@@ -1,0 +1,151 @@
+{
+ "category": "aircraft carrier",
+ "doodle_key_id": "6257793294139392",
+ "facing": 1,
+ "face_from": [
+  "bow",
+  "stern"
+ ],
+ "note": "Quick, Draw! aircraft carrier 6257793294139392, drawn in three-quarter view with the bow at the right. Stroke 0 is the far edge of the flight deck, from the stern corner up to the bow. Stroke 1 is the near edge of the deck, rising at the right into the bow. Stroke 2 is the waterline of the hull, with a short upturn under the bow. Stroke 3 is the stem of the bow. Stroke 4 is the line painted down the middle of the deck. The ship is rigid: nothing on it bends. The whole drawing is placed by two points, the stern and the bow, so it tilts as the ship swings its bow toward the right. Its height across the ship stays one size for the shot, and its length along the ship shortens when the ship points at the camera and lengthens as it turns to three-quarter view.",
+ "strokes": [
+  [
+   [
+    1,
+    68
+   ],
+   [
+    36,
+    29
+   ],
+   [
+    115,
+    20
+   ],
+   [
+    236,
+    0
+   ]
+  ],
+  [
+   [
+    7,
+    77
+   ],
+   [
+    37,
+    77
+   ],
+   [
+    82,
+    69
+   ],
+   [
+    122,
+    69
+   ],
+   [
+    183,
+    58
+   ],
+   [
+    219,
+    57
+   ],
+   [
+    235,
+    22
+   ],
+   [
+    248,
+    1
+   ]
+  ],
+  [
+   [
+    0,
+    80
+   ],
+   [
+    10,
+    88
+   ],
+   [
+    90,
+    86
+   ],
+   [
+    119,
+    99
+   ],
+   [
+    226,
+    83
+   ],
+   [
+    225,
+    67
+   ]
+  ],
+  [
+   [
+    248,
+    5
+   ],
+   [
+    255,
+    25
+   ],
+   [
+    231,
+    75
+   ]
+  ],
+  [
+   [
+    26,
+    50
+   ],
+   [
+    131,
+    35
+   ],
+   [
+    193,
+    21
+   ]
+  ]
+ ],
+ "anchors": {
+  "stern": [
+   0,
+   74
+  ],
+  "bow": [
+   244,
+   38
+  ]
+ },
+ "root": [
+  "stern",
+  "bow"
+ ],
+ "size_from_mask": false,
+ "max_tilt": 40,
+ "foreshorten": [
+  0.45,
+  1.6
+ ],
+ "parts": [
+  {
+   "rest": true,
+   "joint": "stern",
+   "aim": [
+    "stern",
+    "bow"
+   ],
+   "turn": 0
+  }
+ ],
+ "track": false,
+ "smooth": 1.2
+}
