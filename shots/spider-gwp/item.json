@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0076",
+ "id": "spider-gwp",
+ "kind": "shot",
+ "title": "Spider, the Giraffe Walks Past Way",
+ "category": "spider",
+ "wave": 3,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/spider-gwp/cover.png",
+ "cover_alt": "shots/spider-gwp/frames/f020.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/spider-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#spider-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/spider_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/spider/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/spider-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 3"
+ ]
+}

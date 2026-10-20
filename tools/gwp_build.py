@@ -75,7 +75,13 @@ def build(cat):
     cam = [[round(float(cx[f]), 1), round(float(cy[f]), 1)] for f in range(n)]
     objs = []
     for o in sc['objects']:
-        if 'qd' in o:
+        if o.get('copy_of_design'):   # the chosen doodle itself, small, as extras (a flock, a herd)
+            P = np.concatenate([np.array(q, float) for q in spec['strokes']]); mn, mx = P.min(0), P.max(0); x0, y0, x1, y1 = o['box']
+            sc_ = min((x1 - x0) / (mx - mn)[0], (y1 - y0) / (mx - mn)[1])
+            st = [(((np.array(q, float) - mn) * [(-1 if o.get('mirror') else 1), 1] + ([mx[0] - mn[0], 0] if o.get('mirror') else [0, 0])) * sc_ + [x0, y0]).round(1).tolist() for q in spec['strokes']]
+            objs.append({'id': o['id'], 'plane': o['plane'], 'z': next(p['z'] for p in sc['planes'] if p['id'] == o['plane']), 'class': spec['category'],
+                         'source': f"quickdraw:{spec['doodle_key_id']} (the character's own doodle, repeated small)", 'strokes': st})
+        elif 'qd' in o:
             kid, st = qd_fit(o['qd'], o['box'], o.get('strokes'), o.get('skip', 0), o.get('aspect'))
             objs.append({'id': o['id'], 'plane': o['plane'], 'z': next(p['z'] for p in sc['planes'] if p['id'] == o['plane']), 'class': o['qd'],
                          'source': f'quickdraw:{kid}', 'strokes': st})
@@ -89,7 +95,7 @@ def build(cat):
          'planes': sc['planes'], 'camera': cam, 'objects': objs,
          'cast': {'id': cat, 'plane': 'char', 'frames': frames, 'keys': keys, 'source': (f"quickdraw:{spec['doodle_key_id']} as a rig ({len(spec['parts'])} parts, root {spec['root'][0]} to {spec['root'][1]}); {len(keys)} keys placed by eye over SAM silhouettes ({poses.name})" if 'field' not in spec else f"quickdraw:{spec['doodle_key_id']} as a field of marks ({len(spec['field']['layers'])} layers); " + spec['field']['motion'])},
          'xsheet': [{'f': f, 'drawing': (f'K{keys.index(f) + 1:02d}' if f in keys else f'I{f:02d}'), 'kind': 'K' if f in keys else 'I', 'cam': cam[f], 'note': notes.get(str(f), '')} for f in range(n)],
-         'footage': [f'frames/f{f:03d}.jpg' for f in range(n)], 'masks': [M[str(f)] if 'field' not in spec else [] for f in range(n)],
+         'footage': [f'frames/f{f:03d}.jpg' for f in range(n)], 'masks': [M[str(f)] if ('field' not in spec and not sc.get('no_cel')) else [] for f in range(n)],
          'camera_source': sc['camera'].get('source', '')}
     json.dump(S, open(out / 'shot.json', 'w'), separators=(',', ':'))
     print(cat, n, 'frames', len(keys), 'keys', len(objs), 'objects')

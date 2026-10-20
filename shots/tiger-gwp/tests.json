@@ -1,0 +1,90 @@
+[
+ {
+  "id": "M2",
+  "value": 20,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   22,
+   16,
+   16,
+   23,
+   22,
+   22
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.97,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 22
+ },
+ {
+  "id": "M3",
+  "value": 0.16,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.1
+ },
+ {
+  "id": "M6",
+  "value": 2.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "18 strokes, 81 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5746588771155968; scenery quickdraw:6072102937427968",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "35/35",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca cat's face (head only, with pointed ears, whiskers and a small nose and mouth)\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": false,
+  "evidence": "shots/tiger-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The animated head uses the same outline, ear shapes, crossed eye strokes, whisker lines and stick-like mouth as the doodle, so it reads as the same drawing. In frames 1-3 the head is narrowed and squashed for the turn, which makes it look slightly less like the doodle than frames 5-8.",
+  "evidence": "shots/tiger-gwp/reviews/critic-1.json"
+ }
+]

@@ -35,6 +35,26 @@ class TemplateRig:
         self.strokes = [np.array(s, float) for s in sp['strokes']]; self.face = sp.get('facing', -1)
         self.POINTS = list(sp['anchors'])
 
+    def expand(self, parts):
+        """A part may name a region [x0, y0, x1, y1] of the doodle instead of a stroke and vertex range: it then
+        covers every vertex inside that box not claimed by an earlier part. 'rest': true covers everything left."""
+        if getattr(self, '_exp', None) is not None: return self._exp
+        claimed = set(); out = []
+        for p in parts:
+            if 'region' in p or p.get('rest'):
+                x0, y0, x1, y1 = p.get('region', [-1e9, -1e9, 1e9, 1e9])
+                for si, st in enumerate(self.strokes):
+                    run = []
+                    for vi, (x, y) in enumerate(st):
+                        ok = (si, vi) not in claimed and x0 <= x <= x1 and y0 <= y <= y1
+                        if ok: run.append(vi); claimed.add((si, vi))
+                        if (not ok or vi == len(st) - 1) and run:
+                            q = {k: v for k, v in p.items() if k not in ('region', 'rest')}; q.update(stroke=si, **{'from': run[0], 'to': run[-1]}); out.append(q); run = []
+            else:
+                for vi in range(p['from'], p['to'] + 1): claimed.add((p['stroke'], vi))
+                out.append(p)
+        self._exp = out; return out
+
     def draw(self, pose, prm=None):
         prm = prm or {}; sp = self.sp
         a0, a1 = sp['root']
@@ -60,7 +80,7 @@ class TemplateRig:
             r0 = _sim([A[a0], A[a1]], [pose[a0], pose[a1]]); m = sp.get('scale_mult', 1.0); o = np.array(pose[a0], float)
             root = (lambda p, r0=r0, m=m, o=o: o + m * (r0(p) - o)) if m != 1.0 else r0
         out = [[None] * len(s) for s in self.strokes]
-        for part in sp['parts']:
+        for part in self.expand(sp['parts']):
             s = part['stroke']
             if part.get('pin'):
                 j = part['from'] - 1; piv = np.array(out[s][j], float)

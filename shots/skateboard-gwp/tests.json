@@ -1,0 +1,96 @@
+[
+ {
+  "id": "M2",
+  "value": 32,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   23,
+   32,
+   34,
+   35,
+   34,
+   34,
+   28,
+   36,
+   34,
+   34,
+   29,
+   33
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.9,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 26
+ },
+ {
+  "id": "M3",
+  "value": 0.28,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.08
+ },
+ {
+  "id": "M6",
+  "value": 28.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 44 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5264525936820224; scenery quickdraw:6018958220066816, quickdraw:6042966684598272, quickdraw:5224511622348800, drawn by agent: no Quick, Draw! category for a traffic cone; a triangle on a base",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "23/23",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca small car or monster truck: a long flat body on two large round wheels\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": false,
+  "evidence": "shots/skateboard-gwp/reviews/critic-2.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The body outline and the two loop wheels match the doodle's construction, including the short overlapping stroke on the top edge. The animated version is smaller, more tilted, and the wheels change shape slightly from frame to frame, sometimes crossing into the body line.",
+  "evidence": "shots/skateboard-gwp/reviews/critic-2.json"
+ }
+]

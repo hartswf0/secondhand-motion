@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0073",
+ "id": "cow-gwp",
+ "kind": "shot",
+ "title": "Cow, the Giraffe Walks Past Way",
+ "category": "cow",
+ "wave": 3,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/cow-gwp/cover.png",
+ "cover_alt": "shots/cow-gwp/frames/f021.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/cow-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#cow-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/cow_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/cow/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/cow-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 3"
+ ]
+}

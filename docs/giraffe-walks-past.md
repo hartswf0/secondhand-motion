@@ -207,3 +207,30 @@ masks or motion. They now go through the same method, with three additions:
 Rigid subjects (tractor, flying saucer, fan, tornado) are placed by two points and their wheels, blades or
 nothing spin. Rain and storm surf are a field of marks (`rigs/field.py`): the doodle's own strokes repeated,
 falling at a procedural speed (rain) or moved by the water's measured motion (surf).
+
+## Wave 3, and the line for scaling it (`docs/production-line.md`, `tools/subject.py`)
+
+Each subject is still made by hand, one at a time; what scales is everything around the hand work.
+
+- **Survey in CI** (`survey.yml`, `tools/survey.py`): for a whole wave at once, a contact sheet of every clip
+  (a frame every 0.25 s with its time), cut detection, and a bank of 40 real doodles of the category. The
+  agent reads these to choose the interval and the doodle: in wave 3 that took one look per subject, and it
+  rejected two clips the archive search ranked well (fire truck: a parked cab, nothing moves; bulldozer: a
+  power shovel). Cuts it found by eye: the monkey clip cuts to a penguin, the cow to a title card, the tiger
+  at 3.0 s.
+- **Tracking in CI**: listing slugs in `data/track-now.json` runs frames, SAM and depth for that wave.
+- **Rig specs by region** (`rigs/template_rig.py`): a part can be a box of the doodle instead of vertex
+  ranges, read off the numbered doodle sheet (`tools/doodle_sheet.py`), so a new rig is a few lines.
+- **First-pass keys** (`rigs/autoroot.py`, or placement from the silhouette for rigid things) and grids
+  (`tools/subject.py sheets`), then correction by eye. The first pass is often wrong (SAM covers a cow's
+  whole body when the doodle should sit on its head; it covers the whole flock instead of one sheep, where
+  the agent tracked one sheep by template matching instead); the hand pass is where the shot is made.
+- **Extras from the character's own doodle** (`copy_of_design` in a scene): the flock is the chosen sheep
+  doodle, repeated small.
+- **One fresh blind critic per subject**, and one repair round where the critic names a fixable gap
+  (skateboard: spinning the lumpy wheel loops opened them; round 2 passed).
+
+Wave 3 result: eight subjects built; identity bar met for all eight, the skateboard after one repair. Motion
+reads broken for all but follows the film at least partly; the gaps named are the same kinds as before: jumps
+where keys are far apart or the size changes, and head turns the rig only slides instead of turning
+(monkey, tiger). The line page lists every subject's state and next step.

@@ -43,7 +43,8 @@ def run(cat):
             m = raster(S['masks'][f], W, H)
             fits.append(fit_score([s for s in cast[f] if len(s) > 1], m) if m.any() else None)
         fv = [x for x in fits if x is not None]
-        out.append({'id': 'M3', 'value': round(float(np.mean(fv)), 2), 'unit': 'fit to the SAM silhouette, frames with a mask', 'ok': bool(np.mean(fv) >= 0.65 and min(fv) >= 0.45), 'min': round(min(fv), 2)})
+        if not fv: out.append({'id': 'M3', 'value': 'not measured', 'unit': 'no usable silhouette (SAM masked a group, not the subject)', 'ok': None})
+        else: out.append({'id': 'M3', 'value': round(float(np.mean(fv)), 2), 'unit': 'fit to the SAM silhouette, frames with a mask', 'ok': bool(np.mean(fv) >= 0.65 and min(fv) >= 0.45), 'min': round(min(fv), 2)})
     C = np.array([np.concatenate([np.array(s) for s in fr]).mean(0) for fr in cast])
     jerk = float(np.abs(np.diff(C, n=3, axis=0)).max()) if n > 3 else 0.0
     if 'field' in spec: out.append({'id': 'M6', 'value': 'not applicable', 'unit': 'marks wrap at the frame edge', 'ok': None})

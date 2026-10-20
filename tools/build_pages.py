@@ -15,7 +15,7 @@ BATCH = 'batches/2026-10-20-selected-drawings'
 DATE = '20 Oct 2026'
 HEAD = (T / 'head.html').read_text()
 
-NAV = [('index.html', 'Rack'), ('pages/projector.html', 'Projector'), ('production/index.html', 'Production'), ('pages/pipeline.html', 'Pipeline'),
+NAV = [('index.html', 'Rack'), ('pages/projector.html', 'Projector'), ('production/index.html', 'Production'), ('pages/pipeline.html', 'Pipeline'), ('pages/line.html', 'Line'),
        ('pages/tests.html', 'Tests'), ('pages/agent-prompt.html', 'Agent prompt'), ('pages/archive-doodle-index.html', 'Dataset')]
 sys.path.insert(0, str(ROOT / 'tools'))
 import brand
@@ -106,6 +106,7 @@ def main():
           '<script>location.replace("projector.html"+(location.hash||"#dog"))</script><a href="projector.html">Traced keys are in the projector</a>')
     # 6-7: pipeline and agent prompt
     md_page('PIPELINE.md', 'pages/pipeline.html', 'Pipeline')
+    if (ROOT / 'docs/production-line.md').exists(): md_page('docs/production-line.md', 'pages/line.html', 'Production Line')
     md_page('docs/giraffe-walks-past.md', 'pages/how-giraffe-walks-past-was-made.html', 'How Giraffe Walks Past Was Made')
     md_page('AGENTS.md', 'pages/agent-prompt.html', 'Agent Prompt',
             tools='<div class="tools"><span class="meta">Source: AGENTS.md. Fill {CATEGORY} and {WAVE} from data/subject_queue.json.</span>'

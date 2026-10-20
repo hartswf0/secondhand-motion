@@ -1,0 +1,149 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.64,
+   -20.73,
+   -20.73,
+   -20.73,
+   -18.36,
+   -24.72,
+   -28.06,
+   -36.02,
+   -21.86,
+   -17.42,
+   -13.84,
+   -11.97,
+   -20.26,
+   -31.55,
+   -33.17,
+   -36.64,
+   -36.64,
+   -36.64,
+   -28.26
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   4.0,
+   1.0,
+   1.0,
+   1.0,
+   11.63,
+   25.56,
+   40.07,
+   36.05,
+   35.28,
+   30.34,
+   21.41,
+   21.45,
+   23.69,
+   27.01,
+   28.3,
+   27.91,
+   27.91,
+   27.91,
+   27.85
+  ],
+  "source": "phase correlation with the subject masked out"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 7,
+   "label": "Trees and fence",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "ground",
+   "z": 2.4,
+   "label": "Cones",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Skateboard"
+  }
+ ],
+ "objects": [
+  {
+   "id": "tree1",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    180,
+    0,
+    280,
+    90
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "tree2",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    300,
+    10,
+    390,
+    95
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "fence",
+   "plane": "far",
+   "qd": "fence",
+   "box": [
+    150,
+    70,
+    420,
+    110
+   ],
+   "aspect": 6
+  },
+  {
+   "id": "cone",
+   "plane": "ground",
+   "class": "cone",
+   "why": "no Quick, Draw! category for a traffic cone; a triangle on a base",
+   "strokes": [
+    [
+     [
+      95,
+      130
+     ],
+     [
+      110,
+      70
+     ],
+     [
+      125,
+      130
+     ]
+    ],
+    [
+     [
+      88,
+      132
+     ],
+     [
+      132,
+      132
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "rolling away from the camera"
+ }
+}

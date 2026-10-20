@@ -25,6 +25,8 @@ def run(slug, every, facing='motion'):
     for f in range(n):
         m = raster(M[str(f)], W, H); ys, xs = np.nonzero(m)
         cs.append((np.array([xs.min(), ys.min()]), np.array([xs.max(), ys.max()]), np.array([xs.mean(), ys.mean()])) if len(xs) else None)
+    if facing == 'motion':   # one facing for the whole shot, from the overall drift of the silhouette (no flip-flopping)
+        g = [c[2] for c in cs if c is not None]; facing = 'right' if g[-1][0] - g[0][0] >= 0 else 'left'
     frames = sorted(set(list(range(0, n, every)) + [n - 1] + clip.get('keys', [])))
     out = {}
     for f in frames:

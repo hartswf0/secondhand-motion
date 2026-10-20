@@ -7990,5 +7990,1197 @@
   },
   "href": "pages/see-saw-gwp.html",
   "gait": "strut"
+ },
+ {
+  "lot": "SM-0073",
+  "id": "cow-gwp",
+  "kind": "shot",
+  "title": "Cow, the Giraffe Walks Past Way",
+  "category": "cow",
+  "wave": 3,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/cow-gwp/cover.png",
+  "cover_alt": "shots/cow-gwp/frames/f021.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/cow-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#cow-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/cow_spec.json"
+   },
+   {
+    "label": "Survey",
+    "href": "shots/cow/survey/sheet.jpg"
+   }
+  ],
+  "tests": "shots/cow-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 3"
+  ],
+  "t": {
+   "pass": 10,
+   "fail": 2,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 55,
+    "unit": "percentile among real doodles of the category",
+    "ok": true
+   },
+   "M2b": {
+    "value": 0.85,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.24,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 16.4,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "17 strokes, 95 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:5459491900358656; scenery quickdraw:4686187870552064, quickdraw:5039754292756480",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "44/44",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201ccow (head and front of body, close up)\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/cow-gwp.html",
+  "gait": "moonwalk"
+ },
+ {
+  "lot": "SM-0074",
+  "id": "tiger-gwp",
+  "kind": "shot",
+  "title": "Tiger, the Giraffe Walks Past Way",
+  "category": "tiger",
+  "wave": 3,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/tiger-gwp/cover.png",
+  "cover_alt": "shots/tiger-gwp/frames/f021.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/tiger-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#tiger-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/tiger_spec.json"
+   },
+   {
+    "label": "Survey",
+    "href": "shots/tiger/survey/sheet.jpg"
+   }
+  ],
+  "tests": "shots/tiger-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 3"
+  ],
+  "t": {
+   "pass": 9,
+   "fail": 3,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 20,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.97,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.16,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 2.0,
+    "unit": "px jerk (drawing centre)",
+    "ok": true
+   },
+   "T3": {
+    "value": "18 strokes, 81 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:5746588771155968; scenery quickdraw:6072102937427968",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "35/35",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201ca cat's face (head only, with pointed ears, whiskers and a small nose and mouth)\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": false
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/tiger-gwp.html",
+  "gait": "tiptoe"
+ },
+ {
+  "lot": "SM-0075",
+  "id": "monkey-gwp",
+  "kind": "shot",
+  "title": "Monkey, the Giraffe Walks Past Way",
+  "category": "monkey",
+  "wave": 3,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/monkey-gwp/cover.png",
+  "cover_alt": "shots/monkey-gwp/frames/f021.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/monkey-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#monkey-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/monkey_spec.json"
+   },
+   {
+    "label": "Survey",
+    "href": "shots/monkey/survey/sheet.jpg"
+   }
+  ],
+  "tests": "shots/monkey-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 3"
+  ],
+  "t": {
+   "pass": 10,
+   "fail": 2,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 14,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.86,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.47,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 3.8,
+    "unit": "px jerk (drawing centre)",
+    "ok": true
+   },
+   "T3": {
+    "value": "12 strokes, 135 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:6070278159335424; scenery ",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "43/43",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201ca monkey (round head with side ears, face patch, body and curled tail)\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/monkey-gwp.html",
+  "gait": "cancan"
+ },
+ {
+  "lot": "SM-0076",
+  "id": "spider-gwp",
+  "kind": "shot",
+  "title": "Spider, the Giraffe Walks Past Way",
+  "category": "spider",
+  "wave": 3,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/spider-gwp/cover.png",
+  "cover_alt": "shots/spider-gwp/frames/f020.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/spider-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#spider-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/spider_spec.json"
+   },
+   {
+    "label": "Survey",
+    "href": "shots/spider/survey/sheet.jpg"
+   }
+  ],
+  "tests": "shots/spider-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 3"
+  ],
+  "t": {
+   "pass": 10,
+   "fail": 2,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 92,
+    "unit": "percentile among real doodles of the category",
+    "ok": true
+   },
+   "M2b": {
+    "value": 0.89,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.3,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 16.4,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "9 strokes, 42 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:5924220649340928; scenery quickdraw:6463195021574144, quickdraw:4611656485175296, drawn by agent: no Quick, Draw! category is a single web strand; two straight threads",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "38/38",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201ca spider (round body with short leg lines radiating from it) hanging on web threads\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/spider-gwp.html",
+  "gait": "hop"
+ },
+ {
+  "lot": "SM-0077",
+  "id": "sheep-gwp",
+  "kind": "shot",
+  "title": "Sheep, the Giraffe Walks Past Way",
+  "category": "sheep",
+  "wave": 3,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/sheep-gwp/cover.png",
+  "cover_alt": "shots/sheep-gwp/frames/f020.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/sheep-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#sheep-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/sheep_spec.json"
+   },
+   {
+    "label": "Survey",
+    "href": "shots/sheep/survey/sheet.jpg"
+   }
+  ],
+  "tests": "shots/sheep-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 3"
+  ],
+  "t": {
+   "pass": 9,
+   "fail": 2,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 15,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.79,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": "not measured",
+    "unit": "no usable silhouette (SAM masked a group, not the subject)",
+    "ok": null
+   },
+   "M6": {
+    "value": 31.7,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "10 strokes, 80 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:5557017609502720; scenery quickdraw:6298129211064320, quickdraw:5995658756489216, quickdraw:5912015409250304, drawn by agent: no Quick, Draw! category is a ground line, quickdraw:5557017609502720 (the character's own doodle, repeated small), quickdraw:5557017609502720 (the character's own doodle, repeated small), quickdraw:5557017609502720 (the character's own doodle, repeated small), quickdraw:5557017609502720 (the character's own doodle, repeated small), quickdraw:5557017609502720 (the character's own doodle, repeated small), quickdraw:5557017609502720 (the character's own doodle, repeated small), quickdraw:5557017609502720 (the character's own doodle, repeated small), quickdraw:5557017609502720 (the character's own doodle, repeated small), quickdraw:5557017609502720 (the character's own doodle, repeated small), quickdraw:5557017609502720 (the character's own doodle, repeated small), quickdraw:5557017609502720 (the character's own doodle, repeated small)",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "38/38",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201ca sheep (cloud-shaped woolly body, small boxy head with ears and dot eyes, stick legs) grazing with its head lowered\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/sheep-gwp.html",
+  "gait": "goose step"
+ },
+ {
+  "lot": "SM-0078",
+  "id": "sailboat-gwp",
+  "kind": "shot",
+  "title": "Sailboat, the Giraffe Walks Past Way",
+  "category": "sailboat",
+  "wave": 3,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/sailboat-gwp/cover.png",
+  "cover_alt": "shots/sailboat-gwp/frames/f040.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/sailboat-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#sailboat-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/sailboat_spec.json"
+   },
+   {
+    "label": "Survey",
+    "href": "shots/sailboat/survey/sheet.jpg"
+   }
+  ],
+  "tests": "shots/sailboat-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 3"
+  ],
+  "t": {
+   "pass": 10,
+   "fail": 2,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 51,
+    "unit": "percentile among real doodles of the category",
+    "ok": true
+   },
+   "M2b": {
+    "value": 0.99,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.3,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 5.3,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "4 strokes, 38 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:5193394433294336; scenery quickdraw:5571430982877184, quickdraw:5755005313220608, drawn by agent: no Quick, Draw! category is a horizon; one line, with the reflections drawn as short dashes",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "74/74",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201ca sailboat (triangular sail on a mast above a long hull)\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/sailboat-gwp.html",
+  "gait": "shuffle"
+ },
+ {
+  "lot": "SM-0079",
+  "id": "roller-coaster-gwp",
+  "kind": "shot",
+  "title": "Roller coaster, the Giraffe Walks Past Way",
+  "category": "roller-coaster",
+  "wave": 3,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/roller-coaster-gwp/cover.png",
+  "cover_alt": "shots/roller-coaster-gwp/frames/f028.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/roller-coaster-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#roller-coaster-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/roller_coaster_spec.json"
+   },
+   {
+    "label": "Survey",
+    "href": "shots/roller-coaster/survey/sheet.jpg"
+   }
+  ],
+  "tests": "shots/roller-coaster-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 3"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 4,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 2,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.78,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.56,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 29.3,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "19 strokes, 47 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:5572615668236288; scenery quickdraw:4773289035563008, quickdraw:5418102407823360",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "53/53",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201ca roller coaster lift hill: a hatched track climbing to a peak with the drop going down to the right\u201d; motion broken; follows the film: yes",
+    "unit": "",
+    "ok": false
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/roller-coaster-gwp.html",
+  "gait": "sprint"
+ },
+ {
+  "lot": "SM-0080",
+  "id": "skateboard-gwp",
+  "kind": "shot",
+  "title": "Skateboard, the Giraffe Walks Past Way",
+  "category": "skateboard",
+  "wave": 3,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/skateboard-gwp/cover.png",
+  "cover_alt": "shots/skateboard-gwp/frames/f012.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/skateboard-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#skateboard-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/skateboard_spec.json"
+   },
+   {
+    "label": "Survey",
+    "href": "shots/skateboard/survey/sheet.jpg"
+   }
+  ],
+  "tests": "shots/skateboard-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 3"
+  ],
+  "t": {
+   "pass": 9,
+   "fail": 3,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 32,
+    "unit": "percentile among real doodles of the category",
+    "ok": true
+   },
+   "M2b": {
+    "value": 0.9,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.28,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 28.0,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "4 strokes, 44 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:5264525936820224; scenery quickdraw:6018958220066816, quickdraw:6042966684598272, quickdraw:5224511622348800, drawn by agent: no Quick, Draw! category for a traffic cone; a triangle on a base",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "23/23",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201ca small car or monster truck: a long flat body on two large round wheels\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": false
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/skateboard-gwp.html",
+  "gait": "jelly"
  }
 ]

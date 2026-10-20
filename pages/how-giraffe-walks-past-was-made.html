@@ -61,7 +61,7 @@ pre{font:13px/1.65 var(--mono);background:var(--sheet);border:1px solid var(--ru
 .tools button{font:600 13px var(--body);background:var(--ink);color:var(--paper);border:0;border-radius:6px;padding:8px 12px;cursor:pointer}
 .tools .meta{flex:1}
 </style>
-<style>.sm-head{max-width:1200px;margin:0 auto;padding:14px 0 12px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap;border-bottom:2px solid currentColor;color:#161412}.sm-head .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;font:800 20px/1 "Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;letter-spacing:-.01em;margin-right:auto}.sm-head .brand svg{display:block;flex:none}.sm-head nav{display:flex;gap:4px 16px;flex-wrap:wrap;font:600 14px "Atkinson Hyperlegible","Segoe UI",sans-serif}.sm-head nav a{color:inherit;opacity:.72;text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}.sm-head nav a:hover{opacity:1}.sm-head nav a[aria-current]{opacity:1;border-bottom-color:#EF9F3A}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-head{color:#F1EADD}}:root[data-theme="dark"] .sm-head{color:#F1EADD}</style><header class="sm-head"><a class="brand" href="../index.html" aria-label="Secondhand Motion, the rack"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="34" height="34"><g fill="none" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"><path d="M27.5 13.2C27.6 9.4 30.6 7 34 7.4c3.2.4 5.2 3.2 4.6 6.2-.5 2.6-2.8 3.9-5.1 4.4-1.2.3-1.5 1-1.5 2.2V22"/><path d="M32 22 7.5 35.5c-1.6.9-1 3 .8 3h47.4c1.8 0 2.4-2.1.8-3L32 22Z"/><path d="M28 38.5L24 49L17 58.5L23.5 59.5M36 38.5L41 49L46 58.5L52.5 58"/></g></svg><span>Secondhand Motion</span></a><nav aria-label="Site"><a href="../index.html">Rack</a><a href="../pages/projector.html">Projector</a><a href="../production/index.html">Production</a><a href="../pages/pipeline.html">Pipeline</a><a href="../pages/tests.html">Tests</a><a href="../pages/agent-prompt.html">Agent prompt</a><a href="../pages/archive-doodle-index.html">Dataset</a></nav></header>
+<style>.sm-head{max-width:1200px;margin:0 auto;padding:14px 0 12px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap;border-bottom:2px solid currentColor;color:#161412}.sm-head .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;font:800 20px/1 "Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;letter-spacing:-.01em;margin-right:auto}.sm-head .brand svg{display:block;flex:none}.sm-head nav{display:flex;gap:4px 16px;flex-wrap:wrap;font:600 14px "Atkinson Hyperlegible","Segoe UI",sans-serif}.sm-head nav a{color:inherit;opacity:.72;text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}.sm-head nav a:hover{opacity:1}.sm-head nav a[aria-current]{opacity:1;border-bottom-color:#EF9F3A}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-head{color:#F1EADD}}:root[data-theme="dark"] .sm-head{color:#F1EADD}</style><header class="sm-head"><a class="brand" href="../index.html" aria-label="Secondhand Motion, the rack"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="34" height="34"><g fill="none" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"><path d="M27.5 13.2C27.6 9.4 30.6 7 34 7.4c3.2.4 5.2 3.2 4.6 6.2-.5 2.6-2.8 3.9-5.1 4.4-1.2.3-1.5 1-1.5 2.2V22"/><path d="M32 22 7.5 35.5c-1.6.9-1 3 .8 3h47.4c1.8 0 2.4-2.1.8-3L32 22Z"/><path d="M28 38.5L24 49L17 58.5L23.5 59.5M36 38.5L41 49L46 58.5L52.5 58"/></g></svg><span>Secondhand Motion</span></a><nav aria-label="Site"><a href="../index.html">Rack</a><a href="../pages/projector.html">Projector</a><a href="../production/index.html">Production</a><a href="../pages/pipeline.html">Pipeline</a><a href="../pages/line.html">Line</a><a href="../pages/tests.html">Tests</a><a href="../pages/agent-prompt.html">Agent prompt</a><a href="../pages/archive-doodle-index.html">Dataset</a></nav></header>
 <main class="doc">
 
 <h1>How Giraffe Walks Past was made</h1>
@@ -323,6 +323,31 @@ masks or motion. They now go through the same method, with three additions:</p>
 <p>Rigid subjects (tractor, flying saucer, fan, tornado) are placed by two points and their wheels, blades or
 nothing spin. Rain and storm surf are a field of marks (<code>rigs/field.py</code>): the doodle's own strokes repeated,
 falling at a procedural speed (rain) or moved by the water's measured motion (surf).</p>
+<h2>Wave 3, and the line for scaling it (<a href="../docs/production-line.md"><code>docs/production-line.md</code></a>, <a href="../tools/subject.py"><code>tools/subject.py</code></a>)</h2>
+<p>Each subject is still made by hand, one at a time; what scales is everything around the hand work.</p>
+<ul>
+<li><strong>Survey in CI</strong> (<code>survey.yml</code>, <a href="../tools/survey.py"><code>tools/survey.py</code></a>): for a whole wave at once, a contact sheet of every clip
+  (a frame every 0.25 s with its time), cut detection, and a bank of 40 real doodles of the category. The
+  agent reads these to choose the interval and the doodle: in wave 3 that took one look per subject, and it
+  rejected two clips the archive search ranked well (fire truck: a parked cab, nothing moves; bulldozer: a
+  power shovel). Cuts it found by eye: the monkey clip cuts to a penguin, the cow to a title card, the tiger
+  at 3.0 s.</li>
+<li><strong>Tracking in CI</strong>: listing slugs in <a href="../data/track-now.json"><code>data/track-now.json</code></a> runs frames, SAM and depth for that wave.</li>
+<li><strong>Rig specs by region</strong> (<code>rigs/template_rig.py</code>): a part can be a box of the doodle instead of vertex
+  ranges, read off the numbered doodle sheet (<a href="../tools/doodle_sheet.py"><code>tools/doodle_sheet.py</code></a>), so a new rig is a few lines.</li>
+<li><strong>First-pass keys</strong> (<code>rigs/autoroot.py</code>, or placement from the silhouette for rigid things) and grids
+  (<code>tools/subject.py sheets</code>), then correction by eye. The first pass is often wrong (SAM covers a cow's
+  whole body when the doodle should sit on its head; it covers the whole flock instead of one sheep, where
+  the agent tracked one sheep by template matching instead); the hand pass is where the shot is made.</li>
+<li><strong>Extras from the character's own doodle</strong> (<code>copy_of_design</code> in a scene): the flock is the chosen sheep
+  doodle, repeated small.</li>
+<li><strong>One fresh blind critic per subject</strong>, and one repair round where the critic names a fixable gap
+  (skateboard: spinning the lumpy wheel loops opened them; round 2 passed).</li>
+</ul>
+<p>Wave 3 result: eight subjects built; identity bar met for all eight, the skateboard after one repair. Motion
+reads broken for all but follows the film at least partly; the gaps named are the same kinds as before: jumps
+where keys are far apart or the size changes, and head turns the rig only slides instead of turning
+(monkey, tiger). The line page lists every subject's state and next step.</p>
 </main>
 <script id="src" type="text/plain"># How Giraffe Walks Past was made
 
@@ -533,6 +558,33 @@ masks or motion. They now go through the same method, with three additions:
 Rigid subjects (tractor, flying saucer, fan, tornado) are placed by two points and their wheels, blades or
 nothing spin. Rain and storm surf are a field of marks (`rigs/field.py`): the doodle's own strokes repeated,
 falling at a procedural speed (rain) or moved by the water's measured motion (surf).
+
+## Wave 3, and the line for scaling it (`docs/production-line.md`, `tools/subject.py`)
+
+Each subject is still made by hand, one at a time; what scales is everything around the hand work.
+
+- **Survey in CI** (`survey.yml`, `tools/survey.py`): for a whole wave at once, a contact sheet of every clip
+  (a frame every 0.25 s with its time), cut detection, and a bank of 40 real doodles of the category. The
+  agent reads these to choose the interval and the doodle: in wave 3 that took one look per subject, and it
+  rejected two clips the archive search ranked well (fire truck: a parked cab, nothing moves; bulldozer: a
+  power shovel). Cuts it found by eye: the monkey clip cuts to a penguin, the cow to a title card, the tiger
+  at 3.0 s.
+- **Tracking in CI**: listing slugs in `data/track-now.json` runs frames, SAM and depth for that wave.
+- **Rig specs by region** (`rigs/template_rig.py`): a part can be a box of the doodle instead of vertex
+  ranges, read off the numbered doodle sheet (`tools/doodle_sheet.py`), so a new rig is a few lines.
+- **First-pass keys** (`rigs/autoroot.py`, or placement from the silhouette for rigid things) and grids
+  (`tools/subject.py sheets`), then correction by eye. The first pass is often wrong (SAM covers a cow's
+  whole body when the doodle should sit on its head; it covers the whole flock instead of one sheep, where
+  the agent tracked one sheep by template matching instead); the hand pass is where the shot is made.
+- **Extras from the character's own doodle** (`copy_of_design` in a scene): the flock is the chosen sheep
+  doodle, repeated small.
+- **One fresh blind critic per subject**, and one repair round where the critic names a fixable gap
+  (skateboard: spinning the lumpy wheel loops opened them; round 2 passed).
+
+Wave 3 result: eight subjects built; identity bar met for all eight, the skateboard after one repair. Motion
+reads broken for all but follows the film at least partly; the gaps named are the same kinds as before: jumps
+where keys are far apart or the size changes, and head turns the rig only slides instead of turning
+(monkey, tiger). The line page lists every subject's state and next step.
 </script>
 <script>
 (function(){const b=document.getElementById('copy');if(!b)return;

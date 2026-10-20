@@ -1,0 +1,98 @@
+[
+ {
+  "id": "M2",
+  "value": 2,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.78,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 3
+ },
+ {
+  "id": "M3",
+  "value": 0.56,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.43
+ },
+ {
+  "id": "M6",
+  "value": 29.3,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "19 strokes, 47 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5572615668236288; scenery quickdraw:4773289035563008, quickdraw:5418102407823360",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "53/53",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca roller coaster lift hill: a hatched track climbing to a peak with the drop going down to the right\u201d; motion broken; follows the film: yes",
+  "unit": "",
+  "ok": false,
+  "evidence": "shots/roller-coaster-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The animated track is much steeper and narrower than the doodle, which has a gentle curved climb, and the two right-hand drop lines are shallower and longer in the animation than the steep drop lines in the doodle. The double-line track with short slanted cross ticks and the separate drop lines match the doodle's construction.",
+  "evidence": "shots/roller-coaster-gwp/reviews/critic-1.json"
+ }
+]

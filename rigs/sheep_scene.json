@@ -1,0 +1,300 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -5.14,
+   -16.39,
+   -22.64,
+   -32.28,
+   -36.91,
+   -43.22,
+   -46.3,
+   -50.82,
+   -54.92,
+   -57.16,
+   -59.46,
+   -62.26,
+   -64.81,
+   -67.93,
+   -69.23,
+   -73.85,
+   -77.12,
+   -79.82,
+   -83.51,
+   -86.86,
+   -89.5,
+   -96.3,
+   -98.2,
+   -100.39,
+   -104.9,
+   -110.98,
+   -114.51,
+   -123.37,
+   -128.1,
+   -133.04,
+   -137.5,
+   -141.37,
+   -144.41,
+   -150.18,
+   -153.0,
+   -156.11,
+   -160.02
+  ],
+  "y": [
+   0.0,
+   0.29,
+   0.31,
+   0.56,
+   -0.05,
+   0.5,
+   0.43,
+   0.97,
+   0.4,
+   0.44,
+   0.04,
+   -0.03,
+   -0.2,
+   -0.01,
+   0.52,
+   0.03,
+   0.37,
+   -0.29,
+   -0.13,
+   -0.25,
+   -0.04,
+   0.41,
+   0.27,
+   0.54,
+   0.09,
+   0.14,
+   -0.8,
+   -1.27,
+   -1.01,
+   -0.64,
+   -0.23,
+   -0.28,
+   -0.29,
+   -0.68,
+   -0.02,
+   -0.28,
+   0.09,
+   -0.22
+  ],
+  "source": "phase correlation (the mask covers the flock, so the camera here partly measures the flock)"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 7,
+   "label": "Forest",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "flock",
+   "z": 2.6,
+   "label": "Flock",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Sheep"
+  }
+ ],
+ "objects": [
+  {
+   "id": "tree1",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -10,
+    0,
+    120,
+    150
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "tree2",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    130,
+    -10,
+    260,
+    150
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "tree3",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    270,
+    0,
+    400,
+    150
+   ],
+   "strokes": 2,
+   "skip": 2
+  },
+  {
+   "id": "ground",
+   "plane": "flock",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a ground line",
+   "strokes": [
+    [
+     [
+      -20,
+      245
+     ],
+     [
+      420,
+      242
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "s1",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    -13,
+    153,
+    39,
+    187
+   ]
+  },
+  {
+   "id": "s2",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    57,
+    146,
+    109,
+    180
+   ]
+  },
+  {
+   "id": "s3",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    111,
+    158,
+    163,
+    192
+   ]
+  },
+  {
+   "id": "s4",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    179,
+    151,
+    231,
+    185
+   ]
+  },
+  {
+   "id": "s5",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    240,
+    153,
+    292,
+    187
+   ]
+  },
+  {
+   "id": "s6",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    282,
+    153,
+    334,
+    187
+   ]
+  },
+  {
+   "id": "s7",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    340,
+    158,
+    392,
+    192
+   ]
+  },
+  {
+   "id": "s8",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    419,
+    148,
+    471,
+    182
+   ]
+  },
+  {
+   "id": "s9",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    471,
+    156,
+    523,
+    190
+   ]
+  },
+  {
+   "id": "s10",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    540,
+    158,
+    592,
+    192
+   ]
+  },
+  {
+   "id": "s11",
+   "plane": "flock",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    596,
+    144,
+    648,
+    178
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the flock grazes",
+  "21": "one sheep at the front walks and grazes"
+ },
+ "no_cel": "SAM masked the whole flock, not the one sheep, so the cel would erase the flock drawn behind it"
+}

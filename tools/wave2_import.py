@@ -38,7 +38,7 @@ def run(slug):
             tr['frames'] = [dict(x, f=x['f'] - a) for x in tr['frames'] if a <= x['f'] < b]
             clip['n'] = b - a; clip['t0'] = round(clip['t0'] + a / 12, 3); clip['trim'] = [a, b]
             clip['keys'] = [min(b - a - 1, max(0, k - a)) for k in clip['keys']]
-    kp = json.load(open(ROOT / 'shots' / slug / 'keyplan.json'))
+    pass
     clip.update({'category': slug, 'source_title': json.load(open(ROOT / 'shots' / slug / 'source.json')).get('source', {}).get('source_title', 'Moving Image Archive')})
     (out / 'clip.json').write_text(json.dumps(clip, indent=1))
     fr = sorted(tr['frames'], key=lambda x: x['f']); masks = [decode(x['rle'], x['W'], x['H']) for x in fr]
