@@ -41,6 +41,14 @@ def main():
             'B1': {'value': round(still * 100), 'unit': '% strokes held', 'ok': still >= 0.9},
             'T1': {'value': f'{rec:.3f} / {parts:.2f}', 'unit': 'recall / pieces kept', 'ok': rec >= 0.98 and parts >= 1},
         }
+        mt = ROOT / 'traced/matches.json'
+        if mt.exists():
+            share = json.load(open(mt))[cat]['matched_ink']
+            res['T3'] = {'value': f'{min(share):.2f}', 'unit': 'worst key pair, share of ink matched', 'ok': min(share) >= 0.7}
+        m2 = d / 'm2.json'
+        if m2.exists():
+            j = json.load(open(m2)); res['M2'] = {k: j[k] for k in ('value', 'unit', 'ok') if k in j}
+            if 'note' in j: res['M2']['note'] = j['note']
         tests = [{'id': t['id'], **res.get(t['id'], {'value': 'not run', 'unit': '', 'ok': None})} for t in reg]
         (d / 'tests.json').write_text(json.dumps(tests, indent=1))
         n_rev = len(glob.glob(str(B / 'reviews' / f'{cat}-v*.json')))

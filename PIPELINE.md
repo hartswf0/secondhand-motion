@@ -32,6 +32,22 @@ Two lanes have been tried, and the pipeline joins them:
 | 11 | Ledger | every proposal and verdict | `ledger.jsonl` | `loop.py` | append-only, hash-chained |
 | 12 | Pairs | accepted shots | `pairs/` | script | only playback-accepted shots are train-eligible |
 
+## The two lanes, measured on one scale (20 Oct 2026)
+
+`tools/style_score.py` simplifies any drawing the way Quick, Draw! simplified its own data, then
+compares six stroke statistics with real doodles of the category (`data/lane_compare.json`):
+
+- The motion lane (giraffe shot) has about the right number of strokes but lines that turn too often
+  and run too long between points: the rig's wobble reads as jitter.
+- The look lane (traced giraffe, cat, duck keys) has lines that turn like a person's but three to seven
+  standard deviations too many strokes.
+- So the join keeps the look lane's line and the motion lane's stroke budget: fit the rig to the trace,
+  then redraw each rig part as one traced stroke.
+
+`tools/match_strokes.py` gives the look lane its first motion: keys aligned by translation, strokes
+matched key to key, matched strokes interpolated and the rest swapped at the midpoint (test T3).
+Both lanes play side by side with their footage in `pages/projector.html`.
+
 ## Where learning comes in
 
 Nothing has been trained yet. What exists is search: an agent proposes, tests and critics judge, the

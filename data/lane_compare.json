@@ -1,0 +1,74 @@
+{
+ "features": [
+  "strokes",
+  "points (log)",
+  "segment length",
+  "ink length",
+  "turning",
+  "width / height"
+ ],
+ "rows": [
+  {
+   "label": "Giraffe Walks Past (motion lane)",
+   "lane": "motion",
+   "category": "giraffe",
+   "z": [
+    0.46,
+    -0.02,
+    2.61,
+    1.13,
+    3.31,
+    -1.04
+   ],
+   "m2": 1
+  },
+  {
+   "label": "Giraffe traced keys (look lane)",
+   "lane": "look",
+   "category": "giraffe",
+   "z": [
+    7.4,
+    4.13,
+    -1.07,
+    4.43,
+    0.13,
+    1.82
+   ],
+   "m2": 0
+  },
+  {
+   "label": "Cat traced keys (look lane)",
+   "lane": "look",
+   "category": "cat",
+   "z": [
+    2.95,
+    1.44,
+    -0.86,
+    0.43,
+    0.14,
+    0.05
+   ],
+   "m2": 11
+  },
+  {
+   "label": "Duck traced keys (look lane)",
+   "lane": "look",
+   "category": "duck",
+   "z": [
+    3.51,
+    2.62,
+    -1.36,
+    2.08,
+    0.29,
+    -1.05
+   ],
+   "m2": 4
+  }
+ ],
+ "median_strokes": {
+  "giraffe": 4.0,
+  "cat": 10.0,
+  "duck": 5.0
+ },
+ "note": "z = standard deviations from the mean of recognized Quick, Draw! drawings of the same category, after Quick, Draw! simplification. 0 is a typical doodle."
+}

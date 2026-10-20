@@ -15,7 +15,8 @@
   "id": "M2",
   "value": "not run",
   "unit": "",
-  "ok": null
+  "ok": null,
+  "note": "keys include scenery; needs a character mask (stage 1) first"
  },
  {
   "id": "J4",
@@ -35,6 +36,12 @@
   "value": "0.994 / 1.00",
   "unit": "recall / pieces kept",
   "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "0.58",
+  "unit": "worst key pair, share of ink matched",
+  "ok": false
  },
  {
   "id": "M3",

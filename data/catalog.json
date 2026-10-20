@@ -34,7 +34,8 @@
    "total": 0
   },
   "r": {},
-  "href": "pages/archive-doodle-index.html"
+  "href": "pages/archive-doodle-index.html",
+  "gait": "walk"
  },
  {
   "lot": "SM-0002",
@@ -67,7 +68,8 @@
    "total": 0
   },
   "r": {},
-  "href": "pages/doodle-to-footage.html"
+  "href": "pages/doodle-to-footage.html",
+  "gait": "strut"
  },
  {
   "lot": "SM-0003",
@@ -100,7 +102,8 @@
    "total": 0
   },
   "r": {},
-  "href": "pages/cartoon-archive.html"
+  "href": "pages/cartoon-archive.html",
+  "gait": "moonwalk"
  },
  {
   "lot": "SM-0004",
@@ -132,9 +135,9 @@
    "rig"
   ],
   "t": {
-   "pass": 11,
+   "pass": 12,
    "fail": 3,
-   "total": 18
+   "total": 19
   },
   "r": {
    "M1": {
@@ -143,8 +146,8 @@
     "ok": true
    },
    "M2": {
-    "value": 16,
-    "unit": "percentile",
+    "value": 1,
+    "unit": "percentile (Quick, Draw! simplification first)",
     "ok": false
    },
    "M3": {
@@ -226,9 +229,15 @@
     "value": "not run",
     "unit": "",
     "ok": null
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "one rig topology",
+    "ok": true
    }
   },
-  "href": "pages/giraffe-walks-past.html"
+  "href": "pages/giraffe-walks-past.html",
+  "gait": "tiptoe"
  },
  {
   "lot": "SM-0005",
@@ -266,7 +275,8 @@
    "total": 0
   },
   "r": {},
-  "href": "batches/2026-10-20-selected-drawings/index.html"
+  "href": "batches/2026-10-20-selected-drawings/index.html",
+  "gait": "cancan"
  },
  {
   "lot": "SM-0006",
@@ -285,8 +295,8 @@
   ],
   "links": [
    {
-    "label": "Open",
-    "href": "pages/traced-keys.html"
+    "label": "Open in the projector",
+    "href": "pages/projector.html#dog"
    },
    {
     "label": "trace_keys.py",
@@ -303,7 +313,8 @@
    "total": 0
   },
   "r": {},
-  "href": "pages/traced-keys.html"
+  "href": "pages/projector.html#dog",
+  "gait": "hop"
  },
  {
   "lot": "SM-0007",
@@ -335,7 +346,8 @@
    "total": 0
   },
   "r": {},
-  "href": "pages/pipeline.html"
+  "href": "pages/pipeline.html",
+  "gait": "goose step"
  },
  {
   "lot": "SM-0008",
@@ -368,7 +380,8 @@
    "total": 0
   },
   "r": {},
-  "href": "pages/agent-prompt.html"
+  "href": "pages/agent-prompt.html",
+  "gait": "shuffle"
  },
  {
   "lot": "SM-0009",
@@ -400,7 +413,8 @@
    "total": 0
   },
   "r": {},
-  "href": "pages/tests.html"
+  "href": "pages/tests.html",
+  "gait": "sprint"
  },
  {
   "lot": "SM-0010",
@@ -438,8 +452,8 @@
   ],
   "t": {
    "pass": 3,
-   "fail": 1,
-   "total": 6
+   "fail": 2,
+   "total": 7
   },
   "r": {
    "S6": {
@@ -471,9 +485,15 @@
     "value": "0.998 / 1.00",
     "unit": "recall / pieces kept",
     "ok": true
+   },
+   "T3": {
+    "value": "0.10",
+    "unit": "worst key pair, share of ink matched",
+    "ok": false
    }
   },
-  "href": "pages/traced-keys.html#rabbit"
+  "href": "pages/traced-keys.html#rabbit",
+  "gait": "jelly"
  },
  {
   "lot": "SM-0011",
@@ -511,8 +531,8 @@
   ],
   "t": {
    "pass": 3,
-   "fail": 1,
-   "total": 6
+   "fail": 3,
+   "total": 7
   },
   "r": {
    "S6": {
@@ -526,9 +546,9 @@
     "ok": null
    },
    "M2": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 4,
+    "unit": "percentile, mean of 4 keys",
+    "ok": false
    },
    "J4": {
     "value": "bar_met (v2)",
@@ -544,9 +564,15 @@
     "value": "0.999 / 1.00",
     "unit": "recall / pieces kept",
     "ok": true
+   },
+   "T3": {
+    "value": "0.46",
+    "unit": "worst key pair, share of ink matched",
+    "ok": false
    }
   },
-  "href": "pages/traced-keys.html#duck"
+  "href": "pages/traced-keys.html#duck",
+  "gait": "splits"
  },
  {
   "lot": "SM-0012",
@@ -584,8 +610,8 @@
   ],
   "t": {
    "pass": 3,
-   "fail": 1,
-   "total": 6
+   "fail": 2,
+   "total": 7
   },
   "r": {
    "S6": {
@@ -617,9 +643,15 @@
     "value": "0.995 / 1.00",
     "unit": "recall / pieces kept",
     "ok": true
+   },
+   "T3": {
+    "value": "0.20",
+    "unit": "worst key pair, share of ink matched",
+    "ok": false
    }
   },
-  "href": "pages/traced-keys.html#horse"
+  "href": "pages/traced-keys.html#horse",
+  "gait": "heel click"
  },
  {
   "lot": "SM-0013",
@@ -657,8 +689,8 @@
   ],
   "t": {
    "pass": 3,
-   "fail": 1,
-   "total": 6
+   "fail": 2,
+   "total": 7
   },
   "r": {
    "S6": {
@@ -690,9 +722,15 @@
     "value": "0.994 / 1.00",
     "unit": "recall / pieces kept",
     "ok": true
+   },
+   "T3": {
+    "value": "0.58",
+    "unit": "worst key pair, share of ink matched",
+    "ok": false
    }
   },
-  "href": "pages/traced-keys.html#dog"
+  "href": "pages/traced-keys.html#dog",
+  "gait": "skip"
  },
  {
   "lot": "SM-0014",
@@ -730,8 +768,8 @@
   ],
   "t": {
    "pass": 3,
-   "fail": 1,
-   "total": 6
+   "fail": 3,
+   "total": 7
   },
   "r": {
    "S6": {
@@ -745,9 +783,9 @@
     "ok": null
    },
    "M2": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 11,
+    "unit": "percentile, mean of 4 keys",
+    "ok": false
    },
    "J4": {
     "value": "bar_met (v2)",
@@ -763,9 +801,15 @@
     "value": "0.999 / 1.00",
     "unit": "recall / pieces kept",
     "ok": true
+   },
+   "T3": {
+    "value": "0.12",
+    "unit": "worst key pair, share of ink matched",
+    "ok": false
    }
   },
-  "href": "pages/traced-keys.html#cat"
+  "href": "pages/traced-keys.html#cat",
+  "gait": "sit"
  },
  {
   "lot": "SM-0015",
@@ -802,9 +846,9 @@
    "3 reviews"
   ],
   "t": {
-   "pass": 3,
+   "pass": 4,
    "fail": 1,
-   "total": 6
+   "total": 7
   },
   "r": {
    "S6": {
@@ -836,9 +880,15 @@
     "value": "0.996 / 1.00",
     "unit": "recall / pieces kept",
     "ok": true
+   },
+   "T3": {
+    "value": "0.74",
+    "unit": "worst key pair, share of ink matched",
+    "ok": true
    }
   },
-  "href": "pages/traced-keys.html#butterfly"
+  "href": "pages/traced-keys.html#butterfly",
+  "gait": "walk"
  },
  {
   "lot": "SM-0016",
@@ -876,8 +926,8 @@
   ],
   "t": {
    "pass": 3,
-   "fail": 1,
-   "total": 6
+   "fail": 2,
+   "total": 7
   },
   "r": {
    "S6": {
@@ -909,9 +959,15 @@
     "value": "0.995 / 1.00",
     "unit": "recall / pieces kept",
     "ok": true
+   },
+   "T3": {
+    "value": "0.32",
+    "unit": "worst key pair, share of ink matched",
+    "ok": false
    }
   },
-  "href": "pages/traced-keys.html#bicycle"
+  "href": "pages/traced-keys.html#bicycle",
+  "gait": "strut"
  },
  {
   "lot": "SM-0017",
@@ -949,8 +1005,8 @@
   ],
   "t": {
    "pass": 3,
-   "fail": 1,
-   "total": 6
+   "fail": 2,
+   "total": 7
   },
   "r": {
    "S6": {
@@ -982,9 +1038,15 @@
     "value": "0.989 / 1.00",
     "unit": "recall / pieces kept",
     "ok": true
+   },
+   "T3": {
+    "value": "0.53",
+    "unit": "worst key pair, share of ink matched",
+    "ok": false
    }
   },
-  "href": "pages/traced-keys.html#windmill"
+  "href": "pages/traced-keys.html#windmill",
+  "gait": "moonwalk"
  },
  {
   "lot": "SM-0018",
@@ -1022,8 +1084,8 @@
   ],
   "t": {
    "pass": 3,
-   "fail": 1,
-   "total": 6
+   "fail": 2,
+   "total": 7
   },
   "r": {
    "S6": {
@@ -1055,9 +1117,15 @@
     "value": "0.995 / 1.00",
     "unit": "recall / pieces kept",
     "ok": true
+   },
+   "T3": {
+    "value": "0.00",
+    "unit": "worst key pair, share of ink matched",
+    "ok": false
    }
   },
-  "href": "pages/traced-keys.html#helicopter"
+  "href": "pages/traced-keys.html#helicopter",
+  "gait": "tiptoe"
  },
  {
   "lot": "SM-0019",
@@ -1095,8 +1163,8 @@
   ],
   "t": {
    "pass": 3,
-   "fail": 1,
-   "total": 6
+   "fail": 3,
+   "total": 7
   },
   "r": {
    "S6": {
@@ -1110,9 +1178,9 @@
     "ok": null
    },
    "M2": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0,
+    "unit": "percentile, mean of 4 keys",
+    "ok": false
    },
    "J4": {
     "value": "bar_met (v3)",
@@ -1128,9 +1196,15 @@
     "value": "0.984 / 1.00",
     "unit": "recall / pieces kept",
     "ok": true
+   },
+   "T3": {
+    "value": "0.48",
+    "unit": "worst key pair, share of ink matched",
+    "ok": false
    }
   },
-  "href": "pages/traced-keys.html#giraffe"
+  "href": "pages/traced-keys.html#giraffe",
+  "gait": "cancan"
  },
  {
   "lot": "SM-0020",
@@ -1168,7 +1242,8 @@
     "ok": null
    }
   },
-  "href": "shots/flying-saucer/candidates.json"
+  "href": "shots/flying-saucer/candidates.json",
+  "gait": "hop"
  },
  {
   "lot": "SM-0021",
@@ -1206,7 +1281,8 @@
     "ok": null
    }
   },
-  "href": "shots/raccoon/candidates.json"
+  "href": "shots/raccoon/candidates.json",
+  "gait": "goose step"
  },
  {
   "lot": "SM-0022",
@@ -1244,7 +1320,8 @@
     "ok": null
    }
   },
-  "href": "shots/hurricane/candidates.json"
+  "href": "shots/hurricane/candidates.json",
+  "gait": "shuffle"
  },
  {
   "lot": "SM-0023",
@@ -1282,7 +1359,8 @@
     "ok": null
    }
   },
-  "href": "shots/tornado/candidates.json"
+  "href": "shots/tornado/candidates.json",
+  "gait": "sprint"
  },
  {
   "lot": "SM-0024",
@@ -1320,7 +1398,8 @@
     "ok": null
    }
   },
-  "href": "shots/rain/candidates.json"
+  "href": "shots/rain/candidates.json",
+  "gait": "jelly"
  },
  {
   "lot": "SM-0025",
@@ -1358,7 +1437,8 @@
     "ok": null
    }
   },
-  "href": "shots/mosquito/candidates.json"
+  "href": "shots/mosquito/candidates.json",
+  "gait": "splits"
  },
  {
   "lot": "SM-0026",
@@ -1396,7 +1476,8 @@
     "ok": null
    }
   },
-  "href": "shots/pig/candidates.json"
+  "href": "shots/pig/candidates.json",
+  "gait": "heel click"
  },
  {
   "lot": "SM-0027",
@@ -1434,7 +1515,8 @@
     "ok": null
    }
   },
-  "href": "shots/see-saw/candidates.json"
+  "href": "shots/see-saw/candidates.json",
+  "gait": "skip"
  },
  {
   "lot": "SM-0028",
@@ -1472,7 +1554,8 @@
     "ok": null
    }
   },
-  "href": "shots/tractor/candidates.json"
+  "href": "shots/tractor/candidates.json",
+  "gait": "sit"
  },
  {
   "lot": "SM-0029",
@@ -1510,7 +1593,8 @@
     "ok": null
    }
   },
-  "href": "shots/fan/candidates.json"
+  "href": "shots/fan/candidates.json",
+  "gait": "walk"
  },
  {
   "lot": "SM-0030",
@@ -1554,6 +1638,46 @@
    "total": 0
   },
   "r": {},
-  "href": "production/index.html"
+  "href": "production/index.html",
+  "gait": "strut"
+ },
+ {
+  "lot": "SM-0031",
+  "id": "projector",
+  "kind": "study",
+  "title": "Projector",
+  "lane": "join",
+  "stage": 7,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Every moving lot in one player, footage beside cartoon. The look lane moves for the first time: strokes matched key to key.",
+  "cover": "assets/projector.png",
+  "links": [
+   {
+    "label": "Open",
+    "href": "pages/projector.html"
+   },
+   {
+    "label": "match_strokes.py",
+    "href": "tools/match_strokes.py"
+   },
+   {
+    "label": "style_score.py",
+    "href": "tools/style_score.py"
+   }
+  ],
+  "tags": [
+   "player",
+   "in-betweens",
+   "lanes"
+  ],
+  "t": {
+   "pass": 0,
+   "fail": 0,
+   "total": 0
+  },
+  "r": {},
+  "href": "pages/projector.html",
+  "gait": "moonwalk"
  }
 ]

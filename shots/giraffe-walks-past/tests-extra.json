@@ -1,6 +1,41 @@
 [
- {"id": "S6", "value": "missing interval, reported rights", "unit": "", "ok": false, "note": "clip.json keeps the film title and clip video URL (clip 2f255422, source 88b26602) but not the interval or the rights statement."},
- {"id": "T1", "value": "not applicable", "unit": "keys drawn as strokes", "ok": null},
- {"id": "B1", "value": "not run", "unit": "", "ok": null},
- {"id": "J4", "value": "not run", "unit": "", "ok": null}
+ {
+  "id": "S6",
+  "value": "missing interval, reported rights",
+  "unit": "",
+  "ok": false,
+  "note": "clip.json keeps the film title and clip video URL (clip 2f255422, source 88b26602) but not the interval or the rights statement."
+ },
+ {
+  "id": "T1",
+  "value": "not applicable",
+  "unit": "keys drawn as strokes",
+  "ok": null
+ },
+ {
+  "id": "B1",
+  "value": "not run",
+  "unit": "",
+  "ok": null
+ },
+ {
+  "id": "J4",
+  "value": "not run",
+  "unit": "",
+  "ok": null
+ },
+ {
+  "id": "M2",
+  "value": 1,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "note": "tests.py reports 16 measured without simplifying; tools/style_score.py simplifies both sides the way Quick, Draw! did, so the lanes compare on one scale."
+ },
+ {
+  "id": "T3",
+  "value": "1.00",
+  "unit": "one rig topology",
+  "ok": true,
+  "note": "every key is drawn by the same rig, so every stroke carries to the next key by construction"
+ }
 ]

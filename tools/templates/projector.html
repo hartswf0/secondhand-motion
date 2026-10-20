@@ -1,0 +1,244 @@
+__HEAD__
+<title>Projector</title>
+<meta name="description" content="Every moving lot in one player: archive footage beside its doodle cartoon, both lanes measured on one scale.">
+<style>
+/* Layout: header; lot picker; player (footage | cartoon, controls, key strip) beside a side panel (tests, lane comparison). */
+.picker{display:flex;flex-wrap:wrap;gap:6px}
+.picker button{font:600 14px var(--body);background:var(--sheet);color:var(--ink);border:1px solid var(--rule-strong);border-radius:999px;padding:5px 12px;cursor:pointer;display:inline-flex;gap:6px;align-items:baseline}
+.picker button i{font:normal 600 10px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.picker button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.picker button[aria-pressed="true"] i{color:var(--paper);opacity:.7}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+@media (max-width:980px){.layout{grid-template-columns:1fr}}
+.screens{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.screens.one{grid-template-columns:1fr}
+@media (max-width:640px){.screens{grid-template-columns:1fr}}
+.screen{position:relative;background:#fff;border:1px solid var(--rule-strong);border-radius:4px;overflow:hidden}
+.screen canvas,.screen video{display:block;width:100%;height:auto}
+.screen .lab{position:absolute;left:8px;top:8px;font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:rgba(255,251,244,.92);color:#161412;padding:2px 6px;border-radius:3px}
+.screen video{position:absolute;inset:0;opacity:0;pointer-events:none}
+.controls{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.crow{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.play{font:700 14px var(--body);background:var(--ink);color:var(--paper);border:0;border-radius:6px;padding:8px 14px;cursor:pointer;min-width:84px}
+.seg{display:inline-flex;border:1px solid var(--rule-strong);border-radius:6px;overflow:hidden}
+.seg button{font:600 13px var(--body);background:var(--sheet);color:var(--ink);border:0;padding:7px 10px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.seg button:disabled{opacity:.4;cursor:default}
+.scrub{position:relative;flex:1 1 260px;height:34px}
+.scrub input{position:absolute;inset:0;width:100%;margin:0;accent-color:var(--tag)}
+.ticks{position:absolute;left:8px;right:8px;top:0;height:100%;pointer-events:none}
+.ticks i{position:absolute;top:2px;width:2px;height:8px;background:var(--ink);margin-left:-1px}
+.clock{font:600 13px var(--mono);font-variant-numeric:tabular-nums;color:var(--muted);min-width:120px}
+.keys{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:6px}
+@media (max-width:640px){.keys{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.key{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-width:0}
+.key .pair{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.key img{width:100%;display:block;border:1px solid var(--rule);border-radius:3px;background:#fff}
+.key span{font:600 11px var(--mono);color:var(--muted)}
+.key[aria-current="true"] img{border-color:var(--tag);box-shadow:0 0 0 1px var(--tag)}
+.key:focus-visible{outline:2px solid var(--tag);outline-offset:2px}
+.side{display:flex;flex-direction:column;gap:18px}
+.panel{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.panel h3{font-size:16px}
+.tl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px;font-size:14px}
+.tl li{display:grid;grid-template-columns:42px 1fr;gap:2px 8px;align-items:baseline}
+.tl .id{font:600 11px var(--mono);color:var(--muted)}
+.tl .v{grid-column:2;font:11px var(--mono);color:var(--muted)}
+.tl .st{text-align:center}
+.note-s{font-size:13px;color:var(--muted);margin:0}
+.chart svg{width:100%;height:auto;display:block}
+.chart text{font-family:var(--mono);font-size:10px;fill:var(--muted)}
+.chart .lbl{font-family:var(--body);font-size:11px;fill:var(--ink)}
+.lg{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--muted)}
+.chart .lg svg{width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-right:4px}
+.why{font-size:15px;max-width:68ch;margin:0}
+</style>
+__NAV__
+<div class="wrap">
+<header class="page">
+  <span class="eyebrow">Every moving lot, one player</span>
+  <h1>Projector</h1>
+  <p class="lede">Archive footage beside its doodle cartoon. The full shot is the motion lane: a rig in-betweened with the footage's physics. The ten drawn subjects are the look lane: traced keys, played held or in-betweened by matching strokes from key to key. Both are measured on the same scale on the right.</p>
+</header>
+<div class="picker" id="picker" role="group" aria-label="Lot"></div>
+<div class="layout">
+  <section aria-label="Player" style="gap:0">
+    <div class="screens" id="screens">
+      <div class="screen" id="sc-foot"><canvas id="cv-foot" aria-label="Archive footage"></canvas><span class="lab">Footage</span></div>
+      <div class="screen" id="sc-cart"><canvas id="cv-cart" aria-label="Doodle cartoon"></canvas><span class="lab" id="cart-lab">Cartoon</span></div>
+    </div>
+    <video id="vid" muted playsinline preload="auto" aria-hidden="true" style="position:absolute;width:2px;height:2px;opacity:0;pointer-events:none;left:0;top:0"></video>
+    <div class="controls">
+      <div class="crow">
+        <button class="play" id="play" type="button">Play</button>
+        <div class="scrub"><input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Time"><div class="ticks" id="ticks"></div></div>
+        <span class="clock" id="clock"></span>
+      </div>
+      <div class="crow">
+        <div class="seg" role="group" aria-label="View"><button type="button" data-v="side" aria-pressed="true">Side by side</button><button type="button" data-v="over" aria-pressed="false">Overlay</button><button type="button" data-v="cart" aria-pressed="false">Cartoon</button></div>
+        <div class="seg" role="group" aria-label="Motion" id="motion"><button type="button" data-m="held" aria-pressed="false">Held keys</button><button type="button" data-m="tween" aria-pressed="true">In-betweens</button></div>
+        <div class="seg" role="group" aria-label="Speed"><button type="button" data-s="1" aria-pressed="true">1×</button><button type="button" data-s=".5" aria-pressed="false">½×</button><button type="button" data-s=".25" aria-pressed="false">¼×</button></div>
+      </div>
+      <p class="note-s" id="method"></p>
+    </div>
+    <h3 style="margin-top:22px">Keys</h3>
+    <div class="keys" id="keys"></div>
+  </section>
+  <aside class="side">
+    <div class="panel"><h3 id="t-h">Tests on this lot</h3><ul class="tl" id="tests"></ul><a href="tests.html" style="font-size:13px">All tests against all lots</a></div>
+    <div class="panel chart"><h3>The two lanes, against real doodles</h3>
+      <p class="note-s">Distance from a typical Quick, Draw! drawing of the same category, in standard deviations, after simplifying both the way Quick, Draw! simplified its own data. The band is within one standard deviation.</p>
+      <div id="chart"></div><div class="lg" id="lg"></div>
+    </div>
+  </aside>
+</div>
+<section aria-labelledby="c-h">
+  <h2 id="c-h">What the lanes say to each other</h2>
+  <p class="why" id="why"></p>
+</section>
+</div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+const D=JSON.parse(document.getElementById('data').textContent);const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const INK='#161412',PAPER='#FFFFFF',MUTED='#8C8378';
+const vid=$('vid');const cf=$('cv-foot'),cc=$('cv-cart');const gf=cf.getContext('2d'),gc=cc.getContext('2d');
+let lot=null,view='side',motion='tween',speed=1,playing=false,raf=0,t0=0,tBase=0,simT=0;
+
+/* ---------- lot list ---------- */
+const lots=D.lots;const hs=decodeURIComponent(location.hash.slice(1));
+let cur=lots.find(l=>l.id===hs)||lots[0];
+function picker(){const p=$('picker');p.replaceChildren();lots.forEach(l=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',String(l===cur));
+  b.textContent=l.title;const i=document.createElement('i');i.textContent=l.lane;b.append(i);b.onclick=()=>{cur=l;history.replaceState(null,'','#'+l.id);load();picker();};p.append(b);});}
+
+/* ---------- clocks ---------- */
+const dur=()=>cur.kind==='shot'?D.shot.N/D.shot.fps:(cur.duration||vid.duration||4);
+let useVid=false;const internal=()=>cur.kind==='shot'||!useVid;
+function now(){if(internal()){return playing?Math.min(dur(),tBase+(performance.now()-t0)/1000*speed):simT;}return vid.currentTime||0;}
+function seek(t){t=Math.max(0,Math.min(dur()-1e-3,t));if(internal()){simT=t;tBase=t;t0=performance.now();}else{try{vid.currentTime=t;}catch(e){}}draw();}
+function play(on){const tNow=now();playing=on;$('play').textContent=on?'Pause':'Play';
+  if(internal()){if(on){tBase=simT>=dur()-0.01?0:simT;t0=performance.now();}else simT=tNow;}
+  else{vid.playbackRate=speed;if(on){if(vid.currentTime>=dur()-0.02)vid.currentTime=0;vid.play().catch(()=>{});}else vid.pause();}
+  cancelAnimationFrame(raf);if(on)loop();else draw();}
+function loop(){const t=now();if(internal()&&t>=dur()-1e-3){simT=0;tBase=0;t0=performance.now();}
+  if(!internal()&&vid.ended){vid.currentTime=0;vid.play().catch(()=>{});}
+  draw();raf=requestAnimationFrame(loop);}
+
+/* ---------- drawing helpers ---------- */
+function size(c,W,H){const r=Math.min(2,devicePixelRatio||1);if(c.width!==W*r){c.width=W*r;c.height=H*r;}return r;}
+function poly(g,pts,s,ox=0,oy=0){g.beginPath();pts.forEach(([x,y],i)=>i?g.lineTo((x+ox)*s,(y+oy)*s):g.moveTo((x+ox)*s,(y+oy)*s));}
+function strokes(g,set,s,col,lw,ox,oy){g.strokeStyle=col;g.lineWidth=lw;g.lineCap=g.lineJoin='round';set.forEach(p=>{poly(g,p,s,ox,oy);g.stroke();});}
+
+/* ---------- look lane: traced keys ---------- */
+function tracedFrame(e,t){const kt=e.key_times;const fps=e.fps||12;t=Math.floor(t*fps)/fps;   /* on ones, 12 a second */
+  if(t<=kt[0])return {set:e.keys[0],a:0,u:0};if(t>=kt[kt.length-1])return {set:e.keys[kt.length-1],a:kt.length-1,u:0};
+  let a=0;while(a<kt.length-2&&t>=kt[a+1])a++;const u=(t-kt[a])/(kt[a+1]-kt[a]);
+  if(motion==='held')return {set:e.keys[a],a,u};
+  const A=e.keys[a],B=e.keys[a+1],m=e.matches[a],ue=u*u*(3-2*u);const ma=new Set(m.map(x=>x[0])),mb=new Set(m.map(x=>x[1]));const out=[];
+  m.forEach(([i,j,r])=>{const b=r?[...B[j]].reverse():B[j];out.push(A[i].map((p,k)=>[p[0]+(b[k][0]-p[0])*ue,p[1]+(b[k][1]-p[1])*ue]));});
+  if(u<0.5)A.forEach((s,i)=>{if(!ma.has(i))out.push(s);});else B.forEach((s,j)=>{if(!mb.has(j))out.push(s);});
+  return {set:out,a,u};}
+
+/* ---------- motion lane: the multiplane shot ---------- */
+const S=D.shot;const foot=S.footage.map(s=>{const i=new Image();i.src=s;return i;});
+const planes=[...S.planes].sort((a,b)=>b.z-a.z);
+function closed(st){if(st.length<4)return false;const a=st[0],b=st[st.length-1];let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;st.forEach(([x,y])=>{x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x);y1=Math.max(y1,y);});return Math.hypot(a[0]-b[0],a[1]-b[1])<0.18*Math.max(x1-x0,y1-y0,1);}
+function shotFrame(g,f,s,wash){
+  planes.forEach(p=>{const k=p.id==='char'?0:S.z_ref/p.z;const dx=S.camera[f][0]*k,dy=S.camera[f][1]*k;const far=p.z>=6;const lw=(p.id==='char'?3.2:p.id==='fore'?2.4:far?1.6:2.2)*s/2;
+    if(p.id==='char'){if(!wash){g.fillStyle=PAPER;S.masks[f].forEach(m=>{poly(g,m,s);g.closePath();g.fill();});}
+      if(wash)strokes(g,S.cast[f],s,'#fff',lw*2.6,0,0);strokes(g,S.cast[f],s,INK,lw,0,0);return;}
+    S.objects.filter(o=>o.plane===p.id).forEach(o=>{const st=o.frames?o.frames[f]:o.strokes;
+      if(!wash&&o.class!=='grass'&&o.class!=='ground'){g.fillStyle=PAPER;st.forEach(q=>{if(closed(q)){poly(g,q,s,dx,dy);g.closePath();g.fill();}});}
+      if(wash)strokes(g,st,s,'#fff',lw*2.6,dx,dy);strokes(g,st,s,far?MUTED:INK,lw,dx,dy);});});}
+
+/* footage for a drawn subject: the video when this browser can decode it, else the preview frames */
+let thumbs=[];function footAt(t){if(useVid&&vid.readyState>=2)return vid;if(!thumbs.length)return null;const T=cur.thumb_times;let i=0;while(i<T.length-1&&t>=T[i+1])i++;const im=thumbs[i];return im.complete&&im.naturalWidth?im:null;}
+/* ---------- frame ---------- */
+function draw(){const t=now();const r=Math.min(2,devicePixelRatio||1);
+  if(cur.kind==='shot'){const W=S.W,H=S.H;const f=Math.min(S.N-1,Math.floor(t*S.fps));size(cf,W,H);size(cc,W,H);const s=cc.width/W;
+    const im=foot[f];gf.fillStyle='#fff';gf.fillRect(0,0,cf.width,cf.height);if(im.complete&&im.naturalWidth)gf.drawImage(im,0,0,cf.width,cf.height);
+    gc.fillStyle=PAPER;gc.fillRect(0,0,cc.width,cc.height);
+    if(view==='over'){if(im.complete&&im.naturalWidth)gc.drawImage(im,0,0,cc.width,cc.height);gc.fillStyle='rgba(255,255,255,.35)';gc.fillRect(0,0,cc.width,cc.height);}
+    shotFrame(gc,f,s,view==='over');
+    $('cart-lab').textContent=S.keys.includes(f)?'Cartoon · key':'Cartoon · in-between';
+    $('clock').textContent=`frame ${String(f+1).padStart(2,'0')} / ${S.N} · ${t.toFixed(2)} s`;
+    markKey(S.keys.map(k=>k/S.fps),t);}
+  else{const e=D.traced[cur.id];const W=e.W,H=e.H;size(cf,W,H);size(cc,W,H);const s=cc.width/W;
+    gf.fillStyle='#fff';gf.fillRect(0,0,cf.width,cf.height);const src=footAt(t);if(src)gf.drawImage(src,0,0,cf.width,cf.height);
+    gc.fillStyle=PAPER;gc.fillRect(0,0,cc.width,cc.height);
+    const fr=tracedFrame(e,t);
+    if(view==='over'){if(src)gc.drawImage(src,0,0,cc.width,cc.height);gc.fillStyle='rgba(255,255,255,.45)';gc.fillRect(0,0,cc.width,cc.height);strokes(gc,fr.set,s,'#fff',5*s/2,0,0);}
+    strokes(gc,fr.set,s,INK,2.4*s/2,0,0);
+    const atKey=e.key_times.some(k=>Math.abs(k-t)<0.5/12);
+    $('cart-lab').textContent=motion==='held'?`Cartoon · key ${fr.a+1} held`:(atKey||fr.u===0?`Cartoon · key ${fr.a+1}`:'Cartoon · in-between');
+    $('clock').textContent=`${t.toFixed(2)} / ${dur().toFixed(2)} s · 12 fps`;
+    markKey(e.key_times,t);}
+  if(!scrubbing)$('scrub').value=String(Math.round(1000*t/dur()));}
+let lastKey=-1;function markKey(kt,t){let a=0;kt.forEach((k,i)=>{if(t>=k-1e-3)a=i;});if(a===lastKey)return;lastKey=a;document.querySelectorAll('.key').forEach((b,i)=>b.setAttribute('aria-current',String(i===a)));}
+
+/* ---------- load a lot ---------- */
+function load(){play(false);lastKey=-1;
+  const isShot=cur.kind==='shot';$('motion').querySelectorAll('button').forEach(b=>b.disabled=isShot);
+  const kb=$('keys');kb.replaceChildren();const tk=$('ticks');tk.replaceChildren();
+  if(isShot){vid.removeAttribute('src');vid.load();simT=0;
+    $('method').textContent=`Motion lane. Nine keys drawn over SAM silhouettes, in-betweened with planted feet and the measured camera pan; six depth planes. ${S.N} frames at ${S.fps} fps.`;
+    S.keys.forEach((k,i)=>{const b=document.createElement('button');b.className='key';b.type='button';const pr=document.createElement('div');pr.className='pair';
+      const a=document.createElement('img');a.src=S.footage[k];a.alt=`Footage at key ${i+1}`;const c=document.createElement('canvas');c.width=S.W;c.height=S.H;c.style.cssText='width:100%;border:1px solid var(--rule);border-radius:3px;background:#fff';
+      const g=c.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,S.W,S.H);shotFrame(g,k,1,false);pr.append(a,c);
+      const sp=document.createElement('span');sp.textContent=`Key ${i+1} · frame ${k+1}`+(S.notes[k]?' · '+S.notes[k]:'');b.append(pr,sp);b.onclick=()=>{play(false);seek(k/S.fps+1e-3);};kb.append(b);
+      const ti=document.createElement('i');ti.style.left=(100*k/S.N)+'%';tk.append(ti);});
+    kb.style.gridTemplateColumns='repeat(auto-fill,minmax(150px,1fr))';}
+  else{const e=D.traced[cur.id];useVid=false;simT=0;thumbs=(D.thumbs[cur.id]||[]).map(u=>{const i=new Image();i.src=u;i.onload=()=>{if(!playing)draw();};return i;});
+    vid.src=cur.video;vid.load();vid.playbackRate=speed;
+    vid.oncanplay=()=>{if(useVid)return;const t=now();const was=playing;if(was)play(false);useVid=true;try{vid.currentTime=t;}catch(e){}if(was)play(true);else draw();};
+    $('method').textContent=`Look lane. Four keys drawn by an image model, traced to strokes. In-betweens match strokes from key to key (${e.matched_ink.map(x=>Math.round(100*x)+'%').join(', ')} of ink matched) and swap the rest at the midpoint. No physics yet.`;
+    e.key_times.forEach((k,i)=>{const b=document.createElement('button');b.className='key';b.type='button';const pr=document.createElement('div');pr.className='pair';
+      const a=document.createElement('img');a.src=cur.base+`source-key-${i}.png`;a.alt=`Footage at key ${i+1}`;a.loading='lazy';
+      const d=document.createElement('img');d.src=cur.base+`art-key-${i}.png`;d.alt=`Drawn key ${i+1}`;d.loading='lazy';pr.append(a,d);
+      const sp=document.createElement('span');sp.textContent=`Key ${i+1} · ${k.toFixed(1)} s`;b.append(pr,sp);b.onclick=()=>{play(false);seek(k+1e-3);};kb.append(b);
+      const ti=document.createElement('i');ti.style.left=(100*k/(e.duration||4))+'%';tk.append(ti);});
+    kb.style.gridTemplateColumns='';}
+  tests();draw();
+  if(!isShot)vid.addEventListener('loadeddata',draw,{once:true});}
+
+function tests(){const L=D.catalog[cur.lot]||{r:{}};$('t-h').textContent=`Tests on ${cur.lot} ${cur.title}`;const ul=$('tests');ul.replaceChildren();
+  D.registry.filter(t=>t.status==='active'&&L.r[t.id]).forEach(t=>{const r=L.r[t.id];const li=document.createElement('li');
+    const s=document.createElement('span');s.className='st '+(r.ok===true?'pass':r.ok===false?'fail':'none');s.textContent=r.ok===true?'pass':r.ok===false?'fail':'—';
+    const n=document.createElement('span');n.innerHTML='<span class="id"></span> ';n.firstChild.textContent=t.id;n.append(t.name);
+    const v=document.createElement('span');v.className='v';v.textContent=r.ok===null&&String(r.value).startsWith('not')?'not run':String(r.value);li.append(s,n,v);ul.append(li);});}
+
+/* ---------- lane comparison chart ---------- */
+(function chart(){const C=D.compare;const F=C.features;const rows=C.rows;const W=310,rowH=30,top=10,left=92,right=10,H=top+F.length*rowH+24;
+  const lo=-4,hi=8;const X=v=>left+(Math.max(lo,Math.min(hi,v))-lo)/(hi-lo)*(W-left-right);
+  const shape=['circle','square','diamond','triangle'];
+  const sym=(k,x,y,fill)=>{const c=k===0?INK:'var(--tag-ink)';if(shape[k]==='circle')return `<circle cx="${x}" cy="${y}" r="5" fill="${c}"/>`;
+    if(shape[k]==='square')return `<rect x="${x-4.5}" y="${y-4.5}" width="9" height="9" fill="none" stroke="${c}" stroke-width="2"/>`;
+    if(shape[k]==='diamond')return `<path d="M${x} ${y-6}L${x+6} ${y}L${x} ${y+6}L${x-6} ${y}Z" fill="none" stroke="${c}" stroke-width="2"/>`;
+    return `<path d="M${x} ${y-6}L${x+6} ${y+5}L${x-6} ${y+5}Z" fill="none" stroke="${c}" stroke-width="2"/>`;};
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Six stroke statistics for four drawings, in standard deviations from typical doodles">`;
+  s+=`<rect x="${X(-1)}" y="${top-4}" width="${X(1)-X(-1)}" height="${F.length*rowH}" fill="var(--pass-soft)"/>`;
+  s+=`<line x1="${X(0)}" x2="${X(0)}" y1="${top-4}" y2="${top+F.length*rowH-4}" stroke="var(--pass)" stroke-width="1"/>`;
+  F.forEach((f,i)=>{const y=top+i*rowH+rowH/2-4;s+=`<text class="lbl" x="0" y="${y+4}">${f}</text><line x1="${left}" x2="${W-right}" y1="${y}" y2="${y}" stroke="var(--rule)"/>`;
+    rows.forEach((r,k)=>{const v=r.z[i];s+=sym(k,X(v),y+(k-1.5)*3);if(v>hi)s+=`<text x="${W-right-2}" y="${y-6}" text-anchor="end">${v.toFixed(1)}</text>`;});});
+  [-4,-1,0,1,4,8].forEach(v=>{s+=`<text x="${X(v)}" y="${H-6}" text-anchor="middle">${v>0?'+'+v:v}</text>`;});
+  s+='</svg>';$('chart').innerHTML=s;
+  const lg=$('lg');rows.forEach((r,k)=>{const d=document.createElement('span');d.innerHTML=`<svg width="14" height="14" viewBox="-7 -7 14 14">${sym(k,0,0)}</svg>`;d.append(`${r.label} · M2 ${r.m2}`);lg.append(d);});
+  $('why').textContent=C.why;})();
+
+/* ---------- controls ---------- */
+let scrubbing=false;
+$('play').onclick=()=>play(!playing);
+$('scrub').addEventListener('input',e=>{scrubbing=true;if(playing)play(false);seek(+e.target.value/1000*dur());});
+$('scrub').addEventListener('change',()=>{scrubbing=false;});
+document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{view=b.dataset.v;document.querySelectorAll('[data-v]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  $('sc-foot').hidden=view!=='side';$('screens').classList.toggle('one',view!=='side');draw();});
+document.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{motion=b.dataset.m;document.querySelectorAll('[data-m]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));draw();});
+document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{const t=now();speed=+b.dataset.s;vid.playbackRate=speed;if(internal()){tBase=t;t0=performance.now();}
+  document.querySelectorAll('[data-s]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));});
+addEventListener('keydown',e=>{if(e.target.closest('input,button,select,textarea')&&e.key!==' ')return;if(e.key===' '){e.preventDefault();play(!playing);}});
+vid.addEventListener('seeked',()=>{if(!playing)draw();});
+picker();load();
+})();
+</script>

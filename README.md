@@ -17,7 +17,9 @@ Open `index.html` (or the GitHub Pages site): it is **the rack**, every lot of w
 - `python3 tools/new_subject.py "<category>" --wave N` scaffolds a lot from the dataset: archive candidates, a real doodle as cover, every test marked not run.
 - `python3 tools/import_batch.py <batch> <traced.json>` turns a look-lane batch into lots and scores what it can.
 - `python3 tools/validate.py` checks every lot; `python3 tools/build_pages.py` rebuilds every page (it validates first).
-- `python3 tools/brand.py` redraws the mark, favicons and social card.
+- `python3 tools/style_score.py traced/traced_keys.json` scores M2 on one scale for both lanes; `python3 tools/match_strokes.py traced/traced_keys.json batches/<batch> traced/matches.json` in-betweens traced keys (T3).
+- `pages/projector.html` plays every moving lot beside its footage.
+- `python3 tools/brand.py` redraws the mark, its thirteen gaits (each lot's hanger walks its own way), favicons and social card.
 
 ## Production workbench
 

@@ -39,7 +39,10 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 /* the rack: hang tags */
 .rack{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,232px),1fr));gap:22px 16px;padding-top:6px}
 .tag{position:relative;display:flex;flex-direction:column;background:var(--sheet);border:1px solid var(--rule-strong);border-radius:4px 4px 10px 10px;color:inherit;text-decoration:none;min-width:0;transition:transform .12s ease}
-.tag::before{content:"";position:absolute;top:9px;left:50%;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--paper);border:1px solid var(--rule-strong);z-index:2}
+.hang{position:absolute;top:-25px;left:50%;width:42px;height:42px;margin-left:-21px;color:var(--ink);z-index:2;pointer-events:none}
+.hang svg,.cover.blank svg{display:block;width:100%;height:auto;overflow:visible}
+.rack{padding-top:26px}
+.gait{font:600 11px var(--mono);color:var(--tag-ink)}
 .tag:hover{transform:translateY(-2px);border-color:var(--ink)}
 @media (prefers-reduced-motion: reduce){.tag{transition:none}.tag:hover{transform:none}}
 .tag .top{display:flex;justify-content:space-between;align-items:center;padding:7px 10px 6px;gap:8px}
@@ -51,7 +54,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 .tag:hover .cover img.alt,.tag:focus-visible .cover img.alt{opacity:1}
 .cover.doodle img{object-fit:contain;padding:12%}
 .cover.blank{display:flex;align-items:center;justify-content:center;color:#161412}
-.cover.blank svg{width:46%;height:auto;opacity:.85}
+.cover.blank svg{width:52%}
 .stamp{position:absolute;right:6px;bottom:6px;font:700 10px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;border:1.5px solid currentColor;border-radius:3px;background:rgba(255,251,244,.92);transform:rotate(-4deg)}
 .stamp.queued{color:#6B6259}.stamp.progress{color:#8A4A05}.stamp.done{color:#2E7A4A}.stamp.failed{color:#B8432F}
 .tag .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
@@ -122,8 +125,8 @@ __NAV__
     <div class="counts" id="counts"></div>
   </div>
   <figure class="walker" style="margin:0">
-    <svg id="walk" viewBox="0 0 64 64" role="img" aria-label="The mark: a coat hanger walking, four held keys"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path id="w-hook"/><path id="w-hanger"/><path id="w-legs"/></g></svg>
-    <figcaption class="meta">Four keys, held: no in-betweens yet. <button class="clear" id="walk-toggle" type="button">Pause</button></figcaption>
+    <div id="walk" role="img" aria-label="The mark: a coat hanger, walking in held keys"></div>
+    <figcaption class="meta"><span id="gait-name">walk</span> · held keys, no in-betweens. <button class="clear" id="gait-next" type="button">Next gait</button> · <button class="clear" id="walk-toggle" type="button">Pause</button></figcaption>
   </figure>
 </div>
 
@@ -154,7 +157,7 @@ __NAV__
   <div class="lanes">
     <div class="lane"><span class="eyebrow">Look lane</span><b>Draws well, does not move</b><p>An image model draws four still keys in the doodle's identity; fresh critics review. <a href="batches/2026-10-20-selected-drawings/index.html">Selected Drawings</a>.</p></div>
     <div class="lane"><span class="eyebrow">Motion lane</span><b>Moves, draws worse</b><p>A vector rig keyed over SAM silhouettes, in-betweened, on depth planes under the real camera. <a href="pages/giraffe-walks-past.html">Giraffe Walks Past</a>.</p></div>
-    <div class="lane"><span class="eyebrow">The join</span><b>Trace the look into the motion</b><p>Keys traced to strokes keep every mark, and show that backgrounds must be drawn once per shot. <a href="pages/traced-keys.html">Traced Keys</a>.</p></div>
+    <div class="lane"><span class="eyebrow">The join</span><b>Trace the look into the motion</b><p>Traced keys now move by matching strokes from key to key. Measured on one scale, the motion lane has the right stroke count and the wrong line; the look lane the reverse. <a href="pages/projector.html">Projector</a>.</p></div>
   </div>
 </section>
 
@@ -185,12 +188,20 @@ const L=D.lots, ST=D.stages;
 const $=id=>document.getElementById(id);
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 
-/* walking mark: four held keys */
-const W=D.brand;$('w-hook').setAttribute('d',W.hook);$('w-hanger').setAttribute('d',W.hanger);
-let wk=0,wt=null;const step=()=>{$('w-legs').setAttribute('d',W.legs[wk]);wk=(wk+1)%4;};step();
-const walk=on=>{clearInterval(wt);if(on)wt=setInterval(step,250);$('walk-toggle').textContent=on?'Pause':'Play';};
-let walking=!matchMedia('(prefers-reduced-motion: reduce)').matches;walk(walking);
+/* the hanger: every lot wears its pants a different way */
+const B=D.brand,GA=B.gaits,ORDER=B.order,NS='http://www.w3.org/2000/svg';
+const REDUCE=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function hanger(sw){const svg=document.createElementNS(NS,'svg');svg.setAttribute('viewBox','-6 -16 76 80');svg.setAttribute('aria-hidden','true');
+  svg.innerHTML=`<g fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round"><g class="fig"><g class="bod"><path d="${B.hook}"/><path d="${B.hanger}"/></g><path class="legs"/></g></g>`;return svg;}
+function pose(svg,gait,k){const key=GA[gait][k%GA[gait].length];const [dx,dy,rot]=key.move;
+  svg.querySelector('.legs').setAttribute('d',key.legs);svg.querySelector('.bod').setAttribute('transform',`translate(${dx} ${dy})`);
+  svg.querySelector('.fig').setAttribute('transform',`rotate(${rot} 32 ${38.5+dy})`);}
+function animator(svg,gait,ms){let k=0,t=null;pose(svg,gait,0);
+  return {start(){if(REDUCE||t)return;t=setInterval(()=>{k++;pose(svg,gait,k);},ms);},stop(){clearInterval(t);t=null;k=0;pose(svg,gait,0);},set(g){gait=g;k=0;pose(svg,g,0);}};}
+const hero=hanger(2.6);$('walk').append(hero);let gi=0;const H=animator(hero,ORDER[0],230);let walking=!REDUCE;
+const walk=on=>{on?H.start():H.stop();$('walk-toggle').textContent=on?'Pause':'Play';};walk(walking);
 $('walk-toggle').onclick=()=>{walking=!walking;walk(walking);};
+$('gait-next').onclick=()=>{gi=(gi+1)%ORDER.length;H.stop();H.set(ORDER[gi]);$('gait-name').textContent=ORDER[gi];if(walking)H.start();};
 
 /* counts */
 const nTotal=0;const nSub=L.filter(x=>x.kind==='subject'||x.kind==='shot').length;
@@ -228,17 +239,20 @@ const cmp={lot:(a,b)=>a.lot.localeCompare(b.lot),title:(a,b)=>a.title.localeComp
   tests:(a,b)=>(b.t.pass-a.t.pass)||(a.t.fail-b.t.fail)||a.lot.localeCompare(b.lot)};
 
 function stamp(st){const s=document.createElement('span');s.className='stamp '+({queued:'queued','in progress':'progress',done:'done',failed:'failed'}[st]||'queued');s.textContent=st;return s;}
-function blank(){const d=document.createElement('div');d.className='cover blank';d.innerHTML=D.mark;return d;}
+function blank(){const d=document.createElement('div');d.className='cover blank';return d;}
 function tag(x){
   const a=document.createElement('a');a.className='tag';a.href=x.href;
   a.setAttribute('aria-label',`${x.lot}, ${x.title}, ${x.kind}, ${x.status}`);
+  const hg=document.createElement('div');hg.className='hang';const hs=hanger(3.4);hg.append(hs);const anims=[animator(hs,x.gait,200)];a.append(hg);
   const top=document.createElement('div');top.className='top';const lot=document.createElement('span');lot.className='lot';lot.textContent=x.lot;
   const k=document.createElement('span');k.className='kind';k.textContent=x.kind+' · '+x.lane;top.append(lot,k);
   let cv;
   if(x.cover){cv=document.createElement('div');cv.className='cover'+(x.cover.endsWith('.svg')?' doodle':'');
     const im=document.createElement('img');im.src=x.cover;im.alt='';im.loading='lazy';cv.append(im);
     if(x.cover_alt){const i2=document.createElement('img');i2.className='alt';i2.src=x.cover_alt;i2.alt='';i2.loading='lazy';cv.append(i2);}}
-  else cv=blank();
+  else{cv=blank();const big=hanger(2.4);cv.append(big);anims.push(animator(big,x.gait,200));}
+  a.addEventListener('mouseenter',()=>anims.forEach(m=>m.start()));a.addEventListener('mouseleave',()=>anims.forEach(m=>m.stop()));
+  a.addEventListener('focus',()=>anims.forEach(m=>m.start()));a.addEventListener('blur',()=>anims.forEach(m=>m.stop()));
   cv.append(stamp(x.status));
   const b=document.createElement('div');b.className='body';
   const t=document.createElement('b');t.textContent=x.title;const p=document.createElement('p');p.textContent=x.blurb;b.append(t,p);
@@ -249,7 +263,7 @@ function tag(x){
     const lab=`tests that apply: ${x.t.pass} pass, ${x.t.fail} fail, ${x.t.total-x.t.pass-x.t.fail} not run`;tb.setAttribute('aria-label',lab);tb.title=lab;
     const P=document.createElement('i');P.className='p';P.style.width=(100*x.t.pass/x.t.total)+'%';const F=document.createElement('i');F.className='f';F.style.width=(100*x.t.fail/x.t.total)+'%';tb.append(P,F);b.append(tb);}
   const ft=document.createElement('div');ft.className='foot';const l=document.createElement('span');
-  l.textContent=x.t.total?`${x.t.pass}/${x.t.total} tests`:(x.links.length>1?x.links.length+' files':'');const d=document.createElement('span');d.textContent=x.added;ft.append(l,d);b.append(ft);
+  l.textContent=x.t.total?`${x.t.pass}/${x.t.total} tests`:(x.links.length>1?x.links.length+' files':'');const d=document.createElement('span');d.className='gait';d.textContent=x.gait;d.title='how this lot\'s hanger walks';ft.append(l,d);b.append(ft);
   a.append(top,cv,b);return a;}
 
 function list(xs){const box=document.createElement('div');box.className='tablebox list';const t=document.createElement('table');

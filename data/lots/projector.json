@@ -1,0 +1,31 @@
+{
+ "lot": "SM-0031",
+ "id": "projector",
+ "kind": "study",
+ "title": "Projector",
+ "lane": "join",
+ "stage": 7,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Every moving lot in one player, footage beside cartoon. The look lane moves for the first time: strokes matched key to key.",
+ "cover": "assets/projector.png",
+ "links": [
+  {
+   "label": "Open",
+   "href": "pages/projector.html"
+  },
+  {
+   "label": "match_strokes.py",
+   "href": "tools/match_strokes.py"
+  },
+  {
+   "label": "style_score.py",
+   "href": "tools/style_score.py"
+  }
+ ],
+ "tags": [
+  "player",
+  "in-betweens",
+  "lanes"
+ ]
+}

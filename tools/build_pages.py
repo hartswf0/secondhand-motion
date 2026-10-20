@@ -15,8 +15,8 @@ BATCH = 'batches/2026-10-20-selected-drawings'
 DATE = '20 Oct 2026'
 HEAD = (T / 'head.html').read_text()
 
-NAV = [('index.html', 'Rack'), ('pages/pipeline.html', 'Pipeline'), ('pages/tests.html', 'Tests'),
-       ('production/index.html', 'Production'), ('pages/agent-prompt.html', 'Agent prompt'), ('pages/archive-doodle-index.html', 'Dataset')]
+NAV = [('index.html', 'Rack'), ('pages/projector.html', 'Projector'), ('production/index.html', 'Production'), ('pages/pipeline.html', 'Pipeline'),
+       ('pages/tests.html', 'Tests'), ('pages/agent-prompt.html', 'Agent prompt'), ('pages/archive-doodle-index.html', 'Dataset')]
 sys.path.insert(0, str(ROOT / 'tools'))
 import brand
 
@@ -100,14 +100,10 @@ def main():
     # 4: the full shot
     shot = ROOT / 'shots/giraffe-walks-past'
     legacy((shot / 'shot_template.html').read_text(), (shot / 'shot.json').read_text().replace('</', '<\\/'), 'pages/giraffe-walks-past.html')
-    # 5: traced keys
-    tr = json.load(open('traced/traced_keys.json'))
-    val = json.load(open(f'{BATCH}/validation.json'))
-    rev = {s['category']: s['selected_revision'] for s in val['subjects']}
-    for n, e in tr.items():
-        e['revision'] = rev.get(n, '?')
-        e['reviews'] = len(glob.glob(f'{BATCH}/reviews/{n}-v*.json'))
-    page('traced.html', 'pages/traced-keys.html', DATA=js({'batch': '../' + BATCH, 'subjects': tr, 'when': DATE}))
+    # 5: traced keys now play in the projector; the old address forwards there
+    write('pages/traced-keys.html', '<!doctype html><html lang="en"><meta charset="utf-8"><title>Traced Keys</title>'
+          '<meta http-equiv="refresh" content="0; url=projector.html#dog"><link rel="icon" href="../favicon.svg">'
+          '<script>location.replace("projector.html"+(location.hash||"#dog"))</script><a href="projector.html">Traced keys are in the projector</a>')
     # 6-7: pipeline and agent prompt
     md_page('PIPELINE.md', 'pages/pipeline.html', 'Pipeline')
     md_page('AGENTS.md', 'pages/agent-prompt.html', 'Agent Prompt',
@@ -125,10 +121,38 @@ def main():
     page('tests.html', 'pages/tests.html', DATA=js({'tests': reg['tests'], 'stages': reg['stages'],
          'lots': [{'lot': l['lot'], 'title': l['title'], 'href': '../' + l['href'] if not l['href'].startswith('http') else l['href'],
                    'status': l['status'], 'r': l['r']} for l in lots if l['r']]}))
+    projector(lots, reg)
     mark = brand.mark(0, ink='currentColor', sw=2.6, size=64).replace('width="64" height="64"', 'aria-hidden="true"')
     page('hub.html', 'index.html', DATE=DATE, TREE=tree(),
          DATA=js({'lots': [{k: v for k, v in l.items() if k != 'r'} for l in lots], 'stages': reg['stages'], 'brand': brand.data(), 'mark': mark,
                   'n_active': sum(t['status'] == 'active' for t in reg['tests']), 'n_planned': sum(t['status'] == 'planned' for t in reg['tests'])}))
+
+
+def projector(lots, reg):
+    shot = json.load(open('shots/giraffe-walks-past/shot.json'))
+    S = {'W': shot['W'], 'H': shot['H'], 'fps': shot['fps'], 'z_ref': shot['z_ref'], 'planes': shot['planes'], 'camera': shot['camera'],
+         'objects': shot['objects'], 'cast': shot['cast']['frames'], 'keys': shot['cast']['keys'], 'N': len(shot['cast']['frames']),
+         'footage': shot['footage'], 'masks': shot['masks'], 'notes': {x['f']: x['note'] for x in shot['xsheet'] if x['note']}}
+    M = json.load(open('traced/matches.json'))
+    by = {l['id']: l for l in lots}
+    L = [{'id': 'giraffe-walks-past', 'lot': by['giraffe-walks-past']['lot'], 'title': 'Giraffe Walks Past', 'lane': 'motion', 'kind': 'shot'}]
+    thumbs = {}
+    for cat in sorted(M):
+        pv = json.load(open(f'{BATCH}/subjects/{cat}/preview-data.json')); thumbs[cat] = pv['source_frames']
+        L.append({'id': cat, 'lot': by[cat]['lot'], 'title': cat.capitalize(), 'lane': 'look', 'kind': 'traced', 'duration': M[cat]['duration'],
+                  'thumb_times': pv['source_frame_times'],
+                  'video': f'../{BATCH}/subjects/{cat}/source-excerpt.mp4', 'base': f'../{BATCH}/subjects/{cat}/'})
+    C = json.load(open('data/lane_compare.json'))
+    m, g = C['rows'][0]['z'], C['rows'][1]['z']
+    C['why'] = (f"Measured against real doodles, each lane fails where the other passes. The motion lane draws about as many strokes as a "
+                f"real giraffe doodle ({m[0]:+.1f} standard deviations) but its lines turn too often and run too long between points "
+                f"(turning {m[4]:+.1f}, segment length {m[2]:+.1f}): the rig's wobble reads as machine jitter. The look lane draws lines that "
+                f"turn like a person's ({g[4]:+.1f}) but far too many of them ({g[0]:+.1f} for the giraffe; real ones median "
+                f"{int(C['median_strokes']['giraffe'])} strokes). The join to build next keeps the look lane's line and the motion lane's "
+                f"stroke budget: trace the drawn key, fit the rig to it, and redraw each rig part as one traced stroke. Until then, the "
+                f"projector shows both honestly: the look lane now moves, but its in-betweens slide and swap because nothing holds the body together.")
+    page('projector.html', 'pages/projector.html', DATA=js({'lots': L, 'shot': S, 'traced': M, 'compare': C, 'registry': reg['tests'], 'thumbs': thumbs,
+         'catalog': {l['lot']: {'r': l['r']} for l in lots}}))
 
 
 def catalog(reg):
@@ -154,6 +178,7 @@ def catalog(reg):
         it['r'] = r
         it['href'] = it['links'][0]['href'] if it.get('links') else p.parent.relative_to(ROOT).as_posix() + '/'
         it.setdefault('stage', None)
+        it['gait'] = brand.GAIT_NAMES[(int(it['lot'].split('-')[1]) - 1) % len(brand.GAIT_NAMES)]
         out.append(it)
     out.sort(key=lambda x: x['lot'])
     return out

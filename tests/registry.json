@@ -47,8 +47,8 @@
    "name": "Looks hand-drawn",
    "cls": "measured",
    "stage": 4,
-   "bar": "at least 30 (traced outlines: 36)",
-   "how": "typicality of stroke statistics against 4,971 real giraffe doodles, 25-nearest-neighbour",
+   "bar": "at least 30 percentile among real doodles of the category",
+   "how": "tools/style_score.py: simplify the drawing the way Quick, Draw! simplified its own data (scale to 255, RDP epsilon 2), then percentile of mean distance to 25 nearest real drawings of the category over six stroke statistics.",
    "status": "active",
    "applies": [
     "keys",
@@ -102,6 +102,19 @@
    "bar": "character strokes inside the 5th to 95th percentile of real doodles of the category",
    "how": "Count traced character strokes; compare with Quick, Draw! stroke counts for the category.",
    "status": "planned",
+   "applies": [
+    "keys",
+    "shot"
+   ]
+  },
+  {
+   "id": "T3",
+   "name": "Strokes carry from key to key",
+   "cls": "measured",
+   "stage": 7,
+   "bar": "at least 70% of ink matched between every pair of consecutive keys",
+   "how": "tools/match_strokes.py: keys aligned by translation, strokes matched by mean point distance (Hungarian); share of ink in kept matches, worst key pair.",
+   "status": "active",
    "applies": [
     "keys",
     "shot"
