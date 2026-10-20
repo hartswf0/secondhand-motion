@@ -27,7 +27,7 @@ jobs:
       - name: Install CPU torch, transformers and ffmpeg
         run: |
           sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg
-          python3 -m venv /tmp/v && /tmp/v/bin/pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
+          python3 -m venv /tmp/v && /tmp/v/bin/pip install --quiet torch torchvision --index-url https://download.pytorch.org/whl/cpu
           /tmp/v/bin/pip install --quiet "transformers==4.57.1" pillow numpy accelerate
       - name: Frames, SAM 2.1 masks and depth
         shell: bash
