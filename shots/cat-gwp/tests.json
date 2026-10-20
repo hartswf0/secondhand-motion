@@ -1,0 +1,98 @@
+[
+ {
+  "id": "M2",
+  "value": 82,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   83,
+   82,
+   82,
+   82,
+   81,
+   83,
+   81,
+   83,
+   82,
+   82,
+   76,
+   83,
+   82,
+   82
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.77,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 79
+ },
+ {
+  "id": "M3",
+  "value": 0.39,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.32
+ },
+ {
+  "id": "M6",
+  "value": 6.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "11 strokes, 59 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5381512507686912; scenery quickdraw:6126367064195072, quickdraw:6464897556676608, quickdraw:5554186856955904, quickdraw:6096989265592320, quickdraw:6128315012218880",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "62/62",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca cat's head (cat face with pointed ears, two eyes and whiskers)\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/cat-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The head outline, eye shapes, ear construction and whisker strokes match the doodle closely; the drawing is only rotated and moved. In frames 5-6 the ears are cut off at the top edge of the frame, and the head never turns into profile the way the doodle's construction would need to.",
+  "evidence": "shots/cat-gwp/reviews/critic-1.json"
+ }
+]

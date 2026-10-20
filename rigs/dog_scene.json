@@ -1,0 +1,213 @@
+{
+ "z_ref": 3,
+ "camera": {
+  "x": [
+   0.0,
+   0.03,
+   2.53,
+   4.91,
+   4.06,
+   3.7,
+   5.25,
+   4.05,
+   4.64,
+   5.34,
+   8.77,
+   9.39,
+   9.92,
+   11.04,
+   14.8,
+   13.97,
+   13.92,
+   13.64,
+   13.32,
+   10.4,
+   6.53,
+   2.93,
+   -2.84,
+   -3.83,
+   -5.91,
+   -8.98,
+   -11.19,
+   -12.17,
+   -13.55,
+   -12.96,
+   -12.98,
+   -11.3,
+   -11.6,
+   -12.64,
+   -13.84,
+   -14.73,
+   -15.93,
+   -18.37,
+   -19.36,
+   -18.78,
+   -20.54,
+   -20.88,
+   -26.47,
+   -32.72,
+   -44.74,
+   -53.73,
+   -61.49,
+   -70.09,
+   -81.93,
+   -92.26
+  ],
+  "y": [
+   0.0,
+   0.08,
+   2.54,
+   5.85,
+   7.17,
+   7.08,
+   7.59,
+   6.64,
+   8.32,
+   8.91,
+   9.79,
+   9.91,
+   9.15,
+   9.13,
+   12.23,
+   12.68,
+   13.77,
+   13.34,
+   11.65,
+   9.3,
+   4.84,
+   3.3,
+   0.79,
+   -0.06,
+   -2.15,
+   -4.36,
+   -6.29,
+   -7.11,
+   -6.95,
+   -5.86,
+   -5.07,
+   -3.34,
+   -2.87,
+   -3.59,
+   -4.35,
+   -5.29,
+   -5.9,
+   -6.76,
+   -6.63,
+   -5.99,
+   -5.37,
+   -5.56,
+   -5.5,
+   -5.81,
+   -8.02,
+   -10.25,
+   -12.92,
+   -13.99,
+   -14.91,
+   -15.05
+  ],
+  "source": "phase correlation with the dog masked out; agrees with the tub tracked by template matching to within 3 px"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 5,
+   "label": "Bush"
+  },
+  {
+   "id": "mid",
+   "z": 3.4,
+   "label": "Tree"
+  },
+  {
+   "id": "ground",
+   "z": 3,
+   "label": "Tub and grass"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Dog"
+  }
+ ],
+ "objects": [
+  {
+   "id": "bush",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    140,
+    -5,
+    215,
+    42
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "tree",
+   "plane": "mid",
+   "qd": "tree",
+   "box": [
+    235,
+    -60,
+    345,
+    205
+   ],
+   "aspect": 0.5,
+   "strokes": 3
+  },
+  {
+   "id": "tub",
+   "plane": "ground",
+   "qd": "bucket",
+   "box": [
+    247,
+    222,
+    305,
+    262
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "grass1",
+   "plane": "ground",
+   "qd": "grass",
+   "box": [
+    10,
+    228,
+    110,
+    268
+   ]
+  },
+  {
+   "id": "path",
+   "plane": "ground",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a path edge; one straight line for the edge of the path the dog walks on",
+   "strokes": [
+    [
+     [
+      -40,
+      215
+     ],
+     [
+      120,
+      150
+     ],
+     [
+      250,
+      95
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "dog stands looking up and left",
+  "16": "turns right",
+  "24": "stretches toward the right, nose down",
+  "28": "faces us",
+  "40": "walks right",
+  "44": "head down toward the tub",
+  "48": "sniffs at the tub"
+ }
+}

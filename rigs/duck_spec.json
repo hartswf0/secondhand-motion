@@ -1,0 +1,365 @@
+{
+ "category": "duck",
+ "doodle_key_id": "6527787101847552",
+ "facing": 1,
+ "note": "Quick, Draw! duck 6527787101847552, facing right: one outline from the beak round the head, down the back to the tail, along the bottom and up the breast to the beak (stroke 0), an eye (1, 2), a beak line (3), two feet (4-6) and a leg (7). Root: tail to breast; the head turns at the neck.",
+ "strokes": [
+  [
+   [
+    176,
+    50
+   ],
+   [
+    212,
+    52
+   ],
+   [
+    216,
+    47
+   ],
+   [
+    215,
+    36
+   ],
+   [
+    207,
+    31
+   ],
+   [
+    187,
+    3
+   ],
+   [
+    176,
+    0
+   ],
+   [
+    156,
+    0
+   ],
+   [
+    124,
+    15
+   ],
+   [
+    118,
+    21
+   ],
+   [
+    105,
+    44
+   ],
+   [
+    104,
+    77
+   ],
+   [
+    94,
+    103
+   ],
+   [
+    31,
+    141
+   ],
+   [
+    16,
+    158
+   ],
+   [
+    11,
+    171
+   ],
+   [
+    16,
+    194
+   ],
+   [
+    24,
+    202
+   ],
+   [
+    36,
+    205
+   ],
+   [
+    131,
+    207
+   ],
+   [
+    146,
+    203
+   ],
+   [
+    163,
+    193
+   ],
+   [
+    170,
+    181
+   ],
+   [
+    172,
+    158
+   ],
+   [
+    168,
+    70
+   ],
+   [
+    171,
+    58
+   ],
+   [
+    178,
+    49
+   ]
+  ],
+  [
+   [
+    184,
+    17
+   ],
+   [
+    184,
+    17
+   ]
+  ],
+  [
+   [
+    180,
+    14
+   ],
+   [
+    180,
+    14
+   ]
+  ],
+  [
+   [
+    213,
+    42
+   ],
+   [
+    184,
+    41
+   ]
+  ],
+  [
+   [
+    29,
+    202
+   ],
+   [
+    2,
+    233
+   ]
+  ],
+  [
+   [
+    6,
+    233
+   ],
+   [
+    33,
+    230
+   ],
+   [
+    30,
+    241
+   ],
+   [
+    19,
+    255
+   ],
+   [
+    6,
+    247
+   ],
+   [
+    0,
+    235
+   ]
+  ],
+  [
+   [
+    68,
+    191
+   ],
+   [
+    58,
+    225
+   ],
+   [
+    92,
+    233
+   ],
+   [
+    71,
+    248
+   ],
+   [
+    56,
+    217
+   ]
+  ],
+  [
+   [
+    140,
+    205
+   ],
+   [
+    136,
+    232
+   ]
+  ]
+ ],
+ "root": [
+  "tail",
+  "chest"
+ ],
+ "size": "steady",
+ "foreshorten": [
+  0.9,
+  1.1
+ ],
+ "max_tilt": 10,
+ "anchors": {
+  "nose": [
+   213,
+   42
+  ],
+  "neck": [
+   140,
+   75
+  ],
+  "tail": [
+   16,
+   175
+  ],
+  "chest": [
+   172,
+   170
+  ],
+  "lfoot_top": [
+   29,
+   202
+  ],
+  "rfoot_top": [
+   68,
+   191
+  ],
+  "lf": [
+   19,
+   250
+  ],
+  "rf": [
+   80,
+   240
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 10,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 24,
+   "to": 26,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ]
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 11,
+   "to": 23,
+   "joint": "chest",
+   "aim": [
+    "tail",
+    "chest"
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 1,
+   "joint": "lfoot_top",
+   "aim": [
+    "lfoot_top",
+    "lf"
+   ],
+   "turn": 0.5
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 5,
+   "joint": "lfoot_top",
+   "aim": [
+    "lfoot_top",
+    "lf"
+   ],
+   "turn": 0.5
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 4,
+   "joint": "rfoot_top",
+   "aim": [
+    "rfoot_top",
+    "rf"
+   ],
+   "turn": 0.5
+  },
+  {
+   "stroke": 7,
+   "from": 0,
+   "to": 1,
+   "joint": "chest",
+   "aim": [
+    "tail",
+    "chest"
+   ]
+  }
+ ]
+}

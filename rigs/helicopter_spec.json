@@ -1,0 +1,325 @@
+{
+ "category": "helicopter",
+ "doodle_key_id": "4509032549187584",
+ "facing": 1,
+ "face_from": [
+  "mast",
+  "tail"
+ ],
+ "size_from_mask": false,
+ "note": "Quick, Draw! helicopter 4509032549187584, facing right: one outline for the body and tail with a hooked tail fin (0), mast (1), three rotor blades (2-4), cabin window (5), skid struts (6, 7) and skid (8). Placed by the rotor mast top and the tail fin (off frame in the first frames, extended on a steadily shrinking scale); the blades spin about the mast.",
+ "strokes": [
+  [
+   [
+    15,
+    65
+   ],
+   [
+    15,
+    76
+   ],
+   [
+    23,
+    80
+   ],
+   [
+    112,
+    81
+   ],
+   [
+    124,
+    77
+   ],
+   [
+    140,
+    61
+   ],
+   [
+    163,
+    52
+   ],
+   [
+    211,
+    50
+   ],
+   [
+    233,
+    60
+   ],
+   [
+    244,
+    78
+   ],
+   [
+    245,
+    103
+   ],
+   [
+    239,
+    110
+   ],
+   [
+    225,
+    114
+   ],
+   [
+    168,
+    103
+   ],
+   [
+    96,
+    105
+   ],
+   [
+    13,
+    103
+   ],
+   [
+    5,
+    98
+   ],
+   [
+    1,
+    87
+   ],
+   [
+    3,
+    68
+   ],
+   [
+    11,
+    63
+   ],
+   [
+    21,
+    71
+   ],
+   [
+    33,
+    68
+   ]
+  ],
+  [
+   [
+    189,
+    49
+   ],
+   [
+    188,
+    15
+   ],
+   [
+    125,
+    26
+   ]
+  ],
+  [
+   [
+    190,
+    12
+   ],
+   [
+    171,
+    7
+   ]
+  ],
+  [
+   [
+    194,
+    12
+   ],
+   [
+    255,
+    0
+   ]
+  ],
+  [
+   [
+    193,
+    16
+   ],
+   [
+    221,
+    35
+   ]
+  ],
+  [
+   [
+    196,
+    52
+   ],
+   [
+    201,
+    71
+   ],
+   [
+    223,
+    89
+   ],
+   [
+    238,
+    95
+   ],
+   [
+    250,
+    93
+   ]
+  ],
+  [
+   [
+    168,
+    101
+   ],
+   [
+    163,
+    138
+   ]
+  ],
+  [
+   [
+    198,
+    110
+   ],
+   [
+    198,
+    132
+   ],
+   [
+    194,
+    142
+   ]
+  ],
+  [
+   [
+    122,
+    143
+   ],
+   [
+    236,
+    143
+   ]
+  ]
+ ],
+ "root": [
+  "mast",
+  "tail"
+ ],
+ "anchors": {
+  "mast": [
+   190,
+   13
+  ],
+  "nose": [
+   245,
+   95
+  ],
+  "tail": [
+   15,
+   65
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 21,
+   "joint": "mast",
+   "aim": [
+    "mast",
+    "tail"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 2,
+   "joint": "mast",
+   "aim": [
+    "mast",
+    "tail"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 4,
+   "joint": "mast",
+   "aim": [
+    "mast",
+    "tail"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 1,
+   "joint": "mast",
+   "aim": [
+    "mast",
+    "tail"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 7,
+   "from": 0,
+   "to": 2,
+   "joint": "mast",
+   "aim": [
+    "mast",
+    "tail"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 8,
+   "from": 0,
+   "to": 1,
+   "joint": "mast",
+   "aim": [
+    "mast",
+    "tail"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 1,
+   "joint": "mast",
+   "aim": [
+    "mast",
+    "tail"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 1,
+   "joint": "mast",
+   "aim": [
+    "mast",
+    "tail"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 1,
+   "joint": "mast",
+   "aim": [
+    "mast",
+    "tail"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  }
+ ]
+}

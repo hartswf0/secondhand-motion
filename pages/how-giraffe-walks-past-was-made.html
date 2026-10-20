@@ -263,6 +263,44 @@ over SAM silhouettes, which is this shot's method with better drawings.</p>
 <p>So the next step is the giraffe's other half: keep SAM and the drawn keys as pose references, but draw
 every frame with one stroke set (a rig or a single doodle deformed to each key), and search its
 parameters against classifier, typicality and fit, as in step 6.</p>
+<h2>The third pass: the Giraffe Walks Past way, for all ten (<code>shots/&lt;cat&gt;-gwp/</code>)</h2>
+<p>The second pass still fell short because it skipped the giraffe's drawing work: a rig that draws every
+frame, keys posed by hand every few frames, and real doodle scenery on planes. This pass does that work.</p>
+<ul>
+<li><strong>The rig is the chosen doodle itself</strong> (<code>rigs/template_rig.py</code>, <code>rigs/&lt;cat&gt;_spec.json</code>). The doodle's own
+  vertices and strokes are kept. A root similarity places the whole drawing (where, how big, how tilted)
+  and keeps the doodle's proportions; named parts turn at joints (the rabbit's ears, head and front leg;
+  the dog's head and four legs; the duck's head), wings fold toward the body, spokes, rotor blades and
+  windmill sails spin. Every frame is the same drawing, bent; it is never redrawn (test T3).</li>
+<li><strong>Keys by eye over the silhouettes</strong>, as for the giraffe: 9 to 20 per shot, each placed on an enlarged
+  frame with a numbered grid and the SAM outline (<a href="../tools/key_grid.py"><code>tools/key_grid.py</code></a>, <code>shots/&lt;cat&gt;-sam/pose_agent_v*.json</code>).
+  Each spec says what its pose points mean.</li>
+<li><strong>In-betweens</strong> (<code>rigs/inbetween.py</code>) as the giraffe's step 7: Catmull-Rom through the keys plus the
+  smoothed SAM residual; number-valued pose entries (wing opening, spin angle) ease between keys. Size can
+  be held steady for the whole shot, which the first rabbit critic asked for.</li>
+<li><strong>Scenery</strong> (<code>rigs/&lt;cat&gt;_scene.json</code>, <a href="../tools/gwp_build.py"><code>tools/gwp_build.py</code></a>): real Quick, Draw! doodles (door, tree, bush,
+  bucket, grass, fence, flower, leaf, hand, mountain, cloud, wheel) fitted into boxes placed by eye, on
+  depth planes that slide with the measured camera; agent-drawn ground lines where no category fits, each
+  with its reason. The rabbit's camera is the door edge tracked in every frame, because phase correlation
+  failed on that clip.</li>
+<li><strong>Cel</strong> from the SAM silhouette, as before.</li>
+</ul>
+<p>Ten fresh blind critics, each shown the strip, the footage at the same frames, four keys and the doodle
+(<code>shots/&lt;cat&gt;-gwp/reviews/</code>):</p>
+<ul>
+<li><strong>Identity bar met for all ten</strong> (J4). This is the first pass where any subject met it.</li>
+<li>Follows the film: yes for rabbit and helicopter, partly for the rest.</li>
+<li>Motion smooth for windmill and duck; the others still jump at a turn or a size change (dog's turn,
+  rabbit's entrance, giraffe's scale, horse at the end, helicopter's mast at the zoom).</li>
+</ul>
+<p>Tests that still fail, stated plainly: silhouette fit (M3 0.04 to 0.41) fails everywhere, because the rig
+keeps the doodle's proportions rather than the animal's, and a big-headed two-stroke rabbit does not fill a
+real rabbit's silhouette; smooth arcs (M6) fail except the duck, because the footage moves fast and keys
+are 4 frames apart; typicality (M2) is low where the chosen doodle is itself unusual (the rabbit doodle is
+at the 26th percentile of real rabbits). Likeness to the chosen doodle (M2b) passes for all ten.</p>
+<p>The next repairs the critics named: a connected turn for the dog instead of a squash and flip; the duck's
+and cat's head turning toward the viewer and to profile; the giraffe's jaw opening; the horse's head going
+down into the hay at a steady size; the helicopter's mast kept short and upright.</p>
 </main>
 <script id="src" type="text/plain"># How Giraffe Walks Past was made
 
@@ -408,6 +446,47 @@ What the tests and ten blind critics said (round 2, on the corrected shots, `sho
 So the next step is the giraffe's other half: keep SAM and the drawn keys as pose references, but draw
 every frame with one stroke set (a rig or a single doodle deformed to each key), and search its
 parameters against classifier, typicality and fit, as in step 6.
+
+## The third pass: the Giraffe Walks Past way, for all ten (`shots/<cat>-gwp/`)
+
+The second pass still fell short because it skipped the giraffe's drawing work: a rig that draws every
+frame, keys posed by hand every few frames, and real doodle scenery on planes. This pass does that work.
+
+- **The rig is the chosen doodle itself** (`rigs/template_rig.py`, `rigs/<cat>_spec.json`). The doodle's own
+  vertices and strokes are kept. A root similarity places the whole drawing (where, how big, how tilted)
+  and keeps the doodle's proportions; named parts turn at joints (the rabbit's ears, head and front leg;
+  the dog's head and four legs; the duck's head), wings fold toward the body, spokes, rotor blades and
+  windmill sails spin. Every frame is the same drawing, bent; it is never redrawn (test T3).
+- **Keys by eye over the silhouettes**, as for the giraffe: 9 to 20 per shot, each placed on an enlarged
+  frame with a numbered grid and the SAM outline (`tools/key_grid.py`, `shots/<cat>-sam/pose_agent_v*.json`).
+  Each spec says what its pose points mean.
+- **In-betweens** (`rigs/inbetween.py`) as the giraffe's step 7: Catmull-Rom through the keys plus the
+  smoothed SAM residual; number-valued pose entries (wing opening, spin angle) ease between keys. Size can
+  be held steady for the whole shot, which the first rabbit critic asked for.
+- **Scenery** (`rigs/<cat>_scene.json`, `tools/gwp_build.py`): real Quick, Draw! doodles (door, tree, bush,
+  bucket, grass, fence, flower, leaf, hand, mountain, cloud, wheel) fitted into boxes placed by eye, on
+  depth planes that slide with the measured camera; agent-drawn ground lines where no category fits, each
+  with its reason. The rabbit's camera is the door edge tracked in every frame, because phase correlation
+  failed on that clip.
+- **Cel** from the SAM silhouette, as before.
+
+Ten fresh blind critics, each shown the strip, the footage at the same frames, four keys and the doodle
+(`shots/<cat>-gwp/reviews/`):
+
+- **Identity bar met for all ten** (J4). This is the first pass where any subject met it.
+- Follows the film: yes for rabbit and helicopter, partly for the rest.
+- Motion smooth for windmill and duck; the others still jump at a turn or a size change (dog's turn,
+  rabbit's entrance, giraffe's scale, horse at the end, helicopter's mast at the zoom).
+
+Tests that still fail, stated plainly: silhouette fit (M3 0.04 to 0.41) fails everywhere, because the rig
+keeps the doodle's proportions rather than the animal's, and a big-headed two-stroke rabbit does not fill a
+real rabbit's silhouette; smooth arcs (M6) fail except the duck, because the footage moves fast and keys
+are 4 frames apart; typicality (M2) is low where the chosen doodle is itself unusual (the rabbit doodle is
+at the 26th percentile of real rabbits). Likeness to the chosen doodle (M2b) passes for all ten.
+
+The next repairs the critics named: a connected turn for the dog instead of a squash and flip; the duck's
+and cat's head turning toward the viewer and to profile; the giraffe's jaw opening; the horse's head going
+down into the hay at a steady size; the helicopter's mast kept short and upright.
 </script>
 <script>
 (function(){const b=document.getElementById('copy');if(!b)return;

@@ -1,0 +1,93 @@
+[
+ {
+  "id": "M2",
+  "value": 41,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   29,
+   34,
+   49,
+   49,
+   50,
+   48,
+   43,
+   34,
+   35
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.73,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 31
+ },
+ {
+  "id": "M3",
+  "value": 0.4,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.29
+ },
+ {
+  "id": "M6",
+  "value": 11.8,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "12 strokes, 63 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6301565671440384; scenery quickdraw:5009649608687616, quickdraw:5300426310156288",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "17/17",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cgiraffe head and neck in profile, facing right\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/giraffe-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The head construction matches the doodle (two ossicones with one drawn as a P-shaped flag, small open ear, arrow eye, muzzle hook, jaw loop), but the long neck with its crossing strokes is cut off by the frame bottom and the lines are thinner than the doodle's heavy strokes.",
+  "evidence": "shots/giraffe-gwp/reviews/critic-1.json"
+ }
+]

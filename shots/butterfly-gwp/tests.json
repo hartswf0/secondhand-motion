@@ -1,0 +1,98 @@
+[
+ {
+  "id": "M2",
+  "value": 7,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   10,
+   10,
+   9,
+   9,
+   10,
+   8,
+   6,
+   7,
+   6,
+   6,
+   3,
+   4,
+   3,
+   3
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.66,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 12
+ },
+ {
+  "id": "M3",
+  "value": 0.34,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.11
+ },
+ {
+  "id": "M6",
+  "value": 37.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "11 strokes, 72 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5895381575532544; scenery quickdraw:5177350901727232",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "78/78",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca butterfly perched with its wings folded upward\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/butterfly-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The doodle has both wings spread wide on either side of the body, while the animation shows them pressed together into one narrow upright shape. The lobed wing outline, the segmented diagonal body with tick marks, and the looped antennae are kept.",
+  "evidence": "shots/butterfly-gwp/reviews/critic-1.json"
+ }
+]

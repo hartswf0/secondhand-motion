@@ -1,0 +1,316 @@
+{
+ "category": "rabbit",
+ "doodle_key_id": "6204342979788800",
+ "facing": -1,
+ "note": "Quick, Draw! rabbit 6204342979788800 (PL, 2017), facing left. Stroke 0: both ears in one line, from the back of the head up the far ear, down, up the near ear, down into the head. Stroke 1: back of head, round the nose and chin, under the jaw, straight down the front leg, back up, along the belly, round the hind leg to a hook at the rump. The back is never drawn. ear2 is the front ear (nose side), ear1 the back ear. Root: throat to rump end; head, ears, front leg and hind end turn at their joints.",
+ "strokes": [
+  [
+   [
+    39,
+    108
+   ],
+   [
+    31,
+    82
+   ],
+   [
+    24,
+    35
+   ],
+   [
+    25,
+    7
+   ],
+   [
+    28,
+    4
+   ],
+   [
+    46,
+    10
+   ],
+   [
+    56,
+    20
+   ],
+   [
+    67,
+    52
+   ],
+   [
+    69,
+    96
+   ],
+   [
+    76,
+    80
+   ],
+   [
+    81,
+    58
+   ],
+   [
+    94,
+    35
+   ],
+   [
+    146,
+    1
+   ],
+   [
+    155,
+    1
+   ],
+   [
+    152,
+    12
+   ],
+   [
+    120,
+    59
+   ],
+   [
+    99,
+    83
+   ],
+   [
+    91,
+    88
+   ]
+  ],
+  [
+   [
+    41,
+    104
+   ],
+   [
+    13,
+    122
+   ],
+   [
+    2,
+    141
+   ],
+   [
+    0,
+    152
+   ],
+   [
+    11,
+    160
+   ],
+   [
+    50,
+    161
+   ],
+   [
+    66,
+    158
+   ],
+   [
+    83,
+    149
+   ],
+   [
+    85,
+    205
+   ],
+   [
+    89,
+    209
+   ],
+   [
+    102,
+    199
+   ],
+   [
+    103,
+    179
+   ],
+   [
+    125,
+    191
+   ],
+   [
+    143,
+    211
+   ],
+   [
+    156,
+    215
+   ],
+   [
+    191,
+    218
+   ],
+   [
+    222,
+    211
+   ],
+   [
+    232,
+    202
+   ],
+   [
+    236,
+    192
+   ],
+   [
+    223,
+    177
+   ],
+   [
+    234,
+    168
+   ],
+   [
+    254,
+    162
+   ],
+   [
+    255,
+    160
+   ],
+   [
+    252,
+    151
+   ],
+   [
+    243,
+    141
+   ]
+  ]
+ ],
+ "anchors": {
+  "head": [
+   60,
+   100
+  ],
+  "ear1": [
+   150,
+   1
+  ],
+  "ear2": [
+   26,
+   4
+  ],
+  "nose": [
+   0,
+   152
+  ],
+  "chin": [
+   11,
+   160
+  ],
+  "chest": [
+   83,
+   149
+  ],
+  "paw": [
+   89,
+   209
+  ],
+  "belly": [
+   156,
+   215
+  ],
+  "foot": [
+   236,
+   192
+  ],
+  "tail": [
+   243,
+   141
+  ],
+  "back": [
+   200,
+   120
+  ],
+  "earbase2": [
+   69,
+   96
+  ],
+  "earbase1": [
+   91,
+   88
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 7,
+   "joint": "chest",
+   "aim": [
+    "chest",
+    "nose"
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 8,
+   "joint": "earbase2",
+   "aim": [
+    "head",
+    "ear2"
+   ],
+   "stretch": 0.4
+  },
+  {
+   "stroke": 0,
+   "from": 9,
+   "to": 17,
+   "joint": "earbase1",
+   "aim": [
+    "head",
+    "ear1"
+   ],
+   "stretch": 0.4
+  },
+  {
+   "stroke": 1,
+   "from": 8,
+   "to": 11,
+   "pin": true,
+   "aim": [
+    "chest",
+    "paw"
+   ],
+   "stretch": 0.6
+  },
+  {
+   "stroke": 1,
+   "from": 12,
+   "to": 18,
+   "joint": "tail",
+   "aim": [
+    "tail",
+    "foot"
+   ],
+   "stretch": 0.3
+  },
+  {
+   "stroke": 1,
+   "from": 19,
+   "to": 24,
+   "joint": "tail",
+   "aim": [
+    "tail",
+    "foot"
+   ],
+   "stretch": 0.3
+  }
+ ],
+ "root": [
+  "chest",
+  "tail"
+ ],
+ "max_tilt": 30,
+ "area_cap": 70,
+ "size": "steady",
+ "foreshorten": [
+  0.8,
+  1.2
+ ]
+}

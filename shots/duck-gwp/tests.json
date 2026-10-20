@@ -1,0 +1,97 @@
+[
+ {
+  "id": "M2",
+  "value": 31,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   24,
+   30,
+   39,
+   26,
+   22,
+   40,
+   39,
+   45,
+   22,
+   22,
+   31,
+   33,
+   26
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.76,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 28
+ },
+ {
+  "id": "M3",
+  "value": 0.37,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.35
+ },
+ {
+  "id": "M6",
+  "value": 3.1,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "8 strokes, 48 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6527787101847552; scenery quickdraw:4897731438968832, drawn by agent: no Quick, Draw! category is a ground line; one straight line where the duck stands, as Giraffe Walks Past drew its ground",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "48/48",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca duck or goose standing in side view\u201d; motion smooth; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/duck-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The animated character is the doodle mirrored to face left, with the same rounded head, flat beak line, dot eye, back slope, stick legs and triangle feet; the feet are slightly more closed and regular than in the doodle.",
+  "evidence": "shots/duck-gwp/reviews/critic-1.json"
+ }
+]

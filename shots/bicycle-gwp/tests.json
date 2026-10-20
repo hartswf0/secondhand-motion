@@ -1,0 +1,95 @@
+[
+ {
+  "id": "M2",
+  "value": 37,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   37,
+   37,
+   37,
+   37,
+   37,
+   37,
+   42,
+   37,
+   37,
+   37,
+   37
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 1.0,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 37
+ },
+ {
+  "id": "M3",
+  "value": 0.04,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.02
+ },
+ {
+  "id": "M6",
+  "value": 28.3,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "14 strokes, 68 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6344657166401536; scenery quickdraw:6369232059105280, quickdraw:5236338267783168, quickdraw:4951807774162944, drawn by agent: no Quick, Draw! category is a road edge; one straight line along the far edge of the road, quickdraw:6242280815984640",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "21/21",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca bicycle wheel with spokes, close up, with parts of the bicycle frame entering from the top right\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/bicycle-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The wheel matches the doodle's wheels: an eight-sided outline with a gap at the top left and a star of straight spokes, and the horizontal and diagonal lines match the doodle's frame tubes. Only one wheel and stubs of the frame are visible, so the rest of the doodle (second wheel, seat, handlebar) never appears, and the extra second diagonal line and the frame-6 bracket are not in the doodle.",
+  "evidence": "shots/bicycle-gwp/reviews/critic-1.json"
+ }
+]

@@ -1,0 +1,134 @@
+{
+ "z_ref": 3,
+ "camera": {
+  "x": [
+   2.0,
+   4.0,
+   8.0,
+   16.3,
+   25.7,
+   40.3,
+   52.0,
+   69.0,
+   81.3,
+   95.0,
+   101.7,
+   107.3,
+   109.0,
+   110.0,
+   110.0,
+   109.7,
+   109.3,
+   109.0,
+   109.0,
+   108.3,
+   107.7,
+   106.7,
+   106.3,
+   106.0,
+   106.0,
+   105.3,
+   104.3,
+   102.3,
+   101.0,
+   99.0,
+   98.0,
+   96.0,
+   94.7,
+   91.7,
+   89.0,
+   84.7,
+   81.7,
+   78.3,
+   77.0,
+   76.0,
+   76.0,
+   75.0,
+   73.0,
+   67.0,
+   59.3,
+   49.3,
+   40.7,
+   32.0,
+   24.7,
+   18.0,
+   10.7,
+   7.0
+  ],
+  "y": 0,
+  "source": "pan measured from the door's right edge, tracked above the rabbit in every frame (phase correlation of the whole frame was unreliable here); no vertical motion measured"
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 3,
+   "label": "Door"
+  },
+  {
+   "id": "floor",
+   "z": 2.6,
+   "label": "Floor"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Rabbit"
+  }
+ ],
+ "objects": [
+  {
+   "id": "door",
+   "plane": "wall",
+   "qd": "door",
+   "box": [
+    -100,
+    -6,
+    107,
+    262
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "floor",
+   "plane": "floor",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a floor edge; two straight lines where the door meets the floor and the wall meets the floor, as Giraffe Walks Past drew its ground line",
+   "strokes": [
+    [
+     [
+      -130,
+      262
+     ],
+     [
+      107,
+      258
+     ]
+    ],
+    [
+     [
+      107,
+      240
+     ],
+     [
+      260,
+      206
+     ],
+     [
+      470,
+      166
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "rabbit behind the door, head out",
+  "8": "sitting up, ears up, facing us",
+  "12": "turning to its right",
+  "16": "profile, ears back",
+  "24": "crouched, ears flat",
+  "36": "ears lift",
+  "42": "stretches out to go",
+  "48": "leaving frame right"
+ }
+}

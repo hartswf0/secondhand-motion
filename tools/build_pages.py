@@ -136,7 +136,7 @@ def shot_pages():
     """A full shot page (cartoon, over footage, footage, planes in depth, silhouettes) for every SAM shot."""
     T = (T_DIR := ROOT / 'tools' / 'templates' / 'shot_page.html').read_text() if (ROOT / 'tools/templates/shot_page.html').exists() else None
     if not T: return
-    for f in sorted(ROOT.glob('shots/*-sam/shot.json')):
+    for f in sorted(list(ROOT.glob('shots/*-sam/shot.json')) + list(ROOT.glob('shots/*-gwp/shot.json'))):
         sid = f.parent.name; S = json.load(open(f))
         S['footage'] = [f'../shots/{sid}/{u}' for u in S['footage']]
         rv = f.parent / 'reviews'
@@ -148,6 +148,12 @@ def shot_pages():
                 f"SAM 2.1 traced the {S['category']} in every frame. The four keys an image model drew in the chosen doodle's identity, each approved by a "
                 f"critic, were traced to strokes, split from their scenery by the silhouette and moved onto it; in-betweens match strokes key to key and follow "
                 f"the silhouette frame by frame. The scenery is drawn once, and the silhouette is painted as a cel under the character.")
+        if sid.endswith('-gwp'):
+            nk = len(S['cast']['keys'])
+            lede = (f"{S['category'].capitalize()} from the archive, made the way Giraffe Walks Past was made. SAM 2.1 traced the {S['category']} in every frame. "
+                    f"The rig is the chosen Quick, Draw! doodle itself ({S['cast']['source'].split(' as ')[0]}): its own lines, bent at a few joints, so every frame "
+                    f"is the same drawing. {nk} keys were placed by eye over the silhouettes; in-betweens follow the silhouette frame by frame. "
+                    f"Scenery is real Quick, Draw! doodles on depth planes that slide with the measured camera; the silhouette is painted as a cel.")
         html = T.replace('__TITLE__', S['title']).replace('__LEDE__', lede).replace('__ROUNDS__', rounds or '<p class="meta">No review yet.</p>')
         html = html.replace('__DATA__', json.dumps(S, separators=(',', ':')).replace('</', '<\\/'))
         head = ('<!doctype html>\n<html lang="en">\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
@@ -174,6 +180,11 @@ def projector(lots, reg):
             shots[sid] = pack(sh, f'../shots/{sid}/', f"Puppet redraw. The chosen Quick, Draw! {cat} (key_id {sh['design']['key_id']}, all {sh['design']['strokes']} strokes) moved by "
                               f"{len(rig['bones'])} bones the agent placed on {len(sh['cast']['keys'])} key frames by eye; background drawn once from the look-lane key.")
             L.append({'id': sid, 'lot': by[sid]['lot'], 'title': cat.capitalize(), 'lane': 'motion', 'kind': 'shot'})
+        sid3 = f'{cat}-gwp'
+        if sid3 in by:
+            sh = json.load(open(f'shots/{sid3}/shot.json'))
+            shots[sid3] = pack(sh, f'../shots/{sid3}/', f"The Giraffe Walks Past way. SAM on every frame; the rig is the chosen Quick, Draw! doodle itself ({sh['cast']['source'].split(' as ')[0]}), bent at a few joints, so every frame is the same drawing; {len(sh['cast']['keys'])} keys placed by eye over the silhouettes; Quick, Draw! scenery on planes sliding with the measured camera; cel from the silhouette.")
+            L.append({'id': sid3, 'lot': by[sid3]['lot'], 'title': cat.capitalize(), 'lane': 'gwp', 'kind': 'shot'})
         sid2 = f'{cat}-sam'
         if sid2 in by:
             sh = json.load(open(f'shots/{sid2}/shot.json'))

@@ -1,0 +1,19 @@
+{
+ "named_subject": "rabbit",
+ "second_guess": "hare",
+ "action": "A rabbit comes out from behind a wall at the left, turns to face right, sits hunched for several frames, then hops off the right edge of the frame.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  3,
+  7,
+  8
+ ],
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Frames 4 to 6 match the doodle: a mirrored side-view outline with two long pointed ears, an open back, and a front-leg notch. Frame 1 is a small frontal figure with flat ears, frame 2 puts the ears on the left side of a body that faces right, and frames 7 and 8 stretch the body and leave only loose, disconnected strokes at the right edge, so the doodle's outline is lost.",
+ "notes": "Position and facing follow the film in frames 3 to 6, but the scale jumps between frames 1 and 2 and again at 7, and the ears move from left to right between frames 2 and 3. The change that would help most is keeping the doodle's full side-view outline at a steady scale through the entrance and exit frames (1, 2, 7, 8), clipping it at the frame edge instead of reducing it to fragments.",
+ "_packet": "lotq7r2bx",
+ "_round": 1,
+ "_repair": "steady size; rabbit faces right from the start; exit keys carry it past the frame edge"
+}

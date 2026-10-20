@@ -56,6 +56,18 @@
    ]
   },
   {
+   "id": "M2b",
+   "name": "Likeness to the chosen doodle",
+   "cls": "measured",
+   "stage": 4,
+   "bar": "at least 0.5 (1 = the doodle's own stroke statistics)",
+   "how": "tools/gwp_tests.py: distance between the stroke statistics of each key and of the chosen doodle, in units of the category's spread, as exp(-RMS z).",
+   "status": "active",
+   "applies": [
+    "shot"
+   ]
+  },
+  {
    "id": "J4",
    "name": "Keeps the doodle's identity",
    "cls": "judged",

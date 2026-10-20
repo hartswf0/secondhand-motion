@@ -1,0 +1,104 @@
+[
+ {
+  "id": "M2",
+  "value": 17,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   13,
+   12,
+   28,
+   18,
+   23,
+   27,
+   31,
+   26,
+   16,
+   16,
+   17,
+   16,
+   16,
+   12,
+   5,
+   13,
+   10,
+   14,
+   15,
+   13
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.68,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 26
+ },
+ {
+  "id": "M3",
+  "value": 0.41,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.18
+ },
+ {
+  "id": "M6",
+  "value": 41.8,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "2 strokes, 43 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6204342979788800; scenery quickdraw:6144674190327808, drawn by agent: no Quick, Draw! category is a floor edge; two straight lines where the door meets the floor and the wall meets the floor, as Giraffe Walks Past drew its ground line",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "52/52",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201crabbit\u201d; motion broken; follows the film: yes",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/rabbit-gwp/reviews/critic-2.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The animated rabbit is a mirror of the doodle (faces right instead of left) and its body is rounder and more hunched than the doodle's long low body. The ears keep the doodle's two pointed loops, but they often cross the head line or float loose from it, which the doodle's single continuous outline does not do.",
+  "evidence": "shots/rabbit-gwp/reviews/critic-2.json"
+ }
+]

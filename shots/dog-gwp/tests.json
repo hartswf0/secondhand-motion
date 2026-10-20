@@ -1,0 +1,98 @@
+[
+ {
+  "id": "M2",
+  "value": 4,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   2,
+   5,
+   3,
+   5,
+   3,
+   6,
+   4,
+   3,
+   6,
+   6,
+   7,
+   3,
+   3,
+   5
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.7,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 7
+ },
+ {
+  "id": "M3",
+  "value": 0.41,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.12
+ },
+ {
+  "id": "M6",
+  "value": 30.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "12 strokes, 79 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6507786613555200; scenery quickdraw:4985860342677504, quickdraw:6034927747334144, quickdraw:5250178481127424, quickdraw:4775057639342080, drawn by agent: no Quick, Draw! category is a path edge; one straight line for the edge of the path the dog walks on",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "50/50",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cdog\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/dog-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "Frames 1, 2 and 6-8 keep the doodle's boxy head with an eye, long neck, rectangular body and separate straight-line legs, so they read as the same drawing. Frame 3 breaks the drawing apart (head detached at lower left, legs scattered) and frame 5 squashes the body into a short hunched shape that no longer matches the doodle's proportions.",
+  "evidence": "shots/dog-gwp/reviews/critic-1.json"
+ }
+]

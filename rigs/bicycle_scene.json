@@ -1,0 +1,144 @@
+{
+ "z_ref": 3,
+ "camera": {
+  "x": [
+   0.0,
+   -7.84,
+   -14.73,
+   -19.62,
+   -28.81,
+   -31.91,
+   -40.51,
+   -43.1,
+   -53.47,
+   -59.91,
+   -77.88,
+   -78.95,
+   -80.74,
+   -78.62,
+   -63.62,
+   -60.94,
+   -62.75,
+   -59.71,
+   -66.13,
+   -66.38,
+   -67.6
+  ],
+  "y": [
+   0.0,
+   -1.83,
+   -3.5,
+   -4.09,
+   -6.83,
+   -6.76,
+   -9.5,
+   -8.22,
+   -2.52,
+   -3.09,
+   -2.36,
+   4.42,
+   14.83,
+   19.72,
+   25.92,
+   22.28,
+   13.42,
+   8.08,
+   4.1,
+   6.31,
+   13.6
+  ],
+  "source": "phase correlation with the wheel masked out; the camera tracks the bicycle, so the ground slides left"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 5,
+   "label": "Bushes"
+  },
+  {
+   "id": "ground",
+   "z": 3,
+   "label": "Ground"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Bicycle"
+  }
+ ],
+ "objects": [
+  {
+   "id": "bush1",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    60,
+    -5,
+    190,
+    60
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "bush2",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    230,
+    0,
+    360,
+    55
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "bush3",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    400,
+    -5,
+    520,
+    58
+   ],
+   "strokes": 2,
+   "skip": 2
+  },
+  {
+   "id": "road",
+   "plane": "ground",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a road edge; one straight line along the far edge of the road",
+   "strokes": [
+    [
+     [
+      -60,
+      205
+     ],
+     [
+      560,
+      198
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "wheel2",
+   "plane": "ground",
+   "qd": "wheel",
+   "box": [
+    -90,
+    -10,
+    100,
+    150
+   ],
+   "strokes": 2
+  }
+ ],
+ "notes": {
+  "0": "rear wheel close up, rider pedalling",
+  "10": "the camera falls back a little",
+  "14": "wheel lower in frame"
+ }
+}
