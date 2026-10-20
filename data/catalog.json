@@ -1511,5 +1511,49 @@
    }
   },
   "href": "shots/fan/candidates.json"
+ },
+ {
+  "lot": "SM-0030",
+  "id": "production-workbench",
+  "kind": "dataset",
+  "title": "Production Workbench",
+  "lane": "data",
+  "stage": null,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "100 source candidates, 40 existing drawings and 66 timed reference photos. Plan the next 63 drawings; motion remains unapproved.",
+  "cover": "batches/2026-10-20-selected-drawings/selected-drawings-atlas.png",
+  "links": [
+   {
+    "label": "Open workbench",
+    "href": "production/index.html"
+   },
+   {
+    "label": "Frame plan",
+    "href": "production/data/frame-plan.json"
+   },
+   {
+    "label": "Worker contracts",
+    "href": "production/README.md"
+   }
+  ],
+  "metric": [
+   "100",
+   "review candidates"
+  ],
+  "tests": null,
+  "tags": [
+   "production",
+   "source pool",
+   "keyframes",
+   "coordination"
+  ],
+  "t": {
+   "pass": 0,
+   "fail": 0,
+   "total": 0
+  },
+  "r": {},
+  "href": "production/index.html"
  }
 ]

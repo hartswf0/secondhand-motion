@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "candidate_id": "015d2d81-d328-592c-8b82-ed667cb5376c",
+  "worker": "source-worker-01",
+  "stage": "source_review",
+  "passed": true,
+  "inspection_method": "Visual inspection of 16 timestamped stills in contact-sheets/source-worker-01-temporal.jpg; no video playback.",
+  "source_identity": {
+    "title": "[Amateur films: Ivan Besse collection: Britton, South Dakota 1938-39] (Part VI)",
+    "original_source_url": "https://archive.org/details/sIvanBes1938_6",
+    "clip_id": "015d2d81-d328-592c-8b82-ed667cb5376c",
+    "basis": "Identity and provenance read from the leased candidate claim; not independently authenticated."
+  },
+  "observations": [
+    "All sampled frames show a man in side profile holding a trumpet horizontally to his mouth. The bell, tubing, hands and head are recognizable enough for cartoon keydrawing references.",
+    "The sampled composition remains the same outdoor medium shot from 0.057 to 5.567 clip seconds. No scene transition is visible in the supplied samples.",
+    "The bell and hand silhouettes are readable; fine valve/finger detail is soft and hands partly overlap the tubing. Key drawings should preserve these visible contacts rather than invent hidden fingers."
+  ],
+  "proposed_interval": {
+    "time_basis": "clip_local_seconds",
+    "start_seconds": 0.425,
+    "end_seconds": 5.2,
+    "duration_seconds": 4.775,
+    "source_start_seconds": 647.105,
+    "source_end_seconds": 651.88,
+    "scene_boundaries": "Conservative interior interval within the same sampled shot. No cut is observed in the 16 samples; exact shot boundaries and events between samples are unverified.",
+    "purpose": "Cartoon keydrawing pose references of the performer and trumpet."
+  },
+  "limitations": [
+    "Only timestamped stills were inspected, approximately 0.367 seconds apart. No motion, temporal continuity between samples, audio, performance timing or motion quality is approved.",
+    "The claim lists local video and thumbnail paths that are not present relative to this project root; those files were not inspected.",
+    "Public-domain status is inherited metadata explicitly marked not independently audited; no rights audit performed."
+  ],
+  "motion_verified": false,
+  "train_eligible": false,
+  "source_refs": [
+    "data/claims/source-worker-01.json",
+    "https://archive.org/details/sIvanBes1938_6",
+    "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/b98499c1-3f20-5a93-81cc-1526199f601c/v3-ffmpeg-openclip-1/clips/015d2d81-d328-592c-8b82-ed667cb5376c.mp4"
+  ],
+  "evidence_refs": [
+    "reviews/source-worker-01.json",
+    "contact-sheets/source-worker-01-temporal.jpg"
+  ],
+  "issues": []
+}

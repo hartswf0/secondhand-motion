@@ -1,0 +1,49 @@
+100-CLIP REVIEW POOL
+
+10 existing accepted still-key intervals plus 90 provisional thumbnail/metadata candidates. This is not a best-100 ranking or approval of 100 videos.
+
+COUNTS
+{
+  "unique_clip_count": 100,
+  "source_count": 91,
+  "category_count": 100,
+  "status_counts": {
+    "accepted_still_keys": 10,
+    "provisionally_curated_thumbnail": 79,
+    "metadata_candidate": 11
+  },
+  "motion_domain_counts": {
+    "animal": 18,
+    "drawn_character": 1,
+    "environment": 7,
+    "food_plant": 10,
+    "household_objects": 21,
+    "human_body": 4,
+    "music": 8,
+    "tools_mechanisms": 19,
+    "vehicle": 12
+  },
+  "maximum_clips_per_source_film": 2,
+  "train_eligible_count": 0
+}
+
+INSPECTION
+One selection pass. Viewed 329 existing downloaded-video thumbnails in six contact sheets, one still per video, and four existing temporal-probe sheets covering 24 category rows at six sampled fractions. No new temporal samples or normal-speed playback. Positive judgments are limited to per-item inspection_notes. Proposed action families are review leads, not observed motion claims.
+
+INTERVALS
+Ten accepted still-key intervals copied verbatim from cartoon-repair-batch/data/curation.json. All 90 added candidates have null interval. Acceptance covers selected still keys only; all motion remains unreviewed.
+
+DEDUPLICATION
+One clip ID has one representative. category_aliases retain retrieval labels without semantic verification. The two ten-category duplicate groups remain once each in downloaded reserves with all aliases. Cat retains only its accepted interval; bird/owl and mixed-animal aliases are explicitly excluded from its representative. Bear alphabet-card and kangaroo/deer mismatches excluded in reserves.
+
+BALANCE AND AVAILABILITY
+Maximum two clips per source film. All selected clips have local video and thumbnail. Broad domains guide follow-up review.
+{
+  "local_video": 329,
+  "thumbnail_only": 632,
+  "metadata_only": 5391
+}
+The reserve manifest lists 229 other unique downloaded clips; full metadata remains in original CSV.
+
+REVIEW NEXT
+Inspect full local source, identify a continuous action interval, audit rights/provenance, check key poses and generated motion before training eligibility. Retrieval similarity is provenance only, never semantic confidence or quality.

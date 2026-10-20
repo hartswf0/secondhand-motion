@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:cartoon-archive-scale:work-item:1",
+  "title": "Claimed cartoon archive work item",
+  "description": "The work_item emitted by scripts/queue.py claim. A claim is not proof that a worker is running. Result definitions describe stage outputs; the SQLite coordinator enforces cross-job identity, dependency and reference checks.",
+  "type": "object",
+  "required": ["schema_version", "job_id", "candidate_id", "stage", "role", "worker", "token", "lease_until", "attempt", "budget", "input", "acceptance_contract", "evidence_contract", "worker_instruction"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "job_id": {"type": "string", "minLength": 1},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "stage": {"enum": ["source_review", "key_plan", "draw_keys", "key_review", "breakdowns", "motion_review", "publish_ready"]},
+    "role": {"enum": ["source_reviewer", "key_planner", "key_artist", "key_reviewer", "breakdown_artist", "motion_reviewer", "publisher"]},
+    "worker": {"type": "string", "minLength": 1},
+    "token": {"type": "string", "pattern": "^[0-9a-f]{32}$"},
+    "lease_until": {"type": "number", "description": "Unix seconds; completion at or after expiry is rejected."},
+    "attempt": {"type": "integer", "minimum": 1},
+    "budget": {
+      "type": "object", "required": ["max_attempts", "repairs", "max_repairs"],
+      "properties": {"max_attempts": {"type": "integer", "minimum": 1}, "repairs": {"type": "integer", "minimum": 0}, "max_repairs": {"type": "integer", "minimum": 0}}
+    },
+    "input": {
+      "type": "object", "required": ["candidate", "source_refs", "prior_results", "repair_feedback"],
+      "properties": {
+        "candidate": {"type": "object", "description": "Untrusted selection metadata, never an approval."},
+        "source_refs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "prior_results": {"type": "object", "additionalProperties": {"type": "object", "required": ["completed_by", "result"], "properties": {"completed_by": {"type": "string"}, "result": {"type": "object"}}}},
+        "repair_feedback": {"type": ["string", "null"], "description": "JSON-encoded failing review and superseded results, or operator/expiry message."}
+      }
+    },
+    "acceptance_contract": {"type": "string", "minLength": 1},
+    "evidence_contract": {"type": "string", "minLength": 1},
+    "worker_instruction": {"type": "string", "minLength": 1}
+  },
+  "allOf": [
+    {"if": {"properties": {"stage": {"const": "source_review"}}}, "then": {"properties": {"role": {"const": "source_reviewer"}}}},
+    {"if": {"properties": {"stage": {"const": "key_plan"}}}, "then": {"properties": {"role": {"const": "key_planner"}}}},
+    {"if": {"properties": {"stage": {"const": "draw_keys"}}}, "then": {"properties": {"role": {"const": "key_artist"}}}},
+    {"if": {"properties": {"stage": {"const": "key_review"}}}, "then": {"properties": {"role": {"const": "key_reviewer"}}}},
+    {"if": {"properties": {"stage": {"const": "breakdowns"}}}, "then": {"properties": {"role": {"const": "breakdown_artist"}}}},
+    {"if": {"properties": {"stage": {"const": "motion_review"}}}, "then": {"properties": {"role": {"const": "motion_reviewer"}}}},
+    {"if": {"properties": {"stage": {"const": "publish_ready"}}}, "then": {"properties": {"role": {"const": "publisher"}}}}
+  ],
+  "$defs": {
+    "refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "failed_review": {
+      "type": "object", "required": ["passed", "issues", "evidence_refs"],
+      "properties": {"passed": {"const": false}, "issues": {"$ref": "#/$defs/refs"}, "evidence_refs": {"$ref": "#/$defs/refs"}}
+    },
+    "source_review_result": {
+      "oneOf": [
+        {"$ref": "#/$defs/failed_review"},
+        {"type": "object", "required": ["passed", "source_refs", "evidence_refs"], "properties": {"passed": {"const": true}, "source_refs": {"$ref": "#/$defs/refs"}, "evidence_refs": {"$ref": "#/$defs/refs"}}}
+      ]
+    },
+    "key_plan_result": {
+      "type": "object", "required": ["artifact_refs", "planned_keys"],
+      "properties": {
+        "artifact_refs": {"$ref": "#/$defs/refs"},
+        "planned_keys": {"type": "array", "minItems": 2, "items": {"type": "object", "required": ["id", "time", "pose"], "properties": {"id": {"type": "string", "minLength": 1}, "time": {"type": "number"}, "pose": {"type": "string", "minLength": 1}}}}
+      }
+    },
+    "draw_keys_result": {
+      "type": "object", "required": ["artifact_refs", "key_artifacts"],
+      "properties": {"artifact_refs": {"$ref": "#/$defs/refs"}, "key_artifacts": {"type": "object", "minProperties": 2, "additionalProperties": {"type": "string", "minLength": 1}}}
+    },
+    "key_review_pass": {
+      "type": "object", "required": ["passed", "reviewed_artifact_refs", "evidence_refs"],
+      "properties": {"passed": {"const": true}, "reviewed_artifact_refs": {"$ref": "#/$defs/refs"}, "evidence_refs": {"$ref": "#/$defs/refs"}}
+    },
+    "key_review_result": {"oneOf": [{"$ref": "#/$defs/failed_review"}, {"$ref": "#/$defs/key_review_pass"}]},
+    "breakdowns_result": {
+      "type": "object", "required": ["artifact_refs", "playback_ref"],
+      "properties": {"artifact_refs": {"$ref": "#/$defs/refs"}, "playback_ref": {"type": "string", "minLength": 1}}
+    },
+    "motion_review_result": {
+      "oneOf": [
+        {"$ref": "#/$defs/failed_review"},
+        {"allOf": [{"$ref": "#/$defs/key_review_pass"}, {"type": "object", "required": ["playback_inspected", "playback_ref"], "properties": {"playback_inspected": {"const": true}, "playback_ref": {"type": "string", "minLength": 1}}}]}
+      ]
+    },
+    "publish_ready_result": {
+      "type": "object", "required": ["artifact_refs", "source_refs"],
+      "properties": {"artifact_refs": {"$ref": "#/$defs/refs"}, "source_refs": {"$ref": "#/$defs/refs"}}
+    }
+  }
+}

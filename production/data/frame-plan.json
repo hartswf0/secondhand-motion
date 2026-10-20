@@ -1,0 +1,664 @@
+{
+  "schema_version": 1,
+  "status": "planning_only_not_newly_approved_art",
+  "scope": "Event-driven frame plan for the current ten curated clips, based on local material; no art generated, training performed or acceptance status promoted.",
+  "time_semantics": {
+    "unit": "seconds",
+    "all_key_and_candidate_timestamps": "Relative to the downloaded archive clip origin, matching subjects/*/source.json key_times. These are not excerpt-relative times.",
+    "excerpt_time_formula": "excerpt_t = proposed_clip_t - curated_clip_relative_interval_seconds[0]",
+    "archive_time_formula": "archive_t = source_archive_start_seconds + proposed_clip_t",
+    "interval_convention": "[start, end), matching curation; all proposed times lie inside the existing curated interval.",
+    "precision": "Candidate timestamp labels bracket visible events; snap to decoded source frames and confirm ordering/contact before authoring. Decimal precision is not artistic certainty."
+  },
+  "budget_definitions": {
+    "authored_pose_keys": "Existing four accepted still-key drawings plus proposed new action/view/contact anchors.",
+    "breakdowns": "Separately budgeted authored transition drawings for arcs, attachment and overlap; not automatically approved and not included in target_pose_key_count.",
+    "procedural_samples": "Timing/angle checks or rendered transformations; do not count as new authored drawings.",
+    "delivery_frames": "Rendered samples at a chosen delivery rate, including holds, rigs, procedural transforms and possible inbetweens. Frame count is not drawing count.",
+    "uncertainty": "Counts are bounded first-pass production allocations, not measured minimums or quality predictions. Playback can require more or fewer drawings; the 100-clip arithmetic assumes the same complexity mix, not an archive-wide estimate."
+  },
+  "items": [
+    {
+      "category": "rabbit",
+      "clip_id": "16866ed1-bc06-5d59-a8fe-81d8665d0d75",
+      "selected_revision_preserved": "v2",
+      "curated_clip_relative_interval_seconds": [
+        4.8,
+        9.1
+      ],
+      "source_archive_start_seconds": 575.809,
+      "accepted_key_count": 4,
+      "accepted_key_times_seconds": [
+        4.8,
+        5.8,
+        7.0,
+        8.8
+      ],
+      "accepted_evidence": {
+        "curation": "cartoon-repair-batch/data/curation.json",
+        "review": "cartoon-repair-batch/reviews/rabbit-v2.json",
+        "acceptance_scope": "stills only; existing motion_bar is unreviewed"
+      },
+      "proposed_additional_source_timestamps_seconds": [
+        5.15,
+        5.5,
+        6.2,
+        8.15,
+        8.4,
+        9.0
+      ],
+      "proposed_additional_pose_key_count": 6,
+      "target_pose_key_count": 10,
+      "required_breakdown_budget": {
+        "authored_drawing_count": 4,
+        "candidate_source_timestamps_seconds": [
+          5.32,
+          5.65,
+          8.28,
+          8.62
+        ],
+        "status": "planning allowance to author and review; refine at exact source-frame and playback inspection; excluded from pose-key target"
+      },
+      "proposed_procedural_phase_check_timestamps_seconds": [],
+      "procedural_guidance": [],
+      "representation": "Free redraw at landing, body turn and launch; use a small ear/eye rig only within compatible views.",
+      "main_missing_transitions_contact_occlusion": [
+        "Doorway emergence to forepaw landing: preserve foot placement and body compression.",
+        "Frontal landing to right-facing crouch requires silhouette and ear overlap changes.",
+        "Late crouch to stretched launch and frame exit needs push-off, airborne arc and crop continuity."
+      ],
+      "visual_evidence": {
+        "grid": "cartoon-repair-batch/subjects/rabbit/source-keys.png",
+        "excerpt": "cartoon-repair-batch/subjects/rabbit/source-excerpt.mp4",
+        "inspection": "Existing four source keys plus in-memory temporal samples; no full normal-speed playback in this planning pass.",
+        "observations": "Twelve sampled excerpt frames show emergence near 5.16, front landing near 5.52, right-facing settle by 6.23, and launch between 8.02 and 8.74."
+      },
+      "delivery_frame_budget_12fps": 52,
+      "status": "planning_only_not_newly_approved_art",
+      "motion_bar": "unreviewed",
+      "train_eligible": false
+    },
+    {
+      "category": "duck",
+      "clip_id": "86807f62-9963-588f-a7b2-c9a535b6b336",
+      "selected_revision_preserved": "v2",
+      "curated_clip_relative_interval_seconds": [
+        0.1,
+        4.05
+      ],
+      "source_archive_start_seconds": 192.259,
+      "accepted_key_count": 4,
+      "accepted_key_times_seconds": [
+        0.1,
+        1.1,
+        2.2,
+        3.8
+      ],
+      "accepted_evidence": {
+        "curation": "cartoon-repair-batch/data/curation.json",
+        "review": "cartoon-repair-batch/reviews/duck-v2.json",
+        "acceptance_scope": "stills only; existing motion_bar is unreviewed"
+      },
+      "proposed_additional_source_timestamps_seconds": [
+        0.55,
+        1.65,
+        2.8,
+        4.0
+      ],
+      "proposed_additional_pose_key_count": 4,
+      "target_pose_key_count": 8,
+      "required_breakdown_budget": {
+        "authored_drawing_count": 2,
+        "candidate_source_timestamps_seconds": [
+          0.85,
+          3.3
+        ],
+        "status": "planning allowance to author and review; refine at exact source-frame and playback inspection; excluded from pose-key target"
+      },
+      "proposed_procedural_phase_check_timestamps_seconds": [],
+      "procedural_guidance": [],
+      "representation": "Part rig for planted torso, wings and feet; free redraw of bill/head foreshortening and mouth shapes.",
+      "main_missing_transitions_contact_occlusion": [
+        "Side bill to frontal bill transition must rotate the head volume.",
+        "Bill opening/closing and throat movement need timing checks; maintain both feet on the same ground plane."
+      ],
+      "visual_evidence": {
+        "grid": "cartoon-repair-batch/subjects/duck/source-keys.png",
+        "excerpt": "cartoon-repair-batch/subjects/duck/source-excerpt.mp4",
+        "inspection": "Existing four source keys plus in-memory temporal samples; no full normal-speed playback in this planning pass.",
+        "observations": "Eight excerpt samples show a planted figure, side-to-frontal head change and changing open bill/throat shapes."
+      },
+      "delivery_frame_budget_12fps": 48,
+      "status": "planning_only_not_newly_approved_art",
+      "motion_bar": "unreviewed",
+      "train_eligible": false
+    },
+    {
+      "category": "horse",
+      "clip_id": "fd0a7bab-8330-57e5-8c1b-5943070d0605",
+      "selected_revision_preserved": "v2",
+      "curated_clip_relative_interval_seconds": [
+        4.3,
+        8.0
+      ],
+      "source_archive_start_seconds": 292.926,
+      "accepted_key_count": 4,
+      "accepted_key_times_seconds": [
+        4.3,
+        5.5,
+        6.4,
+        7.5
+      ],
+      "accepted_evidence": {
+        "curation": "cartoon-repair-batch/data/curation.json",
+        "review": "cartoon-repair-batch/reviews/horse-v2.json",
+        "acceptance_scope": "stills only; existing motion_bar is unreviewed"
+      },
+      "proposed_additional_source_timestamps_seconds": [
+        4.9,
+        5.9,
+        6.8,
+        7.15,
+        7.85
+      ],
+      "proposed_additional_pose_key_count": 5,
+      "target_pose_key_count": 9,
+      "required_breakdown_budget": {
+        "authored_drawing_count": 4,
+        "candidate_source_timestamps_seconds": [
+          5.15,
+          6.15,
+          6.6,
+          7.3
+        ],
+        "status": "planning allowance to author and review; refine at exact source-frame and playback inspection; excluded from pose-key target"
+      },
+      "proposed_procedural_phase_check_timestamps_seconds": [],
+      "procedural_guidance": [],
+      "representation": "Free redraw head/neck at turn and descent; separate static rail masks and hay/contact layer; limited compatible-view part rig.",
+      "main_missing_transitions_contact_occlusion": [
+        "Frontal head to three-quarter descent changes muzzle and eye overlap.",
+        "Head and muzzle must pass behind the correct foreground rails.",
+        "Approach to hay needs a readable contact/near-contact pose without sliding through the rail."
+      ],
+      "visual_evidence": {
+        "grid": "cartoon-repair-batch/subjects/horse/source-keys.png",
+        "excerpt": "cartoon-repair-batch/subjects/horse/source-excerpt.mp4",
+        "inspection": "Existing four source keys plus in-memory temporal samples; no full normal-speed playback in this planning pass.",
+        "observations": "Twelve excerpt samples show frontal head, sideward lowering around 5.84\u20136.46 and muzzle descending behind foreground rails toward hay around 6.77\u20137.69."
+      },
+      "delivery_frame_budget_12fps": 45,
+      "status": "planning_only_not_newly_approved_art",
+      "motion_bar": "unreviewed",
+      "train_eligible": false
+    },
+    {
+      "category": "dog",
+      "clip_id": "2fdacde1-8a23-58e1-b905-5407385bd039",
+      "selected_revision_preserved": "v2",
+      "curated_clip_relative_interval_seconds": [
+        0.2,
+        4.3
+      ],
+      "source_archive_start_seconds": 225.559,
+      "accepted_key_count": 4,
+      "accepted_key_times_seconds": [
+        0.2,
+        1.4,
+        2.8,
+        4.0
+      ],
+      "accepted_evidence": {
+        "curation": "cartoon-repair-batch/data/curation.json",
+        "review": "cartoon-repair-batch/reviews/dog-v2.json",
+        "acceptance_scope": "stills only; existing motion_bar is unreviewed"
+      },
+      "proposed_additional_source_timestamps_seconds": [
+        0.65,
+        1.95,
+        2.4,
+        3.35,
+        4.2
+      ],
+      "proposed_additional_pose_key_count": 5,
+      "target_pose_key_count": 9,
+      "required_breakdown_budget": {
+        "authored_drawing_count": 4,
+        "candidate_source_timestamps_seconds": [
+          0.95,
+          1.65,
+          3.05,
+          3.7
+        ],
+        "status": "planning allowance to author and review; refine at exact source-frame and playback inspection; excluded from pose-key target"
+      },
+      "proposed_procedural_phase_check_timestamps_seconds": [],
+      "procedural_guidance": [],
+      "representation": "Free redraw for rear-to-front/body turn and leg overlap changes; part rig only for short compatible-view arcs.",
+      "main_missing_transitions_contact_occlusion": [
+        "Rear/left approach to camera-facing approach requires whole-body turn.",
+        "Alternating support legs and ground contacts need gait breakdowns.",
+        "Late approach beside the bowl needs stable foot support and changing leg occlusion."
+      ],
+      "visual_evidence": {
+        "grid": "cartoon-repair-batch/subjects/dog/source-keys.png",
+        "excerpt": "cartoon-repair-batch/subjects/dog/source-excerpt.mp4",
+        "inspection": "Existing four source keys plus in-memory temporal samples; no full normal-speed playback in this planning pass.",
+        "observations": "Eight excerpt samples show rear/left pose near the person, approach toward camera, then lowering/turning beside the bowl. Bowl contact is not established by this sample review."
+      },
+      "delivery_frame_budget_12fps": 50,
+      "status": "planning_only_not_newly_approved_art",
+      "motion_bar": "unreviewed",
+      "train_eligible": false
+    },
+    {
+      "category": "cat",
+      "clip_id": "ccf4e561-d837-5b58-845e-c4b5414938bb",
+      "selected_revision_preserved": "v2",
+      "curated_clip_relative_interval_seconds": [
+        10.4,
+        15.55
+      ],
+      "source_archive_start_seconds": 995.796,
+      "accepted_key_count": 4,
+      "accepted_key_times_seconds": [
+        10.4,
+        12.2,
+        14.0,
+        15.3
+      ],
+      "accepted_evidence": {
+        "curation": "cartoon-repair-batch/data/curation.json",
+        "review": "cartoon-repair-batch/reviews/cat-v2.json",
+        "acceptance_scope": "stills only; existing motion_bar is unreviewed"
+      },
+      "proposed_additional_source_timestamps_seconds": [
+        14.55,
+        14.85,
+        15.1,
+        15.5
+      ],
+      "proposed_additional_pose_key_count": 4,
+      "target_pose_key_count": 8,
+      "required_breakdown_budget": {
+        "authored_drawing_count": 2,
+        "candidate_source_timestamps_seconds": [
+          14.4,
+          15.0
+        ],
+        "status": "planning allowance to author and review; refine at exact source-frame and playback inspection; excluded from pose-key target"
+      },
+      "proposed_procedural_phase_check_timestamps_seconds": [],
+      "procedural_guidance": [],
+      "representation": "Hold/part rig during the stable gaze; free redraw skull and muzzle for the late turn, with ear/eye overlap swaps.",
+      "main_missing_transitions_contact_occlusion": [
+        "Most early footage is a stable gaze and does not need evenly spaced new drawings.",
+        "Concentrate keys at late skull turn, eyelid change and far-eye/muzzle occlusion."
+      ],
+      "visual_evidence": {
+        "grid": "cartoon-repair-batch/subjects/cat/source-keys.png",
+        "excerpt": "cartoon-repair-batch/subjects/cat/source-excerpt.mp4",
+        "inspection": "Existing four source keys plus in-memory temporal samples; no full normal-speed playback in this planning pass.",
+        "observations": "Eight excerpt samples are nearly stable through 14.26, with a strong turn visible by 14.91; late additions are candidate event brackets."
+      },
+      "delivery_frame_budget_12fps": 62,
+      "status": "planning_only_not_newly_approved_art",
+      "motion_bar": "unreviewed",
+      "train_eligible": false
+    },
+    {
+      "category": "butterfly",
+      "clip_id": "810c95a2-7992-5461-9171-49a32c354cb8",
+      "selected_revision_preserved": "v3",
+      "curated_clip_relative_interval_seconds": [
+        9.2,
+        15.7
+      ],
+      "source_archive_start_seconds": 180.914,
+      "accepted_key_count": 4,
+      "accepted_key_times_seconds": [
+        9.2,
+        10.8,
+        12.6,
+        15.4
+      ],
+      "accepted_evidence": {
+        "curation": "cartoon-repair-batch/data/curation.json",
+        "review": "cartoon-repair-batch/reviews/butterfly-v3.json",
+        "acceptance_scope": "stills only; existing motion_bar is unreviewed"
+      },
+      "proposed_additional_source_timestamps_seconds": [
+        11.7,
+        13.65,
+        15.6
+      ],
+      "proposed_additional_pose_key_count": 3,
+      "target_pose_key_count": 7,
+      "required_breakdown_budget": {
+        "authored_drawing_count": 2,
+        "candidate_source_timestamps_seconds": [
+          12.1,
+          14.0
+        ],
+        "status": "planning allowance to author and review; refine at exact source-frame and playback inspection; excluded from pose-key target"
+      },
+      "proposed_procedural_phase_check_timestamps_seconds": [],
+      "procedural_guidance": [],
+      "representation": "Part rig for hand and attached butterfly with free redraw when folded-wing profile or hand overlap changes.",
+      "main_missing_transitions_contact_occlusion": [
+        "Fingertip attachment must stay locked while hand orientation changes.",
+        "Folded wing profile changes and finger/wing overlap need view-specific contours.",
+        "Do not invent a full wing-spread or flapping cycle unsupported by these frames."
+      ],
+      "visual_evidence": {
+        "grid": "cartoon-repair-batch/subjects/butterfly/source-keys.png",
+        "excerpt": "cartoon-repair-batch/subjects/butterfly/source-excerpt.mp4",
+        "inspection": "Existing four source keys plus in-memory temporal samples; no full normal-speed playback in this planning pass.",
+        "observations": "Eight excerpt samples show a perched butterfly with folded wings; the hand rotates and lifts, changing silhouette rather than showing full wing flaps."
+      },
+      "delivery_frame_budget_12fps": 78,
+      "status": "planning_only_not_newly_approved_art",
+      "motion_bar": "unreviewed",
+      "train_eligible": false
+    },
+    {
+      "category": "bicycle",
+      "clip_id": "e31c97d5-19c1-5017-a28a-7eaf9c994a34",
+      "selected_revision_preserved": "v2",
+      "curated_clip_relative_interval_seconds": [
+        1.9,
+        3.6
+      ],
+      "source_archive_start_seconds": 626.994,
+      "accepted_key_count": 4,
+      "accepted_key_times_seconds": [
+        1.9,
+        2.4,
+        2.9,
+        3.4
+      ],
+      "accepted_evidence": {
+        "curation": "cartoon-repair-batch/data/curation.json",
+        "review": "cartoon-repair-batch/reviews/bicycle-v2.json",
+        "acceptance_scope": "stills only; existing motion_bar is unreviewed"
+      },
+      "proposed_additional_source_timestamps_seconds": [
+        2.15,
+        2.65,
+        3.15,
+        3.55
+      ],
+      "proposed_additional_pose_key_count": 4,
+      "target_pose_key_count": 8,
+      "required_breakdown_budget": {
+        "authored_drawing_count": 2,
+        "candidate_source_timestamps_seconds": [
+          2.53,
+          3.03
+        ],
+        "status": "planning allowance to author and review; refine at exact source-frame and playback inspection; excluded from pose-key target"
+      },
+      "proposed_procedural_phase_check_timestamps_seconds": [],
+      "procedural_guidance": [
+        "Track both wheel hubs, wheel radius, crop and ground trajectory; fit angular phase from source, not a guessed revolution per clip.",
+        "Drive crank and leg cycle from measured source phase; wheels and crank need not share one angular speed."
+      ],
+      "representation": "Rigid procedural wheel rotation and tracked frame translation; articulated crank/leg rig with free redraw at leg overlap and crop changes.",
+      "main_missing_transitions_contact_occlusion": [
+        "Pedal/crank and shoe connection must stay attached through the cycle.",
+        "Near/far leg and frame occlusion changes need explicit pose ownership.",
+        "Preserve the later lower/front-wheel crop and wheel-ground relationship."
+      ],
+      "visual_evidence": {
+        "grid": "cartoon-repair-batch/subjects/bicycle/source-keys.png",
+        "excerpt": "cartoon-repair-batch/subjects/bicycle/source-excerpt.mp4",
+        "inspection": "Existing four source keys plus in-memory temporal samples; no full normal-speed playback in this planning pass.",
+        "observations": "Twelve excerpt samples show a repeating pedal cycle, rigid bicycle structure and changing lower/front-wheel crop. Wheel speed/phase still needs measurement."
+      },
+      "delivery_frame_budget_12fps": 21,
+      "status": "planning_only_not_newly_approved_art",
+      "motion_bar": "unreviewed",
+      "train_eligible": false
+    },
+    {
+      "category": "windmill",
+      "clip_id": "2cefc97c-12b2-5141-ae30-570c652db9f0",
+      "selected_revision_preserved": "v2",
+      "curated_clip_relative_interval_seconds": [
+        0.3,
+        4.8
+      ],
+      "source_archive_start_seconds": 558.425,
+      "accepted_key_count": 4,
+      "accepted_key_times_seconds": [
+        0.3,
+        1.6,
+        3.0,
+        4.4
+      ],
+      "accepted_evidence": {
+        "curation": "cartoon-repair-batch/data/curation.json",
+        "review": "cartoon-repair-batch/reviews/windmill-v2.json",
+        "acceptance_scope": "stills only; existing motion_bar is unreviewed"
+      },
+      "proposed_additional_source_timestamps_seconds": [],
+      "proposed_additional_pose_key_count": 0,
+      "target_pose_key_count": 4,
+      "required_breakdown_budget": {
+        "authored_drawing_count": 0,
+        "candidate_source_timestamps_seconds": [],
+        "status": "planning allowance to author and review; refine at exact source-frame and playback inspection; excluded from pose-key target"
+      },
+      "proposed_procedural_phase_check_timestamps_seconds": [
+        0.95,
+        3.7,
+        4.7
+      ],
+      "procedural_guidance": [
+        "Use the four accepted time/phase anchors plus three proposed checks to unwrap rotation consistently.",
+        "Do not assume the four visually similar sails identify a full revolution; resolve phase aliasing in playback.",
+        "One reusable rotor asset is an implementation/setup task, not a new authored key for each delivered rotor angle."
+      ],
+      "representation": "Rigid procedural rotation of one four-sail assembly around a fixed hub, with static tower and foreground foliage masks.",
+      "main_missing_transitions_contact_occlusion": [
+        "Continuous angle/phase between the four accepted poses.",
+        "Correct hub pivot, sail spacing and occlusion by tower/foliage.",
+        "No new whole-pose drawings are budgeted merely to represent intermediate rotor angles."
+      ],
+      "visual_evidence": {
+        "grid": "cartoon-repair-batch/subjects/windmill/source-keys.png",
+        "excerpt": "cartoon-repair-batch/subjects/windmill/source-excerpt.mp4",
+        "inspection": "Existing four source keys plus in-memory temporal samples; no full normal-speed playback in this planning pass.",
+        "observations": "Twelve excerpt samples show a fixed view/tower and monotonic four-sail rotation; no new body view is evident."
+      },
+      "delivery_frame_budget_12fps": 54,
+      "status": "planning_only_not_newly_approved_art",
+      "motion_bar": "unreviewed",
+      "train_eligible": false
+    },
+    {
+      "category": "helicopter",
+      "clip_id": "4457b8b4-fe41-5266-9505-5f55f3124344",
+      "selected_revision_preserved": "v2",
+      "curated_clip_relative_interval_seconds": [
+        0.2,
+        4.0
+      ],
+      "source_archive_start_seconds": 700.4,
+      "accepted_key_count": 4,
+      "accepted_key_times_seconds": [
+        0.2,
+        1.4,
+        2.6,
+        3.8
+      ],
+      "accepted_evidence": {
+        "curation": "cartoon-repair-batch/data/curation.json",
+        "review": "cartoon-repair-batch/reviews/helicopter-v2.json",
+        "acceptance_scope": "stills only; existing motion_bar is unreviewed"
+      },
+      "proposed_additional_source_timestamps_seconds": [
+        0.8,
+        1.9,
+        3.25,
+        3.95
+      ],
+      "proposed_additional_pose_key_count": 4,
+      "target_pose_key_count": 8,
+      "required_breakdown_budget": {
+        "authored_drawing_count": 2,
+        "candidate_source_timestamps_seconds": [
+          1.65,
+          2.2
+        ],
+        "status": "planning allowance to author and review; refine at exact source-frame and playback inspection; excluded from pose-key target"
+      },
+      "proposed_procedural_phase_check_timestamps_seconds": [],
+      "procedural_guidance": [
+        "Measure rotor blur envelope/orientation from source and review temporal aliasing; do not claim a physical RPM from sparse stills."
+      ],
+      "representation": "Tracked body translation/scale with view-specific redraw around close-pass perspective/crop; procedural rotor blur/phase layer.",
+      "main_missing_transitions_contact_occlusion": [
+        "Close pass and right-edge crop before recession need explicit framing anchors.",
+        "Body perspective and skid/tail proportions must change with view, without rubber scaling.",
+        "Rotor appearance must avoid backward/stepped aliasing; source blur may be more faithful than crisp blades."
+      ],
+      "visual_evidence": {
+        "grid": "cartoon-repair-batch/subjects/helicopter/source-keys.png",
+        "excerpt": "cartoon-repair-batch/subjects/helicopter/source-excerpt.mp4",
+        "inspection": "Existing four source keys plus in-memory temporal samples; no full normal-speed playback in this planning pass.",
+        "observations": "Eight excerpt samples show close pass near 1.62\u20132.10 followed by recession. Rotor blur is visible; individual blade phase cannot be inferred reliably from sparse grids."
+      },
+      "delivery_frame_budget_12fps": 46,
+      "status": "planning_only_not_newly_approved_art",
+      "motion_bar": "unreviewed",
+      "train_eligible": false
+    },
+    {
+      "category": "giraffe",
+      "clip_id": "06eba2e3-edcf-5406-a69a-5aab2d02de33",
+      "selected_revision_preserved": "v3",
+      "curated_clip_relative_interval_seconds": [
+        0,
+        1.4
+      ],
+      "source_archive_start_seconds": 326.493,
+      "accepted_key_count": 4,
+      "accepted_key_times_seconds": [
+        0,
+        0.3,
+        0.7,
+        1.2
+      ],
+      "accepted_evidence": {
+        "curation": "cartoon-repair-batch/data/curation.json",
+        "review": "cartoon-repair-batch/reviews/giraffe-v3.json",
+        "acceptance_scope": "stills only; existing motion_bar is unreviewed"
+      },
+      "proposed_additional_source_timestamps_seconds": [
+        0.15,
+        0.5,
+        0.95,
+        1.35
+      ],
+      "proposed_additional_pose_key_count": 4,
+      "target_pose_key_count": 8,
+      "required_breakdown_budget": {
+        "authored_drawing_count": 2,
+        "candidate_source_timestamps_seconds": [
+          0.4,
+          1.1
+        ],
+        "status": "planning allowance to author and review; refine at exact source-frame and playback inspection; excluded from pose-key target"
+      },
+      "proposed_procedural_phase_check_timestamps_seconds": [],
+      "procedural_guidance": [],
+      "representation": "Free redraw skull turn and muzzle depth/overlap; limited jaw/ear rig within each compatible skull view.",
+      "main_missing_transitions_contact_occlusion": [
+        "Carried still acceptance does not solve the understated whole-skull turn.",
+        "Jaw opening/closure must follow head volume and near/far muzzle overlap.",
+        "Ear and ossicone positions must rotate with the skull."
+      ],
+      "visual_evidence": {
+        "grid": "cartoon-repair-batch/subjects/giraffe/source-keys.png",
+        "excerpt": "cartoon-repair-batch/subjects/giraffe/source-excerpt.mp4",
+        "inspection": "Existing four source keys plus in-memory temporal samples; no full normal-speed playback in this planning pass.",
+        "observations": "Eight excerpt samples show open jaw by about 0.35\u20130.52, closure around 0.70\u20130.88 and reopening near 1.22; the skull also changes orientation."
+      },
+      "delivery_frame_budget_12fps": 17,
+      "status": "planning_only_not_newly_approved_art",
+      "motion_bar": "unreviewed",
+      "train_eligible": false
+    }
+  ],
+  "current_ten_totals": {
+    "clip_count": 10,
+    "duration_seconds": 39.1,
+    "accepted_pose_key_drawings": 40,
+    "proposed_additional_pose_key_drawings": 39,
+    "target_pose_key_drawings": 79,
+    "required_breakdown_drawing_budget": 24,
+    "proposed_new_authored_drawings_including_breakdowns": 63,
+    "total_authored_drawing_budget_including_existing": 103,
+    "additional_procedural_phase_check_timestamps": 3,
+    "proposed_additional_pose_or_phase_timestamps": 42,
+    "delivery_fps_assumption": 12,
+    "delivery_frames": 473,
+    "delivery_frame_calculation": "sum per clip ceil((interval_end - interval_start) * 12); do not round duration before multiplying.",
+    "inbetween_frame_count": "Not determined by subtracting drawing counts: authored timings need not land on unique delivery samples, and holds/rig/procedural samples are not authored inbetweens."
+  },
+  "hundred_clip_scenarios": [
+    {
+      "name": "Actual current accepted art to 100 clips at the same complexity mix",
+      "assumption": "Only the current 40 accepted pose-key drawings exist. The additional 90 clips and their art are hypothetical and uncurated; no new art has been produced by this plan.",
+      "clip_count": 100,
+      "actual_current_accepted_pose_key_drawings": 40,
+      "target_pose_key_drawings": 790,
+      "additional_pose_key_drawings_needed_from_actual_current": 750,
+      "required_breakdown_drawing_budget": 240,
+      "additional_authored_drawings_needed_from_actual_current": 990,
+      "total_authored_drawing_budget_including_actual_current": 1030,
+      "procedural_phase_check_timestamps": 30,
+      "duration_seconds": 391,
+      "delivery_frames_12fps": 4730,
+      "calculation": "100-clip target pose drawings 10*79=790; only40 accepted drawings actually exist, so790-40=750 additional pose drawings; add240 breakdown drawings:750+240=990 new authored drawings;40+990=1030 total. Procedural phase checks and4730 rendered frames are separate from authored drawings."
+    },
+    {
+      "name": "Hypothetical fully seeded 100 clips: four accepted poses already supplied for each clip",
+      "assumption": "Hypothetical only: assumes400 accepted drawings, but only40 actually exist today. This scenario understates work remaining from the actual current state and must not be used as the actual-current remaining budget.",
+      "clip_count": 100,
+      "assumed_existing_accepted_pose_key_drawings": 400,
+      "proposed_additional_pose_key_drawings": 390,
+      "target_pose_key_drawings": 790,
+      "required_breakdown_drawing_budget": 240,
+      "proposed_new_authored_drawings_including_breakdowns": 630,
+      "total_authored_drawing_budget_including_existing": 1030,
+      "procedural_phase_check_timestamps": 30,
+      "duration_seconds": 391,
+      "delivery_frames_12fps": 4730,
+      "calculation": "Pose keys 10*79=790, including 10*40=400 assumed accepted and 10*39=390 new; breakdowns 10*24=240; new authoring 390+240=630; total authoring 790+240=1030; rendered frames 10*473=4730."
+    },
+    {
+      "name": "Greenfield 100 clips at the same mix",
+      "assumption": "No preaccepted drawings; author all target poses and breakdowns.",
+      "authored_pose_key_drawings": 790,
+      "authored_breakdown_drawing_budget": 240,
+      "total_new_authored_drawing_budget": 1030,
+      "delivery_frames_12fps": 4730,
+      "calculation": "790 new pose-key drawings + 240 breakdown drawings = 1030 new authored drawings; 4730 delivery frames is separate."
+    }
+  ],
+  "quality_gates": {
+    "stills": [
+      "Preserve accepted four key times, selected drawing identity and source-event/crop relation.",
+      "Review every new pose and breakdown against source: contour/volume, contact, near/far overlap and masking.",
+      "New art remains proposed until independent still review passes; current still acceptance does not establish motion quality."
+    ],
+    "playback": [
+      "Inspect source and candidate at normal speed and slow/stepped playback over the full curated interval.",
+      "Check event order, acceleration/settle, arcs, foot/pedal/fingertip attachment, occlusion continuity, cropping and temporal line stability.",
+      "Check procedural rotation phase/direction and aliasing, hub stability and masks.",
+      "Only after playback review and any repairs may motion_bar change; training eligibility requires its own gate."
+    ]
+  }
+}

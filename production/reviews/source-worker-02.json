@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "candidate_id": "06eba2e3-edcf-5406-a69a-5aab2d02de33",
+  "stage": "source_review",
+  "reviewer": "source-worker-02",
+  "passed": true,
+  "approval_scope": "Limited source suitability from inspected still samples for the existing [0, 1.4) seconds interval only; no motion approval.",
+  "interval": [
+    0,
+    1.4
+  ],
+  "interval_coordinate_system": "seconds_relative_to_downloaded_clip",
+  "absolute_source_interval": [
+    326.493,
+    327.893
+  ],
+  "source_refs": [
+    "/workspace/scratch/e78c43b4722d/cartoon-repair-batch/subjects/giraffe/source.json",
+    "/workspace/scratch/e78c43b4722d/cartoon-repair-batch/subjects/giraffe/source-keys.png"
+  ],
+  "evidence_refs": [
+    "/workspace/scratch/e78c43b4722d/cartoon-archive-scale/contact-sheets/source-worker-02-temporal.jpg",
+    "/workspace/scratch/e78c43b4722d/cartoon-repair-batch/subjects/giraffe/source-keys.png"
+  ],
+  "checks_performed": [
+    "Read the claim candidate and existing source.json provenance record; source title, clip/source IDs and original/shot URLs provide recorded traceability, not independent archive or rights verification.",
+    "Visually inspected all 16 temporal contact-sheet samples, labeled 0.029 through 2.816 seconds, and all four existing source-key images.",
+    "Early samples through 1.330 seconds show a recognizable giraffe head: paired ossicones, large ears, patterned face and elongated muzzle. The source-key grid agrees in identity and appearance.",
+    "The 1.515-second sample still shows giraffe; by 1.701 seconds the image is a waterbird on water and later samples remain waterbird imagery. The sampled sequence establishes a later species/scene transition but does not locate its exact boundary."
+  ],
+  "suitability_notes": "Retain the previously selected [0, 1.4) interval conservatively for giraffe still-key reference. Sampled changes in muzzle position and mouth shape are visible; continuous head-turn timing, temporal coherence, and motion quality were not inspected.",
+  "excluded_intervals": [
+    {
+      "interval": [
+        1.4,
+        2.87
+      ],
+      "reason": "Outside the retained reviewed giraffe interval. Later dissolve/scene transition leads to waterbird imagery; exclude all later frames from giraffe reference to prevent mixed-species contamination. Exact transition onset is unverified between samples."
+    }
+  ],
+  "excluded_category_aliases": [
+    "duck",
+    "swan"
+  ],
+  "category_alias_notes": "Duck and swan search aliases do not establish giraffe identity or qualify later waterbird frames for this giraffe interval.",
+  "provenance_status": "existing_record_inspected_only",
+  "rights_verification": "Existing public-domain statement copied in metadata; not independently audited in this offline stills review.",
+  "playback_inspected": false,
+  "motion_verified": false,
+  "motion_bar": "unreviewed",
+  "train_eligible": false,
+  "issues": []
+}

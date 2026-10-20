@@ -102,3 +102,7 @@ the shot, and how long each stage took.
   style changes beyond the doodle's own."
 
 The critic does not see the builder's notes, earlier critiques, or test numbers.
+
+## Production coordination
+
+`production/README.md` adds a 100-clip source pool and a local coordinator. Its seven coarse stages organize the pipeline; they do not replace the gates above or `tests/registry.json`. A supervisor must verify each applicable gate against the current artifacts before accepting a coordinator result. The category/wave queue remains separate. Source photographs and proposed keys are not authored artwork, and a queue snapshot does not indicate live workers. Keep one-subject deliverables in `shots/{CATEGORY}/` as above.

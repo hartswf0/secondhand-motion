@@ -16,7 +16,7 @@ DATE = '20 Oct 2026'
 HEAD = (T / 'head.html').read_text()
 
 NAV = [('index.html', 'Rack'), ('pages/pipeline.html', 'Pipeline'), ('pages/tests.html', 'Tests'),
-       ('pages/agent-prompt.html', 'Agent prompt'), ('pages/archive-doodle-index.html', 'Dataset')]
+       ('production/index.html', 'Production'), ('pages/agent-prompt.html', 'Agent prompt'), ('pages/archive-doodle-index.html', 'Dataset')]
 sys.path.insert(0, str(ROOT / 'tools'))
 import brand
 
@@ -82,7 +82,7 @@ def md_page(src, rel, title, tools=''):
     raw = (ROOT / src).read_text()
     body = markdown.markdown(raw, extensions=['tables', 'fenced_code'])
     up = '../' * rel.count('/')
-    body = re.sub(r'<code>((?:pages|shots|tools|batches|data|dataset|traced)/[^<\s]+)</code>',
+    body = re.sub(r'<code>((?:pages|shots|tools|batches|data|dataset|traced|production)/[^<\s]+)</code>',
                   lambda m: f'<a href="{up}{m.group(1)}"><code>{m.group(1)}</code></a>' if (ROOT / m.group(1)).exists() else m.group(0), body)
     page('doc.html', rel, TITLE=title, TOOLS=tools, BODY=body, RAW=raw.replace('</', '<\\/'))
 
@@ -90,6 +90,9 @@ def md_page(src, rel, title, tools=''):
 def main():
     os.chdir(ROOT)
     tm = lambda n: (T / n).read_text()
+    # Rebuild the production workbench with embedded data for offline use.
+    import runpy
+    runpy.run_path(str(ROOT / 'production/tools/build_viewer.py'), run_name='__main__')
     # 1-3: pages from the first sessions
     legacy(tm('dataset_template.html'), (T / 'dataset_compact.json').read_text().replace('</', '<\\/'), 'pages/archive-doodle-index.html')
     legacy(tm('stones_template.html'), (T / 'stones_data.json').read_text().replace('</', '<\\/'), 'pages/doodle-to-footage.html')
@@ -160,6 +163,7 @@ def tree():
     rows = [('index.html', 'the rack, built from every item.json'),
             ('shots/<lot>/', 'one folder per subject or shot: item.json, tests.json, work'),
             ('data/lots/', 'lots that are pages or studies'),
+            ('production/', '100-clip pool, timed key references and local worker queue'),
             ('tests/registry.json', 'every test: id, bar, how, stage, active or planned'),
             ('data/catalog.json', 'all lots and results, generated'),
             ('batches/', 'raw look-lane batches as delivered'),

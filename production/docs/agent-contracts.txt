@@ -1,0 +1,162 @@
+LOCAL AGENT QUEUE — OPERATOR AND WORKER CONTRACT
+
+What runs
+scripts/queue.py is a stdlib Python CLI and a SQLite durable coordinator. It
+does not spawn agents, call AgentGPT, draw, interpolate, fetch remote assets,
+run image generation, or publish. A claim exports a concrete JSON work item.
+An external supervisor must actually start a worker and feed that work item
+to it. Leased jobs indicate claimed work, not verified worker activity.
+The queue reports workers_running: "unknown"; it makes no activity badges.
+
+Candidate is a selection state, never a quality approval. Seeding 100 records
+creates 100 unreviewed candidates, not 100 approved clips or finished motion
+artifacts. Source metadata status fields are preserved as input only and
+cannot bypass a gate. publish_ready records readiness, not remote publication.
+
+Pipeline and exact roles
+source_review  source_reviewer  Inspect source identity/provenance/suitability.
+key_plan       key_planner      Specify at least two distinct timed key poses.
+draw_keys      key_artist       Draw each planned key and map keys to artifacts.
+key_review     key_reviewer     Independently inspect all current key artifacts.
+breakdowns     breakdown_artist Create breakdowns and a playable motion artifact.
+motion_review  motion_reviewer  Independently play and inspect current motion.
+publish_ready  publisher        Audit references and record local readiness.
+
+The stage order is mandatory. Each candidate has exactly one job per stage.
+Only source_review initially becomes pending; later jobs are blocked. Each
+accepted completion enables the next stage. There is no approval override or
+automatic human approval. The publisher cannot substitute for motion review.
+
+Install and operate (run from repository root; Python 3.9+; no dependencies)
+  python3 scripts/queue.py init --db /tmp/cartoon-queue.sqlite
+  python3 scripts/queue.py seed --db /tmp/cartoon-queue.sqlite \
+    --manifest data/candidates-100.json --max-attempts 3 --max-repairs 2
+  python3 scripts/queue.py claim --db /tmp/cartoon-queue.sqlite \
+    --worker source-critic-01 --role source_reviewer --lease-seconds 300
+  python3 scripts/queue.py complete --db /tmp/cartoon-queue.sqlite \
+    --worker source-critic-01 --job CLIP_ID:source_review --token TOKEN \
+    --result @/absolute/path/source-review-result.json
+  python3 scripts/queue.py status --db /tmp/cartoon-queue.sqlite
+  python3 scripts/queue.py requeue --db /tmp/cartoon-queue.sqlite \
+    --worker source-critic-01 --job CLIP_ID:source_review --token TOKEN \
+    --reason 'Asset unavailable; no review was performed'
+
+Seed accepts a JSON array or an object containing candidates, jobs or items.
+Each object needs clip_id, candidate_id or id (in that priority order).
+Preferred source representation: {"id":"clip-001", "source_refs":["data/source.json"]}.
+source_refs can also be a string; source_ref, source_url and provenance_ref
+are fallback fields. Unresolved references do not prevent candidate ingestion;
+source review must supply concrete source_refs before it can pass. Additional
+metadata is carried into work_item.input.candidate unchanged. Repeated IDs
+are ignored, never reset. A malformed batch rolls back all new entries.
+Use a fresh DB to intentionally create a new run; no reset/force-pass exists.
+Keep one shared DB on a local filesystem. Do not use independent DB copies
+as one queue, or assume SQLite locking is safe on an arbitrary network share.
+
+Work item / result conventions
+claim outputs {"work_item":{...}} or {"work_item":null} when nothing eligible
+exists for that worker and role. The item includes token, expiry, attempt,
+budget, candidate/source refs, completed prior results (with authors), repair
+feedback, acceptance contract, evidence contract and bounded worker instruction.
+schema/job.schema.json describes this exported work item and result shapes.
+JSON --result is accepted inline or from a file using @path. Stdout is JSON;
+invalid inputs/leases/results return a JSON error on stderr and exit code 2.
+
+All references are nonempty strings: stable repo paths, artifact IDs, or URLs
+that a real worker can inspect. Use unique, versioned artifact paths per repair.
+The coordinator validates state and reference structure; it cannot verify that
+a referenced file exists, that playback actually occurred, that a worker ID
+corresponds to a distinct person/model run, or that review assertions are true.
+The supervisor must enforce identity, access, integrity and actual inspection.
+Never invent an evidence reference or claim a check that was not performed.
+
+Successful result examples by stage
+source_review:
+  {"passed":true,"source_refs":["data/source.json"],
+   "evidence_refs":["reviews/clip-001-source.json"]}
+key_plan:
+  {"artifact_refs":["plans/clip-001.json"],"planned_keys":[
+   {"id":"contact","time":0,"pose":"Left foot contact, body forward"},
+   {"id":"passing","time":0.5,"pose":"Right leg passes under body"}]}
+draw_keys:
+  {"artifact_refs":["keys/contact.svg","keys/passing.svg"],
+   "key_artifacts":{"contact":"keys/contact.svg","passing":"keys/passing.svg"}}
+key_review:
+  {"passed":true,"reviewed_artifact_refs":["keys/contact.svg","keys/passing.svg"],
+   "evidence_refs":["reviews/clip-001-keys.json"]}
+breakdowns:
+  {"artifact_refs":["motion/clip-001.webm","motion/clip-001-frames.json"],
+   "playback_ref":"motion/clip-001.webm"}
+motion_review:
+  {"passed":true,"playback_inspected":true,"playback_ref":"motion/clip-001.webm",
+   "reviewed_artifact_refs":["motion/clip-001.webm","motion/clip-001-frames.json"],
+   "evidence_refs":["reviews/clip-001-playback.json"]}
+publish_ready:
+  {"artifact_refs":["motion/clip-001.webm","motion/clip-001-frames.json"],
+   "source_refs":["data/source.json"]}
+
+Review evidence files should record the inspected version, observations,
+frame/time locations, identity/silhouette checks, and actionable defects.
+Motion evidence additionally records actual playback, timing, contacts,
+arcs, occlusion and temporal continuity. A contact sheet or single still is
+useful evidence for keys but cannot satisfy the playback declaration.
+The queue requires all current target artifact refs in successful reviews.
+The publish_ready result must retain approved source and motion artifact refs.
+
+Failing a review and repairing
+Any review can fail with:
+  {"passed":false,"issues":["At 0.5s the beak changes length"],
+   "evidence_refs":["reviews/clip-001-fail.json"]}
+A failed source review rejects the candidate. A failed key review reopens
+draw_keys. A failed motion review reopens breakdowns. The target and all later
+results are invalidated; the repair input contains the failing review and
+superseded artifact results. Original events remain append-only for audit.
+Repair feedback is JSON encoded in input.repair_feedback. A repair requires
+new completion and independent review; there is no automatic pass on retry.
+Changing an approved source or plan requires a new run/candidate version.
+
+Budget and leases
+Each claim consumes an attempt for that stage, including expired or abandoned
+claims. Defaults: maximum 3 attempts per stage and 2 repairs per candidate.
+Exceeding either bound stops that candidate as exhausted. A source rejection
+is rejected, not approved/exhausted. Exhaustion needs an operator to inspect
+the real failure; this tool cannot grant a bypass. Keep expensive generation
+outside the queue, with your own monetary/runtime/iteration limits.
+
+Claims and completion use BEGIN IMMEDIATE transactions. Only one claimant can
+hold a job. Lease durations are 1..3600 seconds (default 300). Expiry is
+recovered on the next claim or status call, and stale/expired tokens cannot
+complete or requeue. The worker must retain the returned unguessable token.
+No heartbeat/lease renewal is provided: choose a bounded task/lease or requeue
+before expiry and split work externally. Late outputs must not be attached
+under an expired token. Completion validation failures preserve the current
+lease so a worker can correct the result while it remains valid.
+
+External agent / AgentGPT supervisor contract
+1. Start one bounded worker invocation for one claimed work item. Feed only
+   the work item and the files/references needed for its acceptance contract.
+2. Use stable, attributable worker IDs. Assign reviewers distinct IDs and
+   genuinely separate fresh contexts. Do not let an author impersonate a
+   critic. The queue refuses key review by any recorded planner or key author; motion
+   review refuses any recorded planner, key author or breakdown author,
+   including authors from earlier repaired attempts. source_builder or
+   source_worker metadata, when present, cannot claim source_review.
+3. Set explicit output folder, tools, runtime and cost limits in the external
+   supervisor. For this scaffold, a 20-minute total one-pass-plus-fix run is
+   a suggested ceiling, not an automatically running service or measured cost.
+4. Produce real artifacts/evidence and an explicit JSON result. Use passed
+   false for actual failed inspections; use requeue for work not performed.
+5. Complete only with the current token. Stop after the one work item. A
+   separate invocation can claim the next role when work actually exists.
+6. Inspect status and event history rather than treating a claim as proof of
+   model execution. SQLite events contain full results for traceability.
+7. Do not declare 100 outputs complete while source reviews, key drawings,
+   motion artifacts or playback evidence remain absent. Seeded inventory and
+   actual accepted output counts are separate facts.
+
+Verification
+  python3 -m unittest discover -s scripts -p test_queue.py -v
+Tests exercise real multi-process claims, expiry recovery, stale tokens,
+expired completion, self-review refusal, source rejection, missing key maps,
+artifact coverage, still-only motion refusal, full readiness gating, repair
+invalidation, reseed safety, bounded retries and exhaustion.

@@ -1,0 +1,70 @@
+FRAME BUDGET — PLANNING ONLY / NO NEW ART APPROVAL
+
+Evidence: current curation.json, all ten source.json files and source-keys grids; in-memory temporal samples from all ten existing source-excerpt.mp4 files. This pass did not review continuous normal-speed playback. Existing 4 accepted still times per clip are unchanged.
+
+Times are seconds from the downloaded archive clip origin. Excerpt time = listed time - curated interval start. Original archive time = source.start_seconds + listed time. Proposed times are event brackets to snap/confirm against decoded source frames, not certified exact event instants.
+
+Clip         Existing  Add pose  Pose target  Breakdowns  Total authored  Delivery@12fps
+rabbit              4         6           10           4              14              52
+duck                4         4            8           2              10              48
+horse               4         5            9           4              13              45
+dog                 4         5            9           4              13              50
+cat                 4         4            8           2              10              62
+butterfly           4         3            7           2               9              78
+bicycle             4         4            8           2              10              21
+windmill            4         0            4           0               4              54
+helicopter          4         4            8           2              10              46
+giraffe             4         4            8           2              10              17
+TOTAL              40        39           79          24             103             473
+
+CURRENT TEN CALCULATION
+40 existing accepted pose drawings + 39 proposed pose drawings = 79 target pose keys.
+Separately reserve 24 authored breakdowns: 79 + 24 = 103 total authored drawings, of which 39 + 24 = 63 would be new.
+Windmill adds 0 authored pose drawings and 3 procedural phase-check timestamps (0.95, 3.7, 4.7). There are 42 additional pose-or-phase timestamps, but only 39 additional pose-key drawings. Breakdowns have their own 24 candidate timestamps.
+Total curated duration: 39.1 seconds. At the existing 12fps preview/delivery assumption: sum ceil(duration_per_clip*12) = 473 rendered frames.
+Do not count every rendered frame, interpolated transform, held drawing or rotor angle as an authored drawing. A specific inbetween-frame count is undetermined until timing/rig decisions and playback checks.
+
+100-CLIP SCENARIOS (SAME MIX, NOT AN ARCHIVE-WIDE MEASURED ESTIMATE)
+Ten copies of the current mix: 100 clips / 391 seconds / 4730 rendered frames at 12fps.
+ACTUAL CURRENT TO 100: only 40 accepted pose-key drawings exist today. Target 790 pose drawings - 40 actual accepted = 750 additional pose-key drawings. Add 240 breakdown drawings: 750 + 240 = 990 NEW AUTHORED DRAWINGS remaining; 40 + 990 = 1030 total. No new art has been produced by this plan.
+Hypothetical seeded comparison only: if all 100 clips first had four accepted pose drawings, that would assume 400 accepted, leaving 390 pose drawings + 240 breakdowns = 630 new drawings. This is not the actual-current remaining budget.
+If greenfield: 790 pose drawings + 240 breakdown drawings = 1030 new authored drawings.
+Procedural phase-check samples: 10*3 = 30 windmill checks; these do not add authored drawings. Rig/asset setup, masking, tracking, review and repair effort are separate and not estimated in artist-hours here.
+Counts are planning allocations, not claims of a sufficient minimum or numeric artistic certainty. Different event/complexity mixes require new budgets; no extra 90 clips are implied to be curated or accepted.
+
+REPRESENTATION AND EVENT PRIORITIES
+RABBIT: Free redraw at landing, body turn and launch; use a small ear/eye rig only within compatible views.
+  Additional pose times: [5.15, 5.5, 6.2, 8.15, 8.4, 9.0]; breakdown budget: 4 at candidate times [5.32, 5.65, 8.28, 8.62].
+  Doorway emergence to forepaw landing: preserve foot placement and body compression. Frontal landing to right-facing crouch requires silhouette and ear overlap changes. Late crouch to stretched launch and frame exit needs push-off, airborne arc and crop continuity.
+DUCK: Part rig for planted torso, wings and feet; free redraw of bill/head foreshortening and mouth shapes.
+  Additional pose times: [0.55, 1.65, 2.8, 4.0]; breakdown budget: 2 at candidate times [0.85, 3.3].
+  Side bill to frontal bill transition must rotate the head volume. Bill opening/closing and throat movement need timing checks; maintain both feet on the same ground plane.
+HORSE: Free redraw head/neck at turn and descent; separate static rail masks and hay/contact layer; limited compatible-view part rig.
+  Additional pose times: [4.9, 5.9, 6.8, 7.15, 7.85]; breakdown budget: 4 at candidate times [5.15, 6.15, 6.6, 7.3].
+  Frontal head to three-quarter descent changes muzzle and eye overlap. Head and muzzle must pass behind the correct foreground rails. Approach to hay needs a readable contact/near-contact pose without sliding through the rail.
+DOG: Free redraw for rear-to-front/body turn and leg overlap changes; part rig only for short compatible-view arcs.
+  Additional pose times: [0.65, 1.95, 2.4, 3.35, 4.2]; breakdown budget: 4 at candidate times [0.95, 1.65, 3.05, 3.7].
+  Rear/left approach to camera-facing approach requires whole-body turn. Alternating support legs and ground contacts need gait breakdowns. Late approach beside the bowl needs stable foot support and changing leg occlusion.
+CAT: Hold/part rig during the stable gaze; free redraw skull and muzzle for the late turn, with ear/eye overlap swaps.
+  Additional pose times: [14.55, 14.85, 15.1, 15.5]; breakdown budget: 2 at candidate times [14.4, 15.0].
+  Most early footage is a stable gaze and does not need evenly spaced new drawings. Concentrate keys at late skull turn, eyelid change and far-eye/muzzle occlusion.
+BUTTERFLY: Part rig for hand and attached butterfly with free redraw when folded-wing profile or hand overlap changes.
+  Additional pose times: [11.7, 13.65, 15.6]; breakdown budget: 2 at candidate times [12.1, 14.0].
+  Fingertip attachment must stay locked while hand orientation changes. Folded wing profile changes and finger/wing overlap need view-specific contours. Do not invent a full wing-spread or flapping cycle unsupported by these frames.
+BICYCLE: Rigid procedural wheel rotation and tracked frame translation; articulated crank/leg rig with free redraw at leg overlap and crop changes.
+  Additional pose times: [2.15, 2.65, 3.15, 3.55]; breakdown budget: 2 at candidate times [2.53, 3.03].
+  Pedal/crank and shoe connection must stay attached through the cycle. Near/far leg and frame occlusion changes need explicit pose ownership. Preserve the later lower/front-wheel crop and wheel-ground relationship.
+WINDMILL: Rigid procedural rotation of one four-sail assembly around a fixed hub, with static tower and foreground foliage masks.
+  Additional pose times: []; breakdown budget: 0 at candidate times [].
+  Continuous angle/phase between the four accepted poses. Correct hub pivot, sail spacing and occlusion by tower/foliage. No new whole-pose drawings are budgeted merely to represent intermediate rotor angles.
+HELICOPTER: Tracked body translation/scale with view-specific redraw around close-pass perspective/crop; procedural rotor blur/phase layer.
+  Additional pose times: [0.8, 1.9, 3.25, 3.95]; breakdown budget: 2 at candidate times [1.65, 2.2].
+  Close pass and right-edge crop before recession need explicit framing anchors. Body perspective and skid/tail proportions must change with view, without rubber scaling. Rotor appearance must avoid backward/stepped aliasing; source blur may be more faithful than crisp blades.
+GIRAFFE: Free redraw skull turn and muzzle depth/overlap; limited jaw/ear rig within each compatible skull view.
+  Additional pose times: [0.15, 0.5, 0.95, 1.35]; breakdown budget: 2 at candidate times [0.4, 1.1].
+  Carried still acceptance does not solve the understated whole-skull turn. Jaw opening/closure must follow head volume and near/far muzzle overlap. Ear and ossicone positions must rotate with the skull.
+
+QUALITY GATES
+Stills: review each new key/breakdown against actual source and selected drawing identity; verify view, volume, attachment, contact, crop and occlusion. Existing still-key acceptance stays intact.
+Playback: review complete source/candidate at normal speed and stepped/slow speed; verify timing, arcs, settles, foot/pedal/fingertip attachment, overlap/mask changes and rotation phase/aliasing. Add or revise drawings where playback reveals failures.
+All ten motion bars remain unreviewed and train_eligible remains false. This plan creates no new art, no new acceptance evidence and no training result.

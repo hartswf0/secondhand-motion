@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-10-20",
+  "live": false,
+  "workers_running": "unknown",
+  "candidate_count": 100,
+  "counts": [
+    {
+      "stage": "breakdowns",
+      "state": "blocked",
+      "count": 100
+    },
+    {
+      "stage": "draw_keys",
+      "state": "blocked",
+      "count": 100
+    },
+    {
+      "stage": "key_plan",
+      "state": "blocked",
+      "count": 98
+    },
+    {
+      "stage": "key_plan",
+      "state": "pending",
+      "count": 2
+    },
+    {
+      "stage": "key_review",
+      "state": "blocked",
+      "count": 100
+    },
+    {
+      "stage": "motion_review",
+      "state": "blocked",
+      "count": 100
+    },
+    {
+      "stage": "publish_ready",
+      "state": "blocked",
+      "count": 100
+    },
+    {
+      "stage": "source_review",
+      "state": "done",
+      "count": 2
+    },
+    {
+      "stage": "source_review",
+      "state": "pending",
+      "count": 98
+    }
+  ],
+  "completed_source_review_files": [
+    "reviews/source-worker-01.json",
+    "reviews/source-worker-02.json"
+  ],
+  "note": "Actual queue completions. Snapshot contains no claim tokens. Recreating a fresh queue does not import historical completions."
+}

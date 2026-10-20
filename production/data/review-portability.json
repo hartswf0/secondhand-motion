@@ -1,0 +1,14 @@
+{
+  "note": "Historical agent evidence retains its original references. Use these portable equivalents; source worker 01 did not inspect the full local video and worker 02 did not play video.",
+  "source-worker-01": {
+    "candidate_metadata": "data/candidates-100.json",
+    "clip_id": "015d2d81-d328-592c-8b82-ed667cb5376c",
+    "sampled_frames": "contact-sheets/source-worker-01-temporal.jpg"
+  },
+  "source-worker-02": {
+    "metadata": "../batches/2026-10-20-selected-drawings/subjects/giraffe/source.json",
+    "source_keys": "../batches/2026-10-20-selected-drawings/subjects/giraffe/source-keys.png",
+    "sampled_frames": "contact-sheets/source-worker-02-temporal.jpg"
+  },
+  "canonical_art_root": "../batches/2026-10-20-selected-drawings/subjects/<category>/"
+}

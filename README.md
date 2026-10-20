@@ -19,6 +19,12 @@ Open `index.html` (or the GitHub Pages site): it is **the rack**, every lot of w
 - `python3 tools/validate.py` checks every lot; `python3 tools/build_pages.py` rebuilds every page (it validates first).
 - `python3 tools/brand.py` redraws the mark, favicons and social card.
 
+## Production workbench
+
+Open [production/index.html](production/index.html) for source/drawing comparison, a 100-clip review pool, timed references and drawing budgets. It reuses the existing batch artwork. The next current-10 pass plans 63 more drawings; an extrapolated 100-clip target plans about 990 more from the existing 40. See [production/README.md](production/README.md) for the local agent coordinator and [readthrough](production/docs/repo-readthrough.md) for strengths and unresolved checks.
+
+This pool supplements the category/wave queue; it does not replace it. Source-sample or still-key acceptance never establishes playback approval.
+
 ## Start here
 
 - **`PIPELINE.md`**: the 13 stages from archive shot to cartoon, with what each reads, writes and must pass.
@@ -32,7 +38,7 @@ Open `index.html` (or the GitHub Pages site): it is **the rack**, every lot of w
 |---|---|---|---|
 | Where | `batches/2026-10-20-selected-drawings/` | `shots/giraffe-walks-past/` | `tools/trace_keys.py`, `traced/` |
 | What | image model draws 4 still keys per subject in the doodle's identity; fresh critics review | vector rig keyed over SAM silhouettes, in-betweened, 6 depth planes, measured camera | raster keys traced to strokes, split into what holds and what moves |
-| Status | 10 subjects, 40 keys accepted as stills | 11 of 14 tests pass; playback review still open | recall ≥ 0.98 on all 40 keys; backgrounds are redrawn per key (fix upstream) |
+| Status | 10 subjects, 40 keys accepted as stills | 11 of 14 saved test statuses true; several historical assertions; playback review still open | recall ≥ 0.98 on all 40 keys; backgrounds are redrawn per key (fix upstream) |
 
 ## Rebuild
 
