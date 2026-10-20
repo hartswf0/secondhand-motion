@@ -6,7 +6,7 @@
   "crown",
   "crown"
  ],
- "note": "Quick, Draw! light bulb 6496968282996736. Stroke 3 is the glass: one round outline from the left neck up over the crown and down to the right neck. Stroke 4 is a single filament line inside the glass. Strokes 0, 1 and 2 are the three rings of the screw base, stacked under the glass. In the film the bulb itself does not move; the camera pulls back, so the bulb drifts left, gets smaller and settles lower on the table. The rig is rigid: the whole doodle is placed by two points, the top of the glass (crown) and the bottom of the screw base (base), so it changes size and place with the bulb and keeps its own proportions. No part turns.",
+ "note": "Quick, Draw! light bulb 6496968282996736. Stroke 3 is the glass: one round outline from the left neck up over the crown and down to the right neck. Stroke 4 is a single filament line inside the glass. Strokes 0, 1 and 2 are the three rings of the screw base, stacked under the glass. In the film the bulb itself does not move; the camera pulls back, so the bulb drifts left, gets smaller and settles lower on the table. The rig is rigid: the whole doodle is placed by two points, the top of the glass (crown) and the bottom of the screw base (base), so it changes size and place with the bulb and keeps its own proportions. No part turns. Keys were placed every three frames from the bulb's measured width, centre and screw-base bottom in the footage; the glass top is above the frame for the first nine frames, so there the crown is placed from the bulb's height-to-width ratio in the last frames. Optical-flow tracking is off: it changed the pops by less than 0.001 and the crown is off frame early on, where a flow track has nothing to follow.",
  "strokes": [
   [
    [
@@ -285,6 +285,6 @@
    "turn": 0
   }
  ],
- "track": true,
+ "track": false,
  "smooth": 1.2
 }
