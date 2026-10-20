@@ -1,0 +1,443 @@
+{
+ "category": "ant",
+ "doodle_key_id": "5421013154136064",
+ "facing": -1,
+ "note": "Quick, Draw! ant 5421013154136064, drawn facing left in side view. Stroke 0 is the round head, strokes 1 and 2 are its two antennae, stroke 3 is the long oval thorax with a short neck tick at its left end, stroke 4 is the short line joining thorax to abdomen, stroke 5 is the round abdomen, and strokes 6 to 10 are five single-line legs, three under the thorax and two under the abdomen. The root places the whole drawing by the neck and the tip of the abdomen, so body length and tilt follow the ant. The head with both antennae turns at the neck toward the nose point. Each leg swings about its top toward its foot point and may lengthen or shorten a little. The film's ant faces right, so the doodle is mirrored.",
+ "strokes": [
+  [
+   [
+    27,
+    47
+   ],
+   [
+    17,
+    58
+   ],
+   [
+    16,
+    73
+   ],
+   [
+    21,
+    81
+   ],
+   [
+    34,
+    84
+   ],
+   [
+    50,
+    67
+   ],
+   [
+    49,
+    54
+   ],
+   [
+    34,
+    46
+   ],
+   [
+    23,
+    47
+   ],
+   [
+    17,
+    51
+   ]
+  ],
+  [
+   [
+    22,
+    51
+   ],
+   [
+    0,
+    18
+   ]
+  ],
+  [
+   [
+    41,
+    45
+   ],
+   [
+    46,
+    11
+   ],
+   [
+    43,
+    0
+   ]
+  ],
+  [
+   [
+    53,
+    68
+   ],
+   [
+    65,
+    68
+   ],
+   [
+    64,
+    58
+   ],
+   [
+    69,
+    51
+   ],
+   [
+    91,
+    36
+   ],
+   [
+    119,
+    34
+   ],
+   [
+    135,
+    38
+   ],
+   [
+    148,
+    48
+   ],
+   [
+    159,
+    64
+   ],
+   [
+    158,
+    78
+   ],
+   [
+    149,
+    85
+   ],
+   [
+    126,
+    90
+   ],
+   [
+    87,
+    90
+   ],
+   [
+    68,
+    83
+   ],
+   [
+    62,
+    73
+   ]
+  ],
+  [
+   [
+    161,
+    70
+   ],
+   [
+    175,
+    69
+   ]
+  ],
+  [
+   [
+    180,
+    68
+   ],
+   [
+    177,
+    67
+   ],
+   [
+    176,
+    61
+   ],
+   [
+    187,
+    50
+   ],
+   [
+    206,
+    42
+   ],
+   [
+    226,
+    40
+   ],
+   [
+    244,
+    48
+   ],
+   [
+    250,
+    58
+   ],
+   [
+    250,
+    72
+   ],
+   [
+    245,
+    80
+   ],
+   [
+    233,
+    87
+   ],
+   [
+    207,
+    89
+   ],
+   [
+    188,
+    83
+   ],
+   [
+    180,
+    76
+   ],
+   [
+    180,
+    71
+   ]
+  ],
+  [
+   [
+    73,
+    85
+   ],
+   [
+    61,
+    113
+   ]
+  ],
+  [
+   [
+    95,
+    88
+   ],
+   [
+    94,
+    126
+   ]
+  ],
+  [
+   [
+    140,
+    90
+   ],
+   [
+    157,
+    118
+   ]
+  ],
+  [
+   [
+    199,
+    90
+   ],
+   [
+    201,
+    116
+   ],
+   [
+    208,
+    122
+   ]
+  ],
+  [
+   [
+    234,
+    89
+   ],
+   [
+    242,
+    105
+   ],
+   [
+    255,
+    112
+   ]
+  ]
+ ],
+ "anchors": {
+  "nose": [
+   17,
+   62
+  ],
+  "head": [
+   33,
+   65
+  ],
+  "neck": [
+   58,
+   70
+  ],
+  "waist": [
+   168,
+   70
+  ],
+  "tail": [
+   250,
+   65
+  ],
+  "l1top": [
+   73,
+   85
+  ],
+  "l1": [
+   61,
+   113
+  ],
+  "l2top": [
+   95,
+   88
+  ],
+  "l2": [
+   94,
+   126
+  ],
+  "l3top": [
+   140,
+   90
+  ],
+  "l3": [
+   157,
+   118
+  ],
+  "l4top": [
+   199,
+   90
+  ],
+  "l4": [
+   208,
+   122
+  ],
+  "l5top": [
+   234,
+   89
+  ],
+  "l5": [
+   255,
+   112
+  ]
+ },
+ "root": [
+  "neck",
+  "tail"
+ ],
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 9,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ],
+   "turn": 0.8
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ],
+   "turn": 0.8
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 2,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ],
+   "turn": 0.8
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 1,
+   "joint": "l1top",
+   "aim": [
+    "l1top",
+    "l1"
+   ],
+   "stretch": 0.4,
+   "turn": 0.8
+  },
+  {
+   "stroke": 7,
+   "from": 0,
+   "to": 1,
+   "joint": "l2top",
+   "aim": [
+    "l2top",
+    "l2"
+   ],
+   "stretch": 0.4,
+   "turn": 0.8
+  },
+  {
+   "stroke": 8,
+   "from": 0,
+   "to": 1,
+   "joint": "l3top",
+   "aim": [
+    "l3top",
+    "l3"
+   ],
+   "stretch": 0.4,
+   "turn": 0.8
+  },
+  {
+   "stroke": 9,
+   "from": 0,
+   "to": 2,
+   "joint": "l4top",
+   "aim": [
+    "l4top",
+    "l4"
+   ],
+   "stretch": 0.4,
+   "turn": 0.8
+  },
+  {
+   "stroke": 10,
+   "from": 0,
+   "to": 2,
+   "joint": "l5top",
+   "aim": [
+    "l5top",
+    "l5"
+   ],
+   "stretch": 0.4,
+   "turn": 0.8
+  },
+  {
+   "rest": true,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "tail"
+   ]
+  }
+ ],
+ "size": "steady",
+ "foreshorten": [
+  0.85,
+  1.15
+ ],
+ "max_tilt": 25,
+ "track": false,
+ "smooth": 1.0
+}

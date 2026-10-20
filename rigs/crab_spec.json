@@ -1,0 +1,401 @@
+{
+ "category": "crab",
+ "doodle_key_id": "6219540520239104",
+ "facing": 1,
+ "face_from": [
+  "lside",
+  "lside"
+ ],
+ "note": "Quick, Draw! crab 6219540520239104, drawn from the front: one closed outline for the shell (stroke 0), four short leg strokes under it (1-4), the frame-left arm as one line (7) ending in a claw drawn as an outline (8) with an inner line for the pincer gap (9), and the frame-right arm as a three-point line (5) ending in a claw outline (6) with its pincer line (10). The root carries the whole drawing by the two ends of the shell, so it stays where the crab's shell is and at one size. Each arm with its claw turns at its shoulder on the shell toward the pose's claw point, and may shorten a little, so the claws come down and work up toward the mouth as the ghost crab's claws do; the shell and legs hold still as the crab's do.",
+ "strokes": [
+  [
+   [
+    28,
+    133
+   ],
+   [
+    42,
+    114
+   ],
+   [
+    52,
+    106
+   ],
+   [
+    62,
+    99
+   ],
+   [
+    82,
+    91
+   ],
+   [
+    129,
+    86
+   ],
+   [
+    175,
+    101
+   ],
+   [
+    199,
+    120
+   ],
+   [
+    219,
+    148
+   ],
+   [
+    219,
+    154
+   ],
+   [
+    204,
+    173
+   ],
+   [
+    185,
+    183
+   ],
+   [
+    151,
+    184
+   ],
+   [
+    65,
+    174
+   ],
+   [
+    50,
+    164
+   ],
+   [
+    42,
+    146
+   ],
+   [
+    33,
+    137
+   ]
+  ],
+  [
+   [
+    191,
+    184
+   ],
+   [
+    210,
+    218
+   ]
+  ],
+  [
+   [
+    74,
+    178
+   ],
+   [
+    51,
+    204
+   ],
+   [
+    45,
+    223
+   ]
+  ],
+  [
+   [
+    169,
+    184
+   ],
+   [
+    184,
+    204
+   ],
+   [
+    186,
+    219
+   ]
+  ],
+  [
+   [
+    103,
+    178
+   ],
+   [
+    83,
+    210
+   ],
+   [
+    76,
+    230
+   ]
+  ],
+  [
+   [
+    188,
+    115
+   ],
+   [
+    206,
+    100
+   ],
+   [
+    224,
+    69
+   ]
+  ],
+  [
+   [
+    227,
+    70
+   ],
+   [
+    216,
+    53
+   ],
+   [
+    222,
+    24
+   ],
+   [
+    237,
+    13
+   ],
+   [
+    242,
+    14
+   ],
+   [
+    254,
+    34
+   ],
+   [
+    255,
+    48
+   ],
+   [
+    251,
+    61
+   ],
+   [
+    247,
+    68
+   ],
+   [
+    230,
+    79
+   ]
+  ],
+  [
+   [
+    70,
+    106
+   ],
+   [
+    31,
+    48
+   ]
+  ],
+  [
+   [
+    30,
+    60
+   ],
+   [
+    10,
+    46
+   ],
+   [
+    0,
+    11
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    15,
+    0
+   ],
+   [
+    29,
+    2
+   ],
+   [
+    41,
+    12
+   ],
+   [
+    35,
+    44
+   ],
+   [
+    37,
+    53
+   ]
+  ],
+  [
+   [
+    18,
+    5
+   ],
+   [
+    22,
+    26
+   ],
+   [
+    34,
+    28
+   ],
+   [
+    32,
+    49
+   ]
+  ],
+  [
+   [
+    238,
+    8
+   ],
+   [
+    239,
+    34
+   ],
+   [
+    234,
+    50
+   ],
+   [
+    235,
+    56
+   ],
+   [
+    247,
+    66
+   ],
+   [
+    243,
+    77
+   ],
+   [
+    231,
+    88
+   ]
+  ]
+ ],
+ "root": [
+  "lside",
+  "rside"
+ ],
+ "anchors": {
+  "lside": [
+   28,
+   133
+  ],
+  "rside": [
+   219,
+   151
+  ],
+  "lsh": [
+   70,
+   106
+  ],
+  "lclaw": [
+   22,
+   28
+  ],
+  "rsh": [
+   188,
+   115
+  ],
+  "rclaw": [
+   240,
+   45
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 7,
+   "from": 0,
+   "to": 1,
+   "joint": "lsh",
+   "aim": [
+    "lsh",
+    "lclaw"
+   ],
+   "stretch": 0.5
+  },
+  {
+   "stroke": 8,
+   "from": 0,
+   "to": 8,
+   "joint": "lsh",
+   "aim": [
+    "lsh",
+    "lclaw"
+   ],
+   "stretch": 0.5
+  },
+  {
+   "stroke": 9,
+   "from": 0,
+   "to": 3,
+   "joint": "lsh",
+   "aim": [
+    "lsh",
+    "lclaw"
+   ],
+   "stretch": 0.5
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 2,
+   "joint": "rsh",
+   "aim": [
+    "rsh",
+    "rclaw"
+   ],
+   "stretch": 0.25
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 9,
+   "joint": "rsh",
+   "aim": [
+    "rsh",
+    "rclaw"
+   ],
+   "stretch": 0.25
+  },
+  {
+   "stroke": 10,
+   "from": 0,
+   "to": 6,
+   "joint": "rsh",
+   "aim": [
+    "rsh",
+    "rclaw"
+   ],
+   "stretch": 0.25
+  },
+  {
+   "rest": true,
+   "joint": "lside",
+   "aim": [
+    "lside",
+    "rside"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "foreshorten": [
+  0.85,
+  1.1
+ ],
+ "max_tilt": 10,
+ "track": true,
+ "smooth": 1.0
+}

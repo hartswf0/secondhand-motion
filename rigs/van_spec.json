@@ -1,0 +1,234 @@
+{
+ "category": "van",
+ "doodle_key_id": "5046474947690496",
+ "facing": -1,
+ "face_from": [
+  "fwheel",
+  "rwheel"
+ ],
+ "note": "Quick, Draw! van 5046474947690496, facing left. Stroke 0 is a short line at the front bumper. Stroke 1 is the body in one line: the low nose, the sloped windscreen and hood rising to a flat roof, the square back and the floor line. Stroke 2 is the front wheel and stroke 3 the rear wheel, each a loose loop. The van is rigid: the whole drawing is placed by two points, the centres of its two wheels, so it moves, shrinks and tilts with the van in the film. The two wheels turn about their centres as it rolls.",
+ "strokes": [
+  [
+   [
+    0,
+    82
+   ],
+   [
+    5,
+    114
+   ]
+  ],
+  [
+   [
+    3,
+    82
+   ],
+   [
+    47,
+    68
+   ],
+   [
+    79,
+    25
+   ],
+   [
+    108,
+    8
+   ],
+   [
+    158,
+    0
+   ],
+   [
+    242,
+    1
+   ],
+   [
+    248,
+    17
+   ],
+   [
+    255,
+    102
+   ],
+   [
+    253,
+    113
+   ],
+   [
+    166,
+    123
+   ],
+   [
+    18,
+    128
+   ],
+   [
+    4,
+    126
+   ],
+   [
+    4,
+    114
+   ]
+  ],
+  [
+   [
+    57,
+    115
+   ],
+   [
+    42,
+    116
+   ],
+   [
+    36,
+    126
+   ],
+   [
+    39,
+    141
+   ],
+   [
+    49,
+    150
+   ],
+   [
+    65,
+    148
+   ],
+   [
+    72,
+    140
+   ],
+   [
+    74,
+    132
+   ],
+   [
+    66,
+    118
+   ],
+   [
+    43,
+    112
+   ]
+  ],
+  [
+   [
+    207,
+    108
+   ],
+   [
+    194,
+    113
+   ],
+   [
+    187,
+    123
+   ],
+   [
+    188,
+    131
+   ],
+   [
+    198,
+    136
+   ],
+   [
+    203,
+    137
+   ],
+   [
+    211,
+    130
+   ],
+   [
+    216,
+    122
+   ],
+   [
+    218,
+    113
+   ],
+   [
+    210,
+    107
+   ],
+   [
+    193,
+    104
+   ]
+  ]
+ ],
+ "root": [
+  "fwheel",
+  "rwheel"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "fwheel": [
+   54,
+   132
+  ],
+  "rwheel": [
+   202,
+   120
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 1,
+   "joint": "fwheel",
+   "aim": [
+    "fwheel",
+    "rwheel"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 12,
+   "joint": "fwheel",
+   "aim": [
+    "fwheel",
+    "rwheel"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 9,
+   "joint": "fwheel",
+   "aim": [
+    "fwheel",
+    "rwheel"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 10,
+   "joint": "rwheel",
+   "aim": [
+    "fwheel",
+    "rwheel"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  }
+ ],
+ "options": {
+  "size": "free",
+  "smooth": 1.2,
+  "track": false
+ },
+ "track": false,
+ "smooth": 1.2
+}

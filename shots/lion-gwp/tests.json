@@ -1,0 +1,81 @@
+[
+ {
+  "id": "M2",
+  "value": 5,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   7,
+   7,
+   7,
+   7,
+   7,
+   6,
+   6,
+   5,
+   4,
+   4,
+   3,
+   3,
+   3
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.79,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 13
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 2.5,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "6 strokes, 76 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6643650639429632; scenery quickdraw:5912319831834624, quickdraw:4979217567580160, quickdraw:6557173054177280, quickdraw:4759138007515136, drawn by agent: the top edge of the rock ledge both lions lie on; no Quick, Draw! category is a rock ledge, drawn by agent: the foot of the rock face, where the grass starts; no Quick, Draw! category is a rock ledge, quickdraw:5095253159706624, quickdraw:6686884283547648, quickdraw:6672611050258432, quickdraw:5401520432480256, drawn by agent: the second lion, which lies still on the ledge in profile and leaves the frame at the right as the camera pans; it is the character's own doodle (quickdraw 6643650639429632) posed lying and in profile by rigs/lion.py, so both lions are the same drawing",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

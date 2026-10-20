@@ -1,0 +1,83 @@
+[
+ {
+  "id": "M2",
+  "value": 16,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   11,
+   11,
+   11,
+   18,
+   19,
+   20,
+   15,
+   13,
+   14,
+   14,
+   19,
+   19,
+   23,
+   19
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.87,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 20
+ },
+ {
+  "id": "M3",
+  "value": 0.35,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.0
+ },
+ {
+  "id": "M6",
+  "value": 2.4,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "9 strokes, 62 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5362068238630912; scenery quickdraw:6034927747334144, quickdraw:6717628213100544, quickdraw:5719646109958144, quickdraw:4713267874234368, quickdraw:4894443553423360, quickdraw:5689273577635840, quickdraw:4667922435801088, quickdraw:6632245135671296, quickdraw:5689273577635840, quickdraw:4667922435801088, quickdraw:6632245135671296, quickdraw:5689273577635840, quickdraw:4667922435801088, quickdraw:6632245135671296, quickdraw:5689273577635840, quickdraw:4667922435801088, quickdraw:5691748049223680, quickdraw:5220194005811200, quickdraw:4781914235863040, quickdraw:5218573481934848, drawn by agent: no Quick, Draw! category is a lake surface; the horizon of the lake is one long line and the ripples are short dashes below it",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "26/26",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

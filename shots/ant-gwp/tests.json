@@ -1,0 +1,77 @@
+[
+ {
+  "id": "M2",
+  "value": 68,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   72,
+   65,
+   70,
+   70,
+   70,
+   66,
+   67,
+   66,
+   67
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.84,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 62
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 3.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "11 strokes, 59 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5421013154136064; scenery drawn by agent: no Quick, Draw! category is a rock face; one line traces the lower edge of the dark rock overhang across the top of the frame and down its right side, quickdraw:6529285361762304, drawn by agent: no Quick, Draw! category is a rock ledge; one line is the edge of the stones the ant walks along, with two short lines for the pebbles below it",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "25/25",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

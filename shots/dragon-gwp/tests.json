@@ -1,0 +1,81 @@
+[
+ {
+  "id": "M2",
+  "value": 27,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   28,
+   28,
+   28,
+   25,
+   27,
+   27,
+   27,
+   27,
+   27,
+   28,
+   27,
+   27
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.99,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 27
+ },
+ {
+  "id": "M3",
+  "value": 0.58,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.56
+ },
+ {
+  "id": "M6",
+  "value": 3.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 85 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6190476665290752; scenery ",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

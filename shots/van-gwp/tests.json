@@ -1,0 +1,81 @@
+[
+ {
+  "id": "M2",
+  "value": 87,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   83,
+   82,
+   82,
+   86,
+   83,
+   88,
+   89,
+   89,
+   90,
+   88,
+   90,
+   90
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.95,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 89
+ },
+ {
+  "id": "M3",
+  "value": 0.59,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.52
+ },
+ {
+  "id": "M6",
+  "value": 0.8,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 36 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5046474947690496; scenery quickdraw:4766159071084544, quickdraw:6640436766572544, quickdraw:4919937862729728, quickdraw:5996214333997056, quickdraw:5356886742269952, quickdraw:6016484318904320, quickdraw:6370488706138112, drawn by agent: no Quick, Draw! category is the edge of a dirt yard; one long line where the yard meets the lawn behind it, and short dashes for tyre ruts, drawn by agent: no Quick, Draw! category is a bare utility pole; one vertical line where the film has one, drawn by agent: a small white utility box stands in the yard; no Quick, Draw! category fits a plain box, so it is drawn as a square, drawn by agent: a second bare utility pole stands behind the yard on the right late in the shot; one vertical line",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

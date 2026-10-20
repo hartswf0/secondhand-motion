@@ -1,0 +1,250 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -0.1,
+   0.24,
+   0.42,
+   0.47,
+   0.57,
+   0.13,
+   0.24,
+   0.01,
+   0.47,
+   0.46,
+   0.54,
+   0.39,
+   0.57,
+   0.38,
+   0.52,
+   0.3,
+   0.19,
+   0.34,
+   -0.36,
+   -0.31,
+   -0.46,
+   -0.78,
+   -0.75,
+   -0.82,
+   -0.74,
+   -0.72,
+   -0.8,
+   -0.86,
+   -0.71,
+   -0.48,
+   -0.65
+  ],
+  "y": [
+   0.0,
+   0.09,
+   -0.14,
+   -0.95,
+   -1.07,
+   -1.19,
+   -1.65,
+   -0.97,
+   -0.26,
+   -0.05,
+   -0.08,
+   -0.2,
+   -0.38,
+   -0.23,
+   -0.7,
+   -0.91,
+   -0.96,
+   -0.54,
+   -0.54,
+   -0.28,
+   -0.16,
+   0.05,
+   0.05,
+   0.62,
+   -0.38,
+   -0.5,
+   -0.24,
+   -0.36,
+   -0.45,
+   -0.21,
+   0.1,
+   0.18
+  ],
+  "source": "shots/frog-sam/camera.json, phase correlation on the footage; the camera is locked off and these are shifts under 2 px of film weave"
+ },
+ "planes": [
+  {
+   "id": "back",
+   "z": 4,
+   "label": "Board seams behind the toad",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "floor",
+   "z": 1.8,
+   "label": "Floor in front",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Toad"
+  }
+ ],
+ "objects": [
+  {
+   "id": "seam1",
+   "plane": "back",
+   "class": "line",
+   "why": "no Quick, Draw! category is a floorboard seam; one long vertical line for the seam that runs the full height of the frame right of the toad",
+   "strokes": [
+    [
+     [
+      316,
+      -10
+     ],
+     [
+      315,
+      120
+     ],
+     [
+      317,
+      300
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "seam2",
+   "plane": "back",
+   "class": "line",
+   "why": "a second, shorter board seam at the right edge of the frame",
+   "strokes": [
+    [
+     [
+      357,
+      20
+     ],
+     [
+      356,
+      110
+     ],
+     [
+      358,
+      200
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "seam3",
+   "plane": "back",
+   "class": "line",
+   "why": "a faint seam above and right of the toad that fades out at its back",
+   "strokes": [
+    [
+     [
+      251,
+      -10
+     ],
+     [
+      250,
+      40
+     ],
+     [
+      251,
+      84
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "shadow",
+   "plane": "floor",
+   "class": "line",
+   "why": "no Quick, Draw! category is a shadow; one dark streak on the floor to the right of the toad where its shadow falls",
+   "strokes": [
+    [
+     [
+      296,
+      184
+     ],
+     [
+      320,
+      186
+     ],
+     [
+      348,
+      188
+     ],
+     [
+      374,
+      192
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "speck1",
+   "plane": "floor",
+   "class": "line",
+   "why": "small marks on the bare floor at left, as in the footage",
+   "strokes": [
+    [
+     [
+      52,
+      153
+     ],
+     [
+      60,
+      158
+     ],
+     [
+      68,
+      162
+     ]
+    ],
+    [
+     [
+      9,
+      193
+     ],
+     [
+      12,
+      203
+     ],
+     [
+      14,
+      211
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "speck2",
+   "plane": "floor",
+   "class": "line",
+   "why": "a small mark on the floor below and right of the toad",
+   "strokes": [
+    [
+     [
+      340,
+      245
+     ],
+     [
+      344,
+      251
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the toad sits facing us on a bare board floor",
+  "4": "its throat swells",
+  "10": "throat at rest, head tilts a little toward its left",
+  "19": "throat swells again",
+  "22": "head tilted a little",
+  "31": "sits as at the start"
+ },
+ "no_cel": false
+}

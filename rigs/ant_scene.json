@@ -1,0 +1,248 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.08,
+   0.17,
+   0.4,
+   0.59,
+   0.74,
+   0.8,
+   0.77,
+   0.75,
+   0.73,
+   0.68,
+   0.63,
+   0.58,
+   0.54,
+   0.35,
+   0.11,
+   -0.1,
+   -0.13,
+   -0.1,
+   -0.07,
+   -0.02,
+   0.03,
+   0.07,
+   -0.01,
+   -0.05
+  ],
+  "y": [
+   0.0,
+   -0.62,
+   -1.46,
+   -2.02,
+   -2.36,
+   -2.62,
+   -2.74,
+   -2.2,
+   -1.61,
+   -1.16,
+   -1.22,
+   -1.46,
+   -1.71,
+   -1.85,
+   -1.85,
+   -1.86,
+   -1.84,
+   -1.56,
+   -1.25,
+   -0.96,
+   -1.1,
+   -1.27,
+   -1.48,
+   -1.6,
+   -1.68
+  ],
+  "source": "shots/ant-sam/camera.json (phase correlation), median and mean filtered over 3 frames because the measured shift is under 3 px and jitters frame to frame; the camera is locked off"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 6,
+   "label": "Rock overhang",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "ground",
+   "z": 2.5,
+   "label": "Rock ledge and stones",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Ant"
+  }
+ ],
+ "objects": [
+  {
+   "id": "overhang",
+   "plane": "far",
+   "class": "rock",
+   "why": "no Quick, Draw! category is a rock face; one line traces the lower edge of the dark rock overhang across the top of the frame and down its right side",
+   "strokes": [
+    [
+     [
+      -10,
+      30
+     ],
+     [
+      40,
+      48
+     ],
+     [
+      80,
+      66
+     ],
+     [
+      120,
+      80
+     ],
+     [
+      160,
+      72
+     ],
+     [
+      200,
+      70
+     ],
+     [
+      240,
+      84
+     ],
+     [
+      280,
+      98
+     ],
+     [
+      320,
+      118
+     ],
+     [
+      350,
+      135
+     ],
+     [
+      372,
+      160
+     ],
+     [
+      394,
+      175
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "mound",
+   "plane": "ground",
+   "qd": "mountain",
+   "box": [
+    -5,
+    128,
+    92,
+    215
+   ],
+   "strokes": 1
+  },
+  {
+   "id": "ledge",
+   "plane": "ground",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a rock ledge; one line is the edge of the stones the ant walks along, with two short lines for the pebbles below it",
+   "strokes": [
+    [
+     [
+      60,
+      214
+     ],
+     [
+      100,
+      214
+     ],
+     [
+      140,
+      212
+     ],
+     [
+      180,
+      208
+     ],
+     [
+      215,
+      209
+     ],
+     [
+      245,
+      214
+     ],
+     [
+      280,
+      212
+     ],
+     [
+      320,
+      216
+     ],
+     [
+      350,
+      212
+     ],
+     [
+      394,
+      218
+     ]
+    ],
+    [
+     [
+      228,
+      228
+     ],
+     [
+      238,
+      220
+     ],
+     [
+      252,
+      222
+     ],
+     [
+      256,
+      232
+     ],
+     [
+      240,
+      236
+     ],
+     [
+      228,
+      228
+     ]
+    ],
+    [
+     [
+      120,
+      240
+     ],
+     [
+      160,
+      236
+     ],
+     [
+      190,
+      244
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the ant stands at the rock edge facing right, legs stepping",
+  "12": "head lowered toward the rock",
+  "16": "the gaster swings down and forward as the ant steps on",
+  "24": "the ant has moved about a body-third to the right"
+ },
+ "no_cel": true
+}

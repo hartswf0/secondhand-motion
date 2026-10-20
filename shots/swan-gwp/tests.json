@@ -1,0 +1,82 @@
+[
+ {
+  "id": "M2",
+  "value": 5,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   3,
+   7,
+   13,
+   16,
+   23
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.47,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": false,
+  "design_typicality": 25
+ },
+ {
+  "id": "M3",
+  "value": 0.57,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.4
+ },
+ {
+  "id": "M6",
+  "value": 0.5,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "7 strokes, 45 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:4762067460423680; scenery quickdraw:5488182269313024, quickdraw:6408189039869952, quickdraw:5354464636567552, quickdraw:4700943218114560, quickdraw:4725018523074560, quickdraw:5419757748617216, quickdraw:4505384846884864, quickdraw:4711656422637568, quickdraw:5545139437043712, quickdraw:5926557635837952, quickdraw:5606003322126336, quickdraw:5219412678279168, quickdraw:5606003322126336, quickdraw:5219412678279168, quickdraw:5545139437043712, quickdraw:5926557635837952, quickdraw:5606003322126336, drawn by agent: no Quick, Draw! category is a shoreline; one straight line where the far bank meets the lake, at y 129 in the footage, drawn by agent: the lake surface has no Quick, Draw! category in the local data; short level dashes for the ripples, longer and further apart toward the bottom of the frame as the near water is closer, quickdraw:5926557635837952",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

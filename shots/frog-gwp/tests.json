@@ -1,0 +1,80 @@
+[
+ {
+  "id": "M2",
+  "value": 83,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   84,
+   84,
+   84,
+   84,
+   82,
+   82,
+   84,
+   82,
+   84,
+   82,
+   84
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.99,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 84
+ },
+ {
+  "id": "M3",
+  "value": 0.61,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.59
+ },
+ {
+  "id": "M6",
+  "value": 0.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "8 strokes, 84 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6018894881882112; scenery drawn by agent: no Quick, Draw! category is a floorboard seam; one long vertical line for the seam that runs the full height of the frame right of the toad, drawn by agent: a second, shorter board seam at the right edge of the frame, drawn by agent: a faint seam above and right of the toad that fades out at its back, drawn by agent: no Quick, Draw! category is a shadow; one dark streak on the floor to the right of the toad where its shadow falls, drawn by agent: small marks on the bare floor at left, as in the footage, drawn by agent: a small mark on the floor below and right of the toad",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

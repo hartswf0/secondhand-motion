@@ -1,0 +1,610 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.26,
+   0.22,
+   -0.06,
+   0.55,
+   2.2,
+   2.2,
+   2.62,
+   11.83,
+   30.74,
+   53.11,
+   68.74,
+   88.86,
+   108.45,
+   122.4,
+   136.95,
+   150.76,
+   162.12,
+   175.33,
+   189.01,
+   197.87,
+   203.33,
+   212.63,
+   221.53,
+   230.94,
+   241.35,
+   251.78,
+   258.82,
+   265.94,
+   272.1,
+   279.8,
+   289.79
+  ],
+  "y": [
+   0.0,
+   -0.28,
+   0.47,
+   0.01,
+   -1.64,
+   -1.29,
+   -1.21,
+   -2.01,
+   2.42,
+   1.02,
+   -1.3,
+   -0.84,
+   -1.46,
+   -1.48,
+   -0.98,
+   -0.49,
+   -0.79,
+   -0.02,
+   0.75,
+   1.39,
+   2.13,
+   1.98,
+   1.93,
+   1.69,
+   1.63,
+   0.77,
+   0.77,
+   1.02,
+   1.32,
+   1.45,
+   0.91,
+   1.65
+  ],
+  "source": "shots/lion-sam/camera.json, phase correlation with the subject masked out; checked by phase correlation of the top, tree, ledge and grass strips separately, which all move with it within 0.5 px"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 2.0,
+   "label": "Birch and bushes behind the ledge. Set to z 2, not from depth: the footage shows no parallax (top, tree, ledge and grass strips all move with the camera within 0.5 px), so a depth-derived z would slide them at the wrong speed"
+  },
+  {
+   "id": "ledge",
+   "z": 2.0,
+   "label": "Rock ledge and grass in front, same z for the same reason"
+  },
+  {
+   "id": "pair",
+   "z": 2.0,
+   "label": "The other lion, lying still on the same ledge"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Lion"
+  }
+ ],
+ "objects": [
+  {
+   "id": "birch",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -170,
+    -20,
+    -50,
+    135
+   ],
+   "aspect": 0.8,
+   "strokes": 3
+  },
+  {
+   "id": "bush1",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    -300,
+    40,
+    -190,
+    125
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "bush2",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    0,
+    10,
+    120,
+    105
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "bush3",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    300,
+    20,
+    400,
+    110
+   ],
+   "strokes": 2,
+   "skip": 2
+  },
+  {
+   "id": "ledge_top",
+   "plane": "ledge",
+   "class": "ledge",
+   "why": "the top edge of the rock ledge both lions lie on; no Quick, Draw! category is a rock ledge",
+   "strokes": [
+    [
+     [
+      -320,
+      192
+     ],
+     [
+      -180,
+      190
+     ],
+     [
+      -40,
+      191
+     ],
+     [
+      90,
+      189
+     ],
+     [
+      230,
+      191
+     ],
+     [
+      330,
+      190
+     ],
+     [
+      420,
+      193
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "ledge_foot",
+   "plane": "ledge",
+   "class": "ledge",
+   "why": "the foot of the rock face, where the grass starts; no Quick, Draw! category is a rock ledge",
+   "strokes": [
+    [
+     [
+      -320,
+      244
+     ],
+     [
+      -200,
+      248
+     ],
+     [
+      -60,
+      243
+     ],
+     [
+      80,
+      247
+     ],
+     [
+      210,
+      244
+     ],
+     [
+      330,
+      248
+     ],
+     [
+      420,
+      245
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "grass1",
+   "plane": "ledge",
+   "qd": "grass",
+   "box": [
+    -300,
+    250,
+    -170,
+    288
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "grass2",
+   "plane": "ledge",
+   "qd": "grass",
+   "box": [
+    -110,
+    252,
+    20,
+    288
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "grass3",
+   "plane": "ledge",
+   "qd": "grass",
+   "box": [
+    90,
+    250,
+    220,
+    288
+   ],
+   "strokes": 2,
+   "skip": 2
+  },
+  {
+   "id": "grass4",
+   "plane": "ledge",
+   "qd": "grass",
+   "box": [
+    280,
+    252,
+    410,
+    288
+   ],
+   "strokes": 2,
+   "skip": 3
+  },
+  {
+   "id": "lion2",
+   "plane": "pair",
+   "class": "lion",
+   "why": "the second lion, which lies still on the ledge in profile and leaves the frame at the right as the camera pans; it is the character's own doodle (quickdraw 6643650639429632) posed lying and in profile by rigs/lion.py, so both lions are the same drawing",
+   "strokes": [
+    [
+     [
+      259.0,
+      103.0
+     ],
+     [
+      254.0,
+      105.0
+     ],
+     [
+      242.0,
+      116.0
+     ],
+     [
+      234.0,
+      142.0
+     ],
+     [
+      238.0,
+      156.0
+     ],
+     [
+      244.0,
+      162.0
+     ],
+     [
+      258.0,
+      164.0
+     ],
+     [
+      265.0,
+      163.0
+     ],
+     [
+      280.0,
+      149.0
+     ],
+     [
+      287.0,
+      135.0
+     ],
+     [
+      288.0,
+      115.0
+     ],
+     [
+      282.0,
+      107.0
+     ],
+     [
+      271.0,
+      102.0
+     ],
+     [
+      252.0,
+      102.0
+     ],
+     [
+      249.0,
+      105.0
+     ]
+    ],
+    [
+     [
+      222.0,
+      96.0
+     ],
+     [
+      243.0,
+      83.0
+     ],
+     [
+      260.0,
+      82.0
+     ],
+     [
+      261.0,
+      84.0
+     ],
+     [
+      243.0,
+      95.0
+     ],
+     [
+      290.0,
+      81.0
+     ],
+     [
+      266.0,
+      97.0
+     ],
+     [
+      294.0,
+      94.0
+     ],
+     [
+      289.0,
+      110.0
+     ],
+     [
+      291.0,
+      115.0
+     ],
+     [
+      317.0,
+      113.0
+     ],
+     [
+      298.0,
+      139.0
+     ],
+     [
+      297.0,
+      143.0
+     ],
+     [
+      305.0,
+      143.0
+     ],
+     [
+      285.0,
+      157.0
+     ],
+     [
+      298.0,
+      156.0
+     ],
+     [
+      286.0,
+      167.0
+     ],
+     [
+      264.0,
+      181.0
+     ],
+     [
+      267.0,
+      173.0
+     ],
+     [
+      253.0,
+      173.0
+     ],
+     [
+      219.0,
+      190.0
+     ],
+     [
+      217.0,
+      184.0
+     ],
+     [
+      227.0,
+      125.0
+     ],
+     [
+      213.0,
+      136.0
+     ],
+     [
+      229.0,
+      104.0
+     ],
+     [
+      241.0,
+      94.0
+     ]
+    ],
+    [
+     [
+      227.0,
+      149.0
+     ],
+     [
+      223.0,
+      155.0
+     ],
+     [
+      223.0,
+      183.2
+     ],
+     [
+      199.0,
+      187.4
+     ],
+     [
+      181.0,
+      188.3
+     ],
+     [
+      175.0,
+      186.8
+     ],
+     [
+      172.0,
+      181.1
+     ],
+     [
+      173.0,
+      172.4
+     ],
+     [
+      167.0,
+      166.0
+     ],
+     [
+      156.0,
+      168.0
+     ],
+     [
+      139.0,
+      175.4
+     ],
+     [
+      133.0,
+      178.7
+     ],
+     [
+      130.0,
+      184.4
+     ],
+     [
+      114.0,
+      188.9
+     ],
+     [
+      107.0,
+      188.9
+     ],
+     [
+      92.0,
+      184.7
+     ],
+     [
+      85.0,
+      175.7
+     ],
+     [
+      81.0,
+      181.0
+     ],
+     [
+      72.0,
+      187.0
+     ],
+     [
+      62.0,
+      198.0
+     ],
+     [
+      67.0,
+      180.0
+     ],
+     [
+      75.0,
+      172.0
+     ],
+     [
+      135.0,
+      163.0
+     ],
+     [
+      176.0,
+      144.0
+     ],
+     [
+      195.0,
+      127.0
+     ],
+     [
+      226.0,
+      121.0
+     ]
+    ],
+    [
+     [
+      263.0,
+      123.0
+     ],
+     [
+      260.0,
+      122.0
+     ]
+    ],
+    [
+     [
+      288.0,
+      115.0
+     ],
+     [
+      283.0,
+      119.0
+     ],
+     [
+      283.0,
+      115.0
+     ]
+    ],
+    [
+     [
+      255.0,
+      145.0
+     ],
+     [
+      265.0,
+      149.0
+     ],
+     [
+      273.0,
+      149.0
+     ],
+     [
+      285.0,
+      132.0
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the other lion lies in profile; the camera starts to pan left",
+  "9": "the pan speeds up",
+  "14": "the lion enters at the left edge, looking at the camera",
+  "16": "the other lion has left the frame at the right",
+  "20": "the lion turns its head to the right",
+  "24": "the lion looks right in profile",
+  "31": "the lion lies still in profile"
+ },
+ "no_cel": "SAM follows the other lion until frame 16 and then this one, so the cel paint would cover the other lion's lines"
+}

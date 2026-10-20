@@ -1,0 +1,317 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   14.2,
+   28.12,
+   39.86,
+   54.39,
+   71.45,
+   86.53,
+   99.55,
+   111.48,
+   122.8,
+   132.91,
+   145.15,
+   156.67,
+   168.57,
+   179.84,
+   190.67,
+   201.68,
+   212.47,
+   223.57,
+   233.85,
+   243.35,
+   253.18,
+   263.72,
+   273.36,
+   282.76,
+   293.57,
+   303.96,
+   313.47,
+   321.97,
+   330.66,
+   337.91,
+   342.6
+  ],
+  "y": [
+   0.0,
+   -0.61,
+   -0.21,
+   -1.06,
+   -0.4,
+   -0.04,
+   1.22,
+   3.31,
+   5.12,
+   6.96,
+   8.42,
+   9.13,
+   9.49,
+   10.33,
+   10.13,
+   11.07,
+   11.59,
+   11.87,
+   12.29,
+   12.79,
+   13.21,
+   14.0,
+   15.5,
+   17.35,
+   19.95,
+   22.48,
+   25.9,
+   27.3,
+   28.5,
+   28.57,
+   28.59,
+   30.62
+  ],
+  "source": "shots/van-sam/camera.json: phase correlation of the footage with the van masked out; the camera pans left to follow the van, so the background moves right about 11 px a frame"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 2.2,
+   "label": "House and trees behind the yard. The camera pans, so the far scenery moves almost as fast as the near ground; plane depth is not taken from depth.json, which would make the house nearly still"
+  },
+  {
+   "id": "yard",
+   "z": 2,
+   "label": "Dirt yard, pole, box and parked car"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Van"
+  }
+ ],
+ "objects": [
+  {
+   "id": "house",
+   "plane": "far",
+   "qd": "house",
+   "box": [
+    -75,
+    18,
+    112,
+    118
+   ],
+   "strokes": 4
+  },
+  {
+   "id": "tree1",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    180,
+    -10,
+    270,
+    95
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "tree2",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -150,
+    -12,
+    -55,
+    135
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "tree3",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -250,
+    -5,
+    -185,
+    130
+   ],
+   "strokes": 2,
+   "skip": 2
+  },
+  {
+   "id": "tree4",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -345,
+    -8,
+    -270,
+    140
+   ],
+   "strokes": 2,
+   "skip": 3
+  },
+  {
+   "id": "fence",
+   "plane": "far",
+   "qd": "fence",
+   "box": [
+    -125,
+    100,
+    40,
+    126
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "tractor",
+   "plane": "yard",
+   "qd": "tractor",
+   "box": [
+    142,
+    112,
+    186,
+    150
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "ground",
+   "plane": "yard",
+   "class": "ground",
+   "why": "no Quick, Draw! category is the edge of a dirt yard; one long line where the yard meets the lawn behind it, and short dashes for tyre ruts",
+   "strokes": [
+    [
+     [
+      -420,
+      128
+     ],
+     [
+      -200,
+      138
+     ],
+     [
+      0,
+      132
+     ],
+     [
+      420,
+      124
+     ]
+    ],
+    [
+     [
+      -330,
+      230
+     ],
+     [
+      -280,
+      232
+     ]
+    ],
+    [
+     [
+      -200,
+      262
+     ],
+     [
+      -140,
+      260
+     ]
+    ],
+    [
+     [
+      -60,
+      240
+     ],
+     [
+      -10,
+      243
+     ]
+    ],
+    [
+     [
+      60,
+      280
+     ],
+     [
+      120,
+      278
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "pole",
+   "plane": "yard",
+   "class": "pole",
+   "why": "no Quick, Draw! category is a bare utility pole; one vertical line where the film has one",
+   "strokes": [
+    [
+     [
+      -185,
+      -10
+     ],
+     [
+      -183,
+      140
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "box",
+   "plane": "yard",
+   "class": "box",
+   "why": "a small white utility box stands in the yard; no Quick, Draw! category fits a plain box, so it is drawn as a square",
+   "strokes": [
+    [
+     [
+      -44,
+      146
+     ],
+     [
+      -14,
+      146
+     ],
+     [
+      -14,
+      176
+     ],
+     [
+      -44,
+      176
+     ],
+     [
+      -44,
+      146
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "pole2",
+   "plane": "yard",
+   "class": "pole",
+   "why": "a second bare utility pole stands behind the yard on the right late in the shot; one vertical line",
+   "strokes": [
+    [
+     [
+      -58,
+      0
+     ],
+     [
+      -57,
+      150
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the van fills the frame, seen three-quarters from the front",
+  "13": "it turns to a side view as it drives left",
+  "31": "it is smaller and in profile; the camera has panned left with it"
+ }
+}

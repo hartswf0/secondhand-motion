@@ -1,0 +1,81 @@
+[
+ {
+  "id": "M2",
+  "value": 77,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   77,
+   78,
+   79,
+   78,
+   75,
+   73,
+   74,
+   76,
+   80,
+   78,
+   78,
+   80
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.75,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 80
+ },
+ {
+  "id": "M3",
+  "value": 0.3,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.27
+ },
+ {
+  "id": "M6",
+  "value": 0.7,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "11 strokes, 63 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6219540520239104; scenery drawn by agent: no Quick, Draw! category is sand; three long low ripple lines for the soft dunes of the out-of-focus sand behind the crab, drawn by agent: no Quick, Draw! category is a beach; one line where the sand comes into focus in front of the crab, and short dashes for the coarse grains in the foreground, drawn by agent: no Quick, Draw! category fits a bit of shell debris; a short three-point mark where the small dark fragment lies on the sand to the right",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

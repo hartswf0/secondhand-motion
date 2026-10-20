@@ -1,0 +1,466 @@
+{
+ "category": "frog",
+ "doodle_key_id": "6018894881882112",
+ "facing": 1,
+ "face_from": [
+  "lside",
+  "lside"
+ ],
+ "note": "Quick, Draw! frog 6018894881882112, seen from the front. Stroke 0 is the tall rounded body and head in one line; strokes 4 and 5 are the two eyes; stroke 6 is the short mouth line; stroke 2 is the left leg folded beside the body with its toes; strokes 1 and 3 are the right haunch and right foot; stroke 7 is the line along the bottom of the belly. The whole drawing is placed by two points level with the feet, one at the far left of the left foot and one at the far right of the right haunch, so its size comes from the width of the toad. The body, eyes and mouth tilt together about the middle of the belly line when the head shifts (pose point crown), and the mouth line moves down a little with the throat (pose number throat). The legs stay planted as the toad sits. The middle point of the belly line also drops a little with the throat.",
+ "strokes": [
+  [
+   [
+    77,
+    155
+   ],
+   [
+    69,
+    143
+   ],
+   [
+    65,
+    127
+   ],
+   [
+    66,
+    85
+   ],
+   [
+    99,
+    16
+   ],
+   [
+    114,
+    4
+   ],
+   [
+    128,
+    0
+   ],
+   [
+    142,
+    4
+   ],
+   [
+    158,
+    21
+   ],
+   [
+    166,
+    34
+   ],
+   [
+    175,
+    58
+   ],
+   [
+    178,
+    98
+   ],
+   [
+    173,
+    148
+   ]
+  ],
+  [
+   [
+    172,
+    146
+   ],
+   [
+    173,
+    124
+   ],
+   [
+    180,
+    84
+   ],
+   [
+    200,
+    49
+   ],
+   [
+    213,
+    38
+   ],
+   [
+    225,
+    35
+   ],
+   [
+    232,
+    36
+   ],
+   [
+    243,
+    49
+   ],
+   [
+    255,
+    81
+   ],
+   [
+    241,
+    148
+   ]
+  ],
+  [
+   [
+    65,
+    97
+   ],
+   [
+    65,
+    76
+   ],
+   [
+    59,
+    70
+   ],
+   [
+    44,
+    70
+   ],
+   [
+    31,
+    79
+   ],
+   [
+    20,
+    97
+   ],
+   [
+    16,
+    111
+   ],
+   [
+    18,
+    147
+   ],
+   [
+    24,
+    164
+   ],
+   [
+    8,
+    168
+   ],
+   [
+    0,
+    179
+   ],
+   [
+    15,
+    182
+   ],
+   [
+    32,
+    180
+   ],
+   [
+    44,
+    170
+   ],
+   [
+    52,
+    152
+   ],
+   [
+    53,
+    169
+   ],
+   [
+    58,
+    178
+   ],
+   [
+    65,
+    180
+   ],
+   [
+    71,
+    172
+   ],
+   [
+    76,
+    159
+   ],
+   [
+    85,
+    167
+   ],
+   [
+    94,
+    166
+   ],
+   [
+    94,
+    158
+   ],
+   [
+    80,
+    152
+   ]
+  ],
+  [
+   [
+    170,
+    147
+   ],
+   [
+    167,
+    165
+   ],
+   [
+    173,
+    179
+   ],
+   [
+    193,
+    183
+   ],
+   [
+    198,
+    180
+   ],
+   [
+    199,
+    173
+   ],
+   [
+    203,
+    187
+   ],
+   [
+    213,
+    189
+   ],
+   [
+    223,
+    184
+   ],
+   [
+    230,
+    174
+   ],
+   [
+    241,
+    170
+   ],
+   [
+    247,
+    164
+   ],
+   [
+    250,
+    151
+   ],
+   [
+    242,
+    141
+   ]
+  ],
+  [
+   [
+    94,
+    72
+   ],
+   [
+    95,
+    56
+   ],
+   [
+    103,
+    55
+   ],
+   [
+    108,
+    64
+   ],
+   [
+    109,
+    76
+   ],
+   [
+    103,
+    80
+   ],
+   [
+    96,
+    79
+   ],
+   [
+    94,
+    68
+   ],
+   [
+    96,
+    63
+   ]
+  ],
+  [
+   [
+    120,
+    71
+   ],
+   [
+    120,
+    63
+   ],
+   [
+    128,
+    57
+   ],
+   [
+    135,
+    60
+   ],
+   [
+    140,
+    69
+   ],
+   [
+    140,
+    77
+   ],
+   [
+    130,
+    78
+   ],
+   [
+    122,
+    71
+   ],
+   [
+    117,
+    60
+   ]
+  ],
+  [
+   [
+    103,
+    106
+   ],
+   [
+    119,
+    105
+   ]
+  ],
+  [
+   [
+    90,
+    163
+   ],
+   [
+    139,
+    172
+   ],
+   [
+    168,
+    168
+   ]
+  ]
+ ],
+ "root": [
+  "lside",
+  "rside"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "lside": [
+   0,
+   170
+  ],
+  "rside": [
+   255,
+   170
+  ],
+  "base": [
+   128,
+   165
+  ],
+  "crown": [
+   128,
+   0
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 1,
+   "joint": "base",
+   "aim": [
+    "base",
+    "crown"
+   ],
+   "turn": 0.6,
+   "shift_by": "throat",
+   "shift": [
+    0,
+    3
+   ]
+  },
+  {
+   "stroke": 7,
+   "from": 1,
+   "to": 1,
+   "joint": "lside",
+   "aim": [
+    "lside",
+    "rside"
+   ],
+   "turn": 0,
+   "shift_by": "throat",
+   "shift": [
+    0,
+    9
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 12,
+   "joint": "base",
+   "aim": [
+    "base",
+    "crown"
+   ],
+   "turn": 0.6
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 8,
+   "joint": "base",
+   "aim": [
+    "base",
+    "crown"
+   ],
+   "turn": 0.6
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 8,
+   "joint": "base",
+   "aim": [
+    "base",
+    "crown"
+   ],
+   "turn": 0.6
+  },
+  {
+   "rest": true,
+   "joint": "lside",
+   "aim": [
+    "lside",
+    "rside"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "track": false,
+ "smooth": 1.5
+}
