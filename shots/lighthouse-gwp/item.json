@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0096",
+ "id": "lighthouse-gwp",
+ "kind": "shot",
+ "title": "Lighthouse, the Giraffe Walks Past Way",
+ "category": "lighthouse",
+ "wave": 4,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/lighthouse-gwp/cover.png",
+ "cover_alt": "shots/lighthouse-gwp/frames/f016.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/lighthouse-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#lighthouse-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/lighthouse_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/lighthouse/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/lighthouse-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 4"
+ ]
+}

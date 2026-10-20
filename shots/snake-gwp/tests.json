@@ -1,0 +1,84 @@
+[
+ {
+  "id": "M2",
+  "value": 6,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   4,
+   9,
+   11,
+   11,
+   11,
+   11,
+   10,
+   9
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.54,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 37
+ },
+ {
+  "id": "M3",
+  "value": 0.29,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.19
+ },
+ {
+  "id": "M6",
+  "value": 1.1,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 47 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:4612932086267904; scenery drawn by agent: no Quick, Draw! category is a rock edge; one line for the far edge of the rock seen against the sky to the right of the snake, drawn by agent: no Quick, Draw! category is a rock; one line for the top of the rock the coils rest on, and short marks for its grain",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

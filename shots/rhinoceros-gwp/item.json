@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0095",
+ "id": "rhinoceros-gwp",
+ "kind": "shot",
+ "title": "Rhinoceros, the Giraffe Walks Past Way",
+ "category": "rhinoceros",
+ "wave": 4,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/rhinoceros-gwp/cover.png",
+ "cover_alt": "shots/rhinoceros-gwp/frames/f024.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/rhinoceros-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#rhinoceros-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/rhinoceros_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/rhinoceros/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/rhinoceros-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 4"
+ ]
+}

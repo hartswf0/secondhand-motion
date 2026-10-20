@@ -1,0 +1,348 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -0.11,
+   -0.33,
+   -0.15,
+   -0.11,
+   0.09,
+   0.6,
+   1.25,
+   2.59,
+   2.94,
+   4.24,
+   4.64,
+   5.09,
+   5.43,
+   5.93,
+   6.57,
+   5.82,
+   6.51,
+   7.76,
+   8.14,
+   9.26,
+   10.19,
+   10.59,
+   11.21,
+   11.94,
+   12.27,
+   13.51,
+   14.57,
+   15.95,
+   16.98,
+   18.57,
+   19.71
+  ],
+  "y": [
+   0.0,
+   -0.68,
+   -1.63,
+   -1.7,
+   -1.7,
+   -1.49,
+   -0.68,
+   0.57,
+   4.02,
+   5.55,
+   9.52,
+   13.52,
+   17.6,
+   19.89,
+   23.39,
+   26.22,
+   27.69,
+   29.09,
+   32.14,
+   34.54,
+   38.02,
+   40.95,
+   44.72,
+   47.96,
+   52.94,
+   56.1,
+   60.87,
+   64.35,
+   70.92,
+   75.25,
+   81.5,
+   85.93
+  ],
+  "source": "shots/guitar-sam/camera.json: phase correlation of the footage with the guitar masked out. The move is a downward tilt with a little pan, so the room behind the guitar slides almost exactly as far as the guitar does (86 px against the guitar's 89 px)."
+ },
+ "planes": [
+  {
+   "id": "room",
+   "z": 2.05,
+   "label": "Chair, legs and rug behind the guitar. Depth Anything puts them farther than the guitar (0.52 against 0.81), but the camera turns rather than travels, so the measured shift of the room is used almost as it is; a plane at the depth ratio would slide a third too slowly."
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Guitar"
+  }
+ ],
+ "objects": [
+  {
+   "id": "chair",
+   "plane": "room",
+   "class": "chair",
+   "why": "the local Quick, Draw! bank (data/quickdraw) has no chair category; this is the top of the black chair back the guitar leans on and the outer edge of its right arm, which come into view as the camera tilts down",
+   "strokes": [
+    [
+     [
+      -20,
+      -42
+     ],
+     [
+      60,
+      -46
+     ],
+     [
+      140,
+      -52
+     ],
+     [
+      205,
+      -57
+     ],
+     [
+      228,
+      -52
+     ],
+     [
+      246,
+      -40
+     ],
+     [
+      258,
+      -20
+     ],
+     [
+      266,
+      10
+     ],
+     [
+      270,
+      50
+     ],
+     [
+      272,
+      100
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "chair_arm",
+   "plane": "room",
+   "class": "chair",
+   "why": "the local Quick, Draw! bank (data/quickdraw) has no chair category; the rounded arm rest beside the guitar's neck, with its knob",
+   "strokes": [
+    [
+     [
+      150,
+      -18
+     ],
+     [
+      172,
+      -28
+     ],
+     [
+      205,
+      -26
+     ],
+     [
+      230,
+      -20
+     ]
+    ],
+    [
+     [
+      225,
+      -26
+     ],
+     [
+      236,
+      -24
+     ],
+     [
+      240,
+      -16
+     ],
+     [
+      230,
+      -14
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "knee",
+   "plane": "room",
+   "class": "leg",
+   "why": "the local Quick, Draw! bank has no trouser, leg or shoe category; this is the lower edge of the seated person's jeans and the shoe at the top right",
+   "strokes": [
+    [
+     [
+      274,
+      8
+     ],
+     [
+      288,
+      32
+     ],
+     [
+      304,
+      56
+     ],
+     [
+      320,
+      78
+     ],
+     [
+      350,
+      74
+     ],
+     [
+      392,
+      72
+     ]
+    ],
+    [
+     [
+      320,
+      80
+     ],
+     [
+      326,
+      98
+     ],
+     [
+      344,
+      112
+     ],
+     [
+      372,
+      116
+     ],
+     [
+      392,
+      112
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "boot",
+   "plane": "room",
+   "class": "leg",
+   "why": "no trouser or shoe category in the local Quick, Draw! bank; the person's other leg crossing behind the guitar, ending in a brown boot",
+   "strokes": [
+    [
+     [
+      262,
+      104
+     ],
+     [
+      300,
+      110
+     ],
+     [
+      350,
+      104
+     ],
+     [
+      392,
+      98
+     ]
+    ],
+    [
+     [
+      256,
+      140
+     ],
+     [
+      300,
+      150
+     ],
+     [
+      345,
+      140
+     ],
+     [
+      392,
+      130
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "rug",
+   "plane": "room",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a rug edge; the line where the grey carpet meets the yellow rug",
+   "strokes": [
+    [
+     [
+      288,
+      176
+     ],
+     [
+      340,
+      186
+     ],
+     [
+      400,
+      204
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "knob",
+   "plane": "room",
+   "class": "ground",
+   "why": "no Quick, Draw! category fits; a small dark round object lying on the rug",
+   "strokes": [
+    [
+     [
+      306,
+      240
+     ],
+     [
+      312,
+      236
+     ],
+     [
+      319,
+      240
+     ],
+     [
+      319,
+      248
+     ],
+     [
+      312,
+      251
+     ],
+     [
+      306,
+      247
+     ],
+     [
+      306,
+      240
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the guitar leans still against a black chair; a seated person's leg and shoe are at the right",
+  "8": "the camera starts to tilt down, so the guitar and the room slide down and a little right together",
+  "20": "the chair back comes into view above the guitar's shoulders",
+  "31": "the body is near the bottom edge; the sound hole is still in frame"
+ }
+}

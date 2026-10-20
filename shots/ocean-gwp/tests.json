@@ -1,25 +1,26 @@
 [
  {
   "id": "M2",
-  "value": 30,
+  "value": 29,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
    32,
+   33,
    31,
-   31,
-   27,
+   30,
+   26,
+   26,
+   24,
+   26,
    29,
-   27,
-   27,
-   28,
-   31,
-   32
+   30,
+   28
   ]
  },
  {
   "id": "M2b",
-  "value": 0.94,
+  "value": 0.93,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 32
@@ -32,7 +33,7 @@
  },
  {
   "id": "M6",
-  "value": 0.9,
+  "value": 0.6,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -52,7 +53,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:4618667562106880; scenery quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), drawn by agent: the horizon comes into view at the top from frame 28 as the ship pitches; no Quick, Draw! category is a single level line, so it is drawn as one slightly uneven stroke",
+  "value": "rig quickdraw:4618667562106880; scenery quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), drawn by agent: the horizon comes in from the top edge at frame 25 as the ship pitches; no Quick, Draw! category is a single level line, so it is one slightly uneven stroke, placed where the film's sky band ends",
   "unit": "",
   "ok": true
  },
@@ -74,5 +75,20 @@
   "value": "complete",
   "unit": "",
   "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cocean waves (a set of four or five wavy and zigzag line strokes)\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/ocean-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "From frame 5 on the black strokes match the doodle's five lines and their angles closely, but in frames 1-4 the group is cut off at the left edge and the top stroke is drawn with a different shape, so it reads as the doodle only after frame 5.",
+  "evidence": "shots/ocean-gwp/reviews/critic-1.json"
  }
 ]

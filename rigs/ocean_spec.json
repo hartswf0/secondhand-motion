@@ -7,7 +7,7 @@
   "left"
  ],
  "size_from_mask": false,
- "note": "Quick, Draw! ocean 4618667562106880: five wavy lines, one under another. Stroke 0 is the top line with three peaks, the right-hand peak (vertices 13-16) the tallest; strokes 1 and 2 are the middle swells; stroke 3 is the long bottom swell; stroke 4 is a short zigzag at the lower left. The whole drawing is placed by two points on one level line (left and right), which ride with the water as the ship pitches and the sea runs to the right, so the drawing keeps one size. Each line heaves up and down by its own amount (pose h0 to h4, doodle units upward), the right-hand peak of the top line rises on its own as the big crest builds (pose crest), and its last vertex, the lip, throws forward and down when the crest breaks (pose lip).",
+ "note": "Quick, Draw! ocean 4618667562106880: five wavy lines, one under another. Stroke 0 is the top line with three peaks, the right-hand peak (vertices 13-16) the tallest; strokes 1 and 2 are the middle swells; stroke 3 is the long bottom swell; stroke 4 is a short zigzag at the lower left. The whole drawing is placed by two points on one level line (left and right), which ride with the water as the ship pitches and the sea runs to the right, so the drawing keeps one size. Each line heaves up and down by its own amount, about 12 doodle units on an 18-frame swell, each line 4 frames behind the one above, so the swell runs down the drawing toward the viewer (pose h0 to h4, doodle units upward), the right-hand peak of the top line rises on its own as the big crest builds (pose crest), and its last vertex, the lip, throws forward and down when the crest breaks (pose lip).",
  "root": [
   "left",
   "right"
@@ -137,7 +137,7 @@
   }
  ],
  "size": "steady",
- "smooth": 1.2,
+ "smooth": 1.5,
  "track": false,
  "strokes": [
   [
