@@ -1,0 +1,26 @@
+{
+  "review_type": "fresh_blind_visual_critic",
+  "inspected": [
+    "shots/mosquito/source.json",
+    "shots/mosquito/integrated/source-inspection.jpg",
+    "shots/mosquito/integrated/design.png",
+    "shots/mosquito/integrated/source-01.jpg through source-08.jpg",
+    "shots/mosquito/integrated/key-01.png through key-08.png"
+  ],
+  "actual_normal_speed_playback_occurred": false,
+  "playback_note": "Review used the supplied still images only. Neither decoding frames nor actual normal-speed playback was performed.",
+  "source_framing_pose_bar_met": true,
+  "source_framing_pose_assessment": "Broadly met in the sampled stills: the insect remains small, near the upper center-left, with its head to the left and abdomen to the right, standing on a descending diagonal skin surface. The sampled abdomen pitch changes are represented. This is a still-pose assessment, not motion approval.",
+  "same_original_doodle_identity_bar_met": false,
+  "overall_bar_met": false,
+  "most_important_visual_gap": {
+    "name": "The original's distinctive tall angular wing has been flattened into small horizontal overlapping wedges.",
+    "evidence": "In design.png, one large, kinked, narrow wing rises conspicuously above the long body and is a major part of the doodle's silhouette. In every integrated key, the upper appendages lie close to the abdomen and read as short horizontal slivers. The polygon head and thin angular legs survive, but this defining silhouette feature does not.",
+    "smallest_repair": "Restore the supplied doodle's existing tall, kinked wing contour at its original proportion to the body. Attach it to the existing back position and carry its angle with the sampled body pose; keep the source-matched insect scale, placement, body pitch, and foot contacts. Reuse the supplied contour instead of adding anatomical detail or a new wing design.",
+    "must_retain": [
+      "The supplied doodle's irregular polygon head, long tapered body, thin uneven dark strokes, and angular jointed legs.",
+      "The sampled source's small subject scale, left-facing orientation, skin-relative placement, diagonal surface, grounded stance, and abdomen pitch changes.",
+      "The existing restrained cream-and-dark doodle treatment."
+    ]
+  }
+}

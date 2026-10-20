@@ -1641,12 +1641,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
-  "cover": "shots/mosquito/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 6165377341980672; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "121 rendered frames at 24 fps; 8 integrated keys. Late placement needs repair; mask fit fails; motion unapproved.",
+  "cover": "shots/mosquito/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 6165377341980672; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background/context drawn by agent.",
   "links": [
    {
-    "label": "Review six keys",
+    "label": "Watch assembled comparison",
+    "href": "shots/mosquito/integrated/index.html"
+   },
+   {
+    "label": "Source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#mosquito"
+   },
+   {
+    "label": "Earlier isolated keys",
     "href": "shots/mosquito/index.html"
    },
    {
@@ -1656,8 +1664,9 @@
   ],
   "tests": "shots/mosquito/tests.json",
   "tags": [
-   "key drafts",
-   "wave 2"
+   "assembled review",
+   "wave 2",
+   "SAM inspected"
   ],
   "t": {
    "pass": 3,
@@ -1681,7 +1690,7 @@
     "ok": null
    },
    "J4": {
-    "value": "independent identity met",
+    "value": "native drawing identity met by third independent still critic; source placement not met",
     "unit": "",
     "ok": true
    },
@@ -1692,15 +1701,15 @@
    },
    "T1": {
     "value": {
-     "min_recall": 0.9987808932727474,
+     "min_recall": 0.9904559915164369,
      "min_parts_kept": 1.0,
-     "keys": 6
+     "keys": 8
     },
     "unit": "fraction",
     "ok": true
    },
    "S7": {
-    "value": 3,
+    "value": 6,
     "unit": "verified hash-linked entries",
     "ok": true
    },
@@ -1710,7 +1719,7 @@
     "ok": null
    }
   },
-  "href": "shots/mosquito/index.html",
+  "href": "shots/mosquito/integrated/index.html",
   "gait": "splits"
  },
  {
@@ -1724,12 +1733,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
-  "cover": "shots/pig/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 5298401904164864; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "47 rendered frames at 24 fps; 6 integrated keys. Head turn needs repair; motion unapproved.",
+  "cover": "shots/pig/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5298401904164864; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background/context drawn by agent.",
   "links": [
    {
-    "label": "Review six keys",
+    "label": "Watch assembled comparison",
+    "href": "shots/pig/integrated/index.html"
+   },
+   {
+    "label": "Source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#pig"
+   },
+   {
+    "label": "Earlier isolated keys",
     "href": "shots/pig/index.html"
    },
    {
@@ -1739,11 +1756,12 @@
   ],
   "tests": "shots/pig/tests.json",
   "tags": [
-   "key drafts",
-   "wave 2"
+   "assembled review",
+   "wave 2",
+   "SAM inspected"
   ],
   "t": {
-   "pass": 3,
+   "pass": 4,
    "fail": 0,
    "total": 7
   },
@@ -1764,26 +1782,27 @@
     "ok": null
    },
    "J4": {
-    "value": "independent identity met",
+    "value": "v3 independent doodle identity bar met; source head turn still needs repair",
     "unit": "",
     "ok": true
    },
    "B1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 1.0,
+    "unit": "fraction of background vector geometry held unchanged across47frames",
+    "ok": true
    },
    "T1": {
     "value": {
-     "min_recall": 0.9938186179536858,
+     "min_recall": 0.9932963476652797,
      "min_parts_kept": 1.0,
-     "keys": 6
+     "keys": 6,
+     "scope": "separated native-vector character exports"
     },
     "unit": "fraction",
     "ok": true
    },
    "S7": {
-    "value": 3,
+    "value": 6,
     "unit": "verified hash-linked entries",
     "ok": true
    },
@@ -1793,7 +1812,7 @@
     "ok": null
    }
   },
-  "href": "shots/pig/index.html",
+  "href": "shots/pig/integrated/index.html",
   "gait": "heel click"
  },
  {
@@ -1807,12 +1826,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
-  "cover": "shots/see-saw/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 4512834501214208; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "160 rendered frames at 24 fps; 9 integrated keys. Seated rider pose needs repair; motion unapproved.",
+  "cover": "shots/see-saw/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 4512834501214208; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background/context drawn by agent.",
   "links": [
    {
-    "label": "Review six keys",
+    "label": "Watch assembled comparison",
+    "href": "shots/see-saw/integrated/index.html"
+   },
+   {
+    "label": "Source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#see-saw"
+   },
+   {
+    "label": "Earlier isolated keys",
     "href": "shots/see-saw/index.html"
    },
    {
@@ -1822,52 +1849,53 @@
   ],
   "tests": "shots/see-saw/tests.json",
   "tags": [
-   "key drafts",
-   "wave 2"
+   "assembled review",
+   "wave 2",
+   "SAM inspected"
   ],
   "t": {
-   "pass": 3,
+   "pass": 4,
    "fail": 0,
    "total": 7
   },
   "r": {
    "S6": {
-    "value": "source record complete; rights explicitly unverified",
+    "value": "complete source/rights record; retained 9.45\u201316.1s excludes opening fade",
     "unit": "",
     "ok": true
    },
    "M1": {
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
    },
    "M2": {
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
    },
    "J4": {
-    "value": "independent identity met",
+    "value": "same original doodle identity met in independent still review-v3",
     "unit": "",
     "ok": true
    },
    "B1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
-   },
-   "T1": {
-    "value": {
-     "min_recall": 0.9989454257843395,
-     "min_parts_kept": 1.0,
-     "keys": 6
-    },
+    "value": 1.0,
     "unit": "fraction",
     "ok": true
    },
+   "T1": {
+    "value": {
+     "min_recall": 0.9951754385964913,
+     "min_parts_kept": 1.0,
+     "keys": 9
+    },
+    "unit": "",
+    "ok": true
+   },
    "S7": {
-    "value": 4,
-    "unit": "verified hash-linked entries",
+    "value": 7,
+    "unit": "",
     "ok": true
    },
    "T3": {
@@ -1876,7 +1904,7 @@
     "ok": null
    }
   },
-  "href": "shots/see-saw/index.html",
+  "href": "shots/see-saw/integrated/index.html",
   "gait": "skip"
  },
  {

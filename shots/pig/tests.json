@@ -19,37 +19,44 @@
   },
   {
     "id": "J4",
-    "value": "independent identity met",
+    "value": "v3 independent doodle identity bar met; source head turn still needs repair",
     "unit": "",
     "ok": true
   },
   {
     "id": "B1",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 1.0,
+    "unit": "fraction of background vector geometry held unchanged across47frames",
+    "ok": true
   },
   {
     "id": "T1",
     "value": {
-      "min_recall": 0.9938186179536858,
+      "min_recall": 0.9932963476652797,
       "min_parts_kept": 1.0,
-      "keys": 6
+      "keys": 6,
+      "scope": "separated native-vector character exports"
     },
     "unit": "fraction",
     "ok": true
   },
   {
     "id": "M3",
-    "value": "not run",
-    "unit": "",
+    "value": {
+      "mean": 0.7220241628269402,
+      "minimum": 0.6468967494306328,
+      "metric": "filled rig body/head cel +13px limb envelopes vs SAM, not rendered cartoon pixel coverage",
+      "proxy_thresholds_met": true,
+      "source_pose_review": "late head turn still needs repair"
+    },
+    "unit": "IoU proxy",
     "ok": null
   },
   {
     "id": "M4",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0,
+    "unit": "verified planted intervals;4 required; no foot-slide pass",
+    "ok": false
   },
   {
     "id": "M5",
@@ -71,21 +78,21 @@
   },
   {
     "id": "S2",
-    "value": "not run",
+    "value": "All10original doodle strokes assigned; QuickDraw key and agent-drawn scene credited",
     "unit": "",
-    "ok": null
+    "ok": true
   },
   {
     "id": "S3",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 47,
+    "unit": "rendered timeline frames with6keys",
+    "ok": true
   },
   {
     "id": "S5",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": "Far legs behind torso cel; fence/panel behind pig; native near leg and head in front",
+    "unit": "layer order",
+    "ok": true
   },
   {
     "id": "S4",
@@ -113,7 +120,7 @@
   },
   {
     "id": "S7",
-    "value": 3,
+    "value": 6,
     "unit": "verified hash-linked entries",
     "ok": true
   }

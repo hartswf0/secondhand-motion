@@ -1,0 +1,39 @@
+{
+  "review_type": "blind visual review",
+  "source_interval_seconds": [
+    6.3063063063,
+    8.2415749082
+  ],
+  "inspected": [
+    "../source.json",
+    "source-contact-sheet.jpg",
+    "design.png",
+    "source-01.jpg",
+    "source-02.jpg",
+    "source-03.jpg",
+    "source-04.jpg",
+    "source-05.jpg",
+    "source-06.jpg",
+    "key-01.png",
+    "key-02.png",
+    "key-03.png",
+    "key-04.png",
+    "key-05.png",
+    "key-06.png"
+  ],
+  "normal_speed_watched": false,
+  "normal_speed_reason": "No actual normal-speed playback viewing surface was available in this review. Images were inspected; neither sampled frames nor decoding would establish normal-speed viewing.",
+  "motion_approval": "withheld",
+  "source_composition_bar_met": true,
+  "source_pose_bar_met": false,
+  "original_doodle_identity_bar_met": true,
+  "overall_visual_verdict": "repair needed",
+  "one_gap_that_matters_most": "The five leg strokes form long, nearly parallel poles in every key. They do not carry the source\u2019s changing front-leg reach and bent/receding leg poses, especially during the turn toward camera. This is the main break in pose correspondence.",
+  "smallest_repair": "Keep exactly five sparse leg strokes and the present body/head treatment. Change only the leg attachment positions, lengths, angles, and occasional bends across the six keys so the front group follows the visible reaching/bending front legs and the rear pair recedes as in the corresponding source poses. Retain the original doodle\u2019s uneven dangling-stroke character instead of making an evenly spaced parallel bundle.",
+  "strengths_not_to_lose": [
+    "The pig remains clearly recognizable as the supplied doodle: angular double-peak ears, nested square spiral snout, sparse black outline, and five leg strokes.",
+    "The left-facing profile develops toward a three-quarter frontal view, with the snout moving through approximately the right areas of the source frame.",
+    "The large right-side body crop and simple fence/ground context preserve the broad source composition."
+  ],
+  "scope_limit": "Static composition, sampled pose correspondence, and drawing identity only; no timing, interpolation, or motion approval."
+}

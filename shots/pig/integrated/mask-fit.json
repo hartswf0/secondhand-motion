@@ -1,0 +1,127 @@
+{
+  "method": "filled native-body cel polygon plus 13px source-space limb envelopes against SAM binary object mask; coordinates resized nearest-neighbor; not ink overlap",
+  "frames": [
+    {
+      "source_time": 6.372666666666667,
+      "iou": 0.8067909134538473,
+      "sam_predicted_iou": 0.962
+    },
+    {
+      "source_time": 6.456,
+      "iou": 0.8032786885245902,
+      "sam_predicted_iou": 0.962
+    },
+    {
+      "source_time": 6.539333333333333,
+      "iou": 0.7968957069997189,
+      "sam_predicted_iou": 0.956
+    },
+    {
+      "source_time": 6.622666666666667,
+      "iou": 0.7874496765277305,
+      "sam_predicted_iou": 0.959
+    },
+    {
+      "source_time": 6.706,
+      "iou": 0.7749381533796186,
+      "sam_predicted_iou": 0.957
+    },
+    {
+      "source_time": 6.789333333333333,
+      "iou": 0.7819113656918902,
+      "sam_predicted_iou": 0.947
+    },
+    {
+      "source_time": 6.872666666666667,
+      "iou": 0.7404137028861091,
+      "sam_predicted_iou": 0.947
+    },
+    {
+      "source_time": 6.956,
+      "iou": 0.7320694768057615,
+      "sam_predicted_iou": 0.942
+    },
+    {
+      "source_time": 7.039333333333333,
+      "iou": 0.7393531788124309,
+      "sam_predicted_iou": 0.947
+    },
+    {
+      "source_time": 7.122666666666667,
+      "iou": 0.7029836464857342,
+      "sam_predicted_iou": 0.95
+    },
+    {
+      "source_time": 7.206,
+      "iou": 0.673789536165522,
+      "sam_predicted_iou": 0.947
+    },
+    {
+      "source_time": 7.289333333333333,
+      "iou": 0.6575129533678756,
+      "sam_predicted_iou": 0.954
+    },
+    {
+      "source_time": 7.372666666666667,
+      "iou": 0.6803605764260756,
+      "sam_predicted_iou": 0.963
+    },
+    {
+      "source_time": 7.456,
+      "iou": 0.685119309324913,
+      "sam_predicted_iou": 0.953
+    },
+    {
+      "source_time": 7.539333333333333,
+      "iou": 0.7061290322580646,
+      "sam_predicted_iou": 0.95
+    },
+    {
+      "source_time": 7.622666666666667,
+      "iou": 0.6935216391162468,
+      "sam_predicted_iou": 0.942
+    },
+    {
+      "source_time": 7.706,
+      "iou": 0.6689399275076013,
+      "sam_predicted_iou": 0.939
+    },
+    {
+      "source_time": 7.789333333333333,
+      "iou": 0.6468967494306328,
+      "sam_predicted_iou": 0.954
+    },
+    {
+      "source_time": 7.872666666666667,
+      "iou": 0.7142999584545077,
+      "sam_predicted_iou": 0.954
+    },
+    {
+      "source_time": 7.956,
+      "iou": 0.7431632716626175,
+      "sam_predicted_iou": 0.949
+    },
+    {
+      "source_time": 8.039333333333333,
+      "iou": 0.7465215978208719,
+      "sam_predicted_iou": 0.949
+    },
+    {
+      "source_time": 8.122666666666667,
+      "iou": 0.669476047653357,
+      "sam_predicted_iou": 0.946
+    },
+    {
+      "source_time": 8.206,
+      "iou": 0.6547406362639084,
+      "sam_predicted_iou": 0.895
+    }
+  ],
+  "mean": 0.7220241628269402,
+  "minimum": 0.6468967494306328,
+  "bar_mean": 0.65,
+  "bar_minimum": 0.45,
+  "pass": true,
+  "measurement_scope": "Filled rig envelope proxy, not rendered cartoon ink/pixel coverage. No pixel-exact artwork-mask claim.",
+  "time_alignment": "CI nominal sample time t0 + frame/fps; ffmpeg frame selection may differ by one source frame."
+}

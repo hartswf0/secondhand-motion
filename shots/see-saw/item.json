@@ -9,12 +9,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
-  "cover": "shots/see-saw/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 4512834501214208; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "160 rendered frames at 24 fps; 9 integrated keys. Seated rider pose needs repair; motion unapproved.",
+  "cover": "shots/see-saw/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 4512834501214208; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background/context drawn by agent.",
   "links": [
     {
-      "label": "Review six keys",
+      "label": "Watch assembled comparison",
+      "href": "shots/see-saw/integrated/index.html"
+    },
+    {
+      "label": "Source / mask / drawing",
+      "href": "shots/wave2-segmentation/index.html#see-saw"
+    },
+    {
+      "label": "Earlier isolated keys",
       "href": "shots/see-saw/index.html"
     },
     {
@@ -24,7 +32,8 @@
   ],
   "tests": "shots/see-saw/tests.json",
   "tags": [
-    "key drafts",
-    "wave 2"
+    "assembled review",
+    "wave 2",
+    "SAM inspected"
   ]
 }

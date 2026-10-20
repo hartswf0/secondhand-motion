@@ -1,0 +1,15 @@
+{
+  "repository": "hartswf0/secondhand-motion",
+  "branch": "wave2-track/see-saw",
+  "commit": "cf5df58ca80c8c9536d8f920654f5a01ee65898f",
+  "model": "facebook/sam2.1-hiera-small",
+  "frames": 87,
+  "RLE_all_lengths_valid": true,
+  "single_instance_mask_valid": false,
+  "limitation": "SAM merges multiple parallel boards. Whole combined mask is not a valid single-board target; no source mask-fit gate is claimed.",
+  "predicted_iou_is_not_measured_source_fit": true,
+  "input_sha256": {
+    "track.json": "9ed8d1d419d6388418f6038190f78e20d6af5fd29adef88dd765cb5c837a93a7",
+    "clip.json": "b9bb32072180f4f410c4c8b82cf79a96b57a67249efe4ff6312e67ba978e3716"
+  }
+}

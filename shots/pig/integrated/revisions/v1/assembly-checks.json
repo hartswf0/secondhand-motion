@@ -1,0 +1,27 @@
+{
+  "rendered_frames": 47,
+  "fps": 24,
+  "keys": 6,
+  "full_decode": true,
+  "source_sha256_verified": true,
+  "same_topology_all_frames": true,
+  "original_stroke_count": 10,
+  "all_original_strokes_assigned": true,
+  "SAM": "precomputed SAM2.1 masks inspected and used for comparison; manual anatomy landmarks authored against source",
+  "mask_fit": {
+    "mean": 0.7261758020050465,
+    "min": 0.6500895411786501,
+    "pass": true
+  },
+  "held_background_geometry": true,
+  "recognition_classifier": "not run",
+  "foot_contact": "fewer than four independently verified planted intervals; no pass claimed",
+  "independent_playback": "not run",
+  "release_approved": false,
+  "training_ran": false,
+  "trace_fidelity": {
+    "min_recall": 0.9957529640771545,
+    "parts_kept": 1.0,
+    "pass": true
+  }
+}

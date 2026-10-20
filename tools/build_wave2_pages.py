@@ -173,6 +173,8 @@ def gallery_body(rows, root):
         time_span=interval_label(source.get('interval_seconds',source.get('interval')))
         timeline = assembled(folder)
         if timeline:
+            current_source = timeline.get('source', {})
+            time_span = interval_label(current_source.get('interval_seconds', source.get('interval_seconds', source.get('interval'))))
             target = f'{folder.name}/integrated/index.html'
             poster = folder/'integrated/poster.png'
             n = timeline.get('frame_count', len(timeline.get('frames', [])))
@@ -188,7 +190,8 @@ def gallery_body(rows, root):
         (ready if timeline else drafts).append(card)
     films = f'<section><h2>Watch the assembled clips</h2><div class="gallery-grid">{"".join(ready)}</div></section>' if ready else ''
     queue = f'<section><h2>Still to assemble</h2><div class="gallery-grid">{"".join(drafts)}</div></section>' if drafts else ''
-    return f'''<header class="page"><div class="eyebrow">Wave 2 / moving drawings</div><h1>From archive frame<br>to moving drawing.</h1><p class="lede">{len(ready)} assembled review clips · {len(drafts)} subjects still to assemble. Watch each cartoon beside its original footage, then inspect the paired keyframes.</p></header><nav class="breadcrumbs" aria-label="Related pages"><a href="../index.html">← Rack</a><a href="../pages/pipeline.html">Pipeline gates</a></nav>{films}{queue}<footer>Assembled clips are review copies; final motion approval is pending. Earlier isolated drafts remain on each subject page. No training ran. Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Archive sources and reported rights are credited on each clip.</footer>'''
+    inspector = '<a href="wave2-segmentation/index.html">Source / mask / drawing</a>' if (root/'shots/wave2-segmentation/index.html').is_file() else ''
+    return f'''<header class="page"><div class="eyebrow">Wave 2 / moving drawings</div><h1>From archive frame<br>to moving drawing.</h1><p class="lede">{len(ready)} assembled review clips · {len(drafts)} subjects still to assemble. Watch each cartoon beside its original footage, then inspect the paired keyframes.</p></header><nav class="breadcrumbs" aria-label="Related pages"><a href="../index.html">← Rack</a>{inspector}<a href="../pages/pipeline.html">Pipeline gates</a></nav>{films}{queue}<footer>Assembled clips are review copies; final motion approval is pending. Earlier isolated drafts remain on each subject page. No training ran. Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Archive sources and reported rights are credited on each clip.</footer>'''
 
 
 def build(root, head, nav, icons, write):
@@ -202,6 +205,10 @@ def build(root, head, nav, icons, write):
         write(rel,document(row['item'].get('title',row['folder'].name),shot_body(row,root),rel,head,nav,icons))
     rel = 'shots/wave2-keyframes.html'
     write(rel,document('Wave 2 keyframes',gallery_body(rows,root),rel,head,nav,icons))
+    cache = root/'shots/wave2-segmentation/data'
+    if cache.is_dir():
+        from build_segmentation_review import build as build_inspector
+        build_inspector(cache)
     return len(rows)
 
 

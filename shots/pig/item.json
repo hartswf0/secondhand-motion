@@ -9,12 +9,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
-  "cover": "shots/pig/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 5298401904164864; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "47 rendered frames at 24 fps; 6 integrated keys. Head turn needs repair; motion unapproved.",
+  "cover": "shots/pig/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5298401904164864; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background/context drawn by agent.",
   "links": [
     {
-      "label": "Review six keys",
+      "label": "Watch assembled comparison",
+      "href": "shots/pig/integrated/index.html"
+    },
+    {
+      "label": "Source / mask / drawing",
+      "href": "shots/wave2-segmentation/index.html#pig"
+    },
+    {
+      "label": "Earlier isolated keys",
       "href": "shots/pig/index.html"
     },
     {
@@ -24,7 +32,8 @@
   ],
   "tests": "shots/pig/tests.json",
   "tags": [
-    "key drafts",
-    "wave 2"
+    "assembled review",
+    "wave 2",
+    "SAM inspected"
   ]
 }

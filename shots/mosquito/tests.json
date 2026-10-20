@@ -19,7 +19,7 @@
   },
   {
     "id": "J4",
-    "value": "independent identity met",
+    "value": "native drawing identity met by third independent still critic; source placement not met",
     "unit": "",
     "ok": true
   },
@@ -32,24 +32,33 @@
   {
     "id": "T1",
     "value": {
-      "min_recall": 0.9987808932727474,
+      "min_recall": 0.9904559915164369,
       "min_parts_kept": 1.0,
-      "keys": 6
+      "keys": 8
     },
     "unit": "fraction",
     "ok": true
   },
   {
     "id": "M3",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": {
+      "mean": 0.2196893813351909,
+      "minimum": 0.13875432525951556,
+      "frames": 121,
+      "method": "filled native drawing vs nearest12fps source SAM mask"
+    },
+    "unit": "IoU",
+    "ok": false
   },
   {
     "id": "M4",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": {
+      "verified_planted_intervals": 0,
+      "authored_contact_points": 4,
+      "reason": "independent four-interval contact evidence absent"
+    },
+    "unit": "intervals",
+    "ok": false
   },
   {
     "id": "M5",
@@ -77,9 +86,9 @@
   },
   {
     "id": "S3",
-    "value": "not run",
+    "value": "121frames with source times and dense K/B exposure sheet",
     "unit": "",
-    "ok": null
+    "ok": true
   },
   {
     "id": "S5",
@@ -113,7 +122,7 @@
   },
   {
     "id": "S7",
-    "value": 3,
+    "value": 6,
     "unit": "verified hash-linked entries",
     "ok": true
   }

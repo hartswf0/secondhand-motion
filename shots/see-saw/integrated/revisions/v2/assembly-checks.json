@@ -1,0 +1,27 @@
+{
+  "every_frame_rendered": 160,
+  "source_sha256_verified": true,
+  "integrated_keys": 9,
+  "original_strokes_assigned": 4,
+  "held_background_geometry": true,
+  "board_3d_length_variation_fraction": 0.0,
+  "fixed_fulcrum_drift_pixels": 0.0,
+  "source_angle_estimation": "manual observations; not a calibrated 3D reconstruction",
+  "SAM": "SAM2.1 output inspected; mixed-instance segmentation unsuitable for single-board mask-fit gate",
+  "numeric_source_mask_fit": "not measured",
+  "recognition": "not run",
+  "planted_contacts_observed": 0,
+  "foot_slide_gate": "not passed; zero planted intervals measured",
+  "independent_playback": "not run",
+  "release_approved": false,
+  "training_ran": false,
+  "trace": {
+    "min_recall": 0.9951754385964913,
+    "parts_kept": 1.0,
+    "keys": 9,
+    "gate_pass": true
+  },
+  "xsheet_covers_every_frame": true,
+  "background_stroke_geometry_unchanged_fraction": 1.0,
+  "background_measurement": "Single source-coordinate vector plate is shared by all 160frames; foreground actor separately keyed."
+}

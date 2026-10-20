@@ -1,0 +1,11 @@
+{
+  "branch": "wave2-track/pig",
+  "commit": "a3ae55b59e45c664a34c491dd6f088cb2d6480a3",
+  "clip_id": "0bc2d77c-0bc0-52ef-9bf5-b7102e42e04b",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "clip-relative seconds, resampled at 12 fps; paired to nearest recorded render source time",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "672de4cae2f3af37906bc7ee8806cb46c3b27a477d1781ecfeeb4e249cdb5e8a",
+  "source_record": "../../../pig/source.json",
+  "note": "The mask follows the cropped pig. The drawing must keep the same crop."
+}

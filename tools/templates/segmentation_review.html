@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Source / mask / drawing · Secondhand Motion</title>
+<link rel="icon" href="../../favicon.svg">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f1e8;color:#171512;font:17px/1.5 system-ui,sans-serif}main{max-width:1240px;margin:auto;padding:22px}a{color:inherit}nav,.choices,.control{display:flex;gap:10px;align-items:center;flex-wrap:wrap}nav{gap:22px;font-size:14px}h1{font-size:clamp(32px,6vw,62px);line-height:1.08;margin:28px 0 16px}button{background:#fffdf7;color:#171512;border:1px solid #b6ab9a;border-radius:5px;font:inherit;padding:8px 14px;cursor:pointer}button[aria-pressed=true]{background:#171512;color:#fffdf7}.meta{font-size:14px;color:#645d52}.choices{margin:22px 0}.note{padding:12px 16px;border-left:4px solid #ef9f3a;background:#fffdf7}.control{margin:18px 0}.control input{flex:1;min-width:100px;accent-color:#b76313}.control output{font-variant-numeric:tabular-nums;font-size:14px;min-width:175px}.views{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}figure{margin:0;border:1px solid #d5caba;background:#fffdf7;min-width:0;border-radius:7px;overflow:hidden}figcaption{font-weight:650;padding:10px 12px;border-bottom:1px solid #d5caba}figure img,canvas,video{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#fffdf7}video[hidden]{display:none}.caption{padding:10px 12px;font-size:13px;min-height:62px}.data{display:flex;gap:8px 24px;flex-wrap:wrap;font-size:14px}details{margin-top:24px;border-top:1px solid #d5caba;padding-top:15px}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}footer{margin-top:30px;font-size:14px;color:#645d52}#loading{min-height:1.5em}@media(max-width:900px){.views{grid-template-columns:repeat(2,minmax(0,1fr))}.views figure:last-child{grid-column:1/-1;max-width:650px}}@media(max-width:550px){main{padding:14px}.views{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.views figure:last-child{grid-column:1/-1}.views figure:not(:last-child) figcaption{font-size:13px;padding:8px}.views figure:not(:last-child) .caption{font-size:11px;padding:8px}.control output{min-width:100%;order:4}.choices button{flex:1;padding:8px 10px}}
+</style>
+<main>
+<nav><a href="../../index.html">Secondhand Motion</a><a href="../wave2-keyframes.html">Assembled clips</a></nav>
+<h1>Source. Mask. Drawing.</h1>
+<p>Scrub the footage. Check what was extracted. Compare the moving drawing.</p>
+<div class="choices" id="subjects" aria-label="Subject"></div>
+<p class="note" id="note"></p>
+<div class="control"><button id="prev" aria-label="Previous sampled frame">←</button><input id="frame" type="range" min="0" max="0" value="0" aria-label="Sampled source frame"><button id="next" aria-label="Next sampled frame">→</button><output id="time" for="frame"></output></div>
+<div class="views">
+<figure><figcaption>Archive sample</figcaption><a id="original" href="#"><img id="source" alt="Timestamped source photograph"></a><div class="caption" id="sourceCaption"></div></figure>
+<figure><figcaption>SAM 2.1 extraction</figcaption><canvas id="mask" aria-label="Source with the segmented pixels marked red"></canvas><div class="caption" id="maskCaption"></div></figure>
+<figure><figcaption>Assembled drawing</figcaption><video id="cartoon" playsinline muted preload="auto" aria-label="Paused cartoon frame paired with the selected source sample"></video><div class="caption" id="cartoonCaption"></div></figure>
+</div>
+<p id="loading" class="meta" role="status" aria-live="polite"></p>
+<div class="data"><a id="player" href="#">Open the source comparison player →</a><a id="track" href="#">Mask data</a><a id="provenance" href="#">Provenance</a></div>
+<details><summary>How these views line up</summary><p class="meta">The left and middle panels show the same 12 fps CI sample. The cartoon seeks to its nearest recorded source time and stays paused while scrubbing. Open the comparison player for normal-speed playback. Samples outside the retained cartoon interval have no paired drawing.</p><p class="meta">The model’s IoU estimate is a model output, not a measured drawing-to-source fit. Segmentation can miss thin parts or merge several objects. These masks do not establish recognition, motion quality, or training eligibility.</p><pre id="record"></pre></details>
+<footer>Quick, Draw! credits and archive source records are retained on each comparison page. No training ran.</footer>
+</main>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.querySelector('#data').textContent),$=s=>document.querySelector(s);
+const range=$('#frame'),source=$('#source'),canvas=$('#mask'),video=$('#cartoon');let selected='',generation=0,seekTime=0,validPair=false,pairFrame=null;
+function nearest(times,t){let best=0;for(let i=1;i<times.length;i++)if(Math.abs(times[i]-t)<Math.abs(times[best]-t))best=i;return best;}
+function seek(){if(validPair&&video.readyState>=1)video.currentTime=Math.min(seekTime,Math.max(0,video.duration-.001));}
+video.addEventListener('loadedmetadata',seek);
+function draw(){
+ const d=data[selected],i=Number(range.value),f=d.frames[i],t=d.clip.t0+i/d.clip.fps,g=++generation;
+ const url=`data/${selected}/frames/f${String(i).padStart(3,'0')}.jpg`;
+ $('#time').textContent=`${i+1} / ${d.frames.length} · ${t.toFixed(3)} s`;
+ $('#sourceCaption').textContent=`Clip-relative CI sample time ${t.toFixed(3)} s`;
+ $('#maskCaption').textContent=`${f.area.toLocaleString()} marked pixels · model IoU estimate ${Number(f.iou).toFixed(3)} · ${f.from}`;
+ $('#original').href=url;$('#loading').textContent='Loading sample…';
+ source.onload=()=>{if(g!==generation)return;canvas.width=f.W;canvas.height=f.H;const ctx=canvas.getContext('2d');ctx.drawImage(source,0,0,f.W,f.H);const layer=document.createElement('canvas');layer.width=f.W;layer.height=f.H;const lc=layer.getContext('2d'),pixels=lc.createImageData(f.W,f.H);let pos=0,bit=0;for(const n of f.rle){if(!Number.isInteger(n)||n<0||pos+n>f.W*f.H){$('#loading').textContent='Invalid mask data.';return;}if(bit)for(let k=pos;k<pos+n;k++){pixels.data[4*k]=255;pixels.data[4*k+1]=30;pixels.data[4*k+2]=50;pixels.data[4*k+3]=125;}pos+=n;bit=1-bit;}if(pos!==f.W*f.H){$('#loading').textContent='Incomplete mask data.';return;}lc.putImageData(pixels,0,0);ctx.drawImage(layer,0,0);$('#loading').textContent='';};
+ source.onerror=()=>{if(g===generation)$('#loading').textContent='Source sample could not load.';};source.src=url;
+ const ts=d.assembly_times;validPair=Boolean(ts.length&&t>=ts[0]-.05&&t<=ts[ts.length-1]+.05);video.pause();video.hidden=!validPair;
+ if(validPair){const j=nearest(ts,t);pairFrame=j;seekTime=j/d.assembly_fps;seek();$('#cartoonCaption').textContent=`Rendered frame ${j} · recorded source ${ts[j].toFixed(3)} s. ${d.review_note||'Motion approval pending.'}${d.drawing_fit.pass===false?' Filled rig/SAM fit remains below threshold.':''}`;}else{pairFrame=null;$('#cartoonCaption').textContent=ts.length?'Outside the retained drawing interval.':'Assembly not available for this subject yet.';}
+ history.replaceState(null,'',`#${selected}/${i}`);
+ $('#record').textContent=JSON.stringify({subject:selected,sample:i,source_time:t,assembly_time:validPair?seekTime:null,assembly_frame:pairFrame,source_image:url,mask_frame:i,drawing_fit:d.drawing_fit,drawing_record:`../${selected}/integrated/shot.json`,box:f.box,model_iou_estimate:f.iou,provenance:d.provenance},null,2);
+}
+function choose(slug,index=null){if(!Object.prototype.hasOwnProperty.call(data,slug))return;selected=slug;const d=data[slug];range.max=d.frames.length-1;const initial=d.assembly_times.length?Math.round((d.assembly_times[0]-d.clip.t0)*d.clip.fps):(d.clip.keys[0]||0);range.value=Math.max(0,Math.min(index===null?initial:index,d.frames.length-1));$('#note').textContent=d.note;for(const b of $('#subjects').children)b.setAttribute('aria-pressed',String(b.dataset.slug===slug));video.poster=`../${slug}/integrated/poster.png`;video.src=`../${slug}/integrated/cartoon.mp4`;$('#player').href=`../${slug}/integrated/index.html`;$('#track').href=`data/${slug}/track.json`;$('#provenance').href=`data/${slug}/provenance.json`;draw();}
+for(const [slug,d] of Object.entries(data)){const b=document.createElement('button');b.textContent=d.title;b.dataset.slug=slug;b.setAttribute('aria-pressed','false');b.addEventListener('click',()=>choose(slug));$('#subjects').append(b);}
+range.addEventListener('input',draw);$('#prev').addEventListener('click',()=>{range.stepDown();draw();});$('#next').addEventListener('click',()=>{range.stepUp();draw();});
+const match=location.hash.slice(1).split('/');choose(Object.prototype.hasOwnProperty.call(data,match[0])?match[0]:Object.keys(data)[0],match[1]===undefined?null:Number(match[1])||0);
+window.addEventListener('hashchange',()=>{const [slug,index]=location.hash.slice(1).split('/');if(Object.prototype.hasOwnProperty.call(data,slug))choose(slug,Number(index)||0);});
+</script>
+</html>

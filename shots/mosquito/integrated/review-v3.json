@@ -1,0 +1,18 @@
+{
+  "review": "fresh blind visual review",
+  "inspected": [
+    "shots/mosquito/source.json",
+    "shots/mosquito/integrated/source-inspection.jpg",
+    "shots/mosquito/integrated/design.png",
+    "shots/mosquito/integrated/source-01.jpg through source-08.jpg",
+    "shots/mosquito/integrated/key-01.png through key-08.png"
+  ],
+  "source_framing_and_pose_bar_met": false,
+  "original_doodle_identity_bar_met": true,
+  "combined_bar_met": false,
+  "most_important_visual_gap": "The late keys do not follow the source mosquito's upward-left displacement. In source pairs 06–08, the thorax is visibly higher and farther left than in the early source frames, while the cartoon thorax stays around the same screen position as keys 01–05. The late cartoon insect consequently sits roughly 15–25 pixels too far down and right relative to the source at this 480 by 360 inspection size. This weakens both source framing and the planted pose.",
+  "smallest_repair": "Translate the complete existing mosquito drawing in keys 06–08 to the observed source thorax position, with a smooth transition from key 05. Register the body first, then make only the small limb-endpoint adjustments needed to keep its feet on the matching skin locations. Do not redesign the insect or environment.",
+  "must_keep": "Keep the original doodle's angular outlined body, long tapered rightward abdomen, bent single-line legs, small hooked head marks, sparse dark strokes and cream fill. Keep the established diagonal skin framing, simple hair lines, and current abdomen-pitch progression. Preserve these shapes while repairing registration; add no anatomical detail or new style.",
+  "normal_speed_playback_happened": false,
+  "playback_statement": "Actual normal-speed playback did not happen. This assessment uses the specified still images only; decoding is not playback and motion continuity is not approved by this review."
+}

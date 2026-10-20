@@ -1,0 +1,36 @@
+{
+  "rendered_frames": 121,
+  "keys": 8,
+  "source_sha256_verified": true,
+  "all_original_strokes_assigned": true,
+  "original_strokes": 8,
+  "same_topology": true,
+  "held_background_geometry": true,
+  "SAM": "ran upstream; source snapshots/provenance retained",
+  "mask_fit": {
+    "method": "union of closed native head/body/wing fills plus1.02px original appendage lines rendered and nearest-resized to SAM384x288; IoU vs nearest12fps SAM frame. SAM thin-part omissions limit this metric.",
+    "mean": 0.21151764053523692,
+    "minimum": 0.13378684807256236,
+    "frames": 121,
+    "bar_mean": 0.65,
+    "bar_minimum": 0.45,
+    "pass": false
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "release_approved": false,
+  "training_ran": false,
+  "contacts": {
+    "authored_held_points": 4,
+    "independently_observed_planted_intervals": 0,
+    "gate_pass": false,
+    "reason": "Held contacts are authored from source inspection; four independent planted intervals were not established."
+  },
+  "trace_fidelity": {
+    "minimum_recall": 0.9956989247311828,
+    "minimum_parts_kept": 1.0,
+    "keys": 8,
+    "pass": true
+  },
+  "full_decode": true
+}

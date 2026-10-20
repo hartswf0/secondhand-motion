@@ -1,120 +1,126 @@
 [
   {
     "id": "S6",
-    "value": "source record complete; rights explicitly unverified",
+    "value": "complete source/rights record; retained 9.45\u201316.1s excludes opening fade",
     "unit": "",
     "ok": true
   },
   {
     "id": "M1",
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
   },
   {
     "id": "M2",
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
   },
   {
     "id": "J4",
-    "value": "independent identity met",
+    "value": "same original doodle identity met in independent still review-v3",
     "unit": "",
     "ok": true
   },
   {
     "id": "B1",
-    "value": "not run",
-    "unit": "",
-    "ok": null
-  },
-  {
-    "id": "T1",
-    "value": {
-      "min_recall": 0.9989454257843395,
-      "min_parts_kept": 1.0,
-      "keys": 6
-    },
+    "value": 1.0,
     "unit": "fraction",
     "ok": true
   },
   {
+    "id": "T1",
+    "value": {
+      "min_recall": 0.9951754385964913,
+      "min_parts_kept": 1.0,
+      "keys": 9
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
     "id": "M3",
-    "value": "not run",
+    "value": "SAM combines distinct boards; valid single-instance source fit not measured",
     "unit": "",
     "ok": null
   },
   {
     "id": "M4",
-    "value": "not run",
+    "value": {
+      "verified_planted_source_intervals": 0,
+      "note": "IK ankles fixed by construction; no source foot-contact gate passed"
+    },
     "unit": "",
-    "ok": null
+    "ok": false
   },
   {
     "id": "M5",
-    "value": "not run",
+    "value": "board rigid length fixed; human body proportions unmeasured",
     "unit": "",
     "ok": null
   },
   {
     "id": "M6",
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
   },
   {
     "id": "S1",
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
   },
   {
     "id": "S2",
-    "value": "not run",
+    "value": "original doodle and all agent-drawn context named in timeline",
     "unit": "",
-    "ok": null
+    "ok": true
   },
   {
     "id": "S3",
-    "value": "not run",
+    "value": {
+      "covered_frames": 160,
+      "keys": 9
+    },
     "unit": "",
-    "ok": null
+    "ok": true
   },
   {
     "id": "S5",
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
   },
   {
     "id": "S4",
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
   },
   {
     "id": "J1",
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
   },
   {
     "id": "J2",
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
   },
   {
     "id": "J3",
-    "value": "not run",
+    "value": "not run on integrated candidate",
     "unit": "",
     "ok": null
   },
   {
     "id": "S7",
-    "value": 4,
-    "unit": "verified hash-linked entries",
+    "value": 7,
+    "unit": "",
     "ok": true
   }
 ]
