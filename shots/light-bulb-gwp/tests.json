@@ -1,0 +1,79 @@
+[
+ {
+  "id": "M2",
+  "value": 25,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   25,
+   25,
+   25,
+   25,
+   25,
+   25,
+   25,
+   25,
+   25,
+   25
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.99,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 25
+ },
+ {
+  "id": "M3",
+  "value": 0.5,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.47
+ },
+ {
+  "id": "M6",
+  "value": 0.7,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "5 strokes, 60 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6496968282996736; scenery drawn by agent: no Quick, Draw! category is a shelf edge; the long horizontal edge behind the bulb and two lower edges of the wall panel, each stopped short of the bulb so the lines do not run through the glass, quickdraw:5133504855670784, quickdraw:5886422135341056, quickdraw:6315145452060672, drawn by agent: no Quick, Draw! category is a table top seen edge on; one line where the screw base stands",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "26/26",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

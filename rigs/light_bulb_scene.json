@@ -1,0 +1,198 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   -1.67,
+   -1.67,
+   -6.37,
+   -15.28,
+   -20.63,
+   -28.71,
+   -32.23,
+   -40.48,
+   -44.05,
+   -49.98,
+   -52.96,
+   -58.67,
+   -60.65,
+   -62.41,
+   -62.57,
+   -62.62,
+   -62.8,
+   -62.78,
+   -62.88,
+   -62.96,
+   -63.07,
+   -63.37,
+   -63.34,
+   -63.13
+  ],
+  "y": [
+   0.0,
+   0.0,
+   1.68,
+   1.68,
+   3.67,
+   7.35,
+   9.81,
+   13.04,
+   15.09,
+   18.25,
+   20.16,
+   23.71,
+   24.89,
+   28.31,
+   29.8,
+   30.5,
+   30.64,
+   30.55,
+   30.28,
+   30.26,
+   30.29,
+   30.31,
+   30.44,
+   31.0,
+   31.0,
+   31.29
+  ],
+  "source": "shots/light-bulb-sam/camera.json: phase correlation with the bulb masked out; the shot is a pull-back with a pan, and the measured shift is the pan part"
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 2.4,
+   "label": "Shelf and wall behind the bulb (z set from the shelf edge's own motion in the footage, about 40 px down over the shot; the depth map puts the wall far but the footage moves it nearly as much as the bulb)"
+  },
+  {
+   "id": "table",
+   "z": 12,
+   "label": "Table top (z set so the line stays under the screw base; the bulb's contact with the table hardly moves in the footage while the measured pan moves everything else)"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Light bulb"
+  }
+ ],
+ "objects": [
+  {
+   "id": "shelf",
+   "plane": "wall",
+   "class": "shelf",
+   "why": "no Quick, Draw! category is a shelf edge; the long horizontal edge behind the bulb and two lower edges of the wall panel, each stopped short of the bulb so the lines do not run through the glass",
+   "strokes": [
+    [
+     [
+      -80,
+      22
+     ],
+     [
+      135,
+      22
+     ]
+    ],
+    [
+     [
+      350,
+      23
+     ],
+     [
+      470,
+      24
+     ]
+    ],
+    [
+     [
+      -80,
+      52
+     ],
+     [
+      135,
+      52
+     ]
+    ],
+    [
+     [
+      350,
+      53
+     ],
+     [
+      470,
+      54
+     ]
+    ],
+    [
+     [
+      350,
+      96
+     ],
+     [
+      470,
+      97
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "frame",
+   "plane": "wall",
+   "qd": "picture frame",
+   "box": [
+    300,
+    -45,
+    395,
+    18
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "vase",
+   "plane": "wall",
+   "qd": "vase",
+   "box": [
+    80,
+    -22,
+    104,
+    20
+   ],
+   "strokes": 1
+  },
+  {
+   "id": "cup",
+   "plane": "wall",
+   "qd": "cup",
+   "box": [
+    2,
+    -14,
+    32,
+    20
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "table",
+   "plane": "table",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a table top seen edge on; one line where the screw base stands",
+   "strokes": [
+    [
+     [
+      -60,
+      261
+     ],
+     [
+      460,
+      262
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the bulb fills the frame, a man beside it",
+  "13": "the camera has pulled back and the bulb has settled smaller",
+  "25": "held; rays of light begin behind the bulb"
+ }
+}

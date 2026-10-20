@@ -1,0 +1,275 @@
+{
+ "category": "paintbrush",
+ "doodle_key_id": "6685610360176640",
+ "facing": 1,
+ "face_from": [
+  "ferrule",
+  "ferrule"
+ ],
+ "note": "Quick, Draw! paintbrush 6685610360176640. Stroke 0 is the long handle, drawn as one narrow loop from the ferrule up to the butt end. Stroke 1 is the outline of the bristle head, a teardrop that ends in the pointed tip. Stroke 2 is one line inside the bristles and stroke 3 is the zigzag scribble of paint loaded on them; stroke 4 is a short tick at the tip. The rig places the drawing by two points on the handle (the ferrule, where handle meets bristles, and a heel point a third of the way up the handle), so the handle stays straight and keeps one length. The bristle strokes turn at the ferrule toward the pose's tip point by 0.6 of the angle, so the head flexes a little when the brush presses on the paper and dabs.",
+ "strokes": [
+  [
+   [
+    41,
+    167
+   ],
+   [
+    39,
+    158
+   ],
+   [
+    39,
+    139
+   ],
+   [
+    59,
+    52
+   ],
+   [
+    82,
+    9
+   ],
+   [
+    94,
+    1
+   ],
+   [
+    101,
+    2
+   ],
+   [
+    101,
+    16
+   ],
+   [
+    83,
+    68
+   ],
+   [
+    36,
+    179
+   ]
+  ],
+  [
+   [
+    46,
+    170
+   ],
+   [
+    31,
+    174
+   ],
+   [
+    22,
+    181
+   ],
+   [
+    14,
+    189
+   ],
+   [
+    6,
+    204
+   ],
+   [
+    3,
+    211
+   ],
+   [
+    7,
+    230
+   ],
+   [
+    4,
+    255
+   ],
+   [
+    14,
+    249
+   ],
+   [
+    26,
+    237
+   ],
+   [
+    47,
+    202
+   ],
+   [
+    49,
+    191
+   ],
+   [
+    46,
+    176
+   ]
+  ],
+  [
+   [
+    34,
+    175
+   ],
+   [
+    14,
+    207
+   ],
+   [
+    10,
+    216
+   ],
+   [
+    11,
+    226
+   ]
+  ],
+  [
+   [
+    35,
+    183
+   ],
+   [
+    25,
+    202
+   ],
+   [
+    17,
+    234
+   ],
+   [
+    23,
+    227
+   ],
+   [
+    38,
+    196
+   ],
+   [
+    29,
+    233
+   ],
+   [
+    39,
+    207
+   ],
+   [
+    32,
+    210
+   ],
+   [
+    22,
+    224
+   ],
+   [
+    32,
+    208
+   ],
+   [
+    35,
+    195
+   ],
+   [
+    33,
+    190
+   ],
+   [
+    28,
+    190
+   ],
+   [
+    17,
+    204
+   ],
+   [
+    9,
+    238
+   ],
+   [
+    16,
+    223
+   ],
+   [
+    22,
+    200
+   ],
+   [
+    9,
+    240
+   ],
+   [
+    8,
+    226
+   ],
+   [
+    8,
+    245
+   ],
+   [
+    2,
+    221
+   ],
+   [
+    2,
+    246
+   ]
+  ],
+  [
+   [
+    0,
+    215
+   ],
+   [
+    1,
+    236
+   ]
+  ]
+ ],
+ "root": [
+  "ferrule",
+  "heel"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "tip": [
+   6,
+   250
+  ],
+  "ferrule": [
+   38,
+   172
+  ],
+  "heel": [
+   60,
+   107
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 9,
+   "joint": "ferrule",
+   "aim": [
+    "ferrule",
+    "heel"
+   ],
+   "turn": 0
+  },
+  {
+   "region": [
+    -5,
+    160,
+    70,
+    260
+   ],
+   "joint": "ferrule",
+   "aim": [
+    "ferrule",
+    "tip"
+   ],
+   "turn": 0.6
+  }
+ ],
+ "size": "steady",
+ "track": false,
+ "smooth": 1.2
+}

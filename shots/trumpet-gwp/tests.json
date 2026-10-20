@@ -1,0 +1,86 @@
+[
+ {
+  "id": "M2",
+  "value": 61,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   59,
+   60,
+   61,
+   60,
+   60,
+   59,
+   59,
+   60,
+   61,
+   60,
+   61,
+   63,
+   62,
+   63,
+   61,
+   62,
+   62
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.97,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 63
+ },
+ {
+  "id": "M3",
+  "value": 0.03,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.02
+ },
+ {
+  "id": "M6",
+  "value": 1.4,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "7 strokes, 49 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6590023216398336; scenery drawn by agent: no Quick, Draw! category is a roof cornice; two lines for the band of trim that runs across the top of the wall, sloping down to the right as in the film, drawn by agent: no Quick, Draw! category is clapboard siding; three short level lines for the boards of the wall behind the player, drawn by agent: no Quick, Draw! category is the dark corner of the next building; one upright line for its edge and two small window slots in it, drawn by agent: no Quick, Draw! category is a window sill; one long line for the ledge under the trumpet, quickdraw:6034815755223040, quickdraw:5361324483674112",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "62/62",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

@@ -1,0 +1,229 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -0.52,
+   -1.09,
+   5.07,
+   4.69,
+   -7.31,
+   -24.26,
+   -24.26,
+   -24.26,
+   -29.97,
+   -30.06,
+   -22.93,
+   -12.55,
+   -10.04,
+   -3.59,
+   -3.59,
+   -3.59,
+   -3.59,
+   -21.35,
+   -31.18,
+   -31.18,
+   -31.18,
+   -36.26,
+   -39.78,
+   -40.44,
+   -40.44,
+   -40.44,
+   -42.01,
+   -43.67,
+   -56.93,
+   -70.29,
+   -70.29
+  ],
+  "y": [
+   0.0,
+   -0.29,
+   -0.67,
+   -2.78,
+   -2.34,
+   -8.93,
+   -17.02,
+   -17.02,
+   -17.02,
+   -17.23,
+   -16.34,
+   -19.59,
+   -8.51,
+   -13.12,
+   -19.45,
+   -19.45,
+   -19.45,
+   -19.45,
+   -23.8,
+   -26.8,
+   -26.8,
+   -26.8,
+   -20.8,
+   -12.87,
+   -16.85,
+   -16.85,
+   -16.85,
+   -38.97,
+   -50.06,
+   -58.95,
+   -66.56,
+   -66.56
+  ],
+  "source": "shots/broom-sam/camera.json: phase correlation of the footage with the broom masked out"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 8,
+   "label": "Brooms standing behind",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "floor",
+   "z": 3,
+   "label": "Floor",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Broom"
+  }
+ ],
+ "objects": [
+  {
+   "id": "b1",
+   "plane": "far",
+   "copy_of_design": true,
+   "mirror": false,
+   "box": [
+    238,
+    150,
+    292,
+    272
+   ]
+  },
+  {
+   "id": "b2",
+   "plane": "far",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    300,
+    40,
+    360,
+    176
+   ]
+  },
+  {
+   "id": "litter",
+   "plane": "floor",
+   "class": "litter",
+   "why": "no Quick, Draw! category is a scrap of paper on a floor; small open shapes drawn where the white scraps lie on the dark floor in the first frames",
+   "strokes": [
+    [
+     [
+      200,
+      190
+     ],
+     [
+      222,
+      184
+     ],
+     [
+      236,
+      194
+     ],
+     [
+      214,
+      200
+     ],
+     [
+      200,
+      190
+     ]
+    ],
+    [
+     [
+      262,
+      222
+     ],
+     [
+      290,
+      214
+     ],
+     [
+      306,
+      226
+     ],
+     [
+      276,
+      232
+     ]
+    ],
+    [
+     [
+      120,
+      232
+     ],
+     [
+      134,
+      226
+     ],
+     [
+      142,
+      236
+     ]
+    ],
+    [
+     [
+      300,
+      250
+     ],
+     [
+      318,
+      246
+     ]
+    ],
+    [
+     [
+      236,
+      256
+     ],
+     [
+      250,
+      262
+     ]
+    ],
+    [
+     [
+      60,
+      210
+     ],
+     [
+      72,
+      206
+     ]
+    ],
+    [
+     [
+      330,
+      200
+     ],
+     [
+      344,
+      204
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the broom stands on the floor among scraps, handle leaning left",
+  "3": "the broom lifts and leans furthest",
+  "7": "swept down and to the left",
+  "18": "lifted high, head swinging right",
+  "23": "pushed down to the floor at the right",
+  "31": "swept back to the left before it leaves"
+ }
+}

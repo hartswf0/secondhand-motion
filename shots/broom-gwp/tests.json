@@ -1,0 +1,82 @@
+[
+ {
+  "id": "M2",
+  "value": 15,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   13,
+   13,
+   13,
+   17,
+   17,
+   15,
+   15,
+   15,
+   15,
+   17,
+   15,
+   17,
+   16
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.87,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 17
+ },
+ {
+  "id": "M3",
+  "value": 0.6,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.33
+ },
+ {
+  "id": "M6",
+  "value": 4.9,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "17 strokes, 57 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6486360229675008; scenery quickdraw:6486360229675008 (the character's own doodle, repeated small), quickdraw:6486360229675008 (the character's own doodle, repeated small), drawn by agent: no Quick, Draw! category is a scrap of paper on a floor; small open shapes drawn where the white scraps lie on the dark floor in the first frames",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
