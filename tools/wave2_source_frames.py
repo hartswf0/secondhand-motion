@@ -4,7 +4,7 @@ Run per subject with an immutable repository ref. Public assets only, no credent
 import argparse, base64, hashlib, io, json, math, re, tempfile, time
 from pathlib import Path
 from urllib.request import Request, urlopen
-from urllib.parse import urlparse
+from urllib.parse import urlparse, quote
 import cv2
 from PIL import Image, ImageDraw, ImageOps
 
@@ -30,6 +30,33 @@ def emit_asset(asset_id, content, mime):
           'sha256':hashlib.sha256(content).hexdigest(),'chunks':n}), flush=True)
     for i in range(n):
         print('WAVE2_CHUNK '+json.dumps({'asset_id':asset_id,'i':i,'data':encoded[i*12000:(i+1)*12000]}),flush=True)
+
+def emit_design_bank(category, slug):
+    url='https://storage.googleapis.com/quickdraw_dataset/full/simplified/'+quote(category)+'.ndjson'
+    req=Request(url,headers={'Range':'bytes=0-499999','User-Agent':'SecondhandMotion/1.0'})
+    with urlopen(req,timeout=30) as response: prefix=response.read(500000)
+    selected=[]
+    for line in prefix.splitlines()[:-1]:
+        try: row=json.loads(line)
+        except Exception: continue
+        if row.get('recognized') and 4<=len(row['drawing'])<=16:
+            selected.append({'key_id':str(row['key_id']),'word':row['word'],'recognized':True,'drawing':row['drawing']})
+        if len(selected)==12: break
+    if not selected: raise ValueError('no bounded doodle bank')
+    sheet=Image.new('RGB',(1024,3*270),'white'); draw=ImageDraw.Draw(sheet)
+    for i,row in enumerate(selected):
+        x=(i%4)*256;y=(i//4)*270
+        draw.text((x+5,y+4),str(i+1)+' | '+row['key_id'],fill='black')
+        for stroke in row['drawing']:
+            pts=[(x+18+float(a)*.83,y+30+float(b)*.83) for a,b in zip(stroke[0],stroke[1])]
+            if len(pts)>1: draw.line(pts,fill='black',width=3,joint='curve')
+        draw.text((x+5,y+250),'REAL QUICKDRAW | CC BY 4.0',fill='black')
+    data=io.BytesIO();sheet.save(data,format='JPEG',quality=86,optimize=True)
+    emit_asset(slug+'/design-bank.jpg',data.getvalue(),'image/jpeg')
+    emit_asset(slug+'/design-bank.json',json.dumps({'category':category,'source_url':url,
+               'credit':'Quick, Draw! contributors / Google Creative Lab; CC BY 4.0',
+               'recognized_is_not_classifier_confidence':True,'drawings':selected}).encode(),'application/json')
+
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--slug',required=True)
@@ -46,9 +73,13 @@ def main():
     candidates={c['clip_id']:c for c in manifest['clips']}
     if any(cid not in candidates for cid in ids): raise ValueError('candidate not in subject manifest')
     try:
+        emit_design_bank(manifest['category'],a.slug)
+    except Exception as exc:
+        print('WAVE2_BANK_ERROR '+json.dumps({'slug':a.slug,'error':str(exc)}),flush=True)
+    try:
         import cairosvg
         svg=fetch(root+folder+'doodle.svg',500000)
-        png=cairosvg.svg2png(bytestring=svg,output_width=512,output_height=512)
+        png=cairosvg.svg2png(bytestring=svg,output_width=512,output_height=512,background_color='white')
         item=json.loads(fetch(root+folder+'item.json',100000))
         emit_asset(a.slug+'/design-reference.png',png,'image/png')
         print('WAVE2_DESIGN '+json.dumps({'slug':a.slug,'svg_ref':root+folder+'doodle.svg',

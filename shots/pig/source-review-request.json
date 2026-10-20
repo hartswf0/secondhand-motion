@@ -2,14 +2,16 @@
   "schema_version": 1,
   "slug": "pig",
   "clip_ids": [
-    "0bc2d77c-0bc0-52ef-9bf5-b7102e42e04b",
-    "70dbb452-c1ce-552f-96ad-2884826d4deb",
-    "5dd0ad50-9c3a-5cf9-b74c-b141a5947b7e",
-    "3bb5840a-82b0-53b6-aeef-6ac2fad25b69"
+    "0bc2d77c-0bc0-52ef-9bf5-b7102e42e04b"
   ],
-  "selection_status": "metadata_shortlist_only",
+  "intervals": {
+    "0bc2d77c-0bc0-52ef-9bf5-b7102e42e04b": [
+      4.3,
+      8.6
+    ]
+  },
+  "selection_status": "dense_source_inspection_pending",
   "source_approved": false,
   "artwork_authored": 0,
-  "frame_samples_per_clip": 16,
-  "scope": "Inspect these candidates before choosing any interval. Others remain unreviewed."
+  "frame_samples_per_clip": 16
 }

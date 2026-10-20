@@ -2,14 +2,16 @@
   "schema_version": 1,
   "slug": "fan",
   "clip_ids": [
-    "fcce8a86-26f6-5bf9-a53b-f999588cf4b0",
-    "2d906fa5-bb24-5d8c-b805-a966275cd8af",
-    "af2f58ac-f75f-5cb7-a678-c43e22e4d7cd",
     "7c81549f-fdbe-5064-b148-a63e586f6404"
   ],
-  "selection_status": "metadata_shortlist_only",
+  "intervals": {
+    "7c81549f-fdbe-5064-b148-a63e586f6404": [
+      1.2,
+      4.3043
+    ]
+  },
+  "selection_status": "dense_source_inspection_pending",
   "source_approved": false,
   "artwork_authored": 0,
-  "frame_samples_per_clip": 16,
-  "scope": "Inspect these candidates before choosing any interval. Others remain unreviewed."
+  "frame_samples_per_clip": 16
 }

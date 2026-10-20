@@ -2,14 +2,16 @@
   "schema_version": 1,
   "slug": "tractor",
   "clip_ids": [
-    "2fcf5730-6755-5b9e-9671-38ab2f153a39",
-    "3c8dc3cf-73b6-5a51-88ea-b7b30a78f951",
-    "28b56da4-2db3-534d-bd01-b072fff1bebc",
     "b62ed26f-3327-5d10-9427-35299961541e"
   ],
-  "selection_status": "metadata_shortlist_only",
+  "intervals": {
+    "b62ed26f-3327-5d10-9427-35299961541e": [
+      0.5,
+      3.4
+    ]
+  },
+  "selection_status": "dense_source_inspection_pending",
   "source_approved": false,
   "artwork_authored": 0,
-  "frame_samples_per_clip": 16,
-  "scope": "Inspect these candidates before choosing any interval. Others remain unreviewed."
+  "frame_samples_per_clip": 16
 }
