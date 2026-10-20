@@ -1,0 +1,34 @@
+name: Wave 2 source inspection
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/wave2-source-inspection.yml'
+      - 'tools/wave2_source_frames.py'
+      - 'shots/*/source-review-request.json'
+permissions: {}
+jobs:
+  extract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        slug: [flying-saucer, raccoon, hurricane, tornado, rain, mosquito, pig, see-saw, tractor, fan]
+    steps:
+      - name: Install public decoding dependencies
+        run: |
+          python3 -m venv /tmp/wave2-venv
+          /tmp/wave2-venv/bin/python -m pip install --quiet pillow opencv-python-headless cairosvg
+      - name: Load this commit's source extractor
+        env:
+          SOURCE_REF: ${{ github.sha }}
+        run: curl --fail --silent --show-error "https://raw.githubusercontent.com/hartswf0/secondhand-motion/$SOURCE_REF/tools/wave2_source_frames.py" -o /tmp/wave2_source_frames.py
+      - name: Validate code syntax
+        run: /tmp/wave2-venv/bin/python -m py_compile /tmp/wave2_source_frames.py
+      - name: Extract timestamped photographic references
+        env:
+          SOURCE_REF: ${{ github.sha }}
+          SUBJECT_SLUG: ${{ matrix.slug }}
+        run: /tmp/wave2-venv/bin/python -u /tmp/wave2_source_frames.py --slug "$SUBJECT_SLUG" --ref "$SOURCE_REF"
