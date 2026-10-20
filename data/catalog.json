@@ -7841,5 +7841,154 @@
   },
   "href": "pages/hurricane-gwp.html",
   "gait": "walk"
+ },
+ {
+  "lot": "SM-0072",
+  "id": "see-saw-gwp",
+  "kind": "shot",
+  "title": "See saw, the Giraffe Walks Past Way",
+  "category": "see-saw",
+  "wave": 2,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, its plank tilted by the angle measured on each generated key; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/see-saw-gwp/cover.png",
+  "cover_alt": "shots/see-saw-gwp/frames/f041.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/see-saw-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#see-saw-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/see_saw_spec.json"
+   },
+   {
+    "label": "Draft keys",
+    "href": "shots/see-saw/index.html"
+   }
+  ],
+  "tests": "shots/see-saw-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 2"
+  ],
+  "t": {
+   "pass": 9,
+   "fail": 3,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 39,
+    "unit": "percentile among real doodles of the category",
+    "ok": true
+   },
+   "M2b": {
+    "value": 0.83,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.11,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 14.0,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "4 strokes, 27 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:4512834501214208; scenery quickdraw:6640436766572544, quickdraw:5912015409250304, drawn by agent: no Quick, Draw! category is a ground line",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "87/87",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "missing shot_page_url, rights_statement",
+    "unit": "",
+    "ok": false
+   },
+   "J1": {
+    "value": "named \u201ca seesaw (teeter-totter): a long plank resting on a triangular fulcrum\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/see-saw-gwp.html",
+  "gait": "strut"
  }
 ]
