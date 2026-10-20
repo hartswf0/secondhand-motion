@@ -1,25 +1,30 @@
 {
- "lot": "SM-0027",
- "id": "see-saw",
- "kind": "subject",
- "title": "See saw",
- "category": "see saw",
- "wave": 2,
- "lane": "queue",
- "stage": -1,
- "status": "queued",
- "added": "2026-10-20",
- "blurb": "48 archive shots to watch. Best match: [Amateur film: \"Saga of the Happy Wanderers\"] (0.292).",
- "cover": "shots/see-saw/doodle.svg",
- "cover_credit": "Quick, Draw! key_id 4512834501214208, CC BY 4.0",
- "links": [
-  {
-   "label": "Candidates",
-   "href": "shots/see-saw/candidates.json"
-  }
- ],
- "tests": "shots/see-saw/tests.json",
- "tags": [
-  "queued"
- ]
+  "lot": "SM-0027",
+  "id": "see-saw",
+  "kind": "subject",
+  "title": "See saw",
+  "category": "see saw",
+  "wave": 2,
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/see-saw/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 4512834501214208; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "links": [
+    {
+      "label": "Review six keys",
+      "href": "shots/see-saw/index.html"
+    },
+    {
+      "label": "Candidate search",
+      "href": "shots/see-saw/candidates.json"
+    }
+  ],
+  "tests": "shots/see-saw/tests.json",
+  "tags": [
+    "key drafts",
+    "wave 2"
+  ]
 }

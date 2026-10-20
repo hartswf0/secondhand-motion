@@ -1,0 +1,35 @@
+{
+  "subject": "tractor",
+  "review_type": "independent blind still-key review",
+  "reviewed_board": "keys/proof-v2.jpg",
+  "reading_order": "left to right, top to bottom",
+  "source_interval_seconds": [
+    0.5,
+    2.45
+  ],
+  "source_16sheet_indices": [
+    1,
+    3,
+    5,
+    7,
+    10,
+    11
+  ],
+  "identity": {
+    "verdict": "pass",
+    "evidence": "All six retain the crooked open exhaust, long plain bonnet, tiny irregular front wheel, very large irregular rear wheel, and rising rear line of design.png. The added front-facing sliver and changing rear-wheel aspect read as view changes of this doodle rather than a new vehicle."
+  },
+  "source_poses": {
+    "verdict": "pass",
+    "evidence": "The six keys read as an oblique approaching tractor turning toward the broad side view: the visible front plane narrows, the rear wheel broadens, and the far-side wheel is occluded. This corresponds to the required 16-frame-sheet samples 1, 3, 5, 7, 10, and 11. The selected sixkeys sheet extends past the assigned interval and is not used to demand its later poses."
+  },
+  "overall_still_key_verdict": "pass",
+  "greatest_gap": null,
+  "smallest_repair": null,
+  "protected_strengths": [
+    "Keep the unadorned bonnet and intentionally irregular wheel outlines.",
+    "Keep the progressive front-plane narrowing and rear-wheel broadening.",
+    "Do not add driver, trailer, tread detail, shading, or realistic styling."
+  ],
+  "scope_limit": "Still-key identity and source-pose readability only; no timing, in-between, or motion approval."
+}

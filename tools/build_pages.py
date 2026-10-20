@@ -127,6 +127,8 @@ def main():
          DATA=js({'lots': [{k: v for k, v in l.items() if k != 'r'} for l in lots], 'stages': reg['stages'], 'brand': brand.data(), 'mark': mark,
                   'n_active': sum(t['status'] == 'active' for t in reg['tests']), 'n_planned': sum(t['status'] == 'planned' for t in reg['tests'])}))
 
+    __import__('build_wave2_pages').build(ROOT, HEAD, nav, icons, write)
+
 
 def projector(lots, reg):
     def pack(shot, base, method):

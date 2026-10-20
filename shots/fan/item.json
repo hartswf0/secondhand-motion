@@ -1,25 +1,30 @@
 {
- "lot": "SM-0029",
- "id": "fan",
- "kind": "subject",
- "title": "Fan",
- "category": "fan",
- "wave": 2,
- "lane": "queue",
- "stage": -1,
- "status": "queued",
- "added": "2026-10-20",
- "blurb": "46 archive shots to watch. Best match: Types of Guards (0.290).",
- "cover": "shots/fan/doodle.svg",
- "cover_credit": "Quick, Draw! key_id 6120310522773504, CC BY 4.0",
- "links": [
-  {
-   "label": "Candidates",
-   "href": "shots/fan/candidates.json"
-  }
- ],
- "tests": "shots/fan/tests.json",
- "tags": [
-  "queued"
- ]
+  "lot": "SM-0029",
+  "id": "fan",
+  "kind": "subject",
+  "title": "Fan",
+  "category": "fan",
+  "wave": 2,
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/fan/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 6120310522773504; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "links": [
+    {
+      "label": "Review six keys",
+      "href": "shots/fan/index.html"
+    },
+    {
+      "label": "Candidate search",
+      "href": "shots/fan/candidates.json"
+    }
+  ],
+  "tests": "shots/fan/tests.json",
+  "tags": [
+    "key drafts",
+    "wave 2"
+  ]
 }

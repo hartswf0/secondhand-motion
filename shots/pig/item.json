@@ -1,25 +1,30 @@
 {
- "lot": "SM-0026",
- "id": "pig",
- "kind": "subject",
- "title": "Pig",
- "category": "pig",
- "wave": 2,
- "lane": "queue",
- "stage": -1,
- "status": "queued",
- "added": "2026-10-20",
- "blurb": "47 archive shots to watch. Best match: Modern Trends in Swine Production (0.292).",
- "cover": "shots/pig/doodle.svg",
- "cover_credit": "Quick, Draw! key_id 6225622663692288, CC BY 4.0",
- "links": [
-  {
-   "label": "Candidates",
-   "href": "shots/pig/candidates.json"
-  }
- ],
- "tests": "shots/pig/tests.json",
- "tags": [
-  "queued"
- ]
+  "lot": "SM-0026",
+  "id": "pig",
+  "kind": "subject",
+  "title": "Pig",
+  "category": "pig",
+  "wave": 2,
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/pig/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 5298401904164864; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "links": [
+    {
+      "label": "Review six keys",
+      "href": "shots/pig/index.html"
+    },
+    {
+      "label": "Candidate search",
+      "href": "shots/pig/candidates.json"
+    }
+  ],
+  "tests": "shots/pig/tests.json",
+  "tags": [
+    "key drafts",
+    "wave 2"
+  ]
 }

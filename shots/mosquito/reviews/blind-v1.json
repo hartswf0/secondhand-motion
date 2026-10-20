@@ -1,0 +1,26 @@
+{
+  "subject": "mosquito",
+  "review": "blind-v1",
+  "scope": "Still keys only; no motion approval. First six board tiles compared with design.png and selected source contact sheets.",
+  "source_interval_seconds": [
+    0.2335669002,
+    5.2385719052
+  ],
+  "bar_met": false,
+  "identity": {
+    "met": true,
+    "verdict": "All six keys preserve the same peculiar triangular abdomen, tall open angular wing, oval polygonal head and long bent appendages without adding new facial detail."
+  },
+  "source_pose": {
+    "met": false,
+    "verdict": "The bent foreleg variations are readable, but the source abdomen noticeably raises at key 2 and dips at key 3 before returning toward its feeding posture. The drawn abdomen and wing retain nearly the same relationship throughout, so this source pose contrast is missing."
+  },
+  "one_gap_that_matters_most": "The abdomen pitch change between source keys 2 and 3 is flattened out.",
+  "smallest_repair": "Pivot the existing triangular abdomen and its attached wing slightly upward at its head attachment for key 2, then downward for key 3, following the mirrored source pose. Keep the same contour segments and appendage design; preserve the existing foreleg variations.",
+  "must_not_be_lost": [
+    "Exact triangular abdomen and unusually tall open wing silhouette",
+    "Polygonal unfilled head and original bent appendages",
+    "Sparse uneven black strokes and absence of added insect detail",
+    "Existing raised and bent foreleg poses"
+  ]
+}

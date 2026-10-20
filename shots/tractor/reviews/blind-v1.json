@@ -1,0 +1,41 @@
+{
+  "review_type": "independent blind still-key review",
+  "revision": "v1",
+  "motion_approval": false,
+  "scope": "Only design.png, first six tiles of keys/revisions/board-v1.png, selected source 16-frame sheet, and selected source six-key sheet where present. No builder notes, prior critiques, or tests inspected.",
+  "inspection_method": "Actual view_image inspection of every listed image.",
+  "subject": "tractor",
+  "bar": "not met",
+  "identity": "not met",
+  "source_pose_mechanics": "not met",
+  "confidence": "high",
+  "clip_relative_interval_seconds": [
+    0.5,
+    2.45
+  ],
+  "reference_indices_1_based": [
+    1,
+    3,
+    5,
+    7,
+    10,
+    11
+  ],
+  "evidence": [
+    "The keys become larger and the rear wheel becomes wider, but K1-K3 retain an essentially left-facing side-profile hood/wheel arrangement. Source indices 1, 3, and 5 require a clearly more frontal three-quarter approach before indices 10-11 reach the near side view.",
+    "The drawings retain the recognizable tall bent exhaust, small front wheel and large rear wheel, but hood-to-wheel proportions and the rear wheel contour are substantially reconstructed from the chosen design."
+  ],
+  "biggest_gap": "The approach-to-profile change of view is not readable; size increase currently carries most of the source change.",
+  "smallest_repair": "Rework only K1-K3 into progressively less foreshortened three-quarter views using the chosen doodle hood, exhaust, seat line and wheel contours as the identity constraints; keep K4-K6 as the side-view destination, restoring their original hood/wheel proportions where reconstructed. Do not add source-film detail.",
+  "must_not_be_lost": [
+    "The exact irregular original rear-wheel silhouette and its overlap with the rectangular hood.",
+    "The small front wheel, bent exhaust with the downward inner stroke, rising seat/back line, and plain black-on-white doodle economy."
+  ],
+  "source_note": "The available six-key sheet samples later times than the assigned interval, so the assigned 16-frame indices were the deciding pose references.",
+  "inspected_images": [
+    "design.png",
+    "keys/revisions/board-v1.png",
+    "source-review/selected/b62ed26f-3327-5d10-9427-35299961541e-16frames.jpg",
+    "source-review/selected/b62ed26f-3327-5d10-9427-35299961541e-sixkeys.jpg"
+  ]
+}

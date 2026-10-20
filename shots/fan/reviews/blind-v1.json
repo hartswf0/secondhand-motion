@@ -1,0 +1,33 @@
+{
+  "review_type": "independent blind still-key review",
+  "revision": "v1",
+  "motion_approval": false,
+  "scope": "Only design.png, first six tiles of keys/revisions/board-v1.png, selected source 16-frame sheet, and selected source six-key sheet where present. No builder notes, prior critiques, or tests inspected.",
+  "inspection_method": "Actual view_image inspection of every listed image.",
+  "subject": "fan",
+  "bar": "met",
+  "identity": "met",
+  "source_pose_mechanics": "met",
+  "confidence": "high",
+  "clip_relative_interval_seconds": [
+    1.2,
+    4.3043
+  ],
+  "evidence": [
+    "The lopsided outer housing, tiny crossed/scribbled central hub, low trapezoid base and horizontal base scribble persist across all six keys.",
+    "The three interior rotor arms change phase around the same hub while the housing and base stay stable, making the required rotor mechanism readable."
+  ],
+  "biggest_gap": null,
+  "smallest_repair": null,
+  "must_not_be_lost": [
+    "The irregular housing contour, original scribbled hub and base, and exposed overrun strokes.",
+    "A fixed housing/base and a common rotor center across all phase drawings."
+  ],
+  "source_note": "Six anchors are accepted as procedural rotor phases; exact filmed blade angles are not required. This verdict does not assess rotation direction, timing, or interpolation.",
+  "inspected_images": [
+    "design.png",
+    "keys/revisions/board-v1.png",
+    "source-review/selected/7c81549f-fdbe-5064-b148-a63e586f6404-16frames.jpg",
+    "source-review/selected/7c81549f-fdbe-5064-b148-a63e586f6404-sixkeys.jpg"
+  ]
+}

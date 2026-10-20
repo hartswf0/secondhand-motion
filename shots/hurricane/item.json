@@ -1,25 +1,30 @@
 {
- "lot": "SM-0022",
- "id": "hurricane",
- "kind": "subject",
- "title": "Hurricane",
- "category": "hurricane",
- "wave": 2,
- "lane": "queue",
- "stage": -1,
- "status": "queued",
- "added": "2026-10-20",
- "blurb": "47 archive shots to watch. Best match: Shock Troops of Disaster: The Story of the New England Hurricane (0.295).",
- "cover": "shots/hurricane/doodle.svg",
- "cover_credit": "Quick, Draw! key_id 5749368806178816, CC BY 4.0",
- "links": [
-  {
-   "label": "Candidates",
-   "href": "shots/hurricane/candidates.json"
-  }
- ],
- "tests": "shots/hurricane/tests.json",
- "tags": [
-  "queued"
- ]
+  "lot": "SM-0022",
+  "id": "hurricane",
+  "kind": "subject",
+  "title": "Hurricane",
+  "category": "hurricane",
+  "wave": 2,
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Six source-linked key drafts; pose repair required. Motion not reviewed.",
+  "cover": "shots/hurricane/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 4791481996935168; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "links": [
+    {
+      "label": "Review six keys",
+      "href": "shots/hurricane/index.html"
+    },
+    {
+      "label": "Candidate search",
+      "href": "shots/hurricane/candidates.json"
+    }
+  ],
+  "tests": "shots/hurricane/tests.json",
+  "tags": [
+    "key drafts",
+    "wave 2"
+  ]
 }

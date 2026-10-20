@@ -1,0 +1,39 @@
+{
+  "review_type": "independent blind still-key review",
+  "revision": "v1",
+  "motion_approval": false,
+  "scope": "Only design.png, first six tiles of keys/revisions/board-v1.png, selected source 16-frame sheet, and selected source six-key sheet where present. No builder notes, prior critiques, or tests inspected.",
+  "inspection_method": "Actual view_image inspection of every listed image.",
+  "subject": "see-saw",
+  "bar": "not met",
+  "identity": "not met",
+  "source_pose_mechanics": "met",
+  "confidence": "high",
+  "clip_relative_interval_seconds": [
+    8.8,
+    16.1
+  ],
+  "reference_indices_1_based": [
+    1,
+    8,
+    10,
+    12,
+    14,
+    16
+  ],
+  "evidence": [
+    "Opposite end heights and the nearly level crossing are readable, and the triangular support provides a clear fulcrum.",
+    "In the original design and left-high K4-K5, the little crossed/overrun tip mark is on the left end. In left-low K1-K3 and K6 it is on the right end, with the asymmetric plank bend also reflected. These are mirrored versions rather than the same plank rotated around its support."
+  ],
+  "biggest_gap": "The asymmetric chosen plank changes handedness when the tilt reverses.",
+  "smallest_repair": "Replace only the reflected plank geometry in K1-K3 and K6 with rotations of the exact chosen plank about the fulcrum, keeping the desired endpoint heights and the same original end carrying the crossed tip mark. Keep the support unchanged.",
+  "must_not_be_lost": [
+    "The long uneven plank silhouette and its distinctive crossed/overrun mark on one specific end.",
+    "The imperfect triangular support, inner diagonal, tiny nearby speck, and readable opposite end heights."
+  ],
+  "inspected_images": [
+    "design.png",
+    "keys/revisions/board-v1.png",
+    "source-review/selected/0c1a5f0f-c011-51e5-84e2-82de81f2e5ad-16frames.jpg"
+  ]
+}

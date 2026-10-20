@@ -1,0 +1,27 @@
+{
+  "revision": "v1",
+  "source_sampled": true,
+  "identity_critic": {
+    "met": true,
+    "evidence": "reviews/blind-v1.json"
+  },
+  "trace": {
+    "recall_bar": 0.98,
+    "parts_kept_bar": 1.0,
+    "all_keys_pass": true
+  },
+  "held_background": "one separate plate provided",
+  "recognition_classifier": "not run",
+  "SAM_segmentation": "not run",
+  "mask_fit": "not run",
+  "stroke_correspondence": "not established",
+  "foot_slide": "not measured",
+  "motion_approved": false,
+  "training_ran": false,
+  "train_eligible": false,
+  "still_pose_critic": {
+    "met": null,
+    "evidence": "reviews/blind-v1.json"
+  },
+  "still_review": "pose review uncertain"
+}

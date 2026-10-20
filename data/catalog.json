@@ -1213,36 +1213,80 @@
   "title": "Flying saucer",
   "category": "flying saucer",
   "wave": 2,
-  "lane": "queue",
-  "stage": -1,
-  "status": "queued",
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "44 archive shots to watch. Best match: World of Tomorrow, The (Part II) (0.331).",
-  "cover": "shots/flying-saucer/doodle.svg",
-  "cover_credit": "Quick, Draw! key_id 5575420541927424, CC BY 4.0",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/flying-saucer/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 6582446130724864; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
   "links": [
    {
-    "label": "Candidates",
+    "label": "Review six keys",
+    "href": "shots/flying-saucer/index.html"
+   },
+   {
+    "label": "Candidate search",
     "href": "shots/flying-saucer/candidates.json"
    }
   ],
   "tests": "shots/flying-saucer/tests.json",
   "tags": [
-   "queued"
+   "key drafts",
+   "wave 2"
   ],
   "t": {
-   "pass": 0,
+   "pass": 3,
    "fail": 0,
-   "total": 1
+   "total": 7
   },
   "r": {
    "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent identity met",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 1.0,
+     "min_parts_kept": 1.0,
+     "keys": 6
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 2,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
     "value": "not run",
     "unit": "",
     "ok": null
    }
   },
-  "href": "shots/flying-saucer/candidates.json",
+  "href": "shots/flying-saucer/index.html",
   "gait": "hop"
  },
  {
@@ -1252,36 +1296,80 @@
   "title": "Raccoon",
   "category": "raccoon",
   "wave": 2,
-  "lane": "queue",
-  "stage": -1,
-  "status": "queued",
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "47 archive shots to watch. Best match: Horicon National Wildlife Refuge (0.299).",
-  "cover": "shots/raccoon/doodle.svg",
-  "cover_credit": "Quick, Draw! key_id 5325789182558208, CC BY 4.0",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/raccoon/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 5643141870780416; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
   "links": [
    {
-    "label": "Candidates",
+    "label": "Review six keys",
+    "href": "shots/raccoon/index.html"
+   },
+   {
+    "label": "Candidate search",
     "href": "shots/raccoon/candidates.json"
    }
   ],
   "tests": "shots/raccoon/tests.json",
   "tags": [
-   "queued"
+   "key drafts",
+   "wave 2"
   ],
   "t": {
-   "pass": 0,
-   "fail": 0,
-   "total": 1
+   "pass": 2,
+   "fail": 1,
+   "total": 7
   },
   "r": {
    "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent identity met",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9748620478234212,
+     "min_parts_kept": 1.0,
+     "keys": 6
+    },
+    "unit": "fraction",
+    "ok": false
+   },
+   "S7": {
+    "value": 4,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
     "value": "not run",
     "unit": "",
     "ok": null
    }
   },
-  "href": "shots/raccoon/candidates.json",
+  "href": "shots/raccoon/index.html",
   "gait": "goose step"
  },
  {
@@ -1291,36 +1379,80 @@
   "title": "Hurricane",
   "category": "hurricane",
   "wave": 2,
-  "lane": "queue",
-  "stage": -1,
-  "status": "queued",
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "47 archive shots to watch. Best match: Shock Troops of Disaster: The Story of the New England Hurricane (0.295).",
-  "cover": "shots/hurricane/doodle.svg",
-  "cover_credit": "Quick, Draw! key_id 5749368806178816, CC BY 4.0",
+  "blurb": "Six source-linked key drafts; pose repair required. Motion not reviewed.",
+  "cover": "shots/hurricane/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 4791481996935168; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
   "links": [
    {
-    "label": "Candidates",
+    "label": "Review six keys",
+    "href": "shots/hurricane/index.html"
+   },
+   {
+    "label": "Candidate search",
     "href": "shots/hurricane/candidates.json"
    }
   ],
   "tests": "shots/hurricane/tests.json",
   "tags": [
-   "queued"
+   "key drafts",
+   "wave 2"
   ],
   "t": {
-   "pass": 0,
-   "fail": 0,
-   "total": 1
+   "pass": 2,
+   "fail": 1,
+   "total": 7
   },
   "r": {
    "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent identity met",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9326781881847961,
+     "min_parts_kept": 1.0,
+     "keys": 6
+    },
+    "unit": "fraction",
+    "ok": false
+   },
+   "S7": {
+    "value": 2,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
     "value": "not run",
     "unit": "",
     "ok": null
    }
   },
-  "href": "shots/hurricane/candidates.json",
+  "href": "shots/hurricane/index.html",
   "gait": "shuffle"
  },
  {
@@ -1330,36 +1462,80 @@
   "title": "Tornado",
   "category": "tornado",
   "wave": 2,
-  "lane": "queue",
-  "stage": -1,
-  "status": "queued",
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "45 archive shots to watch. Best match: Valley Town (0.295).",
-  "cover": "shots/tornado/doodle.svg",
-  "cover_credit": "Quick, Draw! key_id 6522189199179776, CC BY 4.0",
+  "blurb": "Six source-linked key drafts; pose review uncertain. Motion not reviewed.",
+  "cover": "shots/tornado/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 6522189199179776; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
   "links": [
    {
-    "label": "Candidates",
+    "label": "Review six keys",
+    "href": "shots/tornado/index.html"
+   },
+   {
+    "label": "Candidate search",
     "href": "shots/tornado/candidates.json"
    }
   ],
   "tests": "shots/tornado/tests.json",
   "tags": [
-   "queued"
+   "key drafts",
+   "wave 2"
   ],
   "t": {
-   "pass": 0,
+   "pass": 3,
    "fail": 0,
-   "total": 1
+   "total": 7
   },
   "r": {
    "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent identity met",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.997427652733119,
+     "min_parts_kept": 1.0,
+     "keys": 6
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 1,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
     "value": "not run",
     "unit": "",
     "ok": null
    }
   },
-  "href": "shots/tornado/candidates.json",
+  "href": "shots/tornado/index.html",
   "gait": "sprint"
  },
  {
@@ -1369,36 +1545,80 @@
   "title": "Rain",
   "category": "rain",
   "wave": 2,
-  "lane": "queue",
-  "stage": -1,
-  "status": "queued",
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "43 archive shots to watch. Best match: Pipeline to the Clouds (0.293).",
-  "cover": "shots/rain/doodle.svg",
-  "cover_credit": "Quick, Draw! key_id 5897326906310656, CC BY 4.0",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/rain/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 5897326906310656; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
   "links": [
    {
-    "label": "Candidates",
+    "label": "Review six keys",
+    "href": "shots/rain/index.html"
+   },
+   {
+    "label": "Candidate search",
     "href": "shots/rain/candidates.json"
    }
   ],
   "tests": "shots/rain/tests.json",
   "tags": [
-   "queued"
+   "key drafts",
+   "wave 2"
   ],
   "t": {
-   "pass": 0,
+   "pass": 3,
    "fail": 0,
-   "total": 1
+   "total": 7
   },
   "r": {
    "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent identity met",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 1.0,
+     "min_parts_kept": 1.0,
+     "keys": 6
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 1,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
     "value": "not run",
     "unit": "",
     "ok": null
    }
   },
-  "href": "shots/rain/candidates.json",
+  "href": "shots/rain/index.html",
   "gait": "jelly"
  },
  {
@@ -1408,36 +1628,80 @@
   "title": "Mosquito",
   "category": "mosquito",
   "wave": 2,
-  "lane": "queue",
-  "stage": -1,
-  "status": "queued",
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "47 archive shots to watch. Best match: Insect Zoo (0.293).",
-  "cover": "shots/mosquito/doodle.svg",
-  "cover_credit": "Quick, Draw! key_id 5232112221290496, CC BY 4.0",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/mosquito/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 6165377341980672; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
   "links": [
    {
-    "label": "Candidates",
+    "label": "Review six keys",
+    "href": "shots/mosquito/index.html"
+   },
+   {
+    "label": "Candidate search",
     "href": "shots/mosquito/candidates.json"
    }
   ],
   "tests": "shots/mosquito/tests.json",
   "tags": [
-   "queued"
+   "key drafts",
+   "wave 2"
   ],
   "t": {
-   "pass": 0,
+   "pass": 3,
    "fail": 0,
-   "total": 1
+   "total": 7
   },
   "r": {
    "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent identity met",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9987808932727474,
+     "min_parts_kept": 1.0,
+     "keys": 6
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 3,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
     "value": "not run",
     "unit": "",
     "ok": null
    }
   },
-  "href": "shots/mosquito/candidates.json",
+  "href": "shots/mosquito/index.html",
   "gait": "splits"
  },
  {
@@ -1447,36 +1711,80 @@
   "title": "Pig",
   "category": "pig",
   "wave": 2,
-  "lane": "queue",
-  "stage": -1,
-  "status": "queued",
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "47 archive shots to watch. Best match: Modern Trends in Swine Production (0.292).",
-  "cover": "shots/pig/doodle.svg",
-  "cover_credit": "Quick, Draw! key_id 6225622663692288, CC BY 4.0",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/pig/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 5298401904164864; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
   "links": [
    {
-    "label": "Candidates",
+    "label": "Review six keys",
+    "href": "shots/pig/index.html"
+   },
+   {
+    "label": "Candidate search",
     "href": "shots/pig/candidates.json"
    }
   ],
   "tests": "shots/pig/tests.json",
   "tags": [
-   "queued"
+   "key drafts",
+   "wave 2"
   ],
   "t": {
-   "pass": 0,
+   "pass": 3,
    "fail": 0,
-   "total": 1
+   "total": 7
   },
   "r": {
    "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent identity met",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9938186179536858,
+     "min_parts_kept": 1.0,
+     "keys": 6
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 3,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
     "value": "not run",
     "unit": "",
     "ok": null
    }
   },
-  "href": "shots/pig/candidates.json",
+  "href": "shots/pig/index.html",
   "gait": "heel click"
  },
  {
@@ -1486,36 +1794,80 @@
   "title": "See saw",
   "category": "see saw",
   "wave": 2,
-  "lane": "queue",
-  "stage": -1,
-  "status": "queued",
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "48 archive shots to watch. Best match: [Amateur film: \"Saga of the Happy Wanderers\"] (0.292).",
-  "cover": "shots/see-saw/doodle.svg",
-  "cover_credit": "Quick, Draw! key_id 4512834501214208, CC BY 4.0",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/see-saw/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 4512834501214208; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
   "links": [
    {
-    "label": "Candidates",
+    "label": "Review six keys",
+    "href": "shots/see-saw/index.html"
+   },
+   {
+    "label": "Candidate search",
     "href": "shots/see-saw/candidates.json"
    }
   ],
   "tests": "shots/see-saw/tests.json",
   "tags": [
-   "queued"
+   "key drafts",
+   "wave 2"
   ],
   "t": {
-   "pass": 0,
+   "pass": 3,
    "fail": 0,
-   "total": 1
+   "total": 7
   },
   "r": {
    "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent identity met",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9989454257843395,
+     "min_parts_kept": 1.0,
+     "keys": 6
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 4,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
     "value": "not run",
     "unit": "",
     "ok": null
    }
   },
-  "href": "shots/see-saw/candidates.json",
+  "href": "shots/see-saw/index.html",
   "gait": "skip"
  },
  {
@@ -1525,36 +1877,80 @@
   "title": "Tractor",
   "category": "tractor",
   "wave": 2,
-  "lane": "queue",
-  "stage": -1,
-  "status": "queued",
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "47 archive shots to watch. Best match: Farmer Miller Goes Into High Gear (Part II) (0.292).",
-  "cover": "shots/tractor/doodle.svg",
-  "cover_credit": "Quick, Draw! key_id 4702418350637056, CC BY 4.0",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/tractor/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 4702418350637056; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
   "links": [
    {
-    "label": "Candidates",
+    "label": "Review six keys",
+    "href": "shots/tractor/index.html"
+   },
+   {
+    "label": "Candidate search",
     "href": "shots/tractor/candidates.json"
    }
   ],
   "tests": "shots/tractor/tests.json",
   "tags": [
-   "queued"
+   "key drafts",
+   "wave 2"
   ],
   "t": {
-   "pass": 0,
+   "pass": 3,
    "fail": 0,
-   "total": 1
+   "total": 7
   },
   "r": {
    "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent identity met",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9986254295532646,
+     "min_parts_kept": 1.0,
+     "keys": 6
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 3,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
     "value": "not run",
     "unit": "",
     "ok": null
    }
   },
-  "href": "shots/tractor/candidates.json",
+  "href": "shots/tractor/index.html",
   "gait": "sit"
  },
  {
@@ -1564,36 +1960,80 @@
   "title": "Fan",
   "category": "fan",
   "wave": 2,
-  "lane": "queue",
-  "stage": -1,
-  "status": "queued",
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "46 archive shots to watch. Best match: Types of Guards (0.290).",
-  "cover": "shots/fan/doodle.svg",
-  "cover_credit": "Quick, Draw! key_id 6120310522773504, CC BY 4.0",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/fan/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 6120310522773504; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
   "links": [
    {
-    "label": "Candidates",
+    "label": "Review six keys",
+    "href": "shots/fan/index.html"
+   },
+   {
+    "label": "Candidate search",
     "href": "shots/fan/candidates.json"
    }
   ],
   "tests": "shots/fan/tests.json",
   "tags": [
-   "queued"
+   "key drafts",
+   "wave 2"
   ],
   "t": {
-   "pass": 0,
-   "fail": 0,
-   "total": 1
+   "pass": 2,
+   "fail": 1,
+   "total": 7
   },
   "r": {
    "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent identity met",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9682832824795247,
+     "min_parts_kept": 1.0,
+     "keys": 6
+    },
+    "unit": "fraction",
+    "ok": false
+   },
+   "S7": {
+    "value": 2,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
     "value": "not run",
     "unit": "",
     "ok": null
    }
   },
-  "href": "shots/fan/candidates.json",
+  "href": "shots/fan/index.html",
   "gait": "walk"
  },
  {

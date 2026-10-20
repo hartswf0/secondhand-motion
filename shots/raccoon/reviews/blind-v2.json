@@ -1,0 +1,31 @@
+{
+  "review_type": "fresh_independent_blind_still_key_review",
+  "shot": "raccoon",
+  "inspected_files": [
+    "design.png",
+    "keys/proof-v2.jpg",
+    "source-review/selected/d3746f6b-3468-5959-9570-c90be06ef3b8-sixkeys.jpg",
+    "source-review/selected/d3746f6b-3468-5959-9570-c90be06ef3b8-16frames.jpg"
+  ],
+  "clip_relative_interval_seconds": [
+    10.810810811,
+    13.580246914
+  ],
+  "exact_chosen_doodle_identity": {
+    "met": true,
+    "evidence": "The angular smiling head, small dark eyes, sparse bent stick legs, long outlined body and striped tapered tail remain recognizable as the chosen design. The early frontal compression keeps the same drawing vocabulary."
+  },
+  "source_pose_progression": {
+    "met": false,
+    "evidence": "The six keys do change from frontal to a longer left-facing body, but K5 and K6 retain two fully visible eyes and a broad viewer-facing smile. In the selected source the late head turns away into a left/rear three-quarter view and the face becomes largely concealed."
+  },
+  "greatest_gap": "The late head does not complete the source turn away, even though the body does.",
+  "smallest_repair": "Change only the head projection in K5 and K6: aim the snout farther left and away, foreshorten or occlude the far eye and smile, and shift the ear overlap to match that yaw. Keep the current body poses, striped tail, sparse legs, angular contours and original friendly facial marks wherever visible.",
+  "protected_strengths": [
+    "Clear frontal-to-side body progression",
+    "Chosen angular doodle vocabulary and striped tail"
+  ],
+  "still_key_verdict": "repair_needed",
+  "motion_approval": false,
+  "scope_note": "Still-key review only. No motion approval; no animation inspected."
+}

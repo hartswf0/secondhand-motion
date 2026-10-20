@@ -1,25 +1,30 @@
 {
- "lot": "SM-0020",
- "id": "flying-saucer",
- "kind": "subject",
- "title": "Flying saucer",
- "category": "flying saucer",
- "wave": 2,
- "lane": "queue",
- "stage": -1,
- "status": "queued",
- "added": "2026-10-20",
- "blurb": "44 archive shots to watch. Best match: World of Tomorrow, The (Part II) (0.331).",
- "cover": "shots/flying-saucer/doodle.svg",
- "cover_credit": "Quick, Draw! key_id 5575420541927424, CC BY 4.0",
- "links": [
-  {
-   "label": "Candidates",
-   "href": "shots/flying-saucer/candidates.json"
-  }
- ],
- "tests": "shots/flying-saucer/tests.json",
- "tags": [
-  "queued"
- ]
+  "lot": "SM-0020",
+  "id": "flying-saucer",
+  "kind": "subject",
+  "title": "Flying saucer",
+  "category": "flying saucer",
+  "wave": 2,
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/flying-saucer/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 6582446130724864; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "links": [
+    {
+      "label": "Review six keys",
+      "href": "shots/flying-saucer/index.html"
+    },
+    {
+      "label": "Candidate search",
+      "href": "shots/flying-saucer/candidates.json"
+    }
+  ],
+  "tests": "shots/flying-saucer/tests.json",
+  "tags": [
+    "key drafts",
+    "wave 2"
+  ]
 }

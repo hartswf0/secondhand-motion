@@ -1,25 +1,30 @@
 {
- "lot": "SM-0021",
- "id": "raccoon",
- "kind": "subject",
- "title": "Raccoon",
- "category": "raccoon",
- "wave": 2,
- "lane": "queue",
- "stage": -1,
- "status": "queued",
- "added": "2026-10-20",
- "blurb": "47 archive shots to watch. Best match: Horicon National Wildlife Refuge (0.299).",
- "cover": "shots/raccoon/doodle.svg",
- "cover_credit": "Quick, Draw! key_id 5325789182558208, CC BY 4.0",
- "links": [
-  {
-   "label": "Candidates",
-   "href": "shots/raccoon/candidates.json"
-  }
- ],
- "tests": "shots/raccoon/tests.json",
- "tags": [
-  "queued"
- ]
+  "lot": "SM-0021",
+  "id": "raccoon",
+  "kind": "subject",
+  "title": "Raccoon",
+  "category": "raccoon",
+  "wave": 2,
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
+  "cover": "shots/raccoon/keys/key-01.png",
+  "cover_credit": "Image-model draft from Quick, Draw! key_id 5643141870780416; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "links": [
+    {
+      "label": "Review six keys",
+      "href": "shots/raccoon/index.html"
+    },
+    {
+      "label": "Candidate search",
+      "href": "shots/raccoon/candidates.json"
+    }
+  ],
+  "tests": "shots/raccoon/tests.json",
+  "tags": [
+    "key drafts",
+    "wave 2"
+  ]
 }

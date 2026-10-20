@@ -1,0 +1,60 @@
+{
+  "status": "draft_still_keys",
+  "revision": "v1",
+  "source_clip_id": "b615f6f9-22b3-571b-bbb6-0739a4f7cf1d",
+  "keys": [
+    {
+      "key": 1,
+      "file": "keys/key-01.png",
+      "source_sheet_index": 1,
+      "time": 0.23356666666666667,
+      "source_frame_index": 7,
+      "pose": "Funnel contour establishes the street view"
+    },
+    {
+      "key": 2,
+      "file": "keys/key-02.png",
+      "source_sheet_index": 4,
+      "time": 0.8341666666666667,
+      "source_frame_index": 25,
+      "pose": "Subtle contour widening"
+    },
+    {
+      "key": 3,
+      "file": "keys/key-03.png",
+      "source_sheet_index": 7,
+      "time": 1.4347666666666667,
+      "source_frame_index": 43,
+      "pose": "Funnel edge changes behind foreground trees"
+    },
+    {
+      "key": 4,
+      "file": "keys/key-04.png",
+      "source_sheet_index": 10,
+      "time": 2.0687333333333333,
+      "source_frame_index": 62,
+      "pose": "Narrower lower funnel, same upper rim"
+    },
+    {
+      "key": 5,
+      "file": "keys/key-05.png",
+      "source_sheet_index": 13,
+      "time": 2.6693333333333333,
+      "source_frame_index": 80,
+      "pose": "Upper contour softens"
+    },
+    {
+      "key": 6,
+      "file": "keys/key-06.png",
+      "source_sheet_index": 16,
+      "time": 3.2699333333333334,
+      "source_frame_index": 98,
+      "pose": "Last clean funnel pose before credits"
+    }
+  ],
+  "note": "Observed contour anchors; rotation is not established.",
+  "representation": "proposed source-pose keys",
+  "background": "keys/bg-plate.png",
+  "motion_approved": false,
+  "training_ran": false
+}

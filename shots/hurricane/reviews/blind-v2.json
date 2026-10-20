@@ -1,0 +1,28 @@
+{
+  "subject": "hurricane",
+  "review_type": "independent blind still-key review",
+  "reviewed_board": "keys/proof-v2.jpg",
+  "reading_order": "left to right, top to bottom",
+  "source_interval_seconds": [
+    31.131131,
+    34.200867
+  ],
+  "source_reference": "selected sixkeys sheet at its six printed timestamps",
+  "identity": {
+    "verdict": "pass",
+    "evidence": "All six keep the design's sparse horizontal overlapping angular strokes, long left-running lines, and dense pointed cluster at the right. The image remains the same abstract scribble identity rather than becoming a cyclone icon."
+  },
+  "source_poses": {
+    "verdict": "fail",
+    "evidence": "The source shows floodwater striking a fixed building, with an early splash and then lower churning/receding water. These six drawings read primarily as a progressively flatter horizontal bundle. No stable collision boundary or sufficiently distinct splash-versus-recession silhouette makes water acting against a structure readable from the still keys."
+  },
+  "overall_still_key_verdict": "repair_required",
+  "greatest_gap": "The required water-against-building action has no readable fixed impact boundary or impact-to-recession change.",
+  "smallest_repair": "Within the existing doodle vocabulary, keep the right-side impact cluster fixed as the contact boundary; make the early water strokes visibly rise and break against it, then lower and pull back across the later keys. If necessary use only a minimal fixed angular edge at that contact, retaining the existing stroke network rather than redrawing a realistic building.",
+  "protected_strengths": [
+    "Keep the exact abstract angular scribble character and horizontal water direction.",
+    "Keep the dense right-side convergence and long loose left-running strokes.",
+    "Do not introduce a funnel, spiral cyclone symbol, shading, or realistic wave rendering."
+  ],
+  "scope_limit": "Still-key identity and source-pose readability only; no timing, in-between, or motion approval."
+}

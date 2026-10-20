@@ -1,0 +1,60 @@
+{
+  "status": "draft_still_keys",
+  "revision": "v1",
+  "source_clip_id": "7c81549f-fdbe-5064-b148-a63e586f6404",
+  "keys": [
+    {
+      "key": 1,
+      "file": "keys/key-01.png",
+      "source_sheet_index": 1,
+      "time": 1.234567901234568,
+      "source_frame_index": 37,
+      "pose": "Establish held housing and rotor"
+    },
+    {
+      "key": 2,
+      "file": "keys/key-02.png",
+      "source_sheet_index": 4,
+      "time": 1.8351685018351687,
+      "source_frame_index": 55,
+      "pose": "Rotor phase check 2"
+    },
+    {
+      "key": 3,
+      "file": "keys/key-03.png",
+      "source_sheet_index": 7,
+      "time": 2.4357691024357693,
+      "source_frame_index": 73,
+      "pose": "Rotor phase check 3"
+    },
+    {
+      "key": 4,
+      "file": "keys/key-04.png",
+      "source_sheet_index": 10,
+      "time": 3.0697364030697365,
+      "source_frame_index": 92,
+      "pose": "Rotor phase check 4"
+    },
+    {
+      "key": 5,
+      "file": "keys/key-05.png",
+      "source_sheet_index": 13,
+      "time": 3.6703370036703373,
+      "source_frame_index": 110,
+      "pose": "Rotor phase check 5"
+    },
+    {
+      "key": 6,
+      "file": "keys/key-06.png",
+      "source_sheet_index": 16,
+      "time": 4.270937604270938,
+      "source_frame_index": 128,
+      "pose": "Rotor phase check 6"
+    }
+  ],
+  "note": "Procedural rotor phases; exact angles and RPM are unresolved by source blur. Housing must hold; generated drafts may require repair.",
+  "representation": "procedural phases",
+  "background": "keys/bg-plate.png",
+  "motion_approved": false,
+  "training_ran": false
+}

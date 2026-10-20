@@ -1,0 +1,35 @@
+{
+  "subject": "see-saw",
+  "review_type": "independent blind still-key review",
+  "reviewed_board": "keys/proof-v2.jpg",
+  "reading_order": "left to right, top to bottom",
+  "source_interval_seconds": [
+    8.8,
+    16.1
+  ],
+  "source_16sheet_indices": [
+    1,
+    8,
+    10,
+    12,
+    14,
+    16
+  ],
+  "identity": {
+    "verdict": "pass",
+    "evidence": "The same long uneven outlined plank, crossing line at its end, and off-kilter triangular support with an internal slanted stroke remain recognizable in all six keys. Rider omission is accepted for this prop-only packet."
+  },
+  "source_poses": {
+    "verdict": "fail",
+    "evidence": "The rise, leveling, opposite tilt, and return are readable, but the plank underside visibly floats above the triangular apex in every key. The changing air gap prevents the required source action from reading as a rigid lever rocking on a stationary fulcrum."
+  },
+  "overall_still_key_verdict": "repair_required",
+  "greatest_gap": "The board is detached from its pivot in all six poses.",
+  "smallest_repair": "Keep the support fixed. Reposition each existing plank pose so the same underside pivot point meets the support apex at every angle; preserve plank length and rotate about that contact. Do not add a new mechanism.",
+  "protected_strengths": [
+    "Keep the current alternating tilt sequence and riders omitted.",
+    "Keep the original crooked plank contour, end overshoot, and triangular support.",
+    "Keep the simple unfilled black doodle treatment."
+  ],
+  "scope_limit": "Still-key identity and source-pose readability only; no timing, in-between, or motion approval."
+}
