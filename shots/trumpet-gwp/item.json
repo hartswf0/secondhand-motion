@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0101",
+ "id": "trumpet-gwp",
+ "kind": "shot",
+ "title": "Trumpet, the Giraffe Walks Past Way",
+ "category": "trumpet",
+ "wave": 4,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/trumpet-gwp/cover.png",
+ "cover_alt": "shots/trumpet-gwp/frames/f033.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/trumpet-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#trumpet-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/trumpet_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/trumpet/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/trumpet-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 4"
+ ]
+}

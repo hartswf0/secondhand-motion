@@ -5,23 +5,23 @@
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
+   60,
    59,
+   60,
+   60,
+   60,
+   60,
    60,
    61,
    60,
    60,
-   59,
-   59,
    60,
-   61,
-   60,
-   61,
-   63,
    62,
-   63,
-   61,
    62,
-   62
+   62,
+   62,
+   62,
+   61
   ]
  },
  {
@@ -33,14 +33,13 @@
  },
  {
   "id": "M3",
-  "value": 0.03,
-  "unit": "fit to the SAM silhouette, frames with a mask",
-  "ok": false,
-  "min": 0.02
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
  },
  {
   "id": "M6",
-  "value": 1.4,
+  "value": 1.2,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -60,7 +59,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:6590023216398336; scenery drawn by agent: no Quick, Draw! category is a roof cornice; two lines for the band of trim that runs across the top of the wall, sloping down to the right as in the film, drawn by agent: no Quick, Draw! category is clapboard siding; three short level lines for the boards of the wall behind the player, drawn by agent: no Quick, Draw! category is the dark corner of the next building; one upright line for its edge and two small window slots in it, drawn by agent: no Quick, Draw! category is a window sill; one long line for the ledge under the trumpet, quickdraw:6034815755223040, quickdraw:5361324483674112, drawn by agent: no Quick, Draw! category is a person seen from the side (the face category is drawn from the front); a few lines for the trumpeter as he stands in the film: head in profile with nose, lips at the mouthpiece and chin, ear, glasses, collar, back, and the sleeve of the arm that holds the trumpet, with two loops for his hands",
+  "value": "rig quickdraw:6590023216398336; scenery drawn by agent: no Quick, Draw! category is a roof cornice; two lines for the band of trim that runs across the top of the wall, sloping down to the right as in the film; the lines stop where the player's head is in front of the trim, drawn by agent: no Quick, Draw! category is clapboard siding; three short level lines for the boards of the wall behind the player, drawn by agent: no Quick, Draw! category is the dark corner of the next building; one upright line for its edge and two small window slots in it, drawn by agent: no Quick, Draw! category is a window sill; one line for the ledge under the trumpet, stopping where the player's sleeve is in front of it, quickdraw:6034815755223040, quickdraw:5361324483674112, drawn by agent: no Quick, Draw! category is a person seen from the side (the face category is drawn from the front); a few lines for the trumpeter as he stands in the film: head in profile with nose, lips at the mouthpiece and chin, ear, glasses, collar, back, and the sleeve of the arm that holds the trumpet, with two loops for his hands",
   "unit": "",
   "ok": true
  },
@@ -82,5 +81,20 @@
   "value": "complete",
   "unit": "",
   "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca trumpet\u201d; motion smooth; follows the film: yes",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/trumpet-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The animated trumpet keeps the doodle's oval bell, gapped top line, three looped valves and angled mouthpiece; the only differences are small frame-to-frame changes in valve height and in the gap on the top line.",
+  "evidence": "shots/trumpet-gwp/reviews/critic-1.json"
  }
 ]

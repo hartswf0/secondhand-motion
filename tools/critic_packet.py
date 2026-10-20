@@ -15,7 +15,9 @@ for c in [a for a in sys.argv[1:] if not a.startswith("--")]:
     (d / 'critic').mkdir(exist_ok=True); cam = S['camera']
     zr = S.get('z_ref', 3); zof = {p['id']: p['z'] for p in S.get('planes', [])}
     def bgs(f):   # every scenery object, slid by the camera at its plane's depth
-        return [np.array(s) + np.array(cam[f]) * (zr / zof.get(o['plane'], zr)) for o in S['objects'] for s in o['strokes'] if len(s) > 1]
+        return [np.array(s) + np.array(cam[f]) * (zr / zof.get(o['plane'], zr)) for o in S['objects'] if o['plane'] != 'char' for s in (o['frames'][f] if o.get('frames') else o['strokes']) if len(s) > 1]
+    def cast(f):   # the character, plus any extra drawn on the character's own plane (a second copy of the rig)
+        return [np.array(s) for s in S['cast']['frames'][f]] + [np.array(s) + np.array(cam[f]) * 0 for o in S['objects'] if o['plane'] == 'char' for s in (o['frames'][f] if o.get('frames') else o['strokes']) if len(s) > 1]
     def frame(f):
         im = Image.new('RGB', (W, H), 'white')
         if S['masks'][f]:   # cel: the silhouette painted under the character
@@ -23,9 +25,9 @@ for c in [a for a in sys.argv[1:] if not a.startswith("--")]:
             m = Image.new('L', (W, H), 0); g2 = D2.Draw(m)
             for p in S['masks'][f]:
                 if len(p) > 2: g2.polygon([tuple(q) for q in p], fill=255)
-            draw_frame(im, [], bgs(f)); im.paste((255, 255, 255), mask=m); draw_frame(im, [np.array(s) for s in S['cast']['frames'][f]], [])
+            draw_frame(im, [], bgs(f)); im.paste((255, 255, 255), mask=m); draw_frame(im, cast(f), [])
             return im
-        draw_frame(im, [np.array(s) for s in S['cast']['frames'][f]], bgs(f)); return im
+        draw_frame(im, cast(f), bgs(f)); return im
     NF = 16 if '--dense' in sys.argv else 8
     fr = [round(i * (n - 1) / (NF - 1)) for i in range(NF)]; rows = NF // 4; strip = Image.new('RGB', (4 * W + 12, rows * H + 4 * (rows - 1)), 'white')
     for i, f in enumerate(fr):

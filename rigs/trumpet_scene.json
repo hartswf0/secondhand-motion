@@ -160,7 +160,7 @@
    "id": "cornice",
    "plane": "wall",
    "class": "cornice",
-   "why": "no Quick, Draw! category is a roof cornice; two lines for the band of trim that runs across the top of the wall, sloping down to the right as in the film",
+   "why": "no Quick, Draw! category is a roof cornice; two lines for the band of trim that runs across the top of the wall, sloping down to the right as in the film; the lines stop where the player's head is in front of the trim",
    "strokes": [
     [
      [
@@ -170,6 +170,16 @@
      [
       150,
       70
+     ],
+     [
+      244,
+      75
+     ]
+    ],
+    [
+     [
+      308,
+      79
      ],
      [
       330,
@@ -184,6 +194,16 @@
      [
       150,
       86
+     ],
+     [
+      232,
+      89
+     ]
+    ],
+    [
+     [
+      306,
+      93
      ],
      [
       330,
@@ -220,12 +240,12 @@
     ],
     [
      [
-      230,
+      306,
       118
      ],
      [
-      320,
-      121
+      330,
+      119
      ]
     ]
    ]
@@ -296,7 +316,7 @@
    "id": "sill",
    "plane": "sill",
    "class": "window sill",
-   "why": "no Quick, Draw! category is a window sill; one long line for the ledge under the trumpet",
+   "why": "no Quick, Draw! category is a window sill; one line for the ledge under the trumpet, stopping where the player's sleeve is in front of it",
    "strokes": [
     [
      [
@@ -304,12 +324,8 @@
       196
      ],
      [
-      150,
-      199
-     ],
-     [
-      340,
-      206
+      112,
+      198
      ]
     ]
    ]
@@ -334,7 +350,7 @@
    "box": [
     76,
     214,
-    140,
+    116,
     300
    ],
    "aspect": 0.75,
@@ -568,5 +584,6 @@
   "38": "he tips the trumpet up",
   "50": "held up, the bell high",
   "61": "settling back down"
- }
+ },
+ "no_cel": "the cel paint is the player's SAM silhouette, and it would erase the lines drawn for the player himself (sleeve, hands, ear, glasses); scenery lines behind him are cut short by hand instead"
 }

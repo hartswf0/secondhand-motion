@@ -1,0 +1,90 @@
+[
+ {
+  "id": "M2",
+  "value": 60,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   60,
+   60,
+   60,
+   58,
+   60,
+   60,
+   60,
+   60,
+   60,
+   59,
+   61,
+   59,
+   60,
+   61,
+   61,
+   61,
+   61,
+   61,
+   62,
+   61,
+   60
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.96,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 62
+ },
+ {
+  "id": "M3",
+  "value": 0.31,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.01
+ },
+ {
+  "id": "M6",
+  "value": 10.3,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "5 strokes, 51 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6685610360176640; scenery drawn by agent: no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left, drawn by agent: no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left, drawn by agent: no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left, drawn by agent: no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left, drawn by agent: no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left, drawn by agent: no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left, drawn by agent: no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left, drawn by agent: no Quick, Draw! category is a lock of hair; the painter's dark hair enters the top left corner of the frame, drawn as two curls, drawn by agent: no Quick, Draw! category is a shadow edge; a dark diagonal crease in the paper runs out of the lower left corner, drawn by agent: no Quick, Draw! category is a paper crease; two faint vertical folds run down the right side of the sheet, drawn by agent: no Quick, Draw! category is a paper crease; the second faint vertical fold near the right edge",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "37/37",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

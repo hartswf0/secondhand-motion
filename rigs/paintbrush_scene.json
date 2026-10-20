@@ -1,0 +1,415 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "source": "locked off: phase correlation on the paper grain in the right third of the frame (no brush there) holds within about 1 px over the clip; the 15-20 px jumps in camera.json come from the moving brush and are not camera motion"
+ },
+ "planes": [
+  {
+   "id": "paper",
+   "z": 2.1,
+   "label": "Paper"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Paintbrush"
+  }
+ ],
+ "objects": [
+  {
+   "id": "paint0",
+   "plane": "paper",
+   "class": "line",
+   "visible": [
+    0,
+    36
+   ],
+   "why": "no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left",
+   "strokes": [
+    [
+     [
+      188.0,
+      98.0
+     ],
+     [
+      177.0,
+      105.6
+     ],
+     [
+      164.0,
+      115.2
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "paint1",
+   "plane": "paper",
+   "class": "line",
+   "visible": [
+    6,
+    36
+   ],
+   "why": "no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left",
+   "strokes": [
+    [
+     [
+      164.0,
+      115.2
+     ],
+     [
+      157.8,
+      119.4
+     ],
+     [
+      149.6,
+      125.6
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "paint2",
+   "plane": "paper",
+   "class": "line",
+   "visible": [
+    12,
+    36
+   ],
+   "why": "no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left",
+   "strokes": [
+    [
+     [
+      149.6,
+      125.6
+     ],
+     [
+      144.8,
+      128.8
+     ],
+     [
+      138.1,
+      133.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "paint3",
+   "plane": "paper",
+   "class": "line",
+   "visible": [
+    18,
+    36
+   ],
+   "why": "no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left",
+   "strokes": [
+    [
+     [
+      138.1,
+      133.9
+     ],
+     [
+      132.8,
+      137.4
+     ],
+     [
+      125.6,
+      142.8
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "paint4",
+   "plane": "paper",
+   "class": "line",
+   "visible": [
+    24,
+    36
+   ],
+   "why": "no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left",
+   "strokes": [
+    [
+     [
+      125.6,
+      142.8
+     ],
+     [
+      120.3,
+      146.3
+     ],
+     [
+      113.1,
+      151.8
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "paint5",
+   "plane": "paper",
+   "class": "line",
+   "visible": [
+    30,
+    36
+   ],
+   "why": "no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left",
+   "strokes": [
+    [
+     [
+      113.1,
+      151.8
+     ],
+     [
+      107.4,
+      155.7
+     ],
+     [
+      99.7,
+      161.5
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "paint6",
+   "plane": "paper",
+   "class": "line",
+   "visible": [
+    34,
+    36
+   ],
+   "why": "no Quick, Draw! category is a painted stroke; this is the thin line the brush lays on the paper, drawn in pieces that appear as the brush lengthens it toward the lower left",
+   "strokes": [
+    [
+     [
+      99.7,
+      161.5
+     ],
+     [
+      96.8,
+      163.2
+     ],
+     [
+      92.0,
+      167.0
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "hair",
+   "plane": "paper",
+   "class": "hair",
+   "why": "no Quick, Draw! category is a lock of hair; the painter's dark hair enters the top left corner of the frame, drawn as two curls",
+   "strokes": [
+    [
+     [
+      0,
+      2
+     ],
+     [
+      14,
+      4
+     ],
+     [
+      30,
+      0
+     ]
+    ],
+    [
+     [
+      0,
+      48
+     ],
+     [
+      6,
+      38
+     ],
+     [
+      16,
+      30
+     ],
+     [
+      22,
+      20
+     ],
+     [
+      18,
+      12
+     ],
+     [
+      8,
+      14
+     ],
+     [
+      4,
+      24
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "shadow",
+   "plane": "paper",
+   "class": "line",
+   "why": "no Quick, Draw! category is a shadow edge; a dark diagonal crease in the paper runs out of the lower left corner",
+   "strokes": [
+    [
+     [
+      0,
+      284
+     ],
+     [
+      18,
+      268
+     ],
+     [
+      38,
+      246
+     ],
+     [
+      52,
+      228
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "crease1",
+   "plane": "paper",
+   "class": "line",
+   "why": "no Quick, Draw! category is a paper crease; two faint vertical folds run down the right side of the sheet",
+   "strokes": [
+    [
+     [
+      284,
+      0
+     ],
+     [
+      285,
+      90
+     ],
+     [
+      283,
+      180
+     ],
+     [
+      285,
+      288
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "crease2",
+   "plane": "paper",
+   "class": "line",
+   "why": "no Quick, Draw! category is a paper crease; the second faint vertical fold near the right edge",
+   "strokes": [
+    [
+     [
+      331,
+      0
+     ],
+     [
+      330,
+      120
+     ],
+     [
+      332,
+      288
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "Brush tip up and to the left, resting at the start of the painted line.",
+  "4": "Brush lifts toward the camera and drops down and left in one dab.",
+  "8": "Second dab, further down the line.",
+  "16": "The tip works back and forth along the line in short dabs about every four frames.",
+  "24": "The line now reaches about two thirds of its length.",
+  "33": "Brush at the lower left end of the line.",
+  "36": "Brush lifts quickly up and to the right."
+ }
+}

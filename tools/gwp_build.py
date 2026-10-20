@@ -85,9 +85,35 @@ def build(cat):
             kid, st = qd_fit(o['qd'], o['box'], o.get('strokes'), o.get('skip', 0), o.get('aspect'))
             objs.append({'id': o['id'], 'plane': o['plane'], 'z': next(p['z'] for p in sc['planes'] if p['id'] == o['plane']), 'class': o['qd'],
                          'source': f'quickdraw:{kid}', 'strokes': st})
+        elif o.get('rig_poses'):
+            objs.append({'id': o['id'], 'plane': o['plane'], 'z': next(p['z'] for p in sc['planes'] if p['id'] == o['plane']), 'class': spec['category'], 'source': '', 'strokes': []})
         else:
             objs.append({'id': o['id'], 'plane': o['plane'], 'z': next(p['z'] for p in sc['planes'] if p['id'] == o['plane']), 'class': o.get('class', 'line'),
                          'source': 'drawn by agent: ' + o['why'], 'strokes': o['strokes']})
+    # Scenery that changes during the shot. "visible": [f0, f1] shows an object only on those frames (a hand
+    # that reaches in, rays that come on). "rig_poses": a pose file of keys for a second copy of the character's
+    # own rig (a second ant, a second lion): drawn by the same rig, eased between its keys, on its own plane.
+    for o, so in zip(objs, sc['objects']):
+        if so.get('rig_poses'):
+            import importlib.util
+            spec_ = importlib.util.spec_from_file_location('xrig', ROOT / 'rigs' / f'{rn}.py'); xr = importlib.util.module_from_spec(spec_); spec_.loader.exec_module(xr)
+            K = json.load(open(ROOT / so['rig_poses'])); ks = sorted(int(k) for k in K)
+            def pose_at(f):
+                if f <= ks[0]: return K[str(ks[0])]
+                if f >= ks[-1]: return K[str(ks[-1])]
+                a = max(k for k in ks if k <= f); b = min(k for k in ks if k > f); t = (f - a) / (b - a); t = t * t * (3 - 2 * t)
+                A, B = K[str(a)], K[str(b)]; P = {}
+                for k in A:
+                    if k not in B: P[k] = A[k]
+                    elif isinstance(A[k], (int, float)): P[k] = A[k] + (B[k] - A[k]) * t
+                    else: P[k] = [A[k][0] + (B[k][0] - A[k][0]) * t, A[k][1] + (B[k][1] - A[k][1]) * t]
+                return P
+            o['frames'] = [[np.round(np.array(q, float), 1).tolist() for q in xr.draw(pose_at(f))] for f in range(n)]
+            o['source'] = f"quickdraw:{spec['doodle_key_id']} (a second copy of the character's rig, keyed in {so['rig_poses']})"
+            o['strokes'] = o['frames'][0]
+        if so.get('visible'):
+            a, b = so['visible']; base = o.get('frames') or [o['strokes']] * n
+            o['frames'] = [base[f] if a <= f <= b else [] for f in range(n)]
     M = json.load(open(out / 'masks.json'))
     notes = sc.get('notes', {})
     S = {'title': f"{cat.capitalize()}, the Giraffe Walks Past way", 'category': cat, 'fps': clip['fps'], 'W': W, 'H': H, 'z_ref': sc['z_ref'],
