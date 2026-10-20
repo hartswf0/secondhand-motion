@@ -31,33 +31,33 @@
  },
  {
   "id": "M3",
-  "value": 0.92,
+  "value": 0.83,
   "unit": "fit to the SAM silhouette, every frame",
   "ok": true,
-  "min": 0.88,
+  "min": 0.77,
   "per_frame": [
-   0.94,
-   0.95,
-   0.91,
-   0.94,
-   0.94,
-   0.94,
-   0.9,
-   0.9,
-   0.94,
-   0.92,
-   0.94,
-   0.89,
-   0.89,
+   0.88,
    0.9,
    0.91,
-   0.9,
-   0.88
+   0.88,
+   0.87,
+   0.85,
+   0.77,
+   0.77,
+   0.85,
+   0.8,
+   0.8,
+   0.81,
+   0.83,
+   0.81,
+   0.82,
+   0.82,
+   0.82
   ]
  },
  {
   "id": "M6",
-  "value": 16.1,
+  "value": 17.0,
   "unit": "px jerk (character centre)",
   "ok": false
  },
@@ -69,7 +69,7 @@
  },
  {
   "id": "T3",
-  "value": "0.48",
+  "value": "0.47",
   "unit": "worst key pair, share of character ink matched",
   "ok": false
  },
@@ -107,17 +107,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cgiraffe head\u201d; motion broken at frames 4, 5",
+  "value": "named \u201cgiraffe head and upper neck, seen close up with ossicones, a side ear, and patch spots\u201d; motion broken at frames 3, 5, 7",
   "unit": "",
   "ok": true,
-  "evidence": "shots/giraffe-sam/reviews/critic-1.json"
+  "evidence": "shots/giraffe-sam/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_not_met",
   "unit": "",
   "ok": false,
-  "note": "Construction and viewpoint: the doodle is a side-profile giraffe built from about a dozen straight strokes (long neck, box muzzle, loop/P ossicones, no spots or ears), while the cartoon is a cropped three-quarter head close-up with ears, spots and dense broken contour lines that read as edges traced from a photo.",
-  "evidence": "shots/giraffe-sam/reviews/critic-1.json"
+  "note": "The reference is a sparse, straight-segmented side-profile doodle of a whole head and long neck with a boxy muzzle, a small triangle eye, and the head turned right; the animation is a dense, curvy, traced-looking contour drawing of a close-up head with many spot ovals, interior fur strokes, and a large left ear, none of which appear in the reference. Only the two small flag-shaped ossicone tips carry over from the doodle.",
+  "evidence": "shots/giraffe-sam/reviews/critic-2.json"
  }
 ]

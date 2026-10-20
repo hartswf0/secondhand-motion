@@ -1,0 +1,17 @@
+{
+ "named_subject": "giraffe head and upper neck, seen close up with ossicones, a side ear, and patch spots",
+ "second_guess": "okapi or other spotted ruminant head",
+ "action": "The giraffe raises its muzzle and opens its mouth (frames 3-4), then lowers and closes it (5-6), then opens it again with the jaw pushed forward (7-8), while the ossicones and left ear stay almost fixed.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  5,
+  7
+ ],
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The reference is a sparse, straight-segmented side-profile doodle of a whole head and long neck with a boxy muzzle, a small triangle eye, and the head turned right; the animation is a dense, curvy, traced-looking contour drawing of a close-up head with many spot ovals, interior fur strokes, and a large left ear, none of which appear in the reference. Only the two small flag-shaped ossicone tips carry over from the doodle.",
+ "notes": "The subject is drawn once per frame with no doubling, and the contours appear to follow the footage closely. The jumps at frames 3, 5 and 7 come from the muzzle and spot pattern being redrawn in new positions between pose pairs rather than moving through them, and the spot shapes change from frame to frame.",
+ "_packet": "lot2ltzs7",
+ "_round": 2,
+ "_lane": "drawn keys over SAM, left where drawn"
+}

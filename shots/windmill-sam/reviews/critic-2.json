@@ -1,0 +1,17 @@
+{
+ "named_subject": "a windmill seen from the front, shown as four sails around a central hub",
+ "second_guess": "a pinwheel or propeller on a stick",
+ "action": "The four sails rotate around the hub, going from an X shape (frames 1-2) to a near plus shape (frames 3-6) and back to an X shape (frames 7-8).",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  5,
+  7
+ ],
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The reference has a tall rectangular tower outline behind the sails, a small oval hub, long narrow petal-shaped sails with no crossbars, and a door mark at the bottom; the animation has no tower outline and draws rounded paddle sails with a crossbar near each tip. In frames 5-8 two of the sails are not closed shapes at all, only open edge lines and short spikes, which the reference never does.",
+ "notes": "The frames move in pairs with large jumps in sail angle at frames 3, 5 and 7, and the sail shapes change construction between pairs (closed paddles become open lines or stubs); a separate straight horizontal bar appears above the drawing in frames 6-8 and a long extra line extends left from the hub in frames 3-4. The windmill is not drawn twice, and it stays roughly centered over the same area of the faint footage, though the footage shows little that it could be checked against.",
+ "_packet": "lotetktm8",
+ "_round": 2,
+ "_lane": "drawn keys over SAM, left where drawn"
+}

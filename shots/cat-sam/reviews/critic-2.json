@@ -1,0 +1,16 @@
+{
+ "named_subject": "a cat's head and shoulders, three-quarter view, with ears, two eyes, nose, mouth and whiskers",
+ "second_guess": "a kitten or small fox-like animal face",
+ "action": "The cat holds a three-quarter pose with small shifts of the head through frames 1-7, then in frame 8 the head turns to a near-profile facing right with only one eye visible.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  7,
+  8
+ ],
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The reference doodle is a crude, angular, front-facing head with a flat-topped polygon outline, two straight-sided ears, two large polygonal eyes, long straight whiskers on both sides and no nose, mouth or body. The animation is a smoother, more naturalistic three-quarter cat with a rounded head, unequal eyes, a drawn nose and mouth, a neck and shoulders, and thin grey whiskers, so it reads as a different drawing.",
+ "notes": "The subject is never drawn twice, but in frame 7 the right cheek contour opens and the whiskers detach from the face, and in frame 8 the whole construction changes to a profile with displaced ears, so it pops rather than turning. Frames 1-2 also show small stray stroke stubs at the right cheek where the whiskers attach; no offset from the footage can be judged because the footage is not visible in the strip.",
+ "_packet": "lotvz0ody",
+ "_round": 2,
+ "_lane": "drawn keys over SAM, left where drawn"
+}

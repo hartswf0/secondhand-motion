@@ -1,0 +1,17 @@
+{
+ "named_subject": "a duck or duckling standing upright, seen from the front, with webbed feet on a ground line",
+ "second_guess": "a gosling",
+ "action": "The duck stands in place while its head turns from a left-facing profile in frame 1 to a frontal or right-turned head in later frames, with the beak moving from left to right and back between frames.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  4,
+  5
+ ],
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The reference is a side-view duck made of a few long straight polyline segments with a pointed beak, a single sloping body outline and stick legs ending in small triangle feet. The animation is a detailed frontal trace with smooth curved lines, wing outlines, chest marks, broad webbed feet and a ground line, so it does not share the reference's construction or stroke habits.",
+ "notes": "The subject is never drawn twice in a frame, but the head and neck lines break apart and change shape between frames (the long pointed beak of frame 1 becomes a small blob in frame 2, and the neck outline is open and gapped from frame 2 on). No offset from the footage can be judged because the footage is not visible in the strip.",
+ "_packet": "lotxknpuw",
+ "_round": 2,
+ "_lane": "drawn keys over SAM, left where drawn"
+}

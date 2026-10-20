@@ -114,18 +114,25 @@ What was done for all ten subjects, following this shot's method:
 - SAM 2.1 + Grounding DINO in the browser on every frame (`tools/browser/sam_run.js`, about 1.3 s a frame
   on WebGPU), imported with `tools/sam_import.py`: masks, polygons, a camera measured with the subject
   masked out, and a `silhouettes.png` sheet.
-- `tools/sam_keys.py` takes the four drawn keys per subject (image model, critic-approved), splits each
-  key's strokes into character and scenery by the mask, moves the character onto the silhouette by a
-  scale/shift search, clips stray lines, draws the scenery once, and makes in-betweens by stroke matching
-  plus the same silhouette pull as step 7. The silhouette is painted as a cel.
-- Registration raised silhouette fit (M3) a lot: dog 0.40 to 0.80, rabbit 0.28 to 0.81 at the keys.
+- `tools/key_align.py` finds the excerpt frame each drawn key's still matches (the stills were cut by a
+  seek that lands 1 to 2 frames later than the key times) and the transform between them (near identity).
+- `tools/sam_keys.py` leaves each drawing where it was drawn, splits it point by point into character
+  (near this frame's silhouette) and scenery (also drawn by other keys away from their subject), draws the
+  scenery once from key 0, and makes in-betweens by stroke matching plus the same silhouette pull as step 7.
+  The silhouette is painted as a cel.
+- Mistake in the first version: it searched a scale and shift for each drawing to raise ink-inside-mask
+  fit (M3). That shrank and moved drawings that were already in place (rabbit to 75 %, 47 px), while part of
+  the same drawing stayed on the scenery, so the subject showed twice. M3 rewarded the error: it went up
+  (rabbit 0.28 to 0.81) while the picture got worse. Round 1 critic verdicts on that version are kept in
+  `reviews/round1-misaligned/`.
 - Each shot has its own page in this shot's viewer (`pages/<cat>-sam.html`) with cartoon, over footage,
   footage, planes in depth and silhouettes, and appears in the projector under "Drawn keys over SAM".
 
-What the tests and ten blind critics said (round 1, `shots/<cat>-sam/reviews/critic-1.json`):
+What the tests and ten blind critics said (round 2, on the corrected shots, `shots/<cat>-sam/reviews/critic-2.json`):
 
-- Every critic named the subject (J1 10 of 10). Fit to the silhouette passed for duck, cat, giraffe and
-  bicycle (M3 0.74 to 0.92).
+- Every critic named the subject. None saw the subject drawn twice. Critics flagged an offset from the
+  footage only for bicycle (frames 1-4) and helicopter (frames 5-8), where the stills matched the excerpt
+  worst; horse still splits head and muzzle across the fence rail.
 - Identity failed for all ten (J4): the drawn keys are detailed traced-looking drawings, not doodles, and
   the classifier agrees (M1 near 0 except cat 0.35). The image model drew the footage, not the doodle.
 - Motion broke for all ten at the swap between keys: four keys over 33 to 50 frames, with key drawings

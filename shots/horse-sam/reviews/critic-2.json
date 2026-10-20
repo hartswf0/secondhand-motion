@@ -1,0 +1,17 @@
+{
+ "named_subject": "A horse's head looking over a wooden fence",
+ "second_guess": "A donkey or mule head over a fence",
+ "action": "The horse faces the viewer, turns its head to the side, lowers its head behind and below the top rail, and in the last two frames the view shifts so the head is lower and to the right, reaching toward hay at the bottom right.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  5,
+  7
+ ],
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The reference is a side-view horse head made of a few long straight segments, with a zigzag mane line down the neck, a dot eye and a pointed muzzle. The animation is a traced outline with many short hatch strokes, mostly front or three-quarter view, with no zigzag mane, no dot eye and no long straight neck lines.",
+ "notes": "In frames 3 to 6 the head above the rail and the muzzle below it are drawn as separate shapes that do not line up, so the head reads as split or doubled, and frames 5 and 6 lose most of the head outline. The fence rails are drawn in the same black line as the horse, and between frames 6 and 7 the whole drawing jumps to a different framing.",
+ "_packet": "lot8akk0h",
+ "_round": 2,
+ "_lane": "drawn keys over SAM, left where drawn"
+}

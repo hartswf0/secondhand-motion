@@ -19,49 +19,49 @@
  },
  {
   "id": "M2",
-  "value": 6,
+  "value": 10,
   "unit": "percentile (Quick, Draw! simplification first)",
   "ok": false,
   "per_key": [
    0,
-   0,
-   5,
-   20
+   1,
+   26,
+   14
   ]
  },
  {
   "id": "M3",
-  "value": 0.74,
+  "value": 0.42,
   "unit": "fit to the SAM silhouette, every frame",
-  "ok": true,
-  "min": 0.56,
+  "ok": false,
+  "min": 0.25,
   "per_frame": [
-   0.69,
-   0.7,
-   0.7,
-   0.73,
-   0.81,
-   0.84,
-   0.87,
-   0.85,
-   0.72,
-   0.65,
-   0.67,
-   0.71,
-   0.8,
-   0.8,
-   0.56,
-   0.77,
-   0.74,
-   0.62,
-   0.69,
-   0.77,
-   0.79
+   0.44,
+   0.43,
+   0.42,
+   0.41,
+   0.4,
+   0.43,
+   0.48,
+   0.5,
+   0.44,
+   0.38,
+   0.5,
+   0.45,
+   0.41,
+   0.4,
+   0.25,
+   0.4,
+   0.43,
+   0.4,
+   0.45,
+   0.48,
+   0.39
   ]
  },
  {
   "id": "M6",
-  "value": 50.5,
+  "value": 61.7,
   "unit": "px jerk (character centre)",
   "ok": false
  },
@@ -73,7 +73,7 @@
  },
  {
   "id": "T3",
-  "value": "0.11",
+  "value": "0.10",
   "unit": "worst key pair, share of character ink matched",
   "ok": false
  },
@@ -111,17 +111,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cbicycle (front wheel)\u201d; motion broken at frames 2, 4, 6",
+  "value": "named \u201cClose-up of the front wheel of a bicycle with its fork, fender and handlebar grip, plus a rider's lower leg and shoe in frames 1-4\u201d; motion broken at frames 2, 5, 7",
   "unit": "",
   "ok": true,
-  "evidence": "shots/bicycle-sam/reviews/critic-1.json"
+  "evidence": "shots/bicycle-sam/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_not_met",
   "unit": "",
   "ok": false,
-  "note": "The doodle is a whole two-wheeled bike built from a few loose straight strokes (polygonal wheels, triangle frame, star spokes, scribbled seat). The cartoon shows only one cropped front wheel with smooth double-line traced contours over a photo-trace background, so the doodle's construction and stroke habits are absent.",
-  "evidence": "shots/bicycle-sam/reviews/critic-1.json"
+  "note": "The reference is a whole small bicycle drawn with sparse, angular, polygonal wheels, a single-line triangle frame and a pentagon seat; the animation shows only a cropped front wheel with a smooth round rim, a double-outlined fork tube and a fender, which reads as a tracing of the footage rather than the doodle's construction. The reference's spoke crossing and lumpy wheel shapes do not appear.",
+  "evidence": "shots/bicycle-sam/reviews/critic-2.json"
  }
 ]

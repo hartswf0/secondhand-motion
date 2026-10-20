@@ -3,15 +3,19 @@
 The batch holds four keys per subject, drawn by an image model in the chosen doodle's identity and each
 approved by a fresh critic as matching the footage pose. This puts those drawings over SAM silhouettes:
 
-1. split   each traced key into character and scenery using that key frame's SAM mask
-2. register the character drawing onto the silhouette (scale and shift, searched against mask fit), because
-           the image model drew the right pose but not always in the right place or size
-3. plate   the scenery is drawn once: key 0's scenery, with the hole behind the subject filled from later keys
+1. align   each drawing is carried from its still onto the excerpt frame the still matches (tools/key_align.py);
+           the drawing is not moved or resized: it was drawn over the footage and is already in place
+           (an earlier version searched a scale and shift against the SAM mask; that pulled the character
+           away from the scenery it was drawn with and showed the subject twice)
+2. split   point by point: within 25 px of this frame's silhouette a line is character, unless at least two
+           other keys drew it too away from their own subject (a door jamb in front of the rabbit); farther out
+           it is scenery. Long straight lines running off the silhouette are scenery.
+3. plate   the scenery is drawn once: key 0's scenery plus what later keys add
 4. tween   character strokes are matched key to key and interpolated; every frame is then pulled onto that
            frame's silhouette (centre and size), as Giraffe Walks Past added the SAM residual to its in-betweens
 5. cel     the silhouette is painted under the character so scenery does not show through it
 
-usage: python3 tools/sam_keys.py <category> [...]   (after tools/sam_masks.py)
+usage: python3 tools/sam_keys.py <category> [...]   (after tools/sam_import.py and tools/key_align.py)
 writes shots/<cat>-sam/shot.json (projector and shot-page schema), keys.png, strip.png
 """
 import json, math, sys
@@ -125,33 +129,72 @@ def run(cat):
     T = json.load(open(ROOT / 'traced/traced_keys.json'))[cat]['keys']
     src = json.load(open(B / 'subjects' / cat / 'source.json'))['source']
     review = json.load(open(B / json.load(open(B / 'subjects' / cat / 'preview-data.json'))['review_path']))
+    # Each drawing stays where it was drawn. key_align.json gives the excerpt frame its still matches and the
+    # (near-identity) transform from still to that frame; nothing is rescaled or moved to chase a mask.
+    AL = json.load(open(d / 'key_align.json'))
+    keys = [a['frame'] for a in AL]
+    Ms = [np.array(a['M'], float) for a in AL]
+    drawn = []
+    for i, k in enumerate(keys):
+        st = [s for s in T[i]['strokes'] if len(s) >= 2]
+        drawn.append([(np.c_[np.array(s, float), np.ones(len(s))] @ Ms[i].T) for s in st])
+    # world coordinates of key 0 (camera removed), to compare drawings across keys
+    off = [np.array(cam[keys[0]], float) - np.array(cam[k], float) for k in keys]
+    def ras(strokes, o, r):
+        m = np.zeros((H, W), np.uint8)
+        for q in strokes: cv2.polylines(m, [np.round(q + o).astype(np.int32)], False, 1, 1)
+        return cv2.dilate(m, np.ones((2 * r + 1, 2 * r + 1), np.uint8)) > 0
+    inkw = [ras(drawn[i], off[i], 4) for i in range(len(keys))]
+    maskw = [np.roll(np.roll(masks[k], int(round(off[i][1])), 0), int(round(off[i][0])), 1) for i, k in enumerate(keys)]
+    grow = lambda m, r: cv2.dilate(m.astype(np.uint8), np.ones((2 * r + 1, 2 * r + 1), np.uint8)) > 0
+    near6 = [grow(masks[k], 6) for k in keys]; near25 = [grow(masks[k], 25) for k in keys]
+    maskw25 = [grow(m, 25) for m in maskw]
+    def at(m, x, y): return bool(m[min(max(int(round(y)), 0), H - 1), min(max(int(round(x)), 0), W - 1)])
     char, bgs, reg = [], [], []
     for i, k in enumerate(keys):
-        strokes = [s for s in T[i]['strokes'] if len(s) >= 1]
-        if not masks[k].any():
-            char.append(strokes); bgs.append([]); reg.append({'note': 'no mask at this key; whole drawing kept'}); continue
-        ch, bg = split(strokes, masks[k], grow=20)
-        ch2, p, before, after = register(ch, masks[k])
-        # re-split everything with the registration applied, tighter
-        c = np.concatenate([np.array(s, float) for s in ch]).mean(0) if ch else np.zeros(2)
-        tf = lambda s: [((np.array(q, float) - c) * p['scale'] + c + [p['dx'], p['dy']]).tolist() for q in s]
-        moved = [tf(s) for s in strokes]
-        ch3, _ = split(moved, masks[k], grow=8)
-        ch3 = clip_to(ch3, masks[k], grow=10)
-        ch3 = [s for s in ch3 if len(s) > 1 and (np.hypot(*np.diff(np.array(s), axis=0).T).sum() >= 6)]
-        keep = {id(s) for s in ch3}
-        bg3 = [s for s, mv in zip(strokes, moved) if id(mv) not in keep]
-        char.append(ch3); bgs.append(bg3)
-        reg.append({**p, 'fit_before': round(before, 3), 'fit_after': round(fit_score(ch3, masks[k]), 3), 'char_strokes': len(ch3), 'scenery_strokes': len(bg3)})
-    # plate: key 0 scenery, plus later keys' scenery that falls inside key 0's silhouette (what the subject hid)
-    hole = cv2.dilate(masks[keys[0]].astype(np.uint8), np.ones((11, 11), np.uint8)) > 0
-    plate = [s for s in bgs[0] if np.array(s).size]
+        ch, bg = [], []
+        for q in drawn[i]:
+            pts = dense(q.tolist(), 2.0); lab = []
+            for x, y in pts:
+                wx, wy = x + off[i][0], y + off[i][1]
+                others = [j for j in range(len(keys)) if j != i]
+                # scenery: other keys drew it too, away from their own subject
+                seen_clear = sum(at(inkw[j], wx, wy) and not at(maskw25[j], wx, wy) for j in others)
+                if at(near25[i], x, y): lab.append('bg' if seen_clear >= 2 else 'char')
+                else: lab.append('bg')
+            # runs of one label; drop tiny runs by giving them their neighbours' label
+            runs = []
+            for p_, l in zip(pts, lab):
+                if runs and runs[-1][0] == l: runs[-1][1].append(p_)
+                else: runs.append([l, [p_]])
+            for r in range(len(runs)):
+                if len(runs[r][1]) < 4 and len(runs) > 1:
+                    nb = runs[r - 1][0] if r > 0 else runs[r + 1][0]; runs[r][0] = nb
+            merged = []
+            for l, ps in runs:
+                if merged and merged[-1][0] == l: merged[-1][1].extend(ps)
+                else: merged.append([l, list(ps)])
+            for l, ps in merged:
+                ps = np.array(ps)[::2] if len(ps) > 6 else np.array(ps)
+                if len(ps) < 2: continue
+                (ch if l == 'char' else bg).append(ps.tolist())
+        # door jambs, rails and floor lines: long, straight, and running off the silhouette
+        ch2 = []
+        for q in ch:
+            if straight_and_long(q, masks[k]) and inside_frac(q, near6[i]) < 0.7: bg.append(q)
+            else: ch2.append(q)
+        ch = [q for q in ch2 if np.hypot(*np.diff(np.array(q), axis=0).T).sum() >= 6]
+        char.append(ch); bgs.append(bg)
+        reg.append({'frame': k, 'still_to_frame_scale': AL[i]['scale'], 'still_to_frame_shift': AL[i]['shift'], 'moved': False,
+                    'fit': round(fit_score(ch, masks[k]), 3), 'char_strokes': len(ch), 'scenery_strokes': len(bg)})
+    # plate: key 0's scenery, drawn once; later keys add only what key 0's subject covered and their own subject does not
+    hole = grow(masks[keys[0]], 5)
+    plate = [q for q in bgs[0]]
     for i in range(1, len(keys)):
-        off = np.array(cam[keys[0]]) - np.array(cam[keys[i]])
-        for s in bgs[i]:
-            s0 = (np.array(s, float) + off).tolist()
-            if inside_frac(s0, hole) > 0.7 and not any(inside_frac(s0, masks[keys[i]]) > 0.3 for _ in [0]): plate.append(s0)
-    plate = [s for s in plate if len(s) > 1 and np.hypot(*np.diff(np.array(s), axis=0).T).sum() >= 8]
+        for q in bgs[i]:
+            q0 = np.array(q) + off[i]
+            if inside_frac(q0.tolist(), hole) > 0.7 and inside_frac(q, grow(masks[keys[i]], 4)) < 0.2: plate.append(q0.tolist())
+    plate = [q for q in plate if len(q) > 1 and np.hypot(*np.diff(np.array(q), axis=0).T).sum() >= 8]
     # in-betweens
     R = [[resample(s) for s in ch] for ch in char]
     stats = [(np.concatenate(R[i]).mean(0) if R[i] else np.zeros(2)) for i in range(len(keys))]
@@ -196,14 +239,14 @@ def run(cat):
             'camera': cam,
             'objects': [{'id': 'scenery', 'plane': 'set', 'z': 3, 'class': 'ground', 'source': 'look-lane keys traced; character removed with SAM; key 0 plus what the subject hid',
                          'strokes': [np.round(np.array(s, float), 1).tolist() for s in plate]}],
-            'cast': {'frames': cast, 'keys': keys, 'look_keys': keys, 'source': 'the four approved look-lane keys, traced, registered onto SAM silhouettes'},
+            'cast': {'frames': cast, 'keys': keys, 'look_keys': keys, 'source': 'the four approved look-lane keys, traced, left where they were drawn; character and scenery split point by point'},
             'xsheet': [{'f': f, 'drawing': f'K{keys.index(f) + 1:02d}' if f in keys else f'B{f:02d}', 'kind': 'K' if f in keys else 'B',
                         'cam': [round(cam[f][0], 1), round(cam[f][1], 1)], 'note': notes.get(f, '')} for f in range(n)],
             'footage': [f'frames/f{f:03d}.jpg' for f in range(n)], 'masks': [M[str(f)] for f in range(n)],
             'registration': reg, 'matched_ink': share, 'plate_strokes': len(plate)}
     (d / 'shot.json').write_text(json.dumps(shot, separators=(',', ':')))
     sheets(d, shot, masks)
-    print(cat, 'keys', [r.get('char_strokes') for r in reg], 'fit', [(r.get('fit_before'), r.get('fit_after')) for r in reg], 'matched', share, 'plate', len(plate))
+    print(cat, 'keys', keys, 'char', [r['char_strokes'] for r in reg], 'fit', [r['fit'] for r in reg], 'matched', share, 'plate', len(plate))
 
 
 def sheets(d, S, masks):
