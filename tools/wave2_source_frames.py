@@ -31,17 +31,17 @@ def emit_asset(asset_id, content, mime):
     for i in range(n):
         print('WAVE2_CHUNK '+json.dumps({'asset_id':asset_id,'i':i,'data':encoded[i*12000:(i+1)*12000]}),flush=True)
 
-def emit_design_bank(category, slug):
+def emit_design_bank(category, slug, request):
     url='https://storage.googleapis.com/quickdraw_dataset/full/simplified/'+quote(category)+'.ndjson'
     req=Request(url,headers={'Range':'bytes=0-499999','User-Agent':'SecondhandMotion/1.0'})
     with urlopen(req,timeout=30) as response: prefix=response.read(500000)
-    selected=[]
+    selected=[]; chosen=None
     for line in prefix.splitlines()[:-1]:
         try: row=json.loads(line)
         except Exception: continue
-        if row.get('recognized') and 4<=len(row['drawing'])<=16:
+        if str(row.get('key_id'))==str(request.get('design_key_id')): chosen=row
+        if row.get('recognized') and 4<=len(row['drawing'])<=16 and len(selected)<12:
             selected.append({'key_id':str(row['key_id']),'word':row['word'],'recognized':True,'drawing':row['drawing']})
-        if len(selected)==12: break
     if not selected: raise ValueError('no bounded doodle bank')
     sheet=Image.new('RGB',(1024,3*270),'white'); draw=ImageDraw.Draw(sheet)
     for i,row in enumerate(selected):
@@ -56,6 +56,20 @@ def emit_design_bank(category, slug):
     emit_asset(slug+'/design-bank.json',json.dumps({'category':category,'source_url':url,
                'credit':'Quick, Draw! contributors / Google Creative Lab; CC BY 4.0',
                'recognized_is_not_classifier_confidence':True,'drawings':selected}).encode(),'application/json')
+
+    if request.get('design_key_id'):
+        if chosen is None: raise ValueError('chosen key_id not in bounded original data')
+        im=Image.new('RGB',(512,512),'white'); pen=ImageDraw.Draw(im)
+        mirrored=request.get('design_transform')=='mirror_x'
+        for stroke in chosen['drawing']:
+            pts=[(28+(255-float(x) if mirrored else float(x))*1.78,28+float(y)*1.78) for x,y in zip(stroke[0],stroke[1])]
+            if len(pts)>1: pen.line(pts,fill='black',width=4,joint='curve')
+        b=io.BytesIO(); im.save(b,format='PNG')
+        emit_asset(slug+'/selected-design.png',b.getvalue(),'image/png')
+        emit_asset(slug+'/selected-design.json',json.dumps({'key_id':str(chosen['key_id']),'word':chosen['word'],
+            'drawing':chosen['drawing'],'recognized':chosen['recognized'],'transform':request.get('design_transform','none'),
+            'source_url':url,'credit':'Quick, Draw! contributors / Google Creative Lab; CC BY 4.0',
+            'recognized_is_not_classifier_confidence':True}).encode(),'application/json')
 
 def main():
     ap=argparse.ArgumentParser()
@@ -73,7 +87,7 @@ def main():
     candidates={c['clip_id']:c for c in manifest['clips']}
     if any(cid not in candidates for cid in ids): raise ValueError('candidate not in subject manifest')
     try:
-        emit_design_bank(manifest['category'],a.slug)
+        emit_design_bank(manifest['category'],a.slug,request)
     except Exception as exc:
         print('WAVE2_BANK_ERROR '+json.dumps({'slug':a.slug,'error':str(exc)}),flush=True)
     try:
@@ -119,6 +133,24 @@ def main():
                     sheet.paste(im,(x,y));draw.text((x+4,y+195),str(i+1)+' | '+format(index/fps,'.3f')+'s',fill='black')
                     frames.append({'target_time':target,'frame_index':index,'index_time':index/fps,
                                    'decoder_reported_time':reported})
+
+                key_frames=[]
+                times=request.get('key_times',{}).get(cid,[])
+                if times:
+                    if len(times)!=6 or any(not start-.05<=t<=end+.05 for t in times): raise ValueError('invalid six key times')
+                    six=Image.new('RGB',(768,3*314),'white'); lab=ImageDraw.Draw(six)
+                    for k,target in enumerate(times):
+                        idx=min(count-1,max(0,round(target*fps)))
+                        cap.set(cv2.CAP_PROP_POS_FRAMES,idx);ok,frame=cap.read()
+                        if not ok: raise ValueError('six-key reference decode failed')
+                        photo=Image.fromarray(cv2.cvtColor(frame,cv2.COLOR_BGR2RGB))
+                        photo=ImageOps.pad(photo,(384,288),color='black')
+                        x=(k%2)*384;y=(k//2)*314;six.paste(photo,(x,y))
+                        lab.text((x+5,y+291),'K'+str(k+1)+' | '+format(idx/fps,'.6f')+'s',fill='black')
+                        key_frames.append({'key':k+1,'frame_index':idx,'index_time':idx/fps})
+                    b=io.BytesIO();six.save(b,format='JPEG',quality=88,optimize=True)
+                    emit_asset(a.slug+'/'+cid+'-sixkeys.jpg',b.getvalue(),'image/jpeg')
+
                 cap.release()
                 if len({f['frame_index'] for f in frames})<12: raise ValueError('fewer than 12 distinct sampled frames')
             asset=a.slug+'/'+cid+'-16frames.jpg'
@@ -127,7 +159,7 @@ def main():
             print('WAVE2_RECORD '+json.dumps({'slug':a.slug,'clip_id':cid,'source':c,
                   'source_sha256':hashlib.sha256(video).hexdigest(),'downloaded_bytes':len(video),
                   'fps':fps,'frame_count':count,'duration_seconds':duration,
-                  'sampled_interval':[start,end],'frames':frames,'contact_sheet_asset':asset,
+                  'sampled_interval':[start,end],'frames':frames,'key_reference_frames':key_frames,'contact_sheet_asset':asset,
                   'inspected':False,'source_approved':False,'motion_approved':False,
                   'train_eligible':False,'status':'reference_extraction_only'}),flush=True)
             successes+=1
