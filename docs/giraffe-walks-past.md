@@ -261,3 +261,39 @@ Result after up to four critic rounds per subject (latest verdict, `shots/<slug>
 - Below the bar (2): cat, dog, pig, giraffe (head close-up). Each needs drawn keys the rig cannot make by
   moving the doodle: the pig turning to face the camera, the giraffe's jaw opening and closing at one head
   size, the cat and dog turning. Repairs that only re-timed or re-scaled these shots did not raise them.
+
+## Wave 4: twenty-five more subjects (`data/wave4.json`)
+
+The same line, run for twenty-five subjects at once, with one agent per subject for the hand work.
+
+- **Choosing.** Twenty-five categories from the 100-clip pool were surveyed in CI. One planning agent per five
+  subjects read each contact sheet and doodle bank and wrote the plan with `tools/plan_subject.py` (interval,
+  key times, detector label, doodle). Six clips were rejected on sight: parachute (the clip is the inside of a
+  hot-air balloon), fire truck (a still close-up of a cab), motorbike (only a wheel and a helmet), sea turtle
+  (1.75 s between dissolves), saxophone (no saxophone in the clip) and saw (a machine saw under a guard). Ten
+  replacements were surveyed from `candidate-reserves.json`; squirrel and parrot were rejected, elephant (a
+  building shaped like an elephant) and camel (occluded, with an undetected cut) were dropped to keep the wave
+  at twenty-five.
+- **Tracking** for all twenty-five in CI as before. The camera clip's first frame belonged to the previous shot
+  and is trimmed on import.
+- **Rig, keys and scene** by one builder agent per subject, from one written procedure. Builders placed keys from
+  the frames whenever SAM followed something else (the cellist instead of the cello, the trumpet player instead
+  of the trumpet, the penguin's white belly only, the whole sea, the whole cloud bank) and measured motion
+  directly where that was more exact than placing by eye (the dragon's pull-back and head rock by feature
+  alignment, the trumpet by image alignment, the lion's camera by phase correlation on fixed scenery).
+- **New: scenery that changes during a shot** (`tools/gwp_build.py`). A scene object may carry `visible`
+  [f0, f1], or `rig_poses`: keys for a second copy of the character's own rig, drawn every frame by the same
+  rig. The second ant meeting the first, and the first lion turning its head as it leaves, use it. Copies on
+  the character plane are drawn in black in critic packets.
+- **Critics.** One fresh blind critic per subject on the 16-frame packet; a repair by the subject's own builder
+  when the critic named a fixable gap; at most three rounds.
+
+Result (latest verdict per subject, `shots/<slug>-gwp/reviews/`): identity bar met for all twenty-five. Fifteen
+score 4 (speedboat, van, swan, snake, crab, frog, flower, lighthouse, guitar, trumpet, shovel, paintbrush,
+light bulb, camera, aircraft carrier) and ten score 3 (ant, dragon, lion, cloud, ocean, alarm clock, cello,
+broom, penguin, rhinoceros); none is below the Giraffe Walks Past level. Stated plainly: several of the 4s are
+shots where the film's subject barely moves (camera, shovel, frog, flower, guitar), so there is little for the
+drawing to get wrong. The 3s share the earlier kinds of gap: motion the doodle has no part for (the cello's bow,
+the ocean's foam, the cloud's swelling contour), turns shown by narrowing instead of turning (alarm clock), and a
+fast sweep that the smoothing either lags or lets jump (broom: rounds 2 and 3 scored lower than round 1, and
+round 1's build was restored).

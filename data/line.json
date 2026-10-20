@@ -14,7 +14,7 @@
   "next": "done",
   "critic": [
    "bar_met",
-   "broken",
+   "smooth",
    "partly"
   ]
  },
@@ -123,10 +123,14 @@
    "keys": true,
    "scene": true,
    "build": true,
-   "critic": false
+   "critic": true
   },
-  "next": "critic",
-  "critic": null
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
  },
  {
   "slug": "cat",

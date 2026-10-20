@@ -4,13 +4,13 @@ Every subject goes through the same eight steps, one subject at a time. CI does 
 
 | Subject | survey | plan | track | rig | keys | scene | build | critic | Next | Critic: identity, motion, follows film |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [aircraft-carrier](../pages/aircraft-carrier-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
+| [aircraft-carrier](../pages/aircraft-carrier-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
 | [alarm-clock](../pages/alarm-clock-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
 | [ant](../pages/ant-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
 | [bicycle](../pages/bicycle-gwp.html) | done | done | done | done | done | done | done | done | done | bar_not_met, broken, partly |
 | [broom](../pages/broom-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
 | [butterfly](../pages/butterfly-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, yes |
-| [camera](../pages/camera-gwp.html) | done | done | done | done | done | done | done |  | critic |  |
+| [camera](../pages/camera-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, yes |
 | [cat](../pages/cat-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
 | [cello](../pages/cello-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
 | [cloud](../pages/cloud-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
