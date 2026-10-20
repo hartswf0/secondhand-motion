@@ -87,7 +87,7 @@
   {
    "id": "sea",
    "z": 2,
-   "label": "Sea and horizon (camera turns, so it moves with the water)"
+   "label": "Horizon and far swells (camera turns, so they move with the measured camera)"
   },
   {
    "id": "char",
@@ -96,142 +96,6 @@
   }
  ],
  "objects": [
-  {
-   "id": "sea-left",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    -436.5,
-    60.0,
-    -156,
-    267.9
-   ]
-  },
-  {
-   "id": "sea-right",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    156.5,
-    60.0,
-    437.0,
-    267.9
-   ]
-  },
-  {
-   "id": "far-0",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    -260,
-    -30,
-    -168.2,
-    38.0
-   ]
-  },
-  {
-   "id": "far-1",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    -158.2,
-    -24,
-    -66.4,
-    44.0
-   ],
-   "mirror": true
-  },
-  {
-   "id": "far-2",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    -56.4,
-    -30,
-    35.4,
-    38.0
-   ]
-  },
-  {
-   "id": "far-3",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    45.4,
-    -24,
-    137.2,
-    44.0
-   ],
-   "mirror": true
-  },
-  {
-   "id": "far-4",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    147.2,
-    -30,
-    239.0,
-    38.0
-   ]
-  },
-  {
-   "id": "far-5",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    249.0,
-    -24,
-    340.8,
-    44.0
-   ],
-   "mirror": true
-  },
-  {
-   "id": "far-6",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    350.8,
-    -30,
-    442.6,
-    38.0
-   ]
-  },
-  {
-   "id": "near-0",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    -348.5,
-    283.8,
-    8.5,
-    548.4
-   ]
-  },
-  {
-   "id": "near-1",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    24.5,
-    283.8,
-    381.5,
-    548.4
-   ],
-   "mirror": true
-  },
-  {
-   "id": "near-2",
-   "plane": "sea",
-   "copy_of_design": true,
-   "box": [
-    397.5,
-    283.8,
-    754.5,
-    548.4
-   ]
-  },
   {
    "id": "horizon",
    "plane": "sea",
@@ -265,15 +129,233 @@
     ]
    ],
    "why": "the horizon comes in from the top edge at frame 25 as the ship pitches; no Quick, Draw! category is a single level line, so it is one slightly uneven stroke, placed where the film's sky band ends"
+  },
+  {
+   "id": "far-0",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -250,
+    -45,
+    -221.9,
+    -24.2
+   ]
+  },
+  {
+   "id": "far-1",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -213.9,
+    -45,
+    -185.9,
+    -24.2
+   ],
+   "mirror": true
+  },
+  {
+   "id": "far-2",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -177.9,
+    -45,
+    -149.8,
+    -24.2
+   ]
+  },
+  {
+   "id": "far-3",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -141.8,
+    -45,
+    -113.8,
+    -24.2
+   ],
+   "mirror": true
+  },
+  {
+   "id": "far-4",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -105.8,
+    -45,
+    -77.7,
+    -24.2
+   ]
+  },
+  {
+   "id": "far-5",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -69.7,
+    -45,
+    -41.7,
+    -24.2
+   ],
+   "mirror": true
+  },
+  {
+   "id": "far-6",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -33.7,
+    -45,
+    -5.6,
+    -24.2
+   ]
+  },
+  {
+   "id": "far-7",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    2.4,
+    -45,
+    30.4,
+    -24.2
+   ],
+   "mirror": true
+  },
+  {
+   "id": "far-8",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    38.4,
+    -45,
+    66.5,
+    -24.2
+   ]
+  },
+  {
+   "id": "far-9",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    74.5,
+    -45,
+    102.5,
+    -24.2
+   ],
+   "mirror": true
+  },
+  {
+   "id": "far-10",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    110.5,
+    -45,
+    138.6,
+    -24.2
+   ]
+  },
+  {
+   "id": "far-11",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    146.6,
+    -45,
+    174.6,
+    -24.2
+   ],
+   "mirror": true
+  },
+  {
+   "id": "far-12",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    182.6,
+    -45,
+    210.7,
+    -24.2
+   ]
+  },
+  {
+   "id": "far-13",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    218.7,
+    -45,
+    246.7,
+    -24.2
+   ],
+   "mirror": true
+  },
+  {
+   "id": "far-14",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    254.7,
+    -45,
+    282.8,
+    -24.2
+   ]
+  },
+  {
+   "id": "far-15",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    290.8,
+    -45,
+    318.8,
+    -24.2
+   ],
+   "mirror": true
+  },
+  {
+   "id": "far-16",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    326.8,
+    -45,
+    354.9,
+    -24.2
+   ]
+  },
+  {
+   "id": "far-17",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    362.9,
+    -45,
+    390.9,
+    -24.2
+   ],
+   "mirror": true
+  },
+  {
+   "id": "far-18",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    398.9,
+    -45,
+    427.0,
+    -24.2
+   ]
   }
  ],
  "no_cel": true,
  "notes": {
-  "0": "choppy open sea, foam lacing the dark troughs",
-  "9": "foam patches ride the water to the right",
-  "17": "a big swell builds on the right",
-  "25": "the crest stands tallest",
-  "29": "the crest breaks, its lip throws forward; the horizon comes into view",
-  "37": "the swell has passed; the sea flattens toward the horizon"
+  "0": "choppy open sea; the drawing holds roughly in place while its lines heave",
+  "12": "a big swell starts to build on the right",
+  "24": "the crest stands tallest",
+  "25": "the horizon enters at the top edge as the ship pitches up",
+  "28": "the crest breaks, its lip throws forward and down",
+  "37": "the swell has passed; far swells lie between the horizon and the drawing"
  }
 }
