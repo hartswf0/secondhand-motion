@@ -1,5 +1,62 @@
 [
  {
+  "slug": "aircraft-carrier",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "broken",
+   "partly"
+  ]
+ },
+ {
+  "slug": "alarm-clock",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "partly"
+  ]
+ },
+ {
+  "slug": "ant",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "partly"
+  ]
+ },
+ {
   "slug": "bicycle",
   "steps": {
    "survey": true,
@@ -14,6 +71,25 @@
   "next": "done",
   "critic": [
    "bar_not_met",
+   "broken",
+   "partly"
+  ]
+ },
+ {
+  "slug": "broom",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
    "broken",
    "partly"
   ]
@@ -38,6 +114,21 @@
   ]
  },
  {
+  "slug": "camera",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": false
+  },
+  "next": "critic",
+  "critic": null
+ },
+ {
   "slug": "cat",
   "steps": {
    "survey": true,
@@ -53,6 +144,44 @@
   "critic": [
    "bar_met",
    "broken",
+   "partly"
+  ]
+ },
+ {
+  "slug": "cello",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "partly"
+  ]
+ },
+ {
+  "slug": "cloud",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
    "partly"
   ]
  },
@@ -76,6 +205,25 @@
   ]
  },
  {
+  "slug": "crab",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
+ },
+ {
   "slug": "dog",
   "steps": {
    "survey": true,
@@ -91,6 +239,25 @@
   "critic": [
    "bar_met",
    "broken",
+   "partly"
+  ]
+ },
+ {
+  "slug": "dragon",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
    "partly"
   ]
  },
@@ -133,7 +300,45 @@
   ]
  },
  {
+  "slug": "flower",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
+ },
+ {
   "slug": "flying-saucer",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
+ },
+ {
+  "slug": "frog",
   "steps": {
    "survey": true,
    "plan": true,
@@ -168,6 +373,25 @@
    "bar_met",
    "broken",
    "partly"
+  ]
+ },
+ {
+  "slug": "guitar",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
   ]
  },
  {
@@ -228,6 +452,63 @@
   ]
  },
  {
+  "slug": "light-bulb",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
+ },
+ {
+  "slug": "lighthouse",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
+ },
+ {
+  "slug": "lion",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "broken",
+   "yes"
+  ]
+ },
+ {
   "slug": "monkey",
   "steps": {
    "survey": true,
@@ -262,6 +543,63 @@
   "critic": [
    "bar_met",
    "smooth",
+   "partly"
+  ]
+ },
+ {
+  "slug": "ocean",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "partly"
+  ]
+ },
+ {
+  "slug": "paintbrush",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
+ },
+ {
+  "slug": "penguin",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "broken",
    "partly"
   ]
  },
@@ -342,6 +680,25 @@
   ]
  },
  {
+  "slug": "rhinoceros",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "broken",
+   "partly"
+  ]
+ },
+ {
   "slug": "roller-coaster",
   "steps": {
    "survey": true,
@@ -418,6 +775,25 @@
   ]
  },
  {
+  "slug": "shovel",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
+ },
+ {
   "slug": "skateboard",
   "steps": {
    "survey": true,
@@ -437,6 +813,44 @@
   ]
  },
  {
+  "slug": "snake",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
+ },
+ {
+  "slug": "speedboat",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
+ },
+ {
   "slug": "spider",
   "steps": {
    "survey": true,
@@ -453,6 +867,25 @@
    "bar_met",
    "smooth",
    "partly"
+  ]
+ },
+ {
+  "slug": "swan",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
   ]
  },
  {
@@ -509,6 +942,44 @@
   "critic": [
    "bar_met",
    "broken",
+   "yes"
+  ]
+ },
+ {
+  "slug": "trumpet",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
+   "yes"
+  ]
+ },
+ {
+  "slug": "van",
+  "steps": {
+   "survey": true,
+   "plan": true,
+   "track": true,
+   "rig": true,
+   "keys": true,
+   "scene": true,
+   "build": true,
+   "critic": true
+  },
+  "next": "done",
+  "critic": [
+   "bar_met",
+   "smooth",
    "yes"
   ]
  },
