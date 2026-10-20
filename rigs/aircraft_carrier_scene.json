@@ -1,0 +1,201 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -3.93,
+   -7.33,
+   -12.88,
+   -13.41,
+   -21.24,
+   -29.65,
+   -38.66,
+   -34.86,
+   -33.49,
+   -33.26,
+   -33.26,
+   -39.34,
+   -44.22,
+   -45.47,
+   -42.72,
+   -42.72,
+   -38.36,
+   -36.97,
+   -31.35,
+   -31.93,
+   -32.17,
+   -32.59,
+   -31.06,
+   -27.62,
+   -22.1,
+   -22.1,
+   -22.1,
+   -22.74,
+   -20.23,
+   -18.99,
+   -20.33,
+   -20.33,
+   -22.43,
+   -24.32,
+   -24.32,
+   -24.32,
+   -24.32,
+   -29.34,
+   -24.76,
+   -24.76,
+   -24.76,
+   -20.96,
+   -20.96,
+   -20.96,
+   -15.71,
+   -11.1,
+   -8.24,
+   -13.0,
+   -13.0
+  ],
+  "y": [
+   0.0,
+   0.41,
+   -0.1,
+   -0.41,
+   -0.65,
+   1.66,
+   3.84,
+   2.0,
+   1.52,
+   -0.23,
+   -0.53,
+   -0.53,
+   -0.06,
+   -1.11,
+   -4.13,
+   -0.92,
+   -0.92,
+   1.62,
+   0.24,
+   -3.8,
+   -5.53,
+   -6.94,
+   -4.1,
+   3.77,
+   7.47,
+   5.43,
+   5.43,
+   4.86,
+   5.21,
+   8.17,
+   8.92,
+   7.5,
+   7.5,
+   3.64,
+   3.57,
+   3.57,
+   3.57,
+   3.57,
+   4.22,
+   -0.72,
+   -0.72,
+   -0.72,
+   -0.65,
+   -0.65,
+   -0.65,
+   1.73,
+   6.42,
+   9.92,
+   13.18,
+   13.18
+  ],
+  "source": "shots/aircraft-carrier-sam/camera.json: phase correlation on the water with the ship masked out"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 8,
+   "label": "Water beyond the ship",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "near",
+   "z": 3,
+   "label": "Water in front of the bow",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Aircraft carrier"
+  }
+ ],
+ "objects": [
+  {
+   "id": "sea_far",
+   "plane": "far",
+   "qd": "ocean",
+   "box": [
+    0,
+    18,
+    120,
+    48
+   ],
+   "strokes": 2,
+   "visible": [
+    0,
+    30
+   ]
+  },
+  {
+   "id": "sea_near_l",
+   "plane": "near",
+   "qd": "ocean",
+   "box": [
+    -10,
+    230,
+    120,
+    270
+   ],
+   "strokes": 3,
+   "skip": 2
+  },
+  {
+   "id": "sea_near_r",
+   "plane": "near",
+   "qd": "ocean",
+   "box": [
+    280,
+    236,
+    410,
+    276
+   ],
+   "strokes": 3,
+   "skip": 3,
+   "visible": [
+    0,
+    32
+   ]
+  },
+  {
+   "id": "sea_far_r",
+   "plane": "far",
+   "qd": "ocean",
+   "box": [
+    250,
+    40,
+    384,
+    66
+   ],
+   "strokes": 2,
+   "skip": 4,
+   "visible": [
+    36,
+    49
+   ]
+  }
+ ],
+ "notes": {
+  "0": "The carrier comes at the camera almost bow on, its deck wide across the frame.",
+  "12": "Still nearly head on; the ship rides a little higher in the frame.",
+  "24": "Bow on, the shortest the ship looks in the shot.",
+  "36": "The bow swings to the right; the deck starts to slope down toward the bow.",
+  "49": "Three-quarter view: the ship is long again and its bow points down and to the right."
+ }
+}
