@@ -6,7 +6,7 @@
   "top",
   "top"
  ],
- "note": "Quick, Draw! lighthouse 4811446632316928, drawn upright. Stroke 0 is the tapering tower, wider at the base. Strokes 1 to 4 are the four bands across the tower. Stroke 8 is the lantern room on top, and strokes 9 and 10 are its two sides joining the top of the tower. Stroke 5 is the lamp inside the lantern. Strokes 6, 7, 11 and 12 are four short beams drawn out from the lantern to the right and left. The tower in the film does not bend or move any part; the camera tilts up the tower and pulls back a little, so the drawing moves down the frame and gets about 15 percent smaller. The rig places the whole doodle rigidly by two points on its centre line: the top of the tower just under the lantern (top, put on the dark gallery ring in the film) and a point on the tower's centre line (mid); the size comes from the tower's width just under the gallery. The real tower is much taller for its width than the drawn one and runs off the bottom of the frame in every frame, so the lower tower is lengthened by a constant amount (pose value reach = 1 in every key): the base corners move down 120 doodle units and the lower bands and side vertices by a share of that, so the four bands stay evenly spaced. No stroke is added, removed or redrawn, and the lengthening does not change during the shot. The beams stay as drawn; no light shows in the daytime footage, so they are not animated.",
+ "note": "Quick, Draw! lighthouse 4811446632316928, drawn upright. Stroke 0 is the tapering tower, wider at the base. Strokes 1 to 4 are the four bands across the tower. Stroke 8 is the lantern room on top, and strokes 9 and 10 are its two sides joining the top of the tower. Stroke 5 is the lamp inside the lantern. Strokes 6, 7, 11 and 12 are four short beams drawn out from the lantern to the right and left. The tower in the film does not bend or move any part; the camera tilts up the tower and pulls back a little, so the drawing moves down the frame and gets about 15 percent smaller. The rig places the whole doodle rigidly by two points on its centre line: the top of the tower just under the lantern (top, put on the dark gallery ring in the film) and a point on the tower's centre line (mid); the size comes from the tower's width just under the gallery. The real tower is much taller for its width than the drawn one and runs off the bottom of the frame in every frame, so the lower tower is lengthened by a constant amount (pose value reach = 1 in every key): the base corners move down 100 doodle units (the least that keeps the base below the frame in the first frame) and the lower bands and side vertices by a share of that, so the four bands stay evenly spaced. No stroke is added, removed or redrawn, and the lengthening does not change during the shot. The beams stay as drawn; no light shows in the daytime footage, so they are not animated.",
  "strokes": [
   [
    [
@@ -275,7 +275,7 @@
    "shift_by": "reach",
    "shift": [
     0,
-    24.0
+    20.0
    ]
   },
   {
@@ -294,7 +294,7 @@
    "shift_by": "reach",
    "shift": [
     0,
-    54.0
+    45.0
    ]
   },
   {
@@ -313,7 +313,7 @@
    "shift_by": "reach",
    "shift": [
     0,
-    84.0
+    70.0
    ]
   },
   {
@@ -332,7 +332,7 @@
    "shift_by": "reach",
    "shift": [
     0,
-    120.0
+    100.0
    ]
   },
   {

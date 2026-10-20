@@ -94,10 +94,10 @@
    "plane": "sky",
    "qd": "cloud",
    "box": [
-    228,
-    -45,
-    292,
-    -10
+    234,
+    -58,
+    288,
+    -30
    ],
    "aspect": 1.9,
    "strokes": 1
@@ -107,10 +107,10 @@
    "plane": "sky",
    "qd": "cloud",
    "box": [
-    275,
-    215,
-    365,
-    255
+    262,
+    225,
+    345,
+    260
    ],
    "aspect": 2.0,
    "strokes": 1,
@@ -135,60 +135,49 @@
    "plane": "trees",
    "qd": "bush",
    "box": [
-    -40,
+    -50,
     150,
-    125,
-    310
+    120,
+    320
    ],
-   "aspect": 1.0
+   "aspect": 1.0,
+   "skip": 1
   },
   {
    "id": "bush_high_left",
    "plane": "trees",
    "qd": "bush",
    "box": [
-    -60,
-    -160,
-    165,
-    -35
+    -70,
+    -170,
+    150,
+    -30
    ],
    "aspect": 1.8,
-   "skip": 1
+   "skip": 2
   },
   {
    "id": "tree_right",
    "plane": "trees",
    "qd": "tree",
    "box": [
-    290,
-    -150,
-    440,
-    200
+    300,
+    -160,
+    450,
+    210
    ],
    "aspect": 0.45,
-   "skip": 1
+   "skip": 5
   },
   {
-   "id": "leaf1",
+   "id": "leaf",
    "plane": "trees",
    "qd": "leaf",
    "box": [
-    110,
-    40,
-    140,
-    70
-   ],
-   "strokes": 2
-  },
-  {
-   "id": "leaf2",
-   "plane": "trees",
-   "qd": "leaf",
-   "box": [
-    240,
-    -120,
-    270,
-    -95
+    250,
+    -130,
+    275,
+    -108
    ],
    "strokes": 2,
    "skip": 1

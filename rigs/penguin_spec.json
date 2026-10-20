@@ -6,7 +6,7 @@
   "beak",
   "neck"
  ],
- "note": "Quick, Draw! penguin 6490672733356032, drawn facing left. Stroke 0 is the round head, stroke 1 the beak drawn as one open wedge pointing left (vertices 0-2 upper bill and tip, 3-4 lower bill), strokes 2-4 the eye and two small face marks, strokes 5 and 6 the left and right sides of the body, stroke 7 the right flipper, stroke 8 the left flipper, stroke 9 the rounded bottom, stroke 10 the white belly patch. The root runs from the neck (bottom of the head) to the bottom of the body, so the body leans and sways with the film. The head and beak turn about the neck toward the beak tip the pose gives, and the lower bill moves down by the pose's jaw value when the beak opens. The flippers and belly stay with the body, as in the film, where they do not move.",
+ "note": "Quick, Draw! penguin 6490672733356032, drawn facing left. Stroke 0 is the round head, stroke 1 the beak drawn as one open wedge pointing left (vertices 0-2 upper bill and tip, 3-4 lower bill), strokes 2-4 the eye and two small face marks, strokes 5 and 6 the left and right sides of the body, stroke 7 the right flipper, stroke 8 the left flipper, stroke 9 the rounded bottom, stroke 10 the white belly patch. The root runs from the neck (bottom of the head) to the bottom of the body, so the body leans and sways with the film. The root line is tilted in every key to the lean of the film's belly, measured as the long axis of the SAM belly mask. The head and beak turn fully about the neck toward the beak tip the pose gives (the film's nod, enlarged 1.7 times about its mean angle), and the lower bill moves down by the pose's jaw value when the beak opens. The flippers and belly stay with the body, as in the film, where they do not move.",
  "strokes": [
   [
    [
@@ -407,9 +407,9 @@
    "shift_by": "jaw",
    "shift": [
     4,
-    18
+    26
    ],
-   "turn": 0.85
+   "turn": 1.0
   },
   {
    "region": [
@@ -423,7 +423,7 @@
     "neck",
     "beak"
    ],
-   "turn": 0.85
+   "turn": 1.0
   },
   {
    "rest": true,
@@ -441,6 +441,6 @@
   1.1
  ],
  "size": "steady",
- "track": true,
+ "track": false,
  "smooth": 1.2
 }

@@ -6,7 +6,7 @@
   "neck",
   "neck"
  ],
- "note": "Quick, Draw! shovel 5440893605642240 (Croatia). Stroke 0 is the long straight handle with a small hook where it meets the blade. Stroke 1 is the triangular grip at the top end of the handle. Stroke 2 is a short collar line at the neck of the blade. Stroke 3 is the blade outline. The root places the blade by two points, the neck (where the handle enters the blade) and the far end of the blade, so the blade keeps the doodle's shape and size. The handle and grip are one part that turns about the neck to follow the handle in the film and lengthens to reach it, because the film's handle is longer relative to the blade than the doodle's and is bent a little by the camera's perspective. In the film the shovel lies still on the ground for the whole interval, so the keys hold it in place; the only motion is the slight drift of the hand-held camera.",
+ "note": "Quick, Draw! shovel 5440893605642240 (Croatia). Stroke 0 is the long straight handle with a small hook where it meets the blade. Stroke 1 is the triangular grip at the top end of the handle. Stroke 2 is a short collar line at the neck of the blade. Stroke 3 is the blade outline. The root places the blade by two points, the neck (where the handle enters the blade) and the far end of the blade, so the blade keeps the doodle's shape and size. The handle and grip are one part that turns about the neck to follow the handle in the film and lengthens to reach it (the grip anchor is the vertex where the handle meets the triangular grip), because the film's handle is longer relative to the blade than the doodle's and is bent a little by the camera's perspective. In the film the shovel lies still on the ground for the whole interval, so the keys hold it in place; the only motion is the slight drift of the hand-held camera.",
  "strokes": [
   [
    [
@@ -123,8 +123,8 @@
    150
   ],
   "grip": [
-   20,
-   15
+   40,
+   24
   ]
  },
  "root": [
@@ -171,5 +171,7 @@
  },
  "track": false,
  "smooth": 1.5,
- "size": "steady"
+ "size": "steady",
+ "size_from_mask": false,
+ "max_tilt": 90
 }

@@ -1,0 +1,76 @@
+[
+ {
+  "id": "M2",
+  "value": 2,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.38,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": false,
+  "design_typicality": 6
+ },
+ {
+  "id": "M3",
+  "value": 0.6,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.58
+ },
+ {
+  "id": "M6",
+  "value": 0.7,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 24 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5440893605642240; scenery quickdraw:6461199791161344, quickdraw:5346657354907648, quickdraw:4952902856605696, quickdraw:6099813294669824, quickdraw:5487182812807168, quickdraw:4867902220009472, drawn by agent: loose dry stalks lie across the ground under the shovel; no Quick, Draw! category is a single loose stalk",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

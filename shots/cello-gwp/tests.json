@@ -54,7 +54,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:5389451637293056; scenery drawn by agent: no Quick, Draw! category in the local set is a wall-mounted screen; a dark rectangle drawn as its outline, top left of the frame where the film has one, drawn by agent: no category is a wall rail; one horizontal line for the moulding that runs along the back wall, drawn by agent: no category is a music stand; the black frame of the stand standing behind the player, a bar with one post, drawn by agent: no category is a filing cabinet; its outline and two drawer lines, right of the cello, drawn by agent: the white wool balls on top of the cabinet, drawn as two small loops, drawn by agent: no Quick, Draw! chair in the local set; the mesh chair back at left, outline and two cross lines, drawn by agent: the player behind at left, drawn as a head outline because no face category is in the local set, drawn by agent: the two players behind at right, head outlines, drawn by agent: the edge of a music stand in the lower left corner, its sheet ledge and post",
+  "value": "rig quickdraw:5389451637293056; scenery drawn by agent: no Quick, Draw! category in the local set is a wall-mounted screen; a dark rectangle drawn as its outline, top left of the frame where the film has one, drawn by agent: no category is a wall rail; one horizontal line for the moulding along the back wall, left out where the player and the cello hide it, drawn by agent: no category is a music stand; the black frame of the stand standing behind the player, a bar with one post, drawn by agent: no category is a filing cabinet; its outline and two drawer lines, right of the cello, drawn by agent: the white wool balls on top of the cabinet, drawn as two small loops, drawn by agent: no Quick, Draw! chair in the local set; the mesh chair back at left, outline and two cross lines, drawn by agent: the player behind at left, drawn as a head outline because no face category is in the local set, drawn by agent: the two players behind at right, head outlines, drawn by agent: the edge of a music stand in the lower left corner, its sheet ledge and post",
   "unit": "",
   "ok": true
  },
@@ -76,5 +76,20 @@
   "value": "complete",
   "unit": "",
   "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca cello (or violin-family instrument) seen tilted and cropped at the bottom of the frame\u201d; motion smooth; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/cello-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The animated cello uses the doodle's scroll loop, doubled neck lines, notched waist and f-hole mark, but it is tilted, enlarged and cut off at the bottom, so the doodle's lower body and full outline are never seen.",
+  "evidence": "shots/cello-gwp/reviews/critic-1.json"
  }
 ]

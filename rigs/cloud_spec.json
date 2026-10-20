@@ -1,0 +1,253 @@
+{
+ "category": "cloud",
+ "doodle_key_id": "5120141954121728",
+ "facing": -1,
+ "face_from": [
+  "left",
+  "right"
+ ],
+ "note": "Quick, Draw! cloud 5120141954121728, four strokes. Stroke 0 is the flat underside, the round left end and a small low lobe on the upper left (vertices 8 to 11). Stroke 1 is the tall lobe left of centre. Stroke 2 is the second lobe right of centre. Stroke 3 is the right end, coming down to meet the underside. The whole doodle is placed by its left and right ends at one size for the shot and drifts right and up with the cloud in the footage. The small left lobe turns up about its base, and the two top lobes and the right end turn and swell a little about their bases, as the cloud's top edge billows in the time-lapse.",
+ "strokes": [
+  [
+   [
+    223,
+    105
+   ],
+   [
+    186,
+    115
+   ],
+   [
+    143,
+    120
+   ],
+   [
+    84,
+    119
+   ],
+   [
+    33,
+    109
+   ],
+   [
+    6,
+    98
+   ],
+   [
+    1,
+    86
+   ],
+   [
+    2,
+    72
+   ],
+   [
+    28,
+    38
+   ],
+   [
+    34,
+    36
+   ],
+   [
+    52,
+    34
+   ],
+   [
+    71,
+    45
+   ]
+  ],
+  [
+   [
+    65,
+    60
+   ],
+   [
+    78,
+    25
+   ],
+   [
+    100,
+    5
+   ],
+   [
+    118,
+    0
+   ],
+   [
+    131,
+    4
+   ],
+   [
+    139,
+    11
+   ],
+   [
+    139,
+    22
+   ]
+  ],
+  [
+   [
+    124,
+    40
+   ],
+   [
+    151,
+    19
+   ],
+   [
+    167,
+    11
+   ],
+   [
+    181,
+    8
+   ],
+   [
+    199,
+    11
+   ],
+   [
+    212,
+    28
+   ]
+  ],
+  [
+   [
+    195,
+    29
+   ],
+   [
+    227,
+    31
+   ],
+   [
+    239,
+    37
+   ],
+   [
+    253,
+    53
+   ],
+   [
+    253,
+    74
+   ],
+   [
+    240,
+    93
+   ],
+   [
+    221,
+    110
+   ]
+  ]
+ ],
+ "root": [
+  "left",
+  "right"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "left": [
+   1,
+   86
+  ],
+  "right": [
+   253,
+   64
+  ],
+  "lbase": [
+   2,
+   72
+  ],
+  "ltop": [
+   40,
+   36
+  ],
+  "mbase": [
+   100,
+   42
+  ],
+  "mtop": [
+   118,
+   0
+  ],
+  "rbase": [
+   165,
+   30
+  ],
+  "rtop": [
+   181,
+   8
+  ],
+  "rlow": [
+   221,
+   110
+  ],
+  "rshoulder": [
+   239,
+   37
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 8,
+   "to": 11,
+   "joint": "lbase",
+   "aim": [
+    "lbase",
+    "ltop"
+   ],
+   "stretch": 0.6
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 6,
+   "joint": "mbase",
+   "aim": [
+    "mbase",
+    "mtop"
+   ],
+   "stretch": 0.6
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 5,
+   "joint": "rbase",
+   "aim": [
+    "rbase",
+    "rtop"
+   ],
+   "stretch": 0.6
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 6,
+   "joint": "rlow",
+   "aim": [
+    "rlow",
+    "rshoulder"
+   ],
+   "stretch": 0.4
+  },
+  {
+   "rest": true,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "smooth": 1.5,
+ "track": false
+}
