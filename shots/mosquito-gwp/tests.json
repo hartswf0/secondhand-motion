@@ -1,0 +1,90 @@
+[
+ {
+  "id": "M2",
+  "value": 92,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   92,
+   92,
+   92,
+   92,
+   92,
+   92
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.81,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 99
+ },
+ {
+  "id": "M3",
+  "value": 0.5,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.37
+ },
+ {
+  "id": "M6",
+  "value": 8.6,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "8 strokes, 46 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6165377341980672; scenery quickdraw:5354287364308992, drawn by agent: no Quick, Draw! category is the edge of an arm; one line along it",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "62/62",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "missing shot_page_url, rights_statement",
+  "unit": "",
+  "ok": false
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cmosquito\u201d; motion smooth; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/mosquito-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The flat body, upright wing, round head, antenna and long hooked proboscis match the doodle. The drawing is very small, so the stroke detail is hard to see.",
+  "evidence": "shots/mosquito-gwp/reviews/critic-1.json"
+ }
+]

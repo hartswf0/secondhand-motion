@@ -1,0 +1,119 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "y": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "source": "held: the camera is locked off; phase correlation here measures the rain and surf, not the camera"
+ },
+ "planes": [
+  {
+   "id": "building",
+   "z": 3.5,
+   "label": "Building",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Surf"
+  }
+ ],
+ "objects": [
+  {
+   "id": "house",
+   "plane": "building",
+   "qd": "house",
+   "box": [
+    -10,
+    60,
+    384,
+    200
+   ],
+   "aspect": 2.8,
+   "strokes": 3
+  }
+ ],
+ "notes": {
+  "1": "storm surf breaks against the building"
+ }
+}

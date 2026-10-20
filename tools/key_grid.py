@@ -1,5 +1,7 @@
 """Key frames enlarged with a numbered grid and the SAM outline, for placing rig points by eye.
-usage: python3 tools/key_grid.py <shot_dir> <out.png> f1 f2 ... [--pose poses.json --rig rigs/x.py]"""
+usage: python3 tools/key_grid.py <shot_dir> <out.png> f1 f2 ... [--pose poses.json --rig rigs/x.py] [--target traced.json]
+--target draws a generated key's traced strokes in blue on the frame it was drawn for (clip.json keys), scaled
+from the key's canvas to the frame: the drawing to pose the rig toward."""
 import json, sys, importlib.util
 from pathlib import Path
 import numpy as np, cv2
@@ -13,6 +15,9 @@ if '--pose' in sys.argv:
 if '--rig' in sys.argv:
     rp = sys.argv[sys.argv.index('--rig') + 1]; a = [x for x in a if x != rp]
     spec = importlib.util.spec_from_file_location('rig', rp); rig = importlib.util.module_from_spec(spec); spec.loader.exec_module(rig)
+tgt = None
+if '--target' in sys.argv:
+    tp = sys.argv[sys.argv.index('--target') + 1]; a = [x for x in a if x != tp]; tgt = json.load(open(tp))
 fr = [int(x) for x in a[2:]]
 M = json.load(open(d / 'masks.json')); clip = json.load(open(d / 'clip.json')); W, H = clip['W'], clip['H']; S = 2
 prm = json.load(open(d / 'rig_params.json')) if (d / 'rig_params.json').exists() else {}
@@ -26,6 +31,9 @@ for f in fr:
     for y in range(50, H, 50): dr.text((2, y * S + 2), str(y), fill=(0, 0, 160))
     m = raster(M[str(f)], W, H).astype(np.uint8); cs, _ = cv2.findContours(m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     for c in cs: dr.line([(p[0][0] * S, p[0][1] * S) for p in c] + [(c[0][0][0] * S, c[0][0][1] * S)], fill=(230, 0, 0), width=2)
+    if tgt and f in clip['keys']:
+        k = tgt['keys'][clip['keys'].index(f)]; sc = W / tgt['W']
+        for st in k['strokes']: dr.line([(x * sc * S, y * sc * S) for x, y in st], fill=(30, 110, 255), width=3)
     if pose and str(f) in pose:
         P = pose[str(f)]
         if rig:

@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0065",
+ "id": "tractor-gwp",
+ "kind": "shot",
+ "title": "Tractor, the Giraffe Walks Past Way",
+ "category": "tractor",
+ "wave": 2,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/tractor-gwp/cover.png",
+ "cover_alt": "shots/tractor-gwp/frames/f015.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/tractor-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#tractor-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/tractor_spec.json"
+  },
+  {
+   "label": "Draft keys",
+   "href": "shots/tractor/index.html"
+  }
+ ],
+ "tests": "shots/tractor-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 2"
+ ]
+}

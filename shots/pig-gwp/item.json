@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0063",
+ "id": "pig-gwp",
+ "kind": "shot",
+ "title": "Pig, the Giraffe Walks Past Way",
+ "category": "pig",
+ "wave": 2,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/pig-gwp/cover.png",
+ "cover_alt": "shots/pig-gwp/frames/f014.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/pig-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#pig-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/pig_spec.json"
+  },
+  {
+   "label": "Draft keys",
+   "href": "shots/pig/index.html"
+  }
+ ],
+ "tests": "shots/pig-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 2"
+ ]
+}

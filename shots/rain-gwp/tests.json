@@ -1,0 +1,89 @@
+[
+ {
+  "id": "M2",
+  "value": 0,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.0,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": false,
+  "design_typicality": 38
+ },
+ {
+  "id": "M3",
+  "value": "not applicable",
+  "unit": "a field of marks has no single silhouette",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": "not applicable",
+  "unit": "marks wrap at the frame edge",
+  "ok": null
+ },
+ {
+  "id": "T3",
+  "value": "the doodle's 9 strokes repeated as marks, 171-196 per frame",
+  "unit": "",
+  "ok": true,
+  "note": "field rig: marks enter and leave the frame"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5897326906310656; scenery quickdraw:4905021353230336, quickdraw:5177445445533696, drawn by agent: the Quick, Draw! fences are drawn flat to the page; the footbridge's two rails run in perspective to a point, so the agent drew them as two pairs of lines with posts",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "55/55",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "missing shot_page_url, rights_statement",
+  "unit": "",
+  "ok": false
+ },
+ {
+  "id": "J1",
+  "value": "named \u201crain\u201d; motion jumbled; follows the film: yes",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/rain-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The dashes are the same short, slightly slanted strokes with occasional bends as in the doodle. The animation uses far more of them, densely packed.",
+  "evidence": "shots/rain-gwp/reviews/critic-1.json"
+ }
+]

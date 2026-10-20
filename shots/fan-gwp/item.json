@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0066",
+ "id": "fan-gwp",
+ "kind": "shot",
+ "title": "Fan, the Giraffe Walks Past Way",
+ "category": "fan",
+ "wave": 2,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/fan-gwp/cover.png",
+ "cover_alt": "shots/fan-gwp/frames/f016.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/fan-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#fan-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/fan_spec.json"
+  },
+  {
+   "label": "Draft keys",
+   "href": "shots/fan/index.html"
+  }
+ ],
+ "tests": "shots/fan-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 2"
+ ]
+}

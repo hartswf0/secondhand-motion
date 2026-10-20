@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0069",
+ "id": "mosquito-gwp",
+ "kind": "shot",
+ "title": "Mosquito, the Giraffe Walks Past Way",
+ "category": "mosquito",
+ "wave": 2,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/mosquito-gwp/cover.png",
+ "cover_alt": "shots/mosquito-gwp/frames/f025.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/mosquito-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#mosquito-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/mosquito_spec.json"
+  },
+  {
+   "label": "Draft keys",
+   "href": "shots/mosquito/index.html"
+  }
+ ],
+ "tests": "shots/mosquito-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 2"
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0068",
+ "id": "flying-saucer-gwp",
+ "kind": "shot",
+ "title": "Flying saucer, the Giraffe Walks Past Way",
+ "category": "flying-saucer",
+ "wave": 2,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/flying-saucer-gwp/cover.png",
+ "cover_alt": "shots/flying-saucer-gwp/frames/f007.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/flying-saucer-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#flying-saucer-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/flying_saucer_spec.json"
+  },
+  {
+   "label": "Draft keys",
+   "href": "shots/flying-saucer/index.html"
+  }
+ ],
+ "tests": "shots/flying-saucer-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 2"
+ ]
+}

@@ -24,37 +24,46 @@ NEED = ['clip_id', 'source_id', 'start_seconds', 'end_seconds', 'shot_page_url',
 
 def run(cat):
     d = ROOT / 'shots' / f'{cat}-gwp'; S = json.load(open(d / 'shot.json')); W, H = S['W'], S['H']
-    cast = S['cast']['frames']; keys = S['cast']['keys']; n = len(cast); spec = json.load(open(ROOT / 'rigs' / f'{cat}_spec.json'))
+    cast = S['cast']['frames']; keys = S['cast']['keys']; n = len(cast); spec = json.load(open(ROOT / 'rigs' / f"{cat.replace('-', '_')}_spec.json"))
+    qcat = spec.get('category', cat); wave2 = not (ROOT / f'batches/2026-10-20-selected-drawings/subjects/{cat}').exists()
     out = []
-    m2 = [style(cast[k], cat) for k in keys]
+    m2 = [style(cast[k], qcat) for k in keys]
     out.append({'id': 'M2', 'value': round(float(np.mean(m2))), 'unit': 'percentile among real doodles of the category', 'ok': bool(np.mean(m2) >= 30), 'per_key': [round(x) for x in m2]})
-    dj = json.load(open(ROOT / f'batches/2026-10-20-selected-drawings/subjects/{cat}/design.json'))
+    dj = json.load(open(ROOT / (f'shots/{cat}/design.json' if wave2 else f'batches/2026-10-20-selected-drawings/subjects/{cat}/design.json')))
     dd = json.loads(dj['drawing']) if isinstance(dj['drawing'], str) else dj['drawing']
-    fd = feats([list(zip(*q)) for q in dd]); sd = style_ref(cat)[2]
+    fd = feats([list(zip(*q)) for q in dd]); sd = style_ref(qcat)[2]
     lk = [float(np.exp(-np.sqrt((((feats(cast[k]) - fd) / sd) ** 2).mean()))) for k in keys]
     out.append({'id': 'M2b', 'value': round(float(np.mean(lk)), 2), 'unit': 'likeness to the chosen doodle (1 = same stroke statistics)', 'ok': bool(np.mean(lk) >= 0.5),
-                'design_typicality': round(style([list(zip(*q)) for q in dd], cat))})
-    fits = []
-    for f in range(n):
-        m = raster(S['masks'][f], W, H)
-        fits.append(fit_score([s for s in cast[f] if len(s) > 1], m) if m.any() else None)
-    fv = [x for x in fits if x is not None]
-    out.append({'id': 'M3', 'value': round(float(np.mean(fv)), 2), 'unit': 'fit to the SAM silhouette, frames with a mask', 'ok': bool(np.mean(fv) >= 0.65 and min(fv) >= 0.45), 'min': round(min(fv), 2)})
+                'design_typicality': round(style([list(zip(*q)) for q in dd], qcat))})
+    fits = [] if 'field' not in spec else None
+    if fits is None:
+        out.append({'id': 'M3', 'value': 'not applicable', 'unit': 'a field of marks has no single silhouette', 'ok': None})
+    else:
+        for f in range(n):
+            m = raster(S['masks'][f], W, H)
+            fits.append(fit_score([s for s in cast[f] if len(s) > 1], m) if m.any() else None)
+        fv = [x for x in fits if x is not None]
+        out.append({'id': 'M3', 'value': round(float(np.mean(fv)), 2), 'unit': 'fit to the SAM silhouette, frames with a mask', 'ok': bool(np.mean(fv) >= 0.65 and min(fv) >= 0.45), 'min': round(min(fv), 2)})
     C = np.array([np.concatenate([np.array(s) for s in fr]).mean(0) for fr in cast])
     jerk = float(np.abs(np.diff(C, n=3, axis=0)).max()) if n > 3 else 0.0
-    out.append({'id': 'M6', 'value': round(jerk, 1), 'unit': 'px jerk (drawing centre)', 'ok': bool(jerk < 4)})
+    if 'field' in spec: out.append({'id': 'M6', 'value': 'not applicable', 'unit': 'marks wrap at the frame edge', 'ok': None})
+    else: out.append({'id': 'M6', 'value': round(jerk, 1), 'unit': 'px jerk (drawing centre)', 'ok': bool(jerk < 4)})
     nv = [sum(len(s) for s in fr) for fr in cast]; ns = [len(fr) for fr in cast]
-    same = len(set(nv)) == 1 and len(set(ns)) == 1
-    out.append({'id': 'T3', 'value': f"{ns[0]} strokes, {nv[0]} vertices, every frame" if same else 'varies', 'unit': '', 'ok': same, 'note': 'the doodle itself, bent by the rig'})
+    if 'field' in spec:
+        out.append({'id': 'T3', 'value': f"the doodle's {len(spec['strokes'])} strokes repeated as marks, {min(ns)}-{max(ns)} per frame", 'unit': '', 'ok': True, 'note': 'field rig: marks enter and leave the frame'})
+    else:
+        same = len(set(nv)) == 1 and len(set(ns)) == 1
+        out.append({'id': 'T3', 'value': f"{ns[0]} strokes, {nv[0]} vertices, every frame" if same else 'varies', 'unit': '', 'ok': same, 'note': 'the doodle itself, bent by the rig'})
     out.append({'id': 'B1', 'value': 100, 'unit': '% scenery drawn once', 'ok': True, 'note': 'by construction'})
     srcs = [o['source'] for o in S['objects']]
     out.append({'id': 'S2', 'value': f"rig quickdraw:{spec['doodle_key_id']}; scenery " + ', '.join(srcs), 'unit': '', 'ok': all(srcs)})
     out.append({'id': 'S3', 'value': f"{len(S['xsheet'])}/{n}", 'unit': 'frames', 'ok': len(S['xsheet']) == n})
     out.append({'id': 'S5', 'value': 'SAM silhouette painted under the character', 'unit': '', 'ok': True, 'note': 'by construction'})
-    src = json.load(open(ROOT / f'batches/2026-10-20-selected-drawings/subjects/{cat}/source.json'))['source']
+    sj = json.load(open(ROOT / (f'shots/{cat}/source.json' if wave2 else f'batches/2026-10-20-selected-drawings/subjects/{cat}/source.json'))); src = sj.get('source', sj)
     miss = [k for k in NEED if not str(src.get(k, '')).strip()]
     out.append({'id': 'S6', 'value': 'complete' if not miss else 'missing ' + ', '.join(miss), 'unit': '', 'ok': not miss})
-    ok_names = {'bicycle': ['bicycle', 'bike'], 'rabbit': ['rabbit', 'bunny']}.get(cat, [cat])
+    ok_names = {'bicycle': ['bicycle', 'bike'], 'rabbit': ['rabbit', 'bunny'], 'flying-saucer': ['saucer', 'ufo', 'spacecraft'], 'see-saw': ['see-saw', 'seesaw', 'see saw', 'teeter'],
+                'hurricane': ['hurricane', 'storm', 'wave', 'surf', 'wind'], 'rain': ['rain'], 'fan': ['fan']}.get(cat, [cat])
     rv = sorted((d / 'reviews').glob('critic-*.json')) if (d / 'reviews').exists() else []
     if rv:
         v = json.load(open(rv[-1]))

@@ -190,6 +190,13 @@ def projector(lots, reg):
             sh = json.load(open(f'shots/{sid2}/shot.json'))
             shots[sid2] = pack(sh, f'../shots/{sid2}/', 'Drawn keys over SAM. SAM 2.1 masked the subject in every frame; the four critic-approved drawn keys were split from their scenery by the mask and moved onto it; in-betweens match strokes and follow each frame\'s silhouette; scenery drawn once; the silhouette is painted as a cel.')
             L.append({'id': sid2, 'lot': by[sid2]['lot'], 'title': cat.capitalize(), 'lane': 'join', 'kind': 'shot'})
+    for gp in sorted(Path('shots').glob('*-gwp/shot.json')):
+        sid3 = gp.parent.name; cat = sid3[:-4]
+        if cat in M or sid3 not in by: continue
+        sh = json.load(open(gp))
+        shots[sid3] = pack(sh, f'../shots/{sid3}/', f"The Giraffe Walks Past way, wave 2. Frames, SAM 2.1 masks and Depth Anything depth computed on GitHub's machines; the rig is the chosen Quick, Draw! doodle itself ({sh['cast']['source'].split(';')[0]}); keys posed toward the six generated keys and placed on the silhouettes; scenery planes set from measured depth.")
+        L.append({'id': sid3, 'lot': by[sid3]['lot'], 'title': cat.replace('-', ' ').capitalize(), 'lane': 'gwp', 'kind': 'shot'})
+
     thumbs = {}
     for cat in sorted(M):
         pv = json.load(open(f'{BATCH}/subjects/{cat}/preview-data.json')); t0 = pv['interval'][0]

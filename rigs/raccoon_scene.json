@@ -1,0 +1,164 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.1,
+   0.44,
+   0.1,
+   0.87,
+   1.41,
+   2.93,
+   3.71,
+   4.76,
+   5.99,
+   8.66,
+   10.45,
+   16.03,
+   21.63,
+   28.82,
+   35.19,
+   42.18,
+   48.91,
+   60.91,
+   67.77,
+   75.66,
+   79.61,
+   83.39,
+   86.19,
+   89.5,
+   91.08,
+   89.86,
+   89.36,
+   88.62,
+   87.74,
+   87.42,
+   87.4,
+   86.78,
+   86.59,
+   85.92,
+   85.53
+  ],
+  "y": [
+   0.0,
+   -0.62,
+   -0.62,
+   -1.11,
+   -0.59,
+   -0.54,
+   -0.96,
+   -1.02,
+   -1.0,
+   -1.07,
+   -1.59,
+   -1.5,
+   -3.21,
+   -2.59,
+   -2.99,
+   -2.52,
+   -2.79,
+   -4.43,
+   -3.68,
+   -4.42,
+   -4.51,
+   -3.68,
+   -4.37,
+   -3.81,
+   -4.69,
+   -4.33,
+   -3.54,
+   -2.91,
+   -3.29,
+   -3.47,
+   -4.08,
+   -3.29,
+   -2.91,
+   -2.93,
+   -1.99,
+   -2.84
+  ],
+  "source": "phase correlation with the subject masked out"
+ },
+ "planes": [
+  {
+   "id": "back",
+   "z": 5,
+   "label": "Tall grass",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "ground",
+   "z": 3,
+   "label": "Path",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Raccoon"
+  }
+ ],
+ "objects": [
+  {
+   "id": "grass1",
+   "plane": "back",
+   "qd": "grass",
+   "box": [
+    -10,
+    10,
+    200,
+    110
+   ],
+   "aspect": 2
+  },
+  {
+   "id": "grass2",
+   "plane": "back",
+   "qd": "grass",
+   "box": [
+    190,
+    0,
+    400,
+    105
+   ],
+   "aspect": 2,
+   "skip": 1
+  },
+  {
+   "id": "bush",
+   "plane": "back",
+   "qd": "bush",
+   "box": [
+    280,
+    60,
+    400,
+    150
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "path",
+   "plane": "ground",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a path edge; the edge of the dirt path",
+   "strokes": [
+    [
+     [
+      -20,
+      190
+     ],
+     [
+      420,
+      178
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "1": "head out of the grass",
+  "12": "steps onto the path, facing left",
+  "23": "whole body out, tail ringed",
+  "34": "walking along the path"
+ }
+}

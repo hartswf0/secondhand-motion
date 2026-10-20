@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0064",
+ "id": "raccoon-gwp",
+ "kind": "shot",
+ "title": "Raccoon, the Giraffe Walks Past Way",
+ "category": "raccoon",
+ "wave": 2,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/raccoon-gwp/cover.png",
+ "cover_alt": "shots/raccoon-gwp/frames/f018.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/raccoon-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#raccoon-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/raccoon_spec.json"
+  },
+  {
+   "label": "Draft keys",
+   "href": "shots/raccoon/index.html"
+  }
+ ],
+ "tests": "shots/raccoon-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 2"
+ ]
+}

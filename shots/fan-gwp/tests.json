@@ -1,0 +1,91 @@
+[
+ {
+  "id": "M2",
+  "value": 3,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   3,
+   2,
+   3,
+   2,
+   3,
+   3,
+   2
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.91,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 2
+ },
+ {
+  "id": "M3",
+  "value": 0.63,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.6
+ },
+ {
+  "id": "M6",
+  "value": 5.1,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "8 strokes, 115 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6120310522773504; scenery quickdraw:5535439437955072, drawn by agent: no Quick, Draw! category is a table edge; the front edge of the table",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "missing shot_page_url, rights_statement",
+  "unit": "",
+  "ok": false
+ },
+ {
+  "id": "J1",
+  "value": "named \u201celectric desk fan\u201d; motion smooth; follows the film: yes",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/fan-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The round cage outline, three curved blades, scribbled hub and base with scribble match the doodle. In frame 7 one blade extends past the outer outline, which the doodle never does.",
+  "evidence": "shots/fan-gwp/reviews/critic-1.json"
+ }
+]

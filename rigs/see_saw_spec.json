@@ -1,0 +1,191 @@
+{
+ "category": "see saw",
+ "doodle_key_id": "4512834501214208",
+ "facing": 1,
+ "face_from": [
+  "pivot",
+  "pivot"
+ ],
+ "note": "Quick, Draw! see saw 4512834501214208: a long plank (1, with a dot 0) on a triangular stand (2, 3). Placed by the pivot and the stand's foot; the plank tilts about the pivot by the angle measured in the footage.",
+ "strokes": [
+  [
+   [
+    80,
+    33
+   ],
+   [
+    80,
+    33
+   ]
+  ],
+  [
+   [
+    51,
+    0
+   ],
+   [
+    189,
+    108
+   ],
+   [
+    246,
+    157
+   ],
+   [
+    255,
+    169
+   ],
+   [
+    226,
+    193
+   ],
+   [
+    194,
+    178
+   ],
+   [
+    154,
+    152
+   ],
+   [
+    116,
+    118
+   ],
+   [
+    50,
+    46
+   ],
+   [
+    0,
+    12
+   ],
+   [
+    14,
+    7
+   ],
+   [
+    65,
+    3
+   ]
+  ],
+  [
+   [
+    88,
+    123
+   ],
+   [
+    89,
+    121
+   ]
+  ],
+  [
+   [
+    71,
+    195
+   ],
+   [
+    85,
+    167
+   ],
+   [
+    93,
+    123
+   ],
+   [
+    97,
+    117
+   ],
+   [
+    127,
+    157
+   ],
+   [
+    133,
+    175
+   ],
+   [
+    148,
+    201
+   ],
+   [
+    100,
+    199
+   ],
+   [
+    74,
+    193
+   ],
+   [
+    103,
+    119
+   ],
+   [
+    129,
+    189
+   ]
+  ]
+ ],
+ "root": [
+  "pivot",
+  "base"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "pivot": [
+   96,
+   119
+  ],
+  "base": [
+   110,
+   197
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 1,
+   "joint": "pivot",
+   "aim": [
+    "pivot",
+    "base"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 10,
+   "joint": "pivot",
+   "aim": [
+    "pivot",
+    "base"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 1,
+   "joint": "pivot",
+   "aim": [
+    "pivot",
+    "base"
+   ],
+   "turn": 0,
+   "spin": "tilt"
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 11,
+   "joint": "pivot",
+   "aim": [
+    "pivot",
+    "base"
+   ],
+   "turn": 0,
+   "spin": "tilt"
+  }
+ ]
+}

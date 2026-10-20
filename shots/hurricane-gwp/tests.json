@@ -1,0 +1,89 @@
+[
+ {
+  "id": "M2",
+  "value": 1,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   1,
+   1,
+   1,
+   0,
+   1,
+   0
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.12,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": false,
+  "design_typicality": 3
+ },
+ {
+  "id": "M3",
+  "value": "not applicable",
+  "unit": "a field of marks has no single silhouette",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": "not applicable",
+  "unit": "marks wrap at the frame edge",
+  "ok": null
+ },
+ {
+  "id": "T3",
+  "value": "the doodle's 7 strokes repeated as marks, 11-20 per frame",
+  "unit": "",
+  "ok": true,
+  "note": "field rig: marks enter and leave the frame"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:4791481996935168; scenery quickdraw:6230207394480128",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "39/39",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "missing shot_page_url, rights_statement",
+  "unit": "",
+  "ok": false
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cwaves\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/hurricane-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "Each cluster repeats the doodle's layered scribble with pointed right ends. The doodle is a single cluster, while the animation shows several copies at once.",
+  "evidence": "shots/hurricane-gwp/reviews/critic-1.json"
+ }
+]

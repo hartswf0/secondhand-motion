@@ -183,3 +183,27 @@ at the 26th percentile of real rabbits). Likeness to the chosen doodle (M2b) pas
 The next repairs the critics named: a connected turn for the dog instead of a squash and flip; the duck's
 and cat's head turning toward the viewer and to profile; the giraffe's jaw opening; the horse's head going
 down into the hay at a steady size; the helicopter's mast kept short and upright.
+
+## Wave 2: the full pipeline on ten new subjects (`shots/<slug>-gwp/`)
+
+The ten wave-2 subjects had six draft keys each from an image model, approved as stills, but no frames,
+masks or motion. They now go through the same method, with three additions:
+
+- **Frames, SAM and depth on GitHub's machines.** The archive's media host is not reachable from the agent
+  workspace, so `.github/workflows/wave2-track.yml` runs `tools/wave2_track.py` per subject: the key interval
+  at 12 fps, Grounding DINO + SAM 2.1 (hiera-small) on every frame, Depth Anything V2 Small per frame. Each job
+  pushes its output to branch `wave2-track/<slug>`; `tools/wave2_import.py` brings it into `shots/<slug>-sam/`
+  and summarises depth (subject vs. top, middle and bottom of the scene). Two clips had a cut inside the
+  interval (fan's last frame, flying saucer's first) and are trimmed.
+- **Drawing toward the generated keys.** `tools/key_grid.py --target` draws each generated key (blue) over its
+  frame, the SAM outline (red) and the rig (black). The generated keys carry the pose and the doodle's
+  construction, but they were drawn on their own canvas: for the raccoon, flying saucer and mosquito they sit
+  well away from the subject and at the wrong size. So keys take pose from the generated drawing and place
+  and size from the silhouette. `rigs/fit_to_key.py` does a first automatic fit of the rig to a generated key
+  (chamfer distance), corrected by eye.
+- **Plane depths from measured depth.** A scenery plane with `z_from_depth` gets z = z(character) x subject
+  depth / band depth, so a far fence slides slower than near ground because the depth map says so.
+
+Rigid subjects (tractor, flying saucer, fan, tornado) are placed by two points and their wheels, blades or
+nothing spin. Rain and storm surf are a field of marks (`rigs/field.py`): the doodle's own strokes repeated,
+falling at a procedural speed (rain) or moved by the water's measured motion (surf).

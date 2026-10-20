@@ -1,0 +1,264 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "y": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "source": "held: the camera is locked off; phase correlation here measures the rain and surf, not the camera"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 8,
+   "label": "Trees and house",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "bridge",
+   "z": 2.4,
+   "label": "Footbridge rails",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Rain"
+  }
+ ],
+ "objects": [
+  {
+   "id": "tree",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    270,
+    0,
+    384,
+    120
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "house",
+   "plane": "far",
+   "qd": "house",
+   "box": [
+    110,
+    40,
+    220,
+    120
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "rails",
+   "plane": "bridge",
+   "class": "fence",
+   "why": "the Quick, Draw! fences are drawn flat to the page; the footbridge's two rails run in perspective to a point, so the agent drew them as two pairs of lines with posts",
+   "strokes": [
+    [
+     [
+      0,
+      265
+     ],
+     [
+      190,
+      150
+     ],
+     [
+      384,
+      265
+     ]
+    ],
+    [
+     [
+      0,
+      235
+     ],
+     [
+      190,
+      140
+     ],
+     [
+      384,
+      235
+     ]
+    ],
+    [
+     [
+      40,
+      262
+     ],
+     [
+      40,
+      236
+     ]
+    ],
+    [
+     [
+      100,
+      228
+     ],
+     [
+      100,
+      203
+     ]
+    ],
+    [
+     [
+      150,
+      180
+     ],
+     [
+      150,
+      165
+     ]
+    ],
+    [
+     [
+      240,
+      180
+     ],
+     [
+      240,
+      165
+     ]
+    ],
+    [
+     [
+      290,
+      228
+     ],
+     [
+      290,
+      203
+     ]
+    ],
+    [
+     [
+      345,
+      262
+     ],
+     [
+      345,
+      236
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "1": "rain on the footbridge"
+ }
+}

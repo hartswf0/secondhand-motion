@@ -1,0 +1,121 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.23,
+   0.93,
+   1.82,
+   2.69,
+   3.31,
+   3.27,
+   3.33,
+   3.46,
+   8.73,
+   8.72,
+   8.6,
+   7.71,
+   4.95,
+   0.86,
+   -2.15,
+   -6.99,
+   -2.39,
+   -2.39,
+   4.61,
+   10.78,
+   35.7,
+   37.41,
+   17.89,
+   17.89,
+   17.89
+  ],
+  "y": [
+   0.0,
+   0.46,
+   0.72,
+   0.56,
+   0.51,
+   -0.06,
+   -0.1,
+   -0.15,
+   -0.0,
+   -4.13,
+   -4.23,
+   -4.88,
+   -5.97,
+   -9.44,
+   -16.31,
+   -23.3,
+   -22.66,
+   -29.28,
+   -29.28,
+   -29.48,
+   -28.06,
+   -53.32,
+   -79.0,
+   -56.87,
+   -56.87,
+   -56.87
+  ],
+  "source": "phase correlation with the pig masked out"
+ },
+ "planes": [
+  {
+   "id": "fence",
+   "z": 8,
+   "label": "Fence",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "ground",
+   "z": 3,
+   "label": "Ground",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Pig"
+  }
+ ],
+ "objects": [
+  {
+   "id": "fence",
+   "plane": "fence",
+   "qd": "fence",
+   "box": [
+    -30,
+    -10,
+    420,
+    90
+   ],
+   "aspect": 5,
+   "strokes": 5
+  },
+  {
+   "id": "ground",
+   "plane": "ground",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a ground line; the edge of the trough wall the pig walks along",
+   "strokes": [
+    [
+     [
+      -40,
+      268
+     ],
+     [
+      430,
+      262
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "1": "broadside, walking left",
+  "8": "front leg forward, turn begins",
+  "11": "quarter turn toward us",
+  "18": "three-quarter approach",
+  "24": "near frontal, head down"
+ }
+}

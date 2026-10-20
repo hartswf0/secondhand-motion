@@ -1,0 +1,90 @@
+[
+ {
+  "id": "M2",
+  "value": 26,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   25,
+   27,
+   27,
+   26,
+   25,
+   25
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.48,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": false,
+  "design_typicality": 72
+ },
+ {
+  "id": "M3",
+  "value": 0.66,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.42
+ },
+ {
+  "id": "M6",
+  "value": 13.6,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "6 strokes, 38 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6582446130724864; scenery quickdraw:5691748049223680, quickdraw:5825824043302912",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "28/28",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "missing shot_page_url, rights_statement",
+  "unit": "",
+  "ok": false
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cflying saucer\u201d; motion smooth; follows the film: yes",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/flying-saucer-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The doodle is a wide horizontal saucer with a dome on top; the animation rotates it nearly upright and makes the body narrower. The dome, the rim and the row of small dots are kept.",
+  "evidence": "shots/flying-saucer-gwp/reviews/critic-1.json"
+ }
+]

@@ -1,0 +1,92 @@
+[
+ {
+  "id": "M2",
+  "value": 21,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   20,
+   20,
+   26,
+   20,
+   23,
+   30,
+   15,
+   15
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.86,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 31
+ },
+ {
+  "id": "M3",
+  "value": 0.36,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.19
+ },
+ {
+  "id": "M6",
+  "value": 20.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "10 strokes, 74 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5298401904164864; scenery quickdraw:6721509840125952, drawn by agent: no Quick, Draw! category is a ground line; the edge of the trough wall the pig walks along",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "26/26",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "missing shot_page_url, rights_statement",
+  "unit": "",
+  "ok": false
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cpig\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/pig-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The body, zigzag ear, spiral snout and stick legs match the doodle closely. In frames 6 to 8 the ear zigzag flattens and the front legs are redrawn in different positions.",
+  "evidence": "shots/pig-gwp/reviews/critic-1.json"
+ }
+]

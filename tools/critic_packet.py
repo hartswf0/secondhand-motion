@@ -39,5 +39,6 @@ for c in [a for a in sys.argv[1:] if not a.startswith("--")]:
     lk = S['cast'].get('look_keys') or [S['cast']['keys'][round(i * (len(S['cast']['keys']) - 1) / 3)] for i in range(4)]
     for i, k in enumerate(lk): keys.paste(frame(k), ((i % 2) * (W + 4), (i // 2) * (H + 4)))
     keys.save(d / 'critic' / 'keys.png')
-    shutil.copy(ROOT / f'batches/2026-10-20-selected-drawings/subjects/{c}/design.png', d / 'critic' / 'design.png')
+    dp = ROOT / f'batches/2026-10-20-selected-drawings/subjects/{c}/design.png'
+    shutil.copy(dp if dp.exists() else ROOT / 'shots' / c / 'design.png', d / 'critic' / 'design.png')
     print(c)

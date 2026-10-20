@@ -1,0 +1,90 @@
+[
+ {
+  "id": "M2",
+  "value": 6,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   6,
+   6,
+   6,
+   6,
+   6,
+   6
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 1.0,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 6
+ },
+ {
+  "id": "M3",
+  "value": 0.17,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.0
+ },
+ {
+  "id": "M6",
+  "value": 33.6,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "3 strokes, 31 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6522189199179776; scenery quickdraw:5308897780826112, quickdraw:4933548878331904, quickdraw:4790851043590144",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "39/39",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "missing shot_page_url, rights_statement",
+  "unit": "",
+  "ok": false
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ctornado\u201d; motion smooth; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/tornado-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The inverted cone, oval top loop and trailing hook stroke match the doodle almost exactly. There is no visible difference in construction.",
+  "evidence": "shots/tornado-gwp/reviews/critic-1.json"
+ }
+]

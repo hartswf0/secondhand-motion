@@ -1,0 +1,90 @@
+[
+ {
+  "id": "M2",
+  "value": 28,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   32,
+   27,
+   25,
+   25,
+   32,
+   27
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.73,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 26
+ },
+ {
+  "id": "M3",
+  "value": 0.55,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.42
+ },
+ {
+  "id": "M6",
+  "value": 18.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "5 strokes, 47 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:4702418350637056; scenery quickdraw:4686187870552064, quickdraw:5354287364308992, quickdraw:5224385105362944",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "25/25",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "missing shot_page_url, rights_statement",
+  "unit": "",
+  "ok": false
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ctractor\u201d; motion smooth; follows the film: yes",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/tractor-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The rectangle body, large round rear wheel, small front wheel and stack strokes match the doodle. At frame 7 the body tilts and the rear wheel overlaps the body more than in the doodle.",
+  "evidence": "shots/tractor-gwp/reviews/critic-1.json"
+ }
+]

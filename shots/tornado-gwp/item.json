@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0067",
+ "id": "tornado-gwp",
+ "kind": "shot",
+ "title": "Tornado, the Giraffe Walks Past Way",
+ "category": "tornado",
+ "wave": 2,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/tornado-gwp/cover.png",
+ "cover_alt": "shots/tornado-gwp/frames/f023.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/tornado-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#tornado-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/tornado_spec.json"
+  },
+  {
+   "label": "Draft keys",
+   "href": "shots/tornado/index.html"
+  }
+ ],
+ "tests": "shots/tornado-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 2"
+ ]
+}

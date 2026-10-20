@@ -301,6 +301,28 @@ at the 26th percentile of real rabbits). Likeness to the chosen doodle (M2b) pas
 <p>The next repairs the critics named: a connected turn for the dog instead of a squash and flip; the duck's
 and cat's head turning toward the viewer and to profile; the giraffe's jaw opening; the horse's head going
 down into the hay at a steady size; the helicopter's mast kept short and upright.</p>
+<h2>Wave 2: the full pipeline on ten new subjects (<code>shots/&lt;slug&gt;-gwp/</code>)</h2>
+<p>The ten wave-2 subjects had six draft keys each from an image model, approved as stills, but no frames,
+masks or motion. They now go through the same method, with three additions:</p>
+<ul>
+<li><strong>Frames, SAM and depth on GitHub's machines.</strong> The archive's media host is not reachable from the agent
+  workspace, so <code>.github/workflows/wave2-track.yml</code> runs <a href="../tools/wave2_track.py"><code>tools/wave2_track.py</code></a> per subject: the key interval
+  at 12 fps, Grounding DINO + SAM 2.1 (hiera-small) on every frame, Depth Anything V2 Small per frame. Each job
+  pushes its output to branch <code>wave2-track/&lt;slug&gt;</code>; <a href="../tools/wave2_import.py"><code>tools/wave2_import.py</code></a> brings it into <code>shots/&lt;slug&gt;-sam/</code>
+  and summarises depth (subject vs. top, middle and bottom of the scene). Two clips had a cut inside the
+  interval (fan's last frame, flying saucer's first) and are trimmed.</li>
+<li><strong>Drawing toward the generated keys.</strong> <code>tools/key_grid.py --target</code> draws each generated key (blue) over its
+  frame, the SAM outline (red) and the rig (black). The generated keys carry the pose and the doodle's
+  construction, but they were drawn on their own canvas: for the raccoon, flying saucer and mosquito they sit
+  well away from the subject and at the wrong size. So keys take pose from the generated drawing and place
+  and size from the silhouette. <code>rigs/fit_to_key.py</code> does a first automatic fit of the rig to a generated key
+  (chamfer distance), corrected by eye.</li>
+<li><strong>Plane depths from measured depth.</strong> A scenery plane with <code>z_from_depth</code> gets z = z(character) x subject
+  depth / band depth, so a far fence slides slower than near ground because the depth map says so.</li>
+</ul>
+<p>Rigid subjects (tractor, flying saucer, fan, tornado) are placed by two points and their wheels, blades or
+nothing spin. Rain and storm surf are a field of marks (<code>rigs/field.py</code>): the doodle's own strokes repeated,
+falling at a procedural speed (rain) or moved by the water's measured motion (surf).</p>
 </main>
 <script id="src" type="text/plain"># How Giraffe Walks Past was made
 
@@ -487,6 +509,30 @@ at the 26th percentile of real rabbits). Likeness to the chosen doodle (M2b) pas
 The next repairs the critics named: a connected turn for the dog instead of a squash and flip; the duck's
 and cat's head turning toward the viewer and to profile; the giraffe's jaw opening; the horse's head going
 down into the hay at a steady size; the helicopter's mast kept short and upright.
+
+## Wave 2: the full pipeline on ten new subjects (`shots/<slug>-gwp/`)
+
+The ten wave-2 subjects had six draft keys each from an image model, approved as stills, but no frames,
+masks or motion. They now go through the same method, with three additions:
+
+- **Frames, SAM and depth on GitHub's machines.** The archive's media host is not reachable from the agent
+  workspace, so `.github/workflows/wave2-track.yml` runs `tools/wave2_track.py` per subject: the key interval
+  at 12 fps, Grounding DINO + SAM 2.1 (hiera-small) on every frame, Depth Anything V2 Small per frame. Each job
+  pushes its output to branch `wave2-track/<slug>`; `tools/wave2_import.py` brings it into `shots/<slug>-sam/`
+  and summarises depth (subject vs. top, middle and bottom of the scene). Two clips had a cut inside the
+  interval (fan's last frame, flying saucer's first) and are trimmed.
+- **Drawing toward the generated keys.** `tools/key_grid.py --target` draws each generated key (blue) over its
+  frame, the SAM outline (red) and the rig (black). The generated keys carry the pose and the doodle's
+  construction, but they were drawn on their own canvas: for the raccoon, flying saucer and mosquito they sit
+  well away from the subject and at the wrong size. So keys take pose from the generated drawing and place
+  and size from the silhouette. `rigs/fit_to_key.py` does a first automatic fit of the rig to a generated key
+  (chamfer distance), corrected by eye.
+- **Plane depths from measured depth.** A scenery plane with `z_from_depth` gets z = z(character) x subject
+  depth / band depth, so a far fence slides slower than near ground because the depth map says so.
+
+Rigid subjects (tractor, flying saucer, fan, tornado) are placed by two points and their wheels, blades or
+nothing spin. Rain and storm surf are a field of marks (`rigs/field.py`): the doodle's own strokes repeated,
+falling at a procedural speed (rain) or moved by the water's measured motion (surf).
 </script>
 <script>
 (function(){const b=document.getElementById('copy');if(!b)return;

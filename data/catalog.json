@@ -6500,5 +6500,1346 @@
   },
   "href": "pages/helicopter-gwp.html",
   "gait": "hop"
+ },
+ {
+  "lot": "SM-0063",
+  "id": "pig-gwp",
+  "kind": "shot",
+  "title": "Pig, the Giraffe Walks Past Way",
+  "category": "pig",
+  "wave": 2,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/pig-gwp/cover.png",
+  "cover_alt": "shots/pig-gwp/frames/f014.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/pig-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#pig-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/pig_spec.json"
+   },
+   {
+    "label": "Draft keys",
+    "href": "shots/pig/index.html"
+   }
+  ],
+  "tests": "shots/pig-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 2"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 4,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 21,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.86,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.36,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 20.2,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "10 strokes, 74 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:5298401904164864; scenery quickdraw:6721509840125952, drawn by agent: no Quick, Draw! category is a ground line; the edge of the trough wall the pig walks along",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "26/26",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "missing shot_page_url, rights_statement",
+    "unit": "",
+    "ok": false
+   },
+   "J1": {
+    "value": "named \u201cpig\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/pig-gwp.html",
+  "gait": "goose step"
+ },
+ {
+  "lot": "SM-0064",
+  "id": "raccoon-gwp",
+  "kind": "shot",
+  "title": "Raccoon, the Giraffe Walks Past Way",
+  "category": "raccoon",
+  "wave": 2,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/raccoon-gwp/cover.png",
+  "cover_alt": "shots/raccoon-gwp/frames/f018.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/raccoon-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#raccoon-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/raccoon_spec.json"
+   },
+   {
+    "label": "Draft keys",
+    "href": "shots/raccoon/index.html"
+   }
+  ],
+  "tests": "shots/raccoon-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 2"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 4,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 27,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.84,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.43,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 9.9,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "14 strokes, 78 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:5643141870780416; scenery quickdraw:6604181471232000, quickdraw:5167336065597440, quickdraw:4824051610550272, drawn by agent: no Quick, Draw! category is a path edge; the edge of the dirt path",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "36/36",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "missing shot_page_url, rights_statement",
+    "unit": "",
+    "ok": false
+   },
+   "J1": {
+    "value": "named \u201craccoon\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/raccoon-gwp.html",
+  "gait": "shuffle"
+ },
+ {
+  "lot": "SM-0065",
+  "id": "tractor-gwp",
+  "kind": "shot",
+  "title": "Tractor, the Giraffe Walks Past Way",
+  "category": "tractor",
+  "wave": 2,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/tractor-gwp/cover.png",
+  "cover_alt": "shots/tractor-gwp/frames/f015.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/tractor-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#tractor-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/tractor_spec.json"
+   },
+   {
+    "label": "Draft keys",
+    "href": "shots/tractor/index.html"
+   }
+  ],
+  "tests": "shots/tractor-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 2"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 4,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 28,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.73,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.55,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 18.0,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "5 strokes, 47 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:4702418350637056; scenery quickdraw:4686187870552064, quickdraw:5354287364308992, quickdraw:5224385105362944",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "25/25",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "missing shot_page_url, rights_statement",
+    "unit": "",
+    "ok": false
+   },
+   "J1": {
+    "value": "named \u201ctractor\u201d; motion smooth; follows the film: yes",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/tractor-gwp.html",
+  "gait": "sprint"
+ },
+ {
+  "lot": "SM-0066",
+  "id": "fan-gwp",
+  "kind": "shot",
+  "title": "Fan, the Giraffe Walks Past Way",
+  "category": "fan",
+  "wave": 2,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/fan-gwp/cover.png",
+  "cover_alt": "shots/fan-gwp/frames/f016.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/fan-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#fan-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/fan_spec.json"
+   },
+   {
+    "label": "Draft keys",
+    "href": "shots/fan/index.html"
+   }
+  ],
+  "tests": "shots/fan-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 2"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 4,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 3,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.91,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.63,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 5.1,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "8 strokes, 115 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:6120310522773504; scenery quickdraw:5535439437955072, drawn by agent: no Quick, Draw! category is a table edge; the front edge of the table",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "38/38",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "missing shot_page_url, rights_statement",
+    "unit": "",
+    "ok": false
+   },
+   "J1": {
+    "value": "named \u201celectric desk fan\u201d; motion smooth; follows the film: yes",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/fan-gwp.html",
+  "gait": "jelly"
+ },
+ {
+  "lot": "SM-0067",
+  "id": "tornado-gwp",
+  "kind": "shot",
+  "title": "Tornado, the Giraffe Walks Past Way",
+  "category": "tornado",
+  "wave": 2,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/tornado-gwp/cover.png",
+  "cover_alt": "shots/tornado-gwp/frames/f023.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/tornado-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#tornado-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/tornado_spec.json"
+   },
+   {
+    "label": "Draft keys",
+    "href": "shots/tornado/index.html"
+   }
+  ],
+  "tests": "shots/tornado-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 2"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 4,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 6,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 1.0,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.17,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 33.6,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "3 strokes, 31 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:6522189199179776; scenery quickdraw:5308897780826112, quickdraw:4933548878331904, quickdraw:4790851043590144",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "39/39",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "missing shot_page_url, rights_statement",
+    "unit": "",
+    "ok": false
+   },
+   "J1": {
+    "value": "named \u201ctornado\u201d; motion smooth; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/tornado-gwp.html",
+  "gait": "splits"
+ },
+ {
+  "lot": "SM-0068",
+  "id": "flying-saucer-gwp",
+  "kind": "shot",
+  "title": "Flying saucer, the Giraffe Walks Past Way",
+  "category": "flying-saucer",
+  "wave": 2,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/flying-saucer-gwp/cover.png",
+  "cover_alt": "shots/flying-saucer-gwp/frames/f007.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/flying-saucer-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#flying-saucer-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/flying_saucer_spec.json"
+   },
+   {
+    "label": "Draft keys",
+    "href": "shots/flying-saucer/index.html"
+   }
+  ],
+  "tests": "shots/flying-saucer-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 2"
+  ],
+  "t": {
+   "pass": 7,
+   "fail": 5,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 26,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.48,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.66,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 13.6,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "6 strokes, 38 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:6582446130724864; scenery quickdraw:5691748049223680, quickdraw:5825824043302912",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "28/28",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "missing shot_page_url, rights_statement",
+    "unit": "",
+    "ok": false
+   },
+   "J1": {
+    "value": "named \u201cflying saucer\u201d; motion smooth; follows the film: yes",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/flying-saucer-gwp.html",
+  "gait": "heel click"
+ },
+ {
+  "lot": "SM-0069",
+  "id": "mosquito-gwp",
+  "kind": "shot",
+  "title": "Mosquito, the Giraffe Walks Past Way",
+  "category": "mosquito",
+  "wave": 2,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/mosquito-gwp/cover.png",
+  "cover_alt": "shots/mosquito-gwp/frames/f025.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/mosquito-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#mosquito-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/mosquito_spec.json"
+   },
+   {
+    "label": "Draft keys",
+    "href": "shots/mosquito/index.html"
+   }
+  ],
+  "tests": "shots/mosquito-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 2"
+  ],
+  "t": {
+   "pass": 9,
+   "fail": 3,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 92,
+    "unit": "percentile among real doodles of the category",
+    "ok": true
+   },
+   "M2b": {
+    "value": 0.81,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.5,
+    "unit": "fit to the SAM silhouette, frames with a mask",
+    "ok": false
+   },
+   "M6": {
+    "value": 8.6,
+    "unit": "px jerk (drawing centre)",
+    "ok": false
+   },
+   "T3": {
+    "value": "8 strokes, 46 vertices, every frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:6165377341980672; scenery quickdraw:5354287364308992, drawn by agent: no Quick, Draw! category is the edge of an arm; one line along it",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "62/62",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "missing shot_page_url, rights_statement",
+    "unit": "",
+    "ok": false
+   },
+   "J1": {
+    "value": "named \u201cmosquito\u201d; motion smooth; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/mosquito-gwp.html",
+  "gait": "skip"
+ },
+ {
+  "lot": "SM-0070",
+  "id": "rain-gwp",
+  "kind": "shot",
+  "title": "Rain, the Giraffe Walks Past Way",
+  "category": "rain",
+  "wave": 2,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/rain-gwp/cover.png",
+  "cover_alt": "shots/rain-gwp/frames/f033.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/rain-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#rain-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/rain_spec.json"
+   },
+   {
+    "label": "Draft keys",
+    "href": "shots/rain/index.html"
+   }
+  ],
+  "tests": "shots/rain-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 2"
+  ],
+  "t": {
+   "pass": 7,
+   "fail": 3,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 0,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.0,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": false
+   },
+   "M3": {
+    "value": "not applicable",
+    "unit": "a field of marks has no single silhouette",
+    "ok": null
+   },
+   "M6": {
+    "value": "not applicable",
+    "unit": "marks wrap at the frame edge",
+    "ok": null
+   },
+   "T3": {
+    "value": "the doodle's 9 strokes repeated as marks, 171-196 per frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:5897326906310656; scenery quickdraw:4905021353230336, quickdraw:5177445445533696, drawn by agent: the Quick, Draw! fences are drawn flat to the page; the footbridge's two rails run in perspective to a point, so the agent drew them as two pairs of lines with posts",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "55/55",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "missing shot_page_url, rights_statement",
+    "unit": "",
+    "ok": false
+   },
+   "J1": {
+    "value": "named \u201crain\u201d; motion jumbled; follows the film: yes",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/rain-gwp.html",
+  "gait": "sit"
+ },
+ {
+  "lot": "SM-0071",
+  "id": "hurricane-gwp",
+  "kind": "shot",
+  "title": "Hurricane, the Giraffe Walks Past Way",
+  "category": "hurricane",
+  "wave": 2,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "Wave 2 through the full pipeline: frames, SAM 2.1 masks and depth computed on GitHub; the chosen doodle itself as the rig, posed toward the six generated keys on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+  "cover": "shots/hurricane-gwp/cover.png",
+  "cover_alt": "shots/hurricane-gwp/frames/f016.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/hurricane-gwp.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#hurricane-gwp"
+   },
+   {
+    "label": "Rig spec",
+    "href": "rigs/hurricane_spec.json"
+   },
+   {
+    "label": "Draft keys",
+    "href": "shots/hurricane/index.html"
+   }
+  ],
+  "tests": "shots/hurricane-gwp/tests.json",
+  "tags": [
+   "SAM",
+   "depth",
+   "doodle rig",
+   "wave 2"
+  ],
+  "t": {
+   "pass": 7,
+   "fail": 3,
+   "total": 20
+  },
+  "r": {
+   "M2": {
+    "value": 1,
+    "unit": "percentile among real doodles of the category",
+    "ok": false
+   },
+   "M2b": {
+    "value": 0.12,
+    "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+    "ok": false
+   },
+   "M3": {
+    "value": "not applicable",
+    "unit": "a field of marks has no single silhouette",
+    "ok": null
+   },
+   "M6": {
+    "value": "not applicable",
+    "unit": "marks wrap at the frame edge",
+    "ok": null
+   },
+   "T3": {
+    "value": "the doodle's 7 strokes repeated as marks, 11-20 per frame",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery drawn once",
+    "ok": true
+   },
+   "S2": {
+    "value": "rig quickdraw:4791481996935168; scenery quickdraw:6230207394480128",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "39/39",
+    "unit": "frames",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S6": {
+    "value": "missing shot_page_url, rights_statement",
+    "unit": "",
+    "ok": false
+   },
+   "J1": {
+    "value": "named \u201cwaves\u201d; motion broken; follows the film: partly",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/hurricane-gwp.html",
+  "gait": "walk"
  }
 ]

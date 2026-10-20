@@ -1,0 +1,90 @@
+[
+ {
+  "id": "M2",
+  "value": 27,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   27,
+   25,
+   31,
+   30,
+   26,
+   25
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.84,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 16
+ },
+ {
+  "id": "M3",
+  "value": 0.43,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.19
+ },
+ {
+  "id": "M6",
+  "value": 9.9,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "14 strokes, 78 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5643141870780416; scenery quickdraw:6604181471232000, quickdraw:5167336065597440, quickdraw:4824051610550272, drawn by agent: no Quick, Draw! category is a path edge; the edge of the dirt path",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "36/36",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "missing shot_page_url, rights_statement",
+  "unit": "",
+  "ok": false
+ },
+ {
+  "id": "J1",
+  "value": "named \u201craccoon\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/raccoon-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The round face with smile, small ear, oval body, stick legs and banded tail match the doodle. The head is smaller relative to the body than in the doodle in frames 3 and 4.",
+  "evidence": "shots/raccoon-gwp/reviews/critic-1.json"
+ }
+]
