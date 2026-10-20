@@ -3,9 +3,9 @@ choices made by looking at shots/<slug>/survey/sheet.jpg and doodles.jpg.
 
 usage: python3 tools/plan_subject.py <slug> --interval A B --label "a lion." --doodle N --why "..." [--step 0.5]
        python3 tools/plan_subject.py <slug> --reject "why the clip cannot be used"
-Key times run from A to B every --step seconds (B included). --doodle is the number printed on doodles.jpg.
+Key times run from A to B every --step seconds (B included). --doodle is the number printed on doodles.jpg (counted from 1).
 """
-import argparse, json
+import argparse, json, sys
 from pathlib import Path
 from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parent.parent
@@ -18,10 +18,12 @@ def main():
     W = json.load(open(ROOT / 'data' / 'wave4.json')); S = next(s for s in W['subjects'] if s['slug'] == a.slug); d = ROOT / 'shots' / a.slug
     if a.reject:
         (d / 'rejected.txt').write_text(a.reject + '\n'); print(a.slug, 'rejected'); return
-    A, B = a.interval; n = int(round((B - A) / a.step)); times = [round(A + i * a.step, 3) for i in range(n + 1)]
-    bank = json.load(open(d / 'survey' / 'doodles.json')); dr = bank['drawings'][a.doodle]
+    A, B = a.interval; n = int(round((B - A) / a.step))
+    if abs(A + n * a.step - B) > 1e-6: sys.exit(f'interval {A}-{B} is not a whole number of {a.step} s steps')
+    times = [round(A + i * a.step, 3) for i in range(n + 1)]
+    bank = json.load(open(d / 'survey' / 'doodles.json')); dr = bank['drawings'][a.doodle - 1]   # the sheet numbers its doodles from 1
     plan = {'slug': a.slug, 'category': S['category'], 'video_url': S['video_url'], 'clip_id': S['clip_id'], 'interval': [A, B], 'key_times': times,
-            'label': a.label, 'why': a.why, 'doodle_key_id': dr['key_id'], 'doodle_bank_index': a.doodle}
+            'label': a.label, 'why': a.why, 'doodle_key_id': dr['key_id'], 'doodle_bank_index': a.doodle - 1, 'doodle_sheet_number': a.doodle}
     json.dump(plan, open(d / 'plan.json', 'w'), indent=1)
     src = {k: S[k] for k in ('clip_id', 'source_id', 'source_title', 'source_year', 'video_url', 'shot_page_url', 'source_page_url', 'original_source_url', 'rights_statement')}
     src.update(start_seconds=A, end_seconds=B, category=S['category'], why_this_clip=a.why, pool='production/data/candidates-100.json')

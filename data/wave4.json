@@ -1,6 +1,6 @@
 {
  "wave": 4,
- "note": "Twenty-five more subjects from the 100-clip pool (production/data/candidates-100.json), chosen for something that moves in the clip. Clip and interval are reviewed per subject from the survey before any tracking; a subject whose clip does not show it is rejected and replaced from the pool.",
+ "note": "Twenty-five more subjects from the 100-clip pool (production/data/candidates-100.json), chosen for something that moves in the clip. Clip and interval are reviewed per subject from the survey before any tracking; a subject whose clip does not show it is rejected and replaced from the pool. Replacements come from production/data/candidate-reserves.json.",
  "subjects": [
   {
    "slug": "ant",
@@ -18,7 +18,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/ant/plan.json"
+   "plan": "shots/ant/plan.json",
+   "surveyed": true
   },
   {
    "slug": "dragon",
@@ -36,7 +37,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/dragon/plan.json"
+   "plan": "shots/dragon/plan.json",
+   "surveyed": true
   },
   {
    "slug": "lion",
@@ -54,7 +56,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/lion/plan.json"
+   "plan": "shots/lion/plan.json",
+   "surveyed": true
   },
   {
    "slug": "motorbike",
@@ -72,7 +75,9 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/motorbike/plan.json"
+   "plan": "shots/motorbike/plan.json",
+   "rejected": "The clip shows only close-ups of a spinning motorcycle wheel and a rider's helmeted head, never the whole motorbike as one object.",
+   "surveyed": true
   },
   {
    "slug": "sea-turtle",
@@ -90,7 +95,9 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/sea-turtle/plan.json"
+   "plan": "shots/sea-turtle/plan.json",
+   "rejected": "The sea turtle swims in only one shot, from a dissolve at 7.25 s to a dissolve at 9.0 s, which is shorter than the 2.0 s minimum interval.",
+   "surveyed": true
   },
   {
    "slug": "speedboat",
@@ -108,7 +115,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/speedboat/plan.json"
+   "plan": "shots/speedboat/plan.json",
+   "surveyed": true
   },
   {
    "slug": "parachute",
@@ -126,7 +134,9 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/parachute/plan.json"
+   "plan": "shots/parachute/plan.json",
+   "rejected": "The clip shows the inside of a hot-air balloon envelope seen from below, not a parachute.",
+   "surveyed": true
   },
   {
    "slug": "firetruck",
@@ -144,7 +154,9 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/firetruck/plan.json"
+   "plan": "shots/firetruck/plan.json",
+   "rejected": "The clip is a static close-up of part of a red truck cab and windshield, so the whole fire truck is never in frame and nothing moves.",
+   "surveyed": true
   },
   {
    "slug": "van",
@@ -162,7 +174,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/van/plan.json"
+   "plan": "shots/van/plan.json",
+   "surveyed": true
   },
   {
    "slug": "cloud",
@@ -180,7 +193,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/cloud/plan.json"
+   "plan": "shots/cloud/plan.json",
+   "surveyed": true
   },
   {
    "slug": "ocean",
@@ -198,7 +212,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/ocean/plan.json"
+   "plan": "shots/ocean/plan.json",
+   "surveyed": true
   },
   {
    "slug": "flower",
@@ -216,7 +231,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/flower/plan.json"
+   "plan": "shots/flower/plan.json",
+   "surveyed": true
   },
   {
    "slug": "lighthouse",
@@ -234,7 +250,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/lighthouse/plan.json"
+   "plan": "shots/lighthouse/plan.json",
+   "surveyed": true
   },
   {
    "slug": "alarm-clock",
@@ -252,7 +269,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/alarm-clock/plan.json"
+   "plan": "shots/alarm-clock/plan.json",
+   "surveyed": true
   },
   {
    "slug": "cello",
@@ -270,7 +288,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/cello/plan.json"
+   "plan": "shots/cello/plan.json",
+   "surveyed": true
   },
   {
    "slug": "guitar",
@@ -288,7 +307,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/guitar/plan.json"
+   "plan": "shots/guitar/plan.json",
+   "surveyed": true
   },
   {
    "slug": "saxophone",
@@ -306,7 +326,9 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/saxophone/plan.json"
+   "plan": "shots/saxophone/plan.json",
+   "rejected": "The clip shows a parade, an astronaut portrait and rocket launches, and no saxophone appears in any frame.",
+   "surveyed": true
   },
   {
    "slug": "trumpet",
@@ -324,7 +346,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/trumpet/plan.json"
+   "plan": "shots/trumpet/plan.json",
+   "surveyed": true
   },
   {
    "slug": "saw",
@@ -342,7 +365,9 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/saw/plan.json"
+   "plan": "shots/saw/plan.json",
+   "rejected": "The clip is a close-up of a machine saw whose blade is hidden under a black guard while material feeds past, so no saw shape is visible to trace and it does not match the hand-saw doodles.",
+   "surveyed": true
   },
   {
    "slug": "shovel",
@@ -360,7 +385,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/shovel/plan.json"
+   "plan": "shots/shovel/plan.json",
+   "surveyed": true
   },
   {
    "slug": "broom",
@@ -378,7 +404,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/broom/plan.json"
+   "plan": "shots/broom/plan.json",
+   "surveyed": true
   },
   {
    "slug": "paintbrush",
@@ -396,7 +423,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/paintbrush/plan.json"
+   "plan": "shots/paintbrush/plan.json",
+   "surveyed": true
   },
   {
    "slug": "light-bulb",
@@ -414,7 +442,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/light-bulb/plan.json"
+   "plan": "shots/light-bulb/plan.json",
+   "surveyed": true
   },
   {
    "slug": "aircraft-carrier",
@@ -432,7 +461,8 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/aircraft-carrier/plan.json"
+   "plan": "shots/aircraft-carrier/plan.json",
+   "surveyed": true
   },
   {
    "slug": "camera",
@@ -450,7 +480,198 @@
    "rights_statement": "public_domain",
    "pool_status": "",
    "interval_hint": null,
-   "plan": "shots/camera/plan.json"
+   "plan": "shots/camera/plan.json",
+   "surveyed": true
+  },
+  {
+   "slug": "frog",
+   "category": "frog",
+   "clip_id": "4c834dde-8dc5-5828-a7e2-153be5d0f03b",
+   "source_id": "ac8a9aed-52c4-5df8-adcc-2e1a8f6bfcfa",
+   "source_title": "Andy's Animal Alphabet",
+   "source_year": "1950",
+   "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/ac8a9aed-52c4-5df8-adcc-2e1a8f6bfcfa/v4-conditional-luna-1/clips/4c834dde-8dc5-5828-a7e2-153be5d0f03b.mp4",
+   "shot_page_url": "https://www.movingimagearchive.com/sources/andy-s-animal-alphabet-ac8a9aed?clip=4c834dde-8dc5-5828-a7e2-153be5d0f03b",
+   "source_page_url": "https://www.movingimagearchive.com/sources/andy-s-animal-alphabet-ac8a9aed",
+   "original_source_url": "https://archive.org/details/AndysAnimalA",
+   "start_seconds": 160.46,
+   "end_seconds": 169.136,
+   "rights_statement": "public_domain",
+   "pool_status": "reserve",
+   "interval_hint": null,
+   "plan": "shots/frog/plan.json",
+   "pool": "production/data/candidate-reserves.json"
+  },
+  {
+   "slug": "squirrel",
+   "category": "squirrel",
+   "clip_id": "10c31b6d-c4d8-56ed-880d-21cb1d32f92d",
+   "source_id": "3f71691f-bbe6-52f3-9c11-8654de8cb76b",
+   "source_title": "Tree Buds And Snow",
+   "source_year": "2007",
+   "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/3f71691f-bbe6-52f3-9c11-8654de8cb76b/v4-conditional-luna-1/clips/10c31b6d-c4d8-56ed-880d-21cb1d32f92d.mp4",
+   "shot_page_url": "https://www.movingimagearchive.com/sources/tree-buds-and-snow-3f71691f?clip=10c31b6d-c4d8-56ed-880d-21cb1d32f92d",
+   "source_page_url": "https://www.movingimagearchive.com/sources/tree-buds-and-snow-3f71691f",
+   "original_source_url": "https://archive.org/details/C.E.PriceTreeBudsAndSnow",
+   "start_seconds": 0.0,
+   "end_seconds": 18.686,
+   "rights_statement": "public_domain",
+   "pool_status": "reserve",
+   "interval_hint": null,
+   "plan": "shots/squirrel/plan.json",
+   "pool": "production/data/candidate-reserves.json"
+  },
+  {
+   "slug": "swan",
+   "category": "swan",
+   "clip_id": "299e589e-f689-595b-9f3c-e5537e5c84a6",
+   "source_id": "5857854b-b67d-5388-8b29-3fd017bdf156",
+   "source_title": "Muscatatuck National Wildlife Refuge",
+   "source_year": "2005",
+   "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/5857854b-b67d-5388-8b29-3fd017bdf156/v4-conditional-luna-1/clips/299e589e-f689-595b-9f3c-e5537e5c84a6.mp4",
+   "shot_page_url": "https://www.movingimagearchive.com/sources/muscatatuck-national-wildlife-refuge-5857854b?clip=299e589e-f689-595b-9f3c-e5537e5c84a6",
+   "source_page_url": "https://www.movingimagearchive.com/sources/muscatatuck-national-wildlife-refuge-5857854b",
+   "original_source_url": "https://archive.org/details/gov.fws.aws.1.8",
+   "start_seconds": 355.022,
+   "end_seconds": 362.129,
+   "rights_statement": "public_domain",
+   "pool_status": "reserve",
+   "interval_hint": null,
+   "plan": "shots/swan/plan.json",
+   "pool": "production/data/candidate-reserves.json"
+  },
+  {
+   "slug": "crab",
+   "category": "crab",
+   "clip_id": "ad3d2427-10cc-5a8d-a28f-95548f6de597",
+   "source_id": "9223513b-74ee-5cec-8cff-e60519d2faab",
+   "source_title": "Aransas and Matagorda Island National Wildlife Refuges",
+   "source_year": "2005",
+   "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/9223513b-74ee-5cec-8cff-e60519d2faab/v4-conditional-luna-1/clips/ad3d2427-10cc-5a8d-a28f-95548f6de597.mp4",
+   "shot_page_url": "https://www.movingimagearchive.com/sources/aransas-and-matagorda-island-national-wildlife-refuges-9223513b?clip=ad3d2427-10cc-5a8d-a28f-95548f6de597",
+   "source_page_url": "https://www.movingimagearchive.com/sources/aransas-and-matagorda-island-national-wildlife-refuges-9223513b",
+   "original_source_url": "https://archive.org/details/gov.fws.aws.1.2",
+   "start_seconds": 0.0,
+   "end_seconds": 8.775,
+   "rights_statement": "public_domain",
+   "pool_status": "reserve",
+   "interval_hint": null,
+   "plan": "shots/crab/plan.json",
+   "pool": "production/data/candidate-reserves.json"
+  },
+  {
+   "slug": "elephant",
+   "category": "elephant",
+   "clip_id": "9e4227b5-cd9a-5b6b-8b5a-b1c54a04d0b4",
+   "source_id": "4d9da8fe-2d9c-56d1-babd-a7114c9db022",
+   "source_title": "Henry Ford's Mirror of America (Part I)",
+   "source_year": "1962",
+   "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/4d9da8fe-2d9c-56d1-babd-a7114c9db022/v4-conditional-luna-1/clips/9e4227b5-cd9a-5b6b-8b5a-b1c54a04d0b4.mp4",
+   "shot_page_url": "https://www.movingimagearchive.com/sources/henry-ford-s-mirror-of-america-part-i-4d9da8fe?clip=9e4227b5-cd9a-5b6b-8b5a-b1c54a04d0b4",
+   "source_page_url": "https://www.movingimagearchive.com/sources/henry-ford-s-mirror-of-america-part-i-4d9da8fe",
+   "original_source_url": "https://archive.org/details/HenryFor1962",
+   "start_seconds": 576.91,
+   "end_seconds": 592.693,
+   "rights_statement": "public_domain",
+   "pool_status": "reserve",
+   "interval_hint": null,
+   "plan": "shots/elephant/plan.json",
+   "pool": "production/data/candidate-reserves.json"
+  },
+  {
+   "slug": "penguin",
+   "category": "penguin",
+   "clip_id": "82f5e1f7-1797-5ba8-aa38-1e5e90cc5dc1",
+   "source_id": "988e29a4-f001-5a24-b4cd-c5d4c6f7e534",
+   "source_title": "The Snow Queen (Animation)",
+   "source_year": "1959",
+   "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/988e29a4-f001-5a24-b4cd-c5d4c6f7e534/v4-conditional-luna-1/clips/82f5e1f7-1797-5ba8-aa38-1e5e90cc5dc1.mp4",
+   "shot_page_url": "https://www.movingimagearchive.com/sources/the-snow-queen-animation-988e29a4?clip=82f5e1f7-1797-5ba8-aa38-1e5e90cc5dc1",
+   "source_page_url": "https://www.movingimagearchive.com/sources/the-snow-queen-animation-988e29a4",
+   "original_source_url": "https://archive.org/details/the_snow_queen_1959_animation",
+   "start_seconds": 3561.53,
+   "end_seconds": 3570.8,
+   "rights_statement": "public_domain",
+   "pool_status": "reserve",
+   "interval_hint": null,
+   "plan": "shots/penguin/plan.json",
+   "pool": "production/data/candidate-reserves.json"
+  },
+  {
+   "slug": "parrot",
+   "category": "parrot",
+   "clip_id": "a49e1a7c-0d91-5f42-9672-32d63e7a24b4",
+   "source_id": "3de758fe-c617-503e-b528-8e19604cb13d",
+   "source_title": "Mooch Goes to Hollywood",
+   "source_year": "1971",
+   "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/3de758fe-c617-503e-b528-8e19604cb13d/v4-conditional-luna-1/clips/a49e1a7c-0d91-5f42-9672-32d63e7a24b4.mp4",
+   "shot_page_url": "https://www.movingimagearchive.com/sources/mooch-goes-to-hollywood-3de758fe?clip=a49e1a7c-0d91-5f42-9672-32d63e7a24b4",
+   "source_page_url": "https://www.movingimagearchive.com/sources/mooch-goes-to-hollywood-3de758fe",
+   "original_source_url": "https://archive.org/details/MoochGoestoHollywood",
+   "start_seconds": 606.974,
+   "end_seconds": 622.523,
+   "rights_statement": "public_domain",
+   "pool_status": "reserve",
+   "interval_hint": null,
+   "plan": "shots/parrot/plan.json",
+   "pool": "production/data/candidate-reserves.json"
+  },
+  {
+   "slug": "rhinoceros",
+   "category": "rhinoceros",
+   "clip_id": "16df5c86-d395-55d7-b373-a6e0fc0525bc",
+   "source_id": "ac8a9aed-52c4-5df8-adcc-2e1a8f6bfcfa",
+   "source_title": "Andy's Animal Alphabet",
+   "source_year": "1950",
+   "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/ac8a9aed-52c4-5df8-adcc-2e1a8f6bfcfa/v4-conditional-luna-1/clips/16df5c86-d395-55d7-b373-a6e0fc0525bc.mp4",
+   "shot_page_url": "https://www.movingimagearchive.com/sources/andy-s-animal-alphabet-ac8a9aed?clip=16df5c86-d395-55d7-b373-a6e0fc0525bc",
+   "source_page_url": "https://www.movingimagearchive.com/sources/andy-s-animal-alphabet-ac8a9aed",
+   "original_source_url": "https://archive.org/details/AndysAnimalA",
+   "start_seconds": 401.201,
+   "end_seconds": 417.684,
+   "rights_statement": "public_domain",
+   "pool_status": "reserve",
+   "interval_hint": null,
+   "plan": "shots/rhinoceros/plan.json",
+   "pool": "production/data/candidate-reserves.json"
+  },
+  {
+   "slug": "camel",
+   "category": "camel",
+   "clip_id": "7fc0a4be-6f19-5fcc-85a5-c8d706c36e89",
+   "source_id": "eca4afbe-dd5d-5902-b5d5-6c351964055d",
+   "source_title": "Oil Across Arabia",
+   "source_year": "1950",
+   "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/eca4afbe-dd5d-5902-b5d5-6c351964055d/v3-ffmpeg-openclip-1/clips/7fc0a4be-6f19-5fcc-85a5-c8d706c36e89.mp4",
+   "shot_page_url": "https://www.movingimagearchive.com/sources/oil-across-arabia-eca4afbe?clip=7fc0a4be-6f19-5fcc-85a5-c8d706c36e89",
+   "source_page_url": "https://www.movingimagearchive.com/sources/oil-across-arabia-eca4afbe",
+   "original_source_url": "https://archive.org/details/gov.archives.arc.645177",
+   "start_seconds": 2027.69,
+   "end_seconds": 2034.83,
+   "rights_statement": "public_domain",
+   "pool_status": "reserve",
+   "interval_hint": null,
+   "plan": "shots/camel/plan.json",
+   "pool": "production/data/candidate-reserves.json"
+  },
+  {
+   "slug": "snake",
+   "category": "snake",
+   "clip_id": "8b702d41-8b6f-5a9d-84cd-254e3da2ba1e",
+   "source_id": "22e0ce6f-52a2-5cfd-8419-f15be8416b02",
+   "source_title": "Gateways to the Mind",
+   "source_year": "1958",
+   "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/22e0ce6f-52a2-5cfd-8419-f15be8416b02/v4-conditional-luna-1/clips/8b702d41-8b6f-5a9d-84cd-254e3da2ba1e.mp4",
+   "shot_page_url": "https://www.movingimagearchive.com/sources/gateways-to-the-mind-22e0ce6f?clip=8b702d41-8b6f-5a9d-84cd-254e3da2ba1e",
+   "source_page_url": "https://www.movingimagearchive.com/sources/gateways-to-the-mind-22e0ce6f",
+   "original_source_url": "https://archive.org/details/gateways_to_the_mind",
+   "start_seconds": 981.782,
+   "end_seconds": 995.796,
+   "rights_statement": "public_domain",
+   "pool_status": "reserve",
+   "interval_hint": null,
+   "plan": "shots/snake/plan.json",
+   "pool": "production/data/candidate-reserves.json"
   }
  ]
 }
