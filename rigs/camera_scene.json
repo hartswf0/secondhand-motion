@@ -1,0 +1,284 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   -0.0,
+   -0.34,
+   -0.47,
+   -0.59,
+   -0.5,
+   -0.41,
+   -0.48,
+   -0.52,
+   -0.41,
+   -0.14,
+   0.05,
+   0.05,
+   -0.14,
+   -0.29,
+   -0.31,
+   -0.19,
+   -0.02,
+   0.05,
+   -0.1,
+   -0.23,
+   -0.31,
+   -0.24,
+   -0.33,
+   -0.42,
+   -0.56,
+   -0.56,
+   -0.39,
+   -0.25,
+   -0.25,
+   -0.42,
+   -0.41,
+   -0.2,
+   -0.06,
+   -0.17,
+   -0.42,
+   -0.54,
+   -0.39,
+   -0.23
+  ],
+  "y": [
+   -0.0,
+   -0.26,
+   -0.39,
+   -0.74,
+   -0.94,
+   -1.17,
+   -1.38,
+   -1.43,
+   -1.47,
+   -1.21,
+   -0.95,
+   -0.65,
+   -0.51,
+   -0.56,
+   -0.65,
+   -0.83,
+   -1.18,
+   -1.5,
+   -1.7,
+   -1.51,
+   -1.25,
+   -0.78,
+   -0.36,
+   0.0,
+   -0.19,
+   -0.71,
+   -1.5,
+   -1.96,
+   -2.04,
+   -1.94,
+   -1.9,
+   -2.01,
+   -1.86,
+   -1.75,
+   -1.72,
+   -1.83,
+   -2.13,
+   -2.23
+  ],
+  "source": "phase correlation of each whole frame against frame 1 (the camera face fills the frame, so this is the drift of the camera face), smoothed over 3 frames; frame 0 is the end of the previous shot and is held at 0. camera.json from the footage was not used because it jumps 6 px at frame 28 where the frames show no such jump."
+ },
+ "planes": [
+  {
+   "id": "body",
+   "z": 2,
+   "label": "Side plate of the camera",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "low",
+   "z": 2,
+   "label": "Knob and lever below the lens",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Camera"
+  }
+ ],
+ "objects": [
+  {
+   "id": "knob",
+   "plane": "low",
+   "qd": "wheel",
+   "box": [
+    172,
+    242,
+    220,
+    288
+   ],
+   "aspect": 1.0,
+   "strokes": 2
+  },
+  {
+   "id": "lever",
+   "plane": "low",
+   "class": "line",
+   "why": "no Quick, Draw! category is a curved lever plate; one curve drawn along its upper edge",
+   "strokes": [
+    [
+     [
+      262,
+      222
+     ],
+     [
+      290,
+      232
+     ],
+     [
+      318,
+      252
+     ],
+     [
+      338,
+      276
+     ],
+     [
+      346,
+      290
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "plate",
+   "plane": "body",
+   "class": "line",
+   "why": "no Quick, Draw! category is the camera's side plate; two vertical lines for its edge and two boxes for the latch blocks on it",
+   "strokes": [
+    [
+     [
+      304,
+      0
+     ],
+     [
+      304,
+      250
+     ]
+    ],
+    [
+     [
+      318,
+      62
+     ],
+     [
+      372,
+      62
+     ],
+     [
+      372,
+      112
+     ],
+     [
+      318,
+      112
+     ],
+     [
+      318,
+      62
+     ]
+    ],
+    [
+     [
+      316,
+      142
+     ],
+     [
+      374,
+      142
+     ],
+     [
+      374,
+      214
+     ],
+     [
+      316,
+      214
+     ],
+     [
+      316,
+      142
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "screw",
+   "plane": "body",
+   "class": "line",
+   "why": "no Quick, Draw! category is a screw head; a small circle with one slot",
+   "strokes": [
+    [
+     [
+      26.0,
+      68.0
+     ],
+     [
+      24.5,
+      72.7
+     ],
+     [
+      20.5,
+      75.6
+     ],
+     [
+      15.5,
+      75.6
+     ],
+     [
+      11.5,
+      72.7
+     ],
+     [
+      10.0,
+      68.0
+     ],
+     [
+      11.5,
+      63.3
+     ],
+     [
+      15.5,
+      60.4
+     ],
+     [
+      20.5,
+      60.4
+     ],
+     [
+      24.5,
+      63.3
+     ],
+     [
+      26.0,
+      68.0
+     ]
+    ],
+    [
+     [
+      12,
+      68
+     ],
+     [
+      24,
+      68
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the end of the previous shot (two men at a studio camera); the drawing is held at the first key",
+  "1": "the cut: the camera's lens fills the frame, straight on",
+  "13": "the camera face holds still; only the film grain and light flicker",
+  "27": "the frame has drifted down by about 2 px",
+  "37": "held to the end"
+ },
+ "no_cel": true
+}

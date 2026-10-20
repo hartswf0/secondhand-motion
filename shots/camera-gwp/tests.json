@@ -1,0 +1,77 @@
+[
+ {
+  "id": "M2",
+  "value": 39,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   40,
+   39,
+   41,
+   40,
+   38,
+   40,
+   39,
+   38,
+   38
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 1.0,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 40
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 0.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 57 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6446306388082688; scenery quickdraw:4550565520474112, drawn by agent: no Quick, Draw! category is a curved lever plate; one curve drawn along its upper edge, drawn by agent: no Quick, Draw! category is the camera's side plate; two vertical lines for its edge and two boxes for the latch blocks on it, drawn by agent: no Quick, Draw! category is a screw head; a small circle with one slot",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
