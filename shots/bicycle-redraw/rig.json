@@ -1,0 +1,106 @@
+{
+ "title": "Bicycle Rolls Past",
+ "joints": {
+  "hubF": [
+   40,
+   120
+  ],
+  "hubR": [
+   205,
+   115
+  ],
+  "spin": [
+   55,
+   105
+  ]
+ },
+ "bones": {
+  "frame": [
+   "hubF",
+   "hubR"
+  ],
+  "spokes": [
+   "hubF",
+   "spin"
+  ]
+ },
+ "bind": {
+  "6": [
+   "spokes"
+  ],
+  "7": [
+   "spokes"
+  ],
+  "8": [
+   "spokes"
+  ],
+  "13": [
+   "spokes"
+  ]
+ },
+ "camera": "static",
+ "keys": [
+  {
+   "hubF": [
+    210,
+    185
+   ],
+   "hubR": [
+    525,
+    179
+   ],
+   "spin": [
+    238.3,
+    156.7
+   ]
+  },
+  {
+   "hubF": [
+    165,
+    176
+   ],
+   "hubR": [
+    480,
+    170
+   ],
+   "spin": [
+    171.9,
+    136.6
+   ]
+  },
+  {
+   "hubF": [
+    122,
+    196
+   ],
+   "hubR": [
+    437,
+    190
+   ],
+   "spin": [
+    105.1,
+    159.7
+   ]
+  },
+  {
+   "hubF": [
+    140,
+    196
+   ],
+   "hubR": [
+    455,
+    190
+   ],
+   "spin": [
+    105.4,
+    176.0
+   ]
+  }
+ ],
+ "notes": [
+  "front wheel mid-frame, rider's foot on the pedal",
+  "rolls left, spokes turning",
+  "front wheel low left, foot down",
+  "wheel steadies, next rider behind"
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "named_subject": "windmill",
+ "second_guess": "pinwheel",
+ "action": "The four blades turn counterclockwise around the central hub in front of the tall tower body across the 8 frames.",
+ "motion_reads": "continuous",
+ "broken_frames": [],
+ "identity_verdict": "bar_met",
+ "identity_gap": "The tower body does not stay rigid: as the blades turn, the tower's lower outline is pulled with them, so by the later frames its left wall and base become long diagonal strokes that run off the bottom of the frame and the closed tower shape is lost.",
+ "notes": "Frame 1 matches the doodle almost stroke for stroke (wobbly polygonal blades, small hub ellipse, stray tick marks, short vertical door stroke), so the identity reads. But the blades also stretch unevenly while they rotate, and from frame 5 onward the body distorts. The rotation reads; the windmill's solidity does not.",
+ "_packet": {
+  "a.png": "critic/strip.png",
+  "b.png": "critic/keys.png",
+  "c.png": "critic/design.png"
+ },
+ "_round": 1
+}

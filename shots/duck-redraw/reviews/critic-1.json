@@ -1,0 +1,19 @@
+{
+ "named_subject": "duck",
+ "second_guess": "goose",
+ "action": "A standing duck bends its head down: the beak goes from pointing forward (frame 1) to hanging straight down against the neck (frame 3), then the duck holds that pose with small jitter through frame 8.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  3
+ ],
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The beak. In the doodle it is a flat horizontal wedge sticking out from the head. In frames 2-8 of the cartoon it folds into a thin vertical sliver that merges with the front neck line and crosses inside the head outline, so the head stops reading as the doodle's head. Only frame 1 (mirrored) keeps the doodle's construction.",
+ "notes": "Body, back curve, single leg stroke and triangle feet keep the doodle's polyline habits, though the figure is mirrored and the feet are squashed and cut off under the body, and there is a stray short horizontal tick at lower left. Frames 1 to 3 snap through a large head change in two steps, and frames 3 to 8 are nearly static, so the motion jumps once and then stops.",
+ "_packet": {
+  "a.png": "critic/strip.png",
+  "b.png": "critic/keys.png",
+  "c.png": "critic/design.png"
+ },
+ "_round": 1
+}

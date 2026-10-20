@@ -1,0 +1,13 @@
+{
+ "title": "Cat Looks Up",
+ "joints": {"eyeL": [100, 95], "eyeR": [162, 95]},
+ "bones": {"face": ["eyeL", "eyeR"]},
+ "camera": "static",
+ "keys": [
+  {"eyeL": [127, 107], "eyeR": [217, 83]},
+  {"eyeL": [118, 93], "eyeR": [200, 77]},
+  {"eyeL": [117, 111], "eyeR": [197, 94]},
+  {"eyeL": [257, 157], "eyeR": [306, 168]}
+ ],
+ "notes": ["looks up and to the right", "eyes narrow", "head tips down a little", "turns to profile, facing right"]
+}

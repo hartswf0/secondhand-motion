@@ -1,0 +1,113 @@
+{
+ "title": "Helicopter Lifts Off",
+ "joints": {
+  "tail": [
+   8,
+   68
+  ],
+  "nose": [
+   245,
+   100
+  ],
+  "mast": [
+   187,
+   18
+  ],
+  "blade": [
+   255,
+   0
+  ]
+ },
+ "bones": {
+  "body": [
+   "tail",
+   "nose"
+  ],
+  "rotor": [
+   "mast",
+   "blade"
+  ]
+ },
+ "derive": {
+  "mast": "body",
+  "blade": "body"
+ },
+ "bind": {
+  "0": [
+   "body"
+  ],
+  "1": [
+   "body"
+  ],
+  "2": [
+   "rotor"
+  ],
+  "3": [
+   "rotor"
+  ],
+  "4": [
+   "rotor"
+  ],
+  "5": [
+   "body"
+  ],
+  "6": [
+   "body"
+  ],
+  "7": [
+   "body"
+  ],
+  "8": [
+   "body"
+  ]
+ },
+ "camera": "static",
+ "keys": [
+  {
+   "tail": [
+    -60,
+    98
+   ],
+   "nose": [
+    292,
+    200
+   ]
+  },
+  {
+   "tail": [
+    -25,
+    78
+   ],
+   "nose": [
+    380,
+    188
+   ]
+  },
+  {
+   "tail": [
+    52,
+    86
+   ],
+   "nose": [
+    377,
+    192
+   ]
+  },
+  {
+   "tail": [
+    196,
+    126
+   ],
+   "nose": [
+    332,
+    170
+   ]
+  }
+ ],
+ "notes": [
+  "fills the frame, skids nearly down",
+  "lifts and tilts nose down",
+  "pulls away, tail in view",
+  "small in the sky, leaving right"
+ ]
+}

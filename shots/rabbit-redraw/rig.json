@@ -1,0 +1,15 @@
+{
+ "title": "Rabbit Comes Out",
+ "flip": true,
+ "joints": {"nose": [5, 150], "crown": [40, 105], "eartip": [150, 2], "tail": [250, 160]},
+ "bones": {"head": ["nose", "crown"], "ears": ["crown", "eartip"], "body": ["crown", "tail"]},
+ "bind": {"0": ["ears"], "1": ["head", "body"]},
+ "camera": "static",
+ "keys": [
+  {"nose": [126, 152], "crown": [104, 108], "eartip": [86, 62], "tail": [80, 255]},
+  {"nose": [168, 178], "crown": [160, 112], "eartip": [148, 45], "tail": [150, 252]},
+  {"nose": [262, 180], "crown": [212, 112], "eartip": [150, 42], "tail": [85, 235]},
+  {"nose": [380, 152], "crown": [360, 112], "eartip": [376, 62], "tail": [168, 218]}
+ ],
+ "notes": ["peeks round the door", "sits up tall facing the camera", "settles, side on, nose to the right", "hops off to the right"]
+}

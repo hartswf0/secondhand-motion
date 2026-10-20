@@ -1,0 +1,14 @@
+{
+ "title": "Horse at the Fence",
+ "joints": {"nose": [5, 100], "poll": [110, 30], "neckbase": [235, 160]},
+ "bones": {"head": ["nose", "poll"], "neck": ["poll", "neckbase"]},
+ "bind": {"0": ["head"], "1": ["head", "neck"], "2": ["head", "neck"], "3": ["head"], "4": ["head"], "5": ["head"], "6": ["head"], "7": ["neck"], "8": ["neck"]},
+ "camera": "static",
+ "keys": [
+  {"nose": [195, 268], "poll": [168, 58], "neckbase": [0, 222]},
+  {"_flip": true, "nose": [322, 268], "poll": [150, 42], "neckbase": [0, 200]},
+  {"_flip": true, "nose": [268, 272], "poll": [190, 62], "neckbase": [0, 172]},
+  {"_flip": true, "nose": [160, 205], "poll": [112, 55], "neckbase": [0, 10]}
+ ],
+ "notes": ["looks down over the rail", "turns its head to the right", "lowers its muzzle", "drops its head into the hay"]
+}

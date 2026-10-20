@@ -1,0 +1,104 @@
+[
+ {
+  "id": "M2",
+  "value": 35,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": true,
+  "per_key": [
+   41,
+   41,
+   32,
+   24
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.31,
+  "unit": "fit to a GrabCut silhouette (not SAM)",
+  "ok": false,
+  "per_key": [
+   0.09,
+   0.42,
+   0.5,
+   0.24
+  ],
+  "note": "GrabCut seeded by a box around the agent-placed key; weaker than SAM and partly circular"
+ },
+ {
+  "id": "M4",
+  "value": "not applicable",
+  "unit": "nothing in this shot stands on the ground",
+  "ok": null
+ },
+ {
+  "id": "M5",
+  "value": 0.9,
+  "unit": "% variation (worst bone: spokes)",
+  "ok": true,
+  "per_bone": {
+   "frame": 0.0,
+   "spokes": 0.9
+  }
+ },
+ {
+  "id": "M6",
+  "value": 2.7,
+  "unit": "px jerk (hubF)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "1.00",
+  "unit": "same doodle strokes every frame",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% strokes held (plate drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "quickdraw:6344657166401536",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "21/21",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cbicycle wheel\u201d; motion broken at frames 5, 6",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/bicycle-redraw/reviews/critic-1.json",
+  "note": "blind critic saw the cartoon strip only, then the doodle"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/bicycle-redraw/reviews/critic-1.json",
+  "note": "The cartoon crops so tightly on the front wheel that the rear wheel and seat never appear whole. The handlebar stroke also detaches from the wheel and drifts off to the left (frames 3-5), so the full bicycle silhouette from the doodle is never visible."
+ },
+ {
+  "id": "M1",
+  "value": "not run",
+  "unit": "",
+  "ok": null,
+  "note": "the classifier runs in the browser pane, which did not respond this session; strokes to score are in data/m1/payload.json"
+ }
+]

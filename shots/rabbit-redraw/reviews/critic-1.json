@@ -1,0 +1,20 @@
+{
+ "named_subject": "rabbit",
+ "second_guess": "donkey",
+ "action": "A rabbit, at first crumpled upright beside a wall corner, stretches out into a crouching side-view rabbit and slides right along the floor until it exits off the right edge.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  5,
+  7
+ ],
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "In the early frames the head is not the doodle's head: the doodle's horizontal snout-and-cheek block becomes a small crumpled loop or pentagon on a vertically squeezed body, so the character only matches the doodle (mirrored) from about frame 5 on.",
+ "notes": "Frames 1-3 read as a tangled vertical squiggle with ears rather than a rabbit; frame 4 abruptly swaps in larger ears and a snout facing the other way, frame 5 jumps in scale and position, and frame 7 suddenly shrinks the head at the right edge. Frames 5-8 keep the doodle's stroke habits (straight polyline segments, open ear wedges, single front-leg notch, bumpy back line).",
+ "_packet": {
+  "a.png": "critic/strip.png",
+  "b.png": "critic/keys.png",
+  "c.png": "critic/design.png"
+ },
+ "_round": 1
+}

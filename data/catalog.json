@@ -1679,5 +1679,1395 @@
   "r": {},
   "href": "pages/projector.html",
   "gait": "moonwalk"
+ },
+ {
+  "lot": "SM-0032",
+  "id": "dog-redraw",
+  "kind": "shot",
+  "title": "Dog Goes to the Bowl",
+  "category": "dog",
+  "wave": 1,
+  "lane": "motion",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The chosen doodle itself, puppeted through the footage: 11 joints, 5 keys, every stroke of the Quick, Draw! drawing kept. Background drawn once.",
+  "cover": "shots/dog-redraw/cover.png",
+  "cover_alt": "shots/dog-redraw/frames/f014.jpg",
+  "links": [
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#dog-redraw"
+   },
+   {
+    "label": "rig.json",
+    "href": "shots/dog-redraw/rig.json"
+   },
+   {
+    "label": "Critic verdict",
+    "href": "shots/dog-redraw/reviews/critic-1.json"
+   }
+  ],
+  "tests": "shots/dog-redraw/tests.json",
+  "tags": [
+   "puppet",
+   "redraw",
+   "manual keys"
+  ],
+  "t": {
+   "pass": 6,
+   "fail": 6,
+   "total": 19
+  },
+  "r": {
+   "M2": {
+    "value": 1,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.0,
+    "unit": "fit to a GrabCut silhouette (not SAM)",
+    "ok": false
+   },
+   "M4": {
+    "value": 0.0,
+    "unit": "px drift over 1 planted intervals",
+    "ok": false
+   },
+   "M5": {
+    "value": 37.4,
+    "unit": "% variation (worst bone: body)",
+    "ok": false
+   },
+   "M6": {
+    "value": 3.9,
+    "unit": "px jerk (nose)",
+    "ok": true
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "same doodle strokes every frame",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% strokes held (plate drawn once)",
+    "ok": true
+   },
+   "S2": {
+    "value": "quickdraw:6507786613555200",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "50/50",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cgoose\u201d; motion broken at frames 4, 5",
+    "unit": "",
+    "ok": false
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/projector.html#dog-redraw",
+  "gait": "tiptoe"
+ },
+ {
+  "lot": "SM-0033",
+  "id": "duck-redraw",
+  "kind": "shot",
+  "title": "Duck Looks Up",
+  "category": "duck",
+  "wave": 1,
+  "lane": "motion",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The chosen doodle itself, puppeted through the footage: 7 joints, 4 keys, every stroke of the Quick, Draw! drawing kept. Background drawn once.",
+  "cover": "shots/duck-redraw/cover.png",
+  "cover_alt": "shots/duck-redraw/frames/f012.jpg",
+  "links": [
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#duck-redraw"
+   },
+   {
+    "label": "rig.json",
+    "href": "shots/duck-redraw/rig.json"
+   },
+   {
+    "label": "Critic verdict",
+    "href": "shots/duck-redraw/reviews/critic-1.json"
+   }
+  ],
+  "tests": "shots/duck-redraw/tests.json",
+  "tags": [
+   "puppet",
+   "redraw",
+   "manual keys"
+  ],
+  "t": {
+   "pass": 9,
+   "fail": 3,
+   "total": 19
+  },
+  "r": {
+   "M2": {
+    "value": 8,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.45,
+    "unit": "fit to a GrabCut silhouette (not SAM)",
+    "ok": false
+   },
+   "M4": {
+    "value": 0.0,
+    "unit": "px drift over 6 planted intervals",
+    "ok": true
+   },
+   "M5": {
+    "value": 7.3,
+    "unit": "% variation (worst bone: legL)",
+    "ok": true
+   },
+   "M6": {
+    "value": 0.5,
+    "unit": "px jerk (beak)",
+    "ok": true
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "same doodle strokes every frame",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% strokes held (plate drawn once)",
+    "ok": true
+   },
+   "S2": {
+    "value": "quickdraw:6527787101847552",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "48/48",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cduck\u201d; motion broken at frames 2, 3",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/projector.html#duck-redraw",
+  "gait": "cancan"
+ },
+ {
+  "lot": "SM-0034",
+  "id": "rabbit-redraw",
+  "kind": "shot",
+  "title": "Rabbit Comes Out",
+  "category": "rabbit",
+  "wave": 1,
+  "lane": "motion",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The chosen doodle itself, puppeted through the footage: 4 joints, 4 keys, every stroke of the Quick, Draw! drawing kept. Background drawn once.",
+  "cover": "shots/rabbit-redraw/cover.png",
+  "cover_alt": "shots/rabbit-redraw/frames/f012.jpg",
+  "links": [
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#rabbit-redraw"
+   },
+   {
+    "label": "rig.json",
+    "href": "shots/rabbit-redraw/rig.json"
+   },
+   {
+    "label": "Critic verdict",
+    "href": "shots/rabbit-redraw/reviews/critic-1.json"
+   }
+  ],
+  "tests": "shots/rabbit-redraw/tests.json",
+  "tags": [
+   "puppet",
+   "redraw",
+   "manual keys"
+  ],
+  "t": {
+   "pass": 7,
+   "fail": 4,
+   "total": 19
+  },
+  "r": {
+   "M2": {
+    "value": 1,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.57,
+    "unit": "fit to a GrabCut silhouette (not SAM)",
+    "ok": false
+   },
+   "M4": {
+    "value": "not applicable",
+    "unit": "nothing in this shot stands on the ground",
+    "ok": null
+   },
+   "M5": {
+    "value": 21.4,
+    "unit": "% variation (worst bone: ears)",
+    "ok": false
+   },
+   "M6": {
+    "value": 2.9,
+    "unit": "px jerk (nose)",
+    "ok": true
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "same doodle strokes every frame",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% strokes held (plate drawn once)",
+    "ok": true
+   },
+   "S2": {
+    "value": "quickdraw:6204342979788800",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "52/52",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201crabbit\u201d; motion broken at frames 4, 5, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/projector.html#rabbit-redraw",
+  "gait": "hop"
+ },
+ {
+  "lot": "SM-0035",
+  "id": "horse-redraw",
+  "kind": "shot",
+  "title": "Horse at the Fence",
+  "category": "horse",
+  "wave": 1,
+  "lane": "motion",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The chosen doodle itself, puppeted through the footage: 3 joints, 4 keys, every stroke of the Quick, Draw! drawing kept. Background drawn once.",
+  "cover": "shots/horse-redraw/cover.png",
+  "cover_alt": "shots/horse-redraw/frames/f014.jpg",
+  "links": [
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#horse-redraw"
+   },
+   {
+    "label": "rig.json",
+    "href": "shots/horse-redraw/rig.json"
+   },
+   {
+    "label": "Critic verdict",
+    "href": "shots/horse-redraw/reviews/critic-1.json"
+   }
+  ],
+  "tests": "shots/horse-redraw/tests.json",
+  "tags": [
+   "puppet",
+   "redraw",
+   "manual keys"
+  ],
+  "t": {
+   "pass": 6,
+   "fail": 5,
+   "total": 19
+  },
+  "r": {
+   "M2": {
+    "value": 20,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.44,
+    "unit": "fit to a GrabCut silhouette (not SAM)",
+    "ok": false
+   },
+   "M4": {
+    "value": "not applicable",
+    "unit": "nothing in this shot stands on the ground",
+    "ok": null
+   },
+   "M5": {
+    "value": 23.0,
+    "unit": "% variation (worst bone: neck)",
+    "ok": false
+   },
+   "M6": {
+    "value": 4.9,
+    "unit": "px jerk (nose)",
+    "ok": false
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "same doodle strokes every frame",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% strokes held (plate drawn once)",
+    "ok": true
+   },
+   "S2": {
+    "value": "quickdraw:4658862839824384",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "45/45",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201chorse head\u201d; motion broken at frames 1, 2, 3, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/projector.html#horse-redraw",
+  "gait": "goose step"
+ },
+ {
+  "lot": "SM-0036",
+  "id": "cat-redraw",
+  "kind": "shot",
+  "title": "Cat Looks Up",
+  "category": "cat",
+  "wave": 1,
+  "lane": "motion",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The chosen doodle itself, puppeted through the footage: 2 joints, 4 keys, every stroke of the Quick, Draw! drawing kept. Background drawn once.",
+  "cover": "shots/cat-redraw/cover.png",
+  "cover_alt": "shots/cat-redraw/frames/f022.jpg",
+  "links": [
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#cat-redraw"
+   },
+   {
+    "label": "rig.json",
+    "href": "shots/cat-redraw/rig.json"
+   },
+   {
+    "label": "Critic verdict",
+    "href": "shots/cat-redraw/reviews/critic-1.json"
+   }
+  ],
+  "tests": "shots/cat-redraw/tests.json",
+  "tags": [
+   "puppet",
+   "redraw",
+   "manual keys"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 3,
+   "total": 19
+  },
+  "r": {
+   "M2": {
+    "value": 82,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.12,
+    "unit": "fit to a GrabCut silhouette (not SAM)",
+    "ok": false
+   },
+   "M4": {
+    "value": "not applicable",
+    "unit": "nothing in this shot stands on the ground",
+    "ok": null
+   },
+   "M5": {
+    "value": 15.6,
+    "unit": "% variation (worst bone: face)",
+    "ok": false
+   },
+   "M6": {
+    "value": 5.2,
+    "unit": "px jerk (eyeL)",
+    "ok": false
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "same doodle strokes every frame",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% strokes held (plate drawn once)",
+    "ok": true
+   },
+   "S2": {
+    "value": "quickdraw:5381512507686912",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "62/62",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201ccat face\u201d; motion broken at frames 7, 8",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/projector.html#cat-redraw",
+  "gait": "shuffle"
+ },
+ {
+  "lot": "SM-0037",
+  "id": "giraffe-redraw",
+  "kind": "shot",
+  "title": "Giraffe Close-Up",
+  "category": "giraffe",
+  "wave": 1,
+  "lane": "motion",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The chosen doodle itself, puppeted through the footage: 3 joints, 4 keys, every stroke of the Quick, Draw! drawing kept. Background drawn once.",
+  "cover": "shots/giraffe-redraw/cover.png",
+  "cover_alt": "shots/giraffe-redraw/frames/f004.jpg",
+  "links": [
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#giraffe-redraw"
+   },
+   {
+    "label": "rig.json",
+    "href": "shots/giraffe-redraw/rig.json"
+   },
+   {
+    "label": "Critic verdict",
+    "href": "shots/giraffe-redraw/reviews/critic-1.json"
+   }
+  ],
+  "tests": "shots/giraffe-redraw/tests.json",
+  "tags": [
+   "puppet",
+   "redraw",
+   "manual keys"
+  ],
+  "t": {
+   "pass": 9,
+   "fail": 2,
+   "total": 19
+  },
+  "r": {
+   "M2": {
+    "value": 17,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.68,
+    "unit": "fit to a GrabCut silhouette (not SAM)",
+    "ok": true
+   },
+   "M4": {
+    "value": "not applicable",
+    "unit": "nothing in this shot stands on the ground",
+    "ok": null
+   },
+   "M5": {
+    "value": 7.1,
+    "unit": "% variation (worst bone: head)",
+    "ok": true
+   },
+   "M6": {
+    "value": 2.4,
+    "unit": "px jerk (poll)",
+    "ok": true
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "same doodle strokes every frame",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% strokes held (plate drawn once)",
+    "ok": true
+   },
+   "S2": {
+    "value": "quickdraw:6301565671440384",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "17/17",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201chorse head\u201d; motion broken at frames 5, 7",
+    "unit": "",
+    "ok": false
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/projector.html#giraffe-redraw",
+  "gait": "sprint"
+ },
+ {
+  "lot": "SM-0038",
+  "id": "butterfly-redraw",
+  "kind": "shot",
+  "title": "Butterfly on a Fingertip",
+  "category": "butterfly",
+  "wave": 1,
+  "lane": "motion",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The chosen doodle itself, puppeted through the footage: 4 joints, 4 keys, every stroke of the Quick, Draw! drawing kept. Background drawn once.",
+  "cover": "shots/butterfly-redraw/cover.png",
+  "cover_alt": "shots/butterfly-redraw/frames/f019.jpg",
+  "links": [
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#butterfly-redraw"
+   },
+   {
+    "label": "rig.json",
+    "href": "shots/butterfly-redraw/rig.json"
+   },
+   {
+    "label": "Critic verdict",
+    "href": "shots/butterfly-redraw/reviews/critic-1.json"
+   }
+  ],
+  "tests": "shots/butterfly-redraw/tests.json",
+  "tags": [
+   "puppet",
+   "redraw",
+   "manual keys"
+  ],
+  "t": {
+   "pass": 7,
+   "fail": 4,
+   "total": 19
+  },
+  "r": {
+   "M2": {
+    "value": 5,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.32,
+    "unit": "fit to a GrabCut silhouette (not SAM)",
+    "ok": false
+   },
+   "M4": {
+    "value": "not applicable",
+    "unit": "nothing in this shot stands on the ground",
+    "ok": null
+   },
+   "M5": {
+    "value": 64.7,
+    "unit": "% variation (worst bone: wingR)",
+    "ok": false
+   },
+   "M6": {
+    "value": 1.6,
+    "unit": "px jerk (head)",
+    "ok": true
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "same doodle strokes every frame",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% strokes held (plate drawn once)",
+    "ok": true
+   },
+   "S2": {
+    "value": "quickdraw:5895381575532544",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "78/78",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cbutterfly\u201d; motion broken at frames 4, 5, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/projector.html#butterfly-redraw",
+  "gait": "jelly"
+ },
+ {
+  "lot": "SM-0039",
+  "id": "bicycle-redraw",
+  "kind": "shot",
+  "title": "Bicycle Rolls Past",
+  "category": "bicycle",
+  "wave": 1,
+  "lane": "motion",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The chosen doodle itself, puppeted through the footage: 3 joints, 4 keys, every stroke of the Quick, Draw! drawing kept. Background drawn once.",
+  "cover": "shots/bicycle-redraw/cover.png",
+  "cover_alt": "shots/bicycle-redraw/frames/f006.jpg",
+  "links": [
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#bicycle-redraw"
+   },
+   {
+    "label": "rig.json",
+    "href": "shots/bicycle-redraw/rig.json"
+   },
+   {
+    "label": "Critic verdict",
+    "href": "shots/bicycle-redraw/reviews/critic-1.json"
+   }
+  ],
+  "tests": "shots/bicycle-redraw/tests.json",
+  "tags": [
+   "puppet",
+   "redraw",
+   "manual keys"
+  ],
+  "t": {
+   "pass": 10,
+   "fail": 1,
+   "total": 19
+  },
+  "r": {
+   "M2": {
+    "value": 35,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.31,
+    "unit": "fit to a GrabCut silhouette (not SAM)",
+    "ok": false
+   },
+   "M4": {
+    "value": "not applicable",
+    "unit": "nothing in this shot stands on the ground",
+    "ok": null
+   },
+   "M5": {
+    "value": 0.9,
+    "unit": "% variation (worst bone: spokes)",
+    "ok": true
+   },
+   "M6": {
+    "value": 2.7,
+    "unit": "px jerk (hubF)",
+    "ok": true
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "same doodle strokes every frame",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% strokes held (plate drawn once)",
+    "ok": true
+   },
+   "S2": {
+    "value": "quickdraw:6344657166401536",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "21/21",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cbicycle wheel\u201d; motion broken at frames 5, 6",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/projector.html#bicycle-redraw",
+  "gait": "splits"
+ },
+ {
+  "lot": "SM-0040",
+  "id": "windmill-redraw",
+  "kind": "shot",
+  "title": "Windmill Turns",
+  "category": "windmill",
+  "wave": 1,
+  "lane": "motion",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The chosen doodle itself, puppeted through the footage: 4 joints, 4 keys, every stroke of the Quick, Draw! drawing kept. Background drawn once.",
+  "cover": "shots/windmill-redraw/cover.png",
+  "cover_alt": "shots/windmill-redraw/frames/f016.jpg",
+  "links": [
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#windmill-redraw"
+   },
+   {
+    "label": "rig.json",
+    "href": "shots/windmill-redraw/rig.json"
+   },
+   {
+    "label": "Critic verdict",
+    "href": "shots/windmill-redraw/reviews/critic-1.json"
+   }
+  ],
+  "tests": "shots/windmill-redraw/tests.json",
+  "tags": [
+   "puppet",
+   "redraw",
+   "manual keys"
+  ],
+  "t": {
+   "pass": 9,
+   "fail": 2,
+   "total": 19
+  },
+  "r": {
+   "M2": {
+    "value": 19,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.5,
+    "unit": "fit to a GrabCut silhouette (not SAM)",
+    "ok": false
+   },
+   "M4": {
+    "value": "not applicable",
+    "unit": "nothing in this shot stands on the ground",
+    "ok": null
+   },
+   "M5": {
+    "value": 6.5,
+    "unit": "% variation (worst bone: sails)",
+    "ok": true
+   },
+   "M6": {
+    "value": 0.1,
+    "unit": "px jerk (hub)",
+    "ok": true
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "same doodle strokes every frame",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% strokes held (plate drawn once)",
+    "ok": true
+   },
+   "S2": {
+    "value": "quickdraw:4794921946972160",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "54/54",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cwindmill\u201d; motion continuous",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/projector.html#windmill-redraw",
+  "gait": "heel click"
+ },
+ {
+  "lot": "SM-0041",
+  "id": "helicopter-redraw",
+  "kind": "shot",
+  "title": "Helicopter Lifts Off",
+  "category": "helicopter",
+  "wave": 1,
+  "lane": "motion",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The chosen doodle itself, puppeted through the footage: 4 joints, 4 keys, every stroke of the Quick, Draw! drawing kept. Background drawn once.",
+  "cover": "shots/helicopter-redraw/cover.png",
+  "cover_alt": "shots/helicopter-redraw/frames/f014.jpg",
+  "links": [
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#helicopter-redraw"
+   },
+   {
+    "label": "rig.json",
+    "href": "shots/helicopter-redraw/rig.json"
+   },
+   {
+    "label": "Critic verdict",
+    "href": "shots/helicopter-redraw/reviews/critic-1.json"
+   }
+  ],
+  "tests": "shots/helicopter-redraw/tests.json",
+  "tags": [
+   "puppet",
+   "redraw",
+   "manual keys"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 3,
+   "total": 19
+  },
+  "r": {
+   "M2": {
+    "value": 86,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.45,
+    "unit": "fit to a GrabCut silhouette (not SAM)",
+    "ok": false
+   },
+   "M4": {
+    "value": "not applicable",
+    "unit": "nothing in this shot stands on the ground",
+    "ok": null
+   },
+   "M5": {
+    "value": 27.6,
+    "unit": "% variation (worst bone: body)",
+    "ok": false
+   },
+   "M6": {
+    "value": 6.0,
+    "unit": "px jerk (tail)",
+    "ok": false
+   },
+   "T3": {
+    "value": "1.00",
+    "unit": "same doodle strokes every frame",
+    "ok": true
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% strokes held (plate drawn once)",
+    "ok": true
+   },
+   "S2": {
+    "value": "quickdraw:4509032549187584",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "46/46",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201chelicopter\u201d; motion broken at frames 5, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_met",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/projector.html#helicopter-redraw",
+  "gait": "skip"
  }
 ]

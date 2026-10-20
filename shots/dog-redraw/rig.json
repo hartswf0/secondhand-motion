@@ -1,0 +1,291 @@
+{
+ "title": "Dog Goes to the Bowl",
+ "joints": {
+  "nose": [
+   5,
+   22
+  ],
+  "neck": [
+   100,
+   45
+  ],
+  "rump": [
+   205,
+   62
+  ],
+  "hipA": [
+   140,
+   100
+  ],
+  "footA": [
+   122,
+   150
+  ],
+  "hipB": [
+   172,
+   98
+  ],
+  "footB": [
+   175,
+   155
+  ],
+  "hipC": [
+   200,
+   95
+  ],
+  "footC": [
+   208,
+   152
+  ],
+  "hipD": [
+   236,
+   92
+  ],
+  "footD": [
+   240,
+   150
+  ]
+ },
+ "bones": {
+  "head": [
+   "nose",
+   "neck"
+  ],
+  "body": [
+   "neck",
+   "rump"
+  ],
+  "legA": [
+   "hipA",
+   "footA"
+  ],
+  "legB": [
+   "hipB",
+   "footB"
+  ],
+  "legC": [
+   "hipC",
+   "footC"
+  ],
+  "legD": [
+   "hipD",
+   "footD"
+  ]
+ },
+ "derive": {
+  "hipA": "body",
+  "hipB": "body",
+  "hipC": "body",
+  "hipD": "body"
+ },
+ "bind": {
+  "0": [
+   "head",
+   "body"
+  ],
+  "2": [
+   "head",
+   "body"
+  ],
+  "3": [
+   "head"
+  ],
+  "4": [
+   "head"
+  ],
+  "5": [
+   "head"
+  ],
+  "6": [
+   "head"
+  ],
+  "1": [
+   "body"
+  ],
+  "11": [
+   "body"
+  ],
+  "7": [
+   "legA"
+  ],
+  "8": [
+   "legB"
+  ],
+  "9": [
+   "legC"
+  ],
+  "10": [
+   "legD"
+  ]
+ },
+ "contacts": [
+  "footA",
+  "footB",
+  "footC",
+  "footD"
+ ],
+ "camera": "measured",
+ "keys": [
+  {
+   "nose": [
+    130,
+    95
+   ],
+   "neck": [
+    150,
+    105
+   ],
+   "rump": [
+    200,
+    130
+   ],
+   "footA": [
+    130,
+    190
+   ],
+   "footB": [
+    152,
+    192
+   ],
+   "footC": [
+    182,
+    196
+   ],
+   "footD": [
+    200,
+    190
+   ]
+  },
+  {
+   "nose": [
+    108,
+    130
+   ],
+   "neck": [
+    140,
+    128
+   ],
+   "rump": [
+    192,
+    128
+   ],
+   "footA": [
+    125,
+    198
+   ],
+   "footB": [
+    145,
+    200
+   ],
+   "footC": [
+    180,
+    198
+   ],
+   "footD": [
+    198,
+    196
+   ]
+  },
+  {
+   "_f": 24,
+   "_flip": true,
+   "nose": [
+    175,
+    140
+   ],
+   "neck": [
+    178,
+    124
+   ],
+   "rump": [
+    198,
+    116
+   ],
+   "footA": [
+    182,
+    192
+   ],
+   "footB": [
+    168,
+    190
+   ],
+   "footC": [
+    196,
+    186
+   ],
+   "footD": [
+    188,
+    183
+   ]
+  },
+  {
+   "_flip": true,
+   "nose": [
+    212,
+    132
+   ],
+   "neck": [
+    190,
+    125
+   ],
+   "rump": [
+    170,
+    118
+   ],
+   "footA": [
+    195,
+    195
+   ],
+   "footB": [
+    182,
+    193
+   ],
+   "footC": [
+    165,
+    190
+   ],
+   "footD": [
+    156,
+    186
+   ]
+  },
+  {
+   "_flip": true,
+   "nose": [
+    272,
+    175
+   ],
+   "neck": [
+    245,
+    140
+   ],
+   "rump": [
+    190,
+    118
+   ],
+   "footA": [
+    255,
+    205
+   ],
+   "footB": [
+    235,
+    203
+   ],
+   "footC": [
+    190,
+    200
+   ],
+   "footD": [
+    170,
+    198
+   ]
+  }
+ ],
+ "notes": [
+  "head up, looking off to the left",
+  "nose down, sniffing the ground",
+  "turns to face the camera",
+  "turns toward the camera and the bowl",
+  "head low, walking to the bowl"
+ ]
+}

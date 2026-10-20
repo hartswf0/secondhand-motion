@@ -1,0 +1,184 @@
+{
+ "title": "Duck Looks Up",
+ "flip": true,
+ "joints": {
+  "beak": [
+   212,
+   45
+  ],
+  "nape": [
+   130,
+   30
+  ],
+  "base": [
+   110,
+   205
+  ],
+  "hipL": [
+   35,
+   200
+  ],
+  "footL": [
+   15,
+   235
+  ],
+  "hipM": [
+   68,
+   195
+  ],
+  "footM": [
+   70,
+   235
+  ]
+ },
+ "bones": {
+  "head": [
+   "beak",
+   "nape"
+  ],
+  "body": [
+   "nape",
+   "base"
+  ],
+  "legL": [
+   "hipL",
+   "footL"
+  ],
+  "legM": [
+   "hipM",
+   "footM"
+  ]
+ },
+ "derive": {
+  "hipL": "body",
+  "hipM": "body"
+ },
+ "bind": {
+  "0": [
+   "head",
+   "body"
+  ],
+  "1": [
+   "head"
+  ],
+  "2": [
+   "head"
+  ],
+  "3": [
+   "head"
+  ],
+  "4": [
+   "legL"
+  ],
+  "5": [
+   "legL"
+  ],
+  "6": [
+   "legM"
+  ],
+  "7": [
+   "body"
+  ]
+ },
+ "contacts": [
+  "footL",
+  "footM"
+ ],
+ "camera": "static",
+ "keys": [
+  {
+   "beak": [
+    158,
+    95
+   ],
+   "nape": [
+    222,
+    52
+   ],
+   "base": [
+    222,
+    238
+   ],
+   "footL": [
+    288,
+    262
+   ],
+   "footM": [
+    240,
+    262
+   ]
+  },
+  {
+   "beak": [
+    212,
+    118
+   ],
+   "nape": [
+    222,
+    50
+   ],
+   "base": [
+    225,
+    238
+   ],
+   "footL": [
+    288,
+    262
+   ],
+   "footM": [
+    240,
+    262
+   ]
+  },
+  {
+   "beak": [
+    214,
+    122
+   ],
+   "nape": [
+    218,
+    54
+   ],
+   "base": [
+    218,
+    238
+   ],
+   "footL": [
+    288,
+    262
+   ],
+   "footM": [
+    240,
+    262
+   ]
+  },
+  {
+   "beak": [
+    215,
+    118
+   ],
+   "nape": [
+    224,
+    50
+   ],
+   "base": [
+    225,
+    238
+   ],
+   "footL": [
+    288,
+    262
+   ],
+   "footM": [
+    240,
+    262
+   ]
+  }
+ ],
+ "notes": [
+  "beak to the left, looking off",
+  "turns to face the camera",
+  "beak dips",
+  "looks up at the camera"
+ ]
+}

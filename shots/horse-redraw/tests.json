@@ -1,0 +1,104 @@
+[
+ {
+  "id": "M2",
+  "value": 20,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "per_key": [
+   28,
+   27,
+   18,
+   8
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.44,
+  "unit": "fit to a GrabCut silhouette (not SAM)",
+  "ok": false,
+  "per_key": [
+   0.52,
+   0.33,
+   0.47,
+   0.45
+  ],
+  "note": "GrabCut seeded by a box around the agent-placed key; weaker than SAM and partly circular"
+ },
+ {
+  "id": "M4",
+  "value": "not applicable",
+  "unit": "nothing in this shot stands on the ground",
+  "ok": null
+ },
+ {
+  "id": "M5",
+  "value": 23.0,
+  "unit": "% variation (worst bone: neck)",
+  "ok": false,
+  "per_bone": {
+   "head": 19.5,
+   "neck": 23.0
+  }
+ },
+ {
+  "id": "M6",
+  "value": 4.9,
+  "unit": "px jerk (nose)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "1.00",
+  "unit": "same doodle strokes every frame",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% strokes held (plate drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "quickdraw:4658862839824384",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "45/45",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201chorse head\u201d; motion broken at frames 1, 2, 3, 7",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/horse-redraw/reviews/critic-1.json",
+  "note": "blind critic saw the cartoon strip only, then the doodle"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "evidence": "shots/horse-redraw/reviews/critic-1.json",
+  "note": "The doodle's head is a wedge-shaped profile pointing left, with a separate jaw curve and an open throat. In the cartoon the head is rotated about 90 degrees and stretched into a rounded tube with the muzzle pointing down, so that silhouette is lost. The solid dot eye has also become a small scribbled glyph."
+ },
+ {
+  "id": "M1",
+  "value": "not run",
+  "unit": "",
+  "ok": null,
+  "note": "the classifier runs in the browser pane, which did not respond this session; strokes to score are in data/m1/payload.json"
+ }
+]

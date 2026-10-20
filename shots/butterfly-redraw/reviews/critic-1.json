@@ -1,0 +1,20 @@
+{
+ "named_subject": "butterfly",
+ "second_guess": "moth",
+ "action": "A small black-line butterfly starts on the hand beside the gray butterfly, grows larger in frames 2-4, then jumps left and shrinks while one of its wing outlines stretches into a long loose stroke that trails behind and slowly fades away.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  5,
+  7
+ ],
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The wings do not stay closed and attached to the body. From frame 2 on, one wing outline comes loose and becomes a long open stroke across the frame, so the two-lobed wing pair that defines the doodle is lost. The curly antennae and tick-marked body do carry over.",
+ "notes": "Frame 1 reads clearly as the doodle at small scale, but after that the drawing comes apart: the body line stretches, one wing becomes a huge separate curve, and the figure jumps from the hand to the left edge between frames 4 and 5. By frame 7 the butterfly is a small squashed mark and the stray stroke is the main thing on screen.",
+ "_packet": {
+  "a.png": "critic/strip.png",
+  "b.png": "critic/keys.png",
+  "c.png": "critic/design.png"
+ },
+ "_round": 1
+}

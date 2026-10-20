@@ -1,0 +1,19 @@
+{
+ "named_subject": "cat face",
+ "second_guess": "owl head",
+ "action": "A large, cropped cat head drifts slightly in close-up for six frames, then abruptly shrinks to a small full head that slides down and right.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  7,
+  8
+ ],
+ "identity_verdict": "bar_met",
+ "identity_gap": "In the close-up frames the head is scaled so large that the ears are cropped off the top, so the doodle's defining ears are absent for most of the shot.",
+ "notes": "Frames 1-6 are a near-static, slightly wobbling close-up; frame 7 jumps to roughly half scale with no in-between, and frame 8 jumps again in position and tilt. The construction (lumpy polygon head, mismatched polygon eyes, three whiskers a side, tick mark between the ears) matches the doodle closely, though the cartoon's line is thinner than the doodle's.",
+ "_packet": {
+  "a.png": "critic/strip.png",
+  "b.png": "critic/keys.png",
+  "c.png": "critic/design.png"
+ },
+ "_round": 1
+}

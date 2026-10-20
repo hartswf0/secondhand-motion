@@ -1,0 +1,103 @@
+[
+ {
+  "id": "M2",
+  "value": 82,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": true,
+  "per_key": [
+   83,
+   82,
+   82,
+   82
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.12,
+  "unit": "fit to a GrabCut silhouette (not SAM)",
+  "ok": false,
+  "per_key": [
+   0.04,
+   0.0,
+   0.31,
+   0.13
+  ],
+  "note": "GrabCut seeded by a box around the agent-placed key; weaker than SAM and partly circular"
+ },
+ {
+  "id": "M4",
+  "value": "not applicable",
+  "unit": "nothing in this shot stands on the ground",
+  "ok": null
+ },
+ {
+  "id": "M5",
+  "value": 15.6,
+  "unit": "% variation (worst bone: face)",
+  "ok": false,
+  "per_bone": {
+   "face": 15.6
+  }
+ },
+ {
+  "id": "M6",
+  "value": 5.2,
+  "unit": "px jerk (eyeL)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "1.00",
+  "unit": "same doodle strokes every frame",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% strokes held (plate drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "quickdraw:5381512507686912",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "62/62",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ccat face\u201d; motion broken at frames 7, 8",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/cat-redraw/reviews/critic-1.json",
+  "note": "blind critic saw the cartoon strip only, then the doodle"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/cat-redraw/reviews/critic-1.json",
+  "note": "In the close-up frames the head is scaled so large that the ears are cropped off the top, so the doodle's defining ears are absent for most of the shot."
+ },
+ {
+  "id": "M1",
+  "value": "not run",
+  "unit": "",
+  "ok": null,
+  "note": "the classifier runs in the browser pane, which did not respond this session; strokes to score are in data/m1/payload.json"
+ }
+]

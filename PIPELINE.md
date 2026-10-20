@@ -48,6 +48,29 @@ compares six stroke statistics with real doodles of the category (`data/lane_com
 matched key to key, matched strokes interpolated and the rest swapped at the midpoint (test T3).
 Both lanes play side by side with their footage in `pages/projector.html`.
 
+## Every subject, redrawn the giraffe way (20 Oct 2026)
+
+`tools/puppet.py` does by hand, for each subject, what Giraffe Walks Past did: the chosen Quick, Draw!
+doodle itself (every stroke kept) gets a few joints, the agent places those joints on the footage at
+each key (`tools/look.py` gives a gridded key sheet), bones carry the strokes by linear blend skinning,
+in-betweens interpolate the joints with planted contacts, and the background is drawn once. Then
+`tools/shot_tests.py` runs the shot tests and `tools/critic_packet.py` makes a blind packet: a fresh
+critic sees eight frames of the cartoon only, names what it is, and then judges identity against the doodle.
+
+What happened, across ten subjects:
+
+- T3 and B1, the look lane's two failures, pass everywhere, by construction: one doodle, one plate.
+- Eight of ten critics named the subject from the cartoon alone. The dog was read as a goose (a side-view
+  doodle cannot turn to face the camera) and the giraffe close-up as a horse head (the crop hides the ossicones).
+- Five of ten kept the doodle's identity in the critic's eyes (cat, giraffe, bicycle, windmill, helicopter):
+  the rigid subjects and the faces. The animals that bend (dog, duck, rabbit, horse, butterfly) lost it,
+  because two-point bones stretch strokes they should only turn.
+- M2 is capped by the doodle that was chosen: the look lane picked several drawings that are themselves
+  atypical (dog 7, windmill 4, butterfly 12 percentile at rest). Choosing the doodle should check M2 first.
+- Only the windmill's motion read as continuous; most strips jumped where a key changed scale or facing.
+  The strip skips frames, so this needs a playback review before it counts.
+- M1 (classifier) did not run: the browser pane did not respond. M3 used GrabCut, not SAM, and is weak.
+
 ## Where learning comes in
 
 Nothing has been trained yet. What exists is search: an agent proposes, tests and critics judge, the

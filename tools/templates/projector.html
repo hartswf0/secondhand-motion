@@ -3,7 +3,9 @@ __HEAD__
 <meta name="description" content="Every moving lot in one player: archive footage beside its doodle cartoon, both lanes measured on one scale.">
 <style>
 /* Layout: header; lot picker; player (footage | cartoon, controls, key strip) beside a side panel (tests, lane comparison). */
-.picker{display:flex;flex-wrap:wrap;gap:6px}
+.picker{display:flex;flex-direction:column;gap:8px}
+.prow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.plab{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:170px}
 .picker button{font:600 14px var(--body);background:var(--sheet);color:var(--ink);border:1px solid var(--rule-strong);border-radius:999px;padding:5px 12px;cursor:pointer;display:inline-flex;gap:6px;align-items:baseline}
 .picker button i{font:normal 600 10px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .picker button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
@@ -52,6 +54,7 @@ __HEAD__
 .lg{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--muted)}
 .chart .lg svg{width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-right:4px}
 .why{font-size:15px;max-width:68ch;margin:0}
+.res td{white-space:nowrap;font-size:13px}.res td .st{margin-right:4px}.res td.sub{font-weight:700}
 </style>
 __NAV__
 <div class="wrap">
@@ -92,6 +95,12 @@ __NAV__
     </div>
   </aside>
 </div>
+<section aria-labelledby="r-h">
+  <h2 id="r-h">Every subject, both ways</h2>
+  <p class="why">The giraffe method, done by hand for all ten: the chosen doodle itself, every stroke kept, moved by a few bones placed on the footage key by key, background drawn once. Then the same tests the look lane ran, plus a blind critic who saw only an eight-frame strip of the cartoon and had to name what it was.</p>
+  <div class="tablebox"><table class="res"><thead><tr><th>Subject</th><th>M2 look-lane keys</th><th>M2 puppet</th><th>T3 strokes carry</th><th>B1 background holds</th><th>J4 same doodle</th><th>J1 critic named it</th><th>M5 proportions</th><th>M3 footage fit</th></tr></thead><tbody id="res"></tbody></table></div>
+  <p class="note-s">Look lane / puppet where both ran. M2 is the percentile among real doodles of the category (bar 30). M3 uses a GrabCut silhouette, not SAM, and is weak. The critic strip skips frames, so a "broken" motion verdict is partly the strip's spacing; playback review is still open.</p>
+</section>
 <section aria-labelledby="c-h">
   <h2 id="c-h">What the lanes say to each other</h2>
   <p class="why" id="why"></p>
@@ -110,11 +119,13 @@ let lot=null,view='side',motion='tween',speed=1,playing=false,raf=0,t0=0,tBase=0
 /* ---------- lot list ---------- */
 const lots=D.lots;const hs=decodeURIComponent(location.hash.slice(1));
 let cur=lots.find(l=>l.id===hs)||lots[0];
-function picker(){const p=$('picker');p.replaceChildren();lots.forEach(l=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',String(l===cur));
-  b.textContent=l.title;const i=document.createElement('i');i.textContent=l.lane;b.append(i);b.onclick=()=>{cur=l;history.replaceState(null,'','#'+l.id);load();picker();};p.append(b);});}
+function picker(){const p=$('picker');p.replaceChildren();
+  [['motion','Moves with the footage'],['look','Traced keys']].forEach(([lane,label])=>{const row=document.createElement('div');row.className='prow';const h=document.createElement('span');h.className='plab';h.textContent=label;row.append(h);
+    lots.filter(l=>l.lane===lane).forEach(l=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',String(l===cur));b.textContent=l.title;
+      b.onclick=()=>{cur=l;history.replaceState(null,'','#'+l.id);load();picker();};row.append(b);});p.append(row);});}
 
 /* ---------- clocks ---------- */
-const dur=()=>cur.kind==='shot'?D.shot.N/D.shot.fps:(cur.duration||vid.duration||4);
+const dur=()=>cur.kind==='shot'?S.N/S.fps:(cur.duration||vid.duration||4);
 let useVid=false;const internal=()=>cur.kind==='shot'||!useVid;
 function now(){if(internal()){return playing?Math.min(dur(),tBase+(performance.now()-t0)/1000*speed):simT;}return vid.currentTime||0;}
 function seek(t){t=Math.max(0,Math.min(dur()-1e-3,t));if(internal()){simT=t;tBase=t;t0=performance.now();}else{try{vid.currentTime=t;}catch(e){}}draw();}
@@ -142,8 +153,8 @@ function tracedFrame(e,t){const kt=e.key_times;const fps=e.fps||12;t=Math.floor(
   return {set:out,a,u};}
 
 /* ---------- motion lane: the multiplane shot ---------- */
-const S=D.shot;const foot=S.footage.map(s=>{const i=new Image();i.src=s;return i;});
-const planes=[...S.planes].sort((a,b)=>b.z-a.z);
+let S=null,foot=[],planes=[];const shotCache={};
+function useShot(id){S=D.shots[id];if(!shotCache[id])shotCache[id]=S.footage.map(u=>{const i=new Image();i.src=u;i.onload=()=>{if(!playing&&cur.kind==='shot')draw();};return i;});foot=shotCache[id];planes=[...S.planes].sort((a,b)=>b.z-a.z);}
 function closed(st){if(st.length<4)return false;const a=st[0],b=st[st.length-1];let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;st.forEach(([x,y])=>{x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x);y1=Math.max(y1,y);});return Math.hypot(a[0]-b[0],a[1]-b[1])<0.18*Math.max(x1-x0,y1-y0,1);}
 function shotFrame(g,f,s,wash){
   planes.forEach(p=>{const k=p.id==='char'?0:S.z_ref/p.z;const dx=S.camera[f][0]*k,dy=S.camera[f][1]*k;const far=p.z>=6;const lw=(p.id==='char'?3.2:p.id==='fore'?2.4:far?1.6:2.2)*s/2;
@@ -179,11 +190,11 @@ function draw(){const t=now();const r=Math.min(2,devicePixelRatio||1);
 let lastKey=-1;function markKey(kt,t){let a=0;kt.forEach((k,i)=>{if(t>=k-1e-3)a=i;});if(a===lastKey)return;lastKey=a;document.querySelectorAll('.key').forEach((b,i)=>b.setAttribute('aria-current',String(i===a)));}
 
 /* ---------- load a lot ---------- */
-function load(){play(false);lastKey=-1;
+function load(){if(cur.kind==='shot')useShot(cur.id);play(false);lastKey=-1;
   const isShot=cur.kind==='shot';$('motion').querySelectorAll('button').forEach(b=>b.disabled=isShot);
   const kb=$('keys');kb.replaceChildren();const tk=$('ticks');tk.replaceChildren();
-  if(isShot){vid.removeAttribute('src');vid.load();simT=0;
-    $('method').textContent=`Motion lane. Nine keys drawn over SAM silhouettes, in-betweened with planted feet and the measured camera pan; six depth planes. ${S.N} frames at ${S.fps} fps.`;
+  if(isShot){useShot(cur.id);vid.removeAttribute('src');vid.load();simT=0;
+    $('method').textContent=S.method+` ${S.N} frames at ${S.fps} fps.`;
     S.keys.forEach((k,i)=>{const b=document.createElement('button');b.className='key';b.type='button';const pr=document.createElement('div');pr.className='pair';
       const a=document.createElement('img');a.src=S.footage[k];a.alt=`Footage at key ${i+1}`;const c=document.createElement('canvas');c.width=S.W;c.height=S.H;c.style.cssText='width:100%;border:1px solid var(--rule);border-radius:3px;background:#fff';
       const g=c.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,S.W,S.H);shotFrame(g,k,1,false);pr.append(a,c);
@@ -239,6 +250,11 @@ document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{const t=now();sp
   document.querySelectorAll('[data-s]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));});
 addEventListener('keydown',e=>{if(e.target.closest('input,button,select,textarea')&&e.key!==' ')return;if(e.key===' '){e.preventDefault();play(!playing);}});
 vid.addEventListener('seeked',()=>{if(!playing)draw();});
+(function(){const tb=$('res');const st=c=>{if(!c)return '<span class="st none">—</span>';const k=c.ok===true?'pass':c.ok===false?'fail':'none';
+  return `<span class="st ${k}">${k==='none'?'—':k}</span><span class="meta">${String(c.v).replace(/</g,'&lt;')}</span>`;};
+ D.results.forEach(r=>{const tr=document.createElement('tr');
+  tr.innerHTML=`<td class="sub"><a href="#${r.cat}-redraw">${r.cat}</a></td><td>${st(r.look.M2)}</td><td>${st(r.pup.M2)}</td><td>${st(r.look.T3)} → ${st(r.pup.T3)}</td><td>${st(r.look.B1)} → ${st(r.pup.B1)}</td><td>${st(r.look.J4)} → ${st(r.pup.J4)}</td><td>${st(r.pup.J1)}</td><td>${st(r.pup.M5)}</td><td>${st(r.pup.M3)}</td>`;
+  tr.querySelector('a').onclick=e=>{e.preventDefault();cur=lots.find(l=>l.id===r.cat+'-redraw');history.replaceState(null,'','#'+cur.id);load();picker();scrollTo({top:0,behavior:'smooth'});};tb.append(tr);});})();
 picker();load();
 })();
 </script>

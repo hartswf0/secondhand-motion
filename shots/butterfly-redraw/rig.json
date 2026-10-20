@@ -1,0 +1,14 @@
+{
+ "title": "Butterfly on a Fingertip",
+ "joints": {"head": [140, 62], "tail": [100, 230], "tipL": [45, 10], "tipR": [245, 80]},
+ "bones": {"body": ["head", "tail"], "wingL": ["head", "tipL"], "wingR": ["head", "tipR"]},
+ "bind": {"0": ["wingL"], "1": ["body"], "2": ["body"], "3": ["body"], "4": ["body"], "5": ["body"], "6": ["body"], "7": ["body"], "8": ["body"], "9": ["wingR"], "10": ["body"]},
+ "camera": "static",
+ "keys": [
+  {"head": [305, 148], "tail": [252, 168], "tipL": [282, 122], "tipR": [318, 126]},
+  {"head": [288, 110], "tail": [175, 142], "tipL": [228, 102], "tipR": [278, 104]},
+  {"head": [158, 138], "tail": [108, 150], "tipL": [192, 38], "tipR": [178, 58]},
+  {"head": [108, 150], "tail": [96, 176], "tipL": [160, 28], "tipR": [150, 40]}
+ ],
+ "notes": ["wings held flat along the finger", "creeps up the finger", "lifts its wings", "wings closed straight up"]
+}

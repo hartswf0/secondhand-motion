@@ -1,0 +1,14 @@
+{
+ "title": "Giraffe Close-Up",
+ "joints": {"poll": [120, 32], "muzzle": [215, 90], "neckbase": [25, 240]},
+ "bones": {"head": ["poll", "muzzle"], "neck": ["poll", "neckbase"]},
+ "bind": {"0": ["head", "neck"], "1": ["head", "neck"], "2": ["head"], "3": ["head"], "4": ["head"], "5": ["head"], "6": ["head"], "7": ["head", "neck"], "8": ["neck"], "9": ["neck"], "10": ["neck"], "11": ["neck"]},
+ "camera": "static",
+ "keys": [
+  {"poll": [140, 62], "muzzle": [360, 122], "neckbase": [112, 282]},
+  {"poll": [150, 58], "muzzle": [380, 112], "neckbase": [130, 282]},
+  {"poll": [136, 62], "muzzle": [325, 105], "neckbase": [110, 282]},
+  {"poll": [150, 62], "muzzle": [345, 140], "neckbase": [120, 285]}
+ ],
+ "notes": ["muzzle swings right toward the lens", "reaches closer", "pulls back", "lowers the muzzle"]
+}

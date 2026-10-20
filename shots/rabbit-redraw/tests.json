@@ -1,0 +1,105 @@
+[
+ {
+  "id": "M2",
+  "value": 1,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "per_key": [
+   1,
+   1,
+   2,
+   1
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.57,
+  "unit": "fit to a GrabCut silhouette (not SAM)",
+  "ok": false,
+  "per_key": [
+   0.32,
+   0.6,
+   0.62,
+   0.74
+  ],
+  "note": "GrabCut seeded by a box around the agent-placed key; weaker than SAM and partly circular"
+ },
+ {
+  "id": "M4",
+  "value": "not applicable",
+  "unit": "nothing in this shot stands on the ground",
+  "ok": null
+ },
+ {
+  "id": "M5",
+  "value": 21.4,
+  "unit": "% variation (worst bone: ears)",
+  "ok": false,
+  "per_bone": {
+   "head": 20.0,
+   "ears": 21.4,
+   "body": 17.0
+  }
+ },
+ {
+  "id": "M6",
+  "value": 2.9,
+  "unit": "px jerk (nose)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "1.00",
+  "unit": "same doodle strokes every frame",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% strokes held (plate drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "quickdraw:6204342979788800",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "52/52",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201crabbit\u201d; motion broken at frames 4, 5, 7",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/rabbit-redraw/reviews/critic-1.json",
+  "note": "blind critic saw the cartoon strip only, then the doodle"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "evidence": "shots/rabbit-redraw/reviews/critic-1.json",
+  "note": "In the early frames the head is not the doodle's head: the doodle's horizontal snout-and-cheek block becomes a small crumpled loop or pentagon on a vertically squeezed body, so the character only matches the doodle (mirrored) from about frame 5 on."
+ },
+ {
+  "id": "M1",
+  "value": "not run",
+  "unit": "",
+  "ok": null,
+  "note": "the classifier runs in the browser pane, which did not respond this session; strokes to score are in data/m1/payload.json"
+ }
+]

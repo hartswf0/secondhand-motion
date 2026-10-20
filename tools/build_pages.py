@@ -129,18 +129,30 @@ def main():
 
 
 def projector(lots, reg):
-    shot = json.load(open('shots/giraffe-walks-past/shot.json'))
-    S = {'W': shot['W'], 'H': shot['H'], 'fps': shot['fps'], 'z_ref': shot['z_ref'], 'planes': shot['planes'], 'camera': shot['camera'],
-         'objects': shot['objects'], 'cast': shot['cast']['frames'], 'keys': shot['cast']['keys'], 'N': len(shot['cast']['frames']),
-         'footage': shot['footage'], 'masks': shot['masks'], 'notes': {x['f']: x['note'] for x in shot['xsheet'] if x['note']}}
+    def pack(shot, base, method):
+        return {'W': shot['W'], 'H': shot['H'], 'fps': shot['fps'], 'z_ref': shot['z_ref'], 'planes': shot['planes'], 'camera': shot['camera'],
+                'objects': shot['objects'], 'cast': shot['cast']['frames'], 'keys': shot['cast']['keys'], 'N': len(shot['cast']['frames']),
+                'footage': [u if u.startswith('data:') else base + u for u in shot['footage']], 'masks': shot['masks'],
+                'notes': {x['f']: x['note'] for x in shot['xsheet'] if x['note']}, 'method': method}
+    shots = {'giraffe-walks-past': pack(json.load(open('shots/giraffe-walks-past/shot.json')), '',
+             'Motion lane, rig drawn by the agent. Nine keys drawn over SAM silhouettes, in-betweened with planted feet and the measured camera pan; six depth planes.')}
     M = json.load(open('traced/matches.json'))
     by = {l['id']: l for l in lots}
     L = [{'id': 'giraffe-walks-past', 'lot': by['giraffe-walks-past']['lot'], 'title': 'Giraffe Walks Past', 'lane': 'motion', 'kind': 'shot'}]
+    for cat in sorted(M):
+        sid = f'{cat}-redraw'
+        if sid in by:
+            sh = json.load(open(f'shots/{sid}/shot.json')); rig = json.load(open(f'shots/{sid}/rig.json'))
+            shots[sid] = pack(sh, f'../shots/{sid}/', f"Puppet redraw. The chosen Quick, Draw! {cat} (key_id {sh['design']['key_id']}, all {sh['design']['strokes']} strokes) moved by "
+                              f"{len(rig['bones'])} bones the agent placed on {len(sh['cast']['keys'])} key frames by eye; background drawn once from the look-lane key.")
+            L.append({'id': sid, 'lot': by[sid]['lot'], 'title': cat.capitalize(), 'lane': 'motion', 'kind': 'shot'})
     thumbs = {}
     for cat in sorted(M):
-        pv = json.load(open(f'{BATCH}/subjects/{cat}/preview-data.json')); thumbs[cat] = pv['source_frames']
+        pv = json.load(open(f'{BATCH}/subjects/{cat}/preview-data.json')); t0 = pv['interval'][0]
+        thumbs[cat] = pv['source_frames']
+        M[cat]['key_times'] = [round(t - t0, 3) for t in M[cat]['key_times']]          # excerpt time starts at the interval start
         L.append({'id': cat, 'lot': by[cat]['lot'], 'title': cat.capitalize(), 'lane': 'look', 'kind': 'traced', 'duration': M[cat]['duration'],
-                  'thumb_times': pv['source_frame_times'],
+                  'thumb_times': [round(t - t0, 3) for t in pv['source_frame_times']],
                   'video': f'../{BATCH}/subjects/{cat}/source-excerpt.mp4', 'base': f'../{BATCH}/subjects/{cat}/'})
     C = json.load(open('data/lane_compare.json'))
     m, g = C['rows'][0]['z'], C['rows'][1]['z']
@@ -151,7 +163,14 @@ def projector(lots, reg):
                 f"{int(C['median_strokes']['giraffe'])} strokes). The join to build next keeps the look lane's line and the motion lane's "
                 f"stroke budget: trace the drawn key, fit the rig to it, and redraw each rig part as one traced stroke. Until then, the "
                 f"projector shows both honestly: the look lane now moves, but its in-betweens slide and swap because nothing holds the body together.")
-    page('projector.html', 'pages/projector.html', DATA=js({'lots': L, 'shot': S, 'traced': M, 'compare': C, 'registry': reg['tests'], 'thumbs': thumbs,
+    cat_by = {l['lot']: l for l in lots}
+    res = []
+    for cat in sorted(M):
+        look = by[cat]['r']; pup = by.get(f'{cat}-redraw', {}).get('r', {})
+        cell = lambda r, i: {'v': r[i]['value'], 'ok': r[i]['ok']} if i in r else None
+        res.append({'cat': cat, 'look': {i: cell(look, i) for i in ('M2', 'T3', 'B1', 'J4')},
+                    'pup': {i: cell(pup, i) for i in ('M2', 'T3', 'B1', 'J4', 'J1', 'M3', 'M5')}})
+    page('projector.html', 'pages/projector.html', DATA=js({'lots': L, 'shots': shots, 'traced': M, 'results': res, 'compare': C, 'registry': reg['tests'], 'thumbs': thumbs,
          'catalog': {l['lot']: {'r': l['r']} for l in lots}}))
 
 

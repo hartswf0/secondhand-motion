@@ -1,0 +1,14 @@
+{
+ "title": "Windmill Turns",
+ "joints": {"hub": [110, 108], "sail": [55, 5], "baseL": [22, 248], "baseR": [200, 248]},
+ "bones": {"sails": ["hub", "sail"], "towerL": ["hub", "baseL"], "towerR": ["hub", "baseR"]},
+ "bind": {"0": ["towerL", "towerR"], "1": ["towerL", "towerR"], "2": ["towerL", "towerR"], "3": ["sails"], "4": ["towerL", "towerR"]},
+ "camera": "static",
+ "keys": [
+  {"hub": [157, 148], "sail": [102, 42], "baseL": [132, 272], "baseR": [212, 272]},
+  {"hub": [160, 148], "sail": [143, 18], "baseL": [135, 272], "baseR": [215, 272]},
+  {"hub": [160, 150], "sail": [190, 12], "baseL": [135, 272], "baseR": [215, 272]},
+  {"hub": [160, 148], "sail": [235, 22], "baseL": [135, 272], "baseR": [215, 272]}
+ ],
+ "notes": ["sails at ten past", "sails turning clockwise", "one sail straight up", "sails past the vertical"]
+}

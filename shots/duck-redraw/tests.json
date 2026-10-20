@@ -1,0 +1,106 @@
+[
+ {
+  "id": "M2",
+  "value": 8,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "per_key": [
+   10,
+   7,
+   6,
+   8
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.45,
+  "unit": "fit to a GrabCut silhouette (not SAM)",
+  "ok": false,
+  "per_key": [
+   0.44,
+   0.47,
+   0.47,
+   0.42
+  ],
+  "note": "GrabCut seeded by a box around the agent-placed key; weaker than SAM and partly circular"
+ },
+ {
+  "id": "M4",
+  "value": 0.0,
+  "unit": "px drift over 6 planted intervals",
+  "ok": true
+ },
+ {
+  "id": "M5",
+  "value": 7.3,
+  "unit": "% variation (worst bone: legL)",
+  "ok": true,
+  "per_bone": {
+   "head": 2.9,
+   "body": 0.7,
+   "legL": 7.3,
+   "legM": 4.9
+  }
+ },
+ {
+  "id": "M6",
+  "value": 0.5,
+  "unit": "px jerk (beak)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "1.00",
+  "unit": "same doodle strokes every frame",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% strokes held (plate drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "quickdraw:6527787101847552",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "48/48",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cduck\u201d; motion broken at frames 2, 3",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/duck-redraw/reviews/critic-1.json",
+  "note": "blind critic saw the cartoon strip only, then the doodle"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "evidence": "shots/duck-redraw/reviews/critic-1.json",
+  "note": "The beak. In the doodle it is a flat horizontal wedge sticking out from the head. In frames 2-8 of the cartoon it folds into a thin vertical sliver that merges with the front neck line and crosses inside the head outline, so the head stops reading as the doodle's head. Only frame 1 (mirrored) keeps the doodle's construction."
+ },
+ {
+  "id": "M1",
+  "value": "not run",
+  "unit": "",
+  "ok": null,
+  "note": "the classifier runs in the browser pane, which did not respond this session; strokes to score are in data/m1/payload.json"
+ }
+]

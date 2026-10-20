@@ -1,0 +1,19 @@
+{
+ "named_subject": "helicopter",
+ "second_guess": "seaplane",
+ "action": "A helicopter with a turning rotor drifts across the frame, then gets smaller as if it is flying away from the viewer.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  7
+ ],
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cartoon tilts the whole body nose-down with a sloped skid, while the doodle sits level with a flat horizontal skid. The cartoon line is also thinner than the doodle's heavy marker stroke.",
+ "notes": "Frames 1-4 read as one continuous close-up drift. Frame 5 cuts to a full-body view at a different scale and position, and frame 7 roughly halves the size again, so the recession reads as jumps rather than a smooth fly-away. The construction carries over clearly: hooked tail tip, cockpit window line, asymmetric rotor cross, two splayed struts and a single skid.",
+ "_packet": {
+  "a.png": "critic/strip.png",
+  "b.png": "critic/keys.png",
+  "c.png": "critic/design.png"
+ },
+ "_round": 1
+}

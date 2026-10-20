@@ -1,0 +1,19 @@
+{
+ "named_subject": "bicycle wheel",
+ "second_guess": "unicycle",
+ "action": "A front bicycle wheel stays roughly in place while its spokes rotate, and the frame, handlebar and a second curve shift around it as the view drifts left and down.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  6
+ ],
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cartoon crops so tightly on the front wheel that the rear wheel and seat never appear whole. The handlebar stroke also detaches from the wheel and drifts off to the left (frames 3-5), so the full bicycle silhouette from the doodle is never visible.",
+ "notes": "The front wheel's lopsided heptagon, the crossed-spoke hub and the long top-tube strokes match the doodle stroke for stroke, so it is the same drawing. Motion breaks at 4->5, where the whole view jumps down and left and the handlebar curve leaps away, and at 5->6, where an unexplained curve fragment appears at the right edge and a second at the left.",
+ "_packet": {
+  "a.png": "critic/strip.png",
+  "b.png": "critic/keys.png",
+  "c.png": "critic/design.png"
+ },
+ "_round": 1
+}
