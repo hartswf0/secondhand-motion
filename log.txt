@@ -1,0 +1,40 @@
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Device set to use cpu
+You are using a model of type sam2_video to instantiate a model of type sam2. This is not supported for all configurations of models and can yield errors.
+Device set to use cpu
+0 dino 0.82 0.934 4878 12s
+1 dino 0.90 0.914 4764 24s
+2 dino 0.90 0.906 4180 36s
+3 dino 0.87 0.93 4070 48s
+4 dino 0.91 0.916 4393 60s
+5 dino 0.93 0.933 4400 73s
+6 dino 0.89 0.923 4524 85s
+7 dino 0.90 0.927 4546 97s
+8 dino 0.82 0.912 4277 109s
+9 dino 0.84 0.923 4076 121s
+10 dino 0.89 0.937 4362 133s
+11 dino 0.92 0.933 4248 145s
+12 dino 0.62 0.936 5072 158s
+13 dino 0.94 0.939 5180 170s
+14 dino 0.93 0.931 5775 182s
+15 dino 0.63 0.935 6215 194s
+16 dino 0.76 0.937 6713 206s
+17 dino 0.90 0.931 6509 218s
+18 dino 0.89 0.939 6578 230s
+19 dino 0.93 0.942 6619 242s
+20 dino 0.92 0.946 6544 253s
+21 dino 0.44 0.906 7189 266s
+22 dino 0.85 0.936 7656 278s
+23 dino 0.51 0.922 7540 290s
+24 dino 0.89 0.934 7191 303s
+25 dino 0.89 0.934 7151 315s
+26 dino 0.90 0.934 7284 327s
+27 dino 0.89 0.935 7651 339s
+28 dino 0.91 0.94 7540 351s
+29 dino 0.87 0.932 7552 363s
+30 dino 0.90 0.934 7647 375s
+31 dino 0.88 0.937 7683 387s
+32 dino 0.83 0.929 7213 400s
+33 dino 0.86 0.937 7253 412s
+34 dino 0.88 0.928 7531 424s
+35 dino 0.87 0.931 7482 436s
