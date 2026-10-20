@@ -1,0 +1,31 @@
+{
+  "review_kind": "blind visual review of paired stills",
+  "actual_playback_viewed": false,
+  "evidence_viewed": [
+    "source.json",
+    "integrated/source-contact-sheet.jpg",
+    "integrated/design.png",
+    "integrated/source-01.jpg through source-08.jpg",
+    "integrated/key-01.png through key-08.png"
+  ],
+  "source_event": {
+    "verdict": "partially met",
+    "assessment": "The sampled source shows storm water surging against a low building, with a pronounced early splash at its left front edge followed by a lower waterline. The cartoon preserves the early rise and later settling broadly, but understates the localized upward splash in the first two paired keys. The visible source does not show a rotating cyclone."
+  },
+  "drawing_identity": {
+    "verdict": "met in stills",
+    "assessment": "All eight keys retain the original doodle's overlapping long angular strokes, stacked narrow loops, uneven left endpoints and dense pointed right end. The deformation remains recognizably this drawing."
+  },
+  "composition": {
+    "verdict": "met in stills",
+    "assessment": "The broad roof, cropped left edge, three front openings, right end wall and foreground water preserve the source framing. The main water mass stays beneath the building and the early raised portion is on the correct side."
+  },
+  "smallest_actionable_gap": {
+    "gap": "The early left-side impact reads as a gently raised surface instead of the source's upward burst against the wall.",
+    "repair": "Lift and steepen the existing upper-left stroke group by roughly 15\u201325 pixels in keys 01\u201302 at the building's left front edge, then return it to the lower contour by key 03. Keep the same strokes and their correspondence; add no new splash vocabulary."
+  },
+  "protected_strength": "Preserve the unmistakable angular seven-stroke doodle construction, especially the overlapping long loops and sharp rightward convergence, together with the current building framing.",
+  "still_key_approved": false,
+  "motion_approved": false,
+  "playback_assessment": "Not assessed. I inspected the contact sheet and all eight paired stills but did not watch comparison.mp4 at normal speed; these observations do not establish a playback pass."
+}

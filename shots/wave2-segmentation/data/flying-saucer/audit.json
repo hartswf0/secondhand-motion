@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "7b98a2dc09b3505003afb16dd27d96a567904e5d85cc2d44124f3f00abe663cf",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "CGI aeroshell",
+      "result": "plausible_subject",
+      "note": "The large visible aeroshell is captured.",
+      "model_iou_estimate": 0.969
+    },
+    {
+      "frame": 6,
+      "observed_target": "CGI aeroshell",
+      "result": "plausible_subject",
+      "note": "The mask follows the tilted outer contour.",
+      "model_iou_estimate": 0.973
+    },
+    {
+      "frame": 25,
+      "observed_target": "CGI aeroshell",
+      "result": "plausible_subject",
+      "note": "Visible shell crop is retained.",
+      "model_iou_estimate": 0.981
+    },
+    {
+      "frame": 28,
+      "observed_target": "CGI aeroshell",
+      "result": "plausible_subject",
+      "note": "The visible cropped shell remains captured.",
+      "model_iou_estimate": 0.981
+    }
+  ]
+}

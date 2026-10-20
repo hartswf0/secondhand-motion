@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "93e75f6cd168aaee45a4cdb4c997320ec368ffbbc89e7ad69978faaf143e79f4",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "broad sky",
+      "result": "wrong_target",
+      "note": "The mask does not isolate the funnel.",
+      "model_iou_estimate": 0.874
+    },
+    {
+      "frame": 16,
+      "observed_target": "right-side tree",
+      "result": "wrong_target",
+      "note": "A foreground tree is selected instead of the funnel.",
+      "model_iou_estimate": 0.933
+    },
+    {
+      "frame": 30,
+      "observed_target": "right-side tree",
+      "result": "wrong_target",
+      "note": "Tree selection persists in this inspected frame.",
+      "model_iou_estimate": 0.913
+    },
+    {
+      "frame": 38,
+      "observed_target": "broad sky",
+      "result": "wrong_target",
+      "note": "A high estimate accompanies broad sky selection.",
+      "model_iou_estimate": 0.945
+    }
+  ]
+}

@@ -9,12 +9,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
-  "cover": "shots/rain/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 5897326906310656; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "105 rendered frames at 24 fps; 8 integrated keys. Late road-wide wash and rail-side splashes remain unresolved.",
+  "cover": "shots/rain/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5897326906310656; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
   "links": [
     {
-      "label": "Review six keys",
+      "label": "Watch assembled comparison",
+      "href": "shots/rain/integrated/index.html"
+    },
+    {
+      "label": "Inspect source / mask / drawing",
+      "href": "shots/wave2-segmentation/index.html#rain"
+    },
+    {
+      "label": "Earlier isolated keys",
       "href": "shots/rain/index.html"
     },
     {
@@ -24,7 +32,8 @@
   ],
   "tests": "shots/rain/tests.json",
   "tags": [
-    "key drafts",
-    "wave 2"
+    "assembled review",
+    "wave 2",
+    "SAM inspected"
   ]
 }

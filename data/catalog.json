@@ -1222,12 +1222,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
-  "cover": "shots/flying-saucer/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 6582446130724864; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "53 rendered frames at 24 fps; 8 integrated keys. Framing passes still review; rim marks on the dome remain an identity gap.",
+  "cover": "shots/flying-saucer/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 6582446130724864; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
   "links": [
    {
-    "label": "Review six keys",
+    "label": "Watch assembled comparison",
+    "href": "shots/flying-saucer/integrated/index.html"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#flying-saucer"
+   },
+   {
+    "label": "Earlier isolated keys",
     "href": "shots/flying-saucer/index.html"
    },
    {
@@ -1237,12 +1245,13 @@
   ],
   "tests": "shots/flying-saucer/tests.json",
   "tags": [
-   "key drafts",
-   "wave 2"
+   "assembled review",
+   "wave 2",
+   "SAM inspected"
   ],
   "t": {
    "pass": 3,
-   "fail": 0,
+   "fail": 1,
    "total": 7
   },
   "r": {
@@ -1262,26 +1271,27 @@
     "ok": null
    },
    "J4": {
-    "value": "independent identity met",
+    "value": "v3 fresh critic: original rim/body marks migrated to dome; identity bar not met",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "B1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 1.0,
+    "unit": "fraction of authored background geometry held; camera/parallax unmeasured",
+    "ok": true
    },
    "T1": {
     "value": {
-     "min_recall": 1.0,
+     "min_recall": 0.9992748368382887,
      "min_parts_kept": 1.0,
-     "keys": 6
+     "keys": 8,
+     "pass": true
     },
     "unit": "fraction",
     "ok": true
    },
    "S7": {
-    "value": 2,
+    "value": 7,
     "unit": "verified hash-linked entries",
     "ok": true
    },
@@ -1291,7 +1301,7 @@
     "ok": null
    }
   },
-  "href": "shots/flying-saucer/index.html",
+  "href": "shots/flying-saucer/integrated/index.html",
   "gait": "hop"
  },
  {
@@ -1312,6 +1322,10 @@
    {
     "label": "Watch assembled comparison",
     "href": "shots/raccoon/integrated/index.html"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#raccoon"
    },
    {
     "label": "Earlier isolated keys",
@@ -1392,12 +1406,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; pose repair required. Motion not reviewed.",
-  "cover": "shots/hurricane/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 4791481996935168; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "74 rendered frames at 24 fps; 8 integrated keys. Late foreground surge remains weak; trace recall 0.9514 fails the 0.98 bar.",
+  "cover": "shots/hurricane/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 4791481996935168; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
   "links": [
    {
-    "label": "Review six keys",
+    "label": "Watch assembled comparison",
+    "href": "shots/hurricane/integrated/index.html"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#hurricane"
+   },
+   {
+    "label": "Earlier isolated keys",
     "href": "shots/hurricane/index.html"
    },
    {
@@ -1407,8 +1429,9 @@
   ],
   "tests": "shots/hurricane/tests.json",
   "tags": [
-   "key drafts",
-   "wave 2"
+   "assembled review",
+   "wave 2",
+   "SAM inspected"
   ],
   "t": {
    "pass": 2,
@@ -1417,41 +1440,43 @@
   },
   "r": {
    "S6": {
-    "value": "source record complete; rights explicitly unverified",
+    "value": "source identifiers, interval, archive URL present; rights explicitly unverified",
     "unit": "",
     "ok": true
    },
    "M1": {
-    "value": "not run",
+    "value": "not run on integrated revision",
     "unit": "",
     "ok": null
    },
    "M2": {
-    "value": "not run",
+    "value": "not run on integrated revision",
     "unit": "",
     "ok": null
    },
    "J4": {
-    "value": "independent identity met",
+    "value": "fresh v3 critic: original seven-stroke identity met in stills",
     "unit": "",
     "ok": true
    },
    "B1": {
-    "value": "not run",
+    "value": "not run on integrated revision",
     "unit": "",
     "ok": null
    },
    "T1": {
     "value": {
-     "min_recall": 0.9326781881847961,
+     "min_recall": 0.9514354478253395,
      "min_parts_kept": 1.0,
-     "keys": 6
+     "keys": 8,
+     "recall_bar": 0.98,
+     "parts_bar": 1.0
     },
     "unit": "fraction",
     "ok": false
    },
    "S7": {
-    "value": 2,
+    "value": 5,
     "unit": "verified hash-linked entries",
     "ok": true
    },
@@ -1461,7 +1486,7 @@
     "ok": null
    }
   },
-  "href": "shots/hurricane/index.html",
+  "href": "shots/hurricane/integrated/index.html",
   "gait": "shuffle"
  },
  {
@@ -1475,12 +1500,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; pose review uncertain. Motion not reviewed.",
-  "cover": "shots/tornado/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 6522189199179776; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "73 rendered frames at 24 fps; 6 integrated keys. Still pose and doodle identity passed review; playback approval pending.",
+  "cover": "shots/tornado/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 6522189199179776; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
   "links": [
    {
-    "label": "Review six keys",
+    "label": "Watch assembled comparison",
+    "href": "shots/tornado/integrated/index.html"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#tornado"
+   },
+   {
+    "label": "Earlier isolated keys",
     "href": "shots/tornado/index.html"
    },
    {
@@ -1490,8 +1523,9 @@
   ],
   "tests": "shots/tornado/tests.json",
   "tags": [
-   "key drafts",
-   "wave 2"
+   "assembled review",
+   "wave 2",
+   "SAM inspected"
   ],
   "t": {
    "pass": 3,
@@ -1500,7 +1534,7 @@
   },
   "r": {
    "S6": {
-    "value": "source record complete; rights explicitly unverified",
+    "value": "Source record complete; rights explicitly unverified",
     "unit": "",
     "ok": true
    },
@@ -1515,95 +1549,12 @@
     "ok": null
    },
    "J4": {
-    "value": "independent identity met",
+    "value": "Fresh blind v2: original drawing identity bar met on all six keys",
     "unit": "",
     "ok": true
    },
    "B1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
-   },
-   "T1": {
-    "value": {
-     "min_recall": 0.997427652733119,
-     "min_parts_kept": 1.0,
-     "keys": 6
-    },
-    "unit": "fraction",
-    "ok": true
-   },
-   "S7": {
-    "value": 1,
-    "unit": "verified hash-linked entries",
-    "ok": true
-   },
-   "T3": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
-   }
-  },
-  "href": "shots/tornado/index.html",
-  "gait": "sprint"
- },
- {
-  "lot": "SM-0024",
-  "id": "rain",
-  "kind": "subject",
-  "title": "Rain",
-  "category": "rain",
-  "wave": 2,
-  "lane": "look",
-  "stage": 4,
-  "status": "in progress",
-  "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; passed still review. Motion not reviewed.",
-  "cover": "shots/rain/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 5897326906310656; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
-  "links": [
-   {
-    "label": "Review six keys",
-    "href": "shots/rain/index.html"
-   },
-   {
-    "label": "Candidate search",
-    "href": "shots/rain/candidates.json"
-   }
-  ],
-  "tests": "shots/rain/tests.json",
-  "tags": [
-   "key drafts",
-   "wave 2"
-  ],
-  "t": {
-   "pass": 3,
-   "fail": 0,
-   "total": 7
-  },
-  "r": {
-   "S6": {
-    "value": "source record complete; rights explicitly unverified",
-    "unit": "",
-    "ok": true
-   },
-   "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
-   },
-   "M2": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
-   },
-   "J4": {
-    "value": "independent identity met",
-    "unit": "",
-    "ok": true
-   },
-   "B1": {
-    "value": "not run",
+    "value": "One held background geometry under source-observed camera; locked-shot numeric ink test not run",
     "unit": "",
     "ok": null
    },
@@ -1617,7 +1568,7 @@
     "ok": true
    },
    "S7": {
-    "value": 1,
+    "value": 3,
     "unit": "verified hash-linked entries",
     "ok": true
    },
@@ -1627,7 +1578,99 @@
     "ok": null
    }
   },
-  "href": "shots/rain/index.html",
+  "href": "shots/tornado/integrated/index.html",
+  "gait": "sprint"
+ },
+ {
+  "lot": "SM-0024",
+  "id": "rain",
+  "kind": "subject",
+  "title": "Rain",
+  "category": "rain",
+  "wave": 2,
+  "lane": "look",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "105 rendered frames at 24 fps; 8 integrated keys. Late road-wide wash and rail-side splashes remain unresolved.",
+  "cover": "shots/rain/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5897326906310656; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/rain/integrated/index.html"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#rain"
+   },
+   {
+    "label": "Earlier isolated keys",
+    "href": "shots/rain/index.html"
+   },
+   {
+    "label": "Candidate search",
+    "href": "shots/rain/candidates.json"
+   }
+  ],
+  "tests": "shots/rain/tests.json",
+  "tags": [
+   "assembled review",
+   "wave 2",
+   "SAM inspected"
+  ],
+  "t": {
+   "pass": 3,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "S6": {
+    "value": "source record complete; rights explicitly unverified",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "independent still review: original nine-stroke identity met; motion unapproved",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "one held native plate; numeric source-pixel mismatch not measured",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 1.0,
+     "min_parts_kept": 1.0,
+     "keys": 8
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 4,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "shots/rain/integrated/index.html",
   "gait": "jelly"
  },
  {
@@ -1927,6 +1970,10 @@
     "href": "shots/tractor/integrated/index.html"
    },
    {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#tractor"
+   },
+   {
     "label": "Earlier isolated keys",
     "href": "shots/tractor/index.html"
    },
@@ -2012,6 +2059,10 @@
    {
     "label": "Watch assembled comparison",
     "href": "shots/fan/integrated/index.html"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#fan"
    },
    {
     "label": "Earlier isolated keys",

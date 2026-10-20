@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "706aec9ed7e6550cfa2cf6bbb6e9d340ebe54e22bddf46533bd786d554b3f123",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "mosquito body and some legs",
+      "result": "partial_subject",
+      "note": "Thin appendages are not all retained.",
+      "model_iou_estimate": 0.808
+    },
+    {
+      "frame": 17,
+      "observed_target": "mosquito body and some legs",
+      "result": "partial_subject",
+      "note": "Wing and thin parts need direct source inspection.",
+      "model_iou_estimate": 0.812
+    },
+    {
+      "frame": 41,
+      "observed_target": "mosquito body and some legs",
+      "result": "partial_subject",
+      "note": "Body coverage does not establish contact positions.",
+      "model_iou_estimate": 0.853
+    },
+    {
+      "frame": 61,
+      "observed_target": "mosquito body and some legs",
+      "result": "partial_subject",
+      "note": "Thin parts and hairs can merge.",
+      "model_iou_estimate": 0.831
+    }
+  ]
+}

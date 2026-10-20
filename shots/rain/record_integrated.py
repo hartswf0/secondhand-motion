@@ -1,0 +1,18 @@
+"""Append completed rain assembly reviews without rewriting earlier history."""
+from pathlib import Path
+import importlib.util,json
+ROOT=Path(__file__).resolve().parent;OUT=ROOT/'integrated';REPO=ROOT.parents[1]
+spec=importlib.util.spec_from_file_location('loop',REPO/'batches/2026-10-20-selected-drawings/loop.py');loop=importlib.util.module_from_spec(spec);spec.loader.exec_module(loop)
+with open(ROOT/'ledger.jsonl') as f:old=loop.read_ledger(f)
+existing={e['input']['revision'] for e in old};parent=old[-1]['input']['revision']
+src=json.loads((ROOT/'source.json').read_text())
+for i in range(1,4):
+ q=OUT/f'review-v{i}.json'
+ if not q.exists():continue
+ rev=f'rain-integrated-v{i}'
+ if rev in existing:parent=rev;continue
+ base=OUT/f'revisions/v{i}' if (OUT/f'revisions/v{i}').is_dir() else OUT
+ checks=json.loads((base/'assembly-checks.json').read_text());review=json.loads(q.read_text());tr=checks['trace_fidelity'];passed=bool(review.get('bar_met'))
+ gap=review.get('one_gap_that_matters_most',review.get('single_most_important_gap',review.get('greatest_gap',review.get('most_important_gap',''))))
+ raw={'revision':rev,'parent':parent,'observation_refs':['source.json','design.json','integrated/source-contact-sheet.jpg','integrated/source-masks/provenance.json'],'evidence_refs':[str(q.relative_to(ROOT)),str((base/'assembly-checks.json').relative_to(ROOT))],'action':{'type':'repair_tracking' if i==2 else 'change_layer','details':'Assemble nine original rain strokes over source-framed held wet-road scene; surface events follow source-local brightening.' if i==1 else ('Hold bridge/horizon/rails at their initial source positions; rejected LK had tracked falling rain instead of camera.' if i==2 else 'Strengthen and spread source-located road highlights; ripple opacity and lifespan follow measured source burst energy while glyphs and plate remain unchanged.')},'before_refs':['keys/key-01.png'] if i==1 else [f'integrated/revisions/v{i-1}/shot.json'],'after_refs':[str((base/'shot.json').relative_to(ROOT)),str((base/'comparison.mp4').relative_to(ROOT))],'source':{'identity':src['clip_id'],'interval':{'start':src['interval_seconds'][0],'end':src['interval_seconds'][1],'unit':'seconds'}},'claims':['drawing','motion'],'source_event_preserved':'unknown' if passed else False,'drawing_identity_preserved':True,'train_eligible':False,'measured_tests':[{'name':'complete_decode','status':'pass','constraint':True,'value':checks['rendered_frames'],'unit':'frames','evidence_refs':[str((base/'video-validation.json').relative_to(ROOT))]},{'name':'character_trace','status':'pass' if tr['pass'] else 'fail','constraint':True,'value':tr['min_recall'],'unit':'minimum recall','evidence_refs':[str((base/'traced.json').relative_to(ROOT))]},{'name':'recognition_classifier','status':'unknown','constraint':True},{'name':'source_drop_or_splash_correspondence','status':'unknown','constraint':True,'metric':'Surface brightening events observed; individual drop identities and authored falling phases not verified.'},{'name':'source_pose_mask_fit','status':'unknown','constraint':True,'metric':'Broad puddle mask is not a target for individual drops or diffuse rain.'},{'name':'planted_contacts','status':'fail','constraint':True,'value':0,'unit':'verified planted intervals'},{'name':'independent_normal_speed_playback','status':'unknown','constraint':True}],'critic':{'scope':['source_composition','drawing_identity','sampled_source_event'],'verdict':'bar_met' if passed else 'bar_not_met','gap':gap,'protected_strengths':[review.get('must_not_be_lost','Sparse native nine-stroke rain identity and held perspective rails')],'independent':True}}
+ entry=loop.record(raw,ROOT/'ledger.jsonl');print(rev,entry['decision']['status']);parent=rev

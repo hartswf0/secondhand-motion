@@ -9,12 +9,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; pose repair required. Motion not reviewed.",
-  "cover": "shots/hurricane/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 4791481996935168; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "74 rendered frames at 24 fps; 8 integrated keys. Late foreground surge remains weak; trace recall 0.9514 fails the 0.98 bar.",
+  "cover": "shots/hurricane/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 4791481996935168; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
   "links": [
     {
-      "label": "Review six keys",
+      "label": "Watch assembled comparison",
+      "href": "shots/hurricane/integrated/index.html"
+    },
+    {
+      "label": "Inspect source / mask / drawing",
+      "href": "shots/wave2-segmentation/index.html#hurricane"
+    },
+    {
+      "label": "Earlier isolated keys",
       "href": "shots/hurricane/index.html"
     },
     {
@@ -24,7 +32,8 @@
   ],
   "tests": "shots/hurricane/tests.json",
   "tags": [
-    "key drafts",
-    "wave 2"
+    "assembled review",
+    "wave 2",
+    "SAM inspected"
   ]
 }

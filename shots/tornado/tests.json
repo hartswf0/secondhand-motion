@@ -1,7 +1,7 @@
 [
   {
     "id": "S6",
-    "value": "source record complete; rights explicitly unverified",
+    "value": "Source record complete; rights explicitly unverified",
     "unit": "",
     "ok": true
   },
@@ -19,20 +19,20 @@
   },
   {
     "id": "J4",
-    "value": "independent identity met",
+    "value": "Fresh blind v2: original drawing identity bar met on all six keys",
     "unit": "",
     "ok": true
   },
   {
     "id": "B1",
-    "value": "not run",
+    "value": "One held background geometry under source-observed camera; locked-shot numeric ink test not run",
     "unit": "",
     "ok": null
   },
   {
     "id": "T1",
     "value": {
-      "min_recall": 0.997427652733119,
+      "min_recall": 1.0,
       "min_parts_kept": 1.0,
       "keys": 6
     },
@@ -41,15 +41,15 @@
   },
   {
     "id": "M3",
-    "value": "not run",
+    "value": "Not measured: audited SAM 2.1 masks switch sky/tree and are invalid for tornado object fit",
     "unit": "",
     "ok": null
   },
   {
     "id": "M4",
-    "value": "not run",
+    "value": "0 planted intervals; gate fails its minimum of four, no contact pass claimed",
     "unit": "",
-    "ok": null
+    "ok": false
   },
   {
     "id": "M5",
@@ -65,31 +65,43 @@
   },
   {
     "id": "S1",
-    "value": "not run",
+    "value": "No independent depth/parallax measurement; held distant scene receives camera translation",
     "unit": "",
     "ok": null
   },
   {
     "id": "S2",
-    "value": "not run",
+    "value": "Native subject key6522189199179776; held set geometry drawn by agent; all planes sourced in integrated/shot.json",
     "unit": "",
-    "ok": null
+    "ok": true
   },
   {
     "id": "S3",
-    "value": "not run",
+    "value": {
+      "frames": 73,
+      "fps": 24,
+      "key_indices": [
+        0,
+        14,
+        29,
+        44,
+        58,
+        72
+      ],
+      "per_frame_source_times": true
+    },
     "unit": "",
-    "ok": null
+    "ok": true
   },
   {
     "id": "S5",
-    "value": "not run",
+    "value": "Opaque foreground tree/street planes ordered after tornado; inspected six keys",
     "unit": "",
-    "ok": null
+    "ok": true
   },
   {
     "id": "S4",
-    "value": "not run",
+    "value": "Static links and JavaScript checked; no 390px browser layout inspection",
     "unit": "",
     "ok": null
   },
@@ -113,7 +125,7 @@
   },
   {
     "id": "S7",
-    "value": 1,
+    "value": 3,
     "unit": "verified hash-linked entries",
     "ok": true
   }

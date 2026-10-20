@@ -1,0 +1,13 @@
+{
+  "branch": "wave2-track/fan",
+  "commit": "1d6b33a4f4e3faa8aee1bcf32ca3c64aeb58dc1d",
+  "clip_id": "7c81549f-fdbe-5064-b148-a63e586f6404",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "source_video_note": "CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "426327e9ed86f58fda5dcfd57f9aaf9810b8d3f6582c071397fe4eb893e96360",
+  "source_record": "../../../fan/source.json",
+  "note": "The final CI sample crosses into the next cooking shot. It is retained for inspection and blocked from cartoon pairing."
+}

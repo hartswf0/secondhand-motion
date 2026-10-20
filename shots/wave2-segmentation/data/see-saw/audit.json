@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "9ed8d1d419d6388418f6038190f78e20d6af5fd29adef88dd765cb5c837a93a7",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "several boards",
+      "result": "mixed_instances",
+      "note": "Multiple boards and fragments are marked together.",
+      "model_iou_estimate": 0.494
+    },
+    {
+      "frame": 52,
+      "observed_target": "several boards",
+      "result": "mixed_instances",
+      "note": "The mask does not isolate the selected foreground board.",
+      "model_iou_estimate": 0.662
+    },
+    {
+      "frame": 75,
+      "observed_target": "several boards",
+      "result": "mixed_instances",
+      "note": "Parallel equipment is merged.",
+      "model_iou_estimate": 0.613
+    },
+    {
+      "frame": 86,
+      "observed_target": "several boards",
+      "result": "mixed_instances",
+      "note": "This is not a single-board silhouette.",
+      "model_iou_estimate": 0.679
+    }
+  ]
+}

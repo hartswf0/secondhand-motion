@@ -1,0 +1,1352 @@
+{
+  "method": "roof/eave template NCC translation per source frame; LK cross-check; seven-sample Savitzky-Golay smoothing",
+  "features": 21,
+  "roof_reference": [
+    15,
+    70,
+    285,
+    130
+  ],
+  "roof_search": [
+    0,
+    55,
+    320,
+    145
+  ],
+  "samples": [
+    {
+      "f": 0,
+      "tracked_points": 21,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9999998211860657,
+      "raw_translation": [
+        0,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 1,
+      "tracked_points": 16,
+      "lk_translation": [
+        -0.20830154418945312,
+        0.02768707275390625
+      ],
+      "roof_template_ncc": 0.9957279562950134,
+      "raw_translation": [
+        0,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 2,
+      "tracked_points": 16,
+      "lk_translation": [
+        -0.2449798583984375,
+        -0.07888031005859375
+      ],
+      "roof_template_ncc": 0.9952365159988403,
+      "raw_translation": [
+        0,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 3,
+      "tracked_points": 16,
+      "lk_translation": [
+        -0.1829681396484375,
+        -0.2763404846191406
+      ],
+      "roof_template_ncc": 0.9911492466926575,
+      "raw_translation": [
+        0,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 4,
+      "tracked_points": 17,
+      "lk_translation": [
+        -0.1612548828125,
+        -0.26984405517578125
+      ],
+      "roof_template_ncc": 0.9921320676803589,
+      "raw_translation": [
+        0,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 5,
+      "tracked_points": 16,
+      "lk_translation": [
+        -0.1641693115234375,
+        -0.1963653564453125
+      ],
+      "roof_template_ncc": 0.9936412572860718,
+      "raw_translation": [
+        0,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 6,
+      "tracked_points": 16,
+      "lk_translation": [
+        -0.1641387939453125,
+        -0.19637298583984375
+      ],
+      "roof_template_ncc": 0.9937794208526611,
+      "raw_translation": [
+        0,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 7,
+      "tracked_points": 10,
+      "lk_translation": [
+        -0.7896728515625,
+        0.4175262451171875
+      ],
+      "roof_template_ncc": 0.990488588809967,
+      "raw_translation": [
+        -1,
+        1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 8,
+      "tracked_points": 12,
+      "lk_translation": [
+        -1.0023956298828125,
+        0.3043479919433594
+      ],
+      "roof_template_ncc": 0.9903661608695984,
+      "raw_translation": [
+        -1,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 9,
+      "tracked_points": 10,
+      "lk_translation": [
+        -0.7138824462890625,
+        -0.22547149658203125
+      ],
+      "roof_template_ncc": 0.9866719245910645,
+      "raw_translation": [
+        -1,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 10,
+      "tracked_points": 11,
+      "lk_translation": [
+        -0.684173583984375,
+        -0.21213531494140625
+      ],
+      "roof_template_ncc": 0.9864631295204163,
+      "raw_translation": [
+        -2,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 11,
+      "tracked_points": 10,
+      "lk_translation": [
+        -0.836334228515625,
+        -0.4694328308105469
+      ],
+      "roof_template_ncc": 0.9883609414100647,
+      "raw_translation": [
+        -2,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 12,
+      "tracked_points": 10,
+      "lk_translation": [
+        -0.8361358642578125,
+        -0.6578788757324219
+      ],
+      "roof_template_ncc": 0.9890703558921814,
+      "raw_translation": [
+        -2,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 13,
+      "tracked_points": 10,
+      "lk_translation": [
+        -1.0957183837890625,
+        -0.7439498901367188
+      ],
+      "roof_template_ncc": 0.9892720580101013,
+      "raw_translation": [
+        -3,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 14,
+      "tracked_points": 11,
+      "lk_translation": [
+        -1.159210205078125,
+        -0.6394500732421875
+      ],
+      "roof_template_ncc": 0.9885375499725342,
+      "raw_translation": [
+        -3,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 15,
+      "tracked_points": 7,
+      "lk_translation": [
+        -1.572509765625,
+        -0.264495849609375
+      ],
+      "roof_template_ncc": 0.98758864402771,
+      "raw_translation": [
+        -4,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 16,
+      "tracked_points": 7,
+      "lk_translation": [
+        -1.7818603515625,
+        0.064483642578125
+      ],
+      "roof_template_ncc": 0.9879968166351318,
+      "raw_translation": [
+        -4,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 17,
+      "tracked_points": 7,
+      "lk_translation": [
+        -1.79840087890625,
+        -0.339324951171875
+      ],
+      "roof_template_ncc": 0.9868519902229309,
+      "raw_translation": [
+        -4,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 18,
+      "tracked_points": 7,
+      "lk_translation": [
+        -1.73138427734375,
+        -0.4178466796875
+      ],
+      "roof_template_ncc": 0.9835973978042603,
+      "raw_translation": [
+        -5,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 19,
+      "tracked_points": 7,
+      "lk_translation": [
+        -1.604705810546875,
+        -0.4901885986328125
+      ],
+      "roof_template_ncc": 0.9846317172050476,
+      "raw_translation": [
+        -5,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 20,
+      "tracked_points": 7,
+      "lk_translation": [
+        -1.610137939453125,
+        -0.74896240234375
+      ],
+      "roof_template_ncc": 0.9807118773460388,
+      "raw_translation": [
+        -5,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 21,
+      "tracked_points": 7,
+      "lk_translation": [
+        -1.63214111328125,
+        -0.5793838500976562
+      ],
+      "roof_template_ncc": 0.9783336520195007,
+      "raw_translation": [
+        -5,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 22,
+      "tracked_points": 8,
+      "lk_translation": [
+        -1.8514251708984375,
+        -0.39737701416015625
+      ],
+      "roof_template_ncc": 0.9758005142211914,
+      "raw_translation": [
+        -6,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 23,
+      "tracked_points": 7,
+      "lk_translation": [
+        -2.71417236328125,
+        -0.0573577880859375
+      ],
+      "roof_template_ncc": 0.9730014801025391,
+      "raw_translation": [
+        -7,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 24,
+      "tracked_points": 6,
+      "lk_translation": [
+        -1.951446533203125,
+        1.1169204711914062
+      ],
+      "roof_template_ncc": 0.9675672054290771,
+      "raw_translation": [
+        -7,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 25,
+      "tracked_points": 8,
+      "lk_translation": [
+        -3.13934326171875,
+        0.7880744934082031
+      ],
+      "roof_template_ncc": 0.965983510017395,
+      "raw_translation": [
+        -7,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 26,
+      "tracked_points": 7,
+      "lk_translation": [
+        -2.92059326171875,
+        -0.02532958984375
+      ],
+      "roof_template_ncc": 0.9645348787307739,
+      "raw_translation": [
+        -7,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 27,
+      "tracked_points": 9,
+      "lk_translation": [
+        -2.636077880859375,
+        -0.7983016967773438
+      ],
+      "roof_template_ncc": 0.9631748795509338,
+      "raw_translation": [
+        -7,
+        -2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 28,
+      "tracked_points": 7,
+      "lk_translation": [
+        -3.061004638671875,
+        0.06005859375
+      ],
+      "roof_template_ncc": 0.9603028297424316,
+      "raw_translation": [
+        -7,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 29,
+      "tracked_points": 6,
+      "lk_translation": [
+        -3.323455810546875,
+        -0.21144485473632812
+      ],
+      "roof_template_ncc": 0.9574941992759705,
+      "raw_translation": [
+        -8,
+        -2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 30,
+      "tracked_points": 5,
+      "lk_translation": [
+        -3.5546875,
+        -0.12325286865234375
+      ],
+      "roof_template_ncc": 0.9548265933990479,
+      "raw_translation": [
+        -8,
+        -2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 31,
+      "tracked_points": 5,
+      "lk_translation": [
+        -4.0701904296875,
+        0.47808074951171875
+      ],
+      "roof_template_ncc": 0.9539302587509155,
+      "raw_translation": [
+        -8,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 32,
+      "tracked_points": 4,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9554107785224915,
+      "raw_translation": [
+        -8,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 33,
+      "tracked_points": 5,
+      "lk_translation": [
+        -2.796295166015625,
+        0.204376220703125
+      ],
+      "roof_template_ncc": 0.9492102861404419,
+      "raw_translation": [
+        -8,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 34,
+      "tracked_points": 6,
+      "lk_translation": [
+        -2.9348297119140625,
+        -0.07388687133789062
+      ],
+      "roof_template_ncc": 0.9458330869674683,
+      "raw_translation": [
+        -8,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 35,
+      "tracked_points": 5,
+      "lk_translation": [
+        -2.505340576171875,
+        -0.9602432250976562
+      ],
+      "roof_template_ncc": 0.9456492066383362,
+      "raw_translation": [
+        -8,
+        -2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 36,
+      "tracked_points": 6,
+      "lk_translation": [
+        -2.18621826171875,
+        -0.3954582214355469
+      ],
+      "roof_template_ncc": 0.9503005146980286,
+      "raw_translation": [
+        -7,
+        -2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 37,
+      "tracked_points": 5,
+      "lk_translation": [
+        -2.422821044921875,
+        -0.41318511962890625
+      ],
+      "roof_template_ncc": 0.9533531069755554,
+      "raw_translation": [
+        -7,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 38,
+      "tracked_points": 6,
+      "lk_translation": [
+        -2.3952484130859375,
+        0.062053680419921875
+      ],
+      "roof_template_ncc": 0.9525111317634583,
+      "raw_translation": [
+        -8,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 39,
+      "tracked_points": 4,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9510849714279175,
+      "raw_translation": [
+        -8,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 40,
+      "tracked_points": 5,
+      "lk_translation": [
+        -3.868743896484375,
+        0.5375900268554688
+      ],
+      "roof_template_ncc": 0.9552895426750183,
+      "raw_translation": [
+        -9,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 41,
+      "tracked_points": 5,
+      "lk_translation": [
+        -4.703643798828125,
+        0.06958770751953125
+      ],
+      "roof_template_ncc": 0.9562745094299316,
+      "raw_translation": [
+        -9,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 42,
+      "tracked_points": 3,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9544703364372253,
+      "raw_translation": [
+        -10,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 43,
+      "tracked_points": 2,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9527538418769836,
+      "raw_translation": [
+        -10,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 44,
+      "tracked_points": 4,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9539361596107483,
+      "raw_translation": [
+        -10,
+        -1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 45,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9544476866722107,
+      "raw_translation": [
+        -10,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 46,
+      "tracked_points": 2,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9555816650390625,
+      "raw_translation": [
+        -10,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 47,
+      "tracked_points": 6,
+      "lk_translation": [
+        2.4987640380859375,
+        0.7820205688476562
+      ],
+      "roof_template_ncc": 0.9532044529914856,
+      "raw_translation": [
+        -10,
+        1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 48,
+      "tracked_points": 4,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9527612924575806,
+      "raw_translation": [
+        -11,
+        1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 49,
+      "tracked_points": 4,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9497802257537842,
+      "raw_translation": [
+        -11,
+        1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 50,
+      "tracked_points": 2,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9487507939338684,
+      "raw_translation": [
+        -11,
+        1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 51,
+      "tracked_points": 0,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9433735609054565,
+      "raw_translation": [
+        -11,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 52,
+      "tracked_points": 0,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9436514377593994,
+      "raw_translation": [
+        -11,
+        0
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 53,
+      "tracked_points": 0,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.944208025932312,
+      "raw_translation": [
+        -12,
+        1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 54,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9426096081733704,
+      "raw_translation": [
+        -11,
+        1
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 55,
+      "tracked_points": 0,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9403597712516785,
+      "raw_translation": [
+        -12,
+        2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 56,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9358187913894653,
+      "raw_translation": [
+        -11,
+        2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 57,
+      "tracked_points": 2,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9356234669685364,
+      "raw_translation": [
+        -12,
+        2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 58,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9363176822662354,
+      "raw_translation": [
+        -12,
+        2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 59,
+      "tracked_points": 0,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9355223178863525,
+      "raw_translation": [
+        -11,
+        2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 60,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9331632852554321,
+      "raw_translation": [
+        -11,
+        2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 61,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9276145696640015,
+      "raw_translation": [
+        -11,
+        2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 62,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9267905950546265,
+      "raw_translation": [
+        -11,
+        2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 63,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9277839064598083,
+      "raw_translation": [
+        -11,
+        3
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 64,
+      "tracked_points": 0,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9278804063796997,
+      "raw_translation": [
+        -11,
+        3
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 65,
+      "tracked_points": 2,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9219615459442139,
+      "raw_translation": [
+        -11,
+        3
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 66,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9207010865211487,
+      "raw_translation": [
+        -12,
+        3
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 67,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9241576194763184,
+      "raw_translation": [
+        -11,
+        2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 68,
+      "tracked_points": 3,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9206446409225464,
+      "raw_translation": [
+        -10,
+        2
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 69,
+      "tracked_points": 3,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.921625018119812,
+      "raw_translation": [
+        -11,
+        3
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 70,
+      "tracked_points": 2,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9212427139282227,
+      "raw_translation": [
+        -11,
+        3
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 71,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9195459485054016,
+      "raw_translation": [
+        -11,
+        3
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 72,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9210890531539917,
+      "raw_translation": [
+        -12,
+        4
+      ],
+      "method": "roof template"
+    },
+    {
+      "f": 73,
+      "tracked_points": 1,
+      "lk_translation": [
+        0.0,
+        0.0
+      ],
+      "roof_template_ncc": 0.9242718815803528,
+      "raw_translation": [
+        -11,
+        3
+      ],
+      "method": "roof template"
+    }
+  ],
+  "smoothed": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.09523809523809529,
+      -0.09523809523809529
+    ],
+    [
+      -0.0476190476190477,
+      0.142857142857143
+    ],
+    [
+      -0.3333333333333337,
+      0.285714285714286
+    ],
+    [
+      -0.5714285714285721,
+      0.4285714285714289
+    ],
+    [
+      -1.0000000000000009,
+      0.23809523809523828
+    ],
+    [
+      -1.4285714285714297,
+      -0.1904761904761907
+    ],
+    [
+      -1.571428571428573,
+      -0.7619047619047625
+    ],
+    [
+      -2.0000000000000018,
+      -0.9523809523809532
+    ],
+    [
+      -2.3333333333333357,
+      -1.1904761904761916
+    ],
+    [
+      -2.714285714285717,
+      -0.9523809523809532
+    ],
+    [
+      -3.2857142857142887,
+      -0.6666666666666672
+    ],
+    [
+      -3.66666666666667,
+      -0.3333333333333337
+    ],
+    [
+      -4.0000000000000036,
+      0.04761904761904759
+    ],
+    [
+      -4.428571428571432,
+      0.04761904761904759
+    ],
+    [
+      -4.666666666666671,
+      -0.3333333333333337
+    ],
+    [
+      -4.857142857142861,
+      -0.6666666666666672
+    ],
+    [
+      -5.047619047619053,
+      -1.0476190476190486
+    ],
+    [
+      -5.380952380952386,
+      -1.0476190476190486
+    ],
+    [
+      -6.000000000000005,
+      -0.5714285714285721
+    ],
+    [
+      -6.619047619047626,
+      -0.3809523809523814
+    ],
+    [
+      -7.0476190476190546,
+      -0.2857142857142861
+    ],
+    [
+      -7.095238095238102,
+      -0.714285714285715
+    ],
+    [
+      -6.904761904761911,
+      -1.142857142857144
+    ],
+    [
+      -7.0476190476190546,
+      -1.4761904761904776
+    ],
+    [
+      -7.333333333333341,
+      -1.7142857142857157
+    ],
+    [
+      -7.666666666666675,
+      -1.7619047619047634
+    ],
+    [
+      -7.95238095238096,
+      -1.523809523809525
+    ],
+    [
+      -8.095238095238102,
+      -1.4285714285714297
+    ],
+    [
+      -8.000000000000007,
+      -0.9523809523809533
+    ],
+    [
+      -8.095238095238102,
+      -0.9523809523809533
+    ],
+    [
+      -7.95238095238096,
+      -1.4285714285714297
+    ],
+    [
+      -7.571428571428579,
+      -1.6190476190476204
+    ],
+    [
+      -7.3809523809523885,
+      -1.7142857142857157
+    ],
+    [
+      -7.285714285714294,
+      -1.3809523809523823
+    ],
+    [
+      -7.619047619047627,
+      -0.714285714285715
+    ],
+    [
+      -8.190476190476197,
+      -0.2380952380952384
+    ],
+    [
+      -8.809523809523817,
+      -0.0476190476190477
+    ],
+    [
+      -9.285714285714294,
+      0.19047619047619058
+    ],
+    [
+      -9.76190476190477,
+      -0.142857142857143
+    ],
+    [
+      -9.952380952380961,
+      -0.285714285714286
+    ],
+    [
+      -10.095238095238106,
+      -0.4285714285714289
+    ],
+    [
+      -9.904761904761916,
+      -0.23809523809523828
+    ],
+    [
+      -10.047619047619058,
+      0.1904761904761907
+    ],
+    [
+      -10.333333333333343,
+      0.7619047619047625
+    ],
+    [
+      -10.666666666666677,
+      1.0476190476190486
+    ],
+    [
+      -10.952380952380963,
+      1.0476190476190486
+    ],
+    [
+      -11.00000000000001,
+      0.5714285714285721
+    ],
+    [
+      -11.142857142857153,
+      0.3809523809523814
+    ],
+    [
+      -11.1904761904762,
+      0.2857142857142861
+    ],
+    [
+      -11.476190476190489,
+      0.6190476190476197
+    ],
+    [
+      -11.476190476190487,
+      1.285714285714287
+    ],
+    [
+      -11.523809523809536,
+      1.7619047619047634
+    ],
+    [
+      -11.61904761904763,
+      1.952380952380954
+    ],
+    [
+      -11.761904761904773,
+      2.095238095238097
+    ],
+    [
+      -11.523809523809536,
+      2.0000000000000018
+    ],
+    [
+      -11.42857142857144,
+      2.0000000000000018
+    ],
+    [
+      -11.047619047619058,
+      1.9047619047619067
+    ],
+    [
+      -10.904761904761916,
+      2.0476190476190497
+    ],
+    [
+      -11.00000000000001,
+      2.3333333333333357
+    ],
+    [
+      -10.904761904761916,
+      2.6666666666666696
+    ],
+    [
+      -11.142857142857153,
+      3.0476190476190506
+    ],
+    [
+      -11.380952380952392,
+      3.0476190476190506
+    ],
+    [
+      -11.190476190476202,
+      2.571428571428574
+    ],
+    [
+      -11.00000000000001,
+      2.380952380952383
+    ],
+    [
+      -10.80952380952382,
+      2.380952380952383
+    ],
+    [
+      -10.523809523809534,
+      2.476190476190479
+    ],
+    [
+      -11.00000000000001,
+      3.095238095238098
+    ],
+    [
+      -11.142857142857142,
+      3.2857142857142856
+    ],
+    [
+      -11.285714285714285,
+      3.3571428571428568
+    ],
+    [
+      -11.428571428571425,
+      3.309523809523808
+    ]
+  ]
+}

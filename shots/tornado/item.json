@@ -9,12 +9,20 @@
   "stage": 4,
   "status": "in progress",
   "added": "2026-10-20",
-  "blurb": "Six source-linked key drafts; pose review uncertain. Motion not reviewed.",
-  "cover": "shots/tornado/keys/key-01.png",
-  "cover_credit": "Image-model draft from Quick, Draw! key_id 6522189199179776; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0",
+  "blurb": "73 rendered frames at 24 fps; 6 integrated keys. Still pose and doodle identity passed review; playback approval pending.",
+  "cover": "shots/tornado/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 6522189199179776; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
   "links": [
     {
-      "label": "Review six keys",
+      "label": "Watch assembled comparison",
+      "href": "shots/tornado/integrated/index.html"
+    },
+    {
+      "label": "Inspect source / mask / drawing",
+      "href": "shots/wave2-segmentation/index.html#tornado"
+    },
+    {
+      "label": "Earlier isolated keys",
       "href": "shots/tornado/index.html"
     },
     {
@@ -24,7 +32,8 @@
   ],
   "tests": "shots/tornado/tests.json",
   "tags": [
-    "key drafts",
-    "wave 2"
+    "assembled review",
+    "wave 2",
+    "SAM inspected"
   ]
 }

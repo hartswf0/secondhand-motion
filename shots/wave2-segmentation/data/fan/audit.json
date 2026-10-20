@@ -1,0 +1,36 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "426327e9ed86f58fda5dcfd57f9aaf9810b8d3f6582c071397fe4eb893e96360",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "fan housing and cage",
+      "result": "partial_subject",
+      "note": "Some cage wires and holes are not fully captured.",
+      "model_iou_estimate": 0.786
+    },
+    {
+      "frame": 16,
+      "observed_target": "fan housing and cage",
+      "result": "plausible_subject",
+      "note": "The broad visible fan is selected; blade blur remains unresolved.",
+      "model_iou_estimate": 0.921
+    },
+    {
+      "frame": 30,
+      "observed_target": "fan housing and partial cage",
+      "result": "partial_subject",
+      "note": "The model selection omits parts of the cage.",
+      "model_iou_estimate": 0.911
+    },
+    {
+      "frame": 38,
+      "observed_target": "cooking pot in the following shot",
+      "result": "source_cut",
+      "note": "The CI resampling includes the next shot. Raw frame 129 is still the fan; raw frame 130 is the pot. Do not pair this sample with the fan cartoon.",
+      "model_iou_estimate": 0.981,
+      "pair_usable": false
+    }
+  ]
+}

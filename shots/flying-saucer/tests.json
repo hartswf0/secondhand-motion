@@ -19,37 +19,50 @@
   },
   {
     "id": "J4",
-    "value": "independent identity met",
+    "value": "v3 fresh critic: original rim/body marks migrated to dome; identity bar not met",
     "unit": "",
-    "ok": true
+    "ok": false,
+    "evidence": "integrated/review-v3.json"
   },
   {
     "id": "B1",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 1.0,
+    "unit": "fraction of authored background geometry held; camera/parallax unmeasured",
+    "ok": true,
+    "evidence": "integrated/background.svg"
   },
   {
     "id": "T1",
     "value": {
-      "min_recall": 1.0,
+      "min_recall": 0.9992748368382887,
       "min_parts_kept": 1.0,
-      "keys": 6
+      "keys": 8,
+      "pass": true
     },
     "unit": "fraction",
-    "ok": true
+    "ok": true,
+    "evidence": "integrated/traced.json"
   },
   {
     "id": "M3",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": {
+      "method": "union of filled projected original rim/dome native polygons vs nearest 12fps source SAM mask; original ink specks excluded from silhouette; not model confidence",
+      "mean": 0.6880779454053365,
+      "minimum": 0.5770343231777864,
+      "bar_mean": 0.65,
+      "bar_minimum": 0.45,
+      "frames": 53,
+      "pass": true
+    },
+    "unit": "filled native rim/dome IoU vs SAM; not predicted confidence",
+    "ok": true,
+    "evidence": "integrated/mask-fit.json"
   },
   {
     "id": "M4",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0,
+    "unit": "verified planted intervals; at least4 required; flying subject has none",
+    "ok": false
   },
   {
     "id": "M5",
@@ -71,15 +84,21 @@
   },
   {
     "id": "S2",
-    "value": "not run",
+    "value": "Original6 native strokes and agent-drawn held cloud plate attributed",
     "unit": "",
-    "ok": null
+    "ok": true,
+    "evidence": "integrated/shot.json"
   },
   {
     "id": "S3",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": {
+      "frames": 53,
+      "keys": 8,
+      "fps": 24
+    },
+    "unit": "complete exposure sheet",
+    "ok": true,
+    "evidence": "integrated/shot.json"
   },
   {
     "id": "S5",
@@ -113,8 +132,9 @@
   },
   {
     "id": "S7",
-    "value": 2,
+    "value": 7,
     "unit": "verified hash-linked entries",
-    "ok": true
+    "ok": true,
+    "evidence": "ledger.jsonl"
   }
 ]

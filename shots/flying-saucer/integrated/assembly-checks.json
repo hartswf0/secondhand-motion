@@ -1,0 +1,42 @@
+{
+  "rendered_frames": 53,
+  "fps": 24,
+  "keys": 8,
+  "full_decode": true,
+  "source_sha256_verified": true,
+  "original_strokes": 6,
+  "all_original_strokes_assigned": true,
+  "same_topology": true,
+  "held_background_geometry": true,
+  "source_kind": "NASA CGI aeroshell animation; not physical UFO footage",
+  "SAM": "upstream SAM2.1 snapshots used for observed top/cap landmarks",
+  "mask_fit": {
+    "method": "union of filled projected original rim/dome native polygons vs nearest 12fps source SAM mask; original ink specks excluded from silhouette; not model confidence",
+    "mean": 0.6880779454053365,
+    "minimum": 0.5770343231777864,
+    "bar_mean": 0.65,
+    "bar_minimum": 0.45,
+    "frames": 53,
+    "pass": true
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "planted_contacts_observed": 0,
+  "foot_slide_gate": "not passed; flying subject has no planted contacts",
+  "release_approved": false,
+  "training_ran": false,
+  "trace_fidelity": {
+    "min_recall": 0.9992748368382887,
+    "min_parts_kept": 1.0,
+    "keys": 8,
+    "pass": true
+  },
+  "independent_still_review": {
+    "rounds": 3,
+    "source_framing_pose_bar_met": true,
+    "original_doodle_identity_bar_met": false,
+    "actual_normal_speed_playback_occurred": false,
+    "remaining_gap": "Original-doodle identity: the rim/body ink marks have migrated onto the dome and changed their arrangement.",
+    "stop_reason": "Three independent critique rounds reached; no fourth repair or approval claim."
+  }
+}

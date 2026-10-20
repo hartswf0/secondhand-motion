@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "672de4cae2f3af37906bc7ee8806cb46c3b27a477d1781ecfeeb4e249cdb5e8a",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "pig",
+      "result": "plausible_subject",
+      "note": "The clipped body and visible legs are broadly captured.",
+      "model_iou_estimate": 0.962
+    },
+    {
+      "frame": 11,
+      "observed_target": "pig",
+      "result": "plausible_subject",
+      "note": "The cropped pig is retained during the turn.",
+      "model_iou_estimate": 0.95
+    },
+    {
+      "frame": 18,
+      "observed_target": "pig",
+      "result": "plausible_subject",
+      "note": "The body is captured; soft edges remain approximate.",
+      "model_iou_estimate": 0.939
+    },
+    {
+      "frame": 24,
+      "observed_target": "pig",
+      "result": "plausible_subject",
+      "note": "The closeup stays cropped with partly merged leg edges.",
+      "model_iou_estimate": 0.895
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "f9a74eb4d84065c4d8043ab1b25197e2071ab5ece1a6e130508cca662016e082",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "patch of surf",
+      "result": "partial_water",
+      "note": "Only part of the visible water is selected.",
+      "model_iou_estimate": 0.612
+    },
+    {
+      "frame": 10,
+      "observed_target": "water",
+      "result": "plausible_water",
+      "note": "The foreground water is broadly selected.",
+      "model_iou_estimate": 0.946
+    },
+    {
+      "frame": 26,
+      "observed_target": "water",
+      "result": "plausible_water",
+      "note": "The target remains foreground water.",
+      "model_iou_estimate": 0.977
+    },
+    {
+      "frame": 38,
+      "observed_target": "building",
+      "result": "wrong_target",
+      "note": "The mask switches from water to the building despite a high model estimate.",
+      "model_iou_estimate": 0.945
+    }
+  ]
+}

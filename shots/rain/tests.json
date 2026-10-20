@@ -19,13 +19,13 @@
   },
   {
     "id": "J4",
-    "value": "independent identity met",
+    "value": "independent still review: original nine-stroke identity met; motion unapproved",
     "unit": "",
     "ok": true
   },
   {
     "id": "B1",
-    "value": "not run",
+    "value": "one held native plate; numeric source-pixel mismatch not measured",
     "unit": "",
     "ok": null
   },
@@ -34,7 +34,7 @@
     "value": {
       "min_recall": 1.0,
       "min_parts_kept": 1.0,
-      "keys": 6
+      "keys": 8
     },
     "unit": "fraction",
     "ok": true
@@ -47,9 +47,9 @@
   },
   {
     "id": "M4",
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0,
+    "unit": "independently verified planted intervals; no zero-contact pass",
+    "ok": false
   },
   {
     "id": "M5",
@@ -59,7 +59,7 @@
   },
   {
     "id": "M6",
-    "value": "not run",
+    "value": "independent normal-speed playback not run",
     "unit": "",
     "ok": null
   },
@@ -113,7 +113,7 @@
   },
   {
     "id": "S7",
-    "value": 1,
+    "value": 4,
     "unit": "verified hash-linked entries",
     "ok": true
   }

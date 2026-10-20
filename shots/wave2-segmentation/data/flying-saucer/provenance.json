@@ -1,0 +1,13 @@
+{
+  "branch": "wave2-track/flying-saucer",
+  "commit": "4b1bb49126f9da6319349516b051a1da2e3b55b0",
+  "clip_id": "f3a1f7f8-5ab6-5e91-8e07-bce434ee536c",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "source_video_note": "CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "7b98a2dc09b3505003afb16dd27d96a567904e5d85cc2d44124f3f00abe663cf",
+  "source_record": "../../../flying-saucer/source.json",
+  "note": "NASA CGI aeroshell. The drawing borrows its observed tilt, scale and crop."
+}

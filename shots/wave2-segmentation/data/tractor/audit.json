@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "24e61295d7d814e290ddf738daa61cf5c812c4b107c5681560008b494f1a787f",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "tractor, trailer and driver",
+      "result": "merged_parts",
+      "note": "The selection merges equipment and parts of the driver.",
+      "model_iou_estimate": 0.906
+    },
+    {
+      "frame": 10,
+      "observed_target": "tractor and trailer",
+      "result": "merged_parts",
+      "note": "This is a multi-component equipment mask, not a tractor-only silhouette.",
+      "model_iou_estimate": 0.931
+    },
+    {
+      "frame": 22,
+      "observed_target": "tractor, trailer and partial driver",
+      "result": "merged_parts",
+      "note": "Driver inclusion varies with the frame.",
+      "model_iou_estimate": 0.937
+    },
+    {
+      "frame": 24,
+      "observed_target": "tractor and trailer",
+      "result": "merged_parts",
+      "note": "The broad equipment is selected; individual components remain merged.",
+      "model_iou_estimate": 0.94
+    }
+  ]
+}

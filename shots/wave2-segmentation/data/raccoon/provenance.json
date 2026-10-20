@@ -1,0 +1,13 @@
+{
+  "branch": "wave2-track/raccoon",
+  "commit": "29dd555838e7af99529a5ae134e2ec867fc3aeb0",
+  "clip_id": "d3746f6b-3468-5959-9570-c90be06ef3b8",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "source_video_note": "CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "4702a4ceddbca05c1b34610b7f010f9b9ff465e46aed777ce2ad33f85207fc7e",
+  "source_record": "../../../raccoon/source.json",
+  "note": "The visible body is captured broadly. Hidden legs and the head turn still need direct source inspection."
+}

@@ -1,0 +1,25 @@
+{
+  "rendered_frames": 73,
+  "keys": 6,
+  "source_sha256_verified": true,
+  "full_decode": true,
+  "same_topology": true,
+  "original_strokes": 3,
+  "all_original_strokes_assigned": true,
+  "held_background_geometry": true,
+  "background_camera_registration": "manually observed, not numerically validated",
+  "SAM": "Mask switches from most sky to foreground tree and back; model confidence is not correctness.",
+  "mask_fit": "not measured: unstable sky/tree masks are not a valid tornado target",
+  "trace_fidelity": {
+    "minimum_recall": 0.9993817619783617,
+    "minimum_parts_kept": 1.0,
+    "keys": 6,
+    "pass": true
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "planted_intervals": 0,
+  "foot_slide_gate": false,
+  "release_approved": false,
+  "training_ran": false
+}

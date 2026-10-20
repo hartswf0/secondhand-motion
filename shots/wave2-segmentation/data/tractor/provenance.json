@@ -1,0 +1,13 @@
+{
+  "branch": "wave2-track/tractor",
+  "commit": "d4d71c17564e886b217c60d3867df5566b03ec39",
+  "clip_id": "b62ed26f-3327-5d10-9427-35299961541e",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "source_video_note": "CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "24e61295d7d814e290ddf738daa61cf5c812c4b107c5681560008b494f1a787f",
+  "source_record": "../../../tractor/source.json",
+  "note": "The masks combine the tractor with its trailer and sometimes the driver; they are not tractor-only outlines."
+}

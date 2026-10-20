@@ -1,0 +1,30 @@
+{
+  "rendered_frames": 105,
+  "keys": 8,
+  "source_sha256_verified": true,
+  "original_strokes_assigned": 9,
+  "same_topology": true,
+  "held_background_geometry": true,
+  "measured_surface_event_count": 1243,
+  "SAM": "Upstream puddle mask inspected; invalid as individual rain/splash target.",
+  "numeric_source_mask_fit": "not measured; diffuse rain vs broad scene mask",
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "release_approved": false,
+  "training_ran": false,
+  "independently_observed_planted_intervals": 0,
+  "foot_slide_gate": false,
+  "trace_fidelity": {
+    "min_recall": 1.0,
+    "min_parts_kept": 1.0,
+    "keys": 8,
+    "pass": true
+  },
+  "independent_still_review": {
+    "bar_met": false,
+    "rounds": 3,
+    "evidence": "review-v3.json",
+    "scope": "source composition, identity and sampled buildup",
+    "gap": "In source-05 through source-08, rain churns the road across its width and throws conspicuous spray beside both rails. The matching keys retain many small, pale, separate ellipses, with the strongest buildup in a narrow center column. That reads as scattered puddle hits rather than the source's expanding, sustained wash."
+  }
+}

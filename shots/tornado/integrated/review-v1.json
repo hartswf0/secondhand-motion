@@ -1,0 +1,38 @@
+{
+  "review_kind": "fresh_blind_visual_review",
+  "viewing_basis": {
+    "images_actually_viewed": [
+      "source-contact-sheet.jpg",
+      "design.png",
+      "source-01.jpg",
+      "key-01.png",
+      "source-02.jpg",
+      "key-02.png",
+      "source-03.jpg",
+      "key-03.png",
+      "source-04.jpg",
+      "key-04.png",
+      "source-05.jpg",
+      "key-05.png",
+      "source-06.jpg",
+      "key-06.png"
+    ],
+    "metadata_read": "source.json selected interval: clip-relative 0.2335666667 to 3.2699333333 seconds",
+    "normal_speed_video_viewed": false,
+    "playback_approved": false,
+    "limitation": "Still-image comparison only. No normal-speed playback occurred; temporal continuity, timing and motion are not approved."
+  },
+  "source_framing_pose_bar_met": false,
+  "source_framing_pose_assessment": "The composition is recognizable and largely matches: a central descending cloud form beyond a street, dark tree masses on both sides, and utility pole/wires on the right. The lower form does not yet match the sampled source pose closely enough: the keys converge to a very narrow exposed point, while the source reads as a broader, more nearly upright column disappearing into the distant tree/street gap.",
+  "same_drawing_identity_bar_met": true,
+  "same_drawing_identity_assessment": "All six keys retain the original angular funnel silhouette, overlapping irregular rim strokes, sparse black linework, and consistent shape vocabulary. They read as the same doodle placed in a street setting.",
+  "single_most_important_gap": "The sharp, narrow lower cone overstates the source column taper and exposed tip.",
+  "smallest_bounded_repair": "Adjust only the lower third of the funnel in the six keys: modestly broaden the descending column and let its terminal point disappear behind the existing distant tree/street boundary. Keep the original angular bends and rim construction; do not add texture or rendering.",
+  "strengths_to_preserve": [
+    "Original doodle rim and overlapping top strokes",
+    "Sparse angular linework and consistent drawing identity across all six samples",
+    "Central placement beyond the street, flanking tree masses, and right-side pole/wire arrangement",
+    "Restrained palette and foreground/background hierarchy"
+  ],
+  "overall_verdict": "Small bounded pose repair needed; drawing identity passes. No playback approval."
+}

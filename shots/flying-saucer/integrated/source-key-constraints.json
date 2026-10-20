@@ -1,0 +1,25 @@
+{
+  "coordinate_system": "decoded source pixels;416x240; image top-left origin",
+  "source": "manual visual observation of source-key pairs, supplementing SAM edge-touch observations",
+  "fixed_anchors": [
+    "source top",
+    "source right cap"
+  ],
+  "middle_bottom_crop": {
+    "rendered_frames": [
+      30,
+      40
+    ],
+    "lower_contour_target_y": 248,
+    "hidden_continuation_verified": false
+  },
+  "final_tip_return": {
+    "rendered_frames": [
+      48,
+      52
+    ],
+    "lower_contour_target_y": 238.5,
+    "reason": "rounded lower rim tip visibly returns inside source frame; edge-touching SAM mask overextends to viewport"
+  },
+  "interpolation": "linear target transition from frame40 to48; source landmark trajectories remain independently smoothed"
+}

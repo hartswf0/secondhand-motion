@@ -1,0 +1,29 @@
+{
+  "review_type": "fresh_blind_visual_review",
+  "inspected": {
+    "source_contact_sheet_frames": 16,
+    "source_key_pairs": 8,
+    "original_doodle": true,
+    "actual_playback_viewed": false
+  },
+  "actual_playback_viewed": false,
+  "bars_met": false,
+  "still_key_verdict": {
+    "identity_kept": true,
+    "composition_preserved": true,
+    "source_event_preserved": false,
+    "sampled_source_continuity": "No cut is visible across the 16 source samples; this is a sampled continuity assessment only.",
+    "basis": "All eight keys retain the original doodle's angular, overlapping horizontal strokes. The low building, long roof, repeated openings, foreground water placement and slight camera shift are recognizable. The early high left-hand surge settles in the keys, but keys 3 through 8 give the foreground water essentially the same low outline while the paired source images show continuing changes in foreground wave crests. This weakens the sustained storm-surf event after the initial impact."
+  },
+  "motion_verdict": {
+    "approved": false,
+    "status": "not_reviewed",
+    "reason": "The comparison video was not actually watched at normal speed; still-key inspection cannot approve playback."
+  },
+  "one_smallest_actionable_gap": {
+    "gap": "Continuing foreground surge is underrepresented in the later keys.",
+    "smallest_repair": "Locally raise and lower the existing lower foreground doodle strokes in keys 3 through 8 to follow the visible foreground crest changes in their paired source frames, keeping the settled rear water and building placement.",
+    "protected_strength": "Keep the original doodle's recognizable angular overlapping stroke construction and the stable, restrained building composition; do not add a new water style or replace the doodle."
+  },
+  "other_gates": "Numeric trace, recognition, mask-fit and contact-drift gates are not assessed from this blind visual packet."
+}

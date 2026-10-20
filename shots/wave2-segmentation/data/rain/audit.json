@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "f1271ca51b16a14831119802c5bb41b55d4cb3cb59ce0c7ebd46a15267d5c86e",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "wet road and rail fragments",
+      "result": "surface_region",
+      "note": "This does not identify individual drops.",
+      "model_iou_estimate": 0.736
+    },
+    {
+      "frame": 22,
+      "observed_target": "wet road",
+      "result": "surface_region",
+      "note": "A surface mask, not a rain-event correspondence.",
+      "model_iou_estimate": 0.846
+    },
+    {
+      "frame": 43,
+      "observed_target": "wet road and reflections",
+      "result": "surface_region",
+      "note": "Reflection changes leave many holes.",
+      "model_iou_estimate": 0.578
+    },
+    {
+      "frame": 54,
+      "observed_target": "wet road",
+      "result": "surface_region",
+      "note": "No individual drop identities are established.",
+      "model_iou_estimate": 0.558
+    }
+  ]
+}

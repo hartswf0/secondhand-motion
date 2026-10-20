@@ -1,0 +1,53 @@
+{
+  "review_kind": "blind integrated visual review",
+  "packet_inspected": [
+    "source.json interval",
+    "source-contact-sheet.jpg",
+    "design.png",
+    "source-01.jpg",
+    "key-01.png",
+    "source-02.jpg",
+    "key-02.png",
+    "source-03.jpg",
+    "key-03.png",
+    "source-04.jpg",
+    "key-04.png",
+    "source-05.jpg",
+    "key-05.png",
+    "source-06.jpg",
+    "key-06.png",
+    "source-07.jpg",
+    "key-07.png",
+    "source-08.jpg",
+    "key-08.png"
+  ],
+  "all_eight_source_key_pairs_inspected": true,
+  "source_kind": "NASA CGI aeroshell animation; not physical UFO footage",
+  "source_interval_seconds": [
+    2.3356690023,
+    4.5378712045
+  ],
+  "source_framing_pose": {
+    "bar_met": false,
+    "verdict": "The eight keys follow the near-vertical attitude and rightward then leftward screen travel well, including the middle lower-edge crop. In the final two pairs, however, the source lower rim returns into view while the cartoon lower rim remains cut off by the bottom edge.",
+    "most_important_gap": "Final-key lower-edge framing does not recover the visible rounded rim end in source pairs 07 and 08.",
+    "smallest_repair": "Adjust the final two subject transforms or longitudinal extent just enough to restore the lower rim tip at the same bottom clearance as the source, preserving the matched top position and screen travel."
+  },
+  "quickdraw_identity": {
+    "bar_met": true,
+    "verdict": "Across all eight keys the long uneven brim, angular offset dome, characteristic open join, sparse tiny ink marks, and plain hand-drawn stroke remain recognizably the supplied doodle under a steep attitude change."
+  },
+  "must_not_be_lost": [
+    "The original doodle construction, open join, angular contours and sparse small marks.",
+    "The matched source attitude, rightward-then-leftward drift, and intentional middle-frame bottom crop.",
+    "The held quiet background and subject/background separation."
+  ],
+  "playback": {
+    "actual_normal_speed_playback_occurred": false,
+    "motion_approved": false,
+    "comparison_mp4_watched": false,
+    "cartoon_mp4_watched": false,
+    "verdict": "Only the contact sheet and all eight still pairs were visually inspected. No actual normal-speed video playback occurred; sampled stills do not approve motion."
+  },
+  "overall_bar_met": false
+}

@@ -1,0 +1,13 @@
+{
+  "branch": "wave2-track/tornado",
+  "commit": "6c0f7bc661837f4c71dd12ee9f1c2d5622654757",
+  "clip_id": "b615f6f9-22b3-571b-bbb6-0739a4f7cf1d",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "source_video_note": "CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "93e75f6cd168aaee45a4cdb4c997320ec368ffbbc89e7ad69978faaf143e79f4",
+  "source_record": "../../../tornado/source.json",
+  "note": "Some masks select sky or trees. They cannot establish the funnel boundary or rotation."
+}

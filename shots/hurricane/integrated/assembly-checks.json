@@ -1,0 +1,30 @@
+{
+  "rendered_frames": 74,
+  "keys": 8,
+  "source_sha256_verified": true,
+  "original_strokes_assigned": 7,
+  "same_topology": true,
+  "held_building_geometry": true,
+  "camera_track_min_points": 0,
+  "SAM": "ran upstream; target switches to building, invalid as persistent water instance",
+  "mask_fit": "not measured: diffuse water and invalid target switching",
+  "recognition": "not run",
+  "planted_contacts_observed": 0,
+  "foot_slide_gate": false,
+  "independent_playback": "not run",
+  "release_approved": false,
+  "training_ran": false,
+  "trace_fidelity": {
+    "keys": 8,
+    "min_recall": 0.9514354478253395,
+    "min_parts_kept": 1.0,
+    "recall_bar": 0.98,
+    "parts_bar": 1.0,
+    "pass": false
+  },
+  "independent_still_identity": true,
+  "independent_still_source_event": false,
+  "review_rounds": 3,
+  "remaining_gap": "Continuing foreground surge is underrepresented in the later keys.",
+  "final_revision": "integrated-v3"
+}

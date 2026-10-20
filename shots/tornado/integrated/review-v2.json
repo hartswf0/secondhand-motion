@@ -1,0 +1,23 @@
+{
+  "review_type": "blind still-image inspection",
+  "inspected": ["source.json", "source-contact-sheet.jpg", "design.png", "source-01.jpg/key-01.png", "source-02.jpg/key-02.png", "source-03.jpg/key-03.png", "source-04.jpg/key-04.png", "source-05.jpg/key-05.png", "source-06.jpg/key-06.png"],
+  "source_framing_pose_bar": "met",
+  "same_drawing_identity_bar": "met",
+  "verdict": "Pass for the inspected stills. The large left-of-pole funnel, its broad upper shoulder and low central tip, the enclosing trees, and the diagonal overhead wires preserve the source's framing and readable pose. The six keys remain recognizably the supplied doodle.",
+  "pair_observations": [
+    {"pair": 1, "observation": "Low tip and visible street opening retain the first source's wider ground view; the doodle's upper stroke is cropped at the top."},
+    {"pair": 2, "observation": "Lower tree opening and tip follow the tighter source composition; angular rim and asymmetrical funnel remain intact."},
+    {"pair": 3, "observation": "Raised lower occlusion and broad shoulder retain the source's tall funnel placement beside the pole."},
+    {"pair": 4, "observation": "Small contour and framing differences stay within the same funnel pose and drawing identity."},
+    {"pair": 5, "observation": "Slight leftward composition change carries through the funnel, foliage, and pole without replacing the doodle."},
+    {"pair": 6, "observation": "The final low, partly concealed tip and the right-side pole maintain the source arrangement and the original angular silhouette."}
+  ],
+  "most_important_gap": null,
+  "smallest_repair": "No repair required to clear these two still-image bars.",
+  "must_not_be_lost": "The uneven open spiral rim, projecting upper stroke, long left taper, kinked right contour, sharp low tip, and spare irregular linework; also the source's pole-and-wire placement and tree-framed funnel.",
+  "playback": {
+    "normal_speed_watched": false,
+    "motion_approved": false,
+    "statement": "Only stills and the source contact sheet were inspected. Timing, continuity, rotation, and normal-speed playback are not approved by this review."
+  }
+}

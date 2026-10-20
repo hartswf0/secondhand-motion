@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "4702a4ceddbca05c1b34610b7f010f9b9ff465e46aed777ce2ad33f85207fc7e",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "raccoon body",
+      "result": "plausible_subject",
+      "note": "The visible body is captured; hidden legs are not established.",
+      "model_iou_estimate": 0.914
+    },
+    {
+      "frame": 12,
+      "observed_target": "crouched raccoon",
+      "result": "plausible_subject",
+      "note": "The visible crouch is broadly captured; occluded parts remain unobserved.",
+      "model_iou_estimate": 0.936
+    },
+    {
+      "frame": 23,
+      "observed_target": "raccoon body and visible tail",
+      "result": "plausible_subject",
+      "note": "The mask captures the broad silhouette; the head pose needs direct comparison.",
+      "model_iou_estimate": 0.922
+    },
+    {
+      "frame": 34,
+      "observed_target": "raccoon body",
+      "result": "plausible_subject",
+      "note": "The visible body is selected; the mask cannot verify the late head turn.",
+      "model_iou_estimate": 0.928
+    }
+  ]
+}

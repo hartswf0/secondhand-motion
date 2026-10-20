@@ -1,0 +1,11 @@
+{
+  "branch": "wave2-track/tornado",
+  "commit": "6c0f7bc661837f4c71dd12ee9f1c2d5622654757",
+  "model": "facebook/sam2.1-hiera-small",
+  "track_sha256": "93e75f6cd168aaee45a4cdb4c997320ec368ffbbc89e7ad69978faaf143e79f4",
+  "clip_sha256": "3920a82517658c308fa7d27f4c40cebe8e3c735d7363291da1b181fe70535fcf",
+  "source_sha256": "a46e407ad8c497d5acdc019c3afa53f826079f91ad954e5b5b61ead4f50bac2a",
+  "snapshot_policy": "Pinned clip/track JSON and audited evidence retained; bulk source frames/depth not copied. Mask rejected for object fitting.",
+  "valid_for_object_fit": false,
+  "reason": "Mask switches from most sky to foreground tree and back; model confidence is not correctness."
+}

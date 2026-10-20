@@ -1,0 +1,353 @@
+{
+  "pig": {
+    "author": "agent manual source/mask inspection",
+    "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+    "track_sha256": "672de4cae2f3af37906bc7ee8806cb46c3b27a477d1781ecfeeb4e249cdb5e8a",
+    "samples": [
+      {
+        "frame": 1,
+        "observed_target": "pig",
+        "result": "plausible_subject",
+        "note": "The clipped body and visible legs are broadly captured.",
+        "model_iou_estimate": 0.962
+      },
+      {
+        "frame": 11,
+        "observed_target": "pig",
+        "result": "plausible_subject",
+        "note": "The cropped pig is retained during the turn.",
+        "model_iou_estimate": 0.95
+      },
+      {
+        "frame": 18,
+        "observed_target": "pig",
+        "result": "plausible_subject",
+        "note": "The body is captured; soft edges remain approximate.",
+        "model_iou_estimate": 0.939
+      },
+      {
+        "frame": 24,
+        "observed_target": "pig",
+        "result": "plausible_subject",
+        "note": "The closeup stays cropped with partly merged leg edges.",
+        "model_iou_estimate": 0.895
+      }
+    ]
+  },
+  "mosquito": {
+    "author": "agent manual source/mask inspection",
+    "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+    "track_sha256": "706aec9ed7e6550cfa2cf6bbb6e9d340ebe54e22bddf46533bd786d554b3f123",
+    "samples": [
+      {
+        "frame": 1,
+        "observed_target": "mosquito body and some legs",
+        "result": "partial_subject",
+        "note": "Thin appendages are not all retained.",
+        "model_iou_estimate": 0.808
+      },
+      {
+        "frame": 17,
+        "observed_target": "mosquito body and some legs",
+        "result": "partial_subject",
+        "note": "Wing and thin parts need direct source inspection.",
+        "model_iou_estimate": 0.812
+      },
+      {
+        "frame": 41,
+        "observed_target": "mosquito body and some legs",
+        "result": "partial_subject",
+        "note": "Body coverage does not establish contact positions.",
+        "model_iou_estimate": 0.853
+      },
+      {
+        "frame": 61,
+        "observed_target": "mosquito body and some legs",
+        "result": "partial_subject",
+        "note": "Thin parts and hairs can merge.",
+        "model_iou_estimate": 0.831
+      }
+    ]
+  },
+  "see-saw": {
+    "author": "agent manual source/mask inspection",
+    "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+    "track_sha256": "9ed8d1d419d6388418f6038190f78e20d6af5fd29adef88dd765cb5c837a93a7",
+    "samples": [
+      {
+        "frame": 1,
+        "observed_target": "several boards",
+        "result": "mixed_instances",
+        "note": "Multiple boards and fragments are marked together.",
+        "model_iou_estimate": 0.494
+      },
+      {
+        "frame": 52,
+        "observed_target": "several boards",
+        "result": "mixed_instances",
+        "note": "The mask does not isolate the selected foreground board.",
+        "model_iou_estimate": 0.662
+      },
+      {
+        "frame": 75,
+        "observed_target": "several boards",
+        "result": "mixed_instances",
+        "note": "Parallel equipment is merged.",
+        "model_iou_estimate": 0.613
+      },
+      {
+        "frame": 86,
+        "observed_target": "several boards",
+        "result": "mixed_instances",
+        "note": "This is not a single-board silhouette.",
+        "model_iou_estimate": 0.679
+      }
+    ]
+  },
+  "flying-saucer": {
+    "author": "agent manual source/mask inspection",
+    "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+    "track_sha256": "7b98a2dc09b3505003afb16dd27d96a567904e5d85cc2d44124f3f00abe663cf",
+    "samples": [
+      {
+        "frame": 1,
+        "observed_target": "CGI aeroshell",
+        "result": "plausible_subject",
+        "note": "The large visible aeroshell is captured.",
+        "model_iou_estimate": 0.969
+      },
+      {
+        "frame": 6,
+        "observed_target": "CGI aeroshell",
+        "result": "plausible_subject",
+        "note": "The mask follows the tilted outer contour.",
+        "model_iou_estimate": 0.973
+      },
+      {
+        "frame": 25,
+        "observed_target": "CGI aeroshell",
+        "result": "plausible_subject",
+        "note": "Visible shell crop is retained.",
+        "model_iou_estimate": 0.981
+      },
+      {
+        "frame": 28,
+        "observed_target": "CGI aeroshell",
+        "result": "plausible_subject",
+        "note": "The visible cropped shell remains captured.",
+        "model_iou_estimate": 0.981
+      }
+    ]
+  },
+  "rain": {
+    "author": "agent manual source/mask inspection",
+    "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+    "track_sha256": "f1271ca51b16a14831119802c5bb41b55d4cb3cb59ce0c7ebd46a15267d5c86e",
+    "samples": [
+      {
+        "frame": 1,
+        "observed_target": "wet road and rail fragments",
+        "result": "surface_region",
+        "note": "This does not identify individual drops.",
+        "model_iou_estimate": 0.736
+      },
+      {
+        "frame": 22,
+        "observed_target": "wet road",
+        "result": "surface_region",
+        "note": "A surface mask, not a rain-event correspondence.",
+        "model_iou_estimate": 0.846
+      },
+      {
+        "frame": 43,
+        "observed_target": "wet road and reflections",
+        "result": "surface_region",
+        "note": "Reflection changes leave many holes.",
+        "model_iou_estimate": 0.578
+      },
+      {
+        "frame": 54,
+        "observed_target": "wet road",
+        "result": "surface_region",
+        "note": "No individual drop identities are established.",
+        "model_iou_estimate": 0.558
+      }
+    ]
+  },
+  "hurricane": {
+    "author": "agent manual source/mask inspection",
+    "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+    "track_sha256": "f9a74eb4d84065c4d8043ab1b25197e2071ab5ece1a6e130508cca662016e082",
+    "samples": [
+      {
+        "frame": 1,
+        "observed_target": "patch of surf",
+        "result": "partial_water",
+        "note": "Only part of the visible water is selected.",
+        "model_iou_estimate": 0.612
+      },
+      {
+        "frame": 10,
+        "observed_target": "water",
+        "result": "plausible_water",
+        "note": "The foreground water is broadly selected.",
+        "model_iou_estimate": 0.946
+      },
+      {
+        "frame": 26,
+        "observed_target": "water",
+        "result": "plausible_water",
+        "note": "The target remains foreground water.",
+        "model_iou_estimate": 0.977
+      },
+      {
+        "frame": 38,
+        "observed_target": "building",
+        "result": "wrong_target",
+        "note": "The mask switches from water to the building despite a high model estimate.",
+        "model_iou_estimate": 0.945
+      }
+    ]
+  },
+  "tornado": {
+    "author": "agent manual source/mask inspection",
+    "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+    "track_sha256": "93e75f6cd168aaee45a4cdb4c997320ec368ffbbc89e7ad69978faaf143e79f4",
+    "samples": [
+      {
+        "frame": 1,
+        "observed_target": "broad sky",
+        "result": "wrong_target",
+        "note": "The mask does not isolate the funnel.",
+        "model_iou_estimate": 0.874
+      },
+      {
+        "frame": 16,
+        "observed_target": "right-side tree",
+        "result": "wrong_target",
+        "note": "A foreground tree is selected instead of the funnel.",
+        "model_iou_estimate": 0.933
+      },
+      {
+        "frame": 30,
+        "observed_target": "right-side tree",
+        "result": "wrong_target",
+        "note": "Tree selection persists in this inspected frame.",
+        "model_iou_estimate": 0.913
+      },
+      {
+        "frame": 38,
+        "observed_target": "broad sky",
+        "result": "wrong_target",
+        "note": "A high estimate accompanies broad sky selection.",
+        "model_iou_estimate": 0.945
+      }
+    ]
+  },
+  "fan": {
+    "author": "agent manual source/mask inspection",
+    "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+    "track_sha256": "426327e9ed86f58fda5dcfd57f9aaf9810b8d3f6582c071397fe4eb893e96360",
+    "samples": [
+      {
+        "frame": 1,
+        "observed_target": "fan housing and cage",
+        "result": "partial_subject",
+        "note": "Some cage wires and holes are not fully captured.",
+        "model_iou_estimate": 0.786
+      },
+      {
+        "frame": 16,
+        "observed_target": "fan housing and cage",
+        "result": "plausible_subject",
+        "note": "The broad visible fan is selected; blade blur remains unresolved.",
+        "model_iou_estimate": 0.921
+      },
+      {
+        "frame": 30,
+        "observed_target": "fan housing and partial cage",
+        "result": "partial_subject",
+        "note": "The model selection omits parts of the cage.",
+        "model_iou_estimate": 0.911
+      },
+      {
+        "frame": 38,
+        "observed_target": "cooking pot in the following shot",
+        "result": "source_cut",
+        "note": "The CI resampling includes the next shot. Raw frame 129 is still the fan; raw frame 130 is the pot. Do not pair this sample with the fan cartoon.",
+        "model_iou_estimate": 0.981,
+        "pair_usable": false
+      }
+    ]
+  },
+  "tractor": {
+    "author": "agent manual source/mask inspection",
+    "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+    "track_sha256": "24e61295d7d814e290ddf738daa61cf5c812c4b107c5681560008b494f1a787f",
+    "samples": [
+      {
+        "frame": 1,
+        "observed_target": "tractor, trailer and driver",
+        "result": "merged_parts",
+        "note": "The selection merges equipment and parts of the driver.",
+        "model_iou_estimate": 0.906
+      },
+      {
+        "frame": 10,
+        "observed_target": "tractor and trailer",
+        "result": "merged_parts",
+        "note": "This is a multi-component equipment mask, not a tractor-only silhouette.",
+        "model_iou_estimate": 0.931
+      },
+      {
+        "frame": 22,
+        "observed_target": "tractor, trailer and partial driver",
+        "result": "merged_parts",
+        "note": "Driver inclusion varies with the frame.",
+        "model_iou_estimate": 0.937
+      },
+      {
+        "frame": 24,
+        "observed_target": "tractor and trailer",
+        "result": "merged_parts",
+        "note": "The broad equipment is selected; individual components remain merged.",
+        "model_iou_estimate": 0.94
+      }
+    ]
+  },
+  "raccoon": {
+    "author": "agent manual source/mask inspection",
+    "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+    "track_sha256": "4702a4ceddbca05c1b34610b7f010f9b9ff465e46aed777ce2ad33f85207fc7e",
+    "samples": [
+      {
+        "frame": 1,
+        "observed_target": "raccoon body",
+        "result": "plausible_subject",
+        "note": "The visible body is captured; hidden legs are not established.",
+        "model_iou_estimate": 0.914
+      },
+      {
+        "frame": 12,
+        "observed_target": "crouched raccoon",
+        "result": "plausible_subject",
+        "note": "The visible crouch is broadly captured; occluded parts remain unobserved.",
+        "model_iou_estimate": 0.936
+      },
+      {
+        "frame": 23,
+        "observed_target": "raccoon body and visible tail",
+        "result": "plausible_subject",
+        "note": "The mask captures the broad silhouette; the head pose needs direct comparison.",
+        "model_iou_estimate": 0.922
+      },
+      {
+        "frame": 34,
+        "observed_target": "raccoon body",
+        "result": "plausible_subject",
+        "note": "The visible body is selected; the mask cannot verify the late head turn.",
+        "model_iou_estimate": 0.928
+      }
+    ]
+  }
+}
