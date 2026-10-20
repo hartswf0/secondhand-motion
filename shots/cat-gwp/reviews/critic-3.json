@@ -1,0 +1,18 @@
+{
+ "named_subject": "a cat's head (face with two pointed ears, two eyes and whiskers)",
+ "action": "The cat head sits almost still and drifts slightly down for frames 1-12, then jumps down and to the right in frames 13-14 and stays there to frame 16, without any change of pose.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  13,
+  14
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The head outline, ears, eyes and whisker strokes match the doodle, but the whole drawing is rotated so the left whiskers hang down at an angle instead of running level, and in frames 5-12 the ear tips are cut off by the top edge of the frame.",
+ "notes": "The film shows a cat looking up with its tongue out for frames 1-12 and then cutting to the cat turned into side profile for 13-16; the animation shows neither the upward tilt nor the turn and only slides the same front-view drawing across the frame, with a sudden jump at frame 13. The change that would help most is to turn the head toward profile in frames 13-16 (shift the eyes and nose to one side and narrow the face) and ease the move instead of jumping, while keeping the ears inside the frame.",
+ "_packet": "lotps9lwo",
+ "_round": 3,
+ "_protocol": "16 frames, motion_score 1-5"
+}

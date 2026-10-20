@@ -440,6 +440,41 @@
  },
  "parts": [
   {
+   "stroke": 4,
+   "from": 0,
+   "to": 3,
+   "joint": "poll",
+   "aim": [
+    "poll",
+    "muzzle"
+   ],
+   "turn": 0,
+   "shift_by": "jaw",
+   "shift": [
+    0,
+    18
+   ]
+  },
+  {
+   "region": [
+    0,
+    100,
+    110,
+    130
+   ],
+   "joint": "poll",
+   "aim": [
+    "poll",
+    "muzzle"
+   ],
+   "turn": 0,
+   "shift_by": "jaw",
+   "shift": [
+    0,
+    24
+   ]
+  },
+  {
    "rest": true,
    "joint": "poll",
    "aim": [
@@ -449,5 +484,7 @@
    "turn": 0
   }
  ],
- "size": "steady"
+ "size": "steady",
+ "track": true,
+ "smooth": 2.0
 }

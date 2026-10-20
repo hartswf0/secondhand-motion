@@ -1,0 +1,20 @@
+{
+ "named_subject": "a long-necked four-legged animal, read as a horse or dog",
+ "action": "The animal stands facing left with its head raised, turns to face right, lowers its head forward, lifts it again, and ends with its head lowered toward the bucket.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  8,
+  10,
+  13,
+  14
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "Frames 1-5 match the doodle's head, eye, neck and rectangular rump closely, but from frame 13 on the rump rectangle is drawn twice, overlapping, so the body looks doubled.",
+ "notes": "The film shows a dog looking up at a person, turning, walking toward the camera and then sniffing down at the bowl; the animation gets the start pose and the final head-down at the bucket, but the turn happens as a mirror flip in a single frame (5 to 6), frame 8 stretches the body, and frame 10 shrinks it. The one change that would help most is to animate the turn across several in-between frames instead of flipping the drawing, and remove the duplicated rump strokes.",
+ "_packet": "lotzbnehl",
+ "_round": 3,
+ "_protocol": "16 frames, motion_score 1-5"
+}

@@ -234,3 +234,30 @@ Wave 3 result: eight subjects built; identity bar met for all eight, the skatebo
 reads broken for all but follows the film at least partly; the gaps named are the same kinds as before: jumps
 where keys are far apart or the size changes, and head turns the rig only slides instead of turning
 (monkey, tiger). The line page lists every subject's state and next step.
+
+## Refinement round: every subject held to the Giraffe Walks Past bar
+
+The bar was measured first. Giraffe Walks Past itself was given to a fresh blind critic with the same packet
+every other subject gets (16 evenly spaced frames of the animation, the same 16 frames of footage, four keys,
+the doodle). It scored 3 of 5, motion "broken", follows the film "yes". So a score of 3 with the identity bar
+met is the Giraffe Walks Past level under this protocol, and a 4 is above it.
+
+What changed in the tools for this round:
+
+- `rigs/inbetween.py`: optional point-by-point optical-flow tracking between keys (spec `track`), turned on or
+  off per subject by the pops measure; a Gaussian `smooth` over every pose value; scalar pose entries eased.
+- `rigs/template_rig.py`: turns through yaw with `front_regions` (front strokes shift, outline narrows),
+  `_face` and `_xscale` for a flipbook turn, jaw parts moved by `shift_by`, foreshortening limits.
+- `tools/critic_packet.py --dense`: 16-frame strips; `tools/pops.py` and `tools/pop_frames.py` measure centre
+  acceleration and size steps against the Giraffe Walks Past baseline (0.103 and 0.062).
+- Field subjects (rain, hurricane) and the tornado and sheep scenes drop cel paint (`no_cel`) where it erased lines.
+
+Result after up to four critic rounds per subject (latest verdict, `shots/<slug>-gwp/reviews/`):
+
+- Above the bar (4): butterfly, flying saucer, windmill.
+- At the bar (3): duck, tornado (both raised from 2 this round), cow, horse, hurricane, rabbit, monkey, fan,
+  helicopter, mosquito, raccoon, rain, roller coaster, sailboat, see-saw, sheep, skateboard, spider, tiger,
+  tractor; bicycle scores 3 but its identity bar is not met (the frame crops to a single wheel).
+- Below the bar (2): cat, dog, pig, giraffe (head close-up). Each needs drawn keys the rig cannot make by
+  moving the doodle: the pig turning to face the camera, the giraffe's jaw opening and closing at one head
+  size, the cat and dog turning. Repairs that only re-timed or re-scaled these shots did not raise them.

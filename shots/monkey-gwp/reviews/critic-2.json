@@ -1,0 +1,17 @@
+{
+ "named_subject": "a monkey (head with round ears, muzzle, and a curled tail, seated)",
+ "action": "The monkey slides left and slightly down while its face features shift toward the left edge of the head, holds that position, then returns to a front-facing pose in the last two frames.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  15
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The drawing keeps the doodle's head outline, spiral eye, muzzle loop, ear shapes and spiral tail, but in frames 5-14 the left ear is cut off by the top of the frame and the left eye is squeezed into overlapping lines.",
+ "notes": "The film shows the head turning to screen-left and tilting down so the face points at the ground, but the animation mostly translates the whole drawing and slides the face features sideways, with no downward tilt of the head and a sudden snap back between frames 14 and 15. The one change that would help most is rotating and tilting the head down over frames 4-14 (and easing the return over frames 13-16) instead of translating it, while keeping the left ear inside the frame.",
+ "_packet": "lotiux2w0",
+ "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+ "_round": 2
+}

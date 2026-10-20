@@ -14,6 +14,12 @@ A rig spec (rigs/<cat>_spec.json) gives:
            that share of the turn, so a part keeps some of the doodle's own angle.
   spin (optional): the part also turns about its joint by pose[spin] radians, clockwise on screen
            (wheel spokes, rotor blades, sails).
+  shift_by/shift (optional): vertices of the part move by pose[shift_by] x shift (doodle units) before
+           placement: a jaw opening, a mouth.
+  yaw (pose entry, -1..1) with spec front_regions [[x0,y0,x1,y1],...] in doodle space: a head turn; the
+           features inside those boxes slide further than the outline.
+  _face, _xscale (pose entries): force the facing, and narrow the drawing about its centre line (a flipbook
+           turn: 1 -> 0.4, flip, 0.4 -> 1).
   fold/axis (optional): the part folds toward the axis line (two anchors) by pose[fold] (1 open, 0 shut),
            as wings close.
 Params: wobble, seg (hand wobble on long segments; 0 keeps the doodle's lines exactly), seed.
@@ -59,6 +65,7 @@ class TemplateRig:
         prm = prm or {}; sp = self.sp
         a0, a1 = sp['root']
         face = 1 if pose[sp.get('face_from', ['nose', 'tail'])[0]][0] >= pose[sp.get('face_from', ['nose', 'tail'])[1]][0] else -1
+        if '_face' in pose: face = 1 if pose['_face'] >= 0 else -1
         flip = face != self.face
         mir = lambda v: np.array([255 - v[0], v[1]], float) if flip else np.array(v, float)
         A = {k: mir(v) for k, v in sp['anchors'].items()}
@@ -99,11 +106,30 @@ class TemplateRig:
             ax = (root(A[part['axis'][1]]) - root(A[part['axis'][0]])) if part.get('axis') else None
             for i in range(part['from'], part['to'] + 1):
                 if out[s][i] is None:
-                    q = root(mir(self.strokes[s][i]))
+                    v0 = np.array(self.strokes[s][i], float)
+                    if part.get('shift_by'):   # e.g. a jaw: vertices move in doodle space by pose[shift_by] x shift
+                        v0 = v0 + float(pose.get(part['shift_by'], 0.0)) * np.array(part['shift'], float)
+                    q = root(mir(v0))
                     if fold is not None:   # fold toward the axis line: the across-axis offset times pose[fold]
                         o = root(A[part['axis'][0]]); u = ax / max(np.hypot(*ax), 1e-6); r = q - o; along = (r @ u) * u
                         q = o + along + (r - along) * fold
                     out[s][i] = (R @ (q - piv) + piv).tolist()
+        if pose.get('yaw') and sp.get('front_regions'):
+            # a head turning toward profile: the outline narrows a little, features on the face slide toward the
+            # turn (more than the outline), so a frontal doodle turns without being redrawn
+            allp = np.array([q for st in out for q in st if q is not None], float); cx = allp[:, 0].mean(); wd = np.ptp(allp[:, 0]); yv = float(pose['yaw'])
+            inner = set()
+            for x0, y0, x1, y1 in sp['front_regions']:
+                for si, st in enumerate(self.strokes):
+                    for vi, (x, y) in enumerate(st):
+                        if x0 <= x <= x1 and y0 <= y <= y1: inner.add((si, vi))
+            out = [[None if q is None else [cx + (q[0] - cx) * (1 - 0.25 * abs(yv)) + yv * wd * (0.15 if (si, vi) in inner else 0.04), q[1]]
+                    for vi, q in enumerate(st)] for si, st in enumerate(out)]
+        if '_xscale' in pose and abs(pose['_xscale']) < 0.999:
+            # a flipbook turn: the drawing narrows toward its own centre line, flips facing, and widens again;
+            # its height and every joint stay as drawn, so nothing comes apart mid-turn
+            allp = np.array([q for st in out for q in st if q is not None], float); cx = allp[:, 0].mean(); k = max(abs(pose['_xscale']), 0.3)
+            out = [[None if q is None else [cx + (q[0] - cx) * k, q[1]] for q in st] for st in out]
         res = []; rng = np.random.default_rng(prm.get('seed', 3)); seg = prm.get('seg', 0); wob = prm.get('wobble', 0)
         for st in out:
             st = [p for p in st if p is not None]

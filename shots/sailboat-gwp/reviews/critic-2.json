@@ -1,0 +1,18 @@
+{
+ "named_subject": "a sailboat with one triangular sail, a mast and a long hull, on water with two small grey boats in the distance",
+ "action": "The sailboat drifts left across the water while growing slightly larger, then eases back a little to the right in the last frames.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  8,
+  9
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hull outline, the notched top edge, the hooked bow at right and the doubled mast strokes match the doodle; only the sail is slightly wider and the hull longer than in c.png.",
+ "notes": "The path matches the film's left drift and slight return, but the film boat grows until the sail fills the frame while the drawing barely grows, and the hull's right end changes length at frame 2 and frame 8 and the boat jumps left at frames 8 to 9. The one change that would help most is scaling the boat up steadily across the shot to match the film's approach while keeping the hull length constant.",
+ "_packet": "lot1e34iz",
+ "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+ "_round": 2
+}

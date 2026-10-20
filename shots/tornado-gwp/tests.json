@@ -15,23 +15,22 @@
  },
  {
   "id": "M2b",
-  "value": 1.0,
+  "value": 0.99,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 6
  },
  {
   "id": "M3",
-  "value": 0.17,
-  "unit": "fit to the SAM silhouette, frames with a mask",
-  "ok": false,
-  "min": 0.0
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
  },
  {
   "id": "M6",
-  "value": 33.6,
+  "value": 0.9,
   "unit": "px jerk (drawing centre)",
-  "ok": false
+  "ok": true
  },
  {
   "id": "T3",
@@ -74,17 +73,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ctornado\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201ca tornado funnel: an inverted cone with a looping swirl at the top\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/tornado-gwp/reviews/critic-1.json"
+  "evidence": "shots/tornado-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The inverted cone, oval top loop and trailing hook stroke match the doodle almost exactly. There is no visible difference in construction.",
-  "evidence": "shots/tornado-gwp/reviews/critic-1.json"
+  "note": "The animated funnel keeps the doodle's construction (loop rim, open swirl tail, kinked left side, long right side) but parts of the rim turn grey in some frames, so the drawing loses strokes the doodle has.",
+  "evidence": "shots/tornado-gwp/reviews/critic-4.json"
  }
 ]

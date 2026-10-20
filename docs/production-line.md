@@ -4,34 +4,34 @@ Every subject goes through the same eight steps, one subject at a time. CI does 
 
 | Subject | survey | plan | track | rig | keys | scene | build | critic | Next | Critic: identity, motion, follows film |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [bicycle](../pages/bicycle-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
-| [butterfly](../pages/butterfly-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
+| [bicycle](../pages/bicycle-gwp.html) | done | done | done | done | done | done | done | done | done | bar_not_met, broken, partly |
+| [butterfly](../pages/butterfly-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, yes |
 | [cat](../pages/cat-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
 | [cow](../pages/cow-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
 | [dog](../pages/dog-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
-| [duck](../pages/duck-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
-| [fan](../pages/fan-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, yes |
+| [duck](../pages/duck-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
+| [fan](../pages/fan-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
 | [flying-saucer](../pages/flying-saucer-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, yes |
 | [giraffe](../pages/giraffe-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
 | [helicopter](../pages/helicopter-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, yes |
 | [horse](../pages/horse-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
-| [hurricane](../pages/hurricane-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
+| [hurricane](../pages/hurricane-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
 | [monkey](../pages/monkey-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
 | [mosquito](../pages/mosquito-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
 | [pig](../pages/pig-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
 | [rabbit](../pages/rabbit-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, yes |
-| [raccoon](../pages/raccoon-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
-| [rain](../pages/rain-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, jumbled, yes |
-| [roller-coaster](../pages/roller-coaster-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, yes |
+| [raccoon](../pages/raccoon-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
+| [rain](../pages/rain-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
+| [roller-coaster](../pages/roller-coaster-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
 | [sailboat](../pages/sailboat-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
-| [see-saw](../pages/see-saw-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
+| [see-saw](../pages/see-saw-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
 | [sheep](../pages/sheep-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
-| [skateboard](../pages/skateboard-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
-| [spider](../pages/spider-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
+| [skateboard](../pages/skateboard-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
+| [spider](../pages/spider-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
 | [tiger](../pages/tiger-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, partly |
 | [tornado](../pages/tornado-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
-| [tractor](../pages/tractor-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, yes |
-| [windmill](../pages/windmill-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, partly |
+| [tractor](../pages/tractor-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, broken, yes |
+| [windmill](../pages/windmill-gwp.html) | done | done | done | done | done | done | done | done | done | bar_met, smooth, yes |
 
 ## The steps
 

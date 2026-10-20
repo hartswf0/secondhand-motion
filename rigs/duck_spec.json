@@ -2,7 +2,7 @@
  "category": "duck",
  "doodle_key_id": "6527787101847552",
  "facing": 1,
- "note": "Quick, Draw! duck 6527787101847552, facing right: one outline from the beak round the head, down the back to the tail, along the bottom and up the breast to the beak (stroke 0), an eye (1, 2), a beak line (3), two feet (4-6) and a leg (7). Root: tail to breast; the head turns at the neck.",
+ "note": "Quick, Draw! duck 6527787101847552, facing right: one outline from the beak round the head, down the back to the tail, along the bottom and up the breast to the beak (stroke 0), an eye (1, 2), a beak line (3), two feet (4-6) and a leg (7). Root: tail to breast; the head turns at the neck. Turning toward the viewer: the beak tip pulls back toward the face (pose \"front\", 0 profile .. 1 facing us), the doodle way of foreshortening.",
  "strokes": [
   [
    [
@@ -261,11 +261,31 @@
   {
    "stroke": 0,
    "from": 0,
-   "to": 10,
+   "to": 4,
    "joint": "neck",
    "aim": [
     "neck",
     "nose"
+   ],
+   "shift_by": "front",
+   "shift": [
+    -30,
+    6
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ],
+   "shift_by": "front",
+   "shift": [
+    -30,
+    6
    ]
   },
   {
@@ -290,16 +310,6 @@
   },
   {
    "stroke": 2,
-   "from": 0,
-   "to": 1,
-   "joint": "neck",
-   "aim": [
-    "neck",
-    "nose"
-   ]
-  },
-  {
-   "stroke": 3,
    "from": 0,
    "to": 1,
    "joint": "neck",
@@ -360,6 +370,18 @@
     "tail",
     "chest"
    ]
+  },
+  {
+   "stroke": 0,
+   "from": 5,
+   "to": 10,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ]
   }
- ]
+ ],
+ "track": false,
+ "smooth": 1.5
 }

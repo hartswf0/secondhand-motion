@@ -1,19 +1,19 @@
 [
  {
   "id": "M2",
-  "value": 41,
+  "value": 39,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   29,
-   34,
-   49,
-   49,
-   50,
-   48,
-   43,
-   34,
-   35
+   24,
+   35,
+   47,
+   45,
+   47,
+   46,
+   39,
+   33,
+   33
   ]
  },
  {
@@ -28,11 +28,11 @@
   "value": 0.4,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.29
+  "min": 0.28
  },
  {
   "id": "M6",
-  "value": 11.8,
+  "value": 5.9,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -77,17 +77,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cgiraffe head and neck in profile, facing right\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca giraffe's head and upper neck, seen in close-up with two ossicones, an eye mark and a long muzzle\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/giraffe-gwp/reviews/critic-1.json"
+  "evidence": "shots/giraffe-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The head construction matches the doodle (two ossicones with one drawn as a P-shaped flag, small open ear, arrow eye, muzzle hook, jaw loop), but the long neck with its crossing strokes is cut off by the frame bottom and the lines are thinner than the doodle's heavy strokes.",
-  "evidence": "shots/giraffe-gwp/reviews/critic-1.json"
+  "note": "The head uses the doodle's own parts (the flag-shaped and P-shaped ossicones, the arrow eye, the cheek loop and the muzzle line), but most of the doodle's long neck with its extra strokes is cropped out of frame.",
+  "evidence": "shots/giraffe-gwp/reviews/critic-4.json"
  }
 ]

@@ -302,6 +302,38 @@
  },
  "parts": [
   {
+   "stroke": 5,
+   "from": 0,
+   "to": 2,
+   "joint": "poll",
+   "aim": [
+    "poll",
+    "nose"
+   ],
+   "turn": 0,
+   "shift_by": "jaw",
+   "shift": [
+    0,
+    24
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 9,
+   "to": 10,
+   "joint": "poll",
+   "aim": [
+    "poll",
+    "nose"
+   ],
+   "turn": 0,
+   "shift_by": "jaw",
+   "shift": [
+    0,
+    30
+   ]
+  },
+  {
    "stroke": 0,
    "from": 0,
    "to": 15,
@@ -349,17 +381,6 @@
    "stroke": 4,
    "from": 0,
    "to": 3,
-   "joint": "poll",
-   "aim": [
-    "poll",
-    "nose"
-   ],
-   "turn": 0
-  },
-  {
-   "stroke": 5,
-   "from": 0,
-   "to": 2,
    "joint": "poll",
    "aim": [
     "poll",
@@ -433,5 +454,7 @@
    ],
    "turn": 0
   }
- ]
+ ],
+ "track": false,
+ "smooth": 0.8
 }

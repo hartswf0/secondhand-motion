@@ -1,0 +1,18 @@
+{
+ "named_subject": "a giraffe head and upper neck in close-up, with two ossicones on top, an ear on the left, an eye mark and a long snout",
+ "action": "The giraffe head stays almost still while the snout outline shrinks and reshapes and the lower jaw line tilts from slanted to flat, with the neck lines shifting near the bottom.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  9,
+  13
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The head, ossicones, ear, eye arrow and jaw construction match the doodle closely, but the shot crops off most of the doodle's long neck and its inner neck strokes.",
+ "notes": "The film shows the giraffe chewing with its mouth opening and closing and a second ear coming into view, while the animation only resizes the snout outline in a few steps (frame 5 shrinks it, frame 9 adds split neck lines, frame 13 flattens the jaw). The change that would help most is opening and closing the mouth line at the snout tip in step with the film's chewing, interpolated across every frame instead of changing in jumps.",
+ "_packet": "lotf3nsnc",
+ "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+ "_round": 2
+}

@@ -26,11 +26,12 @@ for c in [a for a in sys.argv[1:] if not a.startswith("--")]:
             draw_frame(im, [], bgs(f)); im.paste((255, 255, 255), mask=m); draw_frame(im, [np.array(s) for s in S['cast']['frames'][f]], [])
             return im
         draw_frame(im, [np.array(s) for s in S['cast']['frames'][f]], bgs(f)); return im
-    fr = [round(i * (n - 1) / 7) for i in range(8)]; strip = Image.new('RGB', (4 * W + 12, 2 * H + 4), 'white')
+    NF = 16 if '--dense' in sys.argv else 8
+    fr = [round(i * (n - 1) / (NF - 1)) for i in range(NF)]; rows = NF // 4; strip = Image.new('RGB', (4 * W + 12, rows * H + 4 * (rows - 1)), 'white')
     for i, f in enumerate(fr):
         t = frame(f); ImageDraw.Draw(t).text((4, 3), str(i + 1), fill=(120, 120, 120)); strip.paste(t, ((i % 4) * (W + 4), (i // 4) * (H + 4)))
     strip.save(d / 'critic' / 'strip.png')
-    foot = Image.new('RGB', (4 * W + 12, 2 * H + 4), 'white')   # the source footage at the same 8 frames
+    foot = Image.new('RGB', (4 * W + 12, rows * H + 4 * (rows - 1)), 'white')   # the source footage at the same 8 frames
     for i, f in enumerate(fr):
         t = Image.open(d / S['footage'][f]).convert('RGB') if not S['footage'][f].startswith('data:') else Image.new('RGB', (W, H), 'gray')
         ImageDraw.Draw(t).text((4, 3), str(i + 1), fill=(255, 255, 0)); foot.paste(t, ((i % 4) * (W + 4), (i // 4) * (H + 4)))

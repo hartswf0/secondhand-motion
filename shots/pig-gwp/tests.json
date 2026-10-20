@@ -1,39 +1,39 @@
 [
  {
   "id": "M2",
-  "value": 21,
+  "value": 23,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   20,
-   20,
-   26,
-   20,
-   23,
-   30,
-   15,
-   15
+   29,
+   24,
+   25,
+   22,
+   24,
+   27,
+   18,
+   18
   ]
  },
  {
   "id": "M2b",
-  "value": 0.86,
+  "value": 0.87,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 31
  },
  {
   "id": "M3",
-  "value": 0.36,
+  "value": 0.34,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.19
+  "min": 0.18
  },
  {
   "id": "M6",
-  "value": 20.2,
+  "value": 3.9,
   "unit": "px jerk (drawing centre)",
-  "ok": false
+  "ok": true
  },
  {
   "id": "T3",
@@ -76,17 +76,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cpig\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca pig seen from the side, with a spiral snout, two pointed ears, a round body and short stick legs\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/pig-gwp/reviews/critic-1.json"
+  "evidence": "shots/pig-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The body, zigzag ear, spiral snout and stick legs match the doodle closely. In frames 6 to 8 the ear zigzag flattens and the front legs are redrawn in different positions.",
-  "evidence": "shots/pig-gwp/reviews/critic-1.json"
+  "note": "Frames 1-6 match the doodle closely, but from frame 13 on the ears tip over into a sideways zigzag, the back of the head becomes one long diagonal line, and the front legs separate from the body, so the late frames drift away from the doodle's construction.",
+  "evidence": "shots/pig-gwp/reviews/critic-4.json"
  }
 ]

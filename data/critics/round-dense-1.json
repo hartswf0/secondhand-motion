@@ -1,0 +1,534 @@
+{
+ "bicycle": {
+  "named_subject": "A bicycle front wheel with spokes, seen close up, with a few straight lines of the bicycle frame at its upper right",
+  "action": "The wheel stays in roughly the same place while its spokes change arrangement from frame to frame, and in the second half a second frame line appears and the wheel outline opens a gap at the lower right.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   3,
+   5,
+   7,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "motion_score": 2,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The wheel matches the doodle's segmented polygon rim and star of spokes, but only one wheel and two frame lines of the doodle are shown, so the seat, handlebar and second wheel are missing.",
+  "notes": "The film shows a front wheel rolling steadily while a rider pedals, and the animation keeps the wheel position but redraws the spokes at unrelated angles each frame instead of turning them in one direction, with sudden extra lines appearing at frames 9 to 12. The change that would help most is to rotate a single fixed spoke set by a consistent small angle per frame so the wheel visibly turns like the film's wheel.",
+  "_packet": "lot7bklsa",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "butterfly": {
+  "named_subject": "a butterfly with two lobed wings, a long segmented body, a round head and antennae",
+  "action": "The butterfly sits on a fingertip as the hand moves left and up, and its wings narrow and tilt more upright toward the end of the shot.",
+  "follows_film": "yes",
+  "motion_reads": "smooth",
+  "broken_frames": [
+   2,
+   13
+  ],
+  "motion_score": 4,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated butterfly keeps the doodle's lobed wing outlines, the ladder-marked body line that extends past the wings, the small circle head and the two antennae, only made smaller and narrower.",
+  "notes": "Most of the leftward travel happens in one step between frames 1 and 2, while in the film the hand drifts over frames 1 to 4, and the wings narrow suddenly at frame 13. Spreading the frame 1 to 2 move across frames 1 to 4 would help most.",
+  "_packet": "lotz4yt8g",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "cat": {
+  "named_subject": "a cat's face (head with two pointed ears, two eyes and whiskers)",
+  "action": "The cat head holds nearly still with a slight tilt and sway for most of the shot, then shrinks and shifts to the right in the last four frames.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   13,
+   14
+  ],
+  "motion_score": 2,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The head outline, ears, top notch and hexagonal eyes match the doodle, but the left whiskers are regrouped into a downward-angled fan instead of the doodle's three roughly horizontal strokes, and the whole head is tilted.",
+  "notes": "Frames 1-12 match the film's upward-looking, mostly still head, but in the film the cat turns its head to a right-facing profile at frame 13, while the drawing only jumps smaller and to the right without turning. The change that would help most is to animate the head turn across frames 12-14 (eyes and ears shifting toward the right side, the face narrowing) instead of a sudden scale and position jump.",
+  "_packet": "lot9cmgy8",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "cow": {
+  "named_subject": "a cow's head, seen close up, with a large rounded muzzle, ears, short horns and a spotted body behind it",
+  "action": "The cow's head tilts slightly in the first frames and then settles upright facing the viewer, holding nearly still with a small smile while a body spot shifts near the end.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   5,
+   6,
+   15
+  ],
+  "motion_score": 2,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The head uses the doodle's oval ear, tick-mark eyes, wide rounded muzzle with a small curved mouth and outlined spots, but the oval left ear is replaced by two loose strokes from frame 6 onward, which the doodle never has.",
+  "notes": "The film shows the cow turning from a three-quarter view to face the camera and then opening its mouth repeatedly; the animation gets the early tilt and the frontal hold but the mouth never opens, the drawing shifts down and redraws between frames 4 and 6, and a spot jumps at frame 15. The one change that would help most is animating the mouth opening and closing on the muzzle in frames 4-16 to match the film's chewing or mooing while keeping the oval ear constant.",
+  "_packet": "loti59j9i",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "dog": {
+  "named_subject": "a four-legged animal with a long neck and a pointed snout, most likely a dog",
+  "action": "The animal stands facing left with its head raised, then turns to face right, lowers its head, and ends with its head down near the bowl.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   6,
+   8,
+   10,
+   13
+  ],
+  "motion_score": 2,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated figure keeps the doodle's diamond-shaped head with the eye, long neck, boxy rear and loop legs, but in later frames the rear box and legs are drawn twice so the body looks duplicated.",
+  "notes": "The film shows the dog looking up at the person, turning, walking toward the camera and then moving to the bowl; the animation gets the head-up start and head-down end but turns from left to right in a single frame (5 to 6) and changes body length and head height abruptly at frames 8, 10 and 13, and it never shows the walk toward the camera. The change that would help most is adding in-between frames for the turn so the body rotates over several frames instead of flipping at once.",
+  "_packet": "lot2i5tgc",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "duck": {
+  "named_subject": "a duck or goose standing in side view, facing left, with small webbed feet",
+  "action": "The bird stays in place in profile and its outline wobbles and shifts slightly, while the beak and head shape change size in a few frames; it never turns to face the viewer.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   4,
+   8,
+   12,
+   16
+  ],
+  "motion_score": 2,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated bird is the doodle mirrored left-to-right with the same body outline, beak stroke and triangle feet, though the beak is drawn heavier and the head rounder in some frames.",
+  "notes": "The film shows a clay duck turning its head from profile to face the camera and then crying, and the drawing only does a small in-place sway with no head turn, so it follows only the standing pose. Every fourth frame (4, 8, 12, 16) the head and beak redraw larger with doubled beak lines, which reads as a pop; the change that would help most is to animate the head turning toward the viewer in frames 3-4 as in the film, with the head drawn consistently between keys.",
+  "_packet": "lotxxc81b",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "fan": {
+  "named_subject": "an electric desk fan seen from the front: a rounded housing with three curved blades around a scribbled hub, standing on a short hatched base",
+  "action": "The three curved blades turn around the central hub while the round housing and the base stay still.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   3,
+   5,
+   7,
+   9,
+   12,
+   15
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated fan keeps the doodle's lopsided outline, small tick at the top, dense scribbled hub, three curved blade lines and hatched base, so it reads as the same drawing.",
+  "notes": "The film shows a fan spinning fast, and the drawing does turn its blades, but the blade positions change by uneven amounts between frames, so the rotation has no steady direction or speed, and in frames 7, 8 and 9 a blade runs past the housing outline down into the base. The one change that would help most is to rotate the blades by an equal angle in one direction each frame and clip them to the housing outline.",
+  "_packet": "lot0iy3n1",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "flying-saucer": {
+  "named_subject": "a flying saucer (UFO) with a domed top and small windows, turned on its side",
+  "action": "The tilted saucer drifts slowly downward and to the right through the middle frames, then shifts left and lower near the end, with the clouds sliding slightly behind it.",
+  "follows_film": "yes",
+  "motion_reads": "smooth",
+  "broken_frames": [],
+  "motion_score": 4,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated character is the doodle's flat oval body with the dome and dotted windows, rotated to match the capsule's tilt; only the window dots shift slightly between frames.",
+  "notes": "The position path matches the film's capsule frame by frame, but the drawing stays the same size and angle while the film capsule turns and grows slightly in frames 13-16. The change that would help most is adding that small rotation and scale increase at the end so the drawing turns with the capsule.",
+  "_packet": "lotnv9ysp",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "giraffe": {
+  "named_subject": "a giraffe head and upper neck in close-up, with two ossicones on top, an ear on the left, an eye mark and a long snout",
+  "action": "The giraffe head stays almost still while the snout outline shrinks and reshapes and the lower jaw line tilts from slanted to flat, with the neck lines shifting near the bottom.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   5,
+   9,
+   13
+  ],
+  "motion_score": 2,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The head, ossicones, ear, eye arrow and jaw construction match the doodle closely, but the shot crops off most of the doodle's long neck and its inner neck strokes.",
+  "notes": "The film shows the giraffe chewing with its mouth opening and closing and a second ear coming into view, while the animation only resizes the snout outline in a few steps (frame 5 shrinks it, frame 9 adds split neck lines, frame 13 flattens the jaw). The change that would help most is opening and closing the mouth line at the snout tip in step with the film's chewing, interpolated across every frame instead of changing in jumps.",
+  "_packet": "lotf3nsnc",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "helicopter": {
+  "named_subject": "a helicopter (side view, with main rotor, cockpit, skid struts, landing skid and tail boom)",
+  "action": "The helicopter starts as a close, cropped view, tilts nose-down to the right as its tail boom comes into frame, and then shrinks steadily as it flies away from the viewer.",
+  "follows_film": "yes",
+  "motion_reads": "broken",
+  "broken_frames": [
+   2,
+   4,
+   6,
+   7,
+   8
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated helicopter uses the same body outline, cockpit line, two struts, flat skid, hooked tail and three-blade rotor as the doodle, so it reads as that drawing; only the cropped opening frames hide the tail and skid.",
+  "notes": "Frames 1-6 and 9-16 move smoothly, but between frames 6 and 8 the body tilts and the tail and skid appear in about two steps while the film tilts more gradually, and rotor blades in frames 2, 4 and 6 are drawn as doubled lines; a grey scenery shape also sits on top of the body from frame 8 on. The change that would help most is spreading the tilt and tail entry across frames 5-8 so the body rotates gradually instead of jumping at frame 7.",
+  "_packet": "lot974zeh",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "horse": {
+  "named_subject": "a horse's head and neck in profile, with a zigzag mane, seen beside a fence",
+  "action": "The horse's head stretches forward and down to the right, then swings back to an upright pose and drifts lower-left, smaller in frame.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   6,
+   12,
+   14
+  ],
+  "motion_score": 2,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The construction matches the doodle (zigzag mane, pointed ears, scribbled dot eye, open jaw curve, two neck lines), but one ear is drawn as a sideways pointed shape sticking out of the neck line rather than upright as in the doodle.",
+  "notes": "The film shows the horse lowering its head into the hay from frame 10 onward, but the animation returns to the opening upright pose at frame 12 and jumps in scale and scenery at frame 14, so the second half does not match. The one change that would help most is to keep the head descending toward the bottom of the frame through frames 10-16 instead of snapping back to the starting pose.",
+  "_packet": "lot3zzxvr",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "hurricane": {
+  "named_subject": "a flat, pointed, boat-like scribble (a canoe or low boat shape made of overlapping strokes), drawn twice, one copy stacked above the other",
+  "action": "The stacked pair of boat shapes slides steadily from left to right across a grey outline of a house roof, while further copies of the pair slide in at the right edge (frames 1-5) and then at the left edge (frames 9-16).",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "motion_score": 2,
+  "identity_verdict": "bar_met",
+  "identity_gap": "Each copy uses the same long overlapping strokes and pointed right end as c.png, but the drawing appears two to four times per frame instead of once.",
+  "notes": "The grey house outline matches the house in the film, but the film shows waves churning in front of a fixed house, and nothing in it slides steadily left to right as the character does; the drawing is also duplicated in every frame, with extra copies entering and leaving at the frame edges. The change that would help most is to draw the character once per frame and tie its movement to the waves breaking along the front of the house.",
+  "_packet": "lotg3du4w",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "monkey": {
+  "named_subject": "a monkey (head with round ears, muzzle, and a curled tail, seated)",
+  "action": "The monkey slides left and slightly down while its face features shift toward the left edge of the head, holds that position, then returns to a front-facing pose in the last two frames.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   5,
+   15
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The drawing keeps the doodle's head outline, spiral eye, muzzle loop, ear shapes and spiral tail, but in frames 5-14 the left ear is cut off by the top of the frame and the left eye is squeezed into overlapping lines.",
+  "notes": "The film shows the head turning to screen-left and tilting down so the face points at the ground, but the animation mostly translates the whole drawing and slides the face features sideways, with no downward tilt of the head and a sudden snap back between frames 14 and 15. The one change that would help most is rotating and tilting the head down over frames 4-14 (and easing the return over frames 13-16) instead of translating it, while keeping the left ear inside the frame.",
+  "_packet": "lotiux2w0",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "mosquito": {
+  "named_subject": "a mosquito (insect with an upright wing, thin legs, round head and a long curved proboscis) standing on a slope",
+  "action": "The mosquito stays in place on a sloped line and its body and wing bob slightly up and down, while the slope and hair marks shift a little between frames.",
+  "follows_film": "partly",
+  "motion_reads": "smooth",
+  "broken_frames": [
+   6,
+   10
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated character is the c.png drawing mirrored to face left, with the same tall triangular wing, oval head, long curved proboscis and stick legs, only drawn smaller.",
+  "notes": "The film shows a mosquito on hairy skin feeding with its proboscis pressed into the skin, but in the animation the skin-edge line runs through the mosquito's body and the proboscis curls into empty air, and at frame 10 the whole hair and ground layer jumps left. The change that would help most is to put the mosquito on the skin surface so the proboscis touches it, and to keep the scenery from jumping at frame 10.",
+  "_packet": "lot330d7k",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "pig": {
+  "named_subject": "a pig seen from the side, with a spiral snout, two pointed ears, a round body and short stick legs",
+  "action": "The pig stands still in profile for six frames, then shrinks and slides right, then grows larger and tilts its body so the head drops lower and to the left while the legs spread.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   8,
+   9,
+   11,
+   14
+  ],
+  "motion_score": 2,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The drawing keeps the doodle's spiral snout, zigzag ears, open body outline and split leg strokes, but in frames 11-16 the body is rotated and swollen so the outline proportions drift from the doodle.",
+  "notes": "The film shows the pig standing, then turning its head toward the camera and walking forward so it grows larger in frame, but the animation first shrinks the pig in frames 8-9 and then rotates the whole flat side-view drawing instead of turning the head, and the size changes at frames 8, 9 and 11 read as pops. The one change that would help most is to remove the shrink in frames 7-9 and make the growth a steady increase across frames 7-16 so the pig scales up continuously as it approaches the camera.",
+  "_packet": "lotzi8m8g",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "rabbit": {
+  "named_subject": "a rabbit",
+  "action": "The rabbit comes out from behind a door edge, turns to face right and sits hunched by the wall with its ears lowering back, then runs off to the right out of frame.",
+  "follows_film": "yes",
+  "motion_reads": "broken",
+  "broken_frames": [
+   3,
+   7,
+   12,
+   13,
+   15
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated rabbit uses the same open single-line outline, two long pointed ears, spike front leg and bumped rump as the doodle, mirrored to face right, though the head in frames 1-2 is drawn tall and narrow and loses the doodle's rounded snout.",
+  "notes": "The poses track the film closely through the sit and the exit, but the body outline appears suddenly at frame 3, the ears swap positions abruptly at frames 7 and 13, the front leg draws as a small closed loop at frame 12, and the ear detaches from the head at frame 15. The change that would help most is smoothing the ear transitions between the upright, laid-back and running poses so the ears do not jump between frames.",
+  "_packet": "lotg63xwg",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 3
+ },
+ "raccoon": {
+  "named_subject": "a raccoon (round smiling face with ears, oval body, four stick legs, striped ringed tail)",
+  "action": "The raccoon stands side-on facing left at the edge of tall grass and drifts slightly left while its head tips downward and then rotates to a more upright, larger oval, with the legs staying almost fixed.",
+  "follows_film": "partly",
+  "motion_reads": "smooth",
+  "broken_frames": [
+   9,
+   13
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated figure uses the same angular head with ear, dot eyes and smile, oval body, four stick legs with a hooked front foot, and banded tail as c.png, with only the head proportions changing in later frames.",
+  "notes": "The figure holds one pose for most of the shot while the film raccoon lowers its head to forage and turns its body; at frame 9 the scenery shifts abruptly and at frame 13 the head is redrawn larger and more upright. The change that would help most is to drive the head drop and body turn from the film, including leg steps, instead of keeping the legs fixed and only resizing the head.",
+  "_packet": "lotj61wev",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "rain": {
+  "named_subject": "rain: many short dark vertical streaks falling over a house, a tree and a zigzag fence",
+  "action": "Short rain streaks fill the frame and are redrawn in new positions each frame as if falling, at roughly constant density, while the grey house, tree and fence stay in place with slight line wobble.",
+  "follows_film": "partly",
+  "motion_reads": "smooth",
+  "broken_frames": [],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The streaks match the doodle's short, slightly slanted single strokes, including the occasional kinked stroke, but the animation uses far more of them at more uniform lengths than the doodle.",
+  "notes": "The rain falls at a steady density throughout, while the film's rain grows heavier and darker over the shot and the water on the bridge surface splashes more; the grey scenery (house, tree, zigzag fence) also does not match the film's bridge with converging railings. The one change that would help most is to increase the rain density and streak length from frame 1 to frame 16 to match the film's build-up, and add splash marks at the bottom.",
+  "_packet": "lotlgz5q1",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "roller-coaster": {
+  "named_subject": "a roller coaster lift hill: a double-rail track with cross-tie hatch marks rising to a peak, with two support lines sloping down to the right",
+  "action": "The track rotates from a moderate slope to a near-vertical climb and narrows over frames 1-9, then holds nearly still through frame 16.",
+  "follows_film": "partly",
+  "motion_reads": "smooth",
+  "broken_frames": [
+   6,
+   7
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated track has the doodle's double rail, short slanted hatch ties and two descending lines, but it is much steeper and narrower than the doodle's shallow bent climb for most of the shot.",
+  "notes": "The track's steepening matches the film's camera reframing, but the scenery pops in frame 6 (both clouds vanish, then return in frame 7) and nothing shows the coaster car climbing the hill, which is the main motion in the film. The one change that would help most is adding the car moving up the track, following the film.",
+  "_packet": "lotfh0uis",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "sailboat": {
+  "named_subject": "a sailboat with one triangular sail, a mast and a long hull, on water with two small grey boats in the distance",
+  "action": "The sailboat drifts left across the water while growing slightly larger, then eases back a little to the right in the last frames.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   2,
+   8,
+   9
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The hull outline, the notched top edge, the hooked bow at right and the doubled mast strokes match the doodle; only the sail is slightly wider and the hull longer than in c.png.",
+  "notes": "The path matches the film's left drift and slight return, but the film boat grows until the sail fills the frame while the drawing barely grows, and the hull's right end changes length at frame 2 and frame 8 and the boat jumps left at frames 8 to 9. The one change that would help most is scaling the boat up steadily across the shot to match the film's approach while keeping the hull length constant.",
+  "_packet": "lot1e34iz",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "see-saw": {
+  "named_subject": "a seesaw: a long plank resting on a triangular pivot, tilted down to the right",
+  "action": "The seesaw stays almost still for all 16 frames, with the plank flattening very slightly around frames 9-12 and returning to its earlier tilt by frames 13-16.",
+  "follows_film": "partly",
+  "motion_reads": "smooth",
+  "broken_frames": [],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated plank is a little flatter and shorter than in the doodle, but the outline, the stray tick at the top-left corner, the doubled pivot strokes and the small dot all match c.png.",
+  "notes": "The film's near seesaw also holds a steady downward tilt to the right while a woman lifts a child onto it, so the near-static drawing matches the board but shows nothing of the activity in the shot. The change that would help most is to have the plank rock or dip visibly when the child is placed on it around frames 9-14, so the drawing shows the event in the film.",
+  "_packet": "lotckencm",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "sheep": {
+  "named_subject": "a sheep (cloud-shaped woolly body, small boxy head with ears, stick legs)",
+  "action": "A sheep with its head lowered grazes, drifting slightly right over the first quarter of the shot and then slowly left for the rest, in front of a line of grey sheep and trees.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   4,
+   5,
+   6
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The body, boxy head with two ears, dot eyes and short line legs match c.png, but the head is tilted down and redrawn smaller, and the legs shift between two and three across frames.",
+  "notes": "The lowered-head grazing pose and the slow drift match the sheep in the film, but in frames 4 to 6 the sheep runs into the right edge, the head is clipped and changes angle sharply, so the drawing pops. The change that would help most is to keep the sheep inside the frame and hold the head angle steady through frames 4 to 6.",
+  "_packet": "lotn60h4u",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "skateboard": {
+  "named_subject": "a small wheeled vehicle, a car or skateboard seen from the side, with a long flat body on two large round wheels",
+  "action": "The vehicle starts level, tips nose-down to the right between frames 2 and 3, then holds that tilt while drifting slowly left and down across the frame.",
+  "follows_film": "partly",
+  "motion_reads": "smooth",
+  "broken_frames": [
+   3,
+   5
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated drawing keeps the doodle's long rounded deck, the overlapping stroke at the top front, and the two lumpy polygonal wheels, so it reads as the same drawing.",
+  "notes": "The film shows a skateboard rolling forward and carving with changing lean, while the drawing takes on one fixed tilt early and then barely changes; the tilt arrives in a single jump at frame 3 and there is a larger leftward shift at frame 5. The change that would help most is to vary the lean and add some forward roll or wheel rotation over frames 6-16 so it follows the film's carving instead of holding one pose.",
+  "_packet": "lotgekn75",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 3
+ },
+ "spider": {
+  "named_subject": "a spider: an oval body with short legs on both sides, sitting where two web threads meet",
+  "action": "The spider stays at the meeting point of the web threads and shifts slightly in place while its legs tilt a little, with almost no travel across the frame.",
+  "follows_film": "partly",
+  "motion_reads": "smooth",
+  "broken_frames": [
+   8,
+   13
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated body and leg strokes match the doodle's lumpy oval, the gaps at the top of the outline and the uneven long and short legs, so the gap is small.",
+  "notes": "The drawing holds together, but the film's spider sinks lower on the web in frames 5-16, turns its body and spreads its long striped legs in new positions, while the animated spider keeps nearly the same spot and leg layout, with a small sideways jump at frame 8 and a stretched lower-left leg at frame 13. The change that would help most is moving the body down and rotating it to follow the film, and redrawing the legs to match the film's changing leg positions.",
+  "_packet": "lotekijuk",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "tiger": {
+  "named_subject": "a cat's head (front view, with ears, whiskers, nose and mouth)",
+  "action": "The cat head holds still, then drops down and shifts right around frames 6-8 while its face widens slightly, then rises back and holds facing forward to the end.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   6,
+   7,
+   9
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated head uses the same outline, ear shapes, crossed eye stroke, tick eyes, loose whiskers and split mouth as the doodle, with only small redrawing of the outline and stroke positions.",
+  "notes": "The film shows the tiger turning its head from a three-quarter view to face the camera with ears raising, but the animation renders this mostly as a vertical drop and bounce of the whole head at frames 6-9 rather than a turn. The change that would help most is to show the turn itself, by shifting the face features and ears from off-center toward center over frames 5-8, instead of translating the head down and back up.",
+  "_packet": "lott3im2h",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "tornado": {
+  "named_subject": "a tornado funnel (an inverted cone with a spiral top)",
+  "action": "The funnel stays in place in the middle of the frame and sways slightly left and right while the cloud band and ground line behind it change from frame to frame.",
+  "follows_film": "partly",
+  "motion_reads": "broken",
+  "broken_frames": [
+   4,
+   5,
+   7,
+   8,
+   9,
+   12,
+   13,
+   15
+  ],
+  "motion_score": 2,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated funnel uses the same wide spiral rim, open overhanging stroke at the top, and kinked left side as the doodle, so it reads as the same drawing.",
+  "notes": "The funnel itself drifts only a little and stays steady, but the grey cloud band appears and disappears on alternating frames (gone in 4, 7, 9-11, 15-16) and the ground line jumps position, which makes the shot flicker; the film shows a steady cloud base over a slowly drifting funnel. The change that would help most is to keep the cloud band present in every frame and move it continuously with the camera drift instead of switching it on and off.",
+  "_packet": "lotuqj87l",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "tractor": {
+  "named_subject": "a farm tractor seen from the side: a box body with an exhaust stack at the front, a small front wheel and a large round rear wheel",
+  "action": "The tractor drives toward the camera, growing larger in frame and sliding slightly left as the view closes in on its side.",
+  "follows_film": "yes",
+  "motion_reads": "broken",
+  "broken_frames": [
+   5,
+   7,
+   12,
+   16
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The construction matches the doodle (rectangle body, hooked exhaust stack with a V mark, small front wheel blob, large rear wheel loop with the curved seat line), but the rear wheel loop changes shape noticeably from frame to frame and becomes a stretched, angular polygon in frame 16.",
+  "notes": "The growth and leftward drift track the film's approach well, but the rear wheel re-forms with a different outline at frames 7, 12 and 16, and the body shrinks briefly at frame 5, which reads as pops. The one change that would help most is to keep the rear wheel outline fixed in shape and only scale and move it with the body.",
+  "_packet": "lotemdf8q",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "windmill": {
+  "named_subject": "a windmill: a tall box-shaped tower with a domed top and several long blades joined at a central hub",
+  "action": "The blades turn clockwise around the hub by roughly 50 degrees while the tower stays still, as the windmill sails turn in the film.",
+  "follows_film": "yes",
+  "motion_reads": "smooth",
+  "broken_frames": [],
+  "motion_score": 4,
+  "identity_verdict": "bar_met",
+  "identity_gap": "The animated windmill uses the same box tower, wobbly roof ellipse, small hub loop, short door tick and five loose petal-shaped blades as the doodle, so it reads as the same drawing.",
+  "notes": "The rotation is steady and in the same direction and amount as the film, but the doodle has five blades while the film windmill has four, and in frames 13-16 the top blade tangles with the roof line. The one change that would help most is keeping the top blade clear of the roof outline as it passes over it so the blade shapes stay separate through the end of the turn.",
+  "_packet": "lottkmutp",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+  "_round": 2
+ },
+ "__gwp__": {
+  "named_subject": "a giraffe, drawn as a straight-line stick figure with a long neck, a small wedge-shaped head with two horns, a box body and four legs",
+  "action": "The giraffe walks from the left side of the frame toward the right, past a bare tree, with two young giraffes in the background, as in the film.",
+  "follows_film": "yes",
+  "motion_reads": "broken",
+  "broken_frames": [
+   2,
+   5,
+   15,
+   16
+  ],
+  "motion_score": 3,
+  "identity_verdict": "bar_not_met",
+  "identity_gap": "The doodle is a large close-up giraffe head and neck with a rounded muzzle, mouth line, eye, ear and knobbed horns, while the animation is a small full-body stick giraffe whose head is a plain triangle wedge with none of those features.",
+  "notes": "The path, direction and pacing follow the film, but the legs pop into unrelated poses in frames 2 (a rearing, bent-leg pose) and 5 (legs splayed apart), several frames show doubled front-leg lines, and in frames 15 and 16 the body shortens and the legs bunch together. The change that would help most is to build the head and neck from the doodle's own strokes (rounded muzzle, mouth line, eye, ear, knobbed horns) instead of the generic wedge, so the character reads as that drawing.",
+  "_packet": "lotir9xv2",
+  "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past"
+ }
+}

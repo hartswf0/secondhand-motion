@@ -1,0 +1,19 @@
+{
+ "named_subject": "a farm tractor seen from the side: a box body with an exhaust stack at the front, a small front wheel and a large round rear wheel",
+ "action": "The tractor drives toward the camera, growing larger in frame and sliding slightly left as the view closes in on its side.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  7,
+  12,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The construction matches the doodle (rectangle body, hooked exhaust stack with a V mark, small front wheel blob, large rear wheel loop with the curved seat line), but the rear wheel loop changes shape noticeably from frame to frame and becomes a stretched, angular polygon in frame 16.",
+ "notes": "The growth and leftward drift track the film's approach well, but the rear wheel re-forms with a different outline at frames 7, 12 and 16, and the body shrinks briefly at frame 5, which reads as pops. The one change that would help most is to keep the rear wheel outline fixed in shape and only scale and move it with the body.",
+ "_packet": "lotemdf8q",
+ "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+ "_round": 2
+}

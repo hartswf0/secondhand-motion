@@ -1,0 +1,20 @@
+{
+ "named_subject": "a rabbit",
+ "action": "The rabbit comes out from behind a door edge, turns to face right and sits hunched by the wall with its ears lowering back, then runs off to the right out of frame.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  7,
+  12,
+  13,
+  15
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated rabbit uses the same open single-line outline, two long pointed ears, spike front leg and bumped rump as the doodle, mirrored to face right, though the head in frames 1-2 is drawn tall and narrow and loses the doodle's rounded snout.",
+ "notes": "The poses track the film closely through the sit and the exit, but the body outline appears suddenly at frame 3, the ears swap positions abruptly at frames 7 and 13, the front leg draws as a small closed loop at frame 12, and the ear detaches from the head at frame 15. The change that would help most is smoothing the ear transitions between the upright, laid-back and running poses so the ears do not jump between frames.",
+ "_packet": "lotg63xwg",
+ "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+ "_round": 3
+}

@@ -1,0 +1,18 @@
+{
+ "named_subject": "a cow's head and front of body, seen close up from the front, with a large rounded muzzle, two eye ticks, a smile, ears and a spot",
+ "action": "The cow's head turns from a slight tilt in frames 1-4 to face the viewer straight on from frame 5, then holds nearly still with small shifts while the mouth stays a fixed smile.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  6,
+  15
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The head, muzzle, eye ticks, smile and hexagonal spots match the doodle, but the left ear is a closed loop only in frames 1-5 and then becomes two open strokes, and the right ear is never the doodle's closed loop.",
+ "notes": "The head turn at the start matches the film, but the film cow opens and closes its mouth repeatedly while the drawn smile never changes; frame 5 adds a new spot shape at once and frame 6 swaps the round ear for forked lines. The one change that would help most is animating the mouth opening and closing in time with the film while keeping both ears as closed loops throughout.",
+ "_packet": "lothj5dq5",
+ "_round": 3,
+ "_protocol": "16 frames, motion_score 1-5"
+}

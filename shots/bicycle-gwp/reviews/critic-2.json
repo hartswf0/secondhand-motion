@@ -1,0 +1,23 @@
+{
+ "named_subject": "A bicycle front wheel with spokes, seen close up, with a few straight lines of the bicycle frame at its upper right",
+ "action": "The wheel stays in roughly the same place while its spokes change arrangement from frame to frame, and in the second half a second frame line appears and the wheel outline opens a gap at the lower right.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  5,
+  7,
+  9,
+  10,
+  11,
+  12,
+  13
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The wheel matches the doodle's segmented polygon rim and star of spokes, but only one wheel and two frame lines of the doodle are shown, so the seat, handlebar and second wheel are missing.",
+ "notes": "The film shows a front wheel rolling steadily while a rider pedals, and the animation keeps the wheel position but redraws the spokes at unrelated angles each frame instead of turning them in one direction, with sudden extra lines appearing at frames 9 to 12. The change that would help most is to rotate a single fixed spoke set by a consistent small angle per frame so the wheel visibly turns like the film's wheel.",
+ "_packet": "lot7bklsa",
+ "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+ "_round": 2
+}

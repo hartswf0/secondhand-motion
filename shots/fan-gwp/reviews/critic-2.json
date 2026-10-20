@@ -1,0 +1,21 @@
+{
+ "named_subject": "an electric desk fan seen from the front: a rounded housing with three curved blades around a scribbled hub, standing on a short hatched base",
+ "action": "The three curved blades turn around the central hub while the round housing and the base stay still.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  5,
+  7,
+  9,
+  12,
+  15
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated fan keeps the doodle's lopsided outline, small tick at the top, dense scribbled hub, three curved blade lines and hatched base, so it reads as the same drawing.",
+ "notes": "The film shows a fan spinning fast, and the drawing does turn its blades, but the blade positions change by uneven amounts between frames, so the rotation has no steady direction or speed, and in frames 7, 8 and 9 a blade runs past the housing outline down into the base. The one change that would help most is to rotate the blades by an equal angle in one direction each frame and clip them to the housing outline.",
+ "_packet": "lot0iy3n1",
+ "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+ "_round": 2
+}

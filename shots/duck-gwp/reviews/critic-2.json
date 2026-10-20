@@ -1,0 +1,19 @@
+{
+ "named_subject": "a duck or goose standing in side view, facing left, with small webbed feet",
+ "action": "The bird stays in place in profile and its outline wobbles and shifts slightly, while the beak and head shape change size in a few frames; it never turns to face the viewer.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  8,
+  12,
+  16
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated bird is the doodle mirrored left-to-right with the same body outline, beak stroke and triangle feet, though the beak is drawn heavier and the head rounder in some frames.",
+ "notes": "The film shows a clay duck turning its head from profile to face the camera and then crying, and the drawing only does a small in-place sway with no head turn, so it follows only the standing pose. Every fourth frame (4, 8, 12, 16) the head and beak redraw larger with doubled beak lines, which reads as a pop; the change that would help most is to animate the head turning toward the viewer in frames 3-4 as in the film, with the head drawn consistently between keys.",
+ "_packet": "lotxxc81b",
+ "_protocol": "16 frames, motion_score 1-5, same packet for Giraffe Walks Past",
+ "_round": 2
+}

@@ -1,0 +1,19 @@
+{
+ "named_subject": "a bicycle wheel with star-shaped spokes, seen close up, with a fork or frame stroke above it",
+ "action": "The spoked wheel stays roughly in place while its spokes turn from frame to frame, as if the wheel is rolling, with scenery lines behind it.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  9,
+  11,
+  12,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The wheel matches the doodle's wheel (polygon rim with a gap at the top, star spokes), but only that one wheel and a few frame strokes appear, so it reads as a cropped detail of the doodle rather than the whole bicycle drawing in motion.",
+ "notes": "Spoke rotation is visible and matches the film's close framing of the front wheel, but the rim jumps left at frame 9, grows and loses its bottom edge in frames 11-12, then snaps back at frame 13, and the stroke at the top right changes shape between frames 9 and 12. The change that would help most is to keep the rim at a fixed size and closed shape across all frames so that only the spokes rotate.",
+ "_packet": "lotg0kdso",
+ "_round": 3,
+ "_protocol": "16 frames, motion_score 1-5"
+}
