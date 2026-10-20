@@ -1,0 +1,57 @@
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Device set to use cpu
+You are using a model of type sam2_video to instantiate a model of type sam2. This is not supported for all configurations of models and can yield errors.
+Device set to use cpu
+0 dino 0.39 0.89 75800 11s
+1 dino 0.45 0.889 79213 23s
+2 dino 0.47 0.911 61748 34s
+3 dino 0.33 0.925 59574 46s
+4 dino 0.40 0.905 59081 57s
+5 dino 0.51 0.906 59018 68s
+6 dino 0.37 0.898 54308 80s
+7 dino 0.47 0.865 60949 91s
+8 dino 0.50 0.896 57949 102s
+9 dino 0.41 0.874 59908 114s
+10 dino 0.42 0.901 56611 125s
+11 dino 0.46 0.913 58246 137s
+12 dino 0.42 0.892 74299 148s
+13 dino 0.41 0.946 55523 160s
+14 dino 0.55 0.886 58553 171s
+15 dino 0.41 0.853 71515 183s
+16 dino 0.39 0.884 79566 194s
+17 dino 0.43 0.861 68569 205s
+18 dino 0.52 0.932 55876 217s
+19 dino 0.50 0.94 55204 228s
+20 dino 0.54 0.93 54853 240s
+21 dino 0.54 0.934 53540 251s
+22 dino 0.54 0.94 51104 263s
+23 dino 0.51 0.925 48076 274s
+24 dino 0.45 0.931 47268 286s
+25 dino 0.55 0.926 46468 297s
+26 dino 0.52 0.921 45208 309s
+27 dino 0.53 0.933 45598 320s
+28 dino 0.59 0.931 45211 331s
+29 dino 0.42 0.934 43860 343s
+30 dino 0.51 0.929 42795 354s
+31 dino 0.52 0.935 42538 365s
+32 dino 0.32 0.935 40230 377s
+33 dino 0.36 0.909 43353 388s
+34 dino 0.34 0.927 41435 400s
+35 dino 0.32 0.93 40524 411s
+36 dino 0.38 0.934 40086 423s
+37 dino 0.38 0.919 43521 434s
+38 dino 0.37 0.937 41939 446s
+39 dino 0.38 0.917 43578 458s
+40 dino 0.43 0.923 40301 469s
+41 dino 0.40 0.93 40895 481s
+42 dino 0.43 0.911 40189 492s
+43 dino 0.40 0.908 38715 503s
+44 dino 0.40 0.915 39558 515s
+45 dino 0.40 0.92 40899 526s
+46 dino 0.42 0.881 33951 538s
+47 dino 0.46 0.919 45353 549s
+48 dino 0.39 0.91 44088 560s
+49 dino 0.47 0.912 43875 572s
+50 dino 0.47 0.918 44443 583s
+51 dino 0.53 0.911 43467 594s
+52 dino 0.41 0.938 42654 606s
