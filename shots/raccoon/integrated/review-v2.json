@@ -1,0 +1,30 @@
+{
+  "bar_met": false,
+  "verdict": "The drawing identity largely survives, and the head lowering and turn broadly follow the source, but the source crouch and occlusion are not yet convincing.",
+  "same_drawing_identity": {
+    "assessment": "largely met",
+    "evidence": "Angular unfilled outline, polygon head, tiny diamond eyes, sparse mouth and ear remain recognizably the supplied doodle. The absent tail is acceptable in this source view because it is hidden."
+  },
+  "source_crop_pose": {
+    "assessment": "partly met",
+    "evidence": "The 4:3 view, reeds, water foreground and head-down progression match broadly. In keys 05\u201308 the drawn torso stretches into a long horizontal oval while the source retains a shorter, bulky hunch."
+  },
+  "crouch_occlusion": {
+    "assessment": "not met",
+    "evidence": "The source animal has a compact high rump with belly and feet lost in the water and vegetation. The cartoon exposes a long clean underside and short straight leg marks, making it read as a standing doodle placed above the water."
+  },
+  "motion": {
+    "assessment": "sampled progression is plausible; playback unverified",
+    "evidence": "Decoded comparison samples show head lowering, turn toward left profile and subsequent hold in the source order. This does not establish normal-speed motion quality."
+  },
+  "most_important_gap": "The compact, partly submerged source crouch becomes an elongated standing silhouette, most clearly in keys 05\u201308.",
+  "smallest_repair": "Make one source-matched silhouette pass on the late body keys: shorten the torso around the existing rump position into the observed hunch, and clip the lower belly and leg marks at the source water/vegetation boundary. Keep the existing head path and timing.",
+  "must_not_be_lost": [
+    "The original doodle\u2019s angular black outline, simple polygon head, tiny eyes and sparse facial marks.",
+    "The head-down turn and source-relative framing already established.",
+    "The source-hidden tail and feet should remain hidden; do not add anatomical detail or a new style."
+  ],
+  "normal_speed_playback_occurred": false,
+  "review_method": "Inspected the supplied original design, source contact sheet, all eight source/key pairs, and a 6 fps decoded contact sheet from comparison.mp4. ffprobe inspected cartoon.mp4 (480\u00d7360, 24 fps, 67 frames, 2.791667 s). No actual normal-speed playback occurred.",
+  "scope": "Blind packet review only; no builder notes, tests, earlier critiques, revisions or conversation read."
+}

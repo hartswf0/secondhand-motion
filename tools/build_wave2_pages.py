@@ -54,6 +54,13 @@ def interval_label(value):
     return 'Interval pending'
 
 
+def assembled(folder):
+    """Only advertise an assembly when its player, timeline and movies exist."""
+    base = folder/'integrated'
+    needed = ['index.html', 'shot.json', 'cartoon.mp4', 'comparison.mp4', 'poster.png']
+    return read(base/'shot.json') if all((base/p).is_file() for p in needed) else {}
+
+
 def link(url, text):
     if not url:
         return ''
@@ -146,22 +153,42 @@ def shot_body(row, root):
 {artifact_section}
 <footer>Draft raster references. Trace fidelity, recognition, identity, background stability, rigging, contacts, and playback require their own evidence and review. <a href="../../pages/pipeline.html">Pipeline gates</a>.</footer>'''
 
-    if (folder/'integrated/index.html').is_file():
-        assembly = '<section><h2>Assembled clip</h2><video class="source-video" controls playsinline preload="metadata" poster="integrated/poster.png" src="integrated/cartoon.mp4"></video><p><a href="integrated/index.html">Open the assembled review copy and synchronized source comparison →</a></p><p class="meta">75 rendered frames at 24 fps. Source-framed head movement, rotating blades and one held room. Final playback review remains pending.</p></section>'
+    timeline = assembled(folder)
+    if timeline:
+        frames = timeline.get('frame_count', len(timeline.get('frames', [])))
+        summary = timeline.get('assembly_summary', 'Source-matched character movement with separate scene layers.')
+        note = timeline.get('review_note', '' if 'pending' in summary.lower() else 'Final playback review remains pending.')
+        assembly = f'<section><h2>Assembled clip</h2><video class="source-video" controls playsinline preload="metadata" poster="integrated/poster.png" src="integrated/cartoon.mp4"></video><p><a href="integrated/index.html">Open the assembled review copy and synchronized source comparison →</a></p><p class="meta">{e(frames)} rendered frames at {e(timeline.get("fps"))} fps · {e(len(timeline.get("keys", [])))} integrated keys. {e(summary)} {e(note)}</p></section>'
         html = html.replace('<section aria-labelledby="keys-heading">', assembly+'<section aria-labelledby="keys-heading">',1)
         html = html.replace('No key animation is presented, and no pipeline gate is claimed passed by this page.', 'An assembled review copy is now available above. The isolated drafts below are retained as revision evidence.')
     return html
 
 
 def gallery_body(rows, root):
-    cards = []
+    ready, drafts = [], []
     page = root/'shots/wave2-keyframes.html'
     for row in rows:
         folder,item,source = row['folder'],row['item'],row['source']
         title=item.get('title',folder.name.replace('-',' ').title())
         time_span=interval_label(source.get('interval_seconds',source.get('interval')))
-        cards.append(f'<article class="gallery-card"><a href="{e(folder.name)}/index.html"><img src="{e(href(folder/"keys/key-01.png",page))}" alt="First draft key for {e(title)}" loading="lazy"><div class="card-body"><div class="eyebrow">{e(item.get("lot","Wave 2"))}</div><h2>{e(title)}</h2><span class="status">6 DRAFT KEYS · NO MOTION APPROVAL</span><p>{e(time_span)}</p><p>Drawings, held background, real doodle, and source references →</p></div></a></article>')
-    return f'''<header class="page"><div class="eyebrow">Wave 2 / source-backed proposals</div><h1>Six moments.<br>One drawing to keep.</h1><p class="lede">{len(rows)} subjects, each with six draft character keys and separate backgrounds where available. Open a subject to compare the drawings with the selected real doodle and timestamped archive photographs.</p></header><nav class="breadcrumbs" aria-label="Related pages"><a href="../index.html">← Rack</a><a href="../pages/pipeline.html">Pipeline gates</a></nav><div class="note scope"><b>Draft keyframes, not approved motion.</b><p>These pages show still proposals. They do not animate the keys or claim test gates passed. Still-key review and normal-speed playback review are separate. No training ran.</p></div><section class="gallery-grid" aria-label="Wave 2 subjects">{''.join(cards)}</section><footer>Drawings are based on real Quick, Draw! designs, credited on each subject page. Source photographs are references, not authored artwork. Reported archive rights and exact intervals are retained in each source record.</footer>'''
+        timeline = assembled(folder)
+        if timeline:
+            target = f'{folder.name}/integrated/index.html'
+            poster = folder/'integrated/poster.png'
+            n = timeline.get('frame_count', len(timeline.get('frames', [])))
+            status = f'{len(timeline.get("keys", []))} KEYS · {n} FRAMES · REVIEW COPY'
+            action = 'Watch the cartoon beside the archive →'
+        else:
+            target = f'{folder.name}/index.html'
+            poster = folder/'keys/key-01.png'
+            status = '6 DRAFT KEYS · ASSEMBLY PENDING'
+            action = 'Open the drawings and source references →'
+        note = f'<p>{e(timeline["review_note"])}</p>' if timeline.get('review_note') else ''
+        card = f'<article class="gallery-card"><a href="{e(target)}"><img src="{e(href(poster,page))}" alt="{e(title)}: {"assembled cartoon" if timeline else "isolated draft"}" loading="lazy"><div class="card-body"><div class="eyebrow">{e(item.get("lot","Wave 2"))}</div><h2>{e(title)}</h2><span class="status">{e(status)}</span><p>{e(time_span)}</p>{note}<p>{action}</p></div></a></article>'
+        (ready if timeline else drafts).append(card)
+    films = f'<section><h2>Watch the assembled clips</h2><div class="gallery-grid">{"".join(ready)}</div></section>' if ready else ''
+    queue = f'<section><h2>Still to assemble</h2><div class="gallery-grid">{"".join(drafts)}</div></section>' if drafts else ''
+    return f'''<header class="page"><div class="eyebrow">Wave 2 / moving drawings</div><h1>From archive frame<br>to moving drawing.</h1><p class="lede">{len(ready)} assembled review clips · {len(drafts)} subjects still to assemble. Watch each cartoon beside its original footage, then inspect the paired keyframes.</p></header><nav class="breadcrumbs" aria-label="Related pages"><a href="../index.html">← Rack</a><a href="../pages/pipeline.html">Pipeline gates</a></nav>{films}{queue}<footer>Assembled clips are review copies; final motion approval is pending. Earlier isolated drafts remain on each subject page. No training ran. Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Archive sources and reported rights are credited on each clip.</footer>'''
 
 
 def build(root, head, nav, icons, write):

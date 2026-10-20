@@ -1,5 +1,7 @@
 """Assemble a source-framed fan performance from original doodle strokes.
 The rotor speed is authored; source blur does not establish exact RPM.
+Usage: python shots/fan/build_integrated.py --source /path/to/fan.mp4
+The source.json video_url identifies the input; its SHA-256 is checked before rendering.
 """
 from pathlib import Path
 import json,math,hashlib,subprocess
@@ -53,8 +55,8 @@ def main():
  keys=[1,15,30,45,59,74];xs=[];frames=[];static=[];held_hash=[]
  cap.set(cv2.CAP_PROP_POS_FRAMES,round(START*srcfps));ok,reference=cap.read();assert ok
  template=cv2.cvtColor(reference,cv2.COLOR_BGR2GRAY)[112:128,90:222]
- import os
- td=Path('/workspace/scratch/e78c43b4722d/fan-integrated-render-'+str(os.getpid()));td.mkdir(exist_ok=True)
+ import tempfile
+ td=Path(tempfile.mkdtemp(prefix='secondhand-motion-fan-'))
  for f in range(N):
   t=f/FPS;source_time=START+t;idx=round(source_time*srcfps)
   cap.set(cv2.CAP_PROP_POS_FRAMES,idx);ok,bgr=cap.read();assert ok
@@ -67,7 +69,7 @@ def main():
   cartoon=Image.open(p).convert('RGB');cartoon.save(td/f'cartoon-{f:03d}.ppm');source.save(td/f'source-{f:03d}.ppm')
   pair=Image.new('RGB',(960,384),'#f5f1e8');pair.paste(source,(0,24));pair.paste(cartoon,(480,24));pen=ImageDraw.Draw(pair)
   pen.text((10,6),'ARCHIVE | '+format(source_time,'.3f')+' s',fill='#171512');pen.text((490,6),'ASSEMBLED CARTOON | procedural rotor phase',fill='#171512');pair.save(td/f'pair-{f:03d}.ppm')
-  frames.append({'f':f,'time':t,'source_time':source_time,'source_frame_index':idx,'rotor_angle':angle,'head_shift':list(HEAD_SHIFT),'head_template_match_ncc':confidence})
+  frames.append({'f':f,'time':t,'source_time':source_time,'source_frame_index':idx,'source_index_time':idx/srcfps,'rotor_angle':angle,'head_shift':list(HEAD_SHIFT),'head_template_match_ncc':confidence})
   xs.append({'f':f,'kind':'K' if f in keys else 'B','note':'Running fan: head pivots slowly on stationary stand while blades rotate. Rotor phase authored.' if f in keys else ''})
   if f in keys:
    k=keys.index(f)+1;cartoon.save(OUT/f'key-{k:02d}.png');source.save(OUT/f'source-{k:02d}.jpg',quality=90);(OUT/f'key-{k:02d}.svg').write_text(svg)
@@ -77,7 +79,7 @@ def main():
  for stem,out in [('cartoon','cartoon.mp4'),('source','source-excerpt.mp4'),('pair','comparison.mp4')]:
   subprocess.run(['ffmpeg','-v','error','-y','-framerate',str(FPS),'-i',str(td/(stem+'-%03d.ppm')),'-an','-c:v','libx264','-preset','slow','-crf','19','-pix_fmt','yuv420p','-movflags','+faststart',str(OUT/out)],check=True)
  (OUT/'background.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 320 240"><rect width="320" height="240" fill="#fffdf7"/>'+''.join(line(s,1.05,'#514a40') for s in BG)+'</svg>')
- data={'title':'Fan in its room','status':'assembled_candidate_review_pending','W':480,'H':360,'fps':FPS,'frame_count':N,'duration':N/FPS,
+ data={'title':'Fan in its room','status':'assembled_candidate_review_pending','assembly_summary':'A held room and stand, a source-tracked head turn, and authored rotor motion.','W':480,'H':360,'fps':FPS,'frame_count':N,'duration':N/FPS,
   'source':json.loads((ROOT/'source.json').read_text()),'design':D,'revision':'integrated-v2','source_anchors':ANCHORS,
   'planes':[{'id':'background','source':'drawn by agent against source frame 36, held once','strokes':BG},{'id':'rotor','source_strokes':[3]},{'id':'housing','source_strokes':[4,5]},{'id':'hub','source_strokes':[2]},{'id':'stand','source_strokes':[0,1]}],
   'source_registration':{'method':'manual source-frame anchors; different part mappings for cage and stand','coordinates':[320,240],'automatic_registration':'not run','camera':'background held; LK/RANSAC first-to-last background shift measured separately under2px','head_depth_mapping':'cage horizontal shift .55 times frontal-hub shift; manually inferred yaw projection; hub/rotor offset 12.5px','head_motion':'black crossbar template registration per decoded source frame; correlation scores retained, not probabilities'},
@@ -91,5 +93,10 @@ def main():
   'source_decode_sha256_verified':True,'source_frame_matches_numeric':'not measured','recognition':'not run','SAM':'not run','independent_playback':'not run','release_approved':False}
  (OUT/'assembly-checks.json').write_text(json.dumps(tests,indent=2)+'\n')
  print(json.dumps({'frames':N,'duration':N/FPS,'keys':len(keys),'output':str(OUT)}))
-if __name__=='__main__':main()
+if __name__=='__main__':
+ import argparse
+ parser=argparse.ArgumentParser(description=__doc__)
+ parser.add_argument('--source',type=Path,default=SOURCE,help='Downloaded archive clip; see source.json video_url')
+ SOURCE=parser.parse_args().source
+ main()
 

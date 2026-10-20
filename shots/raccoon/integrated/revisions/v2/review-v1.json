@@ -1,0 +1,26 @@
+{
+  "verdict": "not_met",
+  "same_drawing_identity": {
+    "status": "met",
+    "assessment": "The angular black outline, long simple body, little polygon ears, two small eye marks, short smile, sparse limb marks and ringed tail remain recognizably the supplied doodle. The sparse marsh drawing is compatible with that drawing."
+  },
+  "source_crop_and_pose": {
+    "status": "partly_met",
+    "assessment": "The 4:3 framing, location and growth of the body, lowered head, and change from a steep early body to a broader late side silhouette broadly follow the paired source. The head itself retains nearly the same two-eyed, smiling three-quarter presentation through the source's much larger turn toward left profile."
+  },
+  "crouch_and_occlusion": {
+    "status": "partly_met",
+    "assessment": "The lowered belly and waterline hide most limbs and convey the source's crouch. The late face remains clearly presented even where the source face turns away into the foreground vegetation."
+  },
+  "motion": {
+    "status": "not_fully_verified",
+    "assessment": "The eight sampled keys support the broad body displacement, widening and settling. Actual normal-speed playback did not occur. No claim is made about interpolation, cadence or motion continuity between those keys. MP4 metadata was inspected: both provided videos contain 67 frames at 24 fps and run 2.791667 seconds."
+  },
+  "most_important_gap": "The source head's front-to-left-profile turn and resulting loss of facial visibility are missing; the integrated late pose keeps showing essentially the same two-eye smile.",
+  "smallest_repair": "Change only the head pose over the middle-to-late keys: turn and shorten the visible facial plane toward left profile, let the far eye disappear with the turn, and allow the existing foreground reeds/waterline to interrupt the lower face where the paired source does. Keep the doodle's own angular marks and avoid adding realistic facial detail.",
+  "must_not_be_lost": "Preserve the supplied doodle's angular outline, small eye and smile vocabulary, simple ears and tail marks, the already useful source-based body placement and scale change, and the low crouch with hidden feet.",
+  "inspection": {
+    "actual_normal_speed_playback": false,
+    "evidence": "Read source.json interval; inspected the supplied source contact sheet, original design.png, and all eight source/key image pairs. Inspected video metadata only; did not play or visually decode video frames."
+  }
+}

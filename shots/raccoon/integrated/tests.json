@@ -1,0 +1,64 @@
+{
+  "continuous_source": {
+    "status": "sampled contact-sheet inspection only",
+    "pass_gate": null
+  },
+  "identity": {
+    "status": "fresh third still review preserves drawing; source head turn fails",
+    "pass_gate": true
+  },
+  "trace_fidelity": {
+    "method": "tools/trace_keys.py on separated native character raster exports",
+    "minimum_recall": 0.9877704609595485,
+    "minimum_parts_kept": 1.0,
+    "bar_recall": 0.98,
+    "bar_parts_kept": 1.0,
+    "pass_gate": true
+  },
+  "held_background": {
+    "status": "one original background geometry, source camera translates it; no per-key redraw",
+    "unchanged_geometry_fraction": 1.0,
+    "pixel_test": "not run"
+  },
+  "recognition": {
+    "status": "classifier not run",
+    "bar": 0.75,
+    "pass_gate": null
+  },
+  "mask_fit": {
+    "status": "SAM and numeric fit not run",
+    "bar_mean": 0.65,
+    "bar_min": 0.45,
+    "pass_gate": null
+  },
+  "foot_slide": {
+    "status": "feet hidden, zero observable planted intervals; no pass",
+    "bar_px": 2,
+    "observed_intervals": 0,
+    "pass_gate": false
+  },
+  "playback": {
+    "status": "normal-speed independent approval not available",
+    "pass_gate": null
+  },
+  "video_decode": {
+    "cartoon.mp4": {
+      "decoded_frames": 67,
+      "fps": 24.0,
+      "complete": true,
+      "last_key_mean_rgb_error": 2.263713348765432
+    },
+    "source-excerpt.mp4": {
+      "decoded_frames": 67,
+      "fps": 24.0,
+      "complete": true
+    },
+    "comparison.mp4": {
+      "decoded_frames": 67,
+      "fps": 24.0,
+      "complete": true
+    }
+  },
+  "training_ran": false,
+  "release_approved": false
+}
