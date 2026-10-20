@@ -1,0 +1,333 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:cartoon-keyframe-loop:repair-input:v1",
+  "title": "GPT tool-use search repair candidate",
+  "description": "Candidate input, not a trained policy or RL result. Acceptance uses a preference/constraint vector and independent critic evidence; there is no scalar artistic reward.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "revision",
+    "parent",
+    "observation_refs",
+    "evidence_refs",
+    "action",
+    "before_refs",
+    "after_refs",
+    "source",
+    "critic"
+  ],
+  "properties": {
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Existing revision or null for a root. Missing parents and duplicate revisions/payloads are refused."
+    },
+    "observation_refs": {
+      "$ref": "#/$defs/refs"
+    },
+    "evidence_refs": {
+      "$ref": "#/$defs/refs"
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "redraw_key",
+            "add_key",
+            "retime",
+            "repair_tracking",
+            "change_layer",
+            "reject_source"
+          ]
+        },
+        "details": {
+          "type": "string"
+        }
+      }
+    },
+    "before_refs": {
+      "$ref": "#/$defs/refs"
+    },
+    "after_refs": {
+      "$ref": "#/$defs/refs"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "interval"
+      ],
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interval": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "start",
+            "end",
+            "unit"
+          ],
+          "properties": {
+            "start": {
+              "type": "number",
+              "minimum": 0
+            },
+            "end": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "enum": [
+                "seconds",
+                "frames"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "motion",
+          "drawing"
+        ]
+      },
+      "default": [
+        "motion"
+      ],
+      "minItems": 1
+    },
+    "source_event_preserved": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ],
+      "default": "unknown"
+    },
+    "drawing_identity_preserved": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ],
+      "default": "unknown"
+    },
+    "train_eligible": {
+      "type": "boolean",
+      "default": false,
+      "description": "Explicit collection flag, never an instruction to train. Effective eligibility also requires acceptance. Synthetic fixtures are never training evidence."
+    },
+    "runtime_cost": {
+      "$ref": "#/$defs/quantity"
+    },
+    "measured_tests": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "status",
+          "constraint"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "pass",
+              "fail",
+              "unknown"
+            ]
+          },
+          "constraint": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "number"
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "metric": {
+            "type": "string"
+          },
+          "evidence_refs": {
+            "$ref": "#/$defs/refs"
+          }
+        },
+        "dependentRequired": {
+          "value": [
+            "unit"
+          ]
+        }
+      }
+    },
+    "critic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scope",
+        "verdict",
+        "gap",
+        "protected_strengths"
+      ],
+      "properties": {
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "verdict": {
+          "enum": [
+            "bar_met",
+            "bar_not_met",
+            "uncertain"
+          ],
+          "description": "Primary quality bar. A measurement or identity proxy cannot supply this judgment."
+        },
+        "gap": {
+          "type": "string"
+        },
+        "protected_strengths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "independent": {
+          "type": "boolean",
+          "default": false
+        },
+        "compared_playback": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "before_ref",
+            "after_ref",
+            "source_ref"
+          ],
+          "properties": {
+            "before_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "after_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_ref": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "x-ledger": {
+    "format": "One canonical JSON envelope per line: sequence, previous_hash, input, decision, id.",
+    "id": "SHA-256 of canonical envelope excluding id. Genesis previous_hash is 64 zeroes.",
+    "integrity": "Append-only implementation with file locking, hash verification and branch history. Keep external trusted hashes to detect complete replacement.",
+    "semantic_checks": [
+      "Interval end must exceed start.",
+      "Playback before and after references must differ.",
+      "Every parent must precede its child.",
+      "Evidence reference strings are not authenticated or opened by the CLI."
+    ]
+  },
+  "x-selection": {
+    "rejected": "Source event false, drawing identity false, failed hard constraint, or reject_source action.",
+    "milestone_needs_review": "Unknown preservation/constraint, missing independent critic, unmet/uncertain primary quality bar, or missing playback evidence for motion claims.",
+    "accepted": "Both preservation flags true, independent critic bar_met, all hard constraints pass, and motion claims include playback scope plus compared before/after/source playback references.",
+    "tie_rule": "Latest recorded accepted candidate. No claim of artistic superiority.",
+    "terminal_preference": "A real terminal motion preference requires independent compared playback of before, after and source. A self-report or single-frame similarity is insufficient. Independent judgments require provenance verification outside this CLI."
+  },
+  "x-unexecuted-rl-plan": {
+    "status": "Proposal only. This repository performs GPT tool-use search; no policy, weights, reward model, or RL training has run.",
+    "episode": "State includes source identity/interval, current artifacts, observations and evidence; action is one repair operation; next state includes immutable after-artifact references; terminal preference comes from independent compared playback.",
+    "warmstart": "Imitation warmstart from licensed real successful repair traces, excluding synthetic audit fixtures.",
+    "offline": "Collect pairwise independent playback preferences and constraint labels; evaluate an offline preference model with uncertainty and anti-proxy counterfactuals before policy optimization.",
+    "online": "Budgeted online rollouts with independent review, logged behavior-policy probabilities when available, replayable evidence, and constrained policy updates only after held-out validation.",
+    "phase_specific_vectors": {
+      "source_selection": [
+        "source event readability",
+        "source suitability"
+      ],
+      "key_drawing": [
+        "drawing identity",
+        "pose readability",
+        "protected strengths"
+      ],
+      "tracking_layer_repair": [
+        "tracking continuity",
+        "layer correctness"
+      ],
+      "timing": [
+        "event direction",
+        "timing",
+        "required motion"
+      ],
+      "terminal": [
+        "independent compared-playback preference",
+        "source-event preservation",
+        "drawing-identity preservation",
+        "runtime cost with units"
+      ]
+    },
+    "held_out": "Split by source identity AND drawing identity, not frames from the same clip. Evaluate frozen, reversed-event, photo-copy, tiny-no-motion and missing-playback counterfactuals.",
+    "reward": "Retain the preference/constraint vector. Do not invent numeric artistic certainty or let identity/similarity/motion magnitude alone become a terminal scalar reward. Any later numeric learning objective requires an explicit independently validated design."
+  }
+}

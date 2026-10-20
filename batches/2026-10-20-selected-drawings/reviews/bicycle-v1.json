@@ -1,0 +1,34 @@
+{
+  "subject": "bicycle",
+  "verdict": "reference_stronger",
+  "inspection_scope": "Stills only: actually viewed source-keys.png, design.png, and revisions/keys-v1.png; read source.json. Four keys read chronologically top-left, top-right, bottom-left, bottom-right. No playback inspected.",
+  "exact_key_evidence": [
+    {
+      "key": 1,
+      "source_time_seconds": 1.9,
+      "evidence": "Candidate retains the source's left-facing bicycle close-up, cropped torso and rear wheel, large front wheel, and lowered near foot. Two shoes are visible, with the lower shoe resting on a short pedal below the crank."
+    },
+    {
+      "key": 2,
+      "source_time_seconds": 2.4,
+      "evidence": "Candidate changes the near knee to the raised phase and places the second foot lower on the opposite side of the crank; fork meets front axle and the crank remains at the frame junction. The pedal cycle is legible in this still."
+    },
+    {
+      "key": 3,
+      "source_time_seconds": 2.9,
+      "evidence": "In the source the front wheel extends beyond the lower border as the camera composition moves closer/lower; the candidate instead keeps the complete front tire above a horizontal ground line with a generous bottom margin."
+    },
+    {
+      "key": 4,
+      "source_time_seconds": 3.4,
+      "evidence": "Source again crops the front tire at the lower border and shifts the wheel/leg relationship within the frame. Candidate keeps the whole front wheel visible at essentially its earlier scale and bottom clearance. Two shoes remain identifiable rather than proliferating into disconnected extras."
+    }
+  ],
+  "main_gap": "The lower two candidate keys freeze the front wheel's complete, grounded framing while the source cuts off its bottom. This weakens the required changing camera/crop despite a plausible pedaling reconstruction.",
+  "one_bounded_repair": "Adjust only keys 3 and 4 framing/placement to match the source front-wheel lower-edge crop and corresponding leg placement; preserve the existing bicycle and two-foot crank construction.",
+  "protected_strengths": [
+    "Recognizable sparse-spoked bicycle and angular frame/fork vocabulary.",
+    "Consistent left-facing bicycle, large front wheel, cropped upper rider and rear wheel.",
+    "Two feet in changing pedal phases, with a readable frame/crank junction and no clear third disconnected shoe."
+  ]
+}

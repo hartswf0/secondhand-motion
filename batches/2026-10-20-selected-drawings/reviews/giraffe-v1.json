@@ -1,0 +1,39 @@
+{
+  "verdict": "reference_stronger",
+  "inspection_scope": {
+    "method": "Actual visual inspection of source contact sheet, original QuickDraw design, and four candidate keys using view_image.",
+    "playback_inspected": false,
+    "limitation": "Only stills could be inspected with the available visual tool. I did not inspect normal-speed playback and cannot judge the 1.4-second exposure rhythm, transitions, or loop seam.",
+    "files": [
+      "references/four-source-keys.png",
+      "references/design-reference.png",
+      "candidates/keys-v1.png"
+    ]
+  },
+  "evidence": [
+    {
+      "pose": "Key 1, candidate top-left, source 0.00 seconds",
+      "observation": "The source muzzle projects toward the camera with a broad front lip mass and visible cheek-to-muzzle depth. The candidate has one eye, one visible ear, and a long uninterrupted side silhouette terminating in a narrow muzzle end. It reads predominantly as a right-facing profile, losing the source's three-quarter projection."
+    },
+    {
+      "pose": "Key 2, candidate top-right, source 0.30 seconds",
+      "observation": "The wide opening is clearly different from key 1, and the raised upper muzzle follows the source's open pose. However, the dark triangular mouth wedge and descending lower lip remain in the same side plane; this can read as an ordinary talking/open-mouth pose rather than a jaw rolling through a chew."
+    },
+    {
+      "pose": "Key 3, candidate bottom-left, source 0.70 seconds",
+      "observation": "The source has a compact, pursed muzzle with an asymmetrically shifted lower lip and a shorter apparent muzzle. The candidate closes the mouth, but its end remains at almost the same horizontal reach as key 1. The changed cheek zigzag does not establish a distinct lateral lower-jaw displacement or strong foreshortening. This is the clearest missing chewing key."
+    },
+    {
+      "pose": "Key 4, candidate bottom-right, source 1.20 seconds",
+      "observation": "The source presents a large rounded front-facing nasal mass with the lower lip displaced beneath it. The candidate shortens the muzzle somewhat and opens a shallow wedge, but preserves the same profile construction, with no clear front plane or opposite lip corner to explain the turn toward camera."
+    }
+  ],
+  "primary_gap": "The open/closed distinction is readable, but the candidate translates most of the motion into a profile jaw hinge. It does not yet preserve the source's three-quarter muzzle volume and meaningful sideways chewing. The stills therefore miss a central requirement even though the character identity is recognizable.",
+  "one_bounded_repair": "Make one muzzle-and-lower-jaw redraw pass across these same four keys, leaving the skull, eye, ear, horns, neck, and key times fixed. Add a simple angular muzzle front plane or opposite lip corner to maintain three-quarter projection; make key 3 the unmistakable lateral compression pose by visibly shortening the muzzle and offsetting the lower lip sideways beneath the upper muzzle. Keep key 2's larger opening and key 4's smaller opening, but let their lip contours wrap around the same volume. Review these four repaired drawings before adding inbetweens.",
+  "protected_strengths": [
+    "The angular black-line silhouette, irregular flag-like horns, slanted eye, and spare drawing vocabulary remain recognizably related to the QuickDraw design.",
+    "The skull, eye, ear, and horn relationships are reasonably consistent across the four keys, providing a useful anchor for a localized muzzle repair.",
+    "Key 2 has a strong open silhouette; keys 1 and 3 provide clear closed states; key 4 supplies a smaller opening.",
+    "There are no added words, gestures, or unrelated acting beats."
+  ]
+}

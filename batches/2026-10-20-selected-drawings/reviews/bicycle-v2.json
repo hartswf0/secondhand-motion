@@ -1,0 +1,15 @@
+{
+  "subject": "bicycle",
+  "revision": "v2",
+  "verdict": "bar_met",
+  "scope": "Independent visual comparison of source-keys.png, design.png, revisions/keys-v2.png and source.json only. Four still keys in chronological 2x2 order; no playback or between-key continuity approval.",
+  "evidence": [
+    {"key": 1, "time_seconds": 1.9, "observation": "Source and drawing both show a close left-facing front wheel, fork and cropped rider, with the rear of the bicycle leaving the right edge. The drawing keeps the whole front wheel visible and the near leg extended toward the low pedal."},
+    {"key": 2, "time_seconds": 2.4, "observation": "The source's raised near knee and higher near shoe are carried into the drawing. The opposite shoe is lower, and visible crank/pedal marks connect the shoes to the bicycle rather than leaving them floating."},
+    {"key": 3, "time_seconds": 2.9, "observation": "The front wheel is enlarged and cut by the lower boundary in both source and drawing. The drawing also lowers the near shoe with the extending leg while keeping the fork joined to the front hub."},
+    {"key": 4, "time_seconds": 3.4, "observation": "Both views retain the lower front-wheel crop and the low near shoe. The drawing's frame, crank region and partly cropped rear wheel remain joined; the sparse irregular wheel outlines and few long spokes retain the selected doodle's salient bicycle vocabulary."}
+  ],
+  "consequential_gap": null,
+  "bounded_repair": null,
+  "protected_strengths": ["Close source framing and late lower-wheel crops", "Readable alternating leg and pedal poses", "Fork-to-hub and frame-to-crank attachment", "Sparse spoke pattern and angular bicycle silhouette"]
+}

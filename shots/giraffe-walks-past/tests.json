@@ -1,0 +1,142 @@
+[
+ {
+  "cls": "measured",
+  "id": "M1",
+  "name": "Reads as a giraffe",
+  "value": 0.93,
+  "unit": "classifier p",
+  "bar": "above 0.75 (real human doodles)",
+  "ok": true,
+  "how": "Quick, Draw! MobileViT classifier on the drawn keyframes (run before the head revision; in-betweens not yet scored)"
+ },
+ {
+  "cls": "measured",
+  "id": "M2",
+  "name": "Looks hand-drawn",
+  "value": 16,
+  "unit": "percentile",
+  "bar": "at least 30 (traced outlines: 36)",
+  "ok": false,
+  "how": "typicality of stroke statistics against 4,971 real giraffe doodles, 25-nearest-neighbour"
+ },
+ {
+  "cls": "measured",
+  "id": "M3",
+  "name": "Holds the footage pose",
+  "value": 0.67,
+  "unit": "mask fit",
+  "bar": "mean at least 0.65, no frame below 0.45",
+  "ok": true,
+  "how": "ink inside the SAM mask x bounding-box agreement; worst frame 15 at 0.48"
+ },
+ {
+  "cls": "measured",
+  "id": "M4",
+  "name": "Planted feet stay put",
+  "value": 0.0,
+  "unit": "px drift",
+  "bar": "under 2 px, measured on at least 4 planted intervals",
+  "ok": true,
+  "how": "world-space drift of a hoof inside 6 planted key intervals (screen x minus camera pan)"
+ },
+ {
+  "cls": "measured",
+  "id": "M5",
+  "name": "Body keeps its proportions",
+  "value": 9.8,
+  "unit": "% variation",
+  "bar": "under 10% for neck, body and legs",
+  "ok": true,
+  "how": "coefficient of variation of neck, body and leg length across frames: neck 6.1%, body 6.8%, legs 9.8%"
+ },
+ {
+  "cls": "measured",
+  "id": "M6",
+  "name": "Head travels on smooth arcs",
+  "value": 3.9,
+  "unit": "px jerk",
+  "bar": "under 4 px",
+  "ok": true,
+  "how": "mean third difference of the nose position in world space; pops show up as spikes"
+ },
+ {
+  "cls": "structural",
+  "id": "S1",
+  "name": "Near planes move faster",
+  "value": "sky < far < mid < secondary < fore",
+  "unit": "",
+  "bar": "sky slowest, grass fastest",
+  "ok": true,
+  "how": "screen speed per plane = camera pan x (reference depth / plane depth)"
+ },
+ {
+  "cls": "structural",
+  "id": "S2",
+  "name": "Every drawing has a source",
+  "value": "40/40",
+  "unit": "objects",
+  "bar": "all",
+  "ok": true,
+  "how": "each object records its Quick, Draw! key_id or that the agent drew it"
+ },
+ {
+  "cls": "structural",
+  "id": "S3",
+  "name": "Exposure sheet covers the shot",
+  "value": "33/33",
+  "unit": "frames",
+  "bar": "every frame, keys marked",
+  "ok": true,
+  "how": "x-sheet rows vs frames; K rows vs agent keys"
+ },
+ {
+  "cls": "structural",
+  "id": "S4",
+  "name": "Page works on a phone",
+  "value": "no overflow at 390 px",
+  "unit": "",
+  "bar": "no sideways scroll, no script errors",
+  "ok": true,
+  "how": "headless render at 390 and 1000 px wide"
+ },
+ {
+  "cls": "structural",
+  "id": "S5",
+  "name": "Nearer things hide farther ones",
+  "value": "SAM silhouette painted under the walker",
+  "unit": "",
+  "bar": "no far lines inside the walker body",
+  "ok": true,
+  "how": "painted by construction; round 3 critic still saw young-giraffe lines between the front legs"
+ },
+ {
+  "cls": "judged",
+  "id": "J1",
+  "name": "Story reads with sound off",
+  "value": "partially met",
+  "unit": "",
+  "bar": "an independent viewer names the action and every animal",
+  "ok": false,
+  "how": "3 blind reviews; last open gap (young giraffes read as llamas) repaired, not yet re-reviewed"
+ },
+ {
+  "cls": "judged",
+  "id": "J2",
+  "name": "Drawn beats traced",
+  "value": "4 of 5 keyframes",
+  "unit": "",
+  "bar": "blind A/B preference for the drawn version",
+  "ok": true,
+  "how": "blind critic with shuffled labels"
+ },
+ {
+  "cls": "judged",
+  "id": "J3",
+  "name": "Keys alone tell it",
+  "value": "not run",
+  "unit": "",
+  "bar": "keys-only playback reads as a walk",
+  "ok": null,
+  "how": "next: play only the 9 keys to an independent critic"
+ }
+]

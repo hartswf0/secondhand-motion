@@ -1,0 +1,32 @@
+{
+  "subject": "cat",
+  "revision": "v2",
+  "verdict": "bar_met",
+  "scope": "Actual source, selected design, and four revision key stills only. No video playback inspected; this is not playback approval.",
+  "timed_key_evidence": [
+    {
+      "time_seconds": 10.4,
+      "evidence": "Raised three-quarter head and unequal polygon eyes preserve the source upward/right attention in the sparse polygon-face vocabulary; two pointed ears and long straight whiskers retain the selected drawing identity."
+    },
+    {
+      "time_seconds": 12.2,
+      "evidence": "The attentive raised head remains in the same framing and orientation, matching the source held attention."
+    },
+    {
+      "time_seconds": 14.0,
+      "evidence": "The third key retains the held raised face and readable neck/chest support without adding unsupported visible limbs."
+    },
+    {
+      "time_seconds": 15.3,
+      "evidence": "The final key turns substantially toward screen right: the muzzle projects right, the far eye compresses against the contour, and the ears and whiskers follow the new view. This preserves the consequential source turn."
+    }
+  ],
+  "consequential_gap": null,
+  "bounded_repair": null,
+  "protected_strengths": [
+    "Irregular polygon head and polygon eye shapes remain recognizable from the selected QuickDraw design.",
+    "Sparse black line treatment, pointed ears, and straight whiskers survive the pose reconstruction.",
+    "The final right turn is distinct from the first three held attention keys."
+  ],
+  "limits": "The empty polygon eyes communicate attention chiefly through head orientation; these stills cannot establish blink timing, transition quality, or normal-speed motion."
+}

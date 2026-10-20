@@ -1,0 +1,125 @@
+__HEAD__
+<title>Cartoon Archive</title>
+<style>
+/* Layout: thesis; two lanes and the join; works lineage; stage board (subjects × stages); tests; repo map; next. */
+.lanes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:860px){.lanes{grid-template-columns:1fr}}
+.lane{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.lane:hover{border-color:var(--blue)}
+.lane img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center top;background:#fff;display:block;border-bottom:1px solid var(--rule)}
+.lane .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.lane b{font:700 18px/1.2 var(--display)}
+.lane p{margin:0;font-size:14px;color:var(--muted)}
+.lane .tag{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.lane.join{border-color:var(--blue)}
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
+.work{display:flex;flex-direction:column;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;min-width:0}
+.work img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:left top;display:block;border-bottom:1px solid var(--rule);background:#fff}
+.work .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.work b{font:700 16px/1.2 var(--display)}
+.work p{margin:0;color:var(--muted);font-size:13px}
+.work .num{font:600 18px var(--mono);font-variant-numeric:tabular-nums;margin-top:auto;padding-top:6px}
+.work:hover{border-color:var(--blue)}
+.board td,.board th{text-align:center;padding:7px 8px}
+.board td:first-child,.board th:first-child{text-align:left;position:sticky;left:0;background:var(--sheet)}
+.dot{display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid var(--rule);vertical-align:middle}
+.dot.done{background:var(--pass);border-color:var(--pass)}
+.dot.part{background:linear-gradient(90deg,var(--pass) 50%,transparent 50%);border-color:var(--pass)}
+.dot.fail{background:var(--fail);border-color:var(--fail)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);align-items:center}
+.queue{display:flex;flex-wrap:wrap;gap:6px}
+.queue span{font:13px var(--mono);border:1px solid var(--rule);border-radius:4px;padding:3px 8px;background:var(--sheet)}
+.queue span b{font-weight:600;color:var(--muted);margin-left:6px}
+td.how{color:var(--muted);font-size:13px;min-width:220px}
+td.val{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.cls{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tree{font:13px/1.7 var(--mono);background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;overflow-x:auto;margin:0;white-space:pre}
+.tree a{text-decoration:none}
+ol.next{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:72ch}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.cta a{font:600 14px var(--body);text-decoration:none;border-radius:6px;padding:9px 14px;border:1px solid var(--ink);color:var(--ink)}
+.cta a.primary{background:var(--ink);color:var(--paper)}
+</style>
+__NAV__
+<div class="wrap">
+<header>
+  <span class="eyebrow">Studio index · __DATE__</span>
+  <h1>Cartoon Archive</h1>
+  <p class="lede">Any shot in the Moving Image Archive should be watchable as a moving Quick, Draw! cartoon: the subject redrawn in the identity of one real doodle, moving as the footage moves, on depth planes that slide with the real camera.</p>
+  <div class="cta"><a class="primary" href="pages/pipeline.html">Read the pipeline</a><a href="pages/agent-prompt.html">Agent prompt</a></div>
+</header>
+
+<section aria-labelledby="l">
+  <h2 id="l">Two lanes, and the join</h2>
+  <p class="lede" style="font-size:15px">Two ways of working have each solved half the problem. One draws well and does not move; the other moves and does not draw well. Tracing the first into the second's strokes joins them.</p>
+  <div class="lanes">
+    <a class="lane" href="batches/2026-10-20-selected-drawings/index.html"><img src="batches/2026-10-20-selected-drawings/selected-drawings-atlas.png" alt="Ten selected doodle drawings: rabbit, duck, horse, dog, cat, butterfly, bicycle, windmill, helicopter, giraffe"><div class="body"><span class="tag">Look lane</span><b>Selected Drawings</b><p>An image model draws four still keys per subject in the doodle's identity; fresh critics review and the agent repairs. 10 subjects, 40 keys, 19 review rounds. No motion.</p></div></a>
+    <a class="lane" href="pages/giraffe-walks-past.html"><img src="assets/shot.jpg" alt="Multiplane doodle cartoon of a giraffe walking past two young giraffes"><div class="body"><span class="tag">Motion lane</span><b>Giraffe Walks Past</b><p>A vector rig keyed over SAM silhouettes, in-betweened with planted feet, on six depth planes under the measured camera pan. Real motion and tests; weaker drawing.</p></div></a>
+    <a class="lane join" href="pages/traced-keys.html"><img src="assets/traced_grid.png" alt="Traced stroke versions of six selected drawings"><div class="body"><span class="tag">The join</span><b>Traced Keys</b><p>Every look-lane key traced into pen strokes: recall __TRACE_RECALL__, every ink piece kept. The traces show the next problem: backgrounds are redrawn on every key.</p></div></a>
+  </div>
+</section>
+
+<section aria-labelledby="b">
+  <h2 id="b">Where each subject stands</h2>
+  <p class="lede" style="font-size:15px">Stages from <a href="pages/pipeline.html">the pipeline</a>. A subject moves right only when the stage's gate passes.</p>
+  <div class="legend"><span><i class="dot done"></i> gate passed</span><span><i class="dot part"></i> done, gate partly met</span><span><i class="dot fail"></i> done, gate failed</span><span><i class="dot"></i> not started</span></div>
+  <div class="tablebox"><table class="board"><thead id="bh"></thead><tbody id="bb"></tbody></table></div>
+  <h3>Wave 2 queue</h3>
+  <p class="meta">Next ten categories with a moving subject, by archive match score. An agent still has to watch each clip.</p>
+  <div class="queue" id="queue"></div>
+</section>
+
+<section aria-labelledby="w">
+  <h2 id="w">Every page, in the order it was made</h2>
+  <div class="works" id="works"></div>
+</section>
+
+<section aria-labelledby="t">
+  <h2 id="t">Tests on the full shot</h2>
+  <p class="lede" style="font-size:15px">Run on <a href="pages/giraffe-walks-past.html">Giraffe Walks Past</a>. Measured tests come from the shot file, structural tests check the file and the page, judged tests need an independent viewer. A bar is never lowered to make a test pass.</p>
+  <div class="tablebox"><table><thead><tr><th>Test</th><th>Result</th><th>Bar</th><th>Status</th></tr></thead><tbody id="tests"></tbody></table></div>
+</section>
+
+<section aria-labelledby="r">
+  <h2 id="r">What is in the repository</h2>
+  <pre class="tree">__TREE__</pre>
+</section>
+
+<section aria-labelledby="n">
+  <h2 id="n">Next</h2>
+  <ol class="next">
+    <li>Redraw one wave 1 subject the joined way: one background plate, the character on blank per key, traced, rig fitted. The dog is first: it shares the giraffe's quadruped rig.</li>
+    <li>Get a fresh critic to watch Giraffe Walks Past at normal speed (J1 again, J3 for the first time).</li>
+    <li>Run wave 2 with one agent per subject from <a href="pages/agent-prompt.html">the agent prompt</a>, critics as separate agents.</li>
+    <li>Collect the pose-from-silhouette pairs from every accepted key; nothing is train-eligible until a shot passes playback review.</li>
+  </ol>
+</section>
+<p class="meta">Footage: Moving Image Archive (reported public-domain; each source record kept). Doodles: Google Creative Lab, Quick, Draw! dataset, CC BY 4.0. Models run: SAM 2.1, Grounding DINO, CLIP and a Quick, Draw! classifier in the browser; image generation for the look-lane keys. No model has been trained.</p>
+</div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+const D=JSON.parse(document.getElementById('data').textContent);
+const wb=document.getElementById('works');
+D.works.forEach(w=>{const a=document.createElement('a');a.className='work';a.href=w.url;
+  const im=document.createElement('img');im.src=w.img;im.alt=w.alt;im.loading='lazy';const b=document.createElement('div');b.className='body';
+  const m=document.createElement('span');m.className='meta';m.textContent=w.step;const t=document.createElement('b');t.textContent=w.title;
+  const p=document.createElement('p');p.textContent=w.proved;const n=document.createElement('span');n.className='num';n.textContent=w.num;
+  const nl=document.createElement('span');nl.className='meta';nl.textContent=w.numlabel;b.append(m,t,p,n,nl);a.append(im,b);wb.append(a);});
+const hr=document.createElement('tr');['Subject',...D.stages].forEach(s=>{const th=document.createElement('th');th.textContent=s;hr.append(th);});document.getElementById('bh').append(hr);
+const bb=document.getElementById('bb');
+D.board.forEach(r=>{const tr=document.createElement('tr');const td=document.createElement('td');td.textContent=r.subject;tr.append(td);
+  r.cells.forEach((c,i)=>{const t=document.createElement('td');const d=document.createElement('i');d.className='dot'+(c?' '+c:'');
+    const lab={done:'gate passed',part:'gate partly met',fail:'gate failed','':'not started'}[c||''];d.setAttribute('role','img');d.setAttribute('aria-label',`${D.stages[i]}: ${lab}`);d.title=`${D.stages[i]}: ${lab}`;t.append(d);tr.append(t);});
+  bb.append(tr);});
+const q=document.getElementById('queue');D.queue.forEach(x=>{const s=document.createElement('span');s.textContent=x.category;const b=document.createElement('b');b.textContent=x.top_score.toFixed(3);s.append(b);q.append(s);});
+const tb=document.getElementById('tests');let last='';
+D.tests.forEach(r=>{const tr=document.createElement('tr');
+  const c0=document.createElement('td');if(r.cls!==last){const s=document.createElement('div');s.className='cls';s.textContent=r.cls;c0.append(s);last=r.cls;}
+  const nm=document.createElement('div');nm.textContent=r.id+' · '+r.name;c0.append(nm);
+  const c1=document.createElement('td');c1.className='val';c1.textContent=String(r.value)+(r.unit?' '+r.unit:'');
+  const c2=document.createElement('td');c2.textContent=r.bar;c2.style.fontSize='13px';
+  const c3=document.createElement('td');const s=document.createElement('span');s.className='st '+(r.ok===true?'pass':r.ok===false?'fail':'none');s.textContent=r.ok===true?'pass':r.ok===false?'fail':'not run';c3.append(s);
+  tr.append(c0,c1,c2,c3);tb.append(tr);});
+})();
+</script>

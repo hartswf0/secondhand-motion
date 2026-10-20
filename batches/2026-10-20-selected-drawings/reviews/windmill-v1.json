@@ -1,0 +1,34 @@
+{
+  "subject": "windmill",
+  "verdict": "reference_stronger",
+  "inspection_scope": "Stills only: actually viewed source-keys.png, design.png, and revisions/keys-v1.png; read source.json. Four keys read chronologically top-left, top-right, bottom-left, bottom-right. No playback inspected.",
+  "exact_key_evidence": [
+    {
+      "key": 1,
+      "source_time_seconds": 0.3,
+      "evidence": "Candidate preserves the source low-angle tower, surrounding branch frame, and diagonal four-arm arrangement. All four sails visibly reach the central hub."
+    },
+    {
+      "key": 2,
+      "source_time_seconds": 1.6,
+      "evidence": "Candidate has the same four arms in an approximately vertical/horizontal arrangement over the same tower; hub remains near the cap's left-front edge."
+    },
+    {
+      "key": 3,
+      "source_time_seconds": 3,
+      "evidence": "Four attached sails change angle again; tower taper, cap, little window, and shrub occlusion remain substantially consistent."
+    },
+    {
+      "key": 4,
+      "source_time_seconds": 4.4,
+      "evidence": "Four attached sails return to a diagonal arrangement with plausible opposite-arm alignment. Across all four keys, however, the selected design's broad, uneven, angular paddle outlines have become narrow, regular ladder-grid rectangles."
+    }
+  ],
+  "main_gap": "The mechanical four-sail reconstruction is readable, but the sail silhouettes abandon the chosen QuickDraw design's distinctive broad irregular paddles for a more literal lattice windmill. This is a design-vocabulary loss rather than a necessary perspective correction.",
+  "one_bounded_repair": "Replace only the four sail outer silhouettes with simplified, broad, irregular tapered paddle shapes derived from design.png, using that same four-sail assembly at the existing hub and four angles; reduce the repeated grid detail accordingly.",
+  "protected_strengths": [
+    "Four sails stay visibly attached to one hub in every inspected key.",
+    "Stable tapered tower, cap, window and vegetation occlusion.",
+    "Source-like low viewpoint, broad composition, and changing sail angles."
+  ]
+}

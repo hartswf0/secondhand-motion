@@ -1,0 +1,31 @@
+{
+  "subject": "rabbit",
+  "revision": "v1",
+  "verdict": "reference_stronger",
+  "review_scope": "Independent visual comparison of source-keys.png, design.png, revisions/keys-v1.png and source.json only. Four chronological still keys in 2x2 order; no normal-speed playback inspected and no motion approval.",
+  "timed_key_evidence": [
+    {
+      "time_seconds": 4.8,
+      "evidence": "Source rabbit is partly emerging through the doorway with a narrow frontal/downward head view and an extended foreleg. Drawing preserves the doorway occlusion and narrow emerging pose, with connected head, ears and forelegs."
+    },
+    {
+      "time_seconds": 5.8,
+      "evidence": "Source has landed facing near front, with forepaws separated and hind support behind. Drawing preserves that readable stance and doorway relationship, although its furry cheeks and chest are newly detailed."
+    },
+    {
+      "time_seconds": 7.0,
+      "evidence": "Source turns to a seated right-facing profile with ears laid diagonally backward and feet supporting the body. Drawing matches this direction and support, but replaces the selected design\u2019s spare, blunt angular silhouette with a round, tufted rabbit."
+    },
+    {
+      "time_seconds": 8.8,
+      "evidence": "Source exits right with the head outside frame, rear body, tail and bent hind leg remaining. Drawing preserves the right-edge crop and connected rear-leg exit silhouette."
+    }
+  ],
+  "main_gap": "The source action and key poses are retained, but the chosen QuickDraw rabbit\u2019s very spare angular outline, blunt muzzle and simple torso are diluted by a generic rounded, shaggy character. Category recognizability is stronger than specific design recognizability.",
+  "bounded_repair": "Perform one outer-contour simplification pass on the rabbit in all four keys: use the selected design\u2019s blunt angular muzzle and simple unbroken body/ear contour vocabulary, removing the added fur serrations while keeping the existing poses, paws, occlusion and framing.",
+  "protected_strengths": [
+    "Doorway entrance, landing, rightward turn and cropped exit remain legible in chronological keys.",
+    "Ear and limb attachment are coherent, and the seated key has clear supporting feet.",
+    "Fixed doorway and floor relationship retain the source\u2019s camera/action staging."
+  ]
+}

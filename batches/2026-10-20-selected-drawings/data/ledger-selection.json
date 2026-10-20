@@ -1,0 +1,465 @@
+{
+  "selection_rule": "latest recorded candidate that clears all gates; no artistic ranking",
+  "selected_revision": "helicopter-v2",
+  "selected_id": "37226c7437fbedf6698ea3d3cbeb033f5fdd72dcc874e342629720bf7c47eed5",
+  "candidates": [
+    {
+      "revision": "cat-v1",
+      "parent": null,
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_not_met",
+        "drawing_identity_preserved": "unknown",
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": "unknown",
+        "unknown_constraints": []
+      },
+      "reasons": [
+        "source_event_preserved=unknown",
+        "drawing_identity_preserved=unknown",
+        "primary_quality_bar_not_met"
+      ],
+      "status": "milestone_needs_review",
+      "train_eligible": false
+    },
+    {
+      "revision": "cat-v2",
+      "parent": "cat-v1",
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_met",
+        "drawing_identity_preserved": true,
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": true,
+        "unknown_constraints": []
+      },
+      "reasons": [],
+      "status": "accepted",
+      "train_eligible": false
+    },
+    {
+      "revision": "dog-v1",
+      "parent": null,
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_not_met",
+        "drawing_identity_preserved": "unknown",
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": "unknown",
+        "unknown_constraints": []
+      },
+      "reasons": [
+        "source_event_preserved=unknown",
+        "drawing_identity_preserved=unknown",
+        "primary_quality_bar_not_met"
+      ],
+      "status": "milestone_needs_review",
+      "train_eligible": false
+    },
+    {
+      "revision": "dog-v2",
+      "parent": "dog-v1",
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_met",
+        "drawing_identity_preserved": true,
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": true,
+        "unknown_constraints": []
+      },
+      "reasons": [],
+      "status": "accepted",
+      "train_eligible": false
+    },
+    {
+      "revision": "horse-v1",
+      "parent": null,
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_not_met",
+        "drawing_identity_preserved": "unknown",
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": "unknown",
+        "unknown_constraints": []
+      },
+      "reasons": [
+        "source_event_preserved=unknown",
+        "drawing_identity_preserved=unknown",
+        "primary_quality_bar_not_met"
+      ],
+      "status": "milestone_needs_review",
+      "train_eligible": false
+    },
+    {
+      "revision": "horse-v2",
+      "parent": "horse-v1",
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_met",
+        "drawing_identity_preserved": true,
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": true,
+        "unknown_constraints": []
+      },
+      "reasons": [],
+      "status": "accepted",
+      "train_eligible": false
+    },
+    {
+      "revision": "rabbit-v1",
+      "parent": null,
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_not_met",
+        "drawing_identity_preserved": "unknown",
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": "unknown",
+        "unknown_constraints": []
+      },
+      "reasons": [
+        "source_event_preserved=unknown",
+        "drawing_identity_preserved=unknown",
+        "primary_quality_bar_not_met"
+      ],
+      "status": "milestone_needs_review",
+      "train_eligible": false
+    },
+    {
+      "revision": "rabbit-v2",
+      "parent": "rabbit-v1",
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_met",
+        "drawing_identity_preserved": true,
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": true,
+        "unknown_constraints": []
+      },
+      "reasons": [],
+      "status": "accepted",
+      "train_eligible": false
+    },
+    {
+      "revision": "butterfly-v1",
+      "parent": null,
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_not_met",
+        "drawing_identity_preserved": "unknown",
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": "unknown",
+        "unknown_constraints": []
+      },
+      "reasons": [
+        "source_event_preserved=unknown",
+        "drawing_identity_preserved=unknown",
+        "primary_quality_bar_not_met"
+      ],
+      "status": "milestone_needs_review",
+      "train_eligible": false
+    },
+    {
+      "revision": "butterfly-v2",
+      "parent": "butterfly-v1",
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_not_met",
+        "drawing_identity_preserved": "unknown",
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": "unknown",
+        "unknown_constraints": []
+      },
+      "reasons": [
+        "source_event_preserved=unknown",
+        "drawing_identity_preserved=unknown",
+        "primary_quality_bar_not_met"
+      ],
+      "status": "milestone_needs_review",
+      "train_eligible": false
+    },
+    {
+      "revision": "butterfly-v3",
+      "parent": "butterfly-v2",
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_met",
+        "drawing_identity_preserved": true,
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": true,
+        "unknown_constraints": []
+      },
+      "reasons": [],
+      "status": "accepted",
+      "train_eligible": false
+    },
+    {
+      "revision": "duck-v1",
+      "parent": null,
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_not_met",
+        "drawing_identity_preserved": "unknown",
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": "unknown",
+        "unknown_constraints": []
+      },
+      "reasons": [
+        "source_event_preserved=unknown",
+        "drawing_identity_preserved=unknown",
+        "primary_quality_bar_not_met"
+      ],
+      "status": "milestone_needs_review",
+      "train_eligible": false
+    },
+    {
+      "revision": "duck-v2",
+      "parent": "duck-v1",
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_met",
+        "drawing_identity_preserved": true,
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": true,
+        "unknown_constraints": []
+      },
+      "reasons": [],
+      "status": "accepted",
+      "train_eligible": false
+    },
+    {
+      "revision": "bicycle-v1",
+      "parent": null,
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_not_met",
+        "drawing_identity_preserved": "unknown",
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": "unknown",
+        "unknown_constraints": []
+      },
+      "reasons": [
+        "source_event_preserved=unknown",
+        "drawing_identity_preserved=unknown",
+        "primary_quality_bar_not_met"
+      ],
+      "status": "milestone_needs_review",
+      "train_eligible": false
+    },
+    {
+      "revision": "bicycle-v2",
+      "parent": "bicycle-v1",
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_met",
+        "drawing_identity_preserved": true,
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": true,
+        "unknown_constraints": []
+      },
+      "reasons": [],
+      "status": "accepted",
+      "train_eligible": false
+    },
+    {
+      "revision": "windmill-v1",
+      "parent": null,
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_not_met",
+        "drawing_identity_preserved": "unknown",
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": "unknown",
+        "unknown_constraints": []
+      },
+      "reasons": [
+        "source_event_preserved=unknown",
+        "drawing_identity_preserved=unknown",
+        "primary_quality_bar_not_met"
+      ],
+      "status": "milestone_needs_review",
+      "train_eligible": false
+    },
+    {
+      "revision": "windmill-v2",
+      "parent": "windmill-v1",
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_met",
+        "drawing_identity_preserved": true,
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": true,
+        "unknown_constraints": []
+      },
+      "reasons": [],
+      "status": "accepted",
+      "train_eligible": false
+    },
+    {
+      "revision": "helicopter-v1",
+      "parent": null,
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_not_met",
+        "drawing_identity_preserved": "unknown",
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": "unknown",
+        "unknown_constraints": []
+      },
+      "reasons": [
+        "source_event_preserved=unknown",
+        "drawing_identity_preserved=unknown",
+        "primary_quality_bar_not_met"
+      ],
+      "status": "milestone_needs_review",
+      "train_eligible": false
+    },
+    {
+      "revision": "helicopter-v2",
+      "parent": "helicopter-v1",
+      "preference_constraint_vector": {
+        "compared_playback": null,
+        "critic_scope": [
+          "stills",
+          "drawing",
+          "source_comparison"
+        ],
+        "critic_verdict": "bar_met",
+        "drawing_identity_preserved": true,
+        "failed_constraints": [],
+        "independent_critic": true,
+        "runtime_cost": null,
+        "source_event_preserved": true,
+        "unknown_constraints": []
+      },
+      "reasons": [],
+      "status": "accepted",
+      "train_eligible": false
+    }
+  ]
+}

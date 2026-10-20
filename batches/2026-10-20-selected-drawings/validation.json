@@ -1,0 +1,255 @@
+{
+  "artifact_checks_passed": true,
+  "selected_subjects": 10,
+  "selected_key_drawings": 40,
+  "new_selected_drawings": 36,
+  "carried_giraffe_drawings": 4,
+  "new_image_generation_calls": 19,
+  "new_candidate_drawings": 76,
+  "new_repair_episodes": 19,
+  "accepted_new_still_key_episodes": 9,
+  "motion_acceptance": false,
+  "actual_rl_training": false,
+  "review_scope": "Independent fresh-context agent still reviews only; no normal-speed playback inspection.",
+  "ui_checks": {
+    "passed": true,
+    "subjects": 10,
+    "pose_pairs": 40,
+    "revision_pairs": 80,
+    "scope": "DOM-stub interaction test, not browser layout or normal-speed video review"
+  },
+  "inline_bytes": 927249,
+  "ledger_sha256": "f90ac6b6d244ae73a04761393907998d8ea2c347c5eba457060192b2e2c0c08c",
+  "subjects": [
+    {
+      "category": "rabbit",
+      "selected_revision": "v2",
+      "selected_art_sha256": "ac46a34f9a9c810fb0d3407db6f8737e28bb8fa9e5c2ef4c8c59ce28d3236ade",
+      "review": "reviews/rabbit-v2.json",
+      "review_sha256": "2a428ad8ccf2c9bd87752bba1c421d36900f46a528a391c8d8b03719960a1ca9",
+      "accepted_scope": "four still keys",
+      "motion_scope": "not independently reviewed",
+      "media": [
+        {
+          "file": "source-excerpt.mp4",
+          "frames": 52,
+          "duration_seconds": 4.333333,
+          "sha256": "311e3686c15f0ad1604a0b1f6ac24e62e67177820fa93def6b039e956751b351"
+        },
+        {
+          "file": "held-key-comparison.mp4",
+          "frames": 52,
+          "duration_seconds": 4.333333,
+          "sha256": "674ffae205741c8fe5b337f4d4a75540fa7790c9272f07b0fc60a616713fda8d"
+        }
+      ]
+    },
+    {
+      "category": "duck",
+      "selected_revision": "v2",
+      "selected_art_sha256": "6f9a016e66ba09baed5a2468823e80f3d51ada62d677389fd8d2a49d7e426b4e",
+      "review": "reviews/duck-v2.json",
+      "review_sha256": "4b869d5418bb8977b3174224d83ac624776048c20f9155c9f2dee4cf0ce1f588",
+      "accepted_scope": "four still keys",
+      "motion_scope": "not independently reviewed",
+      "media": [
+        {
+          "file": "source-excerpt.mp4",
+          "frames": 48,
+          "duration_seconds": 4.0,
+          "sha256": "417804650f6880c0d57b50e707ed9a1fd59d0b70d160956c95327b3b453c0b89"
+        },
+        {
+          "file": "held-key-comparison.mp4",
+          "frames": 48,
+          "duration_seconds": 4.0,
+          "sha256": "3b488bf8df98216bbdbd0332c2e6bbdb535734e6d4b9b98f53c484ad8db03fdc"
+        }
+      ]
+    },
+    {
+      "category": "horse",
+      "selected_revision": "v2",
+      "selected_art_sha256": "ef7424913d4c72371a2f0e84ac90fde4bc8f430add420db37431262a0189cff6",
+      "review": "reviews/horse-v2.json",
+      "review_sha256": "f3058e21479837da5b46045a1d26911e20e0399d959a1249ca3447fb47526258",
+      "accepted_scope": "four still keys",
+      "motion_scope": "not independently reviewed",
+      "media": [
+        {
+          "file": "source-excerpt.mp4",
+          "frames": 45,
+          "duration_seconds": 3.75,
+          "sha256": "7bd4988ef73ba76c26c10752925fbb2ba8a0b02e264b18a5030536597e3be81e"
+        },
+        {
+          "file": "held-key-comparison.mp4",
+          "frames": 45,
+          "duration_seconds": 3.75,
+          "sha256": "e9567e583ab6c1b47007f690e98cb634150d12577512cb3dfa0988b13c4dd8f2"
+        }
+      ]
+    },
+    {
+      "category": "dog",
+      "selected_revision": "v2",
+      "selected_art_sha256": "9999faf98771749e3e618952f4c710424ef235f244d68b7013a1075c25b9770a",
+      "review": "reviews/dog-v2.json",
+      "review_sha256": "262d850821ee140235d563466f8a86c65846e256c3c97f0a648b2d3fcd2ccae2",
+      "accepted_scope": "four still keys",
+      "motion_scope": "not independently reviewed",
+      "media": [
+        {
+          "file": "source-excerpt.mp4",
+          "frames": 50,
+          "duration_seconds": 4.166667,
+          "sha256": "b8295bddff4a995e167947804a1019f8f16e1b31a9af75e3996c484c29158bf8"
+        },
+        {
+          "file": "held-key-comparison.mp4",
+          "frames": 50,
+          "duration_seconds": 4.166667,
+          "sha256": "975c50d287428f912072881bc741c42f98d6edded14abe9c1af0282cd88bfb6e"
+        }
+      ]
+    },
+    {
+      "category": "cat",
+      "selected_revision": "v2",
+      "selected_art_sha256": "863732641481ee05e5a144c0cc4c5437d75461ef66a8f9489d34a441255a827e",
+      "review": "reviews/cat-v2.json",
+      "review_sha256": "f61dc3703153858ff760b7292ebe597b647f2c63d2f2d76164719ef874e8a388",
+      "accepted_scope": "four still keys",
+      "motion_scope": "not independently reviewed",
+      "media": [
+        {
+          "file": "source-excerpt.mp4",
+          "frames": 62,
+          "duration_seconds": 5.166667,
+          "sha256": "cfe5b216c2a663666738bd9c0467e970dbfde77bcf957cb3bb7f981c03ad5a8e"
+        },
+        {
+          "file": "held-key-comparison.mp4",
+          "frames": 62,
+          "duration_seconds": 5.166667,
+          "sha256": "be9174284bca4b0d981e52b163139d9b2a5d23a273266d68874a5e5e9d98fe7b"
+        }
+      ]
+    },
+    {
+      "category": "butterfly",
+      "selected_revision": "v3",
+      "selected_art_sha256": "b18b9bed573a5394ef380978f406d121a229261497c37c4b59e056a168101877",
+      "review": "reviews/butterfly-v3.json",
+      "review_sha256": "599433b5b253dcffe54fac0beb795079b13fe6041a92a46b1e9ab5a8300ece65",
+      "accepted_scope": "four still keys",
+      "motion_scope": "not independently reviewed",
+      "media": [
+        {
+          "file": "source-excerpt.mp4",
+          "frames": 78,
+          "duration_seconds": 6.5,
+          "sha256": "d91a41b25227414741ee87ac23a37370fe128909870693bf303a56c2cf994795"
+        },
+        {
+          "file": "held-key-comparison.mp4",
+          "frames": 78,
+          "duration_seconds": 6.5,
+          "sha256": "f07eb7e295f13d9d36bbfe0c6a2c84164fd08aec47988c2b2cd0dc07987c0982"
+        }
+      ]
+    },
+    {
+      "category": "bicycle",
+      "selected_revision": "v2",
+      "selected_art_sha256": "971e529ef135bcae35441b9a86f2da73b690f6906813d84f9b98504912ebeef8",
+      "review": "reviews/bicycle-v2.json",
+      "review_sha256": "d2d66f70ca83433ab54b843a14c9794f89be0c56589119a821ff6046a0da0072",
+      "accepted_scope": "four still keys",
+      "motion_scope": "not independently reviewed",
+      "media": [
+        {
+          "file": "source-excerpt.mp4",
+          "frames": 21,
+          "duration_seconds": 1.75,
+          "sha256": "661fe0ae0e6cf49955b59a36a7b1b2190fde868821957d5c81ec45c9ce20c08b"
+        },
+        {
+          "file": "held-key-comparison.mp4",
+          "frames": 21,
+          "duration_seconds": 1.75,
+          "sha256": "cb8e99f65b23683f65de2f22d4bfdfe5d081928c88540fcc7702ed2e07ed22b0"
+        }
+      ]
+    },
+    {
+      "category": "windmill",
+      "selected_revision": "v2",
+      "selected_art_sha256": "b4c681858e0dd8fab54869e87ff4e6132f30b01b39dbdc7092c787a0aec416da",
+      "review": "reviews/windmill-v2.json",
+      "review_sha256": "4586f8ccae0e51d16156c999dc31e43d3d75600f292493d55c94dfe631282587",
+      "accepted_scope": "four still keys",
+      "motion_scope": "not independently reviewed",
+      "media": [
+        {
+          "file": "source-excerpt.mp4",
+          "frames": 54,
+          "duration_seconds": 4.5,
+          "sha256": "c56671d93346d4d3bf5983b943c5ebc269bab1b5a41a1f6fe5ff5fdf154e5a13"
+        },
+        {
+          "file": "held-key-comparison.mp4",
+          "frames": 54,
+          "duration_seconds": 4.5,
+          "sha256": "83a95d38a99780054429860a9322e7c35bb25140bde1ef6045636e38649fc046"
+        }
+      ]
+    },
+    {
+      "category": "helicopter",
+      "selected_revision": "v2",
+      "selected_art_sha256": "f31a9304eead44278ad8e0eca28539d71cfe83bee5d37d5d854c6d7dd215b2ac",
+      "review": "reviews/helicopter-v2.json",
+      "review_sha256": "37d5a544197304d807cf0e7dc2b0a70d0f54e5d9bbdc2c5f82311b38b541046d",
+      "accepted_scope": "four still keys",
+      "motion_scope": "not independently reviewed",
+      "media": [
+        {
+          "file": "source-excerpt.mp4",
+          "frames": 46,
+          "duration_seconds": 3.833333,
+          "sha256": "f704b04e7650ae4d118094d8dc352e1e4f1093bbda65bbbd3102fa83a7a5e611"
+        },
+        {
+          "file": "held-key-comparison.mp4",
+          "frames": 46,
+          "duration_seconds": 3.833333,
+          "sha256": "381e600324591dc9e1326690be5c20ba93ae2eef271673a44592fc81a1a2b437"
+        }
+      ]
+    },
+    {
+      "category": "giraffe",
+      "selected_revision": "v3",
+      "selected_art_sha256": "77c8a36f00b2c03a84f0a3af8a01cc742e097765973b258a9ec947aaaf4ad70f",
+      "review": "reviews/giraffe-v3.json",
+      "review_sha256": "57fa1f326e8f0dfb21ee6afb449f8dfa6a48bbbf9f8625509e2482bcbb182be9",
+      "accepted_scope": "four still keys",
+      "motion_scope": "not independently reviewed",
+      "media": [
+        {
+          "file": "source-excerpt.mp4",
+          "frames": 17,
+          "duration_seconds": 1.416667,
+          "sha256": "7ac0acf7edbae7c504d19be5cb0be4ca68d2150c9071d79bd5a51a9538c4cc2f"
+        },
+        {
+          "file": "held-key-comparison.mp4",
+          "frames": 17,
+          "duration_seconds": 1.416667,
+          "sha256": "8133d95b15172e7bd3aa962df38903c62cbaa5d2193dbd6718fce68d8f243635"
+        }
+      ]
+    }
+  ]
+}

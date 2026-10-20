@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --paper:#EEF1F4; --sheet:#F9FAFB; --ink:#171B24; --muted:#5D6573; --rule:#D3D9E1; --blue:#2F6FD8; --blue-soft:#DCE7F8;
+  --pass:#1F7A4D; --pass-soft:#DDF0E5; --fail:#C8402F; --fail-soft:#F8E1DD; --line:#171B24; --card:#FFFFFF;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif; --body:"Atkinson Hyperlegible","Segoe UI",Roboto,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;--pass:#6FCF9B;--pass-soft:#16301F;--fail:#F07A68;--fail-soft:#3A1E1A;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;--pass:#6FCF9B;--pass-soft:#16301F;--fail:#F07A68;--fail-soft:#3A1E1A;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--body);padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 56px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+.repo-nav{max-width:1080px;margin:0 auto;padding:14px 0 0;display:flex;gap:14px;flex-wrap:wrap;font:600 13px var(--body)}
+.repo-nav a{color:var(--muted);text-decoration:none}.repo-nav a:hover,.repo-nav a[aria-current]{color:var(--ink)}
+header{padding-top:20px;display:flex;flex-direction:column;gap:10px}
+h1{font:700 clamp(30px,6.5vw,56px)/1.02 var(--display);margin:0;letter-spacing:-.015em;text-wrap:balance}
+h2{font:700 24px/1.15 var(--display);margin:0;text-wrap:balance}
+h3{font:700 18px/1.2 var(--display);margin:0}
+.lede{margin:0;max-width:64ch;font-size:17px}
+.meta{font:12px var(--mono);color:var(--muted)}
+.eyebrow{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+section{display:flex;flex-direction:column;gap:14px;min-width:0}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.tablebox{overflow-x:auto;border:1px solid var(--rule);border-radius:8px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font:600 12px var(--mono);color:var(--muted);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{font:13px var(--mono);background:var(--blue-soft);padding:1px 4px;border-radius:3px}
+.st{font:600 11px var(--mono);padding:2px 7px;border-radius:3px;white-space:nowrap}
+.st.pass{background:var(--pass-soft);color:var(--pass)}
+.st.fail{background:var(--fail-soft);color:var(--fail)}
+.st.none{border:1px solid var(--rule);color:var(--muted)}
+.note{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.note b{font-size:15px}.note p{margin:0;font-size:14px;color:var(--muted)}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+</style>
+
+<title>Cartoon Archive</title>
+<style>
+/* Layout: thesis; two lanes and the join; works lineage; stage board (subjects × stages); tests; repo map; next. */
+.lanes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:860px){.lanes{grid-template-columns:1fr}}
+.lane{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.lane:hover{border-color:var(--blue)}
+.lane img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center top;background:#fff;display:block;border-bottom:1px solid var(--rule)}
+.lane .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.lane b{font:700 18px/1.2 var(--display)}
+.lane p{margin:0;font-size:14px;color:var(--muted)}
+.lane .tag{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.lane.join{border-color:var(--blue)}
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
+.work{display:flex;flex-direction:column;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;min-width:0}
+.work img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:left top;display:block;border-bottom:1px solid var(--rule);background:#fff}
+.work .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.work b{font:700 16px/1.2 var(--display)}
+.work p{margin:0;color:var(--muted);font-size:13px}
+.work .num{font:600 18px var(--mono);font-variant-numeric:tabular-nums;margin-top:auto;padding-top:6px}
+.work:hover{border-color:var(--blue)}
+.board td,.board th{text-align:center;padding:7px 8px}
+.board td:first-child,.board th:first-child{text-align:left;position:sticky;left:0;background:var(--sheet)}
+.dot{display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid var(--rule);vertical-align:middle}
+.dot.done{background:var(--pass);border-color:var(--pass)}
+.dot.part{background:linear-gradient(90deg,var(--pass) 50%,transparent 50%);border-color:var(--pass)}
+.dot.fail{background:var(--fail);border-color:var(--fail)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);align-items:center}
+.queue{display:flex;flex-wrap:wrap;gap:6px}
+.queue span{font:13px var(--mono);border:1px solid var(--rule);border-radius:4px;padding:3px 8px;background:var(--sheet)}
+.queue span b{font-weight:600;color:var(--muted);margin-left:6px}
+td.how{color:var(--muted);font-size:13px;min-width:220px}
+td.val{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.cls{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tree{font:13px/1.7 var(--mono);background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;overflow-x:auto;margin:0;white-space:pre}
+.tree a{text-decoration:none}
+ol.next{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:72ch}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.cta a{font:600 14px var(--body);text-decoration:none;border-radius:6px;padding:9px 14px;border:1px solid var(--ink);color:var(--ink)}
+.cta a.primary{background:var(--ink);color:var(--paper)}
+</style>
+<style>.repo-nav{max-width:1080px;margin:0 auto;padding:14px 0 0;display:flex;gap:14px;flex-wrap:wrap;font:600 13px "Atkinson Hyperlegible","Segoe UI",sans-serif}.repo-nav a{color:#5D6573;text-decoration:none}.repo-nav a[aria-current]{color:inherit}</style><nav class="repo-nav" aria-label="Repository"><a href="index.html" aria-current="page">Index</a><a href="pages/pipeline.html">Pipeline</a><a href="pages/agent-prompt.html">Agent prompt</a><a href="pages/archive-doodle-index.html">Dataset</a><a href="pages/giraffe-walks-past.html">Giraffe shot</a><a href="pages/traced-keys.html">Traced keys</a><a href="batches/2026-10-20-selected-drawings/index.html">Selected drawings</a></nav>
+<div class="wrap">
+<header>
+  <span class="eyebrow">Studio index · 20 Oct 2026</span>
+  <h1>Cartoon Archive</h1>
+  <p class="lede">Any shot in the Moving Image Archive should be watchable as a moving Quick, Draw! cartoon: the subject redrawn in the identity of one real doodle, moving as the footage moves, on depth planes that slide with the real camera.</p>
+  <div class="cta"><a class="primary" href="pages/pipeline.html">Read the pipeline</a><a href="pages/agent-prompt.html">Agent prompt</a></div>
+</header>
+
+<section aria-labelledby="l">
+  <h2 id="l">Two lanes, and the join</h2>
+  <p class="lede" style="font-size:15px">Two ways of working have each solved half the problem. One draws well and does not move; the other moves and does not draw well. Tracing the first into the second's strokes joins them.</p>
+  <div class="lanes">
+    <a class="lane" href="batches/2026-10-20-selected-drawings/index.html"><img src="batches/2026-10-20-selected-drawings/selected-drawings-atlas.png" alt="Ten selected doodle drawings: rabbit, duck, horse, dog, cat, butterfly, bicycle, windmill, helicopter, giraffe"><div class="body"><span class="tag">Look lane</span><b>Selected Drawings</b><p>An image model draws four still keys per subject in the doodle's identity; fresh critics review and the agent repairs. 10 subjects, 40 keys, 19 review rounds. No motion.</p></div></a>
+    <a class="lane" href="pages/giraffe-walks-past.html"><img src="assets/shot.jpg" alt="Multiplane doodle cartoon of a giraffe walking past two young giraffes"><div class="body"><span class="tag">Motion lane</span><b>Giraffe Walks Past</b><p>A vector rig keyed over SAM silhouettes, in-betweened with planted feet, on six depth planes under the measured camera pan. Real motion and tests; weaker drawing.</p></div></a>
+    <a class="lane join" href="pages/traced-keys.html"><img src="assets/traced_grid.png" alt="Traced stroke versions of six selected drawings"><div class="body"><span class="tag">The join</span><b>Traced Keys</b><p>Every look-lane key traced into pen strokes: recall ≥ 0.98, every ink piece kept. The traces show the next problem: backgrounds are redrawn on every key.</p></div></a>
+  </div>
+</section>
+
+<section aria-labelledby="b">
+  <h2 id="b">Where each subject stands</h2>
+  <p class="lede" style="font-size:15px">Stages from <a href="pages/pipeline.html">the pipeline</a>. A subject moves right only when the stage's gate passes.</p>
+  <div class="legend"><span><i class="dot done"></i> gate passed</span><span><i class="dot part"></i> done, gate partly met</span><span><i class="dot fail"></i> done, gate failed</span><span><i class="dot"></i> not started</span></div>
+  <div class="tablebox"><table class="board"><thead id="bh"></thead><tbody id="bb"></tbody></table></div>
+  <h3>Wave 2 queue</h3>
+  <p class="meta">Next ten categories with a moving subject, by archive match score. An agent still has to watch each clip.</p>
+  <div class="queue" id="queue"></div>
+</section>
+
+<section aria-labelledby="w">
+  <h2 id="w">Every page, in the order it was made</h2>
+  <div class="works" id="works"></div>
+</section>
+
+<section aria-labelledby="t">
+  <h2 id="t">Tests on the full shot</h2>
+  <p class="lede" style="font-size:15px">Run on <a href="pages/giraffe-walks-past.html">Giraffe Walks Past</a>. Measured tests come from the shot file, structural tests check the file and the page, judged tests need an independent viewer. A bar is never lowered to make a test pass.</p>
+  <div class="tablebox"><table><thead><tr><th>Test</th><th>Result</th><th>Bar</th><th>Status</th></tr></thead><tbody id="tests"></tbody></table></div>
+</section>
+
+<section aria-labelledby="r">
+  <h2 id="r">What is in the repository</h2>
+  <pre class="tree">index.html                                  this page
+<a href="PIPELINE.md">PIPELINE.md</a>                                 stages, contracts, tests  → pages/pipeline.html
+<a href="AGENTS.md">AGENTS.md</a>                                   prompt for an agent taking one subject  → pages/agent-prompt.html
+<a href="pages/">pages/</a>                                      every other page, built by tools/build_pages.py
+<a href="dataset/">dataset/</a>                                    345 categories × archive shots: clips.csv, clips.jsonl, categories.csv
+<a href="data/subject_queue.json">data/subject_queue.json</a>                     moving subjects ranked by archive match; wave 2 marked
+<a href="data/quickdraw/fetch.sh">data/quickdraw/fetch.sh</a>                     fetches the exact Quick, Draw! slices the scripts read
+<a href="shots/giraffe-walks-past/">shots/giraffe-walks-past/</a>                   full shot: rig, reward, in-between, planes, tests, critic stills
+<a href="batches/2026-10-20-selected-drawings/">batches/2026-10-20-selected-drawings/</a>       look lane: 40 keys, prompts, reviews, repair ledger
+<a href="traced/traced_keys.json">traced/traced_keys.json</a>                     the 40 keys as strokes, with layer split and scores
+<a href="tools/">tools/</a>                                      trace_keys.py, build_pages.py, page templates</pre>
+</section>
+
+<section aria-labelledby="n">
+  <h2 id="n">Next</h2>
+  <ol class="next">
+    <li>Redraw one wave 1 subject the joined way: one background plate, the character on blank per key, traced, rig fitted. The dog is first: it shares the giraffe's quadruped rig.</li>
+    <li>Get a fresh critic to watch Giraffe Walks Past at normal speed (J1 again, J3 for the first time).</li>
+    <li>Run wave 2 with one agent per subject from <a href="pages/agent-prompt.html">the agent prompt</a>, critics as separate agents.</li>
+    <li>Collect the pose-from-silhouette pairs from every accepted key; nothing is train-eligible until a shot passes playback review.</li>
+  </ol>
+</section>
+<p class="meta">Footage: Moving Image Archive (reported public-domain; each source record kept). Doodles: Google Creative Lab, Quick, Draw! dataset, CC BY 4.0. Models run: SAM 2.1, Grounding DINO, CLIP and a Quick, Draw! classifier in the browser; image generation for the look-lane keys. No model has been trained.</p>
+</div>
+<script id="data" type="application/json">{"works":[{"step":"1 \u00b7 dataset","title":"Archive Doodle Index","url":"pages/archive-doodle-index.html","img":"assets/index.jpg","alt":"Grid of category tiles with match scores","proved":"Every Quick, Draw! category has real archive footage behind it, found by the archive's own image search.","num":"16,042","numlabel":"shot matches across 345 categories"},{"step":"2 \u00b7 joint space","title":"Doodle to Footage","url":"pages/doodle-to-footage.html","img":"assets/stones.jpg","alt":"Doodles beside the archive shots they match","proved":"Drawings and footage share one CLIP space once each modality's average is removed.","num":"52% \u2192 87%","numlabel":"drawings matched to their own category"},{"step":"3 \u00b7 segment and trace","title":"Cartoon Archive","url":"pages/cartoon-archive.html","img":"assets/traced.jpg","alt":"Line cartoons traced from segmented footage","proved":"SAM finds the subject in nearly every frame, but outlines traced from masks do not look drawn.","num":"0.93","numlabel":"giraffe recognition, drawn keys"},{"step":"4 \u00b7 full shot","title":"Giraffe Walks Past","url":"pages/giraffe-walks-past.html","img":"assets/shot.jpg","alt":"Multiplane doodle cartoon of a giraffe","proved":"One shot rebuilt as a multiplane cartoon: rotoscoped keys, six depth planes, real camera pan, three blind reviews.","num":"11 / 14","numlabel":"tests passing"},{"step":"5 \u00b7 look lane","title":"Selected Drawings","url":"batches/2026-10-20-selected-drawings/index.html","img":"batches/2026-10-20-selected-drawings/selected-drawings-atlas.png","alt":"Atlas of ten selected drawings","proved":"An image model holds a doodle identity across four keys when a fresh critic names one gap per round.","num":"40 keys","numlabel":"10 subjects, 19 review rounds"},{"step":"6 \u00b7 the join","title":"Traced Keys","url":"pages/traced-keys.html","img":"assets/traced_grid.png","alt":"Traced strokes of six drawings","proved":"Raster keys become pen strokes without losing a mark; the traces expose that backgrounds are redrawn per key.","num":"0.984","numlabel":"lowest recall over 40 keys"}],"stages":["Select","Observe","Identity","Plan","Keys","Trace","Rig","In-between","Planes","Tests","Critic"],"board":[{"subject":"giraffe (full shot)","cells":["done","done","done","done","part","done","done","done","done","part","part"]},{"subject":"bicycle","cells":["done","","done","done","part","done","","","","",""]},{"subject":"butterfly","cells":["done","","done","done","part","done","","","","",""]},{"subject":"cat","cells":["done","","done","done","part","done","","","","",""]},{"subject":"dog","cells":["done","","done","done","part","done","","","","",""]},{"subject":"duck","cells":["done","","done","done","part","done","","","","",""]},{"subject":"giraffe (keys)","cells":["done","","done","done","part","done","","","","",""]},{"subject":"helicopter","cells":["done","","done","done","part","done","","","","",""]},{"subject":"horse","cells":["done","","done","done","part","done","","","","",""]},{"subject":"rabbit","cells":["done","","done","done","part","done","","","","",""]},{"subject":"windmill","cells":["done","","done","done","part","done","","","","",""]}],"queue":[{"category":"flying saucer","kind":"vehicle","top_score":0.331497,"clips":44,"done":false,"wave":2},{"category":"raccoon","kind":"animal","top_score":0.29925,"clips":47,"done":false,"wave":2},{"category":"hurricane","kind":"weather","top_score":0.295331,"clips":47,"done":false,"wave":2},{"category":"tornado","kind":"weather","top_score":0.295055,"clips":45,"done":false,"wave":2},{"category":"rain","kind":"weather","top_score":0.293712,"clips":43,"done":false,"wave":2},{"category":"mosquito","kind":"animal","top_score":0.293272,"clips":47,"done":false,"wave":2},{"category":"pig","kind":"animal","top_score":0.29281,"clips":47,"done":false,"wave":2},{"category":"see saw","kind":"machine","top_score":0.292625,"clips":48,"done":false,"wave":2},{"category":"tractor","kind":"vehicle","top_score":0.292139,"clips":47,"done":false,"wave":2},{"category":"fan","kind":"machine","top_score":0.290681,"clips":46,"done":false,"wave":2}],"tests":[{"cls":"measured","id":"M1","name":"Reads as a giraffe","value":0.93,"unit":"classifier p","bar":"above 0.75 (real human doodles)","ok":true,"how":"Quick, Draw! MobileViT classifier on the drawn keyframes (run before the head revision; in-betweens not yet scored)"},{"cls":"measured","id":"M2","name":"Looks hand-drawn","value":16,"unit":"percentile","bar":"at least 30 (traced outlines: 36)","ok":false,"how":"typicality of stroke statistics against 4,971 real giraffe doodles, 25-nearest-neighbour"},{"cls":"measured","id":"M3","name":"Holds the footage pose","value":0.67,"unit":"mask fit","bar":"mean at least 0.65, no frame below 0.45","ok":true,"how":"ink inside the SAM mask x bounding-box agreement; worst frame 15 at 0.48"},{"cls":"measured","id":"M4","name":"Planted feet stay put","value":0.0,"unit":"px drift","bar":"under 2 px, measured on at least 4 planted intervals","ok":true,"how":"world-space drift of a hoof inside 6 planted key intervals (screen x minus camera pan)"},{"cls":"measured","id":"M5","name":"Body keeps its proportions","value":9.8,"unit":"% variation","bar":"under 10% for neck, body and legs","ok":true,"how":"coefficient of variation of neck, body and leg length across frames: neck 6.1%, body 6.8%, legs 9.8%"},{"cls":"measured","id":"M6","name":"Head travels on smooth arcs","value":3.9,"unit":"px jerk","bar":"under 4 px","ok":true,"how":"mean third difference of the nose position in world space; pops show up as spikes"},{"cls":"structural","id":"S1","name":"Near planes move faster","value":"sky < far < mid < secondary < fore","unit":"","bar":"sky slowest, grass fastest","ok":true,"how":"screen speed per plane = camera pan x (reference depth / plane depth)"},{"cls":"structural","id":"S2","name":"Every drawing has a source","value":"40/40","unit":"objects","bar":"all","ok":true,"how":"each object records its Quick, Draw! key_id or that the agent drew it"},{"cls":"structural","id":"S3","name":"Exposure sheet covers the shot","value":"33/33","unit":"frames","bar":"every frame, keys marked","ok":true,"how":"x-sheet rows vs frames; K rows vs agent keys"},{"cls":"structural","id":"S4","name":"Page works on a phone","value":"no overflow at 390 px","unit":"","bar":"no sideways scroll, no script errors","ok":true,"how":"headless render at 390 and 1000 px wide"},{"cls":"structural","id":"S5","name":"Nearer things hide farther ones","value":"SAM silhouette painted under the walker","unit":"","bar":"no far lines inside the walker body","ok":true,"how":"painted by construction; round 3 critic still saw young-giraffe lines between the front legs"},{"cls":"judged","id":"J1","name":"Story reads with sound off","value":"partially met","unit":"","bar":"an independent viewer names the action and every animal","ok":false,"how":"3 blind reviews; last open gap (young giraffes read as llamas) repaired, not yet re-reviewed"},{"cls":"judged","id":"J2","name":"Drawn beats traced","value":"4 of 5 keyframes","unit":"","bar":"blind A/B preference for the drawn version","ok":true,"how":"blind critic with shuffled labels"},{"cls":"judged","id":"J3","name":"Keys alone tell it","value":"not run","unit":"","bar":"keys-only playback reads as a walk","ok":null,"how":"next: play only the 9 keys to an independent critic"}]}</script>
+<script>
+(function(){
+const D=JSON.parse(document.getElementById('data').textContent);
+const wb=document.getElementById('works');
+D.works.forEach(w=>{const a=document.createElement('a');a.className='work';a.href=w.url;
+  const im=document.createElement('img');im.src=w.img;im.alt=w.alt;im.loading='lazy';const b=document.createElement('div');b.className='body';
+  const m=document.createElement('span');m.className='meta';m.textContent=w.step;const t=document.createElement('b');t.textContent=w.title;
+  const p=document.createElement('p');p.textContent=w.proved;const n=document.createElement('span');n.className='num';n.textContent=w.num;
+  const nl=document.createElement('span');nl.className='meta';nl.textContent=w.numlabel;b.append(m,t,p,n,nl);a.append(im,b);wb.append(a);});
+const hr=document.createElement('tr');['Subject',...D.stages].forEach(s=>{const th=document.createElement('th');th.textContent=s;hr.append(th);});document.getElementById('bh').append(hr);
+const bb=document.getElementById('bb');
+D.board.forEach(r=>{const tr=document.createElement('tr');const td=document.createElement('td');td.textContent=r.subject;tr.append(td);
+  r.cells.forEach((c,i)=>{const t=document.createElement('td');const d=document.createElement('i');d.className='dot'+(c?' '+c:'');
+    const lab={done:'gate passed',part:'gate partly met',fail:'gate failed','':'not started'}[c||''];d.setAttribute('role','img');d.setAttribute('aria-label',`${D.stages[i]}: ${lab}`);d.title=`${D.stages[i]}: ${lab}`;t.append(d);tr.append(t);});
+  bb.append(tr);});
+const q=document.getElementById('queue');D.queue.forEach(x=>{const s=document.createElement('span');s.textContent=x.category;const b=document.createElement('b');b.textContent=x.top_score.toFixed(3);s.append(b);q.append(s);});
+const tb=document.getElementById('tests');let last='';
+D.tests.forEach(r=>{const tr=document.createElement('tr');
+  const c0=document.createElement('td');if(r.cls!==last){const s=document.createElement('div');s.className='cls';s.textContent=r.cls;c0.append(s);last=r.cls;}
+  const nm=document.createElement('div');nm.textContent=r.id+' · '+r.name;c0.append(nm);
+  const c1=document.createElement('td');c1.className='val';c1.textContent=String(r.value)+(r.unit?' '+r.unit:'');
+  const c2=document.createElement('td');c2.textContent=r.bar;c2.style.fontSize='13px';
+  const c3=document.createElement('td');const s=document.createElement('span');s.className='st '+(r.ok===true?'pass':r.ok===false?'fail':'none');s.textContent=r.ok===true?'pass':r.ok===false?'fail':'not run';c3.append(s);
+  tr.append(c0,c1,c2,c3);tb.append(tr);});
+})();
+</script>

@@ -1,0 +1,35 @@
+{
+  "subject": "cat",
+  "revision": "v1",
+  "verdict": "reference_stronger",
+  "scope": "Still-key drawing review only: inspected source-keys.png, design.png and revisions/keys-v1.png at the four source-relative times. No video playback or motion-quality judgment.",
+  "exact_key_evidence": [
+    {
+      "key": 0,
+      "time_seconds": 10.4,
+      "evidence": "The drawing preserves the chest-up, slightly upward-looking three-quarter view. However, the chosen design has two large empty polygon eye shapes and a blunt polygon face; the drawing replaces these with small lidded eyes, pupils, nose, mouth, forehead stripes and a shaggy contour."
+    },
+    {
+      "key": 1,
+      "time_seconds": 12.2,
+      "evidence": "The source has only a small attention change from key 0. The drawing appropriately stays close to key 0 rather than inventing a new action."
+    },
+    {
+      "key": 2,
+      "time_seconds": 14.0,
+      "evidence": "The source remains nearly in the same upward-looking pose. The third drawing also remains close, with a slightly altered lid/head angle."
+    },
+    {
+      "key": 3,
+      "time_seconds": 15.3,
+      "evidence": "The clear turn toward screen right is present; the muzzle projects rightward and the far eye narrows to a sliver. This is a distinct source-motivated change, not an unrelated expression."
+    }
+  ],
+  "main_gap": "The action is reasonably preserved, but the actual selected QuickDraw identity is not strongly recognizable. The set is a consistent, more conventional tabby cartoon rather than an articulated version of the supplied sparse polygon-face doodle.",
+  "one_bounded_repair": "Restyle the four existing head poses using the selected design\u2019s blunt polygon head, large empty asymmetric polygon eyes and sparse whisker lines; remove the added tabby facial detailing while keeping the present pose angles and final rightward turn.",
+  "protected_strengths": [
+    "Keep the restrained differences between keys 0\u20132.",
+    "Keep the chest-up framing and the clear rightward turn at key 3.",
+    "Keep one consistent head construction across the set."
+  ]
+}

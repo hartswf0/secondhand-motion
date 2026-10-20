@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --paper:#EEF1F4; --sheet:#F9FAFB; --ink:#171B24; --muted:#5D6573; --rule:#D3D9E1; --blue:#2F6FD8; --blue-soft:#DCE7F8;
+  --pass:#1F7A4D; --pass-soft:#DDF0E5; --fail:#C8402F; --fail-soft:#F8E1DD; --line:#171B24; --card:#FFFFFF;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif; --body:"Atkinson Hyperlegible","Segoe UI",Roboto,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;--pass:#6FCF9B;--pass-soft:#16301F;--fail:#F07A68;--fail-soft:#3A1E1A;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;--pass:#6FCF9B;--pass-soft:#16301F;--fail:#F07A68;--fail-soft:#3A1E1A;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--body);padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 56px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+.repo-nav{max-width:1080px;margin:0 auto;padding:14px 0 0;display:flex;gap:14px;flex-wrap:wrap;font:600 13px var(--body)}
+.repo-nav a{color:var(--muted);text-decoration:none}.repo-nav a:hover,.repo-nav a[aria-current]{color:var(--ink)}
+header{padding-top:20px;display:flex;flex-direction:column;gap:10px}
+h1{font:700 clamp(30px,6.5vw,56px)/1.02 var(--display);margin:0;letter-spacing:-.015em;text-wrap:balance}
+h2{font:700 24px/1.15 var(--display);margin:0;text-wrap:balance}
+h3{font:700 18px/1.2 var(--display);margin:0}
+.lede{margin:0;max-width:64ch;font-size:17px}
+.meta{font:12px var(--mono);color:var(--muted)}
+.eyebrow{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+section{display:flex;flex-direction:column;gap:14px;min-width:0}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.tablebox{overflow-x:auto;border:1px solid var(--rule);border-radius:8px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font:600 12px var(--mono);color:var(--muted);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{font:13px var(--mono);background:var(--blue-soft);padding:1px 4px;border-radius:3px}
+.st{font:600 11px var(--mono);padding:2px 7px;border-radius:3px;white-space:nowrap}
+.st.pass{background:var(--pass-soft);color:var(--pass)}
+.st.fail{background:var(--fail-soft);color:var(--fail)}
+.st.none{border:1px solid var(--rule);color:var(--muted)}
+.note{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.note b{font-size:15px}.note p{margin:0;font-size:14px;color:var(--muted)}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+</style>
+
+<title>Pipeline</title>
+<style>
+.doc{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:0}
+.doc h1{margin:20px 0 14px}
+.doc h2{margin:36px 0 10px}
+.doc h3{margin:24px 0 8px}
+.doc p,.doc li{max-width:72ch}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc table{margin:8px 0 4px;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;display:block;overflow-x:auto}
+.doc td:first-child{white-space:nowrap;font-family:var(--mono);font-size:13px}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.tools button{font:600 13px var(--body);background:var(--ink);color:var(--paper);border:0;border-radius:6px;padding:8px 12px;cursor:pointer}
+.tools .meta{flex:1}
+</style>
+<style>.repo-nav{max-width:1080px;margin:0 auto;padding:14px 0 0;display:flex;gap:14px;flex-wrap:wrap;font:600 13px "Atkinson Hyperlegible","Segoe UI",sans-serif}.repo-nav a{color:#5D6573;text-decoration:none}.repo-nav a[aria-current]{color:inherit}</style><nav class="repo-nav" aria-label="Repository"><a href="../index.html">Index</a><a href="../pages/pipeline.html" aria-current="page">Pipeline</a><a href="../pages/agent-prompt.html">Agent prompt</a><a href="../pages/archive-doodle-index.html">Dataset</a><a href="../pages/giraffe-walks-past.html">Giraffe shot</a><a href="../pages/traced-keys.html">Traced keys</a><a href="../batches/2026-10-20-selected-drawings/index.html">Selected drawings</a></nav>
+<main class="doc">
+
+<h1>Pipeline: archive shot → doodle cartoon</h1>
+<p>One shot is one folder, <code>shots/&lt;category&gt;/</code>, and one state file, <code>shot.json</code>. Every stage reads
+files from that folder and writes new files to it; every page is a view of those files. Stages are
+numbered so a ledger line can say where a repair went back to.</p>
+<p>Two lanes have been tried, and the pipeline joins them:</p>
+<ul>
+<li><strong>Look lane</strong> (<a href="../batches/2026-10-20-selected-drawings"><code>batches/2026-10-20-selected-drawings</code></a>): an image model draws four strong still keys
+  per subject in the doodle's identity, reviewed by fresh critics. Good drawing; no motion; the
+  background is redrawn on every key.</li>
+<li><strong>Motion lane</strong> (<a href="../shots/giraffe-walks-past"><code>shots/giraffe-walks-past</code></a>): a vector rig keyed by the agent over SAM
+  silhouettes, in-betweened with planted feet, laid out on six depth planes under the measured
+  camera. Real motion and measurable tests; the drawing is weaker.</li>
+<li><strong>The join</strong> is stage 5: trace look-lane keys into strokes (<a href="../tools/trace_keys.py"><code>tools/trace_keys.py</code></a>), then fit the
+  motion lane's rig to them. Tracing works (recall 0.99, every ink piece kept, across all 40 keys).
+  Holding the background does not yet: separate character and background drawing is required.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Stage</th>
+<th>Reads</th>
+<th>Writes</th>
+<th>Runs where</th>
+<th>Gate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Select</td>
+<td><a href="../dataset/clips.csv"><code>dataset/clips.csv</code></a>, <a href="../data/subject_queue.json"><code>data/subject_queue.json</code></a></td>
+<td><code>source.json</code>, <code>contact-sheet.png</code></td>
+<td>agent + browser (archive video)</td>
+<td>continuous event, subject ≥ 1/10 of frame</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Observe</td>
+<td>source video</td>
+<td><code>clip.json</code> (frames at 12 fps), <code>camera.json</code>, <code>scene_masks.json</code></td>
+<td>browser: SAM 2.1 + Grounding DINO; Python: phase-correlation pan</td>
+<td>mask on ≥ 95% of frames</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Identity</td>
+<td>Quick, Draw! category file</td>
+<td><code>design.json</code>, <code>design.png</code></td>
+<td>CLIP joint space + classifier + agent pick</td>
+<td>doodle recognised, typical stroke style</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plan</td>
+<td>masks, footage</td>
+<td>x-sheet draft in <code>shot.json</code></td>
+<td>agent</td>
+<td>each key has a written reason</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Keys (look)</td>
+<td>frames, design, plan</td>
+<td><code>keys/art-key-*.png</code>, <code>keys/bg-plate.png</code>, prompts</td>
+<td>image model or agent drawing</td>
+<td>identity critic; M1; B1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Trace</td>
+<td>raster keys</td>
+<td><code>keys/traced.json</code></td>
+<td><a href="../tools/trace_keys.py"><code>tools/trace_keys.py</code></a></td>
+<td>T1: recall ≥ 0.98, <code>parts_kept</code> = 1.0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Rig</td>
+<td>traced keys, masks</td>
+<td><code>poses.json</code></td>
+<td>agent + <code>rig.py</code></td>
+<td>M3 mask fit; rig redraw matches the trace</td>
+</tr>
+<tr>
+<td>7</td>
+<td>In-between</td>
+<td>poses, camera, masks</td>
+<td>per-frame cast strokes</td>
+<td><code>inbetween.py</code></td>
+<td>M4–M6</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Planes</td>
+<td>bg plate, masks, doodles</td>
+<td><code>shot.json</code></td>
+<td><code>build_shot.py</code></td>
+<td>each object names its source and plane</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Tests</td>
+<td><code>shot.json</code></td>
+<td><code>tests.json</code></td>
+<td><code>tests.py</code></td>
+<td>all measured and structural tests</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Critic</td>
+<td>critic packet only</td>
+<td><code>reviews/*.json</code></td>
+<td>fresh agent</td>
+<td>stills, then playback at normal speed</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Ledger</td>
+<td>every proposal and verdict</td>
+<td><code>ledger.jsonl</code></td>
+<td><code>loop.py</code></td>
+<td>append-only, hash-chained</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Pairs</td>
+<td>accepted shots</td>
+<td><code>pairs/</code></td>
+<td>script</td>
+<td>only playback-accepted shots are train-eligible</td>
+</tr>
+</tbody>
+</table>
+<h2>Where learning comes in</h2>
+<p>Nothing has been trained yet. What exists is search: an agent proposes, tests and critics judge, the
+ledger keeps every attempt. That is the data a learner would need:</p>
+<ol>
+<li><strong>Pose from silhouette.</strong> Each accepted key is a pair (footage frame + SAM mask → rig pose). With
+   a few hundred pairs per body plan (quadruped, bird, vehicle), a small model can propose keys that
+   the agent then corrects; the corrections are the next round's data.</li>
+<li><strong>Preference over repairs.</strong> Each ledger line holds a before, an after and a critic verdict. Those
+   are preference pairs for a reward model over drawings, scored together with the measured tests,
+   not instead of them. The classifier alone is a misleading reward: it accepts traced silhouettes.</li>
+<li><strong>In-betweening.</strong> Accepted shots give dense key → in-between sequences in one topology, which is
+   what a learned in-betweener needs. Until then <code>inbetween.py</code> is the baseline to beat.</li>
+</ol>
+<p>Training starts when a pair set exists that a fresh critic has approved at playback speed. Still-key
+approval alone does not make a pair train-eligible.</p>
+<h2>Tests</h2>
+<p>Current tests, as <a href="../shots/giraffe-walks-past/tests.py"><code>shots/giraffe-walks-past/tests.py</code></a> computes them, plus the two the join adds:</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Bar</th>
+<th>Kind</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td>Reads as the category</td>
+<td>classifier p above 0.75 (real human doodles score 0.75)</td>
+<td>measured</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>Looks hand-drawn</td>
+<td>stroke-style percentile at least 30 among real doodles (traced outlines: 36)</td>
+<td>measured</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>Holds the footage pose</td>
+<td>mask fit mean at least 0.65, no frame below 0.45</td>
+<td>measured</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>Planted feet stay put</td>
+<td>under 2 px drift, on at least 4 planted intervals</td>
+<td>measured</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>Body keeps its proportions</td>
+<td>under 10% variation for each body segment</td>
+<td>measured</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>Head travels on smooth arcs</td>
+<td>under 4 px jerk</td>
+<td>measured</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>Trace keeps the drawing</td>
+<td>recall at least 0.98 and every ink piece kept</td>
+<td>measured (new)</td>
+</tr>
+<tr>
+<td>B1</td>
+<td>Background holds</td>
+<td>at least 90% of background strokes unchanged between keys on a locked-off shot</td>
+<td>measured (new)</td>
+</tr>
+<tr>
+<td>S1</td>
+<td>Near planes move faster</td>
+<td>sky slowest, foreground fastest</td>
+<td>structural</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>Every drawing has a source</td>
+<td>all objects</td>
+<td>structural</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>Exposure sheet covers the shot</td>
+<td>every frame, keys marked</td>
+<td>structural</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>Page works on a phone</td>
+<td>no sideways scroll at 390 px, no script errors</td>
+<td>structural</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>Nearer things hide farther ones</td>
+<td>no far lines inside the character</td>
+<td>structural</td>
+</tr>
+<tr>
+<td>J1</td>
+<td>Story reads with sound off</td>
+<td>a fresh viewer names the action and every subject</td>
+<td>judged</td>
+</tr>
+<tr>
+<td>J2</td>
+<td>Drawn beats traced</td>
+<td>blind A/B preference for the drawn version</td>
+<td>judged</td>
+</tr>
+<tr>
+<td>J3</td>
+<td>Keys alone tell it</td>
+<td>keys-only playback reads as the action</td>
+<td>judged</td>
+</tr>
+</tbody>
+</table>
+<p>Lessons that set these bars:</p>
+<ul>
+<li>A test can pass by measuring nothing. The first foot-slide test found no planted frames and
+  passed; it now fails with fewer than four planted intervals.</li>
+<li>A number can pass while the drawing gets worse. Forcing one leg length passed the proportion
+  test and crumpled the legs. Every numeric pass is followed by looking at the frames.</li>
+<li>Precision of the tracer is 1.0 by construction (traced lines sit on ink); recall and
+  <code>parts_kept</code> are the informative numbers. <code>parts_kept</code> exists because recall stayed at 0.85
+  while a cat's eye was missing.</li>
+</ul>
+<h2>Scaling to more drawings</h2>
+<ul>
+<li>Wave 1 (done to stage 5): rabbit, duck, horse, dog, cat, butterfly, bicycle, windmill,
+  helicopter, giraffe. Giraffe is through stage 10 as a full shot.</li>
+<li>Wave 2 (queued): the next ten categories with a moving subject, by archive match score, in
+  <a href="../data/subject_queue.json"><code>data/subject_queue.json</code></a>. A high score only means the archive search found a likely shot.</li>
+<li>One agent per subject, run with <code>AGENTS.md</code>; critics are separate agents with fresh context.</li>
+<li>Body plans are shared: a quadruped rig serves dog, horse, cow, pig and raccoon. Build a rig once
+  per body plan, then key many subjects with it.</li>
+</ul>
+</main>
+<script id="src" type="text/plain"># Pipeline: archive shot → doodle cartoon
+
+One shot is one folder, `shots/<category>/`, and one state file, `shot.json`. Every stage reads
+files from that folder and writes new files to it; every page is a view of those files. Stages are
+numbered so a ledger line can say where a repair went back to.
+
+Two lanes have been tried, and the pipeline joins them:
+
+- **Look lane** (`batches/2026-10-20-selected-drawings`): an image model draws four strong still keys
+  per subject in the doodle's identity, reviewed by fresh critics. Good drawing; no motion; the
+  background is redrawn on every key.
+- **Motion lane** (`shots/giraffe-walks-past`): a vector rig keyed by the agent over SAM
+  silhouettes, in-betweened with planted feet, laid out on six depth planes under the measured
+  camera. Real motion and measurable tests; the drawing is weaker.
+- **The join** is stage 5: trace look-lane keys into strokes (`tools/trace_keys.py`), then fit the
+  motion lane's rig to them. Tracing works (recall 0.99, every ink piece kept, across all 40 keys).
+  Holding the background does not yet: separate character and background drawing is required.
+
+| # | Stage | Reads | Writes | Runs where | Gate |
+|---|---|---|---|---|---|
+| 0 | Select | `dataset/clips.csv`, `data/subject_queue.json` | `source.json`, `contact-sheet.png` | agent + browser (archive video) | continuous event, subject ≥ 1/10 of frame |
+| 1 | Observe | source video | `clip.json` (frames at 12 fps), `camera.json`, `scene_masks.json` | browser: SAM 2.1 + Grounding DINO; Python: phase-correlation pan | mask on ≥ 95% of frames |
+| 2 | Identity | Quick, Draw! category file | `design.json`, `design.png` | CLIP joint space + classifier + agent pick | doodle recognised, typical stroke style |
+| 3 | Plan | masks, footage | x-sheet draft in `shot.json` | agent | each key has a written reason |
+| 4 | Keys (look) | frames, design, plan | `keys/art-key-*.png`, `keys/bg-plate.png`, prompts | image model or agent drawing | identity critic; M1; B1 |
+| 5 | Trace | raster keys | `keys/traced.json` | `tools/trace_keys.py` | T1: recall ≥ 0.98, `parts_kept` = 1.0 |
+| 6 | Rig | traced keys, masks | `poses.json` | agent + `rig.py` | M3 mask fit; rig redraw matches the trace |
+| 7 | In-between | poses, camera, masks | per-frame cast strokes | `inbetween.py` | M4–M6 |
+| 8 | Planes | bg plate, masks, doodles | `shot.json` | `build_shot.py` | each object names its source and plane |
+| 9 | Tests | `shot.json` | `tests.json` | `tests.py` | all measured and structural tests |
+| 10 | Critic | critic packet only | `reviews/*.json` | fresh agent | stills, then playback at normal speed |
+| 11 | Ledger | every proposal and verdict | `ledger.jsonl` | `loop.py` | append-only, hash-chained |
+| 12 | Pairs | accepted shots | `pairs/` | script | only playback-accepted shots are train-eligible |
+
+## Where learning comes in
+
+Nothing has been trained yet. What exists is search: an agent proposes, tests and critics judge, the
+ledger keeps every attempt. That is the data a learner would need:
+
+1. **Pose from silhouette.** Each accepted key is a pair (footage frame + SAM mask → rig pose). With
+   a few hundred pairs per body plan (quadruped, bird, vehicle), a small model can propose keys that
+   the agent then corrects; the corrections are the next round's data.
+2. **Preference over repairs.** Each ledger line holds a before, an after and a critic verdict. Those
+   are preference pairs for a reward model over drawings, scored together with the measured tests,
+   not instead of them. The classifier alone is a misleading reward: it accepts traced silhouettes.
+3. **In-betweening.** Accepted shots give dense key → in-between sequences in one topology, which is
+   what a learned in-betweener needs. Until then `inbetween.py` is the baseline to beat.
+
+Training starts when a pair set exists that a fresh critic has approved at playback speed. Still-key
+approval alone does not make a pair train-eligible.
+
+## Tests
+
+Current tests, as `shots/giraffe-walks-past/tests.py` computes them, plus the two the join adds:
+
+| Id | Name | Bar | Kind |
+|---|---|---|---|
+| M1 | Reads as the category | classifier p above 0.75 (real human doodles score 0.75) | measured |
+| M2 | Looks hand-drawn | stroke-style percentile at least 30 among real doodles (traced outlines: 36) | measured |
+| M3 | Holds the footage pose | mask fit mean at least 0.65, no frame below 0.45 | measured |
+| M4 | Planted feet stay put | under 2 px drift, on at least 4 planted intervals | measured |
+| M5 | Body keeps its proportions | under 10% variation for each body segment | measured |
+| M6 | Head travels on smooth arcs | under 4 px jerk | measured |
+| T1 | Trace keeps the drawing | recall at least 0.98 and every ink piece kept | measured (new) |
+| B1 | Background holds | at least 90% of background strokes unchanged between keys on a locked-off shot | measured (new) |
+| S1 | Near planes move faster | sky slowest, foreground fastest | structural |
+| S2 | Every drawing has a source | all objects | structural |
+| S3 | Exposure sheet covers the shot | every frame, keys marked | structural |
+| S4 | Page works on a phone | no sideways scroll at 390 px, no script errors | structural |
+| S5 | Nearer things hide farther ones | no far lines inside the character | structural |
+| J1 | Story reads with sound off | a fresh viewer names the action and every subject | judged |
+| J2 | Drawn beats traced | blind A/B preference for the drawn version | judged |
+| J3 | Keys alone tell it | keys-only playback reads as the action | judged |
+
+Lessons that set these bars:
+
+- A test can pass by measuring nothing. The first foot-slide test found no planted frames and
+  passed; it now fails with fewer than four planted intervals.
+- A number can pass while the drawing gets worse. Forcing one leg length passed the proportion
+  test and crumpled the legs. Every numeric pass is followed by looking at the frames.
+- Precision of the tracer is 1.0 by construction (traced lines sit on ink); recall and
+  `parts_kept` are the informative numbers. `parts_kept` exists because recall stayed at 0.85
+  while a cat's eye was missing.
+
+## Scaling to more drawings
+
+- Wave 1 (done to stage 5): rabbit, duck, horse, dog, cat, butterfly, bicycle, windmill,
+  helicopter, giraffe. Giraffe is through stage 10 as a full shot.
+- Wave 2 (queued): the next ten categories with a moving subject, by archive match score, in
+  `data/subject_queue.json`. A high score only means the archive search found a likely shot.
+- One agent per subject, run with `AGENTS.md`; critics are separate agents with fresh context.
+- Body plans are shared: a quadruped rig serves dog, horse, cow, pig and raccoon. Build a rig once
+  per body plan, then key many subjects with it.
+</script>
+<script>
+(function(){const b=document.getElementById('copy');if(!b)return;
+b.addEventListener('click',async()=>{const t=document.getElementById('src').textContent;
+try{await navigator.clipboard.writeText(t);b.textContent='Copied';}catch(e){const r=document.createRange();r.selectNodeContents(document.querySelector('main'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy';}
+setTimeout(()=>b.textContent='Copy prompt as Markdown',1800);});})();
+</script>

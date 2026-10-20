@@ -1,0 +1,137 @@
+<title>Cartoon Archive</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: clip strip on top, one large stage with view modes and a frame scrubber, then the fold ladder. */
+:root{
+  --paper:#EEF1F4; --sheet:#F9FAFB; --ink:#171B24; --muted:#5D6573; --rule:#D3D9E1; --blue:#2F6FD8; --blue-soft:#DCE7F8;
+  --cel:#FBFAF6; --line:#14161B; --key:#C8402F;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif; --body:"Atkinson Hyperlegible","Segoe UI",Roboto,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:15px/1.5 var(--body);padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 48px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+header{padding-top:28px;display:flex;flex-direction:column;gap:6px}
+h1{font:700 clamp(30px,6vw,52px)/1.02 var(--display);margin:0;letter-spacing:-.01em}
+.lede{margin:0;color:var(--muted);max-width:62ch}
+.strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
+.clip{border:1px solid var(--rule);background:var(--sheet);border-radius:6px;padding:0;overflow:hidden;cursor:pointer;color:var(--ink);text-align:left;display:flex;flex-direction:column}
+.clip img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.clip span{font:600 12px var(--mono);padding:4px 8px}
+.clip[aria-pressed="true"]{outline:2px solid var(--blue);outline-offset:1px}
+.stagebox{display:flex;flex-direction:column;gap:10px}
+.stage{position:relative;width:100%;max-width:100%;aspect-ratio:var(--ar,4/3);background:var(--cel);border-radius:6px;overflow:hidden;border:1px solid var(--rule)}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%}
+.controls{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.seg button{font:600 13px var(--body);background:var(--sheet);color:var(--ink);border:0;padding:6px 11px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.btn{font:600 13px var(--body);background:var(--ink);color:var(--paper);border:0;border-radius:6px;padding:7px 14px;cursor:pointer;min-width:72px}
+input[type=range]{flex:1 1 200px;accent-color:var(--blue)}
+label.chk{display:inline-flex;gap:6px;align-items:center;font-size:13px}
+.meta{font:12px var(--mono);color:var(--muted)}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.film{display:flex;gap:4px;overflow-x:auto;padding-bottom:4px}
+.film canvas{flex:0 0 auto;width:72px;height:auto;border-radius:3px;background:var(--cel);border:1px solid var(--rule);cursor:pointer}
+.film canvas.on{outline:2px solid var(--blue)}
+.film canvas.key{border:2px solid var(--key)}
+.clip.drawn span{color:var(--blue)}
+.loop{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.loop .fold .num{font:600 22px var(--mono);color:var(--ink)}
+h2{font:700 22px/1.2 var(--display);margin:0}
+.folds{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.fold{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:4px}
+.fold b{font-family:var(--display);font-size:17px}
+.state{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;align-self:flex-start;padding:1px 6px;border-radius:3px}
+.state.done{background:var(--blue-soft);color:var(--blue)}
+.state.todo{border:1px solid var(--rule);color:var(--muted)}
+.fold p{margin:0;color:var(--muted);font-size:14px}
+a{color:var(--blue)}
+</style>
+<div class="wrap">
+<header>
+  <h1>Cartoon Archive</h1>
+  <p class="lede">Moving Image Archive clips with each subject segmented frame by frame and redrawn as line. The drawing moves because the footage underneath it moves.</p>
+  <div class="meta" id="summary"></div>
+</header>
+<div class="strip" id="strip"></div>
+<div class="stagebox">
+  <div class="stage" id="stage"><canvas id="cv" width="960" height="720"></canvas></div>
+  <div class="controls">
+    <button class="btn" id="play">Pause</button>
+    <div class="seg" role="group" aria-label="View" id="views"></div>
+    <label class="chk"><input type="checkbox" id="boil" checked> Boil</label>
+    <input type="range" id="scrub" min="0" max="0" value="0" aria-label="Frame">
+    <span class="meta" id="fno"></span>
+  </div>
+  <div class="meta" id="src"></div>
+  <div class="film" id="film" aria-label="Frames"></div>
+</div>
+<section style="display:flex;flex-direction:column;gap:12px">
+  <h2>Giraffe test: drawn vs traced</h2>
+  <p class="lede">The second giraffe is drawn, not traced. An agent placed a pose on five keyframes (outlined in red in the filmstrip), a doodle rig turned each pose into Quick, Draw!-style strokes, and the frames between were interpolated and held to the SAM mask.</p>
+  <div class="loop">
+    <div class="fold"><span class="state done">reward</span><b>Recognised as a giraffe</b><span class="num">0.93</span><p>Quick, Draw! classifier confidence on the five drawn keyframes. Real human giraffe doodles score 0.75 on the same classifier.</p></div>
+    <div class="fold"><span class="state done">reward</span><b>Looks hand-drawn</b><span class="num">44 vs 36</span><p>Typicality percentile of stroke statistics against 4,971 real giraffe doodles, drawn frames vs traced frames.</p></div>
+    <div class="fold"><span class="state done">reward</span><b>Holds the footage pose</b><span class="num">0.66</span><p>Mask fit across all 33 frames. Keyframes reach 0.76; the weakest in-betweens (frames 15 and 31) drop to 0.47.</p></div>
+    <div class="fold"><span class="state done">critic</span><b>Blind review</b><p>A separate agent, shown shuffled A/B pairs, preferred the drawn version in 4 of 5 keyframes: bar met on drawing language and consistency, partial on pose. Its main gap, stiff legs with no gait, was repaired with knees and re-placed hooves.</p></div>
+  </div>
+  <h2>Folds</h2>
+  <div class="folds">
+    <div class="fold"><span class="state done">running</span><b>Segment</b><p>Grounding DINO finds the subject from its name; SAM 2.1 cuts it out on every frame, with the box handed forward from the last mask.</p></div>
+    <div class="fold"><span class="state done">running</span><b>Line</b><p>Each mask's outline is traced and simplified into strokes. The Doodle view stores them the way Quick, Draw! does: a 256 box, strokes as point lists.</p></div>
+    <div class="fold"><span class="state todo">next</span><b>Parts and interior</b><p>Segment eyes, legs, sails as separate pieces so lines inside the silhouette move on their own.</p></div>
+    <div class="fold"><span class="state done">tested</span><b>Doodle style</b><p>Pose keypoints drive a stroke rig whose settings were searched against the three rewards. Tested on one giraffe clip.</p></div>
+    <div class="fold"><span class="state todo">next</span><b>Train</b><p>Agent-drawn keyframes become demonstrations for a pose-from-mask policy; the three rewards then fine-tune it on clips no one has keyed.</p></div>
+  </div>
+</section>
+</div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+const R=JSON.parse(document.getElementById('data').textContent);
+const cv=document.getElementById('cv'),g=cv.getContext('2d');
+const VIEWS=[['cartoon','Cartoon'],['overlay','Over footage'],['split','Side by side'],['doodle','Doodle'],['footage','Footage']];
+let ci=0,fi=0,view='cartoon',playing=!matchMedia('(prefers-reduced-motion: reduce)').matches,last=0,imgs=[];
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function loadImgs(){imgs=R[ci].frames.map(f=>{const i=new Image();i.src=f.im;return i;});}
+function rnd(seed){let s=seed%2147483647||1;return()=>{s=s*16807%2147483647;return (s-1)/2147483646;};}
+function drawPolys(polys,ox,oy,sx,sy,col,lw,seed,boil){const r=rnd(seed);g.strokeStyle=col;g.lineWidth=lw;g.lineJoin=g.lineCap='round';
+  polys.forEach(p=>{g.beginPath();p.forEach(([x,y],i)=>{const jx=boil?(r()-.5)*2.2:0,jy=boil?(r()-.5)*2.2:0;const X=ox+(x+jx)*sx,Y=oy+(y+jy)*sy;i?g.lineTo(X,Y):g.moveTo(X,Y);});if(!R[ci].open)g.closePath();g.stroke();});}
+function normPolys(polys){let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;polys.forEach(p=>p.forEach(([x,y])=>{x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x);y1=Math.max(y1,y);}));
+  const s=255/Math.max(x1-x0,y1-y0,1);return polys.map(p=>p.map(([x,y])=>[Math.round((x-x0)*s),Math.round((y-y0)*s)]));}
+function render(){const c=R[ci],f=c.frames[fi];const W=cv.width,H=cv.height;const boil=document.getElementById('boil').checked;const seed=fi*97+(boil?Math.floor(performance.now()/120):0);
+  g.clearRect(0,0,W,H);const cel=css('--cel'),line=css('--line');
+  const im=imgs[fi];const ready=im&&im.complete&&im.naturalWidth;
+  if(view==='footage'||view==='overlay'){if(ready)g.drawImage(im,0,0,W,H);if(view==='overlay'){g.fillStyle='rgba(255,255,255,.25)';g.fillRect(0,0,W,H);drawPolys(f.p,0,0,W/c.W,H/c.H,'#fff',7,seed,boil);drawPolys(f.p,0,0,W/c.W,H/c.H,'#111',3.2,seed,boil);}}
+  else if(view==='split'){if(ready)g.drawImage(im,0,0,W/2,H/2*1);g.fillStyle=cel;g.fillRect(W/2,0,W/2,H);
+    if(ready)g.drawImage(im,0,H/4,W/2,H/2);g.fillStyle=css('--paper');g.fillRect(0,0,W/2,H/4);g.fillRect(0,H*3/4,W/2,H/4);
+    drawPolys(f.p,W/2,H/4,(W/2)/c.W,(H/2)/c.H,line,2.6,seed,boil);}
+  else if(view==='doodle'){g.fillStyle=cel;g.fillRect(0,0,W,H);if(f.p.length){const n=normPolys(f.p);const S=Math.min(W,H)*0.8;drawPolys(n,(W-S)/2,(H-S)/2,S/255,S/255,line,3.4,seed,boil);}
+    g.fillStyle=css('--muted');g.font='600 20px '+css('--mono');g.fillText('256 × 256  ·  '+f.p.reduce((a,p)=>a+p.length,0)+' points  ·  '+f.p.length+' strokes',24,H-24);}
+  else{g.fillStyle=cel;g.fillRect(0,0,W,H);drawPolys(f.p,0,0,W/c.W,H/c.H,line,3.4,seed,boil);}
+  document.getElementById('scrub').value=fi;document.getElementById('fno').textContent=`frame ${fi+1}/${c.frames.length} · ${(fi/c.fps).toFixed(2)}s`+(f.key?' · keyframe':'');
+  [...document.getElementById('film').children].forEach((x,i)=>x.classList.toggle('on',i===fi));}
+function tick(now){if(playing&&now-last>1000/R[ci].fps){fi=(fi+1)%R[ci].frames.length;last=now;}render();requestAnimationFrame(tick);}
+function filmstrip(){const box=document.getElementById('film');box.replaceChildren();const c=R[ci];
+  c.frames.forEach((f,i)=>{const t=document.createElement('canvas');t.width=144;t.height=Math.round(144*c.H/c.W);const tg=t.getContext('2d');tg.fillStyle=css('--cel');tg.fillRect(0,0,t.width,t.height);
+    tg.strokeStyle=css('--line');tg.lineWidth=1.4;tg.lineJoin='round';f.p.forEach(p=>{tg.beginPath();p.forEach(([x,y],k)=>{const X=x*t.width/c.W,Y=y*t.height/c.H;k?tg.lineTo(X,Y):tg.moveTo(X,Y);});if(!c.open)tg.closePath();tg.stroke();});if(f.key)t.classList.add('key');
+    t.title='frame '+(i+1);t.onclick=()=>{fi=i;playing=false;setPlay();};box.append(t);});}
+function setPlay(){document.getElementById('play').textContent=playing?'Pause':'Play';}
+function pick(i){ci=i;fi=0;const c=R[ci];document.getElementById('stage').style.setProperty('--ar',c.W+'/'+c.H);cv.height=Math.round(cv.width*c.H/c.W);
+  document.getElementById('scrub').max=c.frames.length-1;loadImgs();filmstrip();
+  document.getElementById('src').innerHTML='';const a=document.createElement('a');a.href=c.page||c.url;a.target='_blank';a.rel='noopener';a.textContent=c.title;
+  const kept=c.frames.filter(f=>f.p.length).length;document.getElementById('src').append(a,document.createTextNode(` · ${c.cat} · ${c.frames.length} frames at ${c.fps} fps · subject found in ${kept}`));
+  [...document.getElementById('strip').children].forEach((b,k)=>b.setAttribute('aria-pressed',String(k===i)));}
+const strip=document.getElementById('strip');
+R.forEach((c,i)=>{const b=document.createElement('button');b.className='clip';const im=document.createElement('img');im.src=c.frames[Math.floor(c.frames.length/2)].im;im.alt=c.cat+' clip';
+  const s=document.createElement('span');s.textContent=c.label||c.cat;if(c.open)b.classList.add('drawn');b.append(im,s);b.onclick=()=>pick(i);strip.append(b);});
+const vbox=document.getElementById('views');VIEWS.forEach(([k,l])=>{const b=document.createElement('button');b.textContent=l;b.setAttribute('aria-pressed',String(k===view));b.onclick=()=>{view=k;[...vbox.children].forEach(x=>x.setAttribute('aria-pressed',String(x===b)));};vbox.append(b);});
+document.getElementById('play').onclick=()=>{playing=!playing;setPlay();};
+document.getElementById('scrub').oninput=e=>{fi=+e.target.value;playing=false;setPlay();};
+const totalF=R.reduce((a,c)=>a+c.frames.length,0);
+document.getElementById('summary').textContent=`${R.length} clips · ${totalF} frames segmented in the browser · SAM 2.1 small + Grounding DINO`;
+setPlay();pick(0);requestAnimationFrame(tick);
+})();
+</script>

@@ -1,0 +1,32 @@
+{
+  "subject": "horse",
+  "revision": "v2",
+  "verdict": "bar_met",
+  "scope": "Actual source, selected design, and four revision key stills only. No video playback inspected; this is not playback approval.",
+  "timed_key_evidence": [
+    {
+      "time_seconds": 4.3,
+      "evidence": "The horse starts nearly frontal, with upright ears, a long angular muzzle, dotlike eyes, and neck entering from screen left, matching the source starting view."
+    },
+    {
+      "time_seconds": 5.5,
+      "evidence": "The head changes toward a right-facing three-quarter view and begins lowering. A solid foreground rail masks the head cleanly instead of allowing its edges to run through the horse."
+    },
+    {
+      "time_seconds": 6.4,
+      "evidence": "The neck and head lower further; the foreground rail occludes the upper muzzle/face while the lower muzzle remains visible below it. The rail edges terminate or mask at the appropriate silhouettes without visible wood strokes inside the face."
+    },
+    {
+      "time_seconds": 7.5,
+      "evidence": "The final muzzle reaches the foreground hay beneath the rail, preserving the feeding action and downward neck bend. The rail clearly occludes the upper face while the muzzle overlaps the hay."
+    }
+  ],
+  "consequential_gap": null,
+  "bounded_repair": null,
+  "protected_strengths": [
+    "Long polygon muzzle, simple dark eyes, pointed ears, and angular mane marks preserve the salient selected QuickDraw identity.",
+    "The four keys show a clear head-lowering progression toward the hay.",
+    "Foreground fence masking remains legible, and no rail is visibly drawn through the facial surface."
+  ],
+  "limits": "The keys establish local visible occlusion, not continuous three-dimensional passage between rails; in-between motion and contact timing require playback review."
+}

@@ -1,0 +1,32 @@
+{
+  "subject": "dog",
+  "revision": "v2",
+  "verdict": "bar_met",
+  "scope": "Actual source, selected design, and four revision key stills only. No video playback inspected; this is not playback approval.",
+  "timed_key_evidence": [
+    {
+      "time_seconds": 0.2,
+      "evidence": "The opening key shows a rear/left three-quarter orientation toward the person, with the face turned away and no eye shown. Four leg placements support the long angular body."
+    },
+    {
+      "time_seconds": 1.4,
+      "evidence": "The next key resolves into the left-facing stance seen in the source. The elongated wedge muzzle, polygon eye, straight back, and four separated angular legs preserve the selected doodle identity through the view change."
+    },
+    {
+      "time_seconds": 2.8,
+      "evidence": "The dog turns toward the viewer with the head lowered and legs foreshortened/overlapped under the torso, matching the source change in stance and view."
+    },
+    {
+      "time_seconds": 4.0,
+      "evidence": "The final key faces and advances toward screen right, with four readable legs and a lowered forward muzzle. The bowl and trees remain separate environmental shapes rather than intersecting the body."
+    }
+  ],
+  "consequential_gap": null,
+  "bounded_repair": null,
+  "protected_strengths": [
+    "The opening away-facing head distinguishes the first pose from the later left-facing stance.",
+    "Long blocklike torso, angular muzzle, polygon eye, and bent angular legs retain the chosen drawing character.",
+    "Four-limb support and the later turn remain readable across the sampled views."
+  ],
+  "limits": "Some far-leg contours overlap in the front-facing key; the stills provide readable four-limb construction but cannot establish gait continuity or motion timing."
+}

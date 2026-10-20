@@ -1,0 +1,38 @@
+{
+  "verdict": "bar_met",
+  "scope": {
+    "keys": "Reviewed the source photo grid, original QuickDraw design, and candidate keys-v3.png in chronological 2x2 order. Verdict applies to this keys-only milestone.",
+    "playback": "Stills only. No actual video playback was available in the inspection tool. keys-v3-comparison.mp4 was not played; no timing, holds, motion, interpolation, or loop judgment is made. The claim that the redrawn keys are held at the source times remains unverified."
+  },
+  "pose_evidence": [
+    {
+      "source_time_seconds": 0.0,
+      "state": "closed",
+      "observation": "The top-left drawing preserves the raised, rightward three-quarter muzzle and long diagonal underside of the head. The upper and lower lips meet in a narrow seam, with the lower lip sitting unequally beneath the projecting upper muzzle. This reads as a closed chewing state without a label."
+    },
+    {
+      "source_time_seconds": 0.3,
+      "state": "open",
+      "observation": "The top-right drawing opens a clearly visible wedge between the upturned upper muzzle and dropped lower jaw, matching the source's conspicuous opening. The mouth opening and lower lip are displaced toward screen-right, while the visible eye, near ear, and cheek remain behind the muzzle; it retains a three-quarter construction rather than becoming a centered frontal mouth."
+    },
+    {
+      "source_time_seconds": 0.7,
+      "state": "lateral compression",
+      "observation": "The bottom-left muzzle is markedly shorter and rounder than the first key, with tightly touching, bulging lips and a raised lower mouth mass. This captures the source's puckered, compressed chewing beat and reduced muzzle projection. The source turns somewhat farther toward the viewer; the drawing communicates that change mainly through the muzzle rather than a comparable skull rotation."
+    },
+    {
+      "source_time_seconds": 1.2,
+      "state": "half-open",
+      "observation": "The bottom-right key has a thin, visible mouth gap beneath a broad upper muzzle and a lower lip swept out to screen-right. It is unmistakably less open than the 0.3-second key and more open than the compressed key. This is a readable asymmetric recovery state, although its lateral lower-lip extension is stronger than the source photograph."
+    }
+  ],
+  "identity_evidence": "The angular near ear, polygon-topped stalk horns, small dark wedge eye, long sloping cheek/neck, and blunt muzzle keep the original QuickDraw character recognizable. The same eye and brow shapes, horn arrangement, ear silhouette, and angular cheek landmarks recur across the four keys. The drawings add more folds, spots, and round lip volume than the sparse original, but those additions do not obscure the identifying silhouette.",
+  "consequential_remaining_gap": "The skull and eye region stay almost fixed while the muzzle does most of the pose work. Consequently the 0.7-second compression and 1.2-second recovery understate the source's turn toward the viewer, and the exact lateral travel of the lower jaw is less anatomically explicit than the change in mouth opening. This is the main remaining fidelity gap, not a failure to distinguish the four states.",
+  "acceptance_condition": "Accept these four still keys for the stated milestone: closed, open, compressed, and half-open states are independently readable, the sideways mouth offsets are visible, and the character identity stays coherent. Before accepting the assembled held-key sequence, separately verify the source-time placements and holds in actual playback; this review supplies no evidence for that part.",
+  "protected_strengths": [
+    "Keep the clear opening contrast between the wide wedge at 0.3 seconds and the thin gap at 1.2 seconds.",
+    "Keep the compressed key's reduced muzzle projection and unequal lip bulge; they carry the chewing event.",
+    "Keep the consistently angular ear, horn tips, dark wedge eye, and long cheek/neck silhouette.",
+    "Keep the upper and lower mouth masses offset rather than centering them into a symmetrical open-close cycle."
+  ]
+}

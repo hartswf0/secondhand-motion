@@ -1,0 +1,28 @@
+__HEAD__
+<title>__TITLE__</title>
+<style>
+.doc{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:0}
+.doc h1{margin:20px 0 14px}
+.doc h2{margin:36px 0 10px}
+.doc h3{margin:24px 0 8px}
+.doc p,.doc li{max-width:72ch}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc table{margin:8px 0 4px;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;display:block;overflow-x:auto}
+.doc td:first-child{white-space:nowrap;font-family:var(--mono);font-size:13px}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.tools button{font:600 13px var(--body);background:var(--ink);color:var(--paper);border:0;border-radius:6px;padding:8px 12px;cursor:pointer}
+.tools .meta{flex:1}
+</style>
+__NAV__
+<main class="doc">
+__TOOLS__
+__BODY__
+</main>
+<script id="src" type="text/plain">__RAW__</script>
+<script>
+(function(){const b=document.getElementById('copy');if(!b)return;
+b.addEventListener('click',async()=>{const t=document.getElementById('src').textContent;
+try{await navigator.clipboard.writeText(t);b.textContent='Copied';}catch(e){const r=document.createRange();r.selectNodeContents(document.querySelector('main'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy';}
+setTimeout(()=>b.textContent='Copy prompt as Markdown',1800);});})();
+</script>

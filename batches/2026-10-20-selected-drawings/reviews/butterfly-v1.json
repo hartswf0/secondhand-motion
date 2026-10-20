@@ -1,0 +1,31 @@
+{
+  "subject": "butterfly",
+  "revision": "v1",
+  "verdict": "reference_stronger",
+  "review_scope": "Independent visual comparison of source-keys.png, design.png, revisions/keys-v1.png and source.json only. Four chronological still keys in 2x2 order; no normal-speed playback inspected and no motion approval.",
+  "timed_key_evidence": [
+    {
+      "time_seconds": 9.2,
+      "evidence": "Source shows the butterfly perched on fingertips with its visible wing plane rising steeply above the fingers. Drawing keeps foot-to-finger contact but shows a broad wing projecting almost horizontally left, setting up a much more open wing pose."
+    },
+    {
+      "time_seconds": 10.8,
+      "evidence": "Source remains perched with a similarly steep wing attitude. Drawing adds a prominently raised narrow wing while retaining the broad horizontal wing, increasing the opening change beyond the source still pair."
+    },
+    {
+      "time_seconds": 12.6,
+      "evidence": "Source still has an upright wing with a small view/angle change. Drawing keeps the butterfly supported but further elevates the tall wing relative to the broad left lobe."
+    },
+    {
+      "time_seconds": 15.4,
+      "evidence": "Source\u2019s wing is upright and the finger composition shifts. Drawing ends with a tall closed-looking wing and the head/antennae on the left, producing a large open-to-upright pose change across the four keys rather than the source\u2019s subtle perched variation."
+    }
+  ],
+  "main_gap": "The perched contact survives, but the sequence invents a substantial wing-opening/closing progression. The source keys support subtle wing-angle changes while continuously perched. The selected design\u2019s antenna loops and angular lobes remain visible but cannot justify changing the action.",
+  "bounded_repair": "Replace only the butterfly wing poses across the four keys with consistently steep, near-closed wing planes matching each source still, varying their angle subtly around the same attached thorax; retain the existing fingers, feet, angular line character and looped antennae.",
+  "protected_strengths": [
+    "All four drawings retain contact with the fingertips; none clearly depicts takeoff.",
+    "The hand supplies a clear scale and support cue.",
+    "Loop-ended antennae and polygonal wing edges preserve recognizable elements of the chosen QuickDraw design."
+  ]
+}

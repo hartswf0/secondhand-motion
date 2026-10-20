@@ -1,0 +1,15 @@
+{
+  "subject": "helicopter",
+  "revision": "v2",
+  "verdict": "bar_met",
+  "scope": "Independent visual comparison of source-keys.png, design.png, revisions/keys-v2.png and source.json only. Four still keys in chronological 2x2 order; no playback, rotor-motion or between-key continuity approval.",
+  "evidence": [
+    {"key": 1, "time_seconds": 0.2, "observation": "Both source and drawing show a large right-facing helicopter in a close pass with its long tail cut by the left edge. The drawing retains the selected design's long tail, faceted nose/window, straight rotor and simple supported skid."},
+    {"key": 2, "time_seconds": 1.4, "observation": "The drawing preserves the second close pass with the nose leaving the right boundary and tail leaving the left boundary, matching the source's tight lateral crop. The main rotor is visibly joined through a mast to the roof and the skid through two struts to the underside."},
+    {"key": 3, "time_seconds": 2.6, "observation": "Source and drawing both reveal the full tail and substantially reduce the aircraft's size while retaining its right-facing profile. The tail rotor sits on the tail tip, and main rotor, fuselage and skid remain attached."},
+    {"key": 4, "time_seconds": 3.8, "observation": "Both views place a much smaller complete helicopter on the right above a newly visible low landscape. The drawing carries the same tail, rotor, window and skid vocabulary into the distant scale."}
+  ],
+  "consequential_gap": null,
+  "bounded_repair": null,
+  "protected_strengths": ["Two distinct close cropped passes before recession", "Right-facing flight direction and later right-side placement", "Attached mast, rotor, tail and supported skid", "Sparse angular QuickDraw-derived aircraft silhouette"]
+}

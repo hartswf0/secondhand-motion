@@ -1,0 +1,145 @@
+<title>Cartoon Archive Index</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: thesis; works as a dated lineage (each card: image, what it proved, one number, link); the loop as a five-step strip; test battery table; rules; next. */
+:root{
+  --paper:#EEF1F4; --sheet:#F9FAFB; --ink:#171B24; --muted:#5D6573; --rule:#D3D9E1; --blue:#2F6FD8; --blue-soft:#DCE7F8;
+  --pass:#1F7A4D; --pass-soft:#DDF0E5; --fail:#C8402F; --fail-soft:#F8E1DD;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif; --body:"Atkinson Hyperlegible","Segoe UI",Roboto,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;--pass:#6FCF9B;--pass-soft:#16301F;--fail:#F07A68;--fail-soft:#3A1E1A;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;--pass:#6FCF9B;--pass-soft:#16301F;--fail:#F07A68;--fail-soft:#3A1E1A;color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:15px/1.55 var(--body);padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 56px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+header{padding-top:32px;display:flex;flex-direction:column;gap:10px}
+h1{font:700 clamp(32px,7vw,60px)/1 var(--display);margin:0;letter-spacing:-.015em;text-wrap:balance}
+h2{font:700 24px/1.15 var(--display);margin:0;text-wrap:balance}
+.lede{margin:0;max-width:62ch;font-size:17px}
+.meta{font:12px var(--mono);color:var(--muted)}
+.eyebrow{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+section{display:flex;flex-direction:column;gap:14px;min-width:0}
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.work{display:flex;flex-direction:column;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;min-width:0}
+.work img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:left top;display:block;border-bottom:1px solid var(--rule);background:#fff}
+.work .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.work b{font:700 18px/1.2 var(--display)}
+.work p{margin:0;color:var(--muted);font-size:14px}
+.work .num{font:600 20px var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.work .open{margin-top:auto;font:600 13px var(--body);color:var(--blue)}
+.work:hover{border-color:var(--blue)}
+.work:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.loop{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--sheet)}
+@media (max-width:820px){.loop{grid-template-columns:1fr}}
+.step{padding:12px 14px;border-right:1px solid var(--rule);display:flex;flex-direction:column;gap:4px;position:relative}
+.step:last-child{border-right:0}
+@media (max-width:820px){.step{border-right:0;border-bottom:1px solid var(--rule)}.step:last-child{border-bottom:0}}
+.step b{font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.step span{font-size:14px}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.pair figure{margin:0;display:flex;flex-direction:column;gap:6px}
+.pair img{width:100%;border-radius:6px;border:1px solid var(--rule);display:block}
+.pair figcaption{font-size:13px;color:var(--muted)}
+.tablebox{overflow-x:auto;border:1px solid var(--rule);border-radius:8px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font:600 12px var(--mono);color:var(--muted);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.how{color:var(--muted);font-size:13px;min-width:240px}
+td.val{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.st{font:600 11px var(--mono);padding:2px 7px;border-radius:3px;white-space:nowrap}
+.st.pass{background:var(--pass-soft);color:var(--pass)}
+.st.fail{background:var(--fail-soft);color:var(--fail)}
+.st.none{border:1px solid var(--rule);color:var(--muted)}
+.cls{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.notes.two{grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))}
+.note{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.note b{font-size:15px}
+.note p{margin:0;font-size:14px;color:var(--muted)}
+ol.next{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:70ch}
+a{color:var(--blue)}
+</style>
+<div class="wrap">
+<header>
+  <span class="eyebrow">Studio index · 20 Oct 2026</span>
+  <h1>Cartoon Archive Index</h1>
+  <p class="lede">Any shot in the Moving Image Archive should be able to play as a moving doodle cartoon. Each shot becomes one file: camera, depth planes, doodles, the character's keys and an exposure sheet. Every page here is a view of files like that.</p>
+</header>
+
+<section aria-labelledby="w">
+  <h2 id="w">Works, in the order they were made</h2>
+  <div class="works" id="works"></div>
+</section>
+
+<section aria-labelledby="l">
+  <h2 id="l">The loop every change goes through</h2>
+  <div class="loop">
+    <div class="step"><b>State</b><span>The shot file: camera pan, planes, doodles, keys, x-sheet.</span></div>
+    <div class="step"><b>Observation</b><span>Footage frames, SAM silhouettes, measured camera, real doodles to match.</span></div>
+    <div class="step"><b>Proposal</b><span>The agent keys a pose, picks or draws a doodle, places a plane.</span></div>
+    <div class="step"><b>Validator</b><span>Measured tests, structural tests, then a blind critic who never sees the builder's reasoning.</span></div>
+    <div class="step"><b>Event</b><span>Accepted revision written back to the shot file; the page re-renders from it.</span></div>
+  </div>
+  <div class="pair">
+    <figure><img src="__IMG_SIL__" alt="Footage frame with the SAM silhouette in red and the drawn key over it"><figcaption>Observation and proposal: the key is drawn over the SAM silhouette, the way Mechner traced over white-out silhouettes.</figcaption></figure>
+    <figure><img src="__IMG_BOX__" alt="Six depth planes stacked in space with doodles on each"><figcaption>State: six planes stacked by depth. Near planes slide faster than far ones under the measured camera pan.</figcaption></figure>
+  </div>
+</section>
+
+<section aria-labelledby="t">
+  <h2 id="t">Tests</h2>
+  <p class="lede" style="font-size:15px">Run on <a href="__URL_SHOT__" target="_blank" rel="noopener">Giraffe Walks Past</a>, version 2. Measured tests are computed from the shot file, structural tests check the file and the page, and judged tests need an independent viewer. A bar is never lowered to make a test pass.</p>
+  <div class="tablebox"><table><thead><tr><th>Test</th><th>Result</th><th>Bar</th><th>Status</th><th>How it is measured</th></tr></thead><tbody id="tests"></tbody></table></div>
+  <div class="notes">
+    <div class="note"><b>A test can pass by measuring nothing</b><p>The first foot-slide test found zero planted frames and reported a pass. It now fails when it has fewer than four planted intervals to measure.</p></div>
+    <div class="note"><b>A number can pass while the drawing gets worse</b><p>Forcing one leg length made the proportion test pass and crumpled the legs in frames 1–3 and 30–33. Every numeric pass is followed by looking at the frames.</p></div>
+    <div class="note"><b>The classifier alone is a misleading reward</b><p>It accepts traced silhouettes as giraffes. Recognition is scored together with typicality and pose fit, and the critic outranks all three.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="r">
+  <h2 id="r">How the work is kept</h2>
+  <div class="notes two">
+    <div class="note"><b>Every deliverable is an HTML page</b><p>Datasets, experiments and shots are published as pages you can open on a phone. Raw files stay in the workspace as sources, not as the delivered form.</p></div>
+    <div class="note"><b>Each page carries its own data</b><p>The shot file or dataset is embedded in the page that shows it, so a page can be re-rendered or forked without the session that made it.</p></div>
+    <div class="note"><b>Every drawing names its source</b><p>A Quick, Draw! key_id, or a note that the agent drew it and why no real doodle fitted.</p></div>
+    <div class="note"><b>Reviews are kept, not summarised away</b><p>Each shot page records its critic rounds: verdict, the gap named, and the repair that followed.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="n">
+  <h2 id="n">Next</h2>
+  <ol class="next">
+    <li>Re-review Giraffe Walks Past after the motion repairs, and run the keys-only test (J3).</li>
+    <li>Score every frame with the Quick, Draw! classifier, not only the keys.</li>
+    <li>Resolve the style test: the head and tail the critic asked for cost typicality. Try ossicones as one stroke.</li>
+    <li>Second shot: the dog clip, where a character has to act with a person, not only walk.</li>
+    <li>Turn the agent's keys from both shots into training pairs for a pose-from-silhouette model.</li>
+  </ol>
+</section>
+<p class="meta">Built from: Moving Image Archive (public-domain footage) · Google Quick, Draw! dataset · SAM 2.1, Grounding DINO, CLIP and a Quick, Draw! classifier, run in the browser.</p>
+</div>
+<script id="tdata" type="application/json">__TESTS__</script>
+<script id="wdata" type="application/json">__WORKS__</script>
+<script>
+(function(){
+const T=JSON.parse(document.getElementById('tdata').textContent),W=JSON.parse(document.getElementById('wdata').textContent);
+const wb=document.getElementById('works');
+W.forEach(w=>{const a=document.createElement('a');a.className='work';a.href=w.url;a.target='_blank';a.rel='noopener';
+  const im=document.createElement('img');im.src=w.img;im.alt=w.alt;const b=document.createElement('div');b.className='body';
+  const m=document.createElement('span');m.className='meta';m.textContent=w.step;const t=document.createElement('b');t.textContent=w.title;
+  const n=document.createElement('span');n.className='num';n.textContent=w.num;const nm=document.createElement('span');nm.className='meta';nm.textContent=w.numlabel;
+  const p=document.createElement('p');p.textContent=w.proved;const o=document.createElement('span');o.className='open';o.textContent='Open page';
+  b.append(m,t,p,n,nm,o);a.append(im,b);wb.append(a);});
+const tb=document.getElementById('tests');let last='';
+T.forEach(r=>{const tr=document.createElement('tr');
+  const c0=document.createElement('td');if(r.cls!==last){const s=document.createElement('div');s.className='cls';s.textContent=r.cls;c0.append(s);last=r.cls;}
+  const nm=document.createElement('div');nm.textContent=r.id+' · '+r.name;c0.append(nm);
+  const c1=document.createElement('td');c1.className='val';c1.textContent=String(r.value)+(r.unit?' '+r.unit:'');
+  const c2=document.createElement('td');c2.textContent=r.bar;c2.style.fontSize='13px';
+  const c3=document.createElement('td');const st=document.createElement('span');st.className='st '+(r.ok===true?'pass':r.ok===false?'fail':'none');st.textContent=r.ok===true?'Pass':r.ok===false?'Fail':'Not run';c3.append(st);
+  const c4=document.createElement('td');c4.className='how';c4.textContent=r.how;
+  tr.append(c0,c1,c2,c3,c4);tb.append(tr);});
+})();
+</script>

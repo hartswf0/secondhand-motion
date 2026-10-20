@@ -1,0 +1,35 @@
+{
+  "subject": "horse",
+  "revision": "v1",
+  "verdict": "reference_stronger",
+  "scope": "Still-key drawing review only: inspected the four photographs in source-keys.png, design.png and revisions/keys-v1.png. No video playback or motion-quality judgment. The individual final source PNG could not be displayed, so final-key evidence comes from the supplied contact sheet.",
+  "exact_key_evidence": [
+    {
+      "key": 0,
+      "time_seconds": 4.3,
+      "evidence": "The drawing captures a near-frontal hanging head, upright ears and the neck entering from screen left, in the source\u2019s close crop."
+    },
+    {
+      "key": 1,
+      "time_seconds": 5.5,
+      "evidence": "The three-quarter head with the muzzle lower and to screen right is source-related, but the drawing interrupts the low rail at the muzzle, making that portion of the face read in front of the rail."
+    },
+    {
+      "key": 2,
+      "time_seconds": 6.4,
+      "evidence": "The lowered diagonal head is clearly distinct. A thick foreground rail masks the middle of the face and another masks the muzzle tip; this is the clearest drawing of the head behind the fence."
+    },
+    {
+      "key": 3,
+      "time_seconds": 7.5,
+      "evidence": "The neck and head lower toward the hay as in the source. However, the drawing makes the face and muzzle interrupt the lower rails and sinks the muzzle into foreground hay; the source contact sheet retains a low rail in front of the muzzle region. The fence-depth relationship changes rather than remaining a continuous descent behind the rails."
+    }
+  ],
+  "main_gap": "The sequence communicates lowering, but rail occlusion is not physically consistent across the descent. In the final drawing the horse appears to come through/in front of rails that should still occlude it.",
+  "one_bounded_repair": "Correct the foreground rail masks in keys 1 and 3 using their source stills, keeping continuous rail edges in front of the appropriate muzzle/face portions and placing the final muzzle at the source height above the hay; leave the head-angle progression intact.",
+  "protected_strengths": [
+    "Keep the near-frontal to three-quarter to lowered-head progression.",
+    "Keep key 2\u2019s readable foreground-rail masking.",
+    "Keep the angular long face, pointed ears and dot eye that recall the chosen horse doodle."
+  ]
+}

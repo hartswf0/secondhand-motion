@@ -1,0 +1,35 @@
+{
+  "subject": "dog",
+  "revision": "v1",
+  "verdict": "reference_stronger",
+  "scope": "Still-key drawing review only: inspected source-keys.png, source-key-0.png, source-key-1.png, design.png and revisions/keys-v1.png. No video playback or motion-quality judgment.",
+  "exact_key_evidence": [
+    {
+      "key": 0,
+      "time_seconds": 0.2,
+      "evidence": "The source dog presents its hindquarters/back toward the camera while facing the person at upper left. The drawing substitutes a clean left-facing side profile, losing that rear three-quarter camera relationship."
+    },
+    {
+      "key": 1,
+      "time_seconds": 1.4,
+      "evidence": "The source dog is still angled left toward the person, with its body receding rightward. The drawing turns its face almost directly toward the viewer, an unsupported view change."
+    },
+    {
+      "key": 2,
+      "time_seconds": 2.8,
+      "evidence": "The drawing becomes a front three-quarter pose aimed down/right, broadly corresponding to the source\u2019s approach and change of heading. The legs overlap plausibly, with no obvious extra limb."
+    },
+    {
+      "key": 3,
+      "time_seconds": 4.0,
+      "evidence": "The right-facing, lowered-head profile follows the source heading, and four leg silhouettes read as a plausible grounded stride. The bowl, tree and person preserve useful scene anchors."
+    }
+  ],
+  "main_gap": "Keys 0 and 1 replace the source\u2019s rear/left three-quarter progression with a side pose and a viewer-facing pose. That changes the action staging even though later keys and the angular wedge-headed character are readable.",
+  "one_bounded_repair": "Redraw only keys 0 and 1 from their source camera angles: show the back/hindquarters in key 0 and the left-facing three-quarter stance in key 1, preserving the existing angular dog identity and four-legged ground contact.",
+  "protected_strengths": [
+    "Keep the long angular muzzle and polygon eye motif that connect the set to the chosen doodle.",
+    "Keep keys 2 and 3\u2019s changing heading and leg overlap.",
+    "Keep the bowl, tree and person as spatial anchors; do not add limbs."
+  ]
+}

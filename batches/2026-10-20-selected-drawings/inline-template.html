@@ -1,0 +1,40 @@
+<div id="selected-drawing-repairs">
+  <div class="viz-controls">
+    <label class="form-label">Clip<select class="form-select" data-subject></select></label>
+    <label class="form-label">Drawing<select class="form-select" data-revision><option value="selected">Selected repair</option><option value="first">First pass</option></select></label>
+  </div>
+  <div class="dr-pair">
+    <figure><figcaption>Archive frame</figcaption><img data-photo width="384" height="288" alt="Selected archive source pose"></figure>
+    <figure><figcaption data-art-label>Selected drawing</figcaption><img data-art width="384" height="288" alt="Redrawn cartoon pose"></figure>
+  </div>
+  <div class="viz-controls" data-keys aria-label="Select key pose">
+    <button class="btn" type="button" data-key="0" aria-pressed="false">Key 1</button>
+    <button class="btn" type="button" data-key="1" aria-pressed="false">Key 2</button>
+    <button class="btn" type="button" data-key="2" aria-pressed="true">Key 3</button>
+    <button class="btn" type="button" data-key="3" aria-pressed="false">Key 4</button>
+    <output class="tabular-nums" data-time></output>
+  </div>
+  <div class="text-small" data-detail aria-live="polite"></div>
+</div>
+<style>
+#selected-drawing-repairs{color:var(--foreground)}
+#selected-drawing-repairs .dr-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin:12px 0}
+#selected-drawing-repairs figure{margin:0;min-width:0}
+#selected-drawing-repairs figcaption{margin-bottom:8px}
+#selected-drawing-repairs img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+#selected-drawing-repairs [data-detail]{margin-top:12px;overflow-wrap:anywhere}
+@media(max-width:440px){#selected-drawing-repairs .dr-pair{grid-template-columns:minmax(0,1fr)}}
+</style>
+<script>
+(()=>{
+const root=document.getElementById('selected-drawing-repairs'),data=__DRAWING_DATA__;
+const subject=root.querySelector('[data-subject]'),revision=root.querySelector('[data-revision]'),photo=root.querySelector('[data-photo]'),art=root.querySelector('[data-art]'),artLabel=root.querySelector('[data-art-label]'),time=root.querySelector('[data-time]'),detail=root.querySelector('[data-detail]'),keys=Array.from(root.querySelectorAll('[data-key]'));
+let itemIndex=0,keyIndex=data.items[0].hero;
+data.items.forEach((item,i)=>{const option=document.createElement('option');option.value=String(i);option.textContent=item.title;subject.append(option);});
+function render(){const item=data.items[itemIndex],first=revision.value==='first';photo.src=item.photos[keyIndex];art.src=item[first?'first':'selected'][keyIndex];photo.alt=item.title+' source pose at '+item.times[keyIndex].toFixed(2)+' seconds';art.alt=item.title+' '+(first?'first pass':'selected repaired drawing')+' key '+(keyIndex+1);artLabel.textContent=first?'First drawing':'Selected repair';time.textContent=item.times[keyIndex].toFixed(2)+' s';keys.forEach((b,i)=>b.setAttribute('aria-pressed',String(i===keyIndex)));detail.textContent=first?'First pass · reference stronger':item.note;}
+subject.addEventListener('change',()=>{itemIndex=Number(subject.value);keyIndex=data.items[itemIndex].hero;render();});
+revision.addEventListener('change',render);
+keys.forEach(button=>button.addEventListener('click',()=>{keyIndex=Number(button.dataset.key);render();}));
+root.drawingRepairs={getState:()=>({itemIndex,keyIndex,revision:revision.value})};render();
+})();
+</script>

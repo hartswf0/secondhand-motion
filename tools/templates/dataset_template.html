@@ -1,0 +1,84 @@
+<title>Archive Doodle Index</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: search + sort bar, category grid (score bar per category), selected category's clip table. */
+:root{
+  --paper:#EEF1F4; --sheet:#F9FAFB; --ink:#171B24; --muted:#5D6573; --rule:#D3D9E1; --blue:#2F6FD8; --blue-soft:#DCE7F8; --key:#C8402F;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif; --body:"Atkinson Hyperlegible","Segoe UI",Roboto,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;--key:#F07A68;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;--key:#F07A68;color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:15px/1.5 var(--body);padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 48px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+header{padding-top:24px;display:flex;flex-direction:column;gap:6px}
+h1{font:700 clamp(28px,6vw,46px)/1.02 var(--display);margin:0}
+h2{font:700 20px/1.2 var(--display);margin:0}
+.lede{margin:0;color:var(--muted);max-width:66ch}
+.meta{font:12px var(--mono);color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+input[type=search]{flex:1 1 220px;font:15px var(--body);padding:8px 12px;border:1px solid var(--rule);border-radius:6px;background:var(--sheet);color:var(--ink)}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.seg button{font:600 13px var(--body);background:var(--sheet);color:var(--ink);border:0;padding:7px 11px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.cat{all:unset;box-sizing:border-box;cursor:pointer;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:7px 9px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.cat[aria-pressed="true"]{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
+.cat b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.track{height:4px;background:var(--rule);border-radius:2px;overflow:hidden}
+.track i{display:block;height:100%;background:var(--blue)}
+.cat .meta{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
+.tablebox{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font:13px var(--body);font-variant-numeric:tabular-nums}
+th,td{padding:6px 10px;border-bottom:1px solid var(--rule);text-align:left;white-space:nowrap}
+th{color:var(--muted);font:600 12px var(--mono)}
+td.t{white-space:normal;min-width:220px}
+a{color:var(--blue)}
+.pill{font:600 11px var(--mono);padding:1px 6px;border-radius:3px;background:var(--blue-soft);color:var(--blue)}
+.pill.q{background:transparent;border:1px solid var(--key);color:var(--key)}
+</style>
+<div class="wrap">
+<header>
+  <h1>Archive Doodle Index</h1>
+  <p class="lede">The 345 Quick, Draw! categories matched to shots in the Moving Image Archive. Each category holds its top shots from the archive's own image search, ranked by similarity score. Pick a category to see its shots; each row links to the shot on the archive.</p>
+  <div class="meta" id="sum"></div>
+</header>
+<div class="bar">
+  <input type="search" id="q" placeholder="Find a category or film title" aria-label="Search">
+  <div class="seg" role="group" aria-label="Sort" id="sort"></div>
+</div>
+<div class="grid" id="grid"></div>
+<section style="display:flex;flex-direction:column;gap:10px">
+  <h2 id="ct"></h2>
+  <div class="meta" id="cm"></div>
+  <div class="tablebox"><table><thead><tr><th>#</th><th>Score</th><th>Film</th><th>Year</th><th>At</th><th>Length</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+</section>
+</div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+const D=JSON.parse(document.getElementById('data').textContent);
+const SORTS=[['az','A–Z'],['top','Best match'],['weak','Weakest match']];let sort='az',sel='giraffe',q='';
+const tops=D.cats.map(c=>c.top);const tmin=Math.min(...tops),tmax=Math.max(...tops);
+const total=D.cats.reduce((a,c)=>a+c.n,0);
+document.getElementById('sum').textContent=`${D.cats.length} categories · ${total.toLocaleString()} shot matches · ${D.slugs.length.toLocaleString()} source films · collected 20 Oct 2026`;
+const sb=document.getElementById('sort');SORTS.forEach(([k,l])=>{const b=document.createElement('button');b.textContent=l;b.setAttribute('aria-pressed',String(k===sort));b.onclick=()=>{sort=k;[...sb.children].forEach(x=>x.setAttribute('aria-pressed',String(x===b)));grid();};sb.append(b);});
+const titleHit=t=>D.titles.findIndex(x=>x.toLowerCase().includes(t));
+function grid(){const g=document.getElementById('grid');g.replaceChildren();let cs=[...D.cats];
+  if(q){cs=cs.filter(c=>c.c.toLowerCase().includes(q)||(D.clips[c.c]||[]).some(r=>D.titles[r[2]].toLowerCase().includes(q)));}
+  if(sort==='top')cs.sort((a,b)=>b.top-a.top);else if(sort==='weak')cs.sort((a,b)=>a.top-b.top);else cs.sort((a,b)=>a.c.localeCompare(b.c));
+  cs.forEach(c=>{const b=document.createElement('button');b.className='cat';b.setAttribute('aria-pressed',String(c.c===sel));
+    const n=document.createElement('b');n.textContent=c.c;const tr=document.createElement('div');tr.className='track';const i=document.createElement('i');i.style.width=(8+92*(c.top-tmin)/(tmax-tmin))+'%';tr.append(i);
+    const m=document.createElement('div');m.className='meta';m.innerHTML=`<span>${c.top.toFixed(3)}</span><span>${c.n} shots</span>`;b.append(n,tr,m);b.onclick=()=>{sel=c.c;grid();table();document.getElementById('ct').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});};g.append(b);});}
+function table(){const c=D.cats.find(x=>x.c===sel);const rows=D.clips[sel]||[];document.getElementById('ct').textContent=sel;
+  document.getElementById('cm').textContent=`${rows.length} shots from ${c.src} films · top score ${c.top.toFixed(3)} · mean ${c.mean.toFixed(3)}`+(c.q!==c.c?` · searched as “${c.q}” because the single word returned unrelated shots`:'');
+  const tb=document.getElementById('rows');tb.replaceChildren();
+  rows.forEach((r,i)=>{const [id,sc,t,y,st,du,sl]=r;const tr=document.createElement('tr');
+    const cells=[String(i+1),sc.toFixed(3),null,y?String(y):'—',`${Math.floor(st/60)}:${String(st%60).padStart(2,'0')}`,du+' s',null];
+    cells.forEach((v,k)=>{const td=document.createElement('td');if(k===2){td.className='t';td.textContent=D.titles[t];}else if(k===6){const a=document.createElement('a');a.href=`https://www.movingimagearchive.com/sources/${D.slugs[sl]}?clip=${id}`;a.target='_blank';a.rel='noopener';a.textContent='Open shot';td.append(a);}else td.textContent=v;tr.append(td);});
+    tb.append(tr);});}
+document.getElementById('q').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();grid();});
+grid();table();
+})();
+</script>

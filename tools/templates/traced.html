@@ -1,0 +1,115 @@
+__HEAD__
+<title>Traced Keys</title>
+<style>
+/* Layout: subject picker; one subject = stats strip, held playback beside the doodle, then four key cards (footage / drawn / traced). */
+.picker{display:flex;flex-wrap:wrap;gap:6px}
+.picker button{font:600 14px var(--body);background:var(--sheet);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:7px 12px;cursor:pointer}
+.picker button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.stat{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}
+.stat .v{font:600 22px var(--mono);font-variant-numeric:tabular-nums}
+.stat .l{font-size:13px;color:var(--muted)}
+.stat.bad .v{color:var(--fail)}.stat.good .v{color:var(--pass)}
+.stage{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:14px;align-items:start}
+@media (max-width:760px){.stage{grid-template-columns:1fr}}
+.frame{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:hidden;display:block;width:100%}
+.frame svg,.frame img{display:block;width:100%;height:auto}
+.ctrl{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ctrl button{font:600 13px var(--body);background:var(--sheet);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:6px 10px;cursor:pointer}
+.ctrl button[aria-pressed="true"]{border-color:var(--blue);color:var(--blue)}
+.legend{display:flex;gap:14px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.sw{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
+.key{display:flex;flex-direction:column;gap:6px;min-width:0}
+.key .row{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.key .meta{display:flex;justify-content:space-between;gap:8px}
+figure{margin:0;display:flex;flex-direction:column;gap:6px}
+figcaption{font-size:13px;color:var(--muted)}
+svg .bg{stroke:#9AA3B0}
+svg .ch{stroke:var(--line)}
+.frame{--line:#171B24}
+</style>
+__NAV__
+<div class="wrap">
+<header>
+  <span class="eyebrow">Stage 5 · the join between the two lanes</span>
+  <h1>Traced Keys</h1>
+  <p class="lede">The 40 selected drawings were stills drawn by an image model. Tracing turns each one into pen strokes, the same kind of data a Quick, Draw! doodle is, so a key can be in-betweened, put on a depth plane and measured. Grey strokes stay in place across the subject's four keys; dark strokes change.</p>
+  <p class="meta" id="sum"></p>
+</header>
+<div class="picker" id="picker" role="group" aria-label="Subject"></div>
+<section aria-labelledby="sh">
+  <h2 id="sh"></h2>
+  <div class="stats" id="stats"></div>
+  <div class="stage">
+    <figure>
+      <div class="frame" id="play"></div>
+      <div class="ctrl">
+        <button id="pp" aria-pressed="true">Pause</button>
+        <button id="draw">Draw strokes in order</button>
+        <span class="legend"><span><i class="sw" style="background:#171B24"></i>changes between keys</span><span><i class="sw" style="background:#9AA3B0"></i>stays put</span></span>
+      </div>
+      <figcaption>Traced strokes, four keys held for a third of a second each, no in-betweens yet.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" id="design" alt="">
+      <figcaption id="dcap"></figcaption>
+    </figure>
+  </div>
+  <div class="keys" id="keys"></div>
+  <div class="notes">
+    <div class="note"><b>What the numbers say</b><p>Recall is the share of the drawing's ink that a traced line covers. Ink pieces kept counts whole marks, so a missing eye shows up even when recall is high. Precision is 1.0 by construction and is not shown.</p></div>
+    <div class="note"><b>What the layers say</b><p>On a locked-off shot most background strokes should stay put. They do not: the image model redrew the trees, bowl and ground on every key. The fix is upstream: one background plate per shot, the character drawn on blank for each key.</p></div>
+    <div class="note"><b>What is still missing</b><p>The four keys do not share a topology, so they cannot be in-betweened yet. Next is fitting the rig to each trace, as the giraffe shot does over SAM silhouettes.</p></div>
+  </div>
+</section>
+</div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+const D=JSON.parse(document.getElementById('data').textContent);
+const B=D.batch;const names=Object.keys(D.subjects);let cur=names.includes('dog')?'dog':names[0],k=0,timer=null,playing=true;
+const NS='http://www.w3.org/2000/svg';
+function svg(e,key,cls){const s=document.createElementNS(NS,'svg');s.setAttribute('viewBox',`0 0 ${e.W} ${e.H}`);s.setAttribute('role','img');
+  const r=document.createElementNS(NS,'rect');r.setAttribute('width',e.W);r.setAttribute('height',e.H);r.setAttribute('fill','#fff');s.append(r);
+  key.strokes.forEach((st,i)=>{const p=document.createElementNS(NS,'polyline');p.setAttribute('points',st.map(q=>q.join(',')).join(' '));
+    p.setAttribute('fill','none');p.setAttribute('stroke-width','2.2');p.setAttribute('stroke-linecap','round');p.setAttribute('stroke-linejoin','round');
+    p.setAttribute('class',key.layer[i]==='bg'?'bg':'ch');s.append(p);});return s;}
+function stat(v,l,cls){const d=document.createElement('div');d.className='stat'+(cls?' '+cls:'');d.innerHTML='<span class="v"></span><span class="l"></span>';d.querySelector('.v').textContent=v;d.querySelector('.l').textContent=l;return d;}
+function pick(){const pk=document.getElementById('picker');pk.replaceChildren();
+  names.forEach(n=>{const b=document.createElement('button');b.textContent=n;b.setAttribute('aria-pressed',String(n===cur));b.onclick=()=>{cur=n;k=0;render();pick();};pk.append(b);});}
+function render(){const e=D.subjects[cur];const ks=e.keys;
+  document.getElementById('sh').textContent=cur;
+  const rec=Math.min(...ks.map(x=>x.recall)),parts=Math.min(...ks.map(x=>x.parts_kept));
+  const strokes=Math.round(ks.reduce((a,x)=>a+x.n_strokes,0)/ks.length);
+  const still=ks.reduce((a,x)=>a+(x.n_strokes-x.char_strokes),0)/ks.reduce((a,x)=>a+x.n_strokes,0);
+  const st=document.getElementById('stats');st.replaceChildren(
+    stat(rec.toFixed(3),'lowest recall of four keys (bar 0.98)',rec>=0.98?'good':'bad'),
+    stat(parts.toFixed(2),'ink pieces kept, worst key (bar 1.00)',parts>=1?'good':'bad'),
+    stat(String(strokes),'strokes per key'),
+    stat(Math.round(still*100)+'%','strokes that stay put between keys',still>=0.9?'good':'bad'));
+  const dz=document.getElementById('design');dz.src=`${B}/subjects/${cur}/design.png`;dz.alt=`The chosen Quick, Draw! ${cur} doodle`;
+  document.getElementById('dcap').textContent=`The Quick, Draw! ${cur} whose identity the keys keep. ${e.reviews} review rounds; selected revision ${e.revision}.`;
+  const kb=document.getElementById('keys');kb.replaceChildren();
+  ks.forEach((key,i)=>{const c=document.createElement('div');c.className='key';
+    const m=document.createElement('div');m.className='meta';m.innerHTML='<span></span><span></span>';m.children[0].textContent=`Key ${i+1}`;m.children[1].textContent=`${key.n_strokes} strokes · recall ${key.recall.toFixed(3)}`;
+    const row=document.createElement('div');row.className='row';
+    const a=document.createElement('img');a.className='frame';a.src=`${B}/subjects/${cur}/source-key-${i}.png`;a.alt=`Footage at key ${i+1}`;a.loading='lazy';
+    const b=document.createElement('img');b.className='frame';b.src=`${B}/${key.file}`;b.alt=`Drawn key ${i+1}`;b.loading='lazy';
+    row.append(a,b);const t=document.createElement('div');t.className='frame';t.append(svg(e,key));
+    c.append(m,row,t);kb.append(c);});
+  show();}
+function show(){const e=D.subjects[cur];const p=document.getElementById('play');p.replaceChildren(svg(e,e.keys[k]));}
+function tick(){k=(k+1)%D.subjects[cur].keys.length;show();}
+function play(on){playing=on;clearInterval(timer);if(on)timer=setInterval(tick,333);const b=document.getElementById('pp');b.textContent=on?'Pause':'Play';b.setAttribute('aria-pressed',String(on));}
+document.getElementById('pp').onclick=()=>play(!playing);
+document.getElementById('draw').onclick=()=>{play(false);const s=document.querySelector('#play svg');const ps=[...s.querySelectorAll('polyline')];
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;if(reduce)return;
+  let t=0;ps.forEach(p=>{const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;
+    p.animate([{strokeDashoffset:L},{strokeDashoffset:0}],{duration:Math.max(60,L*3),delay:t,fill:'forwards'});t+=Math.max(30,L*1.2);});};
+const tot=names.reduce((a,n)=>a+D.subjects[n].keys.length,0);
+document.getElementById('sum').textContent=`${names.length} subjects · ${tot} keys · traced with tools/trace_keys.py · ${D.when}`;
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)playing=false;
+pick();render();play(playing);
+})();
+</script>

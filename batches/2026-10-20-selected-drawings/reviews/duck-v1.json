@@ -1,0 +1,32 @@
+{
+  "subject": "duck",
+  "revision": "v1",
+  "verdict": "reference_stronger",
+  "review_scope": "Independent visual comparison of source-keys.png, design.png, revisions/keys-v1.png and source.json only. Four chronological still keys in 2x2 order; no normal-speed playback inspected and no motion approval.",
+  "timed_key_evidence": [
+    {
+      "time_seconds": 0.1,
+      "evidence": "Source duck has a left-facing bill over a forward-facing, planted body. Drawing preserves the leftward head/bill and two broad grounded feet."
+    },
+    {
+      "time_seconds": 1.1,
+      "evidence": "Source faces forward with the bill directed down the image, while body and feet stay planted. Drawing supplies a frontal head, two visible eyes and a downward frontal bill over the same stance."
+    },
+    {
+      "time_seconds": 2.2,
+      "evidence": "Source remains near frontal, with the bill pointing toward the viewer/downward. Drawing instead turns the head strongly to image right and presents a long lateral bill with one visible eye, adding a view change unsupported by this source key."
+    },
+    {
+      "time_seconds": 3.8,
+      "evidence": "Source again has a near-frontal head and planted feet. Drawing returns toward frontal/three-quarter view while retaining the same feet and body support."
+    }
+  ],
+  "main_gap": "The 2.2-second key invents a strong right-facing head turn where the source remains near frontal. Body support and recognizably simple angular duck construction are otherwise coherent.",
+  "bounded_repair": "Redraw only the head and bill in the 2.2-second key as the source\u2019s near-frontal view, with both eye positions readable and a foreshortened downward bill; preserve the neck attachment, body, wings and planted feet.",
+  "protected_strengths": [
+    "Feet and body remain planted across all four keys.",
+    "Both legs connect coherently into broad angular webbed feet.",
+    "The long neck, simple outline and angular bill/feet keep the selected QuickDraw duck identity recognizable.",
+    "The first two keys clearly distinguish left-facing from frontal head views."
+  ]
+}

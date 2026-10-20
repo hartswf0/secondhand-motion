@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --paper:#EEF1F4; --sheet:#F9FAFB; --ink:#171B24; --muted:#5D6573; --rule:#D3D9E1; --blue:#2F6FD8; --blue-soft:#DCE7F8;
+  --pass:#1F7A4D; --pass-soft:#DDF0E5; --fail:#C8402F; --fail-soft:#F8E1DD; --line:#171B24; --card:#FFFFFF;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif; --body:"Atkinson Hyperlegible","Segoe UI",Roboto,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;--pass:#6FCF9B;--pass-soft:#16301F;--fail:#F07A68;--fail-soft:#3A1E1A;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0F1217;--sheet:#171B22;--ink:#E7EAEF;--muted:#98A1AF;--rule:#2A303A;--blue:#7AA8F0;--blue-soft:#1C2A40;--pass:#6FCF9B;--pass-soft:#16301F;--fail:#F07A68;--fail-soft:#3A1E1A;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--body);padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 56px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+.repo-nav{max-width:1080px;margin:0 auto;padding:14px 0 0;display:flex;gap:14px;flex-wrap:wrap;font:600 13px var(--body)}
+.repo-nav a{color:var(--muted);text-decoration:none}.repo-nav a:hover,.repo-nav a[aria-current]{color:var(--ink)}
+header{padding-top:20px;display:flex;flex-direction:column;gap:10px}
+h1{font:700 clamp(30px,6.5vw,56px)/1.02 var(--display);margin:0;letter-spacing:-.015em;text-wrap:balance}
+h2{font:700 24px/1.15 var(--display);margin:0;text-wrap:balance}
+h3{font:700 18px/1.2 var(--display);margin:0}
+.lede{margin:0;max-width:64ch;font-size:17px}
+.meta{font:12px var(--mono);color:var(--muted)}
+.eyebrow{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+section{display:flex;flex-direction:column;gap:14px;min-width:0}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.tablebox{overflow-x:auto;border:1px solid var(--rule);border-radius:8px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font:600 12px var(--mono);color:var(--muted);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{font:13px var(--mono);background:var(--blue-soft);padding:1px 4px;border-radius:3px}
+.st{font:600 11px var(--mono);padding:2px 7px;border-radius:3px;white-space:nowrap}
+.st.pass{background:var(--pass-soft);color:var(--pass)}
+.st.fail{background:var(--fail-soft);color:var(--fail)}
+.st.none{border:1px solid var(--rule);color:var(--muted)}
+.note{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.note b{font-size:15px}.note p{margin:0;font-size:14px;color:var(--muted)}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+</style>
+
+<title>Agent Prompt</title>
+<style>
+.doc{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:0}
+.doc h1{margin:20px 0 14px}
+.doc h2{margin:36px 0 10px}
+.doc h3{margin:24px 0 8px}
+.doc p,.doc li{max-width:72ch}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc table{margin:8px 0 4px;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;display:block;overflow-x:auto}
+.doc td:first-child{white-space:nowrap;font-family:var(--mono);font-size:13px}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.tools button{font:600 13px var(--body);background:var(--ink);color:var(--paper);border:0;border-radius:6px;padding:8px 12px;cursor:pointer}
+.tools .meta{flex:1}
+</style>
+<style>.repo-nav{max-width:1080px;margin:0 auto;padding:14px 0 0;display:flex;gap:14px;flex-wrap:wrap;font:600 13px "Atkinson Hyperlegible","Segoe UI",sans-serif}.repo-nav a{color:#5D6573;text-decoration:none}.repo-nav a[aria-current]{color:inherit}</style><nav class="repo-nav" aria-label="Repository"><a href="../index.html">Index</a><a href="../pages/pipeline.html">Pipeline</a><a href="../pages/agent-prompt.html" aria-current="page">Agent prompt</a><a href="../pages/archive-doodle-index.html">Dataset</a><a href="../pages/giraffe-walks-past.html">Giraffe shot</a><a href="../pages/traced-keys.html">Traced keys</a><a href="../batches/2026-10-20-selected-drawings/index.html">Selected drawings</a></nav>
+<main class="doc">
+<div class="tools"><span class="meta">Source: AGENTS.md. Fill {CATEGORY} and {WAVE} from data/subject_queue.json.</span><button id="copy" type="button">Copy prompt as Markdown</button></div>
+<h1>Agent prompt: turn one archive shot into a doodle cartoon</h1>
+<p>You are working in the Cartoon Archive repository. The goal of the project is that any shot in the
+Moving Image Archive can be watched as a moving Quick, Draw! cartoon: the subject redrawn in the
+identity of one real doodle, moving the way the footage moves, on depth planes that slide with the
+real camera. You take <strong>one subject</strong> from the queue and carry it through the pipeline as far as the
+gates allow. A smaller result that passes its gates is worth more than a complete one that does not.</p>
+<p>Read <a href="../pages/pipeline.html"><code>pages/pipeline.html</code></a> (or <code>PIPELINE.md</code>) for the stage contracts before you start. This prompt
+tells you how to work; the pipeline tells you what each stage must produce.</p>
+<h2>Your assignment</h2>
+<ul>
+<li>Subject: <code>{CATEGORY}</code> (from <a href="../data/subject_queue.json"><code>data/subject_queue.json</code></a>, wave <code>{WAVE}</code>).</li>
+<li>Work folder: <code>shots/{CATEGORY}/</code>. Create it. Everything you make goes there, nowhere else.</li>
+<li>Starting state: if the folder already has a <code>shot.json</code> or a <code>ledger.jsonl</code>, read both and continue
+  from the last accepted revision. Never start over silently.</li>
+</ul>
+<h2>How to work</h2>
+<ol>
+<li><strong>Watch before you choose.</strong> Search results are ranked by an image-text model, not by a person.
+   Look at a contact sheet of at least 12 frames across every candidate clip before picking one.
+   Reject clips with cuts, dissolves, a different species or object, or a subject smaller than about
+   a tenth of the frame. Write down why the chosen interval is one continuous event.</li>
+<li><strong>Pick one doodle and keep it.</strong> The character must stay recognisably the same Quick, Draw!
+   drawing in every key: same construction, same stroke habits, same simplifications. Record its
+   <code>key_id</code>. A conventional cartoon of the animal is a failure even if it looks better.</li>
+<li><strong>Plan keys from the footage, not from habit.</strong> Choose key times where the motion changes:
+   contacts, extremes, turns, a head lifting. Write one line per key in the x-sheet saying what
+   happens there.</li>
+<li><strong>Draw the character and the background separately.</strong> Draw the background plate once per shot
+   and the character on a blank ground for each key. When an image model redraws the whole frame
+   per key, the set dressing changes every key and the background boils (the selected-drawings
+   batch had this problem: in the dog shot, where the trees and bowl barely move, only about a fifth of the traced strokes stay in place from key to key).</li>
+<li><strong>Trace every key to strokes</strong> with <a href="../tools/trace_keys.py"><code>tools/trace_keys.py</code></a>. Vector strokes are what can be
+   in-betweened, placed on planes and measured. A raster key is a reference, not a deliverable.</li>
+<li><strong>Give the keys one topology.</strong> In-betweening needs the same parts in every key. Fit the
+   subject's rig (pose points: head, body, limbs, contacts) to each traced key over the SAM
+   silhouette, or establish stroke-to-stroke correspondence. Do not morph unmatched strokes.</li>
+<li><strong>In-between with the footage's physics.</strong> Feet that are planted in the footage stay planted in
+   world space; the camera pan comes from the footage; held frames are allowed and often right.</li>
+<li><strong>Run the tests, then look.</strong> Every numeric pass is followed by looking at the frames, because
+   tests can pass while the drawing gets worse (see the notes in <a href="../pages/pipeline.html"><code>pages/pipeline.html</code></a>).</li>
+<li><strong>Get a blind critique.</strong> Hand the critic only the files listed under <em>Critic packet</em>, never your
+   reasoning or this conversation. Repair the one bounded gap the critic names, then ask a fresh
+   critic. Stop after three rounds and record what is still wrong.</li>
+<li><strong>Write everything to the ledger.</strong> Each proposal, critic verdict and repair is one line in
+    <code>shots/{CATEGORY}/ledger.jsonl</code> (format: <a href="../batches/2026-10-20-selected-drawings/schema.json"><code>batches/2026-10-20-selected-drawings/schema.json</code></a>,
+    append with <code>loop.py</code>). Rejected candidates stay in the folder.</li>
+</ol>
+<h2>Gates you must not lower</h2>
+<table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Bar</th>
+<th>Stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Continuous source</td>
+<td>no cut or dissolve inside the interval, checked on a contact sheet</td>
+<td>select</td>
+</tr>
+<tr>
+<td>Identity kept</td>
+<td>a fresh critic shown the doodle and the keys says it is the same drawing</td>
+<td>keys</td>
+</tr>
+<tr>
+<td>Trace fidelity</td>
+<td>recall ≥ 0.98 and every ink piece kept (<code>parts_kept</code> = 1.0)</td>
+<td>trace</td>
+</tr>
+<tr>
+<td>Held background</td>
+<td>≥ 90% of background strokes unchanged between keys on a locked-off shot</td>
+<td>keys</td>
+</tr>
+<tr>
+<td>Recognition</td>
+<td>Quick, Draw! classifier p above 0.75 for the category on every key</td>
+<td>keys</td>
+</tr>
+<tr>
+<td>Mask fit</td>
+<td>mean at least 0.65 and no frame below 0.45</td>
+<td>rig</td>
+</tr>
+<tr>
+<td>Foot slide</td>
+<td>planted contacts drift under 2 px in world space, measured on at least 4 planted intervals</td>
+<td>in-between</td>
+</tr>
+<tr>
+<td>Playback</td>
+<td>a fresh critic watches at normal speed and approves the motion</td>
+<td>critic</td>
+</tr>
+</tbody>
+</table>
+<p>If a gate cannot be met, say so in the ledger and in your report. Never change a bar, a test, or a
+threshold to make your work pass. If a test measures nothing (zero intervals, zero frames), it fails.</p>
+<h2>What you may and may not claim</h2>
+<ul>
+<li>Say exactly what ran. If no model was trained, write "no training ran". An agent choosing among
+  candidates with a critic is search, not reinforcement learning.</li>
+<li>Still-key approval is not motion approval. Keep those two verdicts separate everywhere.</li>
+<li>Every drawing names its source: a Quick, Draw! <code>key_id</code>, an image-model prompt file, or "drawn by
+  agent" with the reason no real doodle fitted.</li>
+<li>Keep the archive's source ids, interval and reported rights in <code>source.json</code>. Quick, Draw! is
+  CC BY 4.0 and must be credited.</li>
+</ul>
+<h2>Deliverables in <code>shots/{CATEGORY}/</code></h2>
+<ul>
+<li><code>source.json</code> — clip id, source id, interval, archive URLs, reported rights, why this clip.</li>
+<li><code>design.json</code>, <code>design.png</code> — the chosen doodle.</li>
+<li><code>contact-sheet.png</code> — the frames you watched to choose.</li>
+<li><code>keys/</code> — raster keys, prompts, background plate, and <code>traced.json</code> from <a href="../tools/trace_keys.py"><code>tools/trace_keys.py</code></a>.</li>
+<li><code>poses.json</code> — rig points per key (or <code>correspondence.json</code>).</li>
+<li><code>shot.json</code> — the single state file: planes, camera, objects, cast frames, x-sheet. Same schema
+  as <a href="../shots/giraffe-walks-past/shot.json"><code>shots/giraffe-walks-past/shot.json</code></a>.</li>
+<li><code>tests.json</code> — every gate above with value, bar and pass or fail.</li>
+<li><code>reviews/</code> — each critic's verdict file, unedited.</li>
+<li><code>ledger.jsonl</code> — append-only.</li>
+<li><code>index.html</code> — the shot page, built by <code>python3 tools/build_pages.py</code>; it must open from the file
+  system with no server and no network except fonts.</li>
+</ul>
+<p>End with a short report: which gates passed, which failed, the one change that would most improve
+the shot, and how long each stage took.</p>
+<h2>Critic packet (give the critic only this)</h2>
+<ul>
+<li>the source contact sheet and <code>source.json</code> interval,</li>
+<li><code>design.png</code> (the doodle the character must stay),</li>
+<li>the keys as stills, and for playback review the rendered shot at normal speed,</li>
+<li>this instruction: "Say whether the bar is met. If not, name the one gap that matters most and the
+  smallest repair that would close it. Name what must not be lost in the repair. Do not suggest
+  style changes beyond the doodle's own."</li>
+</ul>
+<p>The critic does not see the builder's notes, earlier critiques, or test numbers.</p>
+</main>
+<script id="src" type="text/plain"># Agent prompt: turn one archive shot into a doodle cartoon
+
+You are working in the Cartoon Archive repository. The goal of the project is that any shot in the
+Moving Image Archive can be watched as a moving Quick, Draw! cartoon: the subject redrawn in the
+identity of one real doodle, moving the way the footage moves, on depth planes that slide with the
+real camera. You take **one subject** from the queue and carry it through the pipeline as far as the
+gates allow. A smaller result that passes its gates is worth more than a complete one that does not.
+
+Read `pages/pipeline.html` (or `PIPELINE.md`) for the stage contracts before you start. This prompt
+tells you how to work; the pipeline tells you what each stage must produce.
+
+## Your assignment
+
+- Subject: `{CATEGORY}` (from `data/subject_queue.json`, wave `{WAVE}`).
+- Work folder: `shots/{CATEGORY}/`. Create it. Everything you make goes there, nowhere else.
+- Starting state: if the folder already has a `shot.json` or a `ledger.jsonl`, read both and continue
+  from the last accepted revision. Never start over silently.
+
+## How to work
+
+1. **Watch before you choose.** Search results are ranked by an image-text model, not by a person.
+   Look at a contact sheet of at least 12 frames across every candidate clip before picking one.
+   Reject clips with cuts, dissolves, a different species or object, or a subject smaller than about
+   a tenth of the frame. Write down why the chosen interval is one continuous event.
+2. **Pick one doodle and keep it.** The character must stay recognisably the same Quick, Draw!
+   drawing in every key: same construction, same stroke habits, same simplifications. Record its
+   `key_id`. A conventional cartoon of the animal is a failure even if it looks better.
+3. **Plan keys from the footage, not from habit.** Choose key times where the motion changes:
+   contacts, extremes, turns, a head lifting. Write one line per key in the x-sheet saying what
+   happens there.
+4. **Draw the character and the background separately.** Draw the background plate once per shot
+   and the character on a blank ground for each key. When an image model redraws the whole frame
+   per key, the set dressing changes every key and the background boils (the selected-drawings
+   batch had this problem: in the dog shot, where the trees and bowl barely move, only about a fifth of the traced strokes stay in place from key to key).
+5. **Trace every key to strokes** with `tools/trace_keys.py`. Vector strokes are what can be
+   in-betweened, placed on planes and measured. A raster key is a reference, not a deliverable.
+6. **Give the keys one topology.** In-betweening needs the same parts in every key. Fit the
+   subject's rig (pose points: head, body, limbs, contacts) to each traced key over the SAM
+   silhouette, or establish stroke-to-stroke correspondence. Do not morph unmatched strokes.
+7. **In-between with the footage's physics.** Feet that are planted in the footage stay planted in
+   world space; the camera pan comes from the footage; held frames are allowed and often right.
+8. **Run the tests, then look.** Every numeric pass is followed by looking at the frames, because
+   tests can pass while the drawing gets worse (see the notes in `pages/pipeline.html`).
+9. **Get a blind critique.** Hand the critic only the files listed under *Critic packet*, never your
+   reasoning or this conversation. Repair the one bounded gap the critic names, then ask a fresh
+   critic. Stop after three rounds and record what is still wrong.
+10. **Write everything to the ledger.** Each proposal, critic verdict and repair is one line in
+    `shots/{CATEGORY}/ledger.jsonl` (format: `batches/2026-10-20-selected-drawings/schema.json`,
+    append with `loop.py`). Rejected candidates stay in the folder.
+
+## Gates you must not lower
+
+| Gate | Bar | Stage |
+|---|---|---|
+| Continuous source | no cut or dissolve inside the interval, checked on a contact sheet | select |
+| Identity kept | a fresh critic shown the doodle and the keys says it is the same drawing | keys |
+| Trace fidelity | recall ≥ 0.98 and every ink piece kept (`parts_kept` = 1.0) | trace |
+| Held background | ≥ 90% of background strokes unchanged between keys on a locked-off shot | keys |
+| Recognition | Quick, Draw! classifier p above 0.75 for the category on every key | keys |
+| Mask fit | mean at least 0.65 and no frame below 0.45 | rig |
+| Foot slide | planted contacts drift under 2 px in world space, measured on at least 4 planted intervals | in-between |
+| Playback | a fresh critic watches at normal speed and approves the motion | critic |
+
+If a gate cannot be met, say so in the ledger and in your report. Never change a bar, a test, or a
+threshold to make your work pass. If a test measures nothing (zero intervals, zero frames), it fails.
+
+## What you may and may not claim
+
+- Say exactly what ran. If no model was trained, write "no training ran". An agent choosing among
+  candidates with a critic is search, not reinforcement learning.
+- Still-key approval is not motion approval. Keep those two verdicts separate everywhere.
+- Every drawing names its source: a Quick, Draw! `key_id`, an image-model prompt file, or "drawn by
+  agent" with the reason no real doodle fitted.
+- Keep the archive's source ids, interval and reported rights in `source.json`. Quick, Draw! is
+  CC BY 4.0 and must be credited.
+
+## Deliverables in `shots/{CATEGORY}/`
+
+- `source.json` — clip id, source id, interval, archive URLs, reported rights, why this clip.
+- `design.json`, `design.png` — the chosen doodle.
+- `contact-sheet.png` — the frames you watched to choose.
+- `keys/` — raster keys, prompts, background plate, and `traced.json` from `tools/trace_keys.py`.
+- `poses.json` — rig points per key (or `correspondence.json`).
+- `shot.json` — the single state file: planes, camera, objects, cast frames, x-sheet. Same schema
+  as `shots/giraffe-walks-past/shot.json`.
+- `tests.json` — every gate above with value, bar and pass or fail.
+- `reviews/` — each critic's verdict file, unedited.
+- `ledger.jsonl` — append-only.
+- `index.html` — the shot page, built by `python3 tools/build_pages.py`; it must open from the file
+  system with no server and no network except fonts.
+
+End with a short report: which gates passed, which failed, the one change that would most improve
+the shot, and how long each stage took.
+
+## Critic packet (give the critic only this)
+
+- the source contact sheet and `source.json` interval,
+- `design.png` (the doodle the character must stay),
+- the keys as stills, and for playback review the rendered shot at normal speed,
+- this instruction: "Say whether the bar is met. If not, name the one gap that matters most and the
+  smallest repair that would close it. Name what must not be lost in the repair. Do not suggest
+  style changes beyond the doodle's own."
+
+The critic does not see the builder's notes, earlier critiques, or test numbers.
+</script>
+<script>
+(function(){const b=document.getElementById('copy');if(!b)return;
+b.addEventListener('click',async()=>{const t=document.getElementById('src').textContent;
+try{await navigator.clipboard.writeText(t);b.textContent='Copied';}catch(e){const r=document.createRange();r.selectNodeContents(document.querySelector('main'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy';}
+setTimeout(()=>b.textContent='Copy prompt as Markdown',1800);});})();
+</script>

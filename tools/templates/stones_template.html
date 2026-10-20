@@ -1,0 +1,255 @@
+<title>Doodle to Footage</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one sticky category rail; a hero replay stage; six numbered stones stacked, each a self-contained visual. */
+:root{
+  --paper:#EEF1F4; --sheet:#F9FAFB; --ink:#171B24; --muted:#5D6573; --rule:#D3D9E1;
+  --blue:#2F6FD8; --blue-soft:#DCE7F8; --red:#C8402F;
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", Roboto, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --stroke:#171B24;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0F1217; --sheet:#171B22; --ink:#E7EAEF; --muted:#98A1AF; --rule:#2A303A;
+  --blue:#7AA8F0; --blue-soft:#1C2A40; --red:#F07A68; --stroke:#E7EAEF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0F1217; --sheet:#171B22; --ink:#E7EAEF; --muted:#98A1AF; --rule:#2A303A;
+  --blue:#7AA8F0; --blue-soft:#1C2A40; --red:#F07A68; --stroke:#E7EAEF; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 48px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+header{padding-top:28px;display:flex;flex-direction:column;gap:8px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,6vw,52px);line-height:1.02;margin:0;letter-spacing:-0.01em;text-wrap:balance}
+.lede{color:var(--muted);max-width:62ch;margin:0}
+.figs{display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.figs b{color:var(--ink);font-weight:600}
+.rail{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);padding-block:10px;border-bottom:1px solid var(--rule);
+  display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin}
+.chip{font:600 13px var(--body);border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:999px;padding:5px 12px;white-space:nowrap;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+section{display:flex;flex-direction:column;gap:14px}
+.eyebrow{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+h2{font-family:var(--display);font-weight:700;font-size:24px;line-height:1.15;margin:0;text-wrap:balance}
+.note{color:var(--muted);margin:0;max-width:65ch}
+.hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:720px){.hero{grid-template-columns:1fr}}
+.stage{position:relative;background:#000;border-radius:6px;overflow:hidden;aspect-ratio:4/3;max-width:100%}
+.stage canvas{width:100%;height:100%;display:block}
+.stage-cap{display:flex;flex-direction:column;gap:6px;min-width:0}
+.cap-title{font-family:var(--display);font-size:20px;font-weight:700}
+.meta{font:12px var(--mono);color:var(--muted)}
+a{color:var(--blue)}
+.sketch{background:var(--sheet);border:1px solid var(--rule);border-radius:4px;display:block;width:100%;aspect-ratio:1}
+.grid8{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
+.cell{display:flex;flex-direction:column;gap:3px;min-width:0}
+.cell .meta{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.worst .sketch{border-style:dashed;opacity:.75}
+.shot{display:flex;flex-direction:column;gap:3px;min-width:0;text-decoration:none;color:inherit}
+.shot img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;background:var(--rule);display:block}
+.shot .meta{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tag{font:600 11px var(--mono);padding:1px 6px;border-radius:3px;background:var(--blue-soft);color:var(--blue);align-self:flex-start}
+.tag.off{background:transparent;color:var(--red);border:1px solid var(--red)}
+.row{display:grid;grid-template-columns:110px repeat(3,minmax(0,1fr));gap:10px;align-items:start}
+@media (max-width:560px){.row{grid-template-columns:80px repeat(3,minmax(0,1fr));gap:6px}}
+.rows{display:flex;flex-direction:column;gap:14px}
+.toggle{display:inline-flex;border:1px solid var(--rule);border-radius:6px;overflow:hidden;align-self:flex-start}
+.toggle button{font:600 13px var(--body);background:var(--sheet);color:var(--ink);border:0;padding:6px 12px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.stat{font:600 13px var(--mono);color:var(--ink)}
+.pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:8px;align-items:start;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:8px}
+.cmp{display:flex;flex-direction:column;gap:12px}
+.cmp-row{display:grid;grid-template-columns:150px repeat(4,minmax(0,1fr));gap:8px;align-items:start}
+@media (max-width:640px){.cmp-row{grid-template-columns:repeat(4,minmax(0,1fr))}.cmp-row .lab{grid-column:1/-1}}
+.lab{display:flex;flex-direction:column;gap:2px;font-weight:700}
+.lab .meta{font-weight:400}
+.mapbox{position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.mapbox canvas{display:block;width:100%;height:auto;touch-action:none}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--paper);font:12px var(--mono);padding:4px 7px;border-radius:4px;max-width:240px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font:12px var(--mono);color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--muted);display:inline-block}
+.line{width:14px;height:0;border-top:2px solid var(--ink);display:inline-block}
+.next{font:13px var(--body);color:var(--muted);border-left:2px solid var(--blue);padding-left:10px;max-width:65ch}
+.next b{color:var(--ink)}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <h1>Doodle to Footage</h1>
+  <p class="lede">Quick, Draw! sketches and Moving Image Archive shots placed in one CLIP embedding space, run in the browser. Six steps from matching toward moving drawings.</p>
+  <div class="figs" id="figs"></div>
+</header>
+
+<nav class="rail" id="rail" aria-label="Category"></nav>
+
+<section aria-labelledby="h0">
+  <div class="hero">
+    <div class="stage"><canvas id="stage" width="640" height="480"></canvas></div>
+    <div class="stage-cap">
+      <span class="eyebrow">Replay</span>
+      <h2 id="h0" class="cap-title" style="font-size:24px"></h2>
+      <div class="meta" id="stageMeta"></div>
+      <p class="note">Each best drawing is redrawn stroke by stroke, in the order the person drew it, over the archive frame it matches most closely.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h1s">
+  <span class="eyebrow">Stone 1</span>
+  <h2 id="h1s">Which drawings read best</h2>
+  <p class="note">All recognized drawings for the category, ranked by CLIP against “a drawing of a …”. Top eight, then the two lowest.</p>
+  <div class="grid8" id="best"></div>
+</section>
+
+<section aria-labelledby="h2s">
+  <span class="eyebrow">Stone 2</span>
+  <h2 id="h2s">Drawing to footage</h2>
+  <p class="note">Nearest archive shots for each of the top three drawings, searched across all twenty categories. Raw CLIP matches line art to line-like frames; removing each modality's average vector fixes most of that.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center">
+    <div class="toggle" role="group" aria-label="Embedding">
+      <button id="tRaw" aria-pressed="false">Raw</button><button id="tCorr" aria-pressed="true">Gap-corrected</button>
+    </div>
+    <span class="stat" id="e1stat"></span>
+  </div>
+  <div class="rows" id="e1"></div>
+</section>
+
+<section aria-labelledby="h3s">
+  <span class="eyebrow">Stone 3</span>
+  <h2 id="h3s">Footage to its doodle twin</h2>
+  <p class="note">The archive's top three shots for the category, each paired with the closest drawing among all 5,546. A red tag means the twin is from another category.</p>
+  <div class="pairs" id="e2"></div>
+</section>
+
+<section aria-labelledby="h4s">
+  <span class="eyebrow">Stone 4</span>
+  <h2 id="h4s">A sketch as a search query</h2>
+  <p class="note">The same archive shots retrieved three ways. The sketch query is the average of the top eight drawings, with no words involved.</p>
+  <div class="cmp" id="e5"></div>
+</section>
+
+<section aria-labelledby="h5s">
+  <span class="eyebrow">Stone 5</span>
+  <h2 id="h5s">Matches across categories</h2>
+  <p class="note">The strongest pairs where a drawing's nearest shot belongs to a different category. These show what the model treats as the same shape.</p>
+  <div class="pairs" id="e3"></div>
+</section>
+
+<section aria-labelledby="h6s">
+  <span class="eyebrow">Stone 6</span>
+  <h2 id="h6s">One map for both</h2>
+  <p class="note">Gap-corrected embeddings projected to two dimensions: 160 best drawings and 918 shots. The selected category is drawn in full colour.</p>
+  <div class="legend"><span><span class="line"></span>drawing</span><span><span class="dot" style="background:var(--blue)"></span>shot, selected category</span><span><span class="dot"></span>shot, other</span></div>
+  <div class="mapbox"><canvas id="map" width="1080" height="640"></canvas><div class="tip" id="tip" hidden></div></div>
+</section>
+
+<section aria-labelledby="h7s">
+  <span class="eyebrow">Next</span>
+  <h2 id="h7s">Where this leads</h2>
+  <div class="next"><b>Pairs for training.</b> Stone 3 gives drawing–shot pairs with a similarity score for every category. That is the reward signal a stroke-drawing agent would optimise, and the conditioning data a sketch-to-video model would train on.</div>
+  <div class="next"><b>Motion.</b> The shots are clips, not stills. Embedding several frames per shot, or the clip with a video model, would let a drawing match a movement as well as a shape.</div>
+  <div class="next"><b>Scale.</b> This run used 20 categories and a 1% sample of Quick, Draw!. The same browser pipeline extends to all 345 categories.</div>
+</section>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+const X=JSON.parse(document.getElementById('data').textContent);
+const A="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
+const strokes=enc=>enc.split(',').map(s=>{const p=[];for(let i=0;i+1<s.length;i+=2)p.push([A.indexOf(s[i]),A.indexOf(s[i+1])]);return p;});
+const SC={};for(const k in X.D)SC[k]=strokes(X.D[k].s);
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const el=(t,a={},...kids)=>{const e=document.createElement(t);for(const k in a){if(k==='class')e.className=a[k];else if(k==='text')e.textContent=a[k];else e.setAttribute(k,a[k]);}kids.forEach(c=>c&&e.append(c));return e;};
+const nice=c=>c==='The Eiffel Tower'?'Eiffel Tower':c;
+const shotUrl=id=>'https://www.movingimagearchive.com/sources/'+X.S[id].slug+'?clip='+id;
+
+function sketchCanvas(key,size=120){
+  const c=el('canvas',{class:'sketch',width:size*2,height:size*2,role:'img','aria-label':'drawing of '+X.D[key].c});
+  drawSketch(c.getContext('2d'),SC[key],0,0,size*2,css('--stroke'),size*2/56,1);return c;}
+function drawSketch(g,st,x,y,S,color,lw,prog,halo){
+  const pad=S*0.08,k=(S-2*pad)/63;let total=0;st.forEach(s=>total+=Math.max(1,s.length-1));let budget=prog*total;
+  g.lineCap=g.lineJoin='round';
+  const pass=(col,w)=>{let b=budget;g.strokeStyle=col;g.lineWidth=w;for(const s of st){if(b<=0)break;g.beginPath();g.moveTo(x+pad+s[0][0]*k,y+pad+s[0][1]*k);
+      if(s.length===1){g.lineTo(x+pad+s[0][0]*k+0.5,y+pad+s[0][1]*k);b-=1;}
+      for(let i=1;i<s.length&&b>0;i++){const f=Math.min(1,b);const [x0,y0]=s[i-1],[x1,y1]=s[i];g.lineTo(x+pad+(x0+(x1-x0)*f)*k,y+pad+(y0+(y1-y0)*f)*k);b-=1;}
+      g.stroke();}};
+  if(halo)pass(halo,lw*2.6);pass(color,lw);}
+function shotEl(id,extra,cat){
+  const s=X.S[id];const a=el('a',{class:'shot',href:shotUrl(id),target:'_blank',rel:'noopener'});
+  a.append(el('img',{src:s.im,alt:s.ti||'archive shot',loading:'lazy'}));
+  if(cat!==undefined){a.append(el('span',{class:'tag'+(s.c===cat?'':' off'),text:nice(s.c)}));}
+  a.append(el('span',{class:'meta',text:(s.ti||'Untitled')+(s.y?' · '+s.y:'')}));
+  if(extra)a.append(el('span',{class:'meta',text:extra}));return a;}
+
+let cat=X.cats.includes('horse')?'horse':X.cats[0], mode='corr';
+document.getElementById('figs').innerHTML=
+  `<span><b>${X.nD.toLocaleString()}</b> drawings embedded</span><span><b>${X.nG}</b> archive shots</span><span><b>${X.cats.length}</b> categories</span><span>gap correction: <b>${Math.round(X.stat.e1raw*100)}% → ${Math.round(X.stat.e1corr*100)}%</b> same-category matches</span>`;
+const rail=document.getElementById('rail');
+X.cats.forEach(c=>{const b=el('button',{class:'chip','aria-pressed':String(c===cat),text:nice(c)});b.onclick=()=>{cat=c;[...rail.children].forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderCat();};rail.append(b);});
+
+function renderBest(){const box=document.getElementById('best');box.replaceChildren();
+  X.best[cat].forEach((k,i)=>{const c=el('div',{class:'cell'});c.append(sketchCanvas(k),el('span',{class:'meta',text:`#${i+1} · ${X.D[k].t.toFixed(3)} · ${X.D[k].cc}`}));box.append(c);});
+  X.worst[cat].forEach(k=>{const c=el('div',{class:'cell worst'});c.append(sketchCanvas(k),el('span',{class:'meta',text:`low · ${X.D[k].t.toFixed(3)}`}));box.append(c);});}
+function renderE1(){const box=document.getElementById('e1');box.replaceChildren();
+  X.e1[cat].forEach(e=>{const r=el('div',{class:'row'});r.append(sketchCanvas(e.d,110));e[mode].forEach(([id,v])=>r.append(shotEl(id,'cos '+v.toFixed(3),cat)));box.append(r);});
+  document.getElementById('e1stat').textContent=`all categories: ${Math.round(X.stat[mode==='raw'?'e1raw':'e1corr']*100)}% of matches in the drawing's own category`;}
+document.getElementById('tRaw').onclick=()=>{mode='raw';setT();};document.getElementById('tCorr').onclick=()=>{mode='corr';setT();};
+function setT(){document.getElementById('tRaw').setAttribute('aria-pressed',String(mode==='raw'));document.getElementById('tCorr').setAttribute('aria-pressed',String(mode==='corr'));renderE1();}
+function pairEl(dk,sid,v,cat0){const p=el('div',{class:'pair'});const left=el('div',{class:'cell'});left.append(sketchCanvas(dk,100),el('span',{class:'tag'+(X.D[dk].c===cat0?'':' off'),text:nice(X.D[dk].c)}));
+  p.append(left,shotEl(sid,'cos '+v.toFixed(3),cat0===undefined?undefined:undefined));return p;}
+function renderE2(){const box=document.getElementById('e2');box.replaceChildren();X.e2[cat].forEach(e=>box.append(pairEl(e.d,e.s,e.v,cat)));}
+function renderE5(){const box=document.getElementById('e5');box.replaceChildren();const f=X.e5[cat];
+  const rows=[['Archive search','its own text ranking',f.arch.map(id=>[id])],['CLIP text','“a photo of a '+nice(cat)+'”',f.txt],['Sketch query','average of 8 drawings',f.sk]];
+  rows.forEach(([t,m,list])=>{const r=el('div',{class:'cmp-row'});const lab=el('div',{class:'lab'});lab.append(el('span',{text:t}),el('span',{class:'meta',text:m}));r.append(lab);
+    list.forEach(([id,v])=>r.append(shotEl(id,v!==undefined?'cos '+v.toFixed(3):'',cat)));box.append(r);});
+  box.append(el('p',{class:'note',text:`Top 10 in the right category: sketch ${f.skIn}/10, CLIP text ${f.txIn}/10. Shared between the two top-10 lists: ${f.ov}.`}));}
+function renderE3(){const box=document.getElementById('e3');box.replaceChildren();X.e3.forEach(e=>{const p=el('div',{class:'pair'});const left=el('div',{class:'cell'});
+  left.append(sketchCanvas(e.d,100),el('span',{class:'tag',text:nice(X.D[e.d].c)}));p.append(left,shotEl(e.s,'cos '+e.v.toFixed(3),X.D[e.d].c));box.append(p);});}
+
+/* map */
+const mc=document.getElementById('map'),mg=mc.getContext('2d'),tip=document.getElementById('tip');
+const xs=X.map.map(p=>p[2]),ys=X.map.map(p=>p[3]);const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+let placed=[];
+function renderMap(){const W=mc.width,H=mc.height,m=36;mg.fillStyle=css('--sheet');mg.fillRect(0,0,W,H);
+  const px=x=>m+(x-x0)/(x1-x0)*(W-2*m),py=y=>m+(y-y0)/(y1-y0)*(H-2*m);placed=[];
+  const blue=css('--blue'),muted=css('--muted'),ink=css('--stroke');
+  X.map.forEach(p=>{if(p[0]!=='s')return;const on=p[1]===cat;mg.globalAlpha=on?0.95:0.28;mg.fillStyle=on?blue:muted;mg.beginPath();mg.arc(px(p[2]),py(p[3]),on?4.5:3,0,7);mg.fill();placed.push({x:px(p[2]),y:py(p[3]),t:nice(p[1])+' shot · '+(p[4]||'')});});
+  X.map.forEach(p=>{if(p[0]!=='d')return;const on=X.D[p[1]].c===cat;const S=on?40:26;mg.globalAlpha=on?1:0.35;
+    drawSketch(mg,SC[p[1]],px(p[2])-S/2,py(p[3])-S/2,S,on?ink:muted,on?1.6:1,1);placed.push({x:px(p[2]),y:py(p[3]),t:nice(X.D[p[1]].c)+' drawing'});});
+  mg.globalAlpha=1;}
+mc.addEventListener('pointermove',ev=>{const r=mc.getBoundingClientRect();const x=(ev.clientX-r.left)*mc.width/r.width,y=(ev.clientY-r.top)*mc.height/r.height;
+  let best=null,bd=14*mc.width/r.width;placed.forEach(p=>{const d=Math.hypot(p.x-x,p.y-y);if(d<bd){bd=d;best=p;}});
+  if(best){tip.hidden=false;tip.textContent=best.t;tip.style.left=Math.min(ev.clientX-r.left+12,r.width-200)+'px';tip.style.top=(ev.clientY-r.top+12)+'px';}else tip.hidden=true;});
+mc.addEventListener('pointerleave',()=>tip.hidden=true);
+
+/* hero replay */
+const sc=document.getElementById('stage'),sg=sc.getContext('2d');const imgCache={};
+let heroPairs=[],hi=0,t0=performance.now(),raf=0;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function img(id){if(!imgCache[id]){const i=new Image();i.src=X.S[id].im;imgCache[id]=i;}return imgCache[id];}
+function setHero(){heroPairs=X.e1[cat].map(e=>({d:e.d,s:e.corr[0][0],v:e.corr[0][1]}));hi=0;t0=performance.now();updCap();}
+function updCap(){const p=heroPairs[hi];const s=X.S[p.s];document.getElementById('h0').textContent=nice(cat)+', drawing '+(hi+1)+' of '+heroPairs.length;
+  document.getElementById('stageMeta').innerHTML='';const a=el('a',{href:shotUrl(p.s),target:'_blank',rel:'noopener',text:(s.ti||'Untitled')+(s.y?' ('+s.y+')':'')});
+  document.getElementById('stageMeta').append(a,document.createTextNode(` · shot at ${s.st}s · cos ${p.v.toFixed(3)}`));}
+function frame(now){const p=heroPairs[hi];const W=sc.width,H=sc.height;const im=img(p.s);
+  sg.fillStyle='#000';sg.fillRect(0,0,W,H);
+  if(im.complete&&im.naturalWidth){const r=Math.max(W/im.naturalWidth,H/im.naturalHeight);const w=im.naturalWidth*r,h=im.naturalHeight*r;sg.globalAlpha=0.85;sg.drawImage(im,(W-w)/2,(H-h)/2,w,h);sg.globalAlpha=1;}
+  const T=(now-t0)/1000,DRAW=2.6,HOLD=1.6;const prog=reduce?1:Math.min(1,T/DRAW);
+  const S=Math.min(W,H)*0.92;drawSketch(sg,SC[p.d],(W-S)/2,(H-S)/2,S,'#FFFFFF',S/70,prog,'rgba(0,0,0,0.55)');
+  if(!reduce&&T>DRAW+HOLD){hi=(hi+1)%heroPairs.length;t0=now;updCap();}
+  raf=requestAnimationFrame(frame);}
+
+function renderCat(){setHero();renderBest();renderE1();renderE2();renderE5();renderMap();}
+renderE3();renderCat();raf=requestAnimationFrame(frame);
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{renderCat();renderE3();});
+new MutationObserver(()=>{renderCat();renderE3();}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+})();
+</script>
