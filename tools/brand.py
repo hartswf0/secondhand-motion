@@ -1,0 +1,76 @@
+"""Secondhand Motion brand mark: a wire coat hanger that walks.
+
+The mark is drawn the way the project draws everything: as strokes, in four held keys.
+Writes assets/brand/*.svg and the favicon set. Run from the repository root:
+    python3 tools/brand.py
+PNG sizes are rendered with Playwright's Chromium (already used for page checks).
+"""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / 'assets' / 'brand'
+
+INK, TAG, PAPER = '#161412', '#EF9F3A', '#F6EFE3'
+
+# 64 x 64 drawing. Hook and hanger are fixed; legs change per key.
+HOOK = 'M27.5 13.2C27.6 9.4 30.6 7 34 7.4c3.2.4 5.2 3.2 4.6 6.2-.5 2.6-2.8 3.9-5.1 4.4-1.2.3-1.5 1-1.5 2.2V22'
+HANGER = 'M32 22 7.5 35.5c-1.6.9-1 3 .8 3h47.4c1.8 0 2.4-2.1.8-3L32 22Z'
+# each key: two legs, each [hip, knee, ankle, toe]
+KEYS = [
+    [[[28, 38.5], [24, 49], [17, 58.5], [23.5, 59.5]], [[36, 38.5], [41, 49], [46, 58.5], [52.5, 58]]],          # contact
+    [[[28, 38.5], [28.5, 49], [29, 59.5], [35.5, 59.5]], [[36, 38.5], [42, 47], [37, 54], [43.5, 53.5]]],        # passing
+    [[[28, 38.5], [33, 49], [38, 58.5], [44.5, 58]], [[36, 38.5], [31.5, 49], [25, 58.5], [31.5, 59.5]]],        # contact, other leg
+    [[[28, 38.5], [34, 47], [29, 54], [35.5, 53.5]], [[36, 38.5], [36, 49], [36, 59.5], [42.5, 59.5]]],          # passing, other leg
+]
+
+
+def legs(key):
+    return ''.join(f'M{h[0]} {h[1]}L{k[0]} {k[1]}L{a[0]} {a[1]}L{t[0]} {t[1]}' for h, k, a, t in key)
+
+
+def mark(key=0, ink=INK, bg=None, sw=3.6, size=64, pad=0):
+    v = f'{-pad} {-pad} {64 + 2 * pad} {64 + 2 * pad}'
+    back = f'<rect x="{-pad}" y="{-pad}" width="{64 + 2 * pad}" height="{64 + 2 * pad}" rx="{14 + pad}" fill="{bg}"/>' if bg else ''
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{v}" width="{size}" height="{size}">{back}'
+            f'<g fill="none" stroke="{ink}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round">'
+            f'<path d="{HOOK}"/><path d="{HANGER}"/><path d="{legs(KEYS[key])}"/></g></svg>')
+
+
+def data():
+    """What pages need to draw and animate the mark inline."""
+    return {'hook': HOOK, 'hanger': HANGER, 'legs': [legs(k) for k in KEYS]}
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / 'mark.svg').write_text(mark())
+    (OUT / 'mark-light.svg').write_text(mark(ink=PAPER))
+    for i in range(4): (OUT / f'walk-{i}.svg').write_text(mark(i))
+    fav = mark(0, ink=INK, bg=TAG, sw=5.2, pad=1)
+    (ROOT / 'favicon.svg').write_text(fav)
+    (OUT / 'brand.json').write_text(json.dumps(data(), indent=1))
+    render(fav)
+    print('wrote', sorted(p.name for p in OUT.iterdir()))
+
+
+def render(fav):
+    from playwright.sync_api import sync_playwright
+    card = f'''<html><body style="margin:0;width:1200px;height:630px;background:{PAPER};display:flex;align-items:center;gap:56px;padding:0 90px;box-sizing:border-box;font-family:Arial Black,Arial,sans-serif">
+    <div style="width:300px;height:300px;flex:none">{mark(0, sw=3.2, size=300)}</div>
+    <div><div style="font:800 92px/0.95 Arial Black,Arial,sans-serif;color:{INK};letter-spacing:-2px">Secondhand<br>Motion</div>
+    <div style="font:500 30px/1.3 Arial,sans-serif;color:#6B6259;margin-top:26px;max-width:640px">Archive film, redrawn as moving Quick, Draw! doodles.</div>
+    <div style="margin-top:26px;display:inline-block;background:{TAG};color:{INK};font:700 22px monospace;padding:6px 14px;border-radius:4px">hartswf0.github.io/secondhand-motion</div></div></body></html>'''
+    with sync_playwright() as p:
+        b = p.chromium.launch()
+        for name, size in [('favicon-32.png', 32), ('favicon-192.png', 192), ('apple-touch-icon.png', 180)]:
+            pg = b.new_page(viewport={'width': size, 'height': size})
+            pg.set_content(f'<html><body style="margin:0;background:transparent">{fav.replace("width=\"64\" height=\"64\"", f"width=\"{size}\" height=\"{size}\"")}</body></html>')
+            pg.screenshot(path=str(ROOT / name if name != 'favicon-192.png' else OUT / name), omit_background=True)
+        pg = b.new_page(viewport={'width': 1200, 'height': 630})
+        pg.set_content(card); pg.screenshot(path=str(OUT / 'social-card.png'))
+        b.close()
+
+
+if __name__ == '__main__':
+    main()

@@ -5,7 +5,7 @@ usage: python3 tools/build_pages.py        (run from the repository root)
 Pages carry their data inline, so each one opens straight from the file system or GitHub Pages.
 Images and videos are referenced by relative path.
 """
-import csv, glob, json, os, re
+import csv, glob, json, os, re, sys
 from pathlib import Path
 import markdown
 
@@ -15,19 +15,37 @@ BATCH = 'batches/2026-10-20-selected-drawings'
 DATE = '20 Oct 2026'
 HEAD = (T / 'head.html').read_text()
 
-NAV = [('index.html', 'Index'), ('pages/pipeline.html', 'Pipeline'), ('pages/agent-prompt.html', 'Agent prompt'),
-       ('pages/archive-doodle-index.html', 'Dataset'), ('pages/giraffe-walks-past.html', 'Giraffe shot'),
-       ('pages/traced-keys.html', 'Traced keys'), (f'{BATCH}/index.html', 'Selected drawings')]
+NAV = [('index.html', 'Rack'), ('pages/pipeline.html', 'Pipeline'), ('pages/tests.html', 'Tests'),
+       ('pages/agent-prompt.html', 'Agent prompt'), ('pages/archive-doodle-index.html', 'Dataset')]
+sys.path.insert(0, str(ROOT / 'tools'))
+import brand
+
+
+def icons(here):
+    up = '../' * here.count('/')
+    return (f'<link rel="icon" href="{up}favicon.svg" type="image/svg+xml"><link rel="icon" href="{up}favicon-32.png" sizes="32x32">'
+            f'<link rel="apple-touch-icon" href="{up}apple-touch-icon.png"><meta name="theme-color" content="#EF9F3A">'
+            f'<meta property="og:image" content="{up}assets/brand/social-card.png"><meta property="og:title" content="Secondhand Motion">'
+            '<meta property="og:description" content="Archive film, redrawn as moving Quick, Draw! doodles.">')
 
 
 def nav(here):
+    """Site header shared by every page, styled on its own so older pages carry it unchanged."""
     up = '../' * here.count('/')
     cur = ' aria-current="page"'
     links = ''.join(f'<a href="{up}{p}"{cur if p == here else ""}>{t}</a>' for p, t in NAV)
-    return ('<style>.repo-nav{max-width:1080px;margin:0 auto;padding:14px 0 0;display:flex;gap:14px;flex-wrap:wrap;'
-            'font:600 13px "Atkinson Hyperlegible","Segoe UI",sans-serif}.repo-nav a{color:#5D6573;text-decoration:none}'
-            '.repo-nav a[aria-current]{color:inherit}</style>'
-            f'<nav class="repo-nav" aria-label="Repository">{links}</nav>')
+    logo = brand.mark(0, ink='currentColor', sw=3.8, size=34)
+    return ('<style>.sm-head{max-width:1200px;margin:0 auto;padding:14px 0 12px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap;'
+            'border-bottom:2px solid currentColor;color:#161412}'
+            '.sm-head .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;font:800 20px/1 "Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;letter-spacing:-.01em;margin-right:auto}'
+            '.sm-head .brand svg{display:block;flex:none}'
+            '.sm-head nav{display:flex;gap:4px 16px;flex-wrap:wrap;font:600 14px "Atkinson Hyperlegible","Segoe UI",sans-serif}'
+            '.sm-head nav a{color:inherit;opacity:.72;text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}'
+            '.sm-head nav a:hover{opacity:1}.sm-head nav a[aria-current]{opacity:1;border-bottom-color:#EF9F3A}'
+            '@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-head{color:#F1EADD}}'
+            ':root[data-theme="dark"] .sm-head{color:#F1EADD}</style>'
+            f'<header class="sm-head"><a class="brand" href="{up}index.html" aria-label="Secondhand Motion, the rack">{logo}<span>Secondhand Motion</span></a>'
+            f'<nav aria-label="Site">{links}</nav></header>')
 
 
 def js(d):
@@ -43,7 +61,7 @@ def legacy(template, data_text, rel):
     """Pages first built as claude.ai artifacts: add a document head and the repository nav."""
     html = template.replace('__DATA__', data_text)
     head = ('<!doctype html>\n<html lang="en">\n<meta charset="utf-8">\n'
-            '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n')
+            '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + icons(rel) + '\n')
     html = head + html
     i = html.index('</style>') + len('</style>')
     html = html[:i] + '\n' + nav(rel) + html[i:]
@@ -53,7 +71,7 @@ def legacy(template, data_text, rel):
 
 
 def page(template, rel, **kw):
-    html = (T / template).read_text().replace('__HEAD__', HEAD).replace('__NAV__', nav(rel))
+    html = (T / template).read_text().replace('__HEAD__', HEAD.replace('__ICONS__', icons(rel))).replace('__NAV__', nav(rel))
     for k, v in kw.items(): html = html.replace(f'__{k}__', v)
     left = set(re.findall(r'__[A-Z_]+__', html))
     assert not left, f'{rel}: unfilled {left}'
@@ -92,52 +110,67 @@ def main():
     md_page('AGENTS.md', 'pages/agent-prompt.html', 'Agent Prompt',
             tools='<div class="tools"><span class="meta">Source: AGENTS.md. Fill {CATEGORY} and {WAVE} from data/subject_queue.json.</span>'
                   '<button id="copy" type="button">Copy prompt as Markdown</button></div>')
-    # index
-    recall = min(k['recall'] for e in tr.values() for k in e['keys'])
-    still = {n: sum(k['n_strokes'] - k['char_strokes'] for k in e['keys']) / sum(k['n_strokes'] for k in e['keys']) for n, e in tr.items()}
-    stages = ['Select', 'Observe', 'Identity', 'Plan', 'Keys', 'Trace', 'Rig', 'In-between', 'Planes', 'Tests', 'Critic']
-    board = [{'subject': 'giraffe (full shot)', 'cells': ['done', 'done', 'done', 'done', 'part', 'done', 'done', 'done', 'done', 'part', 'part']}]
-    for n, e in tr.items():
-        t1 = all(k['recall'] >= 0.98 and k['parts_kept'] >= 1 for k in e['keys'])
-        keys = 'done' if still[n] >= 0.9 else 'part'   # stills accepted by critics; B1 held background decides
-        board.append({'subject': n + (' (keys)' if n == 'giraffe' else ''), 'cells': ['done', '', 'done', 'done', keys, 'done' if t1 else 'fail', '', '', '', '', '']})
-    q = json.load(open('data/subject_queue.json'))['queue']
-    works = [
-        {'step': '1 · dataset', 'title': 'Archive Doodle Index', 'url': 'pages/archive-doodle-index.html', 'img': 'assets/index.jpg', 'alt': 'Grid of category tiles with match scores',
-         'proved': "Every Quick, Draw! category has real archive footage behind it, found by the archive's own image search.", 'num': '16,042', 'numlabel': 'shot matches across 345 categories'},
-        {'step': '2 · joint space', 'title': 'Doodle to Footage', 'url': 'pages/doodle-to-footage.html', 'img': 'assets/stones.jpg', 'alt': 'Doodles beside the archive shots they match',
-         'proved': "Drawings and footage share one CLIP space once each modality's average is removed.", 'num': '52% → 87%', 'numlabel': 'drawings matched to their own category'},
-        {'step': '3 · segment and trace', 'title': 'Cartoon Archive', 'url': 'pages/cartoon-archive.html', 'img': 'assets/traced.jpg', 'alt': 'Line cartoons traced from segmented footage',
-         'proved': 'SAM finds the subject in nearly every frame, but outlines traced from masks do not look drawn.', 'num': '0.93', 'numlabel': 'giraffe recognition, drawn keys'},
-        {'step': '4 · full shot', 'title': 'Giraffe Walks Past', 'url': 'pages/giraffe-walks-past.html', 'img': 'assets/shot.jpg', 'alt': 'Multiplane doodle cartoon of a giraffe',
-         'proved': 'One shot rebuilt as a multiplane cartoon: rotoscoped keys, six depth planes, real camera pan, three blind reviews.',
-         'num': f"{sum(1 for t in json.load(open(shot / 'tests.json')) if t['ok'])} / {len(json.load(open(shot / 'tests.json')))}", 'numlabel': 'tests passing'},
-        {'step': '5 · look lane', 'title': 'Selected Drawings', 'url': f'{BATCH}/index.html', 'img': f'{BATCH}/selected-drawings-atlas.png', 'alt': 'Atlas of ten selected drawings',
-         'proved': 'An image model holds a doodle identity across four keys when a fresh critic names one gap per round.', 'num': '40 keys', 'numlabel': '10 subjects, 19 review rounds'},
-        {'step': '6 · the join', 'title': 'Traced Keys', 'url': 'pages/traced-keys.html', 'img': 'assets/traced_grid.png', 'alt': 'Traced strokes of six drawings',
-         'proved': 'Raster keys become pen strokes without losing a mark; the traces expose that backgrounds are redrawn per key.',
-         'num': f'{recall:.3f}', 'numlabel': 'lowest recall over 40 keys'},
-    ]
-    page('hub.html', 'index.html', DATE=DATE, TRACE_RECALL=f'≥ {recall:.2f}', TREE=tree(),
-         DATA=js({'works': works, 'stages': stages, 'board': board, 'queue': [x for x in q if x.get('wave') == 2],
-                  'tests': json.load(open(shot / 'tests.json'))}))
+    # catalog: every lot's item.json plus its test results
+    import validate
+    errs, _ = validate.check(prebuild=True)
+    if errs:
+        for e in errs: print('ERROR', e)
+        raise SystemExit('fix the lots above, then rebuild')
+    reg = json.load(open('tests/registry.json'))
+    lots = catalog(reg)
+    (ROOT / 'data/catalog.json').write_text(json.dumps(lots, indent=1))
+    page('tests.html', 'pages/tests.html', DATA=js({'tests': reg['tests'], 'stages': reg['stages'],
+         'lots': [{'lot': l['lot'], 'title': l['title'], 'href': '../' + l['href'] if not l['href'].startswith('http') else l['href'],
+                   'status': l['status'], 'r': l['r']} for l in lots if l['r']]}))
+    mark = brand.mark(0, ink='currentColor', sw=2.6, size=64).replace('width="64" height="64"', 'aria-hidden="true"')
+    page('hub.html', 'index.html', DATE=DATE, TREE=tree(),
+         DATA=js({'lots': [{k: v for k, v in l.items() if k != 'r'} for l in lots], 'stages': reg['stages'], 'brand': brand.data(), 'mark': mark,
+                  'n_active': sum(t['status'] == 'active' for t in reg['tests']), 'n_planned': sum(t['status'] == 'planned' for t in reg['tests'])}))
+
+
+def catalog(reg):
+    from new_subject import lot_files
+    active = [t['id'] for t in reg['tests'] if t['status'] == 'active']
+    out = []
+    for p in lot_files():
+        it = json.load(open(p))
+        r = {}
+        if it.get('tests'):
+            tf = ROOT / it['tests']
+            rows = json.load(open(tf))
+            extra = tf.with_name('tests-extra.json')
+            if extra.exists(): rows += json.load(open(extra))
+            for t in rows: r[t['id']] = {'value': t.get('value'), 'unit': t.get('unit', ''), 'ok': t.get('ok')}
+        kind = 'queued' if it.get('status') == 'queued' else 'shot' if it.get('kind') == 'shot' else 'keys'
+        applies = {t['id'] for t in reg['tests'] if kind in t.get('applies', [])}
+        r = {i: v for i, v in r.items() if i in applies}
+        ran = [i for i in active if i in applies] if it.get('tests') else []
+        it['t'] = {'pass': sum(r.get(i, {}).get('ok') is True for i in ran), 'fail': sum(r.get(i, {}).get('ok') is False for i in ran), 'total': len(ran)}
+        if it.get('tests'):
+            for i in ran: r.setdefault(i, {'value': 'not run', 'unit': '', 'ok': None})
+        it['r'] = r
+        it['href'] = it['links'][0]['href'] if it.get('links') else p.parent.relative_to(ROOT).as_posix() + '/'
+        it.setdefault('stage', None)
+        out.append(it)
+    out.sort(key=lambda x: x['lot'])
+    return out
 
 
 def tree():
-    rows = [('index.html', 'this page'), ('PIPELINE.md', 'stages, contracts, tests  → pages/pipeline.html'),
-            ('AGENTS.md', 'prompt for an agent taking one subject  → pages/agent-prompt.html'),
-            ('pages/', 'every other page, built by tools/build_pages.py'),
-            ('dataset/', '345 categories × archive shots: clips.csv, clips.jsonl, categories.csv'),
-            ('data/subject_queue.json', 'moving subjects ranked by archive match; wave 2 marked'),
-            ('data/quickdraw/fetch.sh', 'fetches the exact Quick, Draw! slices the scripts read'),
-            ('shots/giraffe-walks-past/', 'full shot: rig, reward, in-between, planes, tests, critic stills'),
-            (f'{BATCH}/', 'look lane: 40 keys, prompts, reviews, repair ledger'),
-            ('traced/traced_keys.json', 'the 40 keys as strokes, with layer split and scores'),
-            ('tools/', 'trace_keys.py, build_pages.py, page templates')]
+    rows = [('index.html', 'the rack, built from every item.json'),
+            ('shots/<lot>/', 'one folder per subject or shot: item.json, tests.json, work'),
+            ('data/lots/', 'lots that are pages or studies'),
+            ('tests/registry.json', 'every test: id, bar, how, stage, active or planned'),
+            ('data/catalog.json', 'all lots and results, generated'),
+            ('batches/', 'raw look-lane batches as delivered'),
+            ('pages/', 'built pages'),
+            ('tools/', 'new_subject, import_batch, validate, trace_keys, build_pages, brand'),
+            ('AGENTS.md', 'prompt for an agent taking one lot'),
+            ('PIPELINE.md', 'the thirteen stages')]
     out = []
     for p, d in rows:
         name = f'<a href="{p}">{p}</a>' if (ROOT / p).exists() else p
-        out.append(f'{name}{" " * max(2, 44 - len(p))}{d}')
+        out.append(f'{name}{" " * max(2, 22 - len(p))}{d}')
     return '\n'.join(out)
 
 

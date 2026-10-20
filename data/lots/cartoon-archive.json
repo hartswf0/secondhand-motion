@@ -1,0 +1,26 @@
+{
+ "lot": "SM-0003",
+ "id": "cartoon-archive",
+ "kind": "study",
+ "title": "Cartoon Archive",
+ "lane": "motion",
+ "stage": 6,
+ "status": "done",
+ "added": "2026-10-20",
+ "blurb": "SAM finds the subject in nearly every frame, but outlines traced from masks do not look drawn.",
+ "cover": "assets/traced.jpg",
+ "metric": [
+  "0.93",
+  "recognition, drawn keys"
+ ],
+ "links": [
+  {
+   "label": "Open",
+   "href": "pages/cartoon-archive.html"
+  }
+ ],
+ "tags": [
+  "SAM",
+  "segmentation"
+ ]
+}

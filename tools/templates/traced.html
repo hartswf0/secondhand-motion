@@ -68,7 +68,7 @@ __NAV__
 <script>
 (function(){
 const D=JSON.parse(document.getElementById('data').textContent);
-const B=D.batch;const names=Object.keys(D.subjects);let cur=names.includes('dog')?'dog':names[0],k=0,timer=null,playing=true;
+const B=D.batch;const names=Object.keys(D.subjects);const hs=decodeURIComponent(location.hash.slice(1));let cur=names.includes(hs)?hs:(names.includes('dog')?'dog':names[0]),k=0,timer=null,playing=true;
 const NS='http://www.w3.org/2000/svg';
 function svg(e,key,cls){const s=document.createElementNS(NS,'svg');s.setAttribute('viewBox',`0 0 ${e.W} ${e.H}`);s.setAttribute('role','img');
   const r=document.createElementNS(NS,'rect');r.setAttribute('width',e.W);r.setAttribute('height',e.H);r.setAttribute('fill','#fff');s.append(r);
@@ -77,7 +77,7 @@ function svg(e,key,cls){const s=document.createElementNS(NS,'svg');s.setAttribut
     p.setAttribute('class',key.layer[i]==='bg'?'bg':'ch');s.append(p);});return s;}
 function stat(v,l,cls){const d=document.createElement('div');d.className='stat'+(cls?' '+cls:'');d.innerHTML='<span class="v"></span><span class="l"></span>';d.querySelector('.v').textContent=v;d.querySelector('.l').textContent=l;return d;}
 function pick(){const pk=document.getElementById('picker');pk.replaceChildren();
-  names.forEach(n=>{const b=document.createElement('button');b.textContent=n;b.setAttribute('aria-pressed',String(n===cur));b.onclick=()=>{cur=n;k=0;render();pick();};pk.append(b);});}
+  names.forEach(n=>{const b=document.createElement('button');b.textContent=n;b.setAttribute('aria-pressed',String(n===cur));b.onclick=()=>{cur=n;k=0;history.replaceState(null,'','#'+n);render();pick();};pk.append(b);});}
 function render(){const e=D.subjects[cur];const ks=e.keys;
   document.getElementById('sh').textContent=cur;
   const rec=Math.min(...ks.map(x=>x.recall)),parts=Math.min(...ks.map(x=>x.parts_kept));

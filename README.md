@@ -1,18 +1,30 @@
-# Cartoon Archive
+# Secondhand Motion
+
+![Secondhand Motion](assets/brand/social-card.png)
+
 
 Any shot in the [Moving Image Archive](https://www.movingimagearchive.com/) should be watchable as a
 moving [Quick, Draw!](https://github.com/googlecreativelab/quickdraw-dataset) cartoon: the subject
 redrawn in the identity of one real doodle, moving as the footage moves, on depth planes that slide
 with the real camera.
 
-Open `index.html` (or the GitHub Pages site) to start. Every page works from the file system.
+Open `index.html` (or the GitHub Pages site): it is **the rack**, every lot of work as a hang tag you can search, filter by kind, lane, status and stage, and switch to a list. Every page works from the file system.
+
+## How the repository grows
+
+- A **lot** is a folder with an `item.json` (lot number, kind, lane, stage, status, cover, links, tests). Subjects and shots live in `shots/<slug>/`; pages and studies in `data/lots/`; batches carry their own. The rack, stage counts and test rack are generated from these files.
+- A **test** is an entry in `tests/registry.json` (id, bar, how, stage, which lots it applies to, active or planned). Each lot's `tests.json` holds its results; unrun tests show as not run.
+- `python3 tools/new_subject.py "<category>" --wave N` scaffolds a lot from the dataset: archive candidates, a real doodle as cover, every test marked not run.
+- `python3 tools/import_batch.py <batch> <traced.json>` turns a look-lane batch into lots and scores what it can.
+- `python3 tools/validate.py` checks every lot; `python3 tools/build_pages.py` rebuilds every page (it validates first).
+- `python3 tools/brand.py` redraws the mark, favicons and social card.
 
 ## Start here
 
 - **`PIPELINE.md`**: the 13 stages from archive shot to cartoon, with what each reads, writes and must pass.
 - **`AGENTS.md`**: the prompt that hands one subject to an agent. Fill `{CATEGORY}` and `{WAVE}` from
   `data/subject_queue.json`. Critics are separate agents and see only the critic packet.
-- **`index.html`**: where every subject stands, every page so far, and the tests on the full shot.
+- **`index.html`**: the rack. **`pages/tests.html`**: every test against every lot.
 
 ## Two lanes, and the join
 
@@ -33,7 +45,8 @@ python3 inbetween.py pose_agent_v5.json "$PRM" drawn_frames_v5.json
 python3 build_shot.py && python3 tests.py      # shot.json and tests.json rebuild byte-identical
 cd ../..
 python3 tools/trace_keys.py batches/2026-10-20-selected-drawings traced/traced_keys.json
-python3 tools/build_pages.py                   # every page in pages/ and index.html
+python3 tools/import_batch.py batches/2026-10-20-selected-drawings traced/traced_keys.json
+python3 tools/build_pages.py                   # validates lots, then every page and index.html
 ```
 
 The browser stages (SAM 2.1, Grounding DINO, CLIP, the Quick, Draw! classifier, all through

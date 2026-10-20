@@ -1,0 +1,86 @@
+__HEAD__
+<title>Test Rack</title>
+<style>
+/* Layout: header; summary counts; matrix (tests as rows grouped by stage, lots as columns); registry detail cards. */
+.sum{display:flex;flex-wrap:wrap;gap:8px}
+.sum div{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:6px 10px;display:flex;gap:6px;align-items:baseline}
+.sum b{font:600 18px var(--mono)}.sum span{font-size:13px;color:var(--muted)}
+.ctl{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:14px}
+.ctl label{display:flex;gap:6px;align-items:center;cursor:pointer}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted);align-items:center}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:5px}
+.matrix{overflow:auto;border:1px solid var(--rule-strong);border-radius:8px;background:var(--sheet);max-height:78vh}
+.matrix table{border-collapse:separate;border-spacing:0;font-size:13px;width:auto}
+.matrix th,.matrix td{border-bottom:1px solid var(--rule);padding:0}
+.matrix thead th{position:sticky;top:0;background:var(--sheet);z-index:2;vertical-align:bottom;padding:8px 2px;border-bottom:1px solid var(--rule-strong)}
+.matrix thead th a{writing-mode:vertical-rl;transform:rotate(180deg);font:600 12px var(--mono);color:var(--ink);text-decoration:none;white-space:nowrap;display:inline-block;padding:2px}
+.matrix thead th a:hover{color:var(--tag-ink)}
+.matrix th.rowh{position:sticky;left:0;background:var(--sheet);z-index:1;text-align:left;padding:6px 12px 6px 10px;min-width:230px;max-width:280px;font:13px var(--body);white-space:normal;border-right:1px solid var(--rule-strong)}
+.matrix thead th.rowh{z-index:3}
+.matrix th.rowh .id{font:600 12px var(--mono);margin-right:6px}
+.matrix th.rowh.planned{color:var(--muted)}
+.matrix tr.grp th{background:var(--paper);font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:6px 10px;text-align:left;position:sticky;left:0}
+.cell{width:30px;height:30px;text-align:center}
+.cell i{display:inline-block;width:20px;height:20px;border-radius:3px;vertical-align:middle}
+.c-pass{background:var(--pass)}.c-fail{background:var(--fail)}.c-none{border:1.5px solid var(--rule-strong)}.c-plan{background:repeating-linear-gradient(45deg,var(--plan) 0 2px,transparent 2px 5px)}.c-na{background:transparent}
+.reg{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:12px}
+.reg .note .id{font:600 12px var(--mono);color:var(--tag-ink)}
+.reg .note .bar{font-size:14px;color:var(--ink)}
+.reg .note.planned{border-style:dashed}
+</style>
+__NAV__
+<div class="wrap">
+<header class="page">
+  <span class="eyebrow">Every test against every lot</span>
+  <h1>Test Rack</h1>
+  <p class="lede">Each row is a test from <a href="../tests/registry.json"><code>tests/registry.json</code></a>; each column is a lot. A bar is never lowered to make a cell turn green. Planned tests are listed so every lot shows what it has not yet been asked.</p>
+  <div class="sum" id="sum"></div>
+</header>
+<section aria-labelledby="m-h">
+  <h2 id="m-h">Matrix</h2>
+  <div class="ctl">
+    <label><input type="checkbox" id="showq"> Show queued lots</label>
+    <label><input type="checkbox" id="showp" checked> Show planned tests</label>
+    <div class="legend"><span><i class="sw c-pass"></i>pass</span><span><i class="sw c-fail"></i>fail</span><span><i class="sw c-none"></i>not run</span><span><i class="sw c-plan"></i>planned test</span></div>
+  </div>
+  <div class="matrix" id="matrix"></div>
+</section>
+<section aria-labelledby="r-h">
+  <h2 id="r-h">Registry</h2>
+  <div class="reg" id="reg"></div>
+</section>
+</div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+const D=JSON.parse(document.getElementById('data').textContent);const $=id=>document.getElementById(id);
+const R=D.tests, ST=D.stages;
+const act=R.filter(t=>t.status==='active').length;
+[[R.length,'tests'],[act,'active'],[R.length-act,'planned'],[D.lots.filter(l=>l.status!=='queued').length,'lots with results'],[D.lots.reduce((a,l)=>a+Object.values(l.r).filter(v=>v.ok===true).length,0),'passes'],[D.lots.reduce((a,l)=>a+Object.values(l.r).filter(v=>v.ok===false).length,0),'failures']]
+ .forEach(([n,l])=>{const d=document.createElement('div');d.innerHTML='<b></b><span></span>';d.children[0].textContent=n;d.children[1].textContent=l;$('sum').append(d);});
+function draw(){const showq=$('showq').checked,showp=$('showp').checked;
+  const lots=D.lots.filter(l=>showq||l.status!=='queued');const tests=R.filter(t=>showp||t.status==='active');
+  const t=document.createElement('table');const th=document.createElement('thead');const hr=document.createElement('tr');
+  const c0=document.createElement('th');c0.className='rowh';c0.textContent='Test';hr.append(c0);
+  lots.forEach(l=>{const h=document.createElement('th');const a=document.createElement('a');a.href=l.href;a.textContent=l.lot+' '+l.title;a.title=l.title;h.append(a);hr.append(h);});
+  th.append(hr);t.append(th);const tb=document.createElement('tbody');let g=null;
+  tests.slice().sort((a,b)=>a.stage-b.stage).forEach(x=>{
+    if(x.stage!==g){g=x.stage;const gr=document.createElement('tr');gr.className='grp';const gh=document.createElement('th');gh.colSpan=lots.length+1;gh.textContent=`Stage ${g} · ${ST[g]}`;gr.append(gh);tb.append(gr);}
+    const tr=document.createElement('tr');const rh=document.createElement('th');rh.className='rowh'+(x.status==='planned'?' planned':'');rh.scope='row';
+    const id=document.createElement('span');id.className='id';id.textContent=x.id;rh.append(id,document.createTextNode(x.name));tr.append(rh);
+    lots.forEach(l=>{const td=document.createElement('td');td.className='cell';const i=document.createElement('i');const r=l.r[x.id];let cls,lab;
+      if(x.status==='planned'){cls='c-plan';lab='planned';}
+      else if(!r){cls='c-na';lab='not applicable';}
+      else if(r.ok===true){cls='c-pass';lab='pass: '+r.value+(r.unit?' '+r.unit:'');}
+      else if(r.ok===false){cls='c-fail';lab='fail: '+r.value+(r.unit?' '+r.unit:'');}
+      else{cls='c-none';lab=String(r.value||'not run');}
+      i.className=cls;i.setAttribute('role','img');i.setAttribute('aria-label',`${x.id} on ${l.title}: ${lab}`);td.title=`${x.id} · ${l.title}\n${lab}`;td.append(i);tr.append(td);});
+    tb.append(tr);});
+  t.append(tb);$('matrix').replaceChildren(t);}
+$('showq').onchange=draw;$('showp').onchange=draw;draw();
+R.forEach(x=>{const n=document.createElement('div');n.className='note'+(x.status==='planned'?' planned':'');
+  n.innerHTML='<span class="id"></span><b></b><span class="bar"></span><p></p>';
+  n.children[0].textContent=`${x.id} · ${x.cls} · stage ${x.stage} ${ST[x.stage]}${x.status==='planned'?' · planned':''}`;
+  n.children[1].textContent=x.name;n.children[2].textContent='Bar: '+x.bar;n.children[3].textContent=x.how||'';$('reg').append(n);});
+})();
+</script>

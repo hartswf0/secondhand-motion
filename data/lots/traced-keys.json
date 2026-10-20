@@ -1,0 +1,30 @@
+{
+ "lot": "SM-0006",
+ "id": "traced-keys",
+ "kind": "study",
+ "title": "Traced Keys",
+ "lane": "join",
+ "stage": 5,
+ "status": "done",
+ "added": "2026-10-20",
+ "blurb": "Every raster key traced into pen strokes without losing a mark; the traces show backgrounds redrawn per key.",
+ "cover": "assets/traced_grid.png",
+ "metric": [
+  "0.984",
+  "lowest recall, 40 keys"
+ ],
+ "links": [
+  {
+   "label": "Open",
+   "href": "pages/traced-keys.html"
+  },
+  {
+   "label": "trace_keys.py",
+   "href": "tools/trace_keys.py"
+  }
+ ],
+ "tags": [
+  "vectorize",
+  "layers"
+ ]
+}
