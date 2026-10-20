@@ -82,17 +82,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca crab (dome-shaped shell with a large claw hanging at lower left, a smaller claw at the right, and short legs underneath)\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca crab seen from the front, with two raised claws, two eye stalks and four legs\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/crab-gwp/reviews/critic-1.json"
+  "evidence": "shots/crab-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "The doodle has both claws raised high above the body on long arms with four legs below, while the animation has one claw hanging below the body, the other folded at the side, and an arm stroke cutting straight down through the shell, so it reads as a different drawing built from the same parts.",
-  "evidence": "shots/crab-gwp/reviews/critic-1.json"
+  "ok": true,
+  "note": "The body, claws and legs match the doodle's shapes and strokes closely, but the two diamond-tipped eye stalks are added and do not appear in the doodle.",
+  "evidence": "shots/crab-gwp/reviews/critic-2.json"
  }
 ]

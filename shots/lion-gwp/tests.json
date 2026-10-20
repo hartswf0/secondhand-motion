@@ -1,28 +1,29 @@
 [
  {
   "id": "M2",
-  "value": 5,
+  "value": 10,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
+   14,
+   14,
+   14,
+   14,
+   14,
+   14,
+   14,
+   12,
+   8,
    7,
-   7,
-   7,
-   7,
-   7,
-   6,
-   6,
    5,
    4,
    4,
-   3,
-   3,
-   3
+   4
   ]
  },
  {
   "id": "M2b",
-  "value": 0.79,
+  "value": 0.8,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 13
@@ -35,7 +36,7 @@
  },
  {
   "id": "M6",
-  "value": 2.5,
+  "value": 2.1,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -77,5 +78,20 @@
   "value": "complete",
   "unit": "",
   "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca lion (round smiling face inside a spiky mane, with a long low body), lying down\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/lion-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The face and spiky mane match the doodle closely, but the black body is drawn as a flat line with one low hump, and the doodle's two arched leg loops are mostly missing.",
+  "evidence": "shots/lion-gwp/reviews/critic-1.json"
  }
 ]

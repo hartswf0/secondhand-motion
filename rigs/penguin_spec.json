@@ -406,9 +406,10 @@
    ],
    "shift_by": "jaw",
    "shift": [
-    6,
-    12
-   ]
+    4,
+    18
+   ],
+   "turn": 0.85
   },
   {
    "region": [
@@ -421,7 +422,8 @@
    "aim": [
     "neck",
     "beak"
-   ]
+   ],
+   "turn": 0.85
   },
   {
    "rest": true,
@@ -439,6 +441,6 @@
   1.1
  ],
  "size": "steady",
- "track": false,
+ "track": true,
  "smooth": 1.2
 }

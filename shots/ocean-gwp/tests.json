@@ -1,0 +1,78 @@
+[
+ {
+  "id": "M2",
+  "value": 30,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   32,
+   31,
+   31,
+   27,
+   29,
+   27,
+   27,
+   29,
+   31,
+   34
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.95,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 32
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 0.9,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "5 strokes, 49 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:4618667562106880; scenery quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), quickdraw:4618667562106880 (the character's own doodle, repeated small), drawn by agent: the horizon comes into view at the top from frame 28 as the ship pitches; no Quick, Draw! category is a single level line, so it is drawn as one slightly uneven stroke",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

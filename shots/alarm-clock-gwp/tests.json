@@ -1,0 +1,79 @@
+[
+ {
+  "id": "M2",
+  "value": 76,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   81,
+   70,
+   76,
+   77,
+   78,
+   74,
+   72,
+   79,
+   79,
+   76
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.75,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 78
+ },
+ {
+  "id": "M3",
+  "value": 0.64,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.42
+ },
+ {
+  "id": "M6",
+  "value": 1.6,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "8 strokes, 53 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5502112672776192; scenery quickdraw:5732973036961792, quickdraw:6643087495397376, quickdraw:6293707357683712, quickdraw:6333344117686272, drawn by agent: The far edge of the polished table top runs straight across the frame behind the clock's feet; no Quick, Draw! category is a table top seen edge-on, so it is one drawn line., drawn by agent: The near edge of the table and the carved corner at the left are drawn as lines because the Quick, Draw! table doodles show legs and a side view, which the film does not.",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

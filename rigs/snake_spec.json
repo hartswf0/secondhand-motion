@@ -1,0 +1,305 @@
+{
+ "category": "snake",
+ "doodle_key_id": "4612932086267904",
+ "facing": -1,
+ "face_from": [
+  "nose",
+  "tail"
+ ],
+ "size_from_mask": false,
+ "note": "Quick, Draw! snake 4612932086267904, a fat S-shaped snake drawn as one closed outline (stroke 0): the head at top left facing left, the neck running right along the top, turning down at the right and sweeping back left into the lower coil, then out to the right into a pointed tail; a forked tongue (strokes 1 and 2) and one eye (stroke 3). The film's coiled rattlesnake has the same plan: head at left, neck arching right, coils below, rattle at the right. The whole drawing is placed by two points on the body, the left edge of the lower coil and the outer curve of the neck, so it rides the camera's drift and slight zoom. The head turns a little about the neck. The tongue is pinned at the mouth and lengthens toward the pose's tongue point, from almost nothing when it is in to about two thirds of the doodle's length when it flicks out, and it points where the film's tongue points. The tail tip turns up about the base of the tail to stand where the film's raised rattle stands.",
+ "strokes": [
+  [
+   [
+    208,
+    179
+   ],
+   [
+    159,
+    178
+   ],
+   [
+    121,
+    173
+   ],
+   [
+    101,
+    162
+   ],
+   [
+    91,
+    144
+   ],
+   [
+    90,
+    128
+   ],
+   [
+    99,
+    112
+   ],
+   [
+    123,
+    98
+   ],
+   [
+    167,
+    92
+   ],
+   [
+    172,
+    84
+   ],
+   [
+    172,
+    74
+   ],
+   [
+    161,
+    53
+   ],
+   [
+    145,
+    38
+   ],
+   [
+    129,
+    32
+   ],
+   [
+    65,
+    29
+   ],
+   [
+    65,
+    20
+   ],
+   [
+    76,
+    11
+   ],
+   [
+    103,
+    4
+   ],
+   [
+    142,
+    2
+   ],
+   [
+    167,
+    6
+   ],
+   [
+    188,
+    19
+   ],
+   [
+    208,
+    42
+   ],
+   [
+    219,
+    63
+   ],
+   [
+    222,
+    75
+   ],
+   [
+    221,
+    84
+   ],
+   [
+    209,
+    101
+   ],
+   [
+    188,
+    115
+   ],
+   [
+    145,
+    127
+   ],
+   [
+    137,
+    131
+   ],
+   [
+    135,
+    136
+   ],
+   [
+    141,
+    143
+   ],
+   [
+    158,
+    151
+   ],
+   [
+    211,
+    154
+   ],
+   [
+    255,
+    167
+   ],
+   [
+    244,
+    173
+   ],
+   [
+    198,
+    175
+   ],
+   [
+    177,
+    173
+   ],
+   [
+    173,
+    167
+   ]
+  ],
+  [
+   [
+    66,
+    17
+   ],
+   [
+    16,
+    18
+   ],
+   [
+    0,
+    25
+   ]
+  ],
+  [
+   [
+    25,
+    17
+   ],
+   [
+    12,
+    12
+   ],
+   [
+    1,
+    0
+   ]
+  ],
+  [
+   [
+    97,
+    17
+   ],
+   [
+    99,
+    21
+   ],
+   [
+    96,
+    17
+   ]
+  ]
+ ],
+ "anchors": {
+  "nose": [
+   65,
+   24
+  ],
+  "mouth": [
+   65,
+   18
+  ],
+  "tongue": [
+   0,
+   25
+  ],
+  "neck": [
+   150,
+   20
+  ],
+  "arch": [
+   219,
+   63
+  ],
+  "coil": [
+   91,
+   140
+  ],
+  "tailbase": [
+   211,
+   154
+  ],
+  "tail": [
+   255,
+   167
+  ]
+ },
+ "root": [
+  "coil",
+  "arch"
+ ],
+ "parts": [
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 2,
+   "joint": "mouth",
+   "aim": [
+    "mouth",
+    "tongue"
+   ],
+   "stretch": 1
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 2,
+   "joint": "mouth",
+   "aim": [
+    "mouth",
+    "tongue"
+   ],
+   "stretch": 1
+  },
+  {
+   "region": [
+    0,
+    0,
+    135,
+    36
+   ],
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 33,
+   "to": 34,
+   "joint": "tailbase",
+   "aim": [
+    "tailbase",
+    "tail"
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "coil",
+   "aim": [
+    "coil",
+    "arch"
+   ],
+   "turn": 0
+  }
+ ],
+ "track": false,
+ "smooth": 1.0
+}

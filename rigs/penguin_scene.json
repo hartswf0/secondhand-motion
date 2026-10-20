@@ -1,0 +1,228 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -4.0,
+   -2.73,
+   -2.29,
+   1.5,
+   5.46,
+   8.88,
+   12.84,
+   12.84,
+   19.55,
+   15.89,
+   11.77,
+   11.77,
+   10.22,
+   9.88,
+   10.1,
+   9.53,
+   7.97,
+   8.34,
+   8.77,
+   8.59,
+   9.28,
+   10.06,
+   10.35,
+   10.35,
+   7.57,
+   5.62,
+   2.45,
+   0.88,
+   0.47,
+   0.35,
+   0.19,
+   0.12,
+   0.45,
+   0.17,
+   -0.08,
+   -0.33,
+   -0.3,
+   -0.72,
+   -1.2,
+   -1.89,
+   -2.3,
+   -2.45,
+   -2.87
+  ],
+  "y": [
+   0.0,
+   -1.85,
+   -1.82,
+   -1.27,
+   -6.02,
+   -10.12,
+   -9.68,
+   -9.21,
+   -9.21,
+   -12.53,
+   -8.24,
+   0.34,
+   0.34,
+   5.66,
+   5.9,
+   6.95,
+   7.94,
+   10.15,
+   9.82,
+   9.54,
+   9.59,
+   9.21,
+   8.53,
+   7.76,
+   8.14,
+   6.96,
+   6.03,
+   5.77,
+   6.37,
+   5.81,
+   5.08,
+   4.64,
+   5.33,
+   5.35,
+   5.07,
+   5.52,
+   5.83,
+   6.37,
+   5.78,
+   4.93,
+   6.01,
+   5.78,
+   4.99,
+   4.47
+  ],
+  "source": "shots/penguin-sam/camera.json, per-frame shift measured from the footage"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 3.4,
+   "label": "Dark red rock behind the penguin",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "ledge",
+   "z": 2.6,
+   "label": "Pale ice ledge at the bottom of the frame",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Penguin"
+  }
+ ],
+ "objects": [
+  {
+   "id": "rock",
+   "plane": "far",
+   "class": "rock",
+   "why": "The film has a dark red rounded shape at the right edge behind the penguin. No Quick, Draw! category here is a plain rock face, so its outline is drawn as one line.",
+   "strokes": [
+    [
+     [
+      392,
+      38
+     ],
+     [
+      330,
+      36
+     ],
+     [
+      306,
+      46
+     ],
+     [
+      298,
+      70
+     ],
+     [
+      296,
+      110
+     ],
+     [
+      302,
+      138
+     ],
+     [
+      330,
+      146
+     ],
+     [
+      392,
+      144
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "ledge",
+   "plane": "ledge",
+   "class": "ice ledge",
+   "why": "The film has a pale curved slab of ice along the bottom of the frame, rising to the right and hooking down at its end. No Quick, Draw! category is an ice ledge, so its top edge and hook are drawn as lines.",
+   "strokes": [
+    [
+     [
+      140,
+      292
+     ],
+     [
+      148,
+      272
+     ],
+     [
+      200,
+      268
+     ],
+     [
+      262,
+      262
+     ],
+     [
+      282,
+      262
+     ],
+     [
+      294,
+      272
+     ],
+     [
+      302,
+      292
+     ]
+    ],
+    [
+     [
+      78,
+      292
+     ],
+     [
+      82,
+      272
+     ],
+     [
+      94,
+      268
+     ],
+     [
+      102,
+      280
+     ],
+     [
+      104,
+      292
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "Head raised, beak open and pointing up to the left.",
+  "8": "Camera drifts right with the penguin; head lowers and turns toward the viewer's left.",
+  "24": "Head dips; beak points down to the left.",
+  "32": "Beak wide open.",
+  "40": "Quick nod down, then back up by the last frame."
+ }
+}

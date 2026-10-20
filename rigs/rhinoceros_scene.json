@@ -1,0 +1,260 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.56,
+   2.28,
+   2.47,
+   2.43,
+   2.0,
+   2.44,
+   2.31,
+   2.09,
+   1.49,
+   2.22,
+   1.24,
+   1.39,
+   7.47,
+   5.46,
+   3.37,
+   -5.02,
+   -12.01,
+   -11.43,
+   -11.04,
+   -13.61,
+   -14.65,
+   -17.48,
+   -35.97,
+   -46.15,
+   -55.01,
+   -63.33,
+   -62.98,
+   -62.21,
+   -61.56,
+   -58.93,
+   -56.03,
+   -55.07,
+   -53.85,
+   -48.27,
+   -43.32,
+   -42.21,
+   -40.14,
+   -38.36,
+   -36.0,
+   -32.55,
+   -30.77,
+   -30.35,
+   -29.05,
+   -29.05,
+   -29.12,
+   -30.51,
+   -31.44,
+   -32.16,
+   -32.01
+  ],
+  "y": [
+   0.0,
+   -0.01,
+   1.68,
+   1.74,
+   2.14,
+   2.62,
+   2.79,
+   3.74,
+   4.59,
+   4.12,
+   3.96,
+   3.91,
+   3.78,
+   10.92,
+   9.93,
+   9.79,
+   10.0,
+   10.73,
+   11.0,
+   9.37,
+   8.22,
+   7.82,
+   7.54,
+   -1.11,
+   -1.37,
+   -1.9,
+   -0.75,
+   1.83,
+   3.06,
+   4.34,
+   4.22,
+   4.73,
+   4.85,
+   4.8,
+   3.18,
+   3.5,
+   2.69,
+   2.4,
+   -1.33,
+   -11.05,
+   -12.46,
+   -12.31,
+   -11.41,
+   -10.76,
+   -10.76,
+   -11.56,
+   -10.76,
+   -10.17,
+   -9.8,
+   -8.82
+  ],
+  "source": "shots/rhinoceros-sam/camera.json: per-frame shift of the footage, measured by phase correlation"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 8,
+   "label": "Fence along the top of the yard",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "mid",
+   "z": 4,
+   "label": "Post and yard",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "ground",
+   "z": 3,
+   "label": "Sand in front",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Rhinoceros"
+  }
+ ],
+ "objects": [
+  {
+   "id": "fence1",
+   "plane": "far",
+   "qd": "fence",
+   "box": [
+    -40,
+    2,
+    140,
+    34
+   ],
+   "aspect": 5.0,
+   "strokes": 4
+  },
+  {
+   "id": "fence2",
+   "plane": "far",
+   "qd": "fence",
+   "box": [
+    140,
+    2,
+    320,
+    34
+   ],
+   "aspect": 5.0,
+   "strokes": 4
+  },
+  {
+   "id": "fence3",
+   "plane": "far",
+   "qd": "fence",
+   "box": [
+    320,
+    2,
+    500,
+    34
+   ],
+   "aspect": 5.0,
+   "strokes": 4
+  },
+  {
+   "id": "post",
+   "plane": "mid",
+   "class": "post",
+   "why": "no Quick, Draw! category is a single upright post; one vertical line where the footage shows a pole at the right of the yard",
+   "strokes": [
+    [
+     [
+      346,
+      40
+     ],
+     [
+      347,
+      200
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "sand",
+   "plane": "ground",
+   "class": "ground",
+   "why": "no Quick, Draw! category is bare sand; a few short dashes for the ruts in the sand under the rhinoceros",
+   "strokes": [
+    [
+     [
+      -30,
+      262
+     ],
+     [
+      20,
+      264
+     ]
+    ],
+    [
+     [
+      120,
+      278
+     ],
+     [
+      175,
+      280
+     ]
+    ],
+    [
+     [
+      300,
+      266
+     ],
+     [
+      350,
+      268
+     ]
+    ],
+    [
+     [
+      380,
+      282
+     ],
+     [
+      430,
+      283
+     ]
+    ],
+    [
+     [
+      -60,
+      284
+     ],
+     [
+      -10,
+      285
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the rhinoceros stands side on facing right, head low over the sand",
+  "12": "lowers its head to graze and shifts its front feet",
+  "24": "the camera pans left as it backs a step, nose on the ground",
+  "36": "head lowest, front feet planted",
+  "42": "lifts its head a little and steps forward",
+  "49": "grazes again"
+ }
+}

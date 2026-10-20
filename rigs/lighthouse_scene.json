@@ -1,0 +1,203 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.91,
+   2.04,
+   3.22,
+   5.03,
+   6.06,
+   7.69,
+   8.79,
+   10.45,
+   11.47,
+   13.0,
+   14.08,
+   15.78,
+   16.61,
+   17.57,
+   18.39,
+   19.35,
+   20.1,
+   21.03,
+   21.79,
+   22.62,
+   23.17,
+   23.88,
+   24.52,
+   24.8,
+   25.14,
+   25.73,
+   26.01,
+   26.46,
+   26.66,
+   26.94,
+   26.98
+  ],
+  "y": [
+   0.0,
+   6.36,
+   15.29,
+   21.47,
+   30.36,
+   36.11,
+   44.28,
+   49.43,
+   56.67,
+   61.26,
+   67.47,
+   71.81,
+   77.85,
+   81.58,
+   86.98,
+   90.51,
+   95.54,
+   98.74,
+   103.41,
+   106.55,
+   110.94,
+   113.51,
+   117.09,
+   119.76,
+   124.48,
+   127.1,
+   130.05,
+   131.44,
+   133.54,
+   135.05,
+   136.25,
+   136.59
+  ],
+  "source": "shots/lighthouse-sam/camera.json: phase correlation of the footage with the lighthouse masked out; the camera tilts up, so trees and sky slide down the frame by about 137 px over the shot"
+ },
+ "planes": [
+  {
+   "id": "sky",
+   "z": 2,
+   "label": "Clouds in the sky. Depth Anything reads the sky as far, but the camera only tilts, and in a tilt near and far things move the same on screen; the measured background shift equals the tower's own shift, so this plane moves with the camera at the tower's rate."
+  },
+  {
+   "id": "trees",
+   "z": 2,
+   "label": "Trees at the edges of the frame, seen from below. Same rate as the tower, for the same reason."
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Lighthouse"
+  }
+ ],
+ "objects": [
+  {
+   "id": "cloud1",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    228,
+    -45,
+    292,
+    -10
+   ],
+   "aspect": 1.9,
+   "strokes": 1
+  },
+  {
+   "id": "cloud2",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    275,
+    215,
+    365,
+    255
+   ],
+   "aspect": 2.0,
+   "strokes": 1,
+   "skip": 1
+  },
+  {
+   "id": "cloud3",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    40,
+    -130,
+    120,
+    -95
+   ],
+   "aspect": 2.2,
+   "strokes": 1,
+   "skip": 2
+  },
+  {
+   "id": "bush_low_left",
+   "plane": "trees",
+   "qd": "bush",
+   "box": [
+    -40,
+    150,
+    125,
+    310
+   ],
+   "aspect": 1.0
+  },
+  {
+   "id": "bush_high_left",
+   "plane": "trees",
+   "qd": "bush",
+   "box": [
+    -60,
+    -160,
+    165,
+    -35
+   ],
+   "aspect": 1.8,
+   "skip": 1
+  },
+  {
+   "id": "tree_right",
+   "plane": "trees",
+   "qd": "tree",
+   "box": [
+    290,
+    -150,
+    440,
+    200
+   ],
+   "aspect": 0.45,
+   "skip": 1
+  },
+  {
+   "id": "leaf1",
+   "plane": "trees",
+   "qd": "leaf",
+   "box": [
+    110,
+    40,
+    140,
+    70
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "leaf2",
+   "plane": "trees",
+   "qd": "leaf",
+   "box": [
+    240,
+    -120,
+    270,
+    -95
+   ],
+   "strokes": 2,
+   "skip": 1
+  }
+ ],
+ "notes": {
+  "0": "the camera looks up the red and white tower; the lantern is above the frame",
+  "6": "the gallery and lantern come down into the frame as the camera tilts up",
+  "18": "the whole lantern is in frame; the tower is a little smaller than at the start",
+  "31": "the tilt slows and stops with the lantern in the upper middle of the frame"
+ }
+}

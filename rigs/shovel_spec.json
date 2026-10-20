@@ -1,0 +1,175 @@
+{
+ "category": "shovel",
+ "doodle_key_id": "5440893605642240",
+ "facing": 1,
+ "face_from": [
+  "neck",
+  "neck"
+ ],
+ "note": "Quick, Draw! shovel 5440893605642240 (Croatia). Stroke 0 is the long straight handle with a small hook where it meets the blade. Stroke 1 is the triangular grip at the top end of the handle. Stroke 2 is a short collar line at the neck of the blade. Stroke 3 is the blade outline. The root places the blade by two points, the neck (where the handle enters the blade) and the far end of the blade, so the blade keeps the doodle's shape and size. The handle and grip are one part that turns about the neck to follow the handle in the film and lengthens to reach it, because the film's handle is longer relative to the blade than the doodle's and is bent a little by the camera's perspective. In the film the shovel lies still on the ground for the whole interval, so the keys hold it in place; the only motion is the slight drift of the hand-held camera.",
+ "strokes": [
+  [
+   [
+    40,
+    24
+   ],
+   [
+    168,
+    95
+   ],
+   [
+    182,
+    100
+   ],
+   [
+    163,
+    86
+   ]
+  ],
+  [
+   [
+    39,
+    24
+   ],
+   [
+    34,
+    10
+   ],
+   [
+    23,
+    0
+   ],
+   [
+    30,
+    2
+   ],
+   [
+    34,
+    8
+   ],
+   [
+    40,
+    29
+   ],
+   [
+    1,
+    27
+   ],
+   [
+    14,
+    9
+   ],
+   [
+    24,
+    4
+   ]
+  ],
+  [
+   [
+    180,
+    100
+   ],
+   [
+    202,
+    72
+   ]
+  ],
+  [
+   [
+    178,
+    103
+   ],
+   [
+    154,
+    136
+   ],
+   [
+    191,
+    158
+   ],
+   [
+    230,
+    163
+   ],
+   [
+    251,
+    161
+   ],
+   [
+    255,
+    137
+   ],
+   [
+    244,
+    111
+   ],
+   [
+    234,
+    95
+   ],
+   [
+    203,
+    77
+   ]
+  ]
+ ],
+ "anchors": {
+  "neck": [
+   180,
+   100
+  ],
+  "tip": [
+   252,
+   150
+  ],
+  "grip": [
+   20,
+   15
+  ]
+ },
+ "root": [
+  "neck",
+  "tip"
+ ],
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "grip"
+   ],
+   "stretch": 1
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 8,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "grip"
+   ],
+   "stretch": 1
+  },
+  {
+   "rest": true,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "tip"
+   ],
+   "turn": 0
+  }
+ ],
+ "options": {
+  "size": "steady",
+  "smooth": 1.5,
+  "track": false
+ },
+ "track": false,
+ "smooth": 1.5,
+ "size": "steady"
+}

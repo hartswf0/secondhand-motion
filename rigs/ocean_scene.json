@@ -1,0 +1,275 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   8.99,
+   14.06,
+   23.16,
+   29.1,
+   41.78,
+   46.63,
+   62.35,
+   70.16,
+   86.9,
+   94.19,
+   110.07,
+   119.96,
+   134.39,
+   140.66,
+   152.67,
+   158.57,
+   158.57,
+   163.63,
+   171.68,
+   175.64,
+   183.01,
+   186.2,
+   190.41,
+   192.56,
+   196.54,
+   199.36,
+   203.58,
+   205.77,
+   205.77,
+   205.77,
+   205.77,
+   206.14,
+   206.14,
+   216.17,
+   216.17,
+   216.17,
+   216.66
+  ],
+  "y": [
+   0.0,
+   -5.97,
+   -9.2,
+   -13.08,
+   -15.59,
+   -15.46,
+   -16.66,
+   -21.11,
+   -21.79,
+   -21.21,
+   -20.82,
+   -21.06,
+   -20.59,
+   -16.89,
+   -14.28,
+   -6.01,
+   -2.34,
+   -2.34,
+   0.41,
+   10.13,
+   14.13,
+   20.84,
+   24.75,
+   34.81,
+   38.45,
+   45.55,
+   49.27,
+   57.46,
+   61.29,
+   61.29,
+   61.29,
+   61.29,
+   63.0,
+   63.0,
+   65.04,
+   65.04,
+   65.04,
+   68.95
+  ],
+  "source": "shots/ocean-sam/camera.json, phase correlation of the whole frame: the sea runs right about 217 px and the ship pitches so the view drops about 90 px and the horizon comes in at the top. This is a turning camera on a ship, so near and far water shift by the same amount on screen; every scenery plane therefore keeps the character's depth (z 2) instead of taking z from depth.json, whose top band is the sky."
+ },
+ "planes": [
+  {
+   "id": "sea",
+   "z": 2,
+   "label": "Sea and horizon (camera turns, so it moves with the water)"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Ocean doodle"
+  }
+ ],
+ "objects": [
+  {
+   "id": "sea-left",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -492.0,
+    45.0,
+    -186.0,
+    271.8
+   ]
+  },
+  {
+   "id": "sea-right",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    152.0,
+    45.0,
+    458.0,
+    271.8
+   ]
+  },
+  {
+   "id": "far-0",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -260,
+    -30,
+    -168.2,
+    38.0
+   ]
+  },
+  {
+   "id": "far-1",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -158.2,
+    -24,
+    -66.4,
+    44.0
+   ]
+  },
+  {
+   "id": "far-2",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -56.4,
+    -30,
+    35.4,
+    38.0
+   ]
+  },
+  {
+   "id": "far-3",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    45.4,
+    -24,
+    137.2,
+    44.0
+   ]
+  },
+  {
+   "id": "far-4",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    147.2,
+    -30,
+    239.0,
+    38.0
+   ]
+  },
+  {
+   "id": "far-5",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    249.0,
+    -24,
+    340.8,
+    44.0
+   ]
+  },
+  {
+   "id": "far-6",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    350.8,
+    -30,
+    442.6,
+    38.0
+   ]
+  },
+  {
+   "id": "near-0",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    -348.5,
+    283.8,
+    8.5,
+    548.4
+   ]
+  },
+  {
+   "id": "near-1",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    24.5,
+    283.8,
+    381.5,
+    548.4
+   ]
+  },
+  {
+   "id": "near-2",
+   "plane": "sea",
+   "copy_of_design": true,
+   "box": [
+    397.5,
+    283.8,
+    754.5,
+    548.4
+   ]
+  },
+  {
+   "id": "horizon",
+   "plane": "sea",
+   "class": "horizon",
+   "strokes": [
+    [
+     [
+      -260,
+      -38
+     ],
+     [
+      -120,
+      -39
+     ],
+     [
+      0,
+      -37.5
+     ],
+     [
+      120,
+      -38.5
+     ],
+     [
+      260,
+      -37
+     ],
+     [
+      440,
+      -38
+     ]
+    ]
+   ],
+   "why": "the horizon comes into view at the top from frame 28 as the ship pitches; no Quick, Draw! category is a single level line, so it is drawn as one slightly uneven stroke"
+  }
+ ],
+ "no_cel": true,
+ "notes": {
+  "0": "choppy open sea, foam lacing the dark troughs",
+  "9": "foam patches ride the water to the right",
+  "17": "a big swell builds on the right",
+  "25": "the crest stands tallest",
+  "29": "the crest breaks, its lip throws forward; the horizon comes into view",
+  "37": "the swell has passed; the sea flattens toward the horizon"
+ }
+}

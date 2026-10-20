@@ -1,0 +1,81 @@
+[
+ {
+  "id": "M2",
+  "value": 41,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   41,
+   41,
+   41,
+   41,
+   41,
+   41,
+   41,
+   41,
+   41,
+   41,
+   41,
+   41
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 1.0,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 41
+ },
+ {
+  "id": "M3",
+  "value": 0.52,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.08
+ },
+ {
+  "id": "M6",
+  "value": 1.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "7 strokes, 61 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6125487162130432; scenery quickdraw:5056293641388032, quickdraw:5402091071733760, quickdraw:5330967675797504, drawn by agent: no Quick, Draw! category is a reed stalk lying on water; the two pale stalks floating at upper left are drawn as two pairs of long slightly bent lines",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

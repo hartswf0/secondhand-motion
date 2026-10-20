@@ -1,0 +1,79 @@
+[
+ {
+  "id": "M2",
+  "value": 24,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   25,
+   23,
+   26,
+   26,
+   26,
+   25,
+   18,
+   23,
+   26,
+   25
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.67,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 37
+ },
+ {
+  "id": "M3",
+  "value": 0.58,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.49
+ },
+ {
+  "id": "M6",
+  "value": 1.1,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "7 strokes, 47 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5621907212730368; scenery quickdraw:6721509840125952, quickdraw:6721509840125952, quickdraw:6721509840125952, drawn by agent: no Quick, Draw! category is a single upright post; one vertical line where the footage shows a pole at the right of the yard, drawn by agent: no Quick, Draw! category is bare sand; a few short dashes for the ruts in the sand under the rhinoceros",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "50/50",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

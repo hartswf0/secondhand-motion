@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0088",
+ "id": "swan-gwp",
+ "kind": "shot",
+ "title": "Swan, the Giraffe Walks Past Way",
+ "category": "swan",
+ "wave": 4,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/swan-gwp/cover.png",
+ "cover_alt": "shots/swan-gwp/frames/f024.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/swan-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#swan-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/swan_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/swan/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/swan-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 4"
+ ]
+}

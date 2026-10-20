@@ -1,0 +1,225 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.44,
+   0.22,
+   -0.67,
+   -0.84,
+   -0.83,
+   -0.82,
+   -1.14,
+   -1.28,
+   -1.13,
+   -1.16,
+   -1.1,
+   -0.7,
+   -0.66,
+   -0.3,
+   -0.2,
+   -0.37,
+   -0.64,
+   -0.84,
+   -1.01,
+   -1.02,
+   -0.99,
+   -0.95,
+   -0.81,
+   -0.72,
+   -0.73,
+   -0.77,
+   -0.67,
+   -0.4,
+   -0.15,
+   -0.18,
+   -0.48
+  ],
+  "y": [
+   0.0,
+   -0.36,
+   -0.48,
+   -1.12,
+   -1.51,
+   -1.78,
+   -1.86,
+   -1.88,
+   -1.81,
+   -1.51,
+   -1.51,
+   -1.47,
+   -1.45,
+   -1.47,
+   -1.22,
+   -1.15,
+   -0.97,
+   -0.58,
+   -0.43,
+   -0.17,
+   -0.14,
+   -0.09,
+   -0.22,
+   -0.38,
+   -0.43,
+   -0.72,
+   -0.87,
+   -1.07,
+   -1.13,
+   -1.28,
+   -1.37,
+   -1.32
+  ],
+  "source": "shots/shovel-sam/camera.json: per-frame shift of the footage measured by phase correlation; the hand-held camera drifts by under 2 px over the interval"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 3,
+   "label": "Ground above the shovel",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Shovel"
+  },
+  {
+   "id": "near",
+   "z": 1.6,
+   "label": "Ground below the shovel",
+   "z_from_depth": "bottom"
+  }
+ ],
+ "objects": [
+  {
+   "id": "grass1",
+   "plane": "far",
+   "qd": "grass",
+   "box": [
+    20,
+    20,
+    90,
+    55
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "grass2",
+   "plane": "far",
+   "qd": "grass",
+   "box": [
+    140,
+    40,
+    200,
+    70
+   ],
+   "strokes": 3,
+   "skip": 1
+  },
+  {
+   "id": "grass3",
+   "plane": "far",
+   "qd": "grass",
+   "box": [
+    60,
+    95,
+    120,
+    125
+   ],
+   "strokes": 3,
+   "skip": 2
+  },
+  {
+   "id": "grass4",
+   "plane": "near",
+   "qd": "grass",
+   "box": [
+    40,
+    225,
+    110,
+    260
+   ],
+   "strokes": 3,
+   "skip": 3
+  },
+  {
+   "id": "grass5",
+   "plane": "near",
+   "qd": "grass",
+   "box": [
+    170,
+    205,
+    240,
+    240
+   ],
+   "strokes": 3,
+   "skip": 4
+  },
+  {
+   "id": "grass6",
+   "plane": "near",
+   "qd": "grass",
+   "box": [
+    290,
+    235,
+    360,
+    270
+   ],
+   "strokes": 3,
+   "skip": 5
+  },
+  {
+   "id": "straw",
+   "plane": "near",
+   "class": "straw",
+   "why": "loose dry stalks lie across the ground under the shovel; no Quick, Draw! category is a single loose stalk",
+   "strokes": [
+    [
+     [
+      120,
+      200
+     ],
+     [
+      175,
+      212
+     ]
+    ],
+    [
+     [
+      250,
+      262
+     ],
+     [
+      300,
+      255
+     ]
+    ],
+    [
+     [
+      10,
+      240
+     ],
+     [
+      30,
+      275
+     ]
+    ],
+    [
+     [
+      330,
+      200
+     ],
+     [
+      372,
+      212
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the shovel lies still on dry ground, handle to the lower left, blade to the upper right",
+  "14": "a man's foot steps in above the blade",
+  "30": "his hand reaches down toward the handle"
+ }
+}

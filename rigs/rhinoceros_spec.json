@@ -220,21 +220,17 @@
    0,
    0
   ],
-  "face": [
-   66,
+  "poll": [
+   70,
    62
-  ],
-  "neck": [
-   150,
-   72
   ],
   "shoulder": [
    150,
-   95
+   90
   ],
   "rump": [
-   245,
-   95
+   240,
+   90
   ],
   "f1top": [
    134,
@@ -278,23 +274,24 @@
    "stroke": 0,
    "from": 0,
    "to": 4,
-   "joint": "neck",
+   "joint": "poll",
    "aim": [
-    "neck",
+    "poll",
     "nose"
-   ],
-   "turn": 0.8
+   ]
   },
   {
-   "stroke": 1,
-   "from": 0,
-   "to": 18,
-   "joint": "neck",
-   "aim": [
-    "neck",
-    "nose"
+   "region": [
+    -1,
+    40,
+    62,
+    110
    ],
-   "turn": 0.8
+   "joint": "poll",
+   "aim": [
+    "poll",
+    "nose"
+   ]
   },
   {
    "stroke": 4,
@@ -305,7 +302,7 @@
     "f1top",
     "f1"
    ],
-   "stretch": 0.3,
+   "stretch": 0.5,
    "turn": 0.7
   },
   {
@@ -317,7 +314,7 @@
     "f2top",
     "f2"
    ],
-   "stretch": 0.3,
+   "stretch": 0.5,
    "turn": 0.7
   },
   {
@@ -329,7 +326,7 @@
     "h1top",
     "h1"
    ],
-   "stretch": 0.3,
+   "stretch": 0.5,
    "turn": 0.7
   },
   {
@@ -341,7 +338,7 @@
     "h2top",
     "h2"
    ],
-   "stretch": 0.3,
+   "stretch": 0.5,
    "turn": 0.7
   },
   {
@@ -359,7 +356,7 @@
   0.85,
   1.15
  ],
- "max_tilt": 20,
+ "max_tilt": 25,
  "track": false,
  "smooth": 1.2
 }

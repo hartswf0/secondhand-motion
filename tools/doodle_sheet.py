@@ -4,6 +4,7 @@ usage: python3 tools/doodle_sheet.py <design.json> <out.png> [mirror]"""
 import json, sys
 from PIL import Image, ImageDraw
 d = json.load(open(sys.argv[1])); dr = d['drawing'] if not isinstance(d['drawing'], str) else json.loads(d['drawing'])
+import os; os.makedirs(os.path.dirname(os.path.abspath(sys.argv[2])), exist_ok=True)
 mir = len(sys.argv) > 3; S = 3.0; im = Image.new('RGB', (int(256 * S) + 80, int(256 * S) + 80), 'white'); g = ImageDraw.Draw(im)
 cols = [(200, 30, 30), (30, 110, 200), (20, 150, 70), (170, 90, 0), (140, 40, 170), (0, 140, 150), (90, 90, 90)]
 for x in range(0, 257, 32):

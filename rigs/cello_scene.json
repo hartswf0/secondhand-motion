@@ -1,0 +1,524 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.13,
+   0.13,
+   -0.25,
+   -0.9,
+   -1.26,
+   -1.65,
+   -2.0,
+   -2.66,
+   -2.63,
+   -3.1,
+   -3.08,
+   -3.35,
+   -3.42,
+   -3.99,
+   -4.1,
+   -4.27,
+   -4.98,
+   -5.76,
+   -6.73,
+   -6.65,
+   -6.99,
+   -7.18,
+   -8.54,
+   -9.23,
+   -9.47,
+   -9.42,
+   -8.89,
+   -8.68,
+   -8.04,
+   -8.11,
+   -7.75
+  ],
+  "y": [
+   0.0,
+   0.01,
+   0.04,
+   0.0,
+   0.08,
+   0.12,
+   0.3,
+   0.14,
+   0.16,
+   0.07,
+   -0.23,
+   -0.19,
+   -0.3,
+   -0.47,
+   -0.83,
+   -0.8,
+   -0.95,
+   -1.04,
+   -1.29,
+   -1.54,
+   -1.96,
+   -2.24,
+   -2.59,
+   -2.74,
+   -2.94,
+   -2.93,
+   -2.78,
+   -2.55,
+   -2.42,
+   -2.51,
+   -2.68,
+   -2.66
+  ],
+  "source": "shots/cello-sam/camera.json, phase correlation on the footage; the cello itself was tracked separately by template matching on its scroll"
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 12,
+   "label": "Back wall, screen, stand and cabinet",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "chairs",
+   "z": 6,
+   "label": "Chairs and the players behind",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "front",
+   "z": 3,
+   "label": "Music stand in front",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Cello"
+  }
+ ],
+ "objects": [
+  {
+   "id": "screen",
+   "plane": "wall",
+   "class": "screen",
+   "why": "no Quick, Draw! category in the local set is a wall-mounted screen; a dark rectangle drawn as its outline, top left of the frame where the film has one",
+   "strokes": [
+    [
+     [
+      -4,
+      -4
+     ],
+     [
+      47,
+      -4
+     ],
+     [
+      47,
+      72
+     ],
+     [
+      -4,
+      72
+     ],
+     [
+      -4,
+      -4
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "rail",
+   "plane": "wall",
+   "class": "ground",
+   "why": "no category is a wall rail; one horizontal line for the moulding that runs along the back wall",
+   "strokes": [
+    [
+     [
+      -20,
+      134
+     ],
+     [
+      100,
+      134
+     ]
+    ],
+    [
+     [
+      268,
+      134
+     ],
+     [
+      404,
+      134
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "stand_bar",
+   "plane": "wall",
+   "class": "stand",
+   "why": "no category is a music stand; the black frame of the stand standing behind the player, a bar with one post",
+   "strokes": [
+    [
+     [
+      141,
+      48
+     ],
+     [
+      252,
+      46
+     ]
+    ],
+    [
+     [
+      141,
+      48
+     ],
+     [
+      141,
+      82
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "cabinet",
+   "plane": "wall",
+   "class": "cabinet",
+   "why": "no category is a filing cabinet; its outline and two drawer lines, right of the cello",
+   "strokes": [
+    [
+     [
+      280,
+      86
+     ],
+     [
+      352,
+      86
+     ],
+     [
+      352,
+      140
+     ],
+     [
+      280,
+      140
+     ],
+     [
+      280,
+      86
+     ]
+    ],
+    [
+     [
+      284,
+      104
+     ],
+     [
+      348,
+      104
+     ]
+    ],
+    [
+     [
+      284,
+      122
+     ],
+     [
+      348,
+      122
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "balls",
+   "plane": "wall",
+   "class": "balls",
+   "why": "the white wool balls on top of the cabinet, drawn as two small loops",
+   "strokes": [
+    [
+     [
+      276,
+      80
+     ],
+     [
+      281,
+      72
+     ],
+     [
+      289,
+      72
+     ],
+     [
+      292,
+      80
+     ],
+     [
+      285,
+      86
+     ],
+     [
+      276,
+      80
+     ]
+    ],
+    [
+     [
+      291,
+      79
+     ],
+     [
+      296,
+      71
+     ],
+     [
+      304,
+      71
+     ],
+     [
+      306,
+      79
+     ],
+     [
+      299,
+      85
+     ],
+     [
+      291,
+      79
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "chair1",
+   "plane": "chairs",
+   "class": "chair",
+   "why": "no Quick, Draw! chair in the local set; the mesh chair back at left, outline and two cross lines",
+   "strokes": [
+    [
+     [
+      15,
+      142
+     ],
+     [
+      85,
+      140
+     ],
+     [
+      83,
+      200
+     ],
+     [
+      17,
+      202
+     ],
+     [
+      15,
+      142
+     ]
+    ],
+    [
+     [
+      16,
+      160
+     ],
+     [
+      84,
+      158
+     ]
+    ],
+    [
+     [
+      17,
+      180
+     ],
+     [
+      84,
+      178
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "player_l",
+   "plane": "chairs",
+   "class": "head",
+   "why": "the player behind at left, drawn as a head outline because no face category is in the local set",
+   "strokes": [
+    [
+     [
+      130,
+      112
+     ],
+     [
+      128,
+      98
+     ],
+     [
+      136,
+      88
+     ],
+     [
+      148,
+      86
+     ],
+     [
+      158,
+      94
+     ],
+     [
+      160,
+      108
+     ],
+     [
+      154,
+      120
+     ],
+     [
+      142,
+      124
+     ],
+     [
+      132,
+      120
+     ],
+     [
+      130,
+      112
+     ]
+    ],
+    [
+     [
+      118,
+      140
+     ],
+     [
+      128,
+      128
+     ],
+     [
+      160,
+      128
+     ],
+     [
+      170,
+      140
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "player_r",
+   "plane": "chairs",
+   "class": "head",
+   "why": "the two players behind at right, head outlines",
+   "strokes": [
+    [
+     [
+      348,
+      108
+     ],
+     [
+      350,
+      96
+     ],
+     [
+      360,
+      91
+     ],
+     [
+      371,
+      95
+     ],
+     [
+      375,
+      106
+     ],
+     [
+      371,
+      118
+     ],
+     [
+      360,
+      122
+     ],
+     [
+      351,
+      117
+     ],
+     [
+      348,
+      108
+     ]
+    ],
+    [
+     [
+      366,
+      150
+     ],
+     [
+      370,
+      136
+     ],
+     [
+      380,
+      128
+     ],
+     [
+      392,
+      128
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "stand_front",
+   "plane": "front",
+   "class": "stand",
+   "why": "the edge of a music stand in the lower left corner, its sheet ledge and post",
+   "strokes": [
+    [
+     [
+      0,
+      108
+     ],
+     [
+      36,
+      104
+     ]
+    ],
+    [
+     [
+      18,
+      106
+     ],
+     [
+      18,
+      216
+     ]
+    ],
+    [
+     [
+      0,
+      150
+     ],
+     [
+      30,
+      108
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the cello stands upright between her knees, neck leaning right at the top",
+  "8": "she leans left and the cello goes with her",
+  "20": "she leans further left while bowing; the cello slides left about 35 px",
+  "26": "the lean stops and the cello settles back a few pixels; the bow comes into view at the bottom"
+ },
+ "no_cel": "SAM followed the player, not the cello, so a cel painted from the silhouette would be the woman's shape and cover the scenery and the cello's lines"
+}
