@@ -6,7 +6,7 @@
   "shoulder",
   "rump"
  ],
- "note": "Quick, Draw! rhinoceros 5621907212730368, facing left. Stroke 0 is the two horns drawn as one zigzag. Stroke 1 is the head: the snout point and chin at the left, the face line up to the brow, and a large round outline that also covers the shoulders. Stroke 2 is the body, a second round outline behind the head. Strokes 4 and 5 are the front legs and strokes 6 and 3 the hind legs, each a short line. The rig carries the body by the shoulder and rump points. The head and horns turn together at the neck toward the nose point, so the nose dips to the grass and swings as the rhinoceros grazes. Each leg swings at its top as the rhinoceros shifts its feet.",
+ "note": "Quick, Draw! rhinoceros 5621907212730368, facing left. Stroke 0 is the two horns drawn as one zigzag; its last point meets the top of the head's straight diagonal edge. Stroke 1 is the head: the snout point and chin at the left, the straight diagonal face edge up to the brow, and a large round outline that also covers the shoulders. Stroke 2 is the body, a second round outline behind the head. Strokes 4 and 5 are the front legs and strokes 6 and 3 the hind legs, each a short line kept at the doodle's own length. The rig carries the body by the shoulder and rump points. The horns, the diagonal face edge, the snout and the chin turn together as one rigid unit about the brow point where the horns meet the face edge, so the nose dips toward the sand and lifts again while the horns stay on the head. Each leg swings at its top as the rhinoceros shifts its feet.",
  "strokes": [
   [
    [
@@ -221,8 +221,8 @@
    0
   ],
   "poll": [
-   70,
-   62
+   100,
+   23
   ],
   "shoulder": [
    150,
@@ -278,20 +278,30 @@
    "aim": [
     "poll",
     "nose"
-   ]
+   ],
+   "turn": 1
   },
   {
-   "region": [
-    -1,
-    40,
-    62,
-    110
-   ],
+   "stroke": 1,
+   "from": 0,
+   "to": 4,
    "joint": "poll",
    "aim": [
     "poll",
     "nose"
-   ]
+   ],
+   "turn": 1
+  },
+  {
+   "stroke": 1,
+   "from": 14,
+   "to": 18,
+   "joint": "poll",
+   "aim": [
+    "poll",
+    "nose"
+   ],
+   "turn": 1
   },
   {
    "stroke": 4,
@@ -302,7 +312,7 @@
     "f1top",
     "f1"
    ],
-   "stretch": 0.5,
+   "stretch": 0,
    "turn": 0.7
   },
   {
@@ -314,7 +324,7 @@
     "f2top",
     "f2"
    ],
-   "stretch": 0.5,
+   "stretch": 0,
    "turn": 0.7
   },
   {
@@ -326,7 +336,7 @@
     "h1top",
     "h1"
    ],
-   "stretch": 0.5,
+   "stretch": 0,
    "turn": 0.7
   },
   {
@@ -338,7 +348,7 @@
     "h2top",
     "h2"
    ],
-   "stretch": 0.5,
+   "stretch": 0,
    "turn": 0.7
   },
   {
@@ -358,5 +368,5 @@
  ],
  "max_tilt": 25,
  "track": false,
- "smooth": 1.2
+ "smooth": 1.8
 }

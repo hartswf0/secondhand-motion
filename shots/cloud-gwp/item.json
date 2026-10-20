@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0097",
+ "id": "cloud-gwp",
+ "kind": "shot",
+ "title": "Cloud, the Giraffe Walks Past Way",
+ "category": "cloud",
+ "wave": 4,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/cloud-gwp/cover.png",
+ "cover_alt": "shots/cloud-gwp/frames/f031.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/cloud-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#cloud-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/cloud_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/cloud/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/cloud-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 4"
+ ]
+}
