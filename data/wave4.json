@@ -500,7 +500,8 @@
    "pool_status": "reserve",
    "interval_hint": null,
    "plan": "shots/frog/plan.json",
-   "pool": "production/data/candidate-reserves.json"
+   "pool": "production/data/candidate-reserves.json",
+   "surveyed": true
   },
   {
    "slug": "squirrel",
@@ -519,7 +520,9 @@
    "pool_status": "reserve",
    "interval_hint": null,
    "plan": "shots/squirrel/plan.json",
-   "pool": "production/data/candidate-reserves.json"
+   "pool": "production/data/candidate-reserves.json",
+   "rejected": "The only animal is a small, blurred brown shape behind a tangle of bare branches near the top edge, never clearly a squirrel and too occluded to trace as one character.",
+   "surveyed": true
   },
   {
    "slug": "swan",
@@ -538,7 +541,8 @@
    "pool_status": "reserve",
    "interval_hint": null,
    "plan": "shots/swan/plan.json",
-   "pool": "production/data/candidate-reserves.json"
+   "pool": "production/data/candidate-reserves.json",
+   "surveyed": true
   },
   {
    "slug": "crab",
@@ -557,7 +561,8 @@
    "pool_status": "reserve",
    "interval_hint": null,
    "plan": "shots/crab/plan.json",
-   "pool": "production/data/candidate-reserves.json"
+   "pool": "production/data/candidate-reserves.json",
+   "surveyed": true
   },
   {
    "slug": "elephant",
@@ -576,7 +581,9 @@
    "pool_status": "reserve",
    "interval_hint": null,
    "plan": "shots/elephant/plan.json",
-   "pool": "production/data/candidate-reserves.json"
+   "pool": "production/data/candidate-reserves.json",
+   "surveyed": true,
+   "rejected": "Dropped to keep the wave at 25: the clip shows an elephant-shaped building that does not move."
   },
   {
    "slug": "penguin",
@@ -595,7 +602,8 @@
    "pool_status": "reserve",
    "interval_hint": null,
    "plan": "shots/penguin/plan.json",
-   "pool": "production/data/candidate-reserves.json"
+   "pool": "production/data/candidate-reserves.json",
+   "surveyed": true
   },
   {
    "slug": "parrot",
@@ -614,7 +622,9 @@
    "pool_status": "reserve",
    "interval_hint": null,
    "plan": "shots/parrot/plan.json",
-   "pool": "production/data/candidate-reserves.json"
+   "pool": "production/data/candidate-reserves.json",
+   "rejected": "The parrot appears only as a still head close-up from 2.0 to 2.75 s between cuts, shorter than the 2 second minimum and with almost no movement.",
+   "surveyed": true
   },
   {
    "slug": "rhinoceros",
@@ -633,7 +643,8 @@
    "pool_status": "reserve",
    "interval_hint": null,
    "plan": "shots/rhinoceros/plan.json",
-   "pool": "production/data/candidate-reserves.json"
+   "pool": "production/data/candidate-reserves.json",
+   "surveyed": true
   },
   {
    "slug": "camel",
@@ -652,7 +663,9 @@
    "pool_status": "reserve",
    "interval_hint": null,
    "plan": "shots/camel/plan.json",
-   "pool": "production/data/candidate-reserves.json"
+   "pool": "production/data/candidate-reserves.json",
+   "surveyed": true,
+   "rejected": "Dropped to keep the wave at 25: a man blocks the camel for part of the interval and the frame changes sharply near 5.9 s."
   },
   {
    "slug": "snake",
@@ -671,7 +684,8 @@
    "pool_status": "reserve",
    "interval_hint": null,
    "plan": "shots/snake/plan.json",
-   "pool": "production/data/candidate-reserves.json"
+   "pool": "production/data/candidate-reserves.json",
+   "surveyed": true
   }
  ]
 }
