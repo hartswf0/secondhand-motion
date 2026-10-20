@@ -2,7 +2,6 @@
  "z_ref": 2,
  "camera": {
   "x": [
-   -0.0,
    -0.34,
    -0.47,
    -0.59,
@@ -42,7 +41,6 @@
    -0.23
   ],
   "y": [
-   -0.0,
    -0.26,
    -0.39,
    -0.74,
@@ -81,7 +79,7 @@
    -2.13,
    -2.23
   ],
-  "source": "phase correlation of each whole frame against frame 1 (the camera face fills the frame, so this is the drift of the camera face), smoothed over 3 frames; frame 0 is the end of the previous shot and is held at 0. camera.json from the footage was not used because it jumps 6 px at frame 28 where the frames show no such jump."
+  "source": "phase correlation of each whole frame against frame 1 (the camera face fills the frame, so this is the drift of the camera face), smoothed over 3 frames; frame 0 is the end of the previous shot and is held at 0. camera.json from the footage was not used because it jumps 6 px at frame 28 where the frames show no such jump. Frame 0 of the tracked clip (the end of the previous shot) is trimmed off."
  },
  "planes": [
   {
@@ -114,22 +112,19 @@
     288
    ],
    "aspect": 1.0,
-   "strokes": 2
+   "strokes": 2,
+   "skip": 2
   },
   {
    "id": "lever",
    "plane": "low",
    "class": "line",
-   "why": "no Quick, Draw! category is a curved lever plate; one curve drawn along its upper edge",
+   "why": "no Quick, Draw! category is a curved lever plate; one curve drawn along its upper edge, starting where it comes out from under the doodle's body outline",
    "strokes": [
     [
      [
-      262,
-      222
-     ],
-     [
-      290,
-      232
+      302,
+      238
      ],
      [
       318,
@@ -150,21 +145,11 @@
    "id": "plate",
    "plane": "body",
    "class": "line",
-   "why": "no Quick, Draw! category is the camera's side plate; two vertical lines for its edge and two boxes for the latch blocks on it",
+   "why": "no Quick, Draw! category is the camera's side plate; its two latch blocks are drawn as boxes, open on the left where they pass behind the doodle's body outline, so the lines do not cross the camera",
    "strokes": [
     [
      [
-      304,
-      0
-     ],
-     [
-      304,
-      250
-     ]
-    ],
-    [
-     [
-      318,
+      350,
       62
      ],
      [
@@ -176,17 +161,13 @@
       112
      ],
      [
-      318,
+      350,
       112
-     ],
-     [
-      318,
-      62
      ]
     ],
     [
      [
-      316,
+      350,
       142
      ],
      [
@@ -198,12 +179,8 @@
       214
      ],
      [
-      316,
+      350,
       214
-     ],
-     [
-      316,
-      142
      ]
     ]
    ]
@@ -271,14 +248,31 @@
      ]
     ]
    ]
+  },
+  {
+   "id": "plateedge",
+   "plane": "body",
+   "class": "line",
+   "why": "the side plate's edge, drawn only below the doodle's body where it shows in the film",
+   "strokes": [
+    [
+     [
+      304,
+      250
+     ],
+     [
+      304,
+      290
+     ]
+    ]
+   ]
   }
  ],
  "notes": {
-  "0": "the end of the previous shot (two men at a studio camera); the drawing is held at the first key",
-  "1": "the cut: the camera's lens fills the frame, straight on",
-  "13": "the camera face holds still; only the film grain and light flicker",
-  "27": "the frame has drifted down by about 2 px",
-  "37": "held to the end"
+  "0": "the cut: the camera's lens fills the frame, straight on",
+  "12": "the camera face holds still; only the film grain and light flicker",
+  "26": "the frame has drifted down by about 2 px",
+  "36": "held to the end"
  },
  "no_cel": true
 }

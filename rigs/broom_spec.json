@@ -6,7 +6,7 @@
   "top",
   "top"
  ],
- "note": "Quick, Draw! broom 6486360229675008. Strokes 0 and 10 are the two sides of the handle, from the top of the drawing down to the binding. Strokes 11 and 12 are the short binding marks where the handle meets the straw. Strokes 1 to 9 and 13 to 16 are the straw: long lines fanning out and down from the binding to the floor. The whole broom is placed by two points, the binding (neck) and the handle top (top), so it tilts with the handle in the film at one fixed size. The straw is one rigid part that turns about the binding to the head's own axis measured from the silhouette (the film's head hangs a few degrees more upright than the handle), so the fan keeps its shape and only rotates.",
+ "note": "Quick, Draw! broom 6486360229675008. Strokes 0 and 10 are the two sides of the handle, from the top of the drawing down to the binding. Strokes 11 and 12 are the short binding marks where the handle meets the straw. Strokes 1 to 9 and 13 to 16 are the straw: long lines fanning out and down from the binding to the floor. The whole broom is placed by two points, the binding (neck) and the handle top (top), so it tilts with the handle in the film at one fixed size. The straw is one part that turns about the binding toward the pose's foot point by half the difference, so the head can drag a little behind the handle as the broom sweeps across the floor. Two later attempts, a smoother arc through the floor thrust (round 2) and keys that follow the measured handle angle frame by frame (round 3), scored lower with the critic and were set aside; this is the round-1 configuration with keys pose_agent_v6 (copied as v11).",
  "strokes": [
   [
    [
@@ -304,7 +304,7 @@
     "neck",
     "foot"
    ],
-   "turn": 1.0
+   "turn": 0.5
   },
   {
    "rest": true,
@@ -318,9 +318,9 @@
  ],
  "options": {
   "size": "steady",
-  "smooth": 1.4,
+  "smooth": 2.0,
   "track": false
  },
- "smooth": 1.4,
+ "smooth": 2.0,
  "track": false
 }

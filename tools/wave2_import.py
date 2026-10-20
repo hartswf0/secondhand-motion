@@ -16,7 +16,7 @@ from sam_import import decode, polys, camera
 
 # frames to keep, [first, last): cuts found by frame differencing and checked by eye (fan: a different shot in
 # the last frame; flying saucer: the first frame is the previous shot)
-TRIM = {'fan': (0, 38), 'flying-saucer': (1, 29)}
+TRIM = {'fan': (0, 38), 'flying-saucer': (1, 29), 'camera': (1, 38)}
 
 
 def run(slug):

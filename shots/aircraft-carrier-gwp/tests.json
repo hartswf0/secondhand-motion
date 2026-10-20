@@ -1,38 +1,42 @@
 [
  {
   "id": "M2",
-  "value": 6,
+  "value": 7,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
    4,
    4,
-   3,
    14,
    3,
+   14,
    4,
+   4,
+   5,
    6,
+   7,
+   8,
+   8,
    8,
    8
   ]
  },
  {
   "id": "M2b",
-  "value": 0.89,
+  "value": 0.86,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 6
  },
  {
   "id": "M3",
-  "value": 0.43,
-  "unit": "fit to the SAM silhouette, frames with a mask",
-  "ok": false,
-  "min": 0.35
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
  },
  {
   "id": "M6",
-  "value": 1.8,
+  "value": 1.5,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -52,7 +56,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:6257793294139392; scenery quickdraw:4709088602619904, quickdraw:4788728302141440, quickdraw:4656140598116352, quickdraw:5836049819369472",
+  "value": "rig quickdraw:6257793294139392; scenery quickdraw:4847962364575744, quickdraw:6123982463959040",
   "unit": "",
   "ok": true
  },

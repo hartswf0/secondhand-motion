@@ -1,0 +1,20 @@
+{
+ "named_subject": "a straw broom (long handle with a splayed fan of bristles)",
+ "action": "A tilted broom stands with its bristles near the bottom of the frame and shifts its position up, down, left and right from frame to frame while its shape stays mostly fixed.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  6,
+  9,
+  12,
+  13,
+  14
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated broom has the doodle's double-line handle, loose fan of uneven bristle strokes and long curved stroke on the right, but it is tilted and enlarged rather than upright.",
+ "notes": "The broom's position roughly tracks the film's main broom (higher in frame 9, lower right in frame 12), but it jumps between placements instead of moving through them, and the grey background brooms stay still while the film's second broom moves. The change that would help most is interpolating the broom's position and tilt smoothly between the film's key placements so the shifts at frames 5, 9, 12 and 13 become continuous movement.",
+ "_packet": "lot40aa2649",
+ "_round": 3
+}

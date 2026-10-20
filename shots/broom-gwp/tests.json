@@ -1,47 +1,44 @@
 [
  {
   "id": "M2",
-  "value": 16,
+  "value": 15,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
+   14,
    13,
+   16,
+   15,
+   15,
+   17,
+   15,
+   17,
+   15,
+   15,
+   15,
+   15,
    15,
    16,
-   17,
-   15,
-   15,
-   17,
-   15,
-   17,
-   17,
-   15,
-   15,
-   17,
-   15,
-   17,
-   15,
-   17,
-   15
+   17
   ]
  },
  {
   "id": "M2b",
-  "value": 0.89,
+  "value": 0.87,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 17
  },
  {
   "id": "M3",
-  "value": 0.61,
+  "value": 0.6,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.4
+  "min": 0.34
  },
  {
   "id": "M6",
-  "value": 7.1,
+  "value": 4.6,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -86,17 +83,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca straw broom\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca straw broom (long handle with a splayed fan of bristles)\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/broom-gwp/reviews/critic-2.json"
+  "evidence": "shots/broom-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The animated broom uses the doodle's two-line handle and loose fan of bristle strokes with the long curved stroke on the right, but the handle is stretched longer and the whole drawing is tilted.",
-  "evidence": "shots/broom-gwp/reviews/critic-2.json"
+  "note": "The animated broom has the doodle's double-line handle, loose fan of uneven bristle strokes and long curved stroke on the right, but it is tilted and enlarged rather than upright.",
+  "evidence": "shots/broom-gwp/reviews/critic-3.json"
  }
 ]

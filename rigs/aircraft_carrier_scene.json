@@ -132,16 +132,12 @@
    "plane": "far",
    "qd": "ocean",
    "box": [
-    0,
-    18,
-    120,
-    48
+    136,
+    14,
+    204,
+    34
    ],
-   "strokes": 2,
-   "visible": [
-    0,
-    30
-   ]
+   "strokes": 2
   },
   {
    "id": "sea_near_l",
@@ -149,46 +145,12 @@
    "qd": "ocean",
    "box": [
     -10,
-    230,
-    120,
-    270
+    236,
+    110,
+    272
    ],
    "strokes": 3,
    "skip": 2
-  },
-  {
-   "id": "sea_near_r",
-   "plane": "near",
-   "qd": "ocean",
-   "box": [
-    280,
-    236,
-    410,
-    276
-   ],
-   "strokes": 3,
-   "skip": 3,
-   "visible": [
-    0,
-    32
-   ]
-  },
-  {
-   "id": "sea_far_r",
-   "plane": "far",
-   "qd": "ocean",
-   "box": [
-    250,
-    40,
-    384,
-    66
-   ],
-   "strokes": 2,
-   "skip": 4,
-   "visible": [
-    36,
-    49
-   ]
   }
  ],
  "notes": {
@@ -196,6 +158,8 @@
   "12": "Still nearly head on; the ship rides a little higher in the frame.",
   "24": "Bow on, the shortest the ship looks in the shot.",
   "36": "The bow swings to the right; the deck starts to slope down toward the bow.",
-  "49": "Three-quarter view: the ship is long again and its bow points down and to the right."
- }
+  "49": "Three-quarter view: the ship is long again and its bow points down and to the right.",
+  "30": "The bow keeps swinging right at an even rate; the deck slopes a little more each frame."
+ },
+ "no_cel": true
 }
