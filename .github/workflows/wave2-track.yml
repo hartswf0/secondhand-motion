@@ -1,0 +1,38 @@
+name: Wave 2 frames, SAM and depth
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/wave2-track.yml'
+      - 'tools/wave2_track.py'
+permissions:
+  contents: read
+jobs:
+  track:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        slug: [flying-saucer, raccoon, hurricane, tornado, rain, mosquito, pig, see-saw, tractor, fan]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools/wave2_track.py
+            shots/${{ matrix.slug }}/source.json
+            shots/${{ matrix.slug }}/keyplan.json
+      - name: Install CPU torch, transformers and ffmpeg
+        run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg
+          python3 -m venv /tmp/v && /tmp/v/bin/pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
+          /tmp/v/bin/pip install --quiet "transformers==4.57.1" pillow numpy accelerate
+      - name: Frames, SAM 2.1 masks and depth
+        run: /tmp/v/bin/python -u tools/wave2_track.py --slug "${{ matrix.slug }}" --out "out/${{ matrix.slug }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wave2-${{ matrix.slug }}
+          path: out/${{ matrix.slug }}
+          retention-days: 14
