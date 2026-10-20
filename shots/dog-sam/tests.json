@@ -1,0 +1,156 @@
+[
+ {
+  "id": "M1",
+  "value": 0.01,
+  "unit": "classifier p, mean of keys",
+  "ok": false,
+  "per_key": [
+   0.008,
+   0.029,
+   0.006,
+   0.015
+  ],
+  "tops": [
+   "horse",
+   "cow",
+   "octopus",
+   "frog"
+  ]
+ },
+ {
+  "id": "M2",
+  "value": 38,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": true,
+  "per_key": [
+   15,
+   42,
+   49,
+   45
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.62,
+  "unit": "fit to the SAM silhouette, every frame",
+  "ok": false,
+  "min": 0.23,
+  "per_frame": [
+   0.8,
+   0.71,
+   0.63,
+   0.68,
+   0.74,
+   0.79,
+   0.55,
+   0.71,
+   0.66,
+   0.65,
+   0.64,
+   0.59,
+   0.44,
+   0.51,
+   0.65,
+   0.61,
+   0.62,
+   0.66,
+   0.68,
+   0.66,
+   0.61,
+   0.43,
+   0.39,
+   0.23,
+   0.33,
+   0.31,
+   0.65,
+   0.64,
+   0.66,
+   0.7,
+   0.8,
+   0.81,
+   0.78,
+   0.77,
+   0.76,
+   0.72,
+   0.68,
+   0.71,
+   0.66,
+   0.45,
+   0.52,
+   0.34,
+   0.7,
+   0.7,
+   0.52,
+   0.6,
+   0.76,
+   0.77,
+   0.72,
+   0.33
+  ]
+ },
+ {
+  "id": "M6",
+  "value": 29.8,
+  "unit": "px jerk (character centre)",
+  "ok": false
+ },
+ {
+  "id": "T1",
+  "value": "0.994 / 1.00",
+  "unit": "recall / pieces kept",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "0.45",
+  "unit": "worst key pair, share of character ink matched",
+  "ok": false
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery strokes held (drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "look-lane keys (image model, critic-approved) + SAM",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "50/50",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cdog\u201d; motion jumbled at frames 1, 5, 7",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/dog-sam/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "note": "The doodle's defining construction, a long wedge-shaped head with a large almond eye joined to a boxy rear block with a comb of many wobbly leg strokes, is not carried; the cartoon dog changes construction from frame to frame (thin head-up stick figure, front-facing hunched body, then a clean conventional side-view dog) and never has the doodle's boxy multi-leg rear.",
+  "evidence": "shots/dog-sam/reviews/critic-1.json"
+ }
+]

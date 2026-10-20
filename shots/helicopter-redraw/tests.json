@@ -96,9 +96,22 @@
  },
  {
   "id": "M1",
-  "value": "not run",
-  "unit": "",
-  "ok": null,
-  "note": "the classifier runs in the browser pane, which did not respond this session; strokes to score are in data/m1/payload.json"
+  "value": 1.0,
+  "unit": "classifier p, mean of keys",
+  "ok": true,
+  "per_key": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "tops": [
+   "helicopter",
+   "helicopter",
+   "helicopter",
+   "helicopter"
+  ],
+  "design_p": 1,
+  "note": "Quick, Draw! MobileViT classifier in the browser; the untouched doodle scores 1"
  }
 ]

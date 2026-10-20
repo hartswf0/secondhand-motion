@@ -1,0 +1,17 @@
+{
+ "named_subject": "helicopter",
+ "second_guess": "small airplane",
+ "action": "A large close-up helicopter cabin drifts and turns in frames 1-4, then jumps to a smaller full-body helicopter in frames 5-6 and to a tiny one in frames 7-8, while the grey underlay stays one large static helicopter.",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  5,
+  7
+ ],
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The b.png character is a traced, photo-realistic Huey with a three-quarter perspective cabin, framed windows, panel lines and a doubled skid. The doodle is a flat side-profile outline: one wobbly closed loop for body and tail, a three-line rotor, two straight struts and a single skid bar. The construction (perspective solid vs. flat profile) differs, so it does not read as the same drawing.",
+ "notes": "There are scale jumps at frames 5 and 7, and the cabin is redrawn at frame 3, so the motion reads as cuts between different drawings rather than one moving helicopter. The grey underlay helicopter also conflicts with the black one, which makes it harder to see which one is the subject.",
+ "_packet": "lotmrv5gt",
+ "_round": 1,
+ "_lane": "drawn keys over SAM"
+}

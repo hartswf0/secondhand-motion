@@ -139,11 +139,14 @@ function renderBox(f){const Wc=cv.width,Hc=cv.height;g.fillStyle=css('--sheet');
   // axes
   g.strokeStyle=css('--muted');g.lineWidth=1.2;const o=P(-W*0.1,H,zmax+0.6);[[P(W*1.15,H,zmax+0.6)],[P(-W*0.1,H,zmin-0.8)],[P(-W*0.1,-60,zmax+0.6)]].forEach(([b])=>{g.beginPath();g.moveTo(...o);g.lineTo(...b);g.stroke();});
   const planes=[...S.planes].sort((a,b)=>depthOf(b)-depthOf(a));
-  planes.forEach(p=>{if(!on[p.id])return;const [dx,dy]=planeShift(p,f);
-    const c=[P(-20,-10,zOf(p)),P(W+20,-10,zOf(p)),P(W+20,H+10,zOf(p)),P(-20,H+10,zOf(p))];
-    g.beginPath();c.forEach((q,i)=>i?g.lineTo(...q):g.moveTo(...q));g.closePath();g.fillStyle=css('--cel');g.globalAlpha=.72;g.fill();g.globalAlpha=1;g.strokeStyle=css('--rule');g.lineWidth=1;g.stroke();
+  // Sheets first, then every plane's drawing on top. Filling each sheet over the ones behind it at 72%
+  // washed the far planes out (five sheets left about 0.3% of the sky visible); now every line stays readable.
+  const quad=p=>[P(-20,-10,zOf(p)),P(W+20,-10,zOf(p)),P(W+20,H+10,zOf(p)),P(-20,H+10,zOf(p))];
+  planes.forEach(p=>{if(!on[p.id])return;const c=quad(p);
+    g.beginPath();c.forEach((q,i)=>i?g.lineTo(...q):g.moveTo(...q));g.closePath();g.fillStyle=css('--cel');g.globalAlpha=.16;g.fill();g.globalAlpha=1;g.strokeStyle=css('--rule');g.lineWidth=1;g.stroke();});
+  planes.forEach(p=>{if(!on[p.id])return;const [dx,dy]=planeShift(p,f);const c=quad(p);
     g.save();g.beginPath();c.forEach((q,i)=>i?g.lineTo(...q):g.moveTo(...q));g.closePath();g.clip();
-    planeObjects(p).forEach(o=>drawSet(strokesAt(o,f),(x,y)=>P(x+dx,y+dy,zOf(p)),{col:css('--line'),lw:1.6,fill:null,boil:false,seed:1}));g.restore();
+    planeObjects(p).forEach(o=>drawSet(strokesAt(o,f),(x,y)=>P(x+dx,y+dy,zOf(p)),{col:css('--line'),lw:p.id==='char'?2.4:1.6,fill:null,boil:false,seed:1}));g.restore();
     const L=P(-20,-10,zOf(p));g.fillStyle=css('--muted');g.font='600 18px '+css('--mono');g.fillText(p.label+'  z '+p.z,L[0],L[1]-8);});
   g.fillStyle=css('--muted');g.font='16px '+css('--mono');g.fillText('drag to turn the stack',18,Hc-18);}
 function render(){const f=fi;if(view==='box')renderBox(f);else if(view==='silhouette')renderSil(f);else if(view==='footage'){const im=imgs[f];if(im.complete)g.drawImage(im,0,0,cv.width,cv.height);}else renderFlat(f,view==='overlay');

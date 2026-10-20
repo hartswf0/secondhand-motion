@@ -1,0 +1,184 @@
+[
+ {
+  "id": "M1",
+  "value": 0.0,
+  "unit": "classifier p, mean of keys",
+  "ok": false,
+  "per_key": [
+   0,
+   0,
+   0.002,
+   0
+  ],
+  "tops": [
+   "frog",
+   "stethoscope",
+   "banana",
+   "scorpion"
+  ]
+ },
+ {
+  "id": "M2",
+  "value": 1,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "per_key": [
+   2,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.46,
+  "unit": "fit to the SAM silhouette, every frame",
+  "ok": false,
+  "min": 0.11,
+  "per_frame": [
+   0.76,
+   0.55,
+   0.61,
+   0.55,
+   0.54,
+   0.36,
+   0.38,
+   0.3,
+   0.14,
+   0.11,
+   0.13,
+   0.2,
+   0.23,
+   0.21,
+   0.19,
+   0.19,
+   0.2,
+   0.16,
+   0.16,
+   0.21,
+   0.2,
+   0.21,
+   0.2,
+   0.18,
+   0.19,
+   0.52,
+   0.2,
+   0.17,
+   0.16,
+   0.16,
+   0.48,
+   0.48,
+   0.46,
+   0.47,
+   0.48,
+   0.46,
+   0.48,
+   0.48,
+   0.51,
+   0.45,
+   0.54,
+   0.67,
+   0.43,
+   0.7,
+   0.7,
+   0.47,
+   0.43,
+   0.46,
+   0.5,
+   0.66,
+   0.58,
+   0.54,
+   0.24,
+   0.47,
+   0.27,
+   0.69,
+   0.58,
+   0.57,
+   0.61,
+   0.32,
+   0.56,
+   0.3,
+   0.57,
+   0.59,
+   0.6,
+   0.64,
+   0.66,
+   0.69,
+   0.69,
+   0.72,
+   0.73,
+   0.72,
+   0.76,
+   0.72,
+   0.76,
+   0.81,
+   0.73,
+   0.72
+  ]
+ },
+ {
+  "id": "M6",
+  "value": 66.9,
+  "unit": "px jerk (character centre)",
+  "ok": false
+ },
+ {
+  "id": "T1",
+  "value": "0.996 / 1.00",
+  "unit": "recall / pieces kept",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "0.17",
+  "unit": "worst key pair, share of character ink matched",
+  "ok": false
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery strokes held (drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "look-lane keys (image model, critic-approved) + SAM",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "78/78",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cbutterfly\u201d; motion jumbled at frames 1, 2, 3, 6, 7",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/butterfly-sam/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "note": "The doodle is a front-on, symmetric butterfly built from two large lobed wing outlines around a long straight body with tick marks; that silhouette never appears in the cartoon, whose black strokes are short broken fragments tracing a side-view wing and the finger edges of the grey footage.",
+  "evidence": "shots/butterfly-sam/reviews/critic-1.json"
+ }
+]

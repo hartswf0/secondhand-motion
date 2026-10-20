@@ -118,9 +118,9 @@ let lot=null,view='side',motion='tween',speed=1,playing=false,raf=0,t0=0,tBase=0
 
 /* ---------- lot list ---------- */
 const lots=D.lots;const hs=decodeURIComponent(location.hash.slice(1));
-let cur=lots.find(l=>l.id===hs)||lots[0];
+let cur=lots.find(l=>l.id===hs)||lots.find(l=>l.id==='giraffe-walks-past')||lots[0];
 function picker(){const p=$('picker');p.replaceChildren();
-  [['motion','Moves with the footage'],['look','Traced keys']].forEach(([lane,label])=>{const row=document.createElement('div');row.className='prow';const h=document.createElement('span');h.className='plab';h.textContent=label;row.append(h);
+  [['join','Drawn keys over SAM'],['motion','Puppets and the giraffe rig'],['look','Traced keys, no silhouette']].forEach(([lane,label])=>{const row=document.createElement('div');row.className='prow';const h=document.createElement('span');h.className='plab';h.textContent=label;row.append(h);
     lots.filter(l=>l.lane===lane).forEach(l=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',String(l===cur));b.textContent=l.title;
       b.onclick=()=>{cur=l;history.replaceState(null,'','#'+l.id);load();picker();};row.append(b);});p.append(row);});}
 

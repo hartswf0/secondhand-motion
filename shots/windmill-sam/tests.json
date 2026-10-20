@@ -1,0 +1,160 @@
+[
+ {
+  "id": "M1",
+  "value": 0.0,
+  "unit": "classifier p, mean of keys",
+  "ok": false,
+  "per_key": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "tops": [
+   "lobster",
+   "lobster",
+   "kangaroo",
+   "bulldozer"
+  ]
+ },
+ {
+  "id": "M2",
+  "value": 2,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "per_key": [
+   0,
+   0,
+   3,
+   5
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.4,
+  "unit": "fit to the SAM silhouette, every frame",
+  "ok": false,
+  "min": 0.05,
+  "per_frame": [
+   0.77,
+   0.67,
+   0.69,
+   0.62,
+   0.58,
+   0.61,
+   0.43,
+   0.2,
+   0.14,
+   0.13,
+   0.19,
+   0.16,
+   0.33,
+   0.19,
+   0.27,
+   0.17,
+   0.83,
+   0.3,
+   0.48,
+   0.14,
+   0.33,
+   0.53,
+   0.4,
+   0.05,
+   0.18,
+   0.15,
+   0.26,
+   0.34,
+   0.34,
+   0.35,
+   0.3,
+   0.37,
+   0.71,
+   0.56,
+   0.52,
+   0.61,
+   0.52,
+   0.6,
+   0.58,
+   0.56,
+   0.63,
+   0.4,
+   0.44,
+   0.42,
+   0.39,
+   0.33,
+   0.24,
+   0.41,
+   0.37,
+   0.38,
+   0.38,
+   0.39,
+   0.36,
+   0.37
+  ]
+ },
+ {
+  "id": "M6",
+  "value": 85.1,
+  "unit": "px jerk (character centre)",
+  "ok": false
+ },
+ {
+  "id": "T1",
+  "value": "0.989 / 1.00",
+  "unit": "recall / pieces kept",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "0.07",
+  "unit": "worst key pair, share of character ink matched",
+  "ok": false
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery strokes held (drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "look-lane keys (image model, critic-approved) + SAM",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "54/54",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cwindmill\u201d; motion broken at frames 4, 5, 7",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/windmill-sam/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "note": "The doodle is four rounded petal-loop sails, with no crossbars, on a small oval hub, set in front of a tall rectangular tower. The cartoon draws the sails as straight tapered paddles with a crossbar near each tip, and the tower rectangle is gone, replaced by a faint wedge and scribbled shrubbery.",
+  "evidence": "shots/windmill-sam/reviews/critic-1.json"
+ }
+]

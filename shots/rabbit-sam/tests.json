@@ -1,0 +1,158 @@
+[
+ {
+  "id": "M1",
+  "value": 0.21,
+  "unit": "classifier p, mean of keys",
+  "ok": false,
+  "per_key": [
+   0.144,
+   0.042,
+   0.67,
+   0.003
+  ],
+  "tops": [
+   "rhinoceros",
+   "campfire",
+   "rabbit",
+   "bulldozer"
+  ]
+ },
+ {
+  "id": "M2",
+  "value": 17,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "per_key": [
+   4,
+   45,
+   16,
+   1
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.59,
+  "unit": "fit to the SAM silhouette, every frame",
+  "ok": false,
+  "min": 0.09,
+  "per_frame": [
+   0.81,
+   0.76,
+   0.77,
+   0.69,
+   0.5,
+   0.42,
+   0.24,
+   0.28,
+   0.49,
+   0.51,
+   0.58,
+   0.64,
+   0.7,
+   0.71,
+   0.65,
+   0.66,
+   0.58,
+   0.59,
+   0.53,
+   0.71,
+   0.69,
+   0.73,
+   0.76,
+   0.79,
+   0.8,
+   0.81,
+   0.82,
+   0.81,
+   0.8,
+   0.78,
+   0.76,
+   0.71,
+   0.66,
+   0.7,
+   0.74,
+   0.78,
+   0.73,
+   0.09,
+   0.09,
+   0.1,
+   0.18,
+   0.22,
+   0.43,
+   0.49,
+   0.48,
+   0.48,
+   0.53,
+   0.53,
+   0.52,
+   0.57,
+   0.57,
+   0.48
+  ]
+ },
+ {
+  "id": "M6",
+  "value": 183.1,
+  "unit": "px jerk (character centre)",
+  "ok": false
+ },
+ {
+  "id": "T1",
+  "value": "0.998 / 1.00",
+  "unit": "recall / pieces kept",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "0.09",
+  "unit": "worst key pair, share of character ink matched",
+  "ok": false
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery strokes held (drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "look-lane keys (image model, critic-approved) + SAM",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "52/52",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201crabbit\u201d; motion broken at frames 2, 7",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/rabbit-sam/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "note": "Stroke construction: the doodle is a sparse, angular polyline of long straight segments, faces left, and has tall narrow pointed ears and an open back. The cartoon rabbit is drawn with smooth, rounded, mostly closed contours that look traced from a photo: round body, tail bump, soft ears, facing right.",
+  "evidence": "shots/rabbit-sam/reviews/critic-1.json"
+ }
+]

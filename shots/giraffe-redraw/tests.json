@@ -96,9 +96,22 @@
  },
  {
   "id": "M1",
-  "value": "not run",
-  "unit": "",
-  "ok": null,
-  "note": "the classifier runs in the browser pane, which did not respond this session; strokes to score are in data/m1/payload.json"
+  "value": 0.04,
+  "unit": "classifier p, mean of keys",
+  "ok": false,
+  "per_key": [
+   0.008,
+   0.005,
+   0.074,
+   0.07
+  ],
+  "tops": [
+   "diving board",
+   "diving board",
+   "diving board",
+   "diving board"
+  ],
+  "design_p": 0.753,
+  "note": "Quick, Draw! MobileViT classifier in the browser; the untouched doodle scores 0.753"
  }
 ]

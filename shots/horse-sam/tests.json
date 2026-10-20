@@ -1,0 +1,151 @@
+[
+ {
+  "id": "M1",
+  "value": 0.0,
+  "unit": "classifier p, mean of keys",
+  "ok": false,
+  "per_key": [
+   0,
+   0.002,
+   0,
+   0.002
+  ],
+  "tops": [
+   "owl",
+   "yoga",
+   "yoga",
+   "camouflage"
+  ]
+ },
+ {
+  "id": "M2",
+  "value": 4,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "per_key": [
+   2,
+   4,
+   11,
+   0
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.45,
+  "unit": "fit to the SAM silhouette, every frame",
+  "ok": false,
+  "min": 0.12,
+  "per_frame": [
+   0.86,
+   0.49,
+   0.47,
+   0.47,
+   0.72,
+   0.63,
+   0.61,
+   0.5,
+   0.49,
+   0.48,
+   0.48,
+   0.53,
+   0.5,
+   0.58,
+   0.57,
+   0.4,
+   0.53,
+   0.43,
+   0.51,
+   0.43,
+   0.4,
+   0.5,
+   0.4,
+   0.38,
+   0.37,
+   0.66,
+   0.55,
+   0.56,
+   0.49,
+   0.24,
+   0.28,
+   0.15,
+   0.18,
+   0.12,
+   0.17,
+   0.18,
+   0.33,
+   0.34,
+   0.83,
+   0.33,
+   0.31,
+   0.44,
+   0.44,
+   0.62,
+   0.23
+  ]
+ },
+ {
+  "id": "M6",
+  "value": 87.5,
+  "unit": "px jerk (character centre)",
+  "ok": false
+ },
+ {
+  "id": "T1",
+  "value": "0.995 / 1.00",
+  "unit": "recall / pieces kept",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "0.02",
+  "unit": "worst key pair, share of character ink matched",
+  "ok": false
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery strokes held (drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "look-lane keys (image model, critic-approved) + SAM",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "45/45",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201chorse head\u201d; motion broken at frames 3, 5, 7",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/horse-sam/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "note": "Construction: the doodle is a side-profile head with a wedge muzzle, dot eye, jaw curve and zigzag mane, while the cartoon is a front-facing head traced from photo edges, with scattered hair strokes, no eye and no profile wedge.",
+  "evidence": "shots/horse-sam/reviews/critic-1.json"
+ }
+]

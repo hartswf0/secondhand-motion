@@ -1,0 +1,168 @@
+[
+ {
+  "id": "M1",
+  "value": 0.35,
+  "unit": "classifier p, mean of keys",
+  "ok": false,
+  "per_key": [
+   0.117,
+   0.676,
+   0.477,
+   0.113
+  ],
+  "tops": [
+   "crab",
+   "cat",
+   "cat",
+   "lion"
+  ]
+ },
+ {
+  "id": "M2",
+  "value": 25,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "per_key": [
+   11,
+   22,
+   42,
+   27
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.81,
+  "unit": "fit to the SAM silhouette, every frame",
+  "ok": true,
+  "min": 0.55,
+  "per_frame": [
+   0.86,
+   0.86,
+   0.85,
+   0.85,
+   0.86,
+   0.85,
+   0.8,
+   0.79,
+   0.76,
+   0.76,
+   0.76,
+   0.79,
+   0.79,
+   0.8,
+   0.8,
+   0.81,
+   0.82,
+   0.83,
+   0.82,
+   0.82,
+   0.81,
+   0.82,
+   0.87,
+   0.79,
+   0.8,
+   0.78,
+   0.81,
+   0.81,
+   0.81,
+   0.81,
+   0.81,
+   0.81,
+   0.82,
+   0.81,
+   0.82,
+   0.85,
+   0.85,
+   0.85,
+   0.85,
+   0.84,
+   0.84,
+   0.84,
+   0.85,
+   0.88,
+   0.88,
+   0.87,
+   0.91,
+   0.89,
+   0.85,
+   0.76,
+   0.73,
+   0.55,
+   0.58,
+   0.66,
+   0.74,
+   0.8,
+   0.82,
+   0.82,
+   0.85,
+   0.85,
+   0.81,
+   0.81
+  ]
+ },
+ {
+  "id": "M6",
+  "value": 122.6,
+  "unit": "px jerk (character centre)",
+  "ok": false
+ },
+ {
+  "id": "T1",
+  "value": "0.999 / 1.00",
+  "unit": "recall / pieces kept",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "0.11",
+  "unit": "worst key pair, share of character ink matched",
+  "ok": false
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery strokes held (drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "look-lane keys (image model, critic-approved) + SAM",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "62/62",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ccat head\u201d; motion broken at frames 3, 7",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/cat-sam/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "note": "The cartoon cat is built like a traced photo: a rounded tilted head in three-quarter view with nose, mouth, neck/shoulder lines and grey secondary strokes. The doodle is a flat, frontal, head-only polygon with a straight top edge, tall ears on that edge, large open eyes, no nose or mouth, and whiskers that cut straight across the face outline.",
+  "evidence": "shots/cat-sam/reviews/critic-1.json"
+ }
+]

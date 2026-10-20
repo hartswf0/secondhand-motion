@@ -2156,7 +2156,7 @@
   ],
   "t": {
    "pass": 6,
-   "fail": 6,
+   "fail": 7,
    "total": 19
   },
   "r": {
@@ -2221,9 +2221,9 @@
     "ok": false
    },
    "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0.0,
+    "unit": "classifier p, mean of keys",
+    "ok": false
    },
    "T1": {
     "value": "not run",
@@ -2295,7 +2295,7 @@
   ],
   "t": {
    "pass": 9,
-   "fail": 3,
+   "fail": 4,
    "total": 19
   },
   "r": {
@@ -2360,9 +2360,9 @@
     "ok": false
    },
    "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0.03,
+    "unit": "classifier p, mean of keys",
+    "ok": false
    },
    "T1": {
     "value": "not run",
@@ -2434,7 +2434,7 @@
   ],
   "t": {
    "pass": 7,
-   "fail": 4,
+   "fail": 5,
    "total": 19
   },
   "r": {
@@ -2499,9 +2499,9 @@
     "ok": false
    },
    "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0.24,
+    "unit": "classifier p, mean of keys",
+    "ok": false
    },
    "T1": {
     "value": "not run",
@@ -2573,7 +2573,7 @@
   ],
   "t": {
    "pass": 6,
-   "fail": 5,
+   "fail": 6,
    "total": 19
   },
   "r": {
@@ -2638,9 +2638,9 @@
     "ok": false
    },
    "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0.09,
+    "unit": "classifier p, mean of keys",
+    "ok": false
    },
    "T1": {
     "value": "not run",
@@ -2712,7 +2712,7 @@
   ],
   "t": {
    "pass": 8,
-   "fail": 3,
+   "fail": 4,
    "total": 19
   },
   "r": {
@@ -2777,9 +2777,9 @@
     "ok": true
    },
    "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0.61,
+    "unit": "classifier p, mean of keys",
+    "ok": false
    },
    "T1": {
     "value": "not run",
@@ -2851,7 +2851,7 @@
   ],
   "t": {
    "pass": 9,
-   "fail": 2,
+   "fail": 3,
    "total": 19
   },
   "r": {
@@ -2916,9 +2916,9 @@
     "ok": true
    },
    "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0.04,
+    "unit": "classifier p, mean of keys",
+    "ok": false
    },
    "T1": {
     "value": "not run",
@@ -2990,7 +2990,7 @@
   ],
   "t": {
    "pass": 7,
-   "fail": 4,
+   "fail": 5,
    "total": 19
   },
   "r": {
@@ -3055,9 +3055,9 @@
     "ok": false
    },
    "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0.0,
+    "unit": "classifier p, mean of keys",
+    "ok": false
    },
    "T1": {
     "value": "not run",
@@ -3129,7 +3129,7 @@
   ],
   "t": {
    "pass": 10,
-   "fail": 1,
+   "fail": 2,
    "total": 19
   },
   "r": {
@@ -3194,9 +3194,9 @@
     "ok": true
    },
    "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0.21,
+    "unit": "classifier p, mean of keys",
+    "ok": false
    },
    "T1": {
     "value": "not run",
@@ -3268,7 +3268,7 @@
   ],
   "t": {
    "pass": 9,
-   "fail": 2,
+   "fail": 3,
    "total": 19
   },
   "r": {
@@ -3333,9 +3333,9 @@
     "ok": true
    },
    "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 0.03,
+    "unit": "classifier p, mean of keys",
+    "ok": false
    },
    "T1": {
     "value": "not run",
@@ -3406,7 +3406,7 @@
    "manual keys"
   ],
   "t": {
-   "pass": 8,
+   "pass": 9,
    "fail": 3,
    "total": 19
   },
@@ -3472,9 +3472,9 @@
     "ok": true
    },
    "M1": {
-    "value": "not run",
-    "unit": "",
-    "ok": null
+    "value": 1.0,
+    "unit": "classifier p, mean of keys",
+    "ok": true
    },
    "T1": {
     "value": "not run",
@@ -3509,5 +3509,1429 @@
   },
   "href": "pages/projector.html#helicopter-redraw",
   "gait": "skip"
+ },
+ {
+  "lot": "SM-0042",
+  "id": "gwp-method",
+  "kind": "doc",
+  "title": "How Giraffe Walks Past Was Made",
+  "lane": "method",
+  "stage": null,
+  "status": "done",
+  "added": "2026-10-20",
+  "blurb": "The one shot a critic mostly believed, step by step: SAM on every frame, keys over silhouettes, in-betweens pulled to the silhouette, six planes, three critic rounds.",
+  "cover": "assets/sil.jpg",
+  "links": [
+   {
+    "label": "Open",
+    "href": "pages/how-giraffe-walks-past-was-made.html"
+   },
+   {
+    "label": "Markdown",
+    "href": "docs/giraffe-walks-past.md"
+   }
+  ],
+  "tags": [
+   "method",
+   "SAM"
+  ],
+  "t": {
+   "pass": 0,
+   "fail": 0,
+   "total": 0
+  },
+  "r": {},
+  "href": "pages/how-giraffe-walks-past-was-made.html",
+  "gait": "sit"
+ },
+ {
+  "lot": "SM-0043",
+  "id": "dog-sam",
+  "kind": "shot",
+  "title": "Dog, Drawn Keys over SAM",
+  "category": "dog",
+  "wave": 1,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The Giraffe Walks Past method with the drawings we already had: SAM 2.1 on every frame, the four critic-approved drawn keys moved onto the silhouettes, in-betweens pulled to each frame's silhouette, scenery drawn once.",
+  "cover": "shots/dog-sam/cover.png",
+  "cover_alt": "shots/dog-sam/frames/f014.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/dog-sam.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#dog-sam"
+   },
+   {
+    "label": "Silhouettes",
+    "href": "shots/dog-sam/silhouettes.png"
+   }
+  ],
+  "tests": "shots/dog-sam/tests.json",
+  "tags": [
+   "SAM",
+   "drawn keys",
+   "cel"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 5,
+   "total": 19
+  },
+  "r": {
+   "M1": {
+    "value": 0.01,
+    "unit": "classifier p, mean of keys",
+    "ok": false
+   },
+   "M2": {
+    "value": 38,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": true
+   },
+   "M3": {
+    "value": 0.62,
+    "unit": "fit to the SAM silhouette, every frame",
+    "ok": false
+   },
+   "M6": {
+    "value": 29.8,
+    "unit": "px jerk (character centre)",
+    "ok": false
+   },
+   "T1": {
+    "value": "0.994 / 1.00",
+    "unit": "recall / pieces kept",
+    "ok": true
+   },
+   "T3": {
+    "value": "0.45",
+    "unit": "worst key pair, share of character ink matched",
+    "ok": false
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery strokes held (drawn once)",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S2": {
+    "value": "look-lane keys (image model, critic-approved) + SAM",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "50/50",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cdog\u201d; motion jumbled at frames 1, 5, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/dog-sam.html",
+  "gait": "walk"
+ },
+ {
+  "lot": "SM-0044",
+  "id": "duck-sam",
+  "kind": "shot",
+  "title": "Duck, Drawn Keys over SAM",
+  "category": "duck",
+  "wave": 1,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The Giraffe Walks Past method with the drawings we already had: SAM 2.1 on every frame, the four critic-approved drawn keys moved onto the silhouettes, in-betweens pulled to each frame's silhouette, scenery drawn once.",
+  "cover": "shots/duck-sam/cover.png",
+  "cover_alt": "shots/duck-sam/frames/f012.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/duck-sam.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#duck-sam"
+   },
+   {
+    "label": "Silhouettes",
+    "href": "shots/duck-sam/silhouettes.png"
+   }
+  ],
+  "tests": "shots/duck-sam/tests.json",
+  "tags": [
+   "SAM",
+   "drawn keys",
+   "cel"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 5,
+   "total": 19
+  },
+  "r": {
+   "M1": {
+    "value": 0.0,
+    "unit": "classifier p, mean of keys",
+    "ok": false
+   },
+   "M2": {
+    "value": 6,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.83,
+    "unit": "fit to the SAM silhouette, every frame",
+    "ok": true
+   },
+   "M6": {
+    "value": 58.7,
+    "unit": "px jerk (character centre)",
+    "ok": false
+   },
+   "T1": {
+    "value": "0.999 / 1.00",
+    "unit": "recall / pieces kept",
+    "ok": true
+   },
+   "T3": {
+    "value": "0.49",
+    "unit": "worst key pair, share of character ink matched",
+    "ok": false
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery strokes held (drawn once)",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S2": {
+    "value": "look-lane keys (image model, critic-approved) + SAM",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "48/48",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cduck (duckling)\u201d; motion broken at frames 2, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/duck-sam.html",
+  "gait": "strut"
+ },
+ {
+  "lot": "SM-0045",
+  "id": "rabbit-sam",
+  "kind": "shot",
+  "title": "Rabbit, Drawn Keys over SAM",
+  "category": "rabbit",
+  "wave": 1,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The Giraffe Walks Past method with the drawings we already had: SAM 2.1 on every frame, the four critic-approved drawn keys moved onto the silhouettes, in-betweens pulled to each frame's silhouette, scenery drawn once.",
+  "cover": "shots/rabbit-sam/cover.png",
+  "cover_alt": "shots/rabbit-sam/frames/f012.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/rabbit-sam.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#rabbit-sam"
+   },
+   {
+    "label": "Silhouettes",
+    "href": "shots/rabbit-sam/silhouettes.png"
+   }
+  ],
+  "tests": "shots/rabbit-sam/tests.json",
+  "tags": [
+   "SAM",
+   "drawn keys",
+   "cel"
+  ],
+  "t": {
+   "pass": 7,
+   "fail": 6,
+   "total": 19
+  },
+  "r": {
+   "M1": {
+    "value": 0.21,
+    "unit": "classifier p, mean of keys",
+    "ok": false
+   },
+   "M2": {
+    "value": 17,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.59,
+    "unit": "fit to the SAM silhouette, every frame",
+    "ok": false
+   },
+   "M6": {
+    "value": 183.1,
+    "unit": "px jerk (character centre)",
+    "ok": false
+   },
+   "T1": {
+    "value": "0.998 / 1.00",
+    "unit": "recall / pieces kept",
+    "ok": true
+   },
+   "T3": {
+    "value": "0.09",
+    "unit": "worst key pair, share of character ink matched",
+    "ok": false
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery strokes held (drawn once)",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S2": {
+    "value": "look-lane keys (image model, critic-approved) + SAM",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "52/52",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201crabbit\u201d; motion broken at frames 2, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/rabbit-sam.html",
+  "gait": "moonwalk"
+ },
+ {
+  "lot": "SM-0046",
+  "id": "horse-sam",
+  "kind": "shot",
+  "title": "Horse, Drawn Keys over SAM",
+  "category": "horse",
+  "wave": 1,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The Giraffe Walks Past method with the drawings we already had: SAM 2.1 on every frame, the four critic-approved drawn keys moved onto the silhouettes, in-betweens pulled to each frame's silhouette, scenery drawn once.",
+  "cover": "shots/horse-sam/cover.png",
+  "cover_alt": "shots/horse-sam/frames/f014.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/horse-sam.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#horse-sam"
+   },
+   {
+    "label": "Silhouettes",
+    "href": "shots/horse-sam/silhouettes.png"
+   }
+  ],
+  "tests": "shots/horse-sam/tests.json",
+  "tags": [
+   "SAM",
+   "drawn keys",
+   "cel"
+  ],
+  "t": {
+   "pass": 7,
+   "fail": 6,
+   "total": 19
+  },
+  "r": {
+   "M1": {
+    "value": 0.0,
+    "unit": "classifier p, mean of keys",
+    "ok": false
+   },
+   "M2": {
+    "value": 4,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.45,
+    "unit": "fit to the SAM silhouette, every frame",
+    "ok": false
+   },
+   "M6": {
+    "value": 87.5,
+    "unit": "px jerk (character centre)",
+    "ok": false
+   },
+   "T1": {
+    "value": "0.995 / 1.00",
+    "unit": "recall / pieces kept",
+    "ok": true
+   },
+   "T3": {
+    "value": "0.02",
+    "unit": "worst key pair, share of character ink matched",
+    "ok": false
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery strokes held (drawn once)",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S2": {
+    "value": "look-lane keys (image model, critic-approved) + SAM",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "45/45",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201chorse head\u201d; motion broken at frames 3, 5, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/horse-sam.html",
+  "gait": "tiptoe"
+ },
+ {
+  "lot": "SM-0047",
+  "id": "cat-sam",
+  "kind": "shot",
+  "title": "Cat, Drawn Keys over SAM",
+  "category": "cat",
+  "wave": 1,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The Giraffe Walks Past method with the drawings we already had: SAM 2.1 on every frame, the four critic-approved drawn keys moved onto the silhouettes, in-betweens pulled to each frame's silhouette, scenery drawn once.",
+  "cover": "shots/cat-sam/cover.png",
+  "cover_alt": "shots/cat-sam/frames/f022.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/cat-sam.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#cat-sam"
+   },
+   {
+    "label": "Silhouettes",
+    "href": "shots/cat-sam/silhouettes.png"
+   }
+  ],
+  "tests": "shots/cat-sam/tests.json",
+  "tags": [
+   "SAM",
+   "drawn keys",
+   "cel"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 5,
+   "total": 19
+  },
+  "r": {
+   "M1": {
+    "value": 0.35,
+    "unit": "classifier p, mean of keys",
+    "ok": false
+   },
+   "M2": {
+    "value": 25,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.81,
+    "unit": "fit to the SAM silhouette, every frame",
+    "ok": true
+   },
+   "M6": {
+    "value": 122.6,
+    "unit": "px jerk (character centre)",
+    "ok": false
+   },
+   "T1": {
+    "value": "0.999 / 1.00",
+    "unit": "recall / pieces kept",
+    "ok": true
+   },
+   "T3": {
+    "value": "0.11",
+    "unit": "worst key pair, share of character ink matched",
+    "ok": false
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery strokes held (drawn once)",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S2": {
+    "value": "look-lane keys (image model, critic-approved) + SAM",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "62/62",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201ccat head\u201d; motion broken at frames 3, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/cat-sam.html",
+  "gait": "cancan"
+ },
+ {
+  "lot": "SM-0048",
+  "id": "giraffe-sam",
+  "kind": "shot",
+  "title": "Giraffe, Drawn Keys over SAM",
+  "category": "giraffe",
+  "wave": 1,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The Giraffe Walks Past method with the drawings we already had: SAM 2.1 on every frame, the four critic-approved drawn keys moved onto the silhouettes, in-betweens pulled to each frame's silhouette, scenery drawn once.",
+  "cover": "shots/giraffe-sam/cover.png",
+  "cover_alt": "shots/giraffe-sam/frames/f004.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/giraffe-sam.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#giraffe-sam"
+   },
+   {
+    "label": "Silhouettes",
+    "href": "shots/giraffe-sam/silhouettes.png"
+   }
+  ],
+  "tests": "shots/giraffe-sam/tests.json",
+  "tags": [
+   "SAM",
+   "drawn keys",
+   "cel"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 5,
+   "total": 19
+  },
+  "r": {
+   "M1": {
+    "value": 0.0,
+    "unit": "classifier p, mean of keys",
+    "ok": false
+   },
+   "M2": {
+    "value": 0,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.92,
+    "unit": "fit to the SAM silhouette, every frame",
+    "ok": true
+   },
+   "M6": {
+    "value": 16.1,
+    "unit": "px jerk (character centre)",
+    "ok": false
+   },
+   "T1": {
+    "value": "0.984 / 1.00",
+    "unit": "recall / pieces kept",
+    "ok": true
+   },
+   "T3": {
+    "value": "0.48",
+    "unit": "worst key pair, share of character ink matched",
+    "ok": false
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery strokes held (drawn once)",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S2": {
+    "value": "look-lane keys (image model, critic-approved) + SAM",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "17/17",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cgiraffe head\u201d; motion broken at frames 4, 5",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/giraffe-sam.html",
+  "gait": "hop"
+ },
+ {
+  "lot": "SM-0049",
+  "id": "butterfly-sam",
+  "kind": "shot",
+  "title": "Butterfly, Drawn Keys over SAM",
+  "category": "butterfly",
+  "wave": 1,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The Giraffe Walks Past method with the drawings we already had: SAM 2.1 on every frame, the four critic-approved drawn keys moved onto the silhouettes, in-betweens pulled to each frame's silhouette, scenery drawn once.",
+  "cover": "shots/butterfly-sam/cover.png",
+  "cover_alt": "shots/butterfly-sam/frames/f019.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/butterfly-sam.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#butterfly-sam"
+   },
+   {
+    "label": "Silhouettes",
+    "href": "shots/butterfly-sam/silhouettes.png"
+   }
+  ],
+  "tests": "shots/butterfly-sam/tests.json",
+  "tags": [
+   "SAM",
+   "drawn keys",
+   "cel"
+  ],
+  "t": {
+   "pass": 7,
+   "fail": 6,
+   "total": 19
+  },
+  "r": {
+   "M1": {
+    "value": 0.0,
+    "unit": "classifier p, mean of keys",
+    "ok": false
+   },
+   "M2": {
+    "value": 1,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.46,
+    "unit": "fit to the SAM silhouette, every frame",
+    "ok": false
+   },
+   "M6": {
+    "value": 66.9,
+    "unit": "px jerk (character centre)",
+    "ok": false
+   },
+   "T1": {
+    "value": "0.996 / 1.00",
+    "unit": "recall / pieces kept",
+    "ok": true
+   },
+   "T3": {
+    "value": "0.17",
+    "unit": "worst key pair, share of character ink matched",
+    "ok": false
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery strokes held (drawn once)",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S2": {
+    "value": "look-lane keys (image model, critic-approved) + SAM",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "78/78",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cbutterfly\u201d; motion jumbled at frames 1, 2, 3, 6, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/butterfly-sam.html",
+  "gait": "goose step"
+ },
+ {
+  "lot": "SM-0050",
+  "id": "bicycle-sam",
+  "kind": "shot",
+  "title": "Bicycle, Drawn Keys over SAM",
+  "category": "bicycle",
+  "wave": 1,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The Giraffe Walks Past method with the drawings we already had: SAM 2.1 on every frame, the four critic-approved drawn keys moved onto the silhouettes, in-betweens pulled to each frame's silhouette, scenery drawn once.",
+  "cover": "shots/bicycle-sam/cover.png",
+  "cover_alt": "shots/bicycle-sam/frames/f006.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/bicycle-sam.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#bicycle-sam"
+   },
+   {
+    "label": "Silhouettes",
+    "href": "shots/bicycle-sam/silhouettes.png"
+   }
+  ],
+  "tests": "shots/bicycle-sam/tests.json",
+  "tags": [
+   "SAM",
+   "drawn keys",
+   "cel"
+  ],
+  "t": {
+   "pass": 8,
+   "fail": 5,
+   "total": 19
+  },
+  "r": {
+   "M1": {
+    "value": 0.02,
+    "unit": "classifier p, mean of keys",
+    "ok": false
+   },
+   "M2": {
+    "value": 6,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.74,
+    "unit": "fit to the SAM silhouette, every frame",
+    "ok": true
+   },
+   "M6": {
+    "value": 50.5,
+    "unit": "px jerk (character centre)",
+    "ok": false
+   },
+   "T1": {
+    "value": "0.995 / 1.00",
+    "unit": "recall / pieces kept",
+    "ok": true
+   },
+   "T3": {
+    "value": "0.11",
+    "unit": "worst key pair, share of character ink matched",
+    "ok": false
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery strokes held (drawn once)",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S2": {
+    "value": "look-lane keys (image model, critic-approved) + SAM",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "21/21",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cbicycle (front wheel)\u201d; motion broken at frames 2, 4, 6",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/bicycle-sam.html",
+  "gait": "shuffle"
+ },
+ {
+  "lot": "SM-0051",
+  "id": "windmill-sam",
+  "kind": "shot",
+  "title": "Windmill, Drawn Keys over SAM",
+  "category": "windmill",
+  "wave": 1,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The Giraffe Walks Past method with the drawings we already had: SAM 2.1 on every frame, the four critic-approved drawn keys moved onto the silhouettes, in-betweens pulled to each frame's silhouette, scenery drawn once.",
+  "cover": "shots/windmill-sam/cover.png",
+  "cover_alt": "shots/windmill-sam/frames/f016.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/windmill-sam.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#windmill-sam"
+   },
+   {
+    "label": "Silhouettes",
+    "href": "shots/windmill-sam/silhouettes.png"
+   }
+  ],
+  "tests": "shots/windmill-sam/tests.json",
+  "tags": [
+   "SAM",
+   "drawn keys",
+   "cel"
+  ],
+  "t": {
+   "pass": 7,
+   "fail": 6,
+   "total": 19
+  },
+  "r": {
+   "M1": {
+    "value": 0.0,
+    "unit": "classifier p, mean of keys",
+    "ok": false
+   },
+   "M2": {
+    "value": 2,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.4,
+    "unit": "fit to the SAM silhouette, every frame",
+    "ok": false
+   },
+   "M6": {
+    "value": 85.1,
+    "unit": "px jerk (character centre)",
+    "ok": false
+   },
+   "T1": {
+    "value": "0.989 / 1.00",
+    "unit": "recall / pieces kept",
+    "ok": true
+   },
+   "T3": {
+    "value": "0.07",
+    "unit": "worst key pair, share of character ink matched",
+    "ok": false
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery strokes held (drawn once)",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S2": {
+    "value": "look-lane keys (image model, critic-approved) + SAM",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "54/54",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201cwindmill\u201d; motion broken at frames 4, 5, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/windmill-sam.html",
+  "gait": "sprint"
+ },
+ {
+  "lot": "SM-0052",
+  "id": "helicopter-sam",
+  "kind": "shot",
+  "title": "Helicopter, Drawn Keys over SAM",
+  "category": "helicopter",
+  "wave": 1,
+  "lane": "join",
+  "stage": 10,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "The Giraffe Walks Past method with the drawings we already had: SAM 2.1 on every frame, the four critic-approved drawn keys moved onto the silhouettes, in-betweens pulled to each frame's silhouette, scenery drawn once.",
+  "cover": "shots/helicopter-sam/cover.png",
+  "cover_alt": "shots/helicopter-sam/frames/f014.jpg",
+  "links": [
+   {
+    "label": "Shot page",
+    "href": "pages/helicopter-sam.html"
+   },
+   {
+    "label": "Open in the projector",
+    "href": "pages/projector.html#helicopter-sam"
+   },
+   {
+    "label": "Silhouettes",
+    "href": "shots/helicopter-sam/silhouettes.png"
+   }
+  ],
+  "tests": "shots/helicopter-sam/tests.json",
+  "tags": [
+   "SAM",
+   "drawn keys",
+   "cel"
+  ],
+  "t": {
+   "pass": 7,
+   "fail": 6,
+   "total": 19
+  },
+  "r": {
+   "M1": {
+    "value": 0.23,
+    "unit": "classifier p, mean of keys",
+    "ok": false
+   },
+   "M2": {
+    "value": 11,
+    "unit": "percentile (Quick, Draw! simplification first)",
+    "ok": false
+   },
+   "M3": {
+    "value": 0.63,
+    "unit": "fit to the SAM silhouette, every frame",
+    "ok": false
+   },
+   "M6": {
+    "value": 67.1,
+    "unit": "px jerk (character centre)",
+    "ok": false
+   },
+   "T1": {
+    "value": "0.995 / 1.00",
+    "unit": "recall / pieces kept",
+    "ok": true
+   },
+   "T3": {
+    "value": "0.03",
+    "unit": "worst key pair, share of character ink matched",
+    "ok": false
+   },
+   "B1": {
+    "value": 100,
+    "unit": "% scenery strokes held (drawn once)",
+    "ok": true
+   },
+   "S5": {
+    "value": "SAM silhouette painted under the character",
+    "unit": "",
+    "ok": true
+   },
+   "S2": {
+    "value": "look-lane keys (image model, critic-approved) + SAM",
+    "unit": "",
+    "ok": true
+   },
+   "S3": {
+    "value": "46/46",
+    "unit": "frames",
+    "ok": true
+   },
+   "S6": {
+    "value": "complete",
+    "unit": "",
+    "ok": true
+   },
+   "J1": {
+    "value": "named \u201chelicopter\u201d; motion broken at frames 3, 5, 7",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "bar_not_met",
+    "unit": "",
+    "ok": false
+   },
+   "M4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M5": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S4": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "pages/helicopter-sam.html",
+  "gait": "jelly"
  }
 ]

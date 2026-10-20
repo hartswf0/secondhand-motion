@@ -82,7 +82,7 @@ def md_page(src, rel, title, tools=''):
     raw = (ROOT / src).read_text()
     body = markdown.markdown(raw, extensions=['tables', 'fenced_code'])
     up = '../' * rel.count('/')
-    body = re.sub(r'<code>((?:pages|shots|tools|batches|data|dataset|traced|production)/[^<\s]+)</code>',
+    body = re.sub(r'<code>((?:pages|shots|tools|batches|data|dataset|traced|production|docs)/[^<\s]+)</code>',
                   lambda m: f'<a href="{up}{m.group(1)}"><code>{m.group(1)}</code></a>' if (ROOT / m.group(1)).exists() else m.group(0), body)
     page('doc.html', rel, TITLE=title, TOOLS=tools, BODY=body, RAW=raw.replace('</', '<\\/'))
 
@@ -106,6 +106,7 @@ def main():
           '<script>location.replace("projector.html"+(location.hash||"#dog"))</script><a href="projector.html">Traced keys are in the projector</a>')
     # 6-7: pipeline and agent prompt
     md_page('PIPELINE.md', 'pages/pipeline.html', 'Pipeline')
+    md_page('docs/giraffe-walks-past.md', 'pages/how-giraffe-walks-past-was-made.html', 'How Giraffe Walks Past Was Made')
     md_page('AGENTS.md', 'pages/agent-prompt.html', 'Agent Prompt',
             tools='<div class="tools"><span class="meta">Source: AGENTS.md. Fill {CATEGORY} and {WAVE} from data/subject_queue.json.</span>'
                   '<button id="copy" type="button">Copy prompt as Markdown</button></div>')
@@ -122,12 +123,37 @@ def main():
          'lots': [{'lot': l['lot'], 'title': l['title'], 'href': '../' + l['href'] if not l['href'].startswith('http') else l['href'],
                    'status': l['status'], 'r': l['r']} for l in lots if l['r']]}))
     projector(lots, reg)
+    shot_pages()
     mark = brand.mark(0, ink='currentColor', sw=2.6, size=64).replace('width="64" height="64"', 'aria-hidden="true"')
     page('hub.html', 'index.html', DATE=DATE, TREE=tree(),
          DATA=js({'lots': [{k: v for k, v in l.items() if k != 'r'} for l in lots], 'stages': reg['stages'], 'brand': brand.data(), 'mark': mark,
                   'n_active': sum(t['status'] == 'active' for t in reg['tests']), 'n_planned': sum(t['status'] == 'planned' for t in reg['tests'])}))
 
     __import__('build_wave2_pages').build(ROOT, HEAD, nav, icons, write)
+
+
+def shot_pages():
+    """A full shot page (cartoon, over footage, footage, planes in depth, silhouettes) for every SAM shot."""
+    T = (T_DIR := ROOT / 'tools' / 'templates' / 'shot_page.html').read_text() if (ROOT / 'tools/templates/shot_page.html').exists() else None
+    if not T: return
+    for f in sorted(ROOT.glob('shots/*-sam/shot.json')):
+        sid = f.parent.name; S = json.load(open(f))
+        S['footage'] = [f'../shots/{sid}/{u}' for u in S['footage']]
+        rv = f.parent / 'reviews'
+        rounds = ''.join(f'<div class="plane" style="flex-direction:column;align-items:flex-start"><b>Round {i + 1} · {v.get("identity_verdict", "")}</b>'
+                         f'<span class="meta" style="margin:0;white-space:normal">Named “{v.get("named_subject", "")}”; motion {v.get("motion_reads", "")}. {v.get("identity_gap", "")}</span></div>'
+                         for i, v in enumerate(json.load(open(p)) for p in sorted(rv.glob('critic-*.json')))) if rv.exists() else ''
+        reg = S.get('registration', [])
+        lede = (f"{S['category'].capitalize()} from the archive, redrawn the way Giraffe Walks Past was made, starting from drawn poses. "
+                f"SAM 2.1 traced the {S['category']} in every frame. The four keys an image model drew in the chosen doodle's identity, each approved by a "
+                f"critic, were traced to strokes, split from their scenery by the silhouette and moved onto it; in-betweens match strokes key to key and follow "
+                f"the silhouette frame by frame. The scenery is drawn once, and the silhouette is painted as a cel under the character.")
+        html = T.replace('__TITLE__', S['title']).replace('__LEDE__', lede).replace('__ROUNDS__', rounds or '<p class="meta">No review yet.</p>')
+        html = html.replace('__DATA__', json.dumps(S, separators=(',', ':')).replace('</', '<\\/'))
+        head = ('<!doctype html>\n<html lang="en">\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+                + icons(f'pages/{sid}.html') + '\n')
+        html = head + html; i = html.index('</style>') + len('</style>'); html = html[:i] + '\n' + nav(f'pages/{sid}.html') + html[i:]
+        write(f'pages/{sid}.html', html)
 
 
 def projector(lots, reg):
@@ -148,6 +174,11 @@ def projector(lots, reg):
             shots[sid] = pack(sh, f'../shots/{sid}/', f"Puppet redraw. The chosen Quick, Draw! {cat} (key_id {sh['design']['key_id']}, all {sh['design']['strokes']} strokes) moved by "
                               f"{len(rig['bones'])} bones the agent placed on {len(sh['cast']['keys'])} key frames by eye; background drawn once from the look-lane key.")
             L.append({'id': sid, 'lot': by[sid]['lot'], 'title': cat.capitalize(), 'lane': 'motion', 'kind': 'shot'})
+        sid2 = f'{cat}-sam'
+        if sid2 in by:
+            sh = json.load(open(f'shots/{sid2}/shot.json'))
+            shots[sid2] = pack(sh, f'../shots/{sid2}/', 'Drawn keys over SAM. SAM 2.1 masked the subject in every frame; the four critic-approved drawn keys were split from their scenery by the mask and moved onto it; in-betweens match strokes and follow each frame\'s silhouette; scenery drawn once; the silhouette is painted as a cel.')
+            L.append({'id': sid2, 'lot': by[sid2]['lot'], 'title': cat.capitalize(), 'lane': 'join', 'kind': 'shot'})
     thumbs = {}
     for cat in sorted(M):
         pv = json.load(open(f'{BATCH}/subjects/{cat}/preview-data.json')); t0 = pv['interval'][0]
@@ -171,7 +202,8 @@ def projector(lots, reg):
         look = by[cat]['r']; pup = by.get(f'{cat}-redraw', {}).get('r', {})
         cell = lambda r, i: {'v': r[i]['value'], 'ok': r[i]['ok']} if i in r else None
         res.append({'cat': cat, 'look': {i: cell(look, i) for i in ('M2', 'T3', 'B1', 'J4')},
-                    'pup': {i: cell(pup, i) for i in ('M2', 'T3', 'B1', 'J4', 'J1', 'M3', 'M5')}})
+                    'pup': {i: cell(pup, i) for i in ('M1', 'M2', 'T3', 'B1', 'J4', 'J1', 'M3', 'M5')},
+                    'sam': {i: cell(by.get(f'{cat}-sam', {}).get('r', {}), i) for i in ('M1', 'M2', 'T3', 'B1', 'J4', 'J1', 'M3')}})
     page('projector.html', 'pages/projector.html', DATA=js({'lots': L, 'shots': shots, 'traced': M, 'results': res, 'compare': C, 'registry': reg['tests'], 'thumbs': thumbs,
          'catalog': {l['lot']: {'r': l['r']} for l in lots}}))
 

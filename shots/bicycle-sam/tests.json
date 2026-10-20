@@ -1,0 +1,127 @@
+[
+ {
+  "id": "M1",
+  "value": 0.02,
+  "unit": "classifier p, mean of keys",
+  "ok": false,
+  "per_key": [
+   0.003,
+   0.026,
+   0.035,
+   0.008
+  ],
+  "tops": [
+   "violin",
+   "motorbike",
+   "motorbike",
+   "squiggle"
+  ]
+ },
+ {
+  "id": "M2",
+  "value": 6,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "per_key": [
+   0,
+   0,
+   5,
+   20
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.74,
+  "unit": "fit to the SAM silhouette, every frame",
+  "ok": true,
+  "min": 0.56,
+  "per_frame": [
+   0.69,
+   0.7,
+   0.7,
+   0.73,
+   0.81,
+   0.84,
+   0.87,
+   0.85,
+   0.72,
+   0.65,
+   0.67,
+   0.71,
+   0.8,
+   0.8,
+   0.56,
+   0.77,
+   0.74,
+   0.62,
+   0.69,
+   0.77,
+   0.79
+  ]
+ },
+ {
+  "id": "M6",
+  "value": 50.5,
+  "unit": "px jerk (character centre)",
+  "ok": false
+ },
+ {
+  "id": "T1",
+  "value": "0.995 / 1.00",
+  "unit": "recall / pieces kept",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "0.11",
+  "unit": "worst key pair, share of character ink matched",
+  "ok": false
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery strokes held (drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "look-lane keys (image model, critic-approved) + SAM",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "21/21",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cbicycle (front wheel)\u201d; motion broken at frames 2, 4, 6",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/bicycle-sam/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "note": "The doodle is a whole two-wheeled bike built from a few loose straight strokes (polygonal wheels, triangle frame, star spokes, scribbled seat). The cartoon shows only one cropped front wheel with smooth double-line traced contours over a photo-trace background, so the doodle's construction and stroke habits are absent.",
+  "evidence": "shots/bicycle-sam/reviews/critic-1.json"
+ }
+]

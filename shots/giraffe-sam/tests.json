@@ -1,0 +1,123 @@
+[
+ {
+  "id": "M1",
+  "value": 0.0,
+  "unit": "classifier p, mean of keys",
+  "ok": false,
+  "per_key": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "tops": [
+   "blackberry",
+   "blackberry",
+   "hedgehog",
+   "hedgehog"
+  ]
+ },
+ {
+  "id": "M2",
+  "value": 0,
+  "unit": "percentile (Quick, Draw! simplification first)",
+  "ok": false,
+  "per_key": [
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "M3",
+  "value": 0.92,
+  "unit": "fit to the SAM silhouette, every frame",
+  "ok": true,
+  "min": 0.88,
+  "per_frame": [
+   0.94,
+   0.95,
+   0.91,
+   0.94,
+   0.94,
+   0.94,
+   0.9,
+   0.9,
+   0.94,
+   0.92,
+   0.94,
+   0.89,
+   0.89,
+   0.9,
+   0.91,
+   0.9,
+   0.88
+  ]
+ },
+ {
+  "id": "M6",
+  "value": 16.1,
+  "unit": "px jerk (character centre)",
+  "ok": false
+ },
+ {
+  "id": "T1",
+  "value": "0.984 / 1.00",
+  "unit": "recall / pieces kept",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "0.48",
+  "unit": "worst key pair, share of character ink matched",
+  "ok": false
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery strokes held (drawn once)",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "look-lane keys (image model, critic-approved) + SAM",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "17/17",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cgiraffe head\u201d; motion broken at frames 4, 5",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/giraffe-sam/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "note": "Construction and viewpoint: the doodle is a side-profile giraffe built from about a dozen straight strokes (long neck, box muzzle, loop/P ossicones, no spots or ears), while the cartoon is a cropped three-quarter head close-up with ears, spots and dense broken contour lines that read as edges traced from a photo.",
+  "evidence": "shots/giraffe-sam/reviews/critic-1.json"
+ }
+]

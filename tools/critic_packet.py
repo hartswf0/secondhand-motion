@@ -1,5 +1,5 @@
 """Blind critic packet for a puppet redraw: cartoon only, no footage, no notes, no numbers.
-usage: python3 tools/critic_packet.py <cat> [...]
+usage: python3 tools/critic_packet.py <cat> [...] [--suffix=redraw|sam]
 writes shots/<cat>-redraw/critic/strip.png (8 frames, evenly spaced, numbered), keys.png (the look-lane key frames), design.png"""
 import json, os, shutil, sys
 from pathlib import Path
@@ -8,11 +8,20 @@ from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'tools'))
 from puppet import draw_frame
-for c in sys.argv[1:]:
-    d = ROOT / 'shots' / f'{c}-redraw'; S = json.load(open(d / 'shot.json')); W, H = S['W'], S['H']; n = len(S['cast']['frames'])
+SUF = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--suffix=")), "redraw")
+for c in [a for a in sys.argv[1:] if not a.startswith("--")]:
+    d = ROOT / 'shots' / f'{c}-{SUF}'; S = json.load(open(d / 'shot.json')); W, H = S['W'], S['H']; n = len(S['cast']['frames'])
     (d / 'critic').mkdir(exist_ok=True); cam = S['camera']; bg = [np.array(s) for s in S['objects'][0]['strokes']]
     def frame(f):
-        im = Image.new('RGB', (W, H), 'white'); draw_frame(im, [np.array(s) for s in S['cast']['frames'][f]], [s + np.array(cam[f]) for s in bg]); return im
+        im = Image.new('RGB', (W, H), 'white')
+        if S['masks'][f]:   # cel: the silhouette painted under the character
+            from PIL import ImageDraw as D2
+            m = Image.new('L', (W, H), 0); g2 = D2.Draw(m)
+            for p in S['masks'][f]:
+                if len(p) > 2: g2.polygon([tuple(q) for q in p], fill=255)
+            draw_frame(im, [], [s + np.array(cam[f]) for s in bg]); im.paste((255, 255, 255), mask=m); draw_frame(im, [np.array(s) for s in S['cast']['frames'][f]], [])
+            return im
+        draw_frame(im, [np.array(s) for s in S['cast']['frames'][f]], [s + np.array(cam[f]) for s in bg]); return im
     fr = [round(i * (n - 1) / 7) for i in range(8)]; strip = Image.new('RGB', (4 * W + 12, 2 * H + 4), 'white')
     for i, f in enumerate(fr):
         t = frame(f); ImageDraw.Draw(t).text((4, 3), str(i + 1), fill=(120, 120, 120)); strip.paste(t, ((i % 4) * (W + 4), (i // 4) * (H + 4)))
