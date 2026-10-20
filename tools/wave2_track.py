@@ -71,4 +71,9 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    import sys, traceback
+    try:
+        main()
+    except Exception:
+        o = Path(sys.argv[sys.argv.index('--out') + 1]); o.mkdir(parents=True, exist_ok=True)
+        (o / 'error.txt').write_text(traceback.format_exc()); print(traceback.format_exc()); raise
