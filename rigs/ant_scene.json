@@ -236,10 +236,20 @@
      ]
     ]
    ]
+  },
+  {
+   "id": "ant2",
+   "plane": "char",
+   "rig_poses": "shots/ant-sam/ant2_poses_v2.json",
+   "visible": [
+    0,
+    24
+   ],
+   "why": "the second ant in the film, facing the first head to head from the right; the same doodle drawn by the same rig, unmirrored because it faces left, keyed by eye on frames 0, 4, 8, 12, 16, 20 and 24"
   }
  ],
  "notes": {
-  "0": "the ant stands at the rock edge facing right, legs stepping",
+  "0": "the ant stands at the rock edge facing right, head to head with a second ant that faces it from the right",
   "12": "head lowered toward the rock",
   "16": "the gaster swings down and forward as the ant steps on",
   "24": "the ant has moved about a body-third to the right"

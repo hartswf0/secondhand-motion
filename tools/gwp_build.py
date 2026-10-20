@@ -108,7 +108,10 @@ def build(cat):
                     elif isinstance(A[k], (int, float)): P[k] = A[k] + (B[k] - A[k]) * t
                     else: P[k] = [A[k][0] + (B[k][0] - A[k][0]) * t, A[k][1] + (B[k][1] - A[k][1]) * t]
                 return P
-            o['frames'] = [[np.round(np.array(q, float), 1).tolist() for q in xr.draw(pose_at(f))] for f in range(n)]
+            # keys are in frame pixels, like the character's; renderers slide every object by the camera at its
+            # plane's depth, so that slide is taken off here and the copy lands where it was keyed
+            zr_, zo_ = sc['z_ref'], next(p['z'] for p in sc['planes'] if p['id'] == so['plane'])
+            o['frames'] = [[np.round(np.array(q, float) - np.array(cam[f]) * (zr_ / zo_), 1).tolist() for q in xr.draw(pose_at(f))] for f in range(n)]
             o['source'] = f"quickdraw:{spec['doodle_key_id']} (a second copy of the character's rig, keyed in {so['rig_poses']})"
             o['strokes'] = o['frames'][0]
         if so.get('visible'):

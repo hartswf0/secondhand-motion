@@ -17,7 +17,7 @@ for c in [a for a in sys.argv[1:] if not a.startswith("--")]:
     def bgs(f):   # every scenery object, slid by the camera at its plane's depth
         return [np.array(s) + np.array(cam[f]) * (zr / zof.get(o['plane'], zr)) for o in S['objects'] if o['plane'] != 'char' for s in (o['frames'][f] if o.get('frames') else o['strokes']) if len(s) > 1]
     def cast(f):   # the character, plus any extra drawn on the character's own plane (a second copy of the rig)
-        return [np.array(s) for s in S['cast']['frames'][f]] + [np.array(s) + np.array(cam[f]) * 0 for o in S['objects'] if o['plane'] == 'char' for s in (o['frames'][f] if o.get('frames') else o['strokes']) if len(s) > 1]
+        return [np.array(s) for s in S['cast']['frames'][f]] + [np.array(s) + np.array(cam[f]) * (zr / zof.get('char', zr)) for o in S['objects'] if o['plane'] == 'char' for s in (o['frames'][f] if o.get('frames') else o['strokes']) if len(s) > 1]
     def frame(f):
         im = Image.new('RGB', (W, H), 'white')
         if S['masks'][f]:   # cel: the silhouette painted under the character

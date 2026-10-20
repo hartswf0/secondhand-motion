@@ -270,7 +270,7 @@
   {
    "id": "lion2",
    "plane": "char",
-   "why": "the first lion, which lies still on the ledge in profile, turns its head toward the camera at frames 10 to 12 and leaves the frame at the right as the camera pans; it is the character's own doodle drawn by rigs/lion.py from keys placed by eye in world coordinates (frame 0), slid by the camera",
+   "why": "the first lion, which lies still on the ledge in profile, turns its head toward the camera at frames 10 to 12 and leaves the frame at the right as the camera pans; the character's own doodle drawn by rigs/lion.py. Its head turn is keyed by eye at frames 0, 10, 11, 12 and 31; its place is one spot on the ledge plus the measured camera on every frame, because the char plane is in frame coordinates",
    "rig_poses": "shots/lion-sam/lionA_poses.json"
   }
  ],
