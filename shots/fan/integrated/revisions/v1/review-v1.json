@@ -1,0 +1,175 @@
+{
+  "reviewer": "independent_blind_assembly_critic",
+  "review_version": 1,
+  "scope": {
+    "inspected_images": [
+      "shots/fan/design.png",
+      "shots/fan/integrated/source-01.jpg",
+      "shots/fan/integrated/key-01.png",
+      "shots/fan/integrated/source-02.jpg",
+      "shots/fan/integrated/key-02.png",
+      "shots/fan/integrated/source-03.jpg",
+      "shots/fan/integrated/key-03.png",
+      "shots/fan/integrated/source-04.jpg",
+      "shots/fan/integrated/key-04.png",
+      "shots/fan/integrated/source-05.jpg",
+      "shots/fan/integrated/key-05.png",
+      "shots/fan/integrated/source-06.jpg",
+      "shots/fan/integrated/key-06.png"
+    ],
+    "read_manifest": "shots/fan/source.json",
+    "movie_metadata_inspected": [
+      "shots/fan/integrated/cartoon.mp4",
+      "shots/fan/integrated/source-excerpt.mp4",
+      "shots/fan/integrated/comparison.mp4"
+    ],
+    "normal_speed_playback_reviewed": false,
+    "excluded_evidence": "No builder code, builder metrics, or earlier reviews read."
+  },
+  "identity": {
+    "verdict": "needs_revision",
+    "finding": "The irregular outline, scratchy diagonal hub, three bent rotor arms, and striped leaning foot remain recognizable. The assembled foot is disproportionately narrow, and the head has become taller and rounder relative to the design, weakening the same-doodle silhouette.",
+    "visual_estimates_pixels": {
+      "design_housing_bounds_xyxy": [
+        27,
+        31,
+        469,
+        372
+      ],
+      "key_housing_bounds_xyxy": [
+        104,
+        14,
+        378,
+        308
+      ],
+      "design_base_width": 234,
+      "key_base_width": 74,
+      "design_base_to_housing_width_ratio": 0.53,
+      "key_base_to_housing_width_ratio": 0.27
+    },
+    "measurement_caveat": "These silhouette coordinates are visual estimates from the inspected images, not fitted segmentation."
+  },
+  "frame_composition": {
+    "verdict": "needs_minor_revision",
+    "finding": "The large central fan, bowl at lower left, book at lower right, table, and vertical wall divisions preserve the source room relationships. The cartoon head begins about 16 pixels higher than the source cage, while the compact base underrepresents the source footprint. Later source cages/hubs sit farther right than the fixed cartoon fan.",
+    "visual_estimates_pixels": {
+      "source_first_cage_bounds_xyxy": [
+        106,
+        30,
+        385,
+        312
+      ],
+      "source_last_cage_bounds_xyxy": [
+        128,
+        31,
+        399,
+        311
+      ],
+      "cartoon_hub_center_xy": [
+        240,
+        173
+      ],
+      "source_hub_center_first_xy": [
+        239,
+        181
+      ],
+      "source_hub_center_last_xy": [
+        270,
+        181
+      ]
+    },
+    "caveat": "The source horizontal change should be assessed during continuous playback before deciding whether it represents framing, housing orientation, or another cause; do not infer exact rotor phase from blur."
+  },
+  "integration": {
+    "verdict": "sampled_structure_pass_temporal_review_incomplete",
+    "finding": "Across the six inspected keys the outer housing, hub drawing, and foot appear fixed while rotor arms change pose. There is no visible scenery boil in these samples. Arm intersections near the hub vary, as expected for overlapping moving rotor lines; that does not establish hub motion.",
+    "sampled_pixel_checks": {
+      "method": "Count RGB pixel differences against key-01 in fixed crops of all subsequent keys. Coordinates are half-open xyxy.",
+      "left_bowl_and_table": {
+        "crop": [
+          0,
+          250,
+          130,
+          360
+        ],
+        "changed_pixels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "right_book_and_wall": {
+        "crop": [
+          385,
+          0,
+          480,
+          360
+        ],
+        "changed_pixels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "lower_stand": {
+        "crop": [
+          200,
+          310,
+          290,
+          360
+        ],
+        "changed_pixels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "limitations": "Sampled stills cannot establish smooth motion, cadence, continuity, aliasing, or absence of between-sample boil. Housing and hub stability have visual sampled support, not exhaustive isolated-component measurement."
+  },
+  "biggest_gap": "The narrow little base changes the fan identity and its table footprint: it is about one quarter of housing width, whereas the design foot is about one half.",
+  "smallest_repair": "Widen the existing striped foot to roughly 135\u2013145 pixels while preserving its leaning trapezoid, stripes, floor contact, and center under the hub. Preserve the stationary assembly and room. Then reassess whether the head needs a small proportion adjustment rather than redrawing the fan.",
+  "protected_strengths": [
+    "Irregular hand-drawn contour and scratchy diagonal hub.",
+    "Bent rotor-arm character and visibly distinct sampled phases.",
+    "Stable sampled scenery, bowl/book placement, and lower stand.",
+    "Large central framing and consistent warm paper/ink treatment."
+  ],
+  "movie_evidence": {
+    "cartoon": {
+      "dimensions": [
+        480,
+        360
+      ],
+      "fps": 24,
+      "frames": 75,
+      "duration_seconds": 3.125
+    },
+    "source_excerpt": {
+      "dimensions": [
+        480,
+        360
+      ],
+      "fps": 24,
+      "frames": 75,
+      "duration_seconds": 3.125
+    },
+    "comparison": "ffprobe failed during review: moov atom not found / invalid data. It may have been incomplete at the time of inspection."
+  },
+  "release": {
+    "approved": false,
+    "status": "hold",
+    "required_before_release": [
+      "Repair or explicitly resolve the identity/footprint concern.",
+      "Complete isolated housing/hub stability measurements and full-sequence motion checks.",
+      "Provide a valid comparison movie and actually review the cartoon/source comparison at normal speed."
+    ],
+    "source_rotor_angle_and_rpm": "Unknown; phase is procedural and is not certified against source blur."
+  }
+}

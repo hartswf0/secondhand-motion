@@ -1,0 +1,85 @@
+{
+  "review": "Fresh blind review of allowed integrated packet only",
+  "verdict": "promising assembly; final release approval withheld pending normal-speed playback",
+  "identity": {
+    "assessment": "Strong. The irregular cage, faceted hub, angular blades and spare stand preserve the supplied Quick, Draw! fan identity. It reads immediately as the same drawing family.",
+    "protected_strengths": [
+      "Irregular hand-drawn outer cage and faceted hub",
+      "Sparse dark linework on a warm pale field",
+      "Distinct room, fan and tabletop layers"
+    ]
+  },
+  "frame_composition": {
+    "assessment": "Strong. Fan scale and placement track the source framing closely, including the bowl at lower left and rectangular tabletop object at lower right. The head has breathing room and the stationary setting remains legible.",
+    "protected_strengths": [
+      "Source-like fan dominance and tabletop crop",
+      "Stationary bowl, room and right-side object",
+      "Fixed lower stand"
+    ]
+  },
+  "head_motion_and_readability": {
+    "assessment": "Six keys show a modest rightward head progression with the hub moving inside the cage. The turn is plausible but its yaw cue is weaker than its lateral displacement. Rotating blade poses are evident in the sampled images; perceived speed, continuity and strobing cannot be approved from these samples.",
+    "measurement": "At y=180, outer dark cage pixels move from x=113..382 in key 01 to x=131..400 in key 06: +18 px with the same 269 px row span. This is a row-span measurement, not a fitted three-dimensional yaw estimate."
+  },
+  "greatest_gap": {
+    "gap": "The slow head turn relies heavily on lateral movement; the cage keeps nearly the same projected width, so the silhouette alone provides little evidence of yaw.",
+    "smallest_repair": "Add a small, source-matched progressive narrowing of the cage during the rightward turn, anchored to the fixed neck. Preserve the existing hub progression, room, stand, scale and drawing character; do not exaggerate the source\u2019s subtle motion.",
+    "priority": "Provisional visual refinement, to be confirmed against normal-speed playback before changing motion."
+  },
+  "evidence": {
+    "visually_viewed": [
+      "design.png",
+      "source-01.jpg",
+      "source-02.jpg",
+      "source-03.jpg",
+      "source-04.jpg",
+      "source-05.jpg",
+      "source-06.jpg",
+      "key-01.png",
+      "key-02.png",
+      "key-03.png",
+      "key-04.png",
+      "key-05.png",
+      "key-06.png",
+      "comparison.mp4 decoded sample at 0.75 seconds"
+    ],
+    "video_metadata": {
+      "cartoon.mp4": {
+        "duration_seconds": 3.125,
+        "fps": 24,
+        "frames": 75,
+        "dimensions": [
+          480,
+          360
+        ]
+      },
+      "comparison.mp4": {
+        "duration_seconds": 3.125,
+        "fps": 24,
+        "frames": 75,
+        "dimensions": [
+          960,
+          384
+        ]
+      },
+      "source-excerpt.mp4": {
+        "duration_seconds": 3.125,
+        "fps": 24,
+        "frames": 75,
+        "dimensions": [
+          480,
+          360
+        ]
+      }
+    },
+    "decode_check": "All three videos decoded in full without ffmpeg reporting errors.",
+    "stationarity_measurements": "Cartoon first-to-last mean absolute RGB differences on 0..255 values: left room 0.001; lower stand 0.006; bowl 0.174; right box 0.182. These support stationary scenery, allowing for video compression.",
+    "normal_speed_playback_reviewed": false,
+    "limitations": [
+      "No actual normal-speed movie playback was available in this review.",
+      "Successful decoding and sampled images do not establish smoothness, rotor readability or release readiness.",
+      "Source blade phase is blurred; exact authored phase is not treated as a source mismatch."
+    ]
+  },
+  "final_release_approved": false
+}

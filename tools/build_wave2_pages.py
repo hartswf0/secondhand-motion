@@ -135,7 +135,7 @@ def shot_body(row, root):
     if current_board:
         artifact_links.append(link(href(current_board,page), 'Generation board · '+revision))
     artifact_section = ('<section aria-labelledby="records-heading"><h2 id="records-heading">Current artifact records</h2><p class="meta">Selected key revision '+e(revision)+'. These records describe the work and still review; they do not constitute motion approval.</p><div class="artifact-links">'+''.join(artifact_links)+'</div></section>') if artifact_links else ''
-    return f'''<header class="page"><div class="eyebrow">{e(item.get('lot','Wave 2'))} · Wave 2 / draft keys · {e(revision)}</div><h1>{e(title)}</h1><p class="lede">Six proposed character keys, planned against the selected source interval.</p><span class="status">DRAFT RASTER KEYS · MOTION NOT APPROVED</span></header>
+    html = f'''<header class="page"><div class="eyebrow">{e(item.get('lot','Wave 2'))} · Wave 2 / draft keys · {e(revision)}</div><h1>{e(title)}</h1><p class="lede">Six proposed character keys, planned against the selected source interval.</p><span class="status">DRAFT RASTER KEYS · MOTION NOT APPROVED</span></header>
 <nav class="breadcrumbs" aria-label="Related pages"><a href="../../index.html">← Rack</a><a href="../wave2-keyframes.html">All Wave 2 keyframes</a></nav>
 <div class="note scope"><b>Still drawings, in source order.</b><p>These are draft key proposals. No key animation is presented, and no pipeline gate is claimed passed by this page. Still-key approval and normal-speed playback approval are separate. No training ran.</p></div>
 <section aria-labelledby="keys-heading"><h2 id="keys-heading">The six keys</h2><p class="meta">Source clip times · {e(interval_label(interval))}. Open any drawing at full resolution.</p><div class="key-grid">{''.join(cards)}</div></section>
@@ -145,6 +145,12 @@ def shot_body(row, root):
 <details><summary>Source video, interval &amp; provenance</summary><div class="detail-body"><p class="meta">{e(video_kind)} The selected interval is {e(interval_label(interval))}, relative to this downloaded archive clip.</p>{video_html}<dl class="provenance">{provenance}</dl><div class="inline-links">{link(source_url,'Archive source page')}{link(video_url,'Open source video')}{link('source.json','Source record')}{link('keyplan.json','Key plan')}{link('keys/revisions/board-v1.png','Original generated board')}</div><details><summary>Full source record</summary><pre>{e(json.dumps(raw,indent=2,ensure_ascii=False))}</pre></details></div></details></section>
 {artifact_section}
 <footer>Draft raster references. Trace fidelity, recognition, identity, background stability, rigging, contacts, and playback require their own evidence and review. <a href="../../pages/pipeline.html">Pipeline gates</a>.</footer>'''
+
+    if (folder/'integrated/index.html').is_file():
+        assembly = '<section><h2>Assembled clip</h2><video class="source-video" controls playsinline preload="metadata" poster="integrated/poster.png" src="integrated/cartoon.mp4"></video><p><a href="integrated/index.html">Open the assembled review copy and synchronized source comparison →</a></p><p class="meta">75 rendered frames at 24 fps. Source-framed head movement, rotating blades and one held room. Final playback review remains pending.</p></section>'
+        html = html.replace('<section aria-labelledby="keys-heading">', assembly+'<section aria-labelledby="keys-heading">',1)
+        html = html.replace('No key animation is presented, and no pipeline gate is claimed passed by this page.', 'An assembled review copy is now available above. The isolated drafts below are retained as revision evidence.')
+    return html
 
 
 def gallery_body(rows, root):
