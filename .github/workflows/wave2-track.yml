@@ -7,7 +7,7 @@ on:
       - '.github/workflows/wave2-track.yml'
       - 'tools/wave2_track.py'
 permissions:
-  contents: read
+  contents: write
 jobs:
   track:
     runs-on: ubuntu-24.04
@@ -36,9 +36,12 @@ jobs:
           set +e
           /tmp/v/bin/python -u tools/wave2_track.py --slug "${{ matrix.slug }}" --out "out/${{ matrix.slug }}" 2>&1 | tee "out/${{ matrix.slug }}/log.txt"
           exit ${PIPESTATUS[0]}
-      - if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: wave2-${{ matrix.slug }}
-          path: out/${{ matrix.slug }}
-          retention-days: 14
+      - name: Commit the output to its own branch (artifact downloads are not reachable from the agent workspace)
+        if: always()
+        shell: bash
+        run: |
+          cd "out/${{ matrix.slug }}"
+          git init -q -b "wave2-track/${{ matrix.slug }}"
+          git config user.name "github-actions"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "Wave 2 tracking output for ${{ matrix.slug }} (${{ github.sha }})"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" "HEAD:refs/heads/wave2-track/${{ matrix.slug }}"
