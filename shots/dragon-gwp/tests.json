@@ -5,17 +5,18 @@
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
+   26,
    28,
+   26,
    28,
+   27,
+   27,
+   27,
+   27,
+   27,
+   27,
    28,
    25,
-   27,
-   27,
-   27,
-   27,
-   27,
-   28,
-   27,
    27
   ]
  },
@@ -28,16 +29,16 @@
  },
  {
   "id": "M3",
-  "value": 0.58,
+  "value": 0.57,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
   "min": 0.56
  },
  {
   "id": "M6",
-  "value": 3.0,
+  "value": 7.6,
   "unit": "px jerk (drawing centre)",
-  "ok": true
+  "ok": false
  },
  {
   "id": "T3",
@@ -77,5 +78,20 @@
   "value": "complete",
   "unit": "",
   "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca four-legged creature with a small round head, pointed ears, a zigzag spiked back and a tall curled tail, like a spiny dinosaur or dragon-cat\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/dragon-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The animated drawing uses the same polygon head, zigzag back, curled tail and open leg strokes as the doodle, so it reads as the same drawing.",
+  "evidence": "shots/dragon-gwp/reviews/critic-1.json"
  }
 ]

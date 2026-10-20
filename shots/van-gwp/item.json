@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0083",
+ "id": "van-gwp",
+ "kind": "shot",
+ "title": "Van, the Giraffe Walks Past Way",
+ "category": "van",
+ "wave": 4,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/van-gwp/cover.png",
+ "cover_alt": "shots/van-gwp/frames/f016.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/van-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#van-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/van_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/van/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/van-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 4"
+ ]
+}

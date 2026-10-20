@@ -1,0 +1,353 @@
+{
+ "category": "cello",
+ "doodle_key_id": "5389451637293056",
+ "facing": 1,
+ "face_from": [
+  "scroll",
+  "scroll"
+ ],
+ "note": "Quick, Draw! cello 5389451637293056, standing upright. Stroke 0 is the body outline: the upper bout, the C-shaped waist notches on both sides and the lower bout. Stroke 1 is the neck with the scroll at the top. Strokes 2 and 3 are the two strings running from the neck down over the body. Stroke 4 is the small loop of the bridge. In the film the cello is a rigid object held between the player's knees: it does not bend, it shifts and leans with her as she bows. So the rig is rigid: the whole drawing is placed by two points, the top of the scroll and the point where the neck meets the upper bout, which sets its position, size and lean in every frame. No stroke moves on its own.",
+ "strokes": [
+  [
+   [
+    99,
+    158
+   ],
+   [
+    86,
+    157
+   ],
+   [
+    83,
+    161
+   ],
+   [
+    82,
+    171
+   ],
+   [
+    86,
+    177
+   ],
+   [
+    92,
+    179
+   ],
+   [
+    100,
+    175
+   ],
+   [
+    105,
+    182
+   ],
+   [
+    112,
+    215
+   ],
+   [
+    103,
+    235
+   ],
+   [
+    88,
+    249
+   ],
+   [
+    72,
+    255
+   ],
+   [
+    49,
+    251
+   ],
+   [
+    24,
+    240
+   ],
+   [
+    5,
+    223
+   ],
+   [
+    0,
+    207
+   ],
+   [
+    0,
+    196
+   ],
+   [
+    11,
+    172
+   ],
+   [
+    25,
+    175
+   ],
+   [
+    32,
+    171
+   ],
+   [
+    33,
+    151
+   ],
+   [
+    15,
+    143
+   ],
+   [
+    11,
+    132
+   ],
+   [
+    10,
+    120
+   ],
+   [
+    16,
+    109
+   ],
+   [
+    26,
+    98
+   ],
+   [
+    43,
+    91
+   ],
+   [
+    59,
+    91
+   ],
+   [
+    83,
+    99
+   ],
+   [
+    97,
+    111
+   ],
+   [
+    102,
+    123
+   ],
+   [
+    103,
+    144
+   ],
+   [
+    97,
+    161
+   ]
+  ],
+  [
+   [
+    54,
+    92
+   ],
+   [
+    49,
+    54
+   ],
+   [
+    49,
+    24
+   ],
+   [
+    40,
+    19
+   ],
+   [
+    37,
+    10
+   ],
+   [
+    44,
+    1
+   ],
+   [
+    52,
+    0
+   ],
+   [
+    60,
+    3
+   ],
+   [
+    62,
+    8
+   ],
+   [
+    60,
+    47
+   ],
+   [
+    65,
+    78
+   ],
+   [
+    63,
+    100
+   ]
+  ],
+  [
+   [
+    52,
+    52
+   ],
+   [
+    58,
+    103
+   ],
+   [
+    52,
+    183
+   ],
+   [
+    52,
+    201
+   ],
+   [
+    54,
+    194
+   ]
+  ],
+  [
+   [
+    60,
+    72
+   ],
+   [
+    66,
+    95
+   ],
+   [
+    69,
+    135
+   ],
+   [
+    76,
+    177
+   ],
+   [
+    70,
+    219
+   ]
+  ],
+  [
+   [
+    64,
+    148
+   ],
+   [
+    55,
+    155
+   ],
+   [
+    52,
+    166
+   ],
+   [
+    55,
+    178
+   ],
+   [
+    62,
+    173
+   ],
+   [
+    68,
+    160
+   ],
+   [
+    68,
+    149
+   ],
+   [
+    61,
+    144
+   ]
+  ]
+ ],
+ "root": [
+  "scroll",
+  "bout"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "scroll": [
+   51,
+   2
+  ],
+  "bout": [
+   57,
+   92
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 32,
+   "joint": "scroll",
+   "aim": [
+    "scroll",
+    "bout"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 11,
+   "joint": "scroll",
+   "aim": [
+    "scroll",
+    "bout"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 4,
+   "joint": "scroll",
+   "aim": [
+    "scroll",
+    "bout"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 4,
+   "joint": "scroll",
+   "aim": [
+    "scroll",
+    "bout"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 7,
+   "joint": "scroll",
+   "aim": [
+    "scroll",
+    "bout"
+   ],
+   "turn": 0
+  }
+ ],
+ "options": {
+  "size": "steady",
+  "smooth": 1.2,
+  "track": false
+ },
+ "track": false,
+ "smooth": 1.2
+}

@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0086",
+ "id": "speedboat-gwp",
+ "kind": "shot",
+ "title": "Speedboat, the Giraffe Walks Past Way",
+ "category": "speedboat",
+ "wave": 4,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/speedboat-gwp/cover.png",
+ "cover_alt": "shots/speedboat-gwp/frames/f014.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/speedboat-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#speedboat-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/speedboat_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/speedboat/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/speedboat-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 4"
+ ]
+}

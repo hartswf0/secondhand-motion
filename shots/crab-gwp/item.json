@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0085",
+ "id": "crab-gwp",
+ "kind": "shot",
+ "title": "Crab, the Giraffe Walks Past Way",
+ "category": "crab",
+ "wave": 4,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/crab-gwp/cover.png",
+ "cover_alt": "shots/crab-gwp/frames/f018.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/crab-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#crab-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/crab_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/crab/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/crab-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 4"
+ ]
+}

@@ -1,0 +1,350 @@
+{
+ "category": "ocean",
+ "doodle_key_id": "4618667562106880",
+ "facing": 1,
+ "face_from": [
+  "left",
+  "left"
+ ],
+ "size_from_mask": false,
+ "note": "Quick, Draw! ocean 4618667562106880: five wavy lines, one under another. Stroke 0 is the top line with three peaks, the right-hand peak (vertices 13-16) the tallest; strokes 1 and 2 are the middle swells; stroke 3 is the long bottom swell; stroke 4 is a short zigzag at the lower left. The whole drawing is placed by two points on one level line (left and right), which ride with the water as the ship pitches and the sea runs to the right, so the drawing keeps one size. Each line heaves up and down by its own amount (pose h0 to h4, doodle units upward), the right-hand peak of the top line rises on its own as the big crest builds (pose crest), and its last vertex, the lip, throws forward and down when the crest breaks (pose lip).",
+ "root": [
+  "left",
+  "right"
+ ],
+ "anchors": {
+  "left": [
+   0,
+   100
+  ],
+  "right": [
+   255,
+   100
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 16,
+   "to": 16,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "lip",
+   "shift": [
+    1,
+    1
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 13,
+   "to": 15,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "crest",
+   "shift": [
+    0,
+    -1
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 12,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "h0",
+   "shift": [
+    0,
+    -1
+   ]
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 7,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "h1",
+   "shift": [
+    0,
+    -1
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 7,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "h2",
+   "shift": [
+    0,
+    -1
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 10,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "h3",
+   "shift": [
+    0,
+    -1
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 4,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "h4",
+   "shift": [
+    0,
+    -1
+   ]
+  }
+ ],
+ "size": "steady",
+ "smooth": 1.2,
+ "track": false,
+ "strokes": [
+  [
+   [
+    0,
+    38
+   ],
+   [
+    33,
+    55
+   ],
+   [
+    45,
+    50
+   ],
+   [
+    60,
+    17
+   ],
+   [
+    68,
+    14
+   ],
+   [
+    75,
+    15
+   ],
+   [
+    121,
+    41
+   ],
+   [
+    129,
+    42
+   ],
+   [
+    134,
+    39
+   ],
+   [
+    145,
+    15
+   ],
+   [
+    151,
+    15
+   ],
+   [
+    182,
+    31
+   ],
+   [
+    198,
+    34
+   ],
+   [
+    207,
+    33
+   ],
+   [
+    217,
+    26
+   ],
+   [
+    239,
+    0
+   ],
+   [
+    255,
+    4
+   ]
+  ],
+  [
+   [
+    90,
+    96
+   ],
+   [
+    113,
+    88
+   ],
+   [
+    153,
+    87
+   ],
+   [
+    172,
+    91
+   ],
+   [
+    193,
+    102
+   ],
+   [
+    209,
+    103
+   ],
+   [
+    225,
+    94
+   ],
+   [
+    235,
+    80
+   ]
+  ],
+  [
+   [
+    31,
+    110
+   ],
+   [
+    60,
+    119
+   ],
+   [
+    97,
+    125
+   ],
+   [
+    110,
+    124
+   ],
+   [
+    127,
+    114
+   ],
+   [
+    137,
+    113
+   ],
+   [
+    164,
+    127
+   ],
+   [
+    173,
+    126
+   ]
+  ],
+  [
+   [
+    69,
+    181
+   ],
+   [
+    76,
+    179
+   ],
+   [
+    97,
+    151
+   ],
+   [
+    112,
+    142
+   ],
+   [
+    123,
+    140
+   ],
+   [
+    153,
+    167
+   ],
+   [
+    167,
+    168
+   ],
+   [
+    191,
+    160
+   ],
+   [
+    203,
+    159
+   ],
+   [
+    237,
+    189
+   ],
+   [
+    241,
+    187
+   ]
+  ],
+  [
+   [
+    8,
+    136
+   ],
+   [
+    37,
+    155
+   ],
+   [
+    41,
+    135
+   ],
+   [
+    60,
+    142
+   ],
+   [
+    67,
+    140
+   ]
+  ]
+ ]
+}

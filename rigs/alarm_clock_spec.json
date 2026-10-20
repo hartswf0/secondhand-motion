@@ -1,0 +1,370 @@
+{
+ "category": "alarm clock",
+ "doodle_key_id": "5502112672776192",
+ "facing": 1,
+ "face_from": [
+  "c",
+  "c"
+ ],
+ "note": "Quick, Draw! alarm clock 5502112672776192, drawn from the front. Stroke 0 is the round case, open at the bottom left; stroke 1 is the dot at the centre; strokes 2 and 3 are the two hands; strokes 4 and 5 are the left and right bells; strokes 6 and 7 are the two feet. The whole drawing is placed by two points, the centre of the face (c) and the top of the case (top), which set its place, size and tilt. The clock in the film is turned by a hand to show its side and back: the pose entry yaw (negative when the face turns toward screen left) narrows the case and slides the hands and centre dot further left than the outline (they move 40 doodle units per unit of yaw before placement, and again with the front region), and the pose entry bells moves both bells toward the right, where they bunch together when the clock is seen from the side. Nothing else on the clock moves.",
+ "strokes": [
+  [
+   [
+    26,
+    209
+   ],
+   [
+    15,
+    198
+   ],
+   [
+    1,
+    162
+   ],
+   [
+    2,
+    129
+   ],
+   [
+    12,
+    103
+   ],
+   [
+    27,
+    81
+   ],
+   [
+    50,
+    62
+   ],
+   [
+    78,
+    49
+   ],
+   [
+    111,
+    46
+   ],
+   [
+    133,
+    51
+   ],
+   [
+    163,
+    64
+   ],
+   [
+    184,
+    84
+   ],
+   [
+    194,
+    105
+   ],
+   [
+    198,
+    125
+   ],
+   [
+    198,
+    147
+   ],
+   [
+    194,
+    166
+   ],
+   [
+    171,
+    201
+   ],
+   [
+    154,
+    215
+   ],
+   [
+    137,
+    222
+   ],
+   [
+    116,
+    226
+   ],
+   [
+    86,
+    224
+   ],
+   [
+    64,
+    220
+   ],
+   [
+    50,
+    211
+   ]
+  ],
+  [
+   [
+    94,
+    111
+   ],
+   [
+    96,
+    112
+   ]
+  ],
+  [
+   [
+    100,
+    120
+   ],
+   [
+    157,
+    68
+   ]
+  ],
+  [
+   [
+    122,
+    149
+   ],
+   [
+    152,
+    180
+   ],
+   [
+    182,
+    204
+   ]
+  ],
+  [
+   [
+    41,
+    76
+   ],
+   [
+    21,
+    71
+   ],
+   [
+    4,
+    50
+   ],
+   [
+    0,
+    29
+   ],
+   [
+    13,
+    8
+   ],
+   [
+    28,
+    1
+   ],
+   [
+    45,
+    3
+   ],
+   [
+    69,
+    16
+   ],
+   [
+    85,
+    38
+   ]
+  ],
+  [
+   [
+    117,
+    41
+   ],
+   [
+    120,
+    28
+   ],
+   [
+    131,
+    13
+   ],
+   [
+    146,
+    3
+   ],
+   [
+    167,
+    1
+   ],
+   [
+    177,
+    8
+   ],
+   [
+    187,
+    24
+   ],
+   [
+    188,
+    42
+   ],
+   [
+    182,
+    56
+   ]
+  ],
+  [
+   [
+    72,
+    230
+   ],
+   [
+    59,
+    237
+   ],
+   [
+    53,
+    245
+   ]
+  ],
+  [
+   [
+    147,
+    227
+   ],
+   [
+    182,
+    255
+   ]
+  ]
+ ],
+ "root": [
+  "c",
+  "top"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "c": [
+   100,
+   136
+  ],
+  "top": [
+   100,
+   46
+  ],
+  "lbell": [
+   42,
+   40
+  ],
+  "rbell": [
+   152,
+   28
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 8,
+   "joint": "c",
+   "aim": [
+    "c",
+    "top"
+   ],
+   "turn": 0,
+   "shift_by": "bells",
+   "shift": [
+    22,
+    5
+   ]
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 8,
+   "joint": "c",
+   "aim": [
+    "c",
+    "top"
+   ],
+   "turn": 0,
+   "shift_by": "bells",
+   "shift": [
+    4,
+    3
+   ]
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 1,
+   "joint": "c",
+   "aim": [
+    "c",
+    "top"
+   ],
+   "turn": 0,
+   "shift_by": "yaw",
+   "shift": [
+    40,
+    0
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 1,
+   "joint": "c",
+   "aim": [
+    "c",
+    "top"
+   ],
+   "turn": 0,
+   "shift_by": "yaw",
+   "shift": [
+    40,
+    0
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 2,
+   "joint": "c",
+   "aim": [
+    "c",
+    "top"
+   ],
+   "turn": 0,
+   "shift_by": "yaw",
+   "shift": [
+    40,
+    0
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "c",
+   "aim": [
+    "c",
+    "top"
+   ],
+   "turn": 0
+  }
+ ],
+ "front_regions": [
+  [
+   90,
+   60,
+   190,
+   215
+  ]
+ ],
+ "options": {
+  "size": "steady",
+  "smooth": 1.2,
+  "track": false
+ },
+ "size": "steady",
+ "smooth": 1.2,
+ "track": false
+}

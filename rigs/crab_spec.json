@@ -6,7 +6,7 @@
   "lside",
   "lside"
  ],
- "note": "Quick, Draw! crab 6219540520239104, drawn from the front: one closed outline for the shell (stroke 0), four short leg strokes under it (1-4), the frame-left arm as one line (7) ending in a claw drawn as an outline (8) with an inner line for the pincer gap (9), and the frame-right arm as a three-point line (5) ending in a claw outline (6) with its pincer line (10). The root carries the whole drawing by the two ends of the shell, so it stays where the crab's shell is and at one size. Each arm with its claw turns at its shoulder on the shell toward the pose's claw point, and may shorten a little, so the claws come down and work up toward the mouth as the ghost crab's claws do; the shell and legs hold still as the crab's do.",
+ "note": "Quick, Draw! crab 6219540520239104, drawn from the front: one closed outline for the shell (stroke 0), four short leg strokes under it (1-4), the frame-left arm as one line (7) ending in a claw outline (8) with an inner pincer line (9), and the frame-right arm as a three-point line (5) ending in a claw outline (6) with its pincer line (10). Strokes 11 and 12 are NOT in the doodle: they are two short eyestalks, each a line with a small diamond eye, added by the agent on top of the shell because the doodle has no eyes and the film's most visible motion is the ghost crab folding its eyestalks down. The root carries the whole drawing by the two ends of the shell at one steady size. The arms keep the doodle's own raised layout and length (no stretch); each arm with its claw turns only a few degrees at its shoulder, dipping and lifting as the crab works its claws to its mouth. Each eyestalk turns at its base on the shell: upright, then folded outward and down flat along the shell at about 6.9 to 7.1 s, then upright again.",
  "strokes": [
   [
    [
@@ -281,6 +281,58 @@
     231,
     88
    ]
+  ],
+  [
+   [
+    78,
+    92
+   ],
+   [
+    76,
+    66
+   ],
+   [
+    68,
+    60
+   ],
+   [
+    75,
+    50
+   ],
+   [
+    83,
+    58
+   ],
+   [
+    76,
+    66
+   ]
+  ],
+  [
+   [
+    163,
+    97
+   ],
+   [
+    165,
+    71
+   ],
+   [
+    157,
+    65
+   ],
+   [
+    165,
+    55
+   ],
+   [
+    173,
+    63
+   ],
+   [
+    165,
+    71
+   ]
   ]
  ],
  "root": [
@@ -311,6 +363,22 @@
   "rclaw": [
    240,
    45
+  ],
+  "leb": [
+   78,
+   92
+  ],
+  "leye": [
+   75,
+   58
+  ],
+  "reb": [
+   163,
+   97
+  ],
+  "reye": [
+   165,
+   63
   ]
  },
  "parts": [
@@ -323,7 +391,7 @@
     "lsh",
     "lclaw"
    ],
-   "stretch": 0.5
+   "stretch": 0
   },
   {
    "stroke": 8,
@@ -334,7 +402,7 @@
     "lsh",
     "lclaw"
    ],
-   "stretch": 0.5
+   "stretch": 0
   },
   {
    "stroke": 9,
@@ -345,7 +413,7 @@
     "lsh",
     "lclaw"
    ],
-   "stretch": 0.5
+   "stretch": 0
   },
   {
    "stroke": 5,
@@ -356,7 +424,7 @@
     "rsh",
     "rclaw"
    ],
-   "stretch": 0.25
+   "stretch": 0
   },
   {
    "stroke": 6,
@@ -367,7 +435,7 @@
     "rsh",
     "rclaw"
    ],
-   "stretch": 0.25
+   "stretch": 0
   },
   {
    "stroke": 10,
@@ -378,7 +446,27 @@
     "rsh",
     "rclaw"
    ],
-   "stretch": 0.25
+   "stretch": 0
+  },
+  {
+   "stroke": 11,
+   "from": 0,
+   "to": 5,
+   "joint": "leb",
+   "aim": [
+    "leb",
+    "leye"
+   ]
+  },
+  {
+   "stroke": 12,
+   "from": 0,
+   "to": 5,
+   "joint": "reb",
+   "aim": [
+    "reb",
+    "reye"
+   ]
   },
   {
    "rest": true,
