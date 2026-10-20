@@ -1,0 +1,46 @@
+{
+  "status": "supervisor_reassessment",
+  "scope": "Frame composition and pose fidelity; independent critic files remain unchanged.",
+  "reason": "Previous still-review passes assessed identity and broad action but did not establish registration to actual source frames.",
+  "comparison_method": "Full images fitted to equal 4:3 viewports; no subject-centered crop or independent subject scaling.",
+  "observations": [
+    {
+      "title": "EARLIER / Giraffe, key 2",
+      "source": "batches/2026-10-20-selected-drawings/subjects/giraffe/source-key-1.png",
+      "drawing": "batches/2026-10-20-selected-drawings/subjects/giraffe/art-key-1.png",
+      "observation": "The close-up crop, head tilt and open-mouth beat remain recognizable."
+    },
+    {
+      "title": "EARLIER / Dog, key 2",
+      "source": "batches/2026-10-20-selected-drawings/subjects/dog/source-key-1.png",
+      "drawing": "batches/2026-10-20-selected-drawings/subjects/dog/art-key-1.png",
+      "observation": "The dog and scene occupy similar regions; later background stability still needs work."
+    },
+    {
+      "title": "NEW / Tractor, key 1",
+      "source": "shots/tractor/source-review/selected/source-01.jpg",
+      "drawing": "shots/tractor/keys/key-01.png",
+      "observation": "The source is distant and approaches obliquely; the drawing is larger and mostly side-on."
+    },
+    {
+      "title": "NEW / Raccoon, key 6",
+      "source": "shots/raccoon/source-review/selected/source-06.jpg",
+      "drawing": "shots/raccoon/keys/key-06.png",
+      "observation": "The source is a low crouch with hidden legs and tail; the drawing stands with a visible tail."
+    },
+    {
+      "title": "NEW / Pig, key 6",
+      "source": "shots/pig/source-review/selected/source-06.jpg",
+      "drawing": "shots/pig/keys/key-06.png",
+      "observation": "The source is a close cropped approach; the drawing restores a complete, isolated body."
+    }
+  ],
+  "required_before_source_match_approval": [
+    "Exact source timestamp",
+    "Shared screen coordinates and camera crop",
+    "Matching visible silhouette, pose, occlusion and contact",
+    "Comparison against the actual frame before final line refinement"
+  ],
+  "numeric_registration_tests": "not run",
+  "motion_approved": false
+}
