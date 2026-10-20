@@ -1,29 +1,39 @@
-name: Wave 2 frames, SAM and depth
+name: Frames, SAM and depth (wave 2 and planned subjects)
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - '.github/workflows/wave2-track.yml'
-      - 'tools/wave2_track.py'
+      - 'data/track-now.json'
 permissions:
   contents: write
 jobs:
-  track:
+  list:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    outputs:
+      slugs: ${{ steps.s.outputs.slugs }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { sparse-checkout: data/track-now.json }
+      - id: s
+        run: echo "slugs=$(python3 -c "import json;print(json.dumps(json.load(open('data/track-now.json'))['slugs']))")" >> "$GITHUB_OUTPUT"
+  track:
+    needs: list
+    if: needs.list.outputs.slugs != '[]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
     strategy:
       fail-fast: false
       max-parallel: 5
       matrix:
-        slug: [flying-saucer, raccoon, hurricane, tornado, rain, mosquito, pig, see-saw, tractor, fan]
+        slug: ${{ fromJSON(needs.list.outputs.slugs) }}
     steps:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: |
             tools/wave2_track.py
-            shots/${{ matrix.slug }}/source.json
-            shots/${{ matrix.slug }}/keyplan.json
+            shots/${{ matrix.slug }}
       - name: Install CPU torch, transformers and ffmpeg
         run: |
           sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg

@@ -1,0 +1,43 @@
+name: Survey new subjects (contact sheet, cuts, doodle bank)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['data/wave3.json', 'tools/survey.py', '.github/workflows/survey.yml']
+permissions:
+  contents: write
+jobs:
+  list:
+    runs-on: ubuntu-24.04
+    outputs:
+      slugs: ${{ steps.s.outputs.slugs }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { sparse-checkout: data/wave3.json }
+      - id: s
+        run: echo "slugs=$(python3 -c "import json;print(json.dumps([s['slug'] for s in json.load(open('data/wave3.json'))['subjects']]))")" >> "$GITHUB_OUTPUT"
+  survey:
+    needs: list
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+      matrix:
+        slug: ${{ fromJSON(needs.list.outputs.slugs) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            data/wave3.json
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg && python3 -m pip install --quiet --break-system-packages pillow numpy
+      - shell: bash
+        run: |
+          mkdir -p "out/${{ matrix.slug }}"; set +e
+          python3 -u tools/survey.py --slug "${{ matrix.slug }}" --wave data/wave3.json --out "out/${{ matrix.slug }}" 2>&1 | tee "out/${{ matrix.slug }}/log.txt"; exit ${PIPESTATUS[0]}
+      - if: always()
+        shell: bash
+        run: |
+          cd "out/${{ matrix.slug }}" && git init -q -b x && git config user.name github-actions && git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "Survey for ${{ matrix.slug }} (${{ github.sha }})" && git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" "HEAD:refs/heads/survey/${{ matrix.slug }}"

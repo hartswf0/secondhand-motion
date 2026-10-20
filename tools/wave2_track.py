@@ -2,7 +2,7 @@
 workspace cannot): frames, SAM 2.1 masks and Depth Anything V2 depth for the key interval.
 
 usage (CI): python3 tools/wave2_track.py --slug pig --out out/pig
-Reads shots/<slug>/source.json and keyplan.json. Cuts the clip from the first key time - 0.1 s to the last
+Reads shots/<slug>/plan.json (wave 3 on) or source.json and keyplan.json (wave 2). Cuts the clip from the first key time - 0.1 s to the last
 + 0.1 s at 12 fps, 384 px wide. Grounding DINO (IDEA-Research/grounding-dino-tiny) finds the subject from a
 short text label on every frame; SAM 2.1 (facebook/sam2.1-hiera-small) turns the box into a mask (the
 highest predicted IoU of its three). Depth Anything V2 Small gives relative depth per frame (saved 192 px
@@ -30,8 +30,12 @@ def fetch(url, path):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--slug', required=True); ap.add_argument('--out', required=True); a = ap.parse_args()
-    src = json.load(open(f'shots/{a.slug}/source.json')); src = src.get('source', src)
-    kp = json.load(open(f'shots/{a.slug}/keyplan.json')); times = [k['time'] for k in kp['keys']]
+    plan = Path(f'shots/{a.slug}/plan.json')
+    if plan.exists():   # wave 3 on: the agent's plan from the survey (interval, key times, detector label)
+        P = json.load(open(plan)); src = {'video_url': P['video_url'], 'clip_id': P['clip_id']}; times = P['key_times']; LABEL[a.slug] = P['label']
+    else:
+        src = json.load(open(f'shots/{a.slug}/source.json')); src = src.get('source', src)
+        kp = json.load(open(f'shots/{a.slug}/keyplan.json')); times = [k['time'] for k in kp['keys']]
     out = Path(a.out); (out / 'frames').mkdir(parents=True, exist_ok=True); (out / 'depth').mkdir(exist_ok=True)
     clip = out / 'clip.mp4'; fetch(src['video_url'], clip)
     t0 = max(0.0, times[0] - 0.1); dur = times[-1] + 0.1 - t0
