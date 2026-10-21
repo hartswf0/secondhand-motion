@@ -1,45 +1,57 @@
 [
  {
   "id": "M2",
-  "value": 11,
+  "value": 26,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   3,
-   3,
-   3,
-   3,
+   1,
+   1,
    2,
-   9,
-   13,
-   13,
-   16,
-   17,
-   19,
+   1,
+   1,
+   5,
+   4,
+   3,
+   3,
    18,
-   19,
-   19
+   33,
+   35,
+   40,
+   40,
+   41,
+   41,
+   40,
+   40,
+   40,
+   40,
+   40,
+   40,
+   40,
+   40,
+   40,
+   40
   ]
  },
  {
   "id": "M2b",
-  "value": 0.64,
+  "value": 0.67,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 50
  },
  {
   "id": "M3",
-  "value": 0.54,
+  "value": 0.45,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.21
+  "min": 0.2
  },
  {
   "id": "M6",
-  "value": 3.4,
+  "value": 11.9,
   "unit": "px jerk (drawing centre)",
-  "ok": true
+  "ok": false
  },
  {
   "id": "T3",
@@ -57,7 +69,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:5023411405324288; scenery drawn by agent: Quick, Draw! has no sheet of paper; four straight lines for the white sheet lying on the desk behind the binder, quickdraw:5926311543439360, quickdraw:5171495519125504, quickdraw:5171495519125504, quickdraw:4831884737511424",
+  "value": "rig quickdraw:5023411405324288; scenery drawn by agent: Quick, Draw! has no sheet of paper; four straight lines for the white sheet lying on the desk behind the binder, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296, quickdraw:5952723323191296",
   "unit": "",
   "ok": true
  },

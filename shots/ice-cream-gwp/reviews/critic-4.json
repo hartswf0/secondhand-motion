@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A static ice-cream cone (rounded scoop with a flattened left side, a horizontal divider line, and an asymmetric pointed cone) holds still for the whole shot. A hook-shaped ribbon of ice cream, drawn as two parallel lines with an angular bend at the bottom, hangs down from the top edge into the scoop in frames 1-4. In frames 5-8 the ribbon slides to the left side of the scoop and its bend tightens. In frame 9 it has risen out of the scoop to the upper left, and by frame 10-11 only a small V of it remains at the top-left edge. In frame 10 a second V-shaped ribbon end appears at the top right; in frames 11-13 it descends onto the right side of the scoop, and in frames 14-16 it stretches into a long slanted strip that reaches down across the scoop's right edge to the cone rim.",
+ "seen_film": "Close-up of soft-serve being piped into a paper cup. In frames 1-4 a thick ribbon comes down from the top centre and coils on the pile. In frames 5-8 the ribbon column leans and moves toward the left, coiling around the left side of the pile. In frames 9-10 the column is at the far upper left and is being drawn up out of frame. In frames 10-12 a rounded new end of ribbon enters at the top centre-right. In frames 13-16 that ribbon descends on the right side of the cup and lengthens into a long slanted column down to the right rim.",
+ "named_subject": "An ice-cream cone (scoop on a cone) with a ribbon of soft-serve being piped onto it.",
+ "verdict": "reference stronger",
+ "evidence": "Placement and timing follow the film: e.png 1-11 the ribbon sits in the upper centre of the scoop as in f.png 1-11; e.png 12-24 it is at the left edge and rising out of frame as in f.png 12-24; e.png 26-44 a new ribbon enters top right and descends to the right rim as in f.png 26-44. The cone and scoop stay the c.png drawing throughout (g.png shows the body outline stable with small drift). Breaks: e.png 11 to 12 the ribbon's bend jumps from right of centre (tip near the scoop's middle) to the scoop's left edge and narrows by about half in one frame, while f.png 11-12 shows the column moving only slightly; e.png 25 to 26 the second ribbon pops in at full V size above the scoop's top right instead of sliding in from the frame edge; e.png 39 to 41 the descending ribbon's bent end changes from a closed V to two nearly straight lines, a visible redraw. Throughout e.png 1-20 and 33-44 the ribbon lines are drawn straight through the scoop outline with no occlusion, so the ribbon reads as in front of and inside the dome at once.",
+ "primary_gap": "The ribbon's shape is redrawn rather than moved at e.png frame 12 (bend jumps left and narrows) and at frame 26 (new ribbon appears at full size), so the piping does not read as one continuous flow.",
+ "closes_when": "Across e.png 9-14 the ribbon's bend travels left in even steps of similar width with the same hook construction, and across e.png 24-28 the second ribbon's end enters by sliding down from above the frame edge, growing from a small sliver.",
+ "protect": "The cone and scoop exactly as in c.png (flattened left side of the dome, slanted divider line, straight left cone edge and curved right edge, single-weight angular polyline strokes); the ribbon drawn in the same sparse angular line style; the timing of left-side exit around frames 17-24 and right-side descent from frame 26 to 44 matching the film; the ribbon ending on the cone rim at frames 41-44.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  12,
+  26,
+  40,
+  41
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cone and scoop are the c.png doodle with its construction intact; only the added ribbon is new and it follows the same stroke habits.",
+ "still_frames_only": true,
+ "_packet": "lot549626cd",
+ "_round": 4
+}

@@ -1,5 +1,5 @@
 {
- "note": "Read by eye from every film frame (frame pixels). head and waist: per frame, the head centre and the waist (top of the white wrap, centre); make_scene.py keeps the torso one fixed length and moves the waist onto the drawn ladder's left rail. start and moves: each hand and foot is held where it was put until it moves; a move is [frame lifted, frame put down, target]. On the ground a target is a frame point (already scaled to the drawn ladder). On the ladder a target is ['rung', i, u] (rung i of the drawn ladder from the bottom, u of the way along it from the left rail) or ['rail', r, u] (r 0 left, 1 right, u from the top). Feet climb one rung at a time: the right foot steps up to the next rung and the left foot follows it onto the same rung, so a foot is never more than a leg's length below the waist and never above it. Hands go up the rungs alternately, always on a rung above the shoulders' height or near it, and end on the tops of the two rails (right hand at frame 24, left at 27); both feet stay on the top-but-one rung, so he ends bent forward over the top of the ladder with his legs down along it (frames 31-37), as the film man does.",
+ "note": "Read by eye from every film frame (frame pixels). head and waist: per frame, the head centre and the waist (top of the white wrap, centre); make_scene.py keeps the torso one fixed length and moves the waist onto the drawn ladder's left rail. start and moves: each hand and foot is held where it was put until it moves; a move is [frame lifted, frame put down, target]. On the ground a target is a frame point (already scaled to the drawn ladder). On the ladder a target is ['rung', i, u] (rung i of the drawn ladder from the bottom, u of the way along it from the left rail) or ['rail', r, u] (r 0 left, 1 right, u from the top). Feet climb one rung at a time: the right foot steps up to the next rung and the left foot follows it onto the same rung, so a foot is never more than a leg's length below the waist and never above it. Hands go up the rungs alternately (right hand, then left hand onto the same rung a few frames later), so one hand is always on a rung at or above the head; the left hand and foot keep to the left part of a rung and the right hand and foot to the right part, elbows below the hands and out to their own side, knees out to their own side between the rails (make_scene.py rejects any frame where limbs cross each other or the rails, or an arm folds); and end on the tops of the two rails (right hand at frame 24, left at 27); both feet stay on the top-but-one rung, so he ends bent forward over the top of the ladder with his legs down along it (frames 31-37), as the film man does.",
  "head": {
   "0": [
    26,
@@ -350,7 +350,7 @@
     [
      "rung",
      1,
-     0.2
+     0.3
     ]
    ],
    [
@@ -359,7 +359,7 @@
     [
      "rung",
      2,
-     0.25
+     0.2
     ]
    ],
    [
@@ -368,7 +368,7 @@
     [
      "rung",
      3,
-     0.25
+     0.2
     ]
    ],
    [
@@ -377,7 +377,7 @@
     [
      "rung",
      4,
-     0.25
+     0.2
     ]
    ]
   ],
@@ -396,7 +396,7 @@
     [
      "rung",
      0,
-     0.55
+     0.75
     ]
    ],
    [
@@ -405,7 +405,7 @@
     [
      "rung",
      2,
-     0.55
+     0.8
     ]
    ],
    [
@@ -414,7 +414,7 @@
     [
      "rung",
      3,
-     0.6
+     0.8
     ]
    ],
    [
@@ -423,7 +423,7 @@
     [
      "rung",
      4,
-     0.6
+     0.8
     ]
    ]
   ],
@@ -443,7 +443,7 @@
     [
      "rung",
      4,
-     0.45
+     0.85
     ]
    ],
    [
@@ -452,12 +452,12 @@
     [
      "rung",
      5,
-     0.45
+     0.85
     ]
    ],
    [
     22,
-    24,
+    25,
     [
      "rail",
      1,
@@ -480,30 +480,30 @@
     [
      "rung",
      2,
-     0.1
+     0.15
     ]
    ],
    [
     11,
-    13,
+    14,
     [
      "rung",
      4,
-     0.1
+     0.15
     ]
    ],
    [
-    16,
-    18,
+    19,
+    22,
     [
      "rung",
      5,
-     0.1
+     0.15
     ]
    ],
    [
     25,
-    27,
+    28,
     [
      "rail",
      0,

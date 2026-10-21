@@ -42,9 +42,18 @@ def target(q):
 # On the ladder his waist sits over the left rail (seen from behind his body hangs over the left half of the
 # ladder, as in the film where the man is over his own ladder's left rail); the drawn ladder stands about 25 px right
 # of the film's, so the waist is moved onto it, easing in from frame 5 (at the foot) to frame 10.
+# Ladder coordinates: a along the ladder from its foot (up), c across it (0 on the left rail, positive to the right).
+LO=np.array([93.,284.]); LU=np.array([139.,-233.]); LU/=np.hypot(*LU); LV=np.array([-LU[1],LU[0]])
+def lc(p): p=np.asarray(p,float)-LO; return np.array([p@LU,p@LV])
+def pt(a,c): return LO+a*LU+c*LV
+_RA=[lc(q) for q in LAD[1]][::-1]; _LA=[lc(q) for q in LAD[0]][::-1]
+def cR(a): return float(np.interp(a,[q[0] for q in _RA],[q[1] for q in _RA]))   # the right rail's c at height a
+def cL(a): return float(np.interp(a,[q[0] for q in _LA],[q[1] for q in _LA]))
+WAIST_ACROSS=0.4   # seen from behind his body hangs over the middle-left of the ladder, so both legs stand between the rails
 for f in range(n):
-    s=np.clip((f-5)/5,0,1); s=s*s*(3-2*s)
-    WAIST[f][0]+=s*(rail_x(0,WAIST[f][1])+2-WAIST[f][0])
+    s=np.clip((f-4)/4,0,1); s=s*s*(3-2*s)
+    a,c=lc(WAIST[f]); tgt=pt(a,cL(a)+WAIST_ACROSS*(cR(a)-cL(a)))
+    WAIST[f]+=s*(tgt-WAIST[f])
 # One body size every frame: the torso is one line of fixed length. Its lean comes from the film (head over waist),
 # kept bent forward toward the ladder on the climb, and bent further over the ladder at the top (frames 30-37).
 TORSO=40.0
@@ -61,8 +70,9 @@ def contact(f,limb):
         if f>=f1: p=q; continue
         if f>f0:
             t=(f-f0)/(f1-f0); t=t*t*(3-2*t); lift=math.sin(math.pi*t)
-            out={'lf':(-1.6,-4.0),'rf':(-1.6,-4.0),'lh':(-5.0,-3.0),'rh':(6.0,-2.0)}[limb]   # a foot comes up off its rung; a hand swings out to its own side, clear of the head
-            return p+(q-p)*t+np.array(out)*lift
+            if f0>=5: out={'lf':LU*3-LV*3,'rf':LU*3+LV*3,'lh':-LV*5,'rh':LV*5}[limb]   # on the ladder a foot comes up off its rung and a hand swings out to its own side
+            else: out=np.array({'lf':(-1.6,-4.0),'rf':(-1.6,-4.0),'lh':(-5.0,-3.0),'rh':(6.0,-2.0)}[limb])
+            return p+(q-p)*t+out*lift
         break
     return p
 PREV={}
@@ -95,21 +105,87 @@ def hand(pts,wob=True):
         d=P[-1]-P[0]; nr=np.array([-d[1],d[0]])/max(np.hypot(*d),1e-6)
         out.append((P+nr*o).tolist())
     return out
-def man(f):
+def limb_back(root,q,L,side,cap,lo_c=None,hi_c=None):
+    # an elbow or knee for a figure seen from behind on the ladder: halfway between root and contact, bent outward to its own
+    # side (side -1 left, +1 right) by at most cap px (the rest of the bend goes into the ladder, foreshortened), never
+    # inside the root's own line, kept between the rails, and for an arm never higher on the ladder than the hand.
+    A,B=lc(root),lc(q); D=np.hypot(*(B-A)); h=min(math.sqrt(max(L*L-(D/2)**2,0)),cap)
+    m=(A+B)/2; m[1]+=side*h
+    if side<0: m[1]=min(m[1],A[1]-4)
+    else: m[1]=max(m[1],A[1]+4)
+    if lo_c is not None: m[1]=min(max(m[1],lo_c(m[0])+2),hi_c(m[0])-2)
+    if B[0]>A[0]: m[0]=min(m[0],B[0]-3)   # a hand reaching up: the elbow stays below it
+    return pt(*m)
+def skeleton(f):
     H,P=HEAD[f],WAIST[f]
-    ax=(P-H)/np.hypot(*(P-H)); N=H+ax*8
-    st=[]
-    st+=hand([(H+np.array([7*math.cos(a),7.5*math.sin(a)])).tolist() for a in np.linspace(-0.4,2*math.pi-0.1,9)],wob=False)   # head: one loop, not quite closed
-    st+=hand([N,P])                                                                                                   # body: one line
-    S=N+ax*3
-    for limb in ('lh','rh'):
-        q=contact(f,limb); sg=-1 if limb=='lh' else 1; e=joint(S,q,30,lambda z,sg=sg: z[1]+sg*0.3*z[0],fore=True); st+=hand([S,e,q])   # the elbow hangs down and out on its own side (left elbow left, right elbow right)
-    for limb,sg in (('lf',1),('rf',-1)):
-        q=contact(f,limb); Hp=P-np.array([2.5*sg,0.0])
+    ax=(P-H)/np.hypot(*(P-H)); N=H+ax*8; S=N+ax*3
+    # on the ground (to frame 5) the old side-view joints; from frame 8 the back view on the ladder; blended between
+    bl=np.clip((f-5)/3,0,1); bl=bl*bl*(3-2*bl)
+    J={'H':H,'N':N,'P':P,'S':S}
+    for limb,sg in (('lh',-1),('rh',1)):
+        q=contact(f,limb); sgo=-1 if limb=='lh' else 1
+        e0=joint(S,q,30,lambda z,sg=sgo: z[1]+sg*0.3*z[0],fore=True)
+        Sh=S+LV*sg*3
+        e1=limb_back(Sh,q,30,sg,8)
+        J[limb]=(Sh*bl+S*(1-bl),e0*(1-bl)+e1*bl,q)
+    for limb,sg in (('lf',-1),('rf',1)):
+        q=contact(f,limb); Hp0=P-np.array([2.5*(-sg),0.0]); Hp1=P+LV*sg*3; Hp=Hp0*(1-bl)+Hp1*bl
         D=np.hypot(*(q-Hp))
         if D>76: q=Hp+(q-Hp)*76/D   # never a stretched leg
-        k=joint(Hp,q,39,lambda z: z[0]+0.6*z[1],limb); st+=hand([Hp,k,q])
+        k0=joint(Hp0,q,39,lambda z: z[0]+0.6*z[1],limb)
+        k1=limb_back(Hp1,q,39,sg,14,cL,cR)
+        J[limb]=(Hp,k0*(1-bl)+k1*bl,q)
+    return J
+def _x(p1,p2,p3,p4):
+    # proper crossing of segments p1p2 and p3p4
+    d=lambda a,b,c:(b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0])
+    d1,d2,d3,d4=d(p3,p4,p1),d(p3,p4,p2),d(p1,p2,p3),d(p1,p2,p4)
+    return d1*d2<-1e-6 and d3*d4<-1e-6
+RUNG_A=[lc(on(i,0.5))[0] for i in range(2,8)]
+def check(f,J):
+    # per-frame rejection: limbs that overlap or cross each other, an arm folded on itself or over the head, legs crossing the rails
+    bad=[]
+    segs={k:[(J[k][0],J[k][1]),(J[k][1],J[k][2])] for k in ('lh','rh','lf','rf')}
+    ks=list(segs)
+    for i in range(4 if f>=6 else 0):   # on the ground (walking in profile, to frame 5) an arm swinging past a leg is normal
+        for j in range(i+1,4):
+            for s1 in segs[ks[i]]:
+                for s2 in segs[ks[j]]:
+                    if _x(*s1,*s2): bad.append(f'{ks[i]} crosses {ks[j]}')
+    for k in ('lh','rh'):
+        r,e,q=J[k]; u,v=r-e,q-e; ang=math.degrees(math.acos(np.clip(u@v/max(np.hypot(*u)*np.hypot(*v),1e-6),-1,1)))
+        if ang<60: bad.append(f'{k} folded ({ang:.0f} deg)')
+        if f>=8:
+            sg=-1 if k=='lh' else 1
+            if lc(q)[0]>lc(J['S'])[0] and lc(e)[0]>lc(q)[0]+0.5: bad.append(f'{k} elbow above hand')
+            if sg*(lc(e)[1]-lc(J['S'])[1])<3: bad.append(f'{k} elbow inside the shoulder line')
+    for k in ('lf','rf'):
+        r,kn,q=J[k]; u,v=r-kn,q-kn; ang=math.degrees(math.acos(np.clip(u@v/max(np.hypot(*u)*np.hypot(*v),1e-6),-1,1)))
+        if ang<60: bad.append(f'{k} folded ({ang:.0f} deg)')
+        if f>=8:
+            for s1 in segs[k]:
+                for rail in (0,1):
+                    for a_,b_ in zip(LAD[rail][:-1],LAD[rail][1:]):
+                        if _x(*s1,a_,b_): bad.append(f'{k} crosses rail {rail}')
+            if lc(kn)[1]<cL(lc(kn)[0]) or lc(kn)[1]>cR(lc(kn)[0]): bad.append(f'{k} knee outside the rails')
+    if 9<=f<=29:
+        ha=lc(J['H'])[0]
+        if max(lc(J['lh'][2])[0],lc(J['rh'][2])[0])<ha-6: bad.append('no hand at or above the head')
+        if min(lc(J['lf'][2])[0],lc(J['rf'][2])[0])>lc(J['P'])[0]-8: bad.append('no foot on a rung below the waist')
+    return bad
+def man(f):
+    J=SKEL[f]; H=J['H']
+    st=[]
+    st+=hand([(H+np.array([7*math.cos(a),7.5*math.sin(a)])).tolist() for a in np.linspace(-0.4,2*math.pi-0.1,9)],wob=False)   # head: one loop, not quite closed
+    st+=hand([J['N'],J['P']])                                                                                         # body: one line
+    for limb in ('lh','rh','lf','rf'): st+=hand(list(J[limb]))
     return [[[round(x-cam[f][0],1),round(y-cam[f][1],1)] for x,y in s] for s in st]
+SKEL=[skeleton(f) for f in range(n)]   # once per frame, in order (the ground-phase joints remember their side)
+BAD={f:check(f,SKEL[f]) for f in range(n)}
+BAD={f:b for f,b in BAD.items() if b}
+if BAD:
+    for f,b in BAD.items(): print('frame',f,'; '.join(sorted(set(b))))
+    if '--force' not in sys.argv: sys.exit('limb check failed; scene not written')
 objs=[
  {"id":"trees","plane":"far","qd":"tree","box":[-10,-10,130,170],"skip":1},
  {"id":"fence","plane":"far","qd":"fence","box":[300,-5,390,130],"skip":2},
