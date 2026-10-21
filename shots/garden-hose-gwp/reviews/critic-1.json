@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Frames 1-2: a black hose drawn as a double line runs from top left, bends down the right side and ends in a ringed nozzle with loose wavy lines below it; grey scenery shows a machine outline and a spoked wheel. Frame 3: a black zigzag hand, five pointed fingers plus a horizontal line, appears all at once over the hose bend at the right edge. Frames 4-16: the hand and hose stay in nearly the same place; the hose and hand shift by a few pixels and the strokes wobble slightly, but no clear action happens.",
+ "seen_film": "A hose reel with a black hose arcing from the top of the machine down the right side. Frames 1-3: a hand enters from the right edge, moving left toward the hose. Frame 4: the hand reaches the hose on its right-side curve. Frames 5-16: the hand grips the hose and holds it, with small shifts in grip and a slight pull that changes the curve of the hose a little.",
+ "named_subject": "A rubber hose with a ringed nozzle (the doodle), with a zigzag-drawn hand added that grips it.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-5 are the same drawing with no hand, while f.png 2-7 show the hand travelling in from the right edge toward the hose. e.png 6 shows the full hand appearing in one frame already at its grip position with no approach; in f.png the hand only closes on the hose around frame 7-8. e.png 6-38 show the hand and hose nearly frozen, with only a few pixels of drift and stroke jitter (g.png shows the drawings stacked almost on top of one another, red centres clustered within a few pixels), while f.png 8-38 show the hand settling its grip and slightly tugging the hose. The hose curve in the animation keeps the same shape throughout; in the film the curve tightens slightly under the hand. Grip location (upper right curve of the hose) does match the film.",
+ "primary_gap": "The hand pops in fully formed at e.png frame 6 instead of travelling in from the right edge across frames 2-7 as in the film, so the reach that is the main event is missing.",
+ "closes_when": "Across e.png frames 2-7 the hand is drawn entering from the right frame edge and moving left in steady steps until it closes on the hose around frame 7-8, then the hose curve shifts slightly as it is held.",
+ "protect": "The hose drawn exactly as the c.png doodle (double line, ringed nozzle, loose wavy end strokes); the grip placement on the upper right curve matching the film; the steady scenery; the sparse line style.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hose matches the c.png doodle's construction and strokes; the hand is an added zigzag shape not in the doodle but drawn in a compatible sparse style.",
+ "still_frames_only": true,
+ "_packet": "lotd7283677",
+ "_round": 1
+}

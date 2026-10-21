@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A front-view doodle face (angular head outline, two small eye marks, L-shaped nose, ear bumps on both sides, smile line) sits at the left of the frame with the crown of the head cut off by the top edge. Frames 1-2: face at rest with a closed smile. Frames 3-7: the smile line deepens into a deeper U shape and three to four grey arcs appear to the right of the face, spreading outward. Frames 8-9: the mouth returns to the plain smile and the arcs are gone or fading at the right edge. Frames 10-14: the mouth deepens again and a second set of arcs spreads outward. Frames 15-16: mouth back to the closed smile, arcs gone. The head never moves; only the mouth line and the arcs change.",
+ "seen_film": "A side profile of a face in brown and pink (nose, upper lip, lower lip, chin) faces right. Frames 1-2: lips closed. Frames 3-6: the lips part into a round O-shaped opening, the background turns grey, white highlight bars appear on the face, and white sound arcs travel out to the right. Frame 7: the mouth closes and the arcs fade. Frames 8-9: closed, pink background. Frames 10-13: the mouth opens into the round O again and new arcs travel outward. Frames 14-16: mouth closes, arcs fade, background back to pink. The head does not move; only the lips and the arcs change.",
+ "named_subject": "A front-view cartoon human face (head with ears, eyes, nose and smile) speaking or making a sound.",
+ "verdict": "reference stronger",
+ "evidence": "Timing matches: in e.png the arcs appear at 6 and run through 16, and again 23 through 34, while in f.png the arcs run about 5-15 and 22-33; mouth openings in e.png 6-12 and 23-29 line up with the film's O openings in f.png 6-13 and 23-30; closed holds e.png 17-22 and 35-38 match f.png 16-21 and 34-38. The head stays fixed in all 38 frames, as in the film, and g.png shows only the mouth changing, with no drift or jumps. However, the film's main action is the lips opening into a large round O (f.png 7-9, 24-27); in the animation the same moments show only the smile line sagging into a slightly deeper U (e.png 7-11, 24-28), and in those frames the right end of the mouth line runs into and across the jaw contour, so the mouth reads as a smile changing shape rather than a mouth opening. The arcs carry most of the reading that a sound is being made.",
+ "primary_gap": "The mouth never visibly opens: at the film's open-O moments the doodle's smile line only deepens and collides with the jaw line instead of forming an open mouth shape.",
+ "closes_when": "In e.png frames 7-11 and 24-28 the doodle's mouth becomes a clearly open closed-loop shape (an upper and lower line, or an oval) drawn in the same single thin stroke, sitting inside the face without touching the jaw contour, and shrinks back to the smile line over 12-14 and 29-31.",
+ "protect": "The open/close timing that matches the film beat for beat (two openings, two holds); the fixed head position with no drift; the grey arcs that spread outward from the mouth side in step with the film's sound arcs; the doodle's thin single-weight stroke, L-nose, eye dashes and ear bumps.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The features and stroke habits match c.png, but the top of the head outline is cut off by the frame edge and the bottom-left contour has a Z-shaped notch at the chin that the doodle's smoother bottom corner does not have.",
+ "still_frames_only": true,
+ "_packet": "lot0dd5bdd1",
+ "_round": 1
+}

@@ -6,7 +6,7 @@
   "b2",
   "b4"
  ],
- "note": "Quick, Draw! animal migration 6280704109314048: four flying birds drawn as M shapes, a flock seen from behind. The biggest bird, at the top, is three strokes: stroke 0 is its left wing from the wing tip up over the shoulder and down to the body, stroke 3 is the right wing going up from the body, and stroke 1 is the rest of that right wing out to its tip. Stroke 2 is the middle-left bird, stroke 5 the middle-right bird and stroke 4 the bottom bird, each one stroke: wing, dip at the body, wing. The whole drawing is placed by the bodies of the two middle birds (b2 and b4), which sets where the flock is, how big it is and its tilt; that distance is the same in every key, so the drawing keeps one size. Each bird flaps on its own: its wings fold toward a level line through its body by the pose's w1, w2, w3 or w4 amount, 1 as drawn (wings up), 0 level, below 0 wings down. In the film the geese lift off the marsh, climb into the sky and fly on with the camera panning to follow them; the drawing rises with the flock and every bird beats its wings, neighbours out of step with each other as the real geese are.",
+ "note": "Quick, Draw! animal migration 6280704109314048: four flying birds drawn as M shapes, a flock seen from behind. The biggest bird, at the top, is three strokes: stroke 0 is its left wing from the wing tip up over the shoulder and down to the body, stroke 3 is the right wing going up from the body, and stroke 1 is the rest of that right wing out to its tip. Stroke 2 is the middle-left bird, stroke 5 the middle-right bird and stroke 4 the bottom bird, each one stroke: wing, dip at the body, wing. The whole drawing is placed by the bodies of the two middle birds (b2 and b4), which sets where the flock is, how big it is and its tilt; that distance is the same in every key, so the drawing keeps one size. Each bird flaps on its own: each wing turns about the bird's body by the pose's l1..l4 (left wing) and r1..r4 (right wing) angles, 0 as drawn with the wings up, and on the down-stroke the wing tips swing down below the body; at the same time the wings flatten a little toward a level line through the body by w1..w4 (1 as drawn). The wings keep the doodle's own bent shape all through the beat, so a bird never collapses to a straight dash. In the film the geese lift off the marsh, climb into the sky and fly on with the camera panning to follow them; the drawing rises with the flock and every bird beats its wings, neighbours out of step with each other as the real geese are.",
  "strokes": [
   [
    [
@@ -267,6 +267,7 @@
     "b4"
    ],
    "turn": 0,
+   "spin": "l1",
    "fold": "w1",
    "axis": [
     "b1",
@@ -283,6 +284,7 @@
     "b4"
    ],
    "turn": 0,
+   "spin": "r1",
    "fold": "w1",
    "axis": [
     "b1",
@@ -299,6 +301,7 @@
     "b4"
    ],
    "turn": 0,
+   "spin": "r1",
    "fold": "w1",
    "axis": [
     "b1",
@@ -308,6 +311,23 @@
   {
    "stroke": 2,
    "from": 0,
+   "to": 5,
+   "joint": "b2",
+   "aim": [
+    "b2",
+    "b4"
+   ],
+   "turn": 0,
+   "spin": "l2",
+   "fold": "w2",
+   "axis": [
+    "b2",
+    "b2h"
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 6,
    "to": 10,
    "joint": "b2",
    "aim": [
@@ -315,6 +335,7 @@
     "b4"
    ],
    "turn": 0,
+   "spin": "r2",
    "fold": "w2",
    "axis": [
     "b2",
@@ -324,6 +345,23 @@
   {
    "stroke": 5,
    "from": 0,
+   "to": 5,
+   "joint": "b4",
+   "aim": [
+    "b2",
+    "b4"
+   ],
+   "turn": 0,
+   "spin": "l4",
+   "fold": "w4",
+   "axis": [
+    "b4",
+    "b4h"
+   ]
+  },
+  {
+   "stroke": 5,
+   "from": 6,
    "to": 8,
    "joint": "b4",
    "aim": [
@@ -331,6 +369,7 @@
     "b4"
    ],
    "turn": 0,
+   "spin": "r4",
    "fold": "w4",
    "axis": [
     "b4",
@@ -340,6 +379,23 @@
   {
    "stroke": 4,
    "from": 0,
+   "to": 4,
+   "joint": "b3",
+   "aim": [
+    "b2",
+    "b4"
+   ],
+   "turn": 0,
+   "spin": "l3",
+   "fold": "w3",
+   "axis": [
+    "b3",
+    "b3h"
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 5,
    "to": 9,
    "joint": "b3",
    "aim": [
@@ -347,6 +403,7 @@
     "b4"
    ],
    "turn": 0,
+   "spin": "r3",
    "fold": "w3",
    "axis": [
     "b3",

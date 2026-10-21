@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A grey line drawing of a tree line along a far shore with scattered grey wave squiggles on open water. A black outline canoe (two-line hull, pointed left stern, rounded upturned right bow) carrying two stick figures with circle heads starts at the left edge, about a third of the way down the water (a.png frame 1). Each figure holds one long straight paddle line that reaches well below the hull. Across frames 1-16 the canoe moves steadily right and slightly down, and grows larger as it comes closer. The paddles swing back and forth: they lean down-right, pass through vertical, then lean down-left across the hull, then return, and the two paddlers are not always in the same phase. By frame 16 the canoe's bow is cut off by the right edge of the frame.",
+ "seen_film": "A black-and-white shot of a lake with a dark forest and pale shoreline across the top. A canoe with two paddlers enters at the left edge about a third of the way down and travels steadily left to right and slightly downward, growing larger as it approaches. Both paddlers stroke continuously; the stern paddler's paddle is often visible trailing to the left behind the canoe, and the bow paddler raises and pulls the paddle in repeated strokes. By frame 16 the canoe's bow is cut off by the right edge.",
+ "named_subject": "A canoe with two stick-figure paddlers paddling across a lake from left to right.",
+ "verdict": "bar met",
+ "evidence": "Placement and travel match: e.png frame 1 canoe at left edge, about the same height as f.png frame 1; frames 9-16 canoe near x one quarter to one half of frame in both; frames 25-32 canoe centred to right-centre in both; frames 36-38 bow cut off by the right edge in both. Hull size grows gradually in step with the film (about 60 px wide in e.png frame 1 to about 120 px in frame 38). g.png shows an evenly spaced, monotonic rightward and slightly downward path with no gaps or reversals. Paddle strokes progress over several frames rather than snapping, e.g. e.png frames 4-6 front paddle goes from down-right lean to vertical to down-left lean, and frames 20-24 rear paddle goes from down-left lean back through vertical; the two paddlers stroke out of phase as in the film. Judged from still frames only, not playback.",
+ "primary_gap": "The paddles are drawn as long rigid lines that plunge far below the hull and sweep to steep crossing diagonals (e.g. e.png frames 6, 22, 30, 38), while in the film the paddles stay short, mostly trail back toward the stern near the waterline, so the stroke shape differs from the film's.",
+ "closes_when": "The paddle lines stay shorter, enter the water just beside the hull, and pull back toward the stern (left) in each stroke, matching the angle and reach seen in f.png frames 17-38.",
+ "protect": "The steady left-to-right, slightly downward, gradually enlarging canoe path that matches the film's timing and frame positions; the bow exiting the right edge at the end; the doodle's two-line hull with pointed left end and rounded upturned bow; the single straight oar line per paddler taken from the doodle; out-of-phase paddling by two figures; the static grey shoreline and wave scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The doodle shows only a hull and one oar line, and the animation adds two circle-head stick figures; they are drawn in the same sparse single-line manner, but they are an addition not present in c.png.",
+ "still_frames_only": true,
+ "_packet": "lotf5ec4f88",
+ "_round": 4
+}

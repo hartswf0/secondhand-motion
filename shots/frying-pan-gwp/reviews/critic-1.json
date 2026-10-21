@@ -1,0 +1,23 @@
+{
+ "seen_animation": "a.png: Frame 1 shows a skillet drawn in the doodle's double-line oval rim with a long handle, with jagged flames rising from the pan and a thin sliver of a lid at the top edge. Frames 2-3: a hand drawn with an arm holds a flat lid (a thin lens shape) above the pan while tall flames rise on the right; the lid comes lower in frame 3. Frame 4: the lid is set on the pan rim with the hand on it and a few flames are left at the edges. Frame 5 onward: the flames are gone and the lid is drawn as an inner oval with a small arch-shaped knob; the hand has risen to the top of the frame (frame 5), is gone (frame 6), then reappears as a hand without an arm at the top-left and holds there unchanged through frame 16. Grey scenery: a horizon line and a round object at lower right, both static.",
+ "seen_film": "d.png: Frame 1: grease flames burst up out of a cast-iron skillet on a stove while a man in a checked vest stands behind it. Frames 2-3: his hand brings a metal lid down over the flaming pan. Frame 4: the lid is on the pan, his hand presses the knob, and flames spill out around the edge. Frame 5: the flames are out and the hand lifts away upward. Frame 6: no hand is visible. Frames 7-16: his hand enters at the upper left, lowers a little, and hangs still beside the covered pan for the rest of the shot.",
+ "named_subject": "A skillet (frying pan) that has a fire smothered by a lid placed on it by a hand.",
+ "verdict": "reference stronger",
+ "evidence": "e.png against f.png: frames 1-6 track the film closely; the lid descends in the hand over 2-5 and is seated on the rim in 5-6, matching film 2-6, and the flames shrink from 3 to 6 as in the film. Frame 7 matches film 7 (flames out, hand lifted to the top centre), but the lid changes at this cut from a flat lens shape held by the hand to an inner concentric oval with a knob that did not exist in frames 2-6, so the lid looks redrawn rather than settling. Frame 8: hand mostly off the top, frame 9: no hand, as in film 8-9. Frame 10 shows only a row of three V-shaped fingertips floating at the top-left, with no hand outline. At frame 11 the full hand appears at once at its final position and does not move again through 25; in film 11-14 the hand slides in from the left edge and lowers about a hand's height before it holds. g.png shows the lid path 1-4-7 descending smoothly and then markers 10/19 stacked, confirming the hand and lid freeze from 11 on. The skillet keeps the doodle's construction (doubled rim lines, angular oval, tapered handle) in every frame.",
+ "primary_gap": "The second hand entrance pops: frame 10 is a detached row of fingertips and frame 11 shows the whole hand already at its final pose, where the film's hand slides in from the left and lowers across frames 10-14.",
+ "closes_when": "Frames 10-14 show the same hand drawing entering from the top-left edge and moving down and right in small even steps to the held position reached by frame 14, with frame 10 showing the fingertips attached to a partial hand outline at the frame edge.",
+ "protect": "The skillet drawn in the doodle's own stroke habits and held steady in the same place all shot; the lid lowered by the hand over frames 2-6 in step with the film; the flames dying out by frame 7 as in the film; the hand lifting off the top and being absent in frames 8-9 at the film's timing; the static grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  7,
+  10,
+  11
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The skillet matches the doodle's doubled angular rim and tapered handle, though the lid with its arch knob that appears at frame 7 is an added shape not in the doodle and should be introduced as the same lid drawn in frames 2-6.",
+ "still_frames_only": true,
+ "_packet": "lot8eafeaba",
+ "_round": 1
+}

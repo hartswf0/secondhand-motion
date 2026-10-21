@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0163",
+ "id": "face-gwp",
+ "kind": "shot",
+ "title": "Face, the Giraffe Walks Past Way",
+ "category": "face",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/face-gwp/cover.png",
+ "cover_alt": "shots/face-gwp/frames/f017.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/face-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#face-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/face_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/face/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/face-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

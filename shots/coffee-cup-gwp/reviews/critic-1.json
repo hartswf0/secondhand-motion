@@ -1,0 +1,23 @@
+{
+ "seen_animation": "a.png frames 1-2: a large closed rounded outline fills the panel; three short horizontal lines sit in its left half and two or three near-vertical strokes run down its right side, meeting at a point at the bottom. Frames 3-7: the vertical strokes lean and bow to the right, the right side of the outline swells outward, and a grey hand-like shape with finger loops appears below right. Frame 7 and 8: the inner lines rotate; by frame 8 the three short lines are diagonal and sit in the top of the shape, with a long curved line crossing the middle and a vertical stroke on the right. Frames 9-12: the shape becomes a rounded cup-like form with three diagonal hatch lines in an upper oval area, a curved rim line across the middle, and a short line lower down; the grey hand fades out by frame 11. Frames 13-16: the outline moves up-left and becomes a rounded top-heavy blob with the three diagonal lines and two long diagonal strokes crossing near the bottom; it holds nearly still to the end.",
+ "seen_film": "d.png frames 1-2: looking straight down into a round white plastic cup on a dark background; dark granules sit in the bottom. Frames 3-8: the cup tilts and turns toward the lower right; a gloved hand holds it from below, and a handwritten label strip on the inside wall comes into view on the left and then upper right; the cup moves toward the top of the frame. Frames 9-12: the cup is tipped further so its pouring spout points left and the bright side wall faces the camera; the inside is now mostly empty and grey, and a light background appears at right. Frames 13-16: the view looks down into the now empty cup from above-left; the round rim fills the left-centre of the frame, with a few dark specks and a ring of residue at the bottom; the cup holds nearly still.",
+ "named_subject": "A plastic measuring cup with a spout, drawn as the doodle cup (rim with three hatch lines, body with crossing lines).",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-21: the cup is drawn with its rim turned into a vertical pair of strokes on the right edge and the three hatch lines lying horizontal on the left, while f.png 1-21 shows the round rim seen from above, centred, then tilting down-right; the animation does not show a round open rim at all in this stretch. e.png 21 to 24: the three hatch lines rotate from horizontal to diagonal and jump from the left half into an upper oval, the rim stroke jumps from vertical on the right to a curved line across the middle, and the bottom outline is redrawn; this is a redraw over three frames that happens before the film's own fast change at f.png 24-25. e.png 25, 33 and 41: the outline changes size and position (25 bottom cut lower, 33 shrinks, 41 shifts left and becomes top-heavy), which matches the film's abrupt changes at f.png 25, 33 and 41. e.png 41-50 hold almost still while f.png 41-50 also hold, which matches. The grey hand appears at e.png 8 and is gone by 32, roughly matching the gloved hand in f.png 3-32. g.png shows the drawings stacked mostly in one area with a large leftward outline jump late in the shot.",
+ "primary_gap": "For frames 1-21 the cup is drawn with its rim as vertical strokes on the right side instead of as the doodle's round hatched rim seen from above, so the opening of the shot does not read as looking down into a cup, and the change to a readable cup is a pop at frames 22-24 rather than a tilt.",
+ "closes_when": "Frames 1-21 show the doodle's rim as a near-circular oval with its three hatch lines inside, centred where the film's rim is, and that oval then flattens and tilts continuously down-right so that by frame 25 it has arrived at the frame-25 drawing without the hatch lines rotating or relocating between consecutive frames.",
+ "protect": "The plain thin-stroke line style with three straight hatch lines and long single crossing strokes, the timing of the large changes at frames 25, 33 and 41 that match the film's own abrupt changes, the late hold from frame 41 to 50 that matches the film's hold, and the grey hand scenery present only while the film shows the gloved hand.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  22,
+  23,
+  24
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The doodle is an open-topped tapered cup with an oval rim holding three vertical hatch lines and two horizontal body lines, but the animation draws a closed rounded blob whose rim is a vertical pair of strokes for the first 21 frames and whose tapered body and narrow base are never shown.",
+ "still_frames_only": true,
+ "_packet": "lot6e384a7c",
+ "_round": 1
+}

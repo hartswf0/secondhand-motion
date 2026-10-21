@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0161",
+ "id": "basket-gwp",
+ "kind": "shot",
+ "title": "Basket, the Giraffe Walks Past Way",
+ "category": "basket",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/basket-gwp/cover.png",
+ "cover_alt": "shots/basket-gwp/frames/f025.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/basket-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#basket-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/basket_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/basket/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/basket-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}
