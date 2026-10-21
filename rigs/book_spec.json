@@ -6,72 +6,212 @@
   "top",
   "top"
  ],
- "note": "Quick, Draw! book 5023411405324288, an open book seen from above. Stroke 0 is the outline of both pages; strokes 1 and 10 are the spine (10 runs past the bottom edge like a ribbon); strokes 2-5 are text lines on the left page; strokes 6-9 are text lines on the right page. The root places the spine by its two ends (bot, top), which sit on the binder's ring edge in the film. The right page stays flat: it is the binder's page stack. The left page (outline vertices 0-3 and 10-13 and strokes 2-5) folds about the spine by the pose value 'open': -1 lies mirrored over the right page as the closed cover, 0 stands on edge along the spine, 1 lies flat open. The film's hand lifts the cover and then the pages over to the left, so 'open' runs from -1 to about 0.5 across the shot. Two points on the spine line were added to the outline (index 4 at the top edge, index 11 at the bottom edge) so the cover's edges end at the spine when it turns; in the open drawing they lie on the doodle's own top and bottom edges. The cover (outline 0-3, 12-15, strokes 2-5) is drawn per frame in shots/book/drawn.",
+ "note": "Quick, Draw! book 5023411405324288, an open book seen from above. Stroke 0 is the outline of both pages; strokes 1 and 10 are the spine (10 runs past the bottom edge like a ribbon); strokes 2-5 are text lines on the left page; strokes 6-9 are text lines on the right page. The root places the spine by its two ends (bot, top), which sit on the binder's ring edge in the film. The right page stays flat: it is the binder's page stack. The left page (outline vertices 0-3 and 47-50 and strokes 2-5) folds about the spine by the pose value 'open': -1 lies mirrored over the right page as the closed cover, 0 stands on edge along the spine, 1 lies flat open. The film's hand lifts the cover and then the pages over to the left, so 'open' runs from -1 to about 0.5 across the shot. Points on the spine line were added to the outline (index 4 at the top edge, index 46 at the bottom edge), and the right page outline between them carries extra collinear points (indices 5-45) so its part hidden under the raised cover can be laid along the cover outline so the cover's edges end at the spine when it turns; in the open drawing they lie on the doodle's own top and bottom edges. The cover (outline 0-3, 47-50, strokes 2-5) is drawn per frame in shots/book/drawn.",
  "strokes": [
   [
    [
-    5,
-    145
+    5.0,
+    145.0
    ],
    [
-    8,
-    51
+    8.0,
+    51.0
    ],
    [
-    16,
-    7
+    16.0,
+    7.0
    ],
    [
-    54,
-    0
+    54.0,
+    0.0
    ],
    [
-    125,
-    1
+    125.0,
+    1.0
    ],
    [
-    251,
-    2
+    134.69,
+    1.08
    ],
    [
-    255,
-    147
+    144.38,
+    1.15
    ],
    [
-    255,
-    157
+    154.08,
+    1.23
    ],
    [
-    252,
-    159
+    163.77,
+    1.31
    ],
    [
-    220,
-    162
+    173.46,
+    1.38
    ],
    [
-    168,
-    174
+    183.15,
+    1.46
    ],
    [
-    125,
-    172
+    192.85,
+    1.54
    ],
    [
-    35,
-    168
+    202.54,
+    1.62
    ],
    [
-    1,
-    155
+    212.23,
+    1.69
    ],
    [
-    0,
-    144
+    221.92,
+    1.77
    ],
    [
-    3,
-    137
+    231.62,
+    1.85
+   ],
+   [
+    241.31,
+    1.92
+   ],
+   [
+    251.0,
+    2.0
+   ],
+   [
+    251.27,
+    11.67
+   ],
+   [
+    251.53,
+    21.33
+   ],
+   [
+    251.8,
+    31.0
+   ],
+   [
+    252.07,
+    40.67
+   ],
+   [
+    252.33,
+    50.33
+   ],
+   [
+    252.6,
+    60.0
+   ],
+   [
+    252.87,
+    69.67
+   ],
+   [
+    253.13,
+    79.33
+   ],
+   [
+    253.4,
+    89.0
+   ],
+   [
+    253.67,
+    98.67
+   ],
+   [
+    253.93,
+    108.33
+   ],
+   [
+    254.2,
+    118.0
+   ],
+   [
+    254.47,
+    127.67
+   ],
+   [
+    254.73,
+    137.33
+   ],
+   [
+    255.0,
+    147.0
+   ],
+   [
+    255.0,
+    157.0
+   ],
+   [
+    252.0,
+    159.0
+   ],
+   [
+    241.33,
+    160.0
+   ],
+   [
+    230.67,
+    161.0
+   ],
+   [
+    220.0,
+    162.0
+   ],
+   [
+    209.6,
+    164.4
+   ],
+   [
+    199.2,
+    166.8
+   ],
+   [
+    188.8,
+    169.2
+   ],
+   [
+    178.4,
+    171.6
+   ],
+   [
+    168.0,
+    174.0
+   ],
+   [
+    157.25,
+    173.5
+   ],
+   [
+    146.5,
+    173.0
+   ],
+   [
+    135.75,
+    172.5
+   ],
+   [
+    125.0,
+    172.0
+   ],
+   [
+    35.0,
+    168.0
+   ],
+   [
+    1.0,
+    155.0
+   ],
+   [
+    0.0,
+    144.0
+   ],
+   [
+    3.0,
+    137.0
    ]
   ],
   [
@@ -224,8 +364,8 @@
   },
   {
    "stroke": 0,
-   "from": 12,
-   "to": 15,
+   "from": 47,
+   "to": 50,
    "joint": "bot",
    "aim": [
     "bot",
