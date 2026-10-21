@@ -1,35 +1,45 @@
 [
  {
   "id": "M2",
-  "value": 92,
+  "value": 75,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   92,
-   92,
-   92,
-   92,
-   92,
-   92
+   66,
+   59,
+   48,
+   46,
+   76,
+   83,
+   87,
+   89,
+   90,
+   84,
+   82,
+   85,
+   77,
+   67,
+   79,
+   75
   ]
  },
  {
   "id": "M2b",
-  "value": 0.81,
+  "value": 0.77,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 99
  },
  {
   "id": "M3",
-  "value": 0.5,
+  "value": 0.53,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.37
+  "min": 0.32
  },
  {
   "id": "M6",
-  "value": 8.6,
+  "value": 14.6,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -49,7 +59,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:6165377341980672; scenery quickdraw:5354287364308992, drawn by agent: no Quick, Draw! category is the edge of an arm; one line along it",
+  "value": "rig quickdraw:6165377341980672; scenery quickdraw:5354287364308992, drawn by agent: no Quick, Draw! category is the edge of an arm; one line along the arm silhouette against the dark, traced from frame 1, so it runs above the mosquito as in the film",
   "unit": "",
   "ok": true
  },
@@ -74,17 +84,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cmosquito\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201ca mosquito (insect with an upright wing, thin legs, round head and a long curved proboscis) standing on a slope\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/mosquito-gwp/reviews/critic-1.json"
+  "evidence": "shots/mosquito-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The flat body, upright wing, round head, antenna and long hooked proboscis match the doodle. The drawing is very small, so the stroke detail is hard to see.",
-  "evidence": "shots/mosquito-gwp/reviews/critic-1.json"
+  "note": "The animated character is the c.png drawing mirrored to face left, with the same tall triangular wing, oval head, long curved proboscis and stick legs, only drawn smaller.",
+  "evidence": "shots/mosquito-gwp/reviews/critic-2.json"
  }
 ]

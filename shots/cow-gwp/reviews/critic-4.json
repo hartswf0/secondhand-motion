@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A close-up of a line-drawn cow head (polygonal ears, dash eyes, a wide rounded snout), with a grey cloud at upper left, a grey horizon line at left and a grey X mark at right. In frame 1 the head is tilted clockwise, with the snout low and to the right and the left cheek line hanging loose. By frame 2 the head has rotated most of the way upright, and by frame 3 it is upright and centred. It then holds that pose for frames 3-16 while the mouth changes: a closed smile in 1-3, a small open trapezoid in 4, open in 5-7, wider in 8, open in 9, closed smile in 10, open in 11, wide in 12, open in 13, closed in 14, and wide in 15-16. A body spot (an oval) and the back line of the body sit to the right of the head. A small hook mark at the bottom right is the top of a leg.",
+ "seen_film": "A live-action close-up of a brown cow with a white blaze, against a sky and a dark horizon. In frame 1 the head is tilted and turned, with the muzzle low and to the right. By frame 2 the head is nearly upright, and by frame 3 it is upright and facing the camera. From frames 3-16 the head stays frontal while the cow chews or moos: the mouth is slightly open in 4, open in 5-7, wide in 8, open in 9, nearly closed in 10, open in 11, wide in 12, open in 13, nearly closed in 14, open in 15 and wide in 16.",
+ "named_subject": "A cow (head and front of body), seen face-on.",
+ "verdict": "bar met",
+ "evidence": "Frames 1-3: both the animation and the film show the head tilted with the muzzle to the lower right in frame 1, mostly upright in frame 2 and fully frontal in frame 3, with the head in the same place in the frame. Frames 4-16: the mouth cycle matches the film frame for frame. Wide openings fall in 8, 12 and 16 in both. Near-closed mouths fall in 10 and 14 in both. Mid openings fall in 5-7, 9, 11 and 13 in both. The only mismatch is frame 15, where the animation's mouth is wide and the film's is a mid opening. The head outline, ears and eyes keep the same strokes from frame 3 to frame 16, with no redraw. Small flaws: in frame 14 the closed mouth is drawn as a doubled, thickened stroke. Between frames 1 and 3 the body spot at right changes shape from a hook to a spiral to an oval. Judged from still frames only, not playback.",
+ "primary_gap": "The body spot to the right of the head changes construction across frames 1-3 (a broken hook in frame 1, a spiral in frame 2, a closed oval from frame 3 on), so it pops instead of moving with the head turn.",
+ "closes_when": "The spot is the same closed oval in frames 1-3, only shifting and rotating with the head and body, and the frame 14 mouth is a single stroke like the closed mouth in frame 10.",
+ "protect": "The frame 1-3 head turn timed to the film; the chew cycle with wide openings on 8, 12 and 16 and closures on 10 and 14; the stable head, ears and dash eyes from frame 3 on; the doodle's polygonal ears, dash eyes, wide flat-topped snout and open-ended strokes; the framing that places the head where the film's head is.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  2,
+  14
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The head matches the doodle's construction (ear loops, two dash eyes, wide snout with a cross line, open stroke ends); the open trapezoid mouth is an addition, but it is drawn in the same straight-segment habit, and the body is mostly cropped out by the close framing.",
+ "still_frames_only": true,
+ "_packet": "lot15bd45fc",
+ "_round": 4
+}

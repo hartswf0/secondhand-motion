@@ -41,9 +41,12 @@ def ship_coords():
 
 
 UVW = ship_coords()
-L, BEAM, DEPTH = 4.0, 1.25, 0.28           # ship size in world units (length, beam, deck-to-gallery depth)
+# the doubled stern corner: in the doodle S0 starts a few pixels from S1's start; undoing the short oblique axis
+# spreads that gap across a fifth of the beam, so put S0's first point back next to S1's first point
+UVW[0][0] = UVW[1][0] + np.array([-0.02, 0.05, 0.])
+L, BEAM, DEPTH = 3.3, 1.25, 0.28           # ship size in world units (length, beam, deck-to-gallery depth)
 PITCH = np.radians(10)                      # camera looks down at this angle
-DIST = 14.0                                 # camera distance from the ship's centre
+DIST = 30.0                                 # camera distance from the ship's centre
 
 
 def project(phi_deg, cx, cy, scale):
@@ -53,20 +56,44 @@ def project(phi_deg, cx, cy, scale):
     cam = np.array([0., -DIST * np.cos(PITCH), DIST * np.sin(PITCH)])
     fwd = -cam / np.linalg.norm(cam); right = np.array([1., 0, 0]); up = np.cross(right, fwd)
     res = []
-    for s in UVW:
+    # the near side face (S2) is edge on or turned away while the bow points at the camera: only its front end shows,
+    # and more of it slides into view as the bow swings right (fully out by 25 degrees)
+    t = min(max(phi_deg / 25., 0.), 1.); g = 0.12 + 0.88 * t * t * (3 - 2 * t)
+    for i, s in enumerate(UVW):
+        if i == 2:
+            s = s.copy(); s[:, 0] = 1 - (1 - s[:, 0]) * g
         P = ((s[:, 0:1] - .5) * L * h + (s[:, 1:2] - .5) * BEAM * c + (s[:, 2:3]) * DEPTH * np.array([0, 0, -1.])) - cam
         z = P @ fwd; x = (P @ right) / z * DIST; y = -(P @ up) / z * DIST
         res.append(np.c_[cx + x * scale, cy + y * scale])
     return res
 
 
-# frame: (phi, cx, cy, scale, why)
-KEYS = {}
+BOW_NEAR, BOW_FAR = (1., 0., 0.), (1., 1.26, 0.)   # the two ends of the doodle's bow edge (S1's last segment)
+
+
+def corners(phi):
+    """image positions of the bow edge's two ends at scale 1 with the ship centre at the origin"""
+    ph = np.radians(phi); h = np.array([np.sin(ph), -np.cos(ph), 0.]); c = np.array([np.cos(ph), np.sin(ph), 0.])
+    cam = np.array([0., -DIST * np.cos(PITCH), DIST * np.sin(PITCH)])
+    fwd = -cam / np.linalg.norm(cam); right = np.array([1., 0, 0]); up = np.cross(right, fwd)
+    out = []
+    for u, v, w in (BOW_NEAR, BOW_FAR):
+        P = (u - .5) * L * h + (v - .5) * BEAM * c - cam; z = P @ fwd
+        out.append(np.array([(P @ right) / z * DIST, -(P @ up) / z * DIST]))
+    return out
+
+
+def place(phi, flx, fly, width0):
+    """phi: heading; (flx, fly): where the near end of the bow edge (the deck's front-left corner) lands;
+    width0: how wide the bow edge would be in pixels if the ship were head on at this distance."""
+    n0, f0 = corners(0.); sc = width0 / np.linalg.norm(f0 - n0)
+    n, _ = corners(phi)
+    return project(phi, flx - n[0] * sc, fly - n[1] * sc, sc)
 
 
 def write(keys):
-    for f, (phi, cx, cy, sc, why) in keys.items():
-        strokes = project(phi, cx, cy, sc)
+    for f, (phi, flx, fly, w0, why) in keys.items():
+        strokes = place(phi, flx, fly, w0)
         p = HERE / f'k{f:03d}.json'
         old = json.load(open(p)) if p.exists() else {}
         json.dump({'why': why, 'strokes': [np.round(s, 1).tolist() for s in strokes], 'extra': old.get('extra', {})}, open(p, 'w'), indent=0)

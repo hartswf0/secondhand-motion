@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frames 1-5: a black-line raccoon sits just right of center on a grey ground line, in front of grey zigzag grass and a cloud-like bush on the right. It is drawn as a round upright body with the face on the left side, two pointed ears, short leg ticks and a small striped tail; across 1-5 it drifts a little left and lower. Frame 6: the character is suddenly redrawn as a long, low, flattened body with the face lowered at the left, the doodle's side-profile shape. Frames 6-8 hold that low pose. Frame 9: the scenery shifts (grass tops start lower, the bush is cropped smaller at the right edge) and the character is slightly larger; frames 9-16 hold the same low side-profile pose with almost no change, only small shifts of the head and tail.",
+ "seen_film": "Frames 1-4: a raccoon sits hunched at the edge of tall grass, center-left of frame, facing the camera with its masked face visible. Frames 5-8: it lowers its head toward the ground and turns its body to face left, becoming more side-on and stretched. Frame 9: the camera reframes slightly (the grass edge and ground shift). Frames 9-16: the raccoon stays in place in side view facing left, head down near the ground, sniffing or foraging, body long and low, with only small head movements.",
+ "named_subject": "A raccoon (ringed tail, face with eyes and smile, oval body, stick legs).",
+ "verdict": "reference stronger",
+ "evidence": "Placement and timing follow the film: in frames 1-4 the character sits at the same spot (about the center-left grass edge) as the film's raccoon, and frames 9-16 hold a low left-facing pose as the film does, with the frame-9 scenery shift matching the film's reframing at frame 9. But the film's change from upright front-facing (frame 4) to head-down side view (frames 7-8) happens gradually over frames 5-8, while the animation goes from a round upright body in frame 5 to a fully flattened long body in frame 6 with no in-between shape. The face also stays up and fully visible in frames 9-16 while the film's raccoon has its head pressed down toward the ground. Frames 9-16 are nearly identical, so the film's small foraging head movements are barely present.",
+ "primary_gap": "The turn from the upright round body to the long low side-profile body happens as a single redraw between frames 5 and 6 instead of the gradual head-lowering and turn the film shows across frames 5-8.",
+ "closes_when": "Frames 5, 6, 7 and 8 show intermediate shapes in which the body oval stretches step by step and the head drops step by step toward the ground line, so no two neighbouring frames differ by a whole pose.",
+ "protect": "The doodle's construction in frames 6-16 (polygonal oval body, head with dot eyes and smile, striped tail, stick legs), the character's placement matching the film's raccoon position, the frame-9 scenery shift that matches the film's reframing, and the sparse grey grass and bush scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  9
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Frames 6-16 read as the c.png doodle, but frames 1-5 use a different construction (a near-circular upright body with two pointed ears) that is not a posed version of the doodle's long oval body, so the character changes drawing at frame 6.",
+ "still_frames_only": true,
+ "_packet": "lot24ac48bc",
+ "_round": 3
+}

@@ -35,22 +35,24 @@ def front():
     out = np.array(out)
     # the doodle's ear tab, now upright on the top right of the head (same four turns as the doodle's tab)
     out[11] = hc + [rx * math.cos(math.radians(-42)), ry * math.sin(math.radians(-42))]   # end the outline high on the right
-    e0 = out[11]
-    ear = np.array([e0 + [2, -13], e0 + [-3, -23], e0 + [-13, -19], e0 + [-14, -9]])
+    e0 = out[11]   # the doodle's own wide ear tab, same four turns, a little smaller
+    ear = e0 + np.array([[6, -9], [3, -20], [-18, -24], [-26, -17]], float) * 0.8
     S[0] = np.vstack([out, ear])
     S[11] = ORIG[11] - centre(ORIG[11]) + [29, 40]           # eyes either side of the middle
     S[12] = ORIG[12] - centre(ORIG[12]) + [51, 40]
     m = ORIG[13] - centre(ORIG[13]); S[13] = m * [0.75, 1] + [40, 55]   # smile centred under them
-    S[1] = np.array([[64, 22], [67, 4], [79, -12], [98, -18], [116, -12], [128, 4], [134, 30],
-                     [132, 56], [122, 74], [100, 82], [80, 82], [68, 76], [64, 68]], float)
+    b = ORIG[1].copy(); bc = np.array([140., 34.])   # the doodle's own oval body seen end-on: foreshortened
+    b[:, 0] = 94 + (b[:, 0] - bc[0]) * 0.5              # across, a little taller, sitting up behind the head
+    b[:, 1] = 70 - (70 - b[:, 1]) * 1.12
+    S[1] = b
     # tail tucked at the right side of the mound, small: only its tip shows
     tb = np.array(SP['anchors']['tailbase'], float)
-    for i in range(2, 7): S[i] = rot((ORIG[i] - tb) * 0.36 + [128, 66], [128, 66], 30)
+    for i in range(2, 7): S[i] = rot((ORIG[i] - tb) * 0.36 + [124, 58], [124, 58], 30)
     S[7] = np.array([[30, 68], [27, 82], [33, 78]], float)    # front legs under the head, hooked foot kept
     S[8] = np.array([[50, 69], [51, 83]], float)
-    S[9] = np.array([[94, 80], [93, 86]], float)              # hind legs barely show under the mound
-    S[10] = np.array([[114, 77], [116, 85]], float)
-    extra = np.array([[e0[0] - 2 * (e0[0] - hc[0]), e0[1]]] + [[2 * hc[0] - q[0], q[1]] for q in ear[:3]])
+    S[9] = np.array([[88, 74], [87, 84]], float)              # hind legs barely show under the mound
+    S[10] = np.array([[110, 71], [112, 82]], float)
+    extra = np.array([[19, 25], [16, 14], [26, 15]], float)   # only the tip of the far ear, top left
     return S, {'ear2': extra}
 
 
@@ -81,7 +83,7 @@ def blend(A, B, w):
     return S
 
 
-def make(w, dip, s, H, head_scale=1.0, hump=30.):
+def make(w, dip, s, H, head_scale=1.0, hump=30., G=None):
     F, FX = front(); P, _ = forage(hump)
     S = blend((F, FX), (P, {}), w)
     hc = S[0][:12].mean(0)
@@ -96,30 +98,38 @@ def make(w, dip, s, H, head_scale=1.0, hump=30.):
     if w < 0.8:   # the second ear: on the left of the head face-on, sliding behind the doodle's own ear as it turns
         e = FX['ear2'] - F[0][:12].mean(0) + S[0][:12].mean(0)
         k = float(np.clip((w - 0.2) / 0.55, 0, 1)); k = k * k * (3 - 2 * k)
-        e = (1 - k) * e + k * (S[0][12:16] + [-3, 2])
+        e = (1 - k) * e + k * (S[0][13:16] + [-3, 2])
         ex['ear2'] = dipper(e)
     for i in head_parts(): S[i] = dipper(S[i])
     hc = S[0][:12].mean(0)
     place = lambda a: (np.array(a) - hc) * s + H
-    return [place(x) for x in S], {k: place(v) for k, v in ex.items()}
+    out, exo = [place(x) for x in S], {k: place(v) for k, v in ex.items()}
+    if G is not None:   # set the lowest point of the head (the snout) on the ground line G
+        dy = G - out[0][:, 1].max(); out = [x + [0, dy] for x in out]; exo = {k: v + [0, dy] for k, v in exo.items()}
+    return out, exo
 
 
 KEYS = {
-    0: dict(w=0.1, dip=-14, s=0.66, H=(219, 153), why='First frame: facing the camera, head low over the mud at the grass edge.'),
-    1: dict(w=0.08, dip=-12, s=0.66, H=(221, 152), why='Facing the camera at the edge of the grass, head low over the mud: the face is to us, the body a mound behind it.'),
+    0: dict(w=0.06, dip=-14, s=0.66, H=(219, 153), why='First frame: facing the camera, head low over the mud at the grass edge.'),
+    1: dict(w=0.05, dip=-12, s=0.66, H=(221, 152), why='Facing the camera at the edge of the grass, head low over the mud: the face to us, the oval body seen end-on behind it.'),
     4: dict(w=0.0, dip=4, s=0.68, H=(222, 146), why='Head comes up and looks straight at the camera: the small anticipation before the turn.'),
-    8: dict(w=0.35, dip=-10, s=0.66, H=(208, 152), why='Turn starts: the face swings to screen left and the head begins to drop, second ear folding behind.'),
-    12: dict(w=0.75, dip=-22, s=0.62, H=(186, 158), why='Three-quarter left, head low: the turn is nearly done and the nose is going to the mud.'),
-    14: dict(w=1.0, dip=-26, s=0.6, H=(178, 158), why='The line: left profile, nose down on the mud, back hunched up behind the head.'),
-    18: dict(w=1.0, dip=-22, s=0.62, H=(194, 158), why='Settle after the line: still nose down, the body rounds and slides right as it shuffles.'),
-    23: dict(w=1.0, dip=-28, s=0.68, H=(222, 161), why='Foraging: nose pushed into the mud, hunch at its highest.'),
-    29: dict(w=1.0, dip=-17, s=0.68, H=(223, 157), why='Small lift of the head between pokes at the mud.'),
-    34: dict(w=1.0, dip=-27, s=0.68, H=(224, 161), why='Nose back down in the mud: the foraging continues to the end of the shot.'),
+    6: dict(w=0.1, dip=-10, s=0.67, H=(216, 150), why='Head starts down and the face begins to swing to screen left: the turn begins.'),
+    8: dict(w=0.27, dip=-16, s=0.66, H=(207, 154), why='Turn under way: face a quarter to the left, head lower, body starting to lengthen.'),
+    10: dict(w=0.46, dip=-24, s=0.65, H=(196, 158), why='Halfway through the turn: three-quarter left, head dropping toward the mud, body half stretched.'),
+    12: dict(w=0.66, dip=-34, s=0.63, H=(186, 160), G=180, why='Three-quarter left, head low: the nose is nearly at the mud, body almost full length.'),
+    14: dict(w=0.86, dip=-44, s=0.62, H=(178, 160), G=184, why='The line: near left profile, snout pointed down onto the mud, back hunched behind the head.'),
+    16: dict(w=1.0, dip=-48, s=0.62, H=(182, 160), G=185, why='Profile complete: snout pressed into the mud, the turn settles.'),
+    18: dict(w=1.0, dip=-42, s=0.63, H=(194, 160), G=185, why='Settle: still nose down, the body rounds and slides right as it shuffles.'),
+    21: dict(w=1.0, dip=-22, s=0.65, H=(208, 158), G=176, why='Head lifts off the mud between pokes.'),
+    23: dict(w=1.0, dip=-52, s=0.67, H=(220, 162), G=186, why='Pokes the mud again: snout straight down, hunch at its highest.'),
+    27: dict(w=1.0, dip=-24, s=0.68, H=(222, 158), G=177, why='Lifts the head again to chew or look.'),
+    31: dict(w=1.0, dip=-52, s=0.68, H=(223, 162), G=186, why='Snout back down into the mud.'),
+    34: dict(w=1.0, dip=-40, s=0.68, H=(224, 162), G=184, why='Still nosing the mud at the end of the shot.'),
 }
 
 if __name__ == '__main__':
     for f, k in KEYS.items():
-        st, ex = make(k['w'], k['dip'], k['s'], k['H'], k.get('head_scale', 0.9 if k['w'] > 0.5 else 1.0), k.get('hump', 30.))
+        st, ex = make(k['w'], k['dip'], k['s'], k['H'], k.get('head_scale', 1 - 0.12 * k['w']), k.get('hump', 30.), k.get('G'))
         json.dump({'why': k['why'], 'strokes': [np.round(x, 1).tolist() for x in st],
                    'extra': {n: np.round(v, 1).tolist() for n, v in ex.items()}}, open(D / f'k{f:03d}.json', 'w'))
     print('keys', sorted(KEYS))

@@ -1,49 +1,49 @@
 [
  {
   "id": "M2",
-  "value": 14,
+  "value": 15,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
    29,
    24,
-   17,
+   21,
+   23,
+   14,
    16,
-   9,
-   5,
-   4,
+   13,
+   11,
    11,
    12,
    12,
-   13,
-   13,
-   13,
+   12,
+   12,
    15,
    15,
    14,
-   13,
-   13,
-   14,
-   14
+   11,
+   11,
+   12,
+   11
   ]
  },
  {
   "id": "M2b",
-  "value": 0.61,
+  "value": 0.66,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 31
  },
  {
   "id": "M3",
-  "value": 0.39,
+  "value": 0.5,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.19
+  "min": 0.32
  },
  {
   "id": "M6",
-  "value": 20.7,
+  "value": 14.5,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -88,17 +88,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca pig\u201d; motion broken; follows the film: yes",
+  "value": "named \u201ca pig\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/pig-gwp/reviews/critic-6.json"
+  "evidence": "shots/pig-gwp/reviews/critic-7.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "Frames 1-6 are clearly the c.png pig, but from frame 8 on the head is a new V-eared front face and from frame 11 the body is a peaked dome, so the turned pig reads as a different drawing sharing only the snout spiral.",
-  "evidence": "shots/pig-gwp/reviews/critic-6.json"
+  "ok": true,
+  "note": "From frame 10 on the back is redrawn as a long straight line from the rear ear tip to a tall dome, which makes the body boxier and taller than the long low oval of c.png, though the ears, snout and legs remain the doodle's own strokes.",
+  "evidence": "shots/pig-gwp/reviews/critic-7.json"
  }
 ]

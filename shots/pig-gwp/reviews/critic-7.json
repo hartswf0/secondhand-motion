@@ -1,0 +1,24 @@
+{
+ "seen_animation": "Frames 1-6: a line-drawn pig in profile, facing left, stands still on a ground line under grey fence lines; a long straight line runs from the top-left corner down to its spiral snout, like a pole held to the nose. In frame 6 that line lies at a shallower angle. Frame 7: the pole line is gone, the head has dropped slightly and the chin stroke has bent into a hook. Frame 8: the whole pig is shifted right and lower, the head is larger and the body is cropped by the right edge. Frames 9-12: the pig moves back left and grows larger in frame; from frame 10 on, the back is drawn as one long straight line rising from the rear ear tip to a high, domed top, making the body taller than in frames 1-7, and the leg ticks reappear along the bottom. Frame 13: the head is at the lower-left corner, the largest it gets. Frames 14-16: the head moves back right to about one third across and holds there while the body fills the frame. The pig stays in strict side profile in all 16 frames.",
+ "seen_film": "Frames 1-6: a white pig stands in side profile facing left in a pen in front of a chain-link fence, with a snare pole held to its snout from the upper left; a handler's legs are visible behind it. Frame 7: the pole comes off and the pig starts to step forward and turn its head toward the camera. Frame 8: the pig has turned to a three-quarter view facing the camera, head at about one third across. Frames 9-12: the pig walks toward the camera and down-left, growing larger, in three-quarter front view. Frame 13: the pig is closest, its head at the lower-left. Frames 14-16: the camera reframes and the head sits center-left, facing the camera, while the pig keeps walking slowly.",
+ "named_subject": "a pig",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-6 match the film well: profile pose, pole line to the snout at the same angle and place, pole angle flattening at 6. Frame 7 removes the pole at the same moment as the film. Head positions and growth in 8-16 track the film (head at lower-left in 13, back to center-left in 14-16). But the film's main turn of events, the pig turning its head from profile to face the camera between frames 7 and 8, is not performed: frames 8-16 keep the head in the same side profile with both ears on top and the snout pointing left. Motion also pops: from 7 to 8 the pig jumps right and down with the chin redrawn; from 8 to 9 it jumps back left and the back line and legs are redrawn in a different arrangement; from 10 to 11 the body suddenly gets taller with a steep straight back line; from 12 to 13 the head drops far to the lower-left in one step (the film also moves here, but the animation's body shape changes at the same time).",
+ "primary_gap": "The pig never turns its head toward the camera after the pole is released, so the animation shows a profile pig sliding and growing instead of the film's pig turning and walking toward the viewer.",
+ "closes_when": "Between frames 7 and 9 the snout spiral moves to sit below and between the two ear zigzags (ears splitting to either side of the head) and stays in that front-facing arrangement through frame 16, with the body changing by small steps each frame.",
+ "protect": "The exact doodle construction in frames 1-7 (zigzag double-peak ears, spiral boxed snout, open separate chest stroke, short tick legs, rear double stroke); the pole line to the snout in frames 1-6 and its removal at frame 7; the film-matched framing and scale growth in 8-16, including the head reaching the lower-left at 13; the sparse grey fence and ground lines.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  8,
+  9,
+  11,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "From frame 10 on the back is redrawn as a long straight line from the rear ear tip to a tall dome, which makes the body boxier and taller than the long low oval of c.png, though the ears, snout and legs remain the doodle's own strokes.",
+ "still_frames_only": true,
+ "_packet": "lotefc473b4",
+ "_round": 7
+}

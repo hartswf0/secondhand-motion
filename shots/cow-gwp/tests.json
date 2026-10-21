@@ -1,7 +1,7 @@
 [
  {
   "id": "M2",
-  "value": 30,
+  "value": 29,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
@@ -12,29 +12,34 @@
    29,
    30,
    28,
+   28,
    27,
    28,
    26,
-   27,
    26,
-   27,
+   28,
+   26,
+   28,
+   25,
    25,
    24,
-   26,
    23,
    24,
+   23,
    26,
-   24,
-   24,
+   25,
    22,
+   26,
+   23,
    23,
    27,
-   28
+   28,
+   29
   ]
  },
  {
   "id": "M2b",
-  "value": 0.63,
+  "value": 0.62,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 63
@@ -48,7 +53,7 @@
  },
  {
   "id": "M6",
-  "value": 6.2,
+  "value": 5.8,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -93,17 +98,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca cow's head and front of body, seen close up from the front, with a large rounded muzzle, two eye ticks, a smile, ears and a spot\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA cow (head and front of body), seen face-on.\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/cow-gwp/reviews/critic-3.json"
+  "evidence": "shots/cow-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The head, muzzle, eye ticks, smile and hexagonal spots match the doodle, but the left ear is a closed loop only in frames 1-5 and then becomes two open strokes, and the right ear is never the doodle's closed loop.",
-  "evidence": "shots/cow-gwp/reviews/critic-3.json"
+  "note": "The head matches the doodle's construction (ear loops, two dash eyes, wide snout with a cross line, open stroke ends); the open trapezoid mouth is an addition, but it is drawn in the same straight-segment habit, and the body is mostly cropped out by the close framing.",
+  "evidence": "shots/cow-gwp/reviews/critic-4.json"
  }
 ]

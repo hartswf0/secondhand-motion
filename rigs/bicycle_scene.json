@@ -77,7 +77,11 @@
     190,
     60
    ],
-   "strokes": 2
+   "strokes": 2,
+   "visible": [
+    10,
+    20
+   ]
   },
   {
    "id": "bush2",
@@ -90,7 +94,11 @@
     55
    ],
    "strokes": 2,
-   "skip": 1
+   "skip": 1,
+   "visible": [
+    14,
+    20
+   ]
   },
   {
    "id": "bush3",
@@ -103,22 +111,26 @@
     58
    ],
    "strokes": 2,
-   "skip": 2
+   "skip": 2,
+   "visible": [
+    16,
+    20
+   ]
   },
   {
    "id": "road",
    "plane": "ground",
    "class": "ground",
-   "why": "no Quick, Draw! category is a road edge; one straight line along the far edge of the road",
+   "why": "no Quick, Draw! category is a road edge; one straight line along the foot of the wall behind the road, measured at y 150-160 in frame 0",
    "strokes": [
     [
      [
       -60,
-      205
+      158
      ],
      [
       560,
-      198
+      152
      ]
     ]
    ]
@@ -139,6 +151,7 @@
  "notes": {
   "0": "rear wheel close up, rider pedalling",
   "10": "the camera falls back a little",
-  "14": "wheel lower in frame"
+  "14": "wheel lower in frame",
+  "9": "a dark hedge slides in across the top from the left; the bushes appear as it reaches them (pale wall before)"
  }
 }

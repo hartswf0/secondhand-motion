@@ -1,19 +1,22 @@
 [
  {
   "id": "M2",
-  "value": 3,
+  "value": 2,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
+   4,
+   4,
+   4,
    3,
    3,
    2,
-   3,
-   4,
-   4,
-   4,
-   4,
-   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
    2,
    2,
    2,
@@ -23,7 +26,7 @@
  },
  {
   "id": "M2b",
-  "value": 0.71,
+  "value": 0.68,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 3
@@ -81,17 +84,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca wave or swell of water, drawn as a stack of long horizontal strokes that come to a point on the right\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201cA wave or body of ocean water drawn as a horizontal scribble (the c.png doodle).\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/hurricane-gwp/reviews/critic-3.json"
+  "evidence": "shots/hurricane-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The animated figure is the same layered, right-pointing scribble as c.png, only smaller, with the same strokes and construction.",
-  "evidence": "shots/hurricane-gwp/reviews/critic-3.json"
+  "note": "The animated scribble matches c.png's strokes, converging right end and lens shapes; only during the tilt in frames 3-5 do the strokes spread into a looser bundle, which is still recognisably the same drawing.",
+  "evidence": "shots/hurricane-gwp/reviews/critic-4.json"
  }
 ]

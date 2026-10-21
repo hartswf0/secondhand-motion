@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A line-drawn sailboat (single triangular sail, doubled-stroke mast, long open-topped hull) sits on a grey horizon line with two small grey sailboats at far left and a few grey water dashes below. Frames 1-4: the boat sits right of center, about 120 px wide, with its sail top near the top of the frame; it barely moves. Frames 5-8: the boat grows slightly and sits in the same place. Frames 9-12: the boat is larger, has shifted left, and the sail top is now cut off by the top edge; the hull lengthens and flattens. Frames 13-16: the boat keeps growing, the hull becomes long and low, and in 14-16 it moves back to the right so the sail and the right end of the hull run off the right edge. The two small background boats stay the same size and position throughout. In every frame the sail is drawn to the right of the mast and the hull's raised end hook is on the left.",
+ "seen_film": "A gaff-rigged sailing barge with a large dark sail approaches the camera on calm water in haze. Frames 1-4: the barge is right of center and fairly small, with steamships and smoke on the horizon at left. Frames 5-8: the barge grows slightly and drifts a little left; small sailboats begin to appear on the horizon to its left and a rowboat sits beside it. Frames 9-12: the barge is larger, centered slightly left, sail top cut off by the frame top. Frames 13-16: the barge fills most of the frame, slides back right, and its sail and bow run off the right edge. The main sail sits to the LEFT of the mast, and the mast stands over the right part of the hull.",
+ "named_subject": "a sailboat (single sail, mast, hull)",
+ "verdict": "reference stronger",
+ "evidence": "Path and scale follow the film: frames 1-8 boat right of center and small in both; frames 9-12 larger, shifted left, sail top cropped in both; frames 13-16 boat moves back right and runs off the right edge in both (animation 15-16 vs film 15-16). Frame-to-frame changes in the animation are gradual with no pops. But in every animation frame (e.g. 1, 8, 12, 16) the sail is on the right of the mast and the mast stands at the left-middle of the hull, while the film (frames 1-16) and the doodle c.png both put the sail on the left of the mast with the mast toward the right of the hull; the whole drawing has been mirrored. In frames 13-16 the hull also becomes much longer and flatter than in frames 1-4, so its proportions change more than the film's barge does. The two grey background boats at left are static in all 16 frames while the film's horizon traffic changes from steamships (1-4) to sailboats appearing (5-16).",
+ "primary_gap": "The doodle is drawn mirrored left-to-right, so the sail sits right of the mast and the sail mass occupies the opposite side of the frame from both the film's sail and the doodle's own orientation.",
+ "closes_when": "In all 16 frames the sail is drawn on the left side of the mast, with the mast standing over the right part of the hull and the hull's raised end stroke on the right, matching c.png and the film's sail placement.",
+ "protect": "The film-matched path (right of center, drift left by frames 9-12, back right and off the right edge in 14-16), the gradual growth in scale, sail-top cropping from frame 9, the doubled-stroke mast and open-ended hull strokes from the doodle, the plain grey horizon and dashes, and the absence of jumps between frames.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The construction and stroke habits match c.png (doubled mast, open triangle sail, hull with separate raised end stroke), but the drawing is mirrored horizontally and the hull stretches noticeably longer and flatter in frames 13-16 than the doodle's proportions.",
+ "still_frames_only": true,
+ "_packet": "lotd6bf9e41",
+ "_round": 3
+}

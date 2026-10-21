@@ -8,11 +8,11 @@
    13,
    14,
    16,
-   14,
-   12,
-   13,
-   12,
    16,
+   12,
+   12,
+   12,
+   14,
    17,
    16
   ]
@@ -33,9 +33,9 @@
  },
  {
   "id": "M6",
-  "value": 3.4,
+  "value": 4.5,
   "unit": "px jerk (drawing centre)",
-  "ok": true
+  "ok": false
  },
  {
   "id": "T3",
@@ -78,17 +78,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca monkey (head with round ears, muzzle, and a curled tail, seated)\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA monkey (head with round ears, face mask and spiral tail), matching the macaque in the film.\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/monkey-gwp/reviews/critic-2.json"
+  "evidence": "shots/monkey-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The drawing keeps the doodle's head outline, spiral eye, muzzle loop, ear shapes and spiral tail, but in frames 5-14 the left ear is cut off by the top of the frame and the left eye is squeezed into overlapping lines.",
-  "evidence": "shots/monkey-gwp/reviews/critic-2.json"
+  "note": "In the turned frames 5-14 the left edge of the face mask and the end of the brow stroke cross over the head outline and the far ear gains a small crossed tick mark, which the doodle never does; otherwise the drawing is the same as c.png.",
+  "evidence": "shots/monkey-gwp/reviews/critic-3.json"
  }
 ]

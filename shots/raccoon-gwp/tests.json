@@ -1,32 +1,37 @@
 [
  {
   "id": "M2",
-  "value": 27,
+  "value": 26,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   26,
-   28,
-   21,
-   32,
-   36,
-   27,
-   26,
-   24,
    29,
-   24
+   29,
+   21,
+   29,
+   30,
+   25,
+   32,
+   29,
+   24,
+   22,
+   27,
+   21,
+   25,
+   23,
+   22
   ]
  },
  {
   "id": "M2b",
-  "value": 0.48,
+  "value": 0.44,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": false,
   "design_typicality": 16
  },
  {
   "id": "M3",
-  "value": 0.54,
+  "value": 0.55,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
   "min": 0.37
@@ -78,17 +83,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca raccoon (round smiling face with ears, oval body, four stick legs, striped ringed tail)\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201cA raccoon (ringed tail, face with eyes and smile, oval body, stick legs).\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/raccoon-gwp/reviews/critic-2.json"
+  "evidence": "shots/raccoon-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The animated figure uses the same angular head with ear, dot eyes and smile, oval body, four stick legs with a hooked front foot, and banded tail as c.png, with only the head proportions changing in later frames.",
-  "evidence": "shots/raccoon-gwp/reviews/critic-2.json"
+  "ok": false,
+  "note": "Frames 6-16 read as the c.png doodle, but frames 1-5 use a different construction (a near-circular upright body with two pointed ears) that is not a posed version of the doodle's long oval body, so the character changes drawing at frame 6.",
+  "evidence": "shots/raccoon-gwp/reviews/critic-3.json"
  }
 ]

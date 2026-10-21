@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A line-drawn creature with a small polygonal head on the left, two pointed ears, a short stroke out of the face to the left, a zigzag row of spikes along the back, a tall tail that curls over the back to the upper right, and four simple legs. In frame 1 it is drawn larger and cropped at the bottom edge, with the legs cut off and the front leg detached. From frame 2 on it is smaller and fully in frame, standing in place. Frames 2-4 the body sits slightly larger and to the right; by frame 5 it has settled at its final size and position. Frames 5-16 it holds still; the only changes are small shifts in the face stroke angle, the ears and the neck line, and slight changes in the tail tip.",
+ "seen_film": "A painted reddish horned dinosaur (frilled head with horns, plated back, curled tail with clawed feet tucked) shown in profile facing left on black. In frame 1 it is framed close, larger and cropped at the top, right and bottom. In frames 2-4 the camera has pulled back and the creature is fully visible and slightly to the right; by frame 5 it settles a little to the left at its final framing. Frames 5-16 it holds in place with small head and jaw movements: the head tilts slightly and the mouth opens and shuts (frames 10, 12, 14 show the head raised a little and horns more upright).",
+ "named_subject": "A spiky-backed cat-like or dragon-like creature with a curled tail (stand-in for the film's horned dinosaur), drawn in the doodle's polygon-head, zigzag-spine style.",
+ "verdict": "bar met",
+ "evidence": "Frame 1 in both: subject drawn large and cropped by the frame edge (animation cuts the legs off at the bottom, film crops body and tail). Frames 2-4 in both: subject smaller, fully visible, a little to the right. Frame 5 in both: subject shifts slightly left to its resting framing and stays there through frame 16. Frames 5-16 in the animation show only small head-area changes (face stroke angle, ear position), matching the film's held pose with small head and jaw movements. The drawing in every frame keeps c.png's octagonal head, two-ear stroke, zigzag spine row, hooked tail and boxy legs. Judged from still frames only, not playback.",
+ "primary_gap": "The small head movements in frames 5-16 are not timed to the film's head lifts: the face stroke flips between a steep diagonal (frames 5-8) and horizontal (frames 11-12, 16) without the head itself rising in frames 10, 12 and 14 as the film's head does.",
+ "closes_when": "In frames 10, 12 and 14 the whole head, ears and face stroke rise and tilt up together by a few pixels and return in frames 11, 13 and 15, while the face stroke angle stays consistent between neighbouring frames.",
+ "protect": "The exact c.png construction (octagon head, zigzag spines, curled tail, leg shapes, stroke weight); the frame 1 close crop and the frame 1-5 pull-back and leftward settle that match the film's camera move; the steady held pose through frames 5-16 with no redraws or doubling.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  5,
+  12
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character reads as the c.png drawing; only the face stroke and front ear change shape slightly from frame to frame more than the doodle would by moving.",
+ "still_frames_only": true,
+ "_packet": "lot07955c0d",
+ "_round": 3
+}

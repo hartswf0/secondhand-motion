@@ -9,7 +9,8 @@ Files, one per drawn frame: shots/<slug>/drawn/k###.json
   {"why": "what happens at this frame and why it is a key (contact, extreme, turn, the line)",
    "strokes": [[[x, y], ...], ...],      # same stroke count and points per stroke as the rig drawing at that frame
    "extra": {"name": [[x, y], ...]}}     # optional added strokes, frame pixels
-Optional shots/<slug>/drawn/xsheet.json: {"line": frame, "line_why": "...", "holds": [[f0, f1], ...]}
+Optional shots/<slug>/drawn/xsheet.json: {"line": frame, "line_why": "...", "holds": [[f0, f1], ...], "ease": "smooth" | "linear"}
+("linear" moves at an even rate between keys: for steady travel such as a train climbing; the default eases in and out of every key)
 
 How a shot uses them (apply()): at each drawn frame the drawing is replaced by the drawn key. Between keys the
 change from the rig (drawn minus rig, point by point) is eased from one key to the next, so in-betweens are the
@@ -45,6 +46,7 @@ def apply(slug, frames, rig_keys):
     """frames: list (per frame) of strokes from the rig. Returns (frames, all key frames, drawn key frames)."""
     K, X = load(slug)
     if not K: return frames, rig_keys, []
+    ez = (lambda t: t) if X.get('ease') == 'linear' else ease
     n = len(frames); rig = [[np.array(s, float) for s in fr] for fr in frames]
     delta = {}
     for f, k in K.items():
@@ -58,7 +60,7 @@ def apply(slug, frames, rig_keys):
     out = []
     for f in range(n):
         a = max([k for k in anchors if k <= f], default=anchors[0]); b = min([k for k in anchors if k >= f], default=anchors[-1])
-        t = 0 if a == b else ease((f - a) / (b - a))
+        t = 0 if a == b else ez((f - a) / (b - a))
         out.append([rig[f][i] + D[a][i] * (1 - t) + D[b][i] * t for i in range(len(rig[f]))])
     for h0, h1 in X.get('holds', []):   # a hold: the drawing of h0, carried by the root motion only
         c0 = np.concatenate(out[h0]).mean(0)
@@ -73,7 +75,7 @@ def apply(slug, frames, rig_keys):
         m = max(len(K[f]['extra'][nm]) for f in ks)
         rel = {f: resample(K[f]['extra'][nm], m) - cen[f] for f in ks}
         for f in range(ks[0], ks[-1] + 1):
-            a = max(k for k in ks if k <= f); b = min(k for k in ks if k >= f); t = 0 if a == b else ease((f - a) / (b - a))
+            a = max(k for k in ks if k <= f); b = min(k for k in ks if k >= f); t = 0 if a == b else ez((f - a) / (b - a))
             out[f] = out[f] + [rel[a] * (1 - t) + rel[b] * t + cen[f]]
     frames = [[np.round(s, 1).tolist() for s in fr] for fr in out]
     return frames, sorted(set(rig_keys) | set(delta)), sorted(delta)

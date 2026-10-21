@@ -23,7 +23,7 @@ sp = P[1][6:]
 H3 = {
     1: np.r_[A([[64, -44], [60, -106], [38, -50], [14, -82], [-4, -40], [-2, -12]]), sp * 1.1],
     2: A([[10, 14], [20, 32], [40, 40], [62, 26], [72, -6]]),
-    4: A([[70, 78], [42, 58], [24, 42]]),
+    4: A([[66, 60], [40, 52], [22, 40]]),
 }
 PIV = A([70, -20])                            # the neck: the body is shortened and tipped about this point
 POLE_TOP = A([-14, 48])                       # the far end of the catch-pole, fixed in the frame
@@ -57,6 +57,11 @@ def key(f, snout, k, t, tilt=0.0, brot=0.0, swing=0.0, bs=1.0, boff=(0, 0)):
         if i == 4: out[4][:7] += A(boff)
         else: out[i] = out[i] + A(boff)
     out[3][0] = out[1][0] + A([5, 2]) * k
+    # chest: in the turned view the belly runs straight up to the chin, no dip below the frame
+    mid = 0.5 * (out[4][6] + out[4][8]) + A([0, 6]) * k
+    out[4][7] = (1 - t) * out[4][7] + t * mid
+    # front legs hang from the chest line, not across it
+    for i in (7, 8, 9): out[i] = out[i] + t * A([10, 8]) * k
     return out
 
 
@@ -66,14 +71,14 @@ def pole(f, snout, k):
 
 
 def walk(f):  # leg swing in degrees: still until the pig walks, then one step every 3 frames
-    return 0.0 if f < 10 else 14.0 * np.sin(2 * np.pi * (f - 10) / 6 + np.pi / 2)
+    return 0.0 if f < 10 else 9.0 * np.sin(2 * np.pi * (f - 10) / 6 + np.pi / 2)
 
 
 # (frame, snout centre, scale, turn 0..1 (1 = three-quarter), head tilt, body tip, why)
 KEYS = [
-    (7, (74, 112), 1.0, 0.0, -2, 0, 'Still on the catch-pole, starting to pull: the head comes forward a little, the body still.'),
+    (7, (78, 111), 1.0, 0.0, -2, 0, 'Still on the catch-pole, starting to pull: the head comes forward a little, the body still.'),
     (8, (92, 104), 1.0, 0.0, -6, 0, 'The pig pulls against the pole and lifts its head; still a side view, the start of the turn.'),
-    (9, (112, 94), 1.0, 0.12, -12, 0, 'Anticipation, the last frame on the pole: head at its highest, tipped up and back, before it swings round.'),
+    (9, (112, 98), 1.0, 0.12, -12, 0, 'Anticipation, the last frame on the pole: head at its highest, tipped up and back, before it swings round.'),
     (10, (132, 108), 1.0, 0.32, -7, 0, 'Let go: the pole is gone and the head starts to swing toward the camera; the far ear shows. First step.'),
     (11, (142, 121), 1.0, 0.52, -2, 0, 'The ears spread, the near ear grows; the snout moves in from the edge of the head.'),
     (12, (141, 140), 1.0, 0.72, 1, -2, 'Turning on: the head drops toward the camera, the body begins to shorten.'),
@@ -90,7 +95,9 @@ KEYS = [
     (24, (88, 186), 1.22, 1.0, 0, -14, 'Close, three-quarter view, settling.'),
     (25, (88, 189), 1.22, 1.0, 0, -14, 'Last frame: close, three-quarter view.'),
 ]
-BS = {14: 1.04, 15: 1.07, 16: 1.1, 17: 1.12, 18: 1.15, 19: 1.15, 20: 1.15, 21: 1.15, 22: 1.15, 24: 1.15, 25: 1.15}
+BS = {12: 1.01, 13: 1.03, 14: 1.05, 15: 1.07, 16: 1.09, 17: 1.11, 18: 1.13, 19: 1.15, 20: 1.15, 21: 1.15, 22: 1.15, 24: 1.15, 25: 1.15}
+
+BODY_UP = {11: -6, 12: -18, 13: -30, 14: -40, 15: -48, 16: -56}
 
 if __name__ == '__main__':
     for p in D.glob('k[0-9][0-9][0-9].json'): p.unlink()
@@ -98,8 +105,8 @@ if __name__ == '__main__':
     # so the head's dip and lift at 19-22 do not throw the whole body
     sns = {f: A(sn) for f, sn, *_ in KEYS}; fs = sorted(sns)
     W = {7: 1.0, 8: 1.0, 9: 1.0, 10: 0.7, 11: 0.4, 12: 0.15}
-    BODY_AT = {7: (303, 115), 8: (311, 111), 9: (320, 106), 10: (328, 105), 11: (334, 110), 12: (337, 120),
-               13: (336, 132), 14: (332, 144)}   # body centre (back and rump strokes) while the pig is let go and turns
+    BODY_AT = {7: (320, 110), 8: (334, 104), 9: (350, 96), 10: (364, 102), 11: (370, 114), 12: (362, 128),
+               13: (352, 138), 14: (344, 148)}   # body centre (back and rump strokes) while the pig is let go and turns
     for f, sn, k, t, tilt, brot, why in KEYS:
         off = A([0, 0])
         if f in BODY_AT:
@@ -108,6 +115,7 @@ if __name__ == '__main__':
         if f >= 17:
             near = [g for g in fs if abs(g - f) <= 2]
             off = off + (np.mean([sns[g] for g in near], 0) - A(sn)) * 0.8
+        off = off + A([0, BODY_UP.get(f, -64 if f > 16 else 0)])   # the film's head is lowered: the back rides above it
         st = key(f, sn, k, t, tilt, brot, walk(f), BS.get(f, 1.0), off)
         ex = {}
         json.dump({'why': why, 'strokes': [np.round(s, 1).tolist() for s in st], 'extra': ex}, open(D / f'k{f:03d}.json', 'w'))

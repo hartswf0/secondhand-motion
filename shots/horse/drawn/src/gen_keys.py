@@ -25,7 +25,7 @@ FRONT = {
  5: [(214, 58), (228, 48), (246, 40), (257, 40), (255, 48), (240, 62), (228, 72)],                 # right ear (front ear)
  6: [(214, 64), (200, 52), (184, 47), (166, 48), (152, 52), (142, 58)],                            # line across the top between the ears
 }
-EYE_L, EYE_R = np.array([130., 160.]), np.array([234., 170.])
+EYE_L, EYE_R = np.array([142., 158.]), np.array([228., 166.])
 
 
 def scribble(c, k, n=None):
@@ -64,7 +64,7 @@ def neck_mane(K, Kd, k):
     return K
 
 
-def profile(P, N, wb=None, NT=(-10, 20), NB=(-10, 250), bulge=8):
+def profile(P, N, wb=None, NT=(-10, 20), NB=(-10, 250), bulge=8, ref=None):
     P, N = np.array(P, float), np.array(N, float); L = np.linalg.norm(N - P); U = (N - P) / L; V = np.array([-U[1], U[0]])
     sa = L / L0; sb = wb or sa
     T = lambda q: P + ((q - Pd) @ U0) * sa * U + ((q - Pd) @ V0) * sb * V
@@ -73,6 +73,12 @@ def profile(P, N, wb=None, NT=(-10, 20), NB=(-10, 250), bulge=8):
     if nn[1] > 0: nn = -nn
     K[1][12] = a + (b - a) * 0.4 + nn * bulge; K[1][13] = b
     a, b = K[2][0], np.array(NB, float); K[2][1] = a + (b - a) * 0.4; K[2][2] = b
+    th = np.degrees(np.arctan2(*(N - P)[::-1]))
+    if ref:   # the ears stay pricked up (as in the film) instead of swinging forward as the face tips down
+        for i in (4, 5):
+            b = (K[i][0] + K[i][-1]) / 2; tip = K[i][np.argmax(np.linalg.norm(K[i] - b, axis=1))]
+            r = np.radians(ref[i] + max(th - 60, 0) * 0.15 - np.degrees(np.arctan2(*(tip - b)[::-1])))
+            R = np.array([[np.cos(r), -np.sin(r)], [np.sin(r), np.cos(r)]]); K[i] = (K[i] - b) @ R.T + b
     return neck_mane(K, D, (sa + sb) / 2)
 
 
@@ -88,9 +94,13 @@ def front(off):
 T = json.load(open(OUT / 'src/targets.json'))
 
 
+def ear_ref():
+    return {4: -105, 5: -70}   # ear directions in degrees (image axes, -90 = straight up): near ear up and back, far ear up and forward
+
+
 def build(f):
     t = T[str(f)]; tau = t['tau']
-    pr = profile(t['P'], t['N'], t.get('wb'), t['NT'], t['NB'])
+    pr = profile(t['P'], t['N'], t.get('wb'), t['NT'], t['NB'], ref=ear_ref())
     extra = {}
     if tau < 1:
         fr, e2 = front(t['off'])
@@ -101,6 +111,8 @@ def build(f):
         extra['eye2'] = ((e2 - e2.mean(0)) * (1 - tau) ** 1.5 + c).round(1).tolist()
     else:
         K = pr
+        # the far eye stays hidden behind the nose line for the rest of the shot (a tiny mark on the outline)
+        hid = pr[1][8]; e = scribble(np.zeros(2), 0.08, 6); extra['eye2'] = (e + hid).round(1).tolist()
     return {'why': t['why'], 'strokes': [s.round(1).tolist() for s in K], 'extra': extra}
 
 

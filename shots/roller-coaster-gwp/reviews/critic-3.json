@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A black line drawing of a roller coaster lift hill: a double-rail track with short tick marks rising steeply from lower left to a sharp peak, two descending lines on the right, and a column of five small box-shaped cars with tick marks sitting on the upper part of the slope. A grey cloud sits at upper right. From frames 1 to 9 the whole drawing slides right and down in the panel and the slope becomes narrower and steeper; the long descending line on the right shortens. From frames 9 to 16 the framing holds nearly still. The cars sit close to the peak from frame 1 and move only a small distance upward relative to the peak; by frame 16 the lead car is roughly level with the peak.",
+ "seen_film": "A black-and-white shot of a wooden roller coaster lift hill with a crowded train climbing it. In frames 1 to 3 the top of the hill and its tower are cut off by the frame top; from frames 3 to 9 the camera tilts and reframes so the tower at the crest and the sky above come into view and the hill moves down and to the right in the frame. Through frames 9 to 16 the framing is steady while the train continues to climb; the train's lead car begins about two-thirds of the way up the slope and reaches the crest under the tower around frames 15-16.",
+ "named_subject": "A roller coaster: the lift-hill track with a train of cars climbing it.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-9: the animation reproduces the film's reframing (hill shifting right and down, top coming into view) at the same moments, which matches d.png frames 1-9. Frames 1-16: in the film the train travels a visible distance, from about two-thirds up the slope in frame 1 to the crest in frame 16; in the animation the five cars already sit just below the peak in frame 1 and in frames 9, 12 and 16 they are in almost the same position relative to the peak, so the climb, which is the event of the shot, barely registers. Frames 1 and 5 vs c.png: the track is drawn at a far steeper angle than the doodle's shallow, bending rail. No tower is drawn at the crest, while the film shows it from frame 4 on.",
+ "primary_gap": "The train does not visibly climb: the cars start almost at the peak and travel only a few car-lengths over 16 frames, while in the film the train covers roughly the upper third of the slope and arrives at the crest at the end.",
+ "closes_when": "In frame 1 the lead car sits about two-thirds of the way up the track (well below the peak, with track visible above it), moves up by a steady amount each frame, and reaches the peak in frames 15-16.",
+ "protect": "The camera reframing in frames 1-9 that matches the film's tilt timing; the double rail with short slanted tick marks carried over from the doodle; the sharp peak and the two descending lines on the right; the simple box-and-tick cars; the steady drawing with no redraws or flicker between frames.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The track keeps the doodle's double rail, tick marks and right-hand descending lines, but it is bent much steeper than the doodle's shallow curved rise, which pushes it away from c.png's proportions.",
+ "still_frames_only": true,
+ "_packet": "lot3c282b9a",
+ "_round": 3
+}

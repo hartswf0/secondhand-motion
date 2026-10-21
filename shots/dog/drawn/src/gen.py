@@ -47,52 +47,61 @@ def profile(rot=0.0, legs=None):
 
 
 def front(hy=0.0, rx=0.0):
-    """the same strokes seen from the front. hy: head centre height (chest = 0, + is lower), rx: which side the
-    body runs off behind (+ right, - left)."""
-    h = np.array([0.0, hy]); ry = -40.0
-    o = [None] * 12
-    neck_top = max(-28.0, hy - 6)
-    # S0: from the nose over the left brow, across the top of the head, down the right cheek, neck and back
-    o[0] = np.array([[0, 14], [-15, -2], [-5, -19], [13, -15], [22, 2], [20, 18], [0, 0], [0, 0]], float) + [0, hy]
-    o[0][6] = [24, (hy + 18 + neck_top) / 2 + 8]; o[0][7] = [rx * 0.7 + 14, ry + 10]
+    """the same strokes (same point counts) seen from the front, chest at the origin. hy: head centre height
+    (+ is lower); rx: how far to the side the rear block shows past the head (the body runs back that way)."""
+    o = [None] * 12; h = np.array([0.0, hy])
+    hd = lambda a: np.array(a, float) + h
+    sh = min(hy + 14, -6.0)          # where the neck meets the shoulders
+    back = -22.0                     # the top of the back, seen past the head
+    # S0: from the nose over the left brow, across the top of the head, down the right cheek, neck, back
+    o[0] = np.r_[hd([[0, 13], [-21, -4], [-9, -21], [14, -19], [25, -3], [15, 13]]), [[24, sh], [rx * 0.6 + 12, back]]]
     # S2: belly hook, up the left side of the chest, throat, left jaw, to the nose
-    o[2] = np.array([[-6, 24], [0, 27], [-9, 21], [-16, 4], [-17, min(hy + 20, -2)], [-18, hy + 8], [-10, hy + 17], [-2, hy + 16]], float)
+    o[2] = np.r_[[[-9, 26], [-3, 28], [-13, 22], [-22, 4], [-23, sh]], hd([[-24, 2], [-13, 15], [-3, 16]])]
     # S3 muzzle loop and S4 nostril at the bottom centre of the head
-    o[3] = np.array([[-7, 7], [-7, 16], [0, 20], [7, 16], [7, 6]], float) + h
-    o[4] = np.array([[-1, 11], [1, 13]], float) + h
+    o[3] = hd([[-8, 5], [-8, 14], [0, 18], [8, 14], [8, 4]])
+    o[4] = hd([[-1, 9], [1, 11]])
     # S5 eye diamond and S6 pupil, narrowed, on the left of the face
-    e = ST[5] - ST[5].mean(0); o[5] = e * [0.38, 0.85] + [-9, -5] + h
-    p = ST[6] - ST[5].mean(0); o[6] = p * [0.38, 0.85] + [-9, -5] + h
-    # front legs either side under the chest, hind legs behind and shorter, x narrowed (feet toward us)
-    for i, (x, y, kx, ky) in {7: (-11, 20, 0.5, 1.0), 8: (11, 22, 0.5, 1.0), 9: (-21, 8, 0.4, 0.82), 10: (21, 8, 0.4, 0.82)}.items():
-        s = ST[i] - LEGTOP[i]; o[i] = s * [kx, ky] + [x, y]
-    # rear block and rump line, small, behind and above the shoulders, toward the side the body runs off
-    c11 = ST[11].mean(0); o[11] = (ST[11] - c11) * [0.42, 0.55] + [rx, ry]
-    o[1] = (ST[1] - ST[1][0]) * [0.3, 0.45] + [rx * 0.7 + 14, ry + 10]
+    c5 = ST[5].mean(0)
+    o[5] = hd((ST[5] - c5) * [0.42, 0.85] + [-11, -7]); o[6] = hd((ST[6] - c5) * [0.42, 0.85] + [-11, -7])
+    # front legs either side under the chest, hind legs behind, outside them and shorter, x narrowed
+    for i, (x, y, kx, ky) in {7: (-15, 22, -0.6, 0.95), 8: (14, 24, -0.6, 0.95), 9: (-26, 12, -0.45, 0.78), 10: (25, 12, -0.45, 0.78)}.items():
+        o[i] = (ST[i] - LEGTOP[i]) * [kx, ky] + [x, y]
+    # rear block and rump line: the far end of the body, showing past the head on the back
+    c11 = ST[11].mean(0); o[11] = (ST[11] - c11) * [-0.4, 0.8] + [rx, c11[1] - CH[1]]
+    o[1] = (ST[1] - ST[1][0]) * [-0.35, 0.8] + [rx - 12, back]
     return o
 
 
 def front_extra(hy=0.0):
-    e = ST[5] - ST[5].mean(0); p = ST[6] - ST[5].mean(0)
-    return {'eye2': (e * [-0.38, 0.85] + [9, -5 + hy]), 'pupil2': (p * [-0.38, 0.85] + [9, -5 + hy])}
+    c5 = ST[5].mean(0)
+    return {'eye2': (ST[5] - c5) * [-0.42, 0.85] + [11, -7 + hy], 'pupil2': (ST[6] - c5) * [-0.42, 0.85] + [11, -7 + hy]}
 
 
-def view(yaw, rot=0.0, hy=0.0, legs=None):
-    rx = 16 * (1 - yaw)
+def view(yaw, rot=0.0, hy=0.0, legs=None, rx=0.0, hyaw=None):
+    """yaw 0 left profile, 1 front, 2 right profile: a turntable. Each point has its profile x (along the body)
+    and its front x (across the body); seen at angle th its x is px*cos(th) + fx*sin(th), and its height moves
+    from the profile height to the front height as the front shows. hyaw: the head's own turn (a dog looks
+    at us before its body has come round); default the body's."""
+    hyaw = yaw if hyaw is None else hyaw
     F = front(hy, rx); P = profile(rot, legs)
-    if yaw <= 1: A, B, t = P, F, yaw
-    else: A, B, t = F, [s * [-1, 1] for s in P], yaw - 1
+    def ang(y):
+        th = math.radians(90 * y); c, s = math.cos(th), math.sin(th); return c, s, s ** 3
     out = []
-    for a, b in zip(A, B):
-        n = max(len(a), len(b)); out.append(resample(a, n) * (1 - t) + resample(b, n) * t)
+    for i, (p, f) in enumerate(zip(P, F)):
+        hidx = set(range(len(p))) if HEAD.get(i, 0) is None else set(HEAD.get(i, []))
+        q = np.zeros_like(p)
+        for j in range(len(p)):
+            c, s, wy = ang(hyaw if j in hidx else yaw)
+            q[j] = [p[j, 0] * c + f[j, 0] * s, p[j, 1] * (1 - wy) + f[j, 1] * wy]
+        out.append(q)
+    c, s, wy = ang(hyaw)
     ex = {}
-    w = max(0.0, 1 - abs(yaw - 1) / 0.45)   # second eye: full at the front view, shrinks to a point by yaw 0.55 / 1.45
+    w = min(1.0, max(0.0, (s - 0.6) / 0.3))   # second eye: only when the face is mostly toward us
     if w > 0:
-        for k, s in front_extra(hy).items():
-            c = s.mean(0); s2 = (s - c) * w + c
-            if yaw < 1: s2 = s2 + [ (1 - w) * 6, 0]
-            else: s2 = s2 - [(1 - w) * 6, 0]
-            ex[k] = s2
+        for k, fe in front_extra(hy).items():
+            pe = resample(P[5 if k == 'eye2' else 6], len(fe))
+            q = np.c_[pe[:, 0] * c + fe[:, 0] * s, pe[:, 1] * (1 - wy) + fe[:, 1] * wy]
+            m = q.mean(0); ex[k] = (q - m) * w + m
     return out, ex
 
 
@@ -107,7 +116,7 @@ if __name__ == '__main__':
     fs = [int(a) for a in sys.argv[1:]] or [int(k) for k in KEYS]
     for f in fs:
         k = KEYS[str(f)]
-        st, ex = view(k['yaw'], k.get('rot', 0), k.get('hy', 0), {int(i): v for i, v in k.get('legs', {}).items()})
+        st, ex = view(k['yaw'], k.get('rot', 0), k.get('hy', 0), {int(i): v for i, v in k.get('legs', {}).items()}, k.get('rx', 0), k.get('hyaw'))
         st = place(st, np.array(k['C'], float), k['s'], k.get('tilt', 0))
         ex = dict(zip(ex, place(list(ex.values()), np.array(k['C'], float), k['s'], k.get('tilt', 0))))
         J = {'why': k['why'], 'strokes': [np.round(s, 1).tolist() for s in st], 'extra': {n: np.round(s, 1).tolist() for n, s in ex.items()}}

@@ -41,14 +41,14 @@ def front():
 # ---- three-quarter: the head round like the front view, the bill short and pointing down to our left
 def three_q():
     S = [s.copy() for s in BASE]
-    pts = {0: (218, 98), 1: (203, 119), 2: (194, 122), 3: (192, 114), 4: (206, 91),
-           5: (195, 70), 6: (201, 54), 7: (218, 47), 8: (235, 53), 9: (243, 69),
-           10: (242, 87), 11: (237, 98), 24: (189, 126), 25: (196, 104), 26: (210, 100)}
+    pts = {0: (210, 100), 1: (192, 115), 2: (185, 115), 3: (183, 108), 4: (199, 90),
+           5: (196, 72), 6: (201, 54), 7: (218, 47), 8: (235, 53), 9: (243, 69),
+           10: (242, 87), 11: (237, 98), 24: (192, 128), 25: (200, 112), 26: (207, 103)}
     for i, xy in pts.items(): S[0][i] = np.array(xy, float)
     S[0][12] = np.array([233.0, 130.0])
     S[1] = np.array([[203.0, 66.0], [203.0, 66.0]])
     S[2] = np.array([[226.0, 64.0], [226.0, 64.0]])
-    S[3] = np.array([[196.0, 116.0], [210.0, 96.0]])
+    S[3] = np.array([[187.0, 110.0], [203.0, 97.0]])
     return S
 
 P, F, Q = profile(), front(), three_q()
@@ -110,7 +110,7 @@ HEAD[14] = HEAD[14][:5] + ("Facing us; the eyes well up (no tear yet).",)
 HEAD[38] = HEAD[38][:5] + ("The last tear lands; the head at rest.",)
 
 # ---- tears: (name, track x, birth frame); each falls eye -> chest -> ground over 4-6 frames, keyed every 2
-EYE_Y, CHEST_Y, GROUND_Y = 102, 160, 236
+EYE_Y, CHEST_Y, GROUND_Y = 110, 160, 236
 TEARS = [('tearL1', 203, 16), ('tearR1', 236, 16), ('tearL2', 204, 20), ('tearR2', 238, 22),
          ('tearL3', 202, 24), ('tearR3', 237, 28), ('tearL4', 204, 28), ('tearL5', 203, 32), ('tearR4', 236, 32)]
 def tear_at(x0, b, f):

@@ -1,8 +1,11 @@
 """Writes the drawn keys k###.json for alarm-clock from per-key measurements of the film.
-The clock is the doodle's own strokes: the case circle becomes the face rim seen at an angle (narrowed by
-cos(turn) = rx/ry), the dot and hands are narrowed with it, the bells slide toward the middle of the drum's top,
-the right foot slides back under the drum. One extra stroke, case_back, is the drum's back edge (the doodle draws
-only the face); one extra stroke, hand, is the woman's hand that turns the clock."""
+The clock is the doodle's own strokes. Facing us it is the doodle's one round circle with its dot, two diagonal
+hands, two bells and two feet. As the hand turns it, the case circle narrows into the face rim seen at an angle
+(width/height = cos(turn)); the dot and the two diagonal hands are kept and narrowed less than the rim so they stay
+readable; the bells slide toward the middle of the drum's top; the right foot slides back under the drum.
+Extra stroke case_back: the drum's back edge, a partial arc on the right that grows from nothing (lying on the
+rim) as the clock turns and shrinks back to nothing when it faces us (the doodle draws only the face).
+Extra stroke hand: the woman's hand that turns the clock, ten points in the same order in every key."""
 import json, math
 from pathlib import Path
 D = Path(__file__).resolve().parent
@@ -10,59 +13,70 @@ spec = json.load(open(D.parents[2] / 'rigs' / 'alarm_clock_spec.json'))
 ST = spec['strokes']
 CY, RY, DEPTH, SY = 141, 57, 96, 57 / 90.0   # face centre y, face half-height, drum depth, doodle-to-frame scale
 
+
 def clock(cx, rx, tilt=0.0):
     c = rx / RY; s = math.sqrt(max(0, 1 - c * c))
-    sx = rx / 99.0
-    def face(p, dx=0.0):
-        x, y = (p[0] - 100) * sx, (p[1] - 136) * SY
-        # tilt: lean the clock about the face centre (positive leans top to the right)
-        x, y = x + y * -tilt, y
-        return [round(cx + x + dx, 1), round(CY + y, 1)]
-    out = [[face(p) for p in ST[i]] for i in range(4)]
-    xm = cx + 0.45 * DEPTH * s                           # middle of the drum's top
-    for i, off in ((4, -58), (5, 52)):                     # bells: shape kept, centres bunch toward xm
+    vis = min(1.0, max(0.0, (0.85 - c) / 0.55))     # how much of the drum's side shows: 0 facing us, 1 side-on
+    sx = rx / 99.0; hx = SY * max(c, 0.55)            # rim narrows fully; dot and hands narrow less
+
+    def put(x, y, dx=0.0):
+        return [round(cx + x - y * tilt + dx, 1), round(CY + y, 1)]
+    out = [[put((p[0] - 100) * sx, (p[1] - 136) * SY) for p in ST[0]]]
+    out += [[put((p[0] - 100) * hx, (p[1] - 136) * SY) for p in ST[i]] for i in (1, 2, 3)]
+    xm = cx + 0.45 * DEPTH * s * vis                 # middle of the drum's top
+    for i, off in ((4, -58), (5, 52)):               # bells: shape kept, centres bunch toward xm as it turns
         bx0 = sum(p[0] for p in ST[i]) / len(ST[i])
-        tx = xm + off * SY * max(c, 0.42)
-        out.append([[round(tx + (p[0] - bx0) * SY - (p[1] - 136) * SY * tilt, 1), round(CY + (p[1] - 136) * SY, 1)] for p in ST[i]])
-    out.append([face(p) for p in ST[6]])
-    out.append([face(p, 0.30 * DEPTH * s) for p in ST[7]])
-    backR = cx + DEPTH * s + rx; rb = max(rx, 26); bx = backR - rb; mid = (cx + bx) / 2
-    back = [[cx + 0.3 * rx, CY - RY + 1], [mid, CY - RY - 3], [bx, CY - RY - 1]]
-    back += [[bx + rb * math.cos(math.radians(a)), CY + RY * 0.98 * math.sin(math.radians(a))] for a in (-55, -25, 2, 30, 58)]
-    back += [[bx, CY + RY - 1], [mid, CY + RY + 1], [cx + 0.55 * rx, CY + RY - 2]]
-    back = [[round(x - (y - CY) * tilt, 1), round(y, 1)] for x, y in back]
+        tx = xm - cx + off * SY * max(c, 0.42)
+        out.append([put(tx + (p[0] - bx0) * SY, (p[1] - 136) * SY) for p in ST[i]])
+    out.append([put((p[0] - 100) * sx, (p[1] - 136) * SY) for p in ST[6]])
+    out.append([put((p[0] - 100) * sx, (p[1] - 136) * SY, 0.30 * DEPTH * s * vis) for p in ST[7]])
+    # case_back: partial arc of the drum's back edge
+    rb = rx + (max(rx, 26) - rx) * vis
+    backR = cx + rx + DEPTH * s * vis
+    bx = backR - rb; A = 12 + 68 * vis
+    arc = [[bx + rb * math.cos(math.radians(a)), RY * math.sin(math.radians(a))] for a in [-A + 2 * A * k / 6 for k in range(7)]]
+    top = [cx - cx + 0.3 * rx + (arc[0][0] - cx - 0.3 * rx) * (1 - 0.7 * vis), arc[0][1] + (-RY + 1 - arc[0][1]) * vis]
+    bot = [0.55 * rx + (arc[-1][0] - cx - 0.55 * rx) * (1 - 0.7 * vis), arc[-1][1] + (RY - 2 - arc[-1][1]) * vis]
+    back = [put(*top)] + [put(x - cx, y) for x, y in arc] + [put(*bot)]
     return out, back
 
-# frame: (face centre x, face half-width, tilt, hand points, why)
+
+def sh(h, dx=0, dy=0): return [[x + dx, y + dy] for x, y in h]
+
+
+H34 = [[-40, 150], [8, 138], [22, 128], [38, 126], [48, 132], [46, 142], [36, 156], [32, 172], [4, 186], [-40, 192]]
+# hand points, same order every key: arm top at edge, wrist top, knuckle, fingertip top, fingertip end,
+# fingertip under, palm, heel, under-arm, arm bottom at edge
 KEYS = {
- 0:  (162, 38, 0.00, [[0,72],[95,52],[128,24],[198,12],[204,22],[152,42],[152,66],[92,84],[0,108]],
-      "The hand has hold of the clock's top; the face is turned partly to the left. Start pose."),
- 3:  (160, 33, 0.00, [[0,74],[100,50],[134,22],[205,22],[208,32],[160,46],[152,70],[96,90],[0,116]],
-      "The hand starts to turn the clock: the face narrows. Start of the turn away."),
- 6:  (153, 28, 0.04, [[0,96],[110,62],[148,36],[232,40],[234,50],[180,56],[160,80],[100,106],[0,136]],
+ 0:  (172, 52, 0.00, [[0,72],[95,52],[128,26],[186,14],[204,26],[190,34],[152,44],[150,66],[92,84],[0,108]],
+      "The hand has hold of the clock's top; the clock faces us. Start pose."),
+ 3:  (166, 44, 0.00, [[0,74],[100,50],[134,24],[190,22],[206,36],[192,42],[160,48],[152,70],[96,90],[0,116]],
+      "The hand starts to turn the clock: the face narrows and the side begins to show. Start of the turn away."),
+ 6:  (156, 30, 0.04, [[0,96],[110,62],[148,38],[214,40],[230,54],[216,60],[180,58],[160,80],[100,106],[0,136]],
       "Mid turn away, fastest change: face half as wide, bells sliding together over the drum."),
- 10: (146, 19, 0.06, [[0,116],[118,72],[148,52],[200,52],[202,62],[176,66],[160,90],[108,122],[0,160]],
-      "The turn away arrives: face edge-on at the left, the drum's back toward us. Extreme."),
- 14: (141, 16, 0.08, [[0,118],[116,74],[140,56],[176,58],[176,68],[160,72],[156,94],[108,124],[0,162]],
+ 10: (146, 19, 0.06, [[0,116],[118,72],[148,52],[196,52],[204,62],[192,68],[176,68],[160,90],[108,122],[0,160]],
+      "The turn away arrives: face edge-on at the left, the drum's side toward us. Extreme."),
+ 14: (141, 16, 0.08, [[0,118],[116,74],[140,56],[172,58],[178,66],[170,72],[160,74],[156,94],[108,124],[0,162]],
       "Held side-on, face a sliver, leaning a little under the hand. Extreme held."),
- 18: (140, 16, 0.07, [[0,116],[116,72],[140,54],[176,56],[176,66],[160,70],[156,92],[108,122],[0,160]],
+ 18: (140, 16, 0.07, sh([[0,118],[116,74],[140,56],[172,58],[178,66],[170,72],[160,74],[156,94],[108,124],[0,162]], 0, -2),
       "Still side-on; the hand holds it there. Hold."),
- 22: (138, 21, 0.04, [[0,114],[114,72],[138,54],[170,56],[170,66],[158,72],[158,96],[108,126],[0,162]],
+ 22: (138, 21, 0.04, [[0,114],[114,72],[138,54],[166,56],[172,64],[164,70],[156,74],[158,96],[108,126],[0,162]],
       "The face starts to come back: first widening. End of the hold."),
- 24: (140, 27, 0.02, [[0,120],[108,82],[130,64],[170,64],[172,74],[150,80],[158,106],[108,132],[0,170]],
+ 24: (142, 28, 0.02, [[0,120],[108,82],[130,64],[164,64],[172,72],[162,78],[150,82],[158,106],[108,132],[0,170]],
       "Anticipation of the turn back: the hand moves down onto the face's left edge, face still narrow."),
- 25: (150, 38, 0.00, [[0,126],[98,96],[124,84],[164,98],[164,108],[150,116],[146,134],[100,150],[0,182]],
+ 25: (158, 42, 0.00, [[0,126],[98,96],[124,84],[150,90],[160,100],[152,108],[144,118],[138,136],[100,150],[0,182]],
       "The hand swings the face back round toward us: one fast frame, as in the film."),
- 26: (155, 43, 0.00, [[0,134],[80,110],[110,94],[150,92],[152,102],[130,112],[140,140],[90,152],[0,186]],
-      "THE LINE: the face is back toward us, round again, the hand pressed to its left side."),
- 28: (156, 44, 0.00, [[0,136],[74,116],[100,74],[116,44],[132,46],[130,80],[140,122],[108,152],[0,186]],
+ 26: (166, 50, 0.00, [[0,134],[80,110],[110,94],[136,92],[148,100],[142,108],[134,118],[130,138],[90,152],[0,186]],
+      "THE LINE: the clock faces us again, one round face, the hand pressed to its left side."),
+ 28: (168, 52, 0.00, [[0,138],[70,118],[98,82],[112,52],[124,46],[132,54],[128,84],[132,124],[96,152],[0,184]],
       "Contact released: the fingers lift off the clock; the clock stands on its own, settled."),
- 31: (156, 44, 0.00, [[0,132],[48,116],[66,78],[82,52],[98,52],[100,86],[108,126],[78,152],[0,180]],
-      "The open hand pulls back to the left; the clock holds."),
- 34: (156, 44, 0.00, [[-40,150],[8,138],[24,128],[46,132],[46,142],[34,156],[32,172],[4,186],[-40,192]],
-      "The hand drops out at the left edge; the clock holds."),
- 36: (156, 44, 0.00, [[-140,150],[-92,138],[-76,128],[-54,132],[-54,142],[-66,156],[-68,172],[-96,186],[-140,192]],
-      "The hand is gone; the clock alone, face turned partly to the left, as at the end of the film."),
+ 30: (168, 52, 0.00, [[0,136],[56,120],[80,86],[92,58],[104,52],[112,60],[110,90],[114,128],[80,154],[0,182]],
+      "The open hand draws back to the left, arm shortening; breakdown so the withdrawal is continuous."),
+ 31: (168, 52, 0.00, [[0,132],[44,118],[62,84],[76,58],[88,52],[96,60],[96,90],[100,128],[70,152],[0,180]],
+      "The open hand keeps pulling back to the left; the clock holds."),
+ 34: (168, 52, 0.00, H34, "The hand drops out at the left edge; the clock holds."),
+ 36: (168, 52, 0.00, sh(H34, -66, 2), "The hand has left the frame at the left; the clock alone, facing us."),
+ 37: (168, 52, 0.00, sh(H34, -66, 2), "End: the clock stands alone; the hand is kept just outside the frame so it does not blink out."),
 }
 
 for f, (cx, rx, tilt, hand, why) in KEYS.items():

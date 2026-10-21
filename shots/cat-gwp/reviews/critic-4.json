@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frames 1-12: a line-drawn cat head (two pointed ears, round-cornered polygon face, two polygon eyes, three whiskers on each side) faces the viewer in the upper-left of the frame, with grey leaves and a flower to its right. It barely moves across these twelve frames: a small downward drift in frames 5-9 and a small return in frames 10-12, with the eyes shifting a few pixels. Frame 13: the head is suddenly larger, lower and further right; the eyes have moved toward the right side of the face, the right eye is narrower, and the left whiskers now start inside the face near the left eye instead of outside the cheek. Frames 14-16: the head keeps growing and moving right until the right side of the face and its whiskers overlap the grey flower and leaves, which reads as the head turning toward screen right and coming closer. Frame 16 has a few stray grey dots near the bottom right leaf.",
+ "seen_film": "Frames 1-12: close-up of a tabby cat with its head tilted up, eyes half closed, tongue tip out, held almost still on the left-center of the frame with a red flower and dark leaf pattern behind on the right; only slight tongue and head movement. Frame 13: the cat lowers its head and starts turning to screen right, tongue still visible, the right ear swinging back. Frames 14-16: the cat is in three-quarter profile facing right, head lower and larger in frame, right ear laid back, eyes open looking right; little further change between 14 and 16.",
+ "named_subject": "a cat's head (cat face with ears, eyes and whiskers)",
+ "verdict": "reference stronger",
+ "evidence": "The hold in frames 1-12 and the turn starting at frame 13 match the film's timing, and frames 14-16 move the head right and closer as the film does. But between frames 12 and 13 the drawing changes in one step: head size grows by roughly a third, the head drops and shifts right, the eyes jump right, and the left whiskers jump from outside the cheek to inside the face, with no in-between drawing; frame 14 adds a second large jump (face widens, right ear jumps to the right edge, right whiskers cut short). In frames 1-12 the film's head is tilted up with the chin raised; the animation's head is frontal and level, so the upward look and the drop of the head at 13 are not performed. In frames 14-16 the film's right ear is laid back; the animation's right ear stays upright. The animation's head sits in the upper left in frames 1-12, higher than the film's head, which fills the left-center.",
+ "primary_gap": "The head turn is delivered as two large jumps at frames 13 and 14 (size, position, eyes and whiskers all relocate at once) rather than as one continuous turn, and the head starts level instead of tilted up, so the film's lift-then-drop-and-turn is lost.",
+ "closes_when": "Frames 1-12 show the head tilted up with the chin raised (eyes higher on the face, slight upward rotation) and frames 12-15 show the size, position, eye placement and left-whisker origin changing in even steps, so no single frame-to-frame change is larger than the others.",
+ "protect": "The doodle's construction and stroke habits (polygon face, polygon eyes, triangle ears, straight-line whiskers, one weight of black line) are kept faithfully in every frame; the hold in frames 1-12 and the change beginning at frame 13 match the film's timing; the move toward screen right and toward camera in 13-16 matches the film's direction; the grey scenery stays fixed.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  13,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is clearly the doodle in c.png in all frames, though in frames 14-16 the face is stretched into a wide box and the right whiskers are shortened, which drifts from the doodle's proportions.",
+ "still_frames_only": true,
+ "_packet": "lot63f0b2db",
+ "_round": 4
+}

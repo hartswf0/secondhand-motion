@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frames 1-2: a doodled alarm clock (round face with a center dot and two diagonal hand strokes, two loop bells on top, two short leg strokes) stands on a shelf between a grey telephone at left and a grey vase/goblet at right; a black outlined arm comes in from the upper left and rests its hand on the bells. The clock is drawn as two overlapping large circles: the face circle at left and a second body circle offset to the right. Frames 3-4: the face circle narrows into an upright ellipse as the hand presses on the top. Frames 5-10: the clock is turned so the face is a thin ellipse at the left edge of the body circle; the clock hands become short near-vertical strokes and the center dot is gone; the arm lies diagonally across the telephone with the hand at the top left of the clock. Frame 11: the face widens back toward round and the hand outline, now with a jagged notch, sits at the left side of the face. Frame 12: the face is fully round again, hand at its upper left. Frames 13-14: the arm is redrawn as a shorter, more upright open hand shape at the far left, away from the clock. Frame 15: only a small black fragment of the hand remains at the left edge. Frame 16: the clock stands alone facing front.",
+ "seen_film": "Frames 1-3: a woman's hand comes from the left and grips the top of a brass double-bell alarm clock on a dark table, with a pink telephone behind at left and a brass trophy/lamp at right; the face is turned slightly left. Frames 4-10: the hand holds the clock turned so the face points to the left and is seen nearly edge-on as a narrow white oval, the brass body filling the right. Frames 11-12: the hand turns the clock back so the face points toward the camera, fingers on the left of the face. Frames 13-14: the hand lets go and moves away to the left, open. Frame 15: only the fingertips remain at the lower left edge. Frame 16: the clock stands alone, facing the camera.",
+ "named_subject": "a doodled double-bell alarm clock, handled by a human hand and arm",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement follow the film closely: hand on the bells in 1-3 matches film 1-3; the narrow edge-on face in 5-10 matches film 4-10; the face turning back in 11-12 matches film 11-12; the hand withdrawing left in 13-15 and the empty frame 16 match film 13-16. Against that: in every frame the clock is two overlapping full circles (face plus an offset body circle), most visible in frontal frames 1, 2, 12, 13-16, where the doodle in c.png is a single circle; the frontal clock therefore reads as a doubled drawing. In 5-10 the doodle's dot and two diagonal hand strokes are replaced by vertical strokes and the dot disappears. Between 12 and 13 the arm changes from a long diagonal two-line arm resting on the clock to a short upright open-hand shape at the far left, a redraw rather than a continuous withdrawal. In 11 the hand outline has a sharp zigzag notch that appears in no other frame.",
+ "primary_gap": "The clock is drawn as two overlapping full circles throughout, so the doodle's single round face reads as doubled, especially in the frontal frames 1-2 and 12-16.",
+ "closes_when": "In frontal frames 1-2 and 12-16 the clock shows only the doodle's one circle with its dot, two diagonal hand strokes, two bells and two legs, and the body/depth only appears as a narrow sliver or partial arc on the right while the clock is turned in frames 4-11.",
+ "protect": "The event and timing match the film: hand grips top (1-3), clock turned face-left to edge-on (5-10), turned back (11-12), hand leaves to the left (13-15), clock alone (16). Keep the doodle's loop bells and short leg strokes, the thin uneven line weight, the grey scenery placement (telephone left, vase right, shelf line), and the gradual narrowing of the face ellipse in 3-5.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  11,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The doodle is one circle with bells, but the animation draws a second full body circle behind it, so the character is not the same single-circle drawing set in motion.",
+ "still_frames_only": true,
+ "_packet": "lot257a0321",
+ "_round": 2
+}

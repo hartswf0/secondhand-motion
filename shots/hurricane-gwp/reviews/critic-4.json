@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A black horizontal scribble of long, nearly parallel strokes that converge to a point at the right sits at the lower left of a grey scene made of a house-like outline and two long sloping lines. In frames 1-2 the scribble lies flat just below the house outline. In frames 3-4 its left half suddenly tips up into a steep bundle of diagonal strokes rising toward the upper left while the right end stays put. In frame 5 the bundle is still tilted but lower. In frame 6 the scribble is flat again and has shifted right and down. In frame 7 it drops further down, and from frame 7 to frame 16 it stays flat in roughly the same place with only small shifts of a few pixels.",
+ "seen_film": "A low one-storey beach house with a dark roof stands in surf. In frames 1-4 waves break against the left side and front of the house, throwing white spray up the left wall, with a large foam swirl in the lower middle foreground. In frames 5-7 the spray at the left wall subsides to a lower wash. From frame 8 to 16 the water is calmer: a broad sheet of foamy water flows across the whole width of the foreground in front of the house, with continuous small surface movement and no more large splashes.",
+ "named_subject": "A wave or body of ocean water drawn as a horizontal scribble (the c.png doodle).",
+ "verdict": "reference stronger",
+ "evidence": "Frames 3-4: the scribble's left half tips up into a steep diagonal bundle, which loosely matches the film's spray rising against the left wall in frames 1-4, but in the film the spray is already up in frame 1 and in the animation it appears only at frame 3. Frame 2 to 3: the strokes change from flat to steeply tilted in one step with no intermediate pose, which reads as a pop. Frame 5 to 6 and 6 to 7: the whole scribble jumps right and then down by a large distance, while the film shows no matching displacement of the water. Frames 7-16: the scribble is almost static, while in the film the water keeps flowing across the full foreground. Throughout, the scribble covers only the left-centre area under the house, while the film's water fills the full width of the frame bottom.",
+ "primary_gap": "The splash happens late and as a sudden tilt (frames 2-3) followed by a jump down and right (frames 5-7), and after frame 7 the water does not move, whereas the film shows spray from frame 1 that eases down through frame 7 and then continuous flowing surface to frame 16.",
+ "closes_when": "The left end of the scribble is already raised in frame 1, lowers in small even steps through frames 2-7 without the whole scribble jumping position, and in frames 8-16 its strokes visibly ripple or slide sideways a little in each frame while it stays in the same place spanning the bottom of the frame in front of the house.",
+ "protect": "The character is the c.png doodle itself: the long nearly parallel strokes, the closed lens shapes, and the strokes converging to a point at the right are all kept intact and are not redrawn or detailed. The splash idea (left end rising up the side of the house) is the right action to keep. The grey scenery is stable across all frames.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  6,
+  7
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated scribble matches c.png's strokes, converging right end and lens shapes; only during the tilt in frames 3-5 do the strokes spread into a looser bundle, which is still recognisably the same drawing.",
+ "still_frames_only": true,
+ "_packet": "lot044e794f",
+ "_round": 4
+}

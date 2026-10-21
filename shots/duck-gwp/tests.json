@@ -1,50 +1,62 @@
 [
  {
   "id": "M2",
-  "value": 30,
+  "value": 12,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
+   20,
+   19,
    24,
-   32,
-   32,
-   24,
-   32,
-   33,
-   32,
-   32,
-   32,
-   24,
-   32,
-   32,
-   23
+   9,
+   6,
+   6,
+   6,
+   6,
+   15,
+   15,
+   11,
+   6,
+   11,
+   11,
+   6,
+   11,
+   6,
+   6,
+   15,
+   15,
+   6,
+   6,
+   10,
+   13,
+   27
   ]
  },
  {
   "id": "M2b",
-  "value": 0.84,
+  "value": 0.5,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-  "ok": true,
+  "ok": false,
   "design_typicality": 28
  },
  {
   "id": "M3",
-  "value": 0.4,
+  "value": 0.56,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.38
+  "min": 0.47
  },
  {
   "id": "M6",
-  "value": 0.2,
+  "value": 35.1,
   "unit": "px jerk (drawing centre)",
-  "ok": true
+  "ok": false
  },
  {
   "id": "T3",
-  "value": "8 strokes, 48 vertices, every frame",
+  "value": "varies",
   "unit": "",
-  "ok": true,
+  "ok": false,
   "note": "the doodle itself, bent by the rig"
  },
  {
@@ -81,17 +93,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca duck or goose standing in side view with a beak, webbed feet and a rounded body\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca duck (the doodle's duck) that turns to face the viewer and cries\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/duck-gwp/reviews/critic-4.json"
+  "evidence": "shots/duck-gwp/reviews/critic-5.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The body, legs and feet are the doodle's outline mirrored left to right, but in the front-facing frames the head becomes a hooded shape with a two-line beak that the doodle never draws, and the body never moves.",
-  "evidence": "shots/duck-gwp/reviews/critic-4.json"
+  "note": "Frames 1-2 and 16 are the c.png duck (mirrored), but the frontal head in 4-15 is an invented octagon with dot eyes and a rectangular beak that is drawn in the doodle's stroke style but not derived from its head shape.",
+  "evidence": "shots/duck-gwp/reviews/critic-5.json"
  }
 ]

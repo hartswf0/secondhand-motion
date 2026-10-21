@@ -1,47 +1,54 @@
 [
  {
   "id": "M2",
-  "value": 54,
+  "value": 17,
   "unit": "percentile among real doodles of the category",
-  "ok": true,
+  "ok": false,
   "per_key": [
-   48,
-   51,
-   48,
-   49,
-   55,
-   61,
-   60,
-   59,
-   51,
-   50,
-   62,
-   51
+   23,
+   23,
+   22,
+   18,
+   15,
+   20,
+   25,
+   27,
+   27,
+   23,
+   11,
+   8,
+   7,
+   7,
+   8,
+   11,
+   16,
+   15,
+   13
   ]
  },
  {
   "id": "M2b",
-  "value": 0.8,
+  "value": 0.54,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 53
  },
  {
   "id": "M3",
-  "value": 0.26,
+  "value": 0.31,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.0
+  "min": 0.03
  },
  {
   "id": "M6",
-  "value": 36.9,
+  "value": 10.6,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
  {
   "id": "T3",
-  "value": "9 strokes, 68 vertices, every frame",
+  "value": "10 strokes, 74 vertices, every frame",
   "unit": "",
   "ok": true,
   "note": "the doodle itself, bent by the rig"
@@ -80,17 +87,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201chorse head and neck\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA horse's head and neck (a horse lowering its head to eat).\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/horse-gwp/reviews/critic-1.json"
+  "evidence": "shots/horse-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The doodle's two upright pointed ears become one upright ear plus one ear lying sideways like a flag, and a second wavy line runs beside the forehead that the doodle does not have. The zigzag mane, dot eye, curved jaw stroke and throat line do carry over.",
-  "evidence": "shots/horse-gwp/reviews/critic-1.json"
+  "ok": false,
+  "note": "The mane is redrawn as a top zigzag, then a cluster, then vertical tufts instead of the doodle's one zigzag line running down the back of the neck, and the frontal oval head with two eyes in frames 1-4 and 13-16 is a construction the doodle does not contain.",
+  "evidence": "shots/horse-gwp/reviews/critic-4.json"
  }
 ]

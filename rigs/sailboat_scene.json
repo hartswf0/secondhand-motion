@@ -180,10 +180,10 @@
    "plane": "far",
    "qd": "sailboat",
    "box": [
-    40,
-    95,
-    70,
-    125
+    34,
+    140,
+    62,
+    166
    ],
    "strokes": 3
   },
@@ -192,10 +192,10 @@
    "plane": "far",
    "qd": "sailboat",
    "box": [
-    80,
-    98,
-    105,
-    122
+    74,
+    145,
+    96,
+    166
    ],
    "strokes": 3,
    "skip": 1
@@ -204,56 +204,56 @@
    "id": "sea",
    "plane": "sea",
    "class": "ground",
-   "why": "no Quick, Draw! category is a horizon; one line, with the reflections drawn as short dashes",
+   "why": "no Quick, Draw! category is a horizon; one line at the film horizon (y 166, the steamers' waterline), with the reflections drawn as short dashes kept out of the hull",
    "strokes": [
     [
      [
-      -20,
-      128
+      -200,
+      166
      ],
      [
-      420,
-      128
+      620,
+      166
      ]
     ],
     [
      [
       20,
-      160
+      190
      ],
      [
-      60,
-      160
+      70,
+      190
      ]
     ],
     [
      [
-      120,
-      175
+      40,
+      218
      ],
      [
-      180,
-      175
+      105,
+      218
      ]
     ],
     [
      [
-      260,
-      200
+      150,
+      266
      ],
      [
-      330,
-      200
+      220,
+      266
      ]
     ],
     [
      [
-      60,
-      230
+      290,
+      278
      ],
      [
-      130,
-      230
+      350,
+      278
      ]
     ]
    ]

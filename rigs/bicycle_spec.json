@@ -3,11 +3,11 @@
  "doodle_key_id": "6344657166401536",
  "facing": -1,
  "face_from": [
-  "rhub",
-  "rhub"
+  "fhub",
+  "ftop"
  ],
  "size_from_mask": false,
- "note": "Quick, Draw! bicycle 6344657166401536, facing left: two lumpy wheels (0, 1), frame (2, 3), seat (4), handlebar (5), front spokes (7, 13) and fork (8), rear spokes (9-12). Mirrored to face right; placed by the rear hub and the top of the rear wheel, the wheel the footage shows close up. Spokes spin by the distance the ground moves over the wheel radius.",
+ "note": "Quick, Draw! bicycle 6344657166401536, facing left: two lumpy wheels (0 front, 1 rear), frame (2, 3), seat (4), handlebar stem (5), hub mark (6), front spokes (7, 13), front fork (8), rear spokes (9-12). The film's bicycle faces left and the close-up wheel is the FRONT wheel (its fork rises from the hub up to the right), so the doodle is kept facing left (poses carry _face -1) and placed by the front hub and the top of the front wheel (fhub, ftop); the rear wheel, seat and most of the frame fall off frame to the right, as the film's do. The fork (8) turns about the hub toward the pose's 'fork' point so it leans up to the right like the film's fork. Spokes 7 and 13 spin counter-clockwise (rolling left) by pose spin.",
  "strokes": [
   [
    [
@@ -311,8 +311,8 @@
   ]
  ],
  "root": [
-  "rhub",
-  "rtop"
+  "fhub",
+  "ftop"
  ],
  "anchors": {
   "rhub": [
@@ -326,6 +326,14 @@
   "fhub": [
    45,
    123
+  ],
+  "ftop": [
+   45,
+   86
+  ],
+  "fork": [
+   52,
+   93
   ]
  },
  "parts": [
@@ -422,12 +430,12 @@
    "stroke": 8,
    "from": 0,
    "to": 4,
-   "joint": "rhub",
+   "joint": "fhub",
    "aim": [
-    "rhub",
-    "rtop"
+    "fhub",
+    "fork"
    ],
-   "turn": 0
+   "turn": 1
   },
   {
    "stroke": 9,

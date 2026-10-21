@@ -1,19 +1,21 @@
 [
  {
   "id": "M2",
-  "value": 39,
+  "value": 31,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   48,
-   46,
-   46,
-   45,
-   35,
-   25,
-   33,
+   39,
+   40,
+   40,
+   39,
    37,
-   37
+   31,
+   26,
+   19,
+   22,
+   26,
+   26
   ]
  },
  {
@@ -25,14 +27,14 @@
  },
  {
   "id": "M3",
-  "value": 0.35,
+  "value": 0.37,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.26
+  "min": 0.25
  },
  {
   "id": "M6",
-  "value": 21.0,
+  "value": 5.6,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -77,17 +79,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca cat's head (face with two pointed ears, two eyes and whiskers)\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca cat's head (cat face with ears, eyes and whiskers)\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/cat-gwp/reviews/critic-3.json"
+  "evidence": "shots/cat-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The head outline, ears, eyes and whisker strokes match the doodle, but the whole drawing is rotated so the left whiskers hang down at an angle instead of running level, and in frames 5-12 the ear tips are cut off by the top edge of the frame.",
-  "evidence": "shots/cat-gwp/reviews/critic-3.json"
+  "note": "The character is clearly the doodle in c.png in all frames, though in frames 14-16 the face is stretched into a wide box and the right whiskers are shortened, which drifts from the doodle's proportions.",
+  "evidence": "shots/cat-gwp/reviews/critic-4.json"
  }
 ]

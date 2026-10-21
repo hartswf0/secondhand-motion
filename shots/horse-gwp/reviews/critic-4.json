@@ -1,0 +1,23 @@
+{
+ "seen_animation": "Frames 1-4: a horse head drawn from the front as an oval with two eye marks, two pointed ears, and a horizontal zigzag mane along the top edge; a long line runs from the jaw to the left edge as the neck; grey vertical posts behind. Frame 5: still a front view with two eyes, but the zigzag mane collapses into a tight cluster of short strokes between the ears. Frame 6: the head is suddenly a side profile facing right, one eye, muzzle pointing down-right, a new top neck line from the left edge, and a stray dot where the second eye was. Frames 7-10: the profile head stays roughly in place, muzzle pointing down-right, with the mane drawn as several separate vertical zigzag tufts. Frames 11-12: the head rotates so the muzzle points straight down and moves lower; grey zigzag grass appears at the bottom. Frame 13: head low at the bottom-left, muzzle in the grass. Frames 14-16: head moved right and slightly up, muzzle down near the grass; the neck line changes from near-horizontal to a steep diagonal and the left-side posts disappear in frame 14.",
+ "seen_film": "A pale horse with a long blond mane stands at a log fence. Frames 1-2: head seen nearly from the front, center-right, ears up. Frames 3-4: the head begins to turn toward the right. Frames 5-8: the head is in three-quarter to side view facing right, muzzle angled down-right, slowly lowering. Frames 9-12: the head drops further and moves toward the left-center, muzzle pointing down; hay appears at the bottom from frame 11. Frames 13-16: the head is down in the hay at the bottom of frame eating, with the muzzle near the bottom edge in 13-14 and slightly higher, more centered, in 15-16.",
+ "named_subject": "A horse's head and neck (a horse lowering its head to eat).",
+ "verdict": "reference stronger",
+ "evidence": "The overall event matches: front view (1-4), turn to the right (5-8), head lowering (9-12), head down eating at the bottom (13-16), matching film frames at roughly the same positions. But the turn is not continuous: frame 5 is still a two-eyed front view while film frame 5 is already three-quarter, and frame 6 jumps to a full profile with a new top neck line, a different mane, and a leftover dot where the right eye was. The mane changes construction three times: horizontal zigzag along the top (1-4), a collapsed cluster (5-6), and separate vertical tufts (7-12), none of which match the doodle's single zigzag running down the back of the neck. Frame 13 to 14 the head shifts right and the neck line changes from a long near-horizontal line to a short steep diagonal while the left background posts vanish, which reads as a pop. Frames 1-4 and 13-16 show a frontal oval head with two eyes, a construction not present in the doodle.",
+ "primary_gap": "The head turn from front to profile happens as a single snap between frames 5 and 6 (two-eyed oval to one-eyed profile with a new neck line and leftover eye dot) instead of turning gradually across frames 3-6 as in the film.",
+ "closes_when": "Frames 3, 4 and 5 show progressively three-quarter heads (the far eye moving toward the far edge and shrinking, the muzzle beginning to extend to the right) so that frame 6's profile is one small step from frame 5, with no leftover eye dot.",
+ "protect": "The overall timing that matches the film (front, turn, lower, eat); the doodle's eye scribble, pointed loop ears and jaw curve with the short throat stroke in the profile frames 6-10; the head positions that track the film's head in each frame; the plain grey line scenery with posts and grass.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  6,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The mane is redrawn as a top zigzag, then a cluster, then vertical tufts instead of the doodle's one zigzag line running down the back of the neck, and the frontal oval head with two eyes in frames 1-4 and 13-16 is a construction the doodle does not contain.",
+ "still_frames_only": true,
+ "_packet": "lotcfcf7739",
+ "_round": 4
+}

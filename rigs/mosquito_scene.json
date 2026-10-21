@@ -151,26 +151,55 @@
    "qd": "grass",
    "box": [
     -10,
-    180,
+    148,
     400,
-    240
+    212
    ],
-   "aspect": 8
+   "aspect": 8,
+   "why_box": "raised so the hair marks start just under the mosquito feet, as the skin hairs do in the film"
   },
   {
    "id": "edge",
    "plane": "skin",
    "class": "ground",
-   "why": "no Quick, Draw! category is the edge of an arm; one line along it",
+   "why": "no Quick, Draw! category is the edge of an arm; one line along the arm silhouette against the dark, traced from frame 1, so it runs above the mosquito as in the film",
    "strokes": [
     [
      [
       -10,
-      60
+      16
+     ],
+     [
+      32,
+      30
+     ],
+     [
+      96,
+      50
+     ],
+     [
+      160,
+      72
+     ],
+     [
+      224,
+      92
+     ],
+     [
+      256,
+      103
+     ],
+     [
+      288,
+      124
+     ],
+     [
+      330,
+      141
      ],
      [
       400,
-      215
+      150
      ]
     ]
    ]

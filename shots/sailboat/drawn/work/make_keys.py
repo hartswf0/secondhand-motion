@@ -8,9 +8,9 @@ R = Path('/home/claude/cartoon-archive'); D = R / 'shots/sailboat/drawn'
 rig = json.load(open(R / 'shots/sailboat-gwp/rig_frames.json'))
 # frame: (hull height kh, sail size ks, sail extra width aft kw, dx, dy, why)
 K = {
- 0:  (1.00, 1.00, 1.00, 0, 0, 'start: the barge is far off, a narrow boat seen bow-quarter, about a quarter of the frame wide, right of centre with its hull on the horizon'),
- 16: (0.95, 1.03, 1.00, 0, 0, 'approach: the same narrow boat a little bigger, the masthead climbing toward the top edge'),
- 32: (0.88, 1.08, 1.04, 0, 0, 'contact: the masthead touches the top edge of the frame; from here on the boat is too big for the frame'),
+ 0:  (0.92, 1.00, 1.00, 0, 0, 'start: the barge is far off, a narrow boat seen bow-quarter, about a quarter of the frame wide, right of centre with its hull on the horizon'),
+ 16: (0.90, 1.03, 1.00, 0, 0, 'approach: the same narrow boat a little bigger, the masthead climbing toward the top edge'),
+ 32: (0.86, 1.06, 1.04, 0, 0, 'contact: the masthead touches the top edge of the frame; from here on the boat is too big for the frame'),
  42: (0.82, 1.10, 1.08, 0, 0, 'the sail head has left the top of the frame and the boat is still sliding left'),
  48: (0.77, 1.12, 1.12, 0, 0, 'extreme: the leftmost point of the drift; the barge stops sliding left and starts to swing its stern out to the right (anticipation of the line)'),
  54: (0.72, 1.14, 1.20, 0, 0, 'breakdown: the boom and stern swing out to the right, the boat lengthens as it turns its side to us'),

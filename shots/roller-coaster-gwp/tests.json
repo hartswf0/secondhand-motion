@@ -1,38 +1,39 @@
 [
  {
   "id": "M2",
-  "value": 1,
+  "value": 0,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   1,
-   1,
-   1,
-   1,
-   1,
-   1,
-   1,
-   1,
-   1,
-   1,
-   1,
-   1,
-   1,
-   1
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
   ]
  },
  {
   "id": "M2b",
-  "value": 0.11,
+  "value": 0.09,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": false,
   "design_typicality": 3
  },
  {
   "id": "M3",
-  "value": "not measured",
-  "unit": "no usable silhouette (SAM masked a group, not the subject)",
-  "ok": null
+  "value": 0.42,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.32
  },
  {
   "id": "M6",
@@ -42,7 +43,7 @@
  },
  {
   "id": "T3",
-  "value": "27 strokes, 75 vertices, every frame",
+  "value": "29 strokes, 82 vertices, every frame",
   "unit": "",
   "ok": true,
   "note": "the doodle itself, bent by the rig"
@@ -56,7 +57,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:5572615668236288; scenery quickdraw:4773289035563008, quickdraw:5998685164929024",
+  "value": "rig quickdraw:5572615668236288; scenery quickdraw:4773289035563008",
   "unit": "",
   "ok": true
  },
@@ -81,17 +82,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca roller coaster lift hill: a double-rail track with cross-tie hatch marks rising to a peak, with two support lines sloping down to the right\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201cA roller coaster: the lift-hill track with a train of cars climbing it.\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": false,
-  "evidence": "shots/roller-coaster-gwp/reviews/critic-2.json"
+  "evidence": "shots/roller-coaster-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The animated track has the doodle's double rail, short slanted hatch ties and two descending lines, but it is much steeper and narrower than the doodle's shallow bent climb for most of the shot.",
-  "evidence": "shots/roller-coaster-gwp/reviews/critic-2.json"
+  "note": "The track keeps the doodle's double rail, tick marks and right-hand descending lines, but it is bent much steeper than the doodle's shallow curved rise, which pushes it away from c.png's proportions.",
+  "evidence": "shots/roller-coaster-gwp/reviews/critic-3.json"
  }
 ]
