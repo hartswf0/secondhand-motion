@@ -132,7 +132,7 @@ def skeleton(f):
         q=contact(f,limb); sgo=-1 if limb=='lh' else 1
         e0=joint(S,q,30,lambda z,sg=sgo: z[1]+sg*0.3*z[0],fore=True)
         Sh=S+LV*sg*3
-        e1=limb_back(Sh,q,30,sg,8)
+        e1=limb_back(Sh,q,30,sg,14)
         J[limb]=(Sh*bl+S*(1-bl),e0*(1-bl)+e1*bl,q)
     for limb,sg in (('lf',-1),('rf',1)):
         q=contact(f,limb); Hp0=P-np.array([2.5*(-sg),0.0]); Hp1=P+LV*sg*3; Hp=Hp0*(1-bl)+Hp1*bl
