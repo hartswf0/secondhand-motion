@@ -6,7 +6,7 @@
   "right",
   "left"
  ],
- "note": "Quick, Draw! sandwich 4656649232973824, drawn in three-quarter view from above. Stroke 0 is the top slice of bread (crown at the top, crust corner at the right). Stroke 1 is the bottom slice: its left side, bottom edge and right side, drawn below and around the top slice. Strokes 2 and 3 are two filling lines between the slices. Stroke 4 is a short line on the right side, the thickness of the bread. The root places the bottom slice by its lower left corner (left) and its upper right corner (right); in the film the bottom slice lies still on the tray, so it only moves with the camera. The top slice is the one part: it is carried in by the worker's hand and laid on the bottom slice. pose 'lift' moves it away from its resting place along the doodle direction (-100, -40) per unit (up and to the left, where the hand comes from); pose 'tilt' turns it clockwise about the centre of the resting top slice, which both tilts the slice in the hand and swings it along an arc. At lift 0 and tilt 0 the drawing is the doodle exactly.",
+ "note": "Quick, Draw! sandwich 4656649232973824, drawn in three-quarter view from above. Stroke 0 is the top slice of bread (crown at the top, crust corner at the right). Stroke 1 is the bottom slice: its left side, bottom edge and right side, drawn below and around the top slice. Strokes 2 and 3 are two filling lines between the slices. Stroke 4 is a short line on the right side, the thickness of the bread. The root places the bottom slice by its lower left corner (left) and its upper right corner (right); in the film the bottom slice lies still on the tray, so it only moves with the camera. The top slice is the one part: it is carried in by the worker's hand and laid on the bottom slice. pose 'lift' moves it away from its resting place along the doodle direction (-70, -80) per unit (up and to the left, where the hand comes from); pose 'tilt' turns it clockwise about the centre of the resting top slice, which both tilts the slice in the hand and swings it along an arc. At lift 0 and tilt 0 the drawing is the doodle exactly.",
  "strokes": [
   [
    [
@@ -271,8 +271,8 @@
    "spin": "tilt",
    "shift_by": "lift",
    "shift": [
-    -100,
-    -40
+    -70,
+    -80
    ]
   },
   {

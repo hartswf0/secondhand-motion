@@ -1,0 +1,80 @@
+[
+ {
+  "id": "M2",
+  "value": 16,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   12,
+   19,
+   19,
+   19,
+   19,
+   19,
+   11,
+   12,
+   19,
+   11,
+   19
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.5,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 4
+ },
+ {
+  "id": "M3",
+  "value": 0.94,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": true,
+  "min": 0.91
+ },
+ {
+  "id": "M6",
+  "value": 0.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 24 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5665738343841792; scenery drawn by agent: the film's background is a heap of grapes behind the bottle; Quick, Draw! has a grapes category but it is not in this repository's data/quickdraw, so the bunches are drawn by the agent as rows of small circles under a stem, placed where large bunches sit in the frames, drawn by agent: the film's background is a heap of grapes behind the bottle; Quick, Draw! has a grapes category but it is not in this repository's data/quickdraw, so the bunches are drawn by the agent as rows of small circles under a stem, placed where large bunches sit in the frames, drawn by agent: the film's background is a heap of grapes behind the bottle; Quick, Draw! has a grapes category but it is not in this repository's data/quickdraw, so the bunches are drawn by the agent as rows of small circles under a stem, placed where large bunches sit in the frames, drawn by agent: the film's background is a heap of grapes behind the bottle; Quick, Draw! has a grapes category but it is not in this repository's data/quickdraw, so the bunches are drawn by the agent as rows of small circles under a stem, placed where large bunches sit in the frames, drawn by agent: the film's background is a heap of grapes behind the bottle; Quick, Draw! has a grapes category but it is not in this repository's data/quickdraw, so the bunches are drawn by the agent as rows of small circles under a stem, placed where large bunches sit in the frames",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

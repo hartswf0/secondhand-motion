@@ -1,0 +1,109 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.44,
+   1.0,
+   1.67,
+   2.0,
+   2.0,
+   1.67,
+   1.67,
+   2.11,
+   3.0,
+   4.0,
+   4.67,
+   4.67,
+   3.78,
+   2.44,
+   1.11,
+   0.33,
+   -0.0,
+   0.33,
+   1.22,
+   2.89,
+   4.67,
+   6.0,
+   6.67,
+   7.22,
+   7.89,
+   8.56
+  ],
+  "y": [
+   0.11,
+   0.33,
+   0.67,
+   0.89,
+   0.89,
+   0.44,
+   -0.22,
+   -0.78,
+   -1.0,
+   -1.22,
+   -1.78,
+   -2.33,
+   -2.67,
+   -2.44,
+   -2.11,
+   -1.67,
+   -1.11,
+   -0.33,
+   0.67,
+   1.11,
+   1.11,
+   0.78,
+   0.89,
+   1.22,
+   1.67,
+   1.89
+  ],
+  "source": "the underside of the nose at the top of the frame, tracked by template matching on every frame and smoothed over 5 frames. camera.json was not used: it has a 25 px vertical jump at frame 5 that the footage does not have (the nose moves under 4 px vertically in the whole interval); it measured the mouth opening, not the camera."
+ },
+ "planes": [
+  {
+   "id": "face",
+   "z": 2.0,
+   "label": "Nose and moustache (same face as the mouth)"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Mouth"
+  }
+ ],
+ "objects": [
+  {
+   "id": "nose",
+   "plane": "face",
+   "qd": "nose",
+   "box": [
+    138,
+    -60,
+    238,
+    38
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "moustache",
+   "plane": "face",
+   "qd": "moustache",
+   "box": [
+    70,
+    38,
+    300,
+    82
+   ],
+   "strokes": 2
+  }
+ ],
+ "notes": {
+  "0": "mouth a little open, both rows of teeth showing",
+  "4": "lips closed",
+  "10": "mouth at its widest, lower teeth well apart from the upper",
+  "12": "wide smile, still open",
+  "18": "lips closed again",
+  "21": "broad smile, upper teeth showing, lips drawn up",
+  "25": "smile held"
+ }
+}

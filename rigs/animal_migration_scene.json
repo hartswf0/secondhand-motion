@@ -776,24 +776,67 @@
    "skip": 3
   },
   {
-   "id": "flock_left",
+   "id": "flock_a",
    "plane": "char",
    "rig_poses": "shots/animal-migration-sam/flock_a.json",
-   "why": "more of the flock: a second, smaller copy of the same four-bird doodle rising on the left of the frame, beating its wings half a beat apart from the main drawing"
+   "why": "more of the flock: another copy of the same four-bird doodle rig, its own size, tilt and wing-beat phases, resting on the marsh until its own liftoff frame, then climbing and drifting right"
   },
   {
-   "id": "flock_right",
+   "id": "flock_b",
    "plane": "char",
    "rig_poses": "shots/animal-migration-sam/flock_b.json",
-   "why": "more of the flock: a third, smaller copy rising on the right, lower and further back, as the right side of the real flock climbs later"
+   "why": "more of the flock: another copy of the same four-bird doodle rig, its own size, tilt and wing-beat phases, resting on the marsh until its own liftoff frame, then climbing and drifting right"
+  },
+  {
+   "id": "flock_c",
+   "plane": "char",
+   "rig_poses": "shots/animal-migration-sam/flock_c.json",
+   "why": "more of the flock: another copy of the same four-bird doodle rig, its own size, tilt and wing-beat phases, resting on the marsh until its own liftoff frame, then climbing and drifting right"
+  },
+  {
+   "id": "flock_d",
+   "plane": "char",
+   "rig_poses": "shots/animal-migration-sam/flock_d.json",
+   "why": "more of the flock: another copy of the same four-bird doodle rig, its own size, tilt and wing-beat phases, resting on the marsh until its own liftoff frame, then climbing and drifting right"
+  },
+  {
+   "id": "flock_e",
+   "plane": "char",
+   "rig_poses": "shots/animal-migration-sam/flock_e.json",
+   "why": "more of the flock: another copy of the same four-bird doodle rig, its own size, tilt and wing-beat phases, resting on the marsh until its own liftoff frame, then climbing and drifting right"
+  },
+  {
+   "id": "flock_f",
+   "plane": "char",
+   "rig_poses": "shots/animal-migration-sam/flock_f.json",
+   "why": "more of the flock: another copy of the same four-bird doodle rig, its own size, tilt and wing-beat phases, resting on the marsh until its own liftoff frame, then climbing and drifting right"
+  },
+  {
+   "id": "flock_g",
+   "plane": "char",
+   "rig_poses": "shots/animal-migration-sam/flock_g.json",
+   "why": "more of the flock: another copy of the same four-bird doodle rig, its own size, tilt and wing-beat phases, resting on the marsh until its own liftoff frame, then climbing and drifting right"
+  },
+  {
+   "id": "flock_h",
+   "plane": "char",
+   "rig_poses": "shots/animal-migration-sam/flock_h.json",
+   "why": "more of the flock: another copy of the same four-bird doodle rig, its own size, tilt and wing-beat phases, resting on the marsh until its own liftoff frame, then climbing and drifting right"
+  },
+  {
+   "id": "flock_i",
+   "plane": "char",
+   "rig_poses": "shots/animal-migration-sam/flock_i.json",
+   "why": "more of the flock: another copy of the same four-bird doodle rig, its own size, tilt and wing-beat phases, resting on the marsh until its own liftoff frame, then climbing and drifting right"
   }
  ],
  "notes": {
-  "0": "the geese sit on the marsh at the water's edge; the first ones open their wings",
-  "6": "the flock lifts off; the camera starts to pan left and tilt up after it",
-  "18": "the geese climb past the bare trees, wings beating out of step",
-  "30": "the flock is in the open sky; the camera pans fast to keep it in frame",
-  "48": "the flock flies on over the next stand of trees"
+  "0": "the geese rest on the marsh with wings folded low",
+  "1": "the first group on the left opens its wings and lifts off",
+  "4": "the main group lifts off; groups on either side follow one after another through frame 10",
+  "18": "the flock climbs past the bare trees, wings beating out of step",
+  "30": "the flock spreads across the upper half of the sky up to the top edge, drifting right",
+  "48": "the flock flies on to the right over the next stand of trees"
  },
  "no_cel": "SAM masks the whole flock as one block, so a cel from it would paint over the scenery behind the birds"
 }

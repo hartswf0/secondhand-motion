@@ -6,7 +6,7 @@
   "left",
   "left"
  ],
- "note": "Quick, Draw! apple 5888302693482496. Stroke 0 is the whole outline of the apple, drawn in one line with the dimple at the top and a dip at the bottom. Stroke 1 is the stem, stroke 2 the leaf, stroke 3 a short highlight mark beside the stem. The drawing is placed by the left and right sides of the apple at its widest, so it follows the apple across the frame and tilts when the hands tilt it. The pose entry yaw turns the apple about its upright axis: the stem, leaf, highlight and the dimple slide sideways further than the outline, the way the top of a real apple shifts as it is turned between the fingers. The outline keeps the doodle's proportions and size for the whole shot.",
+ "note": "Quick, Draw! apple 5888302693482496. Stroke 0 is the whole outline of the apple, drawn in one line with the dimple at the top and a dip at the bottom. Stroke 1 is the stem, stroke 2 the leaf, stroke 3 a short highlight mark beside the stem. The drawing is placed by the left and right sides of the apple at its widest, so it follows the apple across the frame and tilts when the hands tilt it. The pose entry yaw turns the apple about its upright axis: the stem, leaf, highlight and the dimple slide sideways further than the outline, the way the top of a real apple shifts as it is turned between the fingers. The outline keeps the doodle's proportions and size for the whole shot. The pose entry nod tips the top of the apple toward the camera: the stem, leaf, highlight and the dimple move down into the face of the apple (up to 70 doodle units), as the stem end comes into view in the last second of the shot.",
  "strokes": [
   [
    [
@@ -222,6 +222,86 @@
  },
  "parts": [
   {
+   "stroke": 0,
+   "from": 0,
+   "to": 2,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "nod",
+   "shift": [
+    0,
+    70
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 30,
+   "to": 33,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "nod",
+   "shift": [
+    0,
+    70
+   ]
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 2,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "nod",
+   "shift": [
+    0,
+    70
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 6,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "nod",
+   "shift": [
+    0,
+    70
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 1,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "shift_by": "nod",
+   "shift": [
+    0,
+    70
+   ]
+  },
+  {
    "rest": true,
    "joint": "left",
    "aim": [
@@ -233,10 +313,10 @@
  ],
  "front_regions": [
   [
-   78,
+   86,
    0,
-   145,
-   100
+   140,
+   104
   ]
  ],
  "size": "steady",

@@ -1,0 +1,84 @@
+[
+ {
+  "id": "M2",
+  "value": 41,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   60,
+   40,
+   34,
+   41,
+   41,
+   40,
+   40,
+   40,
+   40,
+   40,
+   40,
+   40,
+   40,
+   41,
+   35,
+   40
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.97,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 41
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 1.5,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "9 strokes, 68 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5938479424864256; scenery drawn by agent: from f008 on, the patterned skirt of the woman opening the doors shows as a light strip at the left edge of the frame; Quick, Draw! has no skirt category in this workspace, so it is one drawn line along its edge",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
