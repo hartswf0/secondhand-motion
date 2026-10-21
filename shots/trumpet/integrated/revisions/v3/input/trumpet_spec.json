@@ -1,0 +1,299 @@
+{
+ "category": "trumpet",
+ "doodle_key_id": "6590023216398336",
+ "facing": -1,
+ "face_from": [
+  "bell",
+  "mouth"
+ ],
+ "note": "Quick, Draw! trumpet 6590023216398336, bell to the left as in the film. Stroke 0 is the bell: a tall oval on the left with the flare running up and right to the top tube. Stroke 1 is the lower tube from the bell bottom to the lead pipe. Stroke 2 is the upper tube. Stroke 3 is the mouthpiece loop at the right end, which sits at the player's lips. Strokes 4, 5 and 6 are the three valves. The whole trumpet is placed by two points, the bell centre and the mouthpiece tip, at one fixed length, so it bobs and tilts as the player moves it and never changes size. Each valve moves down by up to 9 doodle units when its press value goes from 0 to 1, as the player's fingers press it.",
+ "strokes": [
+  [
+   [
+    84,
+    42
+   ],
+   [
+    71,
+    36
+   ],
+   [
+    49,
+    12
+   ],
+   [
+    31,
+    0
+   ],
+   [
+    28,
+    1
+   ],
+   [
+    8,
+    49
+   ],
+   [
+    1,
+    78
+   ],
+   [
+    3,
+    109
+   ],
+   [
+    13,
+    127
+   ],
+   [
+    20,
+    112
+   ],
+   [
+    27,
+    72
+   ],
+   [
+    32,
+    29
+   ],
+   [
+    31,
+    9
+   ]
+  ],
+  [
+   [
+    13,
+    119
+   ],
+   [
+    25,
+    123
+   ],
+   [
+    39,
+    119
+   ],
+   [
+    101,
+    88
+   ],
+   [
+    129,
+    78
+   ],
+   [
+    174,
+    73
+   ],
+   [
+    224,
+    73
+   ]
+  ],
+  [
+   [
+    94,
+    37
+   ],
+   [
+    103,
+    43
+   ],
+   [
+    218,
+    60
+   ],
+   [
+    224,
+    61
+   ],
+   [
+    226,
+    58
+   ]
+  ],
+  [
+   [
+    227,
+    59
+   ],
+   [
+    253,
+    50
+   ],
+   [
+    255,
+    53
+   ],
+   [
+    238,
+    78
+   ],
+   [
+    223,
+    74
+   ]
+  ],
+  [
+   [
+    153,
+    31
+   ],
+   [
+    148,
+    75
+   ],
+   [
+    148,
+    88
+   ],
+   [
+    152,
+    92
+   ],
+   [
+    160,
+    62
+   ],
+   [
+    160,
+    42
+   ],
+   [
+    155,
+    31
+   ]
+  ],
+  [
+   [
+    176,
+    31
+   ],
+   [
+    169,
+    74
+   ],
+   [
+    169,
+    85
+   ],
+   [
+    174,
+    90
+   ],
+   [
+    182,
+    63
+   ],
+   [
+    185,
+    26
+   ]
+  ],
+  [
+   [
+    195,
+    40
+   ],
+   [
+    188,
+    75
+   ],
+   [
+    188,
+    83
+   ],
+   [
+    191,
+    84
+   ],
+   [
+    198,
+    66
+   ],
+   [
+    203,
+    32
+   ]
+  ]
+ ],
+ "anchors": {
+  "bell": [
+   16,
+   64
+  ],
+  "mouth": [
+   254,
+   52
+  ]
+ },
+ "root": [
+  "bell",
+  "mouth"
+ ],
+ "size_from_mask": false,
+ "size": "steady",
+ "parts": [
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 6,
+   "joint": "bell",
+   "aim": [
+    "bell",
+    "mouth"
+   ],
+   "turn": 0,
+   "shift_by": "v1",
+   "shift": [
+    0,
+    9
+   ]
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 5,
+   "joint": "bell",
+   "aim": [
+    "bell",
+    "mouth"
+   ],
+   "turn": 0,
+   "shift_by": "v2",
+   "shift": [
+    0,
+    9
+   ]
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 5,
+   "joint": "bell",
+   "aim": [
+    "bell",
+    "mouth"
+   ],
+   "turn": 0,
+   "shift_by": "v3",
+   "shift": [
+    0,
+    9
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "bell",
+   "aim": [
+    "bell",
+    "mouth"
+   ],
+   "turn": 0
+  }
+ ],
+ "track": true,
+ "smooth": 1.2
+}

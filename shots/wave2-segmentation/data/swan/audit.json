@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "a3c55390d723d234e70321fdf59eacf39d3d75ac07ac1ce51227625e20769e70",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Distant swan",
+      "result": "manual_proxy_inspection",
+      "note": "Small distant swan body and neck captured; feet are not resolved. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.913
+    },
+    {
+      "frame": 12,
+      "observed_target": "Distant swan",
+      "result": "manual_proxy_inspection",
+      "note": "Small distant swan body and neck captured; feet are not resolved. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.904
+    },
+    {
+      "frame": 25,
+      "observed_target": "Distant swan",
+      "result": "manual_proxy_inspection",
+      "note": "Small distant swan body and neck captured; feet are not resolved. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.914
+    },
+    {
+      "frame": 37,
+      "observed_target": "Distant swan",
+      "result": "manual_proxy_inspection",
+      "note": "Small distant swan body and neck captured; feet are not resolved. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.911
+    }
+  ]
+}

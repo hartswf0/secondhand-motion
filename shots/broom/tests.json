@@ -1,0 +1,165 @@
+[
+  {
+    "id": "M1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2b",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M5",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M6",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J3",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S6",
+    "value": "Archive ids, original URLs, reported rights, pinned raw SHA and refined source interval retained; rights independently unverified.",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "J4",
+    "value": {
+      "rounds": 2,
+      "identity": true,
+      "sampled_source_pose": true,
+      "playback_watched": false
+    },
+    "unit": "sampled still review only",
+    "ok": true
+  },
+  {
+    "id": "B1",
+    "value": 1.0,
+    "unit": "fraction of static background geometry unchanged; animated props separately credited",
+    "ok": true
+  },
+  {
+    "id": "T1",
+    "value": {
+      "min_recall": 0.9978517722878625,
+      "min_parts_kept": 1.0,
+      "keys": 13,
+      "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+  },
+  {
+    "id": "T3",
+    "value": {
+      "native_topology": true,
+      "native_key_id": "6486360229675008",
+      "explicit_extra_strokes": []
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "M3",
+    "value": {
+      "pass": false,
+      "status": "not measured by this assembly",
+      "reason": "No audited same-instance mask target evaluated against this final native render"
+    },
+    "unit": "audited target unavailable or not measured",
+    "ok": false
+  },
+  {
+    "id": "M4",
+    "value": 0,
+    "unit": "verified planted intervals; minimum4",
+    "ok": false
+  },
+  {
+    "id": "S1",
+    "value": "Frozen source camera and depth planes preserved; no independent parallax verification.",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S2",
+    "value": "Native key credited; all scene geometry and extra strokes retain separate source records.",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S3",
+    "value": {
+      "frames": 61,
+      "fps": 24,
+      "keys": [
+        0,
+        4,
+        8,
+        12,
+        18,
+        26,
+        32,
+        38,
+        44,
+        46,
+        48,
+        52,
+        60
+      ],
+      "source_time_every_frame": true
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S4",
+    "value": "Static links/scripts checked separately; actual390px browser layout unrun.",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S5",
+    "value": "Native fill regions may occlude held scene; complete actor/prop occlusion not independently reviewed.",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S7",
+    "value": 4,
+    "unit": "hash-linked append-only ledger entries",
+    "ok": true
+  }
+]

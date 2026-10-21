@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "d399ef4ba9295195dbc745830c81e365c355b00cda88613ac7b0feda698fc03b",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Brush / paint marks",
+      "result": "manual_proxy_inspection",
+      "note": "Brush tip and visible handle broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.94
+    },
+    {
+      "frame": 12,
+      "observed_target": "Brush / paint marks",
+      "result": "manual_proxy_inspection",
+      "note": "Brush tip and handle selected with soft edges. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.934
+    },
+    {
+      "frame": 24,
+      "observed_target": "Brush / paint marks",
+      "result": "manual_proxy_inspection",
+      "note": "Brush body selected while its tip changes position. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.949
+    },
+    {
+      "frame": 36,
+      "observed_target": "Brush / paint marks",
+      "result": "manual_proxy_inspection",
+      "note": "Large paint-mark area merges with the brush target. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.826
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "subject": "trumpet",
+  "source_pair_integrity": true,
+  "raw_source_sha256": "a48a92cf09425fe1395e125cec4475606341edfd388b1441995758c8e4e1c445",
+  "keys_checked": 12,
+  "checks": [
+    {
+      "key": 1,
+      "render_frame": 0,
+      "actual_source_index": 15,
+      "actual_source_pts": 0.500501,
+      "photo_rgb_mae": 0.649179,
+      "movie_panel_rgb_mae": 1.057792
+    },
+    {
+      "key": 2,
+      "render_frame": 6,
+      "actual_source_index": 22,
+      "actual_source_pts": 0.734067,
+      "photo_rgb_mae": 0.663698,
+      "movie_panel_rgb_mae": 1.22095
+    },
+    {
+      "key": 3,
+      "render_frame": 12,
+      "actual_source_index": 30,
+      "actual_source_pts": 1.001001,
+      "photo_rgb_mae": 0.725402,
+      "movie_panel_rgb_mae": 1.153525
+    },
+    {
+      "key": 4,
+      "render_frame": 26,
+      "actual_source_index": 47,
+      "actual_source_pts": 1.568235,
+      "photo_rgb_mae": 0.654972,
+      "movie_panel_rgb_mae": 1.180182
+    },
+    {
+      "key": 5,
+      "render_frame": 38,
+      "actual_source_index": 62,
+      "actual_source_pts": 2.068735,
+      "photo_rgb_mae": 0.664906,
+      "movie_panel_rgb_mae": 1.167149
+    },
+    {
+      "key": 6,
+      "render_frame": 54,
+      "actual_source_index": 82,
+      "actual_source_pts": 2.736069,
+      "photo_rgb_mae": 0.69254,
+      "movie_panel_rgb_mae": 1.234562
+    },
+    {
+      "key": 7,
+      "render_frame": 66,
+      "actual_source_index": 97,
+      "actual_source_pts": 3.23657,
+      "photo_rgb_mae": 0.699189,
+      "movie_panel_rgb_mae": 1.259853
+    },
+    {
+      "key": 8,
+      "render_frame": 74,
+      "actual_source_index": 107,
+      "actual_source_pts": 3.570237,
+      "photo_rgb_mae": 0.703396,
+      "movie_panel_rgb_mae": 1.240581
+    },
+    {
+      "key": 9,
+      "render_frame": 80,
+      "actual_source_index": 115,
+      "actual_source_pts": 3.837171,
+      "photo_rgb_mae": 0.657706,
+      "movie_panel_rgb_mae": 1.024197
+    },
+    {
+      "key": 10,
+      "render_frame": 90,
+      "actual_source_index": 127,
+      "actual_source_pts": 4.237571,
+      "photo_rgb_mae": 0.684613,
+      "movie_panel_rgb_mae": 1.112796
+    },
+    {
+      "key": 11,
+      "render_frame": 108,
+      "actual_source_index": 150,
+      "actual_source_pts": 5.005005,
+      "photo_rgb_mae": 0.7365,
+      "movie_panel_rgb_mae": 1.233404
+    },
+    {
+      "key": 12,
+      "render_frame": 120,
+      "actual_source_index": 164,
+      "actual_source_pts": 5.472139,
+      "photo_rgb_mae": 0.680233,
+      "movie_panel_rgb_mae": 1.352967
+    }
+  ],
+  "scope": "Source bytes, nearest decoded PTS and image viewport only. No artistic or motion approval."
+}

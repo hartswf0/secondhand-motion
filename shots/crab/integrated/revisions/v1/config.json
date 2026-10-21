@@ -1,0 +1,78 @@
+{
+  "title": "Crab folds its eyestalks",
+  "revision": "integrated-v1",
+  "interval": [
+    5.5,
+    8.483333333333334
+  ],
+  "W": 384,
+  "H": 288,
+  "source_sha256": "0cfd5cddd16b5480311e0cf81e402b0149ae06a86cafdb03d24ac3ef2627f1b5",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "key_times": [
+    5.5,
+    6.4,
+    6.65,
+    6.7333333,
+    6.8166667,
+    6.9,
+    6.9833333,
+    7.0666667,
+    7.15,
+    7.2333333,
+    7.3166667,
+    8.0,
+    8.483333333333334
+  ],
+  "key_notes": {
+    "5.5": "Opening retained pose",
+    "6.4": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "6.65": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "6.7333333": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "6.8166667": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "6.9": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "6.9833333": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "7.0666667": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "7.15": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "7.2333333": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "7.3166667": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "8.0": "Observed eyestalk reach/fold phase and lowered claw staging",
+    "8.483333333333334": "Final observed pose"
+  },
+  "extra_strokes": [
+    {
+      "index": 11,
+      "source": "drawn by agent in frozen GWP study from source observations",
+      "note": "Left eyestalk and eye outline absent from native design; original 11 strokes kept separately."
+    },
+    {
+      "index": 12,
+      "source": "drawn by agent in frozen GWP study from source observations",
+      "note": "Right eyestalk and eye outline absent from native design."
+    }
+  ],
+  "fill_strokes": [],
+  "background_fill": false,
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Builder inspected16raw source samples spanning the retained interval and boundary margins in preflight-source.jpg. One continuous event; no internal cut/dissolve observed."
+  },
+  "compatibility": {
+    "status": "compatible_with_explicit_simplifications",
+    "changes": [
+      "Each complete native claw assembly is rotated about its native arm root toward the lowered source claw position; original loops and inner claw strokes retained.",
+      "The four native drawn leg strokes are spread to source-observed lateral reaches. They are simplifications of overlapping legs, not four verified foot contacts.",
+      "Two frozen agent-authored eyestalk strokes retain the source fold event, separately credited; they are not original native ink."
+    ],
+    "provisional_design_record": null,
+    "limitations": "Four drawn leg strokes plus2agent eyes, not full anatomical limb/contact tracking"
+  },
+  "verified_contacts": [],
+  "camera_note": "shots/crab-sam/camera.json (phase correlation); the shot is nearly locked off, under 2 px of drift",
+  "review_note": "Native identity passes; sampled source pose passes. Normal-speed playback is unrun/unapproved; the viewed still samples reveal no material identity or source framing/pose gap. Normal-speed motion remains unapproved; classifier unrun. No training ran.",
+  "assembly_summary": "The same native eleven-stroke crab lowers both claw constructions and spreads its four drawn leg reaches over the visible sand. Two separately credited agent eyestalk strokes preserve the observed brief eye-fold event.",
+  "review_status": "review_candidate"
+}

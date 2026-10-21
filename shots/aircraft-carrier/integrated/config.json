@@ -1,0 +1,64 @@
+{
+  "title": "Aircraft carrier turns past the bow",
+  "interval": [
+    14.5,
+    18.0833333333333
+  ],
+  "source_sha256": "0c7934b70af65c769f4e23f5aee5355ef1776935e600869d79aec8bc2e84450b",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/repair-v3-gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "W": 384,
+  "H": 288,
+  "extra_strokes": [],
+  "background_fill": false,
+  "review_note": "3 independent still review round(s). Native identity: True; sampled source pose: False. Across all 15 paired keys the long deck runs off the upper frame, while the source shows the foreshortened deck and its aft extent within the image. The cartoon presents an oversized elongated bow/deck crop instead of the source whole-carrier framing. Normal-speed playback, classifier and verified material contacts remain unrun. No training ran.",
+  "assembly_summary": "Five native strokes describe deck and hull. Island, parked aircraft and crew are absent from this sparse source drawing; no new technical detail is invented.",
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Raw 16-frame preflight shows one carrier turn; cut before11.5 excluded and the end is shortened from18.5 to18.0833 to exclude the next tower dissolve.",
+    "sample_count": 16,
+    "sheet": "preflight-source-design.jpg"
+  },
+  "compatibility": {
+    "status": "compatible_with_explicit_simplifications",
+    "native_key_id": "6257793294139392",
+    "source_part_inventory": "Five native strokes describe deck and hull. Island, parked aircraft and crew are absent from this sparse source drawing; no new technical detail is invented.",
+    "mask_target_limit": "Filled rig mask not measured; early legacy mask omits island and last49crossesdissolve.",
+    "design_reselected": false,
+    "original_native_topology_retained": true
+  },
+  "verified_contacts": [],
+  "camera_note": "Frozen GWP background-only registration retained independently of source-observed character positions. No unverified contact pass inferred.",
+  "key_notes": {
+    "15.9": "The ship approaches; the slab grows slightly, heading unchanged.",
+    "16.4": "Last frames of the straight approach before the swing starts at 26.",
+    "18.3166667": "Swing continues; the bow face narrows.",
+    "17.4": "Even swing: the deck now runs from the island down toward the bow corner.",
+    "16.9": "Even swing: the near long edge leans further over and the near side of the hull starts to show.",
+    "18.15": "The line: the deck reads as a long diagonal from the island to the bow, with the hull side and the stem below it.",
+    "18.0666667": "Even swing into the line.",
+    "14.9": "Same heading while the camera pans; the slab slides right with the deck's front edge.",
+    "17.7333333": "Even swing, one step on.",
+    "18.4": "Swing continues; the ship grows as it closes on the camera.",
+    "17.9": "Even swing: the deck diagonal flattens toward three-quarter.",
+    "17.8166667": "Even swing, one step on.",
+    "16.65": "The swing begins: from here the slab rotates by the same small step every frame until 49.",
+    "18.2333333": "Swing continues past the line.",
+    "18.4833333": "Last frame: three-quarter view, deck diagonal from upper left to the bow, stem at lower right.",
+    "17.65": "Even swing: the stem moves right under the bow face.",
+    "17.15": "Even swing: the near side of the hull widens under the deck edge.",
+    "14.4": "Opening pose: the carrier comes nearly bow on (3 degrees); the doodle's long slab is seen from just off its bow, the deck foreshortened, the long edges receding up the frame, the hull strokes meeting in the V of the bow under the deck.",
+    "17.9833333": "Even swing, one step on.",
+    "15.4": "Still bow on; the slab rides a little lower as the ship approaches."
+  },
+  "fill_strokes": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "revision": "integrated-v3",
+  "review_status": "still_gap_motion_unapproved"
+}

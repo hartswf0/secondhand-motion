@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "516e1a22e22ae41b3f7453016c1b1de464968c58020b10c8cfbc03384b86781d",
+  "legacy_meta_sha256": "b00632cf9b64d135131eb5d2594592652d1e4a3f06d6ec6c0dbea44c14c03e13",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a broom.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/broom-sam/clip.json",
+    "shots/broom-sam/masks.json",
+    "shots/broom-sam/mask_meta.json"
+  ],
+  "clip_id": "e706c786-b112-5c22-846c-7008afec718d",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "cbef6a3f048c9a7c606dde23ea3d5910b0c3be3f1f4288f4849574911a574d17",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "1887a6866954c3f282452bf5b0871d2ff3bb9cfb75ab265fa6d2788c0568ff72",
+  "source_record": "../../../broom/source.json",
+  "assembly_source_record": "../../../broom/integrated/source.json",
+  "note": "The mask changes from one broom to a merged pair; it is not a stable union of all three brooms in the source. These masks are filled exported contour proxies, not original binary SAM masks."
+}

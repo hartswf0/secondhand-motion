@@ -1,0 +1,121 @@
+{
+  "subject": "roller-coaster",
+  "source_pair_integrity": true,
+  "raw_source_sha256": "4c3e5ebeab2be9053893ba38cf9563dec63a7674d83abe96630ad2344761a541",
+  "keys_checked": 14,
+  "checks": [
+    {
+      "key": 1,
+      "render_frame": 0,
+      "actual_source_index": 88,
+      "actual_source_pts": 2.93627,
+      "photo_rgb_mae": 0.752794,
+      "movie_panel_rgb_mae": 0.907507
+    },
+    {
+      "key": 2,
+      "render_frame": 8,
+      "actual_source_index": 98,
+      "actual_source_pts": 3.269937,
+      "photo_rgb_mae": 0.738553,
+      "movie_panel_rgb_mae": 0.876555
+    },
+    {
+      "key": 3,
+      "render_frame": 16,
+      "actual_source_index": 108,
+      "actual_source_pts": 3.603604,
+      "photo_rgb_mae": 0.684335,
+      "movie_panel_rgb_mae": 1.333716
+    },
+    {
+      "key": 4,
+      "render_frame": 24,
+      "actual_source_index": 118,
+      "actual_source_pts": 3.937271,
+      "photo_rgb_mae": 0.620434,
+      "movie_panel_rgb_mae": 1.117344
+    },
+    {
+      "key": 5,
+      "render_frame": 32,
+      "actual_source_index": 128,
+      "actual_source_pts": 4.270938,
+      "photo_rgb_mae": 0.623734,
+      "movie_panel_rgb_mae": 1.103597
+    },
+    {
+      "key": 6,
+      "render_frame": 40,
+      "actual_source_index": 138,
+      "actual_source_pts": 4.604605,
+      "photo_rgb_mae": 0.583152,
+      "movie_panel_rgb_mae": 1.078637
+    },
+    {
+      "key": 7,
+      "render_frame": 48,
+      "actual_source_index": 148,
+      "actual_source_pts": 4.938272,
+      "photo_rgb_mae": 0.559507,
+      "movie_panel_rgb_mae": 1.070132
+    },
+    {
+      "key": 8,
+      "render_frame": 56,
+      "actual_source_index": 158,
+      "actual_source_pts": 5.271939,
+      "photo_rgb_mae": 0.524957,
+      "movie_panel_rgb_mae": 0.98685
+    },
+    {
+      "key": 9,
+      "render_frame": 64,
+      "actual_source_index": 168,
+      "actual_source_pts": 5.605606,
+      "photo_rgb_mae": 0.508111,
+      "movie_panel_rgb_mae": 1.035482
+    },
+    {
+      "key": 10,
+      "render_frame": 72,
+      "actual_source_index": 178,
+      "actual_source_pts": 5.939273,
+      "photo_rgb_mae": 0.492088,
+      "movie_panel_rgb_mae": 0.845809
+    },
+    {
+      "key": 11,
+      "render_frame": 80,
+      "actual_source_index": 188,
+      "actual_source_pts": 6.27294,
+      "photo_rgb_mae": 0.505061,
+      "movie_panel_rgb_mae": 0.86364
+    },
+    {
+      "key": 12,
+      "render_frame": 88,
+      "actual_source_index": 198,
+      "actual_source_pts": 6.606607,
+      "photo_rgb_mae": 0.523875,
+      "movie_panel_rgb_mae": 0.770505
+    },
+    {
+      "key": 13,
+      "render_frame": 96,
+      "actual_source_index": 208,
+      "actual_source_pts": 6.940274,
+      "photo_rgb_mae": 0.531229,
+      "movie_panel_rgb_mae": 0.768983
+    },
+    {
+      "key": 14,
+      "render_frame": 105,
+      "actual_source_index": 218,
+      "actual_source_pts": 7.273941,
+      "photo_rgb_mae": 0.538402,
+      "movie_panel_rgb_mae": 0.968789
+    }
+  ],
+  "scope": "Source bytes, nearest decoded PTS and image viewport only. No artistic or motion approval."
+}

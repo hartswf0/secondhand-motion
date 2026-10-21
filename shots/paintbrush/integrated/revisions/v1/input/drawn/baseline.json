@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A paintbrush drawn in black, bristles pointing up-left, the bristle head a pointed oval filled with a zigzag scribble, the handle two straight lines spreading apart down to the bottom edge. A thin grey line runs up-right from just above the bristle tip. Frames 1-4: the brush stays near the upper-middle with a short grey line. Frames 5-15: the brush slides gradually down and to the left while the grey line lengthens toward the lower left, so the brush appears to be laying down the stroke. Frame 16: the brush is suddenly back up and to the right (about where it was in frames 4-8) and the grey line now extends past it to the left. Grey scenery (a hook-shaped curl top-left, a diagonal curve bottom-left, vertical lines on the right) does not change.",
+ "seen_film": "Close-up of a real paintbrush with dark bristles and a clear/white ferrule, tip up-left, on tan paper. A thin dark line runs up-right from the bristle tip. Frames 1-4: brush near upper-middle, small drift. Frames 5-15: the brush moves down and left in steps while the painted line lengthens behind it toward the lower left; frames 11, 12 and 15 show the brush motion-blurred into a double image. Frame 16: the brush is back up and to the right, partly blurred, as if lifted and returned for the next stroke.",
+ "named_subject": "a paintbrush (bristle head with scribbled hair and a handle) painting a thin line",
+ "verdict": "bar met",
+ "evidence": "Brush positions per cell track the film within about 20 px in every frame: 1 (~150,125 vs film ~145,125), 6 (~135,140 vs ~115,143), 9 (~115,161 vs ~130,141), 13 (~95,174 vs ~100,164), 14 (~90,175 vs ~95,169), and the return in 16 (~140,150 vs ~175,124), which the film also has. The grey stroke lengthens from frame 1 to 15 at the same rate as the film's painted line (left end near x 125 in 9, near x 97 in 15). The animation does not reproduce the film's blur doubling in 11, 12, 15, giving a single clean drawing each frame. The bristle head's zigzag scribble inside a pointed outline matches c.png's bristle construction. Judged from still frames only, not playback.",
+ "primary_gap": "In frames 1-8 the grey painted line starts about 10-15 px up-right of the bristle tip instead of touching it, so the brush does not visibly lay down the line it is moving along, whereas the film's line meets the tip.",
+ "closes_when": "In every frame 1-15 the lower-left end of the grey line sits exactly on the bristle tip point.",
+ "protect": "The frame-by-frame placement and down-left path that matches the film, the frame-16 return matching the film's, the steadily growing stroke, the zigzag-scribble bristle head from c.png kept as one consistent drawing without doubling, and the unchanged grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The bristle head matches c.png, but the handle is drawn as two open diverging lines rather than the doodle's single closed, narrow, slightly tapered handle outline.",
+ "still_frames_only": true,
+ "_lot": "lotff8757d7",
+ "_round": "baseline before drawn keys"
+}

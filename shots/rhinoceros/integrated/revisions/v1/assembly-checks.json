@@ -1,0 +1,31 @@
+{
+  "rendered_frames": 99,
+  "keys": 14,
+  "full_decode": true,
+  "source_sha256_verified": true,
+  "native_topology": true,
+  "trace_fidelity": {
+    "min_recall": 0.9960906958561376,
+    "min_parts_kept": 1.0,
+    "keys": 14,
+    "pass": true
+  },
+  "held_background_geometry": true,
+  "background_strokes_unchanged_fraction": 1.0,
+  "mask_fit": {
+    "pass": false,
+    "status": "not measured by this assembly",
+    "reason": "No audited same-instance mask target evaluated against this final native render"
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "verified_planted_intervals": 0,
+  "foot_slide_gate": false,
+  "release_approved": false,
+  "training_ran": false,
+  "source_aspect_preserved": true,
+  "source_clock": "decoded best_effort_timestamp_time",
+  "common_source_drawing_crop": null,
+  "animated_scene_objects": [],
+  "background_gate_scope": "Static scene objects only; separately credited animated props/operators retain their explicit exposure sequences"
+}

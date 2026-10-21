@@ -1,0 +1,172 @@
+[
+  {
+    "id": "M1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2b",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M5",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M6",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J3",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "T1",
+    "value": {
+      "min_recall": 0.9981842941443486,
+      "min_parts_kept": 1.0,
+      "keys": 12,
+      "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+  },
+  {
+    "id": "T3",
+    "value": {
+      "native_topology": true,
+      "point_counts": [
+        17,
+        8,
+        8,
+        11,
+        5
+      ]
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "B1",
+    "value": {
+      "pass": false,
+      "static_objects_measured": 0,
+      "scope": "Static frozen scenery only; separate camera motion, no regenerated background. Zero static geometry does not pass."
+    },
+    "unit": "",
+    "ok": false
+  },
+  {
+    "id": "M3",
+    "value": {
+      "mean_iou": null,
+      "min_iou": null,
+      "reason": "Not measured against audited same-instance final-render target"
+    },
+    "unit": "IoU",
+    "ok": false
+  },
+  {
+    "id": "M4",
+    "value": 0,
+    "unit": "verified planted intervals; minimum4",
+    "ok": false
+  },
+  {
+    "id": "J4",
+    "value": {
+      "identity": true,
+      "sampled_pose": false,
+      "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+  },
+  {
+    "id": "S1",
+    "value": "Depth planes retained from frozen study; no independent current parallax ordering check",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S2",
+    "value": "Native doodle key 4618667562106880 and separately source-credited frozen scene objects; optional extras explicitly credited",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S3",
+    "value": {
+      "frames": 72,
+      "fps": 24,
+      "source_time_every_frame": true,
+      "keys": [
+        0,
+        8,
+        14,
+        20,
+        26,
+        32,
+        38,
+        44,
+        52,
+        60,
+        66,
+        71
+      ]
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S4",
+    "value": "Offline links/scripts checked by artifact verifier; no actual mobile browser observation",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S5",
+    "value": "Native closed fill strokes occlude scenery; separate independent occlusion audit not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S6",
+    "value": "Raw source SHA256, decoded PTS, original archive ids/URLs/reported rights and QuickDrawCCBY retained",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S7",
+    "value": 7,
+    "unit": "verified hash-linked ledger entries",
+    "ok": true
+  }
+]

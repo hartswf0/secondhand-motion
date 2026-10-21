@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "1d5c894996fb530d0a642f6f1419248925a9945fddd5fb0472b1ef0fee628ad8",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Toad",
+      "result": "manual_proxy_inspection",
+      "note": "Visible frontal toad body and feet broadly captured; floor-edge pixels remain approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.96
+    },
+    {
+      "frame": 10,
+      "observed_target": "Toad",
+      "result": "manual_proxy_inspection",
+      "note": "Visible frontal toad body and feet broadly captured; floor-edge pixels remain approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.963
+    },
+    {
+      "frame": 21,
+      "observed_target": "Toad",
+      "result": "manual_proxy_inspection",
+      "note": "Visible frontal toad body and feet broadly captured; floor-edge pixels remain approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.955
+    },
+    {
+      "frame": 31,
+      "observed_target": "Toad",
+      "result": "manual_proxy_inspection",
+      "note": "Visible frontal toad body and feet broadly captured; floor-edge pixels remain approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.959
+    }
+  ]
+}

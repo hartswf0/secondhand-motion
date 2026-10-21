@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "1887a6866954c3f282452bf5b0871d2ff3bb9cfb75ab265fa6d2788c0568ff72",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Brooms",
+      "result": "manual_proxy_inspection",
+      "note": "Nearest broom head and handle selected; other brooms omitted. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.92
+    },
+    {
+      "frame": 10,
+      "observed_target": "Brooms",
+      "result": "manual_proxy_inspection",
+      "note": "Nearest broom selected; other instances remain outside mask. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.968
+    },
+    {
+      "frame": 21,
+      "observed_target": "Brooms",
+      "result": "manual_proxy_inspection",
+      "note": "One broom selected near the central handle. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.952
+    },
+    {
+      "frame": 31,
+      "observed_target": "Brooms",
+      "result": "manual_proxy_inspection",
+      "note": "Two broom heads merge into one target. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.938
+    }
+  ]
+}

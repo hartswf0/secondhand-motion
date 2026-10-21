@@ -1,0 +1,19 @@
+{
+  "source_sha256": "39c8abc5beb99bde2515b0d31fbfab91731c4110088a1ceedff8ea1712b8a766",
+  "source_fps": 29.97,
+  "source_frames": 256,
+  "files": {
+    "source.json": "687ef90ab5636b5602e79b0a67d4db33ec424f8524fde281ed017b3b22efa7a0",
+    "original-freeze-manifest.json": "55cc87d5090557381ae38c2847773db0a4aa3d598c4d9a9ef417aca0e099939c",
+    "gwp-shot-original.json": "30c36232e7a5f524f97b99f4ca6386fd94012d3c8d99efba4e18796d58584cb4",
+    "design.png": "f963bed588317f3314432ffcc4bff2ad7e7ed0f2a1331bbff1fd690c39077914",
+    "design.json": "2372981d4f607914448d18fb035b11359b508a9425084ac490842f27ce399181",
+    "rig-spec.json": "a3367d50e6130486727483aa1303bc98e9d3164bc8735037788a7434a63ea04f",
+    "clip.json": "54f3f3fb1c729561f5fceeda92e1f90d93cb5106e02e0f49f7bab6807b7b3fc0",
+    "gwp-shot.json": "ef088297ee2ea3e829d87cccd2d50568b67b05d460d6c8d0c14aa08dc6885884",
+    "plan.json": "d788fa87ddda30786869ac97da6c4bfc1938d3d4af847ac379d1591c3607cce2",
+    "drawn/baseline.json": "3b44f486ba3454232dfddc0a4efc0a86c5899e8553ba3a2d976b68677c1f01aa"
+  },
+  "derived_input_note": "gwp-shot-original.json retains original GWP input. gwp-shot.json promotes the source-visible lion2 to cast for2\u20132.75s and shifts native head10px/upperneck6px to source observations; no point count changes.",
+  "snapshot_scope": "Reproduction uses frozenJSONinputs; legacydrawnpreviewPNGs are omitted as they are not renderinputs."
+}

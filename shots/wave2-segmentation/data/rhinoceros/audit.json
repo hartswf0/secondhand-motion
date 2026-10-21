@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "18f0a4aa919b5128b0a75f73aa7790cf3a1a7b0130dbd6029cede76a52ed27e9",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Rhinoceros",
+      "result": "manual_proxy_inspection",
+      "note": "Broad whole visible rhino selected; legs and ground edges approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.956
+    },
+    {
+      "frame": 16,
+      "observed_target": "Rhinoceros",
+      "result": "manual_proxy_inspection",
+      "note": "Broad whole visible rhino selected; legs and ground edges approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.959
+    },
+    {
+      "frame": 33,
+      "observed_target": "Rhinoceros",
+      "result": "manual_proxy_inspection",
+      "note": "Broad whole visible rhino selected; legs and ground edges approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.969
+    },
+    {
+      "frame": 49,
+      "observed_target": "Rhinoceros",
+      "result": "manual_proxy_inspection",
+      "note": "Broad whole visible rhino selected; legs and ground edges approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.955
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "artifact_integrity": {
+    "subject": "aircraft-carrier",
+    "technical_pass": true,
+    "frames": 87,
+    "fps": 24,
+    "keys": 15,
+    "strict_json_files": 178,
+    "relative_links": 15,
+    "hash_verified_ledger_entries": 6,
+    "movies": [
+      {
+        "path": "shots/aircraft-carrier/integrated/cartoon.mp4",
+        "decoded_frames": 87,
+        "fps": 24.0,
+        "sha256": "014fb0e0a6e0c1fc4fa72efb20d8f8021db2e33ef79e68d93ab811a95bd57f5a",
+        "key_pixel_checks": [
+          {
+            "key": 1,
+            "frame": 0,
+            "rgb_mae": 1.68709
+          },
+          {
+            "key": 2,
+            "frame": 10,
+            "rgb_mae": 1.69574
+          },
+          {
+            "key": 3,
+            "frame": 22,
+            "rgb_mae": 1.695536
+          },
+          {
+            "key": 4,
+            "frame": 34,
+            "rgb_mae": 1.700937
+          },
+          {
+            "key": 5,
+            "frame": 46,
+            "rgb_mae": 1.702013
+          },
+          {
+            "key": 6,
+            "frame": 52,
+            "rgb_mae": 1.70569
+          },
+          {
+            "key": 7,
+            "frame": 58,
+            "rgb_mae": 1.699086
+          },
+          {
+            "key": 8,
+            "frame": 64,
+            "rgb_mae": 1.695183
+          },
+          {
+            "key": 9,
+            "frame": 70,
+            "rgb_mae": 1.69515
+          },
+          {
+            "key": 10,
+            "frame": 76,
+            "rgb_mae": 1.704967
+          },
+          {
+            "key": 11,
+            "frame": 78,
+            "rgb_mae": 1.700744
+          },
+          {
+            "key": 12,
+            "frame": 80,
+            "rgb_mae": 1.699047
+          },
+          {
+            "key": 13,
+            "frame": 82,
+            "rgb_mae": 1.702763
+          },
+          {
+            "key": 14,
+            "frame": 84,
+            "rgb_mae": 1.705835
+          },
+          {
+            "key": 15,
+            "frame": 86,
+            "rgb_mae": 1.74012
+          }
+        ]
+      },
+      {
+        "path": "shots/aircraft-carrier/integrated/source-excerpt.mp4",
+        "decoded_frames": 87,
+        "fps": 24.0,
+        "sha256": "06e731dc0f37da4570cab8967b9261bae26c23d5a0c2ff6bbc4b2a9d4004b9a0",
+        "key_pixel_checks": []
+      },
+      {
+        "path": "shots/aircraft-carrier/integrated/comparison.mp4",
+        "decoded_frames": 87,
+        "fps": 24.0,
+        "sha256": "4d2370ba9a7cfea94215b75b60b023590bff62ae0a6e65e369c1df61a611c601",
+        "key_pixel_checks": [
+          {
+            "key": 1,
+            "frame": 0,
+            "rgb_mae": 1.683108
+          },
+          {
+            "key": 2,
+            "frame": 10,
+            "rgb_mae": 1.686532
+          },
+          {
+            "key": 3,
+            "frame": 22,
+            "rgb_mae": 1.68741
+          },
+          {
+            "key": 4,
+            "frame": 34,
+            "rgb_mae": 1.690026
+          },
+          {
+            "key": 5,
+            "frame": 46,
+            "rgb_mae": 1.709442
+          },
+          {
+            "key": 6,
+            "frame": 52,
+            "rgb_mae": 1.678563
+          },
+          {
+            "key": 7,
+            "frame": 58,
+            "rgb_mae": 1.675019
+          },
+          {
+            "key": 8,
+            "frame": 64,
+            "rgb_mae": 1.694517
+          },
+          {
+            "key": 9,
+            "frame": 70,
+            "rgb_mae": 1.674735
+          },
+          {
+            "key": 10,
+            "frame": 76,
+            "rgb_mae": 1.678828
+          },
+          {
+            "key": 11,
+            "frame": 78,
+            "rgb_mae": 1.700171
+          },
+          {
+            "key": 12,
+            "frame": 80,
+            "rgb_mae": 1.683455
+          },
+          {
+            "key": 13,
+            "frame": 82,
+            "rgb_mae": 1.69867
+          },
+          {
+            "key": 14,
+            "frame": 84,
+            "rgb_mae": 1.695439
+          },
+          {
+            "key": 15,
+            "frame": 86,
+            "rgb_mae": 1.73382
+          }
+        ]
+      }
+    ],
+    "scope": "Artifact integrity and saved-key/movie agreement only; no artistic, recognition, normal-speed motion or training approval inferred."
+  },
+  "source_pair_integrity": {
+    "subject": "aircraft-carrier",
+    "source_pair_integrity": true,
+    "raw_source_sha256": "0c7934b70af65c769f4e23f5aee5355ef1776935e600869d79aec8bc2e84450b",
+    "keys_checked": 15,
+    "checks": [
+      {
+        "key": 1,
+        "render_frame": 0,
+        "actual_source_index": 435,
+        "actual_source_pts": 14.5145,
+        "photo_rgb_mae": 1.084385,
+        "movie_panel_rgb_mae": 1.426716
+      },
+      {
+        "key": 2,
+        "render_frame": 10,
+        "actual_source_index": 447,
+        "actual_source_pts": 14.9149,
+        "photo_rgb_mae": 1.126995,
+        "movie_panel_rgb_mae": 1.544265
+      },
+      {
+        "key": 3,
+        "render_frame": 22,
+        "actual_source_index": 462,
+        "actual_source_pts": 15.4154,
+        "photo_rgb_mae": 1.110466,
+        "movie_panel_rgb_mae": 1.530626
+      },
+      {
+        "key": 4,
+        "render_frame": 34,
+        "actual_source_index": 477,
+        "actual_source_pts": 15.9159,
+        "photo_rgb_mae": 1.102331,
+        "movie_panel_rgb_mae": 1.535605
+      },
+      {
+        "key": 5,
+        "render_frame": 46,
+        "actual_source_index": 492,
+        "actual_source_pts": 16.4164,
+        "photo_rgb_mae": 1.096538,
+        "movie_panel_rgb_mae": 1.580036
+      },
+      {
+        "key": 6,
+        "render_frame": 52,
+        "actual_source_index": 500,
+        "actual_source_pts": 16.683333,
+        "photo_rgb_mae": 1.093102,
+        "movie_panel_rgb_mae": 1.501188
+      },
+      {
+        "key": 7,
+        "render_frame": 58,
+        "actual_source_index": 507,
+        "actual_source_pts": 16.9169,
+        "photo_rgb_mae": 1.085434,
+        "movie_panel_rgb_mae": 1.493423
+      },
+      {
+        "key": 8,
+        "render_frame": 64,
+        "actual_source_index": 514,
+        "actual_source_pts": 17.150467,
+        "photo_rgb_mae": 1.085805,
+        "movie_panel_rgb_mae": 1.541938
+      },
+      {
+        "key": 9,
+        "render_frame": 70,
+        "actual_source_index": 522,
+        "actual_source_pts": 17.4174,
+        "photo_rgb_mae": 1.06546,
+        "movie_panel_rgb_mae": 1.503101
+      },
+      {
+        "key": 10,
+        "render_frame": 76,
+        "actual_source_index": 529,
+        "actual_source_pts": 17.650967,
+        "photo_rgb_mae": 1.079418,
+        "movie_panel_rgb_mae": 1.513533
+      },
+      {
+        "key": 11,
+        "render_frame": 78,
+        "actual_source_index": 532,
+        "actual_source_pts": 17.751067,
+        "photo_rgb_mae": 1.070038,
+        "movie_panel_rgb_mae": 1.591131
+      },
+      {
+        "key": 12,
+        "render_frame": 80,
+        "actual_source_index": 534,
+        "actual_source_pts": 17.8178,
+        "photo_rgb_mae": 1.080886,
+        "movie_panel_rgb_mae": 1.516056
+      },
+      {
+        "key": 13,
+        "render_frame": 82,
+        "actual_source_index": 537,
+        "actual_source_pts": 17.9179,
+        "photo_rgb_mae": 1.051068,
+        "movie_panel_rgb_mae": 1.584937
+      },
+      {
+        "key": 14,
+        "render_frame": 84,
+        "actual_source_index": 539,
+        "actual_source_pts": 17.984633,
+        "photo_rgb_mae": 1.087794,
+        "movie_panel_rgb_mae": 1.624479
+      },
+      {
+        "key": 15,
+        "render_frame": 86,
+        "actual_source_index": 542,
+        "actual_source_pts": 18.084733,
+        "photo_rgb_mae": 1.083653,
+        "movie_panel_rgb_mae": 1.717454
+      }
+    ],
+    "scope": "Source bytes, nearest decoded PTS and image viewport only. No artistic or motion approval."
+  },
+  "scope": "Artifact/source correspondence only; no normal-speed motion, recognition or contact approval."
+}

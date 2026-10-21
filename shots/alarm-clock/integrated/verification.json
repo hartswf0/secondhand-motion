@@ -1,0 +1,336 @@
+{
+  "artifact_integrity": {
+    "subject": "alarm-clock",
+    "technical_pass": true,
+    "frames": 73,
+    "fps": 24,
+    "keys": 16,
+    "strict_json_files": 73,
+    "relative_links": 15,
+    "hash_verified_ledger_entries": 2,
+    "movies": [
+      {
+        "path": "shots/alarm-clock/integrated/cartoon.mp4",
+        "decoded_frames": 73,
+        "fps": 24.0,
+        "sha256": "b49570e8a325d770c3254ff3e713ab65eed979b3a6bf56d5ddd6ee4b8bce398b",
+        "key_pixel_checks": [
+          {
+            "key": 1,
+            "frame": 0,
+            "rgb_mae": 1.754395
+          },
+          {
+            "key": 2,
+            "frame": 4,
+            "rgb_mae": 1.789985
+          },
+          {
+            "key": 3,
+            "frame": 10,
+            "rgb_mae": 1.78462
+          },
+          {
+            "key": 4,
+            "frame": 18,
+            "rgb_mae": 1.741735
+          },
+          {
+            "key": 5,
+            "frame": 26,
+            "rgb_mae": 1.724742
+          },
+          {
+            "key": 6,
+            "frame": 34,
+            "rgb_mae": 1.733055
+          },
+          {
+            "key": 7,
+            "frame": 42,
+            "rgb_mae": 1.753548
+          },
+          {
+            "key": 8,
+            "frame": 46,
+            "rgb_mae": 1.761493
+          },
+          {
+            "key": 9,
+            "frame": 48,
+            "rgb_mae": 1.771391
+          },
+          {
+            "key": 10,
+            "frame": 50,
+            "rgb_mae": 1.735171
+          },
+          {
+            "key": 11,
+            "frame": 54,
+            "rgb_mae": 1.731397
+          },
+          {
+            "key": 12,
+            "frame": 58,
+            "rgb_mae": 1.738875
+          },
+          {
+            "key": 13,
+            "frame": 60,
+            "rgb_mae": 1.761556
+          },
+          {
+            "key": 14,
+            "frame": 66,
+            "rgb_mae": 1.731554
+          },
+          {
+            "key": 15,
+            "frame": 70,
+            "rgb_mae": 1.747748
+          },
+          {
+            "key": 16,
+            "frame": 72,
+            "rgb_mae": 1.758373
+          }
+        ]
+      },
+      {
+        "path": "shots/alarm-clock/integrated/source-excerpt.mp4",
+        "decoded_frames": 73,
+        "fps": 24.0,
+        "sha256": "3bad7f9642eeae83b2e93b36a8ddcccb3095ddb3e756ab1ff72db940be79b023",
+        "key_pixel_checks": []
+      },
+      {
+        "path": "shots/alarm-clock/integrated/comparison.mp4",
+        "decoded_frames": 73,
+        "fps": 24.0,
+        "sha256": "057c3a2889d990cba0afca2456983c825961f70a4851191e7f490443f8c299a7",
+        "key_pixel_checks": [
+          {
+            "key": 1,
+            "frame": 0,
+            "rgb_mae": 1.754422
+          },
+          {
+            "key": 2,
+            "frame": 4,
+            "rgb_mae": 1.78018
+          },
+          {
+            "key": 3,
+            "frame": 10,
+            "rgb_mae": 1.790871
+          },
+          {
+            "key": 4,
+            "frame": 18,
+            "rgb_mae": 1.752903
+          },
+          {
+            "key": 5,
+            "frame": 26,
+            "rgb_mae": 1.730704
+          },
+          {
+            "key": 6,
+            "frame": 34,
+            "rgb_mae": 1.745289
+          },
+          {
+            "key": 7,
+            "frame": 42,
+            "rgb_mae": 1.750332
+          },
+          {
+            "key": 8,
+            "frame": 46,
+            "rgb_mae": 1.767476
+          },
+          {
+            "key": 9,
+            "frame": 48,
+            "rgb_mae": 1.748288
+          },
+          {
+            "key": 10,
+            "frame": 50,
+            "rgb_mae": 1.739665
+          },
+          {
+            "key": 11,
+            "frame": 54,
+            "rgb_mae": 1.735132
+          },
+          {
+            "key": 12,
+            "frame": 58,
+            "rgb_mae": 1.74056
+          },
+          {
+            "key": 13,
+            "frame": 60,
+            "rgb_mae": 1.762291
+          },
+          {
+            "key": 14,
+            "frame": 66,
+            "rgb_mae": 1.740518
+          },
+          {
+            "key": 15,
+            "frame": 70,
+            "rgb_mae": 1.753126
+          },
+          {
+            "key": 16,
+            "frame": 72,
+            "rgb_mae": 1.74578
+          }
+        ]
+      }
+    ],
+    "scope": "Artifact integrity and saved-key/movie agreement only; no artistic, recognition, normal-speed motion or training approval inferred."
+  },
+  "source_pair_integrity": {
+    "subject": "alarm-clock",
+    "source_pair_integrity": true,
+    "raw_source_sha256": "24304b9a060026633557d0ba0311ea5b1b6bd6e9e3c7be3fd3d3af337ce045e8",
+    "keys_checked": 16,
+    "checks": [
+      {
+        "key": 1,
+        "render_frame": 0,
+        "actual_source_index": 315,
+        "actual_source_pts": 10.5105,
+        "photo_rgb_mae": 1.139341,
+        "movie_panel_rgb_mae": 1.686713
+      },
+      {
+        "key": 2,
+        "render_frame": 4,
+        "actual_source_index": 320,
+        "actual_source_pts": 10.677333,
+        "photo_rgb_mae": 1.122619,
+        "movie_panel_rgb_mae": 1.833348
+      },
+      {
+        "key": 3,
+        "render_frame": 10,
+        "actual_source_index": 327,
+        "actual_source_pts": 10.9109,
+        "photo_rgb_mae": 1.097689,
+        "movie_panel_rgb_mae": 1.724239
+      },
+      {
+        "key": 4,
+        "render_frame": 18,
+        "actual_source_index": 337,
+        "actual_source_pts": 11.244567,
+        "photo_rgb_mae": 1.121097,
+        "movie_panel_rgb_mae": 1.636628
+      },
+      {
+        "key": 5,
+        "render_frame": 26,
+        "actual_source_index": 347,
+        "actual_source_pts": 11.578233,
+        "photo_rgb_mae": 1.084467,
+        "movie_panel_rgb_mae": 1.650918
+      },
+      {
+        "key": 6,
+        "render_frame": 34,
+        "actual_source_index": 357,
+        "actual_source_pts": 11.9119,
+        "photo_rgb_mae": 1.093645,
+        "movie_panel_rgb_mae": 1.670015
+      },
+      {
+        "key": 7,
+        "render_frame": 42,
+        "actual_source_index": 367,
+        "actual_source_pts": 12.245567,
+        "photo_rgb_mae": 1.080153,
+        "movie_panel_rgb_mae": 1.699406
+      },
+      {
+        "key": 8,
+        "render_frame": 46,
+        "actual_source_index": 372,
+        "actual_source_pts": 12.4124,
+        "photo_rgb_mae": 1.102807,
+        "movie_panel_rgb_mae": 1.693815
+      },
+      {
+        "key": 9,
+        "render_frame": 48,
+        "actual_source_index": 375,
+        "actual_source_pts": 12.5125,
+        "photo_rgb_mae": 1.112446,
+        "movie_panel_rgb_mae": 1.68457
+      },
+      {
+        "key": 10,
+        "render_frame": 50,
+        "actual_source_index": 377,
+        "actual_source_pts": 12.579233,
+        "photo_rgb_mae": 1.103377,
+        "movie_panel_rgb_mae": 1.671857
+      },
+      {
+        "key": 11,
+        "render_frame": 54,
+        "actual_source_index": 382,
+        "actual_source_pts": 12.746067,
+        "photo_rgb_mae": 1.115041,
+        "movie_panel_rgb_mae": 1.684905
+      },
+      {
+        "key": 12,
+        "render_frame": 58,
+        "actual_source_index": 387,
+        "actual_source_pts": 12.9129,
+        "photo_rgb_mae": 1.115611,
+        "movie_panel_rgb_mae": 1.692642
+      },
+      {
+        "key": 13,
+        "render_frame": 60,
+        "actual_source_index": 390,
+        "actual_source_pts": 13.013,
+        "photo_rgb_mae": 1.112256,
+        "movie_panel_rgb_mae": 1.772771
+      },
+      {
+        "key": 14,
+        "render_frame": 66,
+        "actual_source_index": 397,
+        "actual_source_pts": 13.246567,
+        "photo_rgb_mae": 1.124129,
+        "movie_panel_rgb_mae": 1.739876
+      },
+      {
+        "key": 15,
+        "render_frame": 70,
+        "actual_source_index": 402,
+        "actual_source_pts": 13.4134,
+        "photo_rgb_mae": 1.102988,
+        "movie_panel_rgb_mae": 1.769995
+      },
+      {
+        "key": 16,
+        "render_frame": 72,
+        "actual_source_index": 404,
+        "actual_source_pts": 13.480133,
+        "photo_rgb_mae": 1.122589,
+        "movie_panel_rgb_mae": 1.833457
+      }
+    ],
+    "scope": "Source bytes, nearest decoded PTS and image viewport only. No artistic or motion approval."
+  },
+  "scope": "Artifact/source correspondence only; no normal-speed motion, recognition or contact approval."
+}

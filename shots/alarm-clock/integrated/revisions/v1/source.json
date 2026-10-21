@@ -1,0 +1,33 @@
+{
+  "clip_id": "30956829-ceff-5881-9945-d698b1b27723",
+  "source_id": "971c70e1-be49-5fbf-80d5-4dafdd53e4f3",
+  "source_title": "This is Coffee",
+  "source_year": "1961",
+  "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/this-is-coffee/clips/0000021755-0000036270.mp4",
+  "shot_page_url": "https://www.movingimagearchive.com/sources/this-is-coffee?clip=30956829-ceff-5881-9945-d698b1b27723",
+  "source_page_url": "https://www.movingimagearchive.com/sources/this-is-coffee",
+  "original_source_url": "https://archive.org/details/ThisisCo1961",
+  "rights_statement": "public_domain",
+  "start_seconds": 10.5,
+  "end_seconds": 13.483333333333334,
+  "category": "alarm clock",
+  "why_this_clip": "A brass twin-bell alarm clock on a table, filmed from the front, is turned by a hand to show its side and then turned back to face the camera. The clip has no cuts; this interval covers the full turn and return, with the hand covering only part of the clock.",
+  "pool": "production/data/candidates-100.json",
+  "interval_seconds": [
+    10.5,
+    13.483333333333334
+  ],
+  "source_sha256": "24304b9a060026633557d0ba0311ea5b1b6bd6e9e3c7be3fd3d3af337ce045e8",
+  "time_basis": "clip_relative_seconds",
+  "source_clock": "decoded best_effort_timestamp_time",
+  "source_approved": false,
+  "motion_approved": false,
+  "train_eligible": false,
+  "source_selection": {
+    "pass": true,
+    "evidence": "Sixteen raw samples show one continuous hand-operated turn from three-quarter through narrow side to frontal return, no cut/dissolve. Retained endpoint slightly shortened to the final frozen vector observation; no pose extrapolation.",
+    "sample_count": 16,
+    "sheet": "preflight-source-design.jpg"
+  },
+  "vector_observation_clock": "Nominal CI resampling clock; original CI source PTS/input hash unavailable"
+}

@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A line-drawn snake sits in an S-shaped coil on a grey ground line, head at upper left facing left with a short eye dash, and a tall narrow triangular rattle standing upright at the right end of the body. Frames 1-10: the snake holds its pose with only small sways of the head and body of a few pixels; no tongue is shown. Frame 11: a small forked tongue appears at the snout. Frame 12: the tongue extends straight left. Frames 13-15: the tongue is longer and angles down-left from the snout. Frame 16: the tongue points up-left. The rattle stays upright and nearly unchanged throughout.",
+ "seen_film": "A coiled rattlesnake rests on a rock against a plain sky, head raised at left of centre and pointed toward frame left, the rattle held upright to the right of the head. Frame 1 has a faded overlay from a dissolve. Frames 1-10: the snake holds still, with only slight head shifts. Frame 11: the tongue begins to show at the snout. Frame 12: the tongue is out to the left. Frames 13-15: the tongue hangs down-left from the mouth. Frame 16: the tongue flicks up and the rattle is blurred, showing it is shaking.",
+ "named_subject": "a coiled rattlesnake flicking its tongue with its rattle raised",
+ "verdict": "bar met",
+ "evidence": "Head position and rattle position match the film in every frame (head upper left near x 120-140 of each cell, rattle upright near x 300). Frames 1-10 are a held pose in both. The tongue appears in frame 11 in both, is out level in frame 12 in both, hangs down-left in frames 13-15 in both, and flicks upward in frame 16 in both. The body drawing stays the same line set across all 16 frames with no doubling or redraw.",
+ "primary_gap": "The rattle is a fixed triangle in all 16 frames, while the film shows the rattle shaking (blurred in frame 16 and shifting slightly between frames).",
+ "closes_when": "The rattle triangle shows small side-to-side offsets or a few doubled tip lines between frames, most visibly in frame 16, while the rest of the body stays put.",
+ "protect": "The doodle's S-coil outline, eye dash and forked-tongue construction from c.png; the long hold in frames 1-10; the tongue timing in frames 11-16 that matches the film frame for frame; the stable line set with no redraws.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the doodle's S-shaped snake with its eye dash and forked tongue; the added upright rattle is the only element not in c.png and it is drawn in the same plain line style.",
+ "still_frames_only": true,
+ "_lot": "lot9fbdab09",
+ "_round": "baseline before drawn keys"
+}

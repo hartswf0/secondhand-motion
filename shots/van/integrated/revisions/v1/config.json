@@ -1,0 +1,101 @@
+{
+  "title": "Van turns across the yard",
+  "interval": [
+    2.5,
+    4.9833333333
+  ],
+  "source_sha256": "e944d2d8526c4973c24173f6e20349642ff9d0568ed98e0267e281de5f1d7c8e",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "W": 384,
+  "H": 288,
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "key_times": [
+    2.48333333,
+    2.73333333,
+    2.98333333,
+    3.23333333,
+    3.48333333,
+    3.73333333,
+    3.98333333,
+    4.23333333,
+    4.48333333,
+    4.73333333,
+    4.98333333
+  ],
+  "extra_strokes": [
+    {
+      "index": 4,
+      "source": "drawn by agent: three-point perspective/front-plane divider, not part of the four native strokes",
+      "note": "Show the observed turn while preserving the four-stroke van."
+    }
+  ],
+  "revision": "integrated-v1",
+  "review_note": "Fresh identity and source-pose critique pending; classifier and normal-speed playback unrun. Review copy, no training ran.",
+  "source_interval_reason": "Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap. Sixteen raw source samples show one shot; endpoints restrict the event to frozen native observation coverage.",
+  "compatibility": {
+    "status": "provisional_before_first_integrated_lock",
+    "native_key_id": "5046474947690496",
+    "native_strokes": 4,
+    "native_point_counts": [
+      2,
+      13,
+      10,
+      11
+    ],
+    "inventory": [
+      "native short front connector",
+      "native single box-body contour",
+      "two native angular wheel loops"
+    ],
+    "observed_event": "Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "limitations": [
+      "The native four-stroke van has no windows; none are invented as native anatomy.",
+      "A separate three-point front-plane accent indicates the observed three-quarter to side turn; it is credited as agent geometry."
+    ],
+    "extra_strokes": [
+      {
+        "index": 4,
+        "source": "drawn by agent: three-point perspective/front-plane divider, not part of the four native strokes",
+        "why": "Show the observed turn while preserving the four-stroke van."
+      }
+    ],
+    "source_preflight": {
+      "samples": 16,
+      "contact_sheet": "preflight-source.jpg",
+      "paired_study": "preflight-pairs.jpg",
+      "interval": [
+        2.5,
+        5.0
+      ],
+      "continuous_in_sampled_frames": true,
+      "actual_normal_speed_playback_watched": false
+    },
+    "training_ran": false
+  },
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Builder inspected sixteen raw source frames across the provisional event in preflight-source.jpg; no cut/dissolve observed inside retained interval. Normal-speed playback unrun."
+  },
+  "assembly_summary": "Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+  "fill_strokes": [
+    1,
+    2,
+    3
+  ],
+  "verified_contacts": [],
+  "key_notes": {
+    "2.48333333": "Source-observed native pose at 2.483s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "2.73333333": "Source-observed native pose at 2.733s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "2.98333333": "Source-observed native pose at 2.983s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "3.23333333": "Source-observed native pose at 3.233s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "3.48333333": "Source-observed native pose at 3.483s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "3.73333333": "Source-observed native pose at 3.733s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "3.98333333": "Source-observed native pose at 3.983s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "4.23333333": "Source-observed native pose at 4.233s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "4.48333333": "Source-observed native pose at 4.483s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "4.73333333": "Source-observed native pose at 4.733s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap.",
+    "4.98333333": "Source-observed native pose at 4.983s. Passenger van drives left across the yard, changes from three-quarter to side view, and shrinks as the camera pulls back; interval excludes the later foreground pole overlap."
+  }
+}

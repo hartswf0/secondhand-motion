@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "ce50c8e4079a83629e9a0a577591b610db67efb8d32b958f71620c7f8f036057",
+  "legacy_meta_sha256": "c81445bfa79399917112123e00c0d9443cb6198693341d79130981e8ca8915aa",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"an alarm clock.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/alarm-clock-sam/clip.json",
+    "shots/alarm-clock-sam/masks.json",
+    "shots/alarm-clock-sam/mask_meta.json"
+  ],
+  "clip_id": "30956829-ceff-5881-9945-d698b1b27723",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "24304b9a060026633557d0ba0311ea5b1b6bd6e9e3c7be3fd3d3af337ce045e8",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "b761e7954d62f8aab4e17739482e53dd6dbac3f9f22dcba352c953dcfd81545b",
+  "source_record": "../../../alarm-clock/source.json",
+  "assembly_source_record": "../../../alarm-clock/integrated/source.json",
+  "note": "The cropped clock is selected while the operating hand remains mostly separate. Thin feet and bells remain approximate. These masks are filled exported contour proxies, not original binary SAM masks."
+}

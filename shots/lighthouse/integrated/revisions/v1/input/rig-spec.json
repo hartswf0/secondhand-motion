@@ -1,0 +1,350 @@
+{
+ "category": "lighthouse",
+ "doodle_key_id": "4811446632316928",
+ "facing": 1,
+ "face_from": [
+  "top",
+  "top"
+ ],
+ "note": "Quick, Draw! lighthouse 4811446632316928, drawn upright. Stroke 0 is the tapering tower, wider at the base. Strokes 1 to 4 are the four bands across the tower. Stroke 8 is the lantern room on top, and strokes 9 and 10 are its two sides joining the top of the tower. Stroke 5 is the lamp inside the lantern. Strokes 6, 7, 11 and 12 are four short beams drawn out from the lantern to the right and left. The tower in the film does not bend or move any part; the camera tilts up the tower and pulls back a little, so the drawing moves down the frame and gets about 15 percent smaller. The rig places the whole doodle rigidly by two points on its centre line: the top of the tower just under the lantern (top, put on the dark gallery ring in the film) and a point on the tower's centre line (mid); the size comes from the tower's width just under the gallery. The real tower is much taller for its width than the drawn one and runs off the bottom of the frame in every frame, so the lower tower is lengthened by a constant amount (pose value reach = 1 in every key): the base corners move down 100 doodle units (the least that keeps the base below the frame in the first frame) and the lower bands and side vertices by a share of that, so the four bands stay evenly spaced. No stroke is added or removed; one is trimmed: the doodler drew the upper right beam (stroke 6) starting 11 units inside the lantern side (stroke 10), so the two crossed in a small plus sign that rendered at a different thickness from frame to frame and read as a blinking tick; the beam now starts on the lantern side, as the other three beams do, and the lengthening does not change during the shot. The beams stay as drawn; no light shows in the daytime footage, so they are not animated.",
+ "strokes": [
+  [
+   [
+    74,
+    70
+   ],
+   [
+    67,
+    105
+   ],
+   [
+    54,
+    145
+   ],
+   [
+    53,
+    200
+   ],
+   [
+    44,
+    253
+   ],
+   [
+    50,
+    255
+   ],
+   [
+    93,
+    247
+   ],
+   [
+    143,
+    246
+   ],
+   [
+    144,
+    188
+   ],
+   [
+    128,
+    79
+   ],
+   [
+    73,
+    72
+   ]
+  ],
+  [
+   [
+    70,
+    98
+   ],
+   [
+    97,
+    98
+   ],
+   [
+    140,
+    104
+   ]
+  ],
+  [
+   [
+    51,
+    138
+   ],
+   [
+    159,
+    137
+   ]
+  ],
+  [
+   [
+    54,
+    165
+   ],
+   [
+    51,
+    167
+   ],
+   [
+    56,
+    169
+   ],
+   [
+    136,
+    170
+   ],
+   [
+    133,
+    174
+   ]
+  ],
+  [
+   [
+    58,
+    211
+   ],
+   [
+    70,
+    215
+   ],
+   [
+    137,
+    215
+   ]
+  ],
+  [
+   [
+    100,
+    63
+   ],
+   [
+    95,
+    61
+   ],
+   [
+    96,
+    45
+   ],
+   [
+    105,
+    41
+   ],
+   [
+    110,
+    43
+   ],
+   [
+    109,
+    56
+   ],
+   [
+    102,
+    61
+   ]
+  ],
+  [
+   [
+    134,
+    60
+   ],
+   [
+    142,
+    61
+   ],
+   [
+    171,
+    69
+   ]
+  ],
+  [
+   [
+    137,
+    43
+   ],
+   [
+    169,
+    48
+   ]
+  ],
+  [
+   [
+    85,
+    35
+   ],
+   [
+    97,
+    19
+   ],
+   [
+    102,
+    0
+   ],
+   [
+    133,
+    0
+   ],
+   [
+    132,
+    41
+   ],
+   [
+    91,
+    38
+   ]
+  ],
+  [
+   [
+    91,
+    38
+   ],
+   [
+    72,
+    73
+   ]
+  ],
+  [
+   [
+    127,
+    38
+   ],
+   [
+    129,
+    39
+   ],
+   [
+    132,
+    53
+   ],
+   [
+    134,
+    82
+   ]
+  ],
+  [
+   [
+    68,
+    64
+   ],
+   [
+    0,
+    64
+   ]
+  ],
+  [
+   [
+    64,
+    47
+   ],
+   [
+    11,
+    43
+   ]
+  ]
+ ],
+ "root": [
+  "top",
+  "mid"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "top": [
+   101,
+   74
+  ],
+  "mid": [
+   97.6,
+   160
+  ]
+ },
+ "parts": [
+  {
+   "region": [
+    0,
+    125,
+    256,
+    150
+   ],
+   "joint": "top",
+   "aim": [
+    "top",
+    "mid"
+   ],
+   "turn": 0,
+   "shift_by": "reach",
+   "shift": [
+    0,
+    20.0
+   ]
+  },
+  {
+   "region": [
+    0,
+    155,
+    256,
+    180
+   ],
+   "joint": "top",
+   "aim": [
+    "top",
+    "mid"
+   ],
+   "turn": 0,
+   "shift_by": "reach",
+   "shift": [
+    0,
+    45.0
+   ]
+  },
+  {
+   "region": [
+    0,
+    181,
+    256,
+    239
+   ],
+   "joint": "top",
+   "aim": [
+    "top",
+    "mid"
+   ],
+   "turn": 0,
+   "shift_by": "reach",
+   "shift": [
+    0,
+    70.0
+   ]
+  },
+  {
+   "region": [
+    0,
+    240,
+    256,
+    256
+   ],
+   "joint": "top",
+   "aim": [
+    "top",
+    "mid"
+   ],
+   "turn": 0,
+   "shift_by": "reach",
+   "shift": [
+    0,
+    100.0
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "top",
+   "aim": [
+    "top",
+    "mid"
+   ],
+   "turn": 0
+  }
+ ],
+ "track": false,
+ "smooth": 1.5
+}

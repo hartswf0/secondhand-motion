@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A guitar drawn in black lines stands nearly upright, filling the left-centre of the frame: a wide pinched-waist body, a small polygonal soundhole, and the neck drawn as two thin lines that run from the top edge down through the body past the soundhole. Grey scenery lines sit to the right (a slanted edge and several near-horizontal lines, plus a small hexagon low right). Frames 1-4 are almost still. From frame 5 onward the whole guitar slides slowly downward in the frame while the scenery shifts with it; by frame 7-9 a grey hooked line with a small circle (a stand arm) enters at the top, and from frame 12-13 a long grey near-horizontal line appears across the upper left. By frame 16 the shoulders sit about a third lower than in frame 1, the soundhole is near the lower part of the frame and the bottom of the body is cropped by the lower edge.",
+ "seen_film": "An acoustic guitar leans upright against a stand in a dark room, with a seated person's legs and shoes and a patterned rug to the right. The camera tilts slowly upward over the whole shot, so the guitar drifts downward in the frame: frames 1-4 barely move, from about frame 5 the guitar starts to drop, by frames 7-10 the stand's yoke arms appear at the top behind the neck, from frames 12-16 the top edge of a chair back and a light wall appear across the upper frame, and by frame 16 the soundhole is near the bottom and the bridge has left the frame.",
+ "named_subject": "An acoustic guitar standing on a stand (no human character; the event is a slow camera tilt over the guitar).",
+ "verdict": "bar met",
+ "evidence": "Frames 1-4: both film and animation hold the guitar almost still with the shoulders at the top edge. Frames 5-8: both begin the downward drift; in animation frame 8 the shoulders have dropped by roughly the same amount as film frame 8. Frames 7-10: the stand arm with its round tip enters at the top right of the neck in the animation (grey hook and circle) at the same moment the yoke arms appear in the film. Frames 12-16: the long grey line across the upper left matches the chair-back edge appearing in the film at frames 12-13. Frame 16: in both, the soundhole sits in the lower part of the frame and the lower body is cropped. The descent is gradual across frames 5-16 with no jump in the character's position or shape.",
+ "primary_gap": "The neck is drawn as two lines that splay apart and cross near the left shoulder (a small tick and crossing visible in every frame, most clearly in frames 1-8), which reads less like the doodle's single tapered neck of two near-parallel lines and makes the upper body look slightly cluttered.",
+ "closes_when": "The two neck lines run near-parallel from the top edge into the body and end at the soundhole as in c.png, with no extra crossing tick at the upper-left shoulder in any of frames 1-16.",
+ "protect": "The timing of the drift (still in 1-4, steady descent from 5 to 16), the stand arm entering at frames 7-9 and the chair-back line at 12-13, the doodle's wobbly single-stroke body outline with its pinched waist, the small polygonal soundhole, and the consistent stroke weight of the guitar across all frames.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  8,
+  12
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body and soundhole match the doodle's loose polygonal strokes, but the headstock blob never shows (cropped as in the film) and the neck lines splay and cross at the shoulder more than in c.png.",
+ "still_frames_only": true,
+ "_lot": "lotdc0929a0",
+ "_round": "baseline before drawn keys"
+}

@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "0d277e26d6f521a056de4db12bf9dd41da1162587e77b969b86163a7cd2f07fc",
+  "legacy_meta_sha256": "e701dbf69969be30c052ad8d5976a86359122d240f98d0348e0e41e402d0b654",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a crab.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/crab-sam/clip.json",
+    "shots/crab-sam/masks.json",
+    "shots/crab-sam/mask_meta.json"
+  ],
+  "clip_id": "ad3d2427-10cc-5a8d-a28f-95548f6de597",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "0cfd5cddd16b5480311e0cf81e402b0149ae06a86cafdb03d24ac3ef2627f1b5",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "6eb8fe68c9b5ba27549a249175fa74d48b1163c8990bdf07e7922187fdd4fc82",
+  "source_record": "../../../crab/source.json",
+  "assembly_source_record": "../../../crab/integrated/source.json",
+  "note": "Body and claws are broadly selected, with sand patches and thin leg losses. These masks are filled exported contour proxies, not original binary SAM masks."
+}

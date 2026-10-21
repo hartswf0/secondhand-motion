@@ -1,0 +1,453 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   12.51,
+   24.94,
+   38.16,
+   51.88,
+   67.82,
+   87.08,
+   109.21,
+   133.39,
+   159.54,
+   187.1,
+   213.95,
+   242.74,
+   271.04,
+   299.44,
+   327.54,
+   354.74,
+   380.86,
+   406.44,
+   430.75,
+   453.68,
+   478.46,
+   500.48,
+   527.5,
+   550.3,
+   571.82
+  ],
+  "y": [
+   0.0,
+   -0.85,
+   -1.5,
+   -1.89,
+   -2.75,
+   -3.14,
+   -4.17,
+   -5.65,
+   -6.8,
+   -8.22,
+   -9.23,
+   -9.48,
+   -11.08,
+   -14.58,
+   -18.88,
+   -23.78,
+   -28.78,
+   -34.84,
+   -41.86,
+   -49.09,
+   -57.44,
+   -66.69,
+   -76.28,
+   -84.83,
+   -92.73,
+   -99.99
+  ],
+  "source": "shots/speedboat-sam/camera.json (phase correlation with the subject masked out); its steps at frames 12-16 and 23-24 were zero or jumped vertically where the boat filled the frame, so those steps were measured again on the top band of the frame (sky and trees, rows 0-120), which pans steadily at 27-28 px per frame"
+ },
+ "planes": [
+  {
+   "id": "sky",
+   "z": 2.6,
+   "label": "Clouds"
+  },
+  {
+   "id": "shore",
+   "z": 2.4,
+   "label": "Far shore tree line"
+  },
+  {
+   "id": "water",
+   "z": 2.25,
+   "label": "Lake",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "trees",
+   "z": 2.2,
+   "label": "Cypress trees and bank"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Speedboat"
+  }
+ ],
+ "objects": [
+  {
+   "id": "cypress1",
+   "plane": "trees",
+   "qd": "tree",
+   "box": [
+    -70,
+    -60,
+    90,
+    250
+   ],
+   "aspect": 0.5,
+   "strokes": 3
+  },
+  {
+   "id": "cypress2",
+   "plane": "trees",
+   "qd": "tree",
+   "box": [
+    120,
+    -80,
+    270,
+    240
+   ],
+   "aspect": 0.45,
+   "strokes": 3,
+   "skip": 1
+  },
+  {
+   "id": "cypress3",
+   "plane": "trees",
+   "qd": "tree",
+   "box": [
+    270,
+    -90,
+    420,
+    250
+   ],
+   "aspect": 0.45,
+   "strokes": 3,
+   "skip": 2
+  },
+  {
+   "id": "grass1",
+   "plane": "trees",
+   "qd": "grass",
+   "box": [
+    20,
+    240,
+    200,
+    288
+   ],
+   "aspect": 3.7
+  },
+  {
+   "id": "grass2",
+   "plane": "trees",
+   "qd": "grass",
+   "box": [
+    200,
+    236,
+    420,
+    288
+   ],
+   "aspect": 4.5,
+   "skip": 1
+  },
+  {
+   "id": "shore0",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    -560,
+    184,
+    -474,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 0,
+   "strokes": 1
+  },
+  {
+   "id": "shore1",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    -480,
+    187,
+    -394,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 1,
+   "strokes": 1
+  },
+  {
+   "id": "shore2",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    -400,
+    190,
+    -314,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 2,
+   "strokes": 1
+  },
+  {
+   "id": "shore3",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    -320,
+    184,
+    -234,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 0,
+   "strokes": 1
+  },
+  {
+   "id": "shore4",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    -240,
+    187,
+    -154,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 1,
+   "strokes": 1
+  },
+  {
+   "id": "shore5",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    -160,
+    190,
+    -74,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 2,
+   "strokes": 1
+  },
+  {
+   "id": "shore6",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    -80,
+    184,
+    6,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 0,
+   "strokes": 1
+  },
+  {
+   "id": "shore7",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    0,
+    187,
+    86,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 1,
+   "strokes": 1
+  },
+  {
+   "id": "shore8",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    80,
+    190,
+    166,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 2,
+   "strokes": 1
+  },
+  {
+   "id": "shore9",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    160,
+    184,
+    246,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 0,
+   "strokes": 1
+  },
+  {
+   "id": "shore10",
+   "plane": "shore",
+   "qd": "bush",
+   "box": [
+    240,
+    187,
+    326,
+    210
+   ],
+   "aspect": 3.0,
+   "skip": 1,
+   "strokes": 1
+  },
+  {
+   "id": "cloud1",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    -230,
+    10,
+    -100,
+    60
+   ],
+   "aspect": 2.6
+  },
+  {
+   "id": "cloud2",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    -70,
+    20,
+    60,
+    66
+   ],
+   "aspect": 2.8,
+   "skip": 1
+  },
+  {
+   "id": "cloud3",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    -480,
+    60,
+    -330,
+    110
+   ],
+   "aspect": 3.0,
+   "skip": 2
+  },
+  {
+   "id": "cloud4",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    -330,
+    30,
+    -220,
+    70
+   ],
+   "aspect": 2.7,
+   "skip": 3
+  },
+  {
+   "id": "lake",
+   "plane": "water",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a lake surface; the horizon of the lake is one long line and the ripples are short dashes below it",
+   "strokes": [
+    [
+     [
+      -620,
+      212
+     ],
+     [
+      440,
+      212
+     ]
+    ],
+    [
+     [
+      -560,
+      240
+     ],
+     [
+      -500,
+      240
+     ]
+    ],
+    [
+     [
+      -430,
+      262
+     ],
+     [
+      -350,
+      262
+     ]
+    ],
+    [
+     [
+      -300,
+      236
+     ],
+     [
+      -250,
+      236
+     ]
+    ],
+    [
+     [
+      -180,
+      270
+     ],
+     [
+      -110,
+      270
+     ]
+    ],
+    [
+     [
+      -60,
+      246
+     ],
+     [
+      0,
+      246
+     ]
+    ],
+    [
+     [
+      60,
+      272
+     ],
+     [
+      120,
+      272
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the boat is still hidden behind the bank",
+  "2": "the boat comes up over the bank, nose up",
+  "6": "in the air, nose up, we see its bottom",
+  "10": "level at the top of the jump",
+  "13": "nose dips",
+  "16": "the bow hits the lake",
+  "17": "lands; the riders jolt",
+  "19": "skids in its own spray",
+  "25": "runs on across the lake"
+ },
+ "no_cel": false
+}

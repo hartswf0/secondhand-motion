@@ -1,0 +1,974 @@
+{
+  "id": "2026-10-20-batch25",
+  "title": "Twenty-five more moving drawings",
+  "scope": "25 integrated review assemblies with independent still reviews. Technical verification and normal-speed motion approval are separate; no training ran.",
+  "date": "2026-10-20",
+  "target_count": 25,
+  "prior_integrated_count": 16,
+  "training_ran": false,
+  "subjects": [
+    {
+      "slug": "aircraft-carrier",
+      "title": "Aircraft carrier",
+      "lot": "SM-0112",
+      "source_clip_id": "5f07aeb5-b174-544c-92e7-200f4c346bfc",
+      "planned_interval": [
+        14.5,
+        18.5
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/aircraft-carrier/integrated/index.html",
+      "keys": 15,
+      "rendered_frames": 87,
+      "fps": 24,
+      "source_interval": [
+        14.5,
+        18.0833333333333
+      ],
+      "native_key_id": "6257793294139392",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": false,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/aircraft-carrier/integrated/review-v3.json",
+      "latest_blind_review": "shots/aircraft-carrier/integrated/review-v3.json",
+      "selection": {},
+      "remaining_gap": "Across all 15 paired keys the long deck runs off the upper frame, while the source shows the foreshortened deck and its aft extent within the image. The cartoon presents an oversized elongated bow/deck crop instead of the source whole-carrier framing.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "alarm-clock",
+      "title": "Alarm clock",
+      "lot": "SM-0113",
+      "source_clip_id": "30956829-ceff-5881-9945-d698b1b27723",
+      "planned_interval": [
+        10.5,
+        13.5
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/alarm-clock/integrated/index.html",
+      "keys": 16,
+      "rendered_frames": 73,
+      "fps": 24,
+      "source_interval": [
+        10.5,
+        13.483333333333334
+      ],
+      "native_key_id": "5502112672776192",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/alarm-clock/integrated/review-v1.json",
+      "latest_blind_review": "shots/alarm-clock/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": "Normal-speed playback is unrun/unapproved; the viewed still samples reveal no material identity or source framing/pose gap.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "broom",
+      "title": "Broom",
+      "lot": "SM-0114",
+      "source_clip_id": "e706c786-b112-5c22-846c-7008afec718d",
+      "planned_interval": [
+        4.5,
+        7.0
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/broom/integrated/index.html",
+      "keys": 13,
+      "rendered_frames": 61,
+      "fps": 24,
+      "source_interval": [
+        4.5,
+        6.983333333333334
+      ],
+      "native_key_id": "6486360229675008",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/broom/integrated/review-v2.json",
+      "latest_blind_review": "shots/broom/integrated/review-v2.json",
+      "selection": {},
+      "remaining_gap": null,
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "camera",
+      "title": "Camera",
+      "lot": "SM-0115",
+      "source_clip_id": "0eab0b5d-dd57-5e1d-83e6-5d5ea58aaf6e",
+      "planned_interval": [
+        12.0,
+        15.0
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/camera/integrated/index.html",
+      "keys": 8,
+      "rendered_frames": 73,
+      "fps": 24,
+      "source_interval": [
+        12.0,
+        14.983
+      ],
+      "native_key_id": "6446306388082688",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/camera/integrated/review-v2.json",
+      "latest_blind_review": "shots/camera/integrated/review-v2.json",
+      "selection": {},
+      "remaining_gap": null,
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "cello",
+      "title": "Cello",
+      "lot": "SM-0116",
+      "source_clip_id": "13c8e94f-bbac-5fee-9fe8-e4d5be3373dd",
+      "planned_interval": [
+        18.25,
+        20.75
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/cello/integrated/index.html",
+      "keys": 16,
+      "rendered_frames": 61,
+      "fps": 24,
+      "source_interval": [
+        18.25,
+        20.73333333333333
+      ],
+      "native_key_id": "5389451637293056",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/cello/integrated/review-v2.json",
+      "latest_blind_review": "shots/cello/integrated/review-v2.json",
+      "selection": {},
+      "remaining_gap": null,
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "cloud",
+      "title": "Cloud",
+      "lot": "SM-0117",
+      "source_clip_id": "3a3663e4-7a6e-5277-8cf5-12e94237350c",
+      "planned_interval": [
+        4.0,
+        9.0
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/cloud/integrated/index.html",
+      "keys": 10,
+      "rendered_frames": 121,
+      "fps": 24,
+      "source_interval": [
+        4.0,
+        8.983333333333333
+      ],
+      "native_key_id": "5120141954121728",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": false,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/cloud/integrated/review-v3.json",
+      "latest_blind_review": "shots/cloud/integrated/review-v3.json",
+      "selection": {},
+      "remaining_gap": "The left cloud crest is positioned around one-fifth of the cartoon width and slopes up from the left edge; in the source its crest sits close to the left edge and falls into the central trough. This misplaced crest persists through the 10 sampled keys.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "crab",
+      "title": "Crab",
+      "lot": "SM-0118",
+      "source_clip_id": "ad3d2427-10cc-5a8d-a28f-95548f6de597",
+      "planned_interval": [
+        5.5,
+        8.5
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/crab/integrated/index.html",
+      "keys": 13,
+      "rendered_frames": 73,
+      "fps": 24,
+      "source_interval": [
+        5.5,
+        8.483333333333334
+      ],
+      "native_key_id": "6219540520239104",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/crab/integrated/review-v1.json",
+      "latest_blind_review": "shots/crab/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": "Normal-speed playback is unrun/unapproved; the viewed still samples reveal no material identity or source framing/pose gap.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "dragon",
+      "title": "Dragon",
+      "lot": "SM-0119",
+      "source_clip_id": "1d90d230-4e0d-53c7-8840-72a10d398b3f",
+      "planned_interval": [
+        4.25,
+        6.75
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/dragon/integrated/index.html",
+      "keys": 12,
+      "rendered_frames": 61,
+      "fps": 24,
+      "source_interval": [
+        4.25,
+        6.733333333333334
+      ],
+      "native_key_id": "6050774343745536",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/dragon/integrated/review-v1.json",
+      "latest_blind_review": "shots/dragon/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": "No material identity or sampled framing/pose gap found. Normal-speed playback remains unrun and unapproved.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "flower",
+      "title": "Flower",
+      "lot": "SM-0120",
+      "source_clip_id": "c1926b73-5173-5fab-9ac0-96b9f24d0dd8",
+      "planned_interval": [
+        4.0,
+        7.0
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/flower/integrated/index.html",
+      "keys": 9,
+      "rendered_frames": 73,
+      "fps": 24,
+      "source_interval": [
+        4.0,
+        6.983333333333333
+      ],
+      "native_key_id": "5593161550266368",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/flower/integrated/review-v1.json",
+      "latest_blind_review": "shots/flower/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": "No material identity or sampled framing/pose gap found. Normal-speed playback remains unrun and unapproved.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "frog",
+      "title": "Frog",
+      "lot": "SM-0121",
+      "source_clip_id": "4c834dde-8dc5-5828-a7e2-153be5d0f03b",
+      "planned_interval": [
+        0.75,
+        3.25
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/frog/integrated/index.html",
+      "keys": 9,
+      "rendered_frames": 61,
+      "fps": 24,
+      "source_interval": [
+        0.75,
+        3.2333333333333334
+      ],
+      "native_key_id": "6018894881882112",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/frog/integrated/review-v1.json",
+      "latest_blind_review": "shots/frog/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": "No material identity or sampled framing/pose gap found. Normal-speed playback remains unrun and unapproved.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "guitar",
+      "title": "Guitar",
+      "lot": "SM-0122",
+      "source_clip_id": "b7c6bb5e-c497-5dbb-af62-976b10693776",
+      "planned_interval": [
+        5.5,
+        8.0
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/guitar/integrated/index.html",
+      "keys": 9,
+      "rendered_frames": 60,
+      "fps": 24,
+      "source_interval": [
+        5.5,
+        7.958333333333333
+      ],
+      "native_key_id": "5190412266373120",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/guitar/integrated/review-v1.json",
+      "latest_blind_review": "shots/guitar/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": "Normal-speed motion remains unreviewed; still images cannot establish smoothness or faithful timing.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "light-bulb",
+      "title": "Light bulb",
+      "lot": "SM-0123",
+      "source_clip_id": "ccf9d371-1f80-5aa3-bb2a-2e720f1786f2",
+      "planned_interval": [
+        12.0,
+        14.0
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/light-bulb/integrated/index.html",
+      "keys": 11,
+      "rendered_frames": 48,
+      "fps": 24,
+      "source_interval": [
+        12.0,
+        13.958333333333334
+      ],
+      "native_key_id": "6496968282996736",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/light-bulb/integrated/review-v1.json",
+      "latest_blind_review": "shots/light-bulb/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": "Normal-speed playback is unrun/unapproved; the viewed still samples reveal no material identity or source framing/pose gap.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "lighthouse",
+      "title": "Lighthouse",
+      "lot": "SM-0124",
+      "source_clip_id": "998660df-9287-5d68-88cf-56c90d677881",
+      "planned_interval": [
+        4.5,
+        7.0
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/lighthouse/integrated/index.html",
+      "keys": 9,
+      "rendered_frames": 60,
+      "fps": 24,
+      "source_interval": [
+        4.5,
+        6.958333333333333
+      ],
+      "native_key_id": "4811446632316928",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/lighthouse/integrated/review-v1.json",
+      "latest_blind_review": "shots/lighthouse/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": "Normal-speed playback is unrun/unapproved; the viewed still samples reveal no material identity or source framing/pose gap.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "lion",
+      "title": "Lion",
+      "lot": "SM-0125",
+      "source_clip_id": "2c353422-8745-5875-82a7-f19d09c157f9",
+      "planned_interval": [
+        2.0,
+        4.5
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/lion/integrated/index.html",
+      "keys": 6,
+      "rendered_frames": 19,
+      "fps": 24,
+      "source_interval": [
+        2.0,
+        2.75
+      ],
+      "native_key_id": "6643650639429632",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": false,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/lion/integrated/review-v2.json",
+      "latest_blind_review": "shots/lion/integrated/review-v3.json",
+      "selection": {
+        "selected_review": "review-v2.json",
+        "selected_snapshot": "revisions/v3",
+        "selected_art_revision": "integrated-v3",
+        "reason": "Prioritize the original native doodle identity hard bar. The third/final candidate improved the prone pose but failed native facial identity; restore the earlier independently identity-passing version unchanged.",
+        "selected_identity_bar_met": true,
+        "selected_source_framing_pose_bar_met": false,
+        "remaining_gap": "Resting rightward forepaws and low prone chest remain unclear; the selected version retains deep lower leg-like notches and a tall unsupported mane.",
+        "rejected_later_review": "review-v3.json",
+        "rejected_later_snapshot": "revisions/v4",
+        "rejected_later_identity_bar_met": false,
+        "rejected_later_source_framing_pose_bar_met": true,
+        "normal_speed_playback_watched": false,
+        "motion_approved": false,
+        "train_eligible": false,
+        "training_ran": false,
+        "restored_artifacts_sha256": {
+          "comparison-poster.jpg": "c3c383ba61d05438fbd8ae234c3917ff33f96fc911f09606165e623cbd606aea",
+          "paired-keys-01.jpg": "83e46c06692de9cb3c4e6912d11544785db58781ca67746a2f65901ade3f169b",
+          "source-05.jpg": "ddd9b0a8504652f2e73b45b9acd7d908eeea457f39eb00977ce4f140bfb1983c",
+          "source.json": "167d11462b6d536834a734e17c01fd2dad82493fb590e9932a85cc0d0effdafb",
+          "poster.png": "c713801610a17c818eea4a48b04145292cad19bda32b98e22ce57eb3f3b33196",
+          "key-04.svg": "2d4ed4b516a6fdcb8de38d324ce1f213e6120d00a73e2dfb767944ecfcdfc261",
+          "source-01.jpg": "990c59fdc68394be1b0748a2aa5a0c3ba6830ebd6af065097a65b7b3af6f92aa",
+          "source-03.jpg": "5be0d9d57f1d9b07fbfc4b723cba019ae87be81b7f8bc46c81990564aeed14f5",
+          "key-02.png": "f378e5bd4f4aef2beed9bc308c5483cbf9c693a2e7a3151548b54f311171b35c",
+          "key-06.svg": "d533c500ab7848086c2423f8a5e645452d9eb351e35bf3d95b8c499b4aff439f",
+          "source-06.jpg": "287a1a0a929e5ce4f02ea24fa3710af8be68f7818015d859979b29e016d22def",
+          "character-key-03.svg": "697219577078a0152ca1060933195dfb30b0a68c5a0b6ba0ff62396f5a0b502b",
+          "character-key-05.svg": "15108fd0127f321fa75c71b8d1764c4eac2abe719c8e7355b619ea056f52c22d",
+          "character-key-02.svg": "c708b33878dc85de0877b1a5b35a1097b7b5f730e4d7ca5ad57b2c40bdc1dfda",
+          "preflight-grid.jpg": "88a828a55c273a149b1677575ea07788a349a51be9ac9738a18f2460ce08bc3c",
+          "character-key-01.png": "3f7e3c2f3255e443dd65098fd993dfdf85270e3874265e67ca66005fed924936",
+          "character-key-04.png": "9285783bfac84b06d0318000ad95a1a14fc647a44f4f2f2e54af91c1a9c5467e",
+          "key-05.png": "cff0db602a042e900482c47c51c847060c743d665b762099d8b6e033a33595dc",
+          "key-03.png": "d3faca428466cfa73f6a25935ee5d568c407b0af5fb3a2a7ae0efb777fc1bc62",
+          "character-key-05.png": "13fd9d5bb617a42a50a71c3c21d463613952203797898d2067af64d94180bdbf",
+          "key-03.svg": "5d80237ffd753ea6d53427d7e3519aa515cad4457e26448af6b574affb04356e",
+          "preflight-source-12.jpg": "a38e4a82e16c884913374da20af4437265e079d83b70b1aaf7b4f5e83ef3d470",
+          "design.png": "6218ce0963087fb826daf8ed75658126682b734ca6d6d652e0ca485b0d1d3464",
+          "key-04.png": "a3173c49f63ae1447efce1930fffabca0dbe714915462ab2b4cdc9841978ce72",
+          "source-04.jpg": "7b75836aab02c08743717a71abe6baef08f3ac5e9e9be94cfc90d24b32d5f7a3",
+          "source-excerpt.mp4": "04124a681ae92298d9153bd66707265bc05debee1fad3263a5f7d89d46906893",
+          "character-key-02.png": "40f1c057eabdd3e537499aa6cde2ea0f47cc9e781289c37767abd5565c9e4414",
+          "background.png": "782d1c1596f0954135222273bc483a1921c6bd11ebd8aa92790dfbe5df150c2b",
+          "background.svg": "bebe0a9d1f87e175741cecbaf7ec64cdf89861bddf878409d4d2de10acfd4e90",
+          "cartoon.mp4": "8a435b119eeabc34c183ae067f743b32e13051217c74c11e73efd057d5a2e67a",
+          "preflight-retained-source-12.jpg": "c2bf8e69759cdc579e1edc620b0bc7222e8dcad5e0b09d328a750085b1350490",
+          "design.json": "170861e66b82ff03806a7ab42b8b16c311a95ada547019a1cb533f5fc179314e",
+          "key-01.svg": "a297873995861b3c819f72c723f59b33f38030d237310b0714396cdbb97860db",
+          "traced.json": "e352aa9260fa2b338f4526036b528316c1283a52f5cb2124e40faba9ade5490f",
+          "preflight-source-study.jpg": "197fe375d577cf3091eefe5a58c999d88df5731653fed1d48484f375777a965f",
+          "source-02.jpg": "1b358d0feaba787857d857774f5909c0fa51ad7252645d0e8d8e2ede4c041b21",
+          "correspondence.json": "068554c9d40c67bf162f2916393cc9a8082ef2f3d20a1cf58821c3dc3aa0197f",
+          "character-key-04.svg": "1ea3a04025edfa337ead94caa9a0e73758e573d0d7cc90f99d0dc68e871589a5",
+          "key-01.png": "c713801610a17c818eea4a48b04145292cad19bda32b98e22ce57eb3f3b33196",
+          "comparison.mp4": "7f5ea2730980c9f7d582266911cb2480a083bb062e47d7259cbb16c03edf0a11",
+          "character-key-06.png": "2711b74cb6da86a77d82f5e7dc406f93283156a9a716e7c5662b051b7ac2797c",
+          "character-key-06.svg": "66aa49d56fe4f75065ef3461484a38ec792bd0a175b4f4412360b5e56e9bf409",
+          "key-02.svg": "ea144c7bb1fb7a664be3f3a1e1f09e2685deba4d7137ef635fa1ee0dea37036b",
+          "key-06.png": "23844cefb4c8ddba7da375b58507d4c53d32287094b5d10328c26850a4f52594",
+          "key-05.svg": "69b65e9ce718288b2455820df54b8ffc989a7b4be9df6fc3bac9039b1c607603",
+          "character-key-03.png": "60539471fa14ffbfb0cb420ed3925795b7ced98b3928afcc1585e005352c0e45",
+          "source-contact-sheet.jpg": "611fc5d0da7068237ea6f0f59ae1bd78b43dadd819d13ac25445c07629367703",
+          "character-key-01.svg": "c8fa8e65382c55900b1a6276b8433a52a033f4f22e935629fda62d3f536efe5f",
+          "input/source.json": "687ef90ab5636b5602e79b0a67d4db33ec424f8524fde281ed017b3b22efa7a0",
+          "input/freeze-manifest.json": "b72b135d03ab43c4ae669b5c544762b6f8c2ead438cea3aaa2eb7597023a6a96",
+          "input/source-corrected.json": "b663a96448f5edd1776c663400d490b6c3a3652175dab5153e8032e5167d5d0b",
+          "input/original-freeze-manifest.json": "55cc87d5090557381ae38c2847773db0a4aa3d598c4d9a9ef417aca0e099939c",
+          "input/gwp-shot-original.json": "30c36232e7a5f524f97b99f4ca6386fd94012d3c8d99efba4e18796d58584cb4",
+          "input/design.png": "f963bed588317f3314432ffcc4bff2ad7e7ed0f2a1331bbff1fd690c39077914",
+          "input/design.json": "2372981d4f607914448d18fb035b11359b508a9425084ac490842f27ce399181",
+          "input/rig-spec.json": "a3367d50e6130486727483aa1303bc98e9d3164bc8735037788a7434a63ea04f",
+          "input/clip.json": "54f3f3fb1c729561f5fceeda92e1f90d93cb5106e02e0f49f7bab6807b7b3fc0",
+          "input/gwp-shot.json": "11b950b013802460fd94786e875f8e71a91d8a8226bfdca5bc91cba9a9852930",
+          "input/plan.json": "d788fa87ddda30786869ac97da6c4bfc1938d3d4af847ac379d1591c3607cce2",
+          "input/drawn/baseline.json": "3b44f486ba3454232dfddc0a4efc0a86c5899e8553ba3a2d976b68677c1f01aa"
+        },
+        "restored_dense_frames_sha256": "6603afebd4c208c5006dafd73adc7024b6a79099f33b13d248d0f6c74ff47563",
+        "restored_artifact_count": 60,
+        "verification": "Every listed current artifact exactly equals its immutable revisions/v3 counterpart; dense frames match exactly. No fourth artwork or review.",
+        "input_manifest_scope": "input/freeze-manifest.json documents the initial copied study before explicitly recorded derived repairs. The current selected input bytes are pinned by restored_artifacts_sha256 here and final-hashes.json; all match revisions/v3 exactly."
+      },
+      "remaining_gap": "The source lion lies with its chest low and both forepaws extending right along the ledge; the doodle leaves the right end as a tall unsupported mane and retains two deep leg-like notches below its torso, so the prone resting pose is not matched.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "ocean",
+      "title": "Ocean",
+      "lot": "SM-0126",
+      "source_clip_id": "8b44b793-e262-550a-8d3a-3e35096d4ac8",
+      "planned_interval": [
+        11.0,
+        14.0
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/ocean/integrated/index.html",
+      "keys": 12,
+      "rendered_frames": 72,
+      "fps": 24,
+      "source_interval": [
+        11.0,
+        13.958333333333334
+      ],
+      "native_key_id": "4618667562106880",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": false,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/ocean/integrated/review-v3.json",
+      "latest_blind_review": "shots/ocean/integrated/review-v3.json",
+      "selection": {},
+      "remaining_gap": "The sampled ocean drawing gives most emphasis to a continuous hill-shaped upper line, while the source's prominent breaking foam runs diagonally through the left and central foreground, especially at 11.0\u201311.833 seconds. The short detached zigzags do not yet place that visible breaking crest.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "paintbrush",
+      "title": "Paintbrush",
+      "lot": "SM-0127",
+      "source_clip_id": "6c0213fd-3905-53da-9bde-05d816228053",
+      "planned_interval": [
+        0.0,
+        3.0
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/paintbrush/integrated/index.html",
+      "keys": 12,
+      "rendered_frames": 74,
+      "fps": 24,
+      "source_interval": [
+        0.016766766766766777,
+        3.0363697030363697
+      ],
+      "native_key_id": "6685610360176640",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": false,
+      "selected_blind_review": "shots/paintbrush/integrated/review-v1.json",
+      "latest_blind_review": "shots/paintbrush/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": null,
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "rhinoceros",
+      "title": "Rhinoceros",
+      "lot": "SM-0128",
+      "source_clip_id": "16df5c86-d395-55d7-b373-a6e0fc0525bc",
+      "planned_interval": [
+        3.5,
+        7.5
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/rhinoceros/integrated/index.html",
+      "keys": 14,
+      "rendered_frames": 99,
+      "fps": 24,
+      "source_interval": [
+        3.4367701034367704,
+        7.5075075075075075
+      ],
+      "native_key_id": "5621907212730368",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/rhinoceros/integrated/review-v3.json",
+      "latest_blind_review": "shots/rhinoceros/integrated/review-v3.json",
+      "selection": {},
+      "remaining_gap": "Normal-speed motion has not been watched; motion remains unapproved.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "roller-coaster",
+      "title": "Roller coaster",
+      "lot": "SM-0129",
+      "source_clip_id": "63fdebfa-086d-5f35-9a58-27d22e8bdb70",
+      "planned_interval": [
+        3.0,
+        7.25
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/roller-coaster/integrated/index.html",
+      "keys": 14,
+      "rendered_frames": 106,
+      "fps": 24,
+      "source_interval": [
+        2.9362696029362696,
+        7.273940607273941
+      ],
+      "native_key_id": "5572615668236288",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/roller-coaster/integrated/review-v2.json",
+      "latest_blind_review": "shots/roller-coaster/integrated/review-v2.json",
+      "selection": {},
+      "remaining_gap": "Normal-speed motion remains unreviewed; no material identity or sampled framing/pose gap was found in the viewed stills.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "shovel",
+      "title": "Shovel",
+      "lot": "SM-0130",
+      "source_clip_id": "420e7c91-280b-50ef-8a7f-3cd172f7cf0f",
+      "planned_interval": [
+        4.75,
+        7.25
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/shovel/integrated/index.html",
+      "keys": 12,
+      "rendered_frames": 64,
+      "fps": 24,
+      "source_interval": [
+        4.6881047714381054,
+        7.273940607273941
+      ],
+      "native_key_id": "5440893605642240",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/shovel/integrated/review-v2.json",
+      "latest_blind_review": "shots/shovel/integrated/review-v2.json",
+      "selection": {},
+      "remaining_gap": "Normal-speed motion remains unreviewed; no material identity or sampled framing/pose gap was found in the viewed stills.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "skateboard",
+      "title": "Skateboard",
+      "lot": "SM-0131",
+      "source_clip_id": "1919988e-8d4f-5b41-b9a1-144facbffcb8",
+      "planned_interval": [
+        2.75,
+        4.5
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/skateboard/integrated/index.html",
+      "keys": 12,
+      "rendered_frames": 46,
+      "fps": 24,
+      "source_interval": [
+        2.6693333333333333,
+        4.5045
+      ],
+      "native_key_id": "5264525936820224",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": false,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/skateboard/integrated/review-v3.json",
+      "latest_blind_review": "shots/skateboard/integrated/review-v3.json",
+      "selection": {},
+      "remaining_gap": "At key 3 (3.003 s), the drawn deck still rises steeply toward the right, while the source board has already turned to a nearly horizontal, slightly right-down presentation beneath the rider. This delays the sampled board-turn operation.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "snake",
+      "title": "Snake",
+      "lot": "SM-0132",
+      "source_clip_id": "8b702d41-8b6f-5a9d-84cd-254e3da2ba1e",
+      "planned_interval": [
+        10.75,
+        13.75
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/snake/integrated/index.html",
+      "keys": 12,
+      "rendered_frames": 73,
+      "fps": 24,
+      "source_interval": [
+        10.75,
+        13.7333333333
+      ],
+      "native_key_id": "4612932086267904",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/snake/integrated/review-v1.json",
+      "latest_blind_review": "shots/snake/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": null,
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "speedboat",
+      "title": "Speedboat",
+      "lot": "SM-0133",
+      "source_clip_id": "9cfc4529-92c9-5b05-8a57-cbde5cbcef8c",
+      "planned_interval": [
+        1.25,
+        3.25
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/speedboat/integrated/index.html",
+      "keys": 12,
+      "rendered_frames": 45,
+      "fps": 24,
+      "source_interval": [
+        1.4,
+        3.2333333333
+      ],
+      "native_key_id": "5362068238630912",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": false,
+      "selected_blind_review": "shots/speedboat/integrated/review-v3.json",
+      "latest_blind_review": "shots/speedboat/integrated/review-v3.json",
+      "selection": {},
+      "remaining_gap": "No blocking gap found in the sampled stills. Continuous leap, landing, and spray timing remain unverified without normal-speed playback.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "swan",
+      "title": "Swan",
+      "lot": "SM-0134",
+      "source_clip_id": "299e589e-f689-595b-9f3c-e5537e5c84a6",
+      "planned_interval": [
+        3.75,
+        6.75
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/swan/integrated/index.html",
+      "keys": 12,
+      "rendered_frames": 73,
+      "fps": 24,
+      "source_interval": [
+        3.75,
+        6.7333333333
+      ],
+      "native_key_id": "4762067460423680",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": false,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/swan/integrated/review-v3.json",
+      "latest_blind_review": "shots/swan/integrated/review-v3.json",
+      "selection": {},
+      "remaining_gap": "In the early low-neck samples, the drawing folds the neck down from the top of the back and hangs the head below it. The source retains a small upright hooked neck with its crown above the back and its bill at the water. Key 1 makes this difference particularly clear.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "trumpet",
+      "title": "Trumpet",
+      "lot": "SM-0135",
+      "source_clip_id": "015d2d81-d328-592c-8b82-ed667cb5376c",
+      "planned_interval": [
+        0.5,
+        5.5
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/trumpet/integrated/index.html",
+      "keys": 12,
+      "rendered_frames": 121,
+      "fps": 24,
+      "source_interval": [
+        0.5,
+        5.4833333333
+      ],
+      "native_key_id": "6590023216398336",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": false,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/trumpet/integrated/review-v3.json",
+      "latest_blind_review": "shots/trumpet/integrated/review-v3.json",
+      "selection": {},
+      "remaining_gap": "The drawn hand shapes sit below and toward the mouthpiece side of the valve cluster rather than enclosing and pressing the valves as in the source. The trumpet reaches the mouth, but the sampled playing grip is not represented at the valve position.",
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    },
+    {
+      "slug": "van",
+      "title": "Van",
+      "lot": "SM-0136",
+      "source_clip_id": "6cf906f9-cb8b-5f17-9273-b40491dfdf5e",
+      "planned_interval": [
+        2.5,
+        5.0
+      ],
+      "status": "integrated_review",
+      "page": "../../../shots/van/integrated/index.html",
+      "keys": 11,
+      "rendered_frames": 61,
+      "fps": 24,
+      "source_interval": [
+        2.5,
+        4.9833333333
+      ],
+      "native_key_id": "5046474947690496",
+      "identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "normal_speed_playback_watched": false,
+      "motion_approved": false,
+      "train_eligible": false,
+      "trace_pass": true,
+      "selected_blind_review": "shots/van/integrated/review-v1.json",
+      "latest_blind_review": "shots/van/integrated/review-v1.json",
+      "selection": {},
+      "remaining_gap": null,
+      "mask_fit": {
+        "pass": false,
+        "status": "not measured by this assembly",
+        "reason": "No audited same-instance mask target evaluated against this final native render"
+      }
+    }
+  ],
+  "actual_count": 25,
+  "paired_keys": 291,
+  "rendered_frames": 1765,
+  "sampled_still_pass": 18,
+  "motion_approved_count": 0,
+  "train_eligible_count": 0
+}

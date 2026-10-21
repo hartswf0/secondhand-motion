@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "8760c259d8362b2582b4f1f3428bb9ee451dbdbfee5376e52585dbf809f6642c",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Skateboard / shoe edges",
+      "result": "manual_proxy_inspection",
+      "note": "Small board and shoe-edge target; rider omitted. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.882
+    },
+    {
+      "frame": 7,
+      "observed_target": "Skateboard / shoe edges",
+      "result": "manual_proxy_inspection",
+      "note": "Small board and shoe-edge target; rider omitted. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.745
+    },
+    {
+      "frame": 15,
+      "observed_target": "Skateboard / shoe edges",
+      "result": "manual_proxy_inspection",
+      "note": "Small board and shoe-edge target; rider omitted. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.716
+    },
+    {
+      "frame": 22,
+      "observed_target": "Skateboard / shoe edges",
+      "result": "manual_proxy_inspection",
+      "note": "Small board and shoe-edge target; rider omitted. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.818
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A grey scenery of two cloud-topped trees and some vertical stroke posts sits fixed at the top of every frame. The black character, a car drawn as a flat-topped body over two round wheels, sits below the trees just right of center. In frames 1-2 it is level. From frame 3 it tilts clockwise so the right (front) end dips, and over frames 3-12 it slides steadily left (center from about 68% to about 49% of frame width) and down (from about 57% to about 72% of frame height), keeping roughly the same tilt. In frames 13-16 it drifts slightly back to the right and up a little while still tilted. The scenery does not move.",
+ "seen_film": "A low camera follows a skateboarder from behind and slightly to the side; only legs, jeans and later the yellow shirt and gloved hands are visible, with the board low and right of center. In frames 1-4 the rider leans to the right and rolls toward an orange cone that grows from the left-center of the frame. In frames 5-6 the cone passes close on the left edge as the rider slaloms past it. In frames 7-16 the rider carves on open road, the body leaning back and forth while the board stays in the lower center-right; the background pans and blurs, and houses and parked vans appear behind on the left in frames 13-16.",
+ "named_subject": "A car doodle (body with two wheels) standing in for the skateboard and rider.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-2: car level at upper-middle (about 57% height), while the film's board is at about 70-75% height leaning right. Frames 3-12: the car makes one continuous slide left and down with a fixed clockwise tilt; the film in frames 1-6 shows a lean toward and past a cone, then in 7-16 alternating carves, none of which appear as alternating tilts in the animation. Frames 13-16: small drift back right, which loosely matches the board staying center-right in the film. No cone or passing event is represented, and the scenery stays static whereas the film's background pans continuously.",
+ "primary_gap": "The animation shows a single slide-and-tilt instead of the film's slalom: leaning into the cone approach (1-4), passing it (5-6), then alternating left-right carves (7-16).",
+ "closes_when": "The car's tilt reverses direction at least two or three times across frames 5-16 in step with the rider's leans, with its position held low in the frame (about 70-75% height) and center-right, and the scenery or a cone mark sliding past on the left around frames 4-6.",
+ "protect": "The car is drawn exactly as the doodle with its rounded body, offset top stroke and two lumpy wheels, it moves as one rigid drawing without redraw flicker, and the frame-to-frame motion is small and continuous.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  3
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character keeps the doodle's construction and stroke habits throughout; only a slight jump into the tilted pose between frames 2 and 3 stands out.",
+ "still_frames_only": true,
+ "_lot": "lotd1190a18",
+ "_round": "baseline before drawn keys"
+}

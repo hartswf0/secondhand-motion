@@ -1,0 +1,31 @@
+{
+  "clip_id": "9cfc4529-92c9-5b05-8a57-cbde5cbcef8c",
+  "source_id": "13e759d0-41ef-581f-83a3-855d06ae1dd7",
+  "source_title": "Aqua Frolics",
+  "source_year": null,
+  "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/13e759d0-41ef-581f-83a3-855d06ae1dd7/v4-conditional-luna-1/clips/9cfc4529-92c9-5b05-8a57-cbde5cbcef8c.mp4",
+  "shot_page_url": "https://www.movingimagearchive.com/sources/aqua-frolics-13e759d0?clip=9cfc4529-92c9-5b05-8a57-cbde5cbcef8c",
+  "source_page_url": "https://www.movingimagearchive.com/sources/aqua-frolics-13e759d0",
+  "original_source_url": "https://archive.org/details/aqua_frolics",
+  "rights_statement": "public_domain",
+  "start_seconds": 1.4,
+  "end_seconds": 3.2333333333,
+  "category": "speedboat",
+  "why_this_clip": "A speedboat with two riders bursts out from behind cypress trees, leaps into the air and lands on the lake, skidding with spray. The clip has no detected cuts; this interval starts when the boat first appears and runs to the last frame.",
+  "pool": "production/data/candidates-100.json",
+  "interval_seconds": [
+    1.4,
+    3.2333333333
+  ],
+  "source_sha256": "bc0f2ce1af77d40d1d2450ce2b07639d8f88459a54d37916c47ac1a454a022b6",
+  "time_basis": "clip_relative_seconds",
+  "source_clock": "decoded best_effort_timestamp_time",
+  "source_approved": false,
+  "motion_approved": false,
+  "train_eligible": false,
+  "source_selection": {
+    "pass": true,
+    "evidence": "Builder inspected sixteen raw source frames across the provisional event in preflight-source.jpg; no cut/dissolve observed inside retained interval. Normal-speed playback unrun."
+  },
+  "vector_observation_clock": "Nominal CI resampling clock; original CI source PTS/input hash unavailable"
+}

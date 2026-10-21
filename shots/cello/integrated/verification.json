@@ -1,0 +1,336 @@
+{
+  "artifact_integrity": {
+    "subject": "cello",
+    "technical_pass": true,
+    "frames": 61,
+    "fps": 24,
+    "keys": 16,
+    "strict_json_files": 95,
+    "relative_links": 15,
+    "hash_verified_ledger_entries": 4,
+    "movies": [
+      {
+        "path": "shots/cello/integrated/cartoon.mp4",
+        "decoded_frames": 61,
+        "fps": 24.0,
+        "sha256": "c453a4e0e5fad44239c7fed4de19d994e3e8f78408b5581c2ee5c3490ec86200",
+        "key_pixel_checks": [
+          {
+            "key": 1,
+            "frame": 0,
+            "rgb_mae": 1.750117
+          },
+          {
+            "key": 2,
+            "frame": 6,
+            "rgb_mae": 1.775628
+          },
+          {
+            "key": 3,
+            "frame": 10,
+            "rgb_mae": 1.79061
+          },
+          {
+            "key": 4,
+            "frame": 14,
+            "rgb_mae": 1.805174
+          },
+          {
+            "key": 5,
+            "frame": 18,
+            "rgb_mae": 1.758496
+          },
+          {
+            "key": 6,
+            "frame": 22,
+            "rgb_mae": 1.759299
+          },
+          {
+            "key": 7,
+            "frame": 24,
+            "rgb_mae": 1.779916
+          },
+          {
+            "key": 8,
+            "frame": 30,
+            "rgb_mae": 1.749377
+          },
+          {
+            "key": 9,
+            "frame": 34,
+            "rgb_mae": 1.761908
+          },
+          {
+            "key": 10,
+            "frame": 38,
+            "rgb_mae": 1.778457
+          },
+          {
+            "key": 11,
+            "frame": 42,
+            "rgb_mae": 1.789577
+          },
+          {
+            "key": 12,
+            "frame": 46,
+            "rgb_mae": 1.813107
+          },
+          {
+            "key": 13,
+            "frame": 48,
+            "rgb_mae": 1.775334
+          },
+          {
+            "key": 14,
+            "frame": 50,
+            "rgb_mae": 1.793194
+          },
+          {
+            "key": 15,
+            "frame": 54,
+            "rgb_mae": 1.797659
+          },
+          {
+            "key": 16,
+            "frame": 60,
+            "rgb_mae": 1.849047
+          }
+        ]
+      },
+      {
+        "path": "shots/cello/integrated/source-excerpt.mp4",
+        "decoded_frames": 61,
+        "fps": 24.0,
+        "sha256": "77bdc4cd44944ad6ca2385435705b22156b4a1abb58430c997eebdd1a31416f4",
+        "key_pixel_checks": []
+      },
+      {
+        "path": "shots/cello/integrated/comparison.mp4",
+        "decoded_frames": 61,
+        "fps": 24.0,
+        "sha256": "11df89567bddb5d42bf5e5c37d2668a9048289c9fb735110c9d439f18d4f4b8c",
+        "key_pixel_checks": [
+          {
+            "key": 1,
+            "frame": 0,
+            "rgb_mae": 1.750687
+          },
+          {
+            "key": 2,
+            "frame": 6,
+            "rgb_mae": 1.777034
+          },
+          {
+            "key": 3,
+            "frame": 10,
+            "rgb_mae": 1.780563
+          },
+          {
+            "key": 4,
+            "frame": 14,
+            "rgb_mae": 1.787905
+          },
+          {
+            "key": 5,
+            "frame": 18,
+            "rgb_mae": 1.801448
+          },
+          {
+            "key": 6,
+            "frame": 22,
+            "rgb_mae": 1.81029
+          },
+          {
+            "key": 7,
+            "frame": 24,
+            "rgb_mae": 1.782998
+          },
+          {
+            "key": 8,
+            "frame": 30,
+            "rgb_mae": 1.780989
+          },
+          {
+            "key": 9,
+            "frame": 34,
+            "rgb_mae": 1.776592
+          },
+          {
+            "key": 10,
+            "frame": 38,
+            "rgb_mae": 1.801517
+          },
+          {
+            "key": 11,
+            "frame": 42,
+            "rgb_mae": 1.796767
+          },
+          {
+            "key": 12,
+            "frame": 46,
+            "rgb_mae": 1.809771
+          },
+          {
+            "key": 13,
+            "frame": 48,
+            "rgb_mae": 1.816812
+          },
+          {
+            "key": 14,
+            "frame": 50,
+            "rgb_mae": 1.810864
+          },
+          {
+            "key": 15,
+            "frame": 54,
+            "rgb_mae": 1.821068
+          },
+          {
+            "key": 16,
+            "frame": 60,
+            "rgb_mae": 1.851659
+          }
+        ]
+      }
+    ],
+    "scope": "Artifact integrity and saved-key/movie agreement only; no artistic, recognition, normal-speed motion or training approval inferred."
+  },
+  "source_pair_integrity": {
+    "subject": "cello",
+    "source_pair_integrity": true,
+    "raw_source_sha256": "3697f264b233d1543d16136760064582d1e21d0677a0f67ff8eb4baa9a9721c4",
+    "keys_checked": 16,
+    "checks": [
+      {
+        "key": 1,
+        "render_frame": 0,
+        "actual_source_index": 547,
+        "actual_source_pts": 18.251567,
+        "photo_rgb_mae": 1.20382,
+        "movie_panel_rgb_mae": 1.560933
+      },
+      {
+        "key": 2,
+        "render_frame": 6,
+        "actual_source_index": 554,
+        "actual_source_pts": 18.485133,
+        "photo_rgb_mae": 1.200862,
+        "movie_panel_rgb_mae": 1.714128
+      },
+      {
+        "key": 3,
+        "render_frame": 10,
+        "actual_source_index": 559,
+        "actual_source_pts": 18.651967,
+        "photo_rgb_mae": 1.195071,
+        "movie_panel_rgb_mae": 1.70292
+      },
+      {
+        "key": 4,
+        "render_frame": 14,
+        "actual_source_index": 564,
+        "actual_source_pts": 18.8188,
+        "photo_rgb_mae": 1.225144,
+        "movie_panel_rgb_mae": 1.696301
+      },
+      {
+        "key": 5,
+        "render_frame": 18,
+        "actual_source_index": 569,
+        "actual_source_pts": 18.985633,
+        "photo_rgb_mae": 1.212304,
+        "movie_panel_rgb_mae": 1.694171
+      },
+      {
+        "key": 6,
+        "render_frame": 22,
+        "actual_source_index": 574,
+        "actual_source_pts": 19.152467,
+        "photo_rgb_mae": 1.219843,
+        "movie_panel_rgb_mae": 1.676388
+      },
+      {
+        "key": 7,
+        "render_frame": 24,
+        "actual_source_index": 577,
+        "actual_source_pts": 19.252567,
+        "photo_rgb_mae": 1.217709,
+        "movie_panel_rgb_mae": 1.658742
+      },
+      {
+        "key": 8,
+        "render_frame": 30,
+        "actual_source_index": 584,
+        "actual_source_pts": 19.486133,
+        "photo_rgb_mae": 1.228556,
+        "movie_panel_rgb_mae": 1.693094
+      },
+      {
+        "key": 9,
+        "render_frame": 34,
+        "actual_source_index": 589,
+        "actual_source_pts": 19.652967,
+        "photo_rgb_mae": 1.261775,
+        "movie_panel_rgb_mae": 1.705259
+      },
+      {
+        "key": 10,
+        "render_frame": 38,
+        "actual_source_index": 594,
+        "actual_source_pts": 19.8198,
+        "photo_rgb_mae": 1.225775,
+        "movie_panel_rgb_mae": 1.716307
+      },
+      {
+        "key": 11,
+        "render_frame": 42,
+        "actual_source_index": 599,
+        "actual_source_pts": 19.986633,
+        "photo_rgb_mae": 1.219654,
+        "movie_panel_rgb_mae": 1.700605
+      },
+      {
+        "key": 12,
+        "render_frame": 46,
+        "actual_source_index": 604,
+        "actual_source_pts": 20.153467,
+        "photo_rgb_mae": 1.222238,
+        "movie_panel_rgb_mae": 1.693621
+      },
+      {
+        "key": 13,
+        "render_frame": 48,
+        "actual_source_index": 607,
+        "actual_source_pts": 20.253567,
+        "photo_rgb_mae": 1.241167,
+        "movie_panel_rgb_mae": 1.658488
+      },
+      {
+        "key": 14,
+        "render_frame": 50,
+        "actual_source_index": 609,
+        "actual_source_pts": 20.3203,
+        "photo_rgb_mae": 1.2551,
+        "movie_panel_rgb_mae": 1.674021
+      },
+      {
+        "key": 15,
+        "render_frame": 54,
+        "actual_source_index": 614,
+        "actual_source_pts": 20.487133,
+        "photo_rgb_mae": 1.236686,
+        "movie_panel_rgb_mae": 1.73667
+      },
+      {
+        "key": 16,
+        "render_frame": 60,
+        "actual_source_index": 621,
+        "actual_source_pts": 20.7207,
+        "photo_rgb_mae": 1.259537,
+        "movie_panel_rgb_mae": 1.840708
+      }
+    ],
+    "scope": "Source bytes, nearest decoded PTS and image viewport only. No artistic or motion approval."
+  },
+  "scope": "Artifact/source correspondence only; no normal-speed motion, recognition or contact approval."
+}

@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "0daf79299fc28745272e933c34ce76f0f6bed93bf95941afa0b5827e1ff2335b",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Camera",
+      "result": "manual_proxy_inspection",
+      "note": "The broad close-up is marked almost edge to edge; lens, camera frame and some surrounding pixels are merged. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.98
+    },
+    {
+      "frame": 12,
+      "observed_target": "Camera",
+      "result": "manual_proxy_inspection",
+      "note": "The broad close-up is marked almost edge to edge; lens, camera frame and some surrounding pixels are merged. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.98
+    },
+    {
+      "frame": 24,
+      "observed_target": "Camera",
+      "result": "manual_proxy_inspection",
+      "note": "The broad close-up is marked almost edge to edge; lens, camera frame and some surrounding pixels are merged. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.98
+    },
+    {
+      "frame": 36,
+      "observed_target": "Camera",
+      "result": "manual_proxy_inspection",
+      "note": "The broad close-up is marked almost edge to edge; lens, camera frame and some surrounding pixels are merged. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.979
+    }
+  ]
+}

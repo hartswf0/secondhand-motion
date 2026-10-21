@@ -13582,5 +13582,2820 @@
   },
   "href": "shots/tiger/integrated/index.html",
   "gait": "skip"
+ },
+ {
+  "lot": "SM-0112",
+  "id": "aircraft-carrier",
+  "kind": "subject",
+  "title": "Aircraft carrier",
+  "category": "aircraft carrier",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "15 source-paired keys; 87 rendered frames at 24 fps. A sampled identity or source-pose gap remains; see the raw review. Playback approval pending.",
+  "cover": "shots/aircraft-carrier/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 6257793294139392; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/aircraft-carrier/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#aircraft-carrier/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#aircraft-carrier/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#aircraft-carrier"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/aircraft-carrier-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/aircraft-carrier/integrated/source.json"
+   }
+  ],
+  "tests": "shots/aircraft-carrier/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 1,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Archive ids, original URLs, reported rights, pinned raw SHA and refined source interval retained; rights independently unverified.",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 3,
+     "identity": true,
+     "sampled_source_pose": false,
+     "playback_watched": false
+    },
+    "unit": "sampled still review only",
+    "ok": false
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "fraction of static background geometry unchanged; animated props separately credited",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9984332158245202,
+     "min_parts_kept": 1.0,
+     "keys": 15,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "native_key_id": "6257793294139392",
+     "explicit_extra_strokes": []
+    },
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 6,
+    "unit": "hash-linked append-only ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/aircraft-carrier/integrated/index.html",
+  "gait": "sit"
+ },
+ {
+  "lot": "SM-0113",
+  "id": "alarm-clock",
+  "kind": "subject",
+  "title": "Alarm clock",
+  "category": "alarm clock",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "16 source-paired keys; 73 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/alarm-clock/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5502112672776192; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/alarm-clock/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#alarm-clock/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#alarm-clock/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#alarm-clock"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/alarm-clock-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/alarm-clock/integrated/source.json"
+   }
+  ],
+  "tests": "shots/alarm-clock/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Archive ids, original URLs, reported rights, pinned raw SHA and refined source interval retained; rights independently unverified.",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 1,
+     "identity": true,
+     "sampled_source_pose": true,
+     "playback_watched": false
+    },
+    "unit": "sampled still review only",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "fraction of static background geometry unchanged; animated props separately credited",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9941860465116279,
+     "min_parts_kept": 1.0,
+     "keys": 16,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "native_key_id": "5502112672776192",
+     "explicit_extra_strokes": [
+      {
+       "index": 8,
+       "source": "drawn by agent in frozen source-observed vector study",
+       "note": "Clock case-back outline visible during turn; not native doodle ink."
+      },
+      {
+       "index": 9,
+       "source": "drawn by agent in frozen source-observed vector study",
+       "note": "Manipulating hand; not native doodle ink."
+      }
+     ]
+    },
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 2,
+    "unit": "hash-linked append-only ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/alarm-clock/integrated/index.html",
+  "gait": "walk"
+ },
+ {
+  "lot": "SM-0114",
+  "id": "broom",
+  "kind": "subject",
+  "title": "Broom",
+  "category": "broom",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "13 source-paired keys; 61 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/broom/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 6486360229675008; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/broom/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#broom/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#broom/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#broom"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/broom-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/broom/integrated/source.json"
+   }
+  ],
+  "tests": "shots/broom/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Archive ids, original URLs, reported rights, pinned raw SHA and refined source interval retained; rights independently unverified.",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 2,
+     "identity": true,
+     "sampled_source_pose": true,
+     "playback_watched": false
+    },
+    "unit": "sampled still review only",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "fraction of static background geometry unchanged; animated props separately credited",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9978517722878625,
+     "min_parts_kept": 1.0,
+     "keys": 13,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "native_key_id": "6486360229675008",
+     "explicit_extra_strokes": []
+    },
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 4,
+    "unit": "hash-linked append-only ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/broom/integrated/index.html",
+  "gait": "strut"
+ },
+ {
+  "lot": "SM-0115",
+  "id": "camera",
+  "kind": "subject",
+  "title": "Camera",
+  "category": "camera",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "8 source-paired keys; 73 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/camera/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 6446306388082688; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/camera/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#camera/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#camera/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#camera"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/camera-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/camera/integrated/source.json"
+   }
+  ],
+  "tests": "shots/camera/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Archive ids, original URLs, reported rights, pinned raw SHA and refined source interval retained; rights independently unverified.",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 2,
+     "identity": true,
+     "sampled_source_pose": true,
+     "playback_watched": false
+    },
+    "unit": "sampled still review only",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "fraction of static background geometry unchanged; animated props separately credited",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 1.0,
+     "min_parts_kept": 1.0,
+     "keys": 8,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "native_key_id": "6446306388082688",
+     "explicit_extra_strokes": []
+    },
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 5,
+    "unit": "hash-linked append-only ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/camera/integrated/index.html",
+  "gait": "moonwalk"
+ },
+ {
+  "lot": "SM-0116",
+  "id": "cello",
+  "kind": "subject",
+  "title": "Cello",
+  "category": "cello",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "16 source-paired keys; 61 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/cello/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5389451637293056; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/cello/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#cello/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#cello/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#cello"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/cello-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/cello/integrated/source.json"
+   }
+  ],
+  "tests": "shots/cello/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Archive ids, original URLs, reported rights, pinned raw SHA and refined source interval retained; rights independently unverified.",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 2,
+     "identity": true,
+     "sampled_source_pose": true,
+     "playback_watched": false
+    },
+    "unit": "sampled still review only",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "fraction of static background geometry unchanged; animated props separately credited",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9837221920781335,
+     "min_parts_kept": 1.0,
+     "keys": 16,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "native_key_id": "5389451637293056",
+     "explicit_extra_strokes": [
+      {
+       "index": 5,
+       "source": "drawn by agent in frozen source-observed vector study",
+       "note": "Observed bow crossing the strings; not native doodle ink."
+      },
+      {
+       "index": 6,
+       "source": "drawn by agent in frozen source-observed vector study",
+       "note": "Observed left hand at the neck; not native doodle ink."
+      }
+     ]
+    },
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 4,
+    "unit": "hash-linked append-only ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/cello/integrated/index.html",
+  "gait": "tiptoe"
+ },
+ {
+  "lot": "SM-0117",
+  "id": "cloud",
+  "kind": "subject",
+  "title": "Cloud",
+  "category": "cloud",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "10 source-paired keys; 121 rendered frames at 24 fps. A sampled identity or source-pose gap remains; see the raw review. Playback approval pending.",
+  "cover": "shots/cloud/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5120141954121728; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/cloud/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#cloud/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#cloud/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#cloud"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/cloud-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/cloud/integrated/source.json"
+   }
+  ],
+  "tests": "shots/cloud/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 3,
+   "fail": 1,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Clip/source ids, reported rights, URLs, rawSHA256 and retained decoded source times preserved",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "identity": true,
+     "sampled_source_pose": false,
+     "raw_review": "review-v3.json",
+     "normal_speed_playback_watched": false
+    },
+    "unit": "independent still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": {
+     "held_world_background": true,
+     "static_authored_strokes": 0,
+     "scope": "Blank heldpaper; no authored background ink to measure"
+    },
+    "unit": "",
+    "ok": false
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9959100204498977,
+     "min_parts_kept": 1.0,
+     "keys": 10,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "scope": "Explicit native point correspondence retained; registry Hungarian matched-ink metric unrun"
+    },
+    "unit": "",
+    "ok": null
+   },
+   "S7": {
+    "value": 5,
+    "unit": "hash-linked entries",
+    "ok": true
+   }
+  },
+  "href": "shots/cloud/integrated/index.html",
+  "gait": "cancan"
+ },
+ {
+  "lot": "SM-0118",
+  "id": "crab",
+  "kind": "subject",
+  "title": "Crab",
+  "category": "crab",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "13 source-paired keys; 73 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/crab/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 6219540520239104; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/crab/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#crab/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#crab/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#crab"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/crab-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/crab/integrated/source.json"
+   }
+  ],
+  "tests": "shots/crab/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 3,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Clip/source ids, reported rights, URLs, rawSHA256 and retained decoded source times preserved",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "identity": true,
+     "sampled_source_pose": true,
+     "raw_review": "review-v1.json",
+     "normal_speed_playback_watched": false
+    },
+    "unit": "independent still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": {
+     "held_world_background": true,
+     "static_authored_strokes": 13,
+     "scope": "Held world geometry with separate recorded camera; no pixel/stroke matching run"
+    },
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9951327433628319,
+     "min_parts_kept": 1.0,
+     "keys": 13,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "scope": "Explicit native point correspondence retained; registry Hungarian matched-ink metric unrun"
+    },
+    "unit": "",
+    "ok": null
+   },
+   "S7": {
+    "value": 1,
+    "unit": "hash-linked entries",
+    "ok": true
+   }
+  },
+  "href": "shots/crab/integrated/index.html",
+  "gait": "hop"
+ },
+ {
+  "lot": "SM-0119",
+  "id": "dragon",
+  "kind": "subject",
+  "title": "Dragon",
+  "category": "dragon",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "12 source-paired keys; 61 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/dragon/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 6050774343745536; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/dragon/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#dragon/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#dragon/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#dragon"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/dragon-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/dragon/integrated/source.json"
+   }
+  ],
+  "tests": "shots/dragon/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 3,
+   "fail": 1,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Clip/source ids, reported rights, URLs, rawSHA256 and retained decoded source times preserved",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "identity": true,
+     "sampled_source_pose": true,
+     "raw_review": "review-v1.json",
+     "normal_speed_playback_watched": false
+    },
+    "unit": "independent still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": {
+     "held_world_background": true,
+     "static_authored_strokes": 0,
+     "scope": "Blank heldpaper; no authored background ink to measure"
+    },
+    "unit": "",
+    "ok": false
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9978319783197832,
+     "min_parts_kept": 1.0,
+     "keys": 12,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "scope": "Explicit native point correspondence retained; registry Hungarian matched-ink metric unrun"
+    },
+    "unit": "",
+    "ok": null
+   },
+   "S7": {
+    "value": 2,
+    "unit": "hash-linked entries",
+    "ok": true
+   }
+  },
+  "href": "shots/dragon/integrated/index.html",
+  "gait": "goose step"
+ },
+ {
+  "lot": "SM-0120",
+  "id": "flower",
+  "kind": "subject",
+  "title": "Flower",
+  "category": "flower",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "9 source-paired keys; 73 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/flower/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5593161550266368; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/flower/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#flower/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#flower/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#flower"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/flower-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/flower/integrated/source.json"
+   }
+  ],
+  "tests": "shots/flower/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 3,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Clip/source ids, reported rights, URLs, rawSHA256 and retained decoded source times preserved",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "identity": true,
+     "sampled_source_pose": true,
+     "raw_review": "review-v1.json",
+     "normal_speed_playback_watched": false
+    },
+    "unit": "independent still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": {
+     "held_world_background": true,
+     "static_authored_strokes": 10,
+     "scope": "Held world geometry with separate recorded camera; no pixel/stroke matching run"
+    },
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9985724482512491,
+     "min_parts_kept": 1.0,
+     "keys": 9,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "scope": "Explicit native point correspondence retained; registry Hungarian matched-ink metric unrun"
+    },
+    "unit": "",
+    "ok": null
+   },
+   "S7": {
+    "value": 2,
+    "unit": "hash-linked entries",
+    "ok": true
+   }
+  },
+  "href": "shots/flower/integrated/index.html",
+  "gait": "shuffle"
+ },
+ {
+  "lot": "SM-0121",
+  "id": "frog",
+  "kind": "subject",
+  "title": "Frog",
+  "category": "frog",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "9 source-paired keys; 61 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/frog/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 6018894881882112; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/frog/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#frog/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#frog/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#frog"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/frog-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/frog/integrated/source.json"
+   }
+  ],
+  "tests": "shots/frog/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 3,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Clip/source ids, reported rights, URLs, rawSHA256 and retained decoded source times preserved",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "identity": true,
+     "sampled_source_pose": true,
+     "raw_review": "review-v1.json",
+     "normal_speed_playback_watched": false
+    },
+    "unit": "independent still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": {
+     "held_world_background": true,
+     "static_authored_strokes": 7,
+     "scope": "Held world geometry with separate recorded camera; no pixel/stroke matching run"
+    },
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9962139138665405,
+     "min_parts_kept": 1.0,
+     "keys": 9,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "scope": "Explicit native point correspondence retained; registry Hungarian matched-ink metric unrun"
+    },
+    "unit": "",
+    "ok": null
+   },
+   "S7": {
+    "value": 2,
+    "unit": "hash-linked entries",
+    "ok": true
+   }
+  },
+  "href": "shots/frog/integrated/index.html",
+  "gait": "sprint"
+ },
+ {
+  "lot": "SM-0122",
+  "id": "guitar",
+  "kind": "subject",
+  "title": "Guitar",
+  "category": "guitar",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "9 source-paired keys; 60 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/guitar/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5190412266373120; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/guitar/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#guitar/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#guitar/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#guitar"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/guitar-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/guitar/integrated/source.json"
+   }
+  ],
+  "tests": "shots/guitar/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9976162097735399,
+     "min_parts_kept": 1.0,
+     "keys": 9,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "point_counts": [
+      38,
+      9,
+      3,
+      4
+     ]
+    },
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": {
+     "pass": true,
+     "static_objects_measured": 6,
+     "scope": "Static frozen scenery only; separate camera motion, no regenerated background. Zero static geometry does not pass."
+    },
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "identity": true,
+     "sampled_pose": true,
+     "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "S6": {
+    "value": "Raw source SHA256, decoded PTS, original archive ids/URLs/reported rights and QuickDrawCCBY retained",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 2,
+    "unit": "verified hash-linked ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/guitar/integrated/index.html",
+  "gait": "jelly"
+ },
+ {
+  "lot": "SM-0123",
+  "id": "light-bulb",
+  "kind": "subject",
+  "title": "Light bulb",
+  "category": "light bulb",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "11 source-paired keys; 48 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/light-bulb/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 6496968282996736; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/light-bulb/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#light-bulb/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#light-bulb/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#light-bulb"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/light-bulb-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/light-bulb/integrated/source.json"
+   }
+  ],
+  "tests": "shots/light-bulb/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9908512330946698,
+     "min_parts_kept": 1.0,
+     "keys": 11,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "point_counts": [
+      13,
+      12,
+      10,
+      22,
+      3
+     ]
+    },
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": {
+     "pass": true,
+     "static_objects_measured": 5,
+     "scope": "Static frozen scenery only; separate camera motion, no regenerated background. Zero static geometry does not pass."
+    },
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "identity": true,
+     "sampled_pose": true,
+     "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "S6": {
+    "value": "Raw source SHA256, decoded PTS, original archive ids/URLs/reported rights and QuickDrawCCBY retained",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 3,
+    "unit": "verified hash-linked ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/light-bulb/integrated/index.html",
+  "gait": "splits"
+ },
+ {
+  "lot": "SM-0124",
+  "id": "lighthouse",
+  "kind": "subject",
+  "title": "Lighthouse",
+  "category": "lighthouse",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "9 source-paired keys; 60 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/lighthouse/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 4811446632316928; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/lighthouse/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#lighthouse/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#lighthouse/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#lighthouse"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/lighthouse-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/lighthouse/integrated/source.json"
+   }
+  ],
+  "tests": "shots/lighthouse/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.999113475177305,
+     "min_parts_kept": 1.0,
+     "keys": 9,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "point_counts": [
+      11,
+      3,
+      2,
+      5,
+      3,
+      7,
+      3,
+      2,
+      6,
+      2,
+      4,
+      2,
+      2
+     ]
+    },
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": {
+     "pass": true,
+     "static_objects_measured": 7,
+     "scope": "Static frozen scenery only; separate camera motion, no regenerated background. Zero static geometry does not pass."
+    },
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "identity": true,
+     "sampled_pose": true,
+     "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "S6": {
+    "value": "Raw source SHA256, decoded PTS, original archive ids/URLs/reported rights and QuickDrawCCBY retained",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 3,
+    "unit": "verified hash-linked ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/lighthouse/integrated/index.html",
+  "gait": "heel click"
+ },
+ {
+  "lot": "SM-0125",
+  "id": "lion",
+  "kind": "subject",
+  "title": "Lion",
+  "category": "lion",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "6 source-paired keys; 19 rendered frames at 24 fps. A sampled identity or source-pose gap remains; see the raw review. Playback approval pending.",
+  "cover": "shots/lion/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 6643650639429632; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/lion/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#lion/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#lion/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#lion"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/lion-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/lion/integrated/source.json"
+   }
+  ],
+  "tests": "shots/lion/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9920809502859657,
+     "min_parts_kept": 1.0,
+     "keys": 6,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "point_counts": [
+      15,
+      26,
+      26,
+      2,
+      3,
+      4
+     ]
+    },
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": {
+     "pass": true,
+     "static_objects_measured": 10,
+     "scope": "Static frozen scenery only; separate camera motion, no regenerated background. Zero static geometry does not pass."
+    },
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "identity": true,
+     "sampled_pose": false,
+     "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "S6": {
+    "value": "Raw source SHA256, decoded PTS, original archive ids/URLs/reported rights and QuickDrawCCBY retained",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 8,
+    "unit": "verified hash-linked ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/lion/integrated/index.html",
+  "gait": "skip"
+ },
+ {
+  "lot": "SM-0126",
+  "id": "ocean",
+  "kind": "subject",
+  "title": "Ocean",
+  "category": "ocean",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "12 source-paired keys; 72 rendered frames at 24 fps. A sampled identity or source-pose gap remains; see the raw review. Playback approval pending.",
+  "cover": "shots/ocean/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 4618667562106880; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/ocean/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#ocean/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#ocean/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#ocean"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/ocean-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/ocean/integrated/source.json"
+   }
+  ],
+  "tests": "shots/ocean/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 1,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9981842941443486,
+     "min_parts_kept": 1.0,
+     "keys": 12,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": {
+     "native_topology": true,
+     "point_counts": [
+      17,
+      8,
+      8,
+      11,
+      5
+     ]
+    },
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": {
+     "pass": false,
+     "static_objects_measured": 0,
+     "scope": "Static frozen scenery only; separate camera motion, no regenerated background. Zero static geometry does not pass."
+    },
+    "unit": "",
+    "ok": false
+   },
+   "J4": {
+    "value": {
+     "identity": true,
+     "sampled_pose": false,
+     "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "S6": {
+    "value": "Raw source SHA256, decoded PTS, original archive ids/URLs/reported rights and QuickDrawCCBY retained",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 7,
+    "unit": "verified hash-linked ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/ocean/integrated/index.html",
+  "gait": "sit"
+ },
+ {
+  "lot": "SM-0127",
+  "id": "paintbrush",
+  "kind": "subject",
+  "title": "Paintbrush",
+  "category": "paintbrush",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "12 source-paired keys; 74 rendered frames at 24 fps. Both sampled still checks pass. Trace fidelity remains below its gate. Playback approval pending.",
+  "cover": "shots/paintbrush/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 6685610360176640; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/paintbrush/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#paintbrush/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#paintbrush/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#paintbrush"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/paintbrush-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/paintbrush/integrated/source.json"
+   }
+  ],
+  "tests": "shots/paintbrush/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 1,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Source IDs, archive URLs, retained interval, raw SHA256 and archive-reported rights preserved; rights independently unverified",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 1,
+     "identity": true,
+     "sampled_pose": true,
+     "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": "Static scenery is held; separately credited source-observed animated operation/props retain exposure sequences. No world-geometry solve for per-frame projected props.",
+    "unit": "static scenery scope only",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.8979118329466357,
+     "min_parts_kept": 1.0,
+     "keys": 12,
+     "pass": false
+    },
+    "unit": "fraction",
+    "ok": false
+   },
+   "T3": {
+    "value": true,
+    "unit": "original native stroke IDs and pointcounts",
+    "ok": true
+   },
+   "S7": {
+    "value": 2,
+    "unit": "hash-linked ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/paintbrush/integrated/index.html",
+  "gait": "walk"
+ },
+ {
+  "lot": "SM-0128",
+  "id": "rhinoceros",
+  "kind": "subject",
+  "title": "Rhinoceros",
+  "category": "rhinoceros",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "14 source-paired keys; 99 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/rhinoceros/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5621907212730368; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/rhinoceros/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#rhinoceros/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#rhinoceros/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#rhinoceros"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/rhinoceros-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/rhinoceros/integrated/source.json"
+   }
+  ],
+  "tests": "shots/rhinoceros/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Source IDs, archive URLs, retained interval, raw SHA256 and archive-reported rights preserved; rights independently unverified",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 3,
+     "identity": true,
+     "sampled_pose": true,
+     "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": "Static scenery is held; separately credited source-observed animated operation/props retain exposure sequences. No world-geometry solve for per-frame projected props.",
+    "unit": "static scenery scope only",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9982740766309975,
+     "min_parts_kept": 1.0,
+     "keys": 14,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": true,
+    "unit": "original native stroke IDs and pointcounts",
+    "ok": true
+   },
+   "S7": {
+    "value": 6,
+    "unit": "hash-linked ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/rhinoceros/integrated/index.html",
+  "gait": "strut"
+ },
+ {
+  "lot": "SM-0129",
+  "id": "roller-coaster",
+  "kind": "subject",
+  "title": "Roller coaster",
+  "category": "roller coaster",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "14 source-paired keys; 106 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/roller-coaster/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5572615668236288; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/roller-coaster/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#roller-coaster/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#roller-coaster/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#roller-coaster"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/roller-coaster-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/roller-coaster/integrated/source.json"
+   }
+  ],
+  "tests": "shots/roller-coaster/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Source IDs, archive URLs, retained interval, raw SHA256 and archive-reported rights preserved; rights independently unverified",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 2,
+     "identity": true,
+     "sampled_pose": true,
+     "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": "Static scenery is held; separately credited source-observed animated operation/props retain exposure sequences. No world-geometry solve for per-frame projected props.",
+    "unit": "static scenery scope only",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9956937799043062,
+     "min_parts_kept": 1.0,
+     "keys": 14,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": true,
+    "unit": "original native stroke IDs and pointcounts",
+    "ok": true
+   },
+   "S7": {
+    "value": 4,
+    "unit": "hash-linked ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/roller-coaster/integrated/index.html",
+  "gait": "moonwalk"
+ },
+ {
+  "lot": "SM-0130",
+  "id": "shovel",
+  "kind": "subject",
+  "title": "Shovel",
+  "category": "shovel",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "12 source-paired keys; 64 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/shovel/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5440893605642240; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/shovel/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#shovel/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#shovel/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#shovel"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/shovel-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/shovel/integrated/source.json"
+   }
+  ],
+  "tests": "shots/shovel/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Source IDs, archive URLs, retained interval, raw SHA256 and archive-reported rights preserved; rights independently unverified",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 2,
+     "identity": true,
+     "sampled_pose": true,
+     "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": "Static scenery is held; separately credited source-observed animated operation/props retain exposure sequences. No world-geometry solve for per-frame projected props.",
+    "unit": "static scenery scope only",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.998289136013687,
+     "min_parts_kept": 1.0,
+     "keys": 12,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": true,
+    "unit": "original native stroke IDs and pointcounts",
+    "ok": true
+   },
+   "S7": {
+    "value": 4,
+    "unit": "hash-linked ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/shovel/integrated/index.html",
+  "gait": "tiptoe"
+ },
+ {
+  "lot": "SM-0131",
+  "id": "skateboard",
+  "kind": "subject",
+  "title": "Skateboard",
+  "category": "skateboard",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "12 source-paired keys; 46 rendered frames at 24 fps. A sampled identity or source-pose gap remains; see the raw review. Playback approval pending.",
+  "cover": "shots/skateboard/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5264525936820224; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/skateboard/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#skateboard/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#skateboard/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#skateboard"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/skateboard-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/skateboard/integrated/source.json"
+   }
+  ],
+  "tests": "shots/skateboard/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Source IDs, archive URLs, retained interval, raw SHA256 and archive-reported rights preserved; rights independently unverified",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 3,
+     "identity": true,
+     "sampled_pose": false,
+     "normal_speed_playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": "Static scenery is held; separately credited source-observed animated operation/props retain exposure sequences. No world-geometry solve for per-frame projected props.",
+    "unit": "static scenery scope only",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9957924263674615,
+     "min_parts_kept": 1.0,
+     "keys": 12,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": true,
+    "unit": "original native stroke IDs and pointcounts",
+    "ok": true
+   },
+   "S7": {
+    "value": 6,
+    "unit": "hash-linked ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/skateboard/integrated/index.html",
+  "gait": "cancan"
+ },
+ {
+  "lot": "SM-0132",
+  "id": "snake",
+  "kind": "subject",
+  "title": "Snake",
+  "category": "snake",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "12 source-paired keys; 73 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/snake/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 4612932086267904; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/snake/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#snake/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#snake/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#snake"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/snake-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/snake/integrated/source.json"
+   }
+  ],
+  "tests": "shots/snake/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": {
+     "original_doodle_identity_bar_met": true,
+     "source_framing_pose_bar_met": true,
+     "review": "review-v1.json"
+    },
+    "unit": "sampled stills only",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9993517017828201,
+     "min_parts_kept": 1.0,
+     "keys": 12,
+     "pass": true
+    },
+    "unit": "fraction; recall>=.98 and all pieces retained",
+    "ok": true
+   },
+   "T3": {
+    "value": true,
+    "unit": "native stroke IDs and original point counts retained",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "Static scene objects only; separately credited animated props/operators retain their explicit exposure sequences",
+    "ok": true
+   },
+   "S6": {
+    "value": "Source IDs, interval, URLs, raw SHA and reported rights retained; Quick, Draw! CC BY4.0",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 3,
+    "unit": "verified hash-linked append-only ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/snake/integrated/index.html",
+  "gait": "hop"
+ },
+ {
+  "lot": "SM-0133",
+  "id": "speedboat",
+  "kind": "subject",
+  "title": "Speedboat",
+  "category": "speedboat",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "12 source-paired keys; 45 rendered frames at 24 fps. Both sampled still checks pass. Trace fidelity remains below its gate. Playback approval pending.",
+  "cover": "shots/speedboat/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5362068238630912; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/speedboat/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#speedboat/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#speedboat/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#speedboat"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/speedboat-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/speedboat/integrated/source.json"
+   }
+  ],
+  "tests": "shots/speedboat/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 1,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": {
+     "original_doodle_identity_bar_met": true,
+     "source_framing_pose_bar_met": true,
+     "review": "review-v3.json"
+    },
+    "unit": "sampled stills only",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9635535307517085,
+     "min_parts_kept": 1.0,
+     "keys": 12,
+     "pass": false
+    },
+    "unit": "fraction; recall>=.98 and all pieces retained",
+    "ok": false
+   },
+   "T3": {
+    "value": true,
+    "unit": "native stroke IDs and original point counts retained",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "Static scene objects only; separately credited animated props/operators retain their explicit exposure sequences",
+    "ok": true
+   },
+   "S6": {
+    "value": "Source IDs, interval, URLs, raw SHA and reported rights retained; Quick, Draw! CC BY4.0",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 6,
+    "unit": "verified hash-linked append-only ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/speedboat/integrated/index.html",
+  "gait": "goose step"
+ },
+ {
+  "lot": "SM-0134",
+  "id": "swan",
+  "kind": "subject",
+  "title": "Swan",
+  "category": "swan",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "12 source-paired keys; 73 rendered frames at 24 fps. A sampled identity or source-pose gap remains; see the raw review. Playback approval pending.",
+  "cover": "shots/swan/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 4762067460423680; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/swan/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#swan/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#swan/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#swan"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/swan-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/swan/integrated/source.json"
+   }
+  ],
+  "tests": "shots/swan/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 1,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": {
+     "original_doodle_identity_bar_met": true,
+     "source_framing_pose_bar_met": false,
+     "review": "review-v3.json"
+    },
+    "unit": "sampled stills only",
+    "ok": false
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9897260273972602,
+     "min_parts_kept": 1.0,
+     "keys": 12,
+     "pass": true
+    },
+    "unit": "fraction; recall>=.98 and all pieces retained",
+    "ok": true
+   },
+   "T3": {
+    "value": true,
+    "unit": "native stroke IDs and original point counts retained",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "Static scene objects only; separately credited animated props/operators retain their explicit exposure sequences",
+    "ok": true
+   },
+   "S6": {
+    "value": "Source IDs, interval, URLs, raw SHA and reported rights retained; Quick, Draw! CC BY4.0",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 6,
+    "unit": "verified hash-linked append-only ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/swan/integrated/index.html",
+  "gait": "shuffle"
+ },
+ {
+  "lot": "SM-0135",
+  "id": "trumpet",
+  "kind": "subject",
+  "title": "Trumpet",
+  "category": "trumpet",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "12 source-paired keys; 121 rendered frames at 24 fps. A sampled identity or source-pose gap remains; see the raw review. Playback approval pending.",
+  "cover": "shots/trumpet/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 6590023216398336; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/trumpet/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#trumpet/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#trumpet/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#trumpet"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/trumpet-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/trumpet/integrated/source.json"
+   }
+  ],
+  "tests": "shots/trumpet/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 1,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": {
+     "original_doodle_identity_bar_met": true,
+     "source_framing_pose_bar_met": false,
+     "review": "review-v3.json"
+    },
+    "unit": "sampled stills only",
+    "ok": false
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.99597747385358,
+     "min_parts_kept": 1.0,
+     "keys": 12,
+     "pass": true
+    },
+    "unit": "fraction; recall>=.98 and all pieces retained",
+    "ok": true
+   },
+   "T3": {
+    "value": true,
+    "unit": "native stroke IDs and original point counts retained",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "Static scene objects only; separately credited animated props/operators retain their explicit exposure sequences",
+    "ok": true
+   },
+   "S6": {
+    "value": "Source IDs, interval, URLs, raw SHA and reported rights retained; Quick, Draw! CC BY4.0",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 6,
+    "unit": "verified hash-linked append-only ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/trumpet/integrated/index.html",
+  "gait": "sprint"
+ },
+ {
+  "lot": "SM-0136",
+  "id": "van",
+  "kind": "subject",
+  "title": "Van",
+  "category": "van",
+  "wave": 5,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "11 source-paired keys; 61 rendered frames at 24 fps. Both sampled still checks pass. Playback approval pending.",
+  "cover": "shots/van/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! key 5046474947690496; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Source-observed scenery and operating props credited in the assembly.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/van/integrated/index.html"
+   },
+   {
+    "label": "Watch the new batch of 25",
+    "href": "shots/batch-25.html#van/comparison"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#van/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#van"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/van-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/van/integrated/source.json"
+   }
+  ],
+  "tests": "shots/van/tests.json",
+  "tags": [
+   "assembled review",
+   "batch 25",
+   "native QuickDraw",
+   "source paired"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": {
+     "original_doodle_identity_bar_met": true,
+     "source_framing_pose_bar_met": true,
+     "review": "review-v1.json"
+    },
+    "unit": "sampled stills only",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9995906672124437,
+     "min_parts_kept": 1.0,
+     "keys": 11,
+     "pass": true
+    },
+    "unit": "fraction; recall>=.98 and all pieces retained",
+    "ok": true
+   },
+   "T3": {
+    "value": true,
+    "unit": "native stroke IDs and original point counts retained",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "Static scene objects only; separately credited animated props/operators retain their explicit exposure sequences",
+    "ok": true
+   },
+   "S6": {
+    "value": "Source IDs, interval, URLs, raw SHA and reported rights retained; Quick, Draw! CC BY4.0",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 2,
+    "unit": "verified hash-linked append-only ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/van/integrated/index.html",
+  "gait": "jelly"
  }
 ]

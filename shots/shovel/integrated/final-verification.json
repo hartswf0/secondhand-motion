@@ -1,0 +1,156 @@
+{
+  "subject": "shovel",
+  "technical_pass": true,
+  "frames": 64,
+  "fps": 24,
+  "keys": 12,
+  "strict_json_files": 115,
+  "relative_links": 17,
+  "hash_verified_ledger_entries": 4,
+  "movies": [
+    {
+      "path": "shots/shovel/integrated/cartoon.mp4",
+      "decoded_frames": 64,
+      "fps": 24.0,
+      "sha256": "0f07598fdfaf92141884ab63eebcef005b73861e83c3adfc8d35b6818f01ba26",
+      "key_pixel_checks": [
+        {
+          "key": 1,
+          "frame": 0,
+          "rgb_mae": 1.686587
+        },
+        {
+          "key": 2,
+          "frame": 8,
+          "rgb_mae": 1.688371
+        },
+        {
+          "key": 3,
+          "frame": 18,
+          "rgb_mae": 1.70729
+        },
+        {
+          "key": 4,
+          "frame": 26,
+          "rgb_mae": 1.701877
+        },
+        {
+          "key": 5,
+          "frame": 28,
+          "rgb_mae": 1.711598
+        },
+        {
+          "key": 6,
+          "frame": 32,
+          "rgb_mae": 1.710302
+        },
+        {
+          "key": 7,
+          "frame": 36,
+          "rgb_mae": 1.714274
+        },
+        {
+          "key": 8,
+          "frame": 40,
+          "rgb_mae": 1.697878
+        },
+        {
+          "key": 9,
+          "frame": 46,
+          "rgb_mae": 1.705615
+        },
+        {
+          "key": 10,
+          "frame": 52,
+          "rgb_mae": 1.712249
+        },
+        {
+          "key": 11,
+          "frame": 58,
+          "rgb_mae": 1.722234
+        },
+        {
+          "key": 12,
+          "frame": 63,
+          "rgb_mae": 1.75167
+        }
+      ]
+    },
+    {
+      "path": "shots/shovel/integrated/source-excerpt.mp4",
+      "decoded_frames": 64,
+      "fps": 24.0,
+      "sha256": "70b8efda7f79f02bc0dee84635ba7a3d70e4de640dc0923e06efc2c2fbd6def4",
+      "key_pixel_checks": []
+    },
+    {
+      "path": "shots/shovel/integrated/comparison.mp4",
+      "decoded_frames": 64,
+      "fps": 24.0,
+      "sha256": "83b24ef2b35ac17a0a54b6b1f7de961b5b6a40a46bb1323d00445b4e0471001c",
+      "key_pixel_checks": [
+        {
+          "key": 1,
+          "frame": 0,
+          "rgb_mae": 1.685652
+        },
+        {
+          "key": 2,
+          "frame": 8,
+          "rgb_mae": 1.688241
+        },
+        {
+          "key": 3,
+          "frame": 18,
+          "rgb_mae": 1.70871
+        },
+        {
+          "key": 4,
+          "frame": 26,
+          "rgb_mae": 1.707728
+        },
+        {
+          "key": 5,
+          "frame": 28,
+          "rgb_mae": 1.684392
+        },
+        {
+          "key": 6,
+          "frame": 32,
+          "rgb_mae": 1.696027
+        },
+        {
+          "key": 7,
+          "frame": 36,
+          "rgb_mae": 1.697956
+        },
+        {
+          "key": 8,
+          "frame": 40,
+          "rgb_mae": 1.700482
+        },
+        {
+          "key": 9,
+          "frame": 46,
+          "rgb_mae": 1.702558
+        },
+        {
+          "key": 10,
+          "frame": 52,
+          "rgb_mae": 1.713135
+        },
+        {
+          "key": 11,
+          "frame": 58,
+          "rgb_mae": 1.736069
+        },
+        {
+          "key": 12,
+          "frame": 63,
+          "rgb_mae": 1.757496
+        }
+      ]
+    }
+  ],
+  "scope": "Artifact integrity and saved-key/movie agreement only; no artistic, recognition, normal-speed motion or training approval inferred."
+}

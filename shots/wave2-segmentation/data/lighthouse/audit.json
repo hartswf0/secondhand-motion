@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "25ead50ff2b9c35a6118d28b00dc7b57b5c9e56d31cb8a038e3044408cdfd239",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Lighthouse",
+      "result": "manual_proxy_inspection",
+      "note": "Visible striped tower and cap broadly captured; cropped base retained. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.986
+    },
+    {
+      "frame": 10,
+      "observed_target": "Lighthouse",
+      "result": "manual_proxy_inspection",
+      "note": "Visible striped tower and cap broadly captured; cropped base retained. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.981
+    },
+    {
+      "frame": 21,
+      "observed_target": "Lighthouse",
+      "result": "manual_proxy_inspection",
+      "note": "Visible striped tower and cap broadly captured; cropped base retained. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.975
+    },
+    {
+      "frame": 31,
+      "observed_target": "Lighthouse",
+      "result": "manual_proxy_inspection",
+      "note": "Visible striped tower and cap broadly captured; cropped base retained. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.976
+    }
+  ]
+}

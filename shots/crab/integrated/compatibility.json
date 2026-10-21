@@ -1,0 +1,39 @@
+{
+  "status": "compatible_with_explicit_simplifications",
+  "changes": [
+    "Each complete native claw assembly is rotated about its native arm root toward the lowered source claw position; original loops and inner claw strokes retained.",
+    "The four native drawn leg strokes are spread to source-observed lateral reaches. They are simplifications of overlapping legs, not four verified foot contacts.",
+    "Two frozen agent-authored eyestalk strokes retain the source fold event, separately credited; they are not original native ink."
+  ],
+  "provisional_design_record": null,
+  "limitations": "Four drawn leg strokes plus2agent eyes, not full anatomical limb/contact tracking",
+  "native_key_id": "6219540520239104",
+  "native_strokes": 11,
+  "original_point_counts": [
+    17,
+    2,
+    3,
+    3,
+    3,
+    3,
+    10,
+    2,
+    9,
+    4,
+    7
+  ],
+  "native_topology": true,
+  "topology_note": "Native first-stroke IDs and point counts retained",
+  "extras": [
+    {
+      "index": 11,
+      "source": "drawn by agent in frozen GWP study from source observations",
+      "note": "Left eyestalk and eye outline absent from native design; original 11 strokes kept separately."
+    },
+    {
+      "index": 12,
+      "source": "drawn by agent in frozen GWP study from source observations",
+      "note": "Right eyestalk and eye outline absent from native design."
+    }
+  ]
+}

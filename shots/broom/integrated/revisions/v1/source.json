@@ -1,0 +1,33 @@
+{
+  "clip_id": "e706c786-b112-5c22-846c-7008afec718d",
+  "source_id": "647f7e7a-cda4-5969-9593-3456f69d8e32",
+  "source_title": "They Call It All-States",
+  "source_year": "1950",
+  "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/647f7e7a-cda4-5969-9593-3456f69d8e32/v3-ffmpeg-openclip-1/clips/e706c786-b112-5c22-846c-7008afec718d.mp4",
+  "shot_page_url": "https://www.movingimagearchive.com/sources/they-call-it-all-states-647f7e7a?clip=e706c786-b112-5c22-846c-7008afec718d",
+  "source_page_url": "https://www.movingimagearchive.com/sources/they-call-it-all-states-647f7e7a",
+  "original_source_url": "https://archive.org/details/TheyCall1950",
+  "rights_statement": "public_domain",
+  "start_seconds": 4.5,
+  "end_seconds": 6.983333333333334,
+  "category": "broom",
+  "why_this_clip": "A straw broom fills the lower centre of the frame with its handle running up to the top edge, and it sweeps back and forth across a dark floor while a white apron stays at the left. The clip has no detected cuts, and from 4.5 s to 7.0 s the broom head stays large and in view before it swings out of frame at 7.25 s.",
+  "pool": "production/data/candidates-100.json",
+  "interval_seconds": [
+    4.5,
+    6.983333333333334
+  ],
+  "source_sha256": "cbef6a3f048c9a7c606dde23ea3d5910b0c3be3f1f4288f4849574911a574d17",
+  "time_basis": "clip_relative_seconds",
+  "source_clock": "decoded best_effort_timestamp_time",
+  "source_approved": false,
+  "motion_approved": false,
+  "train_eligible": false,
+  "source_selection": {
+    "pass": true,
+    "evidence": "Sixteen raw samples show three brooms in one continuous sweep; main bristles staylarge and visible. No cut/dissolve inside4.5\u20137.0. Retained endpoint slightly shortened to the final frozen vector observation; no pose extrapolation.",
+    "sample_count": 16,
+    "sheet": "preflight-source-design.jpg"
+  },
+  "vector_observation_clock": "Nominal CI resampling clock; original CI source PTS/input hash unavailable"
+}

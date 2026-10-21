@@ -1,0 +1,475 @@
+{
+ "category": "lion",
+ "doodle_key_id": "6643650639429632",
+ "facing": 1,
+ "face_from": [
+  "neck",
+  "rump"
+ ],
+ "note": "Quick, Draw! lion 6643650639429632, a standing lion seen from the side, facing right. Stroke 0 is the round face; stroke 1 is the zigzag mane around it; stroke 2 is the whole body in one line: neck, chest, front leg (vertices 2 to 7), belly, hind leg (10 to 16), tail (17 to 21) and back; strokes 3 and 4 are the eyes and stroke 5 the mouth. The lion in the film lies on a ledge and does not move; the camera pans left past it, so the root (rump and chest) is placed where the lion lies and moves only with the measured camera. The legs fold toward the belly line by the pose value lie, so the standing doodle lies down without being redrawn. The face circle and the eyes and mouth slide right inside the mane by the pose value look (0: facing the camera as drawn, 1: turned to profile toward the right), which is the film's head turn from looking at the camera to looking right.",
+ "strokes": [
+  [
+   [
+    190,
+    22
+   ],
+   [
+    185,
+    24
+   ],
+   [
+    173,
+    35
+   ],
+   [
+    165,
+    61
+   ],
+   [
+    169,
+    75
+   ],
+   [
+    175,
+    81
+   ],
+   [
+    189,
+    83
+   ],
+   [
+    196,
+    82
+   ],
+   [
+    211,
+    68
+   ],
+   [
+    218,
+    54
+   ],
+   [
+    219,
+    34
+   ],
+   [
+    213,
+    26
+   ],
+   [
+    202,
+    21
+   ],
+   [
+    183,
+    21
+   ],
+   [
+    180,
+    24
+   ]
+  ],
+  [
+   [
+    160,
+    15
+   ],
+   [
+    181,
+    2
+   ],
+   [
+    198,
+    1
+   ],
+   [
+    199,
+    3
+   ],
+   [
+    181,
+    14
+   ],
+   [
+    228,
+    0
+   ],
+   [
+    204,
+    16
+   ],
+   [
+    232,
+    13
+   ],
+   [
+    227,
+    29
+   ],
+   [
+    229,
+    34
+   ],
+   [
+    255,
+    32
+   ],
+   [
+    236,
+    58
+   ],
+   [
+    235,
+    62
+   ],
+   [
+    243,
+    62
+   ],
+   [
+    223,
+    76
+   ],
+   [
+    236,
+    75
+   ],
+   [
+    224,
+    86
+   ],
+   [
+    202,
+    100
+   ],
+   [
+    205,
+    92
+   ],
+   [
+    191,
+    92
+   ],
+   [
+    157,
+    109
+   ],
+   [
+    155,
+    103
+   ],
+   [
+    165,
+    44
+   ],
+   [
+    151,
+    55
+   ],
+   [
+    167,
+    23
+   ],
+   [
+    179,
+    13
+   ]
+  ],
+  [
+   [
+    165,
+    68
+   ],
+   [
+    161,
+    74
+   ],
+   [
+    161,
+    126
+   ],
+   [
+    137,
+    140
+   ],
+   [
+    119,
+    143
+   ],
+   [
+    113,
+    138
+   ],
+   [
+    110,
+    119
+   ],
+   [
+    111,
+    90
+   ],
+   [
+    105,
+    85
+   ],
+   [
+    94,
+    87
+   ],
+   [
+    77,
+    100
+   ],
+   [
+    71,
+    111
+   ],
+   [
+    68,
+    130
+   ],
+   [
+    52,
+    145
+   ],
+   [
+    45,
+    145
+   ],
+   [
+    30,
+    131
+   ],
+   [
+    23,
+    101
+   ],
+   [
+    19,
+    100
+   ],
+   [
+    10,
+    106
+   ],
+   [
+    0,
+    117
+   ],
+   [
+    5,
+    99
+   ],
+   [
+    13,
+    91
+   ],
+   [
+    73,
+    82
+   ],
+   [
+    114,
+    63
+   ],
+   [
+    133,
+    46
+   ],
+   [
+    164,
+    40
+   ]
+  ],
+  [
+   [
+    187,
+    42
+   ],
+   [
+    184,
+    41
+   ]
+  ],
+  [
+   [
+    212,
+    34
+   ],
+   [
+    207,
+    38
+   ],
+   [
+    207,
+    34
+   ]
+  ],
+  [
+   [
+    179,
+    64
+   ],
+   [
+    189,
+    68
+   ],
+   [
+    197,
+    68
+   ],
+   [
+    209,
+    51
+   ]
+  ]
+ ],
+ "root": [
+  "rump",
+  "chest"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "rump": [
+   13,
+   91
+  ],
+  "chest": [
+   161,
+   100
+  ],
+  "neck": [
+   160,
+   72
+  ],
+  "head": [
+   192,
+   52
+  ],
+  "belly_r": [
+   60,
+   92
+  ],
+  "belly_f": [
+   150,
+   92
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ],
+   "shift_by": "look",
+   "shift": [
+    14,
+    0
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 2,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ],
+   "shift_by": "look",
+   "shift": [
+    14,
+    0
+   ]
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 3,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ],
+   "shift_by": "look",
+   "shift": [
+    14,
+    0
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 14,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ],
+   "shift_by": "look",
+   "shift": [
+    7,
+    0
+   ]
+  },
+  {
+   "region": [
+    140,
+    0,
+    256,
+    112
+   ],
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 2,
+   "to": 7,
+   "joint": "chest",
+   "aim": [
+    "rump",
+    "chest"
+   ],
+   "fold": "lie",
+   "axis": [
+    "belly_r",
+    "belly_f"
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 10,
+   "to": 16,
+   "joint": "rump",
+   "aim": [
+    "rump",
+    "chest"
+   ],
+   "fold": "lie",
+   "axis": [
+    "belly_r",
+    "belly_f"
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "rump",
+   "aim": [
+    "rump",
+    "chest"
+   ]
+  }
+ ],
+ "size": "steady",
+ "track": true,
+ "smooth": 1.5
+}

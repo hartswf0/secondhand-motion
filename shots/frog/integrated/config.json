@@ -1,0 +1,59 @@
+{
+  "title": "Frog at rest",
+  "revision": "integrated-v1",
+  "interval": [
+    0.75,
+    3.2333333333333334
+  ],
+  "W": 384,
+  "H": 288,
+  "source_sha256": "f8223e0cbab358e0f85ca4a9c7dde5d5adc4cf4613f0c2b37249b9a56edcc1cd",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "key_times": [
+    0.75,
+    1.0666667,
+    1.4,
+    1.7333333,
+    1.9833333,
+    2.3166667,
+    2.4833333,
+    2.8166667,
+    3.2333333333333334
+  ],
+  "key_notes": {
+    "0.75": "Opening retained pose",
+    "1.0666667": "Observed throat/body hold or breathing change",
+    "1.4": "Observed throat/body hold or breathing change",
+    "1.7333333": "Observed throat/body hold or breathing change",
+    "1.9833333": "Observed throat/body hold or breathing change",
+    "2.3166667": "Observed throat/body hold or breathing change",
+    "2.4833333": "Observed throat/body hold or breathing change",
+    "2.8166667": "Observed throat/body hold or breathing change",
+    "3.2333333333333334": "Final observed pose"
+  },
+  "extra_strokes": [],
+  "fill_strokes": [],
+  "background_fill": false,
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Builder inspected16raw source samples spanning the retained interval and boundary margins in preflight-source.jpg. One continuous event; no internal cut/dissolve observed."
+  },
+  "compatibility": {
+    "status": "compatible_with_explicit_simplifications",
+    "changes": [
+      "Broaden the same native central hood/belly while retaining its angular contour, original two side leg constructions and per-stroke point counts.",
+      "Place the same irregular native eye loops farther apart on the observed source eye line; the original two-point mouth dash lies on the source mouth line.",
+      "Small observed body/throat changes inherited from frozen source-keyed poses. Film damage near2.1s is not redrawn as anatomy."
+    ],
+    "provisional_design_record": null,
+    "limitations": "Angular native anatomy simplifies round toad, contacts unverified"
+  },
+  "verified_contacts": [],
+  "camera_note": "shots/frog-sam/camera.json, phase correlation on the footage; the camera is locked off and these are shifts under 2 px of film weave",
+  "review_note": "Native identity passes; sampled source pose passes. No material identity or sampled framing/pose gap found. Normal-speed playback remains unrun and unapproved. Normal-speed motion remains unapproved; classifier unrun. No training ran.",
+  "assembly_summary": "The native eight-stroke frog holds the source's frontal rest and small throat changes. Eye spacing and mouth placement are source-observed; planted material feet are not claimed.",
+  "review_status": "review_candidate"
+}

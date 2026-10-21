@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "48850eca725092c5f103e630bc415d77fee94e0c49adf9ef6b9190d8d9822420",
+  "legacy_meta_sha256": "a8d28d7b417c3d474c078b07b97487670a9a6ae116077ed42172620978865d34",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a skateboard.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/skateboard-sam/clip.json",
+    "shots/skateboard-sam/masks.json",
+    "shots/skateboard-sam/mask_meta.json"
+  ],
+  "clip_id": "1919988e-8d4f-5b41-b9a1-144facbffcb8",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "9b760b70191e6a499dac4493952b819a0054246e9ebebdccc664605213eefa57",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "8760c259d8362b2582b4f1f3428bb9ee451dbdbfee5376e52585dbf809f6642c",
+  "source_record": "../../../skateboard/source.json",
+  "assembly_source_record": "../../../skateboard/integrated/source.json",
+  "note": "The board and some shoe pixels are selected, not the rider. This cannot test the whole rider/board assembly. These masks are filled exported contour proxies, not original binary SAM masks."
+}

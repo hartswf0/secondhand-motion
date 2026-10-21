@@ -1,0 +1,360 @@
+{
+ "category": "speedboat",
+ "doodle_key_id": "5362068238630912",
+ "facing": 1,
+ "face_from": [
+  "nose",
+  "tail"
+ ],
+ "note": "Quick, Draw! speedboat 5362068238630912, drawn with the bow to the right; mirrored here because the film's boat points its bow to the left. Stroke 0 is the hull: the top of the bow, the pointed bow tip and the bottom line back to the stern. Stroke 1 is the stern: the transom going down and round to the bottom. Stroke 7 is the deck line. Stroke 2 is the windshield. Strokes 3 and 4 are two small round heads behind the windshield, the two riders the film shows. Strokes 5 and 6 are the outboard motor and its propeller under the stern, and stroke 8 is the spray lines behind the stern. The whole drawing is placed by two points, the bow tip and the stern, so it tilts nose-up, levels and dives nose-down as the boat does in the jump, and keeps one size across the hull (pose entry _scale); when the bow points toward the camera, as it comes over the bank, the drawing gets shorter along the hull instead of smaller all over. The two heads move up and down together by the pose entry bob, so the riders jolt when the boat lands. The spray lines turn about the propeller by the pose entry spray, so the spray kicks up when the boat hits the water.",
+ "strokes": [
+  [
+   [
+    51,
+    24
+   ],
+   [
+    104,
+    4
+   ],
+   [
+    127,
+    0
+   ],
+   [
+    153,
+    7
+   ],
+   [
+    173,
+    22
+   ],
+   [
+    253,
+    25
+   ],
+   [
+    255,
+    32
+   ],
+   [
+    247,
+    50
+   ],
+   [
+    232,
+    66
+   ],
+   [
+    217,
+    75
+   ],
+   [
+    168,
+    87
+   ],
+   [
+    108,
+    93
+   ]
+  ],
+  [
+   [
+    55,
+    19
+   ],
+   [
+    17,
+    37
+   ],
+   [
+    14,
+    40
+   ],
+   [
+    18,
+    46
+   ],
+   [
+    45,
+    69
+   ],
+   [
+    73,
+    84
+   ],
+   [
+    89,
+    89
+   ],
+   [
+    115,
+    92
+   ]
+  ],
+  [
+   [
+    137,
+    11
+   ],
+   [
+    121,
+    14
+   ],
+   [
+    138,
+    25
+   ],
+   [
+    145,
+    24
+   ],
+   [
+    149,
+    20
+   ],
+   [
+    146,
+    14
+   ],
+   [
+    133,
+    10
+   ]
+  ],
+  [
+   [
+    102,
+    15
+   ],
+   [
+    110,
+    23
+   ],
+   [
+    107,
+    29
+   ],
+   [
+    95,
+    23
+   ],
+   [
+    93,
+    19
+   ],
+   [
+    98,
+    18
+   ]
+  ],
+  [
+   [
+    85,
+    23
+   ],
+   [
+    69,
+    28
+   ],
+   [
+    78,
+    32
+   ],
+   [
+    84,
+    27
+   ],
+   [
+    80,
+    24
+   ]
+  ],
+  [
+   [
+    88,
+    90
+   ],
+   [
+    30,
+    76
+   ],
+   [
+    23,
+    82
+   ],
+   [
+    27,
+    86
+   ],
+   [
+    41,
+    87
+   ],
+   [
+    18,
+    91
+   ],
+   [
+    19,
+    108
+   ]
+  ],
+  [
+   [
+    71,
+    88
+   ],
+   [
+    92,
+    94
+   ],
+   [
+    55,
+    92
+   ],
+   [
+    48,
+    93
+   ],
+   [
+    48,
+    98
+   ],
+   [
+    75,
+    106
+   ]
+  ],
+  [
+   [
+    44,
+    36
+   ],
+   [
+    73,
+    37
+   ],
+   [
+    132,
+    33
+   ],
+   [
+    148,
+    31
+   ],
+   [
+    165,
+    24
+   ]
+  ],
+  [
+   [
+    40,
+    75
+   ],
+   [
+    18,
+    68
+   ],
+   [
+    3,
+    72
+   ],
+   [
+    20,
+    73
+   ],
+   [
+    6,
+    74
+   ],
+   [
+    0,
+    71
+   ]
+  ]
+ ],
+ "anchors": {
+  "nose": [
+   255,
+   32
+  ],
+  "tail": [
+   14,
+   40
+  ],
+  "prop": [
+   40,
+   75
+  ]
+ },
+ "root": [
+  "nose",
+  "tail"
+ ],
+ "size_from_mask": false,
+ "size": "steady",
+ "smooth": 1.5,
+ "track": false,
+ "parts": [
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 5,
+   "joint": "nose",
+   "aim": [
+    "nose",
+    "tail"
+   ],
+   "turn": 0,
+   "shift_by": "bob",
+   "shift": [
+    0,
+    -8
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 4,
+   "joint": "nose",
+   "aim": [
+    "nose",
+    "tail"
+   ],
+   "turn": 0,
+   "shift_by": "bob",
+   "shift": [
+    0,
+    -8
+   ]
+  },
+  {
+   "stroke": 8,
+   "from": 0,
+   "to": 5,
+   "joint": "prop",
+   "aim": [
+    "nose",
+    "tail"
+   ],
+   "turn": 0,
+   "spin": "spray"
+  },
+  {
+   "rest": true,
+   "joint": "nose",
+   "aim": [
+    "nose",
+    "tail"
+   ],
+   "turn": 0
+  }
+ ],
+ "max_tilt": 45,
+ "foreshorten": [
+  0.45,
+  1.4
+ ]
+}

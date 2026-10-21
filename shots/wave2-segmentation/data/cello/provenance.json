@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "3e20043d6f261780a7e3df84ab1a49f5dac7ac5f6b1d8070934ce3fb42a5abd1",
+  "legacy_meta_sha256": "139f6ff1d863bd009c929c20daed6e018657ae47cbfbfded6a9a7d2c64f46215",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a woman playing a cello.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/cello-sam/clip.json",
+    "shots/cello-sam/masks.json",
+    "shots/cello-sam/mask_meta.json"
+  ],
+  "clip_id": "13c8e94f-bbac-5fee-9fe8-e4d5be3373dd",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "3697f264b233d1543d16136760064582d1e21d0677a0f67ff8eb4baa9a9721c4",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "177ef313268a48cc9b6ed59b2218aadb96643feabf3be4e3b9746b65b4ba7bc4",
+  "source_record": "../../../cello/source.json",
+  "assembly_source_record": "../../../cello/integrated/source.json",
+  "note": "The mask follows the player rather than the cello. It cannot measure instrument-only drawing fit. These masks are filled exported contour proxies, not original binary SAM masks."
+}

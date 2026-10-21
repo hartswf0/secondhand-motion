@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "10e0587c91035af8f7f5033c3da3ad35116384cf685012d08761ebb4a9ab238d",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Snake head / partial coil",
+      "result": "manual_proxy_inspection",
+      "note": "Head and raised neck selected; much of lower coil omitted. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.965
+    },
+    {
+      "frame": 12,
+      "observed_target": "Snake head / partial coil",
+      "result": "manual_proxy_inspection",
+      "note": "Head, neck and separate rattle selected; whole coil not covered. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.935
+    },
+    {
+      "frame": 25,
+      "observed_target": "Snake head / partial coil",
+      "result": "manual_proxy_inspection",
+      "note": "Head and partial coil selected with changing boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.892
+    },
+    {
+      "frame": 37,
+      "observed_target": "Snake head / partial coil",
+      "result": "manual_proxy_inspection",
+      "note": "Head, neck and some rattle selected; not a whole-coiled-body target. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.88
+    }
+  ]
+}

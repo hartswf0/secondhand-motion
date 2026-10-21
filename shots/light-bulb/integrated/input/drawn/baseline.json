@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A line-drawn light bulb (round globe, a single filament line, and three stacked pointed screw-thread bands at the base) stands upright in the center of the frame in front of grey shelf scenery (a small vase at upper left, a box shape at upper right, horizontal shelf lines). In frames 1-4 the bulb is large and its top is cut off by the top edge. From frame 5 to frame 9 the bulb gets steadily smaller and moves slightly left, so the whole globe becomes visible, as if the camera pulls back; the scenery shifts with it. From frame 9 to frame 16 the bulb and scenery stay the same size and position, with no visible change; nothing else happens.",
+ "seen_film": "A frosted, glowing light bulb with a brass screw base stands on a dark surface. In frames 1-3 a small grey-haired cartoon figure peeks out from behind the left side of the bulb and slides back behind it; by frame 4 only the edge of its dark cloak remains, and by frame 6 it is gone. Over frames 1-9 the camera pulls back: the bulb shrinks from a cropped, frame-filling size to a fully visible one and shifts slightly left, with shelf objects visible behind. Frames 9-12 hold still. From frame 13 to frame 16 pale rays of light begin to spread outward from the lower part of the bulb and grow stronger, so the bulb visibly lights the space around it.",
+ "named_subject": "an incandescent light bulb with a filament and screw-thread base",
+ "verdict": "reference stronger",
+ "evidence": "The pull-back matches: in both a.png and d.png the bulb top is cropped in frames 1-4 and fully visible from frame 5, shrinking until about frame 9 and drifting slightly left, at matching sizes and positions. The motion between frames 1-9 changes by small even steps with no pops. But frames 13-16 of d.png show light rays spreading out from the bulb, the turn of events that ends the shot, while frames 9-16 of a.png are identical with no rays or any drawn change. The small figure hiding behind the bulb in d.png frames 1-5 also has no counterpart in a.png frames 1-5.",
+ "primary_gap": "The bulb never lights up: frames 13-16 show no radiating light, so the animation ends as a static hold instead of the film's switch-on.",
+ "closes_when": "Starting at frame 13, short loose radiating lines drawn in the doodle's own stroke style appear around the lower half of the globe and grow longer and more numerous through frame 16, matching the spread of rays in d.png frames 13-16.",
+ "protect": "The exact doodle construction (lumpy polygonal globe, single slanted filament line, three overlapping pointed thread bands with the small hook at the left), the pull-back timing and framing in frames 1-9 that matches the film, the steady size reduction without pops, and the stable grey shelf scenery.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The bulb is the c.png doodle redrawn with the same globe outline, filament line and three pointed thread bands in every frame, so identity holds; the only addition needed is light rays in the same stroke manner.",
+ "still_frames_only": true,
+ "_lot": "lot383de913",
+ "_round": "baseline before drawn keys"
+}

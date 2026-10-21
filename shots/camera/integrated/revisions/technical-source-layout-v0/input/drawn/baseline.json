@@ -1,0 +1,19 @@
+{
+ "seen_animation": "All 16 frames show the same black line drawing held almost still: a rounded square body that fills most of the frame, a two-turn spiral in its middle with a short flat stroke above the outer turn, and two short vertical strokes crossing the top edge near the right corner. Grey scenery stays fixed: a small circled minus sign at left, two bracket shapes on the right side, a small circled scribble below the bottom edge, and a vertical line plus a curved line at bottom right. Between frames only the inner spiral's ends and a few vertices shift by a pixel or two; nothing moves as a whole. It is a held shot.",
+ "seen_film": "A static close-up of a camera front: a large circular lens with a knurled outer ring centered left of middle, a small bright central element, a screw at left, a vertical mechanism strip with bracket parts on the right edge, and a round knob below the lens. Across all 16 frames the camera does not move; only slight film grain, brightness flicker and sub-pixel weave change. It is a held shot.",
+ "named_subject": "A camera (square body with a spiral lens and a viewfinder bump on top), drawn as the doodle.",
+ "verdict": "bar met",
+ "evidence": "Frames 1-16 of d.png are a static hold on the lens, and frames 1-16 of a.png are a matching static hold with no jumps. The spiral center sits at about the same place as the film's lens (left of center, upper-middle) in every frame, e.g. frames 1, 8, 16. The grey scenery matches film features at the same places: the circled minus at left matches the screw (frames 1-16), the right brackets match the side mechanism, the circled scribble below the body matches the bottom knob, and the bottom-right curve matches the lower housing edge. Frame-to-frame differences in a.png (inner spiral end in frames 3, 7, 11, 15 vs neighbours) are pixel-level, comparable to the film's grain flicker, and do not read as pops. This is judged from still frames only, not playback.",
+ "primary_gap": "The doodle's viewfinder bump on top, a closed box with a horizontal top line in c.png, appears in every animation frame only as two open vertical strokes cut off by the top edge of the frame, so that part of the doodle's construction is lost.",
+ "closes_when": "The two vertical strokes at the top right are joined by a short horizontal top stroke inside the frame (by scaling or placing the body slightly lower), so the bump reads as the closed viewfinder box from c.png in all 16 frames.",
+ "protect": "The static hold that matches the film's static shot; the spiral lens sitting where the film's lens is; the doodle's wobbly single-weight black strokes, the open-ended two-turn spiral and the short flat stroke above it; the sparse grey scenery marks that line up with the film's screw, side brackets and bottom knob; no added detail or shading.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 5,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body, spiral and stroke style match c.png, but the viewfinder bump is cropped to two open strokes instead of the closed box drawn in the doodle.",
+ "still_frames_only": true,
+ "_lot": "lotc4468627",
+ "_round": "baseline before drawn keys"
+}

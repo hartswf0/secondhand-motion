@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "22e2ea5dce7386bdc1d97bbd529b983e2604a8ac0525b71c283425ad320dd3df",
+  "legacy_meta_sha256": "1feeecb49af522b7edc29067618520307c8762a73a94545798f91ec7c1d58256",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"an ocean wave.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/ocean-sam/clip.json",
+    "shots/ocean-sam/masks.json",
+    "shots/ocean-sam/mask_meta.json"
+  ],
+  "clip_id": "8b44b793-e262-550a-8d3a-3e35096d4ac8",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "f0725c85aa0dd7b3257bc7a98c59762146b78edc3c2c0e6a6fbac097202c63ea",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "45bb160511efe662d341437c3d74ce0a53e099d17536dc18792fe22b6cb47029",
+  "source_record": "../../../ocean/source.json",
+  "assembly_source_record": "../../../ocean/integrated/source.json",
+  "note": "The whole visible water field is marked. This is not a track of foam, a material wave, or an object silhouette. These masks are filled exported contour proxies, not original binary SAM masks."
+}

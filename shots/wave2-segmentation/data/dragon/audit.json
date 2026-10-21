@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "7fcedef2575d0c56a6f460faee65a9b05adadb7d702697673dd4124c1d416399",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Decorative dragon",
+      "result": "manual_proxy_inspection",
+      "note": "Decorative head, horns, body and hanging curl broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.962
+    },
+    {
+      "frame": 10,
+      "observed_target": "Decorative dragon",
+      "result": "manual_proxy_inspection",
+      "note": "Decorative head, horns, body and hanging curl broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.974
+    },
+    {
+      "frame": 21,
+      "observed_target": "Decorative dragon",
+      "result": "manual_proxy_inspection",
+      "note": "Decorative head, horns, body and hanging curl broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.973
+    },
+    {
+      "frame": 31,
+      "observed_target": "Decorative dragon",
+      "result": "manual_proxy_inspection",
+      "note": "Decorative head, horns, body and hanging curl broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.975
+    }
+  ]
+}

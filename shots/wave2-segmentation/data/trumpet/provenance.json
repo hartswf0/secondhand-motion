@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "055a1aa41fdf532fd9b0b79e6d6138beb77045fe28b861bf7099949061061daf",
+  "legacy_meta_sha256": "4b90b3c2e45fcbf9d78e368aeb5496d2a9994411713aef447dbf234ff84f4a11",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a man playing a trumpet.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/trumpet-sam/clip.json",
+    "shots/trumpet-sam/masks.json",
+    "shots/trumpet-sam/mask_meta.json"
+  ],
+  "clip_id": "015d2d81-d328-592c-8b82-ed667cb5376c",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "a48a92cf09425fe1395e125cec4475606341edfd388b1441995758c8e4e1c445",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "e846de2109ad45f8b0db2be7ed6e0d9a25a5813787f288f2c8fc846ce7eba66a",
+  "source_record": "../../../trumpet/source.json",
+  "assembly_source_record": "../../../trumpet/integrated/source.json",
+  "note": "The mask follows the musician, not the trumpet. It cannot measure instrument-only drawing fit. These masks are filled exported contour proxies, not original binary SAM masks."
+}

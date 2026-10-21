@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "7466bfce4a8da8c0e5f7ed07af15795987dc6959cdb833081c4942598f80eb92",
+  "legacy_meta_sha256": "5996e54441967eb33ef2981f7d299f9e53a2d39f90cc8cdd7d19702b137a7cfc",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a swan.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/swan-sam/clip.json",
+    "shots/swan-sam/masks.json",
+    "shots/swan-sam/mask_meta.json"
+  ],
+  "clip_id": "299e589e-f689-595b-9f3c-e5537e5c84a6",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "b8a8ee43c327185dcc5c5074e19d6990e1fa6a477c0ff01c9d814bd6beb840fb",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "a3c55390d723d234e70321fdf59eacf39d3d75ac07ac1ce51227625e20769e70",
+  "source_record": "../../../swan/source.json",
+  "assembly_source_record": "../../../swan/integrated/source.json",
+  "note": "The small body and neck are selected. Distance prevents this from establishing hidden leg or contact motion. These masks are filled exported contour proxies, not original binary SAM masks."
+}

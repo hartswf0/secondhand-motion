@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "e846de2109ad45f8b0db2be7ed6e0d9a25a5813787f288f2c8fc846ce7eba66a",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Trumpet player / person",
+      "result": "manual_proxy_inspection",
+      "note": "Player head, torso and arm selected; instrument mostly outside the mask. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.951
+    },
+    {
+      "frame": 20,
+      "observed_target": "Trumpet player / person",
+      "result": "manual_proxy_inspection",
+      "note": "Player head, torso and arm selected; instrument mostly outside the mask. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.956
+    },
+    {
+      "frame": 41,
+      "observed_target": "Trumpet player / person",
+      "result": "manual_proxy_inspection",
+      "note": "Player head, torso and arm selected; instrument mostly outside the mask. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.957
+    },
+    {
+      "frame": 61,
+      "observed_target": "Trumpet player / person",
+      "result": "manual_proxy_inspection",
+      "note": "Player head, torso and arm selected; instrument mostly outside the mask. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.944
+    }
+  ]
+}

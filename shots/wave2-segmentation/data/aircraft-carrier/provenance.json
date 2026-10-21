@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "66bbe66305ef9fa1a646ad7a21801ffb274ab857d111500d5db0b034df38ef4e",
+  "legacy_meta_sha256": "640299b347b6a95dd0b2f99e951d7e62cffc5adbc4417885d6a88bf2c77d56de",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"an aircraft carrier.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/aircraft-carrier-sam/clip.json",
+    "shots/aircraft-carrier-sam/masks.json",
+    "shots/aircraft-carrier-sam/mask_meta.json"
+  ],
+  "clip_id": "5f07aeb5-b174-544c-92e7-200f4c346bfc",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "0c7934b70af65c769f4e23f5aee5355ef1776935e600869d79aec8bc2e84450b",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "635393d2e06425cbffd182051477d689b9c914d1dcdc92a7e91c8ef6578fb68a",
+  "source_record": "../../../aircraft-carrier/source.json",
+  "assembly_source_record": "../../../aircraft-carrier/integrated/source.json",
+  "note": "The first sample omits the island; later samples broadly include it. The last sample is a dissolve and is blocked from drawing pairing. These masks are filled exported contour proxies, not original binary SAM masks."
+}

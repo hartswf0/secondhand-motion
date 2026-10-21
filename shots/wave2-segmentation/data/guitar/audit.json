@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "26c491f749ed8114efd4432b7477ada27460a9a76b63009650bb63488e3c231b",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Guitar",
+      "result": "manual_proxy_inspection",
+      "note": "Body and visible neck broadly captured. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.949
+    },
+    {
+      "frame": 10,
+      "observed_target": "Guitar",
+      "result": "manual_proxy_inspection",
+      "note": "Body and neck retained with small boundary irregularities. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.956
+    },
+    {
+      "frame": 21,
+      "observed_target": "Guitar",
+      "result": "manual_proxy_inspection",
+      "note": "Guitar plus a small stray red patch on the right floor area. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.883
+    },
+    {
+      "frame": 31,
+      "observed_target": "Guitar",
+      "result": "manual_proxy_inspection",
+      "note": "Body and neck broadly captured. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.913
+    }
+  ]
+}

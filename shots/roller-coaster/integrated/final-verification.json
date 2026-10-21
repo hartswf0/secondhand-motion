@@ -1,0 +1,176 @@
+{
+  "subject": "roller-coaster",
+  "technical_pass": true,
+  "frames": 106,
+  "fps": 24,
+  "keys": 14,
+  "strict_json_files": 115,
+  "relative_links": 18,
+  "hash_verified_ledger_entries": 4,
+  "movies": [
+    {
+      "path": "shots/roller-coaster/integrated/cartoon.mp4",
+      "decoded_frames": 106,
+      "fps": 24.0,
+      "sha256": "55ffd9643682211a14eebe7ac7ad2933f3b23193b50cd6d8692fce3a82db44e4",
+      "key_pixel_checks": [
+        {
+          "key": 1,
+          "frame": 0,
+          "rgb_mae": 1.717327
+        },
+        {
+          "key": 2,
+          "frame": 8,
+          "rgb_mae": 1.716637
+        },
+        {
+          "key": 3,
+          "frame": 16,
+          "rgb_mae": 1.713068
+        },
+        {
+          "key": 4,
+          "frame": 24,
+          "rgb_mae": 1.715314
+        },
+        {
+          "key": 5,
+          "frame": 32,
+          "rgb_mae": 1.708837
+        },
+        {
+          "key": 6,
+          "frame": 40,
+          "rgb_mae": 1.704671
+        },
+        {
+          "key": 7,
+          "frame": 48,
+          "rgb_mae": 1.70056
+        },
+        {
+          "key": 8,
+          "frame": 56,
+          "rgb_mae": 1.696898
+        },
+        {
+          "key": 9,
+          "frame": 64,
+          "rgb_mae": 1.696467
+        },
+        {
+          "key": 10,
+          "frame": 72,
+          "rgb_mae": 1.689272
+        },
+        {
+          "key": 11,
+          "frame": 80,
+          "rgb_mae": 1.684185
+        },
+        {
+          "key": 12,
+          "frame": 88,
+          "rgb_mae": 1.685604
+        },
+        {
+          "key": 13,
+          "frame": 96,
+          "rgb_mae": 1.703508
+        },
+        {
+          "key": 14,
+          "frame": 105,
+          "rgb_mae": 1.728913
+        }
+      ]
+    },
+    {
+      "path": "shots/roller-coaster/integrated/source-excerpt.mp4",
+      "decoded_frames": 106,
+      "fps": 24.0,
+      "sha256": "f6a8c8f9e38f3008228c7b05cfce3c3b4b60639c850710eb18ff0adf65976211",
+      "key_pixel_checks": []
+    },
+    {
+      "path": "shots/roller-coaster/integrated/comparison.mp4",
+      "decoded_frames": 106,
+      "fps": 24.0,
+      "sha256": "819580d4fce836f27468626558a6ecdae19149fd7094e93df0ba6ec3532f7d56",
+      "key_pixel_checks": [
+        {
+          "key": 1,
+          "frame": 0,
+          "rgb_mae": 1.717975
+        },
+        {
+          "key": 2,
+          "frame": 8,
+          "rgb_mae": 1.719299
+        },
+        {
+          "key": 3,
+          "frame": 16,
+          "rgb_mae": 1.778649
+        },
+        {
+          "key": 4,
+          "frame": 24,
+          "rgb_mae": 1.774269
+        },
+        {
+          "key": 5,
+          "frame": 32,
+          "rgb_mae": 1.76142
+        },
+        {
+          "key": 6,
+          "frame": 40,
+          "rgb_mae": 1.762976
+        },
+        {
+          "key": 7,
+          "frame": 48,
+          "rgb_mae": 1.754982
+        },
+        {
+          "key": 8,
+          "frame": 56,
+          "rgb_mae": 1.745033
+        },
+        {
+          "key": 9,
+          "frame": 64,
+          "rgb_mae": 1.745229
+        },
+        {
+          "key": 10,
+          "frame": 72,
+          "rgb_mae": 1.740723
+        },
+        {
+          "key": 11,
+          "frame": 80,
+          "rgb_mae": 1.740385
+        },
+        {
+          "key": 12,
+          "frame": 88,
+          "rgb_mae": 1.684673
+        },
+        {
+          "key": 13,
+          "frame": 96,
+          "rgb_mae": 1.698785
+        },
+        {
+          "key": 14,
+          "frame": 105,
+          "rgb_mae": 1.738703
+        }
+      ]
+    }
+  ],
+  "scope": "Artifact integrity and saved-key/movie agreement only; no artistic, recognition, normal-speed motion or training approval inferred."
+}

@@ -1,0 +1,176 @@
+{
+  "subject": "rhinoceros",
+  "technical_pass": true,
+  "frames": 99,
+  "fps": 24,
+  "keys": 14,
+  "strict_json_files": 293,
+  "relative_links": 18,
+  "hash_verified_ledger_entries": 6,
+  "movies": [
+    {
+      "path": "shots/rhinoceros/integrated/cartoon.mp4",
+      "decoded_frames": 99,
+      "fps": 24.0,
+      "sha256": "f5a607d91bdb9c3178c093967adb5bb57471b2adf93fe3c0b5af0574e1150f71",
+      "key_pixel_checks": [
+        {
+          "key": 1,
+          "frame": 0,
+          "rgb_mae": 1.713982
+        },
+        {
+          "key": 2,
+          "frame": 6,
+          "rgb_mae": 1.728476
+        },
+        {
+          "key": 3,
+          "frame": 12,
+          "rgb_mae": 1.695566
+        },
+        {
+          "key": 4,
+          "frame": 20,
+          "rgb_mae": 1.695885
+        },
+        {
+          "key": 5,
+          "frame": 28,
+          "rgb_mae": 1.718928
+        },
+        {
+          "key": 6,
+          "frame": 36,
+          "rgb_mae": 1.721279
+        },
+        {
+          "key": 7,
+          "frame": 44,
+          "rgb_mae": 1.692163
+        },
+        {
+          "key": 8,
+          "frame": 52,
+          "rgb_mae": 1.692446
+        },
+        {
+          "key": 9,
+          "frame": 60,
+          "rgb_mae": 1.707327
+        },
+        {
+          "key": 10,
+          "frame": 68,
+          "rgb_mae": 1.731677
+        },
+        {
+          "key": 11,
+          "frame": 76,
+          "rgb_mae": 1.726541
+        },
+        {
+          "key": 12,
+          "frame": 84,
+          "rgb_mae": 1.698667
+        },
+        {
+          "key": 13,
+          "frame": 92,
+          "rgb_mae": 1.724835
+        },
+        {
+          "key": 14,
+          "frame": 98,
+          "rgb_mae": 1.761164
+        }
+      ]
+    },
+    {
+      "path": "shots/rhinoceros/integrated/source-excerpt.mp4",
+      "decoded_frames": 99,
+      "fps": 24.0,
+      "sha256": "b11d8f6da69647d9bc933827793cef1db3e4f09bc301d4fdb1b0832f2a7c27b0",
+      "key_pixel_checks": []
+    },
+    {
+      "path": "shots/rhinoceros/integrated/comparison.mp4",
+      "decoded_frames": 99,
+      "fps": 24.0,
+      "sha256": "b143e8d60a1400f9d981e407398fdca9feecdca6fb3ad5b28269028a28fbc92d",
+      "key_pixel_checks": [
+        {
+          "key": 1,
+          "frame": 0,
+          "rgb_mae": 1.698824
+        },
+        {
+          "key": 2,
+          "frame": 6,
+          "rgb_mae": 1.710971
+        },
+        {
+          "key": 3,
+          "frame": 12,
+          "rgb_mae": 1.696084
+        },
+        {
+          "key": 4,
+          "frame": 20,
+          "rgb_mae": 1.725743
+        },
+        {
+          "key": 5,
+          "frame": 28,
+          "rgb_mae": 1.725321
+        },
+        {
+          "key": 6,
+          "frame": 36,
+          "rgb_mae": 1.693299
+        },
+        {
+          "key": 7,
+          "frame": 44,
+          "rgb_mae": 1.697989
+        },
+        {
+          "key": 8,
+          "frame": 52,
+          "rgb_mae": 1.69606
+        },
+        {
+          "key": 9,
+          "frame": 60,
+          "rgb_mae": 1.70103
+        },
+        {
+          "key": 10,
+          "frame": 68,
+          "rgb_mae": 1.701763
+        },
+        {
+          "key": 11,
+          "frame": 76,
+          "rgb_mae": 1.705407
+        },
+        {
+          "key": 12,
+          "frame": 84,
+          "rgb_mae": 1.696364
+        },
+        {
+          "key": 13,
+          "frame": 92,
+          "rgb_mae": 1.70194
+        },
+        {
+          "key": 14,
+          "frame": 98,
+          "rgb_mae": 1.754054
+        }
+      ]
+    }
+  ],
+  "scope": "Artifact integrity and saved-key/movie agreement only; no artistic, recognition, normal-speed motion or training approval inferred."
+}

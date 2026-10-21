@@ -1,0 +1,7 @@
+{
+  "reason": "The initial engine contain() only downscaled via thumbnail(); 320x240 footage was not upscaled into384x288 source viewport, so source photo/left-panel scale did not match native vector viewport.",
+  "status": "technical_reject",
+  "repair": "Use explicitly aspect-fitted resize that permits upscale, then rerender all source photos and comparison movies. No native drawing change.",
+  "artistic_review_rounds": 0,
+  "motion_approved": false
+}

@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "a6fdc64e8b29abe33211d647b22bc0073fc42969d2c480b22f942d9dbb905a54",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Lily / nearby bloom",
+      "result": "manual_proxy_inspection",
+      "note": "Main lily broadly selected; small lower neighboring flower also included. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.841
+    },
+    {
+      "frame": 12,
+      "observed_target": "Lily / nearby bloom",
+      "result": "manual_proxy_inspection",
+      "note": "Main lily broadly selected; small lower neighboring flower also included. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.839
+    },
+    {
+      "frame": 25,
+      "observed_target": "Lily / nearby bloom",
+      "result": "manual_proxy_inspection",
+      "note": "Main lily broadly selected; small lower neighboring flower also included. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.851
+    },
+    {
+      "frame": 37,
+      "observed_target": "Lily / nearby bloom",
+      "result": "manual_proxy_inspection",
+      "note": "Main lily broadly selected; small lower neighboring flower also included. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.85
+    }
+  ]
+}

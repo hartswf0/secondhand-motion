@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "ab1c19fdbd8cf13672d658d0bc741b525836fa2877646ea3eb60d0bd4052464f",
+  "legacy_meta_sha256": "1372fd2d30c2505e82492c2d3eec4cc7f5a393cc78fa49a20aad5c12ba2dbc22",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a dragon.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/dragon-sam/clip.json",
+    "shots/dragon-sam/masks.json",
+    "shots/dragon-sam/mask_meta.json"
+  ],
+  "clip_id": "1d90d230-4e0d-53c7-8840-72a10d398b3f",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "1e4f5c6727d71b6bfbac69e706f3ad3cf18e42c8c7867ad2bd1f0101c8b28d87",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "7fcedef2575d0c56a6f460faee65a9b05adadb7d702697673dd4124c1d416399",
+  "source_record": "../../../dragon/source.json",
+  "assembly_source_record": "../../../dragon/integrated/source.json",
+  "note": "This is a decorative dragon graphic. Its broad silhouette is plausible; it does not establish live-animal articulation. These masks are filled exported contour proxies, not original binary SAM masks."
+}

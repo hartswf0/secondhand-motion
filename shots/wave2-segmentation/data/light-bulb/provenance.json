@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "7c2b39e0c69c4e10a780b820ce79600c8e93e9df272f5242c3bdc4a061c06a9f",
+  "legacy_meta_sha256": "bc440bd15ccfc437589ff2e534082a08880d46d672aedde36263d36fc6cd5adb",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a light bulb.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/light-bulb-sam/clip.json",
+    "shots/light-bulb-sam/masks.json",
+    "shots/light-bulb-sam/mask_meta.json"
+  ],
+  "clip_id": "ccf9d371-1f80-5aa3-bb2a-2e720f1786f2",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "af5abdd9464d1017dacbd0eddc445afb81730cd4a781a8b86b60f580cfb29ee5",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "bd7cc179fadc0d1be2bfa7527c0e53ce077cf59e04d1206acbccee2686269cd9",
+  "source_record": "../../../light-bulb/source.json",
+  "assembly_source_record": "../../../light-bulb/integrated/source.json",
+  "note": "The glass bulb and screw base are broadly captured; small stray pixels do not represent emitted rays. These masks are filled exported contour proxies, not original binary SAM masks."
+}

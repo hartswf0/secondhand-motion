@@ -1,0 +1,46 @@
+{
+  "title": "Camera holds on its lens",
+  "interval": [
+    12.0,
+    14.983
+  ],
+  "source_sha256": "1ebea010965e6f312cf3240158502a00982deae8ee44b5ebe20c52311e853563",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "W": 384,
+  "H": 288,
+  "extra_strokes": [],
+  "background_fill": false,
+  "review_note": "Integrated review candidate. Independent source-pose and native-identity checks pending; normal-speed motion and classifier unrun. Legacy mask almostwholecroppedcamera, notlens-only; no measured drawingfit.",
+  "assembly_summary": "Four native strokes keep the box camera and concentric lens. Source is a severe close crop; source controls become separately credited held scene marks. Camera action is a near-hold with slight registration changes, not invented lens spin.",
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Sixteen raw samples show the same frontal camera after the precedingcut. Lens/body stayslarge and cropped; no transition inside12\u201315. Retained endpoint slightly shortened to the final frozen vector observation; no pose extrapolation.",
+    "sample_count": 16,
+    "sheet": "preflight-source-design.jpg"
+  },
+  "compatibility": {
+    "status": "compatible_with_explicit_simplifications",
+    "native_key_id": "6446306388082688",
+    "source_part_inventory": "Four native strokes keep the box camera and concentric lens. Source is a severe close crop; source controls become separately credited held scene marks. Camera action is a near-hold with slight registration changes, not invented lens spin.",
+    "mask_target_limit": "Legacy mask almostwholecroppedcamera, notlens-only; no measured drawingfit.",
+    "design_reselected": false,
+    "original_native_topology_retained": true
+  },
+  "verified_contacts": [],
+  "camera_note": "Frozen GWP background-only registration retained independently of source-observed character positions. No unverified contact pass inferred.",
+  "key_notes": {
+    "14.983": "held to the end of the shot; same drawing",
+    "14.483": "held; same drawing",
+    "12.483": "the camera face holds still; same drawing, carried by the slight weave of the film",
+    "11.983": "the cut: the camera face is seen straight on, lens centred on the film's lens; the body's top is drawn lower so the viewfinder box closes inside the frame",
+    "14.1496667": "the frame has settled about 2 px lower; same drawing, carried down",
+    "13.3996667": "still holding; the frame has drifted up about a pixel, the drawing goes with it",
+    "13.8163333": "still holding at the top of the film's small weave",
+    "12.983": "the line: the lens looks straight at us, held still, the whole doodle including the closed viewfinder box in frame"
+  },
+  "fill_strokes": [],
+  "revision": "integrated-v1"
+}

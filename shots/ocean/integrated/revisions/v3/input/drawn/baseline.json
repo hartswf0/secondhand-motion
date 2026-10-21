@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Still frames only, no playback. The character is a doodle of sea waves made of five black polyline strokes: a long zigzag wave line on top, two thin middle lines, a small Z-shaped stroke at lower left, and a heavier hill-shaped wave line at the bottom. Frames 1-4: the drawing sits near its doodle pose and drifts slightly down and right; the right end of the top wave line starts to lift. Frames 5-11: the whole group moves down the frame by small even steps while the right end of the top line rises into a taller and taller pointed crest, with a short kink added just below the peak. Frame 12: a grey horizon line appears at the very top of the frame. Frames 13-16: the horizon line moves down a little each frame, the group keeps sinking, and the top-right crest reaches its tallest and sharpest point in frame 16 with a long falling back slope; it never comes down. In frame 16 the thin middle line and the bottom hill shift left and overlap each other slightly.",
+ "seen_film": "A camera looks down at a rough, blue-green open sea. Frames 1-2: dark heaving swells with fine foam streaks, no horizon. Frames 3-4: the surface turns choppy with many white breaking caps, large foam patches at the left edge. Frames 5-8: big whitecaps break in the lower left and lower middle (frame 5-6 lower left, frame 7-8 lower middle-right) while a wave ridge forms across the upper half. Frames 9-12: one large swell rises in the upper right and center, its crest foaming at upper right, foam patches in the lower half fade. Frames 13-14: the camera has tilted up; a pale horizon band appears at the top and the crest is now at the right edge, mid-height. Frames 15-16: the crest flattens and slides down toward the lower right; the sea settles into a broad, calmer surface under the horizon.",
+ "named_subject": "Ocean waves (a doodle of wave lines on the sea).",
+ "verdict": "reference stronger",
+ "evidence": "Matches: the animation's top-right crest rises across frames 5-12 where the film's large swell rises at upper right in frames 9-12, and the grey horizon enters at frame 12 and descends in 13-16 where the film's horizon band appears at frames 13-14; the downward drift of the whole drawing in frames 5-16 corresponds to the camera tilting up. Mismatches: in the film the crest subsides and moves down-right in frames 15-16, but in the animation the crest is at its tallest and sharpest in frames 15-16 (no fall). The film's breaking whitecaps in frames 3-8 at lower left and lower middle have no counterpart; the lower-left Z stroke and the bottom hill line in frames 3-8 only translate and do not lift or break. In film frame 12 the horizon is not yet clearly visible, while the animation's line arrives one frame early at the top edge, which is a minor timing offset rather than a pop.",
+ "primary_gap": "The top-right crest keeps growing to the end, so the film's turn of events (the swell peaking around frames 11-13 and then collapsing down to the right in 14-16) is missing, and the earlier breaking caps in frames 3-8 are not performed.",
+ "closes_when": "The top-right crest of the top wave line peaks around frames 11-13 and then lowers and flattens toward the lower right through frames 14-16, while in frames 3-8 the lower-left Z stroke and the bottom hill line visibly lift and tip over in turn as breaking caps.",
+ "protect": "Keep the five doodle strokes with their plain polyline construction and stroke weights (heavier top and bottom lines, thin middle lines, the small Z mark), the even small-step drift that matches the camera tilt, the horizon line entering at the top around frames 12-13 and moving down, and the crest rising at upper right in frames 5-12.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The drawing stays the c.png doodle throughout, except that the top line gains an extra kink and a long added crest segment not in the doodle, and in frame 16 the thin middle line and the bottom hill line drift into overlap.",
+ "still_frames_only": true,
+ "_lot": "lot08901635",
+ "_round": "baseline before drawn keys"
+}

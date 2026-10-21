@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "b761e7954d62f8aab4e17739482e53dd6dbac3f9f22dcba352c953dcfd81545b",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Alarm clock",
+      "result": "manual_proxy_inspection",
+      "note": "Clock case and bells selected; hand largely excluded. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.925
+    },
+    {
+      "frame": 12,
+      "observed_target": "Alarm clock",
+      "result": "manual_proxy_inspection",
+      "note": "Clock case and bells selected; hand largely excluded. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.946
+    },
+    {
+      "frame": 25,
+      "observed_target": "Alarm clock",
+      "result": "manual_proxy_inspection",
+      "note": "Clock case and bells selected; hand largely excluded. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.933
+    },
+    {
+      "frame": 37,
+      "observed_target": "Alarm clock",
+      "result": "manual_proxy_inspection",
+      "note": "Clock case and bells selected; hand largely excluded. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.933
+    }
+  ]
+}

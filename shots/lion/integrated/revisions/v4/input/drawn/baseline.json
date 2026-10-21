@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frames 1-6: the doodle lion lies on a grey ground line, head with spiky mane on the right, long low body with bumpy legs to the left; it slides steadily rightward while clouds, a tree and grass in grey drift with it. Frame 7: the lion is near the right edge and the mane has come loose from the face: the face oval sits with a short fringe on top while a separate jagged mane shape floats to its right. Frame 8: the head is at the right edge, redrawn as a taller frontal oval with hair parted down the sides and no spiky mane on the right; the body trails to the left. Frame 9: a lion head (with spiky mane, no body visible) sits at the far left edge and a second lion body (rear half, legs and back) appears at the right edge with only a sliver of mane. Frames 10-16: the left lion moves right and its body grows in from the left edge, ending in a pose close to frame 1 (head center-left, body extending off the left edge); the second lion's rear stays at the right edge and slides partly out of frame. Scenery is redrawn in the second half (large tree outline above the lion, a leaf shape at left).",
+ "seen_film": "Frames 1-4: a pale male lion lies on a rock ledge facing right, head on the right of the body, in front of dark foliage. Frames 5-8: the camera pans so the lion moves rightward in frame; by frame 8 its head is cut off at the right edge and a birch trunk enters at left. Frame 9: after the pan the view shows a lion head facing the camera at the far left edge and the back of a second lying lion at the right. Frames 10-16: the left lion drifts right in frame and turns its head to right profile, its body appearing to its left; the second lion's back stays at the right edge, partly cropped.",
+ "named_subject": "A lying male lion (doodle with spiky mane, smiling oval face, long low body), plus a second lion's rear body in the second half.",
+ "verdict": "reference stronger",
+ "evidence": "Placement and timing follow the film closely: frames 1-6 rightward drift matches film 1-6; frame 9 head at left edge plus second body at right matches film 9; frames 10-16 head moving right with body growing in from the left and a second body cropped at right matches film 10-16. The motion breaks at frames 7 and 8: in frame 7 the mane is drawn as a separate shape floating right of the face, and in frame 8 the head is replaced by a different frontal drawing without the right-side spikes, so the head pops twice before the 8-to-9 cut. Frame 12 has a stray grey partial shape at the left edge next to the lion body.",
+ "primary_gap": "In frames 7-8 the head is taken apart and redrawn (mane detached in 7, a different frontal face in 8), so the lion visibly pops instead of continuing the slide toward the right edge as in film frames 7-8.",
+ "closes_when": "Frames 7 and 8 show the same head-and-mane drawing as frames 1-6, intact and only shifted further right and cropped by the right frame edge, with no separated mane shape and no frontal redraw.",
+ "protect": "The doodle's construction and stroke habits (oval face with dot eyes and curved smile, jagged spiked mane, long angular body with bumpy legs); the rightward drift timing in frames 1-8; the frame 9 layout of head at left and second body at right; the frames 10-16 drift and return to a frame-1-like pose; the grey sparse scenery style.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  7,
+  8
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character matches the c.png doodle in most frames, but frame 8 replaces its head with a different frontal face and frame 7 separates the mane from it.",
+ "still_frames_only": true,
+ "_lot": "lotf86a2d73",
+ "_round": "baseline before drawn keys"
+}

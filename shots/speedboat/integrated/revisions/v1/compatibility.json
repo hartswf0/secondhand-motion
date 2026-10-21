@@ -1,0 +1,65 @@
+{
+  "status": "provisional_before_first_integrated_lock",
+  "native_key_id": "5362068238630912",
+  "native_strokes": 9,
+  "native_point_counts": [
+    12,
+    8,
+    7,
+    6,
+    5,
+    7,
+    6,
+    5,
+    6
+  ],
+  "inventory": [
+    "native hull/deck",
+    "three native small passenger/window marks",
+    "native wake marks"
+  ],
+  "observed_event": "Boat emerges into view, pitches bow-up in flight, levels, drops bow-first and lands with spray, then flattens on the water.",
+  "limitations": [
+    "The nine-stroke doodle has sparse passenger/window marks, not realistic individual riders.",
+    "Water spray is represented by credited sparse additional wake geometry; no segmented water motion is inferred."
+  ],
+  "extra_strokes": [
+    {
+      "index": 9,
+      "source": "drawn by agent: six-point splash/wake accent observed at landing; not part of native doodle",
+      "why": "Distinguish impact from the airborne held hull."
+    }
+  ],
+  "source_preflight": {
+    "samples": 16,
+    "contact_sheet": "preflight-source.jpg",
+    "paired_study": "preflight-pairs.jpg",
+    "interval": [
+      1.25,
+      3.25
+    ],
+    "continuous_in_sampled_frames": true,
+    "actual_normal_speed_playback_watched": false
+  },
+  "training_ran": false,
+  "original_point_counts": [
+    12,
+    8,
+    7,
+    6,
+    5,
+    7,
+    6,
+    5,
+    6
+  ],
+  "native_topology": true,
+  "topology_note": "Native first-stroke IDs and point counts retained",
+  "extras": [
+    {
+      "index": 9,
+      "source": "drawn by agent: six-point splash/wake accent observed at landing; not part of native doodle",
+      "note": "Distinguish impact from the airborne held hull."
+    }
+  ]
+}

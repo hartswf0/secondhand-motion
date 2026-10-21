@@ -1,0 +1,330 @@
+{
+ "category": "swan",
+ "doodle_key_id": "4762067460423680",
+ "facing": 1,
+ "note": "Quick, Draw! swan 4762067460423680, facing right. Stroke 0 is the back of the neck and stroke 1 the front of the neck; stroke 2 is the head outline with the beak drawn as a long point to the right; stroke 3 is the eye and stroke 4 the line of the beak; stroke 5 is the body outline from the base of the neck back along the back to the tail, under the belly and up the breast; stroke 6 is the wing. Root: tail to breast, so the body glides at one size and stays level on the water. The neck lines turn about the base of the neck toward the pose's neck top and get shorter when the swan curls its neck (pose \"necktop\"); the head (strokes 2-4) turns by the same angle about the same point and slides down the neck by pose \"curl\" so it stays on the end of the shortened neck, at its own size. In the film the swan holds its head down at the water with the beak pointing down for most of the interval, then lifts its curled neck upright with the beak pointing forward. The wing (stroke 6) turns about its rear tip by pose \"wing\" radians (negative lifts its front end above the line of the back), as the swan raises its wing feathers into a hump while it lifts its neck.",
+ "strokes": [
+  [
+   [
+    193,
+    26
+   ],
+   [
+    174,
+    44
+   ],
+   [
+    151,
+    80
+   ]
+  ],
+  [
+   [
+    207,
+    35
+   ],
+   [
+    190,
+    52
+   ],
+   [
+    180,
+    73
+   ]
+  ],
+  [
+   [
+    193,
+    25
+   ],
+   [
+    194,
+    14
+   ],
+   [
+    205,
+    4
+   ],
+   [
+    233,
+    1
+   ],
+   [
+    242,
+    7
+   ],
+   [
+    254,
+    26
+   ],
+   [
+    242,
+    28
+   ],
+   [
+    234,
+    26
+   ],
+   [
+    224,
+    31
+   ],
+   [
+    208,
+    31
+   ]
+  ],
+  [
+   [
+    224,
+    6
+   ],
+   [
+    222,
+    11
+   ]
+  ],
+  [
+   [
+    235,
+    16
+   ],
+   [
+    240,
+    19
+   ],
+   [
+    255,
+    22
+   ]
+  ],
+  [
+   [
+    152,
+    81
+   ],
+   [
+    136,
+    73
+   ],
+   [
+    123,
+    71
+   ],
+   [
+    64,
+    71
+   ],
+   [
+    26,
+    82
+   ],
+   [
+    11,
+    92
+   ],
+   [
+    4,
+    102
+   ],
+   [
+    0,
+    113
+   ],
+   [
+    1,
+    124
+   ],
+   [
+    7,
+    131
+   ],
+   [
+    17,
+    136
+   ],
+   [
+    52,
+    143
+   ],
+   [
+    111,
+    142
+   ],
+   [
+    144,
+    136
+   ],
+   [
+    172,
+    120
+   ],
+   [
+    190,
+    97
+   ],
+   [
+    189,
+    85
+   ],
+   [
+    183,
+    77
+   ]
+  ],
+  [
+   [
+    129,
+    70
+   ],
+   [
+    123,
+    82
+   ],
+   [
+    108,
+    94
+   ],
+   [
+    77,
+    106
+   ],
+   [
+    40,
+    108
+   ],
+   [
+    14,
+    97
+   ]
+  ]
+ ],
+ "anchors": {
+  "tail": [
+   0,
+   113
+  ],
+  "chest": [
+   190,
+   97
+  ],
+  "neckbase": [
+   166,
+   78
+  ],
+  "necktop": [
+   200,
+   30
+  ],
+  "nose": [
+   255,
+   22
+  ],
+  "wingtip": [
+   14,
+   96
+  ]
+ },
+ "root": [
+  "tail",
+  "chest"
+ ],
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 2,
+   "joint": "neckbase",
+   "aim": [
+    "neckbase",
+    "necktop"
+   ],
+   "stretch": 1
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 2,
+   "joint": "neckbase",
+   "aim": [
+    "neckbase",
+    "necktop"
+   ],
+   "stretch": 1
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 9,
+   "joint": "neckbase",
+   "aim": [
+    "neckbase",
+    "nose"
+   ],
+   "shift_by": "curl",
+   "shift": [
+    -34,
+    48
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 1,
+   "joint": "neckbase",
+   "aim": [
+    "neckbase",
+    "nose"
+   ],
+   "shift_by": "curl",
+   "shift": [
+    -34,
+    48
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 2,
+   "joint": "neckbase",
+   "aim": [
+    "neckbase",
+    "nose"
+   ],
+   "shift_by": "curl",
+   "shift": [
+    -34,
+    48
+   ]
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 5,
+   "joint": "wingtip",
+   "aim": [
+    "tail",
+    "chest"
+   ],
+   "turn": 0,
+   "spin": "wing"
+  },
+  {
+   "rest": true,
+   "joint": "tail",
+   "aim": [
+    "tail",
+    "chest"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "max_tilt": 6,
+ "foreshorten": [
+  0.95,
+  1.05
+ ],
+ "smooth": 1.2,
+ "track": false
+}

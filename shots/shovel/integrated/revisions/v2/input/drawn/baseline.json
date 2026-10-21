@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A line-drawn shovel lies nearly horizontal across the frame: a small triangular grip at the far left edge, a long thin straight shaft rising slightly to the right, and a large pointed blade drawn as an open polygon with a broken collar line on its left side. Grey scenery marks (grass tufts, zigzags, sticks) stay fixed around it. Across frames 1-16 the shovel stays in the same place with no visible pose change. The only differences are small changes at the grip: in frame 8 the grip's left side shows a separate short tick, and in frames 9, 12 and 16 the grip sits slightly further left and partly off the left edge before returning.",
+ "seen_film": "A real shovel lies on dry straw-covered ground, handle running from the lower left up to a pointed blade at the right with its shadow behind. Frames 1-8 are static. In frame 9 a blurred foot in grey trousers enters from the top right; in frames 10-12 the foot steps down just left of the blade and a second leg appears; in frames 13-15 both feet stand beside the shovel and shift; in frame 16 a bare hand reaches down and touches the handle near the blade. The shovel itself does not move in any of the 16 frames.",
+ "named_subject": "A shovel (long-handled, pointed blade, triangular grip) lying on the ground.",
+ "verdict": "bar met",
+ "evidence": "Frames 1-8 in both: shovel at rest, blade at right-centre, shaft running to the left edge, matching the film's placement and angle closely. Frames 9-16 in the film: feet and then a hand arrive, but the shovel stays still; the animation also keeps the shovel still in frames 9-16, so the character's own behaviour matches. The blade outline, collar break and triangular grip are consistent across all 16 frames with no doubling. Judged from still frames only, not playback.",
+ "primary_gap": "The grip end is redrawn slightly differently in frames 8, 9, 12 and 16 (a detached tick in 8, a shift left and partial clipping at the frame edge in 9, 12 and 16), which would read as a small flicker on a shovel the film shows as fully still.",
+ "closes_when": "The grip triangle and its curl occupy the identical position and shape in all 16 frames, with the same left-edge crop as frame 1.",
+ "protect": "The placement and angle of the shovel matching the film's shovel; the blade drawn as the doodle's open polygon with the broken collar line; the single thin straight shaft; the triangular grip with its curl at top; the stillness through the film's foot and hand entrance; the fixed grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  8,
+  9,
+  12,
+  16
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character matches the doodle's triangular grip with curl, straight thin shaft and open angular blade with a collar break; it is only rotated to a flatter angle to match the film, which does not change its construction.",
+ "still_frames_only": true,
+ "_lot": "lot7cd1e0e2",
+ "_round": "baseline before drawn keys"
+}

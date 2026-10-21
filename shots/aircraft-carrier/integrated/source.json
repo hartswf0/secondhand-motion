@@ -1,0 +1,33 @@
+{
+  "clip_id": "5f07aeb5-b174-544c-92e7-200f4c346bfc",
+  "source_id": "650f239b-0762-5c8c-9aaf-a3556cf5b629",
+  "source_title": "Freedom Seven",
+  "source_year": "1961",
+  "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/650f239b-0762-5c8c-9aaf-a3556cf5b629/v4-conditional-luna-1/clips/5f07aeb5-b174-544c-92e7-200f4c346bfc.mp4",
+  "shot_page_url": "https://www.movingimagearchive.com/sources/freedom-seven-650f239b?clip=5f07aeb5-b174-544c-92e7-200f4c346bfc",
+  "source_page_url": "https://www.movingimagearchive.com/sources/freedom-seven-650f239b",
+  "original_source_url": "https://archive.org/details/gov.archives.arc.45020",
+  "rights_statement": "public_domain",
+  "start_seconds": 14.5,
+  "end_seconds": 18.0833333333333,
+  "category": "aircraft carrier",
+  "why_this_clip": "An aircraft carrier fills the frame seen from above its bow, with the flat flight deck, the island and parked planes visible, and it steams toward the camera and swings to its left so the deck turns from head-on to three-quarter. No cuts were detected, but the sheet shows a cut at 11.5 s and a dissolve to a launch tower starting just after 18.5 s, so this interval sits inside the close shot.",
+  "pool": "production/data/candidates-100.json",
+  "interval_seconds": [
+    14.5,
+    18.0833333333333
+  ],
+  "source_sha256": "0c7934b70af65c769f4e23f5aee5355ef1776935e600869d79aec8bc2e84450b",
+  "time_basis": "clip_relative_seconds",
+  "source_clock": "decoded best_effort_timestamp_time",
+  "source_approved": false,
+  "motion_approved": false,
+  "train_eligible": false,
+  "source_selection": {
+    "pass": true,
+    "evidence": "Raw 16-frame preflight shows one carrier turn; cut before11.5 excluded and the end is shortened from18.5 to18.0833 to exclude the next tower dissolve.",
+    "sample_count": 16,
+    "sheet": "preflight-source-design.jpg"
+  },
+  "vector_observation_clock": "Nominal CI resampling clock; original CI source PTS/input hash unavailable"
+}

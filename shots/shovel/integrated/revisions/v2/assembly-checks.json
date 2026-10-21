@@ -1,0 +1,51 @@
+{
+  "rendered_frames": 64,
+  "keys": 12,
+  "full_decode": true,
+  "source_sha256_verified": true,
+  "native_topology": true,
+  "trace_fidelity": {
+    "min_recall": 0.998289136013687,
+    "min_parts_kept": 1.0,
+    "keys": 12,
+    "pass": true
+  },
+  "held_background_geometry": true,
+  "background_strokes_unchanged_fraction": 1.0,
+  "background_strokes_checked": 22,
+  "mask_fit": {
+    "pass": false,
+    "status": "not measured by this assembly",
+    "reason": "No audited same-instance mask target evaluated against this final native render"
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "verified_planted_intervals": 0,
+  "foot_slide_gate": false,
+  "release_approved": false,
+  "training_ran": false,
+  "source_aspect_preserved": true,
+  "source_clock": "decoded best_effort_timestamp_time",
+  "common_source_drawing_crop": null,
+  "animated_scene_objects": [
+    "man_f14",
+    "man_f15",
+    "man_f16",
+    "man_f17",
+    "man_f18",
+    "man_f19",
+    "man_f20",
+    "man_f21",
+    "man_f22",
+    "man_f23",
+    "man_f24",
+    "man_f25",
+    "man_f26",
+    "man_f27",
+    "man_f28",
+    "man_f29",
+    "man_f30",
+    "man_f31"
+  ],
+  "background_gate_scope": "Static scene objects only; separately credited animated props/operators retain their explicit exposure sequences"
+}

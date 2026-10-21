@@ -1,0 +1,1126 @@
+{
+  "title": "Swan neck dip and lift",
+  "interval": [
+    3.75,
+    6.7333333333
+  ],
+  "source_sha256": "b8a8ee43c327185dcc5c5074e19d6990e1fa6a477c0ff01c9d814bd6beb840fb",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "W": 384,
+  "H": 288,
+  "gwp_snapshot": "input/working-gwp-v3.json",
+  "clip_snapshot": "input/clip.json",
+  "key_times": [
+    3.73333333,
+    3.98333333,
+    4.31666667,
+    4.65,
+    4.98333333,
+    5.31666667,
+    5.65,
+    5.9,
+    6.06666667,
+    6.23333333,
+    6.56666667,
+    6.73333333
+  ],
+  "extra_strokes": [],
+  "revision": "integrated-v3",
+  "review_note": "Fresh still review v3: native identity met; source framing/pose not met. In the early low-neck samples, the drawing folds the neck down from the top of the back and hangs the head below it. The source retains a small upright hooked neck with its crown above the back and its bill at the water. Key 1 makes this difference particularly clear. Recognition classifier, audited final mask fit, four verified contacts and actual normal-speed playback remain unrun or unmet. No training ran.",
+  "source_interval_reason": "Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans. Sixteen raw source samples show one shot; endpoints restrict the event to frozen native observation coverage.",
+  "compatibility": {
+    "status": "provisional_before_first_integrated_lock",
+    "native_key_id": "4762067460423680",
+    "native_strokes": 7,
+    "native_point_counts": [
+      3,
+      3,
+      10,
+      2,
+      3,
+      18,
+      6
+    ],
+    "inventory": [
+      "two native three-point neck boundaries",
+      "native small head/bill",
+      "native eye/mouth marks",
+      "native body and wing"
+    ],
+    "observed_event": "Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "limitations": [
+      "The swan occupies only about a tenth of the frame width in the source; full-frame pose detail is soft.",
+      "The native seven-stroke construction is sparse and does not assert submerged feet or contacts."
+    ],
+    "extra_strokes": [],
+    "source_preflight": {
+      "samples": 16,
+      "contact_sheet": "preflight-source.jpg",
+      "paired_study": "preflight-pairs.jpg",
+      "interval": [
+        3.75,
+        6.75
+      ],
+      "continuous_in_sampled_frames": true,
+      "actual_normal_speed_playback_watched": false
+    },
+    "training_ran": false,
+    "common_crop": {
+      "xyxy": [
+        100,
+        96,
+        292,
+        240
+      ],
+      "reason": "The full-frame source bird is small. Both panels retain identical source coordinates and crop; the drawing is not enlarged independently."
+    },
+    "neck_repair": {
+      "observations": [
+        {
+          "f": 0,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 1,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 2,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 3,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 4,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 5,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 6,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 7,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 8,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 9,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 10,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 11,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 12,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 13,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 14,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 15,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 16,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 17,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 18,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 19,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 20,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 21,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 22,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 23,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 24,
+          "head_rotation_degrees": 0.0,
+          "head_shift": [
+            0.0,
+            -4.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 25,
+          "head_rotation_degrees": -5.0,
+          "head_shift": [
+            0.0,
+            -4.333333333333333
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 26,
+          "head_rotation_degrees": -10.0,
+          "head_shift": [
+            0.0,
+            -4.666666666666667
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 27,
+          "head_rotation_degrees": -15.0,
+          "head_shift": [
+            0.0,
+            -5.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 28,
+          "head_rotation_degrees": -21.5,
+          "head_shift": [
+            0.0,
+            -5.5
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 29,
+          "head_rotation_degrees": -28.0,
+          "head_shift": [
+            0.0,
+            -6.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 30,
+          "head_rotation_degrees": -33.0,
+          "head_shift": [
+            0.0,
+            -6.5
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 31,
+          "head_rotation_degrees": -38.0,
+          "head_shift": [
+            0.0,
+            -7.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 32,
+          "head_rotation_degrees": -39.75,
+          "head_shift": [
+            0.375,
+            -6.75
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 33,
+          "head_rotation_degrees": -41.5,
+          "head_shift": [
+            0.75,
+            -6.5
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 34,
+          "head_rotation_degrees": -43.25,
+          "head_shift": [
+            1.125,
+            -6.25
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 35,
+          "head_rotation_degrees": -45.0,
+          "head_shift": [
+            1.5,
+            -6.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 36,
+          "head_rotation_degrees": -45.0,
+          "head_shift": [
+            1.6,
+            -6.0
+          ],
+          "body_wing_vertices_unchanged": true
+        },
+        {
+          "f": 37,
+          "head_rotation_degrees": -45.0,
+          "head_shift": [
+            1.7,
+            -6.0
+          ],
+          "body_wing_vertices_unchanged": true
+        }
+      ],
+      "unchanged_native_strokes": [
+        5,
+        6
+      ],
+      "preserved": "All seven stroke IDs and original point counts; same angular head/beak/eye marks, no new anatomy."
+    },
+    "neck_repair_v3": {
+      "observations": [
+        {
+          "f": 0,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            225.8,
+            136.2
+          ],
+          "inner_forward_elbow": [
+            225.7071,
+            140.37279999999998
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 1,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            225.5,
+            136.3
+          ],
+          "inner_forward_elbow": [
+            225.3131,
+            140.4399
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 2,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            224.9,
+            136.2
+          ],
+          "inner_forward_elbow": [
+            224.6789,
+            140.4929
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 3,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            224.2,
+            136.1
+          ],
+          "inner_forward_elbow": [
+            224.1071,
+            140.4228
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 4,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            223.8,
+            135.9
+          ],
+          "inner_forward_elbow": [
+            223.7071,
+            140.2228
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 5,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            223.3,
+            135.7
+          ],
+          "inner_forward_elbow": [
+            223.301,
+            140.0557
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 6,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            222.5,
+            135.6
+          ],
+          "inner_forward_elbow": [
+            222.501,
+            139.95569999999998
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 7,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            221.7,
+            135.7
+          ],
+          "inner_forward_elbow": [
+            221.6413,
+            140.0698
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 8,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            221.3,
+            135.7
+          ],
+          "inner_forward_elbow": [
+            221.2071,
+            140.12279999999998
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 9,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            221.2,
+            135.7
+          ],
+          "inner_forward_elbow": [
+            221.1071,
+            140.12279999999998
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 10,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            220.7,
+            135.7
+          ],
+          "inner_forward_elbow": [
+            220.5815,
+            140.1839
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 11,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            219.6,
+            135.7
+          ],
+          "inner_forward_elbow": [
+            219.5071,
+            140.2228
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 12,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            218.3,
+            135.8
+          ],
+          "inner_forward_elbow": [
+            218.2071,
+            140.2228
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 13,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            217.3,
+            135.7
+          ],
+          "inner_forward_elbow": [
+            217.2071,
+            140.1728
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 14,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            216.9,
+            135.6
+          ],
+          "inner_forward_elbow": [
+            216.901,
+            140.1557
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 15,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            216.8,
+            135.6
+          ],
+          "inner_forward_elbow": [
+            216.7071,
+            140.1728
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 16,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            216.2,
+            135.6
+          ],
+          "inner_forward_elbow": [
+            216.1071,
+            140.12279999999998
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 17,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            214.6,
+            135.4
+          ],
+          "inner_forward_elbow": [
+            214.4729,
+            140.0258
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 18,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            212.1,
+            135.4
+          ],
+          "inner_forward_elbow": [
+            211.8191,
+            140.107
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 19,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            209.2,
+            135.5
+          ],
+          "inner_forward_elbow": [
+            208.8252,
+            140.2741
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 20,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            206.7,
+            135.6
+          ],
+          "inner_forward_elbow": [
+            206.291,
+            140.37709999999998
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 21,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            204.8,
+            135.6
+          ],
+          "inner_forward_elbow": [
+            204.297,
+            140.44425
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 22,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            202.8,
+            135.6
+          ],
+          "inner_forward_elbow": [
+            202.391,
+            140.5271
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 23,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            201.2,
+            135.7
+          ],
+          "inner_forward_elbow": [
+            200.7568,
+            140.63015000000001
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 24,
+          "head_rotation_degrees": -20.0,
+          "head_shift": [
+            -4.0,
+            -1.0
+          ],
+          "outer_forward_elbow": [
+            200.1,
+            135.8
+          ],
+          "inner_forward_elbow": [
+            199.6568,
+            140.68015
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 25,
+          "head_rotation_degrees": -19.333333333333332,
+          "head_shift": [
+            -3.6666666666666665,
+            -1.6666666666666665
+          ],
+          "outer_forward_elbow": [
+            199.79693636363638,
+            135.66363636363639
+          ],
+          "inner_forward_elbow": [
+            199.41330909090908,
+            139.76350000000002
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 26,
+          "head_rotation_degrees": -18.666666666666668,
+          "head_shift": [
+            -3.3333333333333335,
+            -2.333333333333333
+          ],
+          "outer_forward_elbow": [
+            200.3939727272727,
+            133.8939727272727
+          ],
+          "inner_forward_elbow": [
+            199.85111818181818,
+            138.33785
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 27,
+          "head_rotation_degrees": -18.0,
+          "head_shift": [
+            -3.0,
+            -3.0
+          ],
+          "outer_forward_elbow": [
+            201.0909090909091,
+            130.8909090909091
+          ],
+          "inner_forward_elbow": [
+            200.9878272727273,
+            136.7547
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 28,
+          "head_rotation_degrees": -17.0,
+          "head_shift": [
+            -2.5,
+            -4.0
+          ],
+          "outer_forward_elbow": [
+            201.85454545454547,
+            128.25454545454548
+          ],
+          "inner_forward_elbow": [
+            202.38963636363638,
+            135.53255000000001
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 29,
+          "head_rotation_degrees": -16.0,
+          "head_shift": [
+            -2.0,
+            -5.0
+          ],
+          "outer_forward_elbow": [
+            202.8181818181818,
+            125.41818181818181
+          ],
+          "inner_forward_elbow": [
+            203.93044545454546,
+            134.12195
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 30,
+          "head_rotation_degrees": -15.0,
+          "head_shift": [
+            -2.0,
+            -5.5
+          ],
+          "outer_forward_elbow": [
+            203.28181818181818,
+            122.78181818181818
+          ],
+          "inner_forward_elbow": [
+            204.97175454545453,
+            132.768
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 31,
+          "head_rotation_degrees": -14.0,
+          "head_shift": [
+            -2.0,
+            -6.0
+          ],
+          "outer_forward_elbow": [
+            203.74545454545452,
+            120.54545454545455
+          ],
+          "inner_forward_elbow": [
+            205.79496363636363,
+            131.6464
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 32,
+          "head_rotation_degrees": -13.5,
+          "head_shift": [
+            -2.0,
+            -6.0
+          ],
+          "outer_forward_elbow": [
+            203.9090909090909,
+            117.0090909090909
+          ],
+          "inner_forward_elbow": [
+            206.71547272727273,
+            129.72969999999998
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 33,
+          "head_rotation_degrees": -13.0,
+          "head_shift": [
+            -2.0,
+            -6.0
+          ],
+          "outer_forward_elbow": [
+            203.77272727272728,
+            113.67272727272727
+          ],
+          "inner_forward_elbow": [
+            207.3624818181818,
+            128.06645
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 34,
+          "head_rotation_degrees": -12.5,
+          "head_shift": [
+            -2.0,
+            -6.0
+          ],
+          "outer_forward_elbow": [
+            203.53636363636363,
+            113.23636363636363
+          ],
+          "inner_forward_elbow": [
+            207.5212909090909,
+            127.85149999999999
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 35,
+          "head_rotation_degrees": -12.0,
+          "head_shift": [
+            -2.0,
+            -6.0
+          ],
+          "outer_forward_elbow": [
+            203.5,
+            113.1
+          ],
+          "inner_forward_elbow": [
+            207.8807,
+            127.8381
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 36,
+          "head_rotation_degrees": -12.0,
+          "head_shift": [
+            -2.0,
+            -6.0
+          ],
+          "outer_forward_elbow": [
+            204.0,
+            113.0
+          ],
+          "inner_forward_elbow": [
+            208.4785,
+            127.7277
+          ],
+          "body_wing_points_unchanged": true
+        },
+        {
+          "f": 37,
+          "head_rotation_degrees": -12.0,
+          "head_shift": [
+            -2.0,
+            -6.0
+          ],
+          "outer_forward_elbow": [
+            204.3,
+            113.2
+          ],
+          "inner_forward_elbow": [
+            208.8555,
+            127.8184
+          ],
+          "body_wing_points_unchanged": true
+        }
+      ],
+      "preserved_native_strokes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "body_wing_unchanged": [
+        5,
+        6
+      ],
+      "constraint": "No new neck points, anatomy or photographic contours; retain the original angular line style."
+    }
+  },
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Builder inspected sixteen raw source frames across the provisional event in preflight-source.jpg; no cut/dissolve observed inside retained interval. Normal-speed playback unrun."
+  },
+  "assembly_summary": "Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans. Source and drawing share a fixed 2\u00d7 viewport crop so the small bird can be inspected.",
+  "fill_strokes": [
+    5,
+    2
+  ],
+  "verified_contacts": [],
+  "key_notes": {
+    "3.73333333": "Head and bill held low near the water.",
+    "3.98333333": "Low neck presentation holds while the bird glides.",
+    "4.31666667": "Body drifts under the same low neck.",
+    "4.65": "Head remains near the waterline.",
+    "4.98333333": "Small low-head adjustment without inventing feet.",
+    "5.31666667": "Low feeding posture persists.",
+    "5.65": "Transition toward the lifting beat begins.",
+    "5.9": "Head begins rising from the low hold.",
+    "6.06666667": "Neck curve lifts farther above the back.",
+    "6.23333333": "Neck unfolds toward the ending shape.",
+    "6.56666667": "Raised curved neck becomes legible.",
+    "6.73333333": "Endpoint preserves the lifted neck and gliding body."
+  },
+  "crop": [
+    100,
+    96,
+    292,
+    240
+  ],
+  "evidence_snapshot": "v3",
+  "repair_details": "Final bounded fresh-critic repair: put the two original three-point neck boundaries into a raised forward elbow during the low samples; retain an upper forward/downward curl during the raised samples by reposing the existing head/beak block. Native body and inset wing vertices remain exactly unchanged."
+}

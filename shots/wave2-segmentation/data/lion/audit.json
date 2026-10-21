@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "ec321c3f9228fad762ffdf69afa555c358f369d3ecbd1f97d173121f7809de8a",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Lion instance",
+      "result": "manual_proxy_inspection",
+      "note": "First reclining lion broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.912
+    },
+    {
+      "frame": 10,
+      "observed_target": "Lion instance",
+      "result": "manual_proxy_inspection",
+      "note": "First reclining lion retained before the second enters. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.945
+    },
+    {
+      "frame": 21,
+      "observed_target": "Lion instance",
+      "result": "manual_proxy_inspection",
+      "note": "The right lion is selected while another lion is visible on the left. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.882
+    },
+    {
+      "frame": 31,
+      "observed_target": "Lion instance",
+      "result": "manual_proxy_inspection",
+      "note": "Mask now follows the left lion; instance identity is not stable. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.936
+    }
+  ]
+}

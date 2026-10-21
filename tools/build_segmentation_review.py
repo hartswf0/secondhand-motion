@@ -28,6 +28,10 @@ SUBJECTS = {
 }
 
 
+BATCH25_SUBJECTS = {'aircraft-carrier': ('Carrier deck / hull', 'The first sample omits the island; later samples broadly include it. The last sample is a dissolve and is blocked from drawing pairing. These masks are filled exported contour proxies, not original binary SAM masks.'), 'alarm-clock': ('Alarm clock', 'The cropped clock is selected while the operating hand remains mostly separate. Thin feet and bells remain approximate. These masks are filled exported contour proxies, not original binary SAM masks.'), 'broom': ('Brooms', 'The mask changes from one broom to a merged pair; it is not a stable union of all three brooms in the source. These masks are filled exported contour proxies, not original binary SAM masks.'), 'camera': ('Camera', 'Most of the camera close-up fills the frame; this is a broad cropped camera target, not a lens-only mask. These masks are filled exported contour proxies, not original binary SAM masks.'), 'cello': ('Cellist / person', 'The mask follows the player rather than the cello. It cannot measure instrument-only drawing fit. These masks are filled exported contour proxies, not original binary SAM masks.'), 'cloud': ('Cloud bank', 'Connected cloud banks are marked broadly. A mask does not identify the motion of individual cloud features. These masks are filled exported contour proxies, not original binary SAM masks.'), 'crab': ('Crab', 'Body and claws are broadly selected, with sand patches and thin leg losses. These masks are filled exported contour proxies, not original binary SAM masks.'), 'dragon': ('Decorative dragon', 'This is a decorative dragon graphic. Its broad silhouette is plausible; it does not establish live-animal articulation. These masks are filled exported contour proxies, not original binary SAM masks.'), 'flower': ('Lily / nearby bloom', 'The main lily is selected, sometimes together with a tiny nearby bloom. It is not an isolated petal-motion target. These masks are filled exported contour proxies, not original binary SAM masks.'), 'frog': ('Toad', 'Broad body and visible feet are selected, with soft floor-adjacent boundaries. These masks are filled exported contour proxies, not original binary SAM masks.'), 'guitar': ('Guitar', 'Body and neck are selected; a stray patch appears in a checked sample. These masks are filled exported contour proxies, not original binary SAM masks.'), 'light-bulb': ('Bulb', 'The glass bulb and screw base are broadly captured; small stray pixels do not represent emitted rays. These masks are filled exported contour proxies, not original binary SAM masks.'), 'lighthouse': ('Lighthouse', 'The tower is broadly selected as camera framing changes. The mask does not measure camera tilt or beam motion. These masks are filled exported contour proxies, not original binary SAM masks.'), 'lion': ('Lion instance', 'The selected lion changes when another lion enters. Only the shorter first-lion interval is used for the drawing. These masks are filled exported contour proxies, not original binary SAM masks.'), 'ocean': ('Water field', 'The whole visible water field is marked. This is not a track of foam, a material wave, or an object silhouette. These masks are filled exported contour proxies, not original binary SAM masks.'), 'paintbrush': ('Brush / paint marks', 'Early samples follow the brush; the last target expands into paint marks and is not brush-only. These masks are filled exported contour proxies, not original binary SAM masks.'), 'rhinoceros': ('Rhinoceros', 'The visible body, lowered head and legs are broadly selected. Ground boundaries remain soft. These masks are filled exported contour proxies, not original binary SAM masks.'), 'roller-coaster': ('Coaster structure / sky', 'Early masks include large sky patches; later masks fill broad lattice bounds and cannot measure thin rails. These masks are filled exported contour proxies, not original binary SAM masks.'), 'shovel': ('Shovel', 'Blade and handle are selected while the approaching operator stays mostly separate. These masks are filled exported contour proxies, not original binary SAM masks.'), 'skateboard': ('Skateboard / shoe edges', 'The board and some shoe pixels are selected, not the rider. This cannot test the whole rider/board assembly. These masks are filled exported contour proxies, not original binary SAM masks.'), 'snake': ('Snake head / partial coil', 'The mask follows head and neck plus occasional rattle, omitting much of the coiled body. These masks are filled exported contour proxies, not original binary SAM masks.'), 'speedboat': ('Speedboat', 'The first sample is before entry and has no usable boat target. Later samples select the hull, not the full spray. These masks are filled exported contour proxies, not original binary SAM masks.'), 'swan': ('Distant swan', 'The small body and neck are selected. Distance prevents this from establishing hidden leg or contact motion. These masks are filled exported contour proxies, not original binary SAM masks.'), 'trumpet': ('Trumpet player / person', 'The mask follows the musician, not the trumpet. It cannot measure instrument-only drawing fit. These masks are filled exported contour proxies, not original binary SAM masks.'), 'van': ('Van', 'The cropped vehicle is broadly selected through its turn and retreat. Wheel/ground edges remain approximate. These masks are filled exported contour proxies, not original binary SAM masks.')}
+SUBJECTS = {**BATCH25_SUBJECTS, **SUBJECTS}
+
+
 def build(cache):
     out = ROOT/'shots/wave2-segmentation'
     data = {}
@@ -70,6 +74,7 @@ def build(cache):
                 assert row['sample_sha256'] == hashlib.sha256((target/'frames'/f'f{i:03d}.jpg').read_bytes()).hexdigest(), 'Appearance alignment has stale image'
             if alignment_path.resolve() != (target/'alignment.json').resolve():
                 shutil.copy2(alignment_path, target/'alignment.json')
+        previous = {}
         prior = src/'provenance.json'
         if prior.exists():
             previous = json.loads(prior.read_text())
@@ -91,13 +96,14 @@ def build(cache):
             fit = json.loads(checks.read_text()).get('mask_fit', {}) if checks.exists() else {}
         fit = {key: value for key, value in fit.items() if key != 'frames'} if isinstance(fit, dict) else {'status': str(fit)}
         provenance = {
-            'branch': 'wave2-track/'+slug, 'commit': sha,
+            'branch': previous.get('branch', 'wave2-track/'+slug), 'commit': sha,
+            **{k: v for k, v in previous.items() if k.startswith('legacy_') or k == 'mask_representation'},
             'clip_id': clip['clip_id'], 'model': 'facebook/sam2.1-hiera-small',
             'time_basis': 'approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS',
             'source_video_sha256': None,
             'appearance_alignment': 'alignment.json' if alignment else None,
             'comparison_source_sha256': alignment.get('comparison_source_sha256'),
-            'source_video_note': 'CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.',
+            'source_video_note': 'Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.',
             'detector': 'IDEA-Research/grounding-dino-tiny',
             'track_sha256': track_hash,
             'source_record': '../../../'+slug+'/source.json',
@@ -111,7 +117,7 @@ def build(cache):
         (target/'provenance.json').write_text(json.dumps(provenance, indent=2)+'\n')
         data[slug] = dict(title=title, note=note, clip=clip, frames=track['frames'],
                           provenance=provenance, assembly_times=times,
-                          assembly_fps=timeline.get('fps'), assembly_size=[timeline.get('W'), timeline.get('H')],
+                          assembly_fps=timeline.get('fps'), assembly_size=[timeline.get('W'), timeline.get('H')], assembly_crop=timeline.get('viewport_crop'),
                           review_note=timeline.get('review_note', ''), drawing_fit=fit, audit=audit, source_alignment=alignment)
     template = (ROOT/'tools/templates/segmentation_review.html').read_text()
     html = template.replace('__DATA__', json.dumps(data, separators=(',', ':')).replace('</', '<\\/'))

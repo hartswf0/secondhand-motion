@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "8b47377063f7ab08d408d7ddc8cdc24e1c52c57ced58b14a70903985b47c68bf",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Cloud bank",
+      "result": "manual_proxy_inspection",
+      "note": "Large connected white cloud bank selected with soft edge boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.986
+    },
+    {
+      "frame": 20,
+      "observed_target": "Cloud bank",
+      "result": "manual_proxy_inspection",
+      "note": "Large connected white cloud bank selected with soft edge boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.986
+    },
+    {
+      "frame": 41,
+      "observed_target": "Cloud bank",
+      "result": "manual_proxy_inspection",
+      "note": "Large connected white cloud bank selected with soft edge boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.987
+    },
+    {
+      "frame": 61,
+      "observed_target": "Cloud bank",
+      "result": "manual_proxy_inspection",
+      "note": "Large connected white cloud bank selected with soft edge boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.985
+    }
+  ]
+}

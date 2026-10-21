@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "45bb160511efe662d341437c3d74ce0a53e099d17536dc18792fe22b6cb47029",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Water field",
+      "result": "manual_proxy_inspection",
+      "note": "Most of the water field selected; no persistent individual wave identity. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.995
+    },
+    {
+      "frame": 12,
+      "observed_target": "Water field",
+      "result": "manual_proxy_inspection",
+      "note": "Most of the water field selected; no persistent individual wave identity. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.991
+    },
+    {
+      "frame": 25,
+      "observed_target": "Water field",
+      "result": "manual_proxy_inspection",
+      "note": "Most of the water field selected; no persistent individual wave identity. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.99
+    },
+    {
+      "frame": 37,
+      "observed_target": "Water field",
+      "result": "manual_proxy_inspection",
+      "note": "Most of the water field selected; no persistent individual wave identity. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.98
+    }
+  ]
+}

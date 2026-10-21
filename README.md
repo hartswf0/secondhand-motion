@@ -10,7 +10,7 @@ with the real camera.
 
 Open `index.html` (or the GitHub Pages site): it is **the rack**, every lot of work as a hang tag you can search, filter by kind, lane, status and stage, and switch to a list. Every page works from the file system.
 
-Open [the moving-drawings player](shots/moving-drawings.html) to switch between the synchronized comparison, drawing and source footage while keeping the same time. Each clip links to its exact paired keys and [source/mask inspection](shots/wave2-segmentation/index.html). The player currently holds 16 integrated review clips, 126 paired keys and 1,317 rendered frames. Still approval and normal-speed motion approval are separate.
+Open [the moving-drawings player](shots/moving-drawings.html) to switch between the synchronized comparison, drawing and source footage while keeping the same time. The [new batch of 25](shots/batch-25.html) can be watched separately. Each clip links to its exact paired keys and [source/mask inspection](shots/wave2-segmentation/index.html). The player currently holds 41 integrated review clips, 417 paired keys and 3,082 rendered frames. Still approval and normal-speed motion approval are separate.
 
 ## How the repository grows
 
@@ -18,6 +18,7 @@ Open [the moving-drawings player](shots/moving-drawings.html) to switch between 
 - A **test** is an entry in `tests/registry.json` (id, bar, how, stage, which lots it applies to, active or planned). Each lot's `tests.json` holds its results; unrun tests show as not run.
 - `python3 tools/new_subject.py "<category>" --wave N` scaffolds a lot from the dataset: archive candidates, a real doodle as cover, every test marked not run.
 - `python3 tools/import_batch.py <batch> <traced.json>` turns a look-lane batch into lots and scores what it can.
+- `python3 tools/verify_source_pairs.py guitar frog` checks source photographs and the left movie panel against pinned raw bytes, actual decoded timestamps and shared viewport/crop.
 - `python3 tools/verify_integrated.py monkey ant tiger` fully decodes the named assemblies, compares each movie key with its saved PNG, checks relative links/scripts/JSON and verifies ledgers. This checks artifact integrity; it does not approve source pose or normal-speed motion.
 - `python3 tools/validate.py` checks every lot; `python3 tools/build_pages.py` rebuilds every page (it validates first).
 - `python3 tools/style_score.py traced/traced_keys.json` scores M2 on one scale for both lanes; `python3 tools/match_strokes.py traced/traced_keys.json batches/<batch> traced/matches.json` in-betweens traced keys (T3).
@@ -77,3 +78,5 @@ are committed. Their scripts are not yet in the repository.
 
 See `ATTRIBUTION.md`. Footage: Moving Image Archive (rights as reported per source record).
 Doodles: Quick, Draw! by Google Creative Lab and its contributors, CC BY 4.0.
+
+The full repair archive stays in this repository. GitHub Pages uses `_config.yml` to omit only unlinked diagnostics from deployment. Refresh the exact exclusions with `python tools/package_pages.py --write-config --max-mib 800`; all static HTML stays byte-preserved and referenced assets remain included.

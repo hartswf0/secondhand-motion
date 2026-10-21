@@ -1,0 +1,109 @@
+{
+  "title": "Swan neck dip and lift",
+  "interval": [
+    3.75,
+    6.7333333333
+  ],
+  "source_sha256": "b8a8ee43c327185dcc5c5074e19d6990e1fa6a477c0ff01c9d814bd6beb840fb",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "W": 384,
+  "H": 288,
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "key_times": [
+    3.73333333,
+    3.98333333,
+    4.31666667,
+    4.65,
+    4.98333333,
+    5.31666667,
+    5.65,
+    5.9,
+    6.06666667,
+    6.23333333,
+    6.56666667,
+    6.73333333
+  ],
+  "extra_strokes": [],
+  "revision": "integrated-v1",
+  "review_note": "Fresh identity and source-pose critique pending; classifier and normal-speed playback unrun. Review copy, no training ran.",
+  "source_interval_reason": "Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans. Sixteen raw source samples show one shot; endpoints restrict the event to frozen native observation coverage.",
+  "compatibility": {
+    "status": "provisional_before_first_integrated_lock",
+    "native_key_id": "4762067460423680",
+    "native_strokes": 7,
+    "native_point_counts": [
+      3,
+      3,
+      10,
+      2,
+      3,
+      18,
+      6
+    ],
+    "inventory": [
+      "two native three-point neck boundaries",
+      "native small head/bill",
+      "native eye/mouth marks",
+      "native body and wing"
+    ],
+    "observed_event": "Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "limitations": [
+      "The swan occupies only about a tenth of the frame width in the source; full-frame pose detail is soft.",
+      "The native seven-stroke construction is sparse and does not assert submerged feet or contacts."
+    ],
+    "extra_strokes": [],
+    "source_preflight": {
+      "samples": 16,
+      "contact_sheet": "preflight-source.jpg",
+      "paired_study": "preflight-pairs.jpg",
+      "interval": [
+        3.75,
+        6.75
+      ],
+      "continuous_in_sampled_frames": true,
+      "actual_normal_speed_playback_watched": false
+    },
+    "training_ran": false,
+    "common_crop": {
+      "xyxy": [
+        100,
+        96,
+        292,
+        240
+      ],
+      "reason": "The full-frame source bird is small. Both panels retain identical source coordinates and crop; the drawing is not enlarged independently."
+    }
+  },
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Builder inspected sixteen raw source frames across the provisional event in preflight-source.jpg; no cut/dissolve observed inside retained interval. Normal-speed playback unrun."
+  },
+  "assembly_summary": "Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans. Source and drawing share a fixed 2\u00d7 viewport crop so the small bird can be inspected.",
+  "fill_strokes": [
+    5,
+    2
+  ],
+  "verified_contacts": [],
+  "key_notes": {
+    "3.73333333": "Source-observed native pose at 3.733s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "3.98333333": "Source-observed native pose at 3.983s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "4.31666667": "Source-observed native pose at 4.317s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "4.65": "Source-observed native pose at 4.650s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "4.98333333": "Source-observed native pose at 4.983s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "5.31666667": "Source-observed native pose at 5.317s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "5.65": "Source-observed native pose at 5.650s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "5.9": "Source-observed native pose at 5.900s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "6.06666667": "Source-observed native pose at 6.067s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "6.23333333": "Source-observed native pose at 6.233s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "6.56666667": "Source-observed native pose at 6.567s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans.",
+    "6.73333333": "Source-observed native pose at 6.733s. Swan glides on the lake with its head held low and then lifts the curved neck near the end while the camera pans."
+  },
+  "crop": [
+    100,
+    96,
+    292,
+    240
+  ]
+}

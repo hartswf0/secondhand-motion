@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A flat slab drawn in black lines (a long top surface, an inner line along the top, a wavy side line, a stepped notch on the bottom edge and short vertical strokes at the right end) sits in the middle of the frame with grey wave marks at lower left and a grey cloud mark at top. In frames 1-8 the slab barely moves: its top edge rises slightly toward the right and it drifts a little left and down. Between frames 8 and 11 the slab tips so its left end rises and its right end drops; in frame 9 it is also drawn narrower and shorter, then in frames 10-11 it lengthens and its right end runs past the right border. In frames 11-16 it holds almost the same pose, sloping from upper left to lower right, with only small changes in length.",
+ "seen_film": "An aircraft carrier seen from above and ahead, bow toward the camera, flight deck with a large painted number, island and parked aircraft at the top. In frames 1-8 the ship approaches nearly head-on, slowly growing, with its deck front edge close to level and wake breaking at the bow. From frame 9 onward the ship turns so its port side comes into view on the left and it slides lower and to the right in frame; the turn continues steadily through frame 16, where the deck runs diagonally from the island at upper left to the bow at lower right and the ship fills more of the frame.",
+ "named_subject": "An aircraft carrier flight deck and hull drawn as a flat stepped slab.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-8: slab nearly still, which matches the film's slow head-on approach. Frame 8 to 9: the slab is redrawn shorter and narrower (left corner moves from about x=20 to x=45, top surface loses depth) while the film shows only a slight start of the turn. Frames 9-11: the slab's tilt reverses from rising-right to falling-right within two frames, faster than the film's gradual turn. Frames 11-16: the slab holds the same slope with almost no change, while the film keeps turning and approaching through frame 16 (frame 16 is clearly more angled and larger than frame 12). The film's ship grows and moves down-right over the shot; the slab does not grow appreciably.",
+ "primary_gap": "The turn is compressed into frames 9-11 with a size pop at frame 9 and then freezes for frames 11-16, whereas the film turns steadily from frame 9 to frame 16 while the ship keeps getting larger.",
+ "closes_when": "The slab's tilt changes in even steps from frame 8 to frame 16 (each frame slightly more sloped than the last, reaching the frame-16 slope only at frame 16), with no drop in size at frame 9 and a gradual increase in overall size and downward-right drift through the end.",
+ "protect": "The doodle's construction as drawn: the long top edge with one inner line, the side line, the stepped notch on the bottom edge, the separate short vertical strokes at the right end and the doubled corner stroke at the left; the near-still opening in frames 1-8; the final down-right sloping pose; the sparse grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  9,
+  10,
+  11
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The slab keeps the doodle's strokes and stepped bottom throughout, though the side line in frames 1-7 is wavier than the doodle's straighter stepped line.",
+ "still_frames_only": true,
+ "_lot": "lota6e838a3",
+ "_round": "baseline before drawn keys"
+}

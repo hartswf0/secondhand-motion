@@ -1,0 +1,192 @@
+{
+  "artifact_integrity": {
+    "subject": "camera",
+    "technical_pass": true,
+    "frames": 73,
+    "fps": 24,
+    "keys": 8,
+    "strict_json_files": 117,
+    "relative_links": 14,
+    "hash_verified_ledger_entries": 5,
+    "movies": [
+      {
+        "path": "shots/camera/integrated/cartoon.mp4",
+        "decoded_frames": 73,
+        "fps": 24.0,
+        "sha256": "90b601e801995d2e317ae2ecefa20d25f8faa697257a5e5399ed23feea9ca53f",
+        "key_pixel_checks": [
+          {
+            "key": 1,
+            "frame": 0,
+            "rgb_mae": 1.669913
+          },
+          {
+            "key": 2,
+            "frame": 12,
+            "rgb_mae": 1.676933
+          },
+          {
+            "key": 3,
+            "frame": 24,
+            "rgb_mae": 1.70305
+          },
+          {
+            "key": 4,
+            "frame": 34,
+            "rgb_mae": 1.688712
+          },
+          {
+            "key": 5,
+            "frame": 44,
+            "rgb_mae": 1.713828
+          },
+          {
+            "key": 6,
+            "frame": 52,
+            "rgb_mae": 1.718813
+          },
+          {
+            "key": 7,
+            "frame": 60,
+            "rgb_mae": 1.671788
+          },
+          {
+            "key": 8,
+            "frame": 72,
+            "rgb_mae": 1.734242
+          }
+        ]
+      },
+      {
+        "path": "shots/camera/integrated/source-excerpt.mp4",
+        "decoded_frames": 73,
+        "fps": 24.0,
+        "sha256": "6b12d29ba382af2264d2d9f89436d34fa065755bc53a7e3e30f76c90fae17427",
+        "key_pixel_checks": []
+      },
+      {
+        "path": "shots/camera/integrated/comparison.mp4",
+        "decoded_frames": 73,
+        "fps": 24.0,
+        "sha256": "c7b580d2ae0e61b313f879de9b9b4777a68ccd5458d5d58fc0a04ca4cd581a20",
+        "key_pixel_checks": [
+          {
+            "key": 1,
+            "frame": 0,
+            "rgb_mae": 1.673289
+          },
+          {
+            "key": 2,
+            "frame": 12,
+            "rgb_mae": 1.678771
+          },
+          {
+            "key": 3,
+            "frame": 24,
+            "rgb_mae": 1.677924
+          },
+          {
+            "key": 4,
+            "frame": 34,
+            "rgb_mae": 1.712704
+          },
+          {
+            "key": 5,
+            "frame": 44,
+            "rgb_mae": 1.720366
+          },
+          {
+            "key": 6,
+            "frame": 52,
+            "rgb_mae": 1.709599
+          },
+          {
+            "key": 7,
+            "frame": 60,
+            "rgb_mae": 1.688681
+          },
+          {
+            "key": 8,
+            "frame": 72,
+            "rgb_mae": 1.749144
+          }
+        ]
+      }
+    ],
+    "scope": "Artifact integrity and saved-key/movie agreement only; no artistic, recognition, normal-speed motion or training approval inferred."
+  },
+  "source_pair_integrity": {
+    "subject": "camera",
+    "source_pair_integrity": true,
+    "raw_source_sha256": "1ebea010965e6f312cf3240158502a00982deae8ee44b5ebe20c52311e853563",
+    "keys_checked": 8,
+    "checks": [
+      {
+        "key": 1,
+        "render_frame": 0,
+        "actual_source_index": 360,
+        "actual_source_pts": 12.012012,
+        "photo_rgb_mae": 1.307165,
+        "movie_panel_rgb_mae": 1.598663
+      },
+      {
+        "key": 2,
+        "render_frame": 12,
+        "actual_source_index": 375,
+        "actual_source_pts": 12.512513,
+        "photo_rgb_mae": 1.22382,
+        "movie_panel_rgb_mae": 1.655536
+      },
+      {
+        "key": 3,
+        "render_frame": 24,
+        "actual_source_index": 390,
+        "actual_source_pts": 13.013013,
+        "photo_rgb_mae": 1.190478,
+        "movie_panel_rgb_mae": 1.636857
+      },
+      {
+        "key": 4,
+        "render_frame": 34,
+        "actual_source_index": 402,
+        "actual_source_pts": 13.413413,
+        "photo_rgb_mae": 1.159804,
+        "movie_panel_rgb_mae": 1.653938
+      },
+      {
+        "key": 5,
+        "render_frame": 44,
+        "actual_source_index": 415,
+        "actual_source_pts": 13.847181,
+        "photo_rgb_mae": 1.174919,
+        "movie_panel_rgb_mae": 1.666323
+      },
+      {
+        "key": 6,
+        "render_frame": 52,
+        "actual_source_index": 425,
+        "actual_source_pts": 14.180848,
+        "photo_rgb_mae": 1.171528,
+        "movie_panel_rgb_mae": 1.751347
+      },
+      {
+        "key": 7,
+        "render_frame": 60,
+        "actual_source_index": 435,
+        "actual_source_pts": 14.514515,
+        "photo_rgb_mae": 1.16893,
+        "movie_panel_rgb_mae": 1.729558
+      },
+      {
+        "key": 8,
+        "render_frame": 72,
+        "actual_source_index": 449,
+        "actual_source_pts": 14.981648,
+        "photo_rgb_mae": 1.147093,
+        "movie_panel_rgb_mae": 1.894372
+      }
+    ],
+    "scope": "Source bytes, nearest decoded PTS and image viewport only. No artistic or motion approval."
+  },
+  "scope": "Artifact/source correspondence only; no normal-speed motion, recognition or contact approval."
+}

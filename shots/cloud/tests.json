@@ -1,0 +1,153 @@
+[
+  {
+    "id": "M1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2b",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M5",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M6",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J3",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S6",
+    "value": "Clip/source ids, reported rights, URLs, rawSHA256 and retained decoded source times preserved",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "J4",
+    "value": {
+      "identity": true,
+      "sampled_source_pose": false,
+      "raw_review": "review-v3.json",
+      "normal_speed_playback_watched": false
+    },
+    "unit": "independent still scope only",
+    "ok": true
+  },
+  {
+    "id": "B1",
+    "value": {
+      "held_world_background": true,
+      "static_authored_strokes": 0,
+      "scope": "Blank heldpaper; no authored background ink to measure"
+    },
+    "unit": "",
+    "ok": false
+  },
+  {
+    "id": "T1",
+    "value": {
+      "min_recall": 0.9959100204498977,
+      "min_parts_kept": 1.0,
+      "keys": 10,
+      "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+  },
+  {
+    "id": "T3",
+    "value": {
+      "native_topology": true,
+      "scope": "Explicit native point correspondence retained; registry Hungarian matched-ink metric unrun"
+    },
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M3",
+    "value": {
+      "pass": false,
+      "status": "not measured by this assembly",
+      "reason": "No audited same-instance mask target evaluated against this final native render"
+    },
+    "unit": "unmeasured against audited final render",
+    "ok": false
+  },
+  {
+    "id": "M4",
+    "value": 0,
+    "unit": "verified planted intervals; minimum4",
+    "ok": false
+  },
+  {
+    "id": "S1",
+    "value": "Depth planes retained from source-observed study; ordering not independently measured",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S2",
+    "value": "All native/extra/scenery sources retained in frozen input and editable timeline",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S3",
+    "value": {
+      "frames": 121,
+      "keys": 10,
+      "source_time_every_frame": true
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S4",
+    "value": "Offline relative links/script syntax checked by technical verifier; actual phone viewport unrun",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S5",
+    "value": "Native/background occlusion not independently verified",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S7",
+    "value": 5,
+    "unit": "hash-linked entries",
+    "ok": true
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "title": "Light Bulb \u00b7 source-paired native drawing",
+  "interval": [
+    12,
+    13.958333333333334
+  ],
+  "source_sha256": "af5abdd9464d1017dacbd0eddc445afb81730cd4a781a8b86b60f580cfb29ee5",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "W": 384,
+  "H": 288,
+  "fps": 24,
+  "key_times": [
+    12,
+    12.25,
+    12.5,
+    12.75,
+    13,
+    13.25,
+    13.4,
+    13.5,
+    13.65,
+    13.75,
+    13.958333333333334
+  ],
+  "why_this_interval": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study.",
+  "compatibility_note": "All five native bulb strokes retained. Six optional ray marks are agent-authored lighting indicators, not native doodle points or a measured light field.",
+  "assembly_summary": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. All five native bulb strokes retained. Six optional ray marks are agent-authored lighting indicators, not native doodle points or a measured light field.",
+  "review_note": "Fresh blind still review passes native identity and sampled source framing/pose. Classifier, audited final mask fit, verified contacts and actual normal-speed playback remain unmet/unrun. No training ran.",
+  "extra_strokes": [
+    {
+      "index": 5,
+      "source": "drawn by agent from late source illumination",
+      "note": "Short lighting ray from frozen source-observed vectorstudy, separatelycredited; not one ofthe five nativebulbstrokes."
+    },
+    {
+      "index": 6,
+      "source": "drawn by agent from late source illumination",
+      "note": "Short lighting ray from frozen source-observed vectorstudy, separatelycredited; not one ofthe five nativebulbstrokes."
+    },
+    {
+      "index": 7,
+      "source": "drawn by agent from late source illumination",
+      "note": "Short lighting ray from frozen source-observed vectorstudy, separatelycredited; not one ofthe five nativebulbstrokes."
+    },
+    {
+      "index": 8,
+      "source": "drawn by agent from late source illumination",
+      "note": "Short lighting ray from frozen source-observed vectorstudy, separatelycredited; not one ofthe five nativebulbstrokes."
+    },
+    {
+      "index": 9,
+      "source": "drawn by agent from late source illumination",
+      "note": "Short lighting ray from frozen source-observed vectorstudy, separatelycredited; not one ofthe five nativebulbstrokes."
+    },
+    {
+      "index": 10,
+      "source": "drawn by agent from late source illumination",
+      "note": "Short lighting ray from frozen source-observed vectorstudy, separatelycredited; not one ofthe five nativebulbstrokes."
+    }
+  ],
+  "compatibility": {
+    "doodle_key_id": "6496968282996736",
+    "source_interval": [
+      12,
+      13.958333333333334
+    ],
+    "source_observation": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study.",
+    "native_mapping": "All five native bulb strokes retained. Six optional ray marks are agent-authored lighting indicators, not native doodle points or a measured light field.",
+    "limits": [
+      "No actual normal-speed playback was viewed.",
+      "No classifier ran.",
+      "No independently verified planted contacts."
+    ],
+    "preflight_frames_inspected": 12,
+    "source_continuity": "No internal cut or dissolve seen in twelve retained-interval source samples; source still continuity is not playback approval.",
+    "endpoint_note": "Last40ms ofparentplanexcluded soeachrequestedsource time remainsinsidecachednativeobservationcoverage; no lastvectorclampedforward.",
+    "original_plan_interval": [
+      12,
+      14
+    ]
+  },
+  "continuous_source": {
+    "pass": true,
+    "frames_inspected": 12,
+    "evidence": "preflight-source-12.jpg",
+    "scope": "Twelve source still samples checked, no internalcut/dissolve seen; no normal-speedplayback approval."
+  },
+  "revision": "integrated-v2",
+  "fill_strokes": [
+    3
+  ],
+  "stroke_width": 1.65,
+  "background_fill": false,
+  "key_notes": {
+    "12": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 1: openingposition",
+    "12.25": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 2: source-observed change in crop/pose/field marks",
+    "12.5": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 3: source-observed change in crop/pose/field marks",
+    "12.75": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 4: source-observed change in crop/pose/field marks",
+    "13": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 5: source-observed change in crop/pose/field marks",
+    "13.25": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 6: source-observed change in crop/pose/field marks",
+    "13.4": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 7: source-observed change in crop/pose/field marks",
+    "13.5": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 8: source-observed change in crop/pose/field marks",
+    "13.65": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 9: source-observed change in crop/pose/field marks",
+    "13.75": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 10: source-observed change in crop/pose/field marks",
+    "13.958333333333334": "A frosted bulb pulls back in frame while short rays appear late; the source animated man is omitted from this subject study. Key 11: lastretainedpose"
+  },
+  "observation_time_note": "Frozen native geometry uses legacy12fpsnominalclipclock; photographs use nearestdecodedrawsourcePTS. Approximate source correspondence remains explicit, not independent motion approval."
+}

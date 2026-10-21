@@ -1,0 +1,54 @@
+{
+  "title": "Three brooms sweep the floor",
+  "interval": [
+    4.5,
+    6.983333333333334
+  ],
+  "source_sha256": "cbef6a3f048c9a7c606dde23ea3d5910b0c3be3f1f4288f4849574911a574d17",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/repair-v2-gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "W": 384,
+  "H": 288,
+  "extra_strokes": [],
+  "background_fill": false,
+  "review_note": "2 independent still review round(s). Native identity: True; sampled source pose: True. No sampled still gap identified; actual normal-speed playback, recognition and material contacts remain unapproved. Normal-speed playback, classifier and verified material contacts remain unrun. No training ran.",
+  "assembly_summary": "Seventeen native strokes describe the main straw broom. Two separately moving background brooms are preserved from the frozen source-observed scene, all native copies. The moving apron/operator is omitted, not treated as stationary extracted geometry.",
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Sixteen raw samples show three brooms in one continuous sweep; main bristles staylarge and visible. No cut/dissolve inside4.5\u20137.0. Retained endpoint slightly shortened to the final frozen vector observation; no pose extrapolation.",
+    "sample_count": 16,
+    "sheet": "preflight-source-design.jpg"
+  },
+  "compatibility": {
+    "status": "compatible_with_explicit_simplifications",
+    "native_key_id": "6486360229675008",
+    "source_part_inventory": "Seventeen native strokes describe the main straw broom. Two separately moving background brooms are preserved from the frozen source-observed scene, all native copies. The moving apron/operator is omitted, not treated as stationary extracted geometry.",
+    "mask_target_limit": "Legacy masks switch one/twobrooms, not stable threeinstanceunion; no measured drawingfit orverifiedbristlecontacts.",
+    "design_reselected": false,
+    "original_native_topology_retained": true
+  },
+  "verified_contacts": [],
+  "camera_note": "Frozen GWP background-only registration retained independently of source-observed character positions. No unverified contact pass inferred.",
+  "key_notes": {
+    "6.4833333": "Recovery: the broom rises from the floor and straightens.",
+    "6.4": "The broom still presses on the floor, just starting to come back up: the floor contact held for one more frame.",
+    "4.9833333": "End of the slide: the broom is at its lowest and furthest left, handle nearly straight, while the second broom swings over it.",
+    "6.3166667": "The line: the broom has thrust down to the lower right and its head presses on the floor at the lowest point of the shot.",
+    "4.8166667": "Breakdown in the slide down and left: the handle starts to straighten and the head trails to the right behind it.",
+    "5.2333333": "Upright: the handle stands near vertical and the head hangs straight below the binding.",
+    "6.9833333": "Settled upright at the top of the frame, next to the whisk broom.",
+    "5.5666667": "Still upright, risen a little higher in the frame.",
+    "6.65": "Upright again, standing beside the whisk broom.",
+    "6.0666667": "Anticipation: the handle leans back to the upper left before the broom drives down.",
+    "4.65": "Furthest lean: the handle tips most to the left and the head lifts off the floor, the small rise before the broom slides down and left.",
+    "4.4": "The broom leans with its handle to the upper left and its head on the floor at lower centre-left: the starting lean.",
+    "5.8166667": "Top of the rise: the broom is highest in the frame and starts to tip back to the left."
+  },
+  "fill_strokes": [
+    1
+  ],
+  "revision": "integrated-v2",
+  "review_status": "still_pass_motion_gates_unmet"
+}

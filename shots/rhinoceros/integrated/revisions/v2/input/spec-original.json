@@ -1,0 +1,372 @@
+{
+ "category": "rhinoceros",
+ "doodle_key_id": "5621907212730368",
+ "facing": -1,
+ "face_from": [
+  "shoulder",
+  "rump"
+ ],
+ "note": "Quick, Draw! rhinoceros 5621907212730368, facing left. Stroke 0 is the two horns drawn as one zigzag; its last point meets the top of the head's straight diagonal edge. Stroke 1 is the head: the snout point and chin at the left, the straight diagonal face edge up to the brow, and a large round outline that also covers the shoulders. Stroke 2 is the body, a second round outline behind the head. Strokes 4 and 5 are the front legs and strokes 6 and 3 the hind legs, each a short line kept at the doodle's own length. The rig carries the body by the shoulder and rump points. The horns, the diagonal face edge, the snout and the chin turn together as one rigid unit about the brow point where the horns meet the face edge, so the nose dips toward the sand and lifts again while the horns stay on the head. Each leg swings at its top as the rhinoceros shifts its feet.",
+ "strokes": [
+  [
+   [
+    42,
+    63
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    72,
+    42
+   ],
+   [
+    57,
+    12
+   ],
+   [
+    94,
+    27
+   ]
+  ],
+  [
+   [
+    44,
+    65
+   ],
+   [
+    2,
+    51
+   ],
+   [
+    20,
+    76
+   ],
+   [
+    32,
+    87
+   ],
+   [
+    100,
+    23
+   ],
+   [
+    116,
+    20
+   ],
+   [
+    136,
+    22
+   ],
+   [
+    151,
+    33
+   ],
+   [
+    166,
+    63
+   ],
+   [
+    167,
+    75
+   ],
+   [
+    163,
+    84
+   ],
+   [
+    145,
+    105
+   ],
+   [
+    120,
+    114
+   ],
+   [
+    95,
+    116
+   ],
+   [
+    48,
+    105
+   ],
+   [
+    37,
+    99
+   ],
+   [
+    28,
+    88
+   ],
+   [
+    28,
+    78
+   ],
+   [
+    37,
+    70
+   ]
+  ],
+  [
+   [
+    116,
+    116
+   ],
+   [
+    145,
+    132
+   ],
+   [
+    167,
+    137
+   ],
+   [
+    200,
+    138
+   ],
+   [
+    221,
+    134
+   ],
+   [
+    235,
+    128
+   ],
+   [
+    251,
+    107
+   ],
+   [
+    255,
+    74
+   ],
+   [
+    245,
+    55
+   ],
+   [
+    228,
+    42
+   ],
+   [
+    211,
+    35
+   ],
+   [
+    176,
+    33
+   ],
+   [
+    157,
+    39
+   ],
+   [
+    143,
+    52
+   ]
+  ],
+  [
+   [
+    241,
+    124
+   ],
+   [
+    239,
+    129
+   ],
+   [
+    244,
+    159
+   ]
+  ],
+  [
+   [
+    134,
+    133
+   ],
+   [
+    130,
+    154
+   ]
+  ],
+  [
+   [
+    154,
+    134
+   ],
+   [
+    153,
+    153
+   ]
+  ],
+  [
+   [
+    221,
+    131
+   ],
+   [
+    231,
+    156
+   ]
+  ]
+ ],
+ "anchors": {
+  "nose": [
+   2,
+   51
+  ],
+  "horn": [
+   0,
+   0
+  ],
+  "poll": [
+   100,
+   23
+  ],
+  "shoulder": [
+   150,
+   90
+  ],
+  "rump": [
+   240,
+   90
+  ],
+  "f1top": [
+   134,
+   133
+  ],
+  "f1": [
+   130,
+   154
+  ],
+  "f2top": [
+   154,
+   134
+  ],
+  "f2": [
+   153,
+   153
+  ],
+  "h1top": [
+   221,
+   131
+  ],
+  "h1": [
+   231,
+   156
+  ],
+  "h2top": [
+   241,
+   124
+  ],
+  "h2": [
+   244,
+   159
+  ]
+ },
+ "root": [
+  "shoulder",
+  "rump"
+ ],
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 4,
+   "joint": "poll",
+   "aim": [
+    "poll",
+    "nose"
+   ],
+   "turn": 1
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 4,
+   "joint": "poll",
+   "aim": [
+    "poll",
+    "nose"
+   ],
+   "turn": 1
+  },
+  {
+   "stroke": 1,
+   "from": 14,
+   "to": 18,
+   "joint": "poll",
+   "aim": [
+    "poll",
+    "nose"
+   ],
+   "turn": 1
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 1,
+   "joint": "f1top",
+   "aim": [
+    "f1top",
+    "f1"
+   ],
+   "stretch": 0,
+   "turn": 0.7
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 1,
+   "joint": "f2top",
+   "aim": [
+    "f2top",
+    "f2"
+   ],
+   "stretch": 0,
+   "turn": 0.7
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 1,
+   "joint": "h1top",
+   "aim": [
+    "h1top",
+    "h1"
+   ],
+   "stretch": 0,
+   "turn": 0.7
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 2,
+   "joint": "h2top",
+   "aim": [
+    "h2top",
+    "h2"
+   ],
+   "stretch": 0,
+   "turn": 0.7
+  },
+  {
+   "rest": true,
+   "joint": "shoulder",
+   "aim": [
+    "shoulder",
+    "rump"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "foreshorten": [
+  0.85,
+  1.15
+ ],
+ "max_tilt": 25,
+ "track": false,
+ "smooth": 1.8
+}

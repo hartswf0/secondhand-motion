@@ -1,0 +1,96 @@
+{
+  "title": "Ocean \u00b7 source-paired native drawing",
+  "interval": [
+    11,
+    13.958333333333334
+  ],
+  "source_sha256": "f0725c85aa0dd7b3257bc7a98c59762146b78edc3c2c0e6a6fbac097202c63ea",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "W": 384,
+  "H": 288,
+  "fps": 24,
+  "key_times": [
+    11,
+    11.3333333333,
+    11.5833333333,
+    11.8333333333,
+    12.0833333333,
+    12.3333333333,
+    12.5833333333,
+    12.8333333333,
+    13.1666666667,
+    13.5,
+    13.75,
+    13.958333333333334
+  ],
+  "why_this_interval": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest.",
+  "compatibility_note": "Five native marks act as representative wave rhythms. They do not establish persistent material wave identities, optical flow or fluid motion; no whole-field SAM fit is meaningful.",
+  "assembly_summary": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Five native marks act as representative wave rhythms. They do not establish persistent material wave identities, optical flow or fluid motion; no whole-field SAM fit is meaningful.",
+  "review_note": "Final permitted bounded late-field redistribution after second source-pose rejection; third independent still review pending. Nativefive-strokepointcountsretained. Actual normal-speedplaybackandmaterialwaveidentityremainunapproved. No training.",
+  "compatibility": {
+    "doodle_key_id": "4618667562106880",
+    "source_interval": [
+      11,
+      13.958333333333334
+    ],
+    "source_observation": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest.",
+    "native_mapping": "Five native marks act as representative wave rhythms. They do not establish persistent material wave identities, optical flow or fluid motion; no whole-field SAM fit is meaningful.",
+    "limits": [
+      "No actual normal-speed playback was viewed.",
+      "No classifier ran.",
+      "No independently verified planted contacts."
+    ],
+    "preflight_frames_inspected": 12,
+    "source_continuity": "No internal cut or dissolve seen in twelve retained-interval source samples; source still continuity is not playback approval.",
+    "endpoint_note": "Last40ms ofparentplanexcluded soeachrequestedsource time remainsinsidecachednativeobservationcoverage; no lastvectorclampedforward.",
+    "original_plan_interval": [
+      11,
+      14
+    ],
+    "repair": "Twelve manually observed primarycrest polylines control only the position/slope/spread of native mark0; other four native mark shapes reposition at visible foam/near-swell regions. All original native point counts retained; no claim these are persistent physical wave tracks.",
+    "final_bounded_repair": "Lastthreeobservationsredistributeexistingfivenativemarksthroughupper/middlesea,rightbreakingcrest,andnearforegroundswell. Firstnineobservationsandlatehorizonexposureunchanged; noextrastroke/foamtracing."
+  },
+  "continuous_source": {
+    "pass": true,
+    "frames_inspected": 12,
+    "evidence": "preflight-source-12.jpg",
+    "scope": "Twelve source still samples checked, no internalcut/dissolve seen; no normal-speedplayback approval."
+  },
+  "revision": "integrated-v4",
+  "extra_strokes": [],
+  "fill_strokes": [],
+  "stroke_width": 1.65,
+  "background_fill": false,
+  "key_notes": {
+    "11": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 1: openingposition",
+    "11.3333333333": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 2: source-observed change in crop/pose/field marks",
+    "11.5833333333": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 3: source-observed change in crop/pose/field marks",
+    "11.8333333333": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 4: source-observed change in crop/pose/field marks",
+    "12.0833333333": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 5: source-observed change in crop/pose/field marks",
+    "12.3333333333": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 6: source-observed change in crop/pose/field marks",
+    "12.5833333333": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 7: source-observed change in crop/pose/field marks",
+    "12.8333333333": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 8: source-observed change in crop/pose/field marks",
+    "13.1666666667": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 9: source-observed change in crop/pose/field marks",
+    "13.5": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 10: source-observed change in crop/pose/field marks",
+    "13.75": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 11: source-observed change in crop/pose/field marks",
+    "13.958333333333334": "Open water swells and foam patches change; retain the sparse native wave-line identity rather than tracing every crest. Key 12: lastretainedpose"
+  },
+  "observation_time_note": "Twelve manually observed source-key arrangements replace the earlier stacked field baseline; same native point topology interpolates linearly. Rawphotographs use nearestdecodedPTS. Backgroundcamera/horizon resampled from frozenlegacy study and remain approximate.",
+  "observation_times": [
+    11,
+    11.3333333333,
+    11.5833333333,
+    11.8333333333,
+    12.0833333333,
+    12.3333333333,
+    12.5833333333,
+    12.8333333333,
+    13.1666666667,
+    13.5,
+    13.75,
+    13.958333333333334
+  ]
+}

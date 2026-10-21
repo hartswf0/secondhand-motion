@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A five-petal line flower with a small round center and a straight vertical stem stands near the middle of the frame, surrounded by grey scenery: three parallel curved lines at upper left, a pointed leaf shape at lower left, and leaf outlines at upper right and lower right. Across frames 1-16 the flower barely changes shape; it drifts slightly right and up (center near x~200 in frame 1, ~208 in frame 5, ~212 in frame 9, ~210 in frame 13, back toward ~205 by frame 16) while the stem tilts a few degrees. The scenery drifts by a similar small amount. No large action happens; it is a held shot with gentle sway.",
+ "seen_film": "An overhead shot of a pink-orange water lily with a yellow center floating on dark water among lily pads, with pale stems lying diagonally at upper left. Across the 16 frames the flower stays centered and open; the only motion is a small sway or camera drift of a few pixels left/right and up/down, and the petals do not open or close. It is a near-static held shot.",
+ "named_subject": "A flower (standing in for the film's water lily).",
+ "verdict": "bar met",
+ "evidence": "Frames 1-16 of a.png keep the flower at the same place as the film's lily (horizontally centered, center about 45-55% down the frame) and show only a small drift, matching the few-pixel sway in d.png frames 1-16. The upper-left grey parallel lines sit where the film's diagonal stems are (d.png frames 1-16, upper left), and the lower-left and right grey leaves sit where the lily pads are. No frame shows the flower changing size, petal count, or position abruptly: frames 4-5, 8-9 and 12-13 differ only by a few pixels of offset and slight stem tilt. The construction in every frame matches c.png: five loose loop petals, small polygonal center, crossing stroke at the base of the center, long straight stem.",
+ "primary_gap": "The motion is so small and uniform that it reads only as a slight whole-drawing slide, and the stem bottom and the lower-right grey leaf shift a little between neighboring frames (e.g. frames 1-4) in a way that may read as faint jitter rather than the film's gentle sway.",
+ "closes_when": "Consecutive frames show the flower and scenery offsets changing by steady, evenly spaced amounts (a smooth sway curve) with the stem base and grey leaves moving together with the camera drift instead of separately.",
+ "protect": "Keep the c.png drawing exactly as is (five loop petals, small polygonal center, crossing stroke, straight stem, single-weight black line), the flower's centered placement matching the film, the grey scenery placed where the film's stems and lily pads are, and the restrained near-static timing that matches the film's held shot.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "None of consequence; the flower in every frame is the c.png doodle with its construction and stroke habits intact, only offset slightly.",
+ "still_frames_only": true,
+ "_lot": "lotdbdab6c8",
+ "_round": "baseline before drawn keys"
+}

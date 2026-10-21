@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "a68bba1fbb2f7d56beddb222e129fc35dcf668a52a5d36ab23eb76dfacf68510",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Coaster structure / sky",
+      "result": "manual_proxy_inspection",
+      "note": "Coaster plus large false sky patches. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.89
+    },
+    {
+      "frame": 17,
+      "observed_target": "Coaster structure / sky",
+      "result": "manual_proxy_inspection",
+      "note": "Structure plus a large upper-right sky patch. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.861
+    },
+    {
+      "frame": 35,
+      "observed_target": "Coaster structure / sky",
+      "result": "manual_proxy_inspection",
+      "note": "Broad coaster structure selected; lattice negative spaces filled. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.93
+    },
+    {
+      "frame": 52,
+      "observed_target": "Coaster structure / sky",
+      "result": "manual_proxy_inspection",
+      "note": "Broad tower and coaster bounds selected, not individual rail silhouettes. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.938
+    }
+  ]
+}

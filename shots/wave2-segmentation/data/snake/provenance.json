@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "e4da5889329f31b39276473edf9d07a1f6b1b4d6f413b4278dd9842bedd37ac3",
+  "legacy_meta_sha256": "09d0b726a409ba721f59704c10d85f0a7ff139860ea4cf62125cae14086120bc",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a rattlesnake.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/snake-sam/clip.json",
+    "shots/snake-sam/masks.json",
+    "shots/snake-sam/mask_meta.json"
+  ],
+  "clip_id": "8b702d41-8b6f-5a9d-84cd-254e3da2ba1e",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "65ecf3c932cb2ea7718fd9fc2c0fb310100f98a097325f4fe5ff777531fe600c",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "10e0587c91035af8f7f5033c3da3ad35116384cf685012d08761ebb4a9ab238d",
+  "source_record": "../../../snake/source.json",
+  "assembly_source_record": "../../../snake/integrated/source.json",
+  "note": "The mask follows head and neck plus occasional rattle, omitting much of the coiled body. These masks are filled exported contour proxies, not original binary SAM masks."
+}

@@ -559,5 +559,882 @@
         "model_iou_estimate": 0.957
       }
     ]
+  },
+  "aircraft-carrier": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "635393d2e06425cbffd182051477d689b9c914d1dcdc92a7e91c8ef6578fb68a",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Carrier deck / hull",
+        "result": "manual_proxy_inspection",
+        "note": "Deck and hull selected; upper island mostly omitted. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.896
+      },
+      {
+        "frame": 16,
+        "observed_target": "Carrier deck / hull",
+        "result": "manual_proxy_inspection",
+        "note": "Deck, hull and upper island broadly included. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.913
+      },
+      {
+        "frame": 33,
+        "observed_target": "Carrier deck / hull",
+        "result": "manual_proxy_inspection",
+        "note": "Broad carrier structure selected with soft waterline. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.92
+      },
+      {
+        "frame": 49,
+        "observed_target": "Carrier deck / hull",
+        "result": "manual_proxy_inspection",
+        "note": "Double exposure at the next-shot dissolve; outside the retained clean event. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.793,
+        "pair_usable": false
+      }
+    ]
+  },
+  "alarm-clock": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "b761e7954d62f8aab4e17739482e53dd6dbac3f9f22dcba352c953dcfd81545b",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Alarm clock",
+        "result": "manual_proxy_inspection",
+        "note": "Clock case and bells selected; hand largely excluded. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.925
+      },
+      {
+        "frame": 12,
+        "observed_target": "Alarm clock",
+        "result": "manual_proxy_inspection",
+        "note": "Clock case and bells selected; hand largely excluded. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.946
+      },
+      {
+        "frame": 25,
+        "observed_target": "Alarm clock",
+        "result": "manual_proxy_inspection",
+        "note": "Clock case and bells selected; hand largely excluded. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.933
+      },
+      {
+        "frame": 37,
+        "observed_target": "Alarm clock",
+        "result": "manual_proxy_inspection",
+        "note": "Clock case and bells selected; hand largely excluded. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.933
+      }
+    ]
+  },
+  "broom": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "1887a6866954c3f282452bf5b0871d2ff3bb9cfb75ab265fa6d2788c0568ff72",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Brooms",
+        "result": "manual_proxy_inspection",
+        "note": "Nearest broom head and handle selected; other brooms omitted. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.92
+      },
+      {
+        "frame": 10,
+        "observed_target": "Brooms",
+        "result": "manual_proxy_inspection",
+        "note": "Nearest broom selected; other instances remain outside mask. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.968
+      },
+      {
+        "frame": 21,
+        "observed_target": "Brooms",
+        "result": "manual_proxy_inspection",
+        "note": "One broom selected near the central handle. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.952
+      },
+      {
+        "frame": 31,
+        "observed_target": "Brooms",
+        "result": "manual_proxy_inspection",
+        "note": "Two broom heads merge into one target. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.938
+      }
+    ]
+  },
+  "camera": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "0daf79299fc28745272e933c34ce76f0f6bed93bf95941afa0b5827e1ff2335b",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Camera",
+        "result": "manual_proxy_inspection",
+        "note": "The broad close-up is marked almost edge to edge; lens, camera frame and some surrounding pixels are merged. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.98
+      },
+      {
+        "frame": 12,
+        "observed_target": "Camera",
+        "result": "manual_proxy_inspection",
+        "note": "The broad close-up is marked almost edge to edge; lens, camera frame and some surrounding pixels are merged. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.98
+      },
+      {
+        "frame": 24,
+        "observed_target": "Camera",
+        "result": "manual_proxy_inspection",
+        "note": "The broad close-up is marked almost edge to edge; lens, camera frame and some surrounding pixels are merged. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.98
+      },
+      {
+        "frame": 36,
+        "observed_target": "Camera",
+        "result": "manual_proxy_inspection",
+        "note": "The broad close-up is marked almost edge to edge; lens, camera frame and some surrounding pixels are merged. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.979
+      }
+    ]
+  },
+  "cello": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "177ef313268a48cc9b6ed59b2218aadb96643feabf3be4e3b9746b65b4ba7bc4",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Cellist / person",
+        "result": "manual_proxy_inspection",
+        "note": "Head, torso and arm selected; the cello body is largely outside the target. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.929
+      },
+      {
+        "frame": 10,
+        "observed_target": "Cellist / person",
+        "result": "manual_proxy_inspection",
+        "note": "Head, torso and arm selected; the cello body is largely outside the target. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.748
+      },
+      {
+        "frame": 21,
+        "observed_target": "Cellist / person",
+        "result": "manual_proxy_inspection",
+        "note": "Head, torso and arm selected; the cello body is largely outside the target. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.857
+      },
+      {
+        "frame": 31,
+        "observed_target": "Cellist / person",
+        "result": "manual_proxy_inspection",
+        "note": "Head, torso and arm selected; the cello body is largely outside the target. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.944
+      }
+    ]
+  },
+  "cloud": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "8b47377063f7ab08d408d7ddc8cdc24e1c52c57ced58b14a70903985b47c68bf",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Cloud bank",
+        "result": "manual_proxy_inspection",
+        "note": "Large connected white cloud bank selected with soft edge boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.986
+      },
+      {
+        "frame": 20,
+        "observed_target": "Cloud bank",
+        "result": "manual_proxy_inspection",
+        "note": "Large connected white cloud bank selected with soft edge boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.986
+      },
+      {
+        "frame": 41,
+        "observed_target": "Cloud bank",
+        "result": "manual_proxy_inspection",
+        "note": "Large connected white cloud bank selected with soft edge boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.987
+      },
+      {
+        "frame": 61,
+        "observed_target": "Cloud bank",
+        "result": "manual_proxy_inspection",
+        "note": "Large connected white cloud bank selected with soft edge boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.985
+      }
+    ]
+  },
+  "crab": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "6eb8fe68c9b5ba27549a249175fa74d48b1163c8990bdf07e7922187fdd4fc82",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Crab",
+        "result": "manual_proxy_inspection",
+        "note": "Crab plus a large lower-left sand patch; not a clean silhouette. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.918
+      },
+      {
+        "frame": 12,
+        "observed_target": "Crab",
+        "result": "manual_proxy_inspection",
+        "note": "Broad crab body and claws; thin leg boundaries approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.818
+      },
+      {
+        "frame": 25,
+        "observed_target": "Crab",
+        "result": "manual_proxy_inspection",
+        "note": "Crab body and claws retained with rough sand-adjacent boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.805
+      },
+      {
+        "frame": 37,
+        "observed_target": "Crab",
+        "result": "manual_proxy_inspection",
+        "note": "Crab selected, some thin appendages and sand remain approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.803
+      }
+    ]
+  },
+  "dragon": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "7fcedef2575d0c56a6f460faee65a9b05adadb7d702697673dd4124c1d416399",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Decorative dragon",
+        "result": "manual_proxy_inspection",
+        "note": "Decorative head, horns, body and hanging curl broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.962
+      },
+      {
+        "frame": 10,
+        "observed_target": "Decorative dragon",
+        "result": "manual_proxy_inspection",
+        "note": "Decorative head, horns, body and hanging curl broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.974
+      },
+      {
+        "frame": 21,
+        "observed_target": "Decorative dragon",
+        "result": "manual_proxy_inspection",
+        "note": "Decorative head, horns, body and hanging curl broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.973
+      },
+      {
+        "frame": 31,
+        "observed_target": "Decorative dragon",
+        "result": "manual_proxy_inspection",
+        "note": "Decorative head, horns, body and hanging curl broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.975
+      }
+    ]
+  },
+  "flower": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "a6fdc64e8b29abe33211d647b22bc0073fc42969d2c480b22f942d9dbb905a54",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Lily / nearby bloom",
+        "result": "manual_proxy_inspection",
+        "note": "Main lily broadly selected; small lower neighboring flower also included. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.841
+      },
+      {
+        "frame": 12,
+        "observed_target": "Lily / nearby bloom",
+        "result": "manual_proxy_inspection",
+        "note": "Main lily broadly selected; small lower neighboring flower also included. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.839
+      },
+      {
+        "frame": 25,
+        "observed_target": "Lily / nearby bloom",
+        "result": "manual_proxy_inspection",
+        "note": "Main lily broadly selected; small lower neighboring flower also included. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.851
+      },
+      {
+        "frame": 37,
+        "observed_target": "Lily / nearby bloom",
+        "result": "manual_proxy_inspection",
+        "note": "Main lily broadly selected; small lower neighboring flower also included. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.85
+      }
+    ]
+  },
+  "frog": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "1d5c894996fb530d0a642f6f1419248925a9945fddd5fb0472b1ef0fee628ad8",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Toad",
+        "result": "manual_proxy_inspection",
+        "note": "Visible frontal toad body and feet broadly captured; floor-edge pixels remain approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.96
+      },
+      {
+        "frame": 10,
+        "observed_target": "Toad",
+        "result": "manual_proxy_inspection",
+        "note": "Visible frontal toad body and feet broadly captured; floor-edge pixels remain approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.963
+      },
+      {
+        "frame": 21,
+        "observed_target": "Toad",
+        "result": "manual_proxy_inspection",
+        "note": "Visible frontal toad body and feet broadly captured; floor-edge pixels remain approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.955
+      },
+      {
+        "frame": 31,
+        "observed_target": "Toad",
+        "result": "manual_proxy_inspection",
+        "note": "Visible frontal toad body and feet broadly captured; floor-edge pixels remain approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.959
+      }
+    ]
+  },
+  "guitar": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "26c491f749ed8114efd4432b7477ada27460a9a76b63009650bb63488e3c231b",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Guitar",
+        "result": "manual_proxy_inspection",
+        "note": "Body and visible neck broadly captured. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.949
+      },
+      {
+        "frame": 10,
+        "observed_target": "Guitar",
+        "result": "manual_proxy_inspection",
+        "note": "Body and neck retained with small boundary irregularities. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.956
+      },
+      {
+        "frame": 21,
+        "observed_target": "Guitar",
+        "result": "manual_proxy_inspection",
+        "note": "Guitar plus a small stray red patch on the right floor area. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.883
+      },
+      {
+        "frame": 31,
+        "observed_target": "Guitar",
+        "result": "manual_proxy_inspection",
+        "note": "Body and neck broadly captured. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.913
+      }
+    ]
+  },
+  "light-bulb": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "bd7cc179fadc0d1be2bfa7527c0e53ce077cf59e04d1206acbccee2686269cd9",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Bulb",
+        "result": "manual_proxy_inspection",
+        "note": "Bulb and base selected; occasional stray edge pixels remain. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.973
+      },
+      {
+        "frame": 8,
+        "observed_target": "Bulb",
+        "result": "manual_proxy_inspection",
+        "note": "Bulb and base selected; occasional stray edge pixels remain. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.963
+      },
+      {
+        "frame": 17,
+        "observed_target": "Bulb",
+        "result": "manual_proxy_inspection",
+        "note": "Bulb and base selected; occasional stray edge pixels remain. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.985
+      },
+      {
+        "frame": 25,
+        "observed_target": "Bulb",
+        "result": "manual_proxy_inspection",
+        "note": "Bulb and base selected; occasional stray edge pixels remain. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.986
+      }
+    ]
+  },
+  "lighthouse": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "25ead50ff2b9c35a6118d28b00dc7b57b5c9e56d31cb8a038e3044408cdfd239",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Lighthouse",
+        "result": "manual_proxy_inspection",
+        "note": "Visible striped tower and cap broadly captured; cropped base retained. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.986
+      },
+      {
+        "frame": 10,
+        "observed_target": "Lighthouse",
+        "result": "manual_proxy_inspection",
+        "note": "Visible striped tower and cap broadly captured; cropped base retained. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.981
+      },
+      {
+        "frame": 21,
+        "observed_target": "Lighthouse",
+        "result": "manual_proxy_inspection",
+        "note": "Visible striped tower and cap broadly captured; cropped base retained. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.975
+      },
+      {
+        "frame": 31,
+        "observed_target": "Lighthouse",
+        "result": "manual_proxy_inspection",
+        "note": "Visible striped tower and cap broadly captured; cropped base retained. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.976
+      }
+    ]
+  },
+  "lion": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "ec321c3f9228fad762ffdf69afa555c358f369d3ecbd1f97d173121f7809de8a",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Lion instance",
+        "result": "manual_proxy_inspection",
+        "note": "First reclining lion broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.912
+      },
+      {
+        "frame": 10,
+        "observed_target": "Lion instance",
+        "result": "manual_proxy_inspection",
+        "note": "First reclining lion retained before the second enters. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.945
+      },
+      {
+        "frame": 21,
+        "observed_target": "Lion instance",
+        "result": "manual_proxy_inspection",
+        "note": "The right lion is selected while another lion is visible on the left. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.882
+      },
+      {
+        "frame": 31,
+        "observed_target": "Lion instance",
+        "result": "manual_proxy_inspection",
+        "note": "Mask now follows the left lion; instance identity is not stable. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.936
+      }
+    ]
+  },
+  "ocean": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "45bb160511efe662d341437c3d74ce0a53e099d17536dc18792fe22b6cb47029",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Water field",
+        "result": "manual_proxy_inspection",
+        "note": "Most of the water field selected; no persistent individual wave identity. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.995
+      },
+      {
+        "frame": 12,
+        "observed_target": "Water field",
+        "result": "manual_proxy_inspection",
+        "note": "Most of the water field selected; no persistent individual wave identity. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.991
+      },
+      {
+        "frame": 25,
+        "observed_target": "Water field",
+        "result": "manual_proxy_inspection",
+        "note": "Most of the water field selected; no persistent individual wave identity. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.99
+      },
+      {
+        "frame": 37,
+        "observed_target": "Water field",
+        "result": "manual_proxy_inspection",
+        "note": "Most of the water field selected; no persistent individual wave identity. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.98
+      }
+    ]
+  },
+  "paintbrush": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "d399ef4ba9295195dbc745830c81e365c355b00cda88613ac7b0feda698fc03b",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Brush / paint marks",
+        "result": "manual_proxy_inspection",
+        "note": "Brush tip and visible handle broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.94
+      },
+      {
+        "frame": 12,
+        "observed_target": "Brush / paint marks",
+        "result": "manual_proxy_inspection",
+        "note": "Brush tip and handle selected with soft edges. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.934
+      },
+      {
+        "frame": 24,
+        "observed_target": "Brush / paint marks",
+        "result": "manual_proxy_inspection",
+        "note": "Brush body selected while its tip changes position. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.949
+      },
+      {
+        "frame": 36,
+        "observed_target": "Brush / paint marks",
+        "result": "manual_proxy_inspection",
+        "note": "Large paint-mark area merges with the brush target. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.826
+      }
+    ]
+  },
+  "rhinoceros": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "18f0a4aa919b5128b0a75f73aa7790cf3a1a7b0130dbd6029cede76a52ed27e9",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Rhinoceros",
+        "result": "manual_proxy_inspection",
+        "note": "Broad whole visible rhino selected; legs and ground edges approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.956
+      },
+      {
+        "frame": 16,
+        "observed_target": "Rhinoceros",
+        "result": "manual_proxy_inspection",
+        "note": "Broad whole visible rhino selected; legs and ground edges approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.959
+      },
+      {
+        "frame": 33,
+        "observed_target": "Rhinoceros",
+        "result": "manual_proxy_inspection",
+        "note": "Broad whole visible rhino selected; legs and ground edges approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.969
+      },
+      {
+        "frame": 49,
+        "observed_target": "Rhinoceros",
+        "result": "manual_proxy_inspection",
+        "note": "Broad whole visible rhino selected; legs and ground edges approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.955
+      }
+    ]
+  },
+  "roller-coaster": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "a68bba1fbb2f7d56beddb222e129fc35dcf668a52a5d36ab23eb76dfacf68510",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Coaster structure / sky",
+        "result": "manual_proxy_inspection",
+        "note": "Coaster plus large false sky patches. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.89
+      },
+      {
+        "frame": 17,
+        "observed_target": "Coaster structure / sky",
+        "result": "manual_proxy_inspection",
+        "note": "Structure plus a large upper-right sky patch. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.861
+      },
+      {
+        "frame": 35,
+        "observed_target": "Coaster structure / sky",
+        "result": "manual_proxy_inspection",
+        "note": "Broad coaster structure selected; lattice negative spaces filled. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.93
+      },
+      {
+        "frame": 52,
+        "observed_target": "Coaster structure / sky",
+        "result": "manual_proxy_inspection",
+        "note": "Broad tower and coaster bounds selected, not individual rail silhouettes. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.938
+      }
+    ]
+  },
+  "shovel": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "ce6ddec3e838182992d95cd22d530cb22eacd73d796b05ed047c01a213363125",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Shovel",
+        "result": "manual_proxy_inspection",
+        "note": "Broad blade and handle captured; operator is a separate subject. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.934
+      },
+      {
+        "frame": 10,
+        "observed_target": "Shovel",
+        "result": "manual_proxy_inspection",
+        "note": "Broad blade and handle captured; operator is a separate subject. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.946
+      },
+      {
+        "frame": 21,
+        "observed_target": "Shovel",
+        "result": "manual_proxy_inspection",
+        "note": "Broad blade and handle captured; operator is a separate subject. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.933
+      },
+      {
+        "frame": 31,
+        "observed_target": "Shovel",
+        "result": "manual_proxy_inspection",
+        "note": "Broad blade and handle captured; operator is a separate subject. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.917
+      }
+    ]
+  },
+  "skateboard": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "8760c259d8362b2582b4f1f3428bb9ee451dbdbfee5376e52585dbf809f6642c",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Skateboard / shoe edges",
+        "result": "manual_proxy_inspection",
+        "note": "Small board and shoe-edge target; rider omitted. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.882
+      },
+      {
+        "frame": 7,
+        "observed_target": "Skateboard / shoe edges",
+        "result": "manual_proxy_inspection",
+        "note": "Small board and shoe-edge target; rider omitted. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.745
+      },
+      {
+        "frame": 15,
+        "observed_target": "Skateboard / shoe edges",
+        "result": "manual_proxy_inspection",
+        "note": "Small board and shoe-edge target; rider omitted. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.716
+      },
+      {
+        "frame": 22,
+        "observed_target": "Skateboard / shoe edges",
+        "result": "manual_proxy_inspection",
+        "note": "Small board and shoe-edge target; rider omitted. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.818
+      }
+    ]
+  },
+  "snake": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "10e0587c91035af8f7f5033c3da3ad35116384cf685012d08761ebb4a9ab238d",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Snake head / partial coil",
+        "result": "manual_proxy_inspection",
+        "note": "Head and raised neck selected; much of lower coil omitted. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.965
+      },
+      {
+        "frame": 12,
+        "observed_target": "Snake head / partial coil",
+        "result": "manual_proxy_inspection",
+        "note": "Head, neck and separate rattle selected; whole coil not covered. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.935
+      },
+      {
+        "frame": 25,
+        "observed_target": "Snake head / partial coil",
+        "result": "manual_proxy_inspection",
+        "note": "Head and partial coil selected with changing boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.892
+      },
+      {
+        "frame": 37,
+        "observed_target": "Snake head / partial coil",
+        "result": "manual_proxy_inspection",
+        "note": "Head, neck and some rattle selected; not a whole-coiled-body target. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.88
+      }
+    ]
+  },
+  "speedboat": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "c74ebbccf526e9aa1a327bc3bb46b5b95ef2dd3a35cc5d8b069dc6aec9efce38",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Speedboat",
+        "result": "manual_proxy_inspection",
+        "note": "Tiny unrelated patch before boat entry; no usable boat target. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.31,
+        "pair_usable": false
+      },
+      {
+        "frame": 8,
+        "observed_target": "Speedboat",
+        "result": "manual_proxy_inspection",
+        "note": "Visible airborne hull broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.957
+      },
+      {
+        "frame": 17,
+        "observed_target": "Speedboat",
+        "result": "manual_proxy_inspection",
+        "note": "Hull selected as boat returns toward the water; spray separate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.817
+      },
+      {
+        "frame": 25,
+        "observed_target": "Speedboat",
+        "result": "manual_proxy_inspection",
+        "note": "Hull selected while wake and spray remain separate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.868
+      }
+    ]
+  },
+  "swan": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "a3c55390d723d234e70321fdf59eacf39d3d75ac07ac1ce51227625e20769e70",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Distant swan",
+        "result": "manual_proxy_inspection",
+        "note": "Small distant swan body and neck captured; feet are not resolved. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.913
+      },
+      {
+        "frame": 12,
+        "observed_target": "Distant swan",
+        "result": "manual_proxy_inspection",
+        "note": "Small distant swan body and neck captured; feet are not resolved. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.904
+      },
+      {
+        "frame": 25,
+        "observed_target": "Distant swan",
+        "result": "manual_proxy_inspection",
+        "note": "Small distant swan body and neck captured; feet are not resolved. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.914
+      },
+      {
+        "frame": 37,
+        "observed_target": "Distant swan",
+        "result": "manual_proxy_inspection",
+        "note": "Small distant swan body and neck captured; feet are not resolved. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.911
+      }
+    ]
+  },
+  "trumpet": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "e846de2109ad45f8b0db2be7ed6e0d9a25a5813787f288f2c8fc846ce7eba66a",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Trumpet player / person",
+        "result": "manual_proxy_inspection",
+        "note": "Player head, torso and arm selected; instrument mostly outside the mask. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.951
+      },
+      {
+        "frame": 20,
+        "observed_target": "Trumpet player / person",
+        "result": "manual_proxy_inspection",
+        "note": "Player head, torso and arm selected; instrument mostly outside the mask. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.956
+      },
+      {
+        "frame": 41,
+        "observed_target": "Trumpet player / person",
+        "result": "manual_proxy_inspection",
+        "note": "Player head, torso and arm selected; instrument mostly outside the mask. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.957
+      },
+      {
+        "frame": 61,
+        "observed_target": "Trumpet player / person",
+        "result": "manual_proxy_inspection",
+        "note": "Player head, torso and arm selected; instrument mostly outside the mask. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.944
+      }
+    ]
+  },
+  "van": {
+    "author": "agent manual source / exported-mask-proxy inspection",
+    "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+    "track_sha256": "811f377abdf12adcb25260b27b200f1b37cb9e67e993987c02dab3107bc79078",
+    "samples": [
+      {
+        "frame": 0,
+        "observed_target": "Van",
+        "result": "manual_proxy_inspection",
+        "note": "Broad visible van silhouette selected; cropped edges and wheel boundaries approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.965
+      },
+      {
+        "frame": 10,
+        "observed_target": "Van",
+        "result": "manual_proxy_inspection",
+        "note": "Broad visible van silhouette selected; cropped edges and wheel boundaries approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.97
+      },
+      {
+        "frame": 21,
+        "observed_target": "Van",
+        "result": "manual_proxy_inspection",
+        "note": "Broad visible van silhouette selected; cropped edges and wheel boundaries approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.977
+      },
+      {
+        "frame": 31,
+        "observed_target": "Van",
+        "result": "manual_proxy_inspection",
+        "note": "Broad visible van silhouette selected; cropped edges and wheel boundaries approximate. Exported contours are a lossy approximation of the original SAM mask.",
+        "model_iou_estimate": 0.963
+      }
+    ]
   }
 }

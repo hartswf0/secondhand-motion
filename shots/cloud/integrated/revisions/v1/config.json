@@ -1,0 +1,60 @@
+{
+  "title": "Cloud bank billows",
+  "revision": "integrated-v1",
+  "interval": [
+    4.0,
+    8.983333333333333
+  ],
+  "W": 384,
+  "H": 216,
+  "source_sha256": "ec98e8a0806a41f611e84cc5eec757890e45f8a9c475f260eae40f4a4b24802f",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "key_times": [
+    4,
+    4.4,
+    4.9,
+    5.4,
+    5.9,
+    6.5666667,
+    7.2333333,
+    8.0666667,
+    8.6,
+    8.983333333333333
+  ],
+  "key_notes": {
+    "4": "Opening retained pose",
+    "4.4": "Observed cloud lobe height/crop change",
+    "4.9": "Observed cloud lobe height/crop change",
+    "5.4": "Observed cloud lobe height/crop change",
+    "5.9": "Observed cloud lobe height/crop change",
+    "6.5666667": "Observed cloud lobe height/crop change",
+    "7.2333333": "Observed cloud lobe height/crop change",
+    "8.0666667": "Observed cloud lobe height/crop change",
+    "8.6": "Observed cloud lobe height/crop change",
+    "8.983333333333333": "Final observed pose"
+  },
+  "extra_strokes": [],
+  "fill_strokes": [],
+  "background_fill": false,
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Builder inspected16raw source samples spanning the retained interval and boundary margins in preflight-source.jpg. One continuous event; no internal cut/dissolve observed."
+  },
+  "compatibility": {
+    "status": "compatible_with_explicit_simplifications",
+    "changes": [
+      "Native lower-boundary points placed below the frame to retain source crop; upper native lobe rhythm remains source-observed frozen study.",
+      "Cloud is an evolving field, not a rigid object/material motion estimate."
+    ],
+    "provisional_design_record": null,
+    "limitations": "Field changes/crop, no material cloud-point identity"
+  },
+  "verified_contacts": [],
+  "camera_note": "shots/cloud-sam/camera.json, the per-frame shift measured from the footage",
+  "review_note": "Native identity passes; sampled source pose fails. The sampled source is a cloud bank that continues through both horizontal frame edges, but the cartoon shows visible left and right flanks inside the crop, making it read as a contained cloud rather than the same cropped bank. Normal-speed playback is also unrun/unapproved. Normal-speed motion remains unapproved; classifier unrun. No training ran.",
+  "assembly_summary": "A cropped bank of cloud keeps the original four angular strokes while its three lobe heights follow the observed time-lapse. The bottom boundary stays below the frame rather than inventing a floating closed cloud.",
+  "review_status": "review_candidate"
+}

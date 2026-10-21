@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "31e1f87f928fb36a1d8d15550a360eb55424c048925ea2e4ee67d041857fd2d0",
+  "legacy_meta_sha256": "cb959113d38399559303615f71de7ea9641b97cb98fbe8a55f06eaa8a29bdeda",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a camera.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/camera-sam/clip.json",
+    "shots/camera-sam/masks.json",
+    "shots/camera-sam/mask_meta.json"
+  ],
+  "clip_id": "0eab0b5d-dd57-5e1d-83e6-5d5ea58aaf6e",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "1ebea010965e6f312cf3240158502a00982deae8ee44b5ebe20c52311e853563",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "0daf79299fc28745272e933c34ce76f0f6bed93bf95941afa0b5827e1ff2335b",
+  "source_record": "../../../camera/source.json",
+  "assembly_source_record": "../../../camera/integrated/source.json",
+  "note": "Most of the camera close-up fills the frame; this is a broad cropped camera target, not a lens-only mask. These masks are filled exported contour proxies, not original binary SAM masks."
+}

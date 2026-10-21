@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "6eb8fe68c9b5ba27549a249175fa74d48b1163c8990bdf07e7922187fdd4fc82",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Crab",
+      "result": "manual_proxy_inspection",
+      "note": "Crab plus a large lower-left sand patch; not a clean silhouette. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.918
+    },
+    {
+      "frame": 12,
+      "observed_target": "Crab",
+      "result": "manual_proxy_inspection",
+      "note": "Broad crab body and claws; thin leg boundaries approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.818
+    },
+    {
+      "frame": 25,
+      "observed_target": "Crab",
+      "result": "manual_proxy_inspection",
+      "note": "Crab body and claws retained with rough sand-adjacent boundaries. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.805
+    },
+    {
+      "frame": 37,
+      "observed_target": "Crab",
+      "result": "manual_proxy_inspection",
+      "note": "Crab selected, some thin appendages and sand remain approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.803
+    }
+  ]
+}

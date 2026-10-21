@@ -1,0 +1,116 @@
+{
+  "status": "native_body_footprint_corrected_before_first_valid_review",
+  "native_key_id": "4612932086267904",
+  "native_strokes": 4,
+  "native_point_counts": [
+    38,
+    3,
+    3,
+    3
+  ],
+  "inventory": [
+    "single native long body/head/coil contour",
+    "two three-point tongue strokes",
+    "three-point eye"
+  ],
+  "observed_event": "Large coiled rattlesnake holds its raised head, moves it slightly and flicks its tongue; raised rattle trembles.",
+  "limitations": [
+    "The real snake is coiled and broad at its base; the native S-body does not explicitly draw the overlapping coils.",
+    "Native line vocabulary and tongue are retained, without copying the photographic scale pattern."
+  ],
+  "extra_strokes": [],
+  "source_preflight": {
+    "samples": 16,
+    "contact_sheet": "preflight-source.jpg",
+    "paired_study": "preflight-pairs.jpg",
+    "interval": [
+      10.75,
+      13.75
+    ],
+    "continuous_in_sampled_frames": true,
+    "actual_normal_speed_playback_watched": false
+  },
+  "training_ran": false,
+  "preflight_native_correction": {
+    "source_snapshot": "input/gwp-shot.json",
+    "working_snapshot": "input/working-gwp-v1.json",
+    "vertex_offsets": {
+      "1": [
+        -59.0,
+        7.199999999999989
+      ],
+      "2": [
+        -131.2,
+        -2.4000000000000057
+      ],
+      "3": [
+        -168.9,
+        -7.300000000000011
+      ],
+      "4": [
+        -170.4,
+        -10.800000000000011
+      ],
+      "5": [
+        -163.0,
+        -15.699999999999989
+      ],
+      "6": [
+        -143.3,
+        -18.80000000000001
+      ],
+      "7": [
+        -113.5,
+        -9.800000000000011
+      ],
+      "8": [
+        -33.099999999999994,
+        0.09999999999999432
+      ],
+      "25": [
+        -65.89999999999998,
+        7.0
+      ],
+      "26": [
+        -99.60000000000002,
+        1.6999999999999886
+      ],
+      "27": [
+        -136.6,
+        -4.599999999999994
+      ],
+      "28": [
+        -160.0,
+        3.3000000000000114
+      ],
+      "29": [
+        -152.5,
+        10.0
+      ],
+      "30": [
+        -117.1,
+        12.900000000000006
+      ],
+      "31": [
+        -35.69999999999999,
+        7.900000000000006
+      ]
+    },
+    "preserved": "All4 original stroke IDs/pointcounts, head/eye/tongue and raised right rattle vertices unchanged. No photographic scale texture added."
+  },
+  "original_point_counts": [
+    38,
+    3,
+    3,
+    3
+  ],
+  "native_topology": true,
+  "topology_note": "Native first-stroke IDs and point counts retained",
+  "extras": [
+    {
+      "index": 4,
+      "source": "drawn by agent: late three-point rattle-vibration accent in the frozen source-observed study; not native Quick, Draw! stroke",
+      "note": "Retained only on its existing final two12fps observations; this accent is not a measured rattle track."
+    }
+  ]
+}

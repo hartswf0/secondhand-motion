@@ -21,7 +21,7 @@ SIZE = (96, 72)
 
 def align(source, cache, output):
     clip = json.loads((cache/'clip.json').read_text())
-    cap = cv2.VideoCapture(str(source))
+    cap = cv2.VideoCapture(str(source), cv2.CAP_FFMPEG, [cv2.CAP_PROP_N_THREADS, 1]) if hasattr(cv2, "CAP_PROP_N_THREADS") else cv2.VideoCapture(str(source))
     fps = cap.get(cv2.CAP_PROP_FPS)
     frames = []
     while True:
@@ -63,7 +63,7 @@ def align(source, cache, output):
     usable_times = [r['matched_source_time'] for r in samples if r['usable_for_pairing']]
     assert all(a <= b for a, b in zip(usable_times, usable_times[1:])), 'Appearance matches reverse source order'
     result = dict(method='Local pixel matching after grayscale area resize to 96x72; no model inference',
-                  scope='Estimated appearance correspondences to the retained raw video. Original CI input hash and decode PTS were not recorded; this does not recover them or validate masks, drawing quality, recognition or playback.',
+                  scope='Estimated appearance correspondences to the retained raw video. Original segmentation input hash and decode PTS were not recorded; this does not recover them or validate masks, drawing quality, recognition or playback.',
                   clip_id=clip['clip_id'], comparison_source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
                   track_sha256=hashlib.sha256((cache/'track.json').read_bytes()).hexdigest(),
                   source_clock=clock, source_fps=fps,

@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "b74abd9d4733524538530b7b9be319a2e0a6192afbb2674dc76e51462724fb0d",
+  "legacy_meta_sha256": "7d209d881ff2afdaa0e31bb6b6145a3e990d9b1217f07a23ba2c0eb430274c84",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a roller coaster.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/roller-coaster-sam/clip.json",
+    "shots/roller-coaster-sam/masks.json",
+    "shots/roller-coaster-sam/mask_meta.json"
+  ],
+  "clip_id": "63fdebfa-086d-5f35-9a58-27d22e8bdb70",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "4c3e5ebeab2be9053893ba38cf9563dec63a7674d83abe96630ad2344761a541",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "a68bba1fbb2f7d56beddb222e129fc35dcf668a52a5d36ab23eb76dfacf68510",
+  "source_record": "../../../roller-coaster/source.json",
+  "assembly_source_record": "../../../roller-coaster/integrated/source.json",
+  "note": "Early masks include large sky patches; later masks fill broad lattice bounds and cannot measure thin rails. These masks are filled exported contour proxies, not original binary SAM masks."
+}

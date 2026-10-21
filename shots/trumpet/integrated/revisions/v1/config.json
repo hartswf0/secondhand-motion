@@ -1,0 +1,92 @@
+{
+  "title": "Trumpet held at the mouth",
+  "interval": [
+    0.5,
+    5.4833333333
+  ],
+  "source_sha256": "a48a92cf09425fe1395e125cec4475606341edfd388b1441995758c8e4e1c445",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "W": 384,
+  "H": 288,
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "key_times": [
+    0.48333333,
+    0.73333333,
+    0.98333333,
+    1.56666667,
+    2.06666667,
+    2.73333333,
+    3.23333333,
+    3.56666667,
+    3.81666667,
+    4.23333333,
+    4.98333333,
+    5.48333333
+  ],
+  "extra_strokes": [],
+  "revision": "integrated-v1",
+  "review_note": "Fresh identity and source-pose critique pending; classifier and normal-speed playback unrun. Review copy, no training ran.",
+  "source_interval_reason": "Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles. Sixteen raw source samples show one shot; endpoints restrict the event to frozen native observation coverage.",
+  "compatibility": {
+    "status": "provisional_before_first_integrated_lock",
+    "native_key_id": "6590023216398336",
+    "native_strokes": 7,
+    "native_point_counts": [
+      13,
+      7,
+      5,
+      5,
+      7,
+      6,
+      6
+    ],
+    "inventory": [
+      "native bell and tubing outlines",
+      "native mouthpiece",
+      "three native valve loops"
+    ],
+    "observed_event": "Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "limitations": [
+      "The doodle has a much broader bell than the source instrument; retaining identity does not establish measured silhouette fit.",
+      "The player is separate source-observed background/acting context drawn by agent, not a Quick, Draw! trumpet stroke."
+    ],
+    "extra_strokes": [],
+    "source_preflight": {
+      "samples": 16,
+      "contact_sheet": "preflight-source.jpg",
+      "paired_study": "preflight-pairs.jpg",
+      "interval": [
+        0.5,
+        5.5
+      ],
+      "continuous_in_sampled_frames": true,
+      "actual_normal_speed_playback_watched": false
+    },
+    "training_ran": false
+  },
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Builder inspected sixteen raw source frames across the provisional event in preflight-source.jpg; no cut/dissolve observed inside retained interval. Normal-speed playback unrun."
+  },
+  "assembly_summary": "Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+  "fill_strokes": [
+    0
+  ],
+  "verified_contacts": [],
+  "key_notes": {
+    "0.48333333": "Source-observed native pose at 0.483s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "0.73333333": "Source-observed native pose at 0.733s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "0.98333333": "Source-observed native pose at 0.983s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "1.56666667": "Source-observed native pose at 1.567s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "2.06666667": "Source-observed native pose at 2.067s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "2.73333333": "Source-observed native pose at 2.733s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "3.23333333": "Source-observed native pose at 3.233s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "3.56666667": "Source-observed native pose at 3.567s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "3.81666667": "Source-observed native pose at 3.817s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "4.23333333": "Source-observed native pose at 4.233s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "4.98333333": "Source-observed native pose at 4.983s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles.",
+    "5.48333333": "Source-observed native pose at 5.483s. Player holds trumpet at his mouth, makes small instrument bobs, lifts slightly near3.5s, then settles."
+  }
+}

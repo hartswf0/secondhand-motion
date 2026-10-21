@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A single black-line cloud doodle (flat bottom, two lumpy top bumps, an inner crossing stroke near the middle, a short detached stroke at upper right and an open tick at lower right) sits in the middle of the frame. From frame 1 to frame 16 it slides slowly to the right by roughly 50 px per panel width, without changing shape; from about frame 6 onward its right end is cut off by the right frame edge, and by frames 13-16 the lower-right tick is only a stub at the edge. A grey scenery cloud at the left edge drifts right with it and gets slightly larger and more lobed. The black outline itself never deforms: it is the same rigid drawing translated.",
+ "seen_film": "A static shot of a wide white cumulus bank against blue sky, filling the lower half to two-thirds of the frame and running off both side edges and the bottom. Over the 16 frames the cloud billows in place: the left mound rises and swells (frames 5-12 it is a tall rounded bump at upper left), the dip between the left and right masses shifts and deepens, the right mass stays high and pushes to the right edge, and in frames 13-16 small wisps appear along the top edge at the left and center. There is little lateral drift; the change is a slow churning of the top silhouette.",
+ "named_subject": "A cloud",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1, 6, 11 and 16 of a.png show the same outline at identical proportions, only shifted right, while d.png frames 1, 6, 11 and 16 show the top silhouette changing shape (left mound low in 1, high and round in 6-11, wispy in 15-16; dip moving and deepening). In d.png the cloud mass fills the lower frame and runs off both sides and the bottom in every frame; in a.png the cloud floats as a closed shape in the vertical middle of the frame with sky below it in frames 1-16. The lateral slide in a.png (frames 1 to 16, right edge clipped from frame 6) has no counterpart in the film, which holds its framing.",
+ "primary_gap": "The animation translates a rigid cloud sideways instead of performing the film's event, which is a stationary cloud bank whose top outline billows (left mound rising, dip shifting, wisps forming) while the cloud fills the lower part of the frame.",
+ "closes_when": "Across frames 1-16 the doodle stays roughly in place, sits low and wide so it spans the lower part of the frame like the film's bank, and its top bumps change height and shape in step with d.png (left bump rising by frames 5-8, dip between bumps moving and deepening around frames 9-12, small extra wiggle strokes along the top by frames 13-16).",
+ "protect": "The doodle's construction is reproduced exactly: the two-bump top, the crossing inner stroke, the detached stroke at upper right, the open tick at lower right, the straight-segment polyline look and the uniform black line weight. The motion is steady with no pops, flicker or doubling between frames.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated outline matches c.png in shape and stroke habits, including the inner crossing stroke and open ends, so identity holds; only cropping at the right edge from frame 6 onward hides part of it.",
+ "still_frames_only": true,
+ "_lot": "lot2d55ab7e",
+ "_round": "baseline before drawn keys"
+}

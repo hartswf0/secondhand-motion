@@ -7,7 +7,7 @@
   "source_video_sha256": null,
   "appearance_alignment": null,
   "comparison_source_sha256": null,
-  "source_video_note": "CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
   "detector": "IDEA-Research/grounding-dino-tiny",
   "track_sha256": "f1271ca51b16a14831119802c5bb41b55d4cb3cb59ce0c7ebd46a15267d5c86e",
   "source_record": "../../../rain/source.json",

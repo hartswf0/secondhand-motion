@@ -1,0 +1,18 @@
+{
+  "source_interval": [
+    18.25,
+    20.73333333333333
+  ],
+  "sample_count": 16,
+  "observed_continuity": "Sixteen raw samples show the samecellist bowing in one continuous close shot with caption absent. No cut/dissolve inside18.25\u201320.75.",
+  "doodle_compatibility": "Five native cello strokes preserve body, neck, strings and fholes. Agent-drawn bow and moving hand are separately credited; instrument and lower bow remain cropped like source. The simplified held player edges do not assert a full-body performance reconstruction.",
+  "mask_limit": "LegacySAMselectsperson/head/torso, notinstrument; invalidcellofittarget. Bowandfingercontactsnotverified.",
+  "source_sha256": "3697f264b233d1543d16136760064582d1e21d0677a0f67ff8eb4baa9a9721c4",
+  "native_key_id": "5389451637293056",
+  "design_locked_for_first_integrated_revision": true,
+  "input_manifest": "input/manifest.json",
+  "motion_approved": false,
+  "train_eligible": false,
+  "training_ran": false,
+  "observation_coverage_trim": "End falls within frozen native vector sample coverage; no last-pose extrapolation."
+}

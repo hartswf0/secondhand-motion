@@ -1,0 +1,565 @@
+{
+  "critic_round": 3,
+  "scope": "Final bounded repair: native right summit toward source far-right crown, with cropped outer flank and retained inward crease",
+  "landmark_basis": "Builder inspected retained16source samples and source RGB cloud/sky threshold landmarks; field shape extrema, not material tracking or a SAM fit",
+  "source_observations": [
+    {
+      "f": 0,
+      "source_time": 3.9,
+      "summit_xy": [
+        309.0,
+        63.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 1,
+      "source_time": 3.9833333333333334,
+      "summit_xy": [
+        310.7142857142857,
+        62.42857142857143
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 2,
+      "source_time": 4.066666666666666,
+      "summit_xy": [
+        312.42857142857144,
+        61.857142857142854
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 3,
+      "source_time": 4.15,
+      "summit_xy": [
+        314.14285714285717,
+        61.285714285714285
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 4,
+      "source_time": 4.233333333333333,
+      "summit_xy": [
+        315.85714285714283,
+        60.714285714285715
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 5,
+      "source_time": 4.316666666666666,
+      "summit_xy": [
+        317.57142857142856,
+        60.142857142857146
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 6,
+      "source_time": 4.4,
+      "summit_xy": [
+        319.2857142857143,
+        59.57142857142857
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 7,
+      "source_time": 4.483333333333333,
+      "summit_xy": [
+        321.0,
+        59.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 8,
+      "source_time": 4.566666666666666,
+      "summit_xy": [
+        323.0,
+        58.5
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 9,
+      "source_time": 4.65,
+      "summit_xy": [
+        325.0,
+        58.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 10,
+      "source_time": 4.733333333333333,
+      "summit_xy": [
+        327.0,
+        57.5
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 11,
+      "source_time": 4.816666666666666,
+      "summit_xy": [
+        329.0,
+        57.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 12,
+      "source_time": 4.9,
+      "summit_xy": [
+        331.0,
+        56.5
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 13,
+      "source_time": 4.983333333333333,
+      "summit_xy": [
+        333.0,
+        56.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 14,
+      "source_time": 5.066666666666666,
+      "summit_xy": [
+        334.4166666666667,
+        55.75
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 15,
+      "source_time": 5.15,
+      "summit_xy": [
+        335.8333333333333,
+        55.5
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 16,
+      "source_time": 5.233333333333333,
+      "summit_xy": [
+        337.25,
+        55.25
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 17,
+      "source_time": 5.316666666666666,
+      "summit_xy": [
+        338.6666666666667,
+        55.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 18,
+      "source_time": 5.4,
+      "summit_xy": [
+        340.0833333333333,
+        54.75
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 19,
+      "source_time": 5.483333333333333,
+      "summit_xy": [
+        341.5,
+        54.5
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 20,
+      "source_time": 5.566666666666666,
+      "summit_xy": [
+        342.9166666666667,
+        54.25
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 21,
+      "source_time": 5.65,
+      "summit_xy": [
+        344.3333333333333,
+        54.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 22,
+      "source_time": 5.733333333333333,
+      "summit_xy": [
+        345.75,
+        53.75
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 23,
+      "source_time": 5.816666666666666,
+      "summit_xy": [
+        347.1666666666667,
+        53.5
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 24,
+      "source_time": 5.9,
+      "summit_xy": [
+        348.5833333333333,
+        53.25
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 25,
+      "source_time": 5.983333333333333,
+      "summit_xy": [
+        350.0,
+        53.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 26,
+      "source_time": 6.066666666666666,
+      "summit_xy": [
+        351.14285714285717,
+        52.57142857142857
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 27,
+      "source_time": 6.15,
+      "summit_xy": [
+        352.2857142857143,
+        52.142857142857146
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 28,
+      "source_time": 6.233333333333333,
+      "summit_xy": [
+        353.42857142857144,
+        51.714285714285715
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 29,
+      "source_time": 6.316666666666666,
+      "summit_xy": [
+        354.57142857142856,
+        51.285714285714285
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 30,
+      "source_time": 6.4,
+      "summit_xy": [
+        355.7142857142857,
+        50.857142857142854
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 31,
+      "source_time": 6.483333333333333,
+      "summit_xy": [
+        356.85714285714283,
+        50.42857142857143
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 32,
+      "source_time": 6.566666666666666,
+      "summit_xy": [
+        358.0,
+        50.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 33,
+      "source_time": 6.65,
+      "summit_xy": [
+        359.8,
+        49.6
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 34,
+      "source_time": 6.733333333333333,
+      "summit_xy": [
+        361.6,
+        49.2
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 35,
+      "source_time": 6.816666666666666,
+      "summit_xy": [
+        363.4,
+        48.8
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 36,
+      "source_time": 6.9,
+      "summit_xy": [
+        365.2,
+        48.4
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 37,
+      "source_time": 6.983333333333333,
+      "summit_xy": [
+        367.0,
+        48.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 38,
+      "source_time": 7.066666666666666,
+      "summit_xy": [
+        367.0,
+        47.76923076923077
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 39,
+      "source_time": 7.15,
+      "summit_xy": [
+        367.0,
+        47.53846153846154
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 40,
+      "source_time": 7.233333333333333,
+      "summit_xy": [
+        367.0,
+        47.30769230769231
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 41,
+      "source_time": 7.316666666666666,
+      "summit_xy": [
+        367.0,
+        47.07692307692308
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 42,
+      "source_time": 7.4,
+      "summit_xy": [
+        367.0,
+        46.84615384615385
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 43,
+      "source_time": 7.483333333333333,
+      "summit_xy": [
+        367.0,
+        46.61538461538461
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 44,
+      "source_time": 7.566666666666666,
+      "summit_xy": [
+        367.0,
+        46.38461538461539
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 45,
+      "source_time": 7.65,
+      "summit_xy": [
+        367.0,
+        46.15384615384615
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 46,
+      "source_time": 7.733333333333333,
+      "summit_xy": [
+        367.0,
+        45.92307692307692
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 47,
+      "source_time": 7.816666666666666,
+      "summit_xy": [
+        367.0,
+        45.69230769230769
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 48,
+      "source_time": 7.9,
+      "summit_xy": [
+        367.0,
+        45.46153846153846
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 49,
+      "source_time": 7.9833333333333325,
+      "summit_xy": [
+        367.0,
+        45.23076923076923
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 50,
+      "source_time": 8.066666666666666,
+      "summit_xy": [
+        367.0,
+        45.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 51,
+      "source_time": 8.15,
+      "summit_xy": [
+        367.0,
+        44.81818181818182
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 52,
+      "source_time": 8.233333333333333,
+      "summit_xy": [
+        367.0,
+        44.63636363636363
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 53,
+      "source_time": 8.316666666666666,
+      "summit_xy": [
+        367.0,
+        44.45454545454545
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 54,
+      "source_time": 8.4,
+      "summit_xy": [
+        367.0,
+        44.27272727272727
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 55,
+      "source_time": 8.483333333333333,
+      "summit_xy": [
+        367.0,
+        44.09090909090909
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 56,
+      "source_time": 8.566666666666666,
+      "summit_xy": [
+        367.0,
+        43.90909090909091
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 57,
+      "source_time": 8.65,
+      "summit_xy": [
+        367.0,
+        43.72727272727273
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 58,
+      "source_time": 8.733333333333333,
+      "summit_xy": [
+        367.0,
+        43.54545454545455
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 59,
+      "source_time": 8.816666666666666,
+      "summit_xy": [
+        367.0,
+        43.36363636363637
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 60,
+      "source_time": 8.9,
+      "summit_xy": [
+        367.0,
+        43.18181818181818
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    },
+    {
+      "f": 61,
+      "source_time": 8.983333333333333,
+      "summit_xy": [
+        367.0,
+        43.0
+      ],
+      "bounded_edit": "Only native right-lobe/outer flank points; valley, first/middle lobe and lower crop fixed"
+    }
+  ]
+}

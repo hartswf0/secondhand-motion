@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "79ab82885cd030cc2904bb10992cce939972e8a5d41c4ae25d6b5cfafc9c32c5",
+  "legacy_meta_sha256": "8b3a836b914e019f4c18eee0d2c3b9335827e7c43769f18dd6480403aa659572",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a lion.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/lion-sam/clip.json",
+    "shots/lion-sam/masks.json",
+    "shots/lion-sam/mask_meta.json"
+  ],
+  "clip_id": "2c353422-8745-5875-82a7-f19d09c157f9",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "39c8abc5beb99bde2515b0d31fbfab91731c4110088a1ceedff8ea1712b8a766",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "ec321c3f9228fad762ffdf69afa555c358f369d3ecbd1f97d173121f7809de8a",
+  "source_record": "../../../lion/source.json",
+  "assembly_source_record": "../../../lion/integrated/source.json",
+  "note": "The selected lion changes when another lion enters. Only the shorter first-lion interval is used for the drawing. These masks are filled exported contour proxies, not original binary SAM masks."
+}

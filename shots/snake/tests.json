@@ -1,0 +1,158 @@
+[
+  {
+    "id": "M1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2b",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M5",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M6",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J3",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J4",
+    "value": {
+      "original_doodle_identity_bar_met": true,
+      "source_framing_pose_bar_met": true,
+      "review": "review-v1.json"
+    },
+    "unit": "sampled stills only",
+    "ok": true
+  },
+  {
+    "id": "T1",
+    "value": {
+      "min_recall": 0.9993517017828201,
+      "min_parts_kept": 1.0,
+      "keys": 12,
+      "pass": true
+    },
+    "unit": "fraction; recall>=.98 and all pieces retained",
+    "ok": true
+  },
+  {
+    "id": "T3",
+    "value": true,
+    "unit": "native stroke IDs and original point counts retained",
+    "ok": true
+  },
+  {
+    "id": "B1",
+    "value": 1.0,
+    "unit": "Static scene objects only; separately credited animated props/operators retain their explicit exposure sequences",
+    "ok": true
+  },
+  {
+    "id": "M3",
+    "value": {
+      "pass": false,
+      "status": "not measured by this assembly",
+      "reason": "No audited same-instance mask target evaluated against this final native render"
+    },
+    "unit": "final native silhouette fit not measured",
+    "ok": null
+  },
+  {
+    "id": "M4",
+    "value": 0,
+    "unit": "verified planted intervals; minimum4",
+    "ok": false
+  },
+  {
+    "id": "S1",
+    "value": "Frozen source-observed camera and existing depth planes retained; final depth ordering independently unreviewed",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S2",
+    "value": "Native Quick, Draw! key 4612932086267904; extras and scenery sources preserved in compatibility/timeline",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S3",
+    "value": {
+      "frames": 73,
+      "keys": [
+        0,
+        10,
+        22,
+        34,
+        44,
+        46,
+        48,
+        52,
+        56,
+        60,
+        66,
+        72
+      ],
+      "source_time_every_frame": true
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S4",
+    "value": "Offline links/script checked separately; actual390px browser interaction unrun",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S5",
+    "value": "Native closed-contour paper fills only; no source-mask cel. Depth/occlusion quality unreviewed",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S6",
+    "value": "Source IDs, interval, URLs, raw SHA and reported rights retained; Quick, Draw! CC BY4.0",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S7",
+    "value": 3,
+    "unit": "verified hash-linked append-only ledger entries",
+    "ok": true
+  }
+]

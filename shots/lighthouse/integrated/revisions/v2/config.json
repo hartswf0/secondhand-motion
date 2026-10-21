@@ -1,0 +1,72 @@
+{
+  "title": "Lighthouse \u00b7 source-paired native drawing",
+  "interval": [
+    4.5,
+    6.958333333333333
+  ],
+  "source_sha256": "a234a10a713181df031809ac9cc15826c2367f2cc4b8806ffb2da884330084c3",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "W": 384,
+  "H": 288,
+  "fps": 24,
+  "key_times": [
+    4.5,
+    4.75,
+    5,
+    5.25,
+    5.5,
+    5.75,
+    6,
+    6.5,
+    6.958333333333333
+  ],
+  "why_this_interval": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top.",
+  "compatibility_note": "All thirteen native strokes retained, including stripes, lantern and horizontal light marks. These are graphic marks, not a measured projected light beam.",
+  "assembly_summary": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top. All thirteen native strokes retained, including stripes, lantern and horizontal light marks. These are graphic marks, not a measured projected light beam.",
+  "review_note": "Corrected source panel sizing, preserving raw aspect ratio and all native artwork. First independent still review pending. Actual normal-speed playback remains unrun; no training ran.",
+  "compatibility": {
+    "doodle_key_id": "4811446632316928",
+    "source_interval": [
+      4.5,
+      7
+    ],
+    "source_observation": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top.",
+    "native_mapping": "All thirteen native strokes retained, including stripes, lantern and horizontal light marks. These are graphic marks, not a measured projected light beam.",
+    "limits": [
+      "No actual normal-speed playback was viewed.",
+      "No classifier ran.",
+      "No independently verified planted contacts."
+    ],
+    "preflight_frames_inspected": 12,
+    "source_continuity": "No internal cut or dissolve seen in twelve retained-interval source samples; source still continuity is not playback approval.",
+    "endpoint_note": "Last40ms ofparentplanexcluded soeachrequestedsource time remainsinsidecachednativeobservationcoverage; no lastvectorclampedforward."
+  },
+  "continuous_source": {
+    "pass": true,
+    "frames_inspected": 12,
+    "evidence": "preflight-source-12.jpg",
+    "scope": "Twelve source still samples checked, no internalcut/dissolve seen; no normal-speedplayback approval."
+  },
+  "revision": "integrated-v2",
+  "extra_strokes": [],
+  "fill_strokes": [
+    0
+  ],
+  "stroke_width": 1.65,
+  "background_fill": false,
+  "key_notes": {
+    "4.5": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top. Key 1: openingposition",
+    "4.75": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top. Key 2: source-observed change in crop/pose/field marks",
+    "5": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top. Key 3: source-observed change in crop/pose/field marks",
+    "5.25": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top. Key 4: source-observed change in crop/pose/field marks",
+    "5.5": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top. Key 5: source-observed change in crop/pose/field marks",
+    "5.75": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top. Key 6: source-observed change in crop/pose/field marks",
+    "6": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top. Key 7: source-observed change in crop/pose/field marks",
+    "6.5": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top. Key 8: source-observed change in crop/pose/field marks",
+    "6.958333333333333": "The tower is still while camera tilt reveals its lantern; preserve cropped base and the delayed entry of the top. Key 9: lastretainedpose"
+  },
+  "observation_time_note": "Frozen native geometry uses legacy12fpsnominalclipclock; photographs use nearestdecodedrawsourcePTS. Approximate source correspondence remains explicit, not independent motion approval."
+}

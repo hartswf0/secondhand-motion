@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "177ef313268a48cc9b6ed59b2218aadb96643feabf3be4e3b9746b65b4ba7bc4",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Cellist / person",
+      "result": "manual_proxy_inspection",
+      "note": "Head, torso and arm selected; the cello body is largely outside the target. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.929
+    },
+    {
+      "frame": 10,
+      "observed_target": "Cellist / person",
+      "result": "manual_proxy_inspection",
+      "note": "Head, torso and arm selected; the cello body is largely outside the target. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.748
+    },
+    {
+      "frame": 21,
+      "observed_target": "Cellist / person",
+      "result": "manual_proxy_inspection",
+      "note": "Head, torso and arm selected; the cello body is largely outside the target. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.857
+    },
+    {
+      "frame": 31,
+      "observed_target": "Cellist / person",
+      "result": "manual_proxy_inspection",
+      "note": "Head, torso and arm selected; the cello body is largely outside the target. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.944
+    }
+  ]
+}

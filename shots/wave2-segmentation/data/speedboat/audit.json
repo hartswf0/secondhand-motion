@@ -1,0 +1,36 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "c74ebbccf526e9aa1a327bc3bb46b5b95ef2dd3a35cc5d8b069dc6aec9efce38",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Speedboat",
+      "result": "manual_proxy_inspection",
+      "note": "Tiny unrelated patch before boat entry; no usable boat target. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.31,
+      "pair_usable": false
+    },
+    {
+      "frame": 8,
+      "observed_target": "Speedboat",
+      "result": "manual_proxy_inspection",
+      "note": "Visible airborne hull broadly selected. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.957
+    },
+    {
+      "frame": 17,
+      "observed_target": "Speedboat",
+      "result": "manual_proxy_inspection",
+      "note": "Hull selected as boat returns toward the water; spray separate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.817
+    },
+    {
+      "frame": 25,
+      "observed_target": "Speedboat",
+      "result": "manual_proxy_inspection",
+      "note": "Hull selected while wake and spray remain separate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.868
+    }
+  ]
+}

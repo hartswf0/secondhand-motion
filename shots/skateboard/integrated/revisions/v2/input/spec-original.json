@@ -1,0 +1,254 @@
+{
+ "category": "skateboard",
+ "doodle_key_id": "5264525936820224",
+ "facing": 1,
+ "face_from": [
+  "left",
+  "left"
+ ],
+ "note": "Quick, Draw! skateboard 5264525936820224. A board with two big wheels. Placed by the two ends of the deck; the wheels spin. Wheels do not spin: the doodle draws them as lumpy loops, and turning them opened the loops (critic round 1).",
+ "strokes": [
+  [
+   [
+    114,
+    5
+   ],
+   [
+    105,
+    1
+   ],
+   [
+    83,
+    0
+   ],
+   [
+    39,
+    9
+   ],
+   [
+    9,
+    24
+   ],
+   [
+    5,
+    39
+   ],
+   [
+    31,
+    56
+   ],
+   [
+    49,
+    59
+   ],
+   [
+    178,
+    57
+   ],
+   [
+    228,
+    44
+   ],
+   [
+    255,
+    41
+   ],
+   [
+    246,
+    24
+   ],
+   [
+    229,
+    12
+   ],
+   [
+    203,
+    7
+   ],
+   [
+    80,
+    9
+   ]
+  ],
+  [
+   [
+    43,
+    58
+   ],
+   [
+    19,
+    67
+   ],
+   [
+    4,
+    83
+   ],
+   [
+    0,
+    108
+   ],
+   [
+    6,
+    120
+   ],
+   [
+    26,
+    130
+   ],
+   [
+    51,
+    132
+   ],
+   [
+    64,
+    125
+   ],
+   [
+    69,
+    119
+   ],
+   [
+    72,
+    88
+   ],
+   [
+    63,
+    58
+   ],
+   [
+    56,
+    50
+   ],
+   [
+    31,
+    46
+   ]
+  ],
+  [
+   [
+    237,
+    70
+   ],
+   [
+    216,
+    59
+   ],
+   [
+    193,
+    58
+   ],
+   [
+    179,
+    62
+   ],
+   [
+    169,
+    72
+   ],
+   [
+    164,
+    93
+   ],
+   [
+    163,
+    118
+   ],
+   [
+    170,
+    124
+   ],
+   [
+    205,
+    126
+   ]
+  ],
+  [
+   [
+    205,
+    126
+   ],
+   [
+    224,
+    121
+   ],
+   [
+    236,
+    112
+   ],
+   [
+    242,
+    101
+   ],
+   [
+    246,
+    80
+   ],
+   [
+    232,
+    68
+   ],
+   [
+    203,
+    51
+   ]
+  ]
+ ],
+ "root": [
+  "left",
+  "right"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "left": [
+   5,
+   55
+  ],
+  "right": [
+   250,
+   40
+  ],
+  "lw": [
+   30,
+   115
+  ],
+  "rw": [
+   205,
+   115
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 12,
+   "joint": "lw",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 8,
+   "joint": "rw",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  },
+  {
+   "rest": true,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  }
+ ],
+ "track": false,
+ "smooth": 2.0
+}

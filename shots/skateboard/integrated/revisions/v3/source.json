@@ -1,0 +1,55 @@
+{
+  "clip_id": "1919988e-8d4f-5b41-b9a1-144facbffcb8",
+  "source_id": "75a3e675-c217-590a-8565-fc0d51b59914",
+  "source_title": "Skateboard Sense",
+  "source_year": null,
+  "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/skateboard-sense/clips/0000065365-0000070370.mp4",
+  "shot_page_url": "https://www.movingimagearchive.com/sources/skateboard-sense?clip=1919988e-8d4f-5b41-b9a1-144facbffcb8",
+  "source_page_url": "https://www.movingimagearchive.com/sources/skateboard-sense",
+  "original_source_url": "https://archive.org/details/skateboard_sense",
+  "rights_statement": "public_domain",
+  "start_seconds": 2.6693333333333333,
+  "end_seconds": 4.5045,
+  "category": "skateboard",
+  "why_this_clip": "The camera follows a rider rolling away on the board; continuous between view changes at 2.5 s and 4.75 s.",
+  "pool": "production/data/candidates-100.json",
+  "interval_seconds": [
+    2.6693333333333333,
+    4.5045
+  ],
+  "source_sha256": "9b760b70191e6a499dac4493952b819a0054246e9ebebdccc664605213eefa57",
+  "time_basis": "clip_relative_seconds",
+  "source_clock": "decoded best_effort_timestamp_time",
+  "source_approved": false,
+  "motion_approved": false,
+  "train_eligible": false,
+  "source_selection": {
+    "pass": true,
+    "evidence": "Sixteen raw-source samples visually inspected in preflight/source-design-sheet.jpg; final source-contact-sheet.jpg additionally spans refined clock interval. No cut/dissolve in selected event."
+  },
+  "vector_observation_clock": {
+    "method": "Estimated local pixel appearance correspondence between frozen SAM JPEGs and retained raw frames; grayscale96x72RMSE<=2 andrunnerupgap>=.25. Ambiguous samples use clock interpolation between accepted anchors, or nominal12fps extrapolation at ends.",
+    "evidence": "preflight/source-image-matches.json",
+    "accepted_samples": 15,
+    "total_samples": 23,
+    "accepted_indices": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22
+    ],
+    "not_original_ci_pts": true,
+    "does_not_validate_masks_or_pose": true
+  }
+}

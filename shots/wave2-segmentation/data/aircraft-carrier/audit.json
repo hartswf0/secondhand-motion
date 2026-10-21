@@ -1,0 +1,36 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "635393d2e06425cbffd182051477d689b9c914d1dcdc92a7e91c8ef6578fb68a",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Carrier deck / hull",
+      "result": "manual_proxy_inspection",
+      "note": "Deck and hull selected; upper island mostly omitted. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.896
+    },
+    {
+      "frame": 16,
+      "observed_target": "Carrier deck / hull",
+      "result": "manual_proxy_inspection",
+      "note": "Deck, hull and upper island broadly included. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.913
+    },
+    {
+      "frame": 33,
+      "observed_target": "Carrier deck / hull",
+      "result": "manual_proxy_inspection",
+      "note": "Broad carrier structure selected with soft waterline. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.92
+    },
+    {
+      "frame": 49,
+      "observed_target": "Carrier deck / hull",
+      "result": "manual_proxy_inspection",
+      "note": "Double exposure at the next-shot dissolve; outside the retained clean event. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.793,
+      "pair_usable": false
+    }
+  ]
+}

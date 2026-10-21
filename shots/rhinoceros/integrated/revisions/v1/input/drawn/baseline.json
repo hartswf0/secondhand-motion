@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A side-view creature facing right, built from two overlapping ovals (a large rear body and a smaller head oval), a straight vertical face line on the front of the head, a cluster of three sharp zigzag spikes pointing forward from that face line, and four short straight legs (two under the rear, two under the middle). In frames 1-4 the spike cluster changes shape a lot: in frame 1 the long spike points up and to the right, by frame 3 it points flat to the right, and by frame 4 the cluster has settled into a three-point fan. Frames 5-8 hold the body in place with the spikes in that fan; the body edges slightly left so that in frame 8 the rear is cut off at the left frame edge. Frames 9-12 the whole figure sits further left, with its rear cut off by the frame edge in 9-10, then moves back right. Frames 13-16 return to roughly the frame 1-4 position. The head oval stays at the same height throughout; it never drops toward the ground. Legs shift a little; in frames 4 and 16 one front leg extends below the ground line.",
+ "seen_film": "A rhinoceros stands side-on facing right in a sandy enclosure with a fence behind. Its head is lowered with the horn at or near the ground for the whole shot; in frames 1-4 it is rooting in the sand with dust around the snout, and in frames 5-16 the head stays low with the horn close to the ground, making small nodding and pushing movements. The tail swings in most frames. The body sits in the left-centre of the frame in frames 1-8, appears further left (rear cut by the frame edge) in frames 9-12, and comes back toward the centre in frames 13-16. The legs stay planted; there is no walking.",
+ "named_subject": "A rhinoceros (drawn as a two-oval body with a horned head made of zigzag spikes)",
+ "verdict": "reference stronger",
+ "evidence": "Placement matches: in film frames 9-12 the rhino sits further left with its rear cut off, and animation frames 9-12 do the same; frames 13-16 return toward centre in both. The main action does not match: in film frames 1-16 the head is lowered with the horn at the ground (frame 1-4 rooting in dust, frames 5-16 snout low), while in animation frames 1-16 the head oval stays at body height with the face line upright and the spikes pointing straight forward, never down to the ground line. The visible motion in the animation is mostly the spikes changing shape, which is largest between frames 1, 2, 3 and 4 (the long spike swings from up-right in frame 1 to horizontal in frame 3), something the film's horn does not do. In frames 4 and 16 a front leg extends below the ground line, and in frame 8 one rear leg disappears at the frame edge.",
+ "primary_gap": "The head never lowers to the ground, so the film's event (a rhino with its head down rooting and pushing at the sand) is not performed; the animation shows a level-headed figure whose spikes flap.",
+ "closes_when": "The head oval tilts down so the spikes and face line point toward the ground line, with the spike tips touching or nearly touching the ground in frames 1-4 and staying low with small up-down nods in frames 5-16, while the spike shapes themselves stay fixed.",
+ "protect": "The doodle's construction (two overlapping ovals with the small crossing tick where they meet, the straight face line, the zigzag spike cluster, short straight paired legs), the clean single-weight line, the right-facing orientation matching the film, the planted legs with no walking, and the left shift in frames 9-12 and return in 13-16 that matches the film's framing.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  3,
+  4,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The figure reads as the c.png doodle mirrored to face right, though the doodle's two jagged spikes have become a three-point fan and the spikes change shape from frame to frame instead of staying the same drawing.",
+ "still_frames_only": true,
+ "_lot": "lotbdb004e2",
+ "_round": "baseline before drawn keys"
+}

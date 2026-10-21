@@ -1,0 +1,70 @@
+{
+  "title": "Alarm clock turns and returns",
+  "interval": [
+    10.5,
+    13.483333333333334
+  ],
+  "source_sha256": "24304b9a060026633557d0ba0311ea5b1b6bd6e9e3c7be3fd3d3af337ce045e8",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "W": 384,
+  "H": 288,
+  "extra_strokes": [
+    {
+      "index": 8,
+      "source": "drawn by agent in frozen source-observed vector study",
+      "note": "Clock case-back outline visible during turn; not native doodle ink."
+    },
+    {
+      "index": 9,
+      "source": "drawn by agent in frozen source-observed vector study",
+      "note": "Manipulating hand; not native doodle ink."
+    }
+  ],
+  "background_fill": false,
+  "review_note": "Integrated review candidate. Independent source-pose and native-identity checks pending; normal-speed motion and classifier unrun. Legacy target broadlyclocknotoperatinghand; no measured drawingfit orverifiedbasecontact.",
+  "assembly_summary": "Eight native clock strokes retain twin bells, circular face/hands and feet. Agent-drawn case back and manipulating hand are separately credited observed structures, not original QuickDraw strokes.",
+  "continuous_source": {
+    "pass": true,
+    "evidence": "Sixteen raw samples show one continuous hand-operated turn from three-quarter through narrow side to frontal return, no cut/dissolve. Retained endpoint slightly shortened to the final frozen vector observation; no pose extrapolation.",
+    "sample_count": 16,
+    "sheet": "preflight-source-design.jpg"
+  },
+  "compatibility": {
+    "status": "compatible_with_explicit_simplifications",
+    "native_key_id": "5502112672776192",
+    "source_part_inventory": "Eight native clock strokes retain twin bells, circular face/hands and feet. Agent-drawn case back and manipulating hand are separately credited observed structures, not original QuickDraw strokes.",
+    "mask_target_limit": "Legacy target broadlyclocknotoperatinghand; no measured drawingfit orverifiedbasecontact.",
+    "design_reselected": false,
+    "original_native_topology_retained": true
+  },
+  "verified_contacts": [],
+  "camera_note": "Frozen GWP background-only registration retained independently of source-observed character positions. No unverified contact pass inferred.",
+  "key_notes": {
+    "12.4833333": "The hand swings the face back round toward us: one fast frame, as in the film.",
+    "11.9": "Still side-on; the hand holds it there. Hold.",
+    "12.4": "Anticipation of the turn back: the hand moves down onto the face's left edge, face still narrow.",
+    "13.4": "The hand has left the frame at the left; the clock alone, facing us.",
+    "12.9": "The hand draws back to the left, the arm shortening; breakdown so the withdrawal is continuous.",
+    "13.2333333": "The hand reaches the left edge; the clock holds.",
+    "10.9": "Mid turn away, fastest change: face half as wide, bells sliding together over the drum.",
+    "13.4833333": "End: the clock stands alone; the hand is kept just outside the frame so it does not blink out.",
+    "11.2333333": "The turn away arrives: face edge-on at the left, the drum's side toward us. Extreme.",
+    "12.9833333": "The hand keeps pulling back to the left; the clock holds.",
+    "11.5666667": "Held side-on, face a sliver, leaning a little under the hand. Extreme held.",
+    "10.65": "The hand starts to turn the clock: the face narrows and the side begins to show. Start of the turn away.",
+    "12.7333333": "Contact released: the hand lets go and starts to slide back; the clock stands on its own, settled.",
+    "10.4": "The hand has hold of the clock's top; the clock faces us. Start pose.",
+    "12.5666667": "THE LINE: the clock faces us again, one round face, the hand pressed to its left side.",
+    "12.2333333": "The face starts to come back: first widening. End of the hold."
+  },
+  "fill_strokes": [
+    0,
+    4,
+    5,
+    8
+  ],
+  "revision": "integrated-v1"
+}

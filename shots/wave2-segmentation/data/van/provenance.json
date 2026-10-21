@@ -1,0 +1,26 @@
+{
+  "branch": "main (legacy SAM polygon export)",
+  "commit": "7fa9902cc2084f1ad9a557bef15dcf6c981acbca",
+  "legacy_polygon_sha256": "b1f8483cedac713804f9b6cac6fa2134058a8d27c0f58dbbd72e5f5ec7b12e84",
+  "legacy_meta_sha256": "d7d8e7b9a53018886d062af1e45ca884dfc95b10bdecce87de8e9febe1ca75d0",
+  "legacy_frame_clock": "approximate clip.t0 + frame / clip.fps; original decoded CI PTS and input-video hash unavailable",
+  "mask_representation": "Filled exported SAM contours. Export simplified boundaries and discarded small components; original binary masks cannot be recovered.",
+  "legacy_method_reported": "tools/wave2_track.py on GitHub Actions: Grounding DINO tiny box from \"a white van.\", SAM 2.1 hiera-small mask, every frame (transformers 4.57.1, CPU); Depth Anything V2 Small per frame",
+  "legacy_source_paths": [
+    "shots/van-sam/clip.json",
+    "shots/van-sam/masks.json",
+    "shots/van-sam/mask_meta.json"
+  ],
+  "clip_id": "6cf906f9-cb8b-5f17-9273-b40491dfdf5e",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "appearance_alignment": "alignment.json",
+  "comparison_source_sha256": "e944d2d8526c4973c24173f6e20349642ff9d0568ed98e0267e281de5f1d7c8e",
+  "source_video_note": "Original segmentation exports did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "811f377abdf12adcb25260b27b200f1b37cb9e67e993987c02dab3107bc79078",
+  "source_record": "../../../van/source.json",
+  "assembly_source_record": "../../../van/integrated/source.json",
+  "note": "The cropped vehicle is broadly selected through its turn and retreat. Wheel/ground edges remain approximate. These masks are filled exported contour proxies, not original binary SAM masks."
+}

@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source / exported-mask-proxy inspection",
+  "scope": "Only these four samples were visually inspected. No drawing, contact or playback acceptance is conferred.",
+  "track_sha256": "811f377abdf12adcb25260b27b200f1b37cb9e67e993987c02dab3107bc79078",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "Van",
+      "result": "manual_proxy_inspection",
+      "note": "Broad visible van silhouette selected; cropped edges and wheel boundaries approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.965
+    },
+    {
+      "frame": 10,
+      "observed_target": "Van",
+      "result": "manual_proxy_inspection",
+      "note": "Broad visible van silhouette selected; cropped edges and wheel boundaries approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.97
+    },
+    {
+      "frame": 21,
+      "observed_target": "Van",
+      "result": "manual_proxy_inspection",
+      "note": "Broad visible van silhouette selected; cropped edges and wheel boundaries approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.977
+    },
+    {
+      "frame": 31,
+      "observed_target": "Van",
+      "result": "manual_proxy_inspection",
+      "note": "Broad visible van silhouette selected; cropped edges and wheel boundaries approximate. Exported contours are a lossy approximation of the original SAM mask.",
+      "model_iou_estimate": 0.963
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Guitar \u00b7 source-paired native drawing",
+  "interval": [
+    5.5,
+    7.958333333333333
+  ],
+  "source_sha256": "af6c3d22ed33081ed238acd0a28d6847a45090e75b09d7534775723e80d0c338",
+  "design": "input/design.json",
+  "source_record": "input/source.json",
+  "gwp_snapshot": "input/gwp-shot.json",
+  "clip_snapshot": "input/clip.json",
+  "W": 384,
+  "H": 288,
+  "fps": 24,
+  "key_times": [
+    5.5,
+    6.0,
+    6.5,
+    6.75,
+    7.0,
+    7.25,
+    7.5,
+    7.75,
+    7.958333333333333
+  ],
+  "why_this_interval": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate.",
+  "compatibility_note": "The same four native strokes remain the outline, sound hole and two strings; no hand playing or material guitar motion is invented.",
+  "assembly_summary": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate. The same four native strokes remain the outline, sound hole and two strings; no hand playing or material guitar motion is invented.",
+  "review_note": "Source-paired integrated review candidate. Fresh still review and actual normal-speed playback approval pending. No training ran.",
+  "compatibility": {
+    "doodle_key_id": "5190412266373120",
+    "source_interval": [
+      5.5,
+      8.0
+    ],
+    "source_observation": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate.",
+    "native_mapping": "The same four native strokes remain the outline, sound hole and two strings; no hand playing or material guitar motion is invented.",
+    "limits": [
+      "No actual normal-speed playback was viewed.",
+      "No classifier ran.",
+      "No independently verified planted contacts."
+    ],
+    "preflight_frames_inspected": 12,
+    "source_continuity": "No internal cut or dissolve seen in twelve retained-interval source samples; source still continuity is not playback approval.",
+    "endpoint_note": "Last40ms ofparentplanexcluded soeachrequestedsource time remainsinsidecachednativeobservationcoverage; no lastvectorclampedforward."
+  },
+  "continuous_source": {
+    "pass": true,
+    "frames_inspected": 12,
+    "evidence": "preflight-source-12.jpg",
+    "scope": "Twelve source still samples checked, no internalcut/dissolve seen; no normal-speedplayback approval."
+  },
+  "revision": "integrated-v1",
+  "extra_strokes": [],
+  "fill_strokes": [
+    0
+  ],
+  "stroke_width": 1.65,
+  "background_fill": false,
+  "key_notes": {
+    "5.5": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate. Key 1: openingposition",
+    "6.0": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate. Key 2: source-observed change in crop/pose/field marks",
+    "6.5": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate. Key 3: source-observed change in crop/pose/field marks",
+    "6.75": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate. Key 4: source-observed change in crop/pose/field marks",
+    "7.0": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate. Key 5: source-observed change in crop/pose/field marks",
+    "7.25": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate. Key 6: source-observed change in crop/pose/field marks",
+    "7.5": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate. Key 7: source-observed change in crop/pose/field marks",
+    "7.75": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate. Key 8: source-observed change in crop/pose/field marks",
+    "7.958333333333333": "A leaning guitar remains still while the camera tilts down and right; keep the body/neck crop and one held chair/rug plate. Key 9: lastretainedpose"
+  },
+  "observation_time_note": "Frozen native geometry uses legacy12fpsnominalclipclock; photographs use nearestdecodedrawsourcePTS. Approximate source correspondence remains explicit, not independent motion approval."
+}

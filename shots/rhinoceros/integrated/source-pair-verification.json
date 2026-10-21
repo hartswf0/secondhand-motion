@@ -1,0 +1,121 @@
+{
+  "subject": "rhinoceros",
+  "source_pair_integrity": true,
+  "raw_source_sha256": "87fd12e701260ba3d1e54e7f97b396d4075e462f0e01d5a2682d2b6bed41e5ff",
+  "keys_checked": 14,
+  "checks": [
+    {
+      "key": 1,
+      "render_frame": 0,
+      "actual_source_index": 103,
+      "actual_source_pts": 3.43677,
+      "photo_rgb_mae": 0.614113,
+      "movie_panel_rgb_mae": 0.813802
+    },
+    {
+      "key": 2,
+      "render_frame": 6,
+      "actual_source_index": 110,
+      "actual_source_pts": 3.670337,
+      "photo_rgb_mae": 0.631827,
+      "movie_panel_rgb_mae": 1.053132
+    },
+    {
+      "key": 3,
+      "render_frame": 12,
+      "actual_source_index": 118,
+      "actual_source_pts": 3.937271,
+      "photo_rgb_mae": 0.624864,
+      "movie_panel_rgb_mae": 0.928488
+    },
+    {
+      "key": 4,
+      "render_frame": 20,
+      "actual_source_index": 128,
+      "actual_source_pts": 4.270938,
+      "photo_rgb_mae": 0.631981,
+      "movie_panel_rgb_mae": 1.048352
+    },
+    {
+      "key": 5,
+      "render_frame": 28,
+      "actual_source_index": 138,
+      "actual_source_pts": 4.604605,
+      "photo_rgb_mae": 0.552834,
+      "movie_panel_rgb_mae": 1.012964
+    },
+    {
+      "key": 6,
+      "render_frame": 36,
+      "actual_source_index": 148,
+      "actual_source_pts": 4.938272,
+      "photo_rgb_mae": 0.602069,
+      "movie_panel_rgb_mae": 0.842243
+    },
+    {
+      "key": 7,
+      "render_frame": 44,
+      "actual_source_index": 158,
+      "actual_source_pts": 5.271939,
+      "photo_rgb_mae": 0.566497,
+      "movie_panel_rgb_mae": 0.998954
+    },
+    {
+      "key": 8,
+      "render_frame": 52,
+      "actual_source_index": 168,
+      "actual_source_pts": 5.605606,
+      "photo_rgb_mae": 0.60017,
+      "movie_panel_rgb_mae": 0.88944
+    },
+    {
+      "key": 9,
+      "render_frame": 60,
+      "actual_source_index": 178,
+      "actual_source_pts": 5.939273,
+      "photo_rgb_mae": 0.52143,
+      "movie_panel_rgb_mae": 0.868297
+    },
+    {
+      "key": 10,
+      "render_frame": 68,
+      "actual_source_index": 188,
+      "actual_source_pts": 6.27294,
+      "photo_rgb_mae": 0.568115,
+      "movie_panel_rgb_mae": 0.914837
+    },
+    {
+      "key": 11,
+      "render_frame": 76,
+      "actual_source_index": 198,
+      "actual_source_pts": 6.606607,
+      "photo_rgb_mae": 0.584708,
+      "movie_panel_rgb_mae": 0.832495
+    },
+    {
+      "key": 12,
+      "render_frame": 84,
+      "actual_source_index": 208,
+      "actual_source_pts": 6.940274,
+      "photo_rgb_mae": 0.545718,
+      "movie_panel_rgb_mae": 0.80819
+    },
+    {
+      "key": 13,
+      "render_frame": 92,
+      "actual_source_index": 218,
+      "actual_source_pts": 7.273941,
+      "photo_rgb_mae": 0.539506,
+      "movie_panel_rgb_mae": 0.91075
+    },
+    {
+      "key": 14,
+      "render_frame": 98,
+      "actual_source_index": 225,
+      "actual_source_pts": 7.507508,
+      "photo_rgb_mae": 0.551116,
+      "movie_panel_rgb_mae": 1.067063
+    }
+  ],
+  "scope": "Source bytes, nearest decoded PTS and image viewport only. No artistic or motion approval."
+}
