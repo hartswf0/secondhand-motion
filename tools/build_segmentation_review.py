@@ -9,6 +9,9 @@ import argparse, hashlib, json, shutil, subprocess
 
 ROOT = Path(__file__).resolve().parent.parent
 SUBJECTS = {
+    'monkey': ('Monkey', 'The retained drawing begins after the opening dissolve. The mask follows the visible head and cropped body, not hidden tail or limbs.'),
+    'ant': ('Two ants', 'Two ants interact. The cached mask switches between the left ant and both ants; its sampling ends before the retained event does.'),
+    'tiger': ('Tiger', 'A crouched native drawing covers the lying tiger head, body and paws. The mask is a whole-tiger target, not a head-only target.'),
     'cow': ('Cow', 'A frontal chewing close-up. The mask follows the visible head; the dark shoulder edges and jaw pose need direct comparison.'),
     'spider': ('Spider', 'Turning and stepping on a web. The mask retains much of the legs but does not establish every foot/web contact.'),
     'sailboat': ('Sailboat', 'The main sailing barge approaches into the top/right crop. Thin rigging and late hull edges remain approximate.'),
@@ -53,6 +56,20 @@ def build(cache):
                 shutil.copy2(src/'frames'/name, target/'frames'/name)
         ref = 'origin/wave2-track/'+slug
         track_hash = hashlib.sha256((src/'track.json').read_bytes()).hexdigest()
+        alignment = {}
+        alignment_path = src/'alignment.json'
+        if not alignment_path.exists():
+            alignment_path = target/'alignment.json'
+        if alignment_path.exists():
+            alignment = json.loads(alignment_path.read_text())
+            assert alignment['track_sha256'] == track_hash, 'Appearance alignment has stale masks'
+            assert alignment['clip_id'] == clip['clip_id']
+            assert len(alignment['samples']) == clip['n']
+            for i, row in enumerate(alignment['samples']):
+                assert row['sample'] == i
+                assert row['sample_sha256'] == hashlib.sha256((target/'frames'/f'f{i:03d}.jpg').read_bytes()).hexdigest(), 'Appearance alignment has stale image'
+            if alignment_path.resolve() != (target/'alignment.json').resolve():
+                shutil.copy2(alignment_path, target/'alignment.json')
         prior = src/'provenance.json'
         if prior.exists():
             previous = json.loads(prior.read_text())
@@ -78,6 +95,8 @@ def build(cache):
             'clip_id': clip['clip_id'], 'model': 'facebook/sam2.1-hiera-small',
             'time_basis': 'approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS',
             'source_video_sha256': None,
+            'appearance_alignment': 'alignment.json' if alignment else None,
+            'comparison_source_sha256': alignment.get('comparison_source_sha256'),
             'source_video_note': 'CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.',
             'detector': 'IDEA-Research/grounding-dino-tiny',
             'track_sha256': track_hash,
@@ -93,7 +112,7 @@ def build(cache):
         data[slug] = dict(title=title, note=note, clip=clip, frames=track['frames'],
                           provenance=provenance, assembly_times=times,
                           assembly_fps=timeline.get('fps'), assembly_size=[timeline.get('W'), timeline.get('H')],
-                          review_note=timeline.get('review_note', ''), drawing_fit=fit, audit=audit)
+                          review_note=timeline.get('review_note', ''), drawing_fit=fit, audit=audit, source_alignment=alignment)
     template = (ROOT/'tools/templates/segmentation_review.html').read_text()
     html = template.replace('__DATA__', json.dumps(data, separators=(',', ':')).replace('</', '<\\/'))
     (out/'index.html').write_text(html)

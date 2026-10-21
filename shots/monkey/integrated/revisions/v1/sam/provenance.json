@@ -1,0 +1,9 @@
+{
+  "branch": "wave2-track/monkey",
+  "commit": "31309970a5babf0e1929f8ff58fb55ab25ec59a5",
+  "model": "facebook/sam2.1-hiera-small",
+  "track_sha256": "b922523a586a6110e2e2f752361cad0f7a2f456ba8bf84777df93d7fe2d88378",
+  "clip_sha256": "e6020c657bb1b66180276172826ad9a2673276fec9b4a3b5b3769c79f9fe1c1e",
+  "raw_source_sha256": "1231a7529dd237adaddd08503c9495584aadfa0c2cce96ee4d8452a4870cf127",
+  "note": "CI nominal times are not decoded source PTS; f0 is clean while literal raw0 is dissolving. Mask scores are model estimates, not drawing fit."
+}

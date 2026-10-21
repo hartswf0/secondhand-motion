@@ -1,0 +1,36 @@
+{
+  "rendered_frames": 49,
+  "keys": 8,
+  "instances": 2,
+  "source_sha256_verified": true,
+  "original_strokes_per_instance": 11,
+  "same_topology": true,
+  "held_background_geometry": true,
+  "trace_fidelity": {
+    "min_recall": 0.9973333333333333,
+    "min_parts_kept": 1.0,
+    "keys": 8,
+    "pass": true
+  },
+  "mask_fit": {
+    "status": "not valid",
+    "pass": false,
+    "mean_iou": null,
+    "min_iou": null,
+    "reason": "Audited masks switch from one ant to a merged two-ant target and back. Last nominal sample is2.0s; final0.2s of assembly has no independent cached mask. No final mask is clamped forward.",
+    "sampled_coverage_fraction": 0.8979591836734694
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "verified_planted_intervals": 0,
+  "foot_slide_gate": false,
+  "release_approved": false,
+  "training_ran": false,
+  "independent_still_review": {
+    "source_framing_pose_bar_met": true,
+    "original_doodle_identity_bar_met": true,
+    "rounds": 3,
+    "evidence": "review-v3.json"
+  },
+  "ledger_entries": 4
+}

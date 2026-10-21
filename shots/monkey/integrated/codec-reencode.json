@@ -1,0 +1,63 @@
+{
+  "reason": "Codec-only re-encode after one decoded key MAE2.0005 exceeded fixed2.0 integrity limit. No authored pixels changed.",
+  "exact_key_raster_checks": [
+    {
+      "key": 1,
+      "exact_rgb_equal": true
+    },
+    {
+      "key": 2,
+      "exact_rgb_equal": true
+    },
+    {
+      "key": 3,
+      "exact_rgb_equal": true
+    },
+    {
+      "key": 4,
+      "exact_rgb_equal": true
+    },
+    {
+      "key": 5,
+      "exact_rgb_equal": true
+    },
+    {
+      "key": 6,
+      "exact_rgb_equal": true
+    },
+    {
+      "key": 7,
+      "exact_rgb_equal": true
+    },
+    {
+      "key": 8,
+      "exact_rgb_equal": true
+    },
+    {
+      "key": 9,
+      "exact_rgb_equal": true
+    },
+    {
+      "key": 10,
+      "exact_rgb_equal": true
+    },
+    {
+      "key": 11,
+      "exact_rgb_equal": true
+    }
+  ],
+  "old_movie_sha256": {
+    "cartoon.mp4": "bd61b1d182b488ce6b8dd2c5b4da005715492e5de057b1a8d1c2da46bad43e0a",
+    "comparison.mp4": "ba4fb467d5687248b60b6d2c94158fe3700573032eac0c59db1dc6efc663a773",
+    "source-excerpt.mp4": "d247366bf0be9eb33df473e3bc6c0be5352ac15cfcb6453707d65204c0e7c570"
+  },
+  "old_crf": 19,
+  "new_crf": 12,
+  "art_changed": false,
+  "motion_approved": false,
+  "new_movie_sha256": {
+    "cartoon.mp4": "56a7dd084e27c3c3965969f8435cdee6ac5bc35161420fe21ad71172b51c4833",
+    "comparison.mp4": "99a1e76c9ac38eea47736d053df4b69789710eaa7d06f01ce0a564396914cc89",
+    "source-excerpt.mp4": "a8d5f4b4e637c8858c72e36332f0cb8066578279e65bb88a21ea8935c68596ad"
+  }
+}

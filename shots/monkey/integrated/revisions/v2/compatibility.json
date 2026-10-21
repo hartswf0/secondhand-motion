@@ -1,0 +1,23 @@
+{
+  "selected_key_id": "6070278159335424",
+  "visible_source_parts": [
+    "head",
+    "two visible ears",
+    "eyes",
+    "muzzle/mouth",
+    "upper torso"
+  ],
+  "native_parts": {
+    "head_and_face": "all original facial strokes1:1 under one shared head-local transform; original face-mask containment and proportions protected",
+    "ears": "all four original outer/inner ear strokes retained",
+    "upper_torso": "same native body/chest strokes adapted to source crop",
+    "tail": "original tailstroke retained outside viewport; source tail is not visible, placement unobserved"
+  },
+  "selection": "Existing selected drawing retained; source head/ears/face are represented without adding or deleting major parts. Full lowerbody and tail are outside the source framing.",
+  "interval_refinement": "Exclude raw0\u2013.333s opening transition; CI f0 is not raw source0 and is not continuity evidence.",
+  "limits": [
+    "Real fur is simplified by native angular contour.",
+    "Native tail placement outside crop is authored, not source-measured.",
+    "Frontal native face must foreshorten to the observed down-left pose; fresh identity review required."
+  ]
+}

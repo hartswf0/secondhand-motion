@@ -1,0 +1,160 @@
+[
+  {
+    "id": "M1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2b",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M5",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M6",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J3",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S6",
+    "value": "Archive ids, raw SHA, retained and original film intervals, URLs and reported public_domain preserved. Rights independently unverified.",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "J4",
+    "value": {
+      "review": "review-v3.json",
+      "rounds": 3,
+      "source_framing_pose_bar_met": false,
+      "original_doodle_identity_bar_met": true
+    },
+    "unit": "sampled still review only",
+    "ok": false
+  },
+  {
+    "id": "B1",
+    "value": 1.0,
+    "unit": "fraction of held background geometry unchanged; bar0.9",
+    "ok": true
+  },
+  {
+    "id": "T1",
+    "value": {
+      "min_recall": 0.9970920287375984,
+      "min_parts_kept": 1.0,
+      "keys": 7,
+      "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+  },
+  {
+    "id": "T3",
+    "value": "All11 native strokes and original point counts retained in all67 dense frames",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "M3",
+    "value": {
+      "metric": "filled native whole tiger head/body vs nearest approximate SAM12fps sample",
+      "mean": 0.7628339971955396,
+      "min": 0.7305064619938392,
+      "frames_measured": 67,
+      "mean_bar": 0.65,
+      "minimum_bar": 0.45,
+      "pass": true,
+      "target_validity": "Root inspected4samples: whole visible lying tiger selected, with small gaps/soft boundaries. Not a head-only mask."
+    },
+    "unit": "filled native silhouette/SAM IoU",
+    "ok": true
+  },
+  {
+    "id": "M4",
+    "value": 0,
+    "unit": "independently verified planted intervals; minimum4 required",
+    "ok": false
+  },
+  {
+    "id": "S1",
+    "value": "Locked camera / single held rock plane, no depth pan measured",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S2",
+    "value": "QuickDraw key6296227597516800, CC BY4.0; held rocks drawn once by agent from source",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S3",
+    "value": {
+      "frames": 67,
+      "fps": 24,
+      "keys": [
+        0,
+        18,
+        23,
+        27,
+        32,
+        48,
+        66
+      ],
+      "source_time_every_frame": true
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S4",
+    "value": "Relative links and script syntax checked separately;390px browser layout unrun",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S5",
+    "value": "Opaque native body/head fills hide farther background; no separate depth-contact review",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S7",
+    "value": 5,
+    "unit": "verified append-only hash-linked entries",
+    "ok": true
+  }
+]

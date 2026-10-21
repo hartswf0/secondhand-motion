@@ -1,0 +1,44 @@
+{
+  "lot": "SM-0109",
+  "id": "monkey",
+  "kind": "subject",
+  "title": "Monkey",
+  "category": "monkey",
+  "wave": 3,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-21",
+  "blurb": "77 rendered frames at 24 fps; 11 source-paired keys. Native identity passes; the down-left bow still reads too upright and mask fit is below threshold. Playback approval pending.",
+  "cover": "shots/monkey/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 6070278159335424; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+    {
+      "label": "Watch assembled comparison",
+      "href": "shots/monkey/integrated/index.html"
+    },
+    {
+      "label": "Watch in shared player",
+      "href": "shots/moving-drawings.html#monkey/comparison"
+    },
+    {
+      "label": "Inspect source / mask / drawing",
+      "href": "shots/wave2-segmentation/index.html#monkey"
+    },
+    {
+      "label": "Vector study",
+      "href": "pages/monkey-gwp.html"
+    },
+    {
+      "label": "Source record",
+      "href": "shots/monkey/integrated/source.json"
+    }
+  ],
+  "tests": "shots/monkey/tests.json",
+  "tags": [
+    "assembled review",
+    "wave 3",
+    "native QuickDraw",
+    "SAM inspected"
+  ]
+}

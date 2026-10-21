@@ -5166,28 +5166,28 @@
    "cel"
   ],
   "t": {
-   "pass": 9,
-   "fail": 3,
+   "pass": 8,
+   "fail": 4,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 17,
+    "value": 9,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.68,
+    "value": 0.6,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.41,
+    "value": 0.52,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 41.8,
+    "value": 64.4,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
@@ -5222,14 +5222,14 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201crabbit\u201d; motion broken; follows the film: yes",
+    "value": "named \u201ca rabbit\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
    "J4": {
-    "value": "bar_met",
+    "value": "bar_not_met",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "M1": {
     "value": "not run",
@@ -5317,22 +5317,22 @@
   },
   "r": {
    "M2": {
-    "value": 4,
+    "value": 3,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.7,
+    "value": 0.63,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.41,
+    "value": 0.38,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 30.0,
+    "value": 15.6,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
@@ -5367,7 +5367,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201cdog\u201d; motion broken; follows the film: partly",
+    "value": "named \u201ca dog (the doodle's long-necked four-legged animal)\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -5456,35 +5456,35 @@
    "cel"
   ],
   "t": {
-   "pass": 10,
-   "fail": 2,
+   "pass": 7,
+   "fail": 5,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 28,
+    "value": 12,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.75,
+    "value": 0.5,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-    "ok": true
+    "ok": false
    },
    "M3": {
-    "value": 0.39,
+    "value": 0.56,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 0.8,
+    "value": 35.1,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
-    "value": "8 strokes, 48 vertices, every frame",
+    "value": "varies",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "B1": {
     "value": 100,
@@ -5512,7 +5512,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca duck or goose standing in side view with a beak, webbed feet and a rounded body\u201d; motion broken; follows the film: partly",
+    "value": "named \u201ca duck (the doodle's duck) that turns to face the viewer and cries\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -5607,12 +5607,12 @@
   },
   "r": {
    "M2": {
-    "value": 82,
+    "value": 28,
     "unit": "percentile among real doodles of the category",
-    "ok": true
+    "ok": false
    },
    "M2b": {
-    "value": 0.77,
+    "value": 0.55,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -5622,9 +5622,9 @@
     "ok": false
    },
    "M6": {
-    "value": 6.2,
+    "value": 3.8,
     "unit": "px jerk (drawing centre)",
-    "ok": false
+    "ok": true
    },
    "T3": {
     "value": "11 strokes, 59 vertices, every frame",
@@ -5637,7 +5637,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:5381512507686912; scenery quickdraw:6126367064195072, quickdraw:6464897556676608, quickdraw:5554186856955904, quickdraw:6096989265592320, quickdraw:6128315012218880",
+    "value": "rig quickdraw:5381512507686912; scenery quickdraw:6081225577988096, quickdraw:6464897556676608, quickdraw:4571390508269568, quickdraw:6128315012218880",
     "unit": "",
     "ok": true
    },
@@ -5657,7 +5657,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca cat's head (cat face with pointed ears, two eyes and whiskers)\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cA cat's head (a doodled cat face with ears, two eyes and whiskers)\u201d; motion broken; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -5746,20 +5746,20 @@
    "cel"
   ],
   "t": {
-   "pass": 10,
-   "fail": 2,
+   "pass": 7,
+   "fail": 5,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 39,
+    "value": 10,
     "unit": "percentile among real doodles of the category",
-    "ok": true
+    "ok": false
    },
    "M2b": {
-    "value": 0.73,
+    "value": 0.47,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-    "ok": true
+    "ok": false
    },
    "M3": {
     "value": 0.4,
@@ -5767,14 +5767,14 @@
     "ok": false
    },
    "M6": {
-    "value": 5.9,
+    "value": 8.9,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
    "T3": {
-    "value": "12 strokes, 63 vertices, every frame",
+    "value": "varies",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "B1": {
     "value": 100,
@@ -5802,7 +5802,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca giraffe's head and upper neck, seen in close-up with two ossicones, an eye mark and a long muzzle\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cA giraffe's head and upper neck in close-up, chewing\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -5891,35 +5891,35 @@
    "cel"
   ],
   "t": {
-   "pass": 10,
-   "fail": 2,
+   "pass": 8,
+   "fail": 3,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 54,
+    "value": 24,
     "unit": "percentile among real doodles of the category",
-    "ok": true
+    "ok": false
    },
    "M2b": {
-    "value": 0.8,
+    "value": 0.67,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.26,
-    "unit": "fit to the SAM silhouette, frames with a mask",
-    "ok": false
+    "value": "not measured",
+    "unit": "no usable silhouette (SAM masked a group, not the subject)",
+    "ok": null
    },
    "M6": {
-    "value": 36.9,
+    "value": 25.7,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
    "T3": {
-    "value": "9 strokes, 68 vertices, every frame",
+    "value": "varies",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "B1": {
     "value": 100,
@@ -5947,7 +5947,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201chorse head and neck\u201d; motion broken; follows the film: partly",
+    "value": "named \u201ca horse's head and neck (horse at a fence lowering its head to eat)\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -6036,28 +6036,28 @@
    "cel"
   ],
   "t": {
-   "pass": 9,
-   "fail": 3,
+   "pass": 8,
+   "fail": 4,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 7,
+    "value": 5,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.66,
+    "value": 0.54,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.34,
+    "value": 0.26,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 37.0,
+    "value": 5.9,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
@@ -6092,14 +6092,14 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca butterfly perched with its wings folded upward\u201d; motion broken; follows the film: partly",
+    "value": "named \u201ca butterfly perched on a person's fingertips (character: butterfly; scenery: hand)\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
    "J4": {
-    "value": "bar_met",
+    "value": "bar_not_met",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "M1": {
     "value": "not run",
@@ -6181,33 +6181,33 @@
    "cel"
   ],
   "t": {
-   "pass": 10,
-   "fail": 2,
+   "pass": 9,
+   "fail": 3,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 37,
+    "value": 24,
     "unit": "percentile among real doodles of the category",
-    "ok": true
+    "ok": false
    },
    "M2b": {
-    "value": 1.0,
+    "value": 0.61,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.04,
+    "value": 0.05,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 28.3,
+    "value": 45.8,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
    "T3": {
-    "value": "14 strokes, 68 vertices, every frame",
+    "value": "16 strokes, 80 vertices, every frame",
     "unit": "",
     "ok": true
    },
@@ -6217,7 +6217,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:6344657166401536; scenery quickdraw:6369232059105280, quickdraw:5236338267783168, quickdraw:4951807774162944, drawn by agent: no Quick, Draw! category is a road edge; one straight line along the far edge of the road, quickdraw:6242280815984640",
+    "value": "rig quickdraw:6344657166401536; scenery quickdraw:6369232059105280, quickdraw:5236338267783168, quickdraw:4951807774162944, drawn by agent: no Quick, Draw! category is a road edge; one straight line along the foot of the wall behind the road, measured at y 150-160 in frame 0, quickdraw:6242280815984640",
     "unit": "",
     "ok": true
    },
@@ -6237,7 +6237,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca bicycle wheel with spokes, close up, with parts of the bicycle frame entering from the top right\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cThe front wheel and fork/frame of the doodled bicycle, plus a single-line rider's leg ending in a small hexagon foot, pedaling.\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -6471,30 +6471,30 @@
    "cel"
   ],
   "t": {
-   "pass": 10,
-   "fail": 2,
+   "pass": 11,
+   "fail": 1,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 88,
+    "value": 89,
     "unit": "percentile among real doodles of the category",
     "ok": true
    },
    "M2b": {
-    "value": 0.82,
+    "value": 0.92,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.23,
+    "value": 0.44,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 40.1,
+    "value": 1.8,
     "unit": "px jerk (drawing centre)",
-    "ok": false
+    "ok": true
    },
    "T3": {
     "value": "9 strokes, 43 vertices, every frame",
@@ -6507,7 +6507,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:4509032549187584; scenery quickdraw:5734549172518912, quickdraw:5220194005811200, quickdraw:6128470436347904, quickdraw:6344744508588032",
+    "value": "rig quickdraw:4509032549187584; scenery quickdraw:5734549172518912, quickdraw:5220194005811200, quickdraw:6430061731250176, quickdraw:4790851043590144",
     "unit": "",
     "ok": true
    },
@@ -6527,7 +6527,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201chelicopter\u201d; motion broken; follows the film: yes",
+    "value": "named \u201ca helicopter (side view, with main rotor, cockpit, skid struts, landing skid and tail boom)\u201d; motion broken; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -6626,22 +6626,22 @@
   },
   "r": {
    "M2": {
-    "value": 23,
+    "value": 15,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.61,
+    "value": 0.66,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.49,
+    "value": 0.5,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 16.8,
+    "value": 14.5,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
@@ -6656,7 +6656,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:5298401904164864; scenery quickdraw:6721509840125952, drawn by agent: no Quick, Draw! category is a ground line; the edge of the trough wall the pig walks along",
+    "value": "rig quickdraw:5298401904164864; scenery quickdraw:6721509840125952, drawn by agent: no Quick, Draw! category is a ground line; the edge of the trough wall the pig walks along, drawn by agent: the handler's catch-pole from the upper left to the pig's snout (no Quick, Draw! category is a catch-pole); one copy per stretch of frames so its end stays on the snout until the pig is let go after frame 9, drawn by agent: the handler's catch-pole from the upper left to the pig's snout (no Quick, Draw! category is a catch-pole); one copy per stretch of frames so its end stays on the snout until the pig is let go after frame 9, drawn by agent: the handler's catch-pole from the upper left to the pig's snout (no Quick, Draw! category is a catch-pole); one copy per stretch of frames so its end stays on the snout until the pig is let go after frame 9, drawn by agent: the handler's catch-pole from the upper left to the pig's snout (no Quick, Draw! category is a catch-pole); one copy per stretch of frames so its end stays on the snout until the pig is let go after frame 9",
     "unit": "",
     "ok": true
    },
@@ -6676,7 +6676,7 @@
     "ok": false
    },
    "J1": {
-    "value": "named \u201ca pig seen from the side, with a spiral snout, two pointed ears, a round body and short stick legs\u201d; motion broken; follows the film: partly",
+    "value": "named \u201ca pig\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -6769,35 +6769,35 @@
    "wave 2"
   ],
   "t": {
-   "pass": 8,
-   "fail": 4,
+   "pass": 7,
+   "fail": 5,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 27,
+    "value": 28,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.84,
+    "value": 0.5,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-    "ok": true
+    "ok": false
    },
    "M3": {
-    "value": 0.43,
+    "value": 0.51,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 9.9,
+    "value": 3.1,
     "unit": "px jerk (drawing centre)",
-    "ok": false
+    "ok": true
    },
    "T3": {
-    "value": "14 strokes, 78 vertices, every frame",
+    "value": "varies",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "B1": {
     "value": 100,
@@ -6825,7 +6825,7 @@
     "ok": false
    },
    "J1": {
-    "value": "named \u201craccoon\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cA raccoon (the striped-tail doodle from c.png).\u201d; motion broken; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -7067,8 +7067,8 @@
    "wave 2"
   ],
   "t": {
-   "pass": 8,
-   "fail": 4,
+   "pass": 9,
+   "fail": 3,
    "total": 20
   },
   "r": {
@@ -7078,7 +7078,7 @@
     "ok": false
    },
    "M2b": {
-    "value": 0.91,
+    "value": 0.9,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -7088,9 +7088,9 @@
     "ok": false
    },
    "M6": {
-    "value": 5.1,
+    "value": 0.0,
     "unit": "px jerk (drawing centre)",
-    "ok": false
+    "ok": true
    },
    "T3": {
     "value": "8 strokes, 115 vertices, every frame",
@@ -7123,7 +7123,7 @@
     "ok": false
    },
    "J1": {
-    "value": "named \u201celectric desk fan\u201d; motion smooth; follows the film: yes",
+    "value": "named \u201can electric desk fan seen from the front: a rounded housing with three curved blades around a scribbled hub, standing on a short hatched base\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -7216,8 +7216,8 @@
    "wave 2"
   ],
   "t": {
-   "pass": 9,
-   "fail": 2,
+   "pass": 8,
+   "fail": 3,
    "total": 20
   },
   "r": {
@@ -7227,7 +7227,7 @@
     "ok": false
    },
    "M2b": {
-    "value": 0.99,
+    "value": 1.0,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -7237,9 +7237,9 @@
     "ok": null
    },
    "M6": {
-    "value": 0.9,
+    "value": 29.4,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
     "value": "3 strokes, 31 vertices, every frame",
@@ -7365,8 +7365,8 @@
    "wave 2"
   ],
   "t": {
-   "pass": 7,
-   "fail": 5,
+   "pass": 8,
+   "fail": 4,
    "total": 20
   },
   "r": {
@@ -7381,12 +7381,12 @@
     "ok": false
    },
    "M3": {
-    "value": 0.66,
+    "value": 0.85,
     "unit": "fit to the SAM silhouette, frames with a mask",
-    "ok": false
+    "ok": true
    },
    "M6": {
-    "value": 13.6,
+    "value": 5.6,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
@@ -7401,7 +7401,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:6582446130724864; scenery quickdraw:5691748049223680, quickdraw:5825824043302912",
+    "value": "rig quickdraw:6582446130724864; scenery quickdraw:5691748049223680, quickdraw:5400539233779712",
     "unit": "",
     "ok": true
    },
@@ -7421,7 +7421,7 @@
     "ok": false
    },
    "J1": {
-    "value": "named \u201cflying saucer\u201d; motion smooth; follows the film: yes",
+    "value": "named \u201ca flying saucer (hull with a dome) standing in for a descending spacecraft entry capsule\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -7520,22 +7520,22 @@
   },
   "r": {
    "M2": {
-    "value": 92,
+    "value": 73,
     "unit": "percentile among real doodles of the category",
     "ok": true
    },
    "M2b": {
-    "value": 0.81,
+    "value": 0.71,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.5,
+    "value": 0.49,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 8.6,
+    "value": 14.0,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
@@ -7550,7 +7550,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:6165377341980672; scenery quickdraw:5354287364308992, drawn by agent: no Quick, Draw! category is the edge of an arm; one line along it",
+    "value": "rig quickdraw:6165377341980672; scenery quickdraw:5354287364308992, drawn by agent: no Quick, Draw! category is the edge of an arm; one line along the arm silhouette against the dark, traced from frame 1, so it runs above the mosquito as in the film",
     "unit": "",
     "ok": true
    },
@@ -7570,7 +7570,7 @@
     "ok": false
    },
    "J1": {
-    "value": "named \u201cmosquito\u201d; motion smooth; follows the film: partly",
+    "value": "named \u201ca mosquito, drawn as a stick-line insect with oval head, curled antenna, proboscis, upright wing and hanging legs\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -7689,7 +7689,7 @@
     "ok": null
    },
    "T3": {
-    "value": "the doodle's 9 strokes repeated as marks, 171-196 per frame",
+    "value": "the doodle's 9 strokes repeated as marks, 76-95 per frame",
     "unit": "",
     "ok": true
    },
@@ -7699,7 +7699,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:5897326906310656; scenery quickdraw:4905021353230336, quickdraw:5177445445533696, drawn by agent: the Quick, Draw! fences are drawn flat to the page; the footbridge's two rails run in perspective to a point, so the agent drew them as two pairs of lines with posts",
+    "value": "rig quickdraw:5897326906310656; scenery drawn by agent: the far edge of the water and the base of the buildings behind the bridge, a level line at y 160 in the film, drawn by agent: the tall post at the left of the film's frame, one line as a doodler would draw it, drawn by agent: the street lamp's post and arm at the upper right of the film's frame; the lamp hanging from the arm is a light bulb doodle drawn with rays, quickdraw:5264964543578112, drawn by agent: the footbridge's two railings run in perspective toward a far end about 50 px wide at the water line (y 160), as in the film; each railing is a top rail, a lower rail and posts, quickdraw:5897326906310656 (a second copy of the character's rig, keyed in shots/rain-sam/downpour_keys.json)",
     "unit": "",
     "ok": true
    },
@@ -7719,7 +7719,7 @@
     "ok": false
    },
    "J1": {
-    "value": "named \u201crain\u201d; motion jumbled; follows the film: yes",
+    "value": "named \u201cRain falling on a railed bridge or pier and splashing on its deck, drawn as short dash strokes with chevron splash marks.\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -7812,20 +7812,20 @@
    "wave 2"
   ],
   "t": {
-   "pass": 7,
-   "fail": 3,
+   "pass": 8,
+   "fail": 2,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 1,
+    "value": 2,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.12,
+    "value": 0.76,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-    "ok": false
+    "ok": true
    },
    "M3": {
     "value": "not applicable",
@@ -7838,7 +7838,7 @@
     "ok": null
    },
    "T3": {
-    "value": "the doodle's 7 strokes repeated as marks, 11-20 per frame",
+    "value": "the doodle's 7 strokes repeated as marks, 7-7 per frame",
     "unit": "",
     "ok": true
    },
@@ -7868,7 +7868,7 @@
     "ok": false
    },
    "J1": {
-    "value": "named \u201cwaves\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cAn ocean wave / surf (a scribbled breaking wave)\u201d; motion smooth; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -7961,33 +7961,33 @@
    "wave 2"
   ],
   "t": {
-   "pass": 9,
-   "fail": 3,
+   "pass": 7,
+   "fail": 5,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 39,
+    "value": 8,
     "unit": "percentile among real doodles of the category",
-    "ok": true
+    "ok": false
    },
    "M2b": {
-    "value": 0.83,
+    "value": 0.31,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-    "ok": true
+    "ok": false
    },
    "M3": {
-    "value": 0.11,
+    "value": 0.1,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 14.0,
+    "value": 5.5,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
    "T3": {
-    "value": "4 strokes, 27 vertices, every frame",
+    "value": "6 strokes, 53 vertices, every frame",
     "unit": "",
     "ok": true
    },
@@ -8017,7 +8017,7 @@
     "ok": false
    },
    "J1": {
-    "value": "named \u201ca seesaw (teeter-totter): a long plank resting on a triangular fulcrum\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cA seesaw (the plank on its triangular stand), with a stick-figure woman and child performing the lift beside it.\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -8110,35 +8110,35 @@
    "wave 3"
   ],
   "t": {
-   "pass": 10,
-   "fail": 2,
+   "pass": 8,
+   "fail": 4,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 55,
+    "value": 29,
     "unit": "percentile among real doodles of the category",
-    "ok": true
+    "ok": false
    },
    "M2b": {
-    "value": 0.85,
+    "value": 0.62,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.24,
+    "value": 0.26,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 16.4,
+    "value": 5.8,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
    "T3": {
-    "value": "17 strokes, 95 vertices, every frame",
+    "value": "varies",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "B1": {
     "value": 100,
@@ -8166,7 +8166,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ccow (head and front of body, close up)\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cA cow (head and front of body), seen face-on.\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -8259,28 +8259,28 @@
    "wave 3"
   ],
   "t": {
-   "pass": 9,
-   "fail": 3,
+   "pass": 10,
+   "fail": 2,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 20,
+    "value": 10,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.97,
+    "value": 0.87,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.16,
+    "value": 0.18,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 2.0,
+    "value": 3.4,
     "unit": "px jerk (drawing centre)",
     "ok": true
    },
@@ -8315,9 +8315,9 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca cat's face (head only, with pointed ears, whiskers and a small nose and mouth)\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cA doodled cat face standing in for the tiger's head (head only, no body).\u201d; motion smooth; follows the film: yes",
     "unit": "",
-    "ok": false
+    "ok": true
    },
    "J4": {
     "value": "bar_met",
@@ -8408,8 +8408,8 @@
    "wave 3"
   ],
   "t": {
-   "pass": 10,
-   "fail": 2,
+   "pass": 9,
+   "fail": 3,
    "total": 20
   },
   "r": {
@@ -8419,19 +8419,19 @@
     "ok": false
    },
    "M2b": {
-    "value": 0.86,
+    "value": 0.74,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.47,
+    "value": 0.44,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 3.8,
+    "value": 4.5,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
     "value": "12 strokes, 135 vertices, every frame",
@@ -8464,7 +8464,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca monkey (round head with side ears, face patch, body and curled tail)\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cA monkey (head with round ears, face mask and spiral tail), matching the macaque in the film.\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -8706,18 +8706,18 @@
    "wave 3"
   ],
   "t": {
-   "pass": 9,
-   "fail": 2,
+   "pass": 10,
+   "fail": 1,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 15,
+    "value": 30,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.79,
+    "value": 0.83,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -8727,9 +8727,9 @@
     "ok": null
    },
    "M6": {
-    "value": 31.7,
+    "value": 0.4,
     "unit": "px jerk (drawing centre)",
-    "ok": false
+    "ok": true
    },
    "T3": {
     "value": "10 strokes, 80 vertices, every frame",
@@ -8762,7 +8762,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca sheep (cloud-shaped woolly body, small boxy head with ears and dot eyes, stick legs) grazing with its head lowered\u201d; motion broken; follows the film: partly",
+    "value": "named \u201ca sheep (cloud-shaped woolly body, small boxy head with ears, stick legs)\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -8855,30 +8855,30 @@
    "wave 3"
   ],
   "t": {
-   "pass": 10,
-   "fail": 2,
+   "pass": 12,
+   "fail": 0,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 51,
+    "value": 41,
     "unit": "percentile among real doodles of the category",
     "ok": true
    },
    "M2b": {
-    "value": 0.99,
+    "value": 0.65,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.3,
+    "value": 0.7,
     "unit": "fit to the SAM silhouette, frames with a mask",
-    "ok": false
+    "ok": true
    },
    "M6": {
-    "value": 5.3,
+    "value": 0.5,
     "unit": "px jerk (drawing centre)",
-    "ok": false
+    "ok": true
    },
    "T3": {
     "value": "4 strokes, 38 vertices, every frame",
@@ -8891,7 +8891,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:5193394433294336; scenery quickdraw:5571430982877184, quickdraw:5755005313220608, drawn by agent: no Quick, Draw! category is a horizon; one line, with the reflections drawn as short dashes",
+    "value": "rig quickdraw:5193394433294336; scenery quickdraw:5560369902780416, quickdraw:5745282279014400, quickdraw:6310777906528256, quickdraw:6453133523812352, drawn by agent: no Quick, Draw! category is a horizon; one line at the film horizon (y 166, the steamers' waterline), with the reflections drawn as short dashes kept out of the hull",
     "unit": "",
     "ok": true
    },
@@ -8911,7 +8911,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca sailboat (triangular sail on a mast above a long hull)\u201d; motion broken; follows the film: partly",
+    "value": "named \u201ca sailboat (single sail, mast, hull) approaching the camera\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -9005,32 +9005,32 @@
   ],
   "t": {
    "pass": 8,
-   "fail": 4,
+   "fail": 3,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 2,
+    "value": 0,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.78,
+    "value": 0.09,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-    "ok": true
+    "ok": false
    },
    "M3": {
-    "value": 0.56,
-    "unit": "fit to the SAM silhouette, frames with a mask",
-    "ok": false
+    "value": "not measured",
+    "unit": "no usable silhouette (SAM masked a group, not the subject)",
+    "ok": null
    },
    "M6": {
-    "value": 29.3,
+    "value": 2.4,
     "unit": "px jerk (drawing centre)",
-    "ok": false
+    "ok": true
    },
    "T3": {
-    "value": "19 strokes, 47 vertices, every frame",
+    "value": "29 strokes, 82 vertices, every frame",
     "unit": "",
     "ok": true
    },
@@ -9040,7 +9040,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:5572615668236288; scenery quickdraw:4773289035563008, quickdraw:5418102407823360",
+    "value": "rig quickdraw:5572615668236288; scenery quickdraw:4773289035563008, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts, drawn by agent: no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
     "unit": "",
     "ok": true
    },
@@ -9060,7 +9060,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca roller coaster lift hill: a hatched track climbing to a peak with the drop going down to the right\u201d; motion broken; follows the film: yes",
+    "value": "named \u201cA roller coaster lift hill (two-rail track with ties) with a small train of cars climbing it.\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": false
    },
@@ -9159,22 +9159,22 @@
   },
   "r": {
    "M2": {
-    "value": 32,
+    "value": 27,
     "unit": "percentile among real doodles of the category",
-    "ok": true
+    "ok": false
    },
    "M2b": {
-    "value": 0.9,
+    "value": 0.88,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.28,
+    "value": 0.27,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 28.0,
+    "value": 13.0,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
@@ -9189,7 +9189,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:5264525936820224; scenery quickdraw:6018958220066816, quickdraw:6042966684598272, quickdraw:5224511622348800, drawn by agent: no Quick, Draw! category for a traffic cone; a triangle on a base",
+    "value": "rig quickdraw:5264525936820224; scenery quickdraw:6018958220066816, quickdraw:6042966684598272, quickdraw:5224511622348800, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone",
     "unit": "",
     "ok": true
    },
@@ -9209,9 +9209,9 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca small car or monster truck: a long flat body on two large round wheels\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cA skateboard (a long flat deck on two round wheels), drawn in the doodle's car-like construction.\u201d; motion smooth; follows the film: yes",
     "unit": "",
-    "ok": false
+    "ok": true
    },
    "J4": {
     "value": "bar_met",
@@ -9308,7 +9308,7 @@
   },
   "r": {
    "M2": {
-    "value": 83,
+    "value": 84,
     "unit": "percentile among real doodles of the category",
     "ok": true
    },
@@ -9318,7 +9318,7 @@
     "ok": true
    },
    "M3": {
-    "value": 0.61,
+    "value": 0.6,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
@@ -9358,7 +9358,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca squat sitting frog-like creature with a tall rounded body, two small eyes, a short line mouth, and a bent leg on each side\u201d; motion smooth; follows the film: yes",
+    "value": "named \u201cA frog sitting still and breathing, drawn as the doodle's egg-shaped body with two side legs.\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -9457,12 +9457,12 @@
   },
   "r": {
    "M2": {
-    "value": 68,
+    "value": 74,
     "unit": "percentile among real doodles of the category",
     "ok": true
    },
    "M2b": {
-    "value": 0.84,
+    "value": 0.72,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -9472,7 +9472,7 @@
     "ok": null
    },
    "M6": {
-    "value": 3.0,
+    "value": 2.6,
     "unit": "px jerk (drawing centre)",
     "ok": true
    },
@@ -9487,7 +9487,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:5421013154136064; scenery drawn by agent: no Quick, Draw! category is a rock face; one line traces the lower edge of the dark rock overhang across the top of the frame and down its right side, quickdraw:6529285361762304, drawn by agent: no Quick, Draw! category is a rock ledge; one line is the edge of the stones the ant walks along, with two short lines for the pebbles below it, quickdraw:5421013154136064 (a second copy of the character's rig, keyed in shots/ant-sam/ant2_poses_v2.json)",
+    "value": "rig quickdraw:5421013154136064; scenery drawn by agent: no Quick, Draw! category is a rock face; one line traces the lower edge of the dark rock overhang across the top of the frame and down its right side, quickdraw:6529285361762304, drawn by agent: no Quick, Draw! category is a rock ledge; one line is the edge of the stones the ant walks along, with two short lines for the pebbles below it, quickdraw:5421013154136064 (a second copy of the character's rig, keyed in shots/ant-sam/ant2_poses_v3.json)",
     "unit": "",
     "ok": true
    },
@@ -9507,7 +9507,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201cTwo ants standing head to head on the ground, touching antennae\u201d; motion smooth; follows the film: partly",
+    "value": "named \u201cTwo ants (a larger left ant and a smaller right ant) meeting head to head\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -9749,33 +9749,33 @@
    "wave 4"
   ],
   "t": {
-   "pass": 8,
-   "fail": 4,
+   "pass": 10,
+   "fail": 2,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 27,
+    "value": 37,
     "unit": "percentile among real doodles of the category",
-    "ok": false
+    "ok": true
    },
    "M2b": {
-    "value": 0.99,
+    "value": 0.85,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.57,
+    "value": 0.62,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 7.6,
+    "value": 7.5,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
    "T3": {
-    "value": "4 strokes, 85 vertices, every frame",
+    "value": "5 strokes, 88 vertices, every frame",
     "unit": "",
     "ok": true
    },
@@ -9805,9 +9805,9 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201cA cat-like four-legged animal with pointed ears, a zigzag spiked back and a tall tail curled forward over its body\u201d; motion smooth; follows the film: partly",
+    "value": "named \u201cA spiky-backed cat-like or dragon-like creature with a curled tail (stand-in for the film's horned dinosaur), drawn in the doodle's polygon-head, zigzag-spine style.\u201d; motion smooth; follows the film: yes",
     "unit": "",
-    "ok": false
+    "ok": true
    },
    "J4": {
     "value": "bar_met",
@@ -9904,7 +9904,7 @@
   },
   "r": {
    "M2": {
-    "value": 59,
+    "value": 57,
     "unit": "percentile among real doodles of the category",
     "ok": true
    },
@@ -9919,7 +9919,7 @@
     "ok": false
    },
    "M6": {
-    "value": 0.9,
+    "value": 3.4,
     "unit": "px jerk (drawing centre)",
     "ok": true
    },
@@ -9954,7 +9954,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca crab seen from the front, with two raised claws, two eye stalks and four legs\u201d; motion smooth; follows the film: yes",
+    "value": "named \u201ca crab (ghost crab) folding its eyestalks down and raising them again\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -10047,33 +10047,33 @@
    "wave 4"
   ],
   "t": {
-   "pass": 10,
-   "fail": 2,
+   "pass": 9,
+   "fail": 3,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 16,
+    "value": 5,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.87,
+    "value": 0.63,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.35,
+    "value": 0.56,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 2.4,
+    "value": 12.8,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
-    "value": "9 strokes, 62 vertices, every frame",
+    "value": "10 strokes, 69 vertices, every frame",
     "unit": "",
     "ok": true
    },
@@ -10103,7 +10103,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca speedboat (motorboat hull with a cabin of small windows and spray lines at one end)\u201d; motion smooth; follows the film: yes",
+    "value": "named \u201ca speedboat (racing boat with cabin windows)\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -10494,8 +10494,8 @@
    "wave 4"
   ],
   "t": {
-   "pass": 11,
-   "fail": 1,
+   "pass": 10,
+   "fail": 2,
    "total": 20
   },
   "r": {
@@ -10510,14 +10510,14 @@
     "ok": true
    },
    "M3": {
-    "value": 0.52,
+    "value": 0.43,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 1.0,
+    "value": 4.9,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
     "value": "7 strokes, 61 vertices, every frame",
@@ -10550,7 +10550,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca five-petal flower on a straight stem\u201d; motion smooth; follows the film: yes",
+    "value": "named \u201ca five-petal flower on a stem (standing in for the water lily)\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -10649,12 +10649,12 @@
   },
   "r": {
    "M2": {
-    "value": 69,
+    "value": 53,
     "unit": "percentile among real doodles of the category",
     "ok": true
    },
    "M2b": {
-    "value": 0.9,
+    "value": 0.77,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -10664,12 +10664,12 @@
     "ok": null
    },
    "M6": {
-    "value": 0.8,
+    "value": 1.9,
     "unit": "px jerk (drawing centre)",
     "ok": true
    },
    "T3": {
-    "value": "5 strokes, 63 vertices, every frame",
+    "value": "6 strokes, 68 vertices, every frame",
     "unit": "",
     "ok": true
    },
@@ -10699,7 +10699,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca cello (or violin-family instrument) seen tilted and cropped at the bottom of the frame\u201d; motion smooth; follows the film: partly",
+    "value": "named \u201ca cello\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -10941,8 +10941,8 @@
    "wave 4"
   ],
   "t": {
-   "pass": 10,
-   "fail": 1,
+   "pass": 9,
+   "fail": 2,
    "total": 20
   },
   "r": {
@@ -10962,9 +10962,9 @@
     "ok": null
    },
    "M6": {
-    "value": 0.3,
+    "value": 4.1,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
     "value": "5 strokes, 49 vertices, every frame",
@@ -10977,7 +10977,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:4618667562106880; scenery drawn by agent: the horizon comes in from the top edge at frame 25 as the ship pitches; no Quick, Draw! category is a single level line, so it is one slightly uneven stroke, placed where the film's sky band ends",
+    "value": "rig quickdraw:4618667562106880; scenery drawn by agent: the horizon comes in from the top edge at frame 25 as the ship pitches; no Quick, Draw! category is a single level line, so it is one slightly uneven stroke, placed where the film's sky band ends; raised 12 px and shown from frame 29, so it enters whole at the top as the film's sky band comes into view, with no partial line before",
     "unit": "",
     "ok": true
    },
@@ -10997,7 +10997,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201cocean waves drawn as stacked zigzag wave lines\u201d; motion smooth; follows the film: partly",
+    "value": "named \u201cOcean waves (a doodle of several wave lines on the sea surface).\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -11090,20 +11090,20 @@
    "wave 4"
   ],
   "t": {
-   "pass": 10,
-   "fail": 1,
+   "pass": 7,
+   "fail": 4,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 76,
+    "value": 25,
     "unit": "percentile among real doodles of the category",
-    "ok": true
+    "ok": false
    },
    "M2b": {
-    "value": 0.74,
+    "value": 0.28,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-    "ok": true
+    "ok": false
    },
    "M3": {
     "value": "not measured",
@@ -11111,12 +11111,12 @@
     "ok": null
    },
    "M6": {
-    "value": 1.3,
+    "value": 7.0,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
-    "value": "8 strokes, 53 vertices, every frame",
+    "value": "10 strokes, 75 vertices, every frame",
     "unit": "",
     "ok": true
    },
@@ -11146,7 +11146,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca twin-bell alarm clock with two hands and two small feet, sitting on a shelf\u201d; motion smooth; follows the film: partly",
+    "value": "named \u201cAn alarm clock with two bells and two feet, turned around and back by a hand.\u201d; motion broken; follows the film: yes",
     "unit": "",
     "ok": false
    },
@@ -11239,13 +11239,13 @@
    "wave 4"
   ],
   "t": {
-   "pass": 9,
-   "fail": 3,
+   "pass": 7,
+   "fail": 5,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 2,
+    "value": 3,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
@@ -11255,19 +11255,19 @@
     "ok": false
    },
    "M3": {
-    "value": 0.6,
+    "value": 0.38,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 0.7,
+    "value": 102.6,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
-    "value": "4 strokes, 24 vertices, every frame",
+    "value": "varies",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "B1": {
     "value": 100,
@@ -11394,27 +11394,27 @@
   },
   "r": {
    "M2": {
-    "value": 28,
+    "value": 37,
     "unit": "percentile among real doodles of the category",
-    "ok": false
+    "ok": true
    },
    "M2b": {
-    "value": 0.73,
+    "value": 0.77,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.56,
+    "value": 0.6,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 0.6,
+    "value": 12.0,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
-    "value": "7 strokes, 47 vertices, every frame",
+    "value": "8 strokes, 50 vertices, every frame",
     "unit": "",
     "ok": true
    },
@@ -11444,7 +11444,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca horned four-legged animal, read as a triceratops or rhinoceros, with a round body, a frilled head and zigzag horns pointing right\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cA rhinoceros (oval body, teardrop head with zigzag horns), the doodle mirrored to face right.\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -11548,7 +11548,7 @@
     "ok": false
    },
    "M2b": {
-    "value": 0.56,
+    "value": 0.55,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -11593,7 +11593,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca lighthouse: a tapering banded tower with a lantern room on top, a small window, and short light-ray lines to each side\u201d; motion smooth; follows the film: yes",
+    "value": "named \u201cA lighthouse: a tapered tower with horizontal band lines, a lamp room with a window on top, and short horizontal light-beam lines on both sides of the top.\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -11697,7 +11697,7 @@
     "ok": false
    },
    "M2b": {
-    "value": 0.89,
+    "value": 0.77,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -11707,7 +11707,7 @@
     "ok": null
    },
    "M6": {
-    "value": 0.1,
+    "value": 0.3,
     "unit": "px jerk (drawing centre)",
     "ok": true
    },
@@ -11722,7 +11722,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:5120141954121728; scenery quickdraw:5107657729900544",
+    "value": "rig quickdraw:5120141954121728; scenery ",
     "unit": "",
     "ok": true
    },
@@ -11742,7 +11742,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca cloud\u201d; motion smooth; follows the film: partly",
+    "value": "named \u201cA cloud (cumulus cloud bank).\u201d; motion smooth; follows the film: partly",
     "unit": "",
     "ok": true
    },
@@ -11835,18 +11835,18 @@
    "wave 4"
   ],
   "t": {
-   "pass": 10,
-   "fail": 2,
+   "pass": 8,
+   "fail": 4,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 6,
+    "value": 5,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.54,
+    "value": 0.53,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -11856,14 +11856,14 @@
     "ok": false
    },
    "M6": {
-    "value": 1.1,
+    "value": 10.0,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
-    "value": "4 strokes, 47 vertices, every frame",
+    "value": "varies",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "B1": {
     "value": 100,
@@ -12133,35 +12133,35 @@
    "wave 4"
   ],
   "t": {
-   "pass": 9,
-   "fail": 3,
+   "pass": 7,
+   "fail": 5,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 25,
+    "value": 15,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 1.0,
+    "value": 0.67,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.5,
+    "value": 0.43,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 0.7,
+    "value": 5.0,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
-    "value": "5 strokes, 60 vertices, every frame",
+    "value": "varies",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "B1": {
     "value": 100,
@@ -12189,7 +12189,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca light bulb with a filament line and a threaded screw base\u201d; motion smooth; follows the film: yes",
+    "value": "named \u201cA hand-drawn light bulb (globe, filament line, three-band screw base).\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": false
    },
@@ -12288,12 +12288,12 @@
   },
   "r": {
    "M2": {
-    "value": 61,
+    "value": 56,
     "unit": "percentile among real doodles of the category",
     "ok": true
    },
    "M2b": {
-    "value": 0.97,
+    "value": 0.93,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -12303,7 +12303,7 @@
     "ok": null
    },
    "M6": {
-    "value": 1.2,
+    "value": 2.6,
     "unit": "px jerk (drawing centre)",
     "ok": true
    },
@@ -12437,22 +12437,22 @@
   },
   "r": {
    "M2": {
-    "value": 15,
+    "value": 17,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.87,
+    "value": 0.9,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.6,
+    "value": 0.54,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 4.6,
+    "value": 37.2,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
@@ -12467,7 +12467,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:6486360229675008; scenery quickdraw:6486360229675008 (the character's own doodle, repeated small), quickdraw:6486360229675008 (the character's own doodle, repeated small), drawn by agent: no Quick, Draw! category is a scrap of paper on a floor; small open shapes drawn where the white scraps lie on the dark floor in the first frames",
+    "value": "rig quickdraw:6486360229675008; scenery quickdraw:6486360229675008 (a second copy of the character's rig, keyed in shots/broom-sam/second_broom_poses.json), quickdraw:6486360229675008 (a second copy of the character's rig, keyed in shots/broom-sam/whisk_broom_poses.json), drawn by agent: no Quick, Draw! category is a scrap of paper on a floor; small open shapes drawn where the white scraps lie on the dark floor in the first frames",
     "unit": "",
     "ok": true
    },
@@ -12487,7 +12487,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201ca straw broom (long handle with a splayed fan of bristles)\u201d; motion broken; follows the film: partly",
+    "value": "named \u201ca straw broom (handle plus fanned bristles)\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -12729,18 +12729,18 @@
    "wave 4"
   ],
   "t": {
-   "pass": 9,
-   "fail": 2,
+   "pass": 7,
+   "fail": 4,
    "total": 20
   },
   "r": {
    "M2": {
-    "value": 7,
+    "value": 1,
     "unit": "percentile among real doodles of the category",
     "ok": false
    },
    "M2b": {
-    "value": 0.86,
+    "value": 0.61,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -12750,9 +12750,9 @@
     "ok": null
    },
    "M6": {
-    "value": 1.5,
+    "value": 4.7,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
     "value": "5 strokes, 24 vertices, every frame",
@@ -12785,14 +12785,14 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201can aircraft carrier (a flat deck slab with a stepped hull underneath), seen from above at an angle\u201d; motion smooth; follows the film: partly",
+    "value": "named \u201cAn aircraft carrier (flight deck slab over a V-shaped hull).\u201d; motion broken; follows the film: partly",
     "unit": "",
     "ok": false
    },
    "J4": {
-    "value": "bar_met",
+    "value": "bar_not_met",
     "unit": "",
-    "ok": true
+    "ok": false
    },
    "M1": {
     "value": "not run",
@@ -12884,12 +12884,12 @@
   },
   "r": {
    "M2": {
-    "value": 39,
+    "value": 41,
     "unit": "percentile among real doodles of the category",
     "ok": true
    },
    "M2b": {
-    "value": 1.0,
+    "value": 0.81,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
@@ -12914,7 +12914,7 @@
     "ok": true
    },
    "S2": {
-    "value": "rig quickdraw:6446306388082688; scenery quickdraw:6298610264178688, drawn by agent: no Quick, Draw! category is a curved lever plate; one curve drawn along its upper edge, starting where it comes out from under the doodle's body outline, drawn by agent: no Quick, Draw! category is the camera's side plate; its two latch blocks are drawn as boxes, open on the left where they pass behind the doodle's body outline, so the lines do not cross the camera, drawn by agent: no Quick, Draw! category is a screw head; a small circle with one slot, drawn by agent: the side plate's edge, drawn only below the doodle's body where it shows in the film",
+    "value": "rig quickdraw:6446306388082688; scenery quickdraw:6298610264178688, drawn by agent: no Quick, Draw! category is a curved lever plate; one curve drawn along its upper edge, starting where it comes out from under the doodle's body outline; it starts at the body outline, which sits about 10 px higher since the drawn keys lowered the top and raised the bottom of the body, drawn by agent: no Quick, Draw! category is the camera's side plate; its two latch blocks are drawn as boxes, open on the left where they pass behind the doodle's body outline, so the lines do not cross the camera, drawn by agent: no Quick, Draw! category is a screw head; a small circle with one slot, drawn by agent: the side plate's edge, drawn only below the doodle's body where it shows in the film",
     "unit": "",
     "ok": true
    },
@@ -13279,5 +13279,308 @@
   },
   "href": "shots/sailboat/integrated/index.html",
   "gait": "jelly"
+ },
+ {
+  "lot": "SM-0109",
+  "id": "monkey",
+  "kind": "subject",
+  "title": "Monkey",
+  "category": "monkey",
+  "wave": 3,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-21",
+  "blurb": "77 rendered frames at 24 fps; 11 source-paired keys. Native identity passes; the down-left bow still reads too upright and mask fit is below threshold. Playback approval pending.",
+  "cover": "shots/monkey/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 6070278159335424; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/monkey/integrated/index.html"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#monkey/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#monkey"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/monkey-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/monkey/integrated/source.json"
+   }
+  ],
+  "tests": "shots/monkey/tests.json",
+  "tags": [
+   "assembled review",
+   "wave 3",
+   "native QuickDraw",
+   "SAM inspected"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "S6": {
+    "value": "Archive source/interval/raw SHA and SAM pin retained; archive public-domain claim attributed",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "Fresh blind v3: see unedited review-v3.json",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "fraction",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9973455598455598,
+     "min_parts_kept": 1.0,
+     "keys": 11
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 3,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "shots/monkey/integrated/index.html",
+  "gait": "splits"
+ },
+ {
+  "lot": "SM-0110",
+  "id": "ant",
+  "kind": "subject",
+  "title": "Ant",
+  "category": "ant",
+  "wave": 4,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-21",
+  "blurb": "49 rendered frames at 24 fps; 8 source-paired keys and two native ant instances. Still identity and source poses pass; SAM instance targets switch and contacts remain unverified. Playback approval pending.",
+  "cover": "shots/ant/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5421013154136064; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/ant/integrated/index.html"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#ant/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#ant"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/ant-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/ant/integrated/source.json"
+   }
+  ],
+  "tests": "shots/ant/tests.json",
+  "tags": [
+   "assembled review",
+   "wave 4",
+   "native QuickDraw",
+   "SAM inspected"
+  ],
+  "t": {
+   "pass": 5,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Source ids, URLs, corrected interval, original false plan, raw SHA and reported public_domain retained; rights independently unverified",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "rounds": 3,
+     "identity": true,
+     "sampled_pose": true,
+     "playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+   },
+   "B1": {
+    "value": "One held rock geometry; local NCC camera estimates from three fixed background patches",
+    "unit": "",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9973333333333333,
+     "min_parts_kept": 1.0,
+     "keys": 8,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": "Every native stroke and original point count retained for both named instances in all 49 frames",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 4,
+    "unit": "hash-linked verified ledger entries",
+    "ok": true
+   }
+  },
+  "href": "shots/ant/integrated/index.html",
+  "gait": "heel click"
+ },
+ {
+  "lot": "SM-0111",
+  "id": "tiger",
+  "kind": "subject",
+  "title": "Tiger",
+  "category": "tiger",
+  "wave": 3,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-21",
+  "blurb": "67 rendered frames at 24 fps; 7 source-paired keys. Native identity and mask fit pass; the overlapping forepaws remain unclear in the sampled source pose. Playback approval pending.",
+  "cover": "shots/tiger/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 6296227597516800; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/tiger/integrated/index.html"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#tiger/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#tiger"
+   },
+   {
+    "label": "Vector study",
+    "href": "pages/tiger-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/tiger/integrated/source.json"
+   }
+  ],
+  "tests": "shots/tiger/tests.json",
+  "tags": [
+   "assembled review",
+   "wave 3",
+   "native QuickDraw",
+   "SAM inspected"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 1,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Archive ids, raw SHA, retained and original film intervals, URLs and reported public_domain preserved. Rights independently unverified.",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": {
+     "review": "review-v3.json",
+     "rounds": 3,
+     "source_framing_pose_bar_met": false,
+     "original_doodle_identity_bar_met": true
+    },
+    "unit": "sampled still review only",
+    "ok": false
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "fraction of held background geometry unchanged; bar0.9",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9970920287375984,
+     "min_parts_kept": 1.0,
+     "keys": 7,
+     "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": "All11 native strokes and original point counts retained in all67 dense frames",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 5,
+    "unit": "verified append-only hash-linked entries",
+    "ok": true
+   }
+  },
+  "href": "shots/tiger/integrated/index.html",
+  "gait": "skip"
  }
 ]

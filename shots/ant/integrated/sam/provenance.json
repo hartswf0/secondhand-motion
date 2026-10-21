@@ -1,0 +1,14 @@
+{
+  "branch": "wave2-track/ant",
+  "commit": "88e190d113066292caa735e5f0c86265deb89002",
+  "model": "facebook/sam2.1-hiera-small",
+  "track_sha256": "36a62d53eb8950592fd4d865b3eaa6e8e3086e43e3d385da0ef6f262eefce8da",
+  "validity": "invalid for whole-shot two-instance fit",
+  "limitations": "Audited masks switch from one ant to a merged two-ant target and back. Last nominal sample is2.0s; final0.2s of assembly has no independent cached mask. No final mask is clamped forward.",
+  "sampled_coverage_frames": 44,
+  "assembly_frames": 49,
+  "sampled_coverage_fraction": 0.8979591836734694,
+  "last_nominal_source_time": 2.0,
+  "coverage_scope": "Nominal cache timestamp range only; not a claim of independently aligned, semantically consistent masks or measured target fit.",
+  "root_appearance_clock_audit": "Root reports 23 of 25 samples usable for appearance alignment. This does not resolve alternating mask instances or extend coverage beyond the snapshot."
+}

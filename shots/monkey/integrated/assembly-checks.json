@@ -1,0 +1,48 @@
+{
+  "rendered_frames": 77,
+  "keys": 11,
+  "source_sha256_verified": true,
+  "full_decode": true,
+  "same_topology": true,
+  "original_strokes": 12,
+  "all_original_strokes_assigned": true,
+  "held_background_geometry": true,
+  "background_strokes_unchanged_fraction": 1.0,
+  "mask_fit": {
+    "metric": "filled native body/head/ear regions vs nearest approximate12fps SAM sample",
+    "mean": 0.615983944717177,
+    "min": 0.5676503135374401,
+    "frames_measured": 77,
+    "mean_bar": 0.65,
+    "minimum_bar": 0.45,
+    "pass": false,
+    "target_validity": "Root manually inspected4CI samples: broad head/body plausible, soft fur edges approximate. Source raw0dissolves, CI0nominal clean: source PTS not retained by CI."
+  },
+  "trace_fidelity": {
+    "min_recall": 0.9973455598455598,
+    "min_parts_kept": 1.0,
+    "keys": 11,
+    "pass": true
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "planted_intervals": 0,
+  "foot_slide_gate": false,
+  "release_approved": false,
+  "training_ran": false,
+  "crown_anchor_max_third_difference_px": 1.113415874088744,
+  "nose_jerk_gate": "not measured",
+  "independent_identity_still_bar_met": true,
+  "independent_source_pose_still_bar_met": false,
+  "independent_overall_bar_met": false,
+  "independent_review": "review-v3.json",
+  "technical_movie_key_check": {
+    "pass": true,
+    "movies_fully_decoded": 3,
+    "frames_per_movie": 77,
+    "paired_key_checks": 22,
+    "maximum_rgb_mae": 1.901559,
+    "mae_bar": 2.0
+  },
+  "dense_stroke_point_topology_verified": true
+}

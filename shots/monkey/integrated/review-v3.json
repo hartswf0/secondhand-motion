@@ -1,0 +1,71 @@
+{
+  "review_kind": "fresh_blind_packet_review",
+  "identity_bar_met": true,
+  "source_framing_pose_bar_met": false,
+  "bar_met": false,
+  "motion_approved": false,
+  "same_original_doodle_identity": {
+    "verdict": "met",
+    "assessment": "The keys remain recognizably the supplied original doodle: angular large head, uneven outlined ears, the distinctive unequal eye shapes, connected angular face and muzzle, short bent nose, and sparse angular torso marks. The omitted tail is appropriate to this close source crop. No new rendering style is needed."
+  },
+  "source_pose_event": {
+    "verdict": "not_met",
+    "assessment": "The source contact sheet shows an actual head bow and turn down-left, a low hold, then a return toward the camera. The key sequence conveys leftward travel and return, but the low keys still present essentially the same upright face. In source-04 through source-08 the eyes and muzzle sit down along the leftward-facing head, with the near right ear high and the far side compressed. In key-04 through key-08 the recognizable face remains high in an upright head and both ears remain broadly presented. The sampled event therefore reads more as sideways relocation and resizing than the source's bowed head and changed orientation. This judgment concerns the sampled poses only, not playback."
+  },
+  "source_crop_part_honesty": {
+    "verdict": "met_at_still_packet_level",
+    "assessment": "The keys retain the close head-and-upper-body crop, leave the torso cut by the lower and left edges, and omit the original doodle's off-crop tail and lower body. No added visible limb or tail invents an event absent from this retained source interval. Exact head-to-shoulder relationships still need the pose repair described below."
+  },
+  "actually_viewed_normal_speed_motion": {
+    "verdict": "unapproved",
+    "actually_viewed": false,
+    "assessment": "I viewed the supplied static images. I did not actually view comparison.mp4 or cartoon.mp4 in normal-speed playback with the available image inspection interface. Their presence on disk is not motion evidence. Timing, continuity, holds, ease, and possible interpolation artifacts remain unapproved; still sampling cannot approve them."
+  },
+  "most_important_gap": "The central down-left bow is not embodied in the low head poses: the doodle's face stays upright and high while the whole head moves left. This loses the source event even though the original doodle identity survives.",
+  "smallest_repair": "Adjust only the down-left and low-hold head drawings, with matching transition drawings as needed: keep the existing angular head and facial vocabulary, but articulate the head on the neck so the face and muzzle point down-left, the facial block sits lower toward the chin, and the ear/cheek presentation reflects the source's high near ear and compressed far side. Preserve the sampled leftward displacement and the return-to-camera endpoint. Then obtain an actual normal-speed comparison review; this review cannot close that separate evidence requirement.",
+  "must_not_be_lost": [
+    "The unmistakable original doodle's angular silhouette, unequal eye construction, connected facial shape, bent nose, uneven ears, and sparse line economy.",
+    "The honest upper-body source crop and absence of an invented visible tail or lower-body action.",
+    "The source's down-left move, sustained low pose, and return toward the camera; retain those event phases while making the low pose turn and bow."
+  ],
+  "evidence_reviewed": {
+    "source_interval": {
+      "time_basis": "clip-relative seconds",
+      "start": 0.3333333333333333,
+      "end": 3.5
+    },
+    "files_actually_read_or_viewed": [
+      "shots/monkey/integrated/source.json",
+      "shots/monkey/integrated/source-contact-sheet.jpg",
+      "shots/monkey/integrated/design.png",
+      "shots/monkey/integrated/source-01.jpg",
+      "shots/monkey/integrated/key-01.png",
+      "shots/monkey/integrated/source-02.jpg",
+      "shots/monkey/integrated/key-02.png",
+      "shots/monkey/integrated/source-03.jpg",
+      "shots/monkey/integrated/key-03.png",
+      "shots/monkey/integrated/source-04.jpg",
+      "shots/monkey/integrated/key-04.png",
+      "shots/monkey/integrated/source-05.jpg",
+      "shots/monkey/integrated/key-05.png",
+      "shots/monkey/integrated/source-06.jpg",
+      "shots/monkey/integrated/key-06.png",
+      "shots/monkey/integrated/source-07.jpg",
+      "shots/monkey/integrated/key-07.png",
+      "shots/monkey/integrated/source-08.jpg",
+      "shots/monkey/integrated/key-08.png",
+      "shots/monkey/integrated/source-09.jpg",
+      "shots/monkey/integrated/key-09.png",
+      "shots/monkey/integrated/source-10.jpg",
+      "shots/monkey/integrated/key-10.png",
+      "shots/monkey/integrated/source-11.jpg",
+      "shots/monkey/integrated/key-11.png"
+    ],
+    "normal_speed_videos_actually_viewed": [],
+    "video_files_present_but_not_viewed": [
+      "shots/monkey/integrated/comparison.mp4",
+      "shots/monkey/integrated/cartoon.mp4"
+    ],
+    "excluded_material": "No builder code, notes, checks, prior review contents, or revision contents were inspected."
+  }
+}

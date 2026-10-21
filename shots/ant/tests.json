@@ -1,0 +1,156 @@
+[
+  {
+    "id": "M1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2b",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M5",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M6",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J3",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S6",
+    "value": "Source ids, URLs, corrected interval, original false plan, raw SHA and reported public_domain retained; rights independently unverified",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "J4",
+    "value": {
+      "rounds": 3,
+      "identity": true,
+      "sampled_pose": true,
+      "playback_watched": false
+    },
+    "unit": "sampled still scope only",
+    "ok": true
+  },
+  {
+    "id": "B1",
+    "value": "One held rock geometry; local NCC camera estimates from three fixed background patches",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "T1",
+    "value": {
+      "min_recall": 0.9973333333333333,
+      "min_parts_kept": 1.0,
+      "keys": 8,
+      "pass": true
+    },
+    "unit": "fraction",
+    "ok": true
+  },
+  {
+    "id": "T3",
+    "value": "Every native stroke and original point count retained for both named instances in all 49 frames",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "M3",
+    "value": {
+      "mean_iou": null,
+      "min_iou": null,
+      "reason": "SAM changes target between one and two ants; invalid whole-shot fit"
+    },
+    "unit": "IoU",
+    "ok": false
+  },
+  {
+    "id": "M4",
+    "value": 0,
+    "unit": "verified planted intervals; minimum 4",
+    "ok": false
+  },
+  {
+    "id": "S1",
+    "value": "One background depth plane; parallax ordering unmeasured",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S2",
+    "value": "Two complete instances of QuickDraw key5421013154136064; background drawn once by agent from source",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S3",
+    "value": {
+      "frames": 49,
+      "fps": 24,
+      "keys": [
+        0,
+        6,
+        12,
+        18,
+        24,
+        30,
+        37,
+        48
+      ],
+      "source_time_every_frame": true
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S4",
+    "value": "Static links/JS checked; actual 390px browser inspection unavailable",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S5",
+    "value": "Opaque native body pieces hide background; appendage depth not independently verified",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S7",
+    "value": 4,
+    "unit": "hash-linked verified ledger entries",
+    "ok": true
+  }
+]

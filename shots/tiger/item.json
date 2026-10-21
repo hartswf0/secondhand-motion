@@ -1,0 +1,44 @@
+{
+  "lot": "SM-0111",
+  "id": "tiger",
+  "kind": "subject",
+  "title": "Tiger",
+  "category": "tiger",
+  "wave": 3,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-21",
+  "blurb": "67 rendered frames at 24 fps; 7 source-paired keys. Native identity and mask fit pass; the overlapping forepaws remain unclear in the sampled source pose. Playback approval pending.",
+  "cover": "shots/tiger/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 6296227597516800; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+    {
+      "label": "Watch assembled comparison",
+      "href": "shots/tiger/integrated/index.html"
+    },
+    {
+      "label": "Watch in shared player",
+      "href": "shots/moving-drawings.html#tiger/comparison"
+    },
+    {
+      "label": "Inspect source / mask / drawing",
+      "href": "shots/wave2-segmentation/index.html#tiger"
+    },
+    {
+      "label": "Vector study",
+      "href": "pages/tiger-gwp.html"
+    },
+    {
+      "label": "Source record",
+      "href": "shots/tiger/integrated/source.json"
+    }
+  ],
+  "tests": "shots/tiger/tests.json",
+  "tags": [
+    "assembled review",
+    "wave 3",
+    "native QuickDraw",
+    "SAM inspected"
+  ]
+}
