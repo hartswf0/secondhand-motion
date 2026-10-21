@@ -1,0 +1,192 @@
+{
+ "category": "fish",
+ "doodle_key_id": "5549221702795264",
+ "facing": -1,
+ "face_from": [
+  "nose",
+  "tailbase"
+ ],
+ "note": "Quick, Draw! fish 5549221702795264, facing left as drawn. Stroke 0 is the forked tail fin, a closed loop joined to the body at its narrow end. Stroke 1 is the body outline, a teardrop from the tail join round the head and back. Stroke 2 is the eye, a short dash. Stroke 3 is the mouth line. The film's fish is the lower koi of the pair at the bottom of the frame, swimming right and slightly up, so the drawing is mirrored. The root places the body by the nose and the tail join, so the body keeps its own shape and size; the tail fin turns about the tail join toward the pose's tail tip, which makes the tail flick from side to side as the koi's tail does.",
+ "strokes": [
+  [
+   [
+    148,
+    65
+   ],
+   [
+    192,
+    27
+   ],
+   [
+    234,
+    0
+   ],
+   [
+    241,
+    19
+   ],
+   [
+    255,
+    114
+   ],
+   [
+    229,
+    116
+   ],
+   [
+    200,
+    105
+   ],
+   [
+    166,
+    78
+   ],
+   [
+    150,
+    71
+   ],
+   [
+    144,
+    65
+   ]
+  ],
+  [
+   [
+    157,
+    54
+   ],
+   [
+    140,
+    46
+   ],
+   [
+    122,
+    25
+   ],
+   [
+    110,
+    17
+   ],
+   [
+    75,
+    3
+   ],
+   [
+    39,
+    1
+   ],
+   [
+    32,
+    4
+   ],
+   [
+    19,
+    13
+   ],
+   [
+    5,
+    30
+   ],
+   [
+    0,
+    50
+   ],
+   [
+    1,
+    71
+   ],
+   [
+    15,
+    84
+   ],
+   [
+    33,
+    93
+   ],
+   [
+    63,
+    94
+   ],
+   [
+    81,
+    91
+   ],
+   [
+    132,
+    78
+   ],
+   [
+    151,
+    67
+   ]
+  ],
+  [
+   [
+    30,
+    30
+   ],
+   [
+    34,
+    27
+   ]
+  ],
+  [
+   [
+    5,
+    58
+   ],
+   [
+    32,
+    57
+   ],
+   [
+    52,
+    41
+   ]
+  ]
+ ],
+ "root": [
+  "nose",
+  "tailbase"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "nose": [
+   0,
+   55
+  ],
+  "tailbase": [
+   148,
+   66
+  ],
+  "tailtip": [
+   248,
+   66
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 9,
+   "joint": "tailbase",
+   "aim": [
+    "tailbase",
+    "tailtip"
+   ],
+   "turn": 0.8
+  },
+  {
+   "rest": true,
+   "joint": "nose",
+   "aim": [
+    "nose",
+    "tailbase"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "track": false,
+ "smooth": 1.2
+}
