@@ -1,0 +1,318 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -0.47,
+   -0.31,
+   0.08,
+   0.19,
+   -0.24,
+   -1.35,
+   -2.75,
+   -4.96,
+   -9.32,
+   -13.51,
+   -15.98,
+   -17.75,
+   -18.49,
+   -18.76,
+   -18.91,
+   -19.22,
+   -19.81,
+   -21.96,
+   -27.26,
+   -32.55,
+   -35.48,
+   -37.94,
+   -40.5,
+   -43.54,
+   -49.02
+  ],
+  "y": [
+   0.0,
+   0.27,
+   0.46,
+   0.16,
+   -0.13,
+   0.78,
+   1.57,
+   2.05,
+   2.85,
+   3.16,
+   3.41,
+   3.03,
+   3.02,
+   3.65,
+   4.23,
+   4.91,
+   4.89,
+   4.91,
+   4.99,
+   5.32,
+   5.31,
+   6.15,
+   5.76,
+   5.29,
+   5.84,
+   6.19
+  ],
+  "source": "shots/wheel-sam/camera.json, the per-frame shift measured from the footage"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 10,
+   "label": "Trees",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "grass",
+   "z": 4,
+   "label": "Grass bank",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "ground",
+   "z": 2.5,
+   "label": "Dry ground",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Wheel"
+  }
+ ],
+ "objects": [
+  {
+   "id": "bush1",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    -30,
+    -12,
+    90,
+    38
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "tree1",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    70,
+    -30,
+    150,
+    40
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "bush2",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    150,
+    -14,
+    280,
+    36
+   ],
+   "strokes": 3,
+   "skip": 1
+  },
+  {
+   "id": "tree2",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    250,
+    -30,
+    330,
+    40
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "bush3",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    310,
+    -12,
+    450,
+    40
+   ],
+   "strokes": 3,
+   "skip": 2
+  },
+  {
+   "id": "grass1",
+   "plane": "grass",
+   "qd": "grass",
+   "box": [
+    -20,
+    62,
+    110,
+    100
+   ]
+  },
+  {
+   "id": "grass2",
+   "plane": "grass",
+   "qd": "grass",
+   "box": [
+    120,
+    52,
+    250,
+    84
+   ],
+   "skip": 1
+  },
+  {
+   "id": "grass3",
+   "plane": "grass",
+   "qd": "grass",
+   "box": [
+    260,
+    50,
+    400,
+    78
+   ],
+   "skip": 2
+  },
+  {
+   "id": "grass4",
+   "plane": "grass",
+   "qd": "grass",
+   "box": [
+    400,
+    50,
+    470,
+    76
+   ],
+   "skip": 3
+  },
+  {
+   "id": "edge",
+   "plane": "grass",
+   "class": "ground edge",
+   "why": "no Quick, Draw! category is the line where the grass bank meets the bare ground",
+   "strokes": [
+    [
+     [
+      -30,
+      112
+     ],
+     [
+      60,
+      100
+     ],
+     [
+      150,
+      86
+     ],
+     [
+      230,
+      78
+     ],
+     [
+      330,
+      76
+     ],
+     [
+      460,
+      74
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "shadow",
+   "plane": "ground",
+   "class": "shadow line",
+   "why": "no Quick, Draw! category is the thin shadow of the axle's tow rod that runs across the ground on the right",
+   "strokes": [
+    [
+     [
+      362,
+      158
+     ],
+     [
+      340,
+      190
+     ],
+     [
+      322,
+      212
+     ],
+     [
+      298,
+      232
+     ],
+     [
+      286,
+      246
+     ],
+     [
+      318,
+      244
+     ],
+     [
+      360,
+      234
+     ],
+     [
+      420,
+      226
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "wshadow",
+   "plane": "ground",
+   "class": "shadow line",
+   "why": "no Quick, Draw! category is the wheel's own shadow, a long dark band on the ground below and right of the tire",
+   "strokes": [
+    [
+     [
+      210,
+      252
+     ],
+     [
+      250,
+      262
+     ],
+     [
+      290,
+      288
+     ]
+    ],
+    [
+     [
+      30,
+      288
+     ],
+     [
+      120,
+      276
+     ],
+     [
+      190,
+      262
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the wheel stands side-on, rolling slowly; the tape on the tire is at the top",
+  "7": "the wheel rolls on and starts to turn toward the camera; the tape is at one o'clock",
+  "13": "the tape reaches three o'clock; the wheel is wider now",
+  "19": "the wheel keeps turning toward the camera and comes a little closer",
+  "25": "the tape is at five o'clock; the wheel is turned furthest toward the camera"
+ }
+}

@@ -1,0 +1,87 @@
+[
+ {
+  "id": "M2",
+  "value": 66,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   46,
+   71,
+   70,
+   79,
+   79,
+   78,
+   30,
+   32,
+   77,
+   75,
+   75,
+   77,
+   66,
+   70,
+   66,
+   78,
+   84,
+   44
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.65,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 57
+ },
+ {
+  "id": "M3",
+  "value": 0.48,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.37
+ },
+ {
+  "id": "M6",
+  "value": 4.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 32 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5957605895700480; scenery quickdraw:5574165614559232, quickdraw:5938597918146560, quickdraw:4969383384317952, quickdraw:5683959205724160, quickdraw:4909086493638656, quickdraw:4542436019798016, drawn by agent: no Quick, Draw! category is the edge of a lawn against the far trees; one straight line where the grass meets the tree line in the film (y 250), quickdraw:4775057639342080, quickdraw:5191296928972800, quickdraw:4902899102515200, quickdraw:6593811671154688",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

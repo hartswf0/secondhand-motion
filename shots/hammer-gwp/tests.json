@@ -1,42 +1,42 @@
 [
  {
   "id": "M2",
-  "value": 30,
+  "value": 33,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   32,
-   34,
-   34,
-   27,
+   48,
+   33,
+   36,
+   31,
    24,
    23,
-   26,
-   31,
+   27,
+   39,
    33,
-   35,
+   34,
    34
   ]
  },
  {
   "id": "M2b",
-  "value": 0.77,
+  "value": 0.78,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 34
  },
  {
   "id": "M3",
-  "value": 0.47,
+  "value": 0.46,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
   "min": 0.0
  },
  {
   "id": "M6",
-  "value": 6.4,
+  "value": 3.6,
   "unit": "px jerk (drawing centre)",
-  "ok": false
+  "ok": true
  },
  {
   "id": "T3",
@@ -54,7 +54,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:6216989498408960; scenery drawn by agent: no Quick, Draw! category is the edge of a cave mouth; this line follows the curved right side of the pale opening behind the caveman, drawn by agent: no Quick, Draw! category is the edge of a cave mouth; this line follows the dark left edge of the opening, drawn by agent: no Quick, Draw! category is the line where the cave wall meets the floor, quickdraw:6117459515932672, quickdraw:4782716019015680, quickdraw:5753203763183616, quickdraw:5870144528056320",
+  "value": "rig quickdraw:6216989498408960; scenery drawn by agent: no Quick, Draw! category is the edge of a cave mouth; this line follows the curved right side of the pale opening behind the caveman, drawn by agent: no Quick, Draw! category is the edge of a cave mouth; this line follows the dark left edge of the opening, drawn by agent: no Quick, Draw! category is the line where the cave wall meets the floor, quickdraw:6117459515932672, quickdraw:4782716019015680, quickdraw:5753203763183616",
   "unit": "",
   "ok": true
  },
