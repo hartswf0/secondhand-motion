@@ -59,6 +59,11 @@ def build(cat):
         c0 = json.load(open(out / 'clip.json')); frames = field_frames(out, spec0, c0['n'], c0['W'], c0['H']); keys = c0['keys']
     else:
         frames, keys = inbetween(out, ROOT / 'rigs' / f'{rn}.py', poses)
+    # drawn keys over the footage (tools/drawn.py): the rig's drawing is the base; keys redrawn by hand replace it
+    # at their frames and their changes are eased between keys
+    json.dump(frames, open(out / 'rig_frames.json', 'w'), separators=(',', ':'))
+    from drawn import apply as apply_drawn
+    frames, keys, drawn_keys = apply_drawn(cat, frames, keys)
     clip = json.load(open(out / 'clip.json')); n, W, H = clip['n'], clip['W'], clip['H']
     sc = json.load(open(ROOT / 'rigs' / f'{rn}_scene.json')); spec = json.load(open(ROOT / 'rigs' / f'{rn}_spec.json'))
     # plane depths from Depth Anything (shots/<cat>-sam/depth.json, relative inverse depth, 1 = near): a plane
@@ -122,7 +127,8 @@ def build(cat):
     S = {'title': f"{cat.capitalize()}, the Giraffe Walks Past way", 'category': cat, 'fps': clip['fps'], 'W': W, 'H': H, 'z_ref': sc['z_ref'],
          'source': {'film': clip.get('source_title', 'Moving Image Archive'), 'url': source_record(cat).get('shot_page_url', '')},
          'planes': sc['planes'], 'camera': cam, 'objects': objs,
-         'cast': {'id': cat, 'plane': 'char', 'frames': frames, 'keys': keys, 'source': (f"quickdraw:{spec['doodle_key_id']} as a rig ({len(spec['parts'])} parts, root {spec['root'][0]} to {spec['root'][1]}); {len(keys)} keys placed by eye over SAM silhouettes ({poses.name})" if 'field' not in spec else f"quickdraw:{spec['doodle_key_id']} as a field of marks ({len(spec['field']['layers'])} layers); " + spec['field']['motion'])},
+         'cast': {'id': cat, 'plane': 'char', 'frames': frames, 'keys': keys, 'drawn_keys': drawn_keys,
+                  **({'look_keys': [drawn_keys[round(i * (len(drawn_keys) - 1) / 3)] for i in range(4)]} if len(drawn_keys) >= 4 else {}), 'source': (f"quickdraw:{spec['doodle_key_id']} as a rig ({len(spec['parts'])} parts, root {spec['root'][0]} to {spec['root'][1]}); {len(keys)} keys placed by eye over SAM silhouettes ({poses.name})" if 'field' not in spec else f"quickdraw:{spec['doodle_key_id']} as a field of marks ({len(spec['field']['layers'])} layers); " + spec['field']['motion'])},
          'xsheet': [{'f': f, 'drawing': (f'K{keys.index(f) + 1:02d}' if f in keys else f'I{f:02d}'), 'kind': 'K' if f in keys else 'I', 'cam': cam[f], 'note': notes.get(str(f), '')} for f in range(n)],
          'footage': [f'frames/f{f:03d}.jpg' for f in range(n)], 'masks': [M[str(f)] if ('field' not in spec and not sc.get('no_cel')) else [] for f in range(n)],
          'camera_source': sc['camera'].get('source', '')}
