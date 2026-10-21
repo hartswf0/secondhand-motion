@@ -1,0 +1,138 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   0.0,
+   0.63,
+   -0.29,
+   -0.29,
+   -0.29,
+   -0.29,
+   2.37,
+   2.37,
+   2.37,
+   2.37,
+   2.37,
+   2.37,
+   -23.47,
+   -23.47,
+   -31.51,
+   -31.51,
+   -31.51,
+   -31.51,
+   -31.51,
+   -22.02,
+   -24.92,
+   -24.92,
+   -24.92,
+   -24.92,
+   -24.92,
+   -39.59,
+   -52.6,
+   -54.35,
+   -54.35,
+   -54.35
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   -4.41,
+   8.02,
+   8.02,
+   8.02,
+   8.02,
+   -12.34,
+   -12.34,
+   -12.34,
+   -12.34,
+   -12.34,
+   -12.34,
+   -20.11,
+   -20.11,
+   -29.42,
+   -29.42,
+   -29.42,
+   -29.42,
+   -29.42,
+   -20.6,
+   -19.73,
+   -19.73,
+   -19.73,
+   -19.73,
+   -19.73,
+   -29.77,
+   -38.49,
+   -65.96,
+   -65.96,
+   -65.96
+  ],
+  "source": "shots/hat-sam/camera.json, the per-frame camera shift measured from the footage"
+ },
+ "planes": [
+  {
+   "id": "mid",
+   "z": 2.8,
+   "label": "Pack frame",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Hat"
+  }
+ ],
+ "objects": [
+  {
+   "id": "tube",
+   "plane": "mid",
+   "class": "pack frame tube",
+   "visible": [
+    13,
+    23
+   ],
+   "why": "the aluminium tube of the man's pack frame runs diagonally up the left of the frame from about frame 13 to 23; no Quick, Draw! category is a pipe or pack frame, so it is drawn as two parallel lines placed on frame 18",
+   "strokes": [
+    [
+     [
+      37.9,
+      166.9
+     ],
+     [
+      97.9,
+      94.9
+     ],
+     [
+      153.9,
+      26.9
+     ]
+    ],
+    [
+     [
+      51.9,
+      172.9
+     ],
+     [
+      109.9,
+      102.9
+     ],
+     [
+      165.9,
+      32.9
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the hat on the man's head, brim nearly level",
+  "1": "the handheld camera jolts; the hat jumps up and back over frames 1 to 4",
+  "6": "the man leans forward and the brim begins to tilt down to the right",
+  "12": "he bends over his pack: the brim is steep, tipped down to the right",
+  "16": "the head turns toward the camera, the hat tilts furthest",
+  "24": "he looks down at his hands, the hat at its steepest and largest",
+  "31": "the head comes up a little, the brim eases back"
+ }
+}

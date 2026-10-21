@@ -6,7 +6,7 @@
   "hub",
   "up"
  ],
- "note": "Quick, Draw! cannon 5140965633294336, drawn in side view with the muzzle at the upper right. Stroke 0 is the muzzle ring seen end-on. Stroke 1 is the top line of the barrel, running from the muzzle down to the breech end of the trail at the left. Stroke 2 is the under line of the barrel and trail, from below the muzzle down to the trail foot at the left and up to the breech. Stroke 3 is the wheel. Strokes 4 to 7 are the four spokes. In the film the model cannon stands on a turntable and turns a full circle, so the rig does not bend: the whole drawing is placed by its wheel hub and a point a fixed height above it, which keeps one size and no tilt, and the turn is a flipbook turn: the drawing narrows toward its centre line as the cannon comes end-on to the camera, flips its facing there, and widens again to the other profile.",
+ "note": "Quick, Draw! cannon 5140965633294336, drawn in side view with the muzzle at the upper right. Stroke 0 is the muzzle ring seen end-on. Stroke 1 is the top line of the barrel, running from the muzzle down to the breech end of the trail at the left. Stroke 2 is the under line of the barrel and trail, from below the muzzle down to the trail foot at the left and up to the breech. Stroke 3 is the wheel. Strokes 4 to 7 are the four spokes. In the film the model cannon stands on a turntable and turns a full circle, so the rig does not bend: the whole drawing is placed by a point at the height of the wheel hub on the drawing's centre line (the mean x of its vertices, so the drawing does not jump sideways when it flips facing) and a point a fixed height above it, which keeps one size and no tilt, and the turn is a flipbook turn: the drawing narrows toward its centre line as the cannon comes end-on to the camera, flips its facing there, and widens again to the other profile.",
  "strokes": [
   [
    [
@@ -268,11 +268,11 @@
  "size_from_mask": false,
  "anchors": {
   "hub": [
-   87,
+   106.5,
    190
   ],
   "up": [
-   87,
+   106.5,
    90
   ]
  },
@@ -288,6 +288,6 @@
   }
  ],
  "size": "steady",
- "smooth": 1.0,
+ "smooth": 2.0,
  "track": false
 }

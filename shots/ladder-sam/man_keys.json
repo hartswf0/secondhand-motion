@@ -1,5 +1,5 @@
 {
- "note": "Read by eye from every film frame (frame pixels). body: per frame, the head centre and the waist (top of the white wrap, centre). Contacts: each hand and foot is held where it was put until it moves; 'moves' lists [frame lifted, frame put down, [x, y]] for each limb. Feet go up the ladder one rung level at a time, left and right in turn, two levels per move; each body rise in the film (frames 7-8, 9-10, 15-16, 19-20, 25-26, 30-32) comes right after a foot is put down. The last left-foot move (frames 30-32) is put on the drawn ladder's top-but-one rung beside the right foot, not on the top rung, so that he stands at the top of the drawn ladder (which is shorter than the film's) with his legs under him.",
+ "note": "Read by eye from every film frame (frame pixels). body: per frame, the head centre and the waist (top of the white wrap, centre). Contacts: each hand and foot is held where it was put until it moves; 'moves' lists [frame lifted, frame put down, [x, y]] for each limb. Feet go up the ladder one rung level at a time, left and right in turn, two levels per move; each body rise in the film (frames 7-8, 9-10, 15-16, 19-20, 25-26, 30-32) comes right after a foot is put down. The last left-foot move (frames 30-32) is put on the drawn ladder's top-but-one rung beside the right foot, not on the top rung, so that he stands at the top of the drawn ladder (which is shorter than the film's) with his legs under him. The right foot's step to the top-but-one rung is put one frame later (29-31) so that it lands as the last push begins and both feet are not bunched under the hips at frame 30.",
  "head": {
   "0": [
    26,
@@ -427,8 +427,8 @@
     ]
    ],
    [
-    28,
-    30,
+    29,
+    31,
     [
      223,
      89

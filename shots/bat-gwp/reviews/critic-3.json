@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A line-drawn bat (zigzag left wing spread, pointed two-ear head, tall polygon body) clings at the left edge of a grey tree trunk; a grey two-leaf sprig sits to its right. Frames 1-5: the bat stays near the trunk edge while the leaf sprig slides down the frame. Frames 6-8: the sprig sinks to the bottom edge and leaves the frame; the bat drifts slightly down. Frames 9-12: the bat sits a little lower and further left, and a small right wing begins to unfold from the body's right side. Frames 13-16: the right wing rises from a short flat stub to a raised pointed wing beside the head, while the left wing stays spread.",
+ "seen_film": "Frame 1 is a misty forest of bare branches that dissolves into the shot. Frames 2-5: a brown bat clings to the bright edge of a tree trunk with a leaf sprig to its right; the camera tilts down, so the sprig moves down the frame. Frames 6-8: the sprig leaves the bottom of the frame; the bat shuffles on the trunk edge with its left wing held out as a dark membrane. Frames 9-12: the bat sits lower and slightly further into the trunk, with its right wing beginning to lift. Frames 13-16: the bat turns slightly and raises its right wing upward beside its body while the left wing stays out.",
+ "named_subject": "a bat clinging to a tree trunk",
+ "verdict": "bar met",
+ "evidence": "e.png 1-24 vs f.png 1-24: the leaf sprig descends and exits at the same rate as the film's camera tilt (low at 17, gone by about 25 in both), and the bat holds near the trunk edge with small drift, as in the film. e.png 25-32: the bat moves down and left onto the trunk, matching f.png 28-33. e.png 33-50: a short right-wing stub appears at the body's right side, matching the film's partially lifted right wing at f.png 36-44. e.png 55-62: the right wing is raised as a pointed shape beside the head, matching f.png 55-62. g.png shows one compact, continuous left-and-down drift with no gap or reversal. Weaknesses: the right wing is redrawn rather than unfolded at e.png 52-55 (a flat horizontal stroke at 53-54 becomes a raised wing at 55 in one step), and the film's opening forest dissolve (f.png 1-2) is absent. Judged from still frames only, not playback.",
+ "primary_gap": "The right wing changes shape abruptly between e.png 54 (flat horizontal stroke) and e.png 55 (raised pointed wing), and between 33 and 50 it flickers between a hook, a stub and a short flat line, so the wing lift reads as replacement drawings rather than one unfolding.",
+ "closes_when": "Across e.png 50-56 the right wing rotates upward from the shoulder through intermediate angles (about 0, 20, 45, 70 degrees) with the same zigzag edge kept, and in 33-50 the stub keeps one consistent shape that grows steadily.",
+ "protect": "The doodle's construction (zigzag spread wing, two-point ear head, angular polygon body, single unbroken strokes); the bat's position at the trunk edge and its slow left-down drift that matches the film; the leaf sprig exiting downward with the camera tilt; the timing of the right-wing lift at the end of the shot.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  54,
+  55
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body and left wing match the doodle closely, but the right wing never shows the doodle's long zigzag spread shape; it appears only as a stub or a raised point, which follows the film's folded wing.",
+ "still_frames_only": true,
+ "_packet": "lot4b127321",
+ "_round": 3
+}

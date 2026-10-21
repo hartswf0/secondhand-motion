@@ -1,0 +1,297 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   5.24,
+   9.38,
+   14.16,
+   18.59,
+   22.11,
+   24.81,
+   26.98,
+   28.68,
+   29.73,
+   30.12,
+   30.2,
+   30.38,
+   30.81,
+   31.38,
+   31.81,
+   31.92,
+   31.61,
+   30.96,
+   30.14,
+   29.39,
+   28.85,
+   28.52,
+   28.24,
+   27.79,
+   26.96,
+   25.66,
+   23.89,
+   21.79,
+   19.46,
+   17.08,
+   14.85,
+   12.94,
+   11.43,
+   10.32,
+   9.64,
+   9.44,
+   9.78,
+   10.7,
+   12.16,
+   13.98,
+   15.84,
+   17.43,
+   18.6,
+   19.37
+  ],
+  "y": [
+   -1.06,
+   -1.83,
+   -2.57,
+   -2.82,
+   -2.11,
+   -0.07,
+   3.36,
+   7.92,
+   13.02,
+   17.94,
+   22.23,
+   25.86,
+   29.15,
+   32.39,
+   35.58,
+   38.48,
+   40.8,
+   42.35,
+   43.2,
+   43.58,
+   43.7,
+   43.74,
+   43.78,
+   43.85,
+   43.97,
+   44.09,
+   44.11,
+   43.81,
+   43.08,
+   42.03,
+   41.06,
+   40.62,
+   40.81,
+   41.28,
+   41.59,
+   41.54,
+   41.23,
+   40.92,
+   40.79,
+   40.97,
+   41.56,
+   42.61,
+   44.07,
+   45.68
+  ],
+  "source": "shots/ice-cream-sam/camera.json (phase correlation), smoothed over time with a Gaussian of 2 frames because the measured shift moves in steps of up to 23 px between single frames"
+ },
+ "planes": [
+  {
+   "id": "carton",
+   "z": 2,
+   "label": "Carton lip"
+  },
+  {
+   "id": "pour",
+   "z": 2,
+   "label": "Pouring ice cream"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Ice cream"
+  }
+ ],
+ "objects": [
+  {
+   "id": "lip",
+   "plane": "carton",
+   "class": "carton lip",
+   "why": "the lower edge of the carton's white front lip, which runs under the doodle's rim line for the whole shot; Quick, Draw! has no carton or tub category",
+   "strokes": [
+    [
+     [
+      -19.8,
+      212.8
+     ],
+     [
+      50.2,
+      216.8
+     ],
+     [
+      130.2,
+      216.8
+     ],
+     [
+      200.2,
+      206.8
+     ],
+     [
+      260.2,
+      186.8
+     ],
+     [
+      310.2,
+      158.8
+     ],
+     [
+      350.2,
+      126.8
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "pour1",
+   "plane": "pour",
+   "class": "pour",
+   "visible": [
+    0,
+    21
+   ],
+   "why": "the rope of soft ice cream coming down from the nozzle at the top and laying a fold down the left side of the heap; no Quick, Draw! category is a pour",
+   "strokes": [
+    [
+     [
+      64.6,
+      -30.9
+     ],
+     [
+      31.6,
+      34.1
+     ],
+     [
+      -0.4,
+      99.1
+     ],
+     [
+      -22.4,
+      144.1
+     ]
+    ],
+    [
+     [
+      161.6,
+      -30.9
+     ],
+     [
+      137.6,
+      34.1
+     ],
+     [
+      101.6,
+      86.1
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "pour2",
+   "plane": "pour",
+   "class": "pour",
+   "visible": [
+    22,
+    35
+   ],
+   "why": "the same rope after it swings to the top centre: its rounded end sits on top of the heap",
+   "strokes": [
+    [
+     [
+      132.9,
+      -47.0
+     ],
+     [
+      130.9,
+      -7.0
+     ],
+     [
+      152.9,
+      20.0
+     ],
+     [
+      187.9,
+      28.0
+     ],
+     [
+      222.9,
+      18.0
+     ],
+     [
+      234.9,
+      -12.0
+     ],
+     [
+      232.9,
+      -47.0
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "pour3",
+   "plane": "pour",
+   "class": "pour",
+   "visible": [
+    36,
+    43
+   ],
+   "why": "the same rope after it swings to the right and folds down the right side of the heap",
+   "strokes": [
+    [
+     [
+      124.2,
+      -46.6
+     ],
+     [
+      174.2,
+      28.4
+     ],
+     [
+      234.2,
+      98.4
+     ],
+     [
+      274.2,
+      143.4
+     ]
+    ],
+    [
+     [
+      224.2,
+      -46.6
+     ],
+     [
+      274.2,
+      8.4
+     ],
+     [
+      306.2,
+      68.4
+     ],
+     [
+      319.2,
+      133.4
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the heap stands high after the first fold; the rope comes down at the upper left",
+  "12": "the camera has moved down the carton; the heap sits lower in frame",
+  "24": "the heap leans left as the rope lays a fold on its left side",
+  "33": "the rope swings to the top centre and the heap rises",
+  "41": "the rope folds down the right side; the heap leans right"
+ },
+ "no_cel": true
+}

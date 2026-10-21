@@ -1,0 +1,88 @@
+[
+ {
+  "id": "M2",
+  "value": 91,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   96,
+   88,
+   97,
+   88,
+   93,
+   91,
+   95,
+   91,
+   97,
+   91,
+   96,
+   91,
+   94,
+   88,
+   94,
+   91,
+   94,
+   91,
+   94,
+   64
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.53,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 82
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 7.5,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "6 strokes, 49 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6280704109314048; scenery quickdraw:6522820072833024, quickdraw:4748126554423296, quickdraw:5311435674484736, quickdraw:5874384801628160, quickdraw:4868149780414464, quickdraw:5441562743930880, quickdraw:5300426310156288, quickdraw:5311435674484736, quickdraw:5171717800460288, quickdraw:5634744702205952, drawn by agent: no Quick, Draw! category is the far edge of a reed marsh, so it is one long line, quickdraw:6734270473175040, quickdraw:6041272852676608, quickdraw:6025773255229440, quickdraw:5461283560226816, quickdraw:5331148500631552, quickdraw:6104707925803008, quickdraw:6103746276753408, quickdraw:6734270473175040, quickdraw:6041272852676608, quickdraw:6025773255229440, quickdraw:5461283560226816, quickdraw:5331148500631552, quickdraw:6104707925803008, quickdraw:6103746276753408, quickdraw:6734270473175040, quickdraw:6041272852676608, quickdraw:6025773255229440, quickdraw:5461283560226816, quickdraw:5331148500631552, quickdraw:6104707925803008, quickdraw:5921860954882048, quickdraw:6575185085857792, quickdraw:5355795807993856, quickdraw:6473457325834240, quickdraw:5921860954882048, quickdraw:6575185085857792, drawn by agent: no Quick, Draw! category is a shoreline, so the water's near and far edges are drawn as lines, quickdraw:5529862037045248, quickdraw:5576737851179008, quickdraw:6707108214996992, quickdraw:6584319642435584, quickdraw:5806041503629312, quickdraw:6668212185858048, quickdraw:5529862037045248, quickdraw:5576737851179008, quickdraw:6707108214996992, quickdraw:6584319642435584",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "56/56",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

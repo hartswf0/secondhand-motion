@@ -1,0 +1,80 @@
+[
+ {
+  "id": "M2",
+  "value": 42,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   41,
+   41,
+   41,
+   40,
+   40,
+   41,
+   41,
+   43,
+   43,
+   45,
+   43,
+   44
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.72,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 68
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 6.6,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "5 strokes, 37 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6320704582582272; scenery quickdraw:6211033918078976, quickdraw:5481823301795840, drawn by agent: no Quick, Draw! category is a police badge; an oval with a small ring at its centre where the badge is on the officer's chest, drawn by agent: no Quick, Draw! category is a wall edge; the edge of the light wall seen past the officer's shoulder at the upper left, drawn by agent: no Quick, Draw! category is a wall edge; the edge of the light wall seen under the officer's arm at the lower left",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

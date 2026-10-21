@@ -1,0 +1,289 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.11,
+   0.33,
+   0.67,
+   0.89,
+   1.11,
+   1.44,
+   2.0,
+   2.56,
+   2.89,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   2.89,
+   2.78,
+   2.67,
+   2.78,
+   3.0,
+   3.33,
+   3.67,
+   3.89,
+   4.0,
+   4.0,
+   4.0,
+   4.0,
+   4.0,
+   4.0,
+   4.0,
+   4.0,
+   4.0,
+   4.0
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.11,
+   -0.33,
+   -0.67,
+   -0.78,
+   -0.67,
+   -0.33,
+   -0.11,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.11,
+   0.33,
+   0.56,
+   0.56,
+   0.33,
+   0.11,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "source": "the officer's badge at the upper right tracked by template matching on every frame, smoothed over 5 frames; camera.json from phase correlation jumps 7 px at frame 8 because the helmet fills the frame, and the badge does not move that way"
+ },
+ "planes": [
+  {
+   "id": "back",
+   "z": 4,
+   "label": "Wall and badge",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "low",
+   "z": 3,
+   "label": "Wall at lower left",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "hands",
+   "z": 2,
+   "label": "Hands"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Helmet"
+  }
+ ],
+ "objects": [
+  {
+   "id": "lhand",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    46,
+    198,
+    120,
+    254
+   ],
+   "aspect": 1.0,
+   "strokes": 2,
+   "visible": [
+    5,
+    31
+   ],
+   "why_visible": "the left hand holding the helmet from below is in place by frame 5; its fingers start at the brim's lower line so they do not cross the helmet's band",
+   "skip": 4
+  },
+  {
+   "id": "rhand",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    252,
+    148,
+    328,
+    258
+   ],
+   "aspect": 0.7,
+   "strokes": 2,
+   "skip": 1,
+   "visible": [
+    5,
+    31
+   ],
+   "why_visible": "the right hand gripping the helmet at the strap clip is in place from frame 5"
+  },
+  {
+   "id": "badge",
+   "plane": "back",
+   "class": "badge",
+   "why": "no Quick, Draw! category is a police badge; an oval with a small ring at its centre where the badge is on the officer's chest",
+   "strokes": [
+    [
+     [
+      300,
+      4
+     ],
+     [
+      314,
+      8
+     ],
+     [
+      322,
+      20
+     ],
+     [
+      322,
+      38
+     ],
+     [
+      314,
+      52
+     ],
+     [
+      300,
+      58
+     ],
+     [
+      286,
+      52
+     ],
+     [
+      278,
+      38
+     ],
+     [
+      278,
+      20
+     ],
+     [
+      286,
+      8
+     ],
+     [
+      300,
+      4
+     ]
+    ],
+    [
+     [
+      296,
+      26
+     ],
+     [
+      304,
+      26
+     ],
+     [
+      306,
+      32
+     ],
+     [
+      300,
+      36
+     ],
+     [
+      294,
+      32
+     ],
+     [
+      296,
+      26
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "wall1",
+   "plane": "back",
+   "class": "wall",
+   "why": "no Quick, Draw! category is a wall edge; the edge of the light wall seen past the officer's shoulder at the upper left",
+   "strokes": [
+    [
+     [
+      22,
+      -10
+     ],
+     [
+      24,
+      40
+     ],
+     [
+      14,
+      95
+     ],
+     [
+      4,
+      112
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "wall2",
+   "plane": "low",
+   "class": "wall",
+   "why": "no Quick, Draw! category is a wall edge; the edge of the light wall seen under the officer's arm at the lower left",
+   "strokes": [
+    [
+     [
+      -10,
+      232
+     ],
+     [
+      30,
+      230
+     ],
+     [
+      62,
+      226
+     ],
+     [
+      74,
+      236
+     ],
+     [
+      80,
+      250
+     ],
+     [
+      66,
+      272
+     ],
+     [
+      50,
+      295
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the helmet comes up into frame from the upper left",
+  "4": "it settles between two hands, peak to the right",
+  "9": "held still, tilted down a little to the right",
+  "31": "still held"
+ },
+ "no_cel": "SAM followed the badge in frames 1 and 2 and the arm in frame 0, so cel paint from the silhouette would paint the wrong shapes"
+}

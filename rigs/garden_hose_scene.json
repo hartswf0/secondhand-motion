@@ -199,7 +199,7 @@
    "id": "caliper",
    "plane": "reel",
    "class": "brake caliper",
-   "why": "no Quick, Draw! category is a brake caliper; an outline of the metal block the hose is screwed into",
+   "why": "no Quick, Draw! category is a brake caliper; one outline of the metal block the hose is screwed into",
    "strokes": [
     [
      [
@@ -234,42 +234,6 @@
       75,
       280
      ]
-    ],
-    [
-     [
-      75,
-      200
-     ],
-     [
-      150,
-      200
-     ],
-     [
-      150,
-      280
-     ]
-    ],
-    [
-     [
-      120,
-      95
-     ],
-     [
-      180,
-      95
-     ],
-     [
-      195,
-      125
-     ],
-     [
-      190,
-      190
-     ],
-     [
-      150,
-      200
-     ]
     ]
    ]
   },
@@ -278,14 +242,14 @@
    "plane": "char",
    "qd": "hand",
    "box": [
-    292,
-    58,
-    392,
-    128
+    294,
+    66,
+    394,
+    136
    ],
    "aspect": 1.4,
    "visible": [
-    6,
+    5,
     37
    ]
   }
@@ -296,5 +260,6 @@
   "19": "the hand pulls and the bend drops",
   "31": "a second pull: the bend comes down and to the left, the hanging length swings in",
   "37": "held"
- }
+ },
+ "no_cel": true
 }

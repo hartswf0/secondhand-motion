@@ -1,0 +1,83 @@
+[
+ {
+  "id": "M2",
+  "value": 58,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   31,
+   29,
+   27,
+   36,
+   46,
+   52,
+   61,
+   68,
+   73,
+   75,
+   75,
+   75,
+   75,
+   75,
+   75
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.66,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 31
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 5.5,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 40 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5880797120692224; scenery drawn by agent: The hourglass stands in front of a large bright disc of light that fills the middle of the frame; there is no circle category in the local Quick, Draw! bank, so its edge is drawn as one round line where the footage shows it., drawn by agent: A stone arch curves up behind the disc at the right edge of the frame; there is no arch category in the local Quick, Draw! bank, so its two edges are drawn as two curved lines., quickdraw:5483285268398080, drawn by agent: Once the hand lets go the sand runs: a thin stream falls from the waist of the glass and a small heap rises on the base. The doodle has no sand, so the stream and heap are drawn as two short lines.",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "26/26",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

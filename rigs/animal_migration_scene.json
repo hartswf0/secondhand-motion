@@ -1,0 +1,787 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   1.04,
+   2.39,
+   4.1,
+   5.91,
+   7.45,
+   9.14,
+   11.12,
+   14.68,
+   19.09,
+   25.23,
+   31.2,
+   38.21,
+   44.64,
+   52.44,
+   59.86,
+   69.04,
+   77.7,
+   87.82,
+   97.1,
+   108.89,
+   120.05,
+   133.59,
+   145.52,
+   159.54,
+   171.51,
+   184.79,
+   195.99,
+   209.05,
+   220.4,
+   233.5,
+   244.78,
+   257.96,
+   269.42,
+   282.23,
+   293.18,
+   305.73,
+   317.02,
+   328.45,
+   339.24,
+   351.67,
+   365.72,
+   380.52,
+   393.56,
+   406.11,
+   416.94,
+   429.1,
+   439.91,
+   451.66,
+   461.4,
+   470.8,
+   479.09,
+   489.74,
+   500.42,
+   512.76,
+   523.98
+  ],
+  "y": [
+   0.0,
+   1.43,
+   2.69,
+   3.67,
+   4.55,
+   5.58,
+   7.68,
+   10.62,
+   14.11,
+   16.91,
+   19.59,
+   21.97,
+   24.3,
+   26.12,
+   27.28,
+   27.94,
+   28.69,
+   29.84,
+   31.41,
+   32.87,
+   32.95,
+   33.03,
+   33.61,
+   35.82,
+   38.19,
+   39.97,
+   41.54,
+   42.72,
+   43.87,
+   45.11,
+   46.9,
+   48.74,
+   50.66,
+   51.72,
+   53.18,
+   54.67,
+   56.82,
+   58.57,
+   59.93,
+   60.87,
+   61.63,
+   62.36,
+   63.29,
+   64.34,
+   65.75,
+   67.11,
+   68.64,
+   69.94,
+   71.43,
+   72.85,
+   74.33,
+   75.81,
+   78.43,
+   81.77,
+   85.96,
+   89.92
+  ],
+  "source": "Lucas-Kanade on corner features outside the dilated SAM mask (trees, reeds, water), median step per frame; frames with no usable features take the neighbours' step; a 3-frame mean removes the long-short step alternation of the footage; scaled by 1.62/2 so that the tree plane (z 1.62 from depth) slides by the measured amount. shots/animal-migration-sam/camera.json was not used because it holds still from frame 19 to 42 while the footage pans."
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 1.62,
+   "label": "Bare trees",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "marsh",
+   "z": 1.47,
+   "label": "Reed marsh",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "water",
+   "z": 1.1,
+   "label": "Water and shore ice",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Geese"
+  }
+ ],
+ "objects": [
+  {
+   "id": "tree0",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -700,
+    -60,
+    -593.2,
+    118
+   ],
+   "aspect": 0.6,
+   "skip": 0
+  },
+  {
+   "id": "tree1",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -540,
+    -20,
+    -457.2,
+    118
+   ],
+   "aspect": 0.6,
+   "skip": 1
+  },
+  {
+   "id": "tree2",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -390,
+    -70,
+    -277.2,
+    118
+   ],
+   "aspect": 0.6,
+   "skip": 4
+  },
+  {
+   "id": "tree3",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -230,
+    -30,
+    -141.2,
+    118
+   ],
+   "aspect": 0.6,
+   "skip": 9
+  },
+  {
+   "id": "tree4",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -80,
+    -60,
+    26.799999999999997,
+    118
+   ],
+   "aspect": 0.6,
+   "skip": 7
+  },
+  {
+   "id": "tree5",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    20,
+    0,
+    90.8,
+    118
+   ],
+   "aspect": 0.6,
+   "skip": 10
+  },
+  {
+   "id": "tree6",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    160,
+    -40,
+    254.8,
+    118
+   ],
+   "aspect": 0.6,
+   "skip": 5
+  },
+  {
+   "id": "tree7",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    300,
+    -10,
+    376.8,
+    118
+   ],
+   "aspect": 0.6,
+   "skip": 1
+  },
+  {
+   "id": "marsh_edge",
+   "plane": "marsh",
+   "class": "ground",
+   "why": "no Quick, Draw! category is the far edge of a reed marsh, so it is one long line",
+   "strokes": [
+    [
+     [
+      -860,
+      119
+     ],
+     [
+      -500,
+      117
+     ],
+     [
+      -120,
+      120
+     ],
+     [
+      200,
+      118
+     ],
+     [
+      440,
+      119
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "reeds0",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -840,
+    100,
+    -788,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 0
+  },
+  {
+   "id": "reeds1",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -776,
+    103,
+    -724,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 1
+  },
+  {
+   "id": "reeds2",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -712,
+    106,
+    -660,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 2
+  },
+  {
+   "id": "reeds3",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -648,
+    100,
+    -596,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 3
+  },
+  {
+   "id": "reeds4",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -584,
+    103,
+    -532,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 4
+  },
+  {
+   "id": "reeds5",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -520,
+    106,
+    -468,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 5
+  },
+  {
+   "id": "reeds6",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -456,
+    100,
+    -404,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 6
+  },
+  {
+   "id": "reeds7",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -392,
+    103,
+    -340,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 0
+  },
+  {
+   "id": "reeds8",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -328,
+    106,
+    -276,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 1
+  },
+  {
+   "id": "reeds9",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -264,
+    100,
+    -212,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 2
+  },
+  {
+   "id": "reeds10",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -200,
+    103,
+    -148,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 3
+  },
+  {
+   "id": "reeds11",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -136,
+    106,
+    -84,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 4
+  },
+  {
+   "id": "reeds12",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -72,
+    100,
+    -20,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 5
+  },
+  {
+   "id": "reeds13",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -8,
+    103,
+    44,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 6
+  },
+  {
+   "id": "reeds14",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    56,
+    106,
+    108,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 0
+  },
+  {
+   "id": "reeds15",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    120,
+    100,
+    172,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 1
+  },
+  {
+   "id": "reeds16",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    184,
+    103,
+    236,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 2
+  },
+  {
+   "id": "reeds17",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    248,
+    106,
+    300,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 3
+  },
+  {
+   "id": "reeds18",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    312,
+    100,
+    364,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 4
+  },
+  {
+   "id": "reeds19",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    376,
+    103,
+    428,
+    124
+   ],
+   "aspect": 3.0,
+   "skip": 5
+  },
+  {
+   "id": "bush0",
+   "plane": "marsh",
+   "qd": "bush",
+   "box": [
+    -700,
+    86,
+    -630,
+    122
+   ],
+   "aspect": 1.9,
+   "skip": 0
+  },
+  {
+   "id": "bush1",
+   "plane": "marsh",
+   "qd": "bush",
+   "box": [
+    -480,
+    86,
+    -410,
+    122
+   ],
+   "aspect": 1.9,
+   "skip": 1
+  },
+  {
+   "id": "bush2",
+   "plane": "marsh",
+   "qd": "bush",
+   "box": [
+    -300,
+    86,
+    -230,
+    122
+   ],
+   "aspect": 1.9,
+   "skip": 2
+  },
+  {
+   "id": "bush3",
+   "plane": "marsh",
+   "qd": "bush",
+   "box": [
+    -140,
+    86,
+    -70,
+    122
+   ],
+   "aspect": 1.9,
+   "skip": 3
+  },
+  {
+   "id": "bush4",
+   "plane": "marsh",
+   "qd": "bush",
+   "box": [
+    40,
+    86,
+    110,
+    122
+   ],
+   "aspect": 1.9,
+   "skip": 0
+  },
+  {
+   "id": "bush5",
+   "plane": "marsh",
+   "qd": "bush",
+   "box": [
+    260,
+    86,
+    330,
+    122
+   ],
+   "aspect": 1.9,
+   "skip": 1
+  },
+  {
+   "id": "shore",
+   "plane": "water",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a shoreline, so the water's near and far edges are drawn as lines",
+   "strokes": [
+    [
+     [
+      -1300,
+      207
+     ],
+     [
+      440,
+      209
+     ]
+    ],
+    [
+     [
+      -1300,
+      236
+     ],
+     [
+      440,
+      238
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "water0",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    -1280,
+    212,
+    -1130,
+    232
+   ],
+   "aspect": 7.0,
+   "skip": 0
+  },
+  {
+   "id": "water1",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    -1110,
+    212,
+    -960,
+    232
+   ],
+   "aspect": 7.0,
+   "skip": 1
+  },
+  {
+   "id": "water2",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    -940,
+    212,
+    -790,
+    232
+   ],
+   "aspect": 7.0,
+   "skip": 2
+  },
+  {
+   "id": "water3",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    -770,
+    212,
+    -620,
+    232
+   ],
+   "aspect": 7.0,
+   "skip": 3
+  },
+  {
+   "id": "water4",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    -600,
+    212,
+    -450,
+    232
+   ],
+   "aspect": 7.0,
+   "skip": 4
+  },
+  {
+   "id": "water5",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    -430,
+    212,
+    -280,
+    232
+   ],
+   "aspect": 7.0,
+   "skip": 5
+  },
+  {
+   "id": "water6",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    -260,
+    212,
+    -110,
+    232
+   ],
+   "aspect": 7.0,
+   "skip": 0
+  },
+  {
+   "id": "water7",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    -90,
+    212,
+    60,
+    232
+   ],
+   "aspect": 7.0,
+   "skip": 1
+  },
+  {
+   "id": "water8",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    80,
+    212,
+    230,
+    232
+   ],
+   "aspect": 7.0,
+   "skip": 2
+  },
+  {
+   "id": "water9",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    250,
+    212,
+    400,
+    232
+   ],
+   "aspect": 7.0,
+   "skip": 3
+  }
+ ],
+ "notes": {
+  "0": "the geese sit on the marsh at the water's edge; the first ones open their wings",
+  "6": "the flock lifts off; the camera starts to pan left and tilt up after it",
+  "18": "the geese climb past the bare trees, wings beating out of step",
+  "30": "the flock is in the open sky; the camera pans fast to keep it in frame",
+  "48": "the flock flies on over the next stand of trees"
+ },
+ "no_cel": "SAM masks the whole flock as one block, so a cel from it would paint over the scenery behind the birds"
+}

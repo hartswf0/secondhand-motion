@@ -17,8 +17,9 @@ HEAD,WAIST=series('head'),series('waist')
 # The drawn ladder is shorter than the film's (its top is at y 51 where the film's runs out of the frame), so every
 # reading is scaled about the ladder's foot so that the climb ends on the drawn ladder with the head inside the frame.
 BASE=np.array([100.,285.]); K=0.865
-def fit(q): return BASE+(np.array(q,float)-BASE)*K
-HEAD=np.array([fit(q) for q in HEAD]); WAIST=np.array([fit(q) for q in WAIST])
+def fit(q,k=K): return BASE+(np.array(q,float)-BASE)*k
+def kf(f): t=np.clip((f-3)/6,0,1); return 1-(1-K)*t*t*(3-2*t)   # on the ground (frames 0-3) he is not scaled; the scale eases in as he mounts
+HEAD=np.array([fit(q,kf(f)) for f,q in enumerate(HEAD)]); WAIST=np.array([fit(q,kf(f)) for f,q in enumerate(WAIST)])
 # one body size: the torso keeps one length on the ladder (the film's readings shrink only because he leans in)
 for f in range(n):
     d=HEAD[f]-WAIST[f]; L=np.hypot(*d); T=max(L,40.0) if f<8 else 40.0
@@ -64,8 +65,9 @@ def man(f):
     w=np.clip((Q['rf'][0]-Q['lf'][0])/10,-1,1)               # seen from behind, each leg hangs from the hip on the side its foot is on (eased, so the legs never cross)
     for limb,sg in (('lf',w),('rf',-w)):
         q=Q[limb]; Hp=P-np.array([1.0,0.0])*5*sg
-        k=joint(Hp,q,40,lambda z: z[0]+0.8*z[1]); legs.append([Hp.tolist(),k.tolist(),q.tolist()])   # the knee goes forward to the ladder, never up past the hip
-    dn=ax.copy(); side=pr
+        k=joint(Hp,q,36,lambda z: z[0]+0.8*z[1]); legs.append([Hp.tolist(),k.tolist(),q.tolist()])   # the knee goes forward to the ladder, never up past the hip
+    th=np.mean([np.array(l[1])-np.array(l[0]) for l in legs],0); th/=max(np.hypot(*th),1e-6)
+    dn=0.5*th+0.5*np.array([0.0,1.0]); dn/=np.hypot(*dn); side=np.array([-dn[1],dn[0]])   # the wrap hangs down over the tops of the thighs
     st.append([(P+side*8).tolist(),(P+side*13+dn*19).tolist(),(P-side*13+dn*19).tolist(),(P-side*8).tolist(),(P+side*8).tolist()])        # the white wrap, closed: a short band round the hips
     st+=arms+legs
     return [[[round(x-cam[f][0],1),round(y-cam[f][1],1)] for x,y in s] for s in st]
@@ -84,7 +86,7 @@ S={"z_ref":2,
            {"id":"char","z":2,"label":"Ladder and the man climbing it"},
            {"id":"ground","z":1.8,"label":"Sand in front","z_from_depth":"bottom"}],
  "objects":objs,
- "notes":{"0":"the ladder leans against the haystack; a man walks in from the left","4":"he reaches the ladder and takes the left rail with his right hand","6":"right foot on the bottom rung","8":"first push: he steps up, left foot on the second rung","16":"halfway up, one rung at a time, hand then foot","26":"a push brings his head level with the top of the ladder","32":"the last push lifts him over the top of the ladder onto the haystack","37":"he is on the haystack above the ladder"},
+ "notes":{"0":"the ladder leans against the haystack; a man walks in from the left","4":"he reaches the ladder and takes the left rail with his right hand","6":"right foot on the bottom rung","8":"first push: he steps up, left foot on the second rung","16":"halfway up, one rung at a time, hand then foot","26":"a push brings his head level with the top of the ladder","32":"the last push stands him up at the top of the ladder, feet on the top-but-one rung, hands on the top","37":"he stands at the top of the ladder against the haystack, head inside the frame"},
  "no_cel":"the SAM mask covers the man in most frames, so cel paint would erase the man and leave the ladder alone"}
 json.dump(S,open(R+'rigs/ladder_scene.json','w'),indent=1)
 print(len(objs))

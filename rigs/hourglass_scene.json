@@ -1,0 +1,415 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "source": "locked off: the bright disc's right edge stays within 4 px of x 337 in every frame (measured on row 150 of each frame); the camera.json phase correlation was thrown by the moving hand and reported a 19 px jump at frame 5 that the footage does not have"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 8,
+   "label": "Disc and arch",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "stand",
+   "z": 3,
+   "label": "Stand",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Hourglass"
+  }
+ ],
+ "objects": [
+  {
+   "id": "disc",
+   "plane": "far",
+   "class": "circle",
+   "strokes": [
+    [
+     [
+      84.2,
+      193.8
+     ],
+     [
+      76.4,
+      183.7
+     ],
+     [
+      69.6,
+      173.0
+     ],
+     [
+      63.7,
+      161.7
+     ],
+     [
+      58.8,
+      149.9
+     ],
+     [
+      55.0,
+      137.8
+     ],
+     [
+      52.2,
+      125.4
+     ],
+     [
+      50.6,
+      112.7
+     ],
+     [
+      50.0,
+      100.0
+     ],
+     [
+      50.6,
+      87.3
+     ],
+     [
+      52.2,
+      74.6
+     ],
+     [
+      55.0,
+      62.2
+     ],
+     [
+      58.8,
+      50.1
+     ],
+     [
+      63.7,
+      38.3
+     ],
+     [
+      69.6,
+      27.0
+     ],
+     [
+      76.4,
+      16.3
+     ],
+     [
+      84.2,
+      6.2
+     ],
+     [
+      92.8,
+      -3.2
+     ],
+     [
+      102.2,
+      -11.8
+     ],
+     [
+      112.3,
+      -19.6
+     ],
+     [
+      123.0,
+      -26.4
+     ],
+     [
+      134.3,
+      -32.3
+     ],
+     [
+      146.1,
+      -37.2
+     ],
+     [
+      158.2,
+      -41.0
+     ],
+     [
+      170.6,
+      -43.8
+     ],
+     [
+      183.3,
+      -45.4
+     ],
+     [
+      196.0,
+      -46.0
+     ],
+     [
+      208.7,
+      -45.4
+     ],
+     [
+      221.4,
+      -43.8
+     ],
+     [
+      233.8,
+      -41.0
+     ],
+     [
+      245.9,
+      -37.2
+     ],
+     [
+      257.7,
+      -32.3
+     ],
+     [
+      269.0,
+      -26.4
+     ],
+     [
+      279.7,
+      -19.6
+     ],
+     [
+      289.8,
+      -11.8
+     ],
+     [
+      299.2,
+      -3.2
+     ],
+     [
+      307.8,
+      6.2
+     ],
+     [
+      315.6,
+      16.3
+     ],
+     [
+      322.4,
+      27.0
+     ],
+     [
+      328.3,
+      38.3
+     ],
+     [
+      333.2,
+      50.1
+     ],
+     [
+      337.0,
+      62.2
+     ],
+     [
+      339.8,
+      74.6
+     ],
+     [
+      341.4,
+      87.3
+     ],
+     [
+      342.0,
+      100.0
+     ],
+     [
+      341.4,
+      112.7
+     ],
+     [
+      339.8,
+      125.4
+     ],
+     [
+      337.0,
+      137.8
+     ],
+     [
+      333.2,
+      149.9
+     ],
+     [
+      328.3,
+      161.7
+     ],
+     [
+      322.4,
+      173.0
+     ],
+     [
+      315.6,
+      183.7
+     ],
+     [
+      307.8,
+      193.8
+     ]
+    ]
+   ],
+   "why": "The hourglass stands in front of a large bright disc of light that fills the middle of the frame; there is no circle category in the local Quick, Draw! bank, so its edge is drawn as one round line where the footage shows it."
+  },
+  {
+   "id": "arch",
+   "plane": "far",
+   "class": "arch",
+   "strokes": [
+    [
+     [
+      300,
+      205
+     ],
+     [
+      318,
+      120
+     ],
+     [
+      345,
+      70
+     ],
+     [
+      384,
+      40
+     ]
+    ],
+    [
+     [
+      330,
+      205
+     ],
+     [
+      345,
+      140
+     ],
+     [
+      365,
+      105
+     ],
+     [
+      384,
+      90
+     ]
+    ]
+   ],
+   "why": "A stone arch curves up behind the disc at the right edge of the frame; there is no arch category in the local Quick, Draw! bank, so its two edges are drawn as two curved lines."
+  },
+  {
+   "id": "stand",
+   "plane": "stand",
+   "qd": "table",
+   "box": [
+    100,
+    204,
+    292,
+    282
+   ],
+   "aspect": 2.4,
+   "why": "The hourglass is set down on a dark stand below the disc."
+  },
+  {
+   "id": "sand",
+   "plane": "char",
+   "class": "sand",
+   "visible": [
+    20,
+    25
+   ],
+   "strokes": [
+    [
+     [
+      188,
+      112
+     ],
+     [
+      188,
+      194
+     ]
+    ],
+    [
+     [
+      168,
+      201
+     ],
+     [
+      180,
+      197
+     ],
+     [
+      188,
+      195
+     ],
+     [
+      196,
+      197
+     ],
+     [
+      208,
+      201
+     ]
+    ]
+   ],
+   "why": "Once the hand lets go the sand runs: a thin stream falls from the waist of the glass and a small heap rises on the base. The doodle has no sand, so the stream and heap are drawn as two short lines."
+  }
+ ],
+ "notes": {
+  "0": "the hand holds the hourglass tipped, base toward us",
+  "1": "turning, the base points at the camera",
+  "3": "coming upright",
+  "7": "set down upright on the stand",
+  "16": "the hand lets go and withdraws",
+  "22": "the hand is gone; sand runs"
+ },
+ "no_cel": true
+}

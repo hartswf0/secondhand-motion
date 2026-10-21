@@ -1,32 +1,12 @@
 [
  {
   "id": "M2",
-  "value": 2,
+  "value": 3,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
    3,
-   2,
-   2,
-   2,
    3,
-   3,
-   2,
-   2,
-   2,
-   3,
-   3,
-   2,
-   2,
-   3,
-   2,
-   3,
-   2,
-   2,
-   2,
-   2,
-   3,
-   2,
    2,
    2,
    3,
@@ -34,15 +14,17 @@
    2,
    2,
    2,
-   2,
+   3,
+   4,
    3,
    2,
    2,
-   2,
-   2,
+   3,
+   4,
    3,
    2,
-   2
+   2,
+   3
   ]
  },
  {
@@ -54,14 +36,14 @@
  },
  {
   "id": "M3",
-  "value": 0.23,
+  "value": 0.26,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.06
+  "min": 0.08
  },
  {
   "id": "M6",
-  "value": 3.4,
+  "value": 3.8,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -106,17 +88,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA canoe (the doodled boat with paddle) carrying two stick-figure paddlers, paddling left to right across a lake.\u201d; motion smooth; follows the film: yes",
+  "value": "named \u201cA rowboat/canoe with two stick-figure paddlers moving left to right across a lake.\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/canoe-gwp/reviews/critic-2.json"
+  "evidence": "shots/canoe-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The hull and paddle keep the doodle's construction and loose single-stroke lines; the two stick-figure paddlers and second paddle are additions not in c.png, but they are drawn in the same plain line language and the film calls for two paddlers.",
-  "evidence": "shots/canoe-gwp/reviews/critic-2.json"
+  "note": "The hull matches c.png's construction, but c.png's single paddle line, which crosses the hull diagonally, has become two over-long paddles that flail in every direction, and the doodle never draws them that way.",
+  "evidence": "shots/canoe-gwp/reviews/critic-3.json"
  }
 ]

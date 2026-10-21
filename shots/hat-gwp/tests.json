@@ -1,0 +1,90 @@
+[
+ {
+  "id": "M2",
+  "value": 43,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   51,
+   51,
+   52,
+   52,
+   52,
+   52,
+   52,
+   51,
+   51,
+   50,
+   48,
+   41,
+   32,
+   32,
+   43,
+   39,
+   27,
+   19,
+   24,
+   34,
+   41
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.85,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 51
+ },
+ {
+  "id": "M3",
+  "value": 0.48,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.18
+ },
+ {
+  "id": "M6",
+  "value": 18.8,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 40 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5578352289120256; scenery drawn by agent: the aluminium tube of the man's pack frame runs diagonally up the left of the frame from about frame 13 to 23; no Quick, Draw! category is a pipe or pack frame, so it is drawn as two parallel lines placed on frame 18",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
