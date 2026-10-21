@@ -1,0 +1,379 @@
+{
+ "category": "sleeping bag",
+ "doodle_key_id": "4517131834097664",
+ "facing": -1,
+ "face_from": [
+  "head",
+  "foot"
+ ],
+ "note": "Quick, Draw! sleeping bag 4517131834097664: a person in a tall sleeping bag seen from the front. Stroke 0 is the bag, an upright box with a rounded bottom. Stroke 1 is the hat with its brim pointing left, stroke 2 the face outline, strokes 3, 4, 6 and 7 the eyes, stroke 5 the mouth, strokes 8 and 9 the shoulders running from the chin down to the bag opening. In the film the person sits in the snow facing left, with the bag spread down and to the right, so the root runs from the neck to the foot of the bag and tilts the bag down to the right. The head (strokes 1 to 7) turns about the neck toward the pose's head point, so it nods and leans on its own; yaw slides the eyes and mouth to the left when the face turns into profile.",
+ "strokes": [
+  [
+   [
+    7,
+    95
+   ],
+   [
+    11,
+    121
+   ],
+   [
+    12,
+    169
+   ],
+   [
+    16,
+    199
+   ],
+   [
+    22,
+    216
+   ],
+   [
+    34,
+    235
+   ],
+   [
+    47,
+    244
+   ],
+   [
+    64,
+    252
+   ],
+   [
+    84,
+    254
+   ],
+   [
+    105,
+    239
+   ],
+   [
+    115,
+    215
+   ],
+   [
+    122,
+    159
+   ],
+   [
+    123,
+    89
+   ],
+   [
+    117,
+    85
+   ],
+   [
+    31,
+    87
+   ],
+   [
+    2,
+    97
+   ]
+  ],
+  [
+   [
+    93,
+    0
+   ],
+   [
+    22,
+    19
+   ],
+   [
+    0,
+    36
+   ],
+   [
+    13,
+    44
+   ],
+   [
+    44,
+    43
+   ],
+   [
+    80,
+    37
+   ],
+   [
+    105,
+    28
+   ],
+   [
+    108,
+    12
+   ],
+   [
+    102,
+    6
+   ],
+   [
+    73,
+    5
+   ]
+  ],
+  [
+   [
+    46,
+    9
+   ],
+   [
+    40,
+    12
+   ],
+   [
+    35,
+    20
+   ],
+   [
+    35,
+    32
+   ],
+   [
+    39,
+    39
+   ],
+   [
+    63,
+    52
+   ],
+   [
+    86,
+    52
+   ],
+   [
+    91,
+    47
+   ],
+   [
+    92,
+    28
+   ],
+   [
+    81,
+    17
+   ],
+   [
+    72,
+    14
+   ],
+   [
+    27,
+    14
+   ]
+  ],
+  [
+   [
+    46,
+    24
+   ],
+   [
+    47,
+    25
+   ]
+  ],
+  [
+   [
+    58,
+    27
+   ],
+   [
+    58,
+    27
+   ]
+  ],
+  [
+   [
+    61,
+    37
+   ],
+   [
+    69,
+    37
+   ],
+   [
+    75,
+    31
+   ]
+  ],
+  [
+   [
+    67,
+    17
+   ],
+   [
+    67,
+    17
+   ]
+  ],
+  [
+   [
+    70,
+    17
+   ],
+   [
+    70,
+    18
+   ]
+  ],
+  [
+   [
+    52,
+    43
+   ],
+   [
+    41,
+    55
+   ],
+   [
+    31,
+    58
+   ],
+   [
+    18,
+    68
+   ],
+   [
+    8,
+    84
+   ],
+   [
+    8,
+    95
+   ]
+  ],
+  [
+   [
+    85,
+    46
+   ],
+   [
+    103,
+    72
+   ],
+   [
+    104,
+    83
+   ]
+  ]
+ ],
+ "anchors": {
+  "head": [
+   60,
+   26
+  ],
+  "neck": [
+   63,
+   52
+  ],
+  "foot": [
+   70,
+   250
+  ]
+ },
+ "root": [
+  "neck",
+  "foot"
+ ],
+ "parts": [
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 9,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 11,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 2,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 7,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "foot"
+   ],
+   "turn": 0
+  }
+ ],
+ "front_regions": [
+  [
+   44,
+   15,
+   78,
+   40
+  ]
+ ],
+ "max_tilt": 35,
+ "foreshorten": [
+  0.8,
+  1.15
+ ],
+ "size": "steady",
+ "smooth": 1.2,
+ "track": false
+}

@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A front-facing doodle head (lumpy outline, two ears, closed eye marks, L-shaped nose, smile curve) stays fixed in the left of the frame throughout. Frames 1-2: mouth is the closed smile curve, no scenery. Frame 3: the mouth opens to a thin flat polygon and grey arcs appear to the right of the head. Frames 4-5: the mouth is a wide open pentagon and three or four arcs spread outward. Frame 6: the mouth narrows to a slit, arcs continue. Frame 7: mouth closed to the smile, a few arcs remain. Frames 8-9: closed smile, no arcs. Frames 10-12: the mouth opens again (slit, then pentagon) with arcs. Frame 13: mouth narrowing to a sliver, arcs. Frame 14: closed smile with a few fading arcs. Frames 15-16: closed smile, no arcs. The face speaks two bursts, sending sound-wave arcs to the right each time.",
+ "seen_film": "A side-profile cartoon of a face (nose, upper lip, lower lip, chin as flat brown and pink bands) faces right on a pink ground. Frames 1-2: lips closed. Frame 3: the background darkens, white stripe highlights appear on the face, the lips part into a small round opening and a white arc appears to the right. Frames 4-5: the mouth opens wider into a rounded hollow and several white arcs radiate rightward. Frame 6: the mouth narrows. Frame 7: lips nearly closed, faint arcs. Frames 8-9: lips closed, pink background returns. Frames 10-12: the mouth opens again (small, then wide, then narrowing) with arcs radiating. Frames 13-14: lips closing, arcs fading. Frames 15-16: lips closed, pink background, no arcs. The mouth speaks two bursts, emitting sound-wave arcs to the right.",
+ "named_subject": "A cartoon face speaking: a doodle head whose mouth opens and closes twice while sound-wave arcs radiate to its right.",
+ "verdict": "bar met",
+ "evidence": "Timing matches the film frame for frame in e.png/f.png: both are closed in frames 1-5; both open in frame 6 (animation thin slit, film small round opening) with arcs appearing right of the mouth; both are wide open in 7-10 (animation pentagon, film rounded hollow); both narrow in 11-12 and close by 13-15 with arcs persisting; both are closed with no arcs in 17-22; both reopen at 23, are wide open 24-27, narrow at 28-30, close at 31-32 with arcs fading through 33, and stay closed 34-38. The head outline, ears, eyes and nose do not move in any frame, matching the static profile in the film. g.png shows only the mouth changing shape in place, with no drift or reversal of the head. Arc positions shift outward frame to frame during 6-16 and 23-33, as the film's arcs do.",
+ "primary_gap": "The open mouth is drawn as a thin, straight-edged closed pentagon that replaces the doodle's single smile curve outright, so the mouth's stroke style changes between closed and open states (e.g. frames 6-7 and 23-24) instead of reading as the same curved stroke opening.",
+ "closes_when": "In frames 6-14 and 23-31 the open mouth is drawn as the smile curve itself with a second curved lower stroke pulling away from it, in the same line weight as the face outline, so the closed smile visibly widens into the open mouth.",
+ "protect": "Keep the exact two-burst timing (open at 6 and 23, closed 17-22 and 34-38), the fixed head with no drift, the c.png construction of the head (lumpy outline, side ears, small closed eye marks, L nose, smile curve), and the grey arcs radiating rightward only while the mouth is open.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The head matches c.png closely, but the open-mouth pentagon is a thinner, straight-sided shape that does not appear in the doodle's stroke habits.",
+ "still_frames_only": true,
+ "_packet": "lot1296efce",
+ "_round": 2
+}

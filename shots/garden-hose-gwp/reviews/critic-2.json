@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A grey line scene shows a machine housing outline with a large wheel (spoked circle) inside it and vertical wall lines. A black hose drawn as two parallel lines arcs from upper left over the top and down the right side, ending in a band (ferrule) with wavy lines below it at lower right. In frame 1 only a small curl of black line is at the right edge. By frames 2-3 an open hand with zigzag fingers and a straight horizontal thumb line appears at upper right, overlapping the hose. From frame 4 to frame 16 the hand stays splayed open in roughly the same place on the hose, while the hose and hand wobble slightly in place. Nothing else changes.",
+ "seen_film": "A hose reel machine with a grey pump head, black parts and a silver disc on a wood wall. A black hose arcs from the fitting at upper left over the top and down the right side out of the frame bottom. In frame 1 a hand is barely visible at the right edge; in frames 2-3 the hand enters from the right, above the hose; in frames 4-5 it reaches down onto the hose and by frames 5-6 its fingers close around the hose on the right side. From frame 6 to frame 16 the hand holds the hose in a closed grip, pulling it slightly so the right side of the arc shifts a little; the hand stays in about the same place.",
+ "named_subject": "A hose (two parallel lines with a ferrule band at the end) being grabbed by a hand",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-3: the hand pops in from a single curl (1) to a partial finger shape (2) to a full splayed hand already overlapping the hose (3); in f.png 1-6 the hand is still in the air approaching, reaching the hose only around f.png 7-8, so the animated hand arrives about 4-5 frames early and without an approach path. e.png 4-38: the hand stays as an open, flat zigzag-finger shape lying across the hose; in f.png 8-38 the fingers are wrapped around the hose in a grip, so the grab is never shown. e.png 4-38: the hose arc and ferrule drift a few pixels left and right (g.png shows several offset copies of the arc) while the film hose only shifts slightly at the gripped point. The hose itself (two-line arc, ferrule band, wavy lines below) matches c.png throughout and sits in the same place in frame as the film hose.",
+ "primary_gap": "The hand does not travel in and close around the hose: it pops into place by e.png frame 3 and stays an open splayed shape, so the film's reach-and-grip event is missing.",
+ "closes_when": "Across e.png frames 1-8 the hand moves in from the right edge in small steps above the hose, touches the hose around frame 7-8, and its fingers curl around the hose lines so that from frame 8 on the hose passes through a closed hand.",
+ "protect": "The hose drawn exactly in c.png's construction (two parallel arc lines, ferrule band, wavy end strokes), its placement matching the film's arc from upper left down the right side, the grey scenery, and the near-still hold during the latter part of the shot.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  3,
+  4
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hose matches the doodle's line construction; only the added hand is not from the doodle and is drawn as a stiff open zigzag rather than a gripping hand.",
+ "still_frames_only": true,
+ "_packet": "lot50d5aeba",
+ "_round": 2
+}

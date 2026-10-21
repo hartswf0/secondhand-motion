@@ -7,7 +7,7 @@
   "left"
  ],
  "size_from_mask": false,
- "note": "Quick, Draw! microwave 6562342215090176, drawn from the front: stroke 0 is the left side of the cabinet, stroke 1 the top, stroke 2 the right side, stroke 3 the bottom with a small hook at its right end; stroke 5 is the window of the door, stroke 4 a short line on the window's right edge, stroke 6 the knob. The cabinet (strokes 0 to 3) is placed by two points, the top of its left side and the top of its right side, and does not move, because the camera and the appliance in the film are still. The door is the window, its edge line and the knob (strokes 4, 5, 6). In the film the door is hinged on the right side of the cabinet and a hand pulls it open from the left until it stands edge-on toward the camera. Seen from the front, a door swinging on a right-hand hinge gets narrower toward the hinge line, so the rig narrows strokes 4, 5 and 6 toward the line of stroke 2 (the right side) by the pose entry door_w: 1 is shut, at full width; 0.11 is open and edge-on, a thin sliver against the right side. The value at each key is the film door's free edge, measured as a share of the way from the hinge to the left side of the cabinet.",
+ "note": "Quick, Draw! microwave 6562342215090176, drawn from the front: stroke 0 is the left side of the cabinet, stroke 1 the top, stroke 2 the right side, stroke 3 the bottom with a small hook at its right end; stroke 5 is the window of the door, stroke 4 a short line on the window's right edge, stroke 6 the knob. The cabinet (strokes 0 to 3) is placed by two points, the top of its left side and the top of its right side, and does not move, because the camera and the appliance in the film are still. The door is the window, its edge line and the knob (strokes 4, 5, 6). In the film the door is hinged on the right side of the cabinet and a hand pulls it open from the left until it stands edge-on toward the camera. Seen from the front, a door swinging on a right-hand hinge gets narrower toward the hinge line, so the rig narrows strokes 4, 5 and 6 toward the line of stroke 2 (the right side) by the pose entry door_w: 1 is shut, at full width; 0.15 is open and edge-on, a thin sliver against the right side. The value at each key is the film door's free edge, measured as a share of the way from the hinge to the left side of the cabinet. As the door swings toward the camera its free edge comes nearer and looks taller in the film, most of all half-way open; so the door strokes also grow about the middle of the hinge line by the pose's hinge_mid to door_tip length (up to 1.2 times the doodle's size at frames 12 to 18, back to 1.05 once it stands open), with door_w lowered by the same factor so the free edge stays where the film's is.",
  "root": [
   "left",
   "right"
@@ -28,6 +28,14 @@
   "hinge_bot": [
    249,
    130
+  ],
+  "hinge_mid": [
+   246,
+   72
+  ],
+  "door_tip": [
+   58,
+   72
   ]
  },
  "parts": [
@@ -79,49 +87,52 @@
    "stroke": 4,
    "from": 0,
    "to": 1,
-   "joint": "hinge_top",
+   "joint": "hinge_mid",
    "aim": [
-    "left",
-    "right"
+    "hinge_mid",
+    "door_tip"
    ],
    "turn": 0,
    "fold": "door_w",
    "axis": [
     "hinge_top",
     "hinge_bot"
-   ]
+   ],
+   "stretch": 1
   },
   {
    "stroke": 5,
    "from": 0,
    "to": 9,
-   "joint": "hinge_top",
+   "joint": "hinge_mid",
    "aim": [
-    "left",
-    "right"
+    "hinge_mid",
+    "door_tip"
    ],
    "turn": 0,
    "fold": "door_w",
    "axis": [
     "hinge_top",
     "hinge_bot"
-   ]
+   ],
+   "stretch": 1
   },
   {
    "stroke": 6,
    "from": 0,
    "to": 7,
-   "joint": "hinge_top",
+   "joint": "hinge_mid",
    "aim": [
-    "left",
-    "right"
+    "hinge_mid",
+    "door_tip"
    ],
    "turn": 0,
    "fold": "door_w",
    "axis": [
     "hinge_top",
     "hinge_bot"
-   ]
+   ],
+   "stretch": 1
   }
  ],
  "strokes": [
@@ -279,9 +290,9 @@
  "options": {
   "size": "steady",
   "smooth": 1.5,
-  "track": true
+  "track": false
  },
  "size": "steady",
  "smooth": 1.5,
- "track": true
+ "track": false
 }
