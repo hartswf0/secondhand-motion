@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A line-drawn lobster seen from the front: a tall rounded body with a horizontal band line, a left claw hanging down-left as an open V, and a right claw attached by an arm line at the band, angled down-right. Grey scenery shows a small lobster at left and a table edge. In frames 1-2 the right claw hangs diagonally to the right. In frame 3 the right claw swings to hang straight down and its arm line to the body is gone. In frame 4 it tips toward horizontal at lower right. From frame 5 to 16 the right claw lies horizontally under the body, pincers pointing left, opening right, and holds still. The body and left claw do not move through the whole shot.",
+ "seen_film": "A large dark lobster faces the camera on a cloth-covered table with a small lobster at left. In frames 1-2 its right claw is raised out at the right edge of the frame. In frames 3-4 the claw swings down at the right and starts rotating toward the centre. In frame 5 the large claw sweeps across in front of the body, and from frames 6-16 it rests horizontally across the lower front of the body, tips pointing left, with only small settling movement. The left claw, body and small lobster stay mostly still.",
+ "named_subject": "A lobster (front view, the doodle's body and two V-shaped claws, drawn upside-down so the claws hang down)",
+ "verdict": "reference stronger",
+ "evidence": "The event and timing match: e.png 1-6 the right claw hangs diagonally at right as in f.png 1-6; e.png 7-11 it drops and turns while f.png 7-11 shows the claw swinging down at the right edge; e.png 12-14 it rotates to horizontal while f.png 12-16 shows the claw sweeping across the front; e.png 15-50 hold horizontal while f.png 17-50 hold. Breaks: between e.png 7 and 8 the arm line joining the right claw to the body band disappears and the claw becomes a free-floating shape, and it stays detached for every frame after; between e.png 11 and 12 the claw jumps from a near-vertical V to a flattened sideways V with a different pincer shape; between e.png 13 and 14 the claw shortens and the top pincer becomes a straight horizontal line, a visible redraw. g.png shows the claw drawings as a fan of separate overlapping shapes at lower right rather than one claw rotating around a shoulder point. In the film the claw is large and overlaps the lower body; in the animation the horizontal claw is small and sits below the body without touching it.",
+ "primary_gap": "The right claw loses its arm connection to the body at e.png frame 8 and then rotates as a detached shape that changes its construction at frames 12 and 14, so the swing reads as a claw being replaced rather than one limb swinging from the shoulder.",
+ "closes_when": "Every frame from 1 to 50 keeps a continuous arm line from the body band to the right claw, the claw rotates about that fixed shoulder point with the same V construction and length in each frame, and the final horizontal claw overlaps the lower front of the body as in f.png 17-50.",
+ "protect": "The timing (claw hangs 1-6, drops 7-11, turns 12-14, holds 15-50) that matches the film; the unchanged body and left claw drawn in the doodle's straight-segment V strokes; the static grey scenery; the final horizontal claw with pincers pointing left.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  8,
+  12,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body and left claw are the doodle's construction, but the right claw after frame 8 floats free of the body, which the doodle never does, and its V shape is redrawn differently at frames 12 and 14.",
+ "still_frames_only": true,
+ "_packet": "lot32d98b08",
+ "_round": 3
+}

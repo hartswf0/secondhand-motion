@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A black stick figure with a flat oval head stands on the end of a diving board, drawn as a thin double-line bar on a rounded pedestal, in front of grey scenery: a building with a door, windows, a zigzag roof line and a ladder rail, with pool-edge lines below. Frames 1-7: the figure stands still with arms hanging. Frames 8-9: the arms swing out to a horizontal T. Frames 10-11: the arms drop and one knee bends. Frames 12-13: both arms go up in a V. Frames 14-15: the arms drop again and the knee bends. Frame 16: arms up, the board tilts and the figure rises slightly, the start of a jump. In frame 16 the left edge of the grey door is partly missing.",
+ "seen_film": "A man in a swimsuit stands at the end of a low diving board in front of a pool building, with a boy standing behind him on the board and other people moving on the pool deck. Frames 1-7: he stands and shifts slightly. Frames 8-9: he extends his arms out to the sides. Frames 10-11: he drops his arms and bends into a small bounce. Frames 12-13: he swings his arms up. Frames 14-15: arms down and another bounce. Frame 16: arms up, the board flexes and he leaves it in a jump.",
+ "named_subject": "A diver (stick figure) on the end of a diving board, bouncing with arm swings before jumping off.",
+ "verdict": "reference stronger",
+ "evidence": "The beats line up with the film frame for frame: e.png 1-14 standing (f 1-14 standing), e 15-18 arms out (f 15-18 arms out), e 19-22 arms down with bent knee (f 19-22 bounce crouch), e 23-26 arms up (f 23-26 arms up), e 27-30 crouch (f 27-30 crouch), e 31 arms up with board tilted (f 31 take-off). The figure stays at the film's board position throughout (g.png shows a fixed column with no lateral jumps). Weaknesses: in e 16-18 the horizontal arm line is drawn at head/neck height and extends mostly to the left, while in f 16-18 the arms are at shoulder level and spread to both sides; between e 18 and e 19 the arms pop from that high one-sided line to a lowered asymmetric pose with a bent knee in a single frame. In e 31 the figure only lifts a little and the board tilts, while in f 31 the man is clearly above the board. In e 29-31 the grey door's left edge disappears, a scenery redraw the film does not have.",
+ "primary_gap": "The arms-out pose in e.png 16-18 is placed at head height and is one-sided, so the swing from arms-out to the crouch at frame 19 reads as a pop instead of the film's symmetric arm lowering.",
+ "closes_when": "In e.png 15-18 both arms extend symmetrically from the shoulder point below the head, and frame 19 shows them part-way down rather than snapped to the crouch pose.",
+ "protect": "The exact beat timing (stand, arms out, crouch, arms up, crouch, jump) matching f.png frame numbers; the fixed board position and pedestal; the small flat-oval head and simple single-line limbs from the doodle; the board tilt on the jump frame; the sparse grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  17,
+  19,
+  29,
+  31
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The figure keeps the doodle's flat open-oval head and stick limbs, and the board is the doodle's double-line slab on a rounded block seen end-on, so identity holds; only the figure is drawn larger relative to the board than in c.png.",
+ "still_frames_only": true,
+ "_packet": "lot34639119",
+ "_round": 2
+}

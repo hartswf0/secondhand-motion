@@ -91,17 +91,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA lobster (the large lobster in the film) bringing its big right claw down and across the front of its body.\u201d; motion broken; follows the film: yes",
+  "value": "named \u201cA lobster (front view, the doodle's body and two V-shaped claws, drawn upside-down so the claws hang down)\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/lobster-gwp/reviews/critic-2.json"
+  "evidence": "shots/lobster-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "The body and left claw match c.png, but once the right claw comes to rest it is drawn as crossing straight lines and an open curve instead of c.png's two-prong V pincer, so the character does not read as the same drawing for most of the shot.",
-  "evidence": "shots/lobster-gwp/reviews/critic-2.json"
+  "ok": true,
+  "note": "The body and left claw are the doodle's construction, but the right claw after frame 8 floats free of the body, which the doodle never does, and its V shape is redrawn differently at frames 12 and 14.",
+  "evidence": "shots/lobster-gwp/reviews/critic-3.json"
  }
 ]

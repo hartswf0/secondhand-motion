@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A black-line dolphin drawing sits at the upper right of a grey line-drawn water scene. In frames 1-4 it is tilted steeply, tail fork up at the upper right and snout down toward the lower left, as if arcing or surfacing. In frames 5-8 it rotates down toward level. From frame 9 on it is horizontal, snout pointing left, dorsal hook on top and flipper below, and it slides gradually left and slightly down across frames 9-16, ending just right of centre in the upper third of the frame.",
+ "seen_film": "Rippled grey water. A pale elongated animal body (a dolphin or similar back surfacing) is at the upper right. In frames 1-4 it is angled steeply up to the right. In frames 5-8 it flattens toward horizontal. In frames 9-16 it swims horizontally leftward and a little downward, staying in the upper third, and by frame 16 its body is just right of centre and partly submerged.",
+ "named_subject": "A dolphin (the doodle's dolphin, mirrored to face left) swimming at the water surface.",
+ "verdict": "bar met",
+ "evidence": "Placement and timing match the film throughout: e.png 1-7 and f.png 1-7 both show the body steeply angled up-right at the upper right edge; e.png 9-16 and f.png 9-16 both show a level body held near the right edge; e.png 17-26 and f.png 17-26 both show the body travelling left and slightly down, ending at about the same spot (e.png 26 fish spans roughly x 110-190 of the cell, f.png 26 body spans roughly x 110-185). g.png shows one continuous leftward path with no reversals; drawing size stays constant. The one weak transition is e.png 8 to 9, where the fish goes from about 25 degrees of tilt to level in a single frame, while the film (f.png 6-9) has already flattened gradually. Judged from still frames only, not playback.",
+ "primary_gap": "The rotation from tilted to level is late and finishes in one step at e.png 8-9, while the film flattens gradually over f.png 5-9.",
+ "closes_when": "The tilt angle decreases evenly across e.png 5-9 so that e.png 8 is already nearly level, matching f.png 8, and no single frame-to-frame change exceeds about 8 degrees.",
+ "protect": "The doodle's construction (curled dorsal hook, open stroke gaps, forked tail, single flipper stroke), constant drawing size, the left-facing orientation that matches the film's direction of travel, the hold at the right edge through frame 16, and the steady leftward-downward drift in frames 17-26 that lands where the film's body lands.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  9
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated fish is the c.png doodle mirrored horizontally with the same strokes and gaps; no meaningful identity loss, though the tail fork is slightly clipped by the frame edge in e.png 11-13.",
+ "still_frames_only": true,
+ "_packet": "lot53113676",
+ "_round": 3
+}

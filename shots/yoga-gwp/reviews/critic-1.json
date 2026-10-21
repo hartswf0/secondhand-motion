@@ -1,0 +1,19 @@
+{
+ "seen_animation": "Frames 1-2: a standing figure drawn as a single body line with a small circle head and two arm lines raised straight up in a U around the head, right of centre in a park (cloud, bush, tree). Frames 3-4: the arms and head tip back to the left while the body line bends at the hips. Frames 5-6: the figure has bent backward into an arch; the arm box with the head reaches down and left toward the ground, the leg line runs from a peak down to the ground at the right. Frames 7-8: the arm box stands on the ground with the head circle inside it, and the leg line lifts off the ground and points right horizontally. Frames 9-11: the leg line rises up to vertical over the hands. Frames 12-14: the leg line continues over to the left, passing horizontal. Frames 15-16: the leg line comes down on the left and its end reaches the ground, leaving a bridge shape that matches the doodle. The scenery slides right as the shot goes on, with the tree leaving the right edge.",
+ "seen_film": "Frames 1-2: a woman in loose trousers stands with arms raised over her head, knees slightly bent. Frames 3-4: she arches backward, arms and head going back to the left. Frames 5-6: she is in a deep back bend with hands reaching the ground on the left, feet still planted on the right. Frames 7-8: hands are on the ground and the legs lift off and extend to the right. Frames 9-11: the legs swing up to a vertical handstand. Frames 12-14: the legs continue over to the left past horizontal. Frames 15-16: the legs come down on the left and the feet touch the ground, ending in a bridge. The camera pans so the tree drifts toward the right edge.",
+ "named_subject": "A person performing a back walkover (stand, arch back to hands, kick legs over through handstand, land in a bridge on the other side).",
+ "verdict": "bar met",
+ "evidence": "Judged from still frames only, not playback. Phase timing in e.png matches f.png: arms up and tip back in 1-6 (film 1-6); arch with arms reaching left 7-11 (film 7-12); hands on ground with legs extended right 12-18 (film 13-18); legs rising 19-22 (film 19-22); legs vertical 23-25 (film 23-26); legs over to the left 26-32 (film 27-32); legs descending and touching ground at the left 33-38 (film 33-38). Hand placement stays near the same frame position as the film hands from frame 12 onward. Consecutive frames change by small amounts throughout; g.png shows a compact path with no gaps or reversals. From frame 9 on the figure is the c.png bridge construction: one polyline leg from ground to a peak, an open box for arms, and a circle head inside it, ending in frame 38 almost exactly as c.png. The only visible inconsistency is the head circle growing from about 12 px in frames 1-8 to about 20 px by frames 13-15, a gradual change rather than a pop.",
+ "primary_gap": "The head circle and arm box gradually enlarge between frames 9 and 14, so the standing figure in frames 1-8 reads slightly smaller-headed than the bridge figure later.",
+ "closes_when": "The head circle keeps one diameter (the c.png size) from frame 1 through frame 38 and the arm lines keep a constant length.",
+ "protect": "The frame-for-frame timing against the film (hands down at 12, vertical at 23-25, legs land at 37-38); the single-polyline leg and open arm box with circle head from c.png; the small even steps between consecutive frames; the hands staying planted in one spot from frame 12 onward; the end pose matching c.png.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The standing frames 1-8 use a smaller head circle and thinner U-shaped arms than the doodle's box-and-circle, so the doodle's construction only fully appears from frame 9 on.",
+ "still_frames_only": true,
+ "_packet": "lotf4b0be91",
+ "_round": 1
+}

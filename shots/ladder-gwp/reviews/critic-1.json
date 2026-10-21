@@ -1,0 +1,22 @@
+{
+ "seen_animation": "a.png: A fixed scene with a grey tree at left, a grey sloped mound outline, grey vertical strokes at upper right and a grey ground line. A black ladder leans to the right from the ground near the left-centre. In frames 1-2 a black stick figure (round head, straight-line torso, triangular skirt, angular legs) stands at the far left beside the ladder. In frames 3-4 it steps to the foot of the ladder and puts a hand on a rail. In frames 5-8 it is on the lower rungs, arm reaching up to the next rung. In frames 9-12 it climbs through the middle of the ladder, head rising steadily. In frames 13-14 it is near the top rung, head at the top edge of the frame. In frames 15-16 the head is cut off by the top edge and the body is a small cluster of crossed lines at the ladder's top.",
+ "seen_film": "d.png: Black-and-white film of a large straw or hay stack with a bamboo ladder leaning on it from lower left-centre to upper right, a woven fence at upper right. In frame 1 a man in a white loincloth enters at the far left, blurred. In frames 2-3 he moves to the foot of the ladder. In frame 4 he grips the ladder and starts up. In frames 5-8 he climbs the lower third with his back to the camera. In frames 9-12 he climbs the middle section. In frames 13-14 he is near the top of the ladder. In frames 15-16 he is at the top of the ladder near the top edge of the frame, still on the rungs.",
+ "named_subject": "A ladder (c.png's doodle, drawn static in black) with a stick-figure climber going up it.",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement match the film: e.png 1-4 the figure is at the left beside the ladder base as the man is in f.png 1-4; e.png 5-8 it mounts the bottom rungs as in f.png 5-8; e.png 9-31 the head rises steadily along the ladder, and g.png shows one continuous diagonal path with no reversals, matching f.png 9-31. The ladder in every frame is c.png's drawing unchanged (thick rails, five rungs, the bent second rung and the short stub rung near the base) and it stays still, as the film's ladder does. Weaknesses: throughout e.png 1-31 the figure's legs and skirt are drawn as overlapping triangles and crossed segments, so the limb-by-limb climbing action (one foot up, one hand up) is hard to read; at e.png 32 the figure compresses to about half its previous height and at e.png 33 the head is cut off by the frame edge and the body becomes a knot of crossed lines, which stays through e.png 38, while in f.png 32-38 the man remains a full readable body at the ladder top. Judged from still frames only, not playback.",
+ "primary_gap": "In the last seven frames (e.png 32-38) the climber collapses into a headless tangle of lines at the top edge, so the end of the climb does not read as a person arriving at the top as it does in the film.",
+ "closes_when": "In e.png 32-38 the climber keeps the same head size, torso length and limb count as in e.png 25-31, with the head kept inside the frame (or the figure placed slightly lower), standing or kneeling on the top rungs as the man does in f.png 32-38.",
+ "protect": "The ladder drawn exactly as c.png and held still; the grey scenery placement matching the film's haystack, tree and fence; the timing (approach in frames 1-4, mounting in 5-8, steady climb 9-31) and the continuous diagonal path up the ladder shown in g.png; the thin straight-line stroke style.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  32,
+  33
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The ladder is c.png's drawing unchanged; the climber is an added stick figure not present in c.png, and its overlapping leg and skirt lines are less clear than the doodle's clean separate strokes.",
+ "still_frames_only": true,
+ "_packet": "lot5677e802",
+ "_round": 1
+}

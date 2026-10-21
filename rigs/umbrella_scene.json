@@ -1,0 +1,354 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -0.14,
+   -1.07,
+   1.17,
+   2.58,
+   3.41,
+   2.69,
+   3.5,
+   3.06,
+   1.21,
+   7.07,
+   5.6,
+   3.08,
+   0.67,
+   -0.28,
+   -0.33,
+   -2.37,
+   -3.12,
+   -3.69,
+   -2.24,
+   -2.81,
+   -2.51,
+   -2.39,
+   -3.98,
+   -3.69,
+   -3.32,
+   -4.66,
+   -3.48,
+   -1.97,
+   -4.04,
+   -2.71,
+   -3.55,
+   -2.94,
+   -5.31,
+   -3.29,
+   -4.8,
+   -4.39,
+   -2.82
+  ],
+  "y": [
+   0.0,
+   4.62,
+   8.3,
+   10.79,
+   13.02,
+   17.91,
+   21.41,
+   26.79,
+   30.25,
+   36.4,
+   42.18,
+   46.52,
+   47.08,
+   48.62,
+   50.04,
+   49.75,
+   52.26,
+   53.89,
+   53.81,
+   51.6,
+   47.14,
+   45.66,
+   46.85,
+   50.74,
+   51.31,
+   54.61,
+   54.29,
+   52.43,
+   52.24,
+   51.83,
+   53.39,
+   52.74,
+   53.73,
+   50.89,
+   52.1,
+   49.27,
+   49.33,
+   49.15
+  ],
+  "source": "shots/umbrella-sam/camera.json, phase correlation on the footage: the camera tilts up by about 50 px over the first second and then holds, with a few pixels of hand shake"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 6,
+   "label": "Buildings across the street",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "street",
+   "z": 3.5,
+   "label": "Lamp posts and parked car",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "stand",
+   "z": 2.2,
+   "label": "Flower stand",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Umbrella"
+  }
+ ],
+ "objects": [
+  {
+   "id": "bldg1",
+   "plane": "far",
+   "qd": "house",
+   "box": [
+    -14,
+    -46,
+    112,
+    92
+   ],
+   "strokes": 4
+  },
+  {
+   "id": "bldg2",
+   "plane": "far",
+   "qd": "house",
+   "box": [
+    270,
+    -50,
+    404,
+    96
+   ],
+   "strokes": 4,
+   "skip": 1
+  },
+  {
+   "id": "lamp1",
+   "plane": "street",
+   "class": "lamp post",
+   "strokes": [
+    [
+     [
+      38,
+      14
+     ],
+     [
+      38,
+      150
+     ]
+    ],
+    [
+     [
+      32,
+      6
+     ],
+     [
+      33,
+      -4
+     ],
+     [
+      38,
+      -9
+     ],
+     [
+      43,
+      -4
+     ],
+     [
+      44,
+      6
+     ],
+     [
+      32,
+      6
+     ]
+    ],
+    [
+     [
+      33,
+      14
+     ],
+     [
+      43,
+      14
+     ]
+    ]
+   ],
+   "why": "two street lamps stand at the left behind the stand; Quick, Draw! has no street-lamp category in this archive's data, so each is drawn as a pole with a small glass lamp"
+  },
+  {
+   "id": "lamp2",
+   "plane": "street",
+   "class": "lamp post",
+   "strokes": [
+    [
+     [
+      63,
+      12
+     ],
+     [
+      63,
+      150
+     ]
+    ],
+    [
+     [
+      57,
+      4
+     ],
+     [
+      58,
+      -6
+     ],
+     [
+      63,
+      -11
+     ],
+     [
+      68,
+      -6
+     ],
+     [
+      69,
+      4
+     ],
+     [
+      57,
+      4
+     ]
+    ],
+    [
+     [
+      58,
+      12
+     ],
+     [
+      68,
+      12
+     ]
+    ]
+   ],
+   "why": "the second street lamp, as lamp1"
+  },
+  {
+   "id": "car",
+   "plane": "street",
+   "qd": "van",
+   "box": [
+    316,
+    108,
+    400,
+    152
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "fl1",
+   "plane": "stand",
+   "qd": "flower",
+   "box": [
+    95,
+    100,
+    140,
+    160
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "fl2",
+   "plane": "stand",
+   "qd": "flower",
+   "box": [
+    150,
+    120,
+    195,
+    180
+   ],
+   "strokes": 3,
+   "skip": 1
+  },
+  {
+   "id": "fl3",
+   "plane": "stand",
+   "qd": "flower",
+   "box": [
+    240,
+    100,
+    285,
+    160
+   ],
+   "strokes": 3,
+   "skip": 2
+  },
+  {
+   "id": "fl4",
+   "plane": "stand",
+   "qd": "flower",
+   "box": [
+    290,
+    135,
+    335,
+    195
+   ],
+   "strokes": 3,
+   "skip": 3
+  },
+  {
+   "id": "fl5",
+   "plane": "stand",
+   "qd": "flower",
+   "box": [
+    110,
+    170,
+    155,
+    230
+   ],
+   "strokes": 3,
+   "skip": 4
+  },
+  {
+   "id": "bush1",
+   "plane": "stand",
+   "qd": "bush",
+   "box": [
+    60,
+    140,
+    230,
+    250
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "bush2",
+   "plane": "stand",
+   "qd": "bush",
+   "box": [
+    210,
+    130,
+    390,
+    250
+   ],
+   "strokes": 3,
+   "skip": 1
+  }
+ ],
+ "notes": {
+  "0": "the camera starts high on the umbrella's canopy over the flower stand",
+  "12": "the tilt ends: the whole umbrella and the stand below it are in frame",
+  "20": "a woman walks past in front of the stand; the umbrella does not move",
+  "37": "the camera holds; the umbrella stands still"
+ },
+ "no_cel": "SAM's outline of the umbrella drops a loose patch down the pole on several frames and loses the canopy on frame 1, so cel paint from it would flicker; the drawing carries the umbrella alone"
+}

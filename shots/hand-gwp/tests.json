@@ -1,0 +1,81 @@
+[
+ {
+  "id": "M2",
+  "value": 1,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.73,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 1
+ },
+ {
+  "id": "M3",
+  "value": 0.48,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.45
+ },
+ {
+  "id": "M6",
+  "value": 0.3,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "7 strokes, 43 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5762927632056320; scenery drawn by agent: the tilted card with a raised border that the hand holds by its top edge; Quick, Draw! has no card category, and its picture frame doodles are drawn square to the page, while this card is turned about 20 degrees, so its outer edge and border are drawn as two four-sided outlines at the corners measured on the frames, drawn by agent: the word SORROW painted on the card, drawn as plain capital letters along the same 20 degree slant as on the frames; no Quick, Draw! category draws letters",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "62/62",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

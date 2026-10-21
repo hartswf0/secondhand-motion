@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0157",
+ "id": "palm-tree-gwp",
+ "kind": "shot",
+ "title": "Palm tree, the Giraffe Walks Past Way",
+ "category": "palm-tree",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/palm-tree-gwp/cover.png",
+ "cover_alt": "shots/palm-tree-gwp/frames/f020.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/palm-tree-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#palm-tree-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/palm_tree_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/palm-tree/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/palm-tree-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

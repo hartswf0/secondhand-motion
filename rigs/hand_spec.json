@@ -224,6 +224,17 @@
  },
  "parts": [
   {
+   "stroke": 0,
+   "from": 2,
+   "to": 8,
+   "joint": "tbase",
+   "aim": [
+    "tbase",
+    "thumb"
+   ],
+   "stretch": 0.4
+  },
+  {
    "region": [
     165,
     25,
@@ -236,16 +247,6 @@
     "tip"
    ],
    "stretch": 0.4
-  },
-  {
-   "stroke": 0,
-   "from": 2,
-   "to": 8,
-   "joint": "tbase",
-   "aim": [
-    "tbase",
-    "thumb"
-   ]
   },
   {
    "rest": true,

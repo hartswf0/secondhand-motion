@@ -1,0 +1,78 @@
+[
+ {
+  "id": "M2",
+  "value": 55,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   55,
+   54,
+   54,
+   54,
+   55,
+   55,
+   55,
+   54,
+   54,
+   55
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.97,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 52
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 1.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 41 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:4844628710785024; scenery quickdraw:5266863812509696, quickdraw:4827902916952064, drawn by agent: two street lamps stand at the left behind the stand; Quick, Draw! has no street-lamp category in this archive's data, so each is drawn as a pole with a small glass lamp, drawn by agent: the second street lamp, as lamp1, quickdraw:4796760327192576, quickdraw:6560753693753344, quickdraw:5266940853485568, quickdraw:4946782649843712, quickdraw:4544318540873728, quickdraw:5462792716943360, quickdraw:5618038084730880, quickdraw:4622282636918784",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

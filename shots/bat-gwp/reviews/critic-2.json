@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A line-drawn bat clings to the right edge of a vertical tree trunk (grey lines, with short grey bark ticks), head up, with its left wing raised diagonally up and to the left and its right wing folded against the body as a small zigzag. In frames 1-4 a grey two-leaf sprig sits at the trunk edge to the right of the bat and slides downward; by frames 5-7 it has moved to the bottom of the frame and from frame 8 on it is gone. Over frames 8-13 the bat slides slowly down and to the left on the bark, and a small pointed tip of the right wing starts to show at its right side. In frames 14-16 the right wing lifts from a short horizontal stub to an upright zigzag beside the head, while the bat stays low-left on the trunk.",
+ "seen_film": "Frame 1 is a different shot (bare branches against mist) dissolving into the main shot. From frame 2 a brown bat clings to the right edge of a bark-covered trunk at night, head up, one wing spread to the left like a dark sheet against the bark, the other folded. A leafy sprig at the trunk edge slides down out of frame over frames 2-7 as the camera moves. From frames 8-13 the bat shuffles down and to the left on the trunk, and the trunk edge moves left in frame. In frames 14-16 the bat lifts its right wing upward beside its head while staying on the bark.",
+ "named_subject": "A bat clinging to a tree trunk",
+ "verdict": "bar met",
+ "evidence": "The event and timing match the film: the sprig descends and leaves the frame over e.png 1-24 as in f.png 3-24; the bat stays on the trunk edge in e.png 1-27 as in f.png 4-27; it moves down-left over e.png 28-34, matching f.png 28-34 where the film bat shifts down-left; it holds with small shifts through e.png 35-51 as the film bat does in f.png 35-51; and the right wing rises in e.png 52-62 as in f.png 52-62. Size stays constant across all 62 frames, as in the film. The g.png path runs in one continuous arc from upper right to lower left with no gaps or reversals. The only abrupt change is at e.png 54-55, where the right wing goes from a short horizontal spike to an upright zigzag between two frames; in the film (f.png 53-56) the lift takes about three frames. Frames 1-2 of the film are a dissolve from another shot, which the animation does not show; that is a reasonable omission. Judged from still frames only, not playback.",
+ "primary_gap": "The right wing goes from a horizontal spike to fully upright between e.png 54 and 55, so the wing lift reads as a pop rather than the gradual raise seen in f.png 53-56.",
+ "closes_when": "e.png 53-56 show the right wing at intermediate angles (about horizontal, 30 degrees, 60 degrees, upright) so that each frame moves it only part of the way.",
+ "protect": "Keep the doodle's construction (hexagonal body, M-shaped ear head, zigzag-bottomed wing in the same thin black stroke), the constant character size, the down-left slide timed at e.png 28-34, the sprig descending and leaving frame on the film's schedule, the sparse grey trunk lines, and the late right-wing raise.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  55
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body, ears and left wing are drawn the same way as c.png; the right wing is shown folded as a small zigzag sliver rather than the doodle's spread wing, which matches the film's pose but uses less of the doodle's right-wing shape.",
+ "still_frames_only": true,
+ "_packet": "lot1f75d4a5",
+ "_round": 2
+}

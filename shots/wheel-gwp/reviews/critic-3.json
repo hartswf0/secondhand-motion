@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A spoked wheel drawn as a double-outline rim with four lines crossing at the centre (eight spokes) stands on an axle drawn as two long lines running from the left edge through the hub and on to the right, over grey scenery of trees, grass and ground cracks. In frames 1-4 the wheel is a narrow upright ellipse seen nearly edge-on, with a small zigzag mark at the top of the rim. Over frames 5-12 the ellipse widens as the wheel turns to face the camera, and the zigzag mark travels clockwise down the right side of the rim to about 3 o'clock. In frames 13-16 the wheel is almost round and slightly larger, the mark continues down to about 4-5 o'clock, and a small rectangular post appears at the right edge of the frame.",
+ "seen_film": "A real wagon wheel with a rubber tire and a white tape band is mounted on a long axle tube, standing on a pale gravel surface with grass and trees behind. In frames 1-4 the wheel is seen nearly edge-on with the tape at the top. Through frames 5-12 the wheel rolls and turns toward the camera, widening into a fuller ellipse, while the tape band moves clockwise from the top down the right side to about 3 o'clock. In frames 13-16 the wheel is close to round and a little larger, the tape reaches the lower right at about 4-5 o'clock, and a wooden post comes into view at the right edge.",
+ "named_subject": "A spoked wheel on an axle (a wagon wheel), with a zigzag mark standing in for the tape band on the tire.",
+ "verdict": "bar met",
+ "evidence": "e.png frames 1-4 vs f.png 1-4: both show a narrow edge-on wheel with the marker at the top. Frames 5-16: the animated ellipse widens step by step as the film's wheel turns toward camera, and the zigzag mark moves from upper right (frame 8) to 3 o'clock (frames 16-17) in step with the tape band. Frames 20-26: the wheel is near round, the mark reaches the lower right (about 4-5 o'clock at frames 24-26), and the right-edge post appears at frame 20, one frame before the film's post at frame 21. g.png shows the rim outlines growing as one nested family around a fixed hub and the marker numbers forming a short continuous clockwise arc, with no gaps or reversals. The drawing keeps the doodle's double rim, irregular polygonal inner ring and four crossing spoke lines in every frame.",
+ "primary_gap": "The spoke lines do not visibly rotate with the marker: their angles change from frame to frame without a consistent clockwise step (for example frame 12 has no vertical spoke and frame 13 has one), so in playback the spokes may flicker rather than turn, while the film's spokes rotate with the tape.",
+ "closes_when": "Each spoke keeps a fixed angle relative to the zigzag mark, so that from frame to frame every spoke line advances clockwise by the same small angle the mark advances.",
+ "protect": "The double-outline rim with the lumpy polygonal inner ring and four crossing spoke lines from c.png; the edge-on-to-facing turn timed to the film; the marker's continuous clockwise path from 12 o'clock to about 4-5 o'clock; the wheel staying centred with the hub fixed; the post entering at the right edge near frame 20-21; the grey scenery staying in place.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The wheel uses the doodle's own double rim, uneven inner ring and crossing spoke lines; the only addition is the small zigzag mark, which is needed to show the tape and does not change the drawing's construction.",
+ "still_frames_only": true,
+ "_packet": "lot11377272",
+ "_round": 3
+}
