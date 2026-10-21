@@ -65,7 +65,7 @@ for f in range(1,9): x=WAIST[0][0]+(WAIST[9][0]-WAIST[0][0])*f/9; HEAD[f][0]+=x-
 # The mount is slowed: frames 0-12 are re-timed along the same path so that he walks in at an even pace (frames 1-5),
 # slows at the foot of the ladder, and from frame 7 rises onto it no more than about 9 px a frame (the film man's
 # first step up is small); the walk starts STEP0 px further in so the slower mount still meets the climb at frame 12.
-STEP0=12.0; MSTEP=[0,19,19,19,19,18,13,9.5,9,8.5,8,7.5,6.5]
+STEP0=20.0; MSTEP=[0,17.5,17.5,17.5,17.5,14,12,8,8.5,8.5,8.5,7.5,6.5]
 _P=[WAIST[0]+np.array([STEP0,0.])]+[WAIST[f] for f in range(1,13)]; _O=[HEAD[f]-WAIST[f] for f in range(13)]
 _L=np.r_[0,np.cumsum([np.hypot(*(b-a)) for a,b in zip(_P[:-1],_P[1:])])]
 _s=np.cumsum(MSTEP); _s=_s*_L[-1]/_s[-1]

@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A line-drawn ice cream cone (round scoop with a wavy band line over a lopsided pointed cone) stays fixed in the centre of the frame throughout. In frames 1-4 a thick tube enters from the top and bends into a hook that lies across the top of the scoop, the hook growing toward the right edge. In frames 5-8 the tube leans to the left and its hooked end slides left along the scoop, then the tube swings off the top-left corner, leaving only a small arc at the frame edge in frame 8-9. Frame 9-10 show the bare cone with a small arc of tube at the top edge. In frames 11-16 a new tube enters at the top right and descends down the right side of the scoop until its rounded end rests near the right edge of the band line.",
+ "seen_film": "Close-up of soft-serve ice cream being extruded into a cup. In frames 1-4 a thick rope of cream comes down from the top and coils around the inside of the cup. In frames 5-8 the rope leans left and its upper part sweeps toward the top-left, the coil settling into a mound. Frames 9-10 show the mound with the rope leaving at top-left. From frames 10-12 a new rounded end of cream appears at the top right of the cup, and in frames 13-16 it descends down the right side of the cup, pressing into the mound near the rim.",
+ "named_subject": "An ice cream cone (scoop on a cone) receiving a rope of soft-serve cream.",
+ "verdict": "bar met",
+ "evidence": "e.png 1-8: the tube coils into a hook over the scoop as the film's rope coils in f.png 1-8. e.png 9-19: tube leans left and the hook end slides left, matching f.png 9-19 where the rope swings to the upper left. e.png 20-24: tube exits off the top-left edge in small steps while f.png 20-24 shows the rope at the upper-left edge. e.png 27-33: a new tube end enters at top right, matching the new cream end appearing top right in f.png 27-33. e.png 34-44: the tube descends down the right side of the scoop in even steps, matching the film's descent at the right rim in f.png 34-44. The cone body keeps constant size and position across all 44 frames (g.png shows tightly stacked cone outlines), and the tube moves a small amount each frame with no doubles or redraws. Judged from still frames only, not playback.",
+ "primary_gap": "In e.png 25-26 no tube is visible at all, and in 22-24 only a tiny arc remains, while the film in f.png 22-26 still shows the departing rope as a large blurred mass at the upper left, so the stream briefly reads as vanishing rather than continuously flowing.",
+ "closes_when": "e.png 22-26 keep a visible section of the tube at the upper-left edge (cropped by the frame, thinning out) until the new tube end appears at top right in frame 27, so at least one tube is on screen in every frame.",
+ "protect": "The cone and scoop drawn exactly in c.png's construction (dome, wavy band line, lopsided cone point) at a fixed size and position; the tube drawn as a plain two-line outline in the same stroke weight; the left-sweeping exit in frames 9-24 and the right-side descent in frames 27-44 timed to the film; the small, even per-frame increments of the tube.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cone and scoop are c.png's drawing unchanged; the added cream tube uses the same plain line style, so identity holds.",
+ "still_frames_only": true,
+ "_packet": "lot427fe977",
+ "_round": 9
+}
