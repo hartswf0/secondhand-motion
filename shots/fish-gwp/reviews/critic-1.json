@@ -1,0 +1,19 @@
+{
+ "seen_animation": "a.png: a grey pond scene (a school of small fish at the top left, two fish hanging vertically at the edge of a set of concentric ripple ellipses, a vertical bank line at right, a grey fish at lower left) with one black fish at the bottom centre. In frames 1-8 the black fish faces right, body tilted so the head is raised and the tail points down-left, and it stays nearly in place while the ripples widen. From frame 9 it levels out to horizontal and glides slowly to the right along the bottom of the frame, ending in frame 16 at the lower right of centre. The grey fish at left drifts left and turns to point downward in frames 14-16.",
+ "seen_film": "d.png: overhead view of a green pond with a school of orange koi at the top, two koi nosing the surface where concentric ripples spread across the pond. At the bottom a pale pink koi lies angled up-right; in frames 1-8 it holds almost in place, then from frame 9 to 16 it slides slowly to the right along the bottom edge. A second orange koi above it moves left and turns nose-down in frames 13-16. The ripples expand to fill the lower half of the frame.",
+ "named_subject": "a fish (the pale koi swimming along the bottom of the pond)",
+ "verdict": "bar met",
+ "evidence": "Position and timing match the film: in a.png frames 1-8 the black fish's head sits at about the same x as the film's bottom koi (d.png 1-8, near-hold), and in frames 9-16 both slide right by a similar amount, ending at lower right of centre in frame 16 in both. In e.png the fish holds through frames 1-8 while the film koi holds (f.png 1-8), then advances a few pixels per frame from 9 to about 23 and settles in 23-25, as the film koi does. The tilt flattens gradually across e.png 1-17 with no single-frame pose change (checked 7-10 and 16-21 enlarged). g.png shows one evenly spaced left-to-right path with no gaps or reversals. The drawing keeps c.png's construction in every frame: round head, dot eye, short mouth line, triangle tail crossing the body at a pinched neck, single thin stroke.",
+ "primary_gap": "In e.png frames 1 to about 19 the lower corner of the black fish's tail runs off the bottom edge of the frame, so the closed tail triangle that defines c.png reads as an open V for most of the shot.",
+ "closes_when": "The fish's whole tail triangle, including its lower corner, is visible inside the frame in every frame from 1 to 25 (lift the fish slightly or scale it a little smaller) while keeping the same x path.",
+ "protect": "The hold in frames 1-8 followed by the slow rightward glide from frame 9, matching the film's timing and screen position; the gradual flattening of the tilt with no pops; the unchanged size of the drawing across all frames; c.png's stroke construction (round head, dot eye, mouth line, crossed triangle tail); the grey scenery staying grey and secondary.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The fish is c.png mirrored to face its direction of travel, with the mouth drawn as a small curve instead of c.png's angled line and the tail cropped at the bottom edge in the early frames; otherwise it is the same drawing.",
+ "still_frames_only": true,
+ "_packet": "lotd98134b5",
+ "_round": 1
+}

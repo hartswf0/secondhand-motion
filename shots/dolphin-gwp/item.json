@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0140",
+ "id": "dolphin-gwp",
+ "kind": "shot",
+ "title": "Dolphin, the Giraffe Walks Past Way",
+ "category": "dolphin",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/dolphin-gwp/cover.png",
+ "cover_alt": "shots/dolphin-gwp/frames/f014.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/dolphin-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#dolphin-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/dolphin_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/dolphin/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/dolphin-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

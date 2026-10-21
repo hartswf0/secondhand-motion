@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A line-drawn lobster seen from the front: a tall body outline with a horizontal crossline near the top, a left claw drawn as an open V hanging down to the left, and a grey small lobster doodle at the far left with a grey table edge below. In frames 1-2 the right claw is a horizontal V at the upper right, partly off the frame edge. In frames 3-4 it drops into a downward-pointing V at the lower right. In frame 5 it swings left toward the body as a zigzag. From frame 6 to frame 16 the right claw lies as a long horizontal curve in front of the lower body, joined to the body by two arm lines that cross the body outline, and it holds there with almost no change.",
+ "seen_film": "A large dark lobster stands on a cloth-covered table facing the camera, with a small lobster at the left. In frames 1-2 its right claw is raised and extended to the upper right, partly out of frame. In frames 3-4 the claw swings down to the lower right, pincer turned toward the camera. In frame 5 the claw sweeps left across the front of the body. From frame 6 to 16 the big claw lies horizontally across the front of the lobster, below the head, and stays there with only small adjustments; the antennae hang down and the left claw and small lobster stay still.",
+ "named_subject": "A lobster (front view) swinging its large right claw down and across in front of its body, with a small lobster beside it.",
+ "verdict": "reference stronger",
+ "evidence": "Event and timing match: e.png 1-5 claw raised at upper right (film 1-7 raised), e.png 6-10 claw dropped to a vertical V at lower right (film 8-11 claw down at lower right), e.png 11-15 claw folds left across the body (film 12-16 claw sweeps left), e.png 16-50 hold horizontal across body (film 17-50 hold). g.png shows one continuous arc from upper right down and around to the front of the body with no reversals. Weaknesses: e.png 5->6 the claw changes from a horizontal V to two near-vertical strokes in one frame, while the film claw at 5-6 barely moves and only drops at 7-8, so the drop starts early and pops. e.png 11->12 and 12->13 the claw is redrawn from a vertical V into a sideways zigzag rather than rotating the same V. e.png 14->15 the zigzag notch disappears and the claw becomes a single smooth curve plus a crossing arm line, a redraw rather than a rotation; from 15 to 50 the moved claw has no pincer notch at all, while the film claw keeps its two-finger pincer shape the whole time. In e.png 15-50 the arm lines are drawn straight through the body outline, so the claw reads as stacked lines over the body rather than lying in front of it.",
+ "primary_gap": "The moving right claw does not stay the same V-shaped pincer while it turns: it is redrawn at e.png 6, 12 and 15 and ends as a notchless curve, so the swing reads as shape swaps rather than one claw rotating.",
+ "closes_when": "Across e.png 5-16 the right claw keeps the same open-V pincer drawn the same way as the left claw and in c.png, rotating and translating a little each frame from upper right to horizontal in front of the body, with its drop starting near e.png 7 like the film and the notch still visible in the final hold.",
+ "protect": "The overall timing (raised, drop, sweep left, long hold) that matches the film; the continuous arc path shown in g.png; the still left claw, body outline with crossline and the grey small lobster and table placed where the film has them; the sparse straight-segment line style of the doodle; the steady hold from e.png 16 to 50 with no jitter.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  12,
+  13,
+  15
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The body and left claw match c.png's oval body with crossline and open-V claws, but the moving right claw loses the V pincer construction from e.png 15 onward and becomes a long smooth curve with an arm line through the body, which the doodle never draws.",
+ "still_frames_only": true,
+ "_packet": "lot0f4146c8",
+ "_round": 1
+}

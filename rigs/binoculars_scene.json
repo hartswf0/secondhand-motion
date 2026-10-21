@@ -75,7 +75,7 @@
   {
    "id": "char",
    "z": 2,
-   "label": "Binoculars, the man's hands and arms"
+   "label": "Binoculars (the hands, arms and chin are extra strokes on the drawn keys, carried with the binoculars)"
   }
  ],
  "objects": [
@@ -103,178 +103,6 @@
    ],
    "strokes": 1,
    "skip": 1
-  },
-  {
-   "id": "hand_l",
-   "plane": "char",
-   "qd": "hand",
-   "box": [
-    144,
-    80,
-    170,
-    114
-   ],
-   "aspect": 0.7,
-   "skip": 2
-  },
-  {
-   "id": "hand_r",
-   "plane": "char",
-   "qd": "hand",
-   "box": [
-    252,
-    78,
-    278,
-    112
-   ],
-   "aspect": 0.7,
-   "skip": 3
-  },
-  {
-   "id": "arms",
-   "plane": "char",
-   "class": "arms",
-   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket",
-   "strokes": [
-    [
-     [
-      142,
-      100
-     ],
-     [
-      110,
-      104
-     ],
-     [
-      72,
-      118
-     ],
-     [
-      46,
-      146
-     ],
-     [
-      42,
-      186
-     ],
-     [
-      66,
-      224
-     ],
-     [
-      92,
-      258
-     ],
-     [
-      98,
-      292
-     ]
-    ],
-    [
-     [
-      272,
-      100
-     ],
-     [
-      304,
-      106
-     ],
-     [
-      340,
-      124
-     ],
-     [
-      368,
-      160
-     ],
-     [
-      370,
-      200
-     ],
-     [
-      346,
-      240
-     ],
-     [
-      330,
-      292
-     ]
-    ],
-    [
-     [
-      158,
-      114
-     ],
-     [
-      136,
-      132
-     ],
-     [
-      118,
-      158
-     ],
-     [
-      112,
-      186
-     ]
-    ],
-    [
-     [
-      258,
-      114
-     ],
-     [
-      280,
-      132
-     ],
-     [
-      298,
-      158
-     ],
-     [
-      304,
-      186
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "head",
-   "plane": "char",
-   "class": "head",
-   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars",
-   "strokes": [
-    [
-     [
-      186,
-      120
-     ],
-     [
-      184,
-      142
-     ],
-     [
-      196,
-      164
-     ],
-     [
-      218,
-      172
-     ],
-     [
-      242,
-      165
-     ],
-     [
-      254,
-      142
-     ],
-     [
-      252,
-      120
-     ]
-    ]
-   ]
   }
  ],
  "notes": {
@@ -284,5 +112,6 @@
   "22": "the binoculars tilt slightly the other way",
   "28": "he holds still, looking up"
  },
- "no_cel": "SAM followed the binoculars for frames 0 to 8 and then the man's hands, so cel paint from the silhouette would cover the hands and not the binoculars"
+ "no_cel": "SAM followed the binoculars for frames 0 to 8 and then the man's hands, so cel paint from the silhouette would cover the hands and not the binoculars",
+ "hands_note": "The man's hands, arms and chin were scene objects on the char plane; they slid with the measured camera (left) while the binoculars drifted right, so the hands slid against the barrels. They are now extra strokes in shots/binoculars/drawn/k*.json (the same Quick, Draw! hand doodles and agent-drawn arm and chin lines), kept relative to the binoculars so the hands stay on the barrels."
 }

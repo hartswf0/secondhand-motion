@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0139",
+ "id": "bus-gwp",
+ "kind": "shot",
+ "title": "Bus, the Giraffe Walks Past Way",
+ "category": "bus",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/bus-gwp/cover.png",
+ "cover_alt": "shots/bus-gwp/frames/f012.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/bus-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#bus-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/bus_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/bus/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/bus-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

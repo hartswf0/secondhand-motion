@@ -1,23 +1,23 @@
 [
  {
   "id": "M2",
-  "value": 80,
+  "value": 82,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   75,
    76,
+   77,
    78,
-   93,
+   76,
    91,
    89,
-   89,
+   73,
+   90,
+   92,
+   76,
+   95,
    75,
-   74,
-   78,
-   77,
-   77,
-   75
+   74
   ]
  },
  {
@@ -32,11 +32,11 @@
   "value": 0.76,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": true,
-  "min": 0.53
+  "min": 0.54
  },
  {
   "id": "M6",
-  "value": 0.5,
+  "value": 0.3,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },

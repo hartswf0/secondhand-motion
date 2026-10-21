@@ -6,7 +6,7 @@
   "hip",
   "hip"
  ],
- "note": "Quick, Draw! yoga 5957605895700480: a person in a bridge, drawn as four strokes. Stroke 0 is one line from the left foot up the leg to the hips at the peak (vertices 0-5) and down the back to the shoulders (vertices 6-8). Strokes 1 and 2 are the two arms going from the shoulders down to the hands on the ground. Stroke 3 is the round head hanging between the arms. The root carries the whole drawing on the back line, hips to shoulders, so the body can turn all the way round as the woman goes over. The leg line turns at the hips toward the feet and may lengthen or shorten a little; both arms turn together at the shoulders toward the hands. The facing never flips: the woman in the film turns through a handstand, so the drawing turns with her instead of mirroring.",
+ "note": "Quick, Draw! yoga 5957605895700480: a person in a bridge, drawn as four strokes. Stroke 0 is one line from the left foot up the leg to the hips at the peak (vertices 0-5) and down the back to the shoulders (vertices 6-8). Strokes 1 and 2 are the two arms going from the shoulders down to the hands on the ground. Stroke 3 is the round head hanging between the arms. The root carries the whole drawing on the back line, hips to shoulders, so the body can turn all the way round as the woman goes over. The leg line turns at the hips toward the feet and may lengthen or shorten a little; both arms turn together at the shoulders toward the hands, lengthen a little, and are drawn 40 percent closer together than in the doodle (fold 0.6 toward the shoulder-to-hands line), because the film shows the woman side-on with her arms side by side. The facing never flips: the woman in the film turns through a handstand, so the drawing turns with her instead of mirroring. Track is off and smoothing 1.5: on this clip optical-flow tracking gave larger size steps (0.069 to 0.093) than plain interpolation through keys two frames apart (0.057).",
  "strokes": [
   [
    [
@@ -193,7 +193,12 @@
     "shoulder",
     "hands"
    ],
-   "stretch": 0.7
+   "stretch": 0.7,
+   "fold": "armfold",
+   "axis": [
+    "shoulder",
+    "hands"
+   ]
   },
   {
    "stroke": 2,
@@ -204,7 +209,12 @@
     "shoulder",
     "hands"
    ],
-   "stretch": 0.7
+   "stretch": 0.7,
+   "fold": "armfold",
+   "axis": [
+    "shoulder",
+    "hands"
+   ]
   },
   {
    "rest": true,
@@ -218,5 +228,5 @@
  ],
  "size": "steady",
  "smooth": 1.5,
- "track": true
+ "track": false
 }
