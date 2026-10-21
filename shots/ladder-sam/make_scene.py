@@ -111,7 +111,7 @@ def limb_back(root,q,L,side,cap,lo_c=None,hi_c=None):
     # an elbow or knee for a figure seen from behind on the ladder: halfway between root and contact, bent outward to its own
     # side (side -1 left, +1 right) by at most cap px (the rest of the bend goes into the ladder, foreshortened), never
     # inside the root's own line, kept between the rails, and for an arm never higher on the ladder than the hand.
-    A,B=lc(root),lc(q); D=np.hypot(*(B-A)); h=min(math.sqrt(max(L*L-(D/2)**2,0)),cap)
+    A,B=lc(root),lc(q); D=np.hypot(*(B-A)); h=min(math.sqrt(max(L*L-(D/2)**2,0)),cap,0.5*D)   # at most half the reach, so the two segments open at a right angle or wider
     m=(A+B)/2; m[1]+=side*h
     if side<0: m[1]=min(m[1],A[1]-4)
     else: m[1]=max(m[1],A[1]+4)
