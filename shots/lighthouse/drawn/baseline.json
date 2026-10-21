@@ -1,0 +1,26 @@
+{
+ "seen_animation": "Frame 1: a tall tapered black-line tower fills the centre of the frame, its top cut off at the upper edge, with four horizontal band lines across it; grey bush lower left, grey trunk line right, a small cloud lower right. Frame 2: the tower and its bands have moved down; the top edge of the tower is just at the frame top. Frame 3: the small window mark appears at the top and the side strokes begin to enter. Frame 4: the narrow top cap and the horizontal side strokes on both sides of the window are in view. Frame 5: the whole doodle is visible (cap, window, side strokes, bands), its top about a quarter of the way down; scenery has shifted down, with a cloud upper right and foliage upper left. Frames 6-16: the tower holds roughly the same place and size, drifting slightly left-right and down; the scenery keeps sliding down a little, larger foliage shapes fill the upper left from frame 9, and a small leaf shape appears upper right from frame 12. A short vertical tick crossing the lower right side stroke shows in some frames (4, 8, 10, 12, 16) and is absent in others.",
+ "seen_film": "A camera tilts up a red-and-white striped lighthouse seen from below, framed by dark tree foliage on both sides against a grey-blue sky. Frames 1-2: only the striped shaft is visible, filling the centre, top cut off. Frames 3-4: the black gallery ring at the top enters the frame. Frames 5-6: the lantern room comes into view above the gallery. Frames 7-8: the tilt slows and the full top of the lighthouse sits about a fifth of the way down the frame. Frames 9-16: the shot is essentially held, with small drift; the lighthouse stays centred and the foliage sways slightly.",
+ "named_subject": "A lighthouse (tapered tower with banded stripes, a window, a lantern cap and gallery strokes).",
+ "verdict": "bar met",
+ "evidence": "Frames 1-2 show only the banded shaft with the top cut off, as in film frames 1-2. Frames 3-4 bring the window and side strokes in at the top as film frames 3-4 bring in the gallery ring. Frame 5 shows the full doodle top including the cap, matching film frames 5-6 where the lantern appears. Frames 6-16 hold the tower centred with small drift, as film frames 7-16 hold. Bands slide down continuously through frames 1-5, reading as the same upward tilt. Scenery moves with the tilt (bush lower left in 1-8 moves down, foliage upper left from 9). Minor flicker: the short vertical tick on the right side stroke appears in frames 4, 8, 10, 12, 16 and vanishes in between; the upper-left foliage changes outline between frames 12 and 13.",
+ "primary_gap": "A small vertical tick on the lower right gallery stroke blinks on and off across frames (present 4, 8, 10, 12, 16, absent 5-7, 9, 11, 13-15), which would read as a flicker in playback.",
+ "closes_when": "The tick on the right side stroke is either present in every frame from 4 to 16 or absent in all of them, and the upper-left foliage keeps the same outline from frame 12 to 13.",
+ "protect": "The timing of the tilt (shaft only in 1-2, top entering 3-4, full top by 5, hold 6-16); the doodle's construction (tapered two-line shaft, hooked band lines, small hexagonal window, square cap, paired horizontal side strokes); the light grey scenery that scrolls with the camera; the tower's centred placement matching the film.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  4,
+  8,
+  10,
+  12,
+  13,
+  16
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The tower keeps the doodle's construction (tapered shaft, uneven band lines, hexagonal window, square cap, side strokes), with only the intermittent extra tick on the right side stroke differing from c.png.",
+ "still_frames_only": true,
+ "_lot": "lot05d0ae59",
+ "_round": "baseline before drawn keys"
+}

@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A line-drawn giraffe head in right profile fills the frame, with two ossicones (a bracket shape on the left, a P/pentagon shape on top), an arrow-shaped eye, a snout with a short hooked mouth mark, a cheek/jaw loop, and the neck running off the bottom. Grey trees sit left and right behind it. Frames 1-4: the head is large, the snout reaches the right edge and the lower jaw line slopes down toward the left. Frames 5-8: the snout pulls back left and the jaw line flattens; the neck front line splits into two short strokes at the bottom. Frames 9-11: the head is noticeably smaller and further left, the snout tip rounder, the right tree now fully visible beside it. Frames 12-16: the head grows again, the snout comes back to the right, and the lower jaw becomes a straight horizontal line with a thick bar under the mouth mark. No clear opening and closing of the mouth is drawn; the change is mostly the whole head scaling and the snout outline shifting.",
+ "seen_film": "A close-up of a real giraffe head facing slightly right of camera, with trees behind. Frames 1-3: mouth slightly open, chewing. Frames 4-6: the mouth opens wide, showing the dark inside, lips parted. Frames 7-8: the mouth closes with motion blur and the head turns a little toward camera so the far (right) ear appears below the snout. Frames 9-12: mouth closed, lips working sideways, right ear visible, head roughly in place. Frames 13-16: the mouth opens again, wide by frames 14-16, lower lip hanging. The event is a giraffe chewing: open, close with a slight head turn, open again, with the head staying near the same place and size.",
+ "named_subject": "A giraffe's head (close-up, chewing)",
+ "verdict": "reference stronger",
+ "evidence": "Film frames 4-6 and 14-16 show the mouth wide open; animation frames 4-6 and 14-16 show the snout outline closed with only the small hooked mouth mark, so the opening is never seen. Film frames 7-12 show the head turning slightly toward camera with the far ear appearing below the snout; the animation instead shrinks the whole head in frames 9-11 and enlarges it again in frame 12, which the film does not do (the film's head stays roughly the same size). Between animation frames 8 and 9 the head drops in size and the snout jumps left, and between 11 and 12 it jumps back larger. The animation does keep the doodle's ossicones, arrow eye, snout shape and mouth mark consistently across all 16 frames.",
+ "primary_gap": "The chewing action (mouth opening wide in frames 4-6 and 14-16, closing in 7-12) is not drawn; the animation substitutes a scaling of the whole head that the film does not have.",
+ "closes_when": "The lower jaw line visibly drops away from the upper snout line to form an open mouth in frames 4-6 and 14-16 and rejoins it in frames 7-12, while the head outline stays at roughly constant size and position across all frames.",
+ "protect": "Keep the doodle's construction: bracket ossicone on the left, P-shaped ossicone on top, arrow eye, the stepped forehead-to-snout outline, the hooked mouth mark, and the cheek loop; keep the right-facing profile placement that matches the film's head position and the steady background trees.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  9,
+  12
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The head reads as the c.png giraffe drawing, though it is scaled up so the long neck and its inner neck strokes from the doodle are mostly cropped away and the cheek is closed into a loop rather than the doodle's open cheek line.",
+ "still_frames_only": true,
+ "_lot": "lote6f4325d",
+ "_round": "baseline before drawn keys"
+}

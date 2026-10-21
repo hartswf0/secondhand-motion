@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A doodled raccoon-like animal (round head with dot eyes and smile, small ear, oval body, four stick legs, striped tail) stands in left-facing profile at the lower middle-right of the frame in front of grey zigzag grass and a grey bush shape at the right edge. Frames 1-4: it stands almost still, legs shifting slightly, with the head drifting a little left. Frames 5-8: same pose, the body slightly lower and further left, small leg changes. At frame 9 the scenery and ground line shift down and the grass is redrawn at a new height (a reframing); the animal stays in profile. Frames 9-16: it stays in place; in frames 13-16 the head is drawn larger and tipped forward and down a little. It never leaves profile and never puts its head to the ground.",
+ "seen_film": "A raccoon at the edge of tall grass on muddy ground with low plants. Frames 1-4: it sits hunched, facing the camera with its masked face toward the viewer, slightly right of center. Frames 5-8: it lowers its head toward the mud and begins turning to its left (screen left), moving slightly left and down. At frame 9 the camera reframes (ground sits lower, grass higher in frame). Frames 9-16: the raccoon is crouched low in left-facing three-quarter profile with its nose down at the ground, foraging, drifting slightly to the right, body hunched and rounded.",
+ "named_subject": "a raccoon",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-4 of the film show the raccoon facing the camera head-on; animation frames 1-4 show a side profile walking pose instead. Film frames 5-8 show the head going down to the mud while turning; animation frames 5-8 keep the head level with no turn. Film frames 9-16 show a low hunched crouch with the nose on the ground; animation frames 13-16 only tip the head slightly forward while the body stays upright on straight legs. The reframing at frame 9 matches the film's camera shift at frame 9. Placement is close: the animal sits in the lower middle-right in both. Still frames only; playback not seen.",
+ "primary_gap": "The animation never performs the film's event of turning from facing the camera to lowering the head to the ground and foraging; it holds one standing profile pose throughout.",
+ "closes_when": "Frames 1-4 show the doodle's face turned toward the viewer, frames 5-8 show the head swinging left and dropping, and frames 9-16 show the head at or touching the ground line with the body lowered and legs shortened or bent.",
+ "protect": "The doodle's construction and stroke habits (polygonal round head with dot eyes and smile, small ear tab, oval body, separate stick legs with the hooked front foot, striped tail), the lower middle-right placement, the grey grass-and-bush scenery, the scenery reframing at frame 9 matching the film, and the absence of doubled lines.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  13
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is clearly the c.png doodle; only the head is drawn somewhat larger from frame 13 on.",
+ "still_frames_only": true,
+ "_lot": "lot89f15b7a",
+ "_round": "baseline before drawn keys"
+}

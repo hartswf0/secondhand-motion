@@ -1,0 +1,26 @@
+{
+ "seen_animation": "A black-line doodle of a cat-like creature stands facing left: polygon head with two pointed ears, a zigzag spine of triangles along the back, a tall tail that curls up and over the back with a hook at the top, and four stick legs. Frame 1 is a close view: the figure is large and cropped at the bottom edge. Frames 2 to 4 show the figure smaller and moving down and left in the frame, as if the camera pulls back. From frame 5 to 16 the figure holds one size and position. During this hold the body, tail and legs stay fixed while the head area changes: the ears change shape (a wide M in frames 1, 11, 12; one short ear in frames 5 to 10 and 13 to 16), and the neck/chest line from the head to the belly changes angle and count (one diagonal in frames 1, 2, 5; two lines in frames 3, 4; a near-vertical line crossing the head in frames 11 and 12). No scenery is drawn.",
+ "seen_film": "A painted orange dinosaur-like creature (horned triceratops-style head with a frill, stegosaurus plates along the back, clawed legs, tail curling down and under the body) faces left against a black background. Frame 1 is a close view with the creature large and cropped at the top and right. Frames 2 to 5 pull back so the whole creature is visible and centred. Frames 5 to 16 hold that framing while the head makes small movements: the head and horns tilt slightly up and down (for example higher in frames 10 and 12, lower in frames 5 and 9), the jaw shifts, and the body stays nearly still. It reads as a camera pull-back followed by a mostly static creature with small head motion.",
+ "named_subject": "A cat-like creature with a zigzag spiked back and a curled tail, standing in profile facing left (standing in for the film's horned, plated dinosaur).",
+ "verdict": "reference stronger",
+ "evidence": "Timing of the pull-back matches the film: frame 1 is large and cropped in both a.png and d.png, frames 2 to 4 shrink, and from frame 5 both hold a fixed framing with the figure facing left. The hold matches the film's near-still body. But the head region in the animation changes discontinuously rather than with the film's small smooth tilts: the neck line doubles in frames 3 and 4, swings to a near-vertical stroke crossing the face in frames 11 and 12, and the ears switch between a wide M (frames 1, 11, 12) and a single short ear (frames 5-10, 13-16). Frame 12's ears and neck line look redrawn rather than moved. The film's tail curls down under the body while the animation's tail curls up over the back, so the large silhouette does not occupy the same places in the frame (the film's lower-right curve region is empty in the animation). Still frames only; playback not seen.",
+ "primary_gap": "The head and neck strokes pop between different constructions (doubled neck line in frames 3-4, a vertical line across the face and changed ears in frames 11-12) instead of making one small continuous head tilt like the film.",
+ "closes_when": "Across frames 5 to 16 the head, ears and single neck line keep the same stroke count and shape and only rotate or shift a few pixels up and down in step with the film's head tilts (up around frames 10 and 12, down around 5 and 9).",
+ "protect": "The doodle's construction from c.png (polygon head, zigzag triangle spine, tall hooked tail, stick legs, thin single strokes), the left-facing pose, the frame 1 close view and the pull-back over frames 1 to 5, and the steady hold of body and legs from frame 5 onward.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  4,
+  5,
+  11,
+  12,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The figure is clearly the c.png doodle, though the ears and neck line drift between versions so in some frames (11, 12) the head no longer matches the doodle's single-neck-line construction.",
+ "still_frames_only": true,
+ "_lot": "lot143d8dd2",
+ "_round": "baseline before drawn keys"
+}

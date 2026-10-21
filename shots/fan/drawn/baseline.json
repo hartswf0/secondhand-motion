@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A line drawing of a desk fan seen from the front: a rounded outer housing, three long curved blades meeting at a scribbled hub, and a trapezoid stand with hatching below. A grey bowl outline sits at lower left and a grey dashed table line runs across. Across frames 1-16 the housing, stand, bowl and table stay fixed while the three blades and the hub scribble change angle from frame to frame, so the blades appear to rotate around the hub. The blade tips move from about 12, 4 and 8 o'clock (frames 1-2) to about 2, 6 and 10 o'clock (frames 3-4), back near the frame 1 layout in frame 5, and continue cycling; the hub scribble turns from upright (frames 1-4, 13-14) to horizontal (frames 7-10). Nothing else moves.",
+ "seen_film": "A static shot of a chrome desk fan with a wire grille, centred in frame, on a table with a dark bowl at lower left and boxes/books at right against a wood wall. The fan runs for the whole shot. In frames 1-2 individual dark blades are still partly visible behind the grille; from frame 3 onward the blades are a pale even blur, i.e. the fan is at or near full speed. The grille, stand, bowl and camera do not move; the only event is the blades spinning.",
+ "named_subject": "An electric desk fan (housing, three blades, hub, stand).",
+ "verdict": "bar met",
+ "evidence": "In all 16 frames of a.png the housing outline, stand with hatching, bowl and table line hold the same position as each other, matching the fixed fan, bowl and table in all 16 frames of d.png. Only the blades and hub change: e.g. frame 1 tips at ~12/4/8 o'clock, frame 3 at ~2/6/10, frame 7-10 hub turned horizontal, frame 13-16 hub upright again, which reads as a running fan, the same and only event the film shows. The drawing in every frame keeps c.png's construction: the open-topped rounded housing with the short flat tick at upper left, three long single-stroke curved blades that overshoot the rim, the dense scribble hub, and the trapezoid stand with long diagonal hatching. Judged from still frames only, not playback.",
+ "primary_gap": "The rotation step between frames is uneven (frames 1 and 2 are nearly identical, then frames 2 to 3 jump about a third of a turn, and frame 5 returns close to frame 1's layout), so on playback the spin may read as a stutter or reverse rather than a steady fast spin, and the film's slight spin-up in frames 1-2 is not shown.",
+ "closes_when": "Consecutive frames advance the blades by a consistent angle in one direction (or show the faster rotation from frame 3 on after slower, more readable blade positions in frames 1-2), with no frame repeating the previous frame's blade layout.",
+ "protect": "Keep the housing, stand, hatching, bowl and table completely still as in the film; keep the doodle's three single-stroke curved blades that overshoot the rim, the scribbled hub, the open housing outline with its top-left tick, and the black-on-white single-line style without added blur, grille or detail.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "Blade curvature varies a little between frames (for example the hooked left blade in frame 3 and the shorter right blade in frame 9), but each frame still reads as the same doodle fan.",
+ "still_frames_only": true,
+ "_lot": "lotfb82001d",
+ "_round": "baseline before drawn keys"
+}

@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A seesaw drawn as a long tilted plank (high at upper left, low at lower right) resting on a triangular fulcrum, over a grey ground line with grey tree outlines behind. Frames 1-8 are nearly identical: the plank holds its tilt and does not rise or fall. In frames 9-12 the plank's upper edge becomes slightly flatter and the board looks a little thinner, then in frames 13-16 it returns close to the frames 1-8 pose. The fulcrum, the plank position in the frame and the scenery stay fixed throughout.",
+ "seen_film": "Frame 1 is nearly black (fade-in). Frames 2-8 show a playground with a foreground seesaw plank running from the upper left down to the lower right, held still at that tilt, while a woman at the left bends over near the low part of the board. At frame 9 the framing shifts: the plank's high end now enters lower on the left edge and a woman lifts a small child up. In frames 10-15 the child sits on the plank near the left edge while the woman stands beside it; the plank keeps the same diagonal tilt and does not swing. In frame 16 the child is being lifted off and the woman bends again. Other seesaws in the background also stay still.",
+ "named_subject": "A seesaw (plank on a triangular fulcrum)",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-8 of the animation hold the plank at the same upper-left-to-lower-right tilt as the foreground plank in film frames 2-8, which matches the film's still board. Film frame 1 is a dark fade-in, while animation frame 1 is fully drawn. At film frame 9 the framing changes and the plank's high end sits lower on the left edge for frames 9-16; the animation instead keeps the plank at the same place in frames 9-16 and only flattens the upper edge slightly in frames 9-12, then returns it in 13-16, a change the film does not show at 13-16. The animation is judged from still frames only, not playback.",
+ "primary_gap": "The film's shift at frame 9, where the plank's high end drops lower on the left side of the frame and stays there through frame 16, is not reproduced; the animation instead flattens the board briefly in frames 9-12 and returns it in 13-16.",
+ "closes_when": "From frame 9 onward the whole plank sits slightly lower and its upper-left end meets the left edge lower in the frame, holding that position steadily through frame 16 without reverting.",
+ "protect": "The doodle's construction is kept exactly: the long uneven plank outline with the short crossing stroke at the top left, the doubled-line triangular fulcrum with the stray tick at its apex, and the loose single-weight strokes; the plank's diagonal tilt matching the film; the steady, jump-free drawing across frames.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated seesaw matches c.png's plank shape, crossing stroke and double-lined fulcrum closely, only slightly reduced in scale.",
+ "still_frames_only": true,
+ "_lot": "lot9f2f7fd9",
+ "_round": "baseline before drawn keys"
+}

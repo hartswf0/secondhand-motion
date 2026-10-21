@@ -1,0 +1,19 @@
+{
+ "seen_animation": "All 16 frames show the same layout: grey scenery of a small house and a tree at the top, and two grey diagonal double lines that rise from the lower left and lower right corners to an apex near the top center, like converging railings. Over the whole frame, edge to edge, are many short black dashes tilted slightly from vertical, a few of them bent in the middle. From frame 1 to frame 16 the dashes are redrawn in new positions each frame, while their number, length and spread stay about the same. Nothing gathers at the bottom, nothing splashes, and the rain does not visibly get heavier or lighter across the 16 frames.",
+ "seen_film": "A rainy night street seen down a bridge: railings run from the lower corners to a vanishing point at center, a lamp post at upper right and a dark building behind. In frames 1-6 rain falls as a fine grey curtain mainly in the central band above the bridge, and only a few bright splash patches show on the deck near the bottom center. From frame 7-8 splashes spread across the lower deck; from frame 9 onward the rain curtain darkens and thickens, and by frames 10-16 the whole deck is covered in bright splashing, including the far left corner by the railing (frames 10-12, 16). The event is a downpour that builds in intensity and floods the bridge deck with splashes.",
+ "named_subject": "Falling rain: the character is a field of short, slightly slanted black rain strokes.",
+ "verdict": "reference stronger",
+ "evidence": "Judged from still frames only, not playback. Frames 1 and 16 of a.png have about the same density and length of rain dashes, while d.png frame 1 shows light rain with a small splash patch and frame 16 shows a dark heavy curtain and splashes over the whole deck. In d.png frames 8-12 splashing spreads across the lower deck; in a.png frames 8-12 the bottom band between the railing lines carries only the same falling dashes, with no splash marks. The railing lines in a.png (apex near top center, diagonals to the lower corners) do match the film's bridge layout in all frames, and the rain dashes in every frame match the doodle's strokes.",
+ "primary_gap": "The animation holds one constant rain density for all 16 frames and has no splashes, so it does not show the film's event of the rain building up from frame 7-9 and splashing across the bridge deck.",
+ "closes_when": "Frames 1-6 show sparser dashes concentrated in the center band above the apex with only a few short splash marks near bottom center, and from frame 8-9 onward the dashes become denser and longer while small splash marks drawn in the doodle's stroke style spread across the area between the two railing lines, reaching the lower left corner by frames 10-12.",
+ "protect": "Keep the rain strokes as the doodle's short, slightly tilted single lines with occasional bend; keep the black-character / grey-scenery split; keep the railing diagonals converging at top center where the film's bridge is; keep the light, uncluttered line drawing without adding shading or realistic detail.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The rain dashes match the doodle's stroke length, slant and occasional bend, so identity holds; the only mismatch is that the doodle's strokes are sparser than the dense field drawn in the early frames.",
+ "still_frames_only": true,
+ "_lot": "lot51e5d9de",
+ "_round": "baseline before drawn keys"
+}

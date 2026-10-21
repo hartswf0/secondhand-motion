@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frames 1-12: a front-facing doodled cat head (angular outline, two ears, two hollow polygon eyes, three whisker lines on each side) sits in the upper left with grey leaves and a flower to its right. Across these frames the head rocks very slightly (small tilt and up-down shift); the ear tips are clipped by the top edge of the frame and the right ear reads as two separate strokes in frames 5-12. Frame 13: the whole head jumps lower and to the right and the scenery jumps left. Frames 14-16: the head sits further right and lower, still front-facing with the same eye shapes; the scenery is cropped at the right edge. The head never turns; it only translates.",
+ "seen_film": "Frames 1-12: a tabby cat in close-up, head tilted up and slightly left, eyes half-closed, the tip of its tongue showing, swaying slightly; background of dark leaf shapes and a red flower on the right. Frame 13: the cat lowers its head and starts turning to its left (screen right), tongue going back in. Frames 14-16: the cat is in three-quarter/profile view facing screen right, head lower and centred-right in frame, ears up and pointed, mouth closed; the background shifts slightly.",
+ "named_subject": "a cat's head (front-facing doodle of a cat face with ears and whiskers)",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-12 match the film's held, slightly swaying upward-looking pose in placement, but the doodle shows no upward head tilt and no tongue. At frame 13 the film's cat lowers and turns its head toward screen right; the animation instead shifts the unchanged frontal drawing down and right in one step (frame 12 to 13) and again (frame 13 to 14), with the scenery jumping left at the same frames. In frames 14-16 the film shows a profile facing right, while the animation still shows the full frontal face with both eyes facing the viewer. Ear tips are clipped at the top edge in frames 1-12 and the right ear is drawn as two disconnected strokes in frames 5-12.",
+ "primary_gap": "The film's key event, the cat lowering its head and turning to face screen right at frames 13-16, is performed as a flat sideways translation of the unchanged frontal drawing, arriving in two jumps at frames 13 and 14.",
+ "closes_when": "Across frames 12-16 the drawing rotates progressively toward screen right (far eye shrinking and moving toward the near eye, ears shifting, right whiskers shortening, left whiskers lengthening) while the head descends in small even steps rather than two large shifts.",
+ "protect": "The angular single-stroke head outline, hollow polygon eyes and the small tick mark on the crown from c.png; the held, nearly still pose in frames 1-12 that matches the film's timing; the grey scenery placed on the right side as in the film.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  13,
+  14
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The head and eyes match c.png, but the left whiskers are redrawn as one long line from the eye plus two short angled lines instead of c.png's three near-horizontal strokes, the right whiskers are flat instead of angled down, and the right ear is split into two strokes in frames 5-12.",
+ "still_frames_only": true,
+ "_lot": "lotcaaf56d5",
+ "_round": "baseline before drawn keys"
+}

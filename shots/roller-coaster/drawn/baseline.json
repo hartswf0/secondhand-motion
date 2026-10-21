@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Judged from still frames only, not playback. Frame 1 shows a roller-coaster track in black: a doubled rail with short cross-tie strokes rising from the lower left to a peak near the top centre, and two lines falling away down to the right. Grey clouds sit at the top left and top right. Over frames 1 to 9 the whole track drawing gets steeper and slides left, so the peak moves from about the middle of the frame to about one third from the left, and the climbing section becomes nearly vertical. From frame 9 to frame 16 the drawing holds almost still, with small shifts of the tie strokes. Nothing travels along the track; no car or train is drawn at any point. In frame 1 the left cloud is drawn broken, and in frame 6 the left cloud is gone except for a small stroke, then returns in frame 7.",
+ "seen_film": "A black-and-white shot of a wooden roller coaster's lift hill. A train of cars full of riders climbs the steep lift track on the left toward the crest under a small tower. The camera moves during frames 1 to 8 so the crest shifts left and the tower comes into full view by frame 4; from about frame 9 onward the framing is steady. Throughout the shot the train keeps climbing: in frames 1 to 4 the cars fill the middle of the lift, and by frames 13 to 16 the front car is close to the crest under the tower. A second track loop and a building sit to the right of the lift.",
+ "named_subject": "A roller coaster: a lift-hill track with cross ties rising to a peak, and the track or supports dropping away on the right.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-9: the track drawing steepens and its peak moves left, which matches the camera drift in film frames 1-9 where the crest moves left. Frames 9-16: the animation holds still, which matches the film's steady framing. But in film frames 1-16 a loaded train climbs the lift until it nears the crest in 13-16, and in animation frames 1-16 no train or car is drawn and nothing moves up the track; the only change is the tie strokes jittering slightly from frame to frame. Frame 6 loses the left cloud and frame 1 shows it broken, which are scenery pops the film does not have.",
+ "primary_gap": "The film's event is a train climbing the lift hill to the crest, and the animation shows only the track changing angle with nothing climbing it.",
+ "closes_when": "A small train of cars, drawn in the doodle's short straight-stroke style, sits low on the climbing rail in frame 1 and advances steadily up the rail each frame until it reaches just below the peak in frames 13-16.",
+ "protect": "The track drawn as two rails with short slanted cross-tie strokes as in the doodle; the two lines dropping away to the right of the peak; the leftward drift and steepening of the peak in frames 1-9 followed by a steady hold in frames 9-16, which matches the film's camera; the plain line weight with no added shading.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  6
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The track keeps the doodle's double rail, tick-mark ties and two right-hand drop lines, though it is drawn steeper and straighter than the doodle's gently curved climb.",
+ "still_frames_only": true,
+ "_lot": "lot4dd3c662",
+ "_round": "baseline before drawn keys"
+}

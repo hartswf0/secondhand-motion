@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A line-drawn mosquito (oval head at left, proboscis curling down and to the left, a straight horizontal body, an upright pointed wing, short legs) stands on a grey diagonal line that runs from upper left to lower right; below it is a wavy grey ground line with scattered short grey strokes. Across frames 1-16 the mosquito stays at roughly the same spot (about 40% across, upper third of the frame), with small shifts of a few pixels and slight changes in wing and leg shape. The diagonal line shows short gaps near the mosquito in frames 1, 2, 7, 8 and 9 that are absent in other frames. In frame 9 all scenery is shifted left, and from frame 10 the ground strokes are rearranged (the N-shaped mark at left is gone). The body stays level throughout; no clear dipping, pumping or probing action is visible.",
+ "seen_film": "A close-up of a dark mosquito standing on hairy skin; the skin edge runs diagonally from upper left down to the right with black background above. The mosquito stays in one place, head to the left with the proboscis pushed into the skin, feeding. Through the frames its body rocks: in frames 4, 8, 12 and 16 the head is dipped lower and the abdomen tilts, while in frames 1-3, 5-7, 9-11 and 13-15 it sits higher with the abdomen raised to the right. There is a slight camera reframe around frames 9-10. The event is a mosquito biting and drawing blood with a small rhythmic body bob.",
+ "named_subject": "a mosquito",
+ "verdict": "reference stronger",
+ "evidence": "Placement matches: in all 16 animation frames the mosquito sits at about the same frame position as the film's mosquito (frames 1-16 of d.png), facing left, proboscis reaching below the diagonal skin line, so the setting and the 'stays put and feeds' action are present. But the film shows a repeated head-dip/abdomen-tilt in frames 4, 8, 12 and 16, and in the animation frames 4, 8, 12 and 16 look the same as their neighbours: body level, head at the same height, no tilt. The only changes in the animation are few-pixel position jitters (e.g. frame 3 shifted left relative to 2) and gaps in the grey diagonal line that appear in frames 1, 2, 7, 8, 9 and disappear elsewhere. The ground strokes jump at frame 9 (whole scene shifted left) and frame 10 (strokes rearranged), which roughly lines up with the film's reframe at 9-10.",
+ "primary_gap": "The film's feeding action, a rhythmic head dip and abdomen tilt that peaks in frames 4, 8, 12 and 16, is missing; the animated mosquito holds a level pose with only small jitters, so the bite reads as a still mosquito rather than one pumping blood.",
+ "closes_when": "In animation frames 4, 8, 12 and 16 the head and proboscis visibly lower toward the diagonal line and the rear of the body/abdomen tips up, returning to the level pose in the frames between, while the mosquito's position on the line stays fixed.",
+ "protect": "Keep the doodle's construction (oval head with a vertical stroke, curled proboscis, single straight body bar, upright pointed wing, short separate leg strokes, the antenna hook), the left-facing mirrored orientation that matches the film, the fixed placement on the diagonal skin line at the film's frame position, and the sparse grey scenery style.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  7,
+  8,
+  9
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is clearly c.png mirrored left-to-right with the same strokes, though the separate abdomen stroke behind the body from the doodle is reduced to short tail ticks at small scale.",
+ "still_frames_only": true,
+ "_lot": "lot31e88b72",
+ "_round": "baseline before drawn keys"
+}

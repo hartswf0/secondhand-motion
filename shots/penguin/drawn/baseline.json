@@ -1,0 +1,27 @@
+{
+ "seen_animation": "A doodled penguin-like bird (round head with dash eyes, a beak pointing to the upper left, a large looped ring for the body, a long wing to the left and a teardrop wing to the right) stands tilted about 30 degrees to the left in the left half of the frame, with grey scenery outlines at right and bottom that stay fixed. Frames 1-4: the head starts high and to the left and drops slightly and moves right; the beak changes from a long wedge (1) to a short open box (2) to a flat wedge (3-4). Frames 5-8: the whole figure sits a little lower and further right, nodding gently, beak alternating between a box shape (5) and a wedge (6-8). Frames 9-12: the figure holds roughly in place, head bobbing slightly, beak again redrawn as a box (9, 11) and a wedge (10, 12). Frames 13-15: the figure leans further left and the head drops forward-left; the beak becomes a long slanted shape whose lower stroke runs down into the left wing (14-15). Frame 16: the figure straightens back up and the beak is a thin closed wedge pointing left.",
+ "seen_film": "A black-headed bird-like creature with a pale, leaf-shaped white belly that tilts to the left, a single large eye, a pointed ear at upper right, and a light, fluffy beak/whisker shape on the left side of the head, stands in front of a dark red background with a pale bench or rail along the bottom. Frames 1-2: head high, beak shape open at left. Frames 3-5: the head dips down and the body sways slightly, with the beak shape opening and closing as if speaking. Frames 6-12: the creature holds its position with small nods, the beak shape changing each frame (talking). Frames 13-15: the head pushes forward and down to the left, the beak shape stretches out and down, and in 15 the eye changes to a blank outlined shape. Frame 16: the head returns upright with the beak pointing left.",
+ "named_subject": "a penguin-like bird doodle (head with beak, ring body, two wings)",
+ "verdict": "reference stronger",
+ "evidence": "Placement and tilt follow the film: in frames 1-16 the body leans left at about the same angle as the film's white belly, the head dips in 3-5 as in the film, holds with small nods in 6-12, pushes forward-left in 13-15 and recovers in 16, matching film frames 13-16. But the beak, which carries the film's talking action, is redrawn with a different construction almost every frame: a long open wedge in 1, an open four-sided box in 2, 5, 9 and 11, a flat wedge in 3-4, 6-8, 10 and 12, a long slanted shape whose lower stroke joins the left wing in 14 and 15, and a thin closed wedge in 16. These read as shape swaps rather than a beak opening and closing. Judged from still frames only, not playback.",
+ "primary_gap": "The beak is rebuilt with a different shape from frame to frame (wedge, open box, long slash merging into the wing) instead of being the same two-stroke wedge from c.png opening and closing, so the film's talking reads as pops rather than speech.",
+ "closes_when": "Every frame shows the beak as the c.png wedge (two strokes meeting at a point on the left, anchored at the same spot on the head) whose lower stroke only rotates down and back up across 2-12 and stretches forward-down in 13-15, never becoming a four-sided box and never touching the left wing.",
+ "protect": "Keep the leftward body tilt and screen position that match the film's white belly, the head dip in 3-5, the forward-left push in 13-15 and recovery in 16, the stable ring body, the dash eyes inside the round head, the two wing shapes, and the fixed grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  5,
+  9,
+  11,
+  14,
+  15,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The head, eye dashes, ring body and wings match c.png, but in frames 2, 5, 9, 11, 14 and 15 the beak loses the c.png pointed wedge and becomes a box or a long slash.",
+ "still_frames_only": true,
+ "_lot": "lote9b5eda8",
+ "_round": "baseline before drawn keys"
+}

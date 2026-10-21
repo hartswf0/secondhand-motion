@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A doodled windmill: a tall rectangular body with an elliptical top, a small oval hub near the upper middle, five looped blades radiating from the hub, and a short vertical tick (door) near the bottom. Grey scenery (a big tree to the right, a small bush/tree at lower left, a ground line) stays fixed. In frame 1 the blades sit at roughly 12, 1:30, 9, 7 and 5 o'clock. Across frames 2-8 the whole blade set turns clockwise: the long upper-right blade lowers from about 50 degrees toward about 20 degrees, the left blade rises, the lower-right blade moves toward 6 o'clock. Frames 9-12 continue the turn until the right blade is horizontal and the left blade points up-left at about 10-11 o'clock. Frames 13-16 continue slowly; by frame 16 the blades sit roughly at 11, 1, 3, 9 and 7 o'clock. The body, hub and scenery do not move; only the blades rotate, by about 45-50 degrees total, at a fairly even rate.",
+ "seen_film": "A low-angle shot of a four-sail Dutch windmill against a bright sky, framed by dark foliage. The tower is center-right; the hub is at about 40% across and 50% down. The camera is static. The sails rotate clockwise at a steady rate: in frame 1 one sail points up-left (about 11 o'clock) and the long opposite pair runs from lower-left to upper-right; by frames 6-8 one sail is nearly vertical and the other pair nearly horizontal; by frames 9-12 the vertical sail leans right; by frame 16 the sails form an X with sails at about 1 and 10 o'clock. Total rotation is about 55-60 degrees, continuous, with no change in the tower.",
+ "named_subject": "a windmill with looped blades",
+ "verdict": "bar met",
+ "evidence": "Both turn clockwise at a steady rate around a fixed hub with a fixed body. Frame 1: animation upper-right blade at about 50 degrees, film long sail at about 30 degrees with a sail at 11 o'clock; frames 5-8: animation upper-right blade lowers to about 20-25 degrees while the film's sail approaches vertical; frames 9-12: animation right blade reaches horizontal (frame 12) as the film's sails pass the plus-shape; frames 13-16: both continue into an X-like spread (animation upper blades at about 11 and 1 o'clock in frame 16, film sails at about 10 and 1 o'clock). Hub in both is at about 40-45% across and 50% down in every frame. No frame shows a blade jumping out of sequence, being redrawn, or doubled; frame-to-frame angle steps are similar in size throughout.",
+ "primary_gap": "The animation rotates about 45-50 degrees over the shot while the film rotates about 55-60 degrees, and the animation slightly slows in frames 12-16 where the film keeps a constant rate.",
+ "closes_when": "The blade set's angle advances by an equal step of about 3.5-4 degrees every frame, so that frame 16's blades sit about 10 degrees further clockwise than now (right blade clearly below horizontal, upper blades at about 12:30 and 10:30).",
+ "protect": "Keep the c.png construction exactly: the rectangular body with elliptical top, the small oval hub with its tick, the five open looped blades of differing lengths, the short door tick, and the same wobbly single-stroke line quality; keep the body, hub and scenery static and the rotation clockwise around a fixed hub; keep blade lengths roughly constant as they turn.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The left blade loop grows somewhat longer by frames 13-16 than its short form in c.png and the upper loops crowd the elliptical top line, but the drawing still reads as the c.png windmill.",
+ "still_frames_only": true,
+ "_lot": "lote004981e",
+ "_round": "baseline before drawn keys"
+}

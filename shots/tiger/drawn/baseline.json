@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A frontal cat-head doodle sits to the right of a grey triangular mountain. Frames 1-4: the head holds high in the cell (top near the cell edge), with small tilts and a long whisker sticking out to the right. Frames 5-6: the head has dropped a step lower and tilts slightly. Frame 7: the head is lower again, drawn larger (wider by about a sixth) and shifted right. Frame 8 holds that. Frame 9: the head shifts back left at the same lower height and size. Frames 9-16: the head holds in that lower position with only small wobbles of the whiskers and outline. The face stays frontal in every frame; there is no body.",
+ "seen_film": "A tiger lies on a rock in front of a rock wall, body across the lower frame, front paw extended to the right. Frames 1-6: its head is turned toward frame right in three-quarter view, looking off to the side, held still. Between frames 6 and 7 the tiger turns its head to face the camera. Frames 7-16: it holds a frontal stare at the camera with the head at the upper centre-right of the frame, with very slight shifts.",
+ "named_subject": "a cat's head (frontal face with ears, whiskers, nose and mouth) standing in for the tiger",
+ "verdict": "reference stronger",
+ "evidence": "The film's one event is the head turn from three-quarter view (frames 1-6) to frontal (frames 7-16). In the animation the face is frontal in frames 1-6 as well as 7-16; the only change is a downward drop (frames 4-5 and 6-7) and a size increase at frame 7, so the timing of the change lines up with the film's frame 7 but the action is a drop-and-grow, not a turn. Frame 7 also shifts right and frame 9 shifts back left, which the film does not do. Identity is strong: every frame reproduces c.png's outline, crossed brow marks, tick eyes, uneven whiskers and the 'JL' mouth.",
+ "primary_gap": "The head never turns: frames 1-6 show the same frontal face as frames 7-16, so the film's look-away-then-turn-to-camera does not happen.",
+ "closes_when": "Frames 1-6 show the doodle's face turned toward frame right (features compressed and shifted to the right side of the head outline, near ear foreshortened), and by frame 7 the features slide back to the centred frontal layout of c.png and hold through frame 16, with no drop, growth or left-right shift.",
+ "protect": "The exact c.png construction and stroke habits (angular head outline, two pointed ears, crossed brow lines, tick eyes, uneven whisker strokes including the long one past the outline, the 'JL' mouth); the change landing at frame 7; the quiet hold in frames 9-16.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  7,
+  9
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is clearly the c.png cat drawing; the only identity issue is that it is never shown in a turned pose.",
+ "still_frames_only": true,
+ "_lot": "lot3d1b001e",
+ "_round": "baseline before drawn keys"
+}

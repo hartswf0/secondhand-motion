@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A line-drawn speedboat (cabin with three small windows, spray strokes at the right end) sits low in the frame among grey trees, bushes and grass. Frames 1-3: the boat, tilted with its right end down, rises a little from lower-left center. Frame 4: it is clearly airborne, higher, larger and further right. Frames 5-6: it is at the left-center, nearly level, nose to the left, moving right. Frames 7-8: it moves to the center and its left end dips, the hull lengthening. Frames 9-10: the hull is steeply tilted, left end down at the lower left, right end up near a tree trunk. Frames 11-12: the boat is level at the bottom of the frame as the trees leave the scene. Frames 13-16: the boat, level, shrinks and moves up and toward the center over open ground with a bush line behind it.",
+ "seen_film": "A speedboat bursts out of a cypress swamp bank. Frame 1: dark shape barely visible in the vegetation at left-center. Frames 2-3: the bow emerges, angled down to the right. Frame 4: the boat is airborne, high and large at the center. Frames 5-7: it flies across the frame, nearly level, from left toward center, over open water. Frame 8: right end up, left end lower. Frames 9-10: steeply tilted, left end hitting the water at lower left, men visible aboard. Frames 11-12: it lands flat with a large splash. Frames 13-16: it skims away across the lake trailing big spray, getting smaller and moving toward center-right.",
+ "named_subject": "a speedboat",
+ "verdict": "reference stronger",
+ "evidence": "Positions and attitudes track the film closely: frames 2-3 low tilted emergence at left-center, frame 4 airborne high center, frames 5-6 level at left, frames 9-10 steep nose-down tilt at lower left, frames 11-16 level and shrinking toward the center. But in frames 10-15 the film shows a large water splash on landing and while skimming away, and the animation shows no impact marks at all: frame 10 to 11 is only a rotation from steep to level. Frame 3 to 4 the boat jumps up and grows by about half in one step. In frames 8-10 the hull is stretched to roughly 1.5 times its length in frames 12-16, distorting the doodle's proportions. Judged from still frames only, not playback.",
+ "primary_gap": "The landing in the water (film frames 10-13) is not drawn as an impact, so the animation reads as the boat rotating level rather than crashing down onto the lake.",
+ "closes_when": "Frames 10-14 show splash or spray strokes in the doodle's own short loose-line style rising at the point where the left end meets the ground line, growing at frame 11 and trailing behind the boat through 13-15.",
+ "protect": "The overall path and timing matching the film (low emergence 1-3, airborne 4-7, steep nose-down 9-10, level skim and recede 11-16); the doodle's cabin with three window marks and the spray-stroke cluster kept on every frame; the scenery pan from trees to open bank line.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  4
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the doodle mirrored left-to-right, and in frames 8-10 its hull is stretched much longer than in c.png, though the cabin, windows and spray strokes stay recognizable.",
+ "still_frames_only": true,
+ "_lot": "lot8d7bc536",
+ "_round": "baseline before drawn keys"
+}

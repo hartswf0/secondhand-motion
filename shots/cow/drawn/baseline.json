@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A close-up of the doodle cow's head, large and cropped by the frame, with a grey cloud at top left and a grey horizon line at left. In frames 1-2 the head is tilted, sitting right of center, with a round loop ear at upper left, two short horn strokes at the top, an oval muzzle with a small smile, and a neck line running to the right. Frames 3-5 the head straightens and moves left and down; a body outline line appears to the right and a pointed spot shape appears at lower right. At frame 6 the round loop ear is replaced by two angled strokes, and from frame 6 to 16 the head is held almost unchanged, facing front, with two body spots at right. The smile and muzzle do not change shape across all 16 frames. In frames 15-16 the lower-right spot shape stretches into a pointed form that reaches the bottom edge.",
+ "seen_film": "A close-up of a brown cow with a white forehead blaze against a grey-green sky and dark treeline. In frame 1 the head is tilted and turned to the right; in frames 2-4 it turns to face the camera. From frame 4 to 16 the cow faces front, head nearly still, and chews: the mouth opens and closes repeatedly, showing the lower teeth wide open in frames 4, 8, 12, 13 and 16 and more closed in frames 6, 9-11 and 14-15. The ears flick slightly.",
+ "named_subject": "a cow (head close-up)",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-5 of the animation match the film's opening turn from a tilted head (film frame 1) to a frontal head (film frames 2-4), slightly late. After that the film's event is chewing: the mouth opens wide in film frames 4, 8, 12, 13 and 16, but the animation's smile and muzzle stay the same closed shape in every frame 1-16, so the chewing never happens. At frame 6 the round loop ear of frames 1-5 is redrawn as two separate angled strokes with no transition. In frames 15-16 the lower-right spot shape changes from a closed loop to a stretched pointed shape, and in frame 4 a heavy horizontal line appears at lower right that is not in frames 3 or 5. Judged from still frames only, not playback.",
+ "primary_gap": "The cow's mouth never opens and closes, so the film's main event, repeated chewing with the mouth open in film frames 4, 8, 12, 13 and 16, is absent.",
+ "closes_when": "The smile line under the muzzle opens into a lowered jaw shape (a dropped lower lip stroke below the smile) in frames 4, 8, 12, 13 and 16 and closes back toward the plain smile in frames 6, 9-11 and 14-15, while the rest of the head stays still.",
+ "protect": "The doodle's construction of the head: the rounded-rectangle head, the two short slanted eye ticks, the wide oval muzzle with the line across its top and the small V smile, the thin uniform black stroke, the round loop spots; the head turn from tilted to frontal in frames 1-5 at roughly the film's timing; the still, frontal hold of the head from frame 6 onward; the grey cloud and horizon as scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  6,
+  15,
+  16
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The head, eyes, muzzle and smile match c.png, but from frame 6 the doodle's round loop ear and closed-loop horn are replaced by pairs of loose straight strokes, so for most of the shot the ears are not the doodle's ears.",
+ "still_frames_only": true,
+ "_lot": "lot59f76cf4",
+ "_round": "baseline before drawn keys"
+}

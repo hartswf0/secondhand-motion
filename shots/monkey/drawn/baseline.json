@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A line-drawn monkey head and shoulders (round head, two loop ears, heart-shaped face mask with eyes and a small mouth, spiral tail at right, rounded body below). Frames 1-4: the facing-front monkey slides right across the frame, with the face starting to shift toward the left side of the head. Frames 5-12: the whole figure has jumped left and up; the face features are pushed against the left edge of the head (a three-quarter turn to the viewer's left), and the left ear is no longer a closed loop but two thin open lines poking up at the top edge of the frame. The eye area in frames 6-11 is drawn with overlapping small strokes. Frames 13-14: the figure moves back right, face features begin to re-center, left ear still open lines. Frames 15-16: the left ear is a closed loop again, the face is centered and frontal, and the figure sits right of center and lower in frame 16.",
+ "seen_film": "A close shot of a macaque against a pale backdrop. Frame 1: it faces the camera, head upper left-center. Frames 2-4: its eyes go to its right (viewer's left) and the head begins turning that way. Frames 5-14: the head is turned to the viewer's left in three-quarter view and tilted down, eyes looking down and left, muzzle lowered; the head sits at left of frame with the right ear visible at upper center. Frames 15-16: the head comes back up and turns to face the camera again, ending right of center in frame 16.",
+ "named_subject": "A cartoon monkey (head, ears, face mask, spiral tail, body) standing in for the macaque.",
+ "verdict": "reference stronger",
+ "evidence": "Timing of the turn matches: the head turn to the viewer's left starts around frames 4-5 and returns at frames 15-16 in both a.png and d.png, and the figure's left-then-right-of-center travel (frames 5-12 left, frame 16 right) follows the film's head placement. But the film's key action in frames 5-14 is looking down: the macaque's muzzle and eyes drop and the head tilts forward. In a.png frames 5-14 the eyes, nose and mouth stay at the same height inside the head and the head outline does not tilt, so the animation shows only a sideways turn, not the downward look. The left ear changes abruptly from a closed loop (frame 4) to two open spiky lines (frame 5) and back to a loop (frame 15), which reads as a redraw rather than the ear turning away. In frames 6-11 the eye area is drawn as several overlapping small strokes, which reads as doubled lines. Between frames 4 and 5 the whole figure jumps left and up by a large step while frames 5-12 are nearly static, so the move is concentrated in one jump. Judged from still frames only, not playback.",
+ "primary_gap": "The downward look in frames 5-14 is missing: the face features never drop and the head never tilts, so the animation shows a side glance instead of the film's turn-and-look-down.",
+ "closes_when": "In frames 5-14 the eye, nose and mouth strokes move down within the head outline and the head outline rotates forward/down to the viewer's left, then rise back up through frames 14-16.",
+ "protect": "The doodle's construction and stroke habits (loop ears, heart-shaped face mask, small U mouth, spiral tail, rounded body, single wobbly lines); the timing of the turn starting at frame 4-5 and returning at 15-16; the left-of-frame placement during the turn and the right-of-center end position in frame 16; the face features sliding to the left side of the head to show the three-quarter view.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  6,
+  15
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png monkey drawing, but in frames 5-14 its left ear loses its closed loop shape and becomes two open lines, and the eyes gain extra overlapping strokes that the doodle does not have.",
+ "still_frames_only": true,
+ "_lot": "lotb9631a9c",
+ "_round": "baseline before drawn keys"
+}

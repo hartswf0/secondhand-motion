@@ -1,0 +1,24 @@
+{
+ "seen_animation": "Frames 1-5: the stick-figure dog doodle stands left of the tree facing left, head raised high on a long neck, boxy rump on the right with four hanging legs; it barely moves except small leg shifts. Frame 6: the whole drawing is suddenly mirrored to face right, rump now on the left, head lowered toward the right. Frames 7-8: head down at right; in frame 8 the body stretches long and low and the front legs splay into a crossed tangle. Frame 9: the figure jumps back left and the head comes up. Frame 10: the body is redrawn as a curled loop with a short neck and clustered legs. Frames 11-13: a compact right-facing dog with head forward at nose height, drifting slightly. Frames 14-16: the dog stands just above and left of the bowl with its head lowered over the bowl, body stretched again.",
+ "seen_film": "Frames 1-5: a dog stands center-left beside a standing person, facing left/up toward the person, with small head movements. Frames 6-8: the dog turns around in place, swinging its head down and toward the right/camera, ending in frame 8 head-down, moving forward to the right. Frames 9-13: the dog walks toward the camera down the path, facing the viewer, moving down and slightly right toward the bowl. Frames 14-16: the dog lowers its head and sniffs at the ground just right of/above the bowl while the camera pans right and down, the person leaving frame.",
+ "named_subject": "a dog (stick-figure doodle with long neck, boxy rump and hanging legs)",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-5 match the film's opening pose and place (dog facing left, head up, left of center). The film's turn takes frames 6-8; the animation does it as an instant mirror flip between frames 5 and 6 with no in-between rotation. Frame 8 legs splay into a crossed tangle the film does not have. Frame 9 jumps back left with head raised while the film dog keeps advancing. Frame 10 redraws the body as a curled loop unlike any other frame. Frames 9-13 keep the dog in right-facing profile while the film dog faces the camera and walks toward it. Frames 14-16 match the film's ending: head lowered at the bowl.",
+ "primary_gap": "The turn-around is a single-frame mirror flip (frame 5 to 6) followed by unstable redraws in frames 8-10, so the middle of the shot does not read as one continuous turn-and-walk.",
+ "closes_when": "Frames 6-8 show the dog rotating through intermediate poses (three-quarter, then facing the viewer) with the head swinging down, and frames 9-13 keep one stable body construction while the dog steps steadily down and right toward the bowl without jumping back left.",
+ "protect": "The doodle's construction in frames 1-5 (long neck, eye in a pointed head, boxy rump with dangling, kinked legs, loose single-stroke lines); the correct opening and ending placement relative to the tree and bowl; the head-down sniff over the bowl in frames 14-16.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  8,
+  9,
+  10
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character reads as the c.png dog in most frames, but frame 10 curls the body into a loop and frames 6-16 shorten the long upright neck that defines the doodle.",
+ "still_frames_only": true,
+ "_lot": "lot94c1b7bd",
+ "_round": "baseline before drawn keys"
+}

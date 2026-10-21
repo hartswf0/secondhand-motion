@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A black-line inverted cone (a funnel) hangs from a grey cloud line at the top of the frame, with its point resting on a grey ground line near the bottom, centered slightly left of middle. Across frames 1-16 it stays in place: the tip stays at about the same x position (around 47-49% of frame width) and the rim stays under the cloud base. What changes is the shape of the cone: the rim loop and the hook stroke on top shift slightly, and the right wall alternates between a version with a bend at mid-height and the rim's right end closed (frames 1-2, 5-6, 8-10, 13-14) and a straighter version with the rim's right end open (frames 3-4, 7, 11-12, 15-16). This reads as a funnel standing in one place and slowly turning or wobbling. Nothing else happens; the scenery does not move.",
+ "seen_film": "Black-and-white footage of a large tornado funnel hanging from a dark cloud base, seen behind trees and a utility pole with wires. In frame 1 a person in a white shirt crosses the bottom of the frame; after that the camera reframes slightly (frames 1-2) and stays roughly steady. Through frames 2-16 the funnel stays in the same place, a broad column whose center is near the middle of the frame, reaching from the cloud base at about 20-30% height down behind the tree line. Its outline shifts slowly as it rotates; there is no large movement across the frame and no new event.",
+ "named_subject": "A tornado / funnel cloud drawn as an inverted cone with a looped rim.",
+ "verdict": "bar met",
+ "evidence": "Placement matches: in the film the funnel center sits near mid-frame from frame 1 to 16 (top at cloud base, bottom behind trees), and in the animation the cone spans the same region with its tip at roughly the same x in frames 1, 5, 9, 13 and 16. Timing matches: the film shows a stationary, slowly turning funnel for all 16 frames, and the animation shows a stationary cone whose rim and walls change gradually (compare frames 1, 4, 8, 14 in b.png/a.png). Identity holds in every frame: the looped rim, the hook stroke over the rim, the kinked left wall and the angled right wall of c.png are present in frames 1-16. Judged from still frames only; playback was not seen.",
+ "primary_gap": "The right wall and rim switch between two distinct shapes (bent wall with closed rim end in frames 1-2, 5-6, 8-10, 13-14; straight wall with open rim end in frames 3-4, 7, 11-12, 15-16), which may play as a flicker between two drawings rather than a continuous rotation.",
+ "closes_when": "The right wall's mid-height bend and the rim's right end change by small steps across neighbouring frames (for example frame 3 sits halfway between frames 2 and 4) instead of being present in one frame and gone in the next.",
+ "protect": "Keep the doodle's exact construction (looped rim, hook stroke on top, kinked left wall, single-point tip), the stable placement with the tip near mid-frame on the ground line and the rim at the cloud base, and the restrained, in-place motion that matches the film's stationary funnel.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "No significant gap; the cone is the c.png drawing with the same strokes, only lightly deformed per frame.",
+ "still_frames_only": true,
+ "_lot": "lot7014e7ad",
+ "_round": "baseline before drawn keys"
+}

@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Two stick-legged ant doodles stand head to head on a grey ground line, with grey hills behind and a small grey pentagon stone below the right ant. The left ant is larger (small rear circle at left, large body, head at the centre); the right ant is smaller and faces left. Frames 1-4: the pair holds still with heads touching at the centre; the right ant's head with two antennae sits raised above the front of its body, and the left ant's small head points down beneath it with two crossed stroke antennae. Frames 5-10: the whole pair sits slightly lower and drifts a little right; the left ant's head dips under the right ant's head. Frames 11-13: the left ant's large body arches higher and its rear moves right, closing the gap. Frames 14-16: the two ants press closer; in frame 16 the left ant's head and antennae overlap the right ant's head and front body into a cluster of crossing lines.",
+ "seen_film": "Close-up of two dark ants on rough soil against a pale background, a white crumb lying below the right ant. The left ant (larger abdomen at left) faces right; the right ant faces left; they meet head to head at frame centre. Frames 1-5: they stand with heads together, antennae touching, right ant's head and antennae raised. Frames 6-10: the left ant lifts its front and head, front legs reaching forward and down, while the right ant lowers its head toward it. Frames 11-12: the left ant rears its head up with an antenna swung back to the upper left. Frames 13-16: both ants lower and press together, heads interlocked at centre with legs crossing, positions in frame almost unchanged.",
+ "named_subject": "Two ants (the left one mirrored and larger, the right one smaller) meeting head to head",
+ "verdict": "reference stronger",
+ "evidence": "Layout and timing follow the film: in frames 1-16 both doodle ants occupy the same frame regions as the film ants (left ant rear near 28-35% of width, right ant rear near 63-70%, contact point near centre at ground height), and the left ant's body rises in frames 11-13 as the film's left ant rears in frames 11-12, then the pair closes up in frames 14-16 as in the film. Changes between neighbouring frames are small, so the still frames suggest continuous motion. The weakness is the contact zone: in every frame the right ant's head floats above the front of its body instead of sitting in front of it on a connector as in c.png, the left ant's head is a small pentagon tucked below it with an X of crossed antennae, and in frame 16 these strokes overlap into a tangle where neither head can be separated. The film's distinct actions in frames 6-10 (left ant lifting its front and reaching forward) and 11-12 (antenna swung back) are not visibly performed; the doodle mainly shifts and arches as a whole.",
+ "primary_gap": "The meeting point of the two heads is drawn as stacked, overlapping heads with crossed antenna strokes that do not read as two separate heads touching, and it collapses into a tangle in frame 16.",
+ "closes_when": "Each ant's head sits in front of its own body at body height, joined by a short connector as in c.png, with each ant's two antennae visibly reaching toward the other head and the two head outlines touching but not overlapping in frames 1-16.",
+ "protect": "Keep the head-to-head two-ant staging, the frame positions and scale that match the film, the left ant's arching in frames 11-13 and the closing up in frames 14-16, the small frame-to-frame changes, and the doodle's own construction: lumpy rounded segments, short connector strokes, straight stick legs, plain black lines with no shading.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The segment shapes, connectors and stick legs match c.png, but the right ant's head sits on top of its body instead of in front of it, and the left ant's head is a small pentagon with crossed antennae rather than c.png's rounded head with two separate antenna strokes.",
+ "still_frames_only": true,
+ "_lot": "lot04ce5417",
+ "_round": "baseline before drawn keys"
+}

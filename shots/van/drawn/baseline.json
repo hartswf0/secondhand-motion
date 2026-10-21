@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A boxy van, drawn in black outline in side profile and facing left, with a sloped hood, a flat roof and two octagonal wheels, fills most of frame 1. Over frames 1-16 the van gets steadily smaller and sits slightly lower in the frame, as if it is driving left and away from the camera. Its left edge stays near the left side of the frame. Each frame the wheel strokes are redrawn with their small tick marks in different positions, which reads as the wheels turning. The grey scenery (a house with a long roof, a zigzag fence, trees, a pole and a small box) slides to the right: the house moves from the upper left in frames 1-4 to the right half by frames 13-16, and trees enter from the left starting in frame 5. In frames 9-16 a large round tree and several thin trees fill the background, and a small grey square sits to the right of the van in frames 14-16.",
+ "seen_film": "A light-colored passenger van, facing left, is close to the camera in a three-quarter front view in frame 1, in front of a white farmhouse and bare trees. The camera pans left to follow it as it drives left and away. Through frames 1-8 it shrinks a little and turns toward a side view. Between frames 8 and 9 it gets clearly smaller. By frames 9-16 it is a small side-profile van in the lower middle-left of the frame, still shrinking. The house slides to the right side of the frame and tall trees and a pole appear on the left. A small white box appears near the van at left in frames 5-6 and on the right in frames 13-16.",
+ "named_subject": "A van (boxy minivan) driving away to the left",
+ "verdict": "bar met",
+ "evidence": "Frame 1: the van fills the frame width with its hood at the left, like the film's frame 1. Frames 1-8: it shrinks slowly; frame 9: it is clearly smaller (about 265 px wide against about 320 px in frame 8), which matches the film's step between frames 8 and 9. Frame 16: the van spans about x 60-225 of the cell at mid-lower height, close to the film's van at about x 55-255. The house moves from the left (frames 1-4) to the right (frames 13-16) and trees enter from the left from frame 5, matching the film's pan. The small box on the right in frames 14-16 matches the film's white box in frames 13-16. The body outline keeps the same proportions in every frame, with no doubling; only the wheel tick strokes change, and that reads as rotation.",
+ "primary_gap": "The van stays in flat side profile the whole time, but in frames 1-6 of the film it is in a three-quarter front view that turns gradually to profile, so the turn in the film's early frames is missing.",
+ "closes_when": "In frames 1-6 the front end shows a slight angled face (a short extra front plane at the hood's left edge) that narrows and disappears by frame 8, while the doodle's single-line construction stays the same.",
+ "protect": "The doodle's exact body outline (stepped hood, slightly tilted vertical rear edge, overshooting bottom line) and its octagonal wheels with tick strokes; the steady shrink with the step at frame 9; the van's left-anchored placement matching the film; the scenery pan to the right with trees entering from the left; light grey scenery that stays behind the black character.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The van is the doodle's own outline and wheels at every size, with no added detail; the only change is that the wheel tick marks move between frames, which is consistent with turning wheels.",
+ "still_frames_only": true,
+ "_lot": "lot735cbdd1",
+ "_round": "baseline before drawn keys"
+}

@@ -1,0 +1,24 @@
+{
+ "seen_animation": "Frames 1-2: a line rabbit enters at the left edge, ears spread in a V, one vertical front leg; in frame 1 only the head, ears and leg are drawn, and in frame 2 a belly curve appears at the lower left. Frames 3-4: the rabbit sits near center-left, ears upright and close together, belly curve and a short front leg; it reads as facing roughly toward the viewer. Frames 5-6: the head turns to face right, ears still upright, body settled on the floor line. Frames 7-12: the rabbit stays crouched in the same place facing right while the ears fold back until they lie nearly flat across the top of the head (8-12); in frame 12 the front leg is drawn as a small closed diamond. Frame 13: the ears snap back up, the body stretches and shifts slightly right. Frames 14-16: the rabbit moves out of the right edge; by 15-16 only the rear belly curve, part of a leg and one ear stroke remain in frame.",
+ "seen_film": "A white rabbit comes out from behind the edge of a pale wall at the left (1-2), walks forward toward the camera and faces it with ears raised (3-4), turns its head to face right (5-6), sits crouched in place near center facing right with ears up and angled back (6-12), then hops to the right in a stretched run (13-14) and leaves through the right edge, with only its rear and hind feet visible in 15-16.",
+ "named_subject": "A rabbit (white bunny) drawn as a single open outline with two long ears and one front leg.",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement follow the film: entry from the left in 1-2, facing the viewer in 3-4 (film 4 also faces camera), head turned right in 5-6, sitting crouch in 6-12 at the same center position as film 6-12, run beginning in 13 and exit right in 14-16 matching film 14-16. Problems: frame 1 is only ears, a neck and one leg with no belly, then frame 3 adds a full belly and rear curl at the lower left that was not built up in frame 2, so the body appears suddenly; in frames 7-8 the ears drop from upright to almost horizontal across the head, while in film 7-12 the ears stay raised and angled back; frame 12 draws the front leg as a closed diamond loop not present in 11 or 13; frame 13 the ears return to upright and the head outline changes shape in one step.",
+ "primary_gap": "During the sitting section (frames 7-12) the ears collapse flat across the head and then pop back up in frame 13, a change the film does not show and which reads as a jump.",
+ "closes_when": "Frames 6-13 keep both ears raised and angled back by roughly the same amount as in frames 5-6, so the ears change only slightly between neighbouring frames, and the frame-12 front leg is drawn as the same single open stroke as in frames 10-11.",
+ "protect": "The overall timing and screen positions that match the film (left entry, center sit facing right, exit right at 14-16); the single open outline with no back line, the long pointed loop ears, the one-stroke front leg and the curled rear stroke from the doodle; the grey door and floor scenery that stays fixed.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  8,
+  12,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character keeps the doodle's open outline, long loop ears and single front-leg stroke, though the flattened ears in frames 8-12 make the head read less like the doodle's upright-eared rabbit.",
+ "still_frames_only": true,
+ "_lot": "lot5c72f255",
+ "_round": "baseline before drawn keys"
+}

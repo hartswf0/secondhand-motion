@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A single black-line sheep (cloud-shaped body, small cat-like head with two ears, two or three stick legs) stands in the lower right of a grey-line meadow with three trees and a row of small grey sheep along the tree line. In frames 1-4 it grazes with its head lowered and edges slightly to the right, so that by frame 4 its head touches the right edge of the frame. In frames 5-6 the head is tipped further down toward the ground and is cut by the right frame edge. From frame 7 to frame 16 the sheep keeps grazing with its head down and drifts steadily left, from about x=315 to about x=170 in panel coordinates, with its legs shifting position slightly each frame. The scenery (trees and background flock) slides slowly left across the shot, as in a gentle pan.",
+ "seen_film": "A large flock of sheep grazes in a dry meadow in front of a dark line of pine trees. All sheep keep their heads down to the grass. The foreground sheep, which start in the center-right and right of the frame, walk slowly leftward while grazing throughout all 16 frames; the large front sheep moves from about the right third of the frame in frame 1 to the left-center by frame 16. A dark-faced sheep stays near the middle-left. The camera holds roughly steady with slight drift; nothing sudden happens.",
+ "named_subject": "a sheep (cloud-bodied doodle sheep with a cat-like face) grazing",
+ "verdict": "bar met",
+ "evidence": "Frames 1-16: the character keeps its head lowered to the ground the whole time, matching the grazing of every sheep in the film. Frames 7-16: it drifts left by small, even steps (about 315, 303, 285, 271, 250, 234, 215, 201, 184, 172 px), matching the slow leftward walk of the film's foreground sheep. Frames 1-16 show no doubling or redrawn second figure; the body outline stays the same cloud shape. Frames 1-6 diverge: the sheep moves slightly right (300 to 325 px) while the film's front sheep is already moving left, and in frames 4, 5 and 6 the head is clipped by the right edge of the frame.",
+ "primary_gap": "In frames 1-6 the sheep inches rightward until its head is cut off by the right frame edge, while in the film the foreground sheep walks left from frame 1 onward.",
+ "closes_when": "The sheep starts slightly further left (around x=280 in frame 1) and moves left in every frame from 1 to 16, so its head is fully inside the frame in frames 4-6.",
+ "protect": "The exact doodle construction (bumpy cloud body, boxy cat-like head with two pointed ears and small face marks, stick legs) drawn in the same thin black stroke; the head held down in a grazing pose throughout; the small even per-frame leftward steps in frames 7-16; the grey background flock and trees that place the sheep in a meadow like the film.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  5,
+  6
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character matches the doodle's cloud body and cat-like head, though some frames show three legs and the head is tipped further down and turned than in the doodle; judged from still frames only, not playback.",
+ "still_frames_only": true,
+ "_lot": "lot55664016",
+ "_round": "baseline before drawn keys"
+}

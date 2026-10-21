@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A line-drawn horse head and neck, facing right, with a zigzag mane along the top of the neck, one closed ear on top, a second ear pointing sideways out of the back of the head, a small scribbled eye, and a jaw/throat line. Frames 1-4: the head hangs nearly vertical with the muzzle at the bottom of the frame; very little changes. Frames 5-9: the neck line tilts and the head swings forward so the muzzle moves right and the face becomes a long diagonal pointing down-right; by frame 8-9 the head is fully extended. Frames 10-12: the head swings back toward vertical, ending in frame 12 close to the frame 1 pose. Frame 13: the whole horse is suddenly drawn much smaller and moved to the lower left, and a zigzag grass line appears along the bottom. Frames 14-16: the small head stays upright with the muzzle near the grass line and moves only slightly. Grey scenery (tall arch shapes, vertical posts) changes layout between frames, most visibly between 12 and 13, and partly vanishes in 14.",
+ "seen_film": "A pale horse with a long shaggy mane stands behind a log-rail fence. Frames 1-4: the head faces the camera, close to frontal, ears up, muzzle at the bottom edge. Frames 5-8: the horse turns its head into a right-facing profile and stretches it forward and down, muzzle moving toward the lower right. Frames 9-12: the head keeps going down, the muzzle dropping toward the bottom right where hay comes into view. Frames 13-16: the camera has tilted down; the horse's head is lowered with the forehead toward the top and the muzzle in a pile of hay at the bottom of the frame, eating. The event is: horse turns its head and lowers it to eat hay.",
+ "named_subject": "A horse's head and neck.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-4 of the animation (hanging, near-vertical head) and frames 6-9 (head swung forward into a down-right diagonal) roughly match film frames 1-8 (frontal head, then turn to profile and stretch forward). The match breaks after that: in film frames 9-12 the head keeps descending toward the hay, but in animation frames 10-12 the head swings back up to vertical, reversing the direction. In film frames 13-16 the head is bent down with the muzzle buried in hay at the bottom; in animation frames 13-16 the head is instead redrawn at roughly 60% size in the lower left, still upright, so the 'lowering to eat' reads as a scale cut, not a head going down. Frame 13 is a visible pop in size and position from frame 12. In frames 6-8 the top ear changes from a closed outline to two separate open strokes, and in frame 14 most grey scenery disappears.",
+ "primary_gap": "After the forward stretch the animated head rises back to vertical (frames 10-12) and then jumps to a smaller size (frame 13) instead of continuing to lower its muzzle down to the hay as the film does in frames 9-16.",
+ "closes_when": "From frame 9 onward the head stays the same size and keeps rotating and descending so that by frames 13-16 the muzzle sits at the bottom edge in the grass/hay with the neck arching down from the top of the frame, with no size change between frames 12 and 13.",
+ "protect": "The doodle's construction: single continuous outline for the face and long tapered muzzle with a blunt nose, the small scribbled eye, the jaw curve plus throat stroke, the zigzag mane along the top of the neck, the pointed leaf-shaped ears, and the sparse black-on-white stroke style; the frames 1-9 timing that matches the film's turn and forward stretch; the gradual, smooth change between frames 5-9.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  13,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The horse is drawn mirrored to face right and its second ear sticks out sideways from the back of the head rather than sitting on top as in c.png, and the top ear turns into two loose strokes in frames 6-8, but the head shape, muzzle, eye, jaw line and zigzag mane read as the same drawing.",
+ "still_frames_only": true,
+ "_lot": "lot10211b7b",
+ "_round": "baseline before drawn keys"
+}

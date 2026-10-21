@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A large line-drawn sailboat (triangular sail, doubled mast stroke, long hull with a loop at the right stern) sits on a grey horizon line at about 44% of frame height, with two tiny grey sailboats fixed at far left and short grey wave dashes below. In frames 1-7 the boat barely moves: the sail tip stays near x=265 of a 385-wide panel and only creeps to x=249 by frame 7, while the stern runs off the right edge in frames 2-7. Between frames 7 and 8 the boat jumps left and gets slightly bigger, and the stern loop comes back inside the frame. Frames 9-12 continue left and a little larger (sail tip near x=146-160), so the sail's left corner now sits on top of the grey background boats. Frames 13-16 drift back right (sail tip x=150 to 191) at roughly the same size. Total growth from frame 1 to 16 is about 1.4x in width; the wave dashes shift around between frames.",
+ "seen_film": "A two-masted sailing barge with a large dark sail approaches the camera across calm, hazy water. In frame 1 it is small, right of centre, occupying about a quarter of the frame width (x roughly 215-310), with its hull sitting just below a horizon at about 57% of frame height; steamers smoke at far left. Through frames 1-16 it grows steadily and continuously: by frame 9 it fills about 45% of the width and has drifted left of centre, by frame 13 the sail is cropped by the top edge, and by frames 15-16 the hull and sail run off the top and right edges. It drifts left through frames 5-12 and then right again in 13-16. Small sailboats and a rowboat appear at left from frame 6 on.",
+ "named_subject": "a sailboat",
+ "verdict": "reference stronger",
+ "evidence": "Frame 1: the drawn boat is already about 228 px wide (60% of the panel) while the film boat is about 95 px wide (25%); the approach the film shows has no room to happen. Frames 1-7: the drawn boat holds nearly still (sail tip x=265 to 249) while the film boat grows visibly every frame. Frames 7-8: the drawn boat shifts left and enlarges in one step and the stern that was cut off by the right edge in 2-7 reappears whole, which reads as a jump. Frames 9-16: the drawn boat is only about 1.4x its frame-1 size, while the film boat in 13-16 is cropped by the top and right edges; the drawn sail never touches the top edge. The left-then-right drift (left through 12, back right in 13-16) does match the film. Frames 9-16: the fixed grey background boats sit inside the sail's left corner, which the film never shows.",
+ "primary_gap": "The boat starts far too large and grows only about 1.4x, so the film's event, a small distant boat approaching until it fills and overflows the frame, does not happen.",
+ "closes_when": "Frame 1 shows the boat at about a quarter of the frame width right of centre with its hull just under the horizon, and it grows by a similar small step every frame until in frames 13-16 the sail is cropped by the top edge and the stern by the right edge.",
+ "protect": "The character is the c.png doodle unchanged: the same sail triangle, the doubled wobbly mast stroke, the gap between sail and hull, and the hull with the loop at the stern; the left-then-right drift that matches the film's timing; grey scenery kept separate from the black character.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  8
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The drawn boat keeps the doodle's construction and stroke habits in every frame; the only identity issue is the grey background boats overlapping the sail in frames 9-16.",
+ "still_frames_only": true,
+ "_lot": "lot966eafc8",
+ "_round": "baseline before drawn keys"
+}

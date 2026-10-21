@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A line-drawn duck in profile facing left stands still left of center in front of a grey zigzag mountain line and ground line. Frames 1-2: head in profile, flat bill pointing left. Frame 3: the bill shortens slightly. Frame 4: the head outline is redrawn as a taller, rounder dome with the bill drawn lower. Frames 5-15: the head becomes a hood-like shape with the bill reduced to two short parallel lines at the front of the face, suggesting the head turned toward the viewer; the head shape varies a little from frame to frame (frame 13 is narrower and set further right). Frame 16: the head is a larger rounded dome again with a longer open bill, back toward profile. The body, legs and feet do not move in any frame. Nothing else happens.",
+ "seen_film": "A clay duck stands centered, body facing the camera, feet splayed. Frames 1-2: head turned in profile with the long bill pointing left. Frame 3: the head turns to face the camera, bill pointing down. Frames 4-5: the duck faces the camera with a sad expression. Frames 6-12: white teardrops run from the eyes, down the chest and fall to the ground (several drops visible at a time, e.g. on the chest in 7, 8, 10, 12 and at the feet in 7, 10, 12). Frames 13-15: the tears stop; the duck still faces the camera. Frame 16: the head is blurred/doubled as it turns back toward profile. The body does not move.",
+ "named_subject": "A duck (the doodle's goose/duck drawing, mirrored to face left)",
+ "verdict": "reference stronger",
+ "evidence": "The head-turn timing roughly matches: profile in animation frames 1-2 and film frames 1-2, turned-toward-viewer head in animation 5-15 against film 3-15, and a return toward profile in animation 16 against the film's blurred turn in 16. But the film's main event, the crying, is absent: film frames 6-12 show white tears running down the chest and dropping to the ground, while animation frames 6-12 show no tears or any falling marks at all. The animation's head turn also lags one to two frames (film is frontal at 3, the animation only reaches the frontal shape at 5). Animation frame 4 redraws the head as a taller dome with a different outline than frames 3 and 5, and frame 16 jumps to a noticeably larger head, so the turn reads as swapped head drawings rather than one rotation. The duck is in profile left of center while the film duck stands centered and frontal; the doodle's profile construction is defensible, but the placement is off-center.",
+ "primary_gap": "The tears that run down the chest and fall to the ground in film frames 6-12 are missing, so the animation shows only a head turn and not the crying event.",
+ "closes_when": "Animation frames 6-12 show small drop shapes in the doodle's stroke style leaving the eye, sliding down the front of the neck and chest, and landing by the feet at the same frames as in the film, while the head holds the frontal pose.",
+ "protect": "Keep the doodle's construction (single-stroke outline body, short stick legs, triangular open feet, dot eye, flat two-line bill), the static body and feet matching the film's still body, the profile-to-frontal head turn by frame 5 and the turn back at 16, and the sparse grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  5,
+  13,
+  16
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body, legs, feet and bill match the doodle's strokes (mirrored), but the frontal head in frames 5-15 is a hood shape the doodle never shows, and its outline changes between frames instead of rotating as one head.",
+ "still_frames_only": true,
+ "_lot": "lotc1f583b8",
+ "_round": "baseline before drawn keys"
+}

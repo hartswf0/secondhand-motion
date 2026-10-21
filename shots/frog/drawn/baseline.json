@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A hand-drawn rounded blob character with two small outlined eyes and a short dash mouth sits between two lobed side shapes (a smaller left lobe with a forked foot, a taller right lobe with a scalloped base), left of center, with grey vertical lines and a short grey horizontal line as scenery on the right. Across all 16 frames the body outline, lobes and scenery stay in the same place. The only visible changes are in the face: in frames 1-3 the mouth dash sits slightly lower and is a little thicker, from frame 4 on it sits a little higher; the eye shapes and the mouth dash shift by a few pixels in frames 12 and 16 (the mouth tilts slightly in frame 12). The character essentially sits still with small facial adjustments.",
+ "seen_film": "A frog seen from the front sits on a pale surface, slightly left of center, with vertical scratch lines on the right of the frame. Over the 16 frames it stays seated in the same spot; the only changes are small ones: slight shifts of the head and throat (breathing), small changes in how the front feet rest, and minor framing jitter. Frame 9 has a black film-damage blotch over the frog's left eye and a streak to the right. No large action occurs.",
+ "named_subject": "A seated frog, drawn as the doodle's rounded body with two side lobes for legs, facing the viewer.",
+ "verdict": "bar met",
+ "evidence": "Film frames 1-16 show a frog sitting still with only breathing-scale changes; animation frames 1-16 show the doodle sitting still in the same place (left of center, same scale, scenery verticals on the right matching the film's scratch lines) with only small face changes. The doodle body, lobes, forked left foot and scalloped right base match c.png in every frame with no doubling. The only discrete change is the mouth dash moving up between frames 3 and 4, and small eye/mouth shifts in frames 12 and 16; the film's body/throat breathing has no visible counterpart in the animation's outline.",
+ "primary_gap": "The film's subtle breathing (throat and body swelling) is not shown: the doodle's body outline is identical in all 16 frames, and the only change is a step jump of the mouth between frames 3 and 4.",
+ "closes_when": "The central body outline and lower edge rise and fall by a few pixels in a gradual cycle across frames, and the mouth dash moves gradually rather than switching position at frame 4.",
+ "protect": "Exact doodle construction from c.png (pointed head-body blob, two small loop eyes, dash mouth, left lobe with forked foot, right lobe with scalloped base), the stable placement left of center matching the film, the sparse grey scenery lines, and the absence of doubling or redraw flicker.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  4
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "None of substance; the character is the c.png drawing with its own line habits, only the eyes are drawn slightly more angular in some frames.",
+ "still_frames_only": true,
+ "_lot": "lotcbb56058",
+ "_round": "baseline before drawn keys"
+}

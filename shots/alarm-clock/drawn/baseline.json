@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Judged from still frames only, not playback. A doodled alarm clock (round body, two ear-like bells, two hand strokes, two short feet) stands on a shelf between a grey telephone on the left and a grey vase with a goblet on the right. In frames 1-2 the clock is a wide circle facing front. From frame 3 to frame 10 the body narrows into a taller, lemon-shaped oval that leans slightly, with the bells, hands and feet moving left with it, so the clock looks squeezed or turned partway. In frame 11 the body widens again, and from frame 12 to frame 16 it is back to a full front-facing circle, about where it started. Nothing else in the frame moves and no hand or other figure appears.",
+ "seen_film": "A brass twin-bell alarm clock stands on a dark table between a pink telephone and a brass lamp base. In frames 1-3 a woman's hand comes in from the left and takes hold of the clock's top handle. In frames 4-10 the hand rotates the clock so it turns about a quarter turn toward the left; the white face is seen edge-on as a narrow oval and the brass side of the case faces the camera. In frames 11-12 the hand turns the clock back to face front. In frames 13-15 the hand lets go and withdraws to the left out of frame. In frame 16 the clock stands alone, facing front.",
+ "named_subject": "An alarm clock with two bells on top (the doodle in c.png).",
+ "verdict": "reference stronger",
+ "evidence": "Timing matches: the animation's narrow phase (frames 3-10) lines up with the film's turned-away phase (frames 4-10), and the return to a front-facing circle in frames 11-12 matches the film turning it back in frames 11-12; frame 16 matches the film's end state. But the film's event is a hand turning the clock, and no hand appears in any animation frame (film frames 1-15 all show the hand). In frames 4-10 the animation shows the circle squashed into a leaning oval with the bells and hand strokes still drawn facing front, so it reads as the clock deforming in place rather than being rotated to show its side. Frame 10 to frame 11 switches from fully narrow to nearly full width in one step, which is a larger change than the gradual narrowing in frames 2-5.",
+ "primary_gap": "The hand that grabs, turns and releases the clock in the film is missing, so the animation shows a clock squeezing itself instead of being turned by someone.",
+ "closes_when": "A simple line-drawn hand and arm enters from the left in frames 1-3, holds the clock's top during frames 4-12 while it turns, and withdraws off the left edge in frames 13-15, with the clock's narrowing visibly following the hand's twist.",
+ "protect": "The clock drawing itself is faithful to c.png: open circle with gaps, the two arched bells with their small inner ticks, the two hand strokes with the dot, the two splayed foot strokes, and the same stroke weight. Keep the timing of the narrow phase (frames 3-10) and the return (11-12), the clock's position on the shelf, and the static grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  11
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The clock keeps the doodle's construction and stroke habits throughout; only in the narrow frames 5-10 does the body become a pointed lemon shape that the doodle's round body does not have.",
+ "still_frames_only": true,
+ "_lot": "lot944eefee",
+ "_round": "baseline before drawn keys"
+}

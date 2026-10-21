@@ -1,0 +1,19 @@
+{
+ "seen_animation": "Still frames only. A flat, horizontally stretched black scribble (several long nearly parallel strokes, a closed lozenge loop on top, strokes converging to a point at the right end) sits in the lower-left of frame 1, overlapping the bottom of a grey scenery outline: a pentagon house-like shape in the upper middle and a long grey line sloping from upper-left down to the right edge. Across frames 1-16 the scribble slides steadily to the right and very slightly up, its left edge moving from about x=10 (frame 1) to about x=40 (frame 5), x=90 (frame 9), x=132 (frame 13) and x=148 (frame 16) within each tile. Its shape barely changes; the strokes wobble slightly but no part of it bends, lifts or reacts. The grey scenery does not move. By frame 16 the scribble sits under the right half of the grey house outline.",
+ "seen_film": "A long low single-storey beach house with a dark overhanging roof spans nearly the full width of the frame at mid-height, with the sea in front of it. In frames 1-7 waves break white against the left end and front of the house, spray rising highest around frames 2-4 at the left corner; a rolling wave crest is visible in the foreground water in frames 4-8. From frame 8 onward the water in front is choppy but lower, with no big breaker. The house itself stays in the same place throughout; only the roof line seems to tilt very slightly in frames 13-16. The camera is fixed. The event is surf pounding a stationary house, strongest at the start and settling by the end.",
+ "named_subject": "A low, flat, elongated scribbled object with a pointed right end, reading most like a boat or canoe hull (it does not read as the film's house).",
+ "verdict": "reference stronger",
+ "evidence": "Film frames 1-16: the house holds its position across the whole width of the frame (left wall near x=90 in frame 1 and in frame 16), and the action is waves breaking at its left end in frames 1-7. Animation frames 1-16: the character translates rightward about 140 px (left edge ~10 in frame 1, ~90 in frame 9, ~148 in frame 16) while keeping one rigid shape, so the viewer sees an object gliding right, not a struck, stationary house. The character occupies only the lower-left third of the tile in frame 1 while the film's house spans the full width at mid-height. Nothing in frames 1-7 of the animation shows impact, spray or jolting at the left end, and nothing changes around frame 8 when the film's surf drops. Motion between consecutive animation frames is small and even (shifts of 2-16 px per frame), with no pops or doubling.",
+ "primary_gap": "The character drifts steadily to the right across the frame, whereas the film's subject stays fixed in place and is hit by waves at its left end in frames 1-7, so the animation shows a different event.",
+ "closes_when": "The doodle stays anchored at the film's house position (spanning the frame width at mid-height) in all 16 frames and shows the waves' impact as small jolts or shudders of its left end in frames 1-7 that settle to stillness from frame 8 onward.",
+ "protect": "The doodle's exact stroke construction from c.png (the stacked long strokes, the top lozenge loop, the strokes converging to a point at the right end) kept intact across all frames; the even frame-to-frame spacing with no pops, jumps or doubled drawings; the static grey scenery.",
+ "follows_film": "no",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character keeps the same strokes and proportions as c.png in every frame; it is the doodle, but it is never deformed or posed to perform the film's action.",
+ "still_frames_only": true,
+ "_lot": "lotab8792f6",
+ "_round": "baseline before drawn keys"
+}

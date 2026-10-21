@@ -1,0 +1,26 @@
+{
+ "seen_animation": "A large octagonal black wheel with a gap at its upper left fills the center-left of every frame. Inside it four or five straight spokes, one of them bent, cross at a hub, and their angles change from frame to frame, which suggests the wheel is turning. A horizontal black line leaves the wheel's upper right and runs to the right edge, and a separate diagonal black line stands at the top right without touching the wheel. Grey scenery: a tree outline at the left, two cloud outlines along the top, and a horizontal ground line through the wheel. Over frames 1-9 the wheel drifts left (hub at about x=215 in frame 1, about x=120 in frame 9) and slightly down, then holds at about x=130-145 for frames 10-16. From frame 7 a second diagonal line enters at the top right corner; in frames 10-12 the two diagonals meet in an inverted V with a small bracket at the apex, and in frame 13 they separate again. In frames 11 and 12 the bottom right of the wheel outline is missing. Frames 13-16 continue the spoke rotation with the wheel stationary.",
+ "seen_film": "A close side view, tracked with the rider, of a bicycle moving to the left. The front wheel with its curved fender and fork fills the center-left of the frame; the rider's jeans and sneakers pedal at the right edge, the foot rising (frames 6-11) and coming down (frames 12-16). Part of another bicycle's wheel is visible at the left edge. The background is a pale wall in frames 1-8, and a dark hedge slides in across the top from frame 9 onward. The front wheel's hub drifts slightly left over frames 1-9 (about x=210 to x=150) and stays near x=160-175 afterward; the wheel itself is rendered as a smooth circle that is rolling continuously, with no visible spokes reading as jumps.",
+ "named_subject": "The front wheel of a bicycle (the doodle's star-spoked wheel) with fragments of the bicycle frame.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-9: the wheel's hub moves from about x=215 to x=120, close to the film's drift from x=210 to x=150, and spoke angles change each frame, matching the film's rolling front wheel in place. Frames 9-10: the animated wheel is placed further left than the film's (film hub about x=150-170 in 9-12). Frames 10-12: an inverted-V of two diagonals with a bracket at the apex appears at the top right and disappears at frame 13; the film has no event there (its handlebar and fork stay fixed). Frames 11-12: the wheel outline opens at the bottom right, a redraw the film's solid tire never shows. Frames 4-5 and 8-9: the spoke set changes count and arrangement (e.g. frame 5 has a long diagonal through the whole wheel that frame 4 lacks), which reads as a redraw rather than rotation. Throughout: the diagonal line meant as fork or head tube never reaches the hub, while in the film the fork attaches at the hub in every frame. The pedaling legs, the main moving action at the right of the film frame, have no counterpart, which is acceptable only because the doodle has no rider. Judged from still frames only, not playback.",
+ "primary_gap": "The bicycle frame around the wheel is not held as one rigid drawing: the diagonal lines at top right appear, join into an inverted V (frames 10-12) and separate again (frame 13), and the wheel outline breaks open in frames 11-12, so the wheel reads as a set of shifting strokes rather than the doodle's bicycle rolling.",
+ "closes_when": "Across all 16 frames the fork line runs from the top right down to the hub and stays at a fixed angle relative to the wheel, the horizontal top line keeps its position relative to the hub, no new diagonal or bracket appears at frames 7-12, and the wheel outline stays closed (except for the doodle's own top-left gap) in frames 11-12.",
+ "protect": "The doodle's octagonal wheel with its top-left gap and its straight crossing spokes; the large wheel scale and center-left placement that match the film's framing; the slow leftward drift of the hub over frames 1-9 that tracks the film; the per-frame change in spoke angle that conveys rolling; the sparse grey scenery that stays behind the black character.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  9,
+  10,
+  11,
+  12,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The wheel matches the doodle's star-spoked wheel, but it borrows the bent vertical stroke from the doodle's other wheel as a spoke, and the doodle's frame strokes are reduced to disconnected lines that do not attach to the wheel as they do in c.png.",
+ "still_frames_only": true,
+ "_lot": "lot685c38d1",
+ "_round": "baseline before drawn keys"
+}

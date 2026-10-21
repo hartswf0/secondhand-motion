@@ -1,0 +1,25 @@
+{
+ "seen_animation": "A line-drawn tractor faces left: a rectangular body, an exhaust stack with a hooked top at the left, a small front wheel under the left corner, a large rear wheel on the right, and a curved seat-back line above the rear wheel. The grey scenery has a two-post fence at the left, zig-zag hills at the top right, and a grass line with tick marks along the bottom. In frames 1-5 the tractor stays in the upper middle-left and grows slightly. In frames 6-8 the rear wheel moves from overlapping the body to sitting mostly right of it and becomes a wide, flat oval. In frames 9-11 the whole tractor is larger and lower, and the rear wheel becomes a tall oval. From frame 12 the fence is gone, and the tractor keeps growing and moving down. By frame 16 the rear wheel is a large irregular polygon cut off at the bottom of the frame, and the body spans about half the frame width.",
+ "seen_film": "A tractor pulling a flatbed trailer drives along a dirt road across flat grassland. In frames 1-4 it is in the middle distance, left of center, seen at a three-quarter angle with its front toward the camera-left. In frames 5-8 it comes closer and turns more to the side, growing gradually. Frame 9 is a jump to a much closer view (possibly a cut), and in frames 9-12 the tractor, now in side profile facing left, fills most of the frame width. Frames 13-14 show another scale jump with a doubled exhaust stack (blur or dissolve), and in frames 15-16 the tractor is a close side view: front wheel at the left edge, the large rear wheel at lower right, the driver at the top right, and the trailer cut off at the right edge.",
+ "named_subject": "A farm tractor (box body, exhaust stack, small front wheel, large rear wheel, seat) facing left.",
+ "verdict": "reference stronger",
+ "evidence": "The approach-and-grow event and left-facing orientation match the film in placement: frames 1-4 have the tractor in the upper middle-left like the film, and frames 13-16 have it large and low in the frame. But the rear wheel is redrawn with a different shape and position in nearly every frame instead of keeping one shape: frame 5 narrow oval overlapping the body edge, frame 6 wider oval shifted down-left over the body, frames 7-8 flat wide oval pushed right of the body, frames 9-10 tall oval, frame 12 tilted oval, frame 16 large angular polygon that jumps up and right with the seat line pulled with it. The grey fence is present through frame 11 and vanishes in frame 12. The final scale is too small: in frame 16 the tractor spans about half the frame width while in film frame 16 it spans the whole frame. The film's change from three-quarter view to profile (frames 1-9) does not appear; the animation is in profile throughout. Judged from still frames only.",
+ "primary_gap": "The rear wheel changes shape, proportion and attachment point from frame to frame (most visibly 5-6, 6-7, 8-9, 11-12 and 15-16), so it reads as a redrawn wobble rather than one wheel on a moving tractor.",
+ "closes_when": "The rear wheel keeps the same rounded oval outline from c.png at a fixed overlap with the body's right edge in every frame, changing only in scale and position along with the rest of the tractor.",
+ "protect": "The doodle's construction (rectangle body, hooked stack, small boxy front wheel, big right wheel, seat curve) and its loose single-stroke line; the left-facing orientation matching the film; the starting placement in frames 1-4; the steady downward-and-larger approach across the shot; the grey hills and grass line.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  7,
+  9,
+  12,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The parts and stroke habits of c.png are kept, but the rear wheel drifts away from c.png's wide, round oval overlapping the body, becoming flat in frames 7-8, tall in 9-11 and angular in 16.",
+ "still_frames_only": true,
+ "_lot": "lotd509cff4",
+ "_round": "baseline before drawn keys"
+}

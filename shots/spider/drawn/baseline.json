@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A round-bodied black doodle creature with short straight leg strokes on all sides sits slightly left of and below center, tilted so its long legs point to the lower left. Two grey lines run from it, one to the upper-left corner and one to the upper-right corner; a grey snail-like outline sits top left and a grey leaf bottom left. Across frames 1-16 the creature stays in nearly the same place, drifting slightly up from about frame 9 on, with its legs shifting only a few pixels. The scenery changes more than the character: in frame 8 the upper-left line stops short of the creature, in frames 9-15 that line is broken into dashed segments with gaps, and in frame 13 the snail outline is partly erased. Frame 16 returns to solid lines.",
+ "seen_film": "A banded orb-weaver spider hangs head-up in its web, slightly left of center, against a dark blurred background. Through frames 1-8 it stays in place while working its legs: the front legs reach upward and outward, and the leg spread changes noticeably from frame to frame. From frames 9-12 it sits a little higher with legs widely spread, front legs reaching up. In frames 13-16 a thread from the upper-left corner runs down to the spider's front legs, and the spider pulls or handles that thread with its front legs while the other legs stay spread.",
+ "named_subject": "A spider (round body with radiating leg strokes) hanging on web threads.",
+ "verdict": "reference stronger",
+ "evidence": "Placement and drift match: the spider is at about 45% across and 60% down in frames 1-8 and rises slightly in frames 9-16, as in the film. But in the film the legs change position clearly in every frame (frames 1-4 front legs move from folded to raised, frames 5-8 legs spread wider, frames 13-16 front legs grip a thread from the upper left), while in the animation frames 1-16 show nearly the same leg pose with only small shifts. The film's thread-handling in frames 13-16 is not performed: the animated upper-left line already reaches the spider in frame 1 and the legs do not reach toward it. The spider's body axis is tilted toward the lower left in all animated frames while the film spider hangs head-up. Scenery lines flicker: frame 8 line ends short, frames 9-15 line is dashed with gaps, frame 13 snail outline partly erased.",
+ "primary_gap": "The spider's legs barely move, so the film's leg-working and the thread-pulling by the front legs in frames 13-16 are not performed.",
+ "closes_when": "Across frames 1-8 the front leg strokes visibly lift and spread, and in frames 13-16 the upper-right front leg strokes reach toward and close on the upper-left grey thread while the rest of the legs stay spread.",
+ "protect": "The doodle's exact construction (open-gapped oval body, short straight leg strokes, two long lower-left legs), the placement slightly left of center and below middle, the slight upward drift in the second half, and the absence of character pops or doubling.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  8,
+  9,
+  13
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body and legs are the c.png drawing with its gap at the top of the oval and its uneven straight leg strokes, so identity holds.",
+ "still_frames_only": true,
+ "_lot": "lote5376a6d",
+ "_round": "baseline before drawn keys"
+}
