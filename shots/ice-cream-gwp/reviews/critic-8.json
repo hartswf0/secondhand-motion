@@ -1,0 +1,21 @@
+{
+ "seen_animation": "An ice cream cone (pointed cone, dome scoop, slanted rim line) stays in place in the middle of the frame. In frames 1-4 a thick tube drawn as two parallel lines comes down from the top and curls over the scoop, its loop end resting at the right side of the dome. In frames 5-7 the tube's upper part swings to the upper left, so the curl now enters from the left and ends near the middle of the scoop. In frame 8 the tube is gone except for one bent line at the far left edge, and in frame 9 that line is a short stub at the top-left corner; the scoop is clear. In frame 10 a small arc appears at the top right above the scoop, and in frames 11-16 it becomes a U-shaped tube end that descends onto the right side of the scoop and ends resting on the rim.",
+ "seen_film": "Close-up of soft-serve ice cream being extruded into a paper cup. In frames 1-4 a thick ribbon of ice cream comes down from the top and coils around the cup, its leading end curling to the right. In frames 5-8 the stream feeding the coil moves to the upper left and the coil settles into a mound. In frames 9-10 the stream leaves at the upper left and the mound sits still. In frames 10-12 a new rounded stream end appears at the top right, and in frames 13-16 it descends down the right side of the cup and folds onto the mound at the right rim.",
+ "named_subject": "An ice cream cone (the doodle) being filled by a soft-serve stream drawn as a two-line tube.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-8 match film 1-8: the tube curls over the scoop with its end to the right while the film's coil curls right. e.png 9-19 match film 9-19: the tube's feed swings to the upper left and its curl moves leftward step by step without jumps. e.png 19->20 is a pop: in 19 the tube is two parallel lines with a rounded end touching the scoop at upper left; in 20 it is replaced by a single thin bent line standing well left of the scoop, the second outline and the rounded end disappear in one frame, while film 19-20 shows the thick stream still in the same place at the upper left and leaving gradually through about frame 25. e.png 20-24 the single line shrinks into the top-left corner and 25-26 the frame is empty, matching the film's lull. e.png 27-44 match film 27-44: a rounded stream end appears at top right (27-30) and descends to the right rim (31-44) in small even steps. The cone and scoop hold their position and size throughout (g.png overlay shows the cone outlines stacked tightly). Judged from still frames only, not playback.",
+ "primary_gap": "At frame 20 the stream switches from a two-line tube with a rounded end touching the scoop (frame 19) to a single thin line detached far to the left, a one-frame pop that the film does not have.",
+ "closes_when": "Across frames 19-25 the tube keeps both outline lines and its rounded end, lifting off the scoop and sliding up and out the top-left corner a little further each frame, so no frame drops one line or jumps the tube sideways.",
+ "protect": "The unchanged doodle cone and dome scoop (same construction, slanted rim line, pointed tip, wobbly single strokes); the stream drawn as a simple two-line tube in the same stroke weight; the timing of the first coil curling right (1-8), the leftward swing (9-19), the empty lull (25-26), and the second stream entering top right and descending to the right rim (27-44) in small even steps.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  20
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cone and scoop match c.png's construction and stroke habits; only the added stream tube is new, and it is drawn in the same plain line style.",
+ "still_frames_only": true,
+ "_packet": "lot41e51070",
+ "_round": 8
+}
