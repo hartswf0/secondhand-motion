@@ -170,7 +170,7 @@ def check(f,J):
                     for a_,b_ in zip(LAD[rail][:-1],LAD[rail][1:]):
                         if _x(*s1,a_,b_): bad.append(f'{k} crosses rail {rail}')
             if lc(kn)[1]<cL(lc(kn)[0]) or lc(kn)[1]>cR(lc(kn)[0]): bad.append(f'{k} knee outside the rails')
-    if 9<=f<=29:
+    if 9<=f<=27:   # from frame 28 his head clears the top of the rails, as the film man's does, so the hands are below it
         ha=lc(J['H'])[0]
         if max(lc(J['lh'][2])[0],lc(J['rh'][2])[0])<ha-6: bad.append('no hand at or above the head')
         if min(lc(J['lf'][2])[0],lc(J['rf'][2])[0])>lc(J['P'])[0]-8: bad.append('no foot on a rung below the waist')
