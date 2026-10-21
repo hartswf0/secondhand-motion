@@ -1,0 +1,24 @@
+{
+ "seen_animation": "Grey scenery (a tree outline, a large triangular slope, vertical post lines, a ground line) stays fixed. A black ladder drawn with two wobbly rails, slanted rungs, a bent second rung and a short stub rung near the foot leans up to the right and does not move. A black stick figure stands bent-kneed at the far left in frames 1-2, walks right to the ladder foot in frames 3-4, puts its feet on the bottom rungs, then climbs the ladder hand over hand through frames 5-12, reaching the upper third by frame 12. In frames 13-16 it is at the top of the ladder, drawn somewhat larger with legs spread down two rungs and arms reaching over the top end.",
+ "seen_film": "A static shot of a tall haystack with a bamboo ladder leaning against it and a fence at right. A man in a white wrap enters from the lower left in frames 1-2, reaches the ladder foot in frames 3-4, and climbs steadily up the ladder from frame 5 to frame 14, his body getting smaller as he rises. In frames 15-16 he is at the top end of the ladder near the top of the frame, still climbing slowly. The ladder never moves.",
+ "named_subject": "A ladder leaning against a slope (the doodle), held still while a stick figure climbs it, standing in for the film's man climbing a haystack ladder.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-4: figure enters at left and moves to the ladder foot as the man does in f.png 1-4. e.png 5-8: figure steps onto the bottom rungs while f.png 5-8 shows the man at the ladder foot; timing matches. e.png 9-32: figure rises along the ladder at a steady rate with no reversal (g.png path is continuous along the ladder), matching f.png 9-32 positions within about a rung. Faults: e.png 4->5 the figure shifts right and becomes taller and more upright in one frame. e.png 16->17 a new raised-arm line appears above the head reaching the next rung, a redraw rather than a reach. e.png 27->28 the trailing leg swings from vertical to a long diagonal out to the left of the ladder in one frame. e.png 32->33 the figure is redrawn about 1.4x larger with legs spread down two rungs and arms flat over the ladder top, and holds that enlarged pose through 38, while in f.png 33-38 the man gets smaller near the top and keeps moving. The ladder in every frame matches c.png (bent second rung, short stub rung at the foot) and stays still, as the film's ladder does.",
+ "primary_gap": "At e.png frame 33 the climber pops to a noticeably larger, spread-out pose and freezes there through frame 38, where the film's man shrinks slightly and keeps climbing.",
+ "closes_when": "Frames 33-38 show the climber at the same or slightly smaller size than in frames 28-32, continuing a small rung-by-rung movement at the ladder top with no single-frame change in body length.",
+ "protect": "The ladder drawn exactly as in c.png (wobbly rails, bent second rung, stub rung at the foot) held still in the same place as the film's ladder; the entry from the lower left and arrival at the ladder foot by frames 5-8; the steady upward path along the ladder with no reversals; the overall timing that matches the film's climb.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  17,
+  28,
+  33
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The ladder is the doodle's drawing and stays as drawn, but the climbing stick figure is not part of c.png and is the only thing that moves, so the doodle itself carries no motion (which is correct for the film, where the ladder is still).",
+ "still_frames_only": true,
+ "_packet": "lotf0c4bd7f",
+ "_round": 5
+}
