@@ -1,35 +1,40 @@
 [
  {
   "id": "M2",
-  "value": 28,
+  "value": 23,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   32,
+   18,
+   15,
+   15,
+   14,
+   16,
    27,
-   25,
-   25,
-   32,
-   27
+   36,
+   35,
+   31,
+   24,
+   26
   ]
  },
  {
   "id": "M2b",
-  "value": 0.73,
+  "value": 0.53,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 26
  },
  {
   "id": "M3",
-  "value": 0.55,
+  "value": 0.5,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.42
+  "min": 0.35
  },
  {
   "id": "M6",
-  "value": 18.0,
+  "value": 13.0,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -74,17 +79,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ctractor\u201d; motion smooth; follows the film: yes",
+  "value": "named \u201ca farm tractor seen from the side: a box body with an exhaust stack at the front, a small front wheel and a large round rear wheel\u201d; motion broken; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/tractor-gwp/reviews/critic-1.json"
+  "evidence": "shots/tractor-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The rectangle body, large round rear wheel, small front wheel and stack strokes match the doodle. At frame 7 the body tilts and the rear wheel overlaps the body more than in the doodle.",
-  "evidence": "shots/tractor-gwp/reviews/critic-1.json"
+  "note": "The construction matches the doodle (rectangle body, hooked exhaust stack with a V mark, small front wheel blob, large rear wheel loop with the curved seat line), but the rear wheel loop changes shape noticeably from frame to frame and becomes a stretched, angular polygon in frame 16.",
+  "evidence": "shots/tractor-gwp/reviews/critic-2.json"
  }
 ]

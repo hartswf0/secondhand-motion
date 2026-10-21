@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A black line drawing of an acoustic guitar body (figure-eight outline with a waist on the left, an irregular hexagon sound hole, and a neck drawn as two parallel lines running up-left out of the top of the frame) stands in the left-centre of the frame. Grey lines on the right sketch scenery (diagonal lines and a small hexagon near the lower right). Across frames 1-16 the guitar and scenery slide slowly and steadily downward in the frame, so the body sinks toward the bottom edge. From frame 7 a small grey circle on a short line enters at the top edge above the body and moves down with everything else; from frame 12 a long grey near-horizontal line enters at the top and by frames 13-16 spans the top-left with a curve down on the right. The small lower-right hexagon exits the bottom by frame 12. The guitar shape itself does not change.",
+ "seen_film": "A still acoustic guitar (sunburst top, dark pickguard, round sound hole, bridge) leans in a stand with a person's legs and shoes on a grey and yellow floor at right. The camera tilts slowly upward over the 16 frames, so the guitar moves steadily down in the frame. From about frame 6-7 the top of the guitar stand (a cradle with a small knob) comes into view at the top, and from about frame 13-14 the curved back of a chair or sofa appears across the top of the frame. Nothing in the scene itself moves; the event is the camera tilt.",
+ "named_subject": "An acoustic guitar leaning in a stand (only the body and lower neck are in frame).",
+ "verdict": "bar met",
+ "evidence": "The guitar's sound hole sits near the top third in frame 1 of both a.png and d.png and has sunk to roughly the middle in frame 16 of both, with an even descent through frames 2-15 in each, matching the camera tilt. The stand knob enters at the top in animation frame 7 (film frames 6-7) and stays above the body through frame 16, as in the film. The chair-back line enters in animation frames 12-13 (film frames 13-14) and spans the top in frames 14-16 as the sofa back does in the film. The neck angle (leaning up-left) and the body's left-side waist match the film's framing in all 16 frames. Minor scenery flicker: short grey fragments appear and vanish on the right in frames 8, 10 and 11, and a short stray line at the top in frame 12 precedes the full chair line in frame 13.",
+ "primary_gap": "The grey scenery lines on the right are not stable from frame to frame: short fragments pop in and out in frames 8, 10, 11 and 12, which the film's smooth camera tilt does not have.",
+ "closes_when": "Every grey scenery line in frames 7-13 keeps its shape and simply slides down with the guitar, with the chair-back line growing in from the top edge in frames 12-13 rather than appearing as a separate stray stroke first.",
+ "protect": "The steady downward slide of the whole picture that matches the film's tilt timing; the unchanged guitar drawing across all frames (no redraw or boiling); the stand knob and chair-back entering at the same moments as in the film; the doodle-like construction of a figure-eight body, faceted sound hole, and a two-line neck crossing over the sound hole.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  8,
+  10,
+  11,
+  12
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The guitar uses the doodle's construction (figure-eight body, faceted polygon sound hole, two-line neck passing over the hole), though its body outline is a straighter segmented line with small gaps at the shoulders where the doodle's outline is a single closed wobbly stroke.",
+ "still_frames_only": true,
+ "_packet": "lot7f291d69",
+ "_round": 2
+}
