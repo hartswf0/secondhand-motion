@@ -52,8 +52,10 @@ def cL(a): return float(np.interp(a,[q[0] for q in _LA],[q[1] for q in _LA]))
 WAIST_ACROSS=0.4   # seen from behind his body hangs over the middle-left of the ladder, so both legs stand between the rails
 for f in range(n):
     s=np.clip((f-4)/4,0,1); s=s*s*(3-2*s)
-    a,c=lc(WAIST[f]); tgt=pt(a,cL(a)+WAIST_ACROSS*(cR(a)-cL(a)))
-    WAIST[f]+=s*(tgt-WAIST[f])
+    tgt=WAIST[f].copy()
+    for _ in range(6):   # moved sideways only (the film's height is kept): x where c is WAIST_ACROSS of the way across
+        a,c=lc(tgt); tgt[0]+=(cL(a)+WAIST_ACROSS*(cR(a)-cL(a))-c)/LV[0]
+    WAIST[f][0]+=s*(tgt[0]-WAIST[f][0])
 # One body size every frame: the torso is one line of fixed length. Its lean comes from the film (head over waist),
 # kept bent forward toward the ladder on the climb, and bent further over the ladder at the top (frames 30-37).
 TORSO=40.0
