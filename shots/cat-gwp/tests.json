@@ -1,43 +1,38 @@
 [
  {
   "id": "M2",
-  "value": 82,
+  "value": 39,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   83,
-   82,
-   82,
-   82,
-   81,
-   83,
-   81,
-   83,
-   82,
-   82,
-   76,
-   83,
-   82,
-   82
+   48,
+   46,
+   46,
+   45,
+   35,
+   25,
+   33,
+   37,
+   37
   ]
  },
  {
   "id": "M2b",
-  "value": 0.77,
+  "value": 0.58,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 79
  },
  {
   "id": "M3",
-  "value": 0.39,
+  "value": 0.35,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.32
+  "min": 0.26
  },
  {
   "id": "M6",
-  "value": 6.2,
+  "value": 21.0,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -57,7 +52,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:5381512507686912; scenery quickdraw:6126367064195072, quickdraw:6464897556676608, quickdraw:5554186856955904, quickdraw:6096989265592320, quickdraw:6128315012218880",
+  "value": "rig quickdraw:5381512507686912; scenery quickdraw:5366306662514688, quickdraw:6464897556676608, quickdraw:4678850489352192, quickdraw:6096989265592320, quickdraw:6128315012218880",
   "unit": "",
   "ok": true
  },
@@ -82,17 +77,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca cat's head (cat face with pointed ears, two eyes and whiskers)\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca cat's head (face with two pointed ears, two eyes and whiskers)\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/cat-gwp/reviews/critic-1.json"
+  "evidence": "shots/cat-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The head outline, eye shapes, ear construction and whisker strokes match the doodle closely; the drawing is only rotated and moved. In frames 5-6 the ears are cut off at the top edge of the frame, and the head never turns into profile the way the doodle's construction would need to.",
-  "evidence": "shots/cat-gwp/reviews/critic-1.json"
+  "note": "The head outline, ears, eyes and whisker strokes match the doodle, but the whole drawing is rotated so the left whiskers hang down at an angle instead of running level, and in frames 5-12 the ear tips are cut off by the top edge of the frame.",
+  "evidence": "shots/cat-gwp/reviews/critic-3.json"
  }
 ]

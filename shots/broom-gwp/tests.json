@@ -1,44 +1,42 @@
 [
  {
   "id": "M2",
-  "value": 15,
+  "value": 17,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
    14,
    13,
    16,
-   15,
-   15,
-   17,
-   15,
-   17,
-   15,
-   15,
-   15,
-   15,
-   15,
    16,
-   17
+   19,
+   20,
+   19,
+   16,
+   15,
+   17,
+   15,
+   19,
+   20
   ]
  },
  {
   "id": "M2b",
-  "value": 0.87,
+  "value": 0.9,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 17
  },
  {
   "id": "M3",
-  "value": 0.6,
+  "value": 0.54,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.34
+  "min": 0.31
  },
  {
   "id": "M6",
-  "value": 4.6,
+  "value": 37.2,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -58,7 +56,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:6486360229675008; scenery quickdraw:6486360229675008 (the character's own doodle, repeated small), quickdraw:6486360229675008 (the character's own doodle, repeated small), drawn by agent: no Quick, Draw! category is a scrap of paper on a floor; small open shapes drawn where the white scraps lie on the dark floor in the first frames",
+  "value": "rig quickdraw:6486360229675008; scenery quickdraw:6486360229675008 (a second copy of the character's rig, keyed in shots/broom-sam/second_broom_poses.json), quickdraw:6486360229675008 (a second copy of the character's rig, keyed in shots/broom-sam/whisk_broom_poses.json), drawn by agent: no Quick, Draw! category is a scrap of paper on a floor; small open shapes drawn where the white scraps lie on the dark floor in the first frames",
   "unit": "",
   "ok": true
  },
@@ -83,17 +81,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca straw broom (long handle with a splayed fan of bristles)\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca straw broom (long handle, splayed bristle strands)\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/broom-gwp/reviews/critic-3.json"
+  "evidence": "shots/broom-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The animated broom has the doodle's double-line handle, loose fan of uneven bristle strokes and long curved stroke on the right, but it is tilted and enlarged rather than upright.",
-  "evidence": "shots/broom-gwp/reviews/critic-3.json"
+  "note": "The animated broom uses the same construction as the doodle (a double-line handle, a fan of separate bristle strokes, one long stroke sweeping out to the right) but is held at a steep tilt instead of upright, and the bristle strokes are denser and change in count between frames.",
+  "evidence": "shots/broom-gwp/reviews/critic-4.json"
  }
 ]

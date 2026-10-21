@@ -1,99 +1,127 @@
-"""Draw the pig's turn keys: the doodle's own head strokes placed in profile (t=0) or front view (t=1)
-at the film's snout position, blended for the three-quarter keys. Run from the repo root:
-    python3 shots/pig/drawn/src/make_keys.py
-Writes shots/pig/drawn/kFFF.json for every key in KEYS (body strokes start from the rig drawing)."""
+"""Draw the pig's keys from the doodle itself (the frame-0 rig drawing, which is the doodle as rigged).
+Every key is that drawing, placed by the film's snout position and a scale, with
+  - the head turned from profile (t=0) to three-quarter (t=1): the doodle's own zigzag ears spread, the near ear
+    grows, the far ear stays smaller and partly behind, the snout spiral ends about a third of the way across the head;
+  - the body kept the doodle's flat-topped oval, shortened along its length as the pig turns, tipped up a little
+    when the pig is close (the camera looks down on its back);
+  - the legs swung about their tops in a walk cycle once the pig walks (front pair and hind pair opposite);
+  - an extra "pole" stroke (the handler's catch-pole) held on the snout until the pig is let go.
+Run from the repo root:  python3 shots/pig/drawn/src/make_keys.py"""
 import json
 import numpy as np
 from pathlib import Path
 D = Path('shots/pig/drawn'); G = Path('shots/pig-gwp')
-S = json.load(open(G / 'shot.json'))
-rig = json.load(open(G / 'rig_frames.json')) if (G / 'rig_frames.json').exists() else S['cast']['frames']
+rig = json.load(open(G / 'rig_frames.json'))
 A = lambda x: np.array(x, float)
 
-# profile template: the frame-0 rig drawing (the doodle as rigged), relative to the snout spiral centre
 R0 = [A(s) for s in rig[0]]
-SC = A([65.0, 113.0])
-P = [s - SC for s in R0]
-sp = R0[1][6:] - SC
-# front template, snout centre at origin, same point order and stroke meaning as the profile:
-# S1 back of head -> ear -> valley -> ear -> forehead -> cheek into the snout spiral
-# S2 jaw: under the snout, round the chin and up the far cheek
-# S4 tail (points 7-9): chest under the head up to the near shoulder
-# S7/S8 one front leg (upper slant + lower), S9 the other front leg
-F = {
-    1: np.r_[A([[50, -52], [58, -108], [0, -70], [-58, -108], [-62, -34], [-22, -8]]), sp * 1.3],
-    2: A([[18, 40], [42, 34], [60, 10], [64, -18], [56, -46]]),
-    4: A([[14, 50], [-34, 42], [-60, -20]]),
-    7: A([[-48, 84], [-46, 108]]),
-    8: A([[-40, 46], [-48, 90]]),
-    9: A([[42, 46], [46, 80], [44, 108]]),
+SC = R0[1][6:].mean(0)                       # snout spiral centre in the doodle drawing
+P = [s - SC for s in R0]                      # the doodle, snout at the origin
+sp = P[1][6:]
+# three-quarter head, same points and stroke meanings as the profile (S1 back of head > near ear > valley >
+# far ear > forehead > into the spiral; S2 jaw, here also the near cheek; S4 points 7-9 chest up to the chin)
+H3 = {
+    1: np.r_[A([[64, -44], [60, -106], [38, -50], [14, -82], [-4, -40], [-2, -12]]), sp * 1.1],
+    2: A([[10, 14], [20, 32], [40, 40], [62, 26], [72, -6]]),
+    4: A([[70, 78], [42, 58], [24, 42]]),
 }
-BODY = [(0, None), (3, slice(1, None)), (4, slice(0, 7)), (5, None), (6, None)]
+PIV = A([70, -20])                            # the neck: the body is shortened and tipped about this point
+POLE_TOP = A([-14, 48])                       # the far end of the catch-pole, fixed in the frame
+
 
 def rot(v, deg, c):
     a = np.radians(deg); R = A([[np.cos(a), -np.sin(a)], [np.sin(a), np.cos(a)]]); return (v - c) @ R.T + c
 
-def key(f, snout, k, t, tilt=0.0, legs=1.0, body=None, lift=0.0):
-    r = [A(s) for s in rig[f]]; sn = A(snout)
-    dx = A([sn[0] - r[1][6:].mean(0)[0], 0])   # the front of the pig follows the head sideways
-    for i in (7, 8, 9): r[i] = r[i] + dx
-    r[4][6:8] = r[4][6:8] + dx * [[0.5], [1.0]]
-    out = [s.copy() for s in r]
-    def place(loc):   # head-local offsets -> frame
-        return sn + rot(loc * k, tilt, A([25, -40]) * k)
-    # head strokes: blend profile and front templates
-    out[1] = place((1 - t) * P[1] + t * F[1])
-    out[2] = place((1 - t) * P[2] + t * F[2])
-    # S4 tail and front legs: profile part follows the rig body, front part hangs under the head
-    # front view: the body is mostly hidden behind the head, so it is drawn shorter toward the head
-    hx = sn[0] + 55 * k; c = 1 - 0.3 * t
-    for si, sl in BODY:
-        q = out[si][sl] if sl else out[si]
-        q[:, 0] = np.where(q[:, 0] > hx, hx + (q[:, 0] - hx) * c, q[:, 0])
-    tail_p = np.r_[out[4][7:8], place(P[4][8:])]; tail_f = place(F[4])
-    tail_p[1] = 0.5 * (tail_p[0] + tail_p[2]) + A([6, 4]) * k   # chest: smooth from the rig's chest to the chin
-    out[4][7:] = (1 - t) * tail_p + t * tail_f
-    for i in (7, 8, 9):
-        lp = r[i]; lf = place(F[i]); out[i] = (1 - t * legs) * lp + t * legs * lf
-    # back line starts at the back of the head
+
+def key(f, snout, k, t, tilt=0.0, brot=0.0, swing=0.0, bs=1.0, boff=(0, 0)):
+    out = [s.copy() for s in P]
+    # head: blend profile -> three-quarter, tilt about the middle of the head
+    for i in (1, 2):
+        out[i] = rot((1 - t) * P[i] + t * H3[i], tilt, A([25, -40]))
+    tail = (1 - t) * P[4][7:] + t * H3[4]
+    # body: shortened along its length, then tipped about the neck
+    c = 1 - 0.3 * max(0.0, (t - 0.5) / 0.5)   # shorten only once the head is past half way
+    def body(v):
+        v = v.copy(); v[:, 0] = np.where(v[:, 0] > PIV[0], PIV[0] + (v[:, 0] - PIV[0]) * c, v[:, 0]); return rot(PIV + (v - PIV) * bs, brot, PIV)
+    out[0] = body(P[0]); out[3] = body(P[3]); b4 = body(P[4][:7]); out[4] = np.r_[b4, rot(tail, tilt * 0.5, A([25, -40]))]
+    out[3][0] = out[1][0] + A([5, 2])         # the back starts at the back of the head
+    # legs: swing about their tops (front pair opposite each other, hind pair opposite), then follow the body
+    sw = lambda s, a: rot(s, a, s[0])
+    out[9] = sw(P[9], swing); out[8] = sw(P[8], -swing); out[7] = rot(P[7], -swing, P[8][0])
+    out[5] = sw(P[5], -swing); out[6] = sw(P[6], swing)
+    for i in (5, 6): out[i] = body(out[i])
+    for i in (7, 8, 9): out[i] = rot(out[i], brot * 0.5, PIV)
+    out = [A(snout) + s * k for s in out]
+    # the body does not follow every move of the head: shift it (and the legs) by boff, keep the back joined to the head
+    for i in (0, 3, 4, 5, 6, 7, 8, 9):
+        if i == 4: out[4][:7] += A(boff)
+        else: out[i] = out[i] + A(boff)
     out[3][0] = out[1][0] + A([5, 2]) * k
-    if lift:   # the film's back is higher than the rig's while the pig walks at us
-        out[3][2:] = out[3][2:] - A([0, lift]) * np.linspace(1, 0.4, len(out[3]) - 2)[:, None]
-        out[0][:3] = out[0][:3] - A([0, lift * 0.4])
-    # back line: from behind the far ear, rounded up into the back (no tent at the shoulder)
-    out[3][0] = out[1][0] + A([5, 2]) * k
-    out[3][1] = (1 - t) * out[3][1] + t * (0.5 * out[3][0] + 0.5 * out[3][2] + A([-8, -14]) * k)
-    if body:
-        for (si, pi), xy in body.items(): out[si][pi] = A(xy)
     return out
 
-# (frame, snout centre, scale, turn, tilt, why, body overrides)
-KEYS = [
-    (8, (92, 104), 1.0, 0.0, -6, 'The catch-pole lets go and the pig lifts its head; still a side view, the start of the turn.', None),
-    (9, (112, 94), 1.0, 0.12, -12, 'Anticipation: the head is at its highest, tipped up and back, before it swings round toward the camera.', None),
-    (10, (132, 108), 1.0, 0.27, -7, 'The head starts to swing: the far ear begins to show and the snout moves off the edge of the head.', None),
-    (11, (142, 121), 0.99, 0.4, -2, 'Three-quarter head: the far ear is up, the snout a third of the way to the middle.', None),
-    (12, (141, 140), 0.97, 0.6, 1, 'Past half way: the ears are spreading to either side and the head drops toward the camera.', None),
-    (13, (137, 152), 0.95, 0.82, 3, 'Nearly front-on: the snout is almost in the middle of the face.', None),
-    (14, (128, 166), 0.95, 1.0, 0, 'THE LINE: the pig faces the camera; snout spiral in the middle of a round head, one ear either side.', None),
-    (15, (124, 174), 0.96, 1.0, 1, 'A little air after the line: the same front face, a step closer.', None),
-    (16, (113, 184), 0.97, 1.0, 2, 'First step toward the camera: the front head grows and comes down-left.', None),
-    (17, (100, 198), 0.99, 1.0, 1, 'Walking toward us, the head lower.', None),
-    (18, (80, 208), 1.0, 1.0, 0, 'Walking toward us, head low in the lower left, the body behind it.', None),
-    (19, (74, 218), 1.01, 1.0, 2, 'Contact: a front foot lands and the head dips to its lowest point, down and left.', None),
-    (20, (80, 214), 1.03, 1.0, 1, 'Recoil from the dip: the head starts back up.', None),
-    (21, (92, 199), 1.06, 1.0, -1, 'The head lifts fast and comes closer to the camera (the film moves quickly here).', None),
-    (22, (98, 185), 1.08, 1.0, 0, 'Head up and close: the top of the lift.', None),
-    (24, (88, 186), 1.1, 1.0, 0, 'Close, front view, head in the lower left; settling.', None),
-    (25, (88, 189), 1.1, 1.0, 0, 'Last frame: held front view, close.', None),
-]
 
-LIFT = {15: 8, 16: 14, 17: 20, 18: 26, 19: 26, 20: 26, 21: 20, 22: 10}
+def pole(f, snout, k):
+    end = A(snout) + A([-6, -4]) * k
+    return np.array([POLE_TOP, POLE_TOP * 0.45 + end * 0.55 + A([0, 2]), end, end + A([7, 7]), end + A([2, 15]), end + A([-7, 10])])
+
+
+def walk(f):  # leg swing in degrees: still until the pig walks, then one step every 3 frames
+    return 0.0 if f < 10 else 14.0 * np.sin(2 * np.pi * (f - 10) / 6 + np.pi / 2)
+
+
+# (frame, snout centre, scale, turn 0..1 (1 = three-quarter), head tilt, body tip, why)
+KEYS = [
+    (7, (74, 112), 1.0, 0.0, -2, 0, 'Still on the catch-pole, starting to pull: the head comes forward a little, the body still.'),
+    (8, (92, 104), 1.0, 0.0, -6, 0, 'The pig pulls against the pole and lifts its head; still a side view, the start of the turn.'),
+    (9, (112, 94), 1.0, 0.12, -12, 0, 'Anticipation, the last frame on the pole: head at its highest, tipped up and back, before it swings round.'),
+    (10, (132, 108), 1.0, 0.32, -7, 0, 'Let go: the pole is gone and the head starts to swing toward the camera; the far ear shows. First step.'),
+    (11, (142, 121), 1.0, 0.52, -2, 0, 'The ears spread, the near ear grows; the snout moves in from the edge of the head.'),
+    (12, (141, 140), 1.0, 0.72, 1, -2, 'Turning on: the head drops toward the camera, the body begins to shorten.'),
+    (13, (137, 152), 1.02, 0.88, 3, -4, 'Nearly round: snout a third of the way across the head.'),
+    (14, (128, 166), 1.04, 1.0, 0, -6, 'THE LINE: the pig looks at the camera in three-quarter view, near ear large, far ear behind, body shortened behind the head.'),
+    (15, (124, 174), 1.06, 1.0, 1, -9, 'A little air after the line: the same three-quarter head, one step closer.'),
+    (16, (113, 184), 1.08, 1.0, 2, -11, 'Walking toward the camera: the head grows and comes down-left.'),
+    (17, (100, 198), 1.1, 1.0, 1, -14, 'Walking toward us, the head lower.'),
+    (18, (80, 208), 1.12, 1.0, 0, -17, 'Head low in the lower left, the body behind it tipped up toward the back of the pen.'),
+    (19, (74, 218), 1.13, 1.0, 2, -18, 'Contact: a front foot lands and the head dips to its lowest point.'),
+    (20, (80, 214), 1.15, 1.0, 1, -18, 'Recoil from the dip: the head starts back up.'),
+    (21, (92, 199), 1.18, 1.0, -1, -18, 'The head lifts fast and comes closer (the film moves quickly here).'),
+    (22, (98, 185), 1.2, 1.0, 0, -16, 'Head up and close: the top of the lift.'),
+    (24, (88, 186), 1.22, 1.0, 0, -14, 'Close, three-quarter view, settling.'),
+    (25, (88, 189), 1.22, 1.0, 0, -14, 'Last frame: close, three-quarter view.'),
+]
+BS = {14: 1.04, 15: 1.07, 16: 1.1, 17: 1.12, 18: 1.15, 19: 1.15, 20: 1.15, 21: 1.15, 22: 1.15, 24: 1.15, 25: 1.15}
 
 if __name__ == '__main__':
-    for f, sn, k, t, tilt, why, body in KEYS:
-        st = key(f, sn, k, t, tilt, body=body, lift=LIFT.get(f, 0.0))
-        p = D / f'k{f:03d}.json'
-        old = json.load(open(p)) if p.exists() else {}
-        json.dump({'why': why, 'strokes': [np.round(s, 1).tolist() for s in st], 'extra': old.get('extra', {})}, open(p, 'w'))
+    for p in D.glob('k[0-9][0-9][0-9].json'): p.unlink()
+    # body position: near the rig's body while the pig stands and pulls (7-12), then a smoothed path of the head
+    # so the head's dip and lift at 19-22 do not throw the whole body
+    sns = {f: A(sn) for f, sn, *_ in KEYS}; fs = sorted(sns)
+    W = {7: 1.0, 8: 1.0, 9: 1.0, 10: 0.7, 11: 0.4, 12: 0.15}
+    BODY_AT = {7: (303, 115), 8: (311, 111), 9: (320, 106), 10: (328, 105), 11: (334, 110), 12: (337, 120),
+               13: (336, 132), 14: (332, 144)}   # body centre (back and rump strokes) while the pig is let go and turns
+    for f, sn, k, t, tilt, brot, why in KEYS:
+        off = A([0, 0])
+        if f in BODY_AT:
+            st0 = key(f, sn, k, t, tilt, brot, walk(f), BS.get(f, 1.0))
+            off = A(BODY_AT[f]) - np.concatenate([st0[0], st0[3][1:]]).mean(0)
+        if f >= 17:
+            near = [g for g in fs if abs(g - f) <= 2]
+            off = off + (np.mean([sns[g] for g in near], 0) - A(sn)) * 0.8
+        st = key(f, sn, k, t, tilt, brot, walk(f), BS.get(f, 1.0), off)
+        ex = {}
+        json.dump({'why': why, 'strokes': [np.round(s, 1).tolist() for s in st], 'extra': ex}, open(D / f'k{f:03d}.json', 'w'))
+    # the catch-pole is scenery, not part of the pig: static poles in rigs/pig_scene.json, one per stretch of
+    # frames, each ending on the snout where the snout is in those frames (written here so they match the keys)
+    import json as _j
+    sc = _j.load(open('rigs/pig_scene.json')); sc['objects'] = [o for o in sc['objects'] if not o['id'].startswith('catch_pole')]
+    sn_rig = A(rig[3][1][6:]).mean(0)
+    for name, vis, sn in (('catch_pole', [0, 6], sn_rig), ('catch_pole_7', [7, 7], A(KEYS[0][1])),
+                          ('catch_pole_8', [8, 8], A(KEYS[1][1])), ('catch_pole_9', [9, 9], A(KEYS[2][1]))):
+        q = pole(0, sn, 1.0)
+        sc['objects'].append({'id': name, 'plane': 'char', 'class': 'line', 'visible': vis,
+            'why': "the handler's catch-pole from the upper left to the pig's snout (no Quick, Draw! category is a catch-pole); "
+                   "one copy per stretch of frames so its end stays on the snout until the pig is let go after frame 9",
+            'strokes': [np.round(q[:3], 1).tolist(), np.round(q[2:], 1).tolist()]})
+    _j.dump(sc, open('rigs/pig_scene.json', 'w'), indent=1)
     print('wrote', [k[0] for k in KEYS])

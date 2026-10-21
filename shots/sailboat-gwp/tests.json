@@ -1,51 +1,40 @@
 [
  {
   "id": "M2",
-  "value": 51,
+  "value": 40,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   51,
-   51,
-   51,
-   52,
-   51,
-   52,
-   52,
-   51,
-   51,
-   51,
-   52,
-   52,
-   51,
-   52,
-   52,
-   51,
-   52,
-   52,
-   52,
-   51
+   39,
+   38,
+   40,
+   40,
+   42,
+   41,
+   39,
+   39,
+   40
   ]
  },
  {
   "id": "M2b",
-  "value": 0.99,
+  "value": 0.64,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 51
  },
  {
   "id": "M3",
-  "value": 0.3,
+  "value": 0.61,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.2
+  "min": 0.45
  },
  {
   "id": "M6",
-  "value": 5.3,
+  "value": 0.8,
   "unit": "px jerk (drawing centre)",
-  "ok": false
+  "ok": true
  },
  {
   "id": "T3",
@@ -88,17 +77,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca sailboat (triangular sail on a mast above a long hull)\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca sailboat with one triangular sail, a mast and a long hull, on water with two small grey boats in the distance\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/sailboat-gwp/reviews/critic-1.json"
+  "evidence": "shots/sailboat-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The sail, doubled mast stroke, and open-ended hull outline match the doodle closely. In frames 2 to 4 the right (stern) end of the hull runs off the frame edge and is cut open, so the closed hull shape of the doodle is lost there.",
-  "evidence": "shots/sailboat-gwp/reviews/critic-1.json"
+  "note": "The hull outline, the notched top edge, the hooked bow at right and the doubled mast strokes match the doodle; only the sail is slightly wider and the hull longer than in c.png.",
+  "evidence": "shots/sailboat-gwp/reviews/critic-2.json"
  }
 ]

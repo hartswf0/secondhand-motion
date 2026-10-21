@@ -6,7 +6,7 @@
   "nose",
   "rump"
  ],
- "note": "Quick, Draw! dragon 6190476665290752, facing left. Stroke 0 is the head, a closed loop at the left. Stroke 1 is a short line hanging under the head, the jaw or beard. Stroke 2 is the whole body in one line: from the neck down the belly, up into a tail that curls over the back, down the rump, the hind leg, the belly again and the front leg, ending under the head. Stroke 3 is the zigzag of spikes: the first four vertices are horns on the head, the rest run along the back. The root carries the whole drawing from the neck to the rump, so the drawing moves and changes size with the camera's pull-back. The head, its horns, the first frill spike behind it (stroke 3 vertex 4) and the jaw line turn together at the neck toward the nose point; in the film the painted head is a separate cut-out that rocks about the back of the skull, nose down about 30 degrees at frames 0-3 and 23, nose up about 9 degrees at frame 13, and the rest of the painting holds still. The legs, tail and spikes do not move: template matching on the film's legs and claws finds them still to within 1 px from frame 3 on, so they ride the root only. The pose points are measured, not guessed: an ORB similarity fit of the still body against frame 10 gives the camera's pull-back, and a fit of the head region gives the head's turn about its measured pivot (126, 130 in frame 10), where the doodle's neck anchor is placed (shots/dragon/work/measure.py, gen_keys.py). Smoothing is off (smooth 0): the measured keys are already smooth, and a Gaussian spread the three-frame pull-back over frames 0 to 5, so the drawing shrank later than the film. The zoom is keyed on every frame 0 to 4 at the measured scale. The jaw line does not open: with the head's turn removed, the film's mouth stays the same in every frame, so the head is one rigid cut-out.",
+ "note": "Quick, Draw! dragon 6190476665290752, facing left. Stroke 0 is the head, a closed loop at the left. Stroke 1 is a short line hanging under the head, the jaw or beard. Stroke 2 is the whole body in one line: from the neck down the belly, up into a tail that curls over the back, down the rump, the hind leg, the belly again and the front leg, ending under the head. Stroke 3 is the zigzag of spikes: the first four vertices are horns on the head, the rest run along the back. The root carries the whole drawing from the neck to the rump, so the drawing moves and changes size with the camera's pull-back. The head, its horns, the first frill spike behind it (stroke 3 vertex 4) and the jaw line turn together at the neck toward the nose point; in the film the painted head is a separate cut-out that rocks about the back of the skull, nose down about 30 degrees at frames 0-3 and 23, nose up about 9 degrees at frame 13, and the rest of the painting holds still. The legs, tail and spikes do not move: template matching on the film's legs and claws finds them still to within 1 px from frame 3 on, so they ride the root only. The pose points are measured, not guessed: an ORB similarity fit of the still body against frame 10 gives the camera's pull-back, and a fit of the head region gives the head's turn about its measured pivot (126, 130 in frame 10), where the doodle's neck anchor is placed (shots/dragon/work/measure.py, gen_keys.py). Smoothing is off (smooth 0): the measured keys are already smooth, and a Gaussian spread the three-frame pull-back over frames 0 to 5, so the drawing shrank later than the film. The zoom is keyed on every frame 0 to 4 at the measured scale. The jaw line does not open: with the head's turn removed, the film's mouth stays the same in every frame, so the head is one rigid cut-out. Revised for drawn keys: only the top of the jaw/chest line (stroke 1 vertex 0) turns fully with the head; its middle vertex takes a third of the turn and its foot stays with the body, because in the film only the head cut-out rocks and the chest under it holds still. The horns (stroke 3 vertices 0-3) take 0.6 of the head's turn, so the pair keeps one shape across the rock instead of swapping between an M and a single point; the drawn keys' nose horn carries the full tilt. The first frill spike (vertex 4) takes 0.3 of the turn so the spike between the head and the still back bends instead of flipping shape.",
  "strokes": [
   [
    [
@@ -398,7 +398,7 @@
   {
    "stroke": 1,
    "from": 0,
-   "to": 2,
+   "to": 0,
    "joint": "neck",
    "aim": [
     "neck",
@@ -406,14 +406,37 @@
    ]
   },
   {
+   "stroke": 1,
+   "from": 1,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ],
+   "turn": 0.35
+  },
+  {
    "stroke": 3,
    "from": 0,
+   "to": 3,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "nose"
+   ],
+   "turn": 0.6
+  },
+  {
+   "stroke": 3,
+   "from": 4,
    "to": 4,
    "joint": "neck",
    "aim": [
     "neck",
     "nose"
-   ]
+   ],
+   "turn": 0.3
   },
   {
    "rest": true,

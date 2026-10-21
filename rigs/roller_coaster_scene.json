@@ -144,10 +144,10 @@
    "plane": "far",
    "qd": "cloud",
    "box": [
-    20,
-    40,
-    130,
-    75
+    10,
+    12,
+    95,
+    42
    ],
    "strokes": 1,
    "skip": 1
@@ -155,6 +155,8 @@
  ],
  "notes": {
   "0": "the camera tilts up the lift hill",
-  "40": "the top of the hill"
- }
+  "40": "the top of the hill",
+  "no_cel": "cel paint dropped: the SAM masks in frames 5-7 cover the sky and erased the left cloud"
+ },
+ "no_cel": true
 }

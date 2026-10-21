@@ -92,27 +92,23 @@
  ],
  "objects": [
   {
-   "id": "b1",
+   "id": "second_broom",
    "plane": "far",
-   "copy_of_design": true,
-   "mirror": false,
-   "box": [
-    262,
-    150,
-    316,
-    272
+   "why": "the second broom in the film, which stands at the right and swings up over the main broom from frame 2 and leaves at the top right by frame 11; the character's own doodle drawn by rigs/broom.py, keyed by eye on its binding and handle angle",
+   "rig_poses": "shots/broom-sam/second_broom_poses.json",
+   "visible": [
+    0,
+    11
    ]
   },
   {
-   "id": "b2",
+   "id": "whisk_broom",
    "plane": "far",
-   "copy_of_design": true,
-   "mirror": true,
-   "box": [
-    300,
-    40,
-    360,
-    176
+   "why": "the narrow whisk broom that stands upright to the right of the main broom from frame 15 to the end (behind it at frames 22 to 25); the character's own doodle drawn by rigs/broom.py, keyed by eye",
+   "rig_poses": "shots/broom-sam/whisk_broom_poses.json",
+   "visible": [
+    15,
+    31
    ]
   },
   {

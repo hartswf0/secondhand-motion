@@ -1,48 +1,49 @@
 [
  {
   "id": "M2",
-  "value": 13,
+  "value": 14,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
    29,
    24,
-   24,
-   8,
-   12,
+   17,
    16,
-   7,
-   10,
-   8,
    9,
-   7,
+   5,
+   4,
+   11,
+   12,
    12,
    13,
-   19,
+   13,
+   13,
+   15,
+   15,
    14,
-   12,
-   7,
-   9,
-   7
+   13,
+   13,
+   14,
+   14
   ]
  },
  {
   "id": "M2b",
-  "value": 0.5,
+  "value": 0.61,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 31
  },
  {
   "id": "M3",
-  "value": 0.4,
+  "value": 0.39,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.25
+  "min": 0.19
  },
  {
   "id": "M6",
-  "value": 16.6,
+  "value": 20.7,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -62,7 +63,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:5298401904164864; scenery quickdraw:6721509840125952, drawn by agent: no Quick, Draw! category is a ground line; the edge of the trough wall the pig walks along, drawn by agent: the handler's catch-pole from the upper left to the pig's snout; no Quick, Draw! category is a catch-pole. It holds the pig in frames 0-7, stays where it was as the pig pulls its head away at 8-9, and is gone from frame 10, so the release is seen",
+  "value": "rig quickdraw:5298401904164864; scenery quickdraw:6721509840125952, drawn by agent: no Quick, Draw! category is a ground line; the edge of the trough wall the pig walks along, drawn by agent: the handler's catch-pole from the upper left to the pig's snout (no Quick, Draw! category is a catch-pole); one copy per stretch of frames so its end stays on the snout until the pig is let go after frame 9, drawn by agent: the handler's catch-pole from the upper left to the pig's snout (no Quick, Draw! category is a catch-pole); one copy per stretch of frames so its end stays on the snout until the pig is let go after frame 9, drawn by agent: the handler's catch-pole from the upper left to the pig's snout (no Quick, Draw! category is a catch-pole); one copy per stretch of frames so its end stays on the snout until the pig is let go after frame 9, drawn by agent: the handler's catch-pole from the upper left to the pig's snout (no Quick, Draw! category is a catch-pole); one copy per stretch of frames so its end stays on the snout until the pig is let go after frame 9",
   "unit": "",
   "ok": true
  },

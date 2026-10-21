@@ -133,34 +133,17 @@
  },
  "planes": [
   {
-   "id": "back",
-   "z": 2.4,
-   "label": "Left mass of the same cloud bank, a little behind"
-  },
-  {
    "id": "char",
    "z": 2,
    "label": "Cloud"
   }
  ],
- "objects": [
-  {
-   "id": "leftmass",
-   "plane": "back",
-   "qd": "cloud",
-   "box": [
-    -95,
-    70,
-    42,
-    190
-   ],
-   "skip": 0
-  }
- ],
+ "objects": [],
  "no_cel": true,
  "notes": {
-  "1": "The cloud's top edge: a lobe on the left, a dip, a broad lobe on the right.",
-  "31": "The whole cloud has drifted right and up; the left lobe is rising.",
-  "61": "The right end has drifted out of frame; the left lobe has risen."
- }
+  "0": "The cloud bank fills the lower frame: a low lobe on the left, a middle bump, a high lobe on the right.",
+  "40": "The left lobe has risen to full height and the right side has lifted; the middle bump has sunk into the dip.",
+  "61": "The left lobe has widened to the right; the cloud holds its place in the frame."
+ },
+ "scenery_note": "The grey left-mass cloud was removed: the doodle itself now spans the bank from edge to edge, and the extra cloud overlapped its left end."
 }

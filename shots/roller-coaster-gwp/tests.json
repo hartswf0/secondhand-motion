@@ -1,49 +1,48 @@
 [
  {
   "id": "M2",
-  "value": 2,
+  "value": 1,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
   ]
  },
  {
   "id": "M2b",
-  "value": 0.78,
+  "value": 0.11,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-  "ok": true,
+  "ok": false,
   "design_typicality": 3
  },
  {
   "id": "M3",
-  "value": 0.56,
-  "unit": "fit to the SAM silhouette, frames with a mask",
-  "ok": false,
-  "min": 0.43
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
  },
  {
   "id": "M6",
-  "value": 29.3,
+  "value": 2.4,
   "unit": "px jerk (drawing centre)",
-  "ok": false
+  "ok": true
  },
  {
   "id": "T3",
-  "value": "19 strokes, 47 vertices, every frame",
+  "value": "27 strokes, 75 vertices, every frame",
   "unit": "",
   "ok": true,
   "note": "the doodle itself, bent by the rig"
@@ -57,7 +56,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:5572615668236288; scenery quickdraw:4773289035563008, quickdraw:5418102407823360",
+  "value": "rig quickdraw:5572615668236288; scenery quickdraw:4773289035563008, quickdraw:5998685164929024",
   "unit": "",
   "ok": true
  },
@@ -82,17 +81,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca roller coaster lift hill: a hatched track climbing to a peak with the drop going down to the right\u201d; motion broken; follows the film: yes",
+  "value": "named \u201ca roller coaster lift hill: a double-rail track with cross-tie hatch marks rising to a peak, with two support lines sloping down to the right\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": false,
-  "evidence": "shots/roller-coaster-gwp/reviews/critic-1.json"
+  "evidence": "shots/roller-coaster-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The animated track is much steeper and narrower than the doodle, which has a gentle curved climb, and the two right-hand drop lines are shallower and longer in the animation than the steep drop lines in the doodle. The double-line track with short slanted cross ticks and the separate drop lines match the doodle's construction.",
-  "evidence": "shots/roller-coaster-gwp/reviews/critic-1.json"
+  "note": "The animated track has the doodle's double rail, short slanted hatch ties and two descending lines, but it is much steeper and narrower than the doodle's shallow bent climb for most of the shot.",
+  "evidence": "shots/roller-coaster-gwp/reviews/critic-2.json"
  }
 ]
