@@ -82,7 +82,7 @@ def contact(f,limb):
         if f>=f1: p=q; continue
         if f>f0:
             t=(f-f0)/(f1-f0); t=t*t*(3-2*t); lift=math.sin(math.pi*t)
-            if f0>=5: out={'lf':LU*3-LV*3,'rf':LU*3+LV*3,'lh':-LV*5,'rh':LV*5}[limb]   # on the ladder a foot comes up off its rung and a hand swings out to its own side
+            if f0>=5: out={'lf':LU*3-LV*3,'rf':LU*3+LV*3,'lh':-LV*12,'rh':LV*12}[limb]   # on the ladder a foot comes up off its rung and a hand swings out to its own side
             else: out=np.array({'lf':(-1.6,-4.0),'rf':(-1.6,-4.0),'lh':(-5.0,-3.0),'rh':(6.0,-2.0)}[limb])
             return p+(q-p)*t+out*lift
         break
@@ -117,13 +117,16 @@ def hand(pts,wob=True):
         d=P[-1]-P[0]; nr=np.array([-d[1],d[0]])/max(np.hypot(*d),1e-6)
         out.append((P+nr*o).tolist())
     return out
-def limb_back(root,q,L,side,cos_out,lo_c=None,hi_c=None):
+PREVB={}
+def limb_back(root,q,L,side,cos_out,lo_c=None,hi_c=None,key=None):
     # an elbow or knee for a figure seen from behind on the ladder: a two-bone limb of fixed length L per bone, bent in a
     # plane that leans out of the picture into the ladder, so only cos_out of the bend shows, out to the limb's own side
     # (side -1 left, +1 right). The drawn bones change length smoothly with the reach, never folding to a stub.
     A,B=lc(root),lc(q); d=B-A; D=max(np.hypot(*d),1e-6); h=math.sqrt(max(L*L-(D/2)**2,0))*cos_out
     nr=np.array([-d[1],d[0]])/D
     if nr[1]*side-0.6*nr[0]<0: nr=-nr   # the bend goes out to the limb's own side and, when the reach is across, downward (an elbow hangs below a hand held at shoulder height)
+    if key in PREVB and nr@PREVB[key]<0 and abs(nr[1])<0.5: nr=-nr   # near the flip point the bend keeps the side it had last frame
+    if key is not None: PREVB[key]=nr
     m=(A+B)/2+nr*h
     if lo_c is not None: m[1]=min(max(m[1],lo_c(m[0])+2),hi_c(m[0])-2)
     return pt(*m)
@@ -137,13 +140,13 @@ def skeleton(f):
         q=contact(f,limb); sgo=-1 if limb=='lh' else 1
         e0=joint(S,q,30,lambda z,sg=sgo: z[1]+sg*0.3*z[0],limb,fore=True)
         Sh=S+LV*sg*3
-        e1=limb_back(Sh,q,30*SC(f),sg,0.5)
+        e1=limb_back(Sh,q,30*SC(f),sg,0.5,key=limb)
         J[limb]=(Sh*bl+S*(1-bl),e0*(1-bl)+e1*bl,q)
     for limb,sg in (('lf',-1),('rf',1)):
         q=contact(f,limb); Hp0=P-np.array([2.5*(-sg),0.0]); Hp1=P+LV*sg*3-LU*5*SC(f); Hp=Hp0*(1-bl)+Hp1*bl   # on the ladder the hips sit 5 px below the waist line
         D=np.hypot(*(q-Hp))
         k0=joint(Hp0,q,39,lambda z: z[0]+0.6*z[1],limb)
-        k1=limb_back(Hp1,q,LEG*SC(f),sg,0.75,cL,cR)
+        k1=limb_back(Hp1,q,LEG*SC(f),sg,0.75,cL,cR,key=limb)
         J[limb]=(Hp,k0*(1-bl)+k1*bl,q)
     return J
 def _x(p1,p2,p3,p4):
