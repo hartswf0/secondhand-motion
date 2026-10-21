@@ -3,7 +3,8 @@
 The rotor is the doodle's own four blade lines (the left blade at the end of the mast stroke and strokes 2-4).
 They turn together as one rotor seen from the side: each blade end travels round a flat ellipse in the rotor
 plane (depth squash ROTOR_K), so a blade swings from long to short and back instead of standing up like a fan,
-and no blade is ever drawn on top of another. At pose['spin'] = 0 every blade is exactly where the doodler drew it.
+and no blade is ever drawn on top of another. Each blade keeps the doodler's length and starts at the angle round
+the disc nearest the way the doodler drew it, so at spin 0 the rotor is the doodle's rotor flattened onto the disc.
 """
 from pathlib import Path
 import sys, math
@@ -12,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from template_rig import TemplateRig
 _R = TemplateRig(Path(__file__).parent / 'helicopter_spec.json')
 POINTS = _R.POINTS
-ROTOR_K = 0.35   # depth squash of the rotor disc seen from the side
+ROTOR_K = 0.3   # depth squash of the rotor disc seen from the side
 # (stroke, vertex of the blade's root, vertex of the blade's end) in the doodle
 BLADES = [(1, 1, 2), (2, 0, 1), (3, 0, 1), (4, 0, 1)]
 
@@ -21,7 +22,7 @@ def _blades():
     S = _R.strokes; out = []
     for s, i0, i1 in BLADES:
         st = np.array(S[s][i0], float); v = np.array(S[s][i1], float) - st
-        a0 = math.atan2(v[1] / ROTOR_K, v[0]); L = math.hypot(v[0], v[1] / ROTOR_K)
+        a0 = math.atan2(v[1] / ROTOR_K, v[0]); L = math.hypot(v[0], v[1])
         out.append((s, i0, i1, st, a0, L))
     return out
 

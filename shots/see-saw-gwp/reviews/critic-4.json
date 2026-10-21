@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A black-line seesaw (long plank, high end at upper left, low end at lower right, on a triangular fulcrum) stands fixed in the same place in all 16 frames, with grey trees behind. At the high left end a tall stick-figure adult stands bent forward with a small stick-figure child at waist height beside her legs. Frames 1-8 are almost identical; nothing visibly moves. In frame 9 the adult straightens and the child is still at her side at waist height. In frame 10 the child is suddenly above the high end of the plank, at the top of the frame, with the adult's arm reaching up to it. Frames 10-14 hold the child on or just above the high end of the plank while the adult stands under it, with the child's position shifting slightly left and right. In frame 15 the child is drawn at the adult's head height, overlapping her head, so the two heads read as one cluster. In frame 16 the adult is bent forward again exactly as in frame 1 and the child is back on the ground at her legs.",
+ "seen_film": "Frame 1 is nearly black (a fade-in). Frames 2-8: a woman at the left stands bent over at the high end of a seesaw, working at a small child on the ground beside the seesaw post; her bend and arm positions change a little from frame to frame. Frame 9: she straightens and lifts the child up to the level of the plank. Frames 10-15: she holds the child seated on or against the high end of the plank, the child at the top left of the frame, while she stands beside it; the child moves slightly as she steadies it. Frame 16: she bends forward again over the plank, lowering or reaching for the child, whose body is now down at plank level. The seesaw planks themselves stay mostly still; other children sit on a seesaw in the background.",
+ "named_subject": "A seesaw (the doodle), with a stick-figure woman lifting a small child onto its raised end",
+ "verdict": "reference stronger",
+ "evidence": "The event and its timing match the film: frames 1-8 adult bent over child at the high end (film 2-8), frame 9 adult straightens (film 9), frames 10-14 child up on the high end of the plank (film 10-15), frame 16 adult bent again (film 16). The seesaw in every frame is a faithful copy of c.png in shape and stroke. But the motion does not read as continuous: frames 1-8 are near-duplicates, so the film's small bending and handling movements are absent and the figure is frozen for half the shot; between frames 9 and 10 the child jumps from waist height to above the plank top with no intermediate rise; in frame 15 the child is drawn overlapping the adult's head, producing a tangled double-head cluster; between frames 15 and 16 the adult snaps from fully upright to the frame-1 bent pose and the child drops from head height to the ground, a reset rather than a movement (in the film frame 16 the child is still at plank level, not on the ground).",
+ "primary_gap": "The lift (frames 9-10) and the lowering (frames 15-16) happen as single-frame position jumps, and frame 15 overlaps the child with the adult's head, so the key action reads as pops instead of a lift and set-down.",
+ "closes_when": "The child rises through intermediate heights between frames 9 and 10 with the adult's arms carrying it, stays clearly separate from the adult's head in frame 15, and in frame 16 the adult is mid-bend with the child still near plank level as in the film, while frames 2-8 show small changes in the adult's bend and arms.",
+ "protect": "The seesaw drawn exactly as c.png (plank outline, tick at the top end, doubled-line triangular fulcrum) and held still as in the film; the placement of adult and child at the high left end; the overall timing of bend (1-8), lift (9-10), hold (10-14), bend again (16); the sparse stick-figure line style and grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  10,
+  15,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The seesaw matches the doodle in construction and stroke; the added stick figures are simple enough not to conflict with it, though they are not part of the doodle.",
+ "still_frames_only": true,
+ "_packet": "loteb8d553d",
+ "_round": 4
+}

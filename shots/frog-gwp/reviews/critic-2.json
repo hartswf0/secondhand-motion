@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A seated doodle creature (tall rounded egg-shaped body with two oval eyes and a short dash mouth, a lobed limb on each side with toes at the bottom) sits in the left-center of the frame in front of grey vertical scenery lines and a short grey horizontal line at right. Across all 16 frames it does not move from its spot. The only changes are small: the left edge of the body swells outward so it overlaps the left limb in frames 2, 3, 6, 7, 10, 11, 14, 15 and returns in the others (a repeating 4-frame swell); the mouth dash alternates between a thick and a thin line (thick in 1, 4, 6, 12, 14, 15; thin elsewhere); a short second line runs beside the right edge of the body in most frames.",
+ "seen_film": "A frog sits facing the camera, centered slightly left, on a pale floor in front of vertical scratch-like lines. It stays in place for all 16 frames; the only movement is slight breathing in the throat and body and small shifts of the head and front legs. Frame 9 has a film-damage blotch over the left eye and a dark streak to the right. No larger action happens.",
+ "named_subject": "A frog sitting still and breathing, drawn as the doodle's egg-shaped body with two side legs.",
+ "verdict": "bar met",
+ "evidence": "Film frames 1-16 show a stationary frog breathing; animation frames 1-16 keep the doodle at the same place and size as the frog (body centered near the same x position, base on the same floor line) with no travel, matching the film. The breathing is carried by the left body edge swelling over the left limb in frames 2-3, 6-7, 10-11, 14-15 and settling in 1, 4-5, 8-9, 12-13, 16, an even repeating cycle with no jump in position. Construction matches c.png in every frame: same egg body, same two irregular eye loops with the tick on the right eye, same dash mouth, same three-toed left foot and lobed right foot. Weaknesses that do not break the event: the mouth dash flickers thick/thin (1, 4, 6, 12, 14, 15 thick) and a short doubled segment sits on the body's right edge in most frames.",
+ "primary_gap": "The mouth dash changes stroke weight from frame to frame and a short doubled line runs along the body's right edge, which will read as flicker in playback since the film's frog has no such flicker.",
+ "closes_when": "The mouth dash keeps one stroke weight in all 16 frames and the body's right edge is a single line in every frame, as in c.png.",
+ "protect": "Keep the character fixed at the frog's position and scale for the whole shot, keep the gentle repeating body swell as the breathing, keep the exact c.png construction (egg body, irregular eye loops, dash mouth, toe shapes), and keep the sparse grey scenery lines matching the film's vertical marks.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png drawing; only the flickering mouth weight and the doubled right body edge differ from the doodle's single clean strokes.",
+ "still_frames_only": true,
+ "_packet": "lotbc4612fa",
+ "_round": 2
+}

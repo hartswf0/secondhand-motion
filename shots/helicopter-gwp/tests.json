@@ -1,42 +1,45 @@
 [
  {
   "id": "M2",
-  "value": 88,
+  "value": 64,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   89,
-   87,
-   94,
-   93,
-   86,
-   90,
-   87,
-   82,
-   89,
-   86,
-   80,
-   88,
-   86
+   84,
+   67,
+   75,
+   67,
+   57,
+   56,
+   60,
+   52,
+   49,
+   67,
+   57,
+   53,
+   62,
+   66,
+   67,
+   82
   ]
  },
  {
   "id": "M2b",
-  "value": 0.82,
+  "value": 0.69,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 95
  },
  {
   "id": "M3",
-  "value": 0.23,
+  "value": 0.55,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.09
+  "min": 0.27
  },
  {
   "id": "M6",
-  "value": 40.1,
+  "value": 9.1,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -56,7 +59,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:4509032549187584; scenery quickdraw:5734549172518912, quickdraw:5220194005811200, quickdraw:6128470436347904, quickdraw:6344744508588032",
+  "value": "rig quickdraw:4509032549187584; scenery quickdraw:5734549172518912, quickdraw:5220194005811200, quickdraw:6128470436347904, quickdraw:4790851043590144",
   "unit": "",
   "ok": true
  },
@@ -81,17 +84,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201chelicopter\u201d; motion broken; follows the film: yes",
+  "value": "named \u201ca helicopter (side view, with main rotor, cockpit, skid struts, landing skid and tail boom)\u201d; motion broken; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/helicopter-gwp/reviews/critic-1.json"
+  "evidence": "shots/helicopter-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The body outline, curled tail tip, cockpit window line and three-line rotor all match the doodle. In frames 4 to 6 the rotor mast is drawn as a long diagonal line that cuts down through the cabin, and in frame 4 the mast is doubled, which the doodle never does.",
-  "evidence": "shots/helicopter-gwp/reviews/critic-1.json"
+  "note": "The animated helicopter uses the same body outline, cockpit line, two struts, flat skid, hooked tail and three-blade rotor as the doodle, so it reads as that drawing; only the cropped opening frames hide the tail and skid.",
+  "evidence": "shots/helicopter-gwp/reviews/critic-2.json"
  }
 ]

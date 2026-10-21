@@ -7,7 +7,7 @@
   "tail"
  ],
  "size_from_mask": false,
- "note": "Quick, Draw! helicopter 4509032549187584, facing right: one outline for the body and tail with a hooked tail fin (0), mast (1), three rotor blades (2-4), cabin window (5), skid struts (6, 7) and skid (8). Placed by the rotor mast top and the tail fin (off frame in the first frames, extended on a steadily shrinking scale); the blades spin about the mast.",
+ "note": "Quick, Draw! helicopter 4509032549187584, facing right: one outline for the body and tail with a hooked tail fin (0), mast with the left rotor blade (1), three more rotor blades (2-4), cabin window (5), skid struts (6, 7) and skid (8). Placed by the rotor mast top and the doodle's tail tip, keyed at the film's frames from a fit of the hub, cabin roof step, nose and skid; drawn keys lengthen the boom so the doodle's hooked fin sits on the film's tail fin. The four blades turn together round a flat rotor disc seen from the side (rigs/helicopter.py), so no blade doubles another. Optical-flow tracking is off: the tail point is in open sky or off frame for half the shot.",
  "strokes": [
   [
    [
@@ -322,6 +322,6 @@
    "spin": "spin"
   }
  ],
- "track": true,
+ "track": false,
  "smooth": 1.5
 }

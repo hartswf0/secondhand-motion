@@ -1,0 +1,23 @@
+{
+ "seen_animation": "Frames 1-9: a closed black outline made of a flat four-sided top face with one diagonal interior stroke, sitting on a deep V-shaped lower part whose point is at bottom centre; a short tick sticks out at the upper left. The shape barely changes across these nine frames: it drifts a few pixels and the top face stays the same shape. Frame 10: the left side of the top face is redrawn as a longer sloped edge and the shape widens slightly. Frame 11: the shape changes abruptly; the top face becomes long and low, stretching from the left edge toward the right, the interior stroke turns shallow, and the lower part becomes a wide flat wedge. Frames 12-16: the shape keeps stretching horizontally and flattening; by frame 13 the left end leaves the frame, by 15 the left hull edge is gone and only two long top lines, a sagging middle line and a lower diagonal remain, and by 16 the right point of the hull is cut off at the right edge. Grey wave scribbles at lower left and upper right stay fixed throughout.",
+ "seen_film": "An aircraft carrier seen from above and ahead, sailing toward the camera. Frames 1-4: bow-on, the flight deck is a wide flat slab across the upper half, the hull narrows to a V at bottom centre with a bow wave. Frames 5-8: the ship is a little smaller and centred, still bow-on, deck nearly symmetrical. Frames 9-12: the ship begins to turn, the deck tilts so its left side recedes and the port side of the hull becomes visible on the left. Frames 13-16: the ship has turned further and is closer, the deck reads as a long slab running toward the upper left with the island at top left, the hull side runs diagonally, and the bow sits at lower centre-right.",
+ "named_subject": "An aircraft carrier (flight deck slab over a V-shaped hull).",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-9 of the animation are nearly identical to each other while film frames 1-9 show the ship shrinking from frame 4 to 5 and starting to rotate by frame 9. Between animation frames 10 and 11 the deck outline changes shape in one step (interior stroke angle drops, left end jumps outward to the frame edge), whereas film frames 9-12 show the turn as a gradual rotation. Animation frames 15-16 lose the left hull edge and the bow point leaves the right edge; in film frames 15-16 the bow and hull are still fully in frame at lower centre-right. In frames 1-10 the animated shape is a deep pentagon with a tall V hull, while c.png is a long shallow slab with a thin hull and a stroke running along the deck; only frames 13-14 resemble the doodle.",
+ "primary_gap": "The turn of the ship is compressed into a single jump between frames 10 and 11 after nine almost static frames, instead of the gradual rotation and approach the film shows from frame 5 through 16.",
+ "closes_when": "Frames 5-16 show the outline rotating by a similar small amount each frame (deck stripe angle and left deck end changing steadily), the shape shrinks slightly at frame 5 as in the film, and the hull bow stays inside the frame at lower centre-right through frame 16.",
+ "protect": "The deck-over-V-hull reading as a ship coming toward camera in frames 1-9; the bow point at bottom centre matching the film's bow position; the long-slab deck with an inner stripe in frames 13-14, which is close to the doodle; the sparse single-weight black line style and still grey wave scribbles.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  10,
+  11,
+  15
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "For most of the shot (frames 1-10) the character is a deep pentagon with a tall V hull and a diagonal deck stroke, which does not match the doodle's long, shallow slab with a thin hull and a stroke running parallel to the deck edge.",
+ "still_frames_only": true,
+ "_packet": "lotbe0e56b5",
+ "_round": 5
+}

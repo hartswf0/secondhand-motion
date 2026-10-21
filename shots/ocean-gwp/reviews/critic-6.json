@@ -1,0 +1,26 @@
+{
+ "seen_animation": "The character is a set of five black wave strokes: a long zigzag wave across the top, a short arched line and a longer sagging line in the middle, a small three-segment zigzag at the left, and a peaked wave at the bottom. Frames 1-3: the strokes sit almost still, with small shifts in the top wave's right end. Frame 4: the small left zigzag becomes a tall thin vertical spike. Frames 5-7: the bottom wave's peak rises into a sharp tall point (highest in 6), with a kink at the apex in 7, then settles back in 8-10. Frames 8-11: the top wave's right end lengthens up and to the right. Frame 12: that right end ends in a short downward hook. Frame 13: the hook tilts down, a grey horizontal line appears across the top of the frame, and the whole drawing sits lower. Frames 14-16: the top wave's right end flattens into a long downward-sloping tail; the grey line stays near the top; the other strokes drift slightly.",
+ "seen_film": "Rough open sea seen from above, teal tinted. Frames 1-2: dark rippled water with little foam. Frames 3-4: heavier sea with white foam streaks and whitecaps breaking at the left edge and lower left. Frames 5-8: white breaking crests in the lower-left and lower-center of the frame, a larger swell building across the upper half. Frames 9-12: a big swell crest rises at center-right and its top breaks into white spray at upper right. Frames 13-16: the camera tilts up so a pale horizon band appears along the top edge; the breaking crest moves to the right side and lower, and the sea flattens out toward the horizon.",
+ "named_subject": "Ocean waves (a doodle of several wave lines on the sea surface).",
+ "verdict": "reference stronger",
+ "evidence": "Matches: the grey horizon line appears in frames 13-16 as the horizon band appears in film frames 13-16, and the drawing moves lower as the film's camera tilts; the bottom wave's peak rises in frames 5-7 at the time the film shows white crests breaking in the lower center (film 5-8); the top wave's right end rises and curls over in frames 9-13 while the film's large crest breaks at upper right in film 9-12. Gaps: frames 1-3 are nearly static while film frames 3-4 show a sudden surge of foam and whitecaps on the left; frame 4 the left zigzag pops into a thin vertical spike and back in frame 5; frame 7 the bottom peak shows a kink/doubled apex; frame 12 the top-right end gains an abrupt downward hook; frame 13 the horizon line and the downward shift of the whole drawing arrive in one step; frames 14-16 the top wave's right end turns from an upward curl into a long sagging tail, which redraws that part of the stroke rather than continuing the break. No part of the drawing shows the crest breaking or spraying; the event reads as small wiggles of the lines. Judged from still frames only, not playback.",
+ "primary_gap": "The film's main event, a large crest rising and breaking at upper right (film 9-12) after foam surges at the left (film 3-4), is shown only as a small change at the end of one stroke, and that change arrives by abrupt hooks and redraws (frames 12-14) rather than a continuous rise and fall.",
+ "closes_when": "Across frames 8-13 the top wave's right section visibly rises higher than the rest of the line and tips over in steady increments, then sinks lower in frames 14-16 without a sudden hook or change of stroke shape, and the left zigzag stirs in frames 3-4 without turning into a vertical spike.",
+ "protect": "The exact five-stroke construction of the doodle (top zigzag wave, arched and sagging middle lines, small left zigzag, peaked bottom wave) with its thin even line and sharp corners; the grey horizon arriving in frames 13-16 matching the film's tilt; the bottom peak rising in frames 5-7 in time with the film's lower crests.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  5,
+  7,
+  12,
+  13,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The strokes are the doodle's own five lines with its construction and stroke habit; the only drift is the top wave's right end, which becomes a long sagging tail in frames 14-16 that the doodle does not have.",
+ "still_frames_only": true,
+ "_packet": "lotae70e6b0",
+ "_round": 6
+}
