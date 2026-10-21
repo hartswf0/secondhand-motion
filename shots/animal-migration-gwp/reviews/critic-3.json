@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Frame 1: a band of small black arch-and-m bird marks sits in a strip between a grey ground line with three cartoon trees above and a grey river with wavy lines below. Frames 2-4: the bird marks grow slightly and climb upward over the ground line into the tree layer while the river lines drift down toward the bottom edge. Frames 5-8: the scenery has changed to larger trees whose crowns fill the frame; the birds fill the whole upper two thirds, overlapping the tree crowns, with the river now a strip below the grass. Frames 9-12: the view keeps tilting up (grass line and trees slide down, river lines leave the bottom), birds stay a dense even field over the trees. Frames 13-16: trees and ground keep sliding down and new trees enter; the birds remain a dense field in the upper half, roughly the same arrangement and size from frame to frame.",
+ "seen_film": "Frame 1: a large flock of dark geese sits along a grassy bank above grey water, bare trees behind. Frames 2-4: geese begin lifting off the bank, rising into the dried grass and tree layer. Frames 5-8: the camera tilts up as most of the flock is airborne; birds fill the middle of the frame in front of the trees, a remaining line of birds still on the ground at the bottom. Frames 9-12: the camera is now on the sky; birds spread out across open pale sky above the grass line, with gaps of sky between them. Frames 13-16: the camera keeps following up and right, the birds thin into a looser spread across the sky with bare trees entering again at the bottom and sides.",
+ "named_subject": "A flock of geese taking off from a riverbank, each bird drawn as the doodle's arch or m-shaped wing stroke.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-12 vs f.png 1-12: in the film the geese sit on the bank and only a few lift; in the animation the marks in frame 1 are already drawn as raised wing arches floating over a river strip, so the sitting-then-lifting beat is not shown. e.png 16 to 17: the scenery is replaced, not moved: frame 16 shows the original small trees with their crowns at the top of the frame, frame 17 shows a new set of much larger trees whose crowns sit in the middle of the frame; f.png 16 to 17 is a continuous tilt with the same trees. e.png 17-56: the birds stay a uniform dense grid of about the same count, spacing and size; between consecutive frames (e.g. 41-48, 49-56) the arrangement barely changes, while in f.png 33-56 the flock loosens, birds spread out and drift across open sky. e.png 17-48: the bird marks sit on top of the grey tree crowns so the flock and trees read as one cluttered texture; in f.png 25-48 the birds are mostly against clear sky. g.png: the overlaid path rises steadily in layers with no reversals, so the bird field's lift is continuous; the densest black cluster at upper right holds in place for many samples.",
+ "primary_gap": "After the lift-off, the flock does not spread out against open sky as in the film but holds as a near-static dense grid of marks laid over the tree crowns, and the background trees are swapped rather than tilted between frames 16 and 17.",
+ "closes_when": "In e.png 17-56 the gaps between bird marks visibly widen frame by frame and the flock sits above the tree line against blank sky, while the trees from frame 16 slide continuously down into frame 17 instead of being replaced by a different, larger set.",
+ "protect": "The bird marks are the doodle's own construction (one or two connected arches, m-shapes with a short tick, uneven thin black stroke) and their wing shapes vary between frames so they read as flapping; the camera-tilt idea (ground, grass and river lines sliding down the frame) matches the film's move; the upward lift in frames 1-16 is gradual with no reversals in g.png.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  17
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The birds are drawn with the doodle's arch and m strokes at a comparable weight, though the late-frame flock is so dense that individual doodle birds are hard to pick out from the tree crowns behind them.",
+ "still_frames_only": true,
+ "_packet": "lot08102429",
+ "_round": 3
+}
