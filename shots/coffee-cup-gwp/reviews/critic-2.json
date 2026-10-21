@@ -1,0 +1,26 @@
+{
+ "seen_animation": "A line-drawn cup is shown very large and close, mostly as its rim: a rounded opening with three short strokes inside, and the top of the body below it as a V-shaped lower edge with one or two horizontal strokes. In frames 1-2 the cup sits upright and level at the top of the frame. In frames 3-8 the rim is rotated about 45 degrees clockwise, the cup moves down and to the right, and a grey hand outline appears at the lower right holding it. In frame 7 the cup is pushed toward the right edge and partly cropped. In frames 9-12 the rim is level again, the body is longer and points down with a V-shaped lower edge, and the grey hand fades out. In frames 13-14 the cup tilts again to the left of frame and is rotated about 45 degrees. In frames 15-16 it settles upright and level in the centre with the strokes inside the rim leaning slightly. No contents, spill or pouring is drawn at any point.",
+ "seen_film": "Close shot looking down into a white plastic measuring cup held by a dark gloved hand against a dark background. In frames 1-2 the cup holds dark granules and liquid. In frames 3-8 the cup is tilted, a handwritten label inside the cup becomes visible, the cup drifts right, and the granules slide toward one side. In frames 9-12 the cup is tipped toward the camera, showing its pouring spout on the left and a printed label on the outside; the contents are gone and the background behind it turns pale. In frames 13-16 the camera looks into the now nearly empty cup with a ring of dark residue at the bottom, against a bright background. The event is a cup being tilted and its contents emptied out.",
+ "named_subject": "A plastic measuring cup (the doodle's cup with three strokes inside the rim and horizontal strokes on the body), held by a grey hand.",
+ "verdict": "reference stronger",
+ "evidence": "Frames e1-e7 hold the cup level and steady while the film (f1-f7) also holds with the contents swirling, so the opening matches. e7->e8 the rim jumps to a 45-degree tilt in one step and the grey hand appears all at once, while the film at f7->f8 only begins a small tilt. e8->e9 the cup shifts left and rotates further in one frame. e17-e21 the cup slides right and partly leaves the frame, matching the film's drift right in f17-f21. e24->e25 the drawing is replaced by a level rim with a long downward body: the film also tips sharply at f24->f25, but in the animation the rotation snaps through about 45 degrees with no in-between, and the hand is redrawn smaller. e32->e33 the cup jumps left and rotates back to a tilt; the film at f32->f33 shows the pale background arriving and the emptied cup, which the animation does not show at all. e40->e41 the cup jumps left and rotates further; e42->e43 the rim snaps from a 45-degree tilt to level with leaning strokes while the film at f42->f43 is nearly still. g.png shows the path circling back and forth around one area with large rotational jumps rather than one continuous tilt. Across e1-e50 the cup never empties: there are no contents in e1-e24 and no residue in e41-e50, so the turn of events (full cup becomes empty cup) is missing. Still frames only were seen, not playback.",
+ "primary_gap": "The cup's tilt is performed as a few abrupt rotation snaps (e8, e9, e25, e33, e41, e43) instead of one continuous tipping motion, and the emptying of the cup, which is the film's main event, is never drawn.",
+ "closes_when": "The rim rotates in small steps of a few degrees per frame from e7 through e32 following the film's tilt, and a few grey or black dots of contents inside the rim in e1-e24 slide toward the spout and are gone by e33, leaving a small arc of residue at the cup bottom in e41-e50.",
+ "protect": "The doodle's construction and stroke habits: the rounded rim with three short strokes inside, angular joins, the horizontal strokes on the body, and plain single-weight lines; the steady hold in e1-e7; the rightward drift in e17-e21 that matches the film; the large close framing that matches the film's close shot; the grey hand as simple scenery outline.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  8,
+  9,
+  25,
+  33,
+  41,
+  43
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cup keeps the doodle's rim strokes and body strokes, but because it is scaled up and cropped the body is mostly cut off, so in e1-e7 and e41-e50 it reads more like a rim or bowl than the full cup in c.png.",
+ "still_frames_only": true,
+ "_packet": "lot764ae757",
+ "_round": 2
+}

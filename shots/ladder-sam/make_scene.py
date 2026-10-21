@@ -52,7 +52,7 @@ ang=np.array([math.atan2(HEAD[f][0]-WAIST[f][0],WAIST[f][1]-HEAD[f][1]) for f in
 for f in range(n):
     on_l=np.clip((f-5)/4,0,1); top=np.clip((f-28)/6,0,1); top=top*top*(3-2*top)
     a=ang[f]*(1-on_l)+max(ang[f],math.radians(30))*on_l
-    a=a*(1-top)+math.radians(44)*top
+    a=a*(1-top)+math.radians(50)*top
     HEAD[f]=WAIST[f]+TORSO*np.array([math.sin(a),-math.cos(a)])
 def contact(f,limb):
     p=target(MK['start'][limb])
@@ -101,12 +101,12 @@ def man(f):
     st+=hand([N,P])                                                                                                   # body: one line
     S=N+ax*3
     for limb in ('lh','rh'):
-        q=contact(f,limb); e=joint(S,q,28,lambda z: z[1]-0.3*z[0],limb); st+=hand([S,e,q])
+        q=contact(f,limb); e=joint(S,q,30,lambda z: z[1]-0.3*z[0]); st+=hand([S,e,q])   # the elbow always hangs below the line from shoulder to hand
     for limb,sg in (('lf',1),('rf',-1)):
         q=contact(f,limb); Hp=P-np.array([2.5*sg,0.0])
         D=np.hypot(*(q-Hp))
-        if D>74: q=Hp+(q-Hp)*74/D   # never a stretched leg
-        k=joint(Hp,q,38,lambda z: z[0]+0.6*z[1],limb); st+=hand([Hp,k,q])
+        if D>76: q=Hp+(q-Hp)*76/D   # never a stretched leg
+        k=joint(Hp,q,39,lambda z: z[0]+0.6*z[1],limb); st+=hand([Hp,k,q])
     return [[[round(x-cam[f][0],1),round(y-cam[f][1],1)] for x,y in s] for s in st]
 objs=[
  {"id":"trees","plane":"far","qd":"tree","box":[-10,-10,130,170],"skip":1},

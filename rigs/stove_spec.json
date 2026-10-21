@@ -7,7 +7,7 @@
   "hl"
  ],
  "size_from_mask": false,
- "note": "Quick, Draw! stove 5938479424864256, drawn front on: the top edge (0), the left side and bottom line of the body (1), the right side (2), the line under the cooktop band (3), three burner spirals on the band (4, 5, 6), and two vertical lines in the lower body (7, 8). In the film the lower body is an oven with two doors hinged at its outer sides, so stroke 7 is the free edge of the left door and stroke 8 the free edge of the right door. The whole drawing is placed by the bottom corners of the body (hl, hr) and does not turn or change size. Stroke 7 folds toward the left side line by the pose value lfold and stroke 8 toward the right side line by rfold: about 1.4 puts the edge where the closed door's edge is in the film, 0 puts it on the hinge, and a negative value puts it outside the body, where the door's edge is when it is swung wide open toward the camera.",
+ "note": "Quick, Draw! stove 5938479424864256, drawn front on: the top edge (0), the left side and bottom line of the body (1), the right side (2), the line under the cooktop band (3), three burner spirals on the band (4, 5, 6), and two vertical lines in the lower body (7, 8). In the film the lower body is an oven with two doors hinged at its outer sides, so stroke 7 is the free edge of the left door and stroke 8 the free edge of the right door. The whole drawing is placed by the bottom corners of the body (hl, hr) and does not turn or change size. Stroke 7 folds toward the left side line by the pose value lfold and stroke 8 toward the right side line by rfold: about 1.4 puts the edge where the closed door's edge is in the film, 0 puts it on the hinge, and a negative value puts it outside the body, where the door's edge is when it is swung wide open toward the camera. The lower ends of strokes 7 and 8 are moved 8 doodle units toward their own hinge (pose value lean = 1 throughout) before the fold, because at the large fold of the shut doors the doodle's slant is multiplied and the two lines met in a V at the bottom, where the film shows two parallel door edges with a strip of oven between them.",
  "root": [
   "hl",
   "hr"
@@ -38,7 +38,7 @@
   {
    "stroke": 7,
    "from": 0,
-   "to": 2,
+   "to": 0,
    "joint": "hl",
    "aim": [
     "hl",
@@ -52,8 +52,45 @@
    ]
   },
   {
+   "stroke": 7,
+   "from": 1,
+   "to": 2,
+   "joint": "hl",
+   "aim": [
+    "hl",
+    "hr"
+   ],
+   "turn": 0,
+   "fold": "lfold",
+   "axis": [
+    "lt",
+    "hl"
+   ],
+   "shift_by": "lean",
+   "shift": [
+    -8,
+    0
+   ]
+  },
+  {
    "stroke": 8,
    "from": 0,
+   "to": 1,
+   "joint": "hr",
+   "aim": [
+    "hl",
+    "hr"
+   ],
+   "turn": 0,
+   "fold": "rfold",
+   "axis": [
+    "rt",
+    "rb"
+   ]
+  },
+  {
+   "stroke": 8,
+   "from": 2,
    "to": 2,
    "joint": "hr",
    "aim": [
@@ -65,6 +102,11 @@
    "axis": [
     "rt",
     "rb"
+   ],
+   "shift_by": "lean",
+   "shift": [
+    8,
+    0
    ]
   },
   {

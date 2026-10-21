@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0177",
+ "id": "star-gwp",
+ "kind": "shot",
+ "title": "Star, the Giraffe Walks Past Way",
+ "category": "star",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/star-gwp/cover.png",
+ "cover_alt": "shots/star-gwp/frames/f018.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/star-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#star-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/star_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/star/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/star-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A line-drawn lobster seen head-down: its body hangs from the top of the frame, with a horizontal line across it, a V-shaped pincer claw at lower left, and a second claw hanging straight down at the right edge. A grey small lobster sits at upper left and a grey table edge runs across the bottom. Frames 1-2: the right claw hangs down at the right edge. Frames 3-4: the right claw swings down and inward, its pincer pointing down and then left, low near the table edge. Frames 5-6: the claw swings up and across so it lies roughly horizontal under the body, crossing over the base of the left claw. Frames 7-16: the claw holds in that horizontal position with only small shifts; the body and left claw stay put throughout.",
+ "seen_film": "A large lobster faces the camera from above, its left claw (frame left) resting on a cloth-covered table edge, a small lobster at far left, long antennae hanging down. Frames 1-2: the large lobster's right claw is held out at the right frame edge. Frames 3-4: the right claw swings down and inward, rotating so the pincer curls under. Frames 5-6: the claw rises and turns so it lies horizontally across the front of the body, pincer pointing left. Frames 7-16: the large claw holds horizontally across the front, with slight settling; the body, left claw and small lobster stay in place.",
+ "named_subject": "A lobster (the large lobster), drawn from the doodle's body-with-crossline and V-pincer claws, swinging its right claw down and across its body.",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement match the film: in e.png the right claw hangs at the right edge in 1-6 while f.png 1-6 holds the claw at the right edge; it swings down and inward in 7-11 as in f.png 7-11; it comes up to horizontal in 12-16 as in f.png 12-16; and it holds from 17 to 50 as the film holds. g.png shows one continuous fan-shaped arc for the claw with no reversal. The weak spot is the rotation itself: e.png 12-14 show the claw as a thin V and then a separate two-prong outline below the body, and in 15 it changes to a flat parallelogram with inner crossing lines whose pincer now sits on the left near the other claw; the shape changes more between 14 and 15 than the film's claw does between f.png 14 and 15. From 15 onward the claw's lines cross through the body outline and the left claw, so the held pose reads as overlapping lines rather than one claw in front. At e.png 47-48 a small hook stroke appears at the top right of the body where none was before. Judged from still frames only, not playback.",
+ "primary_gap": "During the claw's turn to horizontal (e.png 13-15) the claw is redrawn as a different shape rather than rotated, and once settled its lines cut through the body and left claw so it does not read as one claw held in front.",
+ "closes_when": "Across e.png 12-16 the right claw keeps the same V-pincer construction while rotating step by step into the horizontal pose, and in the held frames 16-50 its outline sits in front of the body and left claw without lines passing through them.",
+ "protect": "The film's timing (hang 1-6, swing down 7-11, rise to horizontal 12-16, hold 17-50); the claw's continuous arc in g.png; the static body, crossline and left V-pincer that match the doodle's sparse single-stroke style; the grey small lobster and table edge as scenery placed where the film has them.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  14,
+  15,
+  47
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body with its crossline and the left V-shaped pincer match c.png, but the right claw in its held horizontal pose becomes a flat parallelogram of crossing lines that no longer uses the doodle's open V-pincer shape.",
+ "still_frames_only": true,
+ "_packet": "lotdb0820b7",
+ "_round": 6
+}

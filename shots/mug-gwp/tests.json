@@ -5,12 +5,18 @@
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   4,
+   9,
+   8,
+   6,
+   6,
+   5,
+   5,
    4,
    4,
    3,
    3,
    3,
+   3,
    2,
    2,
    2,
@@ -20,34 +26,56 @@
    2,
    2,
    2,
-   3
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
   ]
  },
  {
   "id": "M2b",
-  "value": 0.66,
+  "value": 0.61,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 6
  },
  {
   "id": "M3",
-  "value": 0.45,
+  "value": 0.6,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.27
+  "min": 0.35
  },
  {
   "id": "M6",
-  "value": 4.3,
+  "value": 5.1,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
  {
   "id": "T3",
-  "value": "6 strokes, 73 vertices, every frame",
+  "value": "varies",
   "unit": "",
-  "ok": true,
+  "ok": false,
   "note": "the doodle itself, bent by the rig"
  },
  {
@@ -59,7 +87,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:6337386839539712; scenery drawn by agent: the film has a large blurred bright surface (cloth or a sleeve) standing behind the cup on the right; no Quick, Draw! category is a blurred edge, so it is one hand-drawn wavering vertical line where its left edge is; shown until frame 34, after which the bright surface leaves the right of the frame, drawn by agent: two dark round knobs below the cup at the start of the shot; Quick, Draw! has no knob or bead category, so each is a small drawn circle, drawn by agent: second dark knob, as knob1, drawn by agent: a dark knob to the right of the cup at the end of the shot, as knob1",
+  "value": "rig quickdraw:6337386839539712; scenery drawn by agent: the film has a large blurred bright surface (cloth or a sleeve) standing behind the cup on the right; no Quick, Draw! category is a blurred edge, so it is one hand-drawn wavering vertical line where its left edge is; shown until frame 34, after which the bright surface leaves the right of the frame, drawn by agent: two dark round knobs below the cup at the start of the shot; Quick, Draw! has no knob or bead category, so each is a small drawn circle, drawn by agent: second dark knob, as knob1",
   "unit": "",
   "ok": true
  },

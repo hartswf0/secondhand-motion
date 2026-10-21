@@ -118,17 +118,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA plastic measuring cup with a spout, drawn as the doodle cup (rim with three hatch lines, body with crossing lines).\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA plastic measuring cup (the doodle's cup with three strokes inside the rim and horizontal strokes on the body), held by a grey hand.\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": false,
-  "evidence": "shots/coffee-cup-gwp/reviews/critic-1.json"
+  "evidence": "shots/coffee-cup-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "The doodle is an open-topped tapered cup with an oval rim holding three vertical hatch lines and two horizontal body lines, but the animation draws a closed rounded blob whose rim is a vertical pair of strokes for the first 21 frames and whose tapered body and narrow base are never shown.",
-  "evidence": "shots/coffee-cup-gwp/reviews/critic-1.json"
+  "ok": true,
+  "note": "The cup keeps the doodle's rim strokes and body strokes, but because it is scaled up and cropped the body is mostly cut off, so in e1-e7 and e41-e50 it reads more like a rim or bowl than the full cup in c.png.",
+  "evidence": "shots/coffee-cup-gwp/reviews/critic-2.json"
  }
 ]

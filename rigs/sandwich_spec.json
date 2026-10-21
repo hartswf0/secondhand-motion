@@ -6,7 +6,7 @@
   "right",
   "left"
  ],
- "note": "Quick, Draw! sandwich 4656649232973824, drawn in three-quarter view from above. Stroke 0 is the top slice of bread (crown at the top, crust corner at the right). Stroke 1 is the bottom slice: its left side, bottom edge and right side, drawn below and around the top slice. Strokes 2 and 3 are two filling lines between the slices. Stroke 4 is a short line on the right side, the thickness of the bread. The root places the bottom slice by its lower left corner (left) and its upper right corner (right); in the film the bottom slice lies still on the tray, so it only moves with the camera. The top slice is the one part: it is carried in by the worker's hand and laid on the bottom slice. pose 'lift' moves it away from its resting place along the doodle direction (-70, -80) per unit (up and to the left, where the hand comes from); pose 'tilt' turns it clockwise about the centre of the resting top slice, which both tilts the slice in the hand and swings it along an arc. At lift 0 and tilt 0 the drawing is the doodle exactly.",
+ "note": "Quick, Draw! sandwich 4656649232973824, drawn in three-quarter view from above. Stroke 0 is the top slice of bread (crown at the top, crust corner at the right). Stroke 1 is the bottom slice: its left side, bottom edge and right side, drawn below and around the top slice. Strokes 2 and 3 are two filling lines between the slices. Stroke 4 is a short line on the right side, the thickness of the bread. The root places the bottom slice by its lower left corner (left) and its upper right corner (right); in the film the bottom slice lies still on the tray, so it only moves with the camera. The top slice is the one part: it is carried in by the worker's hand and laid on the bottom slice. pose 'lift' moves it away from its resting place along the doodle direction (-70, -80) per unit (up and to the left, where the hand comes from); pose 'tilt' turns it clockwise about the centre of the resting top slice, which both tilts the slice in the hand and swings it along an arc. At lift 0 and tilt 0 the drawing is the doodle exactly. Keys: the top slice's lift and tilt were placed by eye at 11 frames (0, 2, 3, 5, 7, 9, 13, 19, 25, 31, 37) and eased linearly between them; the bottom slice's two root points are written on every frame from the measured camera shift, because SAM followed the whole tray and its centre residual otherwise moved the still sandwich by up to 12 px (shots/sandwich-sam/pose_agent_v4.json). The second sandwich (scene object sandwichB) is a second copy of this rig keyed at 8 frames.",
  "strokes": [
   [
    [
@@ -288,5 +288,5 @@
  "size_from_mask": false,
  "size": "steady",
  "track": false,
- "smooth": 1.5
+ "smooth": 2.0
 }

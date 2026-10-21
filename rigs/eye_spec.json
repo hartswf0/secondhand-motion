@@ -1,0 +1,273 @@
+{
+ "category": "eye",
+ "doodle_key_id": "5110430580080640",
+ "facing": 1,
+ "face_from": [
+  "rc",
+  "lc"
+ ],
+ "size_from_mask": false,
+ "note": "Quick, Draw! eye 5110430580080640, drawn as four strokes. Stroke 0 is the large round iris, drawn as one loop that crosses the upper lid line. Stroke 1 is the small closed shape inside the iris, the reflection. Stroke 2 is the upper lid, a straight-sided arch from the left corner to the right corner. Stroke 3 is the lower lid, a shallow curve between the same corners. The whole drawing is placed by the two eye corners, so it moves, tilts and holds its size with the film's eye. The upper lid and the lower lid fold toward the line between the corners by the pose entries 'up' and 'lo' (1 is the doodle as drawn, smaller is more shut), so the eye narrows and opens at the frames where the film's eye does. The reflection is scaled about its own centre by the distance between the pose points 'hl' and 'hl2', so it grows when the bright reflection on the film's eyeball grows. The iris keeps the doodle's shape.",
+ "root": [
+  "lc",
+  "rc"
+ ],
+ "anchors": {
+  "lc": [
+   1,
+   56
+  ],
+  "rc": [
+   251,
+   56
+  ],
+  "ic": [
+   131,
+   58
+  ],
+  "hl": [
+   131,
+   50
+  ],
+  "hl2": [
+   161,
+   50
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 9,
+   "joint": "hl",
+   "aim": [
+    "hl",
+    "hl2"
+   ],
+   "turn": 0,
+   "stretch": 1
+  },
+  {
+   "stroke": 2,
+   "from": 1,
+   "to": 4,
+   "joint": "lc",
+   "aim": [
+    "lc",
+    "rc"
+   ],
+   "turn": 0,
+   "fold": "up",
+   "axis": [
+    "lc",
+    "rc"
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 1,
+   "to": 6,
+   "joint": "lc",
+   "aim": [
+    "lc",
+    "rc"
+   ],
+   "turn": 0,
+   "fold": "lo",
+   "axis": [
+    "lc",
+    "rc"
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "lc",
+   "aim": [
+    "lc",
+    "rc"
+   ],
+   "turn": 0
+  }
+ ],
+ "strokes": [
+  [
+   [
+    150,
+    7
+   ],
+   [
+    142,
+    4
+   ],
+   [
+    125,
+    6
+   ],
+   [
+    105,
+    17
+   ],
+   [
+    87,
+    34
+   ],
+   [
+    77,
+    58
+   ],
+   [
+    77,
+    79
+   ],
+   [
+    82,
+    90
+   ],
+   [
+    103,
+    105
+   ],
+   [
+    133,
+    114
+   ],
+   [
+    156,
+    113
+   ],
+   [
+    176,
+    102
+   ],
+   [
+    186,
+    78
+   ],
+   [
+    185,
+    56
+   ],
+   [
+    180,
+    29
+   ],
+   [
+    176,
+    19
+   ],
+   [
+    170,
+    13
+   ],
+   [
+    145,
+    0
+   ]
+  ],
+  [
+   [
+    124,
+    43
+   ],
+   [
+    128,
+    40
+   ],
+   [
+    125,
+    38
+   ],
+   [
+    118,
+    39
+   ],
+   [
+    113,
+    54
+   ],
+   [
+    132,
+    63
+   ],
+   [
+    148,
+    63
+   ],
+   [
+    150,
+    48
+   ],
+   [
+    137,
+    40
+   ],
+   [
+    118,
+    42
+   ]
+  ],
+  [
+   [
+    0,
+    55
+   ],
+   [
+    68,
+    14
+   ],
+   [
+    83,
+    9
+   ],
+   [
+    110,
+    8
+   ],
+   [
+    213,
+    38
+   ],
+   [
+    247,
+    55
+   ]
+  ],
+  [
+   [
+    3,
+    58
+   ],
+   [
+    24,
+    81
+   ],
+   [
+    65,
+    100
+   ],
+   [
+    111,
+    114
+   ],
+   [
+    156,
+    119
+   ],
+   [
+    173,
+    117
+   ],
+   [
+    199,
+    106
+   ],
+   [
+    255,
+    57
+   ]
+  ]
+ ],
+ "size": "steady",
+ "track": false,
+ "smooth": 1.0
+}

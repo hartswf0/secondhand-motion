@@ -1,0 +1,235 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   2.33,
+   5.0,
+   7.33,
+   8.67,
+   9.22,
+   9.33,
+   9.44,
+   9.78,
+   10.44,
+   11.22,
+   11.89,
+   12.33,
+   12.78,
+   13.56,
+   14.89,
+   17.0,
+   19.89,
+   23.56,
+   27.56,
+   31.33,
+   34.11,
+   35.67,
+   36.22,
+   36.44,
+   36.67,
+   36.89,
+   36.89,
+   36.56,
+   36.0,
+   35.22,
+   34.56,
+   34.22,
+   34.56,
+   35.22,
+   35.78,
+   35.78,
+   35.33,
+   34.78,
+   34.56,
+   34.78,
+   35.33,
+   35.89,
+   36.11,
+   36.0,
+   35.33,
+   34.33,
+   33.0,
+   32.0
+  ],
+  "y": [
+   0.0,
+   0.22,
+   0.22,
+   0.0,
+   -0.11,
+   0.0,
+   0.33,
+   0.67,
+   1.0,
+   1.22,
+   1.22,
+   1.0,
+   0.67,
+   0.11,
+   -0.78,
+   -2.11,
+   -3.56,
+   -5.0,
+   -6.33,
+   -7.67,
+   -8.89,
+   -9.78,
+   -10.22,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33,
+   -10.33
+  ],
+  "source": "template tracking of the jacket lapel edge (frame 0 patch x 170-250, y 10-90), smoothed; camera.json from phase correlation reported about twice this motion, and the lapel in the frames moves about 35 px right and 10 px up, so the lapel track is used"
+ },
+ "planes": [
+  {
+   "id": "hands",
+   "z": 200,
+   "label": "Hands (they move with the apple, not with the jacket, so they are held nearly still in the frame)"
+  },
+  {
+   "id": "jacket",
+   "z": 2,
+   "label": "Tweed jacket directly behind the hands"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Apple"
+  }
+ ],
+ "objects": [
+  {
+   "id": "lapel_left",
+   "plane": "jacket",
+   "class": "lapel",
+   "why": "no Quick, Draw! category is a jacket lapel; this is the left edge of the light lapel that rises to a point behind the apple",
+   "strokes": [
+    [
+     [
+      120,
+      160
+     ],
+     [
+      178,
+      95
+     ],
+     [
+      262,
+      0
+     ],
+     [
+      290,
+      -40
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "lapel_right",
+   "plane": "jacket",
+   "class": "lapel",
+   "why": "no Quick, Draw! category is a jacket lapel; this is the right edge of the same lapel",
+   "strokes": [
+    [
+     [
+      215,
+      135
+     ],
+     [
+      230,
+      100
+     ],
+     [
+      268,
+      -5
+     ],
+     [
+      280,
+      -40
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "jacket_seam",
+   "plane": "jacket",
+   "class": "seam",
+   "why": "no Quick, Draw! category is a jacket; this is the dark gap between the left front panel and the shirt",
+   "strokes": [
+    [
+     [
+      50,
+      -40
+     ],
+     [
+      52,
+      60
+     ],
+     [
+      56,
+      150
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "hand_left",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    40,
+    105,
+    150,
+    245
+   ],
+   "strokes": 1
+  },
+  {
+   "id": "hand_right",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    215,
+    190,
+    384,
+    290
+   ],
+   "strokes": 1,
+   "aspect": 1.6
+  }
+ ],
+ "notes": {
+  "0": "the apple held up in both hands, the left fingers over its top-left",
+  "8": "the hands lower the apple and turn it; dark spots on its skin move toward the middle",
+  "19": "lowest point; the right fingers cover the lower half",
+  "37": "the apple raised again to its highest point",
+  "44": "the apple turned so the stem end tips toward the camera",
+  "48": "the stem end faces the camera"
+ },
+ "no_cel": true
+}
