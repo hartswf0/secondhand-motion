@@ -101,7 +101,7 @@ def man(f):
     st+=hand([N,P])                                                                                                   # body: one line
     S=N+ax*3
     for limb in ('lh','rh'):
-        q=contact(f,limb); e=joint(S,q,26,lambda z: z[1]-0.3*z[0],limb); st+=hand([S,e,q])
+        q=contact(f,limb); e=joint(S,q,28,lambda z: z[1]-0.3*z[0],limb); st+=hand([S,e,q])
     for limb,sg in (('lf',1),('rf',-1)):
         q=contact(f,limb); Hp=P-np.array([2.5*sg,0.0])
         D=np.hypot(*(q-Hp))

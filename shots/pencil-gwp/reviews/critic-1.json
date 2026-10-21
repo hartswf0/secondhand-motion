@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A black-line pencil drawn in the doodle's style (scribbled graphite tip, sharpened cone, long shaft with two inner lines, ferrule with a zigzag mark, eraser) lies diagonally in the upper half of the frame, tip at lower left pointing down-left, eraser at upper right near the top edge. Over frames 1-5 the pencil slides a short distance left and down (tip from about x105,y68 to about x85,y78 within the panel) and the eraser end drops further into the frame. From frames 5-16 it holds that position with only a slight drift. Grey dashed lines below it form a sparse grid of short strokes (horizontal row, diagonals) that stay fixed.",
+ "seen_film": "Frame 1 shows a yellow pencil entering from the upper right over a blue sky with a United airliner below; by frame 2 the image has dissolved into a dark green oscilloscope-style dot grid (horizontal dashed row, crossing diagonals). The pencil stays in the upper left quadrant, tip pointing down-left, and moves slightly left and down during frames 1-4, then hovers almost still with small hand tremor through frame 16. The eraser end is always off frame at the upper right.",
+ "named_subject": "A pencil (the doodle's pencil with zigzag-marked ferrule and eraser) hovering with its tip over a dotted grid",
+ "verdict": "bar met",
+ "evidence": "a.png 1-5 against d.png 1-5: both pencils shift left and down by a similar small amount with the tip ending near x80-85, y75-78 of the panel. a.png 5-16 and d.png 5-16: both hold the tip in place. e.png 1-8 against f.png 1-8: the drawing lowers frame by frame in small steps while the film pencil settles; e.png 9-44 against f.png 9-44: both hold with small movement only. g.png shows the drawings stacked tightly in one place with no gaps or reversals, centroid numbers clustered. The angle of the drawn pencil (about 20 degrees from horizontal) matches the film pencil in every frame. Judged from still frames only, not playback.",
+ "primary_gap": "The drawn pencil shows its eraser and ferrule inside the frame at the top edge (partly clipped in e.png 9-44), while the film pencil's back end runs off frame, so the drawn pencil sits slightly further right and shorter-reaching than the film's, and the near-total hold after frame 8 lacks the film's small tremor of the tip.",
+ "closes_when": "The tip keeps its current position while the shaft extends so the eraser end exits cleanly past the top-right edge, and the tip shows a 1-3 pixel wobble across frames 9-44 like the film's hand.",
+ "protect": "The doodle's construction: scribbled graphite tip, two-line shaft, zigzag ferrule mark and loose eraser outline; the consistent diagonal angle matching the film; the small left-down settle in frames 1-8 followed by a hold; constant size with no redraw pops; the grey dotted grid scenery kept static.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The pencil is rotated from the doodle's steep diagonal to the film's shallow angle and slightly lengthened, but keeps the doodle's tip scribble, shaft lines, zigzag ferrule and eraser, so it reads as the same drawing.",
+ "still_frames_only": true,
+ "_packet": "lotd674e341",
+ "_round": 1
+}
