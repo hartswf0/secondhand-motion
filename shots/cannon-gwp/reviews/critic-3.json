@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A doodled cannon (oblong barrel with an open rounded muzzle, one elliptical wheel with crossed spokes) stands on a grey slab under clouds and turns in place like an object on a turntable. Frame 1: seen end-on, barrel upright, wheel edge-on as a thin line at its left. Frames 2-7: it turns so the barrel swings toward the upper left and the wheel opens to a full ellipse. Frame 8: end-on again, barrel upright, wheel edge-on at its right. Frames 9-12: barrel now points to the upper right, wheel open in front. Frames 13-14: turning back toward the viewer, wheel narrowing. Frame 15: end-on with the slab seen square-on. Frame 16: beginning to turn left again. The slab tilts with the turn, and in the second half the whole object sits further right in the frame.",
+ "seen_film": "A model field gun on a square wooden base rotates through a full turn against a dark red starry background. Frame 1: muzzle toward the viewer, both wheels visible. Frames 2-7: it turns so the barrel points to the upper left with the wheel nearest the viewer. Frame 8: seen from behind, trail toward the viewer. Frames 9-12: barrel points to the upper right. Frames 13-15: it turns back to face the viewer. Frame 16: front view again. Over frames 9-16 the gun and base drift toward the right of the frame.",
+ "named_subject": "A cannon (field gun on a wheel)",
+ "verdict": "bar met",
+ "evidence": "Judged from still frames only, not playback. The turn matches the film phase for phase in e.png vs f.png: e1/f1 front end-on; e4-e10 barrel to upper left as in f5-f12; e14-e16 end-on with barrel upright as f14-f16 rear view; e19-e25 barrel to upper right as f19-f24; e29-e31 end-on as f29-f31; e32 starting the next turn as f32. The rightward drift in f21-f32 is matched (slab and cannon right of centre in e21-e29). The wheel narrows from ellipse to line smoothly across e11-e15 and e26-e30, matching the film's foreshortening. g.png shows a single left-to-right path with clustered small steps and no reversal the film lacks. Minor scenery pop: in e8 the slab is drawn nearly square to the viewer while e7 and e9 show it angled; the cloud layer also shifts position between e16 and e17.",
+ "primary_gap": "The grey slab changes perspective abruptly at e8 (frontal) between angled slabs in e7 and e9, and the cloud row relocates between e16 and e17, so the scenery pops even though the cannon turns smoothly.",
+ "closes_when": "The slab in e7-e9 shows a steadily changing angle with no frontal frame in between, and the clouds keep their positions (or move by a constant small step) from e16 to e17.",
+ "protect": "The doodle's construction (oblong barrel with the open rounded muzzle loop, single spoked ellipse wheel, loose single-stroke lines); the turntable rotation timed to the film's phases (left-pointing, rear end-on, right-pointing, front end-on); the smooth wheel foreshortening; the rightward drift in the second half.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  8,
+  17
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "In the end-on frames (e1, e15-e16, e30-e31) the barrel becomes a narrow upright capsule with the wheel reduced to a line, which is less recognisable as the c.png drawing than the side views, though it keeps the same strokes.",
+ "still_frames_only": true,
+ "_packet": "lotbe479204",
+ "_round": 3
+}
