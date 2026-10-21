@@ -1,0 +1,180 @@
+{
+ "category": "canoe",
+ "doodle_key_id": "5064209014456320",
+ "facing": 1,
+ "face_from": [
+  "bow",
+  "stern"
+ ],
+ "note": "Quick, Draw! canoe 5064209014456320, drawn in side view with the bow at the right. Stroke 0 is the top gunwale line from stern to bow; stroke 1 is the inner gunwale line that starts at the stern tip, runs low along the near side and rises to the bow; stroke 2 is the small hook at the bow tip; stroke 3 is the hull's bottom curve from stern to bow; stroke 4 is the paddle, a single line from the gunwale down into the water. The hull (strokes 0 to 3) is rigid and is placed by its two ends, stern and bow, so it moves, tilts and grows as the canoe in the film does. The paddle turns about its top where it meets the gunwale (anchor grip), aimed at the pose point blade, so it reaches forward, goes upright and trails back as the stern paddler's paddle does in the film.",
+ "strokes": [
+  [
+   [
+    3,
+    49
+   ],
+   [
+    97,
+    29
+   ],
+   [
+    140,
+    23
+   ],
+   [
+    195,
+    8
+   ],
+   [
+    235,
+    1
+   ]
+  ],
+  [
+   [
+    6,
+    48
+   ],
+   [
+    1,
+    55
+   ],
+   [
+    11,
+    61
+   ],
+   [
+    89,
+    60
+   ],
+   [
+    205,
+    36
+   ],
+   [
+    233,
+    24
+   ],
+   [
+    255,
+    10
+   ]
+  ],
+  [
+   [
+    228,
+    2
+   ],
+   [
+    246,
+    1
+   ],
+   [
+    249,
+    4
+   ],
+   [
+    248,
+    13
+   ]
+  ],
+  [
+   [
+    0,
+    58
+   ],
+   [
+    34,
+    79
+   ],
+   [
+    49,
+    84
+   ],
+   [
+    98,
+    88
+   ],
+   [
+    162,
+    82
+   ],
+   [
+    199,
+    73
+   ],
+   [
+    224,
+    60
+   ],
+   [
+    248,
+    32
+   ],
+   [
+    252,
+    15
+   ]
+  ],
+  [
+   [
+    102,
+    58
+   ],
+   [
+    141,
+    96
+   ],
+   [
+    190,
+    155
+   ]
+  ]
+ ],
+ "anchors": {
+  "stern": [
+   1,
+   55
+  ],
+  "bow": [
+   252,
+   14
+  ],
+  "grip": [
+   102,
+   58
+  ],
+  "blade": [
+   190,
+   155
+  ]
+ },
+ "root": [
+  "stern",
+  "bow"
+ ],
+ "size_from_mask": false,
+ "parts": [
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 2,
+   "joint": "grip",
+   "aim": [
+    "grip",
+    "blade"
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "stern",
+   "aim": [
+    "stern",
+    "bow"
+   ],
+   "turn": 0
+  }
+ ],
+ "track": false,
+ "smooth": 1.2
+}

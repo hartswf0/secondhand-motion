@@ -1,0 +1,326 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   7.98,
+   -1.21,
+   -1.19,
+   -1.19,
+   -1.25,
+   -0.46,
+   -0.06,
+   -0.06,
+   0.71,
+   0.71,
+   0.24,
+   2.77,
+   1.82,
+   1.44,
+   0.27,
+   0.27,
+   1.02,
+   2.54,
+   2.61,
+   2.61,
+   2.41,
+   1.87,
+   1.87,
+   1.93
+  ],
+  "y": [
+   0.0,
+   -4.35,
+   -0.12,
+   -0.18,
+   -0.18,
+   -0.76,
+   -0.71,
+   0.21,
+   0.21,
+   -1.33,
+   -1.33,
+   -2.15,
+   -7.71,
+   -10.44,
+   -16.94,
+   -18.17,
+   -18.17,
+   -19.63,
+   -19.11,
+   -19.45,
+   -19.45,
+   -20.24,
+   -21.63,
+   -21.63,
+   -20.41
+  ],
+  "source": "shots/ambulance-sam/camera.json, phase correlation of the footage with the ambulance masked out"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 8,
+   "label": "Street lamps",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "side",
+   "z": 3,
+   "label": "Parked cars",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "road",
+   "z": 2.5,
+   "label": "Road",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Ambulance"
+  }
+ ],
+ "objects": [
+  {
+   "id": "lamps",
+   "plane": "far",
+   "class": "light",
+   "why": "the far street lights are only points of light in the dark; no Quick, Draw! category is a point of light, so each is a small drawn ring at its place in the first frame",
+   "strokes": [
+    [
+     [
+      67.0,
+      30.0
+     ],
+     [
+      65.5,
+      32.6
+     ],
+     [
+      62.5,
+      32.6
+     ],
+     [
+      61.0,
+      30.0
+     ],
+     [
+      62.5,
+      27.4
+     ],
+     [
+      65.5,
+      27.4
+     ],
+     [
+      67.0,
+      30.0
+     ]
+    ],
+    [
+     [
+      132.0,
+      64.0
+     ],
+     [
+      131.0,
+      65.7
+     ],
+     [
+      129.0,
+      65.7
+     ],
+     [
+      128.0,
+      64.0
+     ],
+     [
+      129.0,
+      62.3
+     ],
+     [
+      131.0,
+      62.3
+     ],
+     [
+      132.0,
+      64.0
+     ]
+    ],
+    [
+     [
+      324.0,
+      64.0
+     ],
+     [
+      323.0,
+      65.7
+     ],
+     [
+      321.0,
+      65.7
+     ],
+     [
+      320.0,
+      64.0
+     ],
+     [
+      321.0,
+      62.3
+     ],
+     [
+      323.0,
+      62.3
+     ],
+     [
+      324.0,
+      64.0
+     ]
+    ],
+    [
+     [
+      315.0,
+      40.0
+     ],
+     [
+      313.5,
+      42.6
+     ],
+     [
+      310.5,
+      42.6
+     ],
+     [
+      309.0,
+      40.0
+     ],
+     [
+      310.5,
+      37.4
+     ],
+     [
+      313.5,
+      37.4
+     ],
+     [
+      315.0,
+      40.0
+     ]
+    ],
+    [
+     [
+      11.0,
+      6.0
+     ],
+     [
+      9.5,
+      8.6
+     ],
+     [
+      6.5,
+      8.6
+     ],
+     [
+      5.0,
+      6.0
+     ],
+     [
+      6.5,
+      3.4
+     ],
+     [
+      9.5,
+      3.4
+     ],
+     [
+      11.0,
+      6.0
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "car1",
+   "plane": "side",
+   "qd": "van",
+   "box": [
+    318,
+    118,
+    392,
+    168
+   ],
+   "aspect": 1.5,
+   "strokes": 4,
+   "why": "dark parked cars line the right side of the street behind the ambulance; their chrome catches the light at x 320-380"
+  },
+  {
+   "id": "car2",
+   "plane": "side",
+   "qd": "van",
+   "box": [
+    330,
+    170,
+    410,
+    230
+   ],
+   "aspect": 1.4,
+   "strokes": 4,
+   "skip": 1
+  },
+  {
+   "id": "road",
+   "plane": "road",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a road at night; two lines for the kerb edges running away under the ambulance, and short dashes for the wet road catching light",
+   "strokes": [
+    [
+     [
+      -20,
+      290
+     ],
+     [
+      60,
+      262
+     ]
+    ],
+    [
+     [
+      420,
+      288
+     ],
+     [
+      350,
+      262
+     ]
+    ],
+    [
+     [
+      130,
+      276
+     ],
+     [
+      160,
+      275
+     ]
+    ],
+    [
+     [
+      240,
+      276
+     ],
+     [
+      270,
+      277
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the back of the ambulance fills the frame, roof light flashing",
+  "12": "the camera tilts down as the ambulance pulls away",
+  "24": "smaller, further down the street"
+ }
+}

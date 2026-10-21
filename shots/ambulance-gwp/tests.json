@@ -1,0 +1,78 @@
+[
+ {
+  "id": "M2",
+  "value": 4,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   3,
+   3,
+   5,
+   5,
+   4,
+   3,
+   5,
+   4,
+   4
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.83,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 5
+ },
+ {
+  "id": "M3",
+  "value": 0.37,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.11
+ },
+ {
+  "id": "M6",
+  "value": 1.7,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "12 strokes, 130 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5404586804248576; scenery drawn by agent: the far street lights are only points of light in the dark; no Quick, Draw! category is a point of light, so each is a small drawn ring at its place in the first frame, quickdraw:6674049310654464, quickdraw:4984918000009216, drawn by agent: no Quick, Draw! category is a road at night; two lines for the kerb edges running away under the ambulance, and short dashes for the wet road catching light",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "25/25",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
