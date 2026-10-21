@@ -125,7 +125,7 @@ def limb_back(root,q,L,side,cos_out,lo_c=None,hi_c=None,key=None):
     A,B=lc(root),lc(q); d=B-A; D=max(np.hypot(*d),1e-6); h=math.sqrt(max(L*L-(D/2)**2,0))*cos_out
     nr=np.array([-d[1],d[0]])/D
     if nr[1]*side-0.6*nr[0]<0: nr=-nr   # the bend goes out to the limb's own side and, when the reach is across, downward (an elbow hangs below a hand held at shoulder height)
-    if key in PREVB and nr@PREVB[key]<0 and abs(nr[1])<0.5: nr=-nr   # near the flip point the bend keeps the side it had last frame
+    if key in PREVB and nr@PREVB[key]<0 and abs(nr[1]*side-0.6*nr[0])<0.8: nr=-nr   # near the flip point the bend keeps the side it had last frame
     if key is not None: PREVB[key]=nr
     m=(A+B)/2+nr*h
     if lo_c is not None: m[1]=min(max(m[1],lo_c(m[0])+2),hi_c(m[0])-2)
