@@ -1,0 +1,81 @@
+[
+ {
+  "id": "M2",
+  "value": 18,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   16,
+   16,
+   16,
+   17,
+   18,
+   18,
+   19,
+   19,
+   19,
+   19,
+   19,
+   19,
+   18
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.97,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 18
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 0.6,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "8 strokes, 80 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5958634259349504; scenery quickdraw:6667602300502016, quickdraw:5340129524711424, quickdraw:6721679428419584, quickdraw:5774625415888896, drawn by agent: no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket, drawn by agent: no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "29/29",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

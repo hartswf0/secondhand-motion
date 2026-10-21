@@ -109,44 +109,45 @@
    "plane": "char",
    "qd": "hand",
    "box": [
-    146,
-    70,
-    178,
-    118
+    144,
+    80,
+    170,
+    114
    ],
-   "aspect": 0.7
+   "aspect": 0.7,
+   "skip": 2
   },
   {
    "id": "hand_r",
    "plane": "char",
    "qd": "hand",
    "box": [
-    240,
-    68,
-    270,
-    116
+    252,
+    78,
+    278,
+    112
    ],
    "aspect": 0.7,
-   "skip": 1
+   "skip": 3
   },
   {
    "id": "arms",
    "plane": "char",
    "class": "arms",
-   "why": "no Quick, Draw! category is a jacket sleeve; two lines trace the outer edge of the man's raised arms in the blue jacket",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket",
    "strokes": [
     [
      [
-      150,
-      95
-     ],
-     [
-      112,
+      142,
       100
      ],
      [
+      110,
+      104
+     ],
+     [
       72,
-      116
+      118
      ],
      [
       46,
@@ -171,16 +172,16 @@
     ],
     [
      [
-      264,
-      95
+      272,
+      100
      ],
      [
-      302,
-      102
+      304,
+      106
      ],
      [
       340,
-      122
+      124
      ],
      [
       368,
@@ -198,6 +199,42 @@
       330,
       292
      ]
+    ],
+    [
+     [
+      158,
+      114
+     ],
+     [
+      136,
+      132
+     ],
+     [
+      118,
+      158
+     ],
+     [
+      112,
+      186
+     ]
+    ],
+    [
+     [
+      258,
+      114
+     ],
+     [
+      280,
+      132
+     ],
+     [
+      298,
+      158
+     ],
+     [
+      304,
+      186
+     ]
     ]
    ]
   },
@@ -209,31 +246,31 @@
    "strokes": [
     [
      [
-      182,
+      186,
       120
      ],
      [
-      180,
+      184,
       142
      ],
      [
-      192,
+      196,
       164
      ],
      [
-      214,
+      218,
       172
      ],
      [
-      238,
+      242,
       165
      ],
      [
-      250,
+      254,
       142
      ],
      [
-      248,
+      252,
       120
      ]
     ]

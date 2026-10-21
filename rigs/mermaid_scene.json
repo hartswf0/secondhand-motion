@@ -1,0 +1,371 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -0.6,
+   -1.06,
+   -2.28,
+   -1.71,
+   -2.27,
+   -2.56,
+   -1.47,
+   -3.39,
+   -5.65,
+   -6.54,
+   -6.97,
+   -6.64,
+   -4.74,
+   -4.55,
+   -4.07,
+   -3.46,
+   -4.33,
+   -5.87,
+   -5.16,
+   -5.4,
+   -3.43,
+   -4.18,
+   -5.07,
+   -3.21,
+   -4.46,
+   -4.47,
+   -3.55,
+   -3.54,
+   -3.07,
+   -3.68,
+   -4.36,
+   -4.3,
+   -5.2,
+   -5.7,
+   -4.12,
+   -4.12,
+   -3.71
+  ],
+  "y": [
+   0.0,
+   0.87,
+   0.96,
+   0.29,
+   1.32,
+   1.9,
+   1.89,
+   1.62,
+   1.06,
+   0.53,
+   0.88,
+   1.11,
+   1.9,
+   0.53,
+   0.67,
+   1.13,
+   0.49,
+   0.49,
+   0.78,
+   1.0,
+   1.58,
+   1.99,
+   1.42,
+   1.93,
+   0.12,
+   2.05,
+   1.16,
+   1.5,
+   1.28,
+   1.5,
+   1.85,
+   2.77,
+   2.18,
+   1.05,
+   3.35,
+   5.06,
+   4.25,
+   3.14
+  ],
+  "source": "shots/mermaid-sam/camera.json: the film's gate weave measured from the footage; the shot is locked off and only wobbles a few pixels"
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 4,
+   "label": "Grotto wall, stalactites and coral",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "rocks",
+   "z": 2.5,
+   "label": "Rocks along the front of the stage",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Mermaid"
+  }
+ ],
+ "objects": [
+  {
+   "id": "coral_left",
+   "plane": "wall",
+   "qd": "tree",
+   "box": [
+    8,
+    60,
+    112,
+    225
+   ],
+   "strokes": 3,
+   "why": "white branching coral fills the left side of the grotto; a bare tree is the nearest Quick, Draw! category"
+  },
+  {
+   "id": "coral_right",
+   "plane": "wall",
+   "qd": "tree",
+   "box": [
+    300,
+    40,
+    384,
+    230
+   ],
+   "strokes": 3,
+   "skip": 1,
+   "why": "branching coral and a rock column at the right side of the grotto"
+  },
+  {
+   "id": "stalactites",
+   "plane": "wall",
+   "class": "stalactites",
+   "why": "no Quick, Draw! category is a row of stalactites; icicle-like points hang from the grotto roof across the top of the frame",
+   "strokes": [
+    [
+     [
+      20,
+      8
+     ],
+     [
+      34,
+      40
+     ],
+     [
+      46,
+      10
+     ],
+     [
+      60,
+      52
+     ],
+     [
+      74,
+      12
+     ],
+     [
+      92,
+      34
+     ],
+     [
+      110,
+      10
+     ],
+     [
+      126,
+      46
+     ],
+     [
+      142,
+      12
+     ],
+     [
+      160,
+      30
+     ],
+     [
+      178,
+      8
+     ],
+     [
+      196,
+      40
+     ],
+     [
+      214,
+      10
+     ],
+     [
+      232,
+      34
+     ],
+     [
+      250,
+      8
+     ],
+     [
+      268,
+      48
+     ],
+     [
+      286,
+      12
+     ],
+     [
+      302,
+      36
+     ],
+     [
+      320,
+      10
+     ],
+     [
+      338,
+      44
+     ],
+     [
+      356,
+      12
+     ],
+     [
+      372,
+      30
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "rocks_front",
+   "plane": "rocks",
+   "class": "rocks",
+   "why": "no Quick, Draw! category is a row of stones; the stage front is lined with low rounded rocks",
+   "strokes": [
+    [
+     [
+      10,
+      236
+     ],
+     [
+      22,
+      222
+     ],
+     [
+      44,
+      218
+     ],
+     [
+      58,
+      230
+     ],
+     [
+      72,
+      216
+     ],
+     [
+      96,
+      214
+     ],
+     [
+      112,
+      228
+     ],
+     [
+      130,
+      218
+     ],
+     [
+      156,
+      216
+     ],
+     [
+      170,
+      228
+     ],
+     [
+      188,
+      220
+     ],
+     [
+      214,
+      216
+     ],
+     [
+      232,
+      230
+     ],
+     [
+      252,
+      218
+     ],
+     [
+      276,
+      214
+     ],
+     [
+      292,
+      226
+     ],
+     [
+      312,
+      218
+     ],
+     [
+      338,
+      216
+     ],
+     [
+      356,
+      230
+     ],
+     [
+      376,
+      222
+     ]
+    ],
+    [
+     [
+      0,
+      250
+     ],
+     [
+      384,
+      248
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "ledge",
+   "plane": "char",
+   "class": "rock",
+   "why": "the dark rock the mermaid lies on, drawn as one low line under her body so she does not float",
+   "strokes": [
+    [
+     [
+      118,
+      206
+     ],
+     [
+      150,
+      203
+     ],
+     [
+      200,
+      206
+     ],
+     [
+      250,
+      204
+     ],
+     [
+      300,
+      207
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "she lies back on the rock holding a hand mirror up over her head",
+  "7": "she stretches the arm out to the right",
+  "13": "she brings the hand back to her head",
+  "19": "the hand rests at her face",
+  "25": "she raises the arm again, bent at the elbow",
+  "31": "the arm opens out up and to the right",
+  "37": "the arm reaches out level to the right"
+ }
+}

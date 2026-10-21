@@ -1,0 +1,389 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -1.17,
+   -1.88,
+   -3.2,
+   -5.13,
+   -6.54,
+   -7.43,
+   -8.67,
+   -10.43,
+   -11.69,
+   -12.83,
+   -14.43,
+   -17.82,
+   -19.08,
+   -20.96,
+   -23.64,
+   -25.78,
+   -27.42,
+   -27.51,
+   -27.72,
+   -27.88,
+   -23.02,
+   -18.81,
+   -18.77,
+   -13.33,
+   -9.72
+  ],
+  "y": [
+   0.0,
+   -2.1,
+   -2.93,
+   -5.18,
+   -6.75,
+   -9.67,
+   -13.13,
+   -15.81,
+   -19.29,
+   -23.46,
+   -28.36,
+   -31.33,
+   -37.02,
+   -41.78,
+   -44.57,
+   -45.97,
+   -48.39,
+   -51.35,
+   -51.7,
+   -51.98,
+   -52.85,
+   -53.35,
+   -53.25,
+   -51.21,
+   -50.12,
+   -48.95
+  ],
+  "source": "shots/submarine-sam/camera.json, the per-frame shift of the footage measured with the submarine masked out"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 5,
+   "label": "Sea near the misty horizon",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "mid",
+   "z": 3,
+   "label": "Sea behind and beside the submarine",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "wash",
+   "z": 2,
+   "label": "White water along the hull"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Submarine"
+  },
+  {
+   "id": "near",
+   "z": 1.4,
+   "label": "Waves in front of the submarine",
+   "z_from_depth": "bottom"
+  }
+ ],
+ "objects": [
+  {
+   "id": "horizon",
+   "plane": "far",
+   "class": "ground",
+   "why": "the horizon is lost in mist in the film; one faint long line where the grey sea meets the grey sky, and no Quick, Draw! category is a horizon",
+   "strokes": [
+    [
+     [
+      -200,
+      72
+     ],
+     [
+      600,
+      70
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "sea_far1",
+   "plane": "far",
+   "qd": "ocean",
+   "box": [
+    40,
+    74,
+    150,
+    92
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "sea_far2",
+   "plane": "far",
+   "qd": "ocean",
+   "box": [
+    220,
+    76,
+    340,
+    94
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "sea_mid1",
+   "plane": "mid",
+   "qd": "ocean",
+   "box": [
+    20,
+    112,
+    110,
+    136
+   ],
+   "strokes": 3,
+   "skip": 7
+  },
+  {
+   "id": "sea_mid2",
+   "plane": "mid",
+   "qd": "ocean",
+   "box": [
+    300,
+    100,
+    400,
+    128
+   ],
+   "strokes": 3,
+   "skip": 3
+  },
+  {
+   "id": "sea_near1",
+   "plane": "near",
+   "qd": "ocean",
+   "box": [
+    40,
+    180,
+    200,
+    236
+   ],
+   "strokes": 3,
+   "skip": 4
+  },
+  {
+   "id": "sea_near2",
+   "plane": "near",
+   "qd": "ocean",
+   "box": [
+    200,
+    186,
+    360,
+    244
+   ],
+   "strokes": 3,
+   "skip": 5
+  },
+  {
+   "id": "sea_near3",
+   "plane": "near",
+   "qd": "ocean",
+   "box": [
+    60,
+    240,
+    330,
+    300
+   ],
+   "strokes": 3,
+   "skip": 6
+  },
+  {
+   "id": "wash",
+   "plane": "wash",
+   "class": "water",
+   "why": "the sea breaks white along the submarine's waterline all through the shot, from the low bow deck past the tower to the end of the hull; no Quick, Draw! category is a line of foam, so it is a wavy line drawn along the waterline of frame 0",
+   "strokes": [
+    [
+     [
+      100,
+      168.0
+     ],
+     [
+      109,
+      169.6
+     ],
+     [
+      118,
+      165.0
+     ],
+     [
+      127,
+      164.4
+     ],
+     [
+      136,
+      167.4
+     ],
+     [
+      145,
+      164.1
+     ],
+     [
+      154,
+      161.2
+     ],
+     [
+      163,
+      164.4
+     ],
+     [
+      172,
+      163.2
+     ],
+     [
+      181,
+      158.8
+     ],
+     [
+      190,
+      160.9
+     ],
+     [
+      199,
+      162.0
+     ],
+     [
+      208,
+      157.2
+     ],
+     [
+      217,
+      157.2
+     ],
+     [
+      226,
+      160.0
+     ],
+     [
+      235,
+      156.2
+     ],
+     [
+      244,
+      153.9
+     ],
+     [
+      253,
+      157.2
+     ],
+     [
+      262,
+      155.4
+     ],
+     [
+      271,
+      151.3
+     ],
+     [
+      280,
+      153.7
+     ],
+     [
+      289,
+      154.3
+     ],
+     [
+      298,
+      149.5
+     ],
+     [
+      307,
+      150.1
+     ],
+     [
+      316,
+      152.5
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "wash_over",
+   "plane": "wash",
+   "class": "water",
+   "visible": [
+    5,
+    14
+   ],
+   "why": "from about frame 5 to frame 14 a wave washes over the after deck behind the tower; a short second wavy line above the waterline there",
+   "strokes": [
+    [
+     [
+      190,
+      161.7
+     ],
+     [
+      198,
+      159.4
+     ],
+     [
+      206,
+      155.9
+     ],
+     [
+      214,
+      157.6
+     ],
+     [
+      222,
+      157.2
+     ],
+     [
+      230,
+      152.9
+     ],
+     [
+      238,
+      153.2
+     ],
+     [
+      246,
+      154.4
+     ],
+     [
+      254,
+      150.4
+     ],
+     [
+      262,
+      148.9
+     ],
+     [
+      270,
+      151.1
+     ],
+     [
+      278,
+      148.3
+     ],
+     [
+      286,
+      145.1
+     ],
+     [
+      294,
+      147.1
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "The submarine lies side on, bow to the left, tower and mast upright, the hull low in rough water.",
+  "6": "The camera tilts down; the submarine rises in the frame. A wave washes along the after deck.",
+  "13": "The hull is almost level now; the tower stays upright.",
+  "19": "The boat drifts a little left, then back to the right as the camera follows.",
+  "25": "End of the shot, just before the cut to the battleship."
+ }
+}

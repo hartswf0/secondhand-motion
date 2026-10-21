@@ -1,0 +1,359 @@
+{
+ "category": "wheel",
+ "doodle_key_id": "6111212720881664",
+ "facing": 1,
+ "face_from": [
+  "hub",
+  "hub"
+ ],
+ "note": "Quick, Draw! wheel 6111212720881664: the tire as one outer loop (stroke 0, its start and end meet at the top), the rim as an inner loop (stroke 1), and four straight spokes crossing near the centre (strokes 2 to 5). The rig places the drawing by the hub and the top of the wheel, so it moves, grows a little and leans with the wheel in the film. The rim and spokes turn about the hub by the pose's spin, clockwise on screen, as the film's wheel turns. The tire does not turn (it is a plain loop) but is moved right of the hub by the pose's tread, in doodle units, so the thick side of the tire shows on the right as the tread does in the film. The whole drawing is then narrowed sideways by the pose's _xscale, which makes the round doodle the ellipse of a wheel seen at an angle; _xscale grows across the shot as the wheel turns toward the camera.",
+ "strokes": [
+  [
+   [
+    164,
+    2
+   ],
+   [
+    152,
+    0
+   ],
+   [
+    97,
+    5
+   ],
+   [
+    55,
+    18
+   ],
+   [
+    33,
+    38
+   ],
+   [
+    12,
+    78
+   ],
+   [
+    1,
+    129
+   ],
+   [
+    3,
+    173
+   ],
+   [
+    14,
+    203
+   ],
+   [
+    27,
+    224
+   ],
+   [
+    55,
+    245
+   ],
+   [
+    81,
+    253
+   ],
+   [
+    118,
+    255
+   ],
+   [
+    133,
+    253
+   ],
+   [
+    164,
+    240
+   ],
+   [
+    193,
+    218
+   ],
+   [
+    205,
+    203
+   ],
+   [
+    227,
+    155
+   ],
+   [
+    234,
+    121
+   ],
+   [
+    232,
+    96
+   ],
+   [
+    225,
+    72
+   ],
+   [
+    214,
+    54
+   ],
+   [
+    197,
+    36
+   ],
+   [
+    159,
+    0
+   ]
+  ],
+  [
+   [
+    149,
+    24
+   ],
+   [
+    119,
+    23
+   ],
+   [
+    103,
+    26
+   ],
+   [
+    66,
+    42
+   ],
+   [
+    35,
+    88
+   ],
+   [
+    26,
+    114
+   ],
+   [
+    29,
+    146
+   ],
+   [
+    34,
+    169
+   ],
+   [
+    48,
+    195
+   ],
+   [
+    72,
+    223
+   ],
+   [
+    81,
+    228
+   ],
+   [
+    95,
+    230
+   ],
+   [
+    135,
+    227
+   ],
+   [
+    159,
+    215
+   ],
+   [
+    191,
+    185
+   ],
+   [
+    209,
+    152
+   ],
+   [
+    210,
+    131
+   ],
+   [
+    202,
+    90
+   ],
+   [
+    188,
+    58
+   ],
+   [
+    179,
+    47
+   ],
+   [
+    134,
+    27
+   ]
+  ],
+  [
+   [
+    47,
+    189
+   ],
+   [
+    60,
+    185
+   ],
+   [
+    147,
+    115
+   ],
+   [
+    196,
+    62
+   ]
+  ],
+  [
+   [
+    65,
+    49
+   ],
+   [
+    98,
+    83
+   ],
+   [
+    129,
+    123
+   ],
+   [
+    191,
+    180
+   ]
+  ],
+  [
+   [
+    116,
+    218
+   ],
+   [
+    137,
+    94
+   ],
+   [
+    137,
+    47
+   ],
+   [
+    143,
+    29
+   ]
+  ],
+  [
+   [
+    32,
+    139
+   ],
+   [
+    178,
+    141
+   ],
+   [
+    207,
+    137
+   ]
+  ]
+ ],
+ "anchors": {
+  "hub": [
+   118,
+   127
+  ],
+  "top": [
+   118,
+   0
+  ]
+ },
+ "root": [
+  "hub",
+  "top"
+ ],
+ "size_from_mask": false,
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 23,
+   "joint": "hub",
+   "aim": [
+    "hub",
+    "top"
+   ],
+   "turn": 0,
+   "shift_by": "tread",
+   "shift": [
+    1,
+    0
+   ]
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 20,
+   "joint": "hub",
+   "aim": [
+    "hub",
+    "top"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 3,
+   "joint": "hub",
+   "aim": [
+    "hub",
+    "top"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 3,
+   "joint": "hub",
+   "aim": [
+    "hub",
+    "top"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 3,
+   "joint": "hub",
+   "aim": [
+    "hub",
+    "top"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 2,
+   "joint": "hub",
+   "aim": [
+    "hub",
+    "top"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  }
+ ],
+ "track": false,
+ "smooth": 1.2
+}

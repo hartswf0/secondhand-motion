@@ -184,22 +184,6 @@
   "latch": [
    166,
    130
-  ],
-  "hinge_top": [
-   7,
-   8
-  ],
-  "latch_top": [
-   150,
-   18
-  ],
-  "hinge_bot": [
-   14,
-   250
-  ],
-  "latch_bot": [
-   178,
-   220
   ]
  },
  "root": [
@@ -214,30 +198,16 @@
  "max_tilt": 20,
  "parts": [
   {
-   "region": [
-    -10,
-    -10,
-    300,
-    108
-   ],
-   "joint": "hinge_top",
-   "aim": [
-    "hinge_top",
-    "latch_top"
-   ],
-   "stretch": 1.0
-  },
-  {
    "rest": true,
-   "joint": "hinge_bot",
+   "joint": "hinge",
    "aim": [
-    "hinge_bot",
-    "latch_bot"
+    "hinge",
+    "latch"
    ],
-   "stretch": 1.0
+   "turn": 0
   }
  ],
- "note": "Quick, Draw! door 6107831826644992, hinge on the left: stroke 0 is the door outline, stroke 1 the round knob, stroke 2 the window at the top, stroke 3 a kick-plate mark near the bottom left. The root runs from the middle of the hinge edge to the middle of the latch edge; the door's height is held by a fixed _scale in every key, and the hinge-to-latch width shortens as the door swings toward edge-on, so the drawing narrows about its hinge the way the film's door does. The upper half (window and top edge) turns about the top hinge toward the pose's top latch corner and the lower half (knob, kick plate, bottom edge) about the bottom hinge toward the bottom latch corner, both stretching, so the latch edge can grow taller than the hinge edge when it swings toward the camera.",
+ "note": "Quick, Draw! door 6107831826644992, hinge on the left: stroke 0 is the door outline, stroke 1 the round knob near the latch edge, stroke 2 the window at the top, stroke 3 a kick-plate mark near the bottom left. The whole drawing is one leaf that swings on its hinge. The root runs from the middle of the hinge edge to the middle of the latch edge. The door's height is held by a fixed _scale in every key, and only the hinge-to-latch width changes: as the film's door swings away from the camera toward edge-on, the latch point moves toward the hinge and the drawing narrows about its hinge edge, window, knob and kick plate narrowing with it; as the door swings back shut the width returns. An earlier version also turned the upper and lower halves to copy the film's perspective on the top and bottom edges, but that bent the hinge edge, so it was removed.",
  "size": "steady",
  "smooth": 1.0,
  "track": false

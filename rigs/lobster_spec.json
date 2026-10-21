@@ -6,7 +6,7 @@
   "head",
   "head"
  ],
- "note": "Quick, Draw! lobster 6137959747158016, drawn from above with the head at the top and both claws reaching up. Strokes 0 and 2 are the left and right sides of the head and body, stroke 9 is a cross line at the base of the body, strokes 3, 5 and 6 are the narrowing tail, strokes 1 and 4 are dots. Stroke 7 is the claw on the doodle's right, stroke 8 the claw on its left; each is one closed line from the body out to an open pincer and back. The film shows the lobster facing the camera with its tail rising away at the top of the frame and its claws hanging toward the camera, so the root (head to tail) places the doodle turned upside down: tail at the top of the carapace, head at the front. That puts stroke 7 on the screen-left claw, which hangs still, and stroke 8 on the screen-right claw, which the film swings down to the table, curls in and then lays across the front of the body. Each claw turns about its base on the body and lengthens toward the pose's claw tip by half the difference, because the film's claws are longer than the doodle's.",
+ "note": "Quick, Draw! lobster 6137959747158016, drawn from above with the head at the top and both claws reaching up. Strokes 0 and 2 are the left and right sides of the head and body, stroke 9 is a cross line at the base of the body, strokes 3, 5 and 6 are the narrowing tail, strokes 1 and 4 are dots. Stroke 7 is the claw on the doodle's right, stroke 8 the claw on its left; each is one closed line from the body out to an open pincer and back. The film shows the lobster facing the camera with its tail rising away at the top of the frame and its claws hanging toward the camera, so the root (head to tail) places the doodle turned upside down: tail at the top of the carapace, head at the front. That puts stroke 7 on the screen-left claw, which hangs still, and stroke 8 on the screen-right claw, which the film swings down to the table, curls in and then lays across the front of the body. Each claw turns about its base on the body and lengthens toward the pose's claw tip by half the difference, because the film's claws are longer than the doodle's. For frames 12 on, the screen-right claw is also moved (shift_by rshift) so that its base sits at the elbow on the right of the body and the claw lies across the front, where the film's big claw lies; the doodle claw keeps its own shape. SAM tracked the small lobster on the left or the whole table on most frames, so its masks give no size: size comes from the hand keys (size_from_mask false). The in-betweens follow the footage by optical-flow tracking of the pose points (track true), which held steadier than filling every frame from the keys (pose_agent_v8.json, kept for comparison).",
  "root": [
   "head",
   "tail"
@@ -77,7 +77,7 @@
  ],
  "size": "steady",
  "smooth": 1.2,
- "track": false,
+ "track": true,
  "strokes": [
   [
    [
@@ -304,5 +304,6 @@
  "foreshorten": [
   0.9,
   1.1
- ]
+ ],
+ "size_from_mask": false
 }

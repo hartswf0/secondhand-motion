@@ -1,0 +1,98 @@
+[
+ {
+  "id": "M2",
+  "value": 3,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   3,
+   3,
+   3,
+   4,
+   4,
+   3,
+   2,
+   2,
+   3,
+   2,
+   3,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.4,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": false,
+  "design_typicality": 73
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 1.6,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 46 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6315771342880768; scenery drawn by agent: the trunk fills the frame from the left edge; no Quick, Draw! category is the edge of a trunk seen close, so one long line marks its right side, drawn the full height the camera travels, drawn by agent: no Quick, Draw! category is bark; short vertical dashes for the furrows of the bark, so the trunk is seen sliding down as the camera follows the bat up, quickdraw:5090815384748032, quickdraw:5693687629611008, drawn by agent: the leaves hang from a thin stem that runs down to the lower right; a Quick, Draw! leaf has no long stem, drawn by agent: thin pale vine stems hang in the dark woods behind the trunk; no Quick, Draw! category is a bare hanging stem, drawn by agent: a second hanging stem further right in the dark",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "62/62",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
