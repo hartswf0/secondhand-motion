@@ -1,35 +1,35 @@
 [
  {
   "id": "M2",
-  "value": 30,
+  "value": 24,
   "unit": "percentile among real doodles of the category",
-  "ok": true,
+  "ok": false,
   "per_key": [
-   18,
-   18,
-   24,
-   20,
-   22,
-   26,
-   41,
-   52,
-   58,
-   58,
-   55,
-   34,
-   22,
-   12,
    14,
    14,
-   20,
-   35,
-   34,
-   28
+   16,
+   18,
+   19,
+   28,
+   48,
+   54,
+   58,
+   58,
+   51,
+   10,
+   8,
+   6,
+   7,
+   10,
+   13,
+   15,
+   15,
+   15
   ]
  },
  {
   "id": "M2b",
-  "value": 0.66,
+  "value": 0.67,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 53
@@ -42,7 +42,7 @@
  },
  {
   "id": "M6",
-  "value": 24.4,
+  "value": 25.7,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -87,17 +87,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca horse's head and neck (mane, two ears, one or two eyes, muzzle)\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca horse's head and neck (horse at a fence lowering its head to eat)\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/horse-gwp/reviews/critic-5.json"
+  "evidence": "shots/horse-gwp/reviews/critic-6.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The profile frames 5-10 read as the doodle's construction (scribble eye, leaf ears, jaw hook, zigzag mane) mirrored to face right, but the front-view frames 1-4 and 13-16 use a long oval face that the doodle never draws, and the ears in 13-16 become crossed tangled strokes unlike the doodle's two clean ear loops.",
-  "evidence": "shots/horse-gwp/reviews/critic-5.json"
+  "note": "The profile frames carry the doodle's zigzag mane, open pointed ears, chin hook and plain strokes, but the frontal views use smooth U-curves and squiggle eyes where the doodle uses straight angular segments and a single filled dot eye.",
+  "evidence": "shots/horse-gwp/reviews/critic-6.json"
  }
 ]

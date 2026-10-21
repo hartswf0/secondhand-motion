@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A black line drawing of a long flat board on two loose round wheels sits in the lower middle of the frame, under a grey row of two cloud-shaped trees and a few short vertical posts. In frames 1-4 a grey cone outline appears small at the left and grows larger as it moves down and left, while the board drifts to the right (frame 4 board is right of center). In frame 5 the cone is very large at the left edge and the board has moved back toward center and now tilts down toward its right end. In frame 6 the cone is partly cut off at the left edge; from frame 7 on it is gone. From frame 7 the scenery sits slightly lower and the board moves slowly left and down to about one third across the frame (frames 7-9), then holds near that place with small shifts through frame 16, with its tilt flattening a little in frames 13-16.",
+ "seen_film": "A low camera follows a skateboarder from behind on a street; only legs, then torso, and the board are visible. In frames 1-4 an orange traffic cone appears small in the distance on the left and grows as the rider approaches it, while the board is on the right half of the frame. In frames 5-6 the cone is large at the left edge and passes out of frame; the rider is now nearer center. From frame 7 the cone is gone, the camera horizon drops, and the rider rolls steadily with the board around center-left to center, leaning slightly, with trees and then houses and parked vans panning past behind through frame 16.",
+ "named_subject": "A skateboard (a long flat deck on two round wheels), drawn in the doodle's car-like construction.",
+ "verdict": "bar met",
+ "evidence": "Cone timing and placement match the film: small cone at left in frame 1, growing in frames 2-4, very large at the left edge in frame 5, cut off at the edge in frame 6, gone from frame 7, as in film frames 1-7. Board position tracks the film's board: right of center in frames 3-4 (film board right in frames 3-4), back near center in frame 5, center-left from frame 7 on (film frames 7-16). The scenery drop at frame 7 matches the film's horizon drop at frame 7. The board drawing keeps c.png's construction in every frame: one long outline open at the top-left with a short overlapping stroke, and two lumpy open-ended wheel loops. The board's tilt switches between frame 4 (right end raised) and frame 5 (right end lowered), a visible change in pose in one step. Still frames only; playback was not seen.",
+ "primary_gap": "The board's tilt flips in one step between frame 4 (right end higher than left) and frame 5 (right end lower, nose pointing down-right), which will read as a pose pop rather than a turn.",
+ "closes_when": "Frames 3-6 show the board's tilt changing gradually, with the right end lowering in steps across those frames instead of all at once between frames 4 and 5.",
+ "protect": "The cone's growth and exit timing in frames 1-7; the board's left-right path matching the film's board; the scenery drop at frame 7; the doodle's exact stroke construction (open deck outline with overlapping top stroke, lumpy open wheel loops) and its line weight; the sparse grey scenery that does not compete with the character.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  5
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The board is the c.png drawing throughout, only scaled smaller and tilted; the wheel loops vary slightly in shape between frames but keep the same open, lumpy construction.",
+ "still_frames_only": true,
+ "_packet": "lot778ecb3d",
+ "_round": 6
+}

@@ -1,16 +1,16 @@
 [
  {
   "id": "M2",
-  "value": 24,
+  "value": 27,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   4,
-   4,
-   5,
-   7,
-   16,
-   24,
+   12,
+   12,
+   12,
+   18,
+   27,
+   31,
    36,
    36,
    30,
@@ -26,7 +26,7 @@
  },
  {
   "id": "M2b",
-  "value": 0.82,
+  "value": 0.88,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 26
@@ -40,7 +40,7 @@
  },
  {
   "id": "M6",
-  "value": 13.2,
+  "value": 13.0,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -85,17 +85,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca skateboard (deck with two wheels), standing in for the skateboard under the rider in the film\u201d; motion broken; follows the film: yes",
+  "value": "named \u201cA skateboard (a long flat deck on two round wheels), drawn in the doodle's car-like construction.\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/skateboard-gwp/reviews/critic-4.json"
+  "evidence": "shots/skateboard-gwp/reviews/critic-6.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "Frames 5-16 match the doodle, but frames 1-4 (most clearly 1-2) show a shorter deck with small narrow oval wheels that do not match the doodle's long deck and large round wheels.",
-  "evidence": "shots/skateboard-gwp/reviews/critic-4.json"
+  "ok": true,
+  "note": "The board is the c.png drawing throughout, only scaled smaller and tilted; the wheel loops vary slightly in shape between frames but keep the same open, lumpy construction.",
+  "evidence": "shots/skateboard-gwp/reviews/critic-6.json"
  }
 ]

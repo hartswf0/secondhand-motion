@@ -6,11 +6,17 @@
   "ok": false,
   "per_key": [
    25,
-   27,
-   27,
+   26,
+   26,
+   26,
    26,
    25,
-   25
+   25,
+   24,
+   25,
+   26,
+   29,
+   29
   ]
  },
  {
@@ -22,14 +28,14 @@
  },
  {
   "id": "M3",
-  "value": 0.66,
+  "value": 0.85,
   "unit": "fit to the SAM silhouette, frames with a mask",
-  "ok": false,
-  "min": 0.42
+  "ok": true,
+  "min": 0.71
  },
  {
   "id": "M6",
-  "value": 13.6,
+  "value": 5.6,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -49,7 +55,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:6582446130724864; scenery quickdraw:5691748049223680, quickdraw:5825824043302912",
+  "value": "rig quickdraw:6582446130724864; scenery quickdraw:5691748049223680, quickdraw:5400539233779712",
   "unit": "",
   "ok": true
  },
@@ -74,17 +80,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cflying saucer\u201d; motion smooth; follows the film: yes",
+  "value": "named \u201ca flying saucer (UFO) with a domed top and small windows, turned on its side\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/flying-saucer-gwp/reviews/critic-1.json"
+  "evidence": "shots/flying-saucer-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The doodle is a wide horizontal saucer with a dome on top; the animation rotates it nearly upright and makes the body narrower. The dome, the rim and the row of small dots are kept.",
-  "evidence": "shots/flying-saucer-gwp/reviews/critic-1.json"
+  "note": "The animated character is the doodle's flat oval body with the dome and dotted windows, rotated to match the capsule's tilt; only the window dots shift slightly between frames.",
+  "evidence": "shots/flying-saucer-gwp/reviews/critic-2.json"
  }
 ]

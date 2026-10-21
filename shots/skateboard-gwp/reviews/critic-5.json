@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A small black-line vehicle (a flat body on two large round wheels) sits in the lower middle of the frame below a fixed grey row of trees. Frames 1-4: a grey cone on the left grows from small to large as if approaching, while the vehicle drifts slightly right; the vehicle's body in these frames is short, rounded and nearly level. Frame 5: the cone is very large at the far left; the vehicle body is suddenly longer, flatter and tilted down toward the front-right, with the wheels spread farther apart. Frame 6: the cone is tall and clipped at the left edge, then it is gone from frame 7 on. Frames 7-12: the vehicle sits lower in the frame, tilted nose-down to the right, sliding slightly left. Frames 13-16: it levels out a little and stays near the same spot. The trees never move.",
+ "seen_film": "A low camera follows a skateboarder from behind (jeans, yellow shirt, gloves) riding downhill. Frames 1-4: an orange cone ahead on the left grows larger as the rider approaches it; the board is at center-right. Frames 5-6: the cone passes at the left edge, very large and cut off in frame 6. Frames 7-16: the cone is gone; the rider continues straight on the open road with the board near the bottom center, body leaning; the background (trees, fences, then houses and a parked van) pans steadily past as the camera travels. There is no fall or trick; the event is passing a cone and riding on.",
+ "named_subject": "A skateboard (or toy car) drawn as a flat hull on two large round wheels, standing in for the rider's board.",
+ "verdict": "reference stronger",
+ "evidence": "The event and timing match: in frames 1-4 the cone grows on the left in both animation and film, frame 5 shows it large at the left edge, frame 6 shows it clipped at the left edge, and from frame 7 it is gone in both. However, between frames 4 and 5 the vehicle changes construction: in frames 1-4 the body is short and rounded with wheels close together (compare b.png top-left), while in frame 5 it is abruptly longer, thinner and tilted with wheels spread apart, which reads as a redraw rather than a movement. Frames 1-4 are also less like c.png than frames 5-16. The grey trees stay fixed for all 16 frames while the film's background pans continuously, so the sense of travel after the cone (frames 7-16) is weak. Judged from still frames only, not playback.",
+ "primary_gap": "The vehicle's drawing pops from a short rounded body (frames 1-4) to a long tilted body with spread wheels (frame 5 onward), so it reads as two different drawings rather than one continuous movement.",
+ "closes_when": "Frames 1-4 show the same long flat hull and large wheel spacing as c.png and frames 5-16, with any change in tilt or length happening gradually across frames 3-6 instead of all at once at frame 5.",
+ "protect": "The cone's timing and placement (growing on the left in frames 1-4, filling the left edge in 5-6, gone from 7); the vehicle staying low and roughly centered like the film's board; the sparse grey line scenery; the wobbly single-stroke black line quality of the doodle in frames 5-16.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Frames 5-16 resemble the doodle's long hull on two big wheels, but frames 1-4 show a shorter, boxier body with smaller close-set wheels that does not match c.png.",
+ "still_frames_only": true,
+ "_packet": "lotee9ee558",
+ "_round": 5
+}

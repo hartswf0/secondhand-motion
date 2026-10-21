@@ -1,0 +1,26 @@
+{
+ "seen_animation": "A close crop of the doodle bicycle's front wheel (a seven-sided black loop with crossed spokes and a small hook at the hub), with the doodle's frame lines above it: a curved fender/handlebar stroke, a long diagonal tube, a short horizontal tube and a flat line on top of the wheel. On the right a single black polyline comes down from the top edge and ends in a small hexagon, acting as a leg with a foot. Frames 1-4: the leg is nearly straight and vertical, foot low at right. Frames 5-8: the leg bends with a knee pointing up-left and the foot sits low at right. Frames 9-11: the leg leans diagonally down to the left and the foot moves to about the middle-right, below the top tube. Frame 12: the leg becomes a straight vertical line touching the right edge of the wheel and the foot sticks out to its right on a short horizontal stroke. Frames 13-14: similar, with an extra stroke from the wheel rim to the foot. Frames 15-16: the leg tilts the other way and the foot hangs below it at lower right. The spokes rotate slowly through the shot. Grey scenery: a round bush outline at top-left in frames 1-8, replaced from frame 9 by a lumpy hedge outline across the top, which gains a second hedge piece from frame 12; a grey ground line runs across mid-frame.",
+ "seen_film": "A tracking close-up of a bicycle's front wheel with a fender, fork and part of the frame, rolling along a pavement with its shadow below; a second bicycle's wheel is partly visible at the left edge. The rider's jeans-clad leg and sneaker are at the right. Frames 1-4: the leg is extended down at the right edge, foot at the lower right on the pedal. Frames 5-8: the knee bends and rises, the foot stays low right near the chainring. Frames 9-11: the foot is forward and higher, on the pedal at the center-right just behind the wheel, shin angled. Frames 12-14: the leg drives down, foot at the bottom center-right. Frames 15-16: the foot returns to the lower right. A dark hedge enters the background at top-left from frame 8-9 and fills the top through the end. One continuous pedal cycle with the camera tracking alongside.",
+ "named_subject": "The front wheel and fork/frame of the doodled bicycle, plus a single-line rider's leg ending in a small hexagon foot, pedaling.",
+ "verdict": "reference stronger",
+ "evidence": "Placement and broad timing follow the film: the wheel sits left-center in all 16 frames as in the film, the foot is low right in 1-8 (film 1-8), moves left toward center-right in 9-11 (film 9-11, foot forward on the pedal), and the hedge appears at top from frame 9 (film frame 8-9). But the leg does not move as one limb: between frames 4 and 5 it changes from a straight line to a bent line with a new knee; between 11 and 12 it switches from a leftward diagonal to a straight vertical touching the wheel rim, with the foot jumping out to the right on a new horizontal stroke; frames 12-14 add a stroke from the rim to the foot that is not present elsewhere; between 14 and 15 the leg flips its lean direction. In frames 1-2 the wheel has extra near-vertical spoke strokes (three roughly parallel lines) that are gone by frame 3, which reads as doubled drawing. The wheel shifts position between 8 and 9 and again between 11 and 12. The round bush at top-left in 1-8 vanishes outright at 9 instead of sliding out of frame. In the film the knee bends and the foot circles a pedal on a smooth path; in the animation the foot does not trace a circle around a crank point and the leg reshapes itself between neighboring frames. Judged from still frames only, not playback.",
+ "primary_gap": "The leg is redrawn with a different shape and joint structure between neighboring frames (4-5, 11-12, 14-15) instead of being one jointed limb whose foot travels around a fixed crank point the way the film's foot circles the pedal.",
+ "closes_when": "Across all 16 frames the leg keeps the same two segments (thigh from a fixed hip off the top edge, shin to the hexagon foot) and the hexagon traces a single small circle around one crank point behind the wheel, low right in 1-8, forward at center-right in 9-11, bottom in 12-14, back to low right in 15-16, with no added strokes from the wheel rim.",
+ "protect": "The wheel drawn in the doodle's own style (seven-sided loop, crossed spokes, the hub hook) with spokes rotating; the doodle's fender arc, diagonal tube and horizontal tube held in place; the wheel's left-center placement matching the film; the foot positions roughly matching the film per frame; the hedge entering at frame 9; sparse black-line construction without added detail.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  5,
+  9,
+  12,
+  13,
+  15
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The wheel, fender and tubes are clearly the doodle's own strokes, but the leg with a hexagon foot is an added element that borrows the doodle's seat hexagon rather than anything the doodle draws, and the doodle's rear wheel and seat are cropped out as in the film.",
+ "still_frames_only": true,
+ "_packet": "lot42523a1c",
+ "_round": 6
+}

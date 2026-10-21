@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frames 1-4: a horse head seen from the front, a long U-shaped outline with two small squiggle eyes, two ears at the top, a zigzag mane line running from the upper left, a thin straight line from the left edge to the left cheek; grey fence-post shapes behind. Frames 5-10: the head turns to a three-quarter profile facing right, the muzzle swings down and to the right, a jaw/chin line appears, one eye remains, the mane line stays along the top; the muzzle reaches lowest at the bottom right around frames 7-8. Frame 11: the head is suddenly shorter and rounded again, closer to frontal, muzzle at about 0.85 of frame height. Frames 12-16: the head is frontal again with two eyes, smaller and lower in the frame, positioned left of center, with grey grass spikes along the bottom; the head holds nearly still through 14-16. These are still frames only, not playback.",
+ "seen_film": "Frames 1-4: a pale horse with a long mane faces the camera head-on at a log fence, head right of center, ears up. Frames 5-9: the horse turns its head to a three-quarter profile facing right, muzzle pointing down and right, eye visible. Frames 10-12: the head lowers further and moves down toward the bottom right where hay appears, still in three-quarter profile. Frames 13-16: the head is down in the hay at the bottom of the frame, seen from the front and slightly above, the forelock toward the camera, eating; the head sits left of center.",
+ "named_subject": "a horse's head and neck (horse at a fence lowering its head to eat)",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-4 match the film's frontal pose and placement. Frames 5-10 match the film's turn to three-quarter profile with the muzzle down to the right. At frame 11 the animation drops the long profile muzzle of frame 10 and redraws a short rounded near-frontal head in one step, whereas the film at frames 10-12 is still in three-quarter profile with the head lowering toward the hay. In frames 13-16 the film shows the head bent down into hay with the top of the head and forelock toward the camera; the animation shows an upright frontal face with two eyes and the muzzle at about 0.75-0.8 of frame height, reading as a horse standing and looking at the viewer rather than eating.",
+ "primary_gap": "The change from the profile muzzle-down pose (frame 10) to the frontal head (frame 11) happens as a one-frame redraw too early, and the closing frontal pose (12-16) reads as an upright face looking at the camera instead of a head bent down into the hay.",
+ "closes_when": "Frames 10-12 keep a three-quarter profile while the head descends toward the bottom, the turn toward the camera spreads over frames 11-13, and in frames 13-16 the head is tilted down with the forehead and ears toward the top, the muzzle touching the grass/hay at the bottom edge, and the eyes high on the head or partly hidden.",
+ "protect": "The frontal opening pose and placement in frames 1-4; the gradual turn to profile with the muzzle swinging down-right in frames 5-10; the zigzag mane line, the pointed open ears, the single-stroke outline weight, and the grey scenery kept separate from the black character; the end-of-shot placement left of center.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  11,
+  12
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The profile frames carry the doodle's zigzag mane, open pointed ears, chin hook and plain strokes, but the frontal views use smooth U-curves and squiggle eyes where the doodle uses straight angular segments and a single filled dot eye.",
+ "still_frames_only": true,
+ "_packet": "lot9d839d38",
+ "_round": 6
+}

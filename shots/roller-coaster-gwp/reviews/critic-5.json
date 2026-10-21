@@ -1,0 +1,19 @@
+{
+ "seen_animation": "Still frames only. A two-rail track with short cross-ties (black) rises from the lower left to a peak near the top centre, where two straight legs drop down to the right. A short train of four or five small rectangular cars with tick marks on top sits on the incline. A grey cloud sits at upper right and a grey tower stands on the peak. Frames 1-2: the peak is near the top edge at about x=190 and the tower is cut off by the frame edge; the train is in the middle of the incline. Frames 3-9: the whole drawing moves down and to the left in steady steps, as if the view tilts up, and the tower's flat cap comes fully into view (frame 4 onward). The train moves up the incline relative to the track. Frames 9-16: the view settles with the peak at about x=120, y=95; the train reaches the area just below the peak around frame 12 and then advances very little through frame 16.",
+ "seen_film": "A black-and-white shot of a wooden roller coaster lift hill rising from lower left to a summit, with a tall tower structure on top and large curved track sections to the right. A train of cars carrying riders climbs the lift hill. Frames 1-3: the summit is at the top edge and the tower is cut off. Frames 4-9: the camera tilts up and pans slightly so the structure moves down and left, and the tower with its flat cap comes fully into view. Frames 9-16: the framing is nearly steady; the train keeps climbing and its lead car arrives at the summit under the tower by frame 16.",
+ "named_subject": "A roller coaster lift hill (two-rail track with ties) with a small train of cars climbing it.",
+ "verdict": "bar met",
+ "evidence": "Frames 1-2 in both: peak at the top edge, tower cut off, train mid-incline. Frames 4-9 in both: structure shifts down-left and the tower cap becomes fully visible (animation peak moves from about x=176,y=52 in frame 4 to x=130,y=95 in frame 9; film shows the same direction and amount). Frames 9-16 in both: framing steady, train close to the summit at the end. The track keeps the doodle's two rails, scattered short ties, and the two descending legs from c.png in every frame, with no visible pops or redraws between neighbouring frames.",
+ "primary_gap": "The train stops advancing after frame 12 and sits just below the peak through frame 16, while in the film the cars keep climbing steadily and the lead car only reaches the summit at frame 16.",
+ "closes_when": "The train's lead car is visibly lower in frame 12 than in frame 16 and moves up the incline by a similar small step in each of frames 12, 13, 14, 15 and 16, reaching the peak only in frame 16.",
+ "protect": "The tilt-up camera move timed to frames 3-9 with the tower coming into view; the doodle's two-rail track, uneven single-stroke ties, and two straight descending legs drawn unchanged frame to frame; the train kept as small simple boxes in the same line weight; the steady framing in frames 9-16.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The track is the c.png drawing with its rails, ties and legs intact; the added train cars use thinner, fussier box outlines than the doodle's plain strokes but are minor.",
+ "still_frames_only": true,
+ "_packet": "lot383b1032",
+ "_round": 5
+}

@@ -1,0 +1,26 @@
+{
+ "seen_animation": "A line-drawn animal faces right: a large round body on the left, a second rounded head shape overlapping it on the right whose front edge is a near-vertical straight line, a zigzag of two or three spikes (horns) pointing right from that edge, and two pairs of short leg strokes underneath. Grey scenery is a fence line across the top and a vertical post at the right. Across frames 1-16 the pose stays almost the same: the head stays at the same low height with its front edge vertical. In frames 1-3 a short jaw stroke crosses the lower head; it is gone from frame 4 on. Frames 9-12 the whole figure sits further left (body touching the left edge) and the horn zigzag grows longer, with one long spike in frames 8, 11 and 12; frames 13-16 the figure moves slightly right again and the horns shorten. The front leg pair slides along the belly between frames and the legs change length from frame to frame.",
+ "seen_film": "A rhinoceros stands side-on facing right in a sandy enclosure with a fence along the top and a post at right. Frames 1-4 its head is lowered with the horn pushing into the ground and the tail swings. Frames 5-8 the head stays low, nose at ground level, ears up, body roughly centred. Frames 9-12 the rhino has shifted left in the frame (rump at the left edge) and keeps its head down, nosing the ground with small head movements. Frames 13-16 it stays left-of-centre, head down, grazing or rooting, tail flicking. The event is a rhino standing with its head down, rooting at the ground, with small head bobs and a slow drift left.",
+ "named_subject": "A rhinoceros, drawn as two overlapping ovals (body and head) with zigzag horns and stick legs.",
+ "verdict": "reference stronger",
+ "evidence": "Placement matches the film: the leftward shift in frames 9-12 and the slight return in 13-16 track the rhino's position in d.png frames 9-16. But the head never moves the way the film's head does: in film frames 1-4 the head is pressed down with the horn in the dirt and in 9-16 it bobs while rooting, whereas in the animation the head outline is the same from frame 1 to 16 and only the horn zigzag changes. The jaw stroke present in frames 1-3 disappears at frame 4 (pop). The horn zigzag is redrawn with different spike lengths and counts in frames 8, 11, 12 and 16 (long spike reaching the frame edge in 8, 11, 12, short again in 13). The front leg pair jumps position under the belly between frames 3-4, 8-9 and 12-13. The tail swings that are visible in every film frame are absent.",
+ "primary_gap": "The head does not perform the film's rooting action: it stays fixed while the horns are redrawn at changing lengths, so the only visible change is spikes flickering rather than a head dipping and bobbing at the ground.",
+ "closes_when": "Across frames 1-16 the whole head shape (oval, front edge and horns together, at constant horn size) tilts and dips so the horn tip touches the ground line in frames 1-4 and bobs down-up in frames 9-16, with the horn zigzag keeping the same shape in every frame.",
+ "protect": "The doodle's construction (two overlapping open ovals, straight front edge, zigzag horn triangles, paired stick legs, wobbly hand-drawn polyline strokes); the grey fence and post scenery placed as in the film; the leftward drift in frames 9-12 that matches the film's framing.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  8,
+  9,
+  11,
+  12,
+  13
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The drawing is the doodle mirrored to face right with its stroke habits kept, but the head oval has grown to nearly the size of the body, whereas in c.png the head is clearly smaller than the body.",
+ "still_frames_only": true,
+ "_packet": "lot87c96ed8",
+ "_round": 3
+}

@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frames 1-4: a small boat drawn as a hull with three windows and short spray strokes under its right end rises steeply from just above the grass line, nose tilted up to the upper left, climbing and moving right through a grey forest scene. Frames 5-8: the boat is larger and higher, now on the left side of the frame, leveling out from tilted to nearly horizontal while moving slightly right, spray strokes trailing from its right end. Frames 9-10: the hull tips so the left end drops and the right end rises; in frame 10 the left end touches the ground line with a small mark. Frames 11-13: the boat sits low and flat at the lower left with a cluster of tall black spiky strokes at its left end and the hull drawn as a deeper bowl. Frames 14-16: the spikes are gone, the boat is smaller and travels from lower center to center right along an open horizon with spray strokes behind its right end.",
+ "seen_film": "A speedboat jumps from a ramp among cypress trees. Frame 1 shows only trees and the ramp; in frames 2-4 the boat appears center and rises with its bow up to the upper left, moving right. Frames 5-8 it flies through the air on the left side, leveling to horizontal over the open water. Frames 9-10 the stern drops and the hull angles down to the left, the left end striking the water in frame 10. Frames 11-13 it lands in a large white splash and skids, spray rising behind it. Frames 14-16 it runs flat across the water from left of center toward center right, getting smaller, with a wake.",
+ "named_subject": "a speedboat (hull with three cabin windows and spray marks)",
+ "verdict": "reference stronger",
+ "evidence": "Judged from still frames only, not playback. The flight path matches the film closely: frames 2-4 rising nose-up toward the right as in film frames 2-4; frames 5-8 leveling on the left as in film 5-8; frames 9-10 left end dropping to touch down exactly as in film 9-10; frames 14-16 moving rightward and shrinking as in film 14-16. The weakness is the landing: in frame 11 a cluster of tall black zigzag strokes appears all at once at the boat's left end and the hull is redrawn as a deeper, rounder bowl than in frame 10; frames 12-13 keep these spikes; in frame 14 they vanish entirely and the hull drops sharply in size. The film's splash in frames 11-13 is a spray rising behind and over the boat that thins out gradually through 14-16. Frame 1 also already shows the boat, while the film's boat is not visible until frame 2.",
+ "primary_gap": "The landing splash in frames 11-13 is drawn as heavy black character-weight spikes that pop in at frame 11 and disappear at frame 14, with the hull redrawn bigger and rounder at the same moments, so the touchdown reads as a jump rather than the film's continuous skid and settling spray.",
+ "closes_when": "Frames 10 through 16 show the hull keeping one consistent outline and shrinking gradually, while the splash is drawn in the doodle's light spray-stroke style rising behind the boat, growing from frame 10 to 11 and thinning over 13-16 instead of appearing and vanishing in one frame.",
+ "protect": "The flight arc and its timing (rise in 2-4, leveling in 5-8, tail-down touchdown at 9-10, rightward run-out in 14-16); the doodle's construction of a single thin hull line, a line under three small hand-drawn windows and short angular spray strokes at one end; the consistent mirrored orientation of the boat throughout.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  11,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The boat reads as the doodle (thin hull outline, three small windows, short angular spray strokes), but in frames 11-13 the hull swells into a deep bowl and the spiky splash strokes are heavier and more jagged than anything in the doodle.",
+ "still_frames_only": true,
+ "_packet": "lot3c8d438c",
+ "_round": 2
+}

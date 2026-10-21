@@ -49,7 +49,8 @@ UVW[0][0] = UVW[1][0].copy()              # S0 and S1 meet in one clean stern co
 STEM = np.array([0.97, 0.5, 2.0])
 UVW[2][4] = STEM; UVW[2][5] = STEM
 UVW[2][0] = UVW[1][0] + np.array([0., 0., 0.45])   # the underside starts straight below the stern corner
-UVW[3][0] = np.array([1.0, 1.0, 0.0]); UVW[3][2] = STEM
+UVW[0][3] = UVW[1][7].copy()                # S0 and S1 also meet in one clean far bow corner
+UVW[3][0] = UVW[1][7].copy(); UVW[3][2] = STEM   # S3 starts from that corner
 L, BEAM, DEPTH = 4.2, 1.1, 0.32            # ship size in world units (length, beam, depth of the hull per doodle unit)
 PITCH = np.radians(8)                       # camera looks down at this angle
 DIST = 30.0                                 # camera distance from the ship's centre
