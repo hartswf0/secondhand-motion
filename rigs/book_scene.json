@@ -1,0 +1,199 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.22,
+   0.27,
+   0.33,
+   0.69,
+   0.52,
+   0.01,
+   0.1,
+   0.1,
+   0.34,
+   0.65,
+   1.03,
+   1.25,
+   1.19,
+   1.19,
+   1.12,
+   1.0,
+   1.56,
+   1.72,
+   1.7,
+   1.67,
+   1.52,
+   1.8,
+   1.87,
+   2.11,
+   2.23
+  ],
+  "y": [
+   0.0,
+   -0.15,
+   0.26,
+   0.03,
+   -0.28,
+   -0.57,
+   -1.12,
+   -1.07,
+   -1.07,
+   -1.36,
+   -1.62,
+   -2.0,
+   -2.46,
+   -2.44,
+   -2.66,
+   -2.78,
+   -2.97,
+   -3.16,
+   -2.97,
+   -3.07,
+   -3.02,
+   -2.45,
+   -2.92,
+   -3.26,
+   -3.57,
+   -3.5
+  ],
+  "source": "shots/book-sam/camera.json, per-frame shift measured from the footage"
+ },
+ "planes": [
+  {
+   "id": "desk",
+   "z": 4,
+   "label": "Desk and paper",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Binder and hand"
+  }
+ ],
+ "objects": [
+  {
+   "id": "paper",
+   "plane": "desk",
+   "class": "paper",
+   "visible": [
+    0,
+    8
+   ],
+   "why": "Quick, Draw! has no sheet of paper; four straight lines for the white sheet lying on the desk behind the binder",
+   "strokes": [
+    [
+     [
+      88,
+      84
+     ],
+     [
+      135,
+      0
+     ]
+    ],
+    [
+     [
+      88,
+      84
+     ],
+     [
+      232,
+      40
+     ]
+    ],
+    [
+     [
+      135,
+      0
+     ],
+     [
+      300,
+      0
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "hand1",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    170,
+    190,
+    330,
+    300
+   ],
+   "aspect": 1.3,
+   "strokes": 1,
+   "visible": [
+    0,
+    4
+   ],
+   "why": "the woman's hand rests on the lower edge of the cover"
+  },
+  {
+   "id": "hand2",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    150,
+    150,
+    300,
+    290
+   ],
+   "aspect": 1.1,
+   "strokes": 1,
+   "visible": [
+    5,
+    6
+   ],
+   "why": "the hand slides under the cover edge to lift it"
+  },
+  {
+   "id": "hand3",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    10,
+    90,
+    170,
+    240
+   ],
+   "aspect": 1.1,
+   "strokes": 1,
+   "visible": [
+    7,
+    8
+   ],
+   "why": "the hand carries the cover up and over to the left"
+  },
+  {
+   "id": "hand4",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    0,
+    0,
+    130,
+    130
+   ],
+   "aspect": 1.0,
+   "strokes": 1,
+   "visible": [
+    9,
+    12
+   ],
+   "why": "the hand lifts the first pages up at the top left"
+  }
+ ],
+ "notes": {
+  "0": "the black binder lies closed on the desk, a hand at its lower edge",
+  "5": "the hand slides under the cover",
+  "7": "the cover swings up about the ring spine",
+  "9": "the cover is over; the hand lifts the first pages",
+  "14": "the binder lies open, pages standing up on the left",
+  "25": "pages still fanning on the left"
+ }
+}

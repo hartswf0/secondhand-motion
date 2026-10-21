@@ -7,7 +7,7 @@
   "lc"
  ],
  "size_from_mask": false,
- "note": "Quick, Draw! eye 5110430580080640, drawn as four strokes. Stroke 0 is the large round iris, drawn as one loop that crosses the upper lid line. Stroke 1 is the small closed shape inside the iris, the reflection. Stroke 2 is the upper lid, a straight-sided arch from the left corner to the right corner. Stroke 3 is the lower lid, a shallow curve between the same corners. The whole drawing is placed by the two eye corners, so it moves, tilts and holds its size with the film's eye. The upper lid and the lower lid fold toward the line between the corners by the pose entries 'up' and 'lo' (1 is the doodle as drawn, smaller is more shut), so the eye narrows and opens at the frames where the film's eye does. The reflection is scaled about its own centre by the distance between the pose points 'hl' and 'hl2', so it grows when the bright reflection on the film's eyeball grows. The iris keeps the doodle's shape.",
+ "note": "Quick, Draw! eye 5110430580080640, drawn as four strokes. Stroke 0 is the large round iris, drawn as one loop that crosses the upper lid line. Stroke 1 is the small closed shape inside the iris, the reflection. Stroke 2 is the upper lid, a straight-sided arch from the left corner to the right corner. Stroke 3 is the lower lid, a shallow curve between the same corners. The whole drawing is placed by the two eye corners, so it moves, tilts and holds its size with the film's eye. The upper lid and the lower lid fold toward the line between the corners by the pose entries 'up' and 'lo' (1 is the doodle as drawn, smaller is more shut), so the eye narrows and opens at the frames where the film's eye does. The reflection is scaled about its own centre by the distance between the pose points 'hl' and 'hl2', so it grows when the bright reflection on the film's eyeball grows. The iris keeps the doodle's shape. The reflection also slides sideways across the iris by the pose entry 'hx' (doodle units before scaling), because in the film the small early reflection sits right of the pupil, fades out by about frame 11, and the large one that grows from frame 13 sits left of it.",
  "root": [
   "lc",
   "rc"
@@ -45,7 +45,12 @@
     "hl2"
    ],
    "turn": 0,
-   "stretch": 1
+   "stretch": 1,
+   "shift_by": "hx",
+   "shift": [
+    1,
+    0
+   ]
   },
   {
    "stroke": 2,

@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A grey line drawing of a machine (a round wheel with spokes, a housing outline, background verticals) stays fixed. A black curved hose comes from the top centre, arcs right and runs down to a banded ring end with dangling strands at lower right, matching the doodle. In frame 1 a small claw-like hand shape sits at the right edge at mid height. In frames 2-3 a larger open hand with looped fingers appears at the top right. In frame 4 its fingers reach the hose near the top of the bend. From frame 5 to 16 the hand stays wrapped on the hose's upper right portion, fingers as three loops on the left side of the hose and two arm lines going off the right edge, with only small sway of hose and hand.",
+ "seen_film": "A grey pump or reel mechanism with a large silver disc stays fixed, and a black hose arcs from its top fitting over to the right and down out of frame. In frame 1 a hand is just visible at the right edge at mid height. In frames 2-3 the hand comes in from the upper right toward the hose. By frame 4 it touches the hose near the top of the bend, and from frame 5 on it grips the hose there and holds it, with slight shifting and a small pull to the right across the rest of the shot.",
+ "named_subject": "A black hose (the doodle's curved tube with a banded ring end), grabbed by a hand",
+ "verdict": "reference stronger",
+ "evidence": "e.png vs f.png: film frames 1-2 show the hand at the right edge at mid height, barely moving; animation frame 1 has a small claw at mid height but frame 2 already shows a large open hand at the top right, so the hand pops up and grows between 1 and 2. Film frames 3-6 show the hand still approaching in open space left of the edge and not touching the hose; animation frames 4-7 already have the fingers lying across the hose stroke, so contact comes about 3 frames early and the finger lines cross through the hose lines. Film frames 7-8 show the fingers closing around the hose in one continuous motion; animation frame 7 to 8 redraws the hand smaller and lower, with the fingers jumping onto the hose's left side and the arm lines dropping, which reads as a pop rather than a close. Frames 8-38 then hold the grip with small hose sway, which matches the film's hold and slight pull (film 29-32, animation 30-32 show the ring end shifting right). Judged from still frames only, not playback.",
+ "primary_gap": "The hand's approach is broken: it pops from a small mid-height claw to a large top-right hand at frame 2, reaches the hose about three frames before the film does, and is redrawn smaller and lower at frame 8 instead of closing on the hose.",
+ "closes_when": "Across e.png frames 1-8 the hand keeps one size and drawing, slides in from the right edge along a single path at the film's height, stays off the hose until frame 6-7, and its fingers close around the hose at frame 7-8 without the hand shifting position or size.",
+ "protect": "The hose drawing itself (the doodle's two-line tube, banded ring and dangling strands from c.png) held steady in the film's arc position; the fixed grey scenery; the stable grip hold from frame 8 to 38 with the small rightward pull late in the shot; the simple looped-finger hand style that matches the doodle's stroke habits.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  4,
+  8
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hose keeps the doodle's construction (two parallel strokes, banded ring, dangling strands) throughout; only the added hand changes size between frames 2-7 and 8 onward.",
+ "still_frames_only": true,
+ "_packet": "lot848b2f49",
+ "_round": 3
+}

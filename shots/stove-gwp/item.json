@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0179",
+ "id": "stove-gwp",
+ "kind": "shot",
+ "title": "Stove, the Giraffe Walks Past Way",
+ "category": "stove",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/stove-gwp/cover.png",
+ "cover_alt": "shots/stove-gwp/frames/f020.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/stove-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#stove-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/stove_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/stove/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/stove-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

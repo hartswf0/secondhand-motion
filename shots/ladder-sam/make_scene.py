@@ -101,7 +101,7 @@ def man(f):
     st+=hand([N,P])                                                                                                   # body: one line
     S=N+ax*3
     for limb in ('lh','rh'):
-        q=contact(f,limb); e=joint(S,q,30,lambda z: z[1]-0.3*z[0]); st+=hand([S,e,q])   # the elbow always hangs below the line from shoulder to hand
+        q=contact(f,limb); sg=-1 if limb=='lh' else 1; e=joint(S,q,30,lambda z,sg=sg: z[1]+sg*0.5*z[0]); st+=hand([S,e,q])   # the elbow hangs down and out on its own side (left elbow left, right elbow right)
     for limb,sg in (('lf',1),('rf',-1)):
         q=contact(f,limb); Hp=P-np.array([2.5*sg,0.0])
         D=np.hypot(*(q-Hp))

@@ -17,19 +17,23 @@ c = np.array(c); sig = 1.5; rad = 5; w = np.exp(-0.5 * (np.arange(-rad, rad + 1)
 pad = np.r_[np.repeat(c[:1], rad), c, np.repeat(c[-1:], rad)]; c = np.array([pad[i:i + 2 * rad + 1] @ w for i in range(n)])
 turn = c / 135.0
 rig = json.load(open(ROOT / 'shots/vase-gwp/rig_frames.json'))
-LEAF_ID = '4928285815341056'
+# two real Quick, Draw! leaves, alternating round the pot as the film's tall pointed leaves alternate with its
+# round ovals: a narrow upright leaf (4928285815341056) and a round leaf on a stem (6535184159604736)
 rows = [json.loads(l) for l in open(ROOT / 'data/quickdraw/leaf.part').read().splitlines()[:-1]]
-leaf = next(r for r in rows if str(r['key_id']) == LEAF_ID)
-L = [np.array(list(zip(*s)), float) for s in leaf['drawing']]; A = np.concatenate(L); mn, mx = A.min(0), A.max(0)
-L = [(s - (mn + mx) / 2) / (mx - mn) for s in L]          # leaf in a unit box centred on 0
+def unit(kid):
+    r = next(r for r in rows if str(r['key_id']) == kid)
+    L = [np.array(list(zip(*s)), float) for s in r['drawing']]; A = np.concatenate(L); mn, mx = A.min(0), A.max(0)
+    return [(s - (mn + mx) / 2) / (mx - mn) for s in L]   # in a unit box centred on 0
+MARKS = [(unit('4928285815341056'), 0.40, 58.0, 212.0), (unit('6535184159604736'), 0.62, 60.0, 210.0)]   # shape, width (rad), height px, centre y
 def side_x(stroke, y):
     s = np.array(stroke); i = np.argsort(s[:, 1]); return float(np.interp(y, s[i, 1], s[i, 0]))
-N = 7; LW, LH = 0.42, 58.0; Y0 = 212.0                       # 7 leaves round the pot; width in radians, height px
+N = 6   # six marks round the pot, so the pattern repeats only every two marks (2.1 rad), more than the whole turn (1.2 rad)
 for f in range(n):
     fr = rig[f]; extra = {}
     for k in range(N):
         a0 = -math.pi + (k + 0.5) * 2 * math.pi / N + turn[f]
         if math.cos(a0) < 0.12: continue
+        L, LW, LH, Y0 = MARKS[k % 2]
         for j, s in enumerate(L):
             pts = []
             for u, v in s:

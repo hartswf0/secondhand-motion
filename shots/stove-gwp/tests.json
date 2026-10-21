@@ -80,5 +80,20 @@
   "value": "complete",
   "unit": "",
   "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cA cabinet (oven or icebox) drawn as a box with three rounded shapes on top, whose two vertical strokes act as the edges of its two doors.\u201d; motion smooth; follows the film: yes",
+  "unit": "",
+  "ok": false,
+  "evidence": "shots/stove-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The character keeps c.png's box, three loops and two overrunning vertical strokes, and only the strokes move, so it reads as the same drawing; the one departure is that in frames 1-3 the left stroke sits outside the box, which c.png never shows.",
+  "evidence": "shots/stove-gwp/reviews/critic-1.json"
  }
 ]

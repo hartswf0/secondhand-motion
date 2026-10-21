@@ -1,0 +1,23 @@
+{
+ "seen_animation": "The character is a box drawn in loose single strokes: a top band holding three rounded loop shapes (large, medium, small), a lower open compartment, and two vertical strokes that run from the band down past the bottom edge. In frame 1 the two vertical strokes stand at the far left and right edges, the left one outside the box. Over frames 2-4 they move in to just inside the box sides. In frames 5-8 they slide toward the middle, and in frames 8-12 they sit close together just left of centre, about a quarter of the box width apart. In frames 13-16 they slide back out toward the sides, ending in frame 16 just inside the box edges, with the right stroke standing beside the box's right edge. The box, the loops and the faint grey curve at far left stay fixed.",
+ "seen_film": "A front view of a small oven or refrigerator cabinet with two hinged doors. In frame 1 both doors are swung fully open at the frame edges, showing wire racks inside. In frames 2-4 a hand at the top left and the doors begin swinging inward. In frames 5-8 the doors close until only a narrow gap shows the interior near the centre. Frames 8-12 hold nearly closed with a narrow vertical gap left of centre. In frames 13-16 the doors swing back open, and by frame 16 they are back at the edges with the racks visible again.",
+ "named_subject": "A cabinet (oven or icebox) drawn as a box with three rounded shapes on top, whose two vertical strokes act as the edges of its two doors.",
+ "verdict": "bar met",
+ "evidence": "Timing and placement follow the film frame for frame: e.png 1-3 strokes at the outer edges while f.png 1-3 doors are fully open; e.png 5-16 strokes converge while f.png 5-16 doors swing shut; e.png 17-28 strokes hold close together at about x 105-145 of the 235-wide cell, matching the narrow gap held in f.png 17-28; e.png 29-38 strokes separate as f.png 29-38 doors reopen. g.png shows evenly stepped, monotonic paths with no reversals. Small defects: from e.png 3 to 4 the left stroke steps from outside the box to its left edge, a larger step than its neighbours and the stroke changes length; in e.png 37-38 the right stroke stands only a few pixels inside the box's right edge, so the edge reads as a doubled line; and the grey scenery curve at left first appears at about e.png 9 rather than being present throughout. In e.png 38 the strokes are still inside the box, while in f.png 38 the doors are back out at the frame edges as in frame 1, so the reopening stops short. Judged from still frames only, not playback.",
+ "primary_gap": "The reopening stops short: at e.png 36-38 the two strokes are still inside the box sides (the right one crowding the box's right edge into a doubled line), while the film's doors at f.png 36-38 have swung back out to the same open position as frame 1.",
+ "closes_when": "Across e.png 33-38 the two strokes continue outward so that by e.png 38 they stand at the same positions as in e.png 1 (left stroke outside the box's left side, right stroke clear of the right edge), and the 3-to-4 step on the left is spread over frames 2-5.",
+ "protect": "The doodle's exact construction (wobbly top band, three loops of descending size, open lower box, strokes overrunning the bottom edge); the scenery staying fixed while only the two door strokes move; the frame-matched timing of close, hold and reopen; the even, monotonic stepping of the strokes shown in g.png.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  4,
+  37,
+  38
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character keeps c.png's box, three loops and two overrunning vertical strokes, and only the strokes move, so it reads as the same drawing; the one departure is that in frames 1-3 the left stroke sits outside the box, which c.png never shows.",
+ "still_frames_only": true,
+ "_packet": "lotd86329ac",
+ "_round": 1
+}
