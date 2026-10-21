@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A grey triangular hill sits at the left of every frame and does not change. To its right is a black-line cat head. In frames 1-6 the head is drawn in a three-quarter view facing the viewer's right: the nose, mouth and whiskers are pushed against the right edge of the outline, the right ear is short, and the left side of the face holds two long horizontal whisker lines. Frames 1-6 are nearly identical, with only small shifts of a few pixels. Between frames 6 and 7 the head changes in one step to a frontal view: both ears are full, the nose and 'JL' mouth are centred, and whiskers spread to both sides. Frames 7-16 hold that frontal head with small position shifts (frame 8 sits slightly lower and right, frame 9 slightly left) and small changes in the short whisker stroke at the right cheek, which alternates between a thick short bar (7, 10, 11, 14, 16), a thin line (9, 12, 13, 15) and absent (8).",
+ "seen_film": "A tiger lies on a rock in front of a rocky wall, body and forepaws filling the lower half of the frame, head in the upper centre. In frames 1-6 the tiger's head is turned toward the viewer's right, looking off to the side, and is nearly still. In frame 7 the head has turned most of the way to face the camera, with both ears now visible. From frame 8 to frame 16 the tiger looks straight at the camera and holds that pose with only very small head movements. The event is a single head turn from profile/three-quarter to frontal, happening between frames 6 and 8.",
+ "named_subject": "A cat (tiger) face, drawn as the doodle's round head with two ears, whisker strokes, a small nose and a 'JL' mouth.",
+ "verdict": "reference stronger",
+ "evidence": "Timing matches: the film's head turn happens between frames 6 and 8, and the animation's turn happens between frames 6 and 7, with frames 1-6 held in a right-facing three-quarter view and frames 8-16 held frontal in both. Placement matches: the head sits in the upper centre-right of the frame in both. The weakness is the turn itself: frame 6 (three-quarter, features crammed against the right edge, short right ear) and frame 7 (fully frontal, both ears full, features centred) are two different drawings with no in-between, so the turn reads as a swap of drawings rather than a rotation; the film's frame 7 still shows the head slightly angled mid-turn. In frames 8-16 the right-cheek whisker stroke changes weight or disappears from frame to frame (absent in 8, thick in 10, 11, 14, 16, thin in 9, 12, 13, 15), which would read as flicker on a held pose where the film is still. The film's lying body is not represented at all; only the head is animated.",
+ "primary_gap": "The head turn is a one-frame substitution from the three-quarter drawing (frame 6) to the frontal drawing (frame 7) instead of a rotation, so it reads as a pop rather than the tiger turning its head.",
+ "closes_when": "Frame 7 shows an intermediate drawing where the nose, mouth and whiskers sit partway between their frame-6 and frame-8 positions and the right ear is partly restored, so the features visibly travel from right to centre over frames 6-8.",
+ "protect": "The timing of the turn (held right-facing in 1-6, frontal from 8 onward), the head's position in the frame, the frontal drawing in frames 9-16 which closely matches c.png (ear shapes, uneven outline with the notch at the chin, crossed brow strokes, tick eyes, nose shape, 'JL' mouth, long whisker running off past the right edge), and the unchanging grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  7,
+  8,
+  9
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The frontal frames are the doodle almost line for line, but the three-quarter frames 1-6 squeeze the nose, mouth and whiskers against the right edge of the outline so that they overlap it, which is a compression of the doodle rather than the doodle turned, and the right-cheek whisker stroke is not held consistent across frames 8-16.",
+ "still_frames_only": true,
+ "_packet": "lot1bbdca67",
+ "_round": 3
+}

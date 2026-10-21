@@ -43,9 +43,16 @@ def ship_coords():
 UVW = ship_coords()
 # the doubled stern corner: in the doodle S0 starts a few pixels from S1's start; undoing the short oblique axis
 # spreads that gap across a fifth of the beam, so put S0's first point back next to S1's first point
-UVW[0][0] = UVW[1][0] + np.array([-0.02, 0.05, 0.])
-L, BEAM, DEPTH = 2.4, 1.25, 0.28           # ship size in world units (length, beam, deck-to-gallery depth)
-PITCH = np.radians(14)                      # camera looks down at this angle
+UVW[0][0] = UVW[1][0].copy()              # S0 and S1 meet in one clean stern corner
+# The doodle's hull runs under the deck to the bow. Its two strokes that end at the bow end are led to the stem's
+# foot under the middle of the bow, so seen from ahead they draw the V of the bow below the deck:
+# S2 (the near side's underside, notch kept) ends at the stem foot and its last segment climbs back to the near
+# bow corner; S3 (the bow end stroke) starts at the far bow corner on the deck and runs down to the same stem foot.
+STEM = np.array([0.97, 0.5, 1.25])
+UVW[2][4] = STEM
+UVW[3][0] = np.array([1.0, 1.0, 0.0]); UVW[3][2] = STEM
+L, BEAM, DEPTH = 4.2, 1.1, 0.45            # ship size in world units (length, beam, depth of the hull per doodle unit)
+PITCH = np.radians(8)                       # camera looks down at this angle
 DIST = 30.0                                 # camera distance from the ship's centre
 
 

@@ -1,0 +1,25 @@
+{
+ "seen_animation": "Frames 1-4: a horse head drawn in black lines faces the viewer, two pointed ears at the top, two small scribbled eyes, a long closed oval face reaching the bottom edge, a zigzag mane line running left along the top, and a thin straight line running from the left edge into the cheek; grey vertical post shapes behind. Frames 5-8: the head is now in profile facing right, the eye on the left side of the face, a jaw corner with a short horizontal chin line, and the muzzle angled down and to the right ending in a flat blunt tip near the bottom right; the mane line stays across the top. Frames 9-10: the profile head drops lower and the muzzle tip moves left and down. Frames 11-12: the head swings back toward a front view, the muzzle narrows and points straight down, and grey zigzag grass appears along the bottom. Frames 13-16: the head is front-facing and low, narrow muzzle near the grass, ears bunched at the top right, the head shifting slightly right and up from 13 to 14 and then holding through 16.",
+ "seen_film": "Frames 1-2: a pale horse with a long mane faces the camera at a log fence, head filling the center-left. Frames 3-4: the head begins turning to the viewer's right. Frames 5-8: the head is in three-quarter profile facing right, muzzle lowering and moving to the right side of the frame by frame 8. Frames 9-11: the head drops further and comes down and slightly left, muzzle near the bottom of the frame, with hay appearing at the bottom right. Frames 12-16: the head is lowered into a pile of hay at the bottom center-left, nose down, eating, the head nearly front-on to the camera with the ears forward; the head moves slightly between frames while feeding.",
+ "named_subject": "a horse's head and neck (mane, two ears, one or two eyes, muzzle)",
+ "verdict": "reference stronger",
+ "evidence": "The overall event matches: front-facing in 1-4 (film 1-4), turn to right profile with muzzle down-right in 5-8 (film 5-8), lowering in 9-12 (film 9-12), head down near the ground in 13-16 (film 13-16). But frame 4 to 5 changes from a closed front oval with two eyes to an open profile with a separate jaw line in one step, and the face outline is redrawn rather than rotated; frame 10 to 11 switches from a right-pointing profile muzzle to a downward front muzzle in one step while the film turns gradually across 9-12; frames 12-13 show the cheek curve on the left drawn as a separate overlapping contour beside the muzzle outline, so the head reads as two shapes; frame 13 to 14 the head jumps right and the ear strokes at the top become a tangle of crossing lines. The film has hay as a mound; the animation shows generic grass spikes, and the head in 14-16 hovers above them rather than pushing into them.",
+ "primary_gap": "The head changes between front view and profile in single-frame swaps (4 to 5 and 10 to 11) with the outline redrawn, instead of turning through intermediate angles as the film does.",
+ "closes_when": "Frames 3-5 and 10-12 show the same face outline progressively rotating (eye sliding across the face, near cheek line growing, muzzle tip moving smoothly), with no frame where the contour is replaced by a different construction.",
+ "protect": "The timing that matches the film (front 1-4, profile 5-8, lowering 9-12, grazing 13-16); the doodle's few-stroke construction, scribbled eye, pointed leaf-shaped ears, zigzag mane line and jaw/chin stroke; the grey scenery staying subordinate to the black character.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  11,
+  12,
+  13,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The profile frames 5-10 read as the doodle's construction (scribble eye, leaf ears, jaw hook, zigzag mane) mirrored to face right, but the front-view frames 1-4 and 13-16 use a long oval face that the doodle never draws, and the ears in 13-16 become crossed tangled strokes unlike the doodle's two clean ear loops.",
+ "still_frames_only": true,
+ "_packet": "lot9aec8739",
+ "_round": 5
+}

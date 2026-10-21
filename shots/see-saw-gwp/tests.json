@@ -1,7 +1,7 @@
 [
  {
   "id": "M2",
-  "value": 45,
+  "value": 46,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
@@ -9,6 +9,7 @@
    30,
    30,
    60,
+   52,
    39,
    40,
    47,
@@ -25,7 +26,7 @@
  },
  {
   "id": "M2b",
-  "value": 0.54,
+  "value": 0.53,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 20
@@ -39,7 +40,7 @@
  },
  {
   "id": "M6",
-  "value": 86.0,
+  "value": 85.6,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -84,17 +85,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca seesaw: a long plank resting on a triangular pivot, tilted down to the right\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201cA playground seesaw (plank on a triangular pivot), with an added stick-figure child who sits on its raised end.\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/see-saw-gwp/reviews/critic-2.json"
+  "evidence": "shots/see-saw-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The animated plank is a little flatter and shorter than in the doodle, but the outline, the stray tick at the top-left corner, the doubled pivot strokes and the small dot all match c.png.",
-  "evidence": "shots/see-saw-gwp/reviews/critic-2.json"
+  "note": "The seesaw reads as the c.png drawing itself; the only mismatch is the added stick-figure child, which is not part of the doodle and is drawn in a different, tidier stroke style.",
+  "evidence": "shots/see-saw-gwp/reviews/critic-3.json"
  }
 ]

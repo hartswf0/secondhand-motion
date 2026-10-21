@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A black-line sailboat (one triangular sail left of a doubled mast, a cupped hull with an upturned right bow) sits right of center on a grey horizon line at about one third of frame height. Frames 1-7: the boat holds its place and grows very slowly, with small changes in hull tilt; grey background vessels at far left are a small rowboat and a small steamer, with grey dashes for water below. Frame 8: the background vessels change at once into two small grey sailboats. Frames 9-12: the boat is larger, the mast top now leaves the top edge, and the boat sits slightly left of where it began. Frames 13-16: the boat keeps growing and its right side and bow leave the right edge, so by frame 16 only the left half of hull and sail remains in frame. Read as the sailboat coming toward the camera and drifting slightly left. Still frames only, not playback.",
+ "seen_film": "A gaff-rigged sailing barge with a large dark sail sits right of center on a calm, misty sea, with the horizon at about one third of frame height. Frames 1-4: a smoking steamer and a line of small ships sit on the horizon at left. Frames 5-8: the steamer has gone off the left edge, the small ships remain, and one small distant sailboat appears near the barge's left; a rowboat floats just left of the barge. Frames 9-16: the barge grows steadily as it approaches the camera, drifting slightly left; its mast top leaves the top of frame from about frame 9, and its bowsprit and bow leave the right edge from about frame 13. From frame 11 two small distant sailboats sit at left. The barge stays upright with no rocking.",
+ "named_subject": "a sailboat (single sail, mast, hull) approaching the camera",
+ "verdict": "bar met",
+ "evidence": "Frame 1: animated hull spans about the same horizontal band as the film barge (right of center) with hull bottom and mast top at the same heights as the film. Frames 1-8: both hold position with slow growth. Frame 9: both mast tops reach the top edge and both boats have drifted left to the same position. Frames 13-16: in both, the bow leaves the right edge and the boat fills the lower right; frame 16 framing matches the film closely. Horizon height stays matched (about one third down) throughout. Background: steamer/rowboat at left in 1-7, two small sailboats from frame 8, roughly where the film shows the steamer leave and distant sails appear. The boat stays one drawing across all 16 frames with no doubling beyond the doodle's own doubled mast stroke.",
+ "primary_gap": "The grey background vessels swap all at once in frame 8 (rowboat and steamer replaced by two sailboats), whereas in the film the steamer exits left by frame 5, one distant sail appears around frames 5-8 and the second around frame 11, and the small ships stay on the horizon.",
+ "closes_when": "The grey steamer moves left and leaves the frame by about frame 5, one small grey sailboat appears around frame 5 and a second around frame 11, so no frame shows the whole background set changing at once.",
+ "protect": "The matched placement and growth curve of the boat against the film (start right of center, slight leftward drift, mast leaving top near frame 9, bow leaving right edge from frame 13); the horizon height; the boat held as one consistent drawing in the doodle's sparse line style with its doubled mast stroke and left-side triangular sail; the upright, non-rocking motion that matches the film's calm water.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  8
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated hull is deeper and more bowl-shaped than the doodle's long, shallow hull, so the hull proportions drift from c.png although the sail, doubled mast and upturned bow stroke still read as the same drawing.",
+ "still_frames_only": true,
+ "_packet": "lot05b07ea9",
+ "_round": 4
+}

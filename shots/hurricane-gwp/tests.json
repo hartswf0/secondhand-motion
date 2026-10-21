@@ -92,17 +92,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA breaking wave / surge of water (a long, flat scribble tapering to a point at the right).\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cAn ocean wave / surf (a scribbled breaking wave)\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/hurricane-gwp/reviews/critic-5.json"
+  "evidence": "shots/hurricane-gwp/reviews/critic-6.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "In frames 1-4 the doodle's stroke bundle is sheared into a fan of separate diagonal lines, so it stops reading as the compact scribble of c.png, though frames 6-16 do read as c.png.",
-  "evidence": "shots/hurricane-gwp/reviews/critic-5.json"
+  "ok": true,
+  "note": "The animated wave uses the same stroke set and shape as c.png; only in frames 3-4 the strokes fan apart more than the doodle ever does, which is acceptable.",
+  "evidence": "shots/hurricane-gwp/reviews/critic-6.json"
  }
 ]

@@ -1,0 +1,24 @@
+{
+ "seen_animation": "Frames 1-3: a small figure at the left edge with two short thin ears on a head, a stem-like vertical line going down to the floor, and in frames 2-3 a large C-shaped arc that swings up and overlaps the head and ears; the drawing reads as a letter P with a hook rather than a rabbit. Frame 4: a rabbit facing the viewer, two tall upright ears in a V, a round body sitting on the floor near center-left. Frame 5: the same frontal rabbit, ears tilted to the right, body widened. Frames 6-12: a rabbit seen from the side facing right, with long ears laid back that cross over each other, an open-mouthed head line, a front leg spike reaching the floor and a rounded rump on the left; it stays almost still in the same place across these seven frames, with tiny shifts of the ear tips. Frame 13: the body stretches long and low and moves right. Frame 14: further right, head cut off by the right edge. Frames 15-16: only the ears and a U-shaped lower body line remain at the right edge as the rabbit leaves frame. Grey lines show a wall/door edge and floor lines.",
+ "seen_film": "A white rabbit comes out from behind a dark door at the left side. Frames 1-2: half its body is visible at the left edge, emerging. Frame 3: fully out, crouched, head turning. Frames 4-5: it faces the camera with ears up, sitting near center-left. Frames 6-12: it turns to face right and sits hunched in one place, ears laid back, with only small head movements. Frames 13-14: it stretches out and hops to the right. Frames 15-16: it leaves the frame at the right edge, only the rear and hind feet visible in 16.",
+ "named_subject": "a rabbit",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement match the film: emergence at left in 1-3, frontal sit in 4-5, side-facing hunched sit at center-left in 6-12, stretch and hop right in 13-14, exit right in 15-16. But frames 1-3 do not read as the rabbit: the body is a vertical stem plus a large detached C-arc (frames 2-3) that overlaps the head, so the emergence is not legible. Between frame 3 and 4 the drawing is replaced by a different frontal figure at a different size (pop), and between 5 and 6 the frontal figure is replaced by the side profile with crossed ears (second pop). In 6-12 the two ears cross over each other forming an X/loop, while c.png has two ears spread apart in a V with clear space between them. Frames 13-16 carry the exit correctly.",
+ "primary_gap": "The emergence in frames 1-3 is drawn as a garbled P-shape with a large stray arc instead of the doodle rabbit partly visible behind the door edge, and it pops into a differently built frontal figure at frame 4.",
+ "closes_when": "Frames 1-3 show the c.png rabbit (same ear pair, head outline, front-leg spike and rump curve) cut off by the door line and sliding out from it, growing continuously into the frame-4 pose without any arc crossing the head.",
+ "protect": "The overall timing that matches the film beat for beat; the center-left position and near-stillness of the side-facing sit in 6-12; the low stretched hop in 13-14 and the exit off the right edge in 15-16; the sparse single-stroke line style with open gaps, matching the doodle; the grey door and floor scenery lines.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  3,
+  4,
+  6
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Only frames 6-14 resemble the c.png rabbit (mirrored), and even there the ears cross over each other instead of standing apart in a V, while frames 1-5 use a different construction (P-shape, frontal round body) that is not the doodle.",
+ "still_frames_only": true,
+ "_packet": "lot8a4d4cc1",
+ "_round": 4
+}

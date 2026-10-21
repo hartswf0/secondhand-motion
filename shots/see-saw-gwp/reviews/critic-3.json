@@ -1,0 +1,25 @@
+{
+ "seen_animation": "Frames 1-8: a single drawn seesaw (long plank with its left end raised high at upper left, sloping down to the right, resting on a triangular pivot) stands completely still in front of grey scenery (a curved shape at left, a tree at right, a ground line). Nothing moves across these eight frames. Frame 9: a small black stick figure with a round head appears suddenly to the left of the raised left end of the plank, floating in mid-air at about plank height. Frame 10: the stick figure is now sitting on the raised left end of the plank. Frames 11-15: the stick figure stays seated near the left end, shifting slightly left and right along the plank; in frames 12-13 the plank's angle changes slightly (left end a little lower, right end a little higher) and returns by frame 14. Frame 16: the stick figure is gone and the seesaw is back to its starting pose.",
+ "seen_film": "Frame 1 is nearly black (fade-in). Frames 2-8: on a playground of several seesaws, an adult woman stands at the left edge beside the nearest seesaw, whose raised end is at the upper left and which slopes down to the lower right; she bends over at the waist near the base/pivot area, apparently picking up or handling a small child. Frames 9-10: she straightens up and lifts a small child in a light hooded suit up onto the raised left end of the near seesaw. Frames 11-15: the child sits on the high end of the plank, with the woman holding or steadying the child from the left; the child is shifted slightly along the board. Frame 16: the woman leans in and takes the child off the board. The seesaw plank itself stays at nearly the same angle the whole time. Background children and other seesaws stay in place.",
+ "named_subject": "A playground seesaw (plank on a triangular pivot), with an added stick-figure child who sits on its raised end.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-8 of the animation are identical stills of the seesaw, while film frames 2-8 show the woman bending and preparing to lift the child, so the first half of the event has no visible counterpart. In frame 9 the stick figure appears from nowhere in mid-air left of the plank, then in frame 10 is already seated, a jump with no lift motion; the film shows the child being raised by the woman across frames 9-10. Frames 10-15 match the film in placement and timing: a small figure sits on the raised left end of the plank. Frame 16 removes the figure in one cut, whereas film frame 16 shows the woman taking the child off. Frames 12-13 show a small plank tilt change that the film does not show. The seesaw drawing itself in every frame matches c.png closely (doubled-stroke pivot, open left end of plank, small tick mark near pivot top).",
+ "primary_gap": "The adult who bends, lifts the child onto the seesaw and later takes it off is absent, so the child appears in frame 9, is seated in frame 10 and vanishes in frame 16 with no visible cause or motion.",
+ "closes_when": "Frames 2-9 show something (an adult figure or at minimum the child figure) moving continuously from the lower left up onto the plank's raised end, and frame 16 shows the child being lifted off rather than disappearing between frames.",
+ "protect": "The seesaw drawing exactly as in c.png (pivot triangle with doubled strokes, plank outline, tick mark), its position and slope matching the film's near seesaw (raised end upper left, low end lower right), the plank staying nearly still as in the film, and the child seated on the raised left end during frames 10-15 matching the film's timing and placement.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  9,
+  10,
+  12,
+  13,
+  16
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The seesaw reads as the c.png drawing itself; the only mismatch is the added stick-figure child, which is not part of the doodle and is drawn in a different, tidier stroke style.",
+ "still_frames_only": true,
+ "_packet": "lot869d86d7",
+ "_round": 3
+}

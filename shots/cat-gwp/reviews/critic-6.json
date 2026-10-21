@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frames 1-12: the doodled cat head sits in the upper left, tilted so its face points up and to the right, whiskers fanning left and right; between these frames it barely changes (small shifts in the right whiskers and eye outlines). Grey scenery on the right: a leaf, a second leaf near the whisker tips, a clover-like flower, and a curled leaf at the bottom. Frame 13: the head is suddenly upright and lowered, roughly frontal, with the left whiskers now starting inside the face at the left eye. Frames 14-16: the head is larger and lower in the frame, turned to face screen right, the right eye narrowed to a thin sliver near the right edge, the right whiskers short and stubby, the left whiskers drawn inside the face; frames 15 and 16 hold nearly the same pose. The bottom curled grey leaf is gone from frame 13 onward.",
+ "seen_film": "Frames 1-12: a close-up of a tabby cat with its head tilted up and to the right, eyes half closed, tongue tip out, held almost still with small bobs of the head and tongue. Frame 13: the cat turns its head (motion-blurred) toward screen right and lowers it, tongue still showing. Frames 14-16: the head is in three-quarter profile facing screen right, lower and closer to the camera, tongue in, ears up; it holds that pose with small movements.",
+ "named_subject": "A cat's head (a doodled cat face with ears, two eyes and whiskers)",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-12 of the animation match the film's long upward-tilted hold in timing and placement (head upper left, face tilted up-right). The turn happens at frame 13 in both, and frames 14-16 in both show the head lower, larger and turned to screen right, so the event and its timing are followed. But the change from frame 12 to 13 is an abrupt untilt plus a drop with the left whiskers relocated inside the face, and from 13 to 14 the head outline is redrawn about 20 percent larger with a new boxy shape, the right eye shrunk to a sliver and the right ear narrowed; there is no in-between drawing, so the turn reads as two cuts rather than one movement. The grey curled leaf at the bottom right is present in frames 1-12 and disappears at frame 13, which the film has no counterpart for.",
+ "primary_gap": "The head turn is delivered as two disconnected poses (frame 13 frontal, frame 14 redrawn larger and turned) instead of one continuous rotation, and the bottom scenery leaf pops out at the same moment.",
+ "closes_when": "Frames 13 and 14 show the same outline, ears and eye shapes progressively rotated toward screen right and scaled up by small steps from frame 12's drawing, and the curled grey leaf stays visible in frames 13-16.",
+ "protect": "The faithful use of the doodle's construction (open-gap angular head outline, separate pointed ears, polygonal eyes, straight multi-line whisker fans including the whisker that runs into the left eye); the long near-still hold in frames 1-12 matching the film's tilted pose; the turn starting exactly at frame 13 and ending facing screen right, lower and larger, as in the film; the grey scenery staying fixed while the character moves.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  13,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "Frames 14-16 redraw the head outline boxier and shrink the right eye to a sliver, which drifts from the doodle's rounded-polygon head and two comparably sized eyes, though it still reads as the same drawing turned.",
+ "still_frames_only": true,
+ "_packet": "lotce6cca16",
+ "_round": 6
+}

@@ -1,0 +1,25 @@
+{
+ "seen_animation": "A doodled raccoon (polygon head with dot eyes and smile, small ear tab, round body, tick legs, striped tail) stands at the lower right of the frame on a ground line, in front of grey zigzag grass and a curly grey bush on the right. Frames 1-4: the head is upright and faces left, the body is still, with small changes in the face. Frame 5: the head drops lower and slightly forward while still upright. Frame 6: the head is suddenly rotated about 60 degrees so the face points down toward the ground, and the body dome is taller. Frames 7-8: head stays tilted down, little change. Frame 9: the scenery shifts (grass starts lower, the ground line starts further right, the bush is lower) and the raccoon is in the same place with head down. Frames 9-16: the raccoon stays in place with its head down; the head angle changes back and forth between frames (less tilted in 10 and 12, more tilted in 11, 13-16).",
+ "seen_film": "A raccoon sits at the edge of tall grass above a muddy, weedy flat, centre-right of frame. Frames 1-4: it faces the camera with head up, looking around. Frames 5-6: it lowers its head toward the ground. Frames 7-8: head stays low, nose to the ground, body turning slightly to the left. Frame 9: the camera framing changes (grass edge lower in frame) and the raccoon is seen more side-on facing left. Frames 9-16: it stays roughly in place, head down, sniffing or foraging at the ground with small head movements.",
+ "named_subject": "A raccoon (the striped-tail doodle from c.png).",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement match: head up in frames 1-4 as in the film, head lowers at frames 5-6 as in the film, and the scenery shift at frame 9 coincides with the film's reframing at frame 9; the raccoon stays in the lower right in both. The weaknesses: between frames 5 and 6 the head goes from upright to rotated roughly 60 degrees face-down in a single step, with no in-between, and the body dome grows taller at the same moment. In frames 9-13 the head angle flips back and forth (tilted in 9, straighter in 10, more tilted in 11, straighter in 12, tilted in 13), which the film does not show; the film's raccoon holds a steady head-down pose with small sniffing movements. In frames 9-16 the film raccoon reads side-on facing left with the nose at the ground; the animation keeps a face-forward head rotated downward.",
+ "primary_gap": "The head-down action is a one-frame pop at 5 to 6 followed by head-angle flicker in frames 9-13, so the lowering and foraging do not read as one continuous movement.",
+ "closes_when": "The head rotates down gradually across frames 5-7 (about 20 degrees per frame) and then holds a steady angle in frames 9-16, changing only by a few degrees per frame for the sniffing motion.",
+ "protect": "The doodle's construction (polygon head with dot eyes and smile, ear tab, striped tail, short tick legs, single-weight black line); the timing of head up in 1-4 and head down from 5-6; the character's position at the lower right on the ground line; the scenery change at frame 9 matching the film's reframing; the sparse grey scenery that stays behind the character.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  10,
+  11,
+  12,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character keeps the c.png head, face, ear and striped tail, but from frame 5 on the body becomes a taller peaked dome than the doodle's flat oval body and the legs shrink to tiny ticks.",
+ "still_frames_only": true,
+ "_packet": "lotf9e2e5c2",
+ "_round": 5
+}

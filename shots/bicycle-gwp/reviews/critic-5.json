@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A close crop of a drawn bicycle front wheel: an open polygonal wheel with a flat stroke across its top gap, a curved handlebar stroke and a long diagonal tube stroke above it, three long spoke strokes crossing at the hub with a small L-shaped hub mark, and to the right a small hexagon on a short stick with a crossbar. Frames 1-2: spokes are near vertical, the stick hangs down from the hexagon; a grey scribbled bush sits at top left. Frames 3-8: the spokes tilt progressively clockwise toward diagonal, the hexagon-stick swings from hanging down to pointing right and then up-right, and the grey bush fades to a plain grey curve. Frame 9: grey cloud-like hedge outlines appear across the top and a new black slash appears at the top right edge; the whole wheel has shifted left and slightly down; the stick now points up with the crossbar on top. Frames 10-11: spokes continue rotating; stick tilts up-left. Frame 12: the stick flips so the hexagon is upper right and crossbar lower left; a second grey hedge outline appears. Frames 13-16: spokes reach near horizontal, the stick points down again and ends lower right in frame 16. The bike drifts very little; it reads as one slow wheel rotation plus one crank revolution.",
+ "seen_film": "A tracking shot of a boy riding a bicycle left to right, framed on the front wheel, fork and fender, with the rider's jeans-clad leg and sneaker on the pedal at the right; a second bicycle's wheel is partly visible at left. Frames 1-4: foot is low near the bottom right of the wheel. Frames 5-8: the leg lifts, knee bending, foot moving up and forward toward the fork. Frames 9-11: a dark hedge enters at top left; the foot is high and forward, beside the wheel's right-center, the shin near vertical. Frames 12-16: the foot pushes down and back to the lower right as the leg straightens. The wheel stays at roughly the same place, drifting slightly left and down in frames 9-16. The event is one pedal stroke of the rider's leg while the bike rolls past a wall and then a hedge.",
+ "named_subject": "The front wheel, fork and handlebar of the doodled bicycle, with a small hexagon-on-a-stick standing in for the pedal and foot.",
+ "verdict": "reference stronger",
+ "evidence": "Wheel placement follows the film: center near the same position in frames 1-8 and shifted left/down in frames 9-16 as in the film (compare frame 9 in both). Hedge entry at frame 9 matches the film's hedge entering at frame 9. The crank-stick goes down (1-2), right (6-7), up (9-10), and down again (13-16), roughly matching the film's foot low (1-4), rising (5-8), high (9-11), low (12-16). But the film's main moving subject, the rider's leg and shoe occupying the right third of every film frame, is reduced in the animation to a tiny hexagon-stick about one tenth the wheel's height, so the pedaling leg is not seen. Frame 11 to 12 the stick changes orientation by about 90-135 degrees at once (bar top-left with hexagon below in 11, hexagon upper-right with bar lower-left in 12), a larger step than any other pair. Frame 9 adds a black slash at the top right edge that was not there in frame 8, and frame 12 adds a second hedge outline at once. Frames 1-2 show a hooked lower end on one spoke that is gone in frame 3.",
+ "primary_gap": "The rider's leg and foot, which dominate the right side of every film frame and perform the pedal stroke, are absent and replaced by a tiny hexagon-stick that does not read as a leg pushing a pedal.",
+ "closes_when": "A doodle-style leg (two or three straight strokes for thigh, shin and foot, in the same thick black line) enters from the top right edge in every frame and its foot rises toward the fork in frames 5-11 and pushes down to the lower right in frames 12-16, matching the film's foot positions.",
+ "protect": "The doodle's open polygonal wheel with the flat top stroke, the curved handlebar and diagonal tube strokes, the three-spoke hub with the small L mark, the wheel's frame position and its left/down drift at frame 9, the grey hedge entering at frame 9, and the steady clockwise spoke rotation through frames 1-16.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  9,
+  12
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The wheel, fork and handlebar strokes match the doodle's front wheel, but the hexagon used as a pedal is the doodle's seat/head shape moved to a place it does not have in the drawing.",
+ "still_frames_only": true,
+ "_packet": "lot757c0977",
+ "_round": 5
+}

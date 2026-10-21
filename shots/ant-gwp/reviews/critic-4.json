@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Two line-drawn ants stand on a grey ground line in the lower middle of the frame, facing each other with their heads touching near x=190 of the panel; the left ant is larger (rear oval, big body oval, head facing right) and the right ant is smaller (head facing left, body oval, rear oval). Frames 1-4: both ants hold almost still, head to head. Frames 5-8: the left ant's body tilts slightly so its front rises and its legs angle back. Frames 9-13: the left ant rears up further, its big body oval tilting upward and its head lifting above the right ant's head, antennae spread; the right ant lowers its head under it. Frames 14-16: the left ant drops back to level, both ants stand level with heads pressed together, slightly left of the start position.",
+ "seen_film": "Two dark ants on a rock ledge, the left one facing right and the right one facing left, meeting head to head in the lower middle of the frame against a pale background with a white pebble below them. Frames 1-5: they stand level, antennae touching. Frames 6-10: the left ant raises its front, its body tilting up with long legs stretched, and the right ant keeps its head low under it. Frames 11-13: the left ant is at its highest, head over the right ant's head, antennae spread. Frames 14-16: the left ant lowers back to level and the two stand side by side with heads together, slightly further left.",
+ "named_subject": "Two ants (a larger left ant and a smaller right ant) meeting head to head",
+ "verdict": "bar met",
+ "evidence": "Placement matches: in both a.png and d.png the ants occupy the lower middle of the frame with heads meeting near the centre, the grey pentagon in a.png sitting where the film's white pebble is. Frames 1-4 in both are level and still. The rear-up happens in both: film frames 6-13 show the left ant tilted up with head over the right ant, animation frames 9-13 show the same tilt and head-over pose (b.png key 3 = frame 13 matches film frame 13 closely). Frames 14-16 in both show the left ant back down and both ants level with heads together, shifted slightly left. The ants are built from the doodle's pentagonal head with two antenna strokes, rounded body ovals joined by short connector lines, and short straight leg strokes. The rear-up in the animation starts later than in the film: film frame 6 already shows a clear tilt, animation frames 5-8 show only a small tilt. At frame 14 the two heads overlap into a knot of polygons and antenna strokes where the individual heads cannot be read.",
+ "primary_gap": "The left ant's rear-up begins about three frames late: the film is already clearly tilted at frame 6, while the animation stays nearly level until frame 9.",
+ "closes_when": "In animation frames 6-8 the left ant's big body oval is tilted upward and its head is raised above the right ant's head by roughly the amount seen in film frames 6-8.",
+ "protect": "Keep the doodle's construction (pentagonal heads with two straight antenna strokes, rounded body ovals joined by short connector lines, short straight leg strokes, no added detail), the head-to-head placement in the lower middle of the frame, the peak rear-up at frames 11-13, the return to level at 14-16, and the static grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  14
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "Both ants read as the doodle's three-part ant with its pentagonal head and stick legs, though the right ant's rear oval is drawn smaller than the doodle's rear oval and the heads blur together into overlapping polygons at frame 14.",
+ "still_frames_only": true,
+ "_packet": "lotaeeacc0f",
+ "_round": 4
+}

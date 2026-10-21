@@ -1,0 +1,28 @@
+{
+ "seen_animation": "A long-necked four-legged doodle animal stands left of a grey tree, with a grey bucket under the tree, grass at lower left, a cloud and a diagonal ground line. Frames 1-4: it stands in profile facing left with its head raised high toward the upper left, and barely changes. Frame 5: the head comes down to neck height and points left. Frame 6: the head drops low toward the ground on the left. Frame 7: the body shrinks and starts to turn; the legs become separate vertical strokes, some not attached to the body. Frames 8-12: the animal is seen roughly from the front; the head becomes a small tangled cluster of strokes and the legs a bundle of verticals, drifting slightly right and down. Frames 13-14: it is back in profile, now facing right, walking toward the tree trunk with the head forward at the trunk. Frames 15-16: the view shifts (cloud and tree move left, grass leaves the frame) and the animal, drawn larger, stands right of center with its long neck bent down so the head is over the bucket.",
+ "seen_film": "A dog stands on a sunlit path beside a person in a long coat at the left edge, with a metal pan on the ground at lower center-right. Frames 1-5: the dog stands facing left toward the person with its head raised up toward the person's hand. Frames 6-8: the dog lowers its head and turns away from the person, toward the camera and to the right. Frames 9-12: the dog stands and walks slowly forward toward the camera, near center, facing the viewer. Frames 13-14: the dog steps right and down toward the pan, head lowering. Frames 15-16: the camera follows right and closer; the dog stands behind/right of the pan with its head down at it, about to drink or eat.",
+ "named_subject": "A dog, drawn in the doodle's style as a long-necked four-legged animal (the doodle itself reads as a dog/llama-like quadruped).",
+ "verdict": "reference stronger",
+ "evidence": "The event order matches the film: head raised to the upper left in frames 1-4 (film 1-5, dog looking up at the person), head lowering in 5-6 (film 6), turning to face the viewer in 7-12 (film 7-12), turning right toward the bucket in 13-14 (film 13-14), and head down at the bucket in 15-16 (film 15-16). Placement is roughly right: left-center early, center in 9-12, ending over the bucket. But the turn is not performed as one movement: between frame 6 (full profile, head down left) and frame 7 the body shrinks and the legs detach into loose strokes; frames 8-12 show the head as an unreadable knot of crossing strokes rather than the doodle's head with its outlined eye; frame 12 to 13 snaps from the frontal tangle back to a clean profile facing right; frame 14 to 15 the character jumps in size and position (larger, further right) together with the scenery shift. Frames 1-4 are nearly identical, so the film's small head motions near the person are not shown.",
+ "primary_gap": "The turn from facing left to facing right (frames 7-12) is drawn as a collapsed frontal tangle with detached legs instead of the doodle's own head, neck and body rotating, so the middle of the shot does not read as the same dog turning and walking toward the camera.",
+ "closes_when": "Frames 7-12 show the doodle's recognizable head (outlined almond eye, pointed snout) and neck swinging from left to toward-viewer to right, with all four legs attached to the body box and moving in steps, with no frame where the head becomes a scribbled cluster.",
+ "protect": "The doodle's construction in frames 1-6 and 13-16 (long curved neck, almond eye outline, boxy body, loose rectangular legs with the triangle foot), the correct event order and timing against the film (head up, head down, turn, walk to the bowl, head down at the bowl), the ending with the head over the bucket in 15-16, and the sparse grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  15
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "In frames 1-6 and 13-16 the character is clearly the doodle, but in frames 7-12 it loses the doodle's head and body construction and becomes a tangle of strokes that does not look like c.png from any angle.",
+ "still_frames_only": true,
+ "_packet": "lot56b5c0ab",
+ "_round": 4
+}

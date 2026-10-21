@@ -1,0 +1,23 @@
+{
+ "seen_animation": "Frames 1-12 show a large flat box shape drawn in black: a wide four-sided top (a back edge across the top of the frame, two slanted lines running from upper left to lower right, a front edge across the middle) with a short vertical drop at the front-left corner and a separate lower line under the front edge. Across frames 1-12 the box barely changes; it shifts a little down and right, and the left corner is drawn as two or three near-parallel crossing strokes. In frame 12 the right end of the front edge becomes a thicker stroke that runs out to the right border. From frame 13 to 16 the box flattens and turns: the left side becomes a long low diagonal running from the left border down to a front corner near the centre-right, the top becomes a thin wedge, and the right part of the shape leaves the frame. Grey wavy marks at upper right and lower left stay roughly fixed as scenery.",
+ "seen_film": "An aircraft carrier sails toward the camera, seen from above and slightly ahead. Frames 1-8: the ship is nearly bow-on, the flight deck a wide flat trapezoid with the island and parked aircraft at the top, the V-shaped bow and bow wave below; the ship slowly drifts rightward and grows slightly. Frames 9-12: the ship begins to yaw, the port side of the hull becomes visible on the left. Frames 13-16: the ship has turned further, the deck front edge sits lower-right of centre, the long port side of the hull runs back to the upper left, and the ship fills the right and lower part of the frame.",
+ "named_subject": "An aircraft carrier (flight deck and hull) seen from above, sailing toward and turning past the camera.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-12 hold an almost unchanged box while the film shows steady approach and a gradual yaw beginning around frame 9; the animation's turn is compressed into frames 13-16, with the largest single change between 12 and 13 (left side edge goes from a short steep stroke to a long low diagonal, top shape collapses from a square to a wedge). Frame 12 adds a thick stroke at the right end of the front edge that is not in 11 or 13. In frames 1-11 the front-left corner is drawn as two or three crossing near-parallel strokes, which reads as doubling. The V-shaped bow and bow wave that dominate the lower half of every film frame are absent; the animation's box sits in the upper two-thirds and is larger than the ship's deck in the film.",
+ "primary_gap": "The turn of the ship is concentrated in a jump at frames 12-13 instead of the film's gradual yaw from about frame 9 onward, and the drawing is a generic wide box rather than the long thin slab of the doodle.",
+ "closes_when": "The deck rotates by small even steps from frame 9 to 16 with no single-frame reshape, the left corner is one clean stroke per edge, and the shape keeps the doodle's elongated low-slab proportions and slight stroke wobble while sitting where the film's ship sits.",
+ "protect": "The overall direction of the event (a deck that drifts right and turns so its left side lengthens into a diagonal by frame 16), the sparse black line count, and the steady grey water marks.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  12,
+  13,
+  15
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The doodle is a long narrow slanted slab with a stepped wobbly lower edge, while the animation draws a wide nearly square box with straight ruled edges, so it does not read as the same drawing.",
+ "still_frames_only": true,
+ "_packet": "lot37bf2f85",
+ "_round": 4
+}

@@ -93,17 +93,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca long-necked four-legged animal, read as a horse or dog\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA dog, drawn in the doodle's style as a long-necked four-legged animal (the doodle itself reads as a dog/llama-like quadruped).\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/dog-gwp/reviews/critic-3.json"
+  "evidence": "shots/dog-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "Frames 1-5 match the doodle's head, eye, neck and rectangular rump closely, but from frame 13 on the rump rectangle is drawn twice, overlapping, so the body looks doubled.",
-  "evidence": "shots/dog-gwp/reviews/critic-3.json"
+  "ok": false,
+  "note": "In frames 1-6 and 13-16 the character is clearly the doodle, but in frames 7-12 it loses the doodle's head and body construction and becomes a tangle of strokes that does not look like c.png from any angle.",
+  "evidence": "shots/dog-gwp/reviews/critic-4.json"
  }
 ]

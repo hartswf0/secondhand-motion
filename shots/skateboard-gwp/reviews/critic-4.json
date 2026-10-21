@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A black-line skateboard (a long deck with two round wheels under it) rides in front of a fixed grey backdrop of two trees and some vertical post lines. Frames 1-2: the board is small, near the center-left of the frame, drawn almost end-on, with two narrow oval wheels close together; a small grey cone stands at left. Frames 3-4: the board is shifted right and redrawn as a side view with a longer deck and rounder wheels, while the cone grows larger at left. Frame 5: the board is back toward center-left, larger, and tilted nose-down to the right; a tall cone fills the left edge. Frame 6: the cone is cut off at the left edge. Frames 7-16: the cone is gone and the board stays at roughly the same place, center-left, rocking slightly in tilt (more nose-down in 7-8, flatter by 16) with small drifts left and right. The trees never move.",
+ "seen_film": "A low, ground-level camera follows a skateboarder in jeans and yellow shirt from behind as he rides down a sloped street. Frames 1-2: the board is center, seen from behind and a little to the side, with a small orange cone ahead at left. Frames 3-4: the board is at the right of the frame and the cone grows larger at left-center as the rider approaches it. Frame 5: the board is back near center and the cone is large at the left edge. Frame 6: the cone is passing out of frame at the left edge. Frames 7-16: the cone is gone; the rider carves along the street with the board staying roughly center to center-left, leaning slightly, while the background (trees, fence, houses, parked vans) pans and blurs past.",
+ "named_subject": "a skateboard (deck with two wheels), standing in for the skateboard under the rider in the film",
+ "verdict": "reference stronger",
+ "evidence": "Judged from still frames only, not playback. The event and timing follow the film: the cone is small at left in frame 1, grows in frames 3-4, is tall at left in frame 5 and is cut off at the left edge in frame 6, then is gone from frame 7 onward, the same as in the film. The board positions also track the film: center-left in frames 1-2, right in 3-4, back to center-left in 5, and roughly fixed center-left in 7-16. The weakness is between frames 2 and 3: the board changes from a small, near end-on drawing with narrow oval wheels close together (frames 1-2) to a long side-view deck with large round wheels (frame 3 onward). This reads as a redraw rather than a turn, and the frame 1-2 drawing does not match the doodle. Frame 5 also enlarges the board noticeably while jumping left; the film has the same leftward move, so that position change is justified, but the size jump adds to the pop. Frames 5-16 are consistent and close to the doodle. The grey trees stay fixed for all 16 frames, while the film background pans continuously, so the sense of travel is weaker.",
+ "primary_gap": "In frames 1-2 the board is drawn as a different, foreshortened object with small narrow wheels, and it switches to the doodle's side view at frame 3 without an intermediate turn, which reads as a redraw pop.",
+ "closes_when": "Frames 1-4 show the same doodle deck and round wheels as frames 5-16 at a steady size, with any change in viewing angle spread gradually across frames 1-5 so that no single frame-to-frame step changes the wheel shape or deck length abruptly.",
+ "protect": "The cone timing (small at frame 1, growing through 3-4, tall at left in 5, exiting at the left edge in 6, absent from 7); the board's placement following the film (center-left, right in 3-4, back center-left from 5); the faithful doodle drawing in frames 5-16 with its overhanging deck lines and large rounded polygonal wheels; the small tilt variation in frames 7-16 that reads as carving.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  5
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Frames 5-16 match the doodle, but frames 1-4 (most clearly 1-2) show a shorter deck with small narrow oval wheels that do not match the doodle's long deck and large round wheels.",
+ "still_frames_only": true,
+ "_packet": "loted7b2d16",
+ "_round": 4
+}

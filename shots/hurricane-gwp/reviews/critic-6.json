@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A black scribbled wave shape (long flat overlapping loops tapering to a point at the right, with loose dragging lines underneath) sits across the lower middle of the frame, in front of a grey peaked hut outline and a grey diagonal line. Frames 1-2: the wave lies nearly flat, tilted slightly down to the left. Frames 3-4: the whole wave rotates so its left end drops and its strokes spread apart into a steeper downward-left fan; the pointed right tip stays pinned at the same spot. Frames 5-7: it rotates back toward flat. Frames 8-12: it lies almost horizontal and nearly still, with small shifts of individual strokes. Frames 13-16: it tilts slightly down-left again, ending close to frame 1-2. The wave never travels across the frame; it pivots in place around its right tip.",
+ "seen_film": "A low, wide beach house with a dark overhanging roof stands across the middle of the frame, surf filling the lower half. Frames 1-4: waves break against the left end of the house and throw white spray up the left wall, strongest in frames 3-4. Frames 5-7: the surge runs along the front of the house at its base and the spray at the left drops back. Frame 8 onward: the breaking stops; frames 9-16 show churning foamy water flowing past the base of the house with no big splashes, the camera framing slightly lower. The main event is a wave hitting the house at the left and then subsiding into steady churning water.",
+ "named_subject": "An ocean wave / surf (a scribbled breaking wave)",
+ "verdict": "reference stronger",
+ "evidence": "Frames 3-4 of the animation show its largest change (the wave tilting down to the left), which matches in timing the film's peak spray at the left of the house in frames 3-4, and frames 8-12 go flat and calm as the film's water calms. But in the film the energy is a splash rising upward against the left end of the house; in the animation frames 3-4 the left end of the wave moves downward and outward, away from the house, and nothing rises. The wave is pinned at its right tip in all 16 frames, so there is no motion of water toward or past the house. Frames 4 to 5 show a sizeable rotation back in one step, and frames 13-16 re-tilt the wave although the film stays calm there.",
+ "primary_gap": "The wave only pivots in place around its right tip and drops its left end, so it never reads as water striking the house and splashing up at the left as the film shows in frames 1-7.",
+ "closes_when": "In frames 1-4 the wave's left portion lifts upward and forward against the left wall of the grey house (strokes rising above the wave's baseline), falls back in frames 5-7, and then stays low and flat with only small rolling motion through frames 8-16.",
+ "protect": "The character is drawn with exactly the doodle's strokes (long flat looped strokes, pointed right tip, loose trailing lines underneath) and keeps that construction in every frame; the timing of the biggest change at frames 3-4 and the calm stretch in frames 8-12 already line up with the film.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  5
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated wave uses the same stroke set and shape as c.png; only in frames 3-4 the strokes fan apart more than the doodle ever does, which is acceptable.",
+ "still_frames_only": true,
+ "_packet": "lotaa5c8683",
+ "_round": 6
+}

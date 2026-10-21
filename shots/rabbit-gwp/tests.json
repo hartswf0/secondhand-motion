@@ -102,17 +102,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca rabbit\u201d; motion broken; follows the film: yes",
+  "value": "named \u201ca rabbit\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/rabbit-gwp/reviews/critic-3.json"
+  "evidence": "shots/rabbit-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The animated rabbit uses the same open single-line outline, two long pointed ears, spike front leg and bumped rump as the doodle, mirrored to face right, though the head in frames 1-2 is drawn tall and narrow and loses the doodle's rounded snout.",
-  "evidence": "shots/rabbit-gwp/reviews/critic-3.json"
+  "ok": false,
+  "note": "Only frames 6-14 resemble the c.png rabbit (mirrored), and even there the ears cross over each other instead of standing apart in a V, while frames 1-5 use a different construction (P-shape, frontal round body) that is not the doodle.",
+  "evidence": "shots/rabbit-gwp/reviews/critic-4.json"
  }
 ]

@@ -1,31 +1,31 @@
 [
  {
   "id": "M2",
-  "value": 30,
+  "value": 23,
   "unit": "percentile among real doodles of the category",
-  "ok": true,
+  "ok": false,
   "per_key": [
-   31,
-   30,
-   30,
-   29,
-   29,
-   27,
-   28,
-   31,
-   32,
-   29,
-   30,
-   29,
-   31,
-   32,
-   32,
-   31,
-   32,
-   30,
-   31,
-   28,
-   30
+   25,
+   25,
+   24,
+   24,
+   24,
+   22,
+   23,
+   22,
+   23,
+   23,
+   23,
+   21,
+   23,
+   23,
+   23,
+   22,
+   23,
+   22,
+   23,
+   22,
+   23
   ]
  },
  {
@@ -44,13 +44,13 @@
  },
  {
   "id": "M6",
-  "value": 45.5,
+  "value": 45.8,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
  {
   "id": "T3",
-  "value": "15 strokes, 78 vertices, every frame",
+  "value": "16 strokes, 80 vertices, every frame",
   "unit": "",
   "ok": true,
   "note": "the doodle itself, bent by the rig"
@@ -89,17 +89,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cThe front wheel, fork and front frame of the doodled bicycle, with a small hexagon-on-bar standing for the pedal/foot.\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cThe front wheel, fork and handlebar of the doodled bicycle, with a small hexagon-on-a-stick standing in for the pedal and foot.\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/bicycle-gwp/reviews/critic-4.json"
+  "evidence": "shots/bicycle-gwp/reviews/critic-5.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The wheel, fork and frame strokes are the doodle's own, but the hexagon-on-bar pedal is not in c.png and the oversized spokes in frames 3-5 and 11-13 depart from the doodle's spokes, which stay inside the rim.",
-  "evidence": "shots/bicycle-gwp/reviews/critic-4.json"
+  "note": "The wheel, fork and handlebar strokes match the doodle's front wheel, but the hexagon used as a pedal is the doodle's seat/head shape moved to a place it does not have in the drawing.",
+  "evidence": "shots/bicycle-gwp/reviews/critic-5.json"
  }
 ]

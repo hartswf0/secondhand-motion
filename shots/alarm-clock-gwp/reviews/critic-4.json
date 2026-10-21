@@ -1,0 +1,25 @@
+{
+ "seen_animation": "A doodled alarm clock (round face, two loop bells on top, two hand strokes, two short leg ticks) stands on a shelf line between a grey telephone at left and a grey lamp/vase at right. Frame 1: an arm drawn as two long parallel lines ending in an angular flat polygon enters from the upper left and rests over the clock's left bell. Frames 2-4: the clock face narrows into an upright ellipse and a second offset ellipse outline appears beside it, so the rim is drawn twice; the polygon hand slides right over the top of the clock. Frames 5-10: the clock is held as a narrow tall ellipse; the two bells collapse into a cluster of three or four overlapping loops; the two clock-hand strokes stay long and cross past the right edge of the narrow ellipse; the polygon hand sits as a small flat block on top. Frame 11: the face widens back to a near circle with a doubled right rim, bells separate. Frame 12: face is round and frontal again; the arm now touches the clock's left side. Frames 13-14: the arm pulls back to the left, its end redrawn as a hooked shape over the telephone. Frame 15: arm gone except a small dark mark at the left frame edge. Frame 16: clock at rest, frontal, identical to frame 1 without the arm.",
+ "seen_film": "A woman's hand reaches in from the left and grips the top of a brass twin-bell alarm clock on a dark table, with a pink telephone at left and a brass lamp base at right. Frames 2-4: the hand turns the clock about its vertical axis so the face rotates toward the left and becomes a narrow foreshortened oval while the metal body and back come into view on the right. Frames 5-10: the clock is held turned, face mostly edge-on at left, fingers working at the top/back (setting the alarm). Frames 11-12: the hand turns the clock back to face the camera, fingers on the face's left side. Frames 13-15: the hand lets go and withdraws to the left edge. Frame 16: the clock stands alone facing front.",
+ "named_subject": "An alarm clock with two bells and two feet, turned around and back by a hand.",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement follow the film: the hand is on the clock top in frame 1 in both; the face is narrowed by frames 4-5 and held narrow through 10 in both; it returns frontal at 11-12 and the hand withdraws in 13-15 with the clock alone in 16, in the same left-center screen region. Weaknesses: in frames 2-4 and 11 the face outline is drawn as two offset ellipses, which reads as a doubled drawing rather than the clock's body depth; in frames 5-10 the two bells become a tangle of three or four overlapping loops instead of two bells turned in perspective; in frames 4-10 the clock-hand strokes keep their full frontal length and cross outside the narrowed face; the hand is a flat angular block with no fingers in frames 1-10 and changes shape abruptly between frame 12 (flat end against the clock side) and frame 13 (hooked end), so it does not read as one hand gripping and releasing. Judged from still frames only.",
+ "primary_gap": "The turned clock in frames 2-11 is drawn as overlapping, doubled outlines (two rim ellipses, a cluster of bell loops, hand strokes overrunning the face) instead of one cleanly foreshortened doodle clock.",
+ "closes_when": "In frames 2-11 the face is a single ellipse with one optional thin body edge on its right, the two bells read as two loops compressed together (left bell partly hidden), and the clock-hand strokes shrink horizontally so they stay inside the narrowed face.",
+ "protect": "The film's timing (turn by frame 4-5, hold through 10, turn back at 11-12, release 13-15, rest 16); the clock's position on the shelf matching the film; frames 1 and 12-16 being exact copies of the doodle's construction (gapped circle, two open bell loops, two straight hand strokes, short leg ticks); the grey scenery staying constant.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  4,
+  5,
+  11,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The clock is the c.png doodle in the frontal frames, but in the turned frames 5-10 its bells and face are redrawn as overlapping loops that the doodle's sparse, gapped single-stroke style does not contain.",
+ "still_frames_only": true,
+ "_packet": "lotf903217d",
+ "_round": 4
+}

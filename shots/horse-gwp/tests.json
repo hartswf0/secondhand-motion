@@ -23,7 +23,7 @@
    14,
    20,
    35,
-   39,
+   34,
    28
   ]
  },
@@ -87,17 +87,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA horse's head and neck (a horse lowering its head to eat).\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca horse's head and neck (mane, two ears, one or two eyes, muzzle)\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/horse-gwp/reviews/critic-4.json"
+  "evidence": "shots/horse-gwp/reviews/critic-5.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "The mane is redrawn as a top zigzag, then a cluster, then vertical tufts instead of the doodle's one zigzag line running down the back of the neck, and the frontal oval head with two eyes in frames 1-4 and 13-16 is a construction the doodle does not contain.",
-  "evidence": "shots/horse-gwp/reviews/critic-4.json"
+  "ok": true,
+  "note": "The profile frames 5-10 read as the doodle's construction (scribble eye, leaf ears, jaw hook, zigzag mane) mirrored to face right, but the front-view frames 1-4 and 13-16 use a long oval face that the doodle never draws, and the ears in 13-16 become crossed tangled strokes unlike the doodle's two clean ear loops.",
+  "evidence": "shots/horse-gwp/reviews/critic-5.json"
  }
 ]

@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Judged from still frames only, not playback. A black-line roller-coaster lift hill: two parallel rails with short tick crossties rise from the lower left to a sharp peak, with a single line falling away to the right and a second line dropping from under the rails toward the bottom right. A chain of about five small box cars with short wheel/rider ticks sits on the rails. Grey scenery is a cloud at upper right and a tower with a flat cap above the peak. Frames 1-8: the whole drawing slides down the frame (the peak drops from near the top edge to about one third down) and the grey tower comes fully into view by frame 5. Frames 1-2 have extra crossed ties at the far lower left that are gone by frame 3. Frames 9-11: the framing is settled and the cars stay at about the same place, mid-slope. Frames 12-16: the cars climb up the rails, ending just below the peak in frame 16.",
+ "seen_film": "A real wooden roller coaster lift hill shot from below: the climbing track runs from lower left to a crest topped by a tall open tower with a dark sign, with other curved coaster tracks and a large building of track structure to the right and trees at the far right. Frames 1-8: the camera tilts up/the image shifts down, so the crest and tower move from the top edge to about one third down and more sky shows. A train full of riders is on the lift hill throughout and climbs steadily: it is high on the slope already in frames 1-4, and from about frame 9 to 16 its front car sits close under the tower, cresting the top at frames 13-16.",
+ "named_subject": "A roller-coaster lift-hill track (the doodle in c.png) with a small train of cars climbing it",
+ "verdict": "reference stronger",
+ "evidence": "Framing matches: in both a.png and d.png the peak descends from the top edge (frame 1) to about one third down (frames 8-9) and holds through 16, and the tower enters above the peak by frames 4-5. Train position does not match: in d.png frames 8-12 the front car is already right under the tower, while in a.png frames 8-11 the cars sit mid-slope roughly a third of the slope below the peak and barely move; the a.png cars only travel upward in frames 12-16 and reach just below the peak in frame 16, where d.png shows the train at the crest from about frame 13. In a.png frames 1-2 extra crossed ties at the lower-left edge disappear in frame 3. Track drawing in all frames keeps the doodle's double rail, slanted tick ties, sharp apex and two right-hand descending lines.",
+ "primary_gap": "The cars stall mid-slope in frames 8-11 and then catch up in frames 12-16, so the train is behind the film's steady climb and reaches the crest late instead of being near the top from frame 8 onward.",
+ "closes_when": "The cars advance a similar amount up the rails in every frame from 1 to 16, with the front car right under the peak by frames 8-9 and at the crest by frames 13-16, as in d.png.",
+ "protect": "The doodle's track construction (two rails, slanted tick crossties, sharp apex, right-hand descending lines) held stable across frames; the frame 1-8 downward slide of the whole scene matching the film's camera tilt; the tower entering above the peak at frames 4-5; the simple box-car train drawn in the same thin line language.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  3
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The track reads as the c.png doodle, though it is straightened (the doodle's bend in the lower rails is flattened) and the added box-car train is not part of the doodle.",
+ "still_frames_only": true,
+ "_packet": "lotf61b928e",
+ "_round": 4
+}
