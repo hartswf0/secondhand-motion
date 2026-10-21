@@ -1,0 +1,22 @@
+{
+ "seen_animation": "a.png: a fixed black ladder leans up and to the right from the ground line, with grey scenery (tree, slope lines, vertical fence strokes) behind it. Frame 1: a stick figure stands at lower left, knees bent. Frame 2: it has stepped right to the ladder foot. Frames 3-4: it is at the base of the ladder, hands on the rails, one foot on the lowest rung. Frames 5-8: it climbs the lower third, arms reaching up alternately, legs stepping on rungs. Frames 9-12: it climbs the middle section, one arm raised high in 11-12. Frames 13-16: it reaches the top of the ladder, crouched with knees spread, and in 16 its head is above the top end of the ladder. The ladder itself does not move.",
+ "seen_film": "d.png: a man in a white wrap, seen from behind, approaches a tall leaning ladder set against a large haystack. Frame 1: he enters at lower left. Frames 2-4: he reaches the ladder foot and steps on. Frames 5-8: he climbs the lower part, staying on the left side of the ladder. Frames 9-12: he climbs through the middle. Frames 13-16: he reaches the upper part of the ladder near the top of the stack; the ladder stays in place throughout.",
+ "named_subject": "A ladder (the doodle in c.png) leaning against a haystack, with a stick figure climbing it as the man in the film does.",
+ "verdict": "bar met",
+ "evidence": "a.png 1 vs d.png 1: figure at lower left of frame in both. a.png 3-4 vs d.png 3-4: figure at the ladder foot in both. a.png 8 vs d.png 8: figure about one third up the ladder in both. a.png 12 vs d.png 12: figure in the upper half in both. a.png 16 vs d.png 16: figure at the top of the ladder in both. The ladder in every frame of e.png matches c.png stroke for stroke (two slightly bowed rails, six rungs, the short broken rung near the foot, the extra tick at the bottom left rail) and holds still, as the ladder does in f.png. e.png heads rise steadily from frame 9 to 38 with no reversal; g.png shows one continuous path from lower left onto and up the ladder. Small pose pops: e.png 8 to 9 (arms spread wide then suddenly folded) and 29 to 30 (legs switch from straight to a wide bent hexagon shape in one frame). Judged from still frames only, not playback.",
+ "primary_gap": "From e.png frame 30 to 38 the figure's legs are drawn as a wide bent hexagon spreading outside the ladder rails and its head ends above the ladder top, while in f.png 30-38 the man keeps climbing with legs on the rungs and ladder still extending past him.",
+ "closes_when": "In e.png 29-38 the figure's feet stay on rungs between the rails with alternating leg steps, the change from frame 29 to 30 is gradual, and at frame 38 the ladder top still extends at or above the figure's shoulders as in f.png 38.",
+ "protect": "The ladder drawn exactly as c.png and held fixed in the same place as the film's ladder; the figure's timing (lower left at 1, ladder foot by 4-5, one third up by 16, top by 32-38); the steady upward head path with no reversals; the plain thin-line stick construction that matches the doodle's stroke weight; the grey scenery placement matching the haystack, trees and fence.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  9,
+  30
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The ladder is the c.png drawing unchanged and held still as in the film; the climbing stick figure is an added element not present in c.png, though its thin plain strokes are consistent with the doodle.",
+ "still_frames_only": true,
+ "_packet": "lotb20fbd24",
+ "_round": 7
+}
