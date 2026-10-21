@@ -14,19 +14,30 @@ def series(name):
     b=a.copy(); b[1:-1]=0.25*a[:-2]+0.5*a[1:-1]+0.25*a[2:]   # light smoothing of the by-eye readings
     return b
 HEAD,WAIST=series('head'),series('waist')
+# The drawn ladder is shorter than the film's (its top is at y 51 where the film's runs out of the frame), so every
+# reading is scaled about the ladder's foot so that the climb ends on the drawn ladder with the head inside the frame.
+BASE=np.array([100.,285.]); K=0.865
+def fit(q): return BASE+(np.array(q,float)-BASE)*K
+HEAD=np.array([fit(q) for q in HEAD]); WAIST=np.array([fit(q) for q in WAIST])
+# one body size: the torso keeps one length on the ladder (the film's readings shrink only because he leans in)
+for f in range(n):
+    d=HEAD[f]-WAIST[f]; L=np.hypot(*d); T=max(L,40.0) if f<8 else 40.0
+    HEAD[f]=WAIST[f]+d/L*T
+    lo=13.0-HEAD[f][1]
+    if lo>0: HEAD[f]+= [0,lo]; WAIST[f]+=[0,lo]
 LAD=[np.array(q,float) for q in json.load(open(R+'shots/ladder-gwp/shot.json'))['cast']['frames'][0]]   # the ladder doodle as placed (it does not move)
-def snap(q,lim=9):
-    # a hand or foot put on the ladder lands on the nearest drawn rail or rung, if one is close
+def snap(q,lim=30,rungs=False):
+    # a hand or foot put on the ladder lands on the nearest drawn rung (feet) or rail or rung (hands), if one is close
     best,bd=q,lim
-    for s in LAD:
+    for s in (LAD[2:] if rungs else LAD):
         for a,b in zip(s[:-1],s[1:]):
             d=b-a; t=np.clip(np.dot(q-a,d)/max(np.dot(d,d),1e-9),0,1); c=a+d*t; dd=np.hypot(*(q-c))
             if dd<bd: best,bd=c,dd
     return best
 def contact(f,limb):
-    p=np.array(MK['start'][limb],float)
+    p=fit(MK['start'][limb]); onl=limb in('lf','rf')
     for f0,f1,q in MK['moves'][limb]:
-        q=snap(np.array(q,float))
+        q=fit(q); q=snap(q,rungs=onl) if q[1]<270 else q
         if f>=f1: p=q; continue
         if f>f0:
             t=(f-f0)/(f1-f0); t=t*t*(3-2*t); lift=math.sin(math.pi*t)*5

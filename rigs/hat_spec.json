@@ -1,0 +1,213 @@
+{
+ "category": "hat",
+ "doodle_key_id": "5578352289120256",
+ "facing": 1,
+ "face_from": [
+  "br",
+  "bl"
+ ],
+ "note": "Quick, Draw! hat 5578352289120256, a bucket hat seen from the front. Stroke 0 is the brim, a closed loop wider than the crown. Stroke 1 is the crown, an arch from the brim's left side up over the top and down to the right. Strokes 2 and 3 are the two lines of the hat band across the front of the crown. The hat is one rigid object: it is placed by the two ends of the brim (bl at the left tip, br at the right tip), which set where it is, how big it is and how far it tilts. In the film the hat tilts and bobs as the man lowers and turns his head, and the drawing tilts and moves with the brim; no part of it bends.",
+ "strokes": [
+  [
+   [
+    29,
+    104
+   ],
+   [
+    16,
+    107
+   ],
+   [
+    1,
+    117
+   ],
+   [
+    0,
+    123
+   ],
+   [
+    11,
+    135
+   ],
+   [
+    69,
+    151
+   ],
+   [
+    119,
+    155
+   ],
+   [
+    198,
+    152
+   ],
+   [
+    238,
+    140
+   ],
+   [
+    254,
+    126
+   ],
+   [
+    255,
+    122
+   ],
+   [
+    250,
+    114
+   ],
+   [
+    238,
+    108
+   ],
+   [
+    203,
+    104
+   ]
+  ],
+  [
+   [
+    35,
+    102
+   ],
+   [
+    40,
+    68
+   ],
+   [
+    51,
+    41
+   ],
+   [
+    82,
+    13
+   ],
+   [
+    106,
+    2
+   ],
+   [
+    128,
+    0
+   ],
+   [
+    142,
+    3
+   ],
+   [
+    158,
+    15
+   ],
+   [
+    183,
+    48
+   ],
+   [
+    193,
+    85
+   ],
+   [
+    193,
+    105
+   ]
+  ],
+  [
+   [
+    13,
+    82
+   ],
+   [
+    15,
+    86
+   ],
+   [
+    37,
+    104
+   ],
+   [
+    60,
+    118
+   ],
+   [
+    100,
+    132
+   ],
+   [
+    134,
+    132
+   ],
+   [
+    157,
+    126
+   ],
+   [
+    184,
+    116
+   ],
+   [
+    202,
+    103
+   ]
+  ],
+  [
+   [
+    18,
+    78
+   ],
+   [
+    66,
+    102
+   ],
+   [
+    91,
+    108
+   ],
+   [
+    133,
+    113
+   ],
+   [
+    179,
+    108
+   ],
+   [
+    214,
+    89
+   ]
+  ]
+ ],
+ "root": [
+  "bl",
+  "br"
+ ],
+ "size_from_mask": false,
+ "size": "steady",
+ "anchors": {
+  "bl": [
+   0,
+   122
+  ],
+  "br": [
+   255,
+   122
+  ],
+  "top": [
+   128,
+   0
+  ]
+ },
+ "parts": [
+  {
+   "rest": true,
+   "joint": "bl",
+   "aim": [
+    "bl",
+    "br"
+   ],
+   "turn": 0
+  }
+ ],
+ "track": false,
+ "smooth": 1.2
+}

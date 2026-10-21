@@ -1,0 +1,266 @@
+{
+ "category": "garden hose",
+ "doodle_key_id": "4535542685368320",
+ "facing": 1,
+ "face_from": [
+  "fitting",
+  "ring"
+ ],
+ "note": "Quick, Draw! garden hose 4535542685368320. Strokes 0 and 1 are the two edges of the hose: they start at the left end, rise to a crown, bend at the shoulder and run down to the nozzle. Stroke 2 is the nozzle ring. Strokes 3 to 6 are water falling from the nozzle. In the film the hose leaves a brass fitting on the brake mechanism, arcs over and hangs down the right side, where a hand grips it and pulls. The root puts the left end on the fitting and the shoulder on the bend, which sets place, size and tilt. The hanging part (everything below the shoulder, with the ring and the water) turns about the shoulder toward the pose's ring point, so the hanging length swings when the hand pulls it.",
+ "strokes": [
+  [
+   [
+    0,
+    31
+   ],
+   [
+    51,
+    10
+   ],
+   [
+    94,
+    0
+   ],
+   [
+    139,
+    0
+   ],
+   [
+    167,
+    11
+   ],
+   [
+    180,
+    25
+   ],
+   [
+    187,
+    39
+   ],
+   [
+    196,
+    116
+   ],
+   [
+    213,
+    164
+   ]
+  ],
+  [
+   [
+    5,
+    52
+   ],
+   [
+    37,
+    38
+   ],
+   [
+    86,
+    29
+   ],
+   [
+    126,
+    29
+   ],
+   [
+    146,
+    51
+   ],
+   [
+    164,
+    95
+   ],
+   [
+    178,
+    167
+   ],
+   [
+    202,
+    168
+   ],
+   [
+    224,
+    165
+   ]
+  ],
+  [
+   [
+    211,
+    162
+   ],
+   [
+    184,
+    160
+   ],
+   [
+    171,
+    166
+   ],
+   [
+    171,
+    178
+   ],
+   [
+    176,
+    181
+   ],
+   [
+    207,
+    183
+   ],
+   [
+    219,
+    177
+   ],
+   [
+    225,
+    170
+   ],
+   [
+    223,
+    162
+   ],
+   [
+    212,
+    157
+   ]
+  ],
+  [
+   [
+    182,
+    183
+   ],
+   [
+    175,
+    187
+   ],
+   [
+    175,
+    194
+   ],
+   [
+    184,
+    210
+   ],
+   [
+    182,
+    235
+   ]
+  ],
+  [
+   [
+    207,
+    187
+   ],
+   [
+    203,
+    190
+   ],
+   [
+    203,
+    199
+   ],
+   [
+    212,
+    212
+   ],
+   [
+    214,
+    226
+   ]
+  ],
+  [
+   [
+    233,
+    181
+   ],
+   [
+    231,
+    197
+   ],
+   [
+    236,
+    223
+   ]
+  ],
+  [
+   [
+    190,
+    220
+   ],
+   [
+    190,
+    228
+   ],
+   [
+    198,
+    237
+   ],
+   [
+    199,
+    255
+   ]
+  ]
+ ],
+ "anchors": {
+  "fitting": [
+   2,
+   41
+  ],
+  "top": [
+   120,
+   15
+  ],
+  "shoulder": [
+   172,
+   48
+  ],
+  "ring": [
+   198,
+   170
+  ],
+  "spout": [
+   205,
+   245
+  ]
+ },
+ "root": [
+  "fitting",
+  "shoulder"
+ ],
+ "size_from_mask": false,
+ "size": "steady",
+ "track": true,
+ "smooth": 1.2,
+ "options": {
+  "size": "steady",
+  "smooth": 1.2,
+  "track": true
+ },
+ "parts": [
+  {
+   "region": [
+    140,
+    60,
+    255,
+    255
+   ],
+   "joint": "shoulder",
+   "aim": [
+    "shoulder",
+    "ring"
+   ],
+   "stretch": 0.3
+  },
+  {
+   "rest": true,
+   "joint": "fitting",
+   "aim": [
+    "fitting",
+    "shoulder"
+   ],
+   "turn": 0
+  }
+ ]
+}

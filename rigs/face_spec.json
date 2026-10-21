@@ -1,0 +1,365 @@
+{
+ "category": "face",
+ "doodle_key_id": "5796259950493696",
+ "facing": 1,
+ "face_from": [
+  "brow",
+  "brow"
+ ],
+ "note": "Quick, Draw! face 5796259950493696, a frontal face. Stroke 0 is the head outline with an ear bump on each side; stroke 1 is the L-shaped nose; strokes 2 and 3 are the left eye (a dot and a short line); stroke 4 is the right eye; stroke 5 is the smiling mouth. The film shows a still head in profile, facing right, whose lips open and close twice. The whole drawing is placed by two points, the brow and the chin, held upright at one size; a constant yaw turns it toward the right so the nose, eyes and mouth slide toward the film's profile edge. The only moving part is the mouth: the middle four points of stroke 5 move up or down by the pose entry 'open' (-1 shut, a nearly flat line; 0 the doodle's own smile; +1 wide open, a deep curve), and the two lowest chin points move down a little with it.",
+ "strokes": [
+  [
+   [
+    84,
+    1
+   ],
+   [
+    58,
+    13
+   ],
+   [
+    42,
+    32
+   ],
+   [
+    32,
+    56
+   ],
+   [
+    25,
+    95
+   ],
+   [
+    9,
+    90
+   ],
+   [
+    1,
+    100
+   ],
+   [
+    3,
+    130
+   ],
+   [
+    4,
+    132
+   ],
+   [
+    19,
+    136
+   ],
+   [
+    20,
+    177
+   ],
+   [
+    26,
+    190
+   ],
+   [
+    37,
+    200
+   ],
+   [
+    68,
+    207
+   ],
+   [
+    81,
+    217
+   ],
+   [
+    100,
+    222
+   ],
+   [
+    155,
+    224
+   ],
+   [
+    175,
+    212
+   ],
+   [
+    189,
+    197
+   ],
+   [
+    210,
+    159
+   ],
+   [
+    213,
+    142
+   ],
+   [
+    243,
+    136
+   ],
+   [
+    254,
+    125
+   ],
+   [
+    255,
+    111
+   ],
+   [
+    252,
+    105
+   ],
+   [
+    239,
+    94
+   ],
+   [
+    225,
+    90
+   ],
+   [
+    218,
+    82
+   ],
+   [
+    212,
+    60
+   ],
+   [
+    180,
+    21
+   ],
+   [
+    126,
+    9
+   ],
+   [
+    99,
+    7
+   ],
+   [
+    86,
+    0
+   ]
+  ],
+  [
+   [
+    113,
+    89
+   ],
+   [
+    97,
+    141
+   ],
+   [
+    129,
+    145
+   ]
+  ],
+  [
+   [
+    84,
+    54
+   ],
+   [
+    84,
+    54
+   ]
+  ],
+  [
+   [
+    82,
+    54
+   ],
+   [
+    86,
+    58
+   ],
+   [
+    97,
+    58
+   ],
+   [
+    95,
+    55
+   ]
+  ],
+  [
+   [
+    150,
+    55
+   ],
+   [
+    154,
+    60
+   ],
+   [
+    166,
+    59
+   ]
+  ],
+  [
+   [
+    68,
+    167
+   ],
+   [
+    88,
+    192
+   ],
+   [
+    104,
+    201
+   ],
+   [
+    141,
+    200
+   ],
+   [
+    161,
+    189
+   ],
+   [
+    168,
+    181
+   ]
+  ]
+ ],
+ "root": [
+  "brow",
+  "chin"
+ ],
+ "anchors": {
+  "brow": [
+   128,
+   30
+  ],
+  "chin": [
+   128,
+   224
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 5,
+   "from": 1,
+   "to": 4,
+   "joint": "brow",
+   "aim": [
+    "brow",
+    "chin"
+   ],
+   "turn": 0,
+   "shift_by": "open",
+   "shift": [
+    0,
+    14
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 14,
+   "to": 16,
+   "joint": "brow",
+   "aim": [
+    "brow",
+    "chin"
+   ],
+   "turn": 0,
+   "shift_by": "open",
+   "shift": [
+    0,
+    4
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 32,
+   "joint": "brow",
+   "aim": [
+    "brow",
+    "chin"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 2,
+   "joint": "brow",
+   "aim": [
+    "brow",
+    "chin"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 1,
+   "joint": "brow",
+   "aim": [
+    "brow",
+    "chin"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 3,
+   "joint": "brow",
+   "aim": [
+    "brow",
+    "chin"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 2,
+   "joint": "brow",
+   "aim": [
+    "brow",
+    "chin"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 0,
+   "joint": "brow",
+   "aim": [
+    "brow",
+    "chin"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 5,
+   "from": 5,
+   "to": 5,
+   "joint": "brow",
+   "aim": [
+    "brow",
+    "chin"
+   ],
+   "turn": 0
+  }
+ ],
+ "front_regions": [
+  [
+   60,
+   40,
+   180,
+   210
+  ]
+ ],
+ "size_from_mask": false,
+ "size": "steady",
+ "smooth": 0.8,
+ "track": false
+}

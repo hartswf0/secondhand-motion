@@ -1,0 +1,221 @@
+{
+ "category": "ice cream",
+ "doodle_key_id": "4766883213475840",
+ "facing": 1,
+ "face_from": [
+  "rimR",
+  "rimL"
+ ],
+ "note": "Quick, Draw! ice cream 4766883213475840, a cone with one scoop: stroke 0 is the cone's left side, stroke 1 its right side, stroke 2 the line where the scoop sits on the cone, stroke 3 the scoop's dome, stroke 4 a single dot on the scoop. In the film there is no cone: soft ice cream folds into a round carton seen from just above, so the rim line is the carton's rim, the two cone sides are the carton's walls running down out of frame, and the dome is the heap of ice cream. The drawing is placed by the two ends of the rim line, so it moves and tilts with the carton. The dome is cut at its top: its left half turns about the left rim end and its right half about the right rim end, both aimed at the crest point, so when the crest point rises, sinks or moves sideways the heap swells, settles and leans the way the folding ice cream does. The dot rides with the left half.",
+ "strokes": [
+  [
+   [
+    3,
+    85
+   ],
+   [
+    29,
+    149
+   ],
+   [
+    50,
+    255
+   ]
+  ],
+  [
+   [
+    50,
+    255
+   ],
+   [
+    57,
+    229
+   ],
+   [
+    86,
+    178
+   ],
+   [
+    110,
+    144
+   ],
+   [
+    128,
+    126
+   ],
+   [
+    155,
+    83
+   ]
+  ],
+  [
+   [
+    155,
+    83
+   ],
+   [
+    53,
+    83
+   ],
+   [
+    22,
+    88
+   ],
+   [
+    0,
+    87
+   ]
+  ],
+  [
+   [
+    0,
+    87
+   ],
+   [
+    0,
+    54
+   ],
+   [
+    10,
+    26
+   ],
+   [
+    22,
+    12
+   ],
+   [
+    39,
+    3
+   ],
+   [
+    53,
+    0
+   ],
+   [
+    88,
+    0
+   ],
+   [
+    112,
+    9
+   ],
+   [
+    129,
+    31
+   ],
+   [
+    145,
+    74
+   ]
+  ],
+  [
+   [
+    34,
+    15
+   ],
+   [
+    34,
+    15
+   ]
+  ]
+ ],
+ "anchors": {
+  "rimL": [
+   0,
+   87
+  ],
+  "rimR": [
+   155,
+   83
+  ],
+  "crest": [
+   70,
+   0
+  ],
+  "dot": [
+   34,
+   15
+  ]
+ },
+ "root": [
+  "rimL",
+  "rimR"
+ ],
+ "size_from_mask": false,
+ "size": "steady",
+ "smooth": 1.2,
+ "track": false,
+ "parts": [
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 5,
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "crest"
+   ],
+   "stretch": 0.6
+  },
+  {
+   "stroke": 3,
+   "from": 6,
+   "to": 9,
+   "joint": "rimR",
+   "aim": [
+    "rimR",
+    "crest"
+   ],
+   "stretch": 0.6
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 1,
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "crest"
+   ],
+   "stretch": 0.6
+  },
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 2,
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 5,
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 3,
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0
+  }
+ ],
+ "options": {
+  "size": "steady",
+  "smooth": 1.2,
+  "track": false
+ }
+}
