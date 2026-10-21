@@ -1,25 +1,41 @@
 [
  {
   "id": "M2",
-  "value": 8,
+  "value": 3,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
    5,
-   5,
-   7,
-   9,
-   7,
-   7,
-   8,
-   9,
-   11,
-   12
+   5
   ]
  },
  {
   "id": "M2b",
-  "value": 0.15,
+  "value": 0.12,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": false,
   "design_typicality": 35
@@ -33,13 +49,13 @@
  },
  {
   "id": "M6",
-  "value": 0.7,
+  "value": 0.3,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
  {
   "id": "T3",
-  "value": "11 strokes, 70 vertices, every frame",
+  "value": "12 strokes, 76 vertices, every frame",
   "unit": "",
   "ok": true,
   "note": "the doodle itself, bent by the rig"
@@ -75,5 +91,20 @@
   "value": "complete",
   "unit": "",
   "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201ca spoked wagon wheel on an axle\u201d; motion broken; follows the film: partly",
+  "unit": "",
+  "ok": true,
+  "evidence": "shots/wheel-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_met",
+  "unit": "",
+  "ok": true,
+  "note": "The wheel reads as the c.png doodle (double rim, eight crossing spokes, one wavy spoke), but it is redrawn each frame instead of being one consistent drawing that rotates.",
+  "evidence": "shots/wheel-gwp/reviews/critic-1.json"
  }
 ]

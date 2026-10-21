@@ -1,18 +1,18 @@
 [
  {
   "id": "M2",
-  "value": 63,
+  "value": 58,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   41,
-   43,
+   21,
+   23,
+   49,
+   64,
    67,
-   76,
-   66,
-   66,
    65,
-   66,
+   65,
+   65,
    67,
    67,
    66,
@@ -23,17 +23,17 @@
  },
  {
   "id": "M2b",
-  "value": 0.83,
+  "value": 0.81,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 66
  },
  {
   "id": "M3",
-  "value": 0.17,
+  "value": 0.25,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.09
+  "min": 0.12
  },
  {
   "id": "M6",
@@ -82,17 +82,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca dolphin (the c.png dolphin doodle, mirrored to face left), standing in for the pale swimming animal in the film\u201d; motion smooth; follows the film: yes",
+  "value": "named \u201ca dolphin (the doodle's fish/dolphin outline, mirrored to face left, the direction of travel)\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/dolphin-gwp/reviews/critic-1.json"
+  "evidence": "shots/dolphin-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The character is the c.png dolphin mirrored to face left with its construction and stroke gaps kept; only the early clipped frames make it briefly hard to recognize.",
-  "evidence": "shots/dolphin-gwp/reviews/critic-1.json"
+  "note": "The character is the c.png doodle mirrored horizontally, with all its strokes kept, and it reads as the same drawing; the only drift is the dorsal fin growing in the late frames.",
+  "evidence": "shots/dolphin-gwp/reviews/critic-2.json"
  }
 ]

@@ -1,0 +1,26 @@
+{
+ "seen_animation": "A doodled spoked wheel (double-line rim, about eight straight spokes crossing at a hub, one wavy near-horizontal spoke) sits on a pair of black axle lines running left to right across a grey sketched yard. In frames 1-4 the wheel is a narrow upright ellipse seen nearly edge-on. Over frames 5-12 the ellipse widens and tilts so the wheel faces the viewer more. In frames 13-16 it is close to a full oval, slightly larger and a little lower-left, and a grey-and-black rectangular post appears at the right edge. The spoke pattern changes from frame to frame, but there is no marked spoke, so whether the wheel spins in a consistent direction cannot be read.",
+ "seen_film": "A real spoked carriage wheel with a white tape band on the tyre sits on an axle in a sunny gravel yard. The wheel turns clockwise in place: the tape band moves from the top (frames 1-4) down the right side (frames 5-12) to the lower right (frames 13-16). At the same time the camera angle changes, so the wheel goes from a narrow edge-on ellipse to a near-frontal oval and drifts slightly left and down. A wooden post enters at the right edge from about frame 13 (shot frame 20).",
+ "named_subject": "a spoked wagon wheel on an axle",
+ "verdict": "reference stronger",
+ "evidence": "The change in viewing angle matches the film well: e.png frames 1-8 show a narrow ellipse like f.png 1-8, frames 9-16 widen like f.png 9-16, and frames 17-26 are near-frontal ovals like f.png 17-26. The post appears at e.png 20 and f.png 20-21. g.png shows a compact path that drifts slightly left with no jumps or reversals. The film's main event, the wheel spinning clockwise as shown by the tape band moving from the top (f.png 1) to the lower right (f.png 26), cannot be seen in the animation. The spokes are not drawn as one rigid set rotating by a steady angle. Their arrangement reshuffles between e.png 4-5, 8-9, 12-13, 16-17, 20-21 and 22-23, and the wavy horizontal spoke switches between the left side (e.g. e.png 13-14) and the right side (e.g. e.png 17-20) instead of travelling around the hub. Judged from still frames only, not playback.",
+ "primary_gap": "The wheel's rotation is not legible: the spokes reshuffle irregularly instead of turning together clockwise, and nothing marks the rim the way the film's white tape band does.",
+ "closes_when": "Across e.png frames 1-26 the same eight spokes keep their angles to each other and step clockwise by a constant small angle each frame, and one rim feature (such as a short filled or hatched segment of the double rim) travels from the top at frame 1 down the right side to the lower right by frame 26, matching the tape band in f.png.",
+ "protect": "Keep the doodle's double-line rim, its straight, slightly uneven spokes with the one wavy spoke, and the loose rim corners. Keep the edge-on-to-frontal change in ellipse width timed to the film, the wheel's position on the axle lines, the steady path in g.png, the post entering at frame 20, and the light grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  9,
+  13,
+  17,
+  21,
+  23
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The wheel reads as the c.png doodle (double rim, eight crossing spokes, one wavy spoke), but it is redrawn each frame instead of being one consistent drawing that rotates.",
+ "still_frames_only": true,
+ "_packet": "lotcb23e9b6",
+ "_round": 1
+}

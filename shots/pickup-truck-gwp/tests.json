@@ -7,17 +7,17 @@
   "per_key": [
    6,
    6,
-   6,
-   6,
-   5,
    5,
    6,
+   5,
    6,
    6,
    6,
    6,
    6,
-   5
+   6,
+   6,
+   6
   ]
  },
  {
@@ -29,14 +29,14 @@
  },
  {
   "id": "M3",
-  "value": 0.69,
+  "value": 0.7,
   "unit": "fit to the SAM silhouette, frames with a mask",
-  "ok": false,
-  "min": 0.45
+  "ok": true,
+  "min": 0.46
  },
  {
   "id": "M6",
-  "value": 0.7,
+  "value": 0.6,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -78,5 +78,20 @@
   "value": "complete",
   "unit": "",
   "ok": true
+ },
+ {
+  "id": "J1",
+  "value": "named \u201cA car or truck carrying a horizontal boom with hanging boxes on each side.\u201d; motion smooth; follows the film: partly",
+  "unit": "",
+  "ok": false,
+  "evidence": "shots/pickup-truck-gwp/reviews/critic-1.json"
+ },
+ {
+  "id": "J4",
+  "value": "bar_not_met",
+  "unit": "",
+  "ok": false,
+  "note": "The vehicle is a redrawn generic box car with small inset wheels rather than the doodle's stepped cab-and-hood shape with big loose wheel loops.",
+  "evidence": "shots/pickup-truck-gwp/reviews/critic-1.json"
  }
 ]

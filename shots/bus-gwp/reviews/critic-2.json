@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A side-view doodled bus (stepped low hood at the left, slanted roof, four square windows, two loose oval wheels drawn below a separate underbody line) sits on a road drawn as diagonal grey lines with grey house outlines behind. Frames 1-8: the bus holds roughly in place and grows slightly while the scenery slides right. Frames 9-12: the bus is larger and lower in the frame; the rear end reaches the right edge and the rear wheel starts to leave frame. Frames 13-16: the bus is larger still, filling the width, only three windows and the front wheel remain visible, the roof near the top of the frame, and the houses become sparse grey strokes at the top.",
+ "seen_film": "A 1940s city bus (14 Mission) drives along a sloping street toward and past the camera, front at the left. Frames 1-4 it is mid-frame and small in front of a grocery and a tall house; frames 5-8 the camera pans and the bus grows as it approaches; frames 9-12 it is large, the rear begins to leave frame right; frames 13-16 it fills the frame, only the front, front wheel and forward windows visible, with motion blur in the background.",
+ "named_subject": "A bus (side view, front at the left) driving toward and past the camera.",
+ "verdict": "bar met",
+ "evidence": "Position and scale track the film frame by frame: a.png/d.png frame 1 both place the bus in the middle of the frame between about 40% and 80% of the width; frames 9-12 both show the bus large with the rear wheel leaving frame right (e.png 17-21 rear wheel shrinks to a partial arc at the right edge and is gone by 21, matching f.png 17-21); e.png 24 vs f.png 24 both have the front edge near x=45/250 and the front wheel near the middle. The size step at e.png 16->17 coincides with the same size step in f.png 16->17, so it is not an added pop. g.png shows a continuous, monotonic growth with drawing centers clustered and drifting right in 19-25, no reversals. The doodle's stepped hood, four boxy windows hanging from the roofline, and the separate oval wheels with a small hook stroke on the front wheel are kept in every frame. Judged from still frames only, not playback.",
+ "primary_gap": "As the bus scales up in e.png 17-25 the stroke weight stays hairline, so the late frames read thinner and lighter than the bold, even marker strokes of c.png.",
+ "closes_when": "Line thickness in e.png 17-25 grows in proportion to the bus size so the late frames show strokes as heavy relative to the drawing as in c.png.",
+ "protect": "Frame-by-frame match of position, size and timing to the film (including the 16->17 step and the rear wheel exiting at 17-21); the doodle's construction (stepped hood, four hanging windows, detached underbody line, oval wheels with the hook stroke); the grey scenery panning with the camera; the smooth monotonic path in g.png.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The drawing is c.png's bus with added perspective slant, but its line weight becomes thinner than the doodle's as it enlarges in the last third.",
+ "still_frames_only": true,
+ "_packet": "lotbaff3e8d",
+ "_round": 2
+}

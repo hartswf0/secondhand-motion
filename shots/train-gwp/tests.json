@@ -1,49 +1,85 @@
 [
  {
   "id": "M2",
-  "value": 28,
+  "value": 23,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   28,
-   28,
-   29,
-   28,
+   26,
+   26,
    25,
-   28,
-   27,
-   29,
-   28,
-   31,
-   29,
-   27,
-   29,
-   29
+   24,
+   26,
+   26,
+   26,
+   25,
+   25,
+   23,
+   24,
+   24,
+   23,
+   24,
+   24,
+   23,
+   23,
+   26,
+   23,
+   23,
+   23,
+   22,
+   23,
+   23,
+   23,
+   22,
+   22,
+   22,
+   22,
+   22,
+   21,
+   21,
+   21,
+   21,
+   21,
+   22,
+   22,
+   22,
+   22,
+   22,
+   22,
+   21,
+   21,
+   21,
+   21,
+   21,
+   21,
+   21,
+   21,
+   21
   ]
  },
  {
   "id": "M2b",
-  "value": 0.75,
+  "value": 0.61,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 69
  },
  {
   "id": "M3",
-  "value": 0.61,
+  "value": 0.45,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.53
+  "min": 0.31
  },
  {
   "id": "M6",
-  "value": 0.6,
+  "value": 0.9,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
  {
   "id": "T3",
-  "value": "9 strokes, 75 vertices, every frame",
+  "value": "12 strokes, 95 vertices, every frame",
   "unit": "",
   "ok": true,
   "note": "the doodle itself, bent by the rig"
@@ -82,17 +118,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA steam-style train/locomotive seen from the front, with smokestack and smoke\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201cA locomotive (drawn as the doodle's boxy train with arch door, chimney, smoke and polygon wheels) approaching, with a stick-figure worker who walks to it and grabs on.\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/train-gwp/reviews/critic-1.json"
+  "evidence": "shots/train-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The doodle is a long side view, and the animation turns it into a tall front view; it keeps the doodle's smoke squiggle, stack bracket, arch and pentagon wheels, but the doodle's slanted front edge and long low body are gone.",
-  "evidence": "shots/train-gwp/reviews/critic-1.json"
+  "ok": false,
+  "note": "The doodle's wide, low side-view body with slanted right front and small off-centre arch door has been replaced by a tall square front-view box with a huge centred arch, so only the chimney, smoke and wheel marks identify it as the same drawing.",
+  "evidence": "shots/train-gwp/reviews/critic-2.json"
  }
 ]

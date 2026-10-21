@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A lobster in black line, drawn as an upright tube body with a cross band, a V-shaped left claw pointing down at the left, and a right claw at the upper right edge. A small grey lobster sits at left and a grey table edge runs along the bottom. Frames 1-2: the right claw is held out to the upper right. Frame 3: the right claw swings down and points at the table. Frame 4: it sweeps inward toward the body's lower edge. Frames 5-16: the right claw lies across the front of the body as a long open shape, with one line running to the right edge and a short pincer tucked under the body. This pose holds with almost no change to the end.",
+ "seen_film": "A large dark lobster faces the camera on a cloth-covered table, with a small lobster at left. Frames 1-2: its right claw (screen right) is raised at the right edge of the frame. Frames 3-4: the claw drops down and curls inward at the lower right. Frames 5-6: the large claw swings across in front of the body and lies flat, opening toward the left. Frames 7-16: the lobster holds this pose with the big claw resting horizontally across the lower body, and only small shifts.",
+ "named_subject": "A lobster (the large lobster in the film) bringing its big right claw down and across the front of its body.",
+ "verdict": "reference stronger",
+ "evidence": "The event and timing match. e.png 1-6 holds the claw at the upper right while f.png 1-6 holds. e7-8 and f7-8 both drop the claw. e9-11 sweeps it inward as f9-11 curls it inward. e13-16 lays it across the body as f13-16 does, and both hold from about frame 17 to 50. The weakness is the claw drawing in transit. From e8 to e9 the claw goes from an inverted V hanging off the right edge to a vertical zigzag at lower right, with no in-between. From e11 to e12 the zigzag pincer flattens into a horizontal Z near the body. From e12 to e13 it is redrawn as a different construction: a straight line crossing the body, a small triangle under the body, and a long open curve to the right edge. After that the V-pincer form from c.png is no longer readable. In the held pose (e17-50) the right claw is a tangle of crossing lines over the lower body, where the film shows one solid claw shape.",
+ "primary_gap": "The right claw changes construction between e11 and e13, switching from a V-pincer zigzag to a set of crossing lines over the body, so the swing reads as a redraw instead of the same claw rotating into place.",
+ "closes_when": "In e9-e16 the right claw keeps the same two-prong V outline it has in e1-e8 and in c.png, rotating and translating from the lower right to lie across the body, so the resting claw in e17-50 is a single closed pincer shape with no lines crossing through the body.",
+ "protect": "The timing matched to the film (hold until about frame 7, drop at 7-8, sweep at 9-16, long hold after); the tube body with the cross band and the V left claw drawn in c.png's angular stroke habit; the stable body and left claw that do not wobble through the shot; the grey small lobster and table scenery kept in place.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  8,
+  9,
+  12,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The body and left claw match c.png, but once the right claw comes to rest it is drawn as crossing straight lines and an open curve instead of c.png's two-prong V pincer, so the character does not read as the same drawing for most of the shot.",
+ "still_frames_only": true,
+ "_packet": "lot85cbef7e",
+ "_round": 2
+}

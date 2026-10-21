@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A boxy vehicle drawn in black line, seen from behind, with a small tilted box on the roof and three or four short rays above it. A vertical double line (a door seam) runs down the upper half, and a horizontal belt line crosses it. In frames 1-8 the vehicle fills the frame; its sides flare outward toward the bottom and the lower edge is cut off. Through frames 9-12 it shrinks and rises, and the bottoms of two scribbled round wheels enter at the lower frame edge. By frames 12-16 the whole body is visible: a near-rectangular box with two scribbled wheels, smaller and centred, with grey scenery (parked-car outlines at right, two dashes on the ground, perspective lines at the bottom corners) staying in place. The final frames hold it at about the same size while it shrinks a little more.",
+ "seen_film": "A night shot from behind of an ambulance driving away from the camera. Its rear cab with two lit windows (a patient lying down on the left, an attendant on the right) and a rotating light on the roof fills the upper frame at first, with two bright tail lights at the lower corners and lettering ('AMBULANCE') below. The ambulance steadily recedes: it gets smaller and its lower body rises into view, and a lit licence plate appears at the bottom from about frame 9 (of 16). The recession is fast at first and slows in the second half. The rear outline keeps its shape throughout: a cab whose sides flare slightly outward toward the bottom, with rounded top corners. Parked cars glint on the right side.",
+ "named_subject": "An ambulance (boxy vehicle with a roof light and rays), seen from behind",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement follow the film: in e.png frames 1-8 the body is cropped and frame-filling like f.png 1-8; frames 9-14 shrink and rise as the film's ambulance does in f.png 9-14; wheels enter at the bottom edge at 12-14, at the same time the film's plate enters; frames 19-25 hold near one size as the film's recession slows (g.png shows centres 19, 22, 25 nearly coincident and a steady upward path with no reversals). The break is in the outline: frames 1-14 have flared sides and a rounded top-right corner; frame 15 has a chamfered top-right corner; frame 16 becomes a square-cornered rectangle with vertical sides and the left wall jumps inward; frame 17 keeps the square corners; frame 18 brings the chamfered top-right corner back, and it stays to 25. The film's outline does not change shape at any of these frames. The roof rays also change angle and length frame to frame (e.g. frame 8 has a ray pointing straight up that 7 and 9 do not; in 22-24 the roof box flattens and the rays shorten), which reads as a flicker the film's steady roof light does not have. Judged from still frames only, not playback.",
+ "primary_gap": "Between e.png frames 14 and 18 the body outline switches construction (flared sides and rounded corner, then a chamfer, then a square rectangle, then the chamfer again), so the vehicle visibly redraws itself while the film's ambulance keeps one shape as it recedes.",
+ "closes_when": "Frames 14 through 18 show one outline that only scales down and moves up between consecutive frames, keeping the same corner type and side slope (the slight outward flare, eased toward the doodle's upright sides over several frames rather than in one frame).",
+ "protect": "The recession timing that matches the film (fast shrink in 1-14, slowing in 19-25); the steady upward path in g.png with no reversals; the cropped frame-filling opening; wheels entering from the bottom edge at the moment the film's lower body comes into view; the doodle's construction (tilted roof box with rays, double door seam, belt line, scribbled loop wheels) and its loose single-line stroke; the fixed grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  15,
+  16,
+  17,
+  18
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png ambulance doodle (roof box, rays, door seam, belt line, scribbled wheels), though its top-right corner alternates between rounded, chamfered and square instead of keeping the doodle's single rounded corner.",
+ "still_frames_only": true,
+ "_packet": "lot3e2ab068",
+ "_round": 3
+}

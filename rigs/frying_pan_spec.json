@@ -1,0 +1,225 @@
+{
+ "category": "frying pan",
+ "doodle_key_id": "5503636144652288",
+ "facing": 1,
+ "face_from": [
+  "handle",
+  "left"
+ ],
+ "note": "Quick, Draw! frying pan 5503636144652288, handle to the right. Stroke 0 is the rim of the pan, a closed oval. Stroke 1 is the far inner wall seen over the rim. Stroke 2 is the near side and bottom of the pan, under the rim. Stroke 3 is the long handle, a narrow loop rising to the right. The body (strokes 0 to 2) is placed by two points, the left and right ends of the rim, so it takes the film pan's width; the handle turns about its base and lengthens or shortens (stretch 1) so its tip lands on the film's handle tip, because the doodle's handle is long for its pan. The pan does not move in the film: the cook sets a lid on it while flames rise, then it sits still. The lid, the cook's hand and the flames are scenery that changes frame by frame, not parts of the doodle.",
+ "strokes": [
+  [
+   [
+    2,
+    71
+   ],
+   [
+    14,
+    83
+   ],
+   [
+    23,
+    88
+   ],
+   [
+    43,
+    93
+   ],
+   [
+    73,
+    93
+   ],
+   [
+    110,
+    84
+   ],
+   [
+    134,
+    71
+   ],
+   [
+    137,
+    66
+   ],
+   [
+    137,
+    54
+   ],
+   [
+    126,
+    45
+   ],
+   [
+    106,
+    40
+   ],
+   [
+    81,
+    40
+   ],
+   [
+    35,
+    51
+   ],
+   [
+    8,
+    62
+   ],
+   [
+    4,
+    67
+   ]
+  ],
+  [
+   [
+    26,
+    76
+   ],
+   [
+    49,
+    63
+   ],
+   [
+    74,
+    59
+   ],
+   [
+    100,
+    59
+   ],
+   [
+    118,
+    66
+   ],
+   [
+    122,
+    73
+   ]
+  ],
+  [
+   [
+    0,
+    84
+   ],
+   [
+    0,
+    87
+   ],
+   [
+    27,
+    101
+   ],
+   [
+    54,
+    107
+   ],
+   [
+    75,
+    107
+   ],
+   [
+    118,
+    91
+   ],
+   [
+    133,
+    79
+   ],
+   [
+    141,
+    69
+   ]
+  ],
+  [
+   [
+    131,
+    52
+   ],
+   [
+    156,
+    39
+   ],
+   [
+    183,
+    31
+   ],
+   [
+    230,
+    1
+   ],
+   [
+    244,
+    0
+   ],
+   [
+    253,
+    5
+   ],
+   [
+    255,
+    12
+   ],
+   [
+    217,
+    26
+   ],
+   [
+    187,
+    43
+   ]
+  ]
+ ],
+ "anchors": {
+  "left": [
+   2,
+   71
+  ],
+  "right": [
+   137,
+   62
+  ],
+  "hbase": [
+   131,
+   52
+  ],
+  "handle": [
+   253,
+   8
+  ]
+ },
+ "root": [
+  "left",
+  "right"
+ ],
+ "parts": [
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 8,
+   "joint": "hbase",
+   "aim": [
+    "hbase",
+    "handle"
+   ],
+   "stretch": 1
+  },
+  {
+   "rest": true,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  }
+ ],
+ "options": {
+  "size": "steady",
+  "smooth": 1.2,
+  "track": false
+ },
+ "size_from_mask": false,
+ "size": "steady",
+ "smooth": 1.2,
+ "track": false
+}

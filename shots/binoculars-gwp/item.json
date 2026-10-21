@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0146",
+ "id": "binoculars-gwp",
+ "kind": "shot",
+ "title": "Binoculars, the Giraffe Walks Past Way",
+ "category": "binoculars",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/binoculars-gwp/cover.png",
+ "cover_alt": "shots/binoculars-gwp/frames/f013.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/binoculars-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#binoculars-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/binoculars_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/binoculars/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/binoculars-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

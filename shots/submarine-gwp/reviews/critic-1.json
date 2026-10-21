@@ -1,0 +1,19 @@
+{
+ "seen_animation": "a.png shows a line-drawn submarine seen side-on, bow (rounded end) on the left, conning tower in the left third, propeller cross on the right end, sitting in grey wave lines under a grey horizon line. In frames 1-4 the hull is tilted with the bow lower-left and the stern raised, and the boat sits low in the frame. Over frames 4-9 the whole boat rises in the frame and the hull levels out. From about frame 10 to 16 the hull is level and the boat stays in the same place with only very small changes. The grey wave lines below the hull grow denser as the boat rises.",
+ "seen_film": "d.png shows a real submarine on the surface in a rough sea, conning tower with a mast and two crew on the left, a long low deck running to the right. In frames 1-4 the boat sits low in the frame with the deck tilted slightly up to the right and water washing over the deck. Through frames 5-10 the camera framing shifts so the boat rises in the frame and the deck becomes level. From frames 11-16 the boat holds roughly level in the same place while waves roll across the foreground and spray washes along the deck; the crew lean over the tower rail.",
+ "named_subject": "a submarine (side view, conning tower and propeller)",
+ "verdict": "bar met",
+ "evidence": "g.png shows one continuous path: the drawing's centre rises steadily from e.png frame 1 through 4, 7, 10, 13 to 16 with no gaps or reversals, and the tilt of the hull reduces evenly, matching f.png frames 1-17 where the boat rises in frame and levels. e.png frames 16-26 hold the hull level in one place, matching f.png frames 17-26 where the boat stays at about the same height. Consecutive e.png frames show no change of size, no doubling and no redraw of the hull or tower; the only variations are small line-weight shifts on the hull top edge (e.g. frames 7, 11, 13) which do not read as pops. Judged from still frames only, not playback.",
+ "primary_gap": "From e.png frame 16 to 26 the submarine and the grey waves are fully frozen, while in f.png frames 16-26 the boat still bobs slightly and the waves roll and wash over the deck, so the last second reads as a held still rather than a boat riding a swell.",
+ "closes_when": "In e.png frames 16-26 the hull shows a small up-down bob and slight pitch of a few pixels following f.png, and the grey wave lines along the waterline shift from frame to frame.",
+ "protect": "The single continuous rise-and-level path across frames 1-16, the matching timing with the film, the constant size of the drawing, the doodle's loose single-stroke hull, rounded tower with its inner mark and the crossed-stroke propeller, and the absence of any doubling or redraw.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The drawing is the c.png doodle mirrored (bow left instead of right) and the hull is stretched longer and flatter than the doodle, making the tower look smaller relative to the hull, but the stroke style and parts are the same.",
+ "still_frames_only": true,
+ "_packet": "lot075572b2",
+ "_round": 1
+}

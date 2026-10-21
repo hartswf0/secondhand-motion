@@ -10,7 +10,7 @@
    7,
    10,
    7,
-   5,
+   6,
    7,
    7,
    6,
@@ -42,7 +42,7 @@
  },
  {
   "id": "M6",
-  "value": 4.2,
+  "value": 4.4,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -87,17 +87,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA lobster (front view) swinging its large right claw down and across in front of its body, with a small lobster beside it.\u201d; motion broken; follows the film: yes",
+  "value": "named \u201cA lobster (the large lobster in the film) bringing its big right claw down and across the front of its body.\u201d; motion broken; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/lobster-gwp/reviews/critic-1.json"
+  "evidence": "shots/lobster-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_not_met",
   "unit": "",
   "ok": false,
-  "note": "The body and left claw match c.png's oval body with crossline and open-V claws, but the moving right claw loses the V pincer construction from e.png 15 onward and becomes a long smooth curve with an arm line through the body, which the doodle never draws.",
-  "evidence": "shots/lobster-gwp/reviews/critic-1.json"
+  "note": "The body and left claw match c.png, but once the right claw comes to rest it is drawn as crossing straight lines and an open curve instead of c.png's two-prong V pincer, so the character does not read as the same drawing for most of the shot.",
+  "evidence": "shots/lobster-gwp/reviews/critic-2.json"
  }
 ]

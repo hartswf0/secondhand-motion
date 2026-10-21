@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A grey-line pond scene: a school of small grey fish at the top, a set of concentric ripple ellipses in the middle that widen over the shot, a grey fish just above the character that drifts left and down and ends pointing downward, and a vertical grey line at the right. The black character is a single fish with a triangular tail on the left, rounded body, dot eye and smile line, facing right, near the bottom centre. In frames 1-8 it stays roughly in place with small tail and body tilt changes; from frames 9-16 it glides steadily to the right and very slightly down, ending at the lower right of centre.",
+ "seen_film": "Overhead view of a green pond with orange koi. A group of koi hangs at the top; one koi near the centre mouths the surface and sets off concentric ripples that spread outward through the shot. Near the bottom, one koi drifts left and turns downward, and the lowest, larger pale koi, pointing up and to the right, holds roughly in place for the first half and then slides rightward through the second half, ending lower right of centre.",
+ "named_subject": "A fish (the lowest koi in the pond), drawn as the c.png doodle fish mirrored to face right.",
+ "verdict": "bar met",
+ "evidence": "Measured black-line centroid in e.png: x stays at about 118-120 px for frames 1-10 (film f.png frames 1-10: lowest koi also holds near the same spot), then advances 3-6 px per frame from frame 11 to frame 22 (123, 127, 130, 132, 135, 142, 147, 152, 158, 162, 163, 168) and eases to a stop at 170-172 in frames 23-25, matching the film koi sliding right in frames 11-25 and settling. Vertical centroid stays within 164-171 px throughout, as the film koi stays at the same height. Bounding box width stays 57-59 px every frame, so no size pops. g.png shows a single continuous chain of overlapping drawings with no gaps or reversals. a.png frame 1 and frame 16 place the fish at the same start and end positions as d.png frames 1 and 16.",
+ "primary_gap": "The film koi is angled pointing up and to the right throughout, while the drawn fish swims nearly level, so its heading only approximates the film's.",
+ "closes_when": "The drawn fish's body axis is tilted roughly 15-20 degrees so the head sits higher than the tail in every frame, matching the koi's diagonal heading in f.png.",
+ "protect": "The hold-then-glide timing (frames 1-10 still, 11-22 moving, 23-25 easing out), the even per-frame spacing with no jumps, the constant drawing size, the doodle's construction (open triangle tail, rounded body, dot eye, single smile stroke, plain thick line), and the correct start and end positions in frame.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 5,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png fish mirrored to face right with the same triangle tail, rounded body, dot eye and short mouth stroke; the only difference is the mouth reads as a slight curve instead of the doodle's angled line.",
+ "still_frames_only": true,
+ "_packet": "lotc1f08d23",
+ "_round": 2
+}

@@ -1,7 +1,7 @@
 [
  {
   "id": "M2",
-  "value": 4,
+  "value": 1,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
@@ -16,16 +16,18 @@
    0,
    1,
    1,
-   10,
-   11,
-   12,
-   13,
-   16
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
   ]
  },
  {
   "id": "M2b",
-  "value": 0.28,
+  "value": 0.17,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": false,
   "design_typicality": 23
@@ -38,15 +40,15 @@
  },
  {
   "id": "M6",
-  "value": 42.0,
+  "value": 5.3,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
  {
   "id": "T3",
-  "value": "varies",
+  "value": "8 strokes, 58 vertices, every frame",
   "unit": "",
-  "ok": false,
+  "ok": true,
   "note": "the doodle itself, bent by the rig"
  },
  {

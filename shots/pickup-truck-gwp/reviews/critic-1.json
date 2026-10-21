@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A black line drawing of a vehicle seen from the side sits in the middle of the frame between a grey row of trees above and grey grass and bushes below. The vehicle is a flat box body with a smaller box cab on top and two small wheels drawn inside the lower edge of the body. A long horizontal bar runs through it, with two open square boxes hanging from the bar on each side. Across frames 1-16 the vehicle stays in about the same place; it shifts a few pixels left and right and the cab tilts slightly, and the side boxes move a little with it. The scenery stays fixed. Nothing else happens.",
+ "seen_film": "A white pickup truck faces the camera in a tall-grass field with a dark tree line behind. A horizontal boom is mounted across its front, with yellow boxes or panels hanging below it on both sides. Across frames 1-16 the truck stays roughly centred and the same size; it rocks and bounces slightly as it drives slowly through the grass, the boom tilts, and the yellow boxes swing and tilt individually (the far-left box tips noticeably in film frames 31-40 and 49-54). The camera shakes slightly. No large change of position or scale happens.",
+ "named_subject": "A car or truck carrying a horizontal boom with hanging boxes on each side.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-62: the vehicle and boom stay centred at constant size, matching the film's near-stationary truck, and the g.png overlay is a tight cluster with only small horizontal offsets and no reversal larger than the film's rocking, so placement and overall timing follow the film. However, the film's boxes swing and tilt on their own (f.png 31-40 the left box tips down and back; f.png 49-54 boxes rock), while in e.png 31-40 and 49-54 the four boxes stay rigid squares that only translate with the body. The film's bounce of the truck body is visible as vertical rocking; the animation shows mostly sideways drift with small cab tilts. The vehicle is drawn in side view while the film shows it head-on; given the side-view doodle this is acceptable. The drawing differs from c.png: the doodle has a tall cab at one end and a lower hood at the other in a stepped profile with two large loose open-loop wheels hanging below the body, while the animation draws a centred box cab on a flat slab with two tiny wheels tucked inside the body line. Judged from still frames only, not playback.",
+ "primary_gap": "The character is not the c.png doodle: its stepped cab-and-hood profile and the two large loose wheel loops below the body have been replaced by a generic centred cab on a slab with tiny wheels.",
+ "closes_when": "Every frame shows the c.png outline itself (tall cab on one end, lower hood on the other, two large open-ended wheel loops below the body line, same loose stroke gaps) carrying the boom, rocking in place as the film does.",
+ "protect": "Fixed centred placement and constant scale matching the film; the boom with two boxes on each side; small continuous rocking with no pops; plain line scenery of trees and grass kept grey and still.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The vehicle is a redrawn generic box car with small inset wheels rather than the doodle's stepped cab-and-hood shape with big loose wheel loops.",
+ "still_frames_only": true,
+ "_packet": "lot99dcc3e0",
+ "_round": 1
+}
