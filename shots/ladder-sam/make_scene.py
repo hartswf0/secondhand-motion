@@ -55,7 +55,7 @@ def rail_at(r,a):
     P=[lc(q) for q in LAD[r]][::-1]; c=float(np.interp(a,[q[0] for q in P],[q[1] for q in P])); return pt(a,c)
 WAIST_ACROSS=0.5   # seen from behind his body hangs over the middle-left of the ladder, so both legs stand between the rails
 for f in range(n):
-    s=np.clip((f-1)/8,0,1)   # spread evenly over frames 1-9 so no frame carries a large sideways step
+    s=np.clip((f-1)/6,0,1)   # spread evenly over frames 1-9 so no frame carries a large sideways step
     tgt=WAIST[f].copy()
     for _ in range(6):   # moved sideways only (the film's height is kept): x where c is WAIST_ACROSS of the way across
         a,c=lc(tgt); tgt[0]+=(cL(a)+WAIST_ACROSS*(cR(a)-cL(a))-c)/LV[0]
@@ -64,11 +64,18 @@ for f in range(n):
 for f in range(1,9): x=WAIST[0][0]+(WAIST[9][0]-WAIST[0][0])*f/9; HEAD[f][0]+=x-WAIST[f][0]; WAIST[f][0]=x
 # The mount is slowed: frames 0-12 are re-timed along the same path so that he walks in at an even pace (frames 1-5),
 # slows at the foot of the ladder, and from frame 7 rises onto it no more than about 9 px a frame (the film man's
-# first step up is small); the walk starts STEP0 px further in so the slower mount still meets the climb at frame 12.
-STEP0=20.0; MSTEP=[0,17.5,17.5,17.5,17.5,14,12,8,8.5,8.5,8.5,7.5,6.5]
+# first step up is small); the steps are counted back from frame 12, so the walk starts wherever on the path that puts it.
+# Before re-timing, the path itself is moved over the middle of the ladder from its frame-6 point on (eased in over
+# frames 3-6), so that by the time his left foot comes onto the rung his hips are between the rails.
+for f in range(3,13):
+    w=np.clip((f-3)/3,0,1); w=w*w*(3-2*w); tgt=WAIST[f].copy()
+    for _ in range(6):
+        a,c=lc(tgt); tgt[0]+=(cL(a)+WAIST_ACROSS*(cR(a)-cL(a))-c)/LV[0]
+    dx=w*(tgt[0]-WAIST[f][0]); WAIST[f][0]+=dx; HEAD[f][0]+=dx
+STEP0=0.0; MSTEP=[0,19,19,19,18.5,15.5,12.5,7.5,8.5,8.5,8.5,7.5,6.5]
 _P=[WAIST[0]+np.array([STEP0,0.])]+[WAIST[f] for f in range(1,13)]; _O=[HEAD[f]-WAIST[f] for f in range(13)]
 _L=np.r_[0,np.cumsum([np.hypot(*(b-a)) for a,b in zip(_P[:-1],_P[1:])])]
-_s=np.cumsum(MSTEP); _s=_s*_L[-1]/_s[-1]
+_s=np.cumsum(MSTEP); _s=_s+(_L[-1]-_s[-1]); print('walk-in start', round(_s[0],1), 'px along the path') if _s[0]<0 else None
 for f in range(13):
     t=np.interp(_s[f],_L,np.arange(13)); i=min(int(t),11); u=t-i
     WAIST[f]=_P[i]+(_P[i+1]-_P[i])*u; HEAD[f]=WAIST[f]+_O[i]+(_O[i+1]-_O[i])*u
@@ -152,6 +159,7 @@ def skeleton(f):
         Sh=S+LV*sg*3
         e1=limb_back(Sh,q,30*SC(f),sg,0.5,key=limb)
         J[limb]=(Sh*bl+S*(1-bl),e0*(1-bl)+e1*bl,q)
+    bl=np.clip((f-4)/4,0,1); bl=bl*bl*(3-2*bl)   # the legs turn to the back view a little sooner (frames 4-8), as the feet go onto the rungs
     for limb,sg in (('lf',-1),('rf',1)):
         q=contact(f,limb); Hp0=P-np.array([2.5*(-sg),0.0]); Hp1=P+LV*sg*3-LU*5*SC(f); Hp=Hp0*(1-bl)+Hp1*bl   # on the ladder the hips sit 5 px below the waist line
         D=np.hypot(*(q-Hp))
