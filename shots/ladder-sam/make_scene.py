@@ -63,12 +63,15 @@ for f in range(n):
 # One body size every frame: the torso is one line of fixed length. Its lean comes from the film (head over waist),
 # kept bent forward toward the ladder on the climb, and bent further over the ladder at the top (frames 30-37).
 TORSO=40.0
+# Near the top the film man recedes from the camera and looks a little smaller, so from frame 24 the whole figure
+# (torso, head, neck, reach) shrinks by up to 7 %, a fraction of a percent per frame.
+def SC(f): t=np.clip((f-24)/13,0,1); return 1-0.07*t*t*(3-2*t)
 ang=np.array([math.atan2(HEAD[f][0]-WAIST[f][0],WAIST[f][1]-HEAD[f][1]) for f in range(n)])
 for f in range(n):
     on_l=np.clip((f-5)/4,0,1); top=np.clip((f-28)/6,0,1); top=top*top*(3-2*top)
     a=ang[f]*(1-on_l)+max(ang[f],math.radians(30))*on_l
     a=a*(1-top)+math.radians(50)*top
-    HEAD[f]=WAIST[f]+TORSO*np.array([math.sin(a),-math.cos(a)])
+    HEAD[f]=WAIST[f]+TORSO*SC(f)*np.array([math.sin(a),-math.cos(a)])
 def contact(f,limb):
     p=target(MK['start'][limb])
     for f0,f1,q in MK['moves'][limb]:
@@ -124,7 +127,7 @@ def limb_back(root,q,L,side,cap,lo_c=None,hi_c=None):
     return pt(*m)
 def skeleton(f):
     H,P=HEAD[f],WAIST[f]
-    ax=(P-H)/np.hypot(*(P-H)); N=H+ax*8; S=N+ax*3
+    ax=(P-H)/np.hypot(*(P-H)); N=H+ax*8*SC(f); S=N+ax*3*SC(f)
     # on the ground (to frame 5) the old side-view joints; from frame 8 the back view on the ladder; blended between
     bl=np.clip((f-5)/3,0,1); bl=bl*bl*(3-2*bl)
     J={'H':H,'N':N,'P':P,'S':S}
@@ -137,7 +140,7 @@ def skeleton(f):
     for limb,sg in (('lf',-1),('rf',1)):
         q=contact(f,limb); Hp0=P-np.array([2.5*(-sg),0.0]); Hp1=P+LV*sg*3; Hp=Hp0*(1-bl)+Hp1*bl
         D=np.hypot(*(q-Hp))
-        if D>76: q=Hp+(q-Hp)*76/D   # never a stretched leg
+        if D>76*SC(f): q=Hp+(q-Hp)*76*SC(f)/D   # never a stretched leg
         k0=joint(Hp0,q,39,lambda z: z[0]+0.6*z[1],limb)
         k1=limb_back(Hp1,q,39,sg,14,cL,cR)
         J[limb]=(Hp,k0*(1-bl)+k1*bl,q)
@@ -179,15 +182,36 @@ def check(f,J):
         if max(lc(J['lh'][2])[0],lc(J['rh'][2])[0])<ha-6: bad.append('no hand at or above the head')
         if min(lc(J['lf'][2])[0],lc(J['rf'][2])[0])>lc(J['P'])[0]-8: bad.append('no foot on a rung below the waist')
     return bad
+def stepping(f):
+    # the hands and feet whose contact point moves between frame f-1 and frame f
+    return {k for k,mv in MK['moves'].items() for f0,f1,q in mv if f0<f<=f1}
+def cont(f,J0,J1):
+    # frame-to-frame check: the torso and the limb segments change length by at most a few % per frame, and every joint
+    # moves at most ~8 px per frame, except the hand or foot that is stepping (and its elbow or knee, up to 14 px)
+    bad=[]; st=stepping(f)
+    for k in ('H','N','P','S'):
+        d=np.hypot(*(J1[k]-J0[k]))
+        if d>8.5: bad.append(f'{k} moves {d:.1f}px')
+    t0,t1=np.hypot(*(J0['N']-J0['P'])),np.hypot(*(J1['N']-J1['P']))
+    if abs(t1/t0-1)>0.04: bad.append(f'torso length {t0:.1f}->{t1:.1f}')
+    for k in ('lh','rh','lf','rf'):
+        for i,nm in enumerate(('root','mid','end')):
+            d=np.hypot(*(J1[k][i]-J0[k][i])); lim=8.5 if k not in st else (8.5,14,99)[i]
+            if d>lim: bad.append(f'{k} {nm} moves {d:.1f}px')
+        for i in (0,1):
+            a,b=np.hypot(*(J0[k][i]-J0[k][i+1])),np.hypot(*(J1[k][i]-J1[k][i+1]))
+            lim=0.06 if k not in st else 0.2
+            if abs(b/max(a,1e-6)-1)>lim: bad.append(f'{k} segment {i} {a:.1f}->{b:.1f}')
+    return bad
 def man(f):
     J=SKEL[f]; H=J['H']
     st=[]
-    st+=hand([(H+np.array([7*math.cos(a),7.5*math.sin(a)])).tolist() for a in np.linspace(-0.4,2*math.pi-0.1,9)],wob=False)   # head: one loop, not quite closed
+    st+=hand([(H+SC(f)*np.array([7*math.cos(a),7.5*math.sin(a)])).tolist() for a in np.linspace(-0.4,2*math.pi-0.1,9)],wob=False)   # head: one loop, not quite closed
     st+=hand([J['N'],J['P']])                                                                                         # body: one line
     for limb in ('lh','rh','lf','rf'): st+=hand(list(J[limb]))
     return [[[round(x-cam[f][0],1),round(y-cam[f][1],1)] for x,y in s] for s in st]
 SKEL=[skeleton(f) for f in range(n)]   # once per frame, in order (the ground-phase joints remember their side)
-BAD={f:check(f,SKEL[f]) for f in range(n)}
+BAD={f:check(f,SKEL[f])+(cont(f,SKEL[f-1],SKEL[f]) if f else []) for f in range(n)}
 BAD={f:b for f,b in BAD.items() if b}
 if BAD:
     for f,b in BAD.items(): print('frame',f,'; '.join(sorted(set(b))))
