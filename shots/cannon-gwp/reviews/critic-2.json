@@ -1,0 +1,26 @@
+{
+ "seen_animation": "A black-line doodle of a field cannon (one spoked wheel drawn as an ellipse with crossing spokes, a long tube ending in an oval muzzle, a short hooked tail) stands on a grey slab under grey clouds and stars, and turns in place through a full rotation. Frame 1: seen from the front, the wheel is edge-on and the barrel is two loose ovals pointing at the viewer; the slab is a flat front-facing box. Frames 2-4: the slab is suddenly a diagonal slab, the wheel opens up and the muzzle swings toward the upper left. Frames 5-6: side view, muzzle up-left, full doodle shape. Frames 7-8: the barrel foreshortens and narrows (in 7 it is almost a single line). Frame 8: the wheel is edge-on and the barrel points straight up, seen from behind. Frames 9-12: the barrel swings to the upper right, full side view mirrored from frames 5-6, the cannon a little right of centre. Frames 13-15: the barrel foreshortens again toward the viewer, the wheel goes edge-on, and the slab returns to the front-facing box in 15. Frame 16: slab diagonal again, cannon near the start pose.",
+ "seen_film": "A model field cannon with two spoked wheels on a rectangular base turns on a turntable through one full revolution against a red, starry background. Frame 1: front view, muzzle toward the camera, base seen front-on. Frames 2-4: the base and cannon rotate together; the barrel swings toward the upper left. Frames 5-7: side view, barrel up-left, trail down-right. Frame 8: seen from behind, barrel pointing up and away, wheels at both sides. Frames 9-12: the barrel swings to the upper right, side view mirrored, base drifting slightly right in frame. Frames 13-15: the cannon turns back toward the front view; frame 15 is front-on. Frame 16: just past front, starting to turn again. The base rotates continuously with the cannon at every frame.",
+ "named_subject": "A wheeled field cannon (one wheel, long barrel with an oval muzzle, short tail), drawn as a loose doodle, turning on a base.",
+ "verdict": "reference stronger",
+ "evidence": "Timing and staging follow the film closely: e.png 5-12 muzzle up-left matches f.png 5-12; e.png 15-16 barrel vertical with edge-on wheel matches the rear view in f.png 15-16; e.png 20-26 muzzle up-right matches f.png 20-26; e.png 30 front view matches f.png 30. The rotation of the cannon itself is continuous frame to frame. Weaknesses: the grey base pops between two unrelated drawings, a flat front box in e.png 1 and 30 and a diagonal slab in e.png 2 and 31, with no intermediate angles, while in f.png 1-3 and 29-32 the base turns smoothly; across e.png 2-28 the slab barely changes angle although in the film it rotates with the cannon the whole time. In e.png 12-13 the tube collapses to a thin single-line stick with a small oval, then thickens again in 14-15, a redraw the film does not have. In e.png 28-31 (front view) the barrel is drawn as two separate ovals floating beside an edge-on wheel, detached from it, so the cannon reads as doubled blobs rather than one object; e.png 1 has the same look. The front views (e.png 1, 29-31) are noticeably smaller than the side views, while the film's cannon keeps a similar size.",
+ "primary_gap": "The base does not rotate with the cannon: it jumps between a front-facing box (e.png 1, 30) and a fixed diagonal slab (e.png 2-29, 31-32), and the front-view barrel at e.png 28-31 and 1 comes apart into two ovals detached from the wheel.",
+ "closes_when": "The slab's angle changes a little every frame in step with the cannon's turn (front-on at 1, 15-16 and 30, through intermediate angles in between), and in the front views the barrel is drawn as one foreshortened tube attached to the wheel hub instead of two loose ovals beside it.",
+ "protect": "The doodle's own construction (single ellipse wheel with crossing spokes, long tube with oval muzzle, hooked tail, loose wobbly line); the turntable timing that hits up-left at 5-12, rear view at 15-16, up-right at 20-26 and front at 30 exactly as the film does; the gradual foreshortening of the barrel through the turn; the sparse grey cloud-and-star scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  2,
+  12,
+  13,
+  29,
+  30,
+  31
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The side views are the c.png doodle turned in space, but the front views (e.png 1, 28-31) break it into two separate ovals beside the wheel, which the doodle's construction does not contain.",
+ "still_frames_only": true,
+ "_packet": "lote7bdf77b",
+ "_round": 2
+}

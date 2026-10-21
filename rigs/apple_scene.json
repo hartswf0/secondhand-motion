@@ -198,29 +198,1670 @@
    ]
   },
   {
-   "id": "hand_left",
+   "id": "hand_left_f00",
    "plane": "hands",
    "qd": "hand",
    "box": [
-    40,
-    105,
-    150,
-    245
-   ],
-   "strokes": 1
-  },
-  {
-   "id": "hand_right",
-   "plane": "hands",
-   "qd": "hand",
-   "box": [
-    215,
-    190,
-    384,
-    290
+    40.4,
+    105.4,
+    150.4,
+    245.4
    ],
    "strokes": 1,
-   "aspect": 1.6
+   "aspect": 0.7857,
+   "visible": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "hand_right_f00",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    217.0,
+    192.4,
+    386.0,
+    292.4
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "hand_left_f01",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    40.8,
+    105.8,
+    150.8,
+    245.8
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "hand_right_f01",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    218.4,
+    194.1,
+    387.4,
+    294.1
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "hand_left_f02",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    41.3,
+    106.3,
+    151.3,
+    246.3
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": "hand_right_f02",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    219.5,
+    195.5,
+    388.5,
+    295.5
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": "hand_left_f03",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    42.0,
+    107.0,
+    152.0,
+    247.0
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    3,
+    3
+   ]
+  },
+  {
+   "id": "hand_right_f03",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    221.1,
+    197.8,
+    390.1,
+    297.8
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    3,
+    3
+   ]
+  },
+  {
+   "id": "hand_left_f04",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    42.7,
+    107.7,
+    152.7,
+    247.7
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "hand_right_f04",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    222.0,
+    200.1,
+    391.0,
+    300.1
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "hand_left_f05",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    43.3,
+    108.3,
+    153.3,
+    248.3
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    5,
+    5
+   ]
+  },
+  {
+   "id": "hand_right_f05",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    221.9,
+    201.9,
+    390.9,
+    301.9
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    5,
+    5
+   ]
+  },
+  {
+   "id": "hand_left_f06",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    43.6,
+    108.5,
+    153.6,
+    248.5
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "hand_right_f06",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    221.0,
+    203.0,
+    390.0,
+    303.0
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "hand_left_f07",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    43.6,
+    108.3,
+    153.6,
+    248.3
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    7,
+    7
+   ]
+  },
+  {
+   "id": "hand_right_f07",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    219.6,
+    203.8,
+    388.6,
+    303.8
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    7,
+    7
+   ]
+  },
+  {
+   "id": "hand_left_f08",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    43.4,
+    107.7,
+    153.4,
+    247.7
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    8,
+    8
+   ]
+  },
+  {
+   "id": "hand_right_f08",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    218.1,
+    204.6,
+    387.1,
+    304.6
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    8,
+    8
+   ]
+  },
+  {
+   "id": "hand_left_f09",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    43.0,
+    107.0,
+    153.0,
+    247.0
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    9,
+    9
+   ]
+  },
+  {
+   "id": "hand_right_f09",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    216.7,
+    205.2,
+    385.7,
+    305.2
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    9,
+    9
+   ]
+  },
+  {
+   "id": "hand_left_f10",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    42.6,
+    106.3,
+    152.6,
+    246.3
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "hand_right_f10",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    215.5,
+    205.5,
+    384.5,
+    305.5
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "hand_left_f11",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    42.4,
+    105.9,
+    152.4,
+    245.9
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "hand_right_f11",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    214.6,
+    206.1,
+    383.6,
+    306.1
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "hand_left_f12",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    42.4,
+    106.5,
+    152.4,
+    246.5
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    12,
+    12
+   ]
+  },
+  {
+   "id": "hand_right_f12",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    213.9,
+    207.4,
+    382.9,
+    307.4
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    12,
+    12
+   ]
+  },
+  {
+   "id": "hand_left_f13",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    42.8,
+    108.2,
+    152.8,
+    248.2
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "hand_right_f13",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    213.8,
+    209.6,
+    382.8,
+    309.6
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "hand_left_f14",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    43.5,
+    111.0,
+    153.5,
+    251.0
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    14,
+    14
+   ]
+  },
+  {
+   "id": "hand_right_f14",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    214.0,
+    212.0,
+    383.0,
+    312.0
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    14,
+    14
+   ]
+  },
+  {
+   "id": "hand_left_f15",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    44.5,
+    114.9,
+    154.5,
+    254.9
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "hand_right_f15",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    214.8,
+    214.3,
+    383.8,
+    314.3
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "hand_left_f16",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    45.5,
+    119.1,
+    155.5,
+    259.1
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    16,
+    16
+   ]
+  },
+  {
+   "id": "hand_right_f16",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    216.3,
+    216.0,
+    385.3,
+    316.0
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    16,
+    16
+   ]
+  },
+  {
+   "id": "hand_left_f17",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    46.5,
+    123.0,
+    156.5,
+    263.0
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "hand_right_f17",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    218.1,
+    216.8,
+    387.1,
+    316.8
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "hand_left_f18",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    47.1,
+    125.8,
+    157.1,
+    265.8
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    18,
+    18
+   ]
+  },
+  {
+   "id": "hand_right_f18",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    219.9,
+    216.8,
+    388.9,
+    316.8
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    18,
+    18
+   ]
+  },
+  {
+   "id": "hand_left_f19",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    47.3,
+    127.2,
+    157.3,
+    267.2
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    19,
+    19
+   ]
+  },
+  {
+   "id": "hand_right_f19",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    221.9,
+    216.3,
+    390.9,
+    316.3
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    19,
+    19
+   ]
+  },
+  {
+   "id": "hand_left_f20",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    46.9,
+    127.4,
+    156.9,
+    267.4
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    20,
+    20
+   ]
+  },
+  {
+   "id": "hand_right_f20",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    223.8,
+    215.8,
+    392.8,
+    315.8
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    20,
+    20
+   ]
+  },
+  {
+   "id": "hand_left_f21",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    46.1,
+    126.5,
+    156.1,
+    266.5
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    21,
+    21
+   ]
+  },
+  {
+   "id": "hand_right_f21",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    225.0,
+    215.5,
+    394.0,
+    315.5
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    21,
+    21
+   ]
+  },
+  {
+   "id": "hand_left_f22",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    45.0,
+    125.0,
+    155.0,
+    265.0
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    22,
+    22
+   ]
+  },
+  {
+   "id": "hand_right_f22",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    226.0,
+    215.1,
+    395.0,
+    315.1
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    22,
+    22
+   ]
+  },
+  {
+   "id": "hand_left_f23",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    43.9,
+    123.5,
+    153.9,
+    263.5
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    23,
+    23
+   ]
+  },
+  {
+   "id": "hand_right_f23",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    227.1,
+    214.3,
+    396.1,
+    314.3
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    23,
+    23
+   ]
+  },
+  {
+   "id": "hand_left_f24",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    42.8,
+    122.2,
+    152.8,
+    262.2
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "hand_right_f24",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    228.4,
+    213.2,
+    397.4,
+    313.2
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "hand_left_f25",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    41.7,
+    120.8,
+    151.7,
+    260.8
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    25,
+    25
+   ]
+  },
+  {
+   "id": "hand_right_f25",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    229.5,
+    212.0,
+    398.5,
+    312.0
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    25,
+    25
+   ]
+  },
+  {
+   "id": "hand_left_f26",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    40.3,
+    119.4,
+    150.3,
+    259.4
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    26,
+    26
+   ]
+  },
+  {
+   "id": "hand_right_f26",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    230.9,
+    210.6,
+    399.9,
+    310.6
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    26,
+    26
+   ]
+  },
+  {
+   "id": "hand_left_f27",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    38.8,
+    117.8,
+    148.8,
+    257.8
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    27,
+    27
+   ]
+  },
+  {
+   "id": "hand_right_f27",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    233.0,
+    208.9,
+    402.0,
+    308.9
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    27,
+    27
+   ]
+  },
+  {
+   "id": "hand_left_f28",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    37.2,
+    116.2,
+    147.2,
+    256.2
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    28,
+    28
+   ]
+  },
+  {
+   "id": "hand_right_f28",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    235.7,
+    207.1,
+    404.7,
+    307.1
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    28,
+    28
+   ]
+  },
+  {
+   "id": "hand_left_f29",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    36.0,
+    114.4,
+    146.0,
+    254.4
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    29,
+    29
+   ]
+  },
+  {
+   "id": "hand_right_f29",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    238.5,
+    205.5,
+    407.5,
+    305.5
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    29,
+    29
+   ]
+  },
+  {
+   "id": "hand_left_f30",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    35.5,
+    112.2,
+    145.5,
+    252.2
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    30,
+    30
+   ]
+  },
+  {
+   "id": "hand_right_f30",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    241.0,
+    204.0,
+    410.0,
+    304.0
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    30,
+    30
+   ]
+  },
+  {
+   "id": "hand_left_f31",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    36.0,
+    109.6,
+    146.0,
+    249.6
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    31,
+    31
+   ]
+  },
+  {
+   "id": "hand_right_f31",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    242.9,
+    202.5,
+    411.9,
+    302.5
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    31,
+    31
+   ]
+  },
+  {
+   "id": "hand_left_f32",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    37.0,
+    107.0,
+    147.0,
+    247.0
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    32,
+    32
+   ]
+  },
+  {
+   "id": "hand_right_f32",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    243.8,
+    201.4,
+    412.8,
+    301.4
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    32,
+    32
+   ]
+  },
+  {
+   "id": "hand_left_f33",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    38.6,
+    104.4,
+    148.6,
+    244.4
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    33,
+    33
+   ]
+  },
+  {
+   "id": "hand_right_f33",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    243.7,
+    200.5,
+    412.7,
+    300.5
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    33,
+    33
+   ]
+  },
+  {
+   "id": "hand_left_f34",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    41.0,
+    101.8,
+    151.0,
+    241.8
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    34,
+    34
+   ]
+  },
+  {
+   "id": "hand_right_f34",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    243.1,
+    199.2,
+    412.1,
+    299.2
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    34,
+    34
+   ]
+  },
+  {
+   "id": "hand_left_f35",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    44.0,
+    99.6,
+    154.0,
+    239.6
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    35,
+    35
+   ]
+  },
+  {
+   "id": "hand_right_f35",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    242.5,
+    197.4,
+    411.5,
+    297.4
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    35,
+    35
+   ]
+  },
+  {
+   "id": "hand_left_f36",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    47.0,
+    98.0,
+    157.0,
+    238.0
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    36,
+    36
+   ]
+  },
+  {
+   "id": "hand_right_f36",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    242.0,
+    195.5,
+    411.0,
+    295.5
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    36,
+    36
+   ]
+  },
+  {
+   "id": "hand_left_f37",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    49.6,
+    96.7,
+    159.6,
+    236.7
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    37,
+    37
+   ]
+  },
+  {
+   "id": "hand_right_f37",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    242.0,
+    193.9,
+    411.0,
+    293.9
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    37,
+    37
+   ]
+  },
+  {
+   "id": "hand_left_f38",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    51.4,
+    95.4,
+    161.4,
+    235.4
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    38,
+    38
+   ]
+  },
+  {
+   "id": "hand_right_f38",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    242.7,
+    192.8,
+    411.7,
+    292.8
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    38,
+    38
+   ]
+  },
+  {
+   "id": "hand_left_f39",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    52.0,
+    94.4,
+    162.0,
+    234.4
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    39,
+    39
+   ]
+  },
+  {
+   "id": "hand_right_f39",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    243.9,
+    192.5,
+    412.9,
+    292.5
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    39,
+    39
+   ]
+  },
+  {
+   "id": "hand_left_f40",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    52.0,
+    94.3,
+    162.0,
+    234.3
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    40,
+    40
+   ]
+  },
+  {
+   "id": "hand_right_f40",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    245.3,
+    192.5,
+    414.3,
+    292.5
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    40,
+    40
+   ]
+  },
+  {
+   "id": "hand_left_f41",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    52.4,
+    95.4,
+    162.4,
+    235.4
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    41,
+    41
+   ]
+  },
+  {
+   "id": "hand_right_f41",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    246.8,
+    192.2,
+    415.8,
+    292.2
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    41,
+    41
+   ]
+  },
+  {
+   "id": "hand_left_f42",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    53.4,
+    97.1,
+    163.4,
+    237.1
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    42,
+    42
+   ]
+  },
+  {
+   "id": "hand_right_f42",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    248.0,
+    191.4,
+    417.0,
+    291.4
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    42,
+    42
+   ]
+  },
+  {
+   "id": "hand_left_f43",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    54.7,
+    98.8,
+    164.7,
+    238.8
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    43,
+    43
+   ]
+  },
+  {
+   "id": "hand_right_f43",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    248.6,
+    190.4,
+    417.6,
+    290.4
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    43,
+    43
+   ]
+  },
+  {
+   "id": "hand_left_f44",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    56.1,
+    100.2,
+    166.1,
+    240.2
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    44,
+    44
+   ]
+  },
+  {
+   "id": "hand_right_f44",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    248.7,
+    189.2,
+    417.7,
+    289.2
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    44,
+    44
+   ]
+  },
+  {
+   "id": "hand_left_f45",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    57.0,
+    100.7,
+    167.0,
+    240.7
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    45,
+    45
+   ]
+  },
+  {
+   "id": "hand_right_f45",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    248.6,
+    188.3,
+    417.6,
+    288.3
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    45,
+    45
+   ]
+  },
+  {
+   "id": "hand_left_f46",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    57.0,
+    100.0,
+    167.0,
+    240.0
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    46,
+    46
+   ]
+  },
+  {
+   "id": "hand_right_f46",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    248.5,
+    188.0,
+    417.5,
+    288.0
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    46,
+    46
+   ]
+  },
+  {
+   "id": "hand_left_f47",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    56.8,
+    99.2,
+    166.8,
+    239.2
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    47,
+    47
+   ]
+  },
+  {
+   "id": "hand_right_f47",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    248.4,
+    188.0,
+    417.4,
+    288.0
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    47,
+    47
+   ]
+  },
+  {
+   "id": "hand_left_f48",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    56.4,
+    98.3,
+    166.4,
+    238.3
+   ],
+   "strokes": 1,
+   "aspect": 0.7857,
+   "visible": [
+    48,
+    48
+   ]
+  },
+  {
+   "id": "hand_right_f48",
+   "plane": "hands",
+   "qd": "hand",
+   "box": [
+    248.2,
+    188.0,
+    417.2,
+    288.0
+   ],
+   "strokes": 1,
+   "aspect": 1.6,
+   "visible": [
+    48,
+    48
+   ]
   }
  ],
  "notes": {
@@ -231,5 +1872,6 @@
   "44": "the apple turned so the stem end tips toward the camera",
   "48": "the stem end faces the camera"
  },
- "no_cel": true
+ "no_cel": true,
+ "hands_note": "hand_left_fNN and hand_right_fNN are one copy of each hand doodle per frame, shown on that frame only, moved to follow the film hands (left hand placed by eye at frames 0, 6, 12, 19, 25, 30, 34, 38, 41, 44, 48; right hand from its bright-region centroid), eased and smoothed so each frame step is small"
 }
