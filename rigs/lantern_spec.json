@@ -6,7 +6,7 @@
   "base",
   "base"
  ],
- "note": "Quick, Draw! lantern 6354663194492928 (Vietnam): stroke 0 is the body, a tall box drawn as one line from the middle of the left side down, across the bottom, up the right side, across the top and back down the left; stroke 1 is the domed cap on top of the box; stroke 2 is a horizontal band across the body; strokes 3 and 4 are two vertical bars inside the body. The safety lamp in the film is rigid, so the drawing is moved whole: it is placed by two points, the top of the cap (top, on the lamp's hook knob) and the middle of the bottom edge (base, where the lamp goes into the miner's fist), so it rises, slides, sways and tilts with the lamp and keeps one size.",
+ "note": "Quick, Draw! lantern 6354663194492928 (Vietnam): stroke 0 is the body, a tall box drawn as one line from the middle of the left side down, across the bottom, up the right side, across the top and back down the left; stroke 1 is the domed cap on top of the box; stroke 2 is a horizontal band across the body; strokes 3 and 4 are two vertical bars inside the body. The safety lamp in the film is rigid, so the drawing is moved whole: it is placed by two points, the top of the cap (top, on the lamp's hook knob) and the middle of the bottom edge (base, where the lamp goes into the miner's fist), so it rises, slides, sways and tilts with the lamp and keeps one size. No size option is set because the lamp really grows by about a third as it is raised toward the camera; key size follows the lamp's measured width. Optical-flow tracking between keys is on (track true): it gave a lower centre step than plain interpolation (0.046 against 0.056) with the drawing on the lamp in every frame.",
  "strokes": [
   [
    [
@@ -170,5 +170,5 @@
   }
  ],
  "smooth": 1.2,
- "track": false
+ "track": true
 }

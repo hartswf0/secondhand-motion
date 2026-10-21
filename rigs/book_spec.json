@@ -6,7 +6,7 @@
   "top",
   "top"
  ],
- "note": "Quick, Draw! book 5023411405324288, an open book seen from above. Stroke 0 is the outline of both pages; strokes 1 and 10 are the spine (10 runs past the bottom edge like a ribbon); strokes 2-5 are text lines on the left page; strokes 6-9 are text lines on the right page. The root places the spine by its two ends (bot, top), which sit on the binder's ring edge in the film. The right page stays flat: it is the binder's page stack. The left page (outline vertices 0-3 and 10-13 and strokes 2-5) folds about the spine by the pose value 'open': -1 lies mirrored over the right page as the closed cover, 0 stands on edge along the spine, 1 lies flat open. The film's hand lifts the cover and then the pages over to the left, so 'open' runs from -1 to about 0.5 across the shot.",
+ "note": "Quick, Draw! book 5023411405324288, an open book seen from above. Stroke 0 is the outline of both pages; strokes 1 and 10 are the spine (10 runs past the bottom edge like a ribbon); strokes 2-5 are text lines on the left page; strokes 6-9 are text lines on the right page. The root places the spine by its two ends (bot, top), which sit on the binder's ring edge in the film. The right page stays flat: it is the binder's page stack. The left page (outline vertices 0-3 and 10-13 and strokes 2-5) folds about the spine by the pose value 'open': -1 lies mirrored over the right page as the closed cover, 0 stands on edge along the spine, 1 lies flat open. The film's hand lifts the cover and then the pages over to the left, so 'open' runs from -1 to about 0.5 across the shot. Two points on the spine line were added to the outline (index 4 at the top edge, index 11 at the bottom edge) so the cover's edges end at the spine when it turns; in the open drawing they lie on the doodle's own top and bottom edges. The cover (outline 0-3, 12-15, strokes 2-5) is drawn per frame in shots/book/drawn.",
  "strokes": [
   [
    [
@@ -24,6 +24,10 @@
    [
     54,
     0
+   ],
+   [
+    125,
+    1
    ],
    [
     251,
@@ -48,6 +52,10 @@
    [
     168,
     174
+   ],
+   [
+    125,
+    172
    ],
    [
     35,
@@ -216,8 +224,8 @@
   },
   {
    "stroke": 0,
-   "from": 10,
-   "to": 13,
+   "from": 12,
+   "to": 15,
    "joint": "bot",
    "aim": [
     "bot",

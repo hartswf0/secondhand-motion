@@ -5,8 +5,7 @@ Marks: each mark is one real Quick, Draw! leaf doodle placed on the vase body as
 x = centre(y) + halfwidth(y) * sin(angle + turn). All six marks are on every frame with the same points, so no
 mark appears or vanishes between two frames. A part of a mark that has turned past the right edge is pressed onto
 the body outline and drawn in toward the mark's middle height; a part still behind the hand's fingertips on the
-left is pressed onto the hand's own outline (so it lies under the finger lines) and drawn in toward the longest
-fingertip. So a mark thins in from the fingertips
+left is pressed onto the hand's own outline at that height, so it lies under the finger lines. So a mark thins in from the fingertips
 over several frames and thins out into the right outline over several frames, continuously, down to zero width.
 
 turn(f) = the film's measured pattern slide (phase correlation of the painted band, rows 140-235, cols 110-270,
@@ -61,7 +60,10 @@ rows = [json.loads(l) for l in open(ROOT / 'data/quickdraw/leaf.part').read().sp
 def unit(kid):
     r = next(r for r in rows if str(r['key_id']) == kid)
     L = [np.array(list(zip(*s)), float) for s in r['drawing']]; A = np.concatenate(L); mn, mx = A.min(0), A.max(0)
-    return [(s - (mn + mx) / 2) / (mx - mn) for s in L]
+    L = [(s - (mn + mx) / 2) / (mx - mn) for s in L]
+    # each segment split into even sub-steps (the doodle's own vertices kept), so a part pressed onto the hand's
+    # outline follows that outline closely instead of cutting across the fingers in long chords
+    return [np.vstack([a + (b - a) * t for a, b in zip(q[:-1], q[1:]) for t in np.arange(8) / 8] + [q[-1:]]) for q in L]
 MARKS = [(unit('4928285815341056'), 0.40, 58.0, 212.0), (unit('6535184159604736'), 0.62, 60.0, 210.0)]
 def side_x(stroke, y):
     s = np.array(stroke); i = np.argsort(s[:, 1]); return float(np.interp(y, s[i, 1], s[i, 0]))
@@ -83,8 +85,8 @@ for f in range(n):
                 y = Y0 + v * LH; a = a0 + u * LW; aL = a_left(y)
                 if a > math.pi / 2:      # round the right edge: onto the outline, drawn in toward the mark's middle
                     t = min(1.0, (a - math.pi / 2) / FADE); y = y + (Y0 - y) * t; a = math.pi / 2
-                elif a < aL:             # behind the fingertips: onto the fingertip line, drawn in toward the fingertip
-                    t = min(1.0, (aL - a) / FADE); y = y + (ty - y) * t; a = a_left(y)
+                elif a < aL:             # behind the fingers: onto the hand's own outline at that height
+                    a = aL
                 cx, hw = body(y); pts.append([round(cx + hw * math.sin(a), 1), round(y, 1)])
             extra[f'leaf{k}{"abcdef"[j]}'] = pts
     json.dump({'why': ('the pot turned by %.2f rad from the first frame (measured pattern slide %.0f px); the leaves of the painted band are where that turn puts them' % (turn[f], c[f])),
