@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A black line apple with a stem and a single leaf sits in the middle of a grey line scene of two open hands and two diagonal lines. In frames 1-4 the apple slides slightly down and to the left. In frames 5-8 it sits lower and drifts back right. In frames 9-11 it rises and moves right. In frame 12 the stem and leaf tilt and start to fold toward the top edge. In frame 13 the stem and leaf have moved inside the outline near the top. In frame 14 the stem is a small mark in the middle of the apple and the top of the outline has become a notch. In frame 15 the mark is a dot near the bottom. In frame 16 the apple is a plain outline with a notch at the top and no stem, slightly lower and left.",
+ "seen_film": "Two real hands hold a pale apple in front of a tweed jacket. In frames 1-4 the right fingers rub across the apple, which sits upper centre, showing small dark spots. In frames 5-8 the apple is lower and further left, cradled in the left palm while the right hand turns it. In frames 9-11 the apple moves right and is pressed by both hands. In frames 12-14 the apple is rotated so its stem side turns toward the right edge and away. In frames 15-16 the apple is lower and smaller in the frame, between the two hands, with its blossom end (a dark hole) facing the camera.",
+ "named_subject": "an apple (the doodle apple with stem and leaf) being turned in someone's hands",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-35: the apple holds roughly mid-frame with small drifts while the film (f.png 1-35) moves the apple from upper centre down-left (f.png 13-20) and then right (f.png 23-30); the drawing's path in g.png is a short cluster, not the film's larger down-left then right travel. e.png 36-40: the stem and leaf fold over the top and the top outline gains a notch, which matches the film's turn (f.png 35-41) in timing. e.png 40->41: the leaf and stem change in one step from a leaf shape at the top to a small arrow-shaped mark in the centre of the apple, a visible pop. e.png 41-46: the mark slides down to the bottom edge and shrinks; e.png 47: it vanishes in one frame. e.png 47-49: plain outline with no blossom-end mark, while film f.png 45-49 shows the blossom-end hole clearly facing the camera. The animation apple does not shrink or drop as much as the film apple does in f.png 44-49. Judged from still frames only.",
+ "primary_gap": "The turn of the apple happens as an abrupt swap at e.png 40-41 (leaf at top replaced by a centre mark) and ends at e.png 47-49 as a blank outline, so the rotation does not read as one continuous turn ending with the blossom end facing camera as in the film.",
+ "closes_when": "Across e.png 36-46 the stem and leaf travel in small steps over the top and down the far side out of view while a calyx mark (short crossed strokes in the doodle's line) enters from the near side and settles at the centre-bottom and stays visible through e.png 49, with no single-frame replacement.",
+ "protect": "The apple outline keeps c.png's construction: the two-lobed top, the flat notched bottom with two small bumps, the single slightly wobbly stroke, the leaf with its inner vein line. The timing of the turn starting near e.png 36 matches the film. Scenery stays grey and stable without flicker.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  40,
+  41,
+  46,
+  47
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The apple is clearly the c.png drawing in frames 1-39, but after the turn the leaf disappears and the replacement centre mark is not drawn in the doodle's stroke style.",
+ "still_frames_only": true,
+ "_packet": "lot1f709ce0",
+ "_round": 2
+}
