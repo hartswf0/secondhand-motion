@@ -1,0 +1,26 @@
+{
+ "seen_animation": "A black-line bird doodle (round head with dash eyes, long triangular beak pointing left, an oval body with an inner oval belly, a wing on each side) stands in front of grey scenery: a rounded bracket shape at upper right and a long rail with a small bump along the bottom. In frame 1 the beak points steeply up and to the left. From frame 2 the beak is near horizontal and stays that way. Through frames 2-12 the whole bird sways slightly left and right and the head bobs up and down by small amounts while the beak opens and closes. In frames 7, 12, 14 and 16 a heavier straight horizontal line appears under or across the beak, so the beak looks drawn twice. In frame 13 the bird has shifted to the left of the frame. In frame 15 the head tilts and the beak swings down to point down-left toward the chest; in frame 16 the head is upright again with the beak horizontal.",
+ "seen_film": "A dark character with a black head, a pale snout or muzzle tuft sticking out to the left, a pointed pale ear at upper right, and a long pale tilted oval chest stands against a dark background with a red shape at upper right and a pale rail along the bottom. Across the 16 frames the character stays in place and talks or chews: the head bobs and the snout tuft opens and changes shape. In frames 3-4 the head is slightly lower and the snout is closer to the chest. Frames 5-12 show small head bobs and snout changes with the body nearly still. In frame 13 the character sits a little further left. In frame 15 the head dips and turns so the snout drops down onto the chest and the eye becomes a plain outline; in frame 16 the head comes back up.",
+ "named_subject": "a bird (penguin-like) with a long beak, standing in for a talking animal with a white bib",
+ "verdict": "reference stronger",
+ "evidence": "The scenery and overall staging match the film: grey bracket at upper right and bottom rail line up with the film's red shape and rail in all frames, and the body occupies the same left-center area. The head bob and beak open/close in frames 2-12 match the film's talking motion, the leftward shift in frame 13 matches film frame 13, and the downward beak dip in frame 15 matches the snout dropping in film frame 15. Against this: frame 1 shows the beak pointing steeply up-left, while film frame 1 has the snout at the left at about the same angle as frame 2; the change from frame 1 to frame 2 is a jump of roughly 40 degrees in beak angle that the film does not have. Frames 7, 12, 14 and 16 show a thick extra horizontal stroke at the beak (the beak appears doubled), and frame 4 has an extra line running from the chin into the beak. The body tilt also changes from frame 1 (leaning, wings spread) to frame 2 more than the film's body does.",
+ "primary_gap": "The beak pops and doubles: frame 1's steep upward beak jumps to horizontal in frame 2, and frames 4, 7, 12, 14 and 16 show an extra or heavier beak stroke, so the talking reads as redraws rather than one beak opening and closing.",
+ "closes_when": "Frame 1's beak sits at about the same leftward angle as frame 2 (as in film frame 1), and in every frame the beak is two thin strokes meeting at a point, opening and closing by small steps, with no heavy extra horizontal line in frames 7, 12, 14 and 16.",
+ "protect": "Keep the doodle's construction (round head with dash eyes, thin triangle beak, oval body with inner oval, two loose wing loops), the scenery placement matching the film, the small head bobs through frames 2-12, the leftward shift at frame 13, and the downward beak dip at frame 15 followed by recovery at frame 16.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  4,
+  7,
+  12,
+  14,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character keeps the doodle's head, beak, oval-in-oval body and wing strokes, though the body is tilted more than in c.png and the doubled beak strokes in some frames are not part of the doodle's drawing habits.",
+ "still_frames_only": true,
+ "_packet": "lot23b5d37d",
+ "_round": 3
+}
