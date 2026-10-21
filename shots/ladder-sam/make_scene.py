@@ -135,13 +135,13 @@ def skeleton(f):
         q=contact(f,limb); sgo=-1 if limb=='lh' else 1
         e0=joint(S,q,30,lambda z,sg=sgo: z[1]+sg*0.3*z[0],fore=True)
         Sh=S+LV*sg*3
-        e1=limb_back(Sh,q,30*SC(f),sg,0.55)
+        e1=limb_back(Sh,q,30*SC(f),sg,0.8)
         J[limb]=(Sh*bl+S*(1-bl),e0*(1-bl)+e1*bl,q)
     for limb,sg in (('lf',-1),('rf',1)):
         q=contact(f,limb); Hp0=P-np.array([2.5*(-sg),0.0]); Hp1=P+LV*sg*3-LU*5*SC(f); Hp=Hp0*(1-bl)+Hp1*bl   # on the ladder the hips sit 5 px below the waist line
         D=np.hypot(*(q-Hp))
         k0=joint(Hp0,q,39,lambda z: z[0]+0.6*z[1],limb)
-        k1=limb_back(Hp1,q,LEG*SC(f),sg,0.4,cL,cR)
+        k1=limb_back(Hp1,q,LEG*SC(f),sg,0.75,cL,cR)
         J[limb]=(Hp,k0*(1-bl)+k1*bl,q)
     return J
 def _x(p1,p2,p3,p4):
