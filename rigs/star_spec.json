@@ -1,0 +1,258 @@
+{
+ "category": "star",
+ "doodle_key_id": "4916376630198272",
+ "facing": 1,
+ "face_from": [
+  "c",
+  "c"
+ ],
+ "note": "Quick, Draw! star 4916376630198272, a five-pointed star drawn in five strokes: stroke 0 is the top point and the start of the right point, stroke 1 the left point, stroke 2 the lower edge of the right point, stroke 3 the lower-left point and the start of the lower-right point, stroke 4 the lower-right point. In the film a white star-shaped flower opens from a bud and grows. The whole star is placed from its centre to the tip of the top point, so it grows as the top petal grows. The other four points turn about the centre toward their petals and lengthen or shorten part of the way toward them, so the star opens as the petals open. The inner corners of the star stay where the root puts them.",
+ "root": [
+  "c",
+  "top"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "c": [
+   103,
+   138
+  ],
+  "top": [
+   116,
+   0
+  ],
+  "r": [
+   204,
+   98
+  ],
+  "l": [
+   4,
+   90
+  ],
+  "ll": [
+   2,
+   240
+  ],
+  "lr": [
+   163,
+   254
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 1,
+   "to": 4,
+   "joint": "c",
+   "aim": [
+    "c",
+    "top"
+   ],
+   "stretch": 0,
+   "turn": 0
+  },
+  {
+   "stroke": 0,
+   "from": 6,
+   "to": 6,
+   "joint": "c",
+   "aim": [
+    "c",
+    "r"
+   ],
+   "stretch": 0.6,
+   "turn": 1.0
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 1,
+   "joint": "c",
+   "aim": [
+    "c",
+    "r"
+   ],
+   "stretch": 0.6,
+   "turn": 1.0
+  },
+  {
+   "stroke": 1,
+   "from": 1,
+   "to": 2,
+   "joint": "c",
+   "aim": [
+    "c",
+    "l"
+   ],
+   "stretch": 0.6,
+   "turn": 1.0
+  },
+  {
+   "stroke": 3,
+   "from": 1,
+   "to": 3,
+   "joint": "c",
+   "aim": [
+    "c",
+    "ll"
+   ],
+   "stretch": 0.6,
+   "turn": 1.0
+  },
+  {
+   "stroke": 4,
+   "from": 2,
+   "to": 5,
+   "joint": "c",
+   "aim": [
+    "c",
+    "lr"
+   ],
+   "stretch": 0.6,
+   "turn": 1.0
+  },
+  {
+   "stroke": 3,
+   "from": 6,
+   "to": 6,
+   "joint": "c",
+   "aim": [
+    "c",
+    "lr"
+   ],
+   "stretch": 0.6,
+   "turn": 1.0
+  },
+  {
+   "rest": true,
+   "joint": "c",
+   "aim": [
+    "c",
+    "top"
+   ],
+   "turn": 0
+  }
+ ],
+ "track": false,
+ "smooth": 1.2,
+ "strokes": [
+  [
+   [
+    90,
+    99
+   ],
+   [
+    107,
+    20
+   ],
+   [
+    114,
+    1
+   ],
+   [
+    118,
+    0
+   ],
+   [
+    138,
+    62
+   ],
+   [
+    139,
+    95
+   ],
+   [
+    204,
+    98
+   ]
+  ],
+  [
+   [
+    81,
+    97
+   ],
+   [
+    4,
+    90
+   ],
+   [
+    36,
+    132
+   ],
+   [
+    55,
+    146
+   ]
+  ],
+  [
+   [
+    196,
+    104
+   ],
+   [
+    179,
+    131
+   ],
+   [
+    144,
+    165
+   ]
+  ],
+  [
+   [
+    52,
+    148
+   ],
+   [
+    9,
+    218
+   ],
+   [
+    0,
+    240
+   ],
+   [
+    6,
+    242
+   ],
+   [
+    86,
+    185
+   ],
+   [
+    100,
+    195
+   ],
+   [
+    141,
+    239
+   ]
+  ],
+  [
+   [
+    151,
+    162
+   ],
+   [
+    150,
+    184
+   ],
+   [
+    167,
+    252
+   ],
+   [
+    163,
+    255
+   ],
+   [
+    158,
+    254
+   ],
+   [
+    120,
+    238
+   ]
+  ]
+ ]
+}

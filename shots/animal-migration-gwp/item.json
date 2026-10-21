@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0172",
+ "id": "animal-migration-gwp",
+ "kind": "shot",
+ "title": "Animal migration, the Giraffe Walks Past Way",
+ "category": "animal-migration",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/animal-migration-gwp/cover.png",
+ "cover_alt": "shots/animal-migration-gwp/frames/f030.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/animal-migration-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#animal-migration-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/animal_migration_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/animal-migration/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/animal-migration-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

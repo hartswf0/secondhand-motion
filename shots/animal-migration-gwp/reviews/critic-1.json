@@ -1,0 +1,19 @@
+{
+ "seen_animation": "Judged from still frames only, not playback. Frame 1: three copies of a four-bird doodle (one large peaked M bird over smaller m-shaped birds) sit in the band between a grass line with trees above and a water line below. Frames 2-4: the clusters stay in about the same screen area while the grass line and water lines move down, so the birds sit higher relative to the ground. Frames 5-7: the birds overlap the grass line and trees, and the water line moves to the bottom edge. Frames 8-16: the water is gone, the trees fill the frame behind the birds, the ground line sits low, and the three clusters hover in the upper-middle of the frame among the tree crowns with small changes in wing shape. The number of birds stays at twelve throughout.",
+ "seen_film": "Frame 1: a large flock of geese rests on the ground in a band of brown reeds below bare trees, with icy water at the bottom. Frames 2-4: birds start lifting off, wings spread, from the left and centre. Frames 5-8: most of the flock is airborne, rising through the reed band and over the trees, while the camera tilts up and the water drops out of frame. Frames 9-16: dozens of geese fill the whole upper two thirds of the sky from edge to edge, flapping and drifting right, with bare trees and reeds now at the bottom of the frame.",
+ "named_subject": "A flock of flying birds (geese), drawn as the c.png group of four M-shaped birds repeated in three clusters.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-8: birds are already drawn in flight pose and spread at y ~35-55% of the panel, while f.png 1-8 shows the geese still standing on the ground and only beginning to lift off; there is no takeoff. e.png 9-56: the bird count stays at 12 in three fixed blocks (left, centre, right) with the same internal layout, while f.png 17-56 shows the flock growing to dozens of birds spread across the whole sky. e.png 25-56: the clusters stay in the middle band (roughly y 25-45% of the panel) while in f.png 25-56 the birds occupy the top of the frame and reach the top edge. g.png shows each cluster moving in a short, straight vertical line with no lateral drift, while the film flock drifts to the right. Scenery redraws rather than scrolls in several places: e.png 27-28 and 42-43 (a tree appears or vanishes at the left edge), 36-37 (the last water line disappears at once). The bird motion itself is continuous: no cluster jumps between consecutive frames in g.png.",
+ "primary_gap": "The animation never performs the film's event of a grounded flock taking off and spreading across the sky: its twelve birds are airborne from frame 1 and stay as three fixed stamped clusters in the middle band.",
+ "closes_when": "In e.png 1-8 the birds sit low on the grass/water band with folded or low wings and lift off one cluster after another, and by e.png 25-56 more birds (or the clusters spread apart) fill the upper half of the frame up to the top edge while drifting right as in f.png.",
+ "protect": "The c.png stroke language (peaked M and small m wing strokes, thin black line, no added detail); continuous small-step vertical motion with no pops in the bird path; the grey scenery that tilts down (water out, trees in) at the same times as the film's camera tilt.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "Each cluster is the c.png four-bird drawing with its own stroke habits, but repeating it three times in identical layout reads as a stamped pattern rather than one flock.",
+ "still_frames_only": true,
+ "_packet": "lot79adc004",
+ "_round": 1
+}

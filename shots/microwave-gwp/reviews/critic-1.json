@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A black line drawing of a wide box, like a freezer compartment seen from the front, with a trapezoid panel (the door) in the middle and a small U-shaped handle to its right. In frames 1-2 the panel sits at center. From frame 3 four grey shelf lines appear at the left inside the box and the panel starts drifting right. Through frames 4-8 the panel moves steadily right and gets narrower, its handle staying beside its right edge. By frames 9-10 the panel is a tall thin sliver pressed against the right wall of the box, and frames 10-16 hold it there with only slight wobble, so the box interior is left open with the shelves visible.",
+ "seen_film": "A cream refrigerator freezer compartment fills the frame. In frames 1-2 a hand at the left pulls the full-width door, which is hinged on the right. Frames 3-6 the door's left edge swings out and travels right, exposing a dark interior with four ice trays stacked at the left; the door appears foreshortened. Frames 7-9 the door continues to swing toward the right edge, showing its inner panel and the frosted back wall. By frames 10-12 the door is nearly edge-on at the right side of the frame, and frames 13-16 hold the open freezer with the door seen edge-on at the right.",
+ "named_subject": "A freezer compartment whose door swings open to the right on a right-side hinge.",
+ "verdict": "bar met",
+ "evidence": "g.png shows the door drawings at e-frames 1,4,7,10,13,16 evenly spaced and moving one way to the right, then bunching at the right wall from about 19 onward, with no reversal. e-frames 1-8 the door drifts slowly right (film 1-8: hand pulls and the door's left edge starts to swing); e-frames 9-18 the door moves faster and narrows (film 9-18: door swings through the middle of its arc); e-frames 19-25 the door becomes a thin sliver against the right wall (film 19-27: door approaches edge-on at right); e-frames 26-38 hold (film 28-38 hold with door edge-on). The narrowing width reads as rotation about a right hinge, matching the film's foreshortening. The drawing keeps c.png's construction: the outer box with left vertical stroke, slanted top-right corner, long sagging bottom line ending in a small hook, the trapezoid door with its notched left side and doubled right stroke, and the small U handle. Weaknesses: the four grey shelf lines appear all at once at e-frame 5 rather than being uncovered as the door moves; the bottom line of the box shows a break near the right hook in e-frames 26, 30 and 31 that is not in neighbouring frames; the animation settles at the right wall about 3-5 frames earlier than the film. Judged from still frames only, not playback.",
+ "primary_gap": "The shelf lines pop in fully at e-frame 5 while the door is still covering the middle, and the box's bottom line flickers open near the hook at e-frames 26, 30 and 31, so two small pops break otherwise continuous motion.",
+ "closes_when": "The shelf lines are revealed only as the door's left edge passes them (or are present from frame 1 if the doodle has them as fixed scenery), and the bottom line of the box is drawn identically and unbroken in every frame from 1 to 38.",
+ "protect": "The one-direction rightward travel of the door with progressive narrowing that reads as a hinged swing; the timing that starts slow, speeds through the middle and settles against the right wall with a long hold; the exact stroke construction of c.png (notched trapezoid door, doubled right edge, U handle, sagging bottom line with hook); the static outer box.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  5,
+  26,
+  30,
+  31
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png drawing itself; the only departures are the added grey shelf lines and brief gaps in the bottom line at frames 26, 30 and 31.",
+ "still_frames_only": true,
+ "_packet": "lota1abdd0c",
+ "_round": 1
+}

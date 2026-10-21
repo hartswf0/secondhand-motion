@@ -6,7 +6,7 @@
   "head",
   "head"
  ],
- "note": "Quick, Draw! lollipop 4885340923887616: stroke 0 is the round candy, drawn as one closed loop with a small notch at the top; strokes 1 and 2 are the two long sides of the flat stick, leaving the candy at its lower left; stroke 3 is the short line closing the stick's end. In the film the candy and stick are one rigid object that slides left to right across a dark surface while the stick swings from pointing down-right to pointing down-left. The rig places the whole doodle by two points, the candy's centre and the top of the stick, so the drawing keeps its own shape and size and turns as one piece when the stick swings; nothing bends.",
+ "note": "Quick, Draw! lollipop 4885340923887616: stroke 0 is the round candy, drawn as one closed loop with a small notch at the top; strokes 1 and 2 are the two long sides of the flat stick, leaving the candy at its lower left; stroke 3 is the short line closing the stick's end. In the film the candy and stick slide left to right across a dark surface while the stick swings from pointing down-right to pointing down-left. The rig places the whole doodle by two points, the candy's centre (head) and the point where the stick leaves the candy (neck), so the candy keeps its size and the drawing turns as one piece with the stick's angle. The stick (strokes 1 to 3) stays joined to the candy at the neck and lengthens or shortens toward the tip point, because in the film the stick shows more of its length below the candy near the frame edges than in the middle of the shot.",
  "strokes": [
   [
    [
@@ -129,9 +129,46 @@
   "neck": [
    69,
    120
+  ],
+  "tip": [
+   8,
+   250
   ]
  },
  "parts": [
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 2,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "tip"
+   ],
+   "stretch": 0.5
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 2,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "tip"
+   ],
+   "stretch": 0.5
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 1,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "tip"
+   ],
+   "stretch": 0.5
+  },
   {
    "rest": true,
    "joint": "head",
@@ -145,5 +182,5 @@
  "size_from_mask": false,
  "size": "steady",
  "smooth": 1.0,
- "track": false
+ "track": true
 }

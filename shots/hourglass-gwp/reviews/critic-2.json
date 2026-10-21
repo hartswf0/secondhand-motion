@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frame 1: a line-drawn hourglass lies on its side in the upper middle of the frame, its flat pointed top plate standing vertical on the left and its base line vertical on the right. Frames 2-4: it rotates clockwise in the picture plane, the plate swinging up and over, and moves down toward a grey stand. Frames 4-5: it is nearly upright, with the base line tilted and dipping onto the stand. Frames 5-12: it stands upright on the stand with the plate on top, unchanged. Frame 13: a short vertical line appears in the lower bulb under the neck, the neck pinches narrower, and a small mark appears at the bottom. Frames 14-16: the line reaches from the neck to the base and ends in a small peaked mound, a falling stream of sand with a pile. Grey scenery (a large circle arc, a stand, diagonal lines on the right) stays fixed.",
+ "seen_film": "A dark gloved hand holds an hourglass in silhouette against a large bright disc. Frames 1-2: the hourglass is tipped over, its round base disc seen nearly face-on near the top of the frame. Frames 3-5: the hand turns it upright while lowering it, the base disc foreshortening into an ellipse, and sets it down on a stand. Frames 6-12: the hand stays wrapped around the upright hourglass, holding still. Frame 13: the hand slides away to the left, blurred, and dark sand is visible filling the upper bulb. Frames 14-16: the hourglass stands alone on the stand, and sand runs from the upper bulb into the lower one.",
+ "named_subject": "an hourglass (sand timer) with a flat top plate and wavy sides",
+ "verdict": "bar met",
+ "evidence": "Judged from still frames only, not playback. e1-e6 vs f1-f8: both show the hourglass turned from tipped-over to upright while it is lowered onto the stand. The animation is upright and seated by e7, about one to two frames before the film settles at f8-f9. e7-e20 vs f9-f20: the animation holds still while the film's hand holds the hourglass still, so the hold matches. e21-e26 vs f21-f26: the sand stream appears at e21, the same frame the hand leaves and sand shows in f21, and from e22 it reaches the base with a pile, matching the film's running sand. g.png shows the centre moving steadily from frame 1 down to frames 10-25 with no reversals or gaps. Size stays the same throughout: the horizontal length in e1 equals the upright height in e8. The film turns the hourglass toward the camera (its base disc foreshortens), while the animation spins it flat in the picture plane. This simplification fits the doodle's flat line language.",
+ "primary_gap": "When the sand starts at e21, the upper bulb is still empty and the neck suddenly redraws narrower in one frame, so the stream pops in as a bare line instead of reading as sand draining from a filled top bulb as in f21-f26.",
+ "closes_when": "From e21 onward the upper bulb shows a sand level drawn in the doodle's single-stroke style (a line across the upper bulb that drops slightly each frame), and the neck narrows over two or three frames before e21 instead of in one frame.",
+ "protect": "The c.png construction: the pointed flat top plate, the wobbly asymmetric sides with an angled kink at the neck, and the base line that overshoots on the left. The single in-plane clockwise turn over e1-e6 with steady increments and constant size. The still hold over e7-e20 that matches the film's held hand. The sand starting at e21 in step with the film. The fixed grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  7,
+  21
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hourglass keeps c.png's plate, wavy sides and base stroke throughout. The only deviation is the narrower neck from e21 on, which departs slightly from the doodle's open waist.",
+ "still_frames_only": true,
+ "_packet": "lot7e701e90",
+ "_round": 2
+}

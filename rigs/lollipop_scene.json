@@ -1,0 +1,75 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "source": "held still: the surface is a plain dark blue cloth with no marks to track, and shots/lollipop-sam/camera.json follows the lollipop itself (it moves right by the same 160 px the candy travels), so the lollipop slides across a still frame"
+ },
+ "planes": [
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Lollipop"
+  }
+ ],
+ "objects": [],
+ "notes": {
+  "0": "the candy enters at the left edge, stick pointing down and to the right",
+  "12": "the stick points straight down below the candy",
+  "25": "the candy leaves at the right edge, stick pointing down and to the left"
+ }
+}

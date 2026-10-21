@@ -273,6 +273,22 @@
   "foot": [
    70,
    250
+  ],
+  "lhip": [
+   8,
+   98
+  ],
+  "lfoot": [
+   34,
+   236
+  ],
+  "rhip": [
+   122,
+   92
+  ],
+  "rfoot": [
+   105,
+   240
   ]
  },
  "root": [
@@ -349,6 +365,28 @@
     "neck",
     "head"
    ]
+  },
+  {
+   "stroke": 0,
+   "from": 1,
+   "to": 8,
+   "joint": "lhip",
+   "aim": [
+    "lhip",
+    "lfoot"
+   ],
+   "stretch": 0.4
+  },
+  {
+   "stroke": 0,
+   "from": 9,
+   "to": 11,
+   "joint": "rhip",
+   "aim": [
+    "rhip",
+    "rfoot"
+   ],
+   "stretch": 0.4
   },
   {
    "rest": true,

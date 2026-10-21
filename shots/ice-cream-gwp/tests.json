@@ -83,17 +83,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cAn ice cream cone: a scoop drawn as a segmented dome on top of a cone, standing in for the cream mound in the cup.\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cAn ice cream cone (a scoop on top of a cone), used here as the cup and mound of soft serve.\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": false,
-  "evidence": "shots/ice-cream-gwp/reviews/critic-1.json"
+  "evidence": "shots/ice-cream-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The dome, rim line and cone sides are drawn in the doodle's segmented straight-line style, but the shot is cropped so tightly that the cone's point never shows and the character reads mainly as a large dome.",
-  "evidence": "shots/ice-cream-gwp/reviews/critic-1.json"
+  "ok": false,
+  "note": "The dome and cone top line match c.png's construction, but the drawing is scaled up until the cone's lower half and point are cut off by the frame, so it reads as a cup rim and mound rather than the complete cone doodle.",
+  "evidence": "shots/ice-cream-gwp/reviews/critic-2.json"
  }
 ]

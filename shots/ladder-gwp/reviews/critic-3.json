@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A fixed black ladder, drawn with the same wobbly strokes as the doodle, leans from bottom-centre up to the right in front of grey scenery (a tree at left, a mountain outline, vertical posts at right). A black stick figure with a circle head and a small box torso stands at the far left (frames 1-2), walks toward the ladder foot (3), crouches at the ladder base with one arm reaching to a rung (4), and then climbs the ladder diagonally upward (5-12), its arm reaching to rungs and its legs bending below. By frames 13-16 the figure is near the top of the ladder, standing more upright with its legs crossed below its torso. The ladder does not move.",
+ "seen_film": "A bare-backed man in a white cloth runs in from the lower left (frames 1-2), reaches the foot of a bamboo ladder leaning on a large haystack (3-4), steps onto it and climbs steadily along the ladder diagonal toward upper right (5-14), bent forward with hands on the upper rungs, and is near the top of the ladder against the haystack at frames 15-16. The ladder and haystack do not move.",
+ "named_subject": "A leaning ladder (the doodle in c.png), with a stick-figure climber going up it.",
+ "verdict": "reference stronger",
+ "evidence": "Still frames only, no playback. The ladder in every frame of e.png is the c.png doodle stroke for stroke (bent second rung, short hooked bottom rung, hooked foot of the left rail) and stays fixed, as the film's ladder does. Timing and placement of the climb match the film: e.png 1-5 figure at the left edge while the film man runs in at the left (f.png 1-5); e.png 9-16 figure low on the ladder, matching f.png 9-16; e.png 25 head at the same mid-ladder spot as the man in f.png 25; e.png 33-38 figure at the ladder top as in f.png 33-38. g.png shows one steady diagonal path with no reversals. Breaks: e.png 5->6 the figure changes from an upright standing pose to a wide-legged squat with a raised arm in one step; e.png 30->31->32 the torso box grows to roughly twice its size and tilts, then at 33 shrinks back to a small upright box; through e.png 9-30 the torso is drawn as a box crossed with diagonal lines and the legs often hang to the left of the left rail instead of on the rungs (e.g. 9-12, 25-26), so the figure reads as sliding beside the ladder; e.png 33-38 the figure stands fully upright above the top rung with legs crossed in an X, while the film man (f.png 33-38) is still bent forward over the ladder with hands on it.",
+ "primary_gap": "The climber's body does not stay one consistent drawing in contact with the ladder: its torso box changes size and shape (e.png 6, 31-33) and its feet hang beside the left rail instead of landing on rungs, so the climb reads as a figure sliding up beside the ladder with pose pops.",
+ "closes_when": "In every frame the climber's torso box stays the same size and shape, each foot sits on a rung of the doodle ladder and steps up one rung at a time, the hands grip a rung above, the 5->6 approach becomes an in-between step into a crouch, and the figure stays bent forward over the ladder at the top in 33-38.",
+ "protect": "The ladder is exactly the c.png doodle and stays fixed in the same place as the film's ladder; the grey scenery is unobtrusive; the climb's timing and screen positions follow the film frame for frame (left entrance 1-5, base 6-10, mid-ladder around 25, top by 33); the path in g.png is one steady diagonal with no reversals.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  31,
+  32,
+  33
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The ladder is the doodle unchanged, but the added climber is drawn with thinner, more geometric lines (box-with-X torso) than the doodle's thick hand-drawn strokes, so the climber does not share the doodle's stroke habits.",
+ "still_frames_only": true,
+ "_packet": "lotc1d5ab94",
+ "_round": 3
+}

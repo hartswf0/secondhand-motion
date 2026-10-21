@@ -1,0 +1,332 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   -1.17,
+   -2.51,
+   -4.65,
+   -7.95,
+   -12.13,
+   -17.29,
+   -24.52,
+   -31.45,
+   -37.89,
+   -43.21,
+   -47.44,
+   -49.24,
+   -53.15,
+   -56.91,
+   -60.66,
+   -62.19,
+   -59.82,
+   -53.63,
+   -47.45,
+   -41.27,
+   -37.53,
+   -38.32,
+   -39.77,
+   -41.21,
+   -42.5,
+   -41.99,
+   -39.85,
+   -37.72,
+   -35.59,
+   -34.54,
+   -34.95,
+   -35.89,
+   -35.6,
+   -34.73,
+   -32.79,
+   -30.63,
+   -28.48,
+   -24.82,
+   -21.73,
+   -18.04,
+   -14.55,
+   -11.06,
+   -10.49,
+   -9.54
+  ],
+  "y": [
+   1.93,
+   2.27,
+   2.48,
+   2.89,
+   1.91,
+   0.77,
+   -0.38,
+   -1.23,
+   -0.55,
+   1.04,
+   2.62,
+   5.06,
+   9.17,
+   15.43,
+   23.28,
+   31.98,
+   39.84,
+   46.14,
+   48.97,
+   49.98,
+   50.15,
+   50.32,
+   49.03,
+   45.81,
+   39.58,
+   33.27,
+   26.96,
+   21.56,
+   18.15,
+   18.17,
+   22.71,
+   28.42,
+   35.26,
+   43.01,
+   51.47,
+   55.98,
+   59.31,
+   62.75,
+   65.27,
+   67.0,
+   68.3,
+   69.64,
+   69.77,
+   70.0
+  ],
+  "source": "shots/mug-sam/camera.json (phase correlation on the footage), passed through a 5-frame median and a 5-frame mean, because single-frame spikes (frame 7) come from the cup itself moving across the frame"
+ },
+ "planes": [
+  {
+   "id": "back",
+   "z": 4,
+   "label": "Bright cloth and dark knobs behind the cup",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Mug"
+  }
+ ],
+ "objects": [
+  {
+   "id": "cloth",
+   "plane": "back",
+   "class": "edge",
+   "why": "the film has a large blurred bright surface (cloth or a sleeve) standing behind the cup on the right; no Quick, Draw! category is a blurred edge, so it is one hand-drawn wavering vertical line where its left edge is",
+   "strokes": [
+    [
+     [
+      262,
+      -60
+     ],
+     [
+      258,
+      0
+     ],
+     [
+      252,
+      50
+     ],
+     [
+      250,
+      100
+     ],
+     [
+      254,
+      150
+     ],
+     [
+      262,
+      200
+     ],
+     [
+      270,
+      280
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "knob1",
+   "plane": "back",
+   "class": "knob",
+   "why": "two dark round knobs below the cup at the start of the shot; Quick, Draw! has no knob or bead category, so each is a small drawn circle",
+   "strokes": [
+    [
+     [
+      127.0,
+      138.0
+     ],
+     [
+      125.3,
+      143.3
+     ],
+     [
+      120.8,
+      146.6
+     ],
+     [
+      115.2,
+      146.6
+     ],
+     [
+      110.7,
+      143.3
+     ],
+     [
+      109.0,
+      138.0
+     ],
+     [
+      110.7,
+      132.7
+     ],
+     [
+      115.2,
+      129.4
+     ],
+     [
+      120.8,
+      129.4
+     ],
+     [
+      125.3,
+      132.7
+     ],
+     [
+      127.0,
+      138.0
+     ]
+    ]
+   ],
+   "visible": [
+    0,
+    7
+   ]
+  },
+  {
+   "id": "knob2",
+   "plane": "back",
+   "class": "knob",
+   "why": "second dark knob, as knob1",
+   "strokes": [
+    [
+     [
+      158.0,
+      168.0
+     ],
+     [
+      156.5,
+      172.7
+     ],
+     [
+      152.5,
+      175.6
+     ],
+     [
+      147.5,
+      175.6
+     ],
+     [
+      143.5,
+      172.7
+     ],
+     [
+      142.0,
+      168.0
+     ],
+     [
+      143.5,
+      163.3
+     ],
+     [
+      147.5,
+      160.4
+     ],
+     [
+      152.5,
+      160.4
+     ],
+     [
+      156.5,
+      163.3
+     ],
+     [
+      158.0,
+      168.0
+     ]
+    ]
+   ],
+   "visible": [
+    0,
+    7
+   ]
+  },
+  {
+   "id": "knob3",
+   "plane": "back",
+   "class": "knob",
+   "why": "a dark knob to the right of the cup at the end of the shot, as knob1",
+   "strokes": [
+    [
+     [
+      284.0,
+      30.0
+     ],
+     [
+      281.3,
+      38.2
+     ],
+     [
+      274.3,
+      43.3
+     ],
+     [
+      265.7,
+      43.3
+     ],
+     [
+      258.7,
+      38.2
+     ],
+     [
+      256.0,
+      30.0
+     ],
+     [
+      258.7,
+      21.8
+     ],
+     [
+      265.7,
+      16.7
+     ],
+     [
+      274.3,
+      16.7
+     ],
+     [
+      281.3,
+      21.8
+     ],
+     [
+      284.0,
+      30.0
+     ]
+    ]
+   ],
+   "visible": [
+    36,
+    43
+   ]
+  }
+ ],
+ "notes": {
+  "1": "the cup comes down into view, lip at the upper left",
+  "5": "looking into the rim, lip at the left",
+  "21": "the lip has swung round to the lower left",
+  "29": "the lip starts back up",
+  "43": "lip back at the left"
+ }
+}
