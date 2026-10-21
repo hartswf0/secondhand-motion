@@ -379,3 +379,93 @@ What the critics taught the drawers, stated plainly:
 | windmill | 4 | 4 | bar met | bar_met |
 
 Baseline is the motion score before drawn keys; the rounds column lists each critic's motion score in order (1-5). Verdicts and identity are from the last round.
+
+## Wave 5: fifty subjects held to the SCION bar (`data/wave5.json`)
+
+The goal for this wave was fifty new subjects that a blind critic passes on all three counts: the verdict is
+"bar met", the identity of the doodle is kept, and the motion scores 4 or 5 out of 5.
+
+- **Survey and plan.** About half of the first candidate clips did not show their subject, so 127 more were
+  surveyed in CI. Planning agents wrote a plan, a doodle choice or a rejection for each. 55 clips had real motion;
+  59 others were still shots and were kept as spares.
+- **Build.** One builder agent per subject made the rig, keys and scene, with three to six look-and-fix rounds
+  measured by `tools/pops.py` against the Giraffe Walks Past numbers (centre step 0.103, size step 0.062).
+- **Motion sheets.** Each critic packet now has three extra sheets made every frame: the animation (e.png), the
+  footage (f.png) and the drawings overlaid on one panel (g.png). The critic reads frame-to-frame jumps from these
+  instead of from a 16-frame strip.
+- **Drawn keys and repairs.** When a critic named a gap, a repair agent drew keys over the footage
+  (`shots/<slug>/drawn/`) or changed the scene, then a fresh blind critic judged it again. 135 critic verdicts
+  were written in all.
+- **What repairs learned** (now in the drawing instructions): keep each stroke's point count so resampling does not
+  flicker corners; draw a key on every rig key frame; turn a rigid part by rotating one fixed shape, never by
+  redrawing it; hide lines behind a part by cutting them at its outline a little more each frame, never by removing
+  a whole stroke at once; scenery that moves (a hand, a rope of ice cream, a turning base) is drawn as one copy per
+  frame, each visible on its own frame.
+
+Result: **52 subjects pass** (bar met, identity met, motion 4 or 5). 5 score 5
+(fish, baseball-bat, umbrella, popsicle, cell-phone). The rest score 4.
+3 did not pass after repeated rounds and are reported as they stand: ladder (5 rounds, motion 3), ice-cream (7 rounds, motion 3), book (4 rounds, motion 3). In each the critic still sees one gap: the timing of a fast event spread or bunched against the film, or a part that changes shape in one frame.
+
+Stated plainly: the critics judge still frames, not playback. Their requests sometimes conflict between rounds
+(one critic asked the apple to shrink at the end, the next said the film's apple does not shrink), and the
+animal-migration critics read the row breaks of the motion sheet as scenery jumps that measurement showed were not
+in the frames. Lobster needed eight rounds; it passed only when the swinging claw was redrawn as a mirror of the
+doodle's own left claw.
+
+| Subject | Critic rounds | Final verdict | Motion | Identity |
+|---|---|---|---|---|
+| ambulance | 4 | bar met | 4 | bar met |
+| animal-migration | 5 | bar met | 4 | bar met |
+| apple | 5 | bar met | 4 | bar met |
+| baseball-bat | 2 | bar met | 5 | bar met |
+| basket | 2 | bar met | 4 | bar met |
+| bat | 3 | bar met | 4 | bar met |
+| binoculars | 2 | bar met | 4 | bar met |
+| bus | 2 | bar met | 4 | bar met |
+| cannon | 3 | bar met | 4 | bar met |
+| canoe | 4 | bar met | 4 | bar met |
+| cell-phone | 1 | bar met | 5 | bar met |
+| coffee-cup | 3 | bar met | 4 | bar met |
+| diving-board | 4 | bar met | 4 | bar met |
+| dolphin | 3 | bar met | 4 | bar met |
+| door | 3 | bar met | 4 | bar met |
+| eye | 1 | bar met | 4 | bar met |
+| face | 2 | bar met | 4 | bar met |
+| fish | 2 | bar met | 5 | bar met |
+| flamingo | 2 | bar met | 4 | bar met |
+| frying-pan | 2 | bar met | 4 | bar met |
+| garden-hose | 4 | bar met | 4 | bar met |
+| hammer | 3 | bar met | 4 | bar met |
+| hand | 1 | bar met | 4 | bar met |
+| hat | 4 | bar met | 4 | bar met |
+| helmet | 2 | bar met | 4 | bar met |
+| hourglass | 2 | bar met | 4 | bar met |
+| lantern | 1 | bar met | 4 | bar met |
+| lobster | 8 | bar met | 4 | bar met |
+| lollipop | 1 | bar met | 4 | bar met |
+| map | 1 | bar met | 4 | bar met |
+| mermaid | 2 | bar met | 4 | bar met |
+| microwave | 1 | bar met | 4 | bar met |
+| mug | 3 | bar met | 4 | bar met |
+| palm-tree | 1 | bar met | 4 | bar met |
+| pencil | 1 | bar met | 4 | bar met |
+| pickup-truck | 2 | bar met | 4 | bar met |
+| popsicle | 2 | bar met | 5 | bar met |
+| river | 1 | bar met | 4 | bar met |
+| sandwich | 1 | bar met | 4 | bar met |
+| sleeping-bag | 2 | bar met | 4 | bar met |
+| star | 1 | bar met | 4 | bar met |
+| stove | 1 | bar met | 4 | bar met |
+| submarine | 2 | bar met | 4 | bar met |
+| tooth | 2 | bar met | 4 | bar met |
+| traffic-light | 1 | bar met | 4 | bar met |
+| train | 4 | bar met | 4 | bar met |
+| umbrella | 1 | bar met | 5 | bar met |
+| vase | 2 | bar met | 4 | bar met |
+| wheel | 3 | bar met | 4 | bar met |
+| wine-bottle | 1 | bar met | 4 | bar met |
+| wine-glass | 1 | bar met | 4 | bar met |
+| yoga | 2 | bar met | 4 | bar met |
+| book | 4 | reference stronger | 3 | bar met |
+| ice-cream | 7 | reference stronger | 3 | bar met |
+| ladder | 5 | reference stronger | 3 | bar met |

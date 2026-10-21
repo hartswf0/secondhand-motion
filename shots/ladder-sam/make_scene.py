@@ -239,7 +239,7 @@ S={"z_ref":2,
            {"id":"char","z":2,"label":"Ladder and the man climbing it"},
            {"id":"ground","z":1.8,"label":"Sand in front","z_from_depth":"bottom"}],
  "objects":objs,
- "notes":{"0":"the ladder leans against the haystack; a man walks in from the left","4":"he reaches the ladder and takes the left rail with his right hand","6":"right foot on the bottom rung","8":"first push: he steps up, left foot on the second rung","16":"halfway up, one rung at a time, hand then foot","26":"a push brings his head level with the top of the ladder","32":"the last push brings him to the top of the ladder, feet on the top-but-one rung, hands on the tops of the rails","37":"he stays bent forward over the top of the ladder against the haystack, head inside the frame"},
+ "notes":{"0":"the ladder leans against the haystack; a man walks in from the left","4":"he reaches the ladder and takes the left rail with his right hand","6":"right foot on the bottom rung","8":"first push: he steps up, left foot on the second rung","16":"halfway up, one rung at a time, hand then foot","26":"a push brings his head level with the top of the ladder","27":"left hand on the top of the left rail; the feet step up to the top-but-one rung one at a time (right 24-28, left 25-31)","32":"right hand on the top of the right rail","37":"he is still rising slowly, bent forward over the top of the ladder against the haystack, head inside the frame"},
  "no_cel":"the SAM mask covers the man in most frames, so cel paint would erase the man and leave the ladder alone"}
 json.dump(S,open(R+'rigs/ladder_scene.json','w'),indent=1)
 print(len(objs))

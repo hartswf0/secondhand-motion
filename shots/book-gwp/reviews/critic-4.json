@@ -1,0 +1,26 @@
+{
+ "seen_animation": "a.png frames 1-2: a closed book drawn as a tilted rectangle with diagonal text-line marks, a spine line on its upper left, and a hand at the bottom edge. Frame 3: a second, slightly offset cover outline appears along the right edge. Frames 4-5: the cover is drawn as a separate quadrilateral lifting off and swinging up and to the left, with the hand on it. Frame 6: the cover is edge-on as a bundle of lines along the spine, with the hand on it. Frames 7-8: the cover has landed on the left as a left page, shown only as loose dash marks and an arm line, with the hand at the upper left. Frames 9-10: the hand slides out at the left edge. Frames 11-16: an open book, two pages with a double spine line and text marks, holds still, with the left page partly cropped by the frame edge.",
+ "seen_film": "d.png frames 1-3: a hand with red nails grips the lower right corner of a closed black binder labelled Federal Reserve Regulations. Frames 4-5: the hand lifts the cover, which blurs as it swings up and to the left. Frame 6: the cover is nearly vertical and edge-on, with the hand pushing it over. Frames 7-8: the cover has gone over to the left, the white pages are visible, and the hand at the upper left pushes a page that is still rising. Frames 9-10: the hand leaves at the upper left and the left pages settle. Frames 11-16: the binder lies open on the text pages and barely moves.",
+ "named_subject": "An open book (a two-page spread with a center spine and text-line marks), shown first closed and then opened by a hand.",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement match the film. The hand starts at the lower right in e1-e3 (film e1-e3), the cover lifts in e5-e8 (film e5-e8), it is edge-on at e9 (film e9-e10), it lies to the left in e10-e12 (film e11-e12), the hand exits at the left in e13-e15 (film e13-e14), and the book holds from e16 to e26 (film e17-e26). g.png shows the hand travelling in one arc from 4 to 7 to 10 to 13 with no reversal. The drawing breaks in several places. e4: a second cover outline, offset to the right, appears around the closed book, so the book is drawn twice. e5-e8: the lifting cover is a transparent quadrilateral drawn over the closed book body, and the body's text marks show through it. e9: the cover becomes a stack of four or five parallel lines along the spine instead of one edge. e10-e12: the cover that has turned over has no outline. It is only scattered dash marks plus a long arm line running down to the bottom of the book, so the left page is not readable as a page. e13: the outer edge of the left page suddenly appears as a full curved line (pop). e16: the left half of the spine changes from one line to two crossing lines, and that persists to e26. The film's page that keeps rising through e13-e16 is not drawn.",
+ "primary_gap": "From e9 to e13 the turning cover is not drawn as one continuous page: it splits into parallel edge lines at e9, has no outline while the hand carries it in e10-e12, and its outline pops in only at e13.",
+ "closes_when": "In e9-e13 a single cover or page outline (four edges with its text marks) rotates from edge-on over the spine to lying flat on the left, and its outer edge is visible in every one of those frames.",
+ "protect": "The overall timing that matches the film frame for frame; the hand's continuous leftward arc and exit (g.png 4-7-10-13); the stable right page and the doodle's sparse stroke style with short text dashes and a double spine line; the steady hold of the open book from e16 to e26.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  9,
+  10,
+  11,
+  13,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The final open spread matches c.png's construction (two pages, a double spine line, short text dashes), but the left page is cropped by the frame and its spine stroke doubles from e16, so the left half is less clean than in the doodle.",
+ "still_frames_only": true,
+ "_packet": "lot30163184",
+ "_round": 4
+}
