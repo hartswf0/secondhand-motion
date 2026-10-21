@@ -1,0 +1,267 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.17,
+   0.3,
+   0.18,
+   0.14,
+   -0.06,
+   0.01,
+   -0.07,
+   -0.19,
+   -0.31,
+   -0.13,
+   -0.02,
+   -0.02,
+   -0.01,
+   -0.01,
+   0.05,
+   0.02,
+   -0.02,
+   -0.07,
+   -0.05,
+   -0.13,
+   -0.28,
+   -0.51,
+   -0.74,
+   -0.98,
+   -1.05,
+   -1.09,
+   -1.13,
+   -1.08,
+   -1.04,
+   -0.93,
+   -0.84
+  ],
+  "y": [
+   0.0,
+   -0.04,
+   -0.38,
+   -0.67,
+   -0.53,
+   -0.47,
+   -0.5,
+   -0.47,
+   -0.51,
+   -0.3,
+   0.07,
+   0.04,
+   0.05,
+   0.04,
+   -0.11,
+   -0.22,
+   -0.26,
+   -0.34,
+   -0.47,
+   -0.71,
+   -0.9,
+   -0.94,
+   -0.88,
+   -0.75,
+   -0.61,
+   -0.41,
+   -0.16,
+   0.08,
+   0.3,
+   0.48,
+   0.59,
+   0.57
+  ],
+  "source": "phase correlation on the coats at the left edge of the frame (x 0-95), smoothed over 7 frames. The shared camera.json reads up to 16 px of drift, but the coats and the door frame do not move in the footage; that measure was taken over the whole frame and followed the swinging door and the woman, so it is not used."
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 2.4,
+   "label": "Back wall and door frame",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "floor",
+   "z": 1.8,
+   "label": "Floor",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Door"
+  },
+  {
+   "id": "near",
+   "z": 1.5,
+   "label": "Coats and the near door"
+  }
+ ],
+ "objects": [
+  {
+   "id": "near_door",
+   "plane": "near",
+   "qd": "door",
+   "box": [
+    302,
+    -12,
+    396,
+    296
+   ],
+   "aspect": 0.33,
+   "strokes": 3,
+   "why": "the second white door standing open at the right edge of the frame, nearer the camera; it does not move"
+  },
+  {
+   "id": "box",
+   "plane": "wall",
+   "qd": "picture frame",
+   "box": [
+    42,
+    -4,
+    78,
+    40
+   ],
+   "strokes": 2,
+   "why": "the small dark box hung on the wall above the coats"
+  },
+  {
+   "id": "jambs",
+   "plane": "wall",
+   "class": "door frame",
+   "why": "no Quick, Draw! category is a door frame; these are the two jambs of the doorway the door closes into, at x 103 and x 248 in the footage",
+   "strokes": [
+    [
+     [
+      103,
+      -5
+     ],
+     [
+      103,
+      262
+     ]
+    ],
+    [
+     [
+      249,
+      -5
+     ],
+     [
+      250,
+      282
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "floor",
+   "plane": "floor",
+   "class": "floor line",
+   "why": "no Quick, Draw! category is a floor edge; this is where the wall meets the floor at the bottom left and under the doorway",
+   "strokes": [
+    [
+     [
+      -5,
+      252
+     ],
+     [
+      60,
+      256
+     ],
+     [
+      103,
+      262
+     ]
+    ],
+    [
+     [
+      250,
+      282
+     ],
+     [
+      300,
+      286
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "coats",
+   "plane": "near",
+   "class": "coats on hooks",
+   "why": "no Quick, Draw! category is a coat; these are the long coats hanging on hooks at the left edge of the frame",
+   "strokes": [
+    [
+     [
+      2,
+      20
+     ],
+     [
+      40,
+      24
+     ],
+     [
+      88,
+      30
+     ]
+    ],
+    [
+     [
+      30,
+      26
+     ],
+     [
+      10,
+      90
+     ],
+     [
+      4,
+      200
+     ],
+     [
+      6,
+      290
+     ]
+    ],
+    [
+     [
+      40,
+      26
+     ],
+     [
+      72,
+      70
+     ],
+     [
+      86,
+      160
+     ],
+     [
+      84,
+      290
+     ]
+    ],
+    [
+     [
+      45,
+      95
+     ],
+     [
+      52,
+      200
+     ],
+     [
+      48,
+      290
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the door is shut; a woman in a striped smock stands at it with her back to the camera",
+  "7": "she has the knob and the door starts to swing away from the camera; it narrows about its hinge",
+  "16": "the door is open furthest, about a third of its shut width, and she steps through",
+  "22": "she is gone and the door swings back toward shut",
+  "31": "the door is shut again"
+ },
+ "no_cel": "SAM followed the near door at the right edge on frames 9 to 18 instead of the swinging door, so cel paint from the masks would sit on the wrong door"
+}

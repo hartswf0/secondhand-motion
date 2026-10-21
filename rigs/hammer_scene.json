@@ -1,0 +1,232 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -0.08,
+   -0.12,
+   -0.05,
+   -0.12,
+   0.09,
+   0.05,
+   0.34,
+   0.53,
+   0.88,
+   0.96,
+   1.0,
+   1.03,
+   0.9,
+   0.82,
+   0.95,
+   0.94,
+   0.88,
+   0.93,
+   0.92,
+   1.16,
+   1.33,
+   0.67,
+   0.29,
+   0.28,
+   0.33,
+   0.88,
+   0.94,
+   1.21,
+   1.44,
+   1.91,
+   1.91,
+   1.97,
+   1.85,
+   1.76,
+   1.66,
+   1.59,
+   1.61
+  ],
+  "y": [
+   0.0,
+   0.44,
+   0.56,
+   1.02,
+   1.01,
+   0.91,
+   0.96,
+   1.11,
+   1.0,
+   0.58,
+   0.45,
+   0.34,
+   0.35,
+   0.43,
+   0.58,
+   0.59,
+   0.64,
+   0.82,
+   0.92,
+   0.85,
+   0.18,
+   0.3,
+   0.31,
+   0.61,
+   1.08,
+   1.22,
+   1.32,
+   1.2,
+   1.75,
+   1.81,
+   1.21,
+   1.09,
+   0.91,
+   0.87,
+   0.88,
+   1.19,
+   1.52,
+   1.6
+  ],
+  "source": "shots/hammer-sam/camera.json (phase correlation); the shot is locked off and the 1-2 px drift comes from the caveman moving"
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 4,
+   "label": "Cave wall",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "rocks",
+   "z": 1.6,
+   "label": "Rocks",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Hammer"
+  }
+ ],
+ "objects": [
+  {
+   "id": "arch",
+   "plane": "wall",
+   "class": "cave mouth",
+   "why": "no Quick, Draw! category is the edge of a cave mouth; this line follows the curved right side of the pale opening behind the caveman",
+   "strokes": [
+    [
+     [
+      205,
+      -5
+     ],
+     [
+      250,
+      12
+     ],
+     [
+      278,
+      40
+     ],
+     [
+      290,
+      80
+     ],
+     [
+      292,
+      160
+     ],
+     [
+      290,
+      232
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "arch_left",
+   "plane": "wall",
+   "class": "cave mouth",
+   "why": "no Quick, Draw! category is the edge of a cave mouth; this line follows the dark left edge of the opening",
+   "strokes": [
+    [
+     [
+      62,
+      -5
+     ],
+     [
+      40,
+      60
+     ],
+     [
+      18,
+      128
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "floor",
+   "plane": "wall",
+   "class": "ground",
+   "why": "no Quick, Draw! category is the line where the cave wall meets the floor",
+   "strokes": [
+    [
+     [
+      0,
+      130
+     ],
+     [
+      120,
+      136
+     ],
+     [
+      290,
+      150
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tree",
+   "plane": "wall",
+   "qd": "tree",
+   "box": [
+    292,
+    -190,
+    392,
+    262
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "rockpile",
+   "plane": "rocks",
+   "qd": "mountain",
+   "box": [
+    205,
+    218,
+    335,
+    282
+   ],
+   "strokes": 1
+  },
+  {
+   "id": "rockpile2",
+   "plane": "rocks",
+   "qd": "mountain",
+   "box": [
+    300,
+    240,
+    384,
+    288
+   ],
+   "strokes": 1,
+   "skip": 1
+  }
+ ],
+ "notes": {
+  "0": "the frame before the cut into this closer shot; the hammer is held where it is in frame 1",
+  "1": "the caveman holds the hammer upright against his cheek",
+  "3": "he swings it out to his right in one quick move",
+  "5": "it settles held out at an angle, head up and to the right",
+  "21": "held still while he rubs his face",
+  "23": "he lowers it and brings it more upright",
+  "26": "it settles more upright in front of his chest",
+  "37": "held still while he looks at it"
+ }
+}

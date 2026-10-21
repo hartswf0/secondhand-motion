@@ -6,7 +6,7 @@
   "neck",
   "neck"
  ],
- "note": "Quick, Draw! bat 6315771342880768, drawn from the front with both wings spread. Stroke 0 is the left wing, a long upper edge and a zigzag lower edge; stroke 1 is the body, a closed oval; stroke 2 is the head with two pointed ears; stroke 3 is the right wing, drawn the same way as the left. The whole drawing is placed by the neck and the bottom of the body, which sets where the bat is, how big and how it leans. The head turns at the neck toward the pose's head point. Each wing turns at its shoulder so that its outer tip points at the pose's wing tip, and grows or shrinks with the shoulder-to-tip distance, so a wing held close is the same wing drawn smaller, because in the film the bat clings to a trunk with its wings half open and hanging down, and opens and closes them as it crawls.",
+ "note": "Quick, Draw! bat 6315771342880768, drawn from the front with both wings spread. Stroke 0 is the left wing: a long upper edge from the shoulder up to a peak and out to the outer corner, then a zigzag lower edge back to the body. Stroke 1 is the body, a closed oval. Stroke 2 is the head with two pointed ears. Stroke 3 is the right wing, drawn the same way as the left. The whole drawing is placed by the neck and the bottom of the body, which sets where the bat is, how big and how it leans; that distance is the same in every key, so the bat keeps one size. The head turns at the neck toward the pose's head point. Each wing turns at its shoulder so that the peak of its upper edge lands on the pose's wing tip, and closes toward its own upper edge by the pose's lfold or rfold amount (1 as drawn, 0 shut), the way a bat's membrane narrows as the wing folds. In the film the bat clings to a trunk, crawls up it, and raises, lowers, opens and closes its wings; the right wing is mostly folded behind the body and lifts behind the head late in the shot.",
  "strokes": [
   [
    [
@@ -219,16 +219,16 @@
    58
   ],
   "ltip": [
-   0,
-   98
+   60,
+   0
   ],
   "rsh": [
    153,
    60
   ],
   "rtip": [
-   255,
-   90
+   249,
+   14
   ]
  },
  "root": [
@@ -268,7 +268,12 @@
     "lsh",
     "ltip"
    ],
-   "stretch": 1.0
+   "stretch": 1.0,
+   "fold": "lfold",
+   "axis": [
+    "lsh",
+    "ltip"
+   ]
   },
   {
    "stroke": 3,
@@ -279,11 +284,16 @@
     "rsh",
     "rtip"
    ],
-   "stretch": 1.0
+   "stretch": 1.0,
+   "fold": "rfold",
+   "axis": [
+    "rsh",
+    "rtip"
+   ]
   }
  ],
  "size": "steady",
  "smooth": 2.0,
- "track": true,
+ "track": false,
  "max_tilt": 40
 }

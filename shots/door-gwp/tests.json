@@ -1,0 +1,79 @@
+[
+ {
+  "id": "M2",
+  "value": 12,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   19,
+   18,
+   13,
+   10,
+   7,
+   5,
+   8,
+   11,
+   13,
+   15,
+   19
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.46,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": false,
+  "design_typicality": 23
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 2.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 40 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6107831826644992; scenery quickdraw:6504850265210880, quickdraw:5089073301553152, drawn by agent: no Quick, Draw! category is a door frame; these are the two jambs of the doorway the door closes into, at x 103 and x 248 in the footage, drawn by agent: no Quick, Draw! category is a floor edge; this is where the wall meets the floor at the bottom left and under the doorway, drawn by agent: no Quick, Draw! category is a coat; these are the long coats hanging on hooks at the left edge of the frame",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

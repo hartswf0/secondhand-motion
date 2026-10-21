@@ -6,7 +6,7 @@
   "hub",
   "hub"
  ],
- "note": "Quick, Draw! wheel 6111212720881664: the tire as one outer loop (stroke 0, its start and end meet at the top), the rim as an inner loop (stroke 1), and four straight spokes crossing near the centre (strokes 2 to 5). The rig places the drawing by the hub and the top of the wheel, so it moves, grows a little and leans with the wheel in the film. The rim and spokes turn about the hub by the pose's spin, clockwise on screen, as the film's wheel turns. The tire does not turn (it is a plain loop) but is moved right of the hub by the pose's tread, in doodle units, so the thick side of the tire shows on the right as the tread does in the film. The whole drawing is then narrowed sideways by the pose's _xscale, which makes the round doodle the ellipse of a wheel seen at an angle; _xscale grows across the shot as the wheel turns toward the camera.",
+ "note": "Quick, Draw! wheel 6111212720881664: the tire as one outer loop (stroke 0, its start and end meet at the top in a small point), the rim as an inner loop (stroke 1), and four straight spokes crossing a little right of the rim's centre (strokes 2 to 5). The rig places the drawing by the hub (the rim's centre) and the top of the wheel, so it moves, grows a little and leans with the wheel in the film. Every stroke turns by the pose's spin, clockwise on screen, at a steady rate, as the film's wheel rolls: the rim about its own centre, the spokes about their crossing, the tire about its own centre. The tire is moved 14 doodle units right of the rim (pose tread, anchor tirec) so its thick side shows on the right as the film's tread does, and the point where the tire stroke starts and ends travels round the tire like the white tape on the real tire. The whole drawing is then narrowed sideways by the pose's _xscale, which makes the round doodle the ellipse of a wheel seen at an angle; _xscale grows across the shot as the wheel turns toward the camera.",
  "strokes": [
   [
    [
@@ -269,6 +269,14 @@
   "top": [
    118,
    0
+  ],
+  "tirec": [
+   132,
+   127
+  ],
+  "cross": [
+   129,
+   124
   ]
  },
  "root": [
@@ -281,7 +289,7 @@
    "stroke": 0,
    "from": 0,
    "to": 23,
-   "joint": "hub",
+   "joint": "tirec",
    "aim": [
     "hub",
     "top"
@@ -291,7 +299,8 @@
    "shift": [
     1,
     0
-   ]
+   ],
+   "spin": "spin"
   },
   {
    "stroke": 1,
@@ -309,7 +318,7 @@
    "stroke": 2,
    "from": 0,
    "to": 3,
-   "joint": "hub",
+   "joint": "cross",
    "aim": [
     "hub",
     "top"
@@ -321,7 +330,7 @@
    "stroke": 3,
    "from": 0,
    "to": 3,
-   "joint": "hub",
+   "joint": "cross",
    "aim": [
     "hub",
     "top"
@@ -333,7 +342,7 @@
    "stroke": 4,
    "from": 0,
    "to": 3,
-   "joint": "hub",
+   "joint": "cross",
    "aim": [
     "hub",
     "top"
@@ -345,7 +354,7 @@
    "stroke": 5,
    "from": 0,
    "to": 2,
-   "joint": "hub",
+   "joint": "cross",
    "aim": [
     "hub",
     "top"

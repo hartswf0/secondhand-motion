@@ -62,15 +62,13 @@
  "planes": [
   {
    "id": "far",
-   "z": 5,
-   "label": "Sea near the misty horizon",
-   "z_from_depth": "top"
+   "z": 2.15,
+   "label": "Sea near the misty horizon (the camera only tilts, so it moves almost with the submarine)"
   },
   {
    "id": "mid",
-   "z": 3,
-   "label": "Sea behind and beside the submarine",
-   "z_from_depth": "middle"
+   "z": 2.08,
+   "label": "Sea behind and beside the submarine"
   },
   {
    "id": "wash",
@@ -84,9 +82,8 @@
   },
   {
    "id": "near",
-   "z": 1.4,
-   "label": "Waves in front of the submarine",
-   "z_from_depth": "bottom"
+   "z": 1.85,
+   "label": "Waves in front of the submarine"
   }
  ],
  "objects": [
@@ -99,11 +96,11 @@
     [
      [
       -200,
-      72
+      58
      ],
      [
       600,
-      70
+      56
      ]
     ]
    ]
@@ -114,9 +111,9 @@
    "qd": "ocean",
    "box": [
     40,
-    74,
+    62,
     150,
-    92
+    80
    ],
    "strokes": 2
   },
@@ -126,9 +123,9 @@
    "qd": "ocean",
    "box": [
     220,
-    76,
+    64,
     340,
-    94
+    82
    ],
    "strokes": 2,
    "skip": 1

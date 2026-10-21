@@ -1,0 +1,264 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   14.16,
+   40.92,
+   54.06,
+   73.5,
+   83.58,
+   104.52,
+   121.02,
+   145.92,
+   161.64,
+   183.48,
+   197.28,
+   219.54,
+   231.36,
+   257.82,
+   274.98,
+   297.72,
+   312.54,
+   337.32,
+   349.86,
+   369.9,
+   381.42,
+   407.4,
+   423.84,
+   455.58,
+   471.24,
+   495.24,
+   509.94,
+   536.64,
+   554.58,
+   581.64,
+   598.68,
+   622.2,
+   639.9,
+   661.5,
+   675.78,
+   701.94,
+   721.56
+  ],
+  "y": [
+   0.0,
+   -1.8,
+   1.68,
+   -0.6,
+   -0.6,
+   -4.02,
+   0.18,
+   -2.28,
+   -0.18,
+   -1.2,
+   1.8,
+   1.02,
+   -0.78,
+   -3.18,
+   -5.52,
+   -6.3,
+   -6.0,
+   -6.84,
+   -6.12,
+   -7.56,
+   -4.68,
+   -5.1,
+   -4.86,
+   -7.56,
+   -7.98,
+   -9.12,
+   -7.62,
+   -8.7,
+   -9.18,
+   -12.78,
+   -13.86,
+   -12.72,
+   -12.18,
+   -10.92,
+   -10.38,
+   -9.24,
+   -7.86,
+   -9.36
+  ],
+  "source": "camera.json (phase correlation on the footage, which measures the trees and the horizon) multiplied by 6.00, the depth ratio of the tree band to the woman, so the tree plane slides exactly as the film's trees do (about 120 px to the right over the shot as the camera pans left with her)"
+ },
+ "planes": [
+  {
+   "id": "sky",
+   "z": 12,
+   "label": "Clouds",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "trees",
+   "z": 12,
+   "label": "Trees on the horizon",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "lawn",
+   "z": 6,
+   "label": "Lawn",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Woman"
+  }
+ ],
+ "objects": [
+  {
+   "id": "cloud",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    30,
+    18,
+    140,
+    58
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "tree1",
+   "plane": "trees",
+   "qd": "tree",
+   "box": [
+    245,
+    118,
+    335,
+    250
+   ],
+   "aspect": 0.75,
+   "strokes": 3
+  },
+  {
+   "id": "tree2",
+   "plane": "trees",
+   "qd": "tree",
+   "box": [
+    345,
+    100,
+    425,
+    250
+   ],
+   "aspect": 0.6,
+   "strokes": 3,
+   "skip": 1
+  },
+  {
+   "id": "bush1",
+   "plane": "trees",
+   "qd": "bush",
+   "box": [
+    55,
+    206,
+    130,
+    250
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "bush2",
+   "plane": "trees",
+   "qd": "bush",
+   "box": [
+    -125,
+    194,
+    -45,
+    250
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "bush3",
+   "plane": "trees",
+   "qd": "bush",
+   "box": [
+    -40,
+    208,
+    5,
+    250
+   ],
+   "strokes": 2,
+   "skip": 2
+  },
+  {
+   "id": "lawn_edge",
+   "plane": "trees",
+   "class": "ground",
+   "why": "no Quick, Draw! category is the edge of a lawn against the far trees; one straight line where the grass meets the tree line in the film (y 250)",
+   "strokes": [
+    [
+     [
+      -400,
+      250
+     ],
+     [
+      700,
+      250
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "grass1",
+   "plane": "lawn",
+   "qd": "grass",
+   "box": [
+    -330,
+    262,
+    -280,
+    282
+   ]
+  },
+  {
+   "id": "grass2",
+   "plane": "lawn",
+   "qd": "grass",
+   "box": [
+    -150,
+    264,
+    -100,
+    284
+   ],
+   "skip": 1
+  },
+  {
+   "id": "grass3",
+   "plane": "lawn",
+   "qd": "grass",
+   "box": [
+    20,
+    266,
+    70,
+    284
+   ],
+   "skip": 2
+  },
+  {
+   "id": "grass4",
+   "plane": "lawn",
+   "qd": "grass",
+   "box": [
+    290,
+    264,
+    340,
+    284
+   ],
+   "skip": 3
+  }
+ ],
+ "notes": {
+  "0": "stands on the lawn with her arms up and leans back",
+  "6": "bends back, arms reaching for the ground behind her",
+  "10": "hands land: a bridge, feet on the right",
+  "14": "kicks her legs up over her hands",
+  "23": "handstand",
+  "30": "legs go on over to the left",
+  "37": "feet land: a bridge the other way round"
+ }
+}
