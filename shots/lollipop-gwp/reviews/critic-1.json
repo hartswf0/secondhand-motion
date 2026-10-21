@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A lollipop drawing (a round outline with a dip at the top and a two-line stick ending in a small cross tick) enters from the left edge with the ball partly cut off and the stick pointing down to the right (frames 1-3). In frames 4-8 the whole ball is visible and it travels right across the upper part of the frame while the stick swings from leaning down-right to vertical. In frames 9-12 it keeps moving right and the stick swings past vertical to lean down-left. In frames 13-16 the ball reaches the right edge and is cut off, with the stick pointing down-left at about 45 degrees. The ball stays the same size the whole time; the motion is a sweep from left to right with the stick rotating about the ball.",
+ "seen_film": "On a dark blue cloth, a stitched ball enters from the left edge (frames 1-3) with a flat wooden popsicle stick below it, the stick angled down to the right and running off the bottom of the frame. The ball moves right across the upper part of the frame while the stick, kept just below the ball with a small gap, swings to vertical (frames 7-9) and then leans down-left (frames 11-16). The ball's seam changes position from frame to frame, so it turns as it travels. By frame 16 the ball is half off the right edge and the stick points down-left.",
+ "named_subject": "A lollipop (round candy head on a stick), standing in for the film's ball and popsicle stick.",
+ "verdict": "bar met",
+ "evidence": "Ball position tracks the film closely in e.png vs f.png: right edge of the ball at about x=14/23/36/50/63/78/91/106 in frames 1-8 against about 12/35/45/65/70/75/90/110 in the film; frame 17 ball right edge at about x=207 in both; frames 21-26 the ball is cut by the right edge in both, with frame 24 left edge at about the same place. Stick angle matches the film: down-right in frames 1-6, near vertical in frames 12-14 (film 12-14 vertical), down-left in frames 20-26. g.png shows an even arc of ball centres from 1 to 25 with steady spacing and no gaps or reversals. Ball size stays constant across e.png frames 5-20, as in the film. No doubled lines or redraw pops are visible between any consecutive frames. Judged from still frames only, not playback.",
+ "primary_gap": "The film's ball visibly turns as it travels (its seam moves between frames 4, 8, 12 and 16), but the drawn ball does not turn: the dip at its top stays at the same top-left spot in every frame.",
+ "closes_when": "The dip in the top of the ball outline moves steadily around the circle across the shot (for example from upper-left in frame 1 to upper-right or lower by frame 26) at a rate matching the film's seam movement, without changing the outline's size or construction.",
+ "protect": "The left-to-right timing and frame positions that match the film frame for frame; the stick's swing from down-right through vertical to down-left at the same frames as the film; constant ball size; the doodle's construction (round outline with a top dip, two-line tapering stick, small cross tick at the stick end); clean single lines with no doubling.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The ball outline is drawn with straighter, more angular segments than the doodle's looser rounded line, and the doodle's two-bump top is reduced to a small notch, but it still reads as the same lollipop drawing.",
+ "still_frames_only": true,
+ "_packet": "lot61bcb4fc",
+ "_round": 1
+}

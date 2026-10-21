@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A line-drawn lobster, seen from the front with only its lower body column showing, stands behind a table edge. A grey small lobster sits at the left. In frames 1-2 the left claw (screen left) hangs down in a V-pincer and the right claw hangs straight down at the right edge of the frame. In frames 3-4 the right claw swings inward and up, its pincer pointing down-left and then nearly horizontal. In frame 5 the claw crosses in front of the body, overlapping the left claw. From frame 6 to 16 the right claw lies horizontally across the lower body with its pincer pointing left and stays in that pose with no further change.",
+ "seen_film": "A large dark lobster faces the camera on a cloth-covered table, with a smaller lobster at the left. In frames 1-2 its right claw (screen right) hangs off the right edge of the frame. In frames 3-4 the claw swings in toward the centre, low and turned so its jaws face the viewer. In frames 5-6 it rises and rotates into a horizontal position across the front of the body, pincer pointing left. From frame 7 to 16 the claw stays across the front, with small shifts of the claw and body and a slight opening of the jaws. The left claw hangs down throughout and the antennae hang down to the bottom.",
+ "named_subject": "A lobster (front view, body column with two pincer claws), the large lobster in the film, with the small lobster drawn as grey scenery.",
+ "verdict": "reference stronger",
+ "evidence": "Timing follows the film: e.png 1-6 the right claw hangs at the right edge as in f.png 1-6; e.png 7-11 it swings inward low as in f.png 7-11; e.png 12-16 it lifts across the body as in f.png 12-16; e.png 17-50 it holds horizontal as in f.png 17-50. The weaknesses are in the turn: e.png 11 to 12 the claw changes from a short two-prong V pointing down-left to a long thin pincer pointing left, a redraw rather than a rotation; e.png 13 and 14 the pincer prongs change length and shape again and overlap the left claw; e.png 14 to 15 the rounded bottom outline of the body disappears and is replaced by straight vertical lines down to the claw, so the body shape pops; e.png 17-50 the drawing is frozen identical while the film (f.png 17-50) keeps small claw and body movement. g.png shows the claw path sweeping up from lower right to the horizontal pose without reversals, so the trajectory itself is continuous.",
+ "primary_gap": "During the lift (e.png 11-15) the right claw is redrawn with a different pincer shape on each frame and the body outline changes at frame 15, so the turn reads as a series of replacements rather than one claw rotating.",
+ "closes_when": "The right claw keeps the same two-prong V construction and prong lengths in e.png 11-15 while only its angle and position change, and the body column keeps the same rounded lower outline from frame 14 into frame 15.",
+ "protect": "The timing of the event against the film (hang, swing in low, lift to horizontal, hold), the continuous sweep path shown in g.png, the placement of the claw across the lower body matching the film's final pose, the static grey small lobster and table as scenery, and the doodle's sparse straight-segment line style with V-shaped pincers and the cross line on the body.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  12,
+  13,
+  14,
+  15
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character uses the doodle's narrow body column, cross line and open V pincers, but the claws point down instead of up and the right claw's pincer construction drifts during the lift, so it only partly keeps the doodle's construction while moving.",
+ "still_frames_only": true,
+ "_packet": "lotd78c4ad0",
+ "_round": 5
+}

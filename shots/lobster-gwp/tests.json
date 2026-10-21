@@ -91,17 +91,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA lobster (the large lobster in the foreground) swinging its right claw in from the right edge and folding it horizontally across the front of its body.\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA lobster (front view, body column with two pincer claws), the large lobster in the film, with the small lobster drawn as grey scenery.\u201d; motion broken; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/lobster-gwp/reviews/critic-4.json"
+  "evidence": "shots/lobster-gwp/reviews/critic-5.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "The body and left pincer match the doodle's construction, but from e.png 13 onward the right claw is a wide plate of parallel lines that does not use the doodle's two-stroke V pincer and overlaps the body as if transparent, so half the character no longer reads as the c.png drawing.",
-  "evidence": "shots/lobster-gwp/reviews/critic-4.json"
+  "ok": true,
+  "note": "The character uses the doodle's narrow body column, cross line and open V pincers, but the claws point down instead of up and the right claw's pincer construction drifts during the lift, so it only partly keeps the doodle's construction while moving.",
+  "evidence": "shots/lobster-gwp/reviews/critic-5.json"
  }
 ]

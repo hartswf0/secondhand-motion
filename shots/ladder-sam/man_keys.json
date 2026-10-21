@@ -1,5 +1,5 @@
 {
- "note": "Read by eye from every film frame (frame pixels). body: per frame, the head centre and the waist (top of the white wrap, centre). Contacts: each hand and foot is held where it was put until it moves; 'moves' lists [frame lifted, frame put down, [x, y]] for each limb. Feet go up the ladder one rung level at a time, left and right in turn, two levels per move; each body rise in the film (frames 7-8, 9-10, 15-16, 19-20, 25-26, 30-32) comes right after a foot is put down. The last left-foot move (frames 30-32) is put on the drawn ladder's top-but-one rung beside the right foot, not on the top rung, so that he stands at the top of the drawn ladder (which is shorter than the film's) with his legs under him. The right foot's step to the top-but-one rung is put one frame later (29-31) so that it lands as the last push begins and both feet are not bunched under the hips at frame 30.",
+ "note": "Read by eye from every film frame (frame pixels). head and waist: per frame, the head centre and the waist (top of the white wrap, centre); make_scene.py keeps the torso one fixed length and moves the waist onto the drawn ladder's left rail. start and moves: each hand and foot is held where it was put until it moves; a move is [frame lifted, frame put down, target]. On the ground a target is a frame point (already scaled to the drawn ladder). On the ladder a target is ['rung', i, u] (rung i of the drawn ladder from the bottom, u of the way along it from the left rail) or ['rail', r, u] (r 0 left, 1 right, u from the top). Feet climb one rung at a time: the right foot steps up to the next rung and the left foot follows it onto the same rung, so a foot is never more than a leg's length below the waist and never above it. Hands go up the rungs alternately, always on a rung above the shoulders' height or near it, and end on the tops of the two rails, where he stays bent over the ladder (frames 31-37).",
  "head": {
   "0": [
    26,
@@ -310,20 +310,20 @@
  },
  "start": {
   "lf": [
-   18,
-   288
+   29.1,
+   287.6
   ],
   "rf": [
-   46,
-   287
+   53.3,
+   286.7
   ],
   "lh": [
-   14,
-   238
+   25.6,
+   244.3
   ],
   "rh": [
-   62,
-   232
+   67.1,
+   239.2
   ]
  },
  "moves": {
@@ -332,56 +332,52 @@
     0,
     2,
     [
-     55,
-     288
+     61.1,
+     287.6
     ]
    ],
    [
     3,
     4,
     [
-     80,
-     287
+     82.7,
+     286.7
     ]
    ],
    [
     6,
     8,
     [
-     132,
-     243
+     "rung",
+     1,
+     0.2
     ]
    ],
    [
     12,
     14,
     [
-     158,
-     199
+     "rung",
+     2,
+     0.25
     ]
    ],
    [
-    19,
-    22,
+    18,
+    20,
     [
-     184,
-     155
+     "rung",
+     3,
+     0.25
     ]
    ],
    [
-    26,
-    28,
+    27,
+    29,
     [
-     210,
-     111
-    ]
-   ],
-   [
-    30,
-    32,
-    [
-     246,
-     104
+     "rung",
+     4,
+     0.25
     ]
    ]
   ],
@@ -390,98 +386,91 @@
     1,
     3,
     [
-     80,
-     285
+     82.7,
+     285.0
     ]
    ],
    [
     4,
     6,
     [
-     118,
-     265
+     "rung",
+     0,
+     0.55
     ]
    ],
    [
     9,
     11,
     [
-     145,
-     221
+     "rung",
+     2,
+     0.55
     ]
    ],
    [
     15,
-    18,
+    17,
     [
-     171,
-     177
+     "rung",
+     3,
+     0.6
     ]
    ],
    [
-    23,
-    25,
+    24,
+    26,
     [
-     197,
-     133
+     "rung",
+     4,
+     0.6
     ]
    ],
    [
-    29,
-    31,
+    32,
+    34,
     [
-     223,
-     89
-    ]
-   ],
-   [
-    35,
-    37,
-    [
-     226,
-     72
+     "rung",
+     5,
+     0.55
     ]
    ]
   ],
   "rh": [
    [
     2,
-    4,
+    5,
     [
-     126,
-     206
+     "rung",
+     2,
+     0.3
     ]
    ],
    [
     7,
     9,
     [
-     170,
-     166
+     "rung",
+     4,
+     0.7
     ]
    ],
    [
-    14,
     16,
+    18,
     [
-     203,
-     111
+     "rung",
+     5,
+     0.7
     ]
    ],
    [
-    22,
     24,
+    26,
     [
-     229,
-     67
-    ]
-   ],
-   [
-    30,
-    32,
-    [
-     242,
-     28
+     "rail",
+     1,
+     0.04
     ]
    ]
   ],
@@ -490,48 +479,44 @@
     1,
     3,
     [
-     68,
-     234
+     72.3,
+     240.9
     ]
    ],
    [
-    3,
+    4,
     6,
     [
-     150,
-     177
+     "rung",
+     3,
+     0.2
     ]
    ],
    [
     11,
     13,
     [
-     188,
-     133
+     "rung",
+     4,
+     0.2
     ]
    ],
    [
-    18,
     20,
+    22,
     [
-     216,
-     89
+     "rung",
+     5,
+     0.2
     ]
    ],
    [
-    26,
-    28,
+    29,
+    31,
     [
-     236,
-     52
-    ]
-   ],
-   [
-    32,
-    34,
-    [
-     236,
-     40
+     "rail",
+     0,
+     0.03
     ]
    ]
   ]

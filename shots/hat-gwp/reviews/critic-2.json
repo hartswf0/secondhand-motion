@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A line-drawn bowler-style hat (domed crown, two crossing band lines, oval brim). Frame 1: the whole hat sits upper-left-of-centre with only the crown top cut by the frame edge. Frames 2-4: the hat slides right and up, so more of the crown leaves the top edge. Frames 5-12: the hat tilts so the brim slopes down to the right, and it sits so high that only the brim, the band lines and the lower stubs of the crown sides are visible; the right end of the brim runs off the right edge. Frames 13-16: the hat comes down and grows; a large rounded crown comes back into view, still cut at the top and right, and the full brim end reappears in frame 15.",
+ "seen_film": "Close shot of a man in a white bucket hat and blue hooded sweatshirt holding a pole with a strap and dark glasses attached. Frames 1-4: his head moves from left-centre to the right; the hat is high in frame with its crown top touching the top edge. Frames 5-12: the camera tilts, the hat sits in the upper right with its whole crown visible, he leans his head down onto his arm while his hands work at the strap and glasses. Frames 13-16: the camera moves closer; the hat becomes larger in the upper right, cut by the top and right edges, as he looks down at a drawstring.",
+ "named_subject": "A hat (the doodle's domed hat with band and brim) standing in for the man's white bucket hat.",
+ "verdict": "reference stronger",
+ "evidence": "Path and timing follow the film: e.png 1-8 the hat moves right as the film's head moves right (f.png 1-8); e.png 9-24 the hat holds in the upper right and tilts with the film's camera tilt (f.png 9-24); e.png 26-32 the hat grows and drops as the film's camera moves in (f.png 25-32). The gap is vertical placement: in f.png 9-24 the whole crown of the hat is inside the frame with the brim near the middle third of the hat region (brim roughly 35-45% down the frame), but in e.png 9-24 the brim sits roughly 15-35% down and the crown is entirely above the top edge, so only brim and band lines are drawn. The same upward offset appears in e.png 3-8 versus f.png 3-8, where the film shows most of the crown and the animation shows only a sliver. Minor pops: the right crown side line is absent in e.png 10-14 and reappears in e.png 15; the crown is absent in e.png 24-25 and a much larger crown appears at e.png 26.",
+ "primary_gap": "For most of the shot (e.png 3-24) the hat is placed roughly 15-20% of frame height too high, so its crown is cut off and the character reads as a floating brim instead of the doodle's hat, while the film keeps the whole crown in view.",
+ "closes_when": "In e.png 3-24 the hat is lowered so its full domed crown sits inside the frame, with the brim at the height of the film's brim (about 35-45% down the frame) and the right crown side visible in every frame as in f.png 3-24.",
+ "protect": "The doodle's construction and stroke habits (domed crown, two crossing band lines that overshoot at the ends, rounded oval brim with the small notch at left); the left-to-right move in frames 1-8; the tilt matching the camera tilt in frames 9-24; the growth and lowering of the hat in frames 26-32 matching the camera push-in; the generally continuous frame-to-frame motion with no doubling.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  15,
+  26
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "Where it is visible the hat is drawn in the doodle's own construction, but in e.png 9-24 the crown is off-frame so only the brim and band of the doodle are seen.",
+ "still_frames_only": true,
+ "_packet": "lot9b45ad0f",
+ "_round": 2
+}

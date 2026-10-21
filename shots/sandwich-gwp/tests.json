@@ -1,0 +1,78 @@
+[
+ {
+  "id": "M2",
+  "value": 70,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   7,
+   22,
+   57,
+   89,
+   87,
+   88,
+   88,
+   88,
+   88,
+   88
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.74,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 84
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 3.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "5 strokes, 55 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:4656649232973824; scenery quickdraw:4656649232973824 (a second copy of the character's rig, keyed in shots/sandwich-sam/copyB_keys.json), quickdraw:4656649232973824 (a second copy of the character's rig, keyed in shots/sandwich-sam/extra_t1.json), quickdraw:4656649232973824 (a second copy of the character's rig, keyed in shots/sandwich-sam/extra_t2.json), quickdraw:4656649232973824 (a second copy of the character's rig, keyed in shots/sandwich-sam/extra_t3.json), quickdraw:4656649232973824 (a second copy of the character's rig, keyed in shots/sandwich-sam/extra_t4.json), quickdraw:4656649232973824 (a second copy of the character's rig, keyed in shots/sandwich-sam/extra_t5.json), quickdraw:4656649232973824 (a second copy of the character's rig, keyed in shots/sandwich-sam/extra_t6.json), quickdraw:4656649232973824 (a second copy of the character's rig, keyed in shots/sandwich-sam/extra_o1.json), quickdraw:4656649232973824 (a second copy of the character's rig, keyed in shots/sandwich-sam/extra_o2.json), quickdraw:4656649232973824 (a second copy of the character's rig, keyed in shots/sandwich-sam/extra_o3.json), drawn by agent: no Quick, Draw! category is the edge of a baking tray; two straight lines mark the dark rim behind the rows of bread",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

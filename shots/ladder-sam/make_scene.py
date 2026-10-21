@@ -24,40 +24,51 @@ BASE=np.array([100.,285.]); K=0.865
 def fit(q,k=K): return BASE+(np.array(q,float)-BASE)*k
 def kf(f): t=np.clip((f-3)/6,0,1); return 1-(1-K)*t*t*(3-2*t)   # on the ground (frames 0-3) he is not scaled; the scale eases in as he mounts
 HEAD=np.array([fit(q,kf(f)) for f,q in enumerate(HEAD)]); WAIST=np.array([fit(q,kf(f)) for f,q in enumerate(WAIST)])
-# one body size: the torso keeps one length on the ladder (the film's readings shrink only because he leans in)
+# The drawn ladder (it does not move); its rails and rungs are where his hands and feet go.
+LAD=[np.array(q,float) for q in json.load(open(R+'shots/ladder-gwp/shot.json'))['cast']['frames'][0]]
+def rail_x(r,y):
+    s=LAD[r]
+    for (x0,y0),(x1,y1) in zip(s[:-1],s[1:]):
+        if min(y0,y1)<=y<=max(y0,y1) and y0!=y1: return x0+(y-y0)/(y1-y0)*(x1-x0)
+    return s[0][0] if y<s[0][1] else s[-1][0]
+def on(seg,u):
+    # a point u of the way along a drawn stroke (0 = its left end)
+    s=LAD[seg]; L=np.r_[0,np.cumsum(np.hypot(*np.diff(s,axis=0).T))]; t=u*L[-1]; i=min(np.searchsorted(L,t,side='right')-1,len(s)-2)
+    return s[i]+(s[i+1]-s[i])*(t-L[i])/max(L[i+1]-L[i],1e-9)
+def target(q):
+    # ["rung", i, u]: rung i (0 = bottom) of the drawn ladder, u along it; ["rail", r, u]: rail r (0 left, 1 right); else a frame point (ground)
+    if isinstance(q[0],str): return on(q[1]+2 if q[0]=='rung' else q[1],q[2])
+    return np.array(q,float)
+# On the ladder his waist sits over the left rail (seen from behind his body hangs over the left half of the
+# ladder, as in the film where the man is over his own ladder's left rail); the drawn ladder stands about 25 px right
+# of the film's, so the waist is moved onto it, easing in from frame 5 (at the foot) to frame 10.
 for f in range(n):
-    d=HEAD[f]-WAIST[f]; L=np.hypot(*d); T=max(L,40.0) if f<8 else 40.0
-    HEAD[f]=WAIST[f]+d/L*T
-    lo=13.0-HEAD[f][1]
-    if lo>0: HEAD[f]+= [0,lo]; WAIST[f]+=[0,lo]
-LAD=[np.array(q,float) for q in json.load(open(R+'shots/ladder-gwp/shot.json'))['cast']['frames'][0]]   # the ladder doodle as placed (it does not move)
-def snap(q,lim=30,rungs=False):
-    # a hand or foot put on the ladder lands on the nearest drawn rung (feet) or rail or rung (hands), if one is close
-    best,bd=q,lim
-    for s in (LAD[2:] if rungs else LAD):
-        for a,b in zip(s[:-1],s[1:]):
-            d=b-a; t=np.clip(np.dot(q-a,d)/max(np.dot(d,d),1e-9),0,1); c=a+d*t; dd=np.hypot(*(q-c))
-            if dd<bd: best,bd=c,dd
-    return best
-STEP=12.0   # at most about half a rung spacing (the rungs are ~30 px apart) per frame for a hand or foot
+    s=np.clip((f-5)/5,0,1); s=s*s*(3-2*s)
+    WAIST[f][0]+=s*(rail_x(0,WAIST[f][1])+2-WAIST[f][0])
+# One body size every frame: the torso is one line of fixed length. Its lean comes from the film (head over waist),
+# kept bent forward toward the ladder on the climb, and bent further over the ladder at the top (frames 30-37).
+TORSO=40.0
+ang=np.array([math.atan2(HEAD[f][0]-WAIST[f][0],WAIST[f][1]-HEAD[f][1]) for f in range(n)])
+for f in range(n):
+    on_l=np.clip((f-5)/4,0,1); top=np.clip((f-28)/6,0,1); top=top*top*(3-2*top)
+    a=ang[f]*(1-on_l)+max(ang[f],math.radians(30))*on_l
+    a=a*(1-top)+math.radians(44)*top
+    HEAD[f]=WAIST[f]+TORSO*np.array([math.sin(a),-math.cos(a)])
 def contact(f,limb):
-    p=fit(MK['start'][limb]); onl=limb in('lf','rf'); last=-99
+    p=target(MK['start'][limb])
     for f0,f1,q in MK['moves'][limb]:
-        q=fit(q); q=snap(q,rungs=onl) if q[1]<270 else q
-        if f1>=8: f0=max(min(f0,f1-math.ceil(np.hypot(*(q-p))/STEP)),last)   # a long reach is lifted earlier so it travels over more frames
-        last=f1
+        q=target(q)
         if f>=f1: p=q; continue
         if f>f0:
-            t=(f-f0)/(f1-f0); t=0.5*t+0.5*t*t*(3-2*t); lift=math.sin(math.pi*t)*5
-            d=q-p; nd=np.array([d[1],-d[0]])/max(np.hypot(*d),1e-6)   # the limb swings out from the ladder a little on the way
-            return p+d*t+nd*lift*(1 if nd[0]<0 else -1)
+            t=(f-f0)/(f1-f0); t=t*t*(3-2*t); lift=math.sin(math.pi*t)*4
+            return p+(q-p)*t+np.array([-0.4,-1.0])*lift   # the hand or foot comes off the rung a little, out from the ladder, on the way
         break
     return p
 PREV={}
 def joint(p,q,L,prefer,key=None):
     # the elbow or knee: keeps a slight bend even at full reach, and stays on the side it was on in the previous frame
-    d=q-p; D=max(np.hypot(*d),1e-6); D2=min(D,2*L*0.96)
-    h=math.sqrt(L*L-(D2/2)**2); m=(p+q)/2; nrm=np.array([-d[1],d[0]])/D
+    d=q-p; D=max(np.hypot(*d),1e-6); D2=min(D,2*L*0.97)
+    h=math.sqrt(max(L*L-(D2/2)**2,0)); m=p+d/D*(D2/2); nrm=np.array([-d[1],d[0]])/D
     a,b=m+nrm*h,m-nrm*h
     pick=a if prefer(a)>=prefer(b) else b
     if key in PREV:
@@ -65,26 +76,37 @@ def joint(p,q,L,prefer,key=None):
         if np.hypot(*(alt-o))+12<np.hypot(*(pick-o)): pick=alt
     PREV[key]=pick
     return pick
+# The doodle's ladder is drawn with a heavy, slightly wobbly line; the man is drawn in the same hand: each line is a few
+# points with a small fixed waver (the same waver every frame, so the line does not boil) and traced twice 1 px apart.
+WOB=[0,0.9,-0.7,0.5,0]
+def hand(pts,wob=True):
+    P=np.array(pts,float); out=[]
+    if wob and len(P)==2:
+        d=P[1]-P[0]; nr=np.array([-d[1],d[0]])/max(np.hypot(*d),1e-6)
+        P=np.array([P[0]+d*t+nr*w for t,w in zip(np.linspace(0,1,5),WOB)])
+    elif wob:
+        Q=[P[0]]
+        for a_,b_ in zip(P[:-1],P[1:]):
+            d=b_-a_; nr=np.array([-d[1],d[0]])/max(np.hypot(*d),1e-6); Q+=[a_+d*0.5+nr*0.8,b_]
+        P=np.array(Q)
+    for o in (-0.55,0.55):
+        d=P[-1]-P[0]; nr=np.array([-d[1],d[0]])/max(np.hypot(*d),1e-6)
+        out.append((P+nr*o).tolist())
+    return out
 def man(f):
     H,P=HEAD[f],WAIST[f]
-    ax=(P-H)/np.hypot(*(P-H)); N=H+ax*9; pr=np.array([-ax[1],ax[0]])
+    ax=(P-H)/np.hypot(*(P-H)); N=H+ax*8
     st=[]
-    st.append([(H+np.array([7*math.cos(a),7.5*math.sin(a)])).tolist() for a in np.linspace(-0.4,2*math.pi-0.1,9)])   # head: one loop, not quite closed
-    st.append([N.tolist(),P.tolist()])                                                                                    # body
-    S=N+ax*3; arms=[]; legs=[]
+    st+=hand([(H+np.array([7*math.cos(a),7.5*math.sin(a)])).tolist() for a in np.linspace(-0.4,2*math.pi-0.1,9)],wob=False)   # head: one loop, not quite closed
+    st+=hand([N,P])                                                                                                   # body: one line
+    S=N+ax*3
     for limb in ('lh','rh'):
-        q=contact(f,limb); e=joint(S,q,24,lambda z: z[1],limb); arms.append([S.tolist(),e.tolist(),q.tolist()])
-    Q={l:contact(f,l) for l in ('lf','rf')}
-    w=np.clip((Q['rf'][0]-Q['lf'][0])/10,-1,1)               # seen from behind, each leg hangs from the hip on the side its foot is on (eased, so the legs never cross)
-    for limb,sg in (('lf',w),('rf',-w)):
-        q=Q[limb]; Hp=P-np.array([1.0,0.0])*5*sg
+        q=contact(f,limb); e=joint(S,q,26,lambda z: z[1]-0.3*z[0],limb); st+=hand([S,e,q])
+    for limb,sg in (('lf',1),('rf',-1)):
+        q=contact(f,limb); Hp=P-np.array([2.5*sg,0.0])
         D=np.hypot(*(q-Hp))
-        if D>70: q=Hp+(q-Hp)*70/D   # a foot left behind by a push comes up off its rung rather than the leg stretching
-        k=joint(Hp,q,36,lambda z: z[0]+0.8*z[1],limb); legs.append([Hp.tolist(),k.tolist(),q.tolist()])   # the knee goes forward to the ladder, never up past the hip
-    th=np.mean([np.array(l[1])-np.array(l[0]) for l in legs],0); th/=max(np.hypot(*th),1e-6)
-    dn=0.5*th+0.5*np.array([0.0,1.0]); dn/=np.hypot(*dn); side=np.array([-dn[1],dn[0]])   # the wrap hangs down over the tops of the thighs
-    st.append([(P+side*8).tolist(),(P+side*13+dn*19).tolist(),(P-side*13+dn*19).tolist(),(P-side*8).tolist(),(P+side*8).tolist()])        # the white wrap, closed: a short band round the hips
-    st+=arms+legs
+        if D>74: q=Hp+(q-Hp)*74/D   # never a stretched leg
+        k=joint(Hp,q,38,lambda z: z[0]+0.6*z[1],limb); st+=hand([Hp,k,q])
     return [[[round(x-cam[f][0],1),round(y-cam[f][1],1)] for x,y in s] for s in st]
 objs=[
  {"id":"trees","plane":"far","qd":"tree","box":[-10,-10,130,170],"skip":1},

@@ -1,0 +1,83 @@
+[
+ {
+  "id": "M2",
+  "value": 10,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   11,
+   11,
+   11,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.63,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 23
+ },
+ {
+  "id": "M3",
+  "value": 0.43,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.18
+ },
+ {
+  "id": "M6",
+  "value": 7.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "10 strokes, 49 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5364274119573504; scenery drawn by agent: no Quick, Draw! category is a radar blip; each stroke is one short dash at the place and angle of a bright green blip on the radar screen, measured from the average of ten frames with the pencil masked out",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "44/44",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

@@ -1,0 +1,79 @@
+[
+ {
+  "id": "M2",
+  "value": 30,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   32,
+   34,
+   35,
+   36,
+   39,
+   42,
+   43,
+   13,
+   11,
+   14
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.67,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 58
+ },
+ {
+  "id": "M3",
+  "value": 0.4,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.2
+ },
+ {
+  "id": "M6",
+  "value": 12.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "10 strokes, 58 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:4517131834097664; scenery quickdraw:5783373941309440, quickdraw:5661315131506688, quickdraw:4822720116162560, quickdraw:6278883378724864, quickdraw:6287779988242432, drawn by agent: no Quick, Draw! category is a snow surface; one line for the edge of the snow the person sits on, which runs nearly level just under the bag, quickdraw:5904344530550784",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "50/50",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

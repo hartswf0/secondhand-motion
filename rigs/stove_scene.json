@@ -1,0 +1,140 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "source": "locked off: the stove body's top corners sit at the same frame pixels (x 42 and 358, y 38) in f000, f009, f016, f028 and f037; camera.json moves up to 35 px because phase correlation followed the swinging doors, so it is not used"
+ },
+ "planes": [
+  {
+   "id": "back",
+   "z": 4,
+   "label": "Room behind the stove",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Stove"
+  }
+ ],
+ "objects": [
+  {
+   "id": "skirt",
+   "plane": "back",
+   "class": "skirt edge",
+   "strokes": [
+    [
+     [
+      14,
+      120
+     ],
+     [
+      8,
+      170
+     ],
+     [
+      4,
+      230
+     ],
+     [
+      2,
+      288
+     ]
+    ]
+   ],
+   "visible": [
+    8,
+    37
+   ],
+   "why": "from f008 on, the patterned skirt of the woman opening the doors shows as a light strip at the left edge of the frame; Quick, Draw! has no skirt category in this workspace, so it is one drawn line along its edge"
+  }
+ ],
+ "notes": {
+  "0": "both doors swung wide open toward the camera",
+  "6": "doors edge-on to the camera",
+  "14": "doors nearly shut, a gap left in the middle",
+  "24": "doors start to open again",
+  "34": "doors edge-on again",
+  "37": "doors open wide"
+ },
+ "no_cel": true
+}
