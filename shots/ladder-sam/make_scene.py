@@ -114,16 +114,15 @@ def hand(pts,wob=True):
         d=P[-1]-P[0]; nr=np.array([-d[1],d[0]])/max(np.hypot(*d),1e-6)
         out.append((P+nr*o).tolist())
     return out
-def limb_back(root,q,L,side,cap,lo_c=None,hi_c=None):
-    # an elbow or knee for a figure seen from behind on the ladder: halfway between root and contact, bent outward to its own
-    # side (side -1 left, +1 right) by at most cap px (the rest of the bend goes into the ladder, foreshortened), never
-    # inside the root's own line, kept between the rails, and for an arm never higher on the ladder than the hand.
-    A,B=lc(root),lc(q); D=np.hypot(*(B-A)); h=min(math.sqrt(max(L*L-(D/2)**2,0)),cap,0.5*D)   # at most half the reach, so the two segments open at a right angle or wider
-    m=(A+B)/2; m[1]+=side*h
-    if side<0: m[1]=min(m[1],A[1]-4)
-    else: m[1]=max(m[1],A[1]+4)
+def limb_back(root,q,L,side,cos_out,lo_c=None,hi_c=None):
+    # an elbow or knee for a figure seen from behind on the ladder: a two-bone limb of fixed length L per bone, bent in a
+    # plane that leans out of the picture into the ladder, so only cos_out of the bend shows, out to the limb's own side
+    # (side -1 left, +1 right). The drawn bones change length smoothly with the reach, never folding to a stub.
+    A,B=lc(root),lc(q); d=B-A; D=max(np.hypot(*d),1e-6); h=math.sqrt(max(L*L-(D/2)**2,0))*cos_out
+    nr=np.array([-d[1],d[0]])/D
+    if nr[1]*side<0: nr=-nr
+    m=(A+B)/2+nr*h
     if lo_c is not None: m[1]=min(max(m[1],lo_c(m[0])+2),hi_c(m[0])-2)
-    if B[0]>A[0]: m[0]=min(m[0],B[0]-3)   # a hand reaching up: the elbow stays below it
     return pt(*m)
 def skeleton(f):
     H,P=HEAD[f],WAIST[f]
@@ -135,14 +134,14 @@ def skeleton(f):
         q=contact(f,limb); sgo=-1 if limb=='lh' else 1
         e0=joint(S,q,30,lambda z,sg=sgo: z[1]+sg*0.3*z[0],fore=True)
         Sh=S+LV*sg*3
-        e1=limb_back(Sh,q,30,sg,14)
+        e1=limb_back(Sh,q,30*SC(f),sg,0.55)
         J[limb]=(Sh*bl+S*(1-bl),e0*(1-bl)+e1*bl,q)
     for limb,sg in (('lf',-1),('rf',1)):
         q=contact(f,limb); Hp0=P-np.array([2.5*(-sg),0.0]); Hp1=P+LV*sg*3; Hp=Hp0*(1-bl)+Hp1*bl
         D=np.hypot(*(q-Hp))
         if D>76*SC(f): q=Hp+(q-Hp)*76*SC(f)/D   # never a stretched leg
         k0=joint(Hp0,q,39,lambda z: z[0]+0.6*z[1],limb)
-        k1=limb_back(Hp1,q,39,sg,14,cL,cR)
+        k1=limb_back(Hp1,q,39*SC(f),sg,0.4,cL,cR)
         J[limb]=(Hp,k0*(1-bl)+k1*bl,q)
     return J
 def _x(p1,p2,p3,p4):
