@@ -1,0 +1,54 @@
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Device set to use cpu
+You are using a model of type sam2_video to instantiate a model of type sam2. This is not supported for all configurations of models and can yield errors.
+Device set to use cpu
+0 dino 0.86 0.969 15106 10s
+1 dino 0.94 0.963 16000 19s
+2 dino 0.93 0.965 16611 29s
+3 dino 0.87 0.981 17195 39s
+4 dino 0.89 0.986 17854 49s
+5 dino 0.94 0.982 19113 59s
+6 dino 0.95 0.976 19940 69s
+7 dino 0.93 0.969 21487 79s
+8 dino 0.91 0.975 22513 90s
+9 dino 0.91 0.958 22889 101s
+10 dino 0.93 0.959 24199 111s
+11 dino 0.93 0.968 24965 122s
+12 dino 0.93 0.97 25433 132s
+13 dino 0.92 0.969 27467 142s
+14 dino 0.92 0.967 28029 153s
+15 dino 0.91 0.962 28754 163s
+16 dino 0.89 0.966 29598 174s
+17 dino 0.91 0.972 30681 184s
+18 dino 0.90 0.96 31038 194s
+19 dino 0.91 0.962 32474 204s
+20 dino 0.92 0.952 32626 215s
+21 dino 0.93 0.957 33931 225s
+22 dino 0.90 0.958 34780 235s
+23 dino 0.92 0.971 36094 245s
+24 dino 0.92 0.974 36746 255s
+25 dino 0.93 0.968 38225 266s
+26 dino 0.93 0.967 39996 276s
+27 dino 0.94 0.965 40254 286s
+28 dino 0.93 0.959 40325 296s
+29 dino 0.93 0.967 39768 306s
+30 dino 0.91 0.959 39613 316s
+31 dino 0.94 0.964 39581 326s
+32 dino 0.95 0.959 39440 336s
+33 dino 0.95 0.958 37636 346s
+34 dino 0.94 0.964 36550 356s
+35 dino 0.95 0.947 35751 366s
+36 dino 0.95 0.951 35530 377s
+37 dino 0.95 0.962 34784 387s
+38 dino 0.95 0.959 34261 397s
+39 dino 0.95 0.96 33436 408s
+40 dino 0.95 0.956 33014 418s
+41 dino 0.95 0.957 31470 428s
+42 dino 0.94 0.963 31138 439s
+43 dino 0.95 0.96 30989 449s
+44 dino 0.88 0.945 29784 459s
+45 dino 0.94 0.95 30726 469s
+46 dino 0.94 0.948 30190 480s
+47 dino 0.94 0.939 29055 490s
+48 dino 0.93 0.956 26895 500s
+49 dino 0.79 0.928 25185 511s
