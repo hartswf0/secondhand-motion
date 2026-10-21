@@ -258,10 +258,10 @@
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    -61,
-    161,
-    -31,
-    170
+    -71,
+    146,
+    -47,
+    153
    ],
    "aspect": 3.0,
    "skip": 0
@@ -271,10 +271,10 @@
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    0,
-    161,
-    30,
-    170
+    -16,
+    146,
+    8,
+    153
    ],
    "aspect": 3.0,
    "skip": 1
@@ -284,10 +284,10 @@
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    71,
-    161,
-    101,
-    170
+    49,
+    146,
+    73,
+    153
    ],
    "aspect": 3.0,
    "skip": 2
@@ -297,10 +297,10 @@
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    139,
-    161,
-    169,
-    170
+    111,
+    146,
+    135,
+    153
    ],
    "aspect": 3.0,
    "skip": 3
@@ -310,10 +310,10 @@
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    190,
-    161,
-    220,
-    170
+    156,
+    146,
+    180,
+    153
    ],
    "aspect": 3.0,
    "skip": 4
@@ -323,10 +323,10 @@
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    252,
-    161,
-    282,
-    170
+    212,
+    146,
+    236,
+    153
    ],
    "aspect": 3.0,
    "skip": 5
@@ -336,101 +336,335 @@
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    331,
-    161,
-    361,
-    170
+    285,
+    146,
+    309,
+    153
    ],
    "aspect": 3.0,
    "skip": 6
+  },
+  {
+   "id": "tuft0_7",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    336,
+    146,
+    360,
+    153
+   ],
+   "aspect": 3.0,
+   "skip": 7
   },
   {
    "id": "tuft1_0",
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    -28,
-    195,
-    2,
-    204
+    -42,
+    163,
+    -18,
+    170
    ],
    "aspect": 3.0,
-   "skip": 7
+   "skip": 8
   },
   {
    "id": "tuft1_1",
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    35,
-    195,
-    65,
-    204
+    15,
+    163,
+    39,
+    170
    ],
    "aspect": 3.0,
-   "skip": 8
+   "skip": 0
   },
   {
    "id": "tuft1_2",
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    98,
-    195,
-    128,
-    204
+    82,
+    163,
+    106,
+    170
    ],
    "aspect": 3.0,
-   "skip": 0
+   "skip": 1
   },
   {
    "id": "tuft1_3",
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    171,
-    195,
-    201,
-    204
+    140,
+    163,
+    164,
+    170
    ],
    "aspect": 3.0,
-   "skip": 1
+   "skip": 2
   },
   {
    "id": "tuft1_4",
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    235,
     195,
-    265,
-    204
+    163,
+    219,
+    170
    ],
    "aspect": 3.0,
-   "skip": 2
+   "skip": 3
   },
   {
    "id": "tuft1_5",
    "plane": "marsh",
    "qd": "grass",
    "box": [
-    296,
-    195,
-    326,
-    204
+    245,
+    163,
+    269,
+    170
    ],
    "aspect": 3.0,
-   "skip": 3
+   "skip": 4
   },
   {
    "id": "tuft1_6",
    "plane": "marsh",
    "qd": "grass",
    "box": [
+    306,
+    163,
+    330,
+    170
+   ],
+   "aspect": 3.0,
+   "skip": 5
+  },
+  {
+   "id": "tuft1_7",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    361,
+    163,
+    385,
+    170
+   ],
+   "aspect": 3.0,
+   "skip": 6
+  },
+  {
+   "id": "tuft2_0",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -62,
+    181,
+    -38,
+    188
+   ],
+   "aspect": 3.0,
+   "skip": 7
+  },
+  {
+   "id": "tuft2_1",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -8,
+    181,
+    16,
+    188
+   ],
+   "aspect": 3.0,
+   "skip": 8
+  },
+  {
+   "id": "tuft2_2",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    38,
+    181,
+    62,
+    188
+   ],
+   "aspect": 3.0,
+   "skip": 0
+  },
+  {
+   "id": "tuft2_3",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    98,
+    181,
+    122,
+    188
+   ],
+   "aspect": 3.0,
+   "skip": 1
+  },
+  {
+   "id": "tuft2_4",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    159,
+    181,
+    183,
+    188
+   ],
+   "aspect": 3.0,
+   "skip": 2
+  },
+  {
+   "id": "tuft2_5",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    213,
+    181,
+    237,
+    188
+   ],
+   "aspect": 3.0,
+   "skip": 3
+  },
+  {
+   "id": "tuft2_6",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    279,
+    181,
+    303,
+    188
+   ],
+   "aspect": 3.0,
+   "skip": 4
+  },
+  {
+   "id": "tuft2_7",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    328,
+    181,
     352,
+    188
+   ],
+   "aspect": 3.0,
+   "skip": 5
+  },
+  {
+   "id": "tuft3_0",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    -41,
+    198,
+    -17,
+    205
+   ],
+   "aspect": 3.0,
+   "skip": 6
+  },
+  {
+   "id": "tuft3_1",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    24,
+    198,
+    48,
+    205
+   ],
+   "aspect": 3.0,
+   "skip": 7
+  },
+  {
+   "id": "tuft3_2",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    79,
+    198,
+    103,
+    205
+   ],
+   "aspect": 3.0,
+   "skip": 8
+  },
+  {
+   "id": "tuft3_3",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    138,
+    198,
+    162,
+    205
+   ],
+   "aspect": 3.0,
+   "skip": 0
+  },
+  {
+   "id": "tuft3_4",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
     195,
-    382,
-    204
+    198,
+    219,
+    205
+   ],
+   "aspect": 3.0,
+   "skip": 1
+  },
+  {
+   "id": "tuft3_5",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    255,
+    198,
+    279,
+    205
+   ],
+   "aspect": 3.0,
+   "skip": 2
+  },
+  {
+   "id": "tuft3_6",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    303,
+    198,
+    327,
+    205
+   ],
+   "aspect": 3.0,
+   "skip": 3
+  },
+  {
+   "id": "tuft3_7",
+   "plane": "marsh",
+   "qd": "grass",
+   "box": [
+    368,
+    198,
+    392,
+    205
    ],
    "aspect": 3.0,
    "skip": 4

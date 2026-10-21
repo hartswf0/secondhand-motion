@@ -63,6 +63,7 @@ for f in range(n):
 # One body size every frame: the torso is one line of fixed length. Its lean comes from the film (head over waist),
 # kept bent forward toward the ladder on the climb, and bent further over the ladder at the top (frames 30-37).
 TORSO=40.0
+LEG=42.0   # one leg bone; the leg is two
 # Near the top the film man recedes from the camera and looks a little smaller, so from frame 24 the whole figure
 # (torso, head, neck, reach) shrinks by up to 7 %, a fraction of a percent per frame.
 def SC(f): t=np.clip((f-24)/13,0,1); return 1-0.07*t*t*(3-2*t)
@@ -70,7 +71,7 @@ ang=np.array([math.atan2(HEAD[f][0]-WAIST[f][0],WAIST[f][1]-HEAD[f][1]) for f in
 for f in range(n):
     on_l=np.clip((f-5)/4,0,1); top=np.clip((f-28)/6,0,1); top=top*top*(3-2*top)
     a=ang[f]*(1-on_l)+max(ang[f],math.radians(30))*on_l
-    a=a*(1-top)+math.radians(50)*top
+    a=a*(1-top)+math.radians(40)*top
     HEAD[f]=WAIST[f]+TORSO*SC(f)*np.array([math.sin(a),-math.cos(a)])
 def contact(f,limb):
     p=target(MK['start'][limb])
@@ -137,11 +138,10 @@ def skeleton(f):
         e1=limb_back(Sh,q,30*SC(f),sg,0.55)
         J[limb]=(Sh*bl+S*(1-bl),e0*(1-bl)+e1*bl,q)
     for limb,sg in (('lf',-1),('rf',1)):
-        q=contact(f,limb); Hp0=P-np.array([2.5*(-sg),0.0]); Hp1=P+LV*sg*3; Hp=Hp0*(1-bl)+Hp1*bl
+        q=contact(f,limb); Hp0=P-np.array([2.5*(-sg),0.0]); Hp1=P+LV*sg*3-LU*5*SC(f); Hp=Hp0*(1-bl)+Hp1*bl   # on the ladder the hips sit 5 px below the waist line
         D=np.hypot(*(q-Hp))
-        if D>76*SC(f): q=Hp+(q-Hp)*76*SC(f)/D   # never a stretched leg
         k0=joint(Hp0,q,39,lambda z: z[0]+0.6*z[1],limb)
-        k1=limb_back(Hp1,q,39*SC(f),sg,0.4,cL,cR)
+        k1=limb_back(Hp1,q,LEG*SC(f),sg,0.4,cL,cR)
         J[limb]=(Hp,k0*(1-bl)+k1*bl,q)
     return J
 def _x(p1,p2,p3,p4):
