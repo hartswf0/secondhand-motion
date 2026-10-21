@@ -1,0 +1,834 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.47,
+   0.72,
+   0.7,
+   0.79,
+   1.12,
+   1.75,
+   1.91,
+   1.93,
+   1.88,
+   1.65,
+   1.99,
+   2.02,
+   2.07,
+   2.55,
+   2.56,
+   2.54,
+   2.84,
+   2.98,
+   2.49,
+   2.2,
+   1.95,
+   2.71,
+   3.03,
+   2.67,
+   2.44,
+   2.12,
+   2.11,
+   1.95,
+   2.37,
+   2.44,
+   1.97,
+   1.26,
+   1.45,
+   2.14,
+   2.01,
+   1.84,
+   1.48,
+   1.13,
+   1.19,
+   0.93,
+   1.07,
+   0.86,
+   1.32
+  ],
+  "y": [
+   0.0,
+   -0.06,
+   -0.19,
+   -0.53,
+   -0.69,
+   -1.21,
+   -1.14,
+   -0.14,
+   0.42,
+   0.73,
+   0.23,
+   0.27,
+   0.29,
+   0.18,
+   -0.03,
+   -0.13,
+   -0.33,
+   -0.22,
+   -0.08,
+   -0.21,
+   0.5,
+   0.06,
+   0.09,
+   0.78,
+   0.79,
+   0.15,
+   -0.29,
+   -0.02,
+   0.24,
+   0.44,
+   0.63,
+   0.93,
+   0.71,
+   1.04,
+   1.08,
+   0.95,
+   0.55,
+   -0.06,
+   0.14,
+   0.14,
+   0.23,
+   0.15,
+   0.41,
+   0.56
+  ],
+  "source": "shots/traffic-light-sam/camera.json: per-frame shift measured from the footage; the camera is locked off and only shakes by up to three pixels"
+ },
+ "planes": [
+  {
+   "id": "sky",
+   "label": "Wires across the pale sky, far behind the signal",
+   "z_from_depth": "top",
+   "z": 12
+  },
+  {
+   "id": "pole",
+   "label": "Utility pole with its step bars, behind the signal on the right",
+   "z_from_depth": "middle",
+   "z": 12
+  },
+  {
+   "id": "board",
+   "z": 2.3,
+   "label": "The tall back board on the signal's mast, just behind the housing (z set by eye; it moves with the signal in the footage)"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Traffic light"
+  }
+ ],
+ "objects": [
+  {
+   "id": "wires",
+   "plane": "sky",
+   "class": "wire",
+   "why": "no Quick, Draw! category is an overhead wire; three thin lines across the sky on the left where the footage shows wires",
+   "strokes": [
+    [
+     [
+      -20,
+      112
+     ],
+     [
+      150,
+      96
+     ]
+    ],
+    [
+     [
+      -20,
+      200
+     ],
+     [
+      120,
+      178
+     ]
+    ],
+    [
+     [
+      -20,
+      248
+     ],
+     [
+      150,
+      222
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "wires_right",
+   "plane": "sky",
+   "class": "wire",
+   "why": "no Quick, Draw! category is an overhead wire; two wires meeting the pole at the top right",
+   "strokes": [
+    [
+     [
+      296,
+      26
+     ],
+     [
+      400,
+      44
+     ]
+    ],
+    [
+     [
+      300,
+      60
+     ],
+     [
+      400,
+      70
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "pole",
+   "plane": "pole",
+   "qd": "ladder",
+   "box": [
+    302,
+    18,
+    342,
+    252
+   ],
+   "aspect": 0.17
+  },
+  {
+   "id": "board",
+   "plane": "board",
+   "class": "board",
+   "why": "no Quick, Draw! category is the back board of a signal mast; its two long edges and its top, as seen beside the housing",
+   "strokes": [
+    [
+     [
+      246,
+      14
+     ],
+     [
+      284,
+      12
+     ],
+     [
+      322,
+      288
+     ]
+    ],
+    [
+     [
+      246,
+      14
+     ],
+     [
+      284,
+      288
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "amber_on",
+   "plane": "char",
+   "class": "lamp lit",
+   "why": "the lamp lit: no Quick, Draw! category is a lamp being on; a zigzag of colouring-in inside the doodle's own lamp, with eight short rays around it, on the frames where the amber lamp is on",
+   "strokes": [
+    [
+     [
+      152.3,
+      147.1
+     ],
+     [
+      143.7,
+      138.4
+     ],
+     [
+      138.0,
+      125.7
+     ],
+     [
+      160.2,
+      147.9
+     ],
+     [
+      165.7,
+      146.3
+     ],
+     [
+      139.7,
+      120.3
+     ],
+     [
+      141.7,
+      115.3
+     ],
+     [
+      169.7,
+      143.2
+     ],
+     [
+      174.2,
+      140.6
+     ],
+     [
+      144.3,
+      110.8
+     ],
+     [
+      148.8,
+      108.2
+     ],
+     [
+      176.7,
+      136.1
+     ],
+     [
+      177.4,
+      129.7
+     ],
+     [
+      153.3,
+      105.6
+     ],
+     [
+      159.3,
+      104.5
+     ],
+     [
+      177.6,
+      122.8
+     ],
+     [
+      176.8,
+      114.9
+     ],
+     [
+      171.5,
+      109.6
+     ]
+    ],
+    [
+     [
+      157.1,
+      91.0
+     ],
+     [
+      156.7,
+      83.0
+     ]
+    ],
+    [
+     [
+      132.8,
+      105.5
+     ],
+     [
+      126.1,
+      101.1
+     ]
+    ],
+    [
+     [
+      124.8,
+      130.2
+     ],
+     [
+      117.0,
+      132.0
+     ]
+    ],
+    [
+     [
+      140.8,
+      155.9
+     ],
+     [
+      137.1,
+      163.0
+     ]
+    ],
+    [
+     [
+      166.5,
+      161.4
+     ],
+     [
+      168.1,
+      169.2
+     ]
+    ],
+    [
+     [
+      186.7,
+      147.8
+     ],
+     [
+      192.6,
+      153.1
+     ]
+    ],
+    [
+     [
+      190.0,
+      115.5
+     ],
+     [
+      197.8,
+      113.8
+     ]
+    ],
+    [
+     [
+      184.7,
+      105.0
+     ],
+     [
+      191.4,
+      100.6
+     ]
+    ]
+   ],
+   "visible": [
+    4,
+    37
+   ]
+  },
+  {
+   "id": "amber_coming",
+   "plane": "char",
+   "class": "lamp lit",
+   "why": "the lamp lit: no Quick, Draw! category is a lamp being on; a zigzag of colouring-in inside the doodle's own lamp, without rays, on the frame where the amber lamp is coming on",
+   "strokes": [
+    [
+     [
+      152.3,
+      147.1
+     ],
+     [
+      143.7,
+      138.4
+     ],
+     [
+      138.0,
+      125.7
+     ],
+     [
+      160.2,
+      147.9
+     ],
+     [
+      165.7,
+      146.3
+     ],
+     [
+      139.7,
+      120.3
+     ],
+     [
+      141.7,
+      115.3
+     ],
+     [
+      169.7,
+      143.2
+     ],
+     [
+      174.2,
+      140.6
+     ],
+     [
+      144.3,
+      110.8
+     ],
+     [
+      148.8,
+      108.2
+     ],
+     [
+      176.7,
+      136.1
+     ],
+     [
+      177.4,
+      129.7
+     ],
+     [
+      153.3,
+      105.6
+     ],
+     [
+      159.3,
+      104.5
+     ],
+     [
+      177.6,
+      122.8
+     ],
+     [
+      176.8,
+      114.9
+     ],
+     [
+      171.5,
+      109.6
+     ]
+    ]
+   ],
+   "visible": [
+    3,
+    3
+   ]
+  },
+  {
+   "id": "amber_going",
+   "plane": "char",
+   "class": "lamp lit",
+   "why": "the lamp lit: no Quick, Draw! category is a lamp being on; a zigzag of colouring-in inside the doodle's own lamp, without rays, on the frame where the amber lamp is going off",
+   "strokes": [
+    [
+     [
+      152.3,
+      147.1
+     ],
+     [
+      143.7,
+      138.4
+     ],
+     [
+      138.0,
+      125.7
+     ],
+     [
+      160.2,
+      147.9
+     ],
+     [
+      165.7,
+      146.3
+     ],
+     [
+      139.7,
+      120.3
+     ],
+     [
+      141.7,
+      115.3
+     ],
+     [
+      169.7,
+      143.2
+     ],
+     [
+      174.2,
+      140.6
+     ],
+     [
+      144.3,
+      110.8
+     ],
+     [
+      148.8,
+      108.2
+     ],
+     [
+      176.7,
+      136.1
+     ],
+     [
+      177.4,
+      129.7
+     ],
+     [
+      153.3,
+      105.6
+     ],
+     [
+      159.3,
+      104.5
+     ],
+     [
+      177.6,
+      122.8
+     ],
+     [
+      176.8,
+      114.9
+     ],
+     [
+      171.5,
+      109.6
+     ]
+    ]
+   ],
+   "visible": [
+    38,
+    38
+   ]
+  },
+  {
+   "id": "red_coming",
+   "plane": "char",
+   "class": "lamp lit",
+   "why": "the lamp lit: no Quick, Draw! category is a lamp being on; a zigzag of colouring-in inside the doodle's own lamp, without rays, on the frame where the red lamp is coming on",
+   "strokes": [
+    [
+     [
+      113.4,
+      62.9
+     ],
+     [
+      108.2,
+      57.7
+     ],
+     [
+      104.1,
+      46.5
+     ],
+     [
+      118.4,
+      60.8
+     ],
+     [
+      122.9,
+      58.2
+     ],
+     [
+      100.9,
+      36.3
+     ],
+     [
+      106.3,
+      34.6
+     ],
+     [
+      127.4,
+      55.7
+     ],
+     [
+      131.9,
+      53.1
+     ],
+     [
+      111.8,
+      33.0
+     ],
+     [
+      116.8,
+      30.9
+     ],
+     [
+      135.9,
+      50.0
+     ],
+     [
+      140.4,
+      47.4
+     ],
+     [
+      122.7,
+      29.8
+     ],
+     [
+      129.1,
+      29.1
+     ],
+     [
+      144.9,
+      44.9
+     ],
+     [
+      146.0,
+      38.9
+     ],
+     [
+      136.0,
+      28.9
+     ]
+    ]
+   ],
+   "visible": [
+    39,
+    39
+   ]
+  },
+  {
+   "id": "red_on",
+   "plane": "char",
+   "class": "lamp lit",
+   "why": "the lamp lit: no Quick, Draw! category is a lamp being on; a zigzag of colouring-in inside the doodle's own lamp, with eight short rays around it, on the frames where the red lamp is on",
+   "strokes": [
+    [
+     [
+      113.4,
+      62.9
+     ],
+     [
+      108.2,
+      57.7
+     ],
+     [
+      104.1,
+      46.5
+     ],
+     [
+      118.4,
+      60.8
+     ],
+     [
+      122.9,
+      58.2
+     ],
+     [
+      100.9,
+      36.3
+     ],
+     [
+      106.3,
+      34.6
+     ],
+     [
+      127.4,
+      55.7
+     ],
+     [
+      131.9,
+      53.1
+     ],
+     [
+      111.8,
+      33.0
+     ],
+     [
+      116.8,
+      30.9
+     ],
+     [
+      135.9,
+      50.0
+     ],
+     [
+      140.4,
+      47.4
+     ],
+     [
+      122.7,
+      29.8
+     ],
+     [
+      129.1,
+      29.1
+     ],
+     [
+      144.9,
+      44.9
+     ],
+     [
+      146.0,
+      38.9
+     ],
+     [
+      136.0,
+      28.9
+     ]
+    ],
+    [
+     [
+      87.0,
+      32.0
+     ],
+     [
+      79.4,
+      29.5
+     ]
+    ],
+    [
+     [
+      100.2,
+      70.1
+     ],
+     [
+      94.5,
+      75.8
+     ]
+    ],
+    [
+     [
+      104.2,
+      74.5
+     ],
+     [
+      99.5,
+      81.0
+     ]
+    ],
+    [
+     [
+      110.9,
+      73.0
+     ],
+     [
+      107.2,
+      80.2
+     ]
+    ],
+    [
+     [
+      156.7,
+      45.6
+     ],
+     [
+      164.7,
+      45.9
+     ]
+    ],
+    [
+     [
+      158.6,
+      37.7
+     ],
+     [
+      166.4,
+      36.1
+     ]
+    ],
+    [
+     [
+      154.5,
+      26.7
+     ],
+     [
+      161.3,
+      22.5
+     ]
+    ],
+    [
+     [
+      142.8,
+      19.3
+     ],
+     [
+      147.3,
+      12.7
+     ]
+    ]
+   ],
+   "visible": [
+    40,
+    43
+   ]
+  }
+ ],
+ "no_cel": false,
+ "notes": {
+  "0": "all three lamps dark",
+  "3": "the amber lamp comes on",
+  "4": "amber fully lit",
+  "37": "amber still lit",
+  "38": "amber goes off",
+  "39": "the red lamp at the top comes on",
+  "43": "red lit"
+ }
+}

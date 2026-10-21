@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A single apple drawn in black outline with a leaf on its stem sits between two grey scenery hands: a hand with spread fingers at left and a curled set of fingers at lower right, with grey diagonal lines above. In frames 1-5 the apple slides down and to the left toward the left hand and tilts slightly. In frames 6-9 it travels back up and to the right to about its starting position. In frames 10-12 it holds roughly in place and a small mark appears near its bottom. In frames 13-16 the apple becomes smaller and rounder, the leaf goes away, the stem becomes a short tick at the top, and a small cross is drawn in the middle of the body, so the apple reads as turned to show its blossom end; it settles lower and slightly left, near the lower right fingers.",
+ "seen_film": "Close shot of a man in a tweed jacket holding an apple in both hands at chest height. In frames 1-4 the right hand cups the apple from below and the left hand holds its side. In frames 5-7 the hands roll the apple down and to the left, turning it so its spotted side faces the camera. In frames 8-11 the apple comes back to the right and centre and is turned again in the fingers. In frames 12-14 the apple is turned further, showing a dented or cut edge, and the left hand covers part of it. In frames 15-16 the apple sits lower between both hands with its blossom or stem end facing the camera, partly hidden by the fingers; the lighting brightens slightly at that point.",
+ "named_subject": "An apple (the doodle in c.png), handled and turned between two hands.",
+ "verdict": "reference stronger",
+ "evidence": "Path matches the film: e.png 1-17 the apple moves down-left (film f.png 9-18 also rolls down-left), e.png 18-32 it returns right and up (film 19-32 returns right), e.png 37-49 it turns to show the end with a cross mark and settles lower (film 40-49 shows the end-on apple low between the hands). Drawing matches c.png in e.png 1-36: same bumpy two-lobed bottom, leaf with hatch lines, slight lean. The weakness: between e.png 39 and 41 the apple shrinks by roughly a fifth in width and height and the leaf is replaced by a short tick within two frames, which reads as a size pop rather than a turn; the film apple in f.png 39-41 does not get noticeably smaller, only rotates and is partly covered. In e.png 41-49 the outline also loses the two-lobed bottom and becomes a plain rounded box, so the drawing is less like c.png. Judged from still frames only, not playback.",
+ "primary_gap": "The end-on turn at e.png 39-41 is done as a sudden shrink and redraw (smaller body, leaf removed, cross added) instead of a gradual rotation at the same size, so the apple pops and loses the doodle's lobed bottom.",
+ "closes_when": "Across e.png 36-44 the apple keeps its frame 36 size within a few percent while the leaf and stem move step by step toward the top-centre and shorten, and the cross mark fades in, with the lobed bottom contour carried into the end-on drawings.",
+ "protect": "The down-left then back-right travel timed to the film (e.png 1-32), the steady single-outline rendering with no doubling, the c.png leaf, lobed bottom and stroke weight in the early frames, the cross mark for the blossom end, and the grey scenery hands placed where the film's hands are.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  40,
+  41
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "In the end-on frames (e.png 41-49) the outline becomes a smaller plain rounded shape without the two-lobed bottom and leaf of c.png, so the last third looks like a different, simpler apple drawing.",
+ "still_frames_only": true,
+ "_packet": "lotacc97a4d",
+ "_round": 4
+}

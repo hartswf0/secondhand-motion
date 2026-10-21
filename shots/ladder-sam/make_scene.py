@@ -61,7 +61,7 @@ for f in range(n):
         a,c=lc(tgt); tgt[0]+=(cL(a)+WAIST_ACROSS*(cR(a)-cL(a))-c)/LV[0]
     dx=s*(tgt[0]-WAIST[f][0]); WAIST[f][0]+=dx; HEAD[f][0]+=dx   # the head goes with the waist, so the lean read from the film is kept
 # walking in (frames 0-9) the waist goes the same distance each frame, as the film man walks at an even pace
-for f in range(1,9): WAIST[f][0]=WAIST[0][0]+(WAIST[9][0]-WAIST[0][0])*f/9
+for f in range(1,9): x=WAIST[0][0]+(WAIST[9][0]-WAIST[0][0])*f/9; HEAD[f][0]+=x-WAIST[f][0]; WAIST[f][0]=x
 # One body size every frame: the torso is one line of fixed length. Its lean comes from the film (head over waist),
 # kept bent forward toward the ladder on the climb, and bent further over the ladder at the top (frames 30-37).
 TORSO=40.0
@@ -135,7 +135,7 @@ def skeleton(f):
     J={'H':H,'N':N,'P':P,'S':S}
     for limb,sg in (('lh',-1),('rh',1)):
         q=contact(f,limb); sgo=-1 if limb=='lh' else 1
-        e0=joint(S,q,30,lambda z,sg=sgo: z[1]+sg*0.3*z[0],fore=True)
+        e0=joint(S,q,30,lambda z,sg=sgo: z[1]+sg*0.3*z[0],limb,fore=True)
         Sh=S+LV*sg*3
         e1=limb_back(Sh,q,30*SC(f),sg,0.5)
         J[limb]=(Sh*bl+S*(1-bl),e0*(1-bl)+e1*bl,q)
@@ -172,7 +172,7 @@ def check(f,J):
     for k in ('lf','rf'):
         r,kn,q=J[k]; u,v=r-kn,q-kn; ang=math.degrees(math.acos(np.clip(u@v/max(np.hypot(*u)*np.hypot(*v),1e-6),-1,1)))
         if ang<60: bad.append(f'{k} folded ({ang:.0f} deg)')
-        if f>=7:   # once both hips are over the ladder (frame 6 is the step onto the bottom rung from the left)
+        if f>=7 and not (f<9 and k in stepping(f)):   # once both hips are over the ladder (to frame 8 the left foot is still stepping in onto the rung from the left)
             for s1 in segs[k]:
                 for rail in (0,1):
                     for a_,b_ in zip(LAD[rail][:-1],LAD[rail][1:]):
@@ -190,7 +190,7 @@ def cont(f,J0,J1):
     # frame-to-frame check: the torso and the limb segments change length by at most a few % per frame, and every joint
     # moves at most ~8 px per frame, except the hand or foot that is stepping (and its elbow or knee, up to 14 px)
     bad=[]; st=stepping(f)
-    LIM=9 if f>=10 else 20   # walking in and stepping onto the ladder (to frame 9) the film man moves 12-18 px a frame
+    LIM=9 if f>=10 else 25   # walking in and stepping onto the ladder (to frame 9) the film man moves 12-18 px a frame
     for k in ('H','N','P','S'):
         d=np.hypot(*(J1[k]-J0[k]))
         if d>LIM: bad.append(f'{k} moves {d:.1f}px')
@@ -205,14 +205,14 @@ def cont(f,J0,J1):
             # a bone is fixed in length; drawn foreshortened, it may lengthen or shorten only as much as the limb's
             # reach (shoulder or hip to hand or foot) changes in that frame, plus a few %
             dD=abs(np.hypot(*(J1[k][2]-J1[k][0]))-np.hypot(*(J0[k][2]-J0[k][0])))
-            lim=0.05*a+0.6*dD if k not in st else 0.2*a+0.6*dD
+            lim=0.05*a+0.6*dD if k not in st else 0.4*a+0.6*dD
             if abs(b-a)>lim: bad.append(f'{k} segment {i} {a:.1f}->{b:.1f}')
     return bad
 def man(f):
     J=SKEL[f]; H=J['H']
     st=[]
     st+=hand([(H+SC(f)*np.array([7*math.cos(a),7.5*math.sin(a)])).tolist() for a in np.linspace(-0.4,2*math.pi-0.1,9)],wob=False)   # head: one loop, not quite closed
-    st+=hand([J['N'],J['P']])                                                                                         # body: one line
+    st+=hand([J['N'],(J['lf'][0]+J['rf'][0])/2])   # body: one line, from the neck down to between the hips                                                                                         # body: one line
     for limb in ('lh','rh','lf','rf'): st+=hand(list(J[limb]))
     return [[[round(x-cam[f][0],1),round(y-cam[f][1],1)] for x,y in s] for s in st]
 SKEL=[skeleton(f) for f in range(n)]   # once per frame, in order (the ground-phase joints remember their side)

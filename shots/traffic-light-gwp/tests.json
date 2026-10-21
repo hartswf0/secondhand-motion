@@ -1,0 +1,85 @@
+[
+ {
+  "id": "M2",
+  "value": 49,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   48,
+   48,
+   48,
+   48,
+   48,
+   48,
+   48,
+   48,
+   48,
+   48,
+   49,
+   48,
+   48,
+   48,
+   48,
+   51
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.65,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 90
+ },
+ {
+  "id": "M3",
+  "value": 0.62,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.61
+ },
+ {
+  "id": "M6",
+  "value": 0.4,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 48 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5183299381100544; scenery drawn by agent: no Quick, Draw! category is an overhead wire; three thin lines across the sky on the left where the footage shows wires, drawn by agent: no Quick, Draw! category is an overhead wire; two wires meeting the pole at the top right, quickdraw:6559030757556224, drawn by agent: no Quick, Draw! category is the back board of a signal mast; its two long edges and its top, as seen beside the housing, drawn by agent: the lamp lit: no Quick, Draw! category is a lamp being on; a zigzag of colouring-in inside the doodle's own lamp, with eight short rays around it, on the frames where the amber lamp is on, drawn by agent: the lamp lit: no Quick, Draw! category is a lamp being on; a zigzag of colouring-in inside the doodle's own lamp, without rays, on the frame where the amber lamp is coming on, drawn by agent: the lamp lit: no Quick, Draw! category is a lamp being on; a zigzag of colouring-in inside the doodle's own lamp, without rays, on the frame where the amber lamp is going off, drawn by agent: the lamp lit: no Quick, Draw! category is a lamp being on; a zigzag of colouring-in inside the doodle's own lamp, without rays, on the frame where the red lamp is coming on, drawn by agent: the lamp lit: no Quick, Draw! category is a lamp being on; a zigzag of colouring-in inside the doodle's own lamp, with eight short rays around it, on the frames where the red lamp is on",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "44/44",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
