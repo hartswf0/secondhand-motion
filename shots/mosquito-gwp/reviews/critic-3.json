@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A small black line insect (oval head on the left with an antenna hook, a curved proboscis line hanging down-left, a pointed arch wing, a long body bar and four or five vertical leg strokes) stands in the middle of the frame below a grey diagonal line, above a grey ground band with short grey strokes. In frames 1-2 the body bar slopes up to the right. In frame 3 the body/wing swings to a steep diagonal that crosses the upper grey line and the rear end is drawn as three parallel strokes. Frame 4 returns near frame 1. Frames 5-6 tilt the body down to the right with short bent legs, and frame 6 again shows a diagonal bar with doubled rear strokes. From frame 7 to 16 the body is a flat horizontal bar and the pose holds almost unchanged, with small shifts in leg spacing. At frame 10 the whole scene (character and scenery) shifts up and right and stays there to frame 16.",
+ "seen_film": "A dark mosquito sits on the edge of a hairy forearm, the skin edge running diagonally from upper left to lower right against a black background. Its head is on the left with the proboscis pushed into the skin; wings lie folded back over the abdomen toward the right. Across all 16 frames the mosquito stays in the same place, feeding; the only motion is small: the body bobs and the abdomen and legs shift slightly (frames 4, 8, 12 the body is a little lower/more compact). Around frames 9-10 the camera/frame shifts slightly, moving the arm edge and mosquito, then holds through frame 16.",
+ "named_subject": "a mosquito (insect with round head, antenna, proboscis, one triangular wing, long body and thin legs), standing on skin",
+ "verdict": "reference stronger",
+ "evidence": "Placement and the overall event (an insect standing still in one spot under a diagonal skin edge, frame shift at 10) match the film: compare a frames 1, 9, 10, 16 to d frames 1, 9, 10, 16. But the film's wings stay folded and the body only bobs, while the animation swings the wing/body to a steep diagonal in frame 3 (crossing the upper grey line, rear end tripled into three parallel strokes) and again in frame 6 (doubled rear strokes), then snaps back in frames 4 and 7. Frame 7 changes the body from a sloped bar to a flat horizontal bar in one step, and it stays flat through 16, so the first half and second half read as two different poses. The proboscis in the animation hangs in the air to the left rather than reaching down into the skin line as in the film; the character also floats above the grey hair strokes rather than touching the skin edge.",
+ "primary_gap": "The wing/body swings in frames 3 and 6 (with doubled and tripled rear strokes) and the pose switch at frame 7 are jumps the film does not have, where the film shows only a small continuous body bob with folded wings.",
+ "closes_when": "The wing and body bar keep one near-horizontal angle across all 16 frames, folded over the body, with only a small vertical bob of the body (lower in frames 4, 8, 12 as in the film) and single, undoubled rear strokes in frames 3 and 6.",
+ "protect": "Keep the character's screen position and size under the diagonal skin line, the frame-10 shift that matches the film's camera move, the held feeding pose in frames 7-16, and the doodle's construction: open oval head with antenna hook, curved proboscis, pointed arch wing, long body bar and sparse straight leg strokes in a single black line weight.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  4,
+  6,
+  7
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character keeps the doodle's oval head, antenna hook, curved proboscis, pointed wing and leg strokes (mirrored to face left), but the wing is drawn much narrower than the doodle's broad triangle and the proboscis does not reach down to the skin as the subject's feeding pose needs.",
+ "still_frames_only": true,
+ "_packet": "lotb4b1890c",
+ "_round": 3
+}

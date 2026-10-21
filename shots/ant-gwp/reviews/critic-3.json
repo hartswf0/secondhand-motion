@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Two line-drawn ants stand head to head on a grey ground line in front of grey hills, with a small grey pebble below. The left ant is large (abdomen at left, big thorax oval, pentagon head facing right with two antennae); the right ant is a much smaller copy facing left. In frames 1-4 they hold almost still with the heads overlapping in a small tangle of antenna strokes. In frames 5-10 the left ant shifts slightly and its legs change positions, but its body stays level. In frame 11 the left ant's thorax suddenly arches upward, its head rises, and its legs become long and splayed; frames 12-13 hold this raised pose. In frame 14 the left ant is level and low again, and frames 15-16 keep both ants level with heads together.",
+ "seen_film": "Two dark ants of similar size meet head to head on a rocky ledge in the middle of the frame, the left ant facing right and the right ant facing left. In frames 1-5 both are level, antennae touching. From frame 6 the left ant stands higher on long front legs, its head lifted above the right ant's head; this raised stance continues through frames 6-10. In frames 11-13 the left ant is most raised, its abdomen tilted down at the left and its front tipped toward the right ant, the two heads pressed together. In frames 14-16 both ants lower to a level stance with heads together, the left ant's abdomen slightly further right than at the start.",
+ "named_subject": "Two ants meeting head to head, drawn as the doodle's ant (round abdomen, larger thorax oval, small pentagon head, stick legs and antennae); the left ant is the doodle mirrored, the right ant a scaled-down copy.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-5 match the film's level head-to-head meeting at similar positions. In the film the left ant is already standing raised in frames 6-10, but in the animation frames 6-10 stay level with only small leg shifts. The rise then appears all at once between frame 10 (level body, short legs) and frame 11 (arched thorax, raised head, long splayed legs), and drops all at once between frame 13 (raised) and frame 14 (level, low). The right ant is roughly half the size of the left ant throughout, while in the film the two ants are about the same size. The final pose in frames 14-16 matches the film's level ending.",
+ "primary_gap": "The left ant's rearing starts and ends as single-frame pose changes (10 to 11 and 13 to 14) instead of building from frame 6 and settling over frames 13-15 as in the film.",
+ "closes_when": "The left ant's head and thorax rise progressively across frames 6-10, peak in frames 11-13, and lower in steps over frames 13-15, so no adjacent pair of frames shows the whole rise or drop.",
+ "protect": "Keep the doodle construction (round abdomen, larger thorax oval, pentagon head, straight stick legs, two antennae), the head-to-head staging at the film's screen positions, the level opening in frames 1-5, the level ending in frames 14-16, and the static grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  11,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The left ant reads as the doodle mirrored, but the right ant is drawn at about half the size, which makes it read as a smaller ant rather than a second ant of the same size as in the film.",
+ "still_frames_only": true,
+ "_packet": "lot720ca758",
+ "_round": 3
+}

@@ -1,25 +1,28 @@
 [
  {
   "id": "M2",
-  "value": 70,
+  "value": 73,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   61,
-   55,
-   75,
-   71,
    65,
-   85,
-   85,
+   57,
+   70,
    72,
-   63,
-   66
+   73,
+   74,
+   85,
+   85,
+   84,
+   78,
+   75,
+   70,
+   67
   ]
  },
  {
   "id": "M2b",
-  "value": 0.76,
+  "value": 0.73,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 62
@@ -32,7 +35,7 @@
  },
  {
   "id": "M6",
-  "value": 3.1,
+  "value": 2.6,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -77,17 +80,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cTwo ants standing head to head on the ground, touching antennae\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201cTwo ants meeting head to head, drawn as the doodle's ant (round abdomen, larger thorax oval, small pentagon head, stick legs and antennae); the left ant is the doodle mirrored, the right ant a scaled-down copy.\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/ant-gwp/reviews/critic-2.json"
+  "evidence": "shots/ant-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The left ant uses the doodle's construction (small head with two antennae, large middle oval, rear oval, straight stick legs) mirrored to face right, but its segments are rounder and taller than the doodle's flat ovals, and the right ant is a smaller variant.",
-  "evidence": "shots/ant-gwp/reviews/critic-2.json"
+  "note": "The left ant reads as the doodle mirrored, but the right ant is drawn at about half the size, which makes it read as a smaller ant rather than a second ant of the same size as in the film.",
+  "evidence": "shots/ant-gwp/reviews/critic-3.json"
  }
 ]

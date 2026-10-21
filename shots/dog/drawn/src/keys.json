@@ -3,26 +3,62 @@
 "yaw": 0.0,
 "rot": -25,
 "C": [
-127,
-143
+108,
+142
 ],
 "s": 0.65,
 "why": "the dog stops looking up at the person and starts to drop its head: the start of the turn"
+},
+"15": {
+"yaw": 0.0,
+"rot": -40,
+"C": [
+113,
+144
+],
+"s": 0.65,
+"why": "breakdown: the head is on its way down, so the drop is a swing and not a jump"
+},
+"16": {
+"yaw": 0.06,
+"hyaw": 0.08,
+"rot": -55,
+"hy": 12,
+"C": [
+117,
+145
+],
+"s": 0.65,
+"why": "breakdown: head nearly at the ground, the body has not moved yet"
 },
 "17": {
 "yaw": 0.15,
 "rot": -65,
 "hy": 12,
 "C": [
-140,
-147
+122,
+146
 ],
 "s": 0.65,
 "why": "head down at the ground by the person's feet, body still side-on: the low point before the dog swings round",
-"hyaw": 0.2
+"hyaw": 0.2,
+"extras": true
+},
+"19": {
+"yaw": 0.32,
+"hyaw": 0.4,
+"rot": -72,
+"hy": 14,
+"C": [
+150,
+146
+],
+"s": 0.67,
+"extras": true,
+"why": "breakdown: the low head starts to swing toward the camera while the body is still side-on"
 },
 "20": {
-"yaw": 0.45,
+"yaw": 0.5,
 "rot": -75,
 "hy": 12,
 "C": [
@@ -31,33 +67,50 @@
 ],
 "s": 0.68,
 "why": "the head swings round toward the camera, still low; body runs off behind to the right",
-"hyaw": 0.55
+"hyaw": 0.6,
+"extras": true
+},
+"21": {
+"yaw": 0.66,
+"hyaw": 0.74,
+"rot": -72,
+"hy": 18,
+"C": [
+168,
+143
+],
+"s": 0.72,
+"rx": 18,
+"extras": true,
+"why": "breakdown: head low and nearly toward us, body foreshortening behind to the right, so the turn has no jump"
 },
 "22": {
-"yaw": 0.88,
+"yaw": 0.8,
 "rot": -70,
 "hy": 20,
 "C": [
 172,
 142
 ],
-"s": 0.7,
+"s": 0.76,
 "why": "three-quarter front, head low, the second eye coming into view",
-"hyaw": 0.92,
-"rx": 18
+"hyaw": 0.86,
+"rx": 18,
+"extras": true
 },
 "23": {
-"yaw": 0.94,
+"yaw": 0.92,
 "rot": -50,
 "hy": 21,
 "C": [
 176,
 141
 ],
-"s": 0.72,
+"s": 0.8,
 "why": "nearly full front, head low; breakdown where the rig changes facing",
-"hyaw": 0.97,
-"rx": 18
+"hyaw": 0.95,
+"rx": 18,
+"extras": true
 },
 "24": {
 "yaw": 0.95,
@@ -65,37 +118,40 @@
 "hy": 22,
 "C": [
 172,
-140
+136
 ],
-"s": 0.74,
+"s": 0.82,
 "why": "full front, head low: the dog is now coming straight at the camera",
 "hyaw": 1.0,
-"rx": 18
+"rx": 18,
+"extras": true
 },
 "26": {
 "yaw": 1.0,
 "rot": -20,
 "hy": 8,
 "C": [
-176,
-134
+172,
+130
 ],
-"s": 0.75,
+"s": 0.82,
 "why": "THE LINE: full front, head coming up, the dog faces us after turning away from the person",
-"rx": 16
+"rx": 16,
+"extras": true
 },
 "28": {
 "yaw": 1.1,
 "rot": 0,
 "hy": -8,
 "C": [
-176,
-130
+174,
+126
 ],
-"s": 0.75,
+"s": 0.8,
 "why": "head up, face toward us and a little to the right: the settle after the turn",
 "hyaw": 1.0,
-"rx": -6
+"rx": -6,
+"extras": true
 },
 "32": {
 "yaw": 1.15,
@@ -105,9 +161,10 @@
 195,
 134
 ],
-"s": 0.74,
+"s": 0.77,
 "why": "head up and turned to the right, three-quarter, standing",
-"hyaw": 1.06
+"hyaw": 1.06,
+"extras": true
 },
 "36": {
 "yaw": 1.3,
@@ -117,12 +174,13 @@
 207,
 138
 ],
-"s": 0.73,
+"s": 0.75,
 "why": "still three-quarter right, stepping right toward the bowl",
-"hyaw": 1.15
+"hyaw": 1.15,
+"extras": true
 },
 "40": {
-"yaw": 1.65,
+"yaw": 1.55,
 "rot": -45,
 "hy": 0,
 "C": [
@@ -131,7 +189,8 @@
 ],
 "s": 0.66,
 "why": "turning on into right profile, head starting down toward the bowl",
-"hyaw": 1.55
+"hyaw": 1.35,
+"extras": true
 },
 "44": {
 "yaw": 2.0,
@@ -141,7 +200,18 @@
 160
 ],
 "s": 0.61,
-"why": "right profile, head down over the bowl: contact, the dog reaches the bowl"
+"why": "right profile, head down over the bowl: contact, the dog reaches the bowl",
+"extras": true
+},
+"47": {
+"yaw": 2.0,
+"rot": -40,
+"C": [
+214,
+162
+],
+"s": 0.62,
+"why": "sniffing at the bowl; holds the drawing steady while the camera pans"
 },
 "49": {
 "yaw": 2.0,

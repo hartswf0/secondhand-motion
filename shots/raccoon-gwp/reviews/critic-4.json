@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frames 1-4: a small, compact animal stands on a ground line at lower centre-right, in front of grey zigzag grass and a cloud-like bush at right. It has a round body, a round head on the left with two pointed cat-like ears, a small face, short stick legs and a small striped tail; it barely changes across these four frames. Frame 5: the body is longer and lower and the head sits lower on the left. Frame 6: the figure is suddenly much larger and longer (now the elongated doodle body with a striped tail), and the head has dropped toward the ground. Frames 7-16: the head is tilted almost vertical, pressed to the ground at the front-left of the body, the body stays long and low, and the figure holds roughly the same place with small shifts. At frame 9 the scenery reframes: the ground line becomes shorter, starting further right, and the right-hand bush shrinks and moves up and right; the scenery then stays fixed through 16.",
+ "seen_film": "A raccoon at the edge of tall grass above a flat, weedy mud/water surface. Frames 1-4: it faces the camera, sitting hunched at centre, head up, small movements. Frames 5-8: it lowers its head toward the ground and starts turning to its left (screen left), the body extending sideways. Between 8 and 9 the camera reframes slightly. Frames 9-16: the raccoon is seen side-on, facing screen left with its head down at the ground, foraging; it creeps slightly right and lower, body long and low, with the head mostly hidden down in the vegetation by frames 13-16.",
+ "named_subject": "A raccoon (striped tail, round head with ear), drawn in the doodle's simple stick-leg style.",
+ "verdict": "reference stronger",
+ "evidence": "Placement and timing follow the film: in frames 1-4 the figure sits at the same spot as the film raccoon (about two-thirds across, just below the grass line); in frames 5-8 the head lowers as in the film; in frames 9-16 the figure is long and low with its head down at front-left, matching the film's side-on foraging pose, and the scenery reframe at frame 9 matches the film's camera shift at 9. But frames 1-4 use a different drawing from c.png (round compact body, cat-like pointed ears, no long oval body), and between frames 5 and 6 the character roughly doubles in length and changes construction, which reads as a redraw rather than a continuous rise-and-stretch. The film raccoon's size stays constant across 4-8; the animated figure does not.",
+ "primary_gap": "The opening frames 1-5 show a different, compact cat-eared drawing that then pops into the elongated doodle at frame 6, so the character changes size and construction mid-action instead of moving continuously.",
+ "closes_when": "Frames 1-5 show the same elongated c.png body, ear, striped tail and stick legs at the same overall size as frames 6-16, posed head-up and seen more end-on, and the head lowers and the body turns side-on gradually across frames 4-8 with no sudden size change between 5 and 6.",
+ "protect": "The placement of the figure matching the film raccoon's position in every frame; the head-down foraging pose with the head at front-left in frames 7-16; the timing of the head lowering around frames 5-8; the scenery reframe at frame 9 matching the film; the doodle's striped tail, single ear on the head, plain oval body and short stick legs in frames 6-16; the sparse grey grass and ground line.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  6
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Frames 6-16 read as the c.png doodle, but frames 1-5 show a rounder, smaller animal with pointed cat ears that is not the c.png drawing.",
+ "still_frames_only": true,
+ "_packet": "lot308318bc",
+ "_round": 4
+}

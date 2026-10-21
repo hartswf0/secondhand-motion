@@ -1,0 +1,27 @@
+{
+ "seen_animation": "Frames 1-5: a black line figure fills the upper two thirds of the frame: a long top edge, a stepped staircase line down the left side, two short bent strokes hanging from the top on the right, a long horizontal line across the middle, a short vertical hook at far left, and a lower line closing at a corner on the right. It shifts slightly and the left staircase shrinks. Frames 6-8: the left staircase changes into a sharp zigzag and the right-hand hanging strokes start to lean to the right. Frames 9-12: the zigzag stays, the right strokes become long diagonals running down to the right, the left vertical hook doubles into two parallel strokes in frames 11-12. Frames 13-16: the figure is rebuilt into a different shape: the top becomes a wide flat plane with three long lines slanting down to the right, the zigzag is replaced by a sloping left edge, and a slab-like underside with a short vertical end stroke appears at the bottom, ending at frame 16 as a flat, skewed slab seen in perspective. Grey wave scribbles sit fixed in the upper right and lower left throughout. Still frames only; playback not seen.",
+ "seen_film": "An aircraft carrier seen from above and ahead, bow toward the camera, steaming toward the viewer. Frames 1-4: the flight deck fills the upper half, the overhanging bow deck edge spans the frame, the V-shaped hull and bow wave are at bottom center, the island superstructure is at top center. Frames 5-12: the ship holds the same form and size while it slowly yaws, its stern swinging so the port hull side becomes visible on the left. Frames 13-16: the yaw continues; the deck tilts so it runs down to the right, the island moves to the upper left, and the ship drifts slightly right and down in the frame. One continuous slow turn of a rigid ship, no change of shape.",
+ "named_subject": "An aircraft carrier (a flat deck slab on a hull), drawn as a few straight-line strokes.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-5 show a figure that does not match c.png: a stepped staircase left edge and two hanging bent strokes that the doodle does not have. Frames 6-8 the staircase turns into a zigzag, a change of drawing that the rigid ship in d.png frames 6-8 does not undergo. Frames 11-12 the left vertical stroke is drawn as two parallel lines (doubling). Frames 12-15 the whole figure is reconstructed: the zigzag, horizontal middle line and hook disappear and a new slanted deck plane and slab underside appear, while in d.png frames 12-15 the ship only continues a small yaw. Only frames 15-16 resemble the doodle's flat slanted slab. The general direction (deck coming to slant down to the right by the last frames) does match the film's late yaw in d.png frames 13-16.",
+ "primary_gap": "The character is a different drawing for frames 1-12 and morphs into the doodle only at frames 13-16, so the shot reads as a shape transformation rather than the doodle-ship holding its form while it slowly turns.",
+ "closes_when": "Every frame from 1 to 16 shows the c.png slab (long top deck edge, parallel inner deck line, thin stepped underside, short end stroke) with constant construction, changing only by a gradual rotation from nearly bow-on in frame 1 to deck slanting down-right in frame 16, with no zigzag, staircase or doubled strokes.",
+ "protect": "The end pose of frames 15-16, which reads as the c.png slab in its sparse straight-stroke style; the timing that puts the deck's slant down to the right in the last quarter, matching d.png frames 13-16; the large placement filling the upper two thirds of the frame like the film's deck; the static grey water scribbles.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  8,
+  11,
+  12,
+  13,
+  14,
+  15
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Only frames 15-16 look like the c.png doodle; frames 1-12 show a staircase/zigzag figure with hanging strokes that is not the doodle's construction.",
+ "still_frames_only": true,
+ "_packet": "lote7f4bdcc",
+ "_round": 3
+}

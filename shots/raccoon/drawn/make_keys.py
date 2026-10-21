@@ -95,9 +95,9 @@ def make(w, dip, s, H, head_scale=1.0, hump=30., G=None):
         c = c0; sq = 1 + min(dip, 0) / 90 * (1 - w)
         return (x - c) * [1, sq] + c + [0, -dip * 0.5 * (1 - w)]
     ex = {}
-    if w < 0.8:   # the second ear: on the left of the head face-on, sliding behind the doodle's own ear as it turns
+    if w < 0.92:   # the second ear: on the left of the head face-on, sliding behind the doodle's own ear as it turns
         e = FX['ear2'] - F[0][:12].mean(0) + S[0][:12].mean(0)
-        k = float(np.clip((w - 0.2) / 0.55, 0, 1)); k = k * k * (3 - 2 * k)
+        k = float(np.clip((w - 0.6) / 0.3, 0, 1)); k = k * k * (3 - 2 * k)
         e = (1 - k) * e + k * (S[0][13:16] + [-3, 2])
         ex['ear2'] = dipper(e)
     for i in head_parts(): S[i] = dipper(S[i])
@@ -110,14 +110,14 @@ def make(w, dip, s, H, head_scale=1.0, hump=30., G=None):
 
 
 KEYS = {
-    0: dict(w=0.06, dip=-14, s=0.66, H=(219, 153), why='First frame: facing the camera, head low over the mud at the grass edge.'),
-    1: dict(w=0.05, dip=-12, s=0.66, H=(221, 152), why='Facing the camera at the edge of the grass, head low over the mud: the face to us, the oval body seen end-on behind it.'),
-    4: dict(w=0.0, dip=4, s=0.68, H=(222, 146), why='Head comes up and looks straight at the camera: the small anticipation before the turn.'),
-    6: dict(w=0.1, dip=-10, s=0.67, H=(216, 150), why='Head starts down and the face begins to swing to screen left: the turn begins.'),
-    8: dict(w=0.27, dip=-16, s=0.66, H=(207, 154), why='Turn under way: face a quarter to the left, head lower, body starting to lengthen.'),
-    10: dict(w=0.46, dip=-24, s=0.65, H=(196, 158), why='Halfway through the turn: three-quarter left, head dropping toward the mud, body half stretched.'),
-    12: dict(w=0.66, dip=-34, s=0.63, H=(186, 160), G=180, why='Three-quarter left, head low: the nose is nearly at the mud, body almost full length.'),
-    14: dict(w=0.86, dip=-44, s=0.62, H=(178, 160), G=184, why='The line: near left profile, snout pointed down onto the mud, back hunched behind the head.'),
+    0: dict(w=0.56, dip=-14, s=0.64, H=(219, 153), why='First frame: facing the camera, head low over the mud at the grass edge.'),
+    1: dict(w=0.55, dip=-12, s=0.64, H=(221, 152), why='Facing the camera at the edge of the grass, head low over the mud: the face to us, the oval body seen end-on behind it.'),
+    4: dict(w=0.55, dip=4, s=0.65, H=(222, 146), why='Head comes up and looks straight at the camera: the small anticipation before the turn.'),
+    6: dict(w=0.6, dip=-10, s=0.64, H=(216, 150), why='Head starts down and the face begins to swing to screen left: the turn begins.'),
+    8: dict(w=0.69, dip=-16, s=0.64, H=(207, 154), why='Turn under way: face a quarter to the left, head lower, body starting to lengthen.'),
+    10: dict(w=0.78, dip=-24, s=0.63, H=(196, 158), why='Halfway through the turn: three-quarter left, head dropping toward the mud, body half stretched.'),
+    12: dict(w=0.86, dip=-34, s=0.62, H=(186, 160), G=180, why='Three-quarter left, head low: the nose is nearly at the mud, body almost full length.'),
+    14: dict(w=0.93, dip=-44, s=0.62, H=(178, 160), G=184, why='The line: near left profile, snout pointed down onto the mud, back hunched behind the head.'),
     16: dict(w=1.0, dip=-48, s=0.62, H=(182, 160), G=185, why='Profile complete: snout pressed into the mud, the turn settles.'),
     18: dict(w=1.0, dip=-42, s=0.63, H=(194, 160), G=185, why='Settle: still nose down, the body rounds and slides right as it shuffles.'),
     21: dict(w=1.0, dip=-22, s=0.65, H=(208, 158), G=176, why='Head lifts off the mud between pokes.'),

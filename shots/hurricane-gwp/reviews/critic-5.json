@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A grey scenery drawing of a house outline (roof peak, left wall, a sloping line across the left) stays fixed in every frame. The black character is a long, flat, horizontal scribble of overlapping strokes that taper to a pinned point at the right. In frames 1-3 the left half of the scribble is tilted steeply upward toward the upper left, with its strokes fanned apart into many separate diagonal lines that cross the house's lower left wall. Frame 4 is less tilted, frame 5 lower still, and by frames 6-7 the scribble lies flat and horizontal below the house. Frames 8-16 are almost identical: the flat scribble sits still with only tiny shifts at its left ends. The right tip never moves.",
+ "seen_film": "A long single-storey beach house with a dark roof stands in the upper middle of the frame, with surf filling the lower third. In frames 1-4 waves break against the house's left end and lower wall, throwing white spray up the left wall (spray is highest around frames 3-4). In frames 5-7 smaller surges still splash at the left corner and front. From frame 8 onward the spray is gone and the foreground water is rolling, foamy surf that keeps moving through frame 16 while the house stays still.",
+ "named_subject": "A breaking wave / surge of water (a long, flat scribble tapering to a point at the right).",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-3: the left end of the scribble is raised high against the house's left wall, matching the film's crash at the house's left end, but its strokes are fanned into separate crossing diagonals, so the drawing looks split rather than like c.png lifted. Frames 4-5: the left end drops a large distance in one step. Frames 6-16: the scribble is flat and matches c.png closely, but frames 8-16 are nearly frozen while the film's surf keeps rolling. The film's spray peaks at frames 3-4 with further surges at 5 and 7; the animation's lift peaks at frame 1 and only decays, with no second surge. The right tip is pinned at one point in all 16 frames, so the wave never travels toward or along the house.",
+ "primary_gap": "The surge is rendered as a shear that fans the doodle's strokes apart and peaks at frame 1, instead of the whole drawing rising as one body to hit the house's left end around frames 3-4 and then settling with smaller follow-up surges.",
+ "closes_when": "In frames 1-4 the left part of the scribble rises from flat to its highest point at frames 3-4 with all strokes staying bundled together as in c.png, drops between frames 5-7 with a smaller second lift near frame 5 or 7, and in frames 8-16 the scribble keeps a small continuous rolling motion instead of standing still.",
+ "protect": "Keep the character as the flat, tapered, overlapping-stroke scribble of c.png at the water line below the house; keep the grey house scenery fixed in place; keep the general order of a high surge at the house's left end early and a flat, calm wave late; keep the line weight and stroke habits of frames 6-16, which match c.png well.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  1,
+  2,
+  3,
+  5
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "In frames 1-4 the doodle's stroke bundle is sheared into a fan of separate diagonal lines, so it stops reading as the compact scribble of c.png, though frames 6-16 do read as c.png.",
+ "still_frames_only": true,
+ "_packet": "loteb628682",
+ "_round": 5
+}

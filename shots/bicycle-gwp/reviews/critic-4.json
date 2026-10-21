@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A close view of the front wheel of a line-drawn bicycle: a polygonal rim, a short bent fork stroke at the hub, a vertical head-tube stroke and two long frame lines at top, and a small hexagon on a short bar to the right of the wheel. Across frames 1-8 the two long spoke lines inside the wheel turn from a shallow cross (1) through near-vertical (4-5) to a shallow cross again (8), while the hexagon-on-bar swings from hanging below its pivot (1-3) to pointing right (6-8). At frame 9 the grey scenery changes from a rounded bush at upper left to a scalloped hedge along the top. In frames 9-16 the spokes keep turning (steep again in 11-13, shallow in 15-16) and the hexagon goes from above its bar (9-11) to the left-low side (12) and back below (13-16). The wheel stays in the same place; nothing else moves.",
+ "seen_film": "A tracking close-up of the front of a bicycle being ridden left to right past a wall: the front wheel with its curved fork fills the lower left, the rider's jeans and sneaker work the pedal at the right edge. Frames 1-5 the foot is low near the bottom of the crank; frames 6-8 it rises at the right; frames 9-11 it is at the top-forward position with the knee high; frames 12-16 it goes down and back to the bottom. The wheel stays roughly in place in frame because the camera tracks. At frame 9 the background changes from the plain wall to a dark hedge across the top. Another bicycle's wheel is partly visible at the left edge throughout.",
+ "named_subject": "The front wheel, fork and front frame of the doodled bicycle, with a small hexagon-on-bar standing for the pedal/foot.",
+ "verdict": "reference stronger",
+ "evidence": "Matches: the wheel sits at the same place as the film's wheel in all 16 frames; the scenery switch to a hedge happens at frame 9 in both; the pedal mark is low in 1-3, right in 6-8, high in 9-11 and low again in 13-16, which tracks the foot's crank cycle in the film. The wheel rim, bent fork stroke and frame lines keep the doodle's stroke habits. Problems: in frames 3, 4, 5, 11, 12 and 13 the two spoke lines are longer than the wheel's radius and poke out past the rim at top and bottom (frame 12 extends well above the rim into the frame-line area and below the bottom of the wheel); in frames 4 and 5 the spokes plus the fork stroke form three near-parallel near-vertical lines that read as a doubled drawing; between frames 11 and 12 the pedal mark jumps from upper right of its pivot to lower left, and its pivot position also shifts, so the crank does not read as one circle. Judgement is from still frames only, not playback.",
+ "primary_gap": "The spoke lines are drawn longer than the rim's radius when they turn toward vertical, so in frames 3-5 and 11-13 they stick out of the wheel and the wheel stops reading as one rotating object.",
+ "closes_when": "In every frame both spoke lines end on or inside the polygonal rim, with the same length at every angle, so frames 3-5 and 11-13 look like frames 1, 8 and 16 rotated.",
+ "protect": "The fixed wheel placement matching the film; the hedge scenery change landing at frame 9; the doodle's polygonal rim, bent fork stroke at the hub, and the open-ended frame strokes at top; the pedal mark completing one crank cycle in step with the rider's foot; the sparse line count.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  5,
+  12,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The wheel, fork and frame strokes are the doodle's own, but the hexagon-on-bar pedal is not in c.png and the oversized spokes in frames 3-5 and 11-13 depart from the doodle's spokes, which stay inside the rim.",
+ "still_frames_only": true,
+ "_packet": "lotc05eb4c2",
+ "_round": 4
+}

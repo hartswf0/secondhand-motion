@@ -1,0 +1,25 @@
+{
+ "seen_animation": "Judged from 16 still frames, not playback. Frame 1: a doodled alarm clock (round face, two hands, two ear-like bells, two short legs) stands face-on on a shelf between a grey telephone and a grey vase; a long two-line arm with a pointed hand reaches over the clock's top from the left. Frames 2-4: the face narrows into a tall ellipse and a second body outline grows on its right; in frames 3-4 two overlapping outlines and doubled bells are visible at the same time. Frames 5-10: the clock holds a turned pose, with the face as a narrow ellipse at left and a large rounded-rectangle side body to its right, while the arm's hand sits tangled on the bells. Frame 11: the clock is suddenly face-on again, its bells lifted above the face, with a loose arc floating at the right edge; the arm lies across the lower face. Frame 12: face-on clock, arm across the face. Frames 13-14: the arm is redrawn as a pointed triangular hand outline pulling away to the left. Frame 15: only a small stroke remains at the left edge. Frame 16: the clock stands face-on alone.",
+ "seen_film": "A woman's hand rests on top of a brass twin-bell alarm clock on a nightstand (frames 1-3) and turns the clock so its face swings to the left and the side/back of the case faces the camera (frames 4-10, held). In frames 11-12 the clock turns back toward face-on with her fingers on the face. In frames 13-14 the hand withdraws to the left, in frame 15 only fingertips remain at the left edge, and in frame 16 the clock stands face-on alone beside the pink telephone and the brass lamp.",
+ "named_subject": "A doodled twin-bell alarm clock (round face with two hands, two bells, two legs) turned by a hand.",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement follow the film: hand on top in 1-2 (film 1-3), turned pose held 5-10 (film 4-10), return to face-on 11-12 (film 11-12), hand withdrawing 13-15 (film 13-15), clock alone 16 (film 16). But frames 3 and 4 show the face circle and a second outline with doubled bells on screen together instead of one rotating shape; frames 5-10 render the turned side as a large flat-cornered rectangle wider than the face, a shape that the doodle in c.png does not contain; frame 11 pops back to face-on with the bells floating above the face and a detached arc at right; frame 13 replaces the two-line arm of frames 1-12 with a different triangular hand outline.",
+ "primary_gap": "The turn of the clock (frames 3-4 into 5-10 and back at 11) is done by cross-fading two separate outlines and swapping in a large rectangle side body, so the turn reads as doubling and a pop instead of one doodle rotating.",
+ "closes_when": "Across frames 2-5 and 10-12 only one clock outline is visible per frame, the face circle narrowing to an ellipse while a slim side band of the same wobbly stroke (no larger than the face) appears beside it, with the bells staying attached to the top of the case throughout.",
+ "protect": "The doodle's face-on construction in frames 1, 12-16 (open circle with gaps, two diagonal hands, two open bell loops, two splayed leg strokes) matches c.png closely; the event timing frame-for-frame matches the film; the grey scenery (telephone, vase, shelf line) stays fixed in the same place as the film's props.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  4,
+  5,
+  11,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The face-on clock is the c.png drawing, but the turned pose in frames 5-10 adds a large rectangular side body that is not in the doodle's construction and reads as a different object.",
+ "still_frames_only": true,
+ "_packet": "lote8f1868f",
+ "_round": 3
+}

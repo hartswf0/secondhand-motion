@@ -82,17 +82,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca bicycle wheel with star-shaped spokes, seen close up, with a fork or frame stroke above it\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cThe front wheel, fork and front frame of the doodled bicycle, with a small hexagon-on-bar standing for the pedal/foot.\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/bicycle-gwp/reviews/critic-3.json"
+  "evidence": "shots/bicycle-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "The wheel matches the doodle's wheel (polygon rim with a gap at the top, star spokes), but only that one wheel and a few frame strokes appear, so it reads as a cropped detail of the doodle rather than the whole bicycle drawing in motion.",
-  "evidence": "shots/bicycle-gwp/reviews/critic-3.json"
+  "ok": true,
+  "note": "The wheel, fork and frame strokes are the doodle's own, but the hexagon-on-bar pedal is not in c.png and the oversized spokes in frames 3-5 and 11-13 depart from the doodle's spokes, which stay inside the rim.",
+  "evidence": "shots/bicycle-gwp/reviews/critic-4.json"
  }
 ]

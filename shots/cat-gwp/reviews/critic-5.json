@@ -1,0 +1,24 @@
+{
+ "seen_animation": "Frames 1-12: a black-line polygonal cat head (two pointed ears, two outlined eyes, three whiskers on each side) sits upper-left of centre, tilted slightly up and to the right, almost unchanged; it drops a little between frames 4 and 5 and shifts slightly right in frame 12. Grey scenery of leaves and a flower stays fixed on the right. Frame 13: the head is suddenly larger and further right, the face is more upright, the left whiskers now start inside the face near the left eye, and the right eye is narrower. Frames 14-16: the head jumps lower and further right again and grows larger; the right eye becomes a thin slit, the right ear tip overlaps the grey leaf, the right whiskers run off the right edge across the grey flower, and the head holds there. In frame 16 a small broken grey fragment appears below the lower leaf.",
+ "seen_film": "A tabby cat in close-up with a blurred wallpaper and a red flower behind it. Frames 1-12: the head is tilted up to the right, eyes half closed, tongue tip out at the mouth, licking; the head barely moves, with small bobs. Frame 13: the head swings down and turns toward the right, tongue still out, motion-blurred. Frames 14-16: the head is in three-quarter profile facing right, lowered, eyes looking down-right, tongue back in, ears up, holding that pose.",
+ "named_subject": "a cat's head (the doodle's polygonal cat face with ears, eyes and whiskers)",
+ "verdict": "reference stronger",
+ "evidence": "Timing matches: both hold an upward-tilted head through frames 1-12 and change pose at frame 13, settling by 14-16. But in the film frames 13-16 the head rotates into a right-facing three-quarter profile and lowers; in the animation frames 13 and 14 the same frontal face is moved right/down and scaled up in two separate steps, with only the right eye narrowed, so it reads as the drawing sliding and enlarging rather than turning. Frame 13 to 14 is a second large jump in position and size where the film has already mostly arrived. The small drop between frames 4 and 5 and the shift in frame 12 have no counterpart in the film. In frames 14-16 the right whiskers and right ear overlap the grey flower and leaf and the whiskers run off the frame edge, and in frame 16 a stray grey fragment appears under the lower leaf. Judged from still frames only, not playback.",
+ "primary_gap": "The head turn at frames 13-16 is performed as a slide-and-scale of the frontal face in two jumps instead of a rotation into right-facing profile.",
+ "closes_when": "Frames 13-16 show the face features (eyes, whisker roots) shifting toward the right side of the head outline and the right side of the outline flattening while the head lowers in one continuous path, with frame 13 sitting between frame 12 and frame 14 in position and size.",
+ "protect": "The doodle's construction and stroke habits (angular polygon head, open-topped triangle ears, polygon eyes, straight whisker strokes with the long left whisker reaching the eye); the near-still hold through frames 1-12; the change of pose arriving at frame 13 as in the film; fixed grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  13,
+  14,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is clearly the c.png cat face; only frames 14-16 drift from it, where the right eye becomes a thin slit and the right whiskers stretch off the frame.",
+ "still_frames_only": true,
+ "_packet": "lot97d1bada",
+ "_round": 5
+}

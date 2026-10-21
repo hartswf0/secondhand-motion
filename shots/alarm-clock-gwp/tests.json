@@ -1,31 +1,31 @@
 [
  {
   "id": "M2",
-  "value": 22,
+  "value": 25,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   39,
-   37,
+   46,
+   45,
    26,
-   14,
-   14,
-   15,
-   16,
-   22,
-   27,
-   29,
+   26,
+   31,
    32,
+   28,
    31,
-   31,
-   12,
+   27,
+   23,
+   22,
+   26,
+   24,
+   9,
    3,
    3
   ]
  },
  {
   "id": "M2b",
-  "value": 0.26,
+  "value": 0.28,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": false,
   "design_typicality": 78
@@ -38,13 +38,13 @@
  },
  {
   "id": "M6",
-  "value": 7.3,
+  "value": 7.0,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
  {
   "id": "T3",
-  "value": "10 strokes, 72 vertices, every frame",
+  "value": "10 strokes, 75 vertices, every frame",
   "unit": "",
   "ok": true,
   "note": "the doodle itself, bent by the rig"
@@ -83,17 +83,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca doodled double-bell alarm clock, handled by a human hand and arm\u201d; motion broken; follows the film: yes",
+  "value": "named \u201cA doodled twin-bell alarm clock (round face with two hands, two bells, two legs) turned by a hand.\u201d; motion broken; follows the film: yes",
   "unit": "",
   "ok": false,
-  "evidence": "shots/alarm-clock-gwp/reviews/critic-2.json"
+  "evidence": "shots/alarm-clock-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "The doodle is one circle with bells, but the animation draws a second full body circle behind it, so the character is not the same single-circle drawing set in motion.",
-  "evidence": "shots/alarm-clock-gwp/reviews/critic-2.json"
+  "ok": true,
+  "note": "The face-on clock is the c.png drawing, but the turned pose in frames 5-10 adds a large rectangular side body that is not in the doodle's construction and reads as a different object.",
+  "evidence": "shots/alarm-clock-gwp/reviews/critic-3.json"
  }
 ]
