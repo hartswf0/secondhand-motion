@@ -1,0 +1,25 @@
+{
+ "seen_animation": "A black-line apple drawing with a leaf on its stem sits between two grey scenery hands (an open hand at left, curled fingers at lower right) and two grey diagonal lines above. In a.png frames 1-5 the apple slides down and to the left toward the left hand. In frames 6-9 it moves back up and to the right. Frames 9-12 it stays upright at roughly the same place right of centre. In frame 13 the stem and leaf shrink and a small mark appears near the bottom; in frames 14-16 the stem and leaf are gone, the top shows a notch, a small plus mark sits in the lower body, and the apple is smaller and lower in the frame, as if turned to show its bottom end.",
+ "seen_film": "Close shot of a man's two hands in front of a tweed jacket holding an apple. In d.png frames 1-5 the hands roll the apple and carry it down and to the left. In frames 6-8 the apple moves back right and the left thumb works at its side. Frames 9-11 the apple sits between the hands right of centre. In frames 12-14 the hands rotate the apple so a different face, with a dark crease or stem side, comes toward camera. In frames 15-16 the apple sits lower, appears smaller, and a dark dimple (stem or calyx end) faces the camera between the fingers.",
+ "named_subject": "an apple with a stem and leaf, being turned over in a pair of hands",
+ "verdict": "reference stronger",
+ "evidence": "Path: e.png 1-17 the apple drifts down-left as film 1-20 does; e.png 18-32 it returns right as film 21-32 does; this part tracks the film closely and moves in small even steps (g.png shows a continuous arc for these frames). Turn: the film starts rotating the apple around frames 33-40 (a dark seam and changed face appear from 34 onward), but the animation holds the same upright apple with stem and leaf unchanged through e.png 33-39 (stall while the film moves). The whole turn is then compressed into e.png 40-44: at 40 a plus mark appears at the bottom edge while the leaf is still intact, at 41-42 the leaf collapses to a small notch in one step, at 42-43 the plus mark jumps up into the body, and at 43-44 the outline shrinks from full width to a smaller rounded shape and drops lower. In the film the size drop happens at 44-45, one frame later and with a lighting change. e.png 44-49 hold the small apple with only slight drift, matching film 45-49. Still frames only; playback was not viewed.",
+ "primary_gap": "The apple's turn, which the film spreads across roughly frames 33-45, is held off until frame 40 and then performed in four frames as a stem/leaf removal, a plus mark appearing, and a size pop, so it reads as a swap of drawings rather than a rotation.",
+ "closes_when": "From e.png 33 onward the stem and leaf visibly tip and foreshorten a little each frame while the bottom outline rounds and the plus mark rises in from the lower edge, so that by frame 44-45 the apple has rotated and shrunk in even steps with no single-frame loss of the leaf or jump in size.",
+ "protect": "The down-left then back-right path in e.png 1-32 that matches the film's timing and placement; the apple outline, notched bottom and leaf-on-stem taken directly from c.png with its uneven hand-drawn line; the static grey scenery hands and lines; the final lower, smaller, bottom-facing apple position in 44-49 that matches the film's ending.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  40,
+  41,
+  42,
+  43,
+  44
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "Through frame 39 the apple is the c.png drawing moved intact, but in frames 41-49 the leaf and stem are removed and a plus mark that c.png never has is added, so the end pose looks like a different, simpler drawing instead of the same apple seen from below.",
+ "still_frames_only": true,
+ "_packet": "lot7229ebb0",
+ "_round": 3
+}
