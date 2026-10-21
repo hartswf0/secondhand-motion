@@ -1,0 +1,24 @@
+{
+ "seen_animation": "An ice cream cone (rounded scoop on a long triangular cone) stays still in the centre of the frame for the whole shot. A thin outlined bar with a bent hook at its end comes down from the top edge into the left-centre of the scoop, with the hook pointing right across the scoop (frames 1-4). The bar slides left and leans over (5-7), its hook shortens, and by frame 8 it has pulled up to the top-left corner as a small V-shaped tip. In frames 9-11 the left tip stays at the top-left while a second V-shaped tip appears at the top right and moves toward the right edge of the scoop. In frames 12-16 the right bar comes straight down along the right side of the scoop until its tip rests at the scoop/cone seam on the right, and the right part of the scoop outline is pushed lower.",
+ "seen_film": "Close shot looking down into a paper tub of ice cream. A thick rounded ribbon of soft ice cream is extruded from above. In frames 1-4 the ribbon enters at top centre and curls down and around to the lower left, piling a looped coil. In frames 5-8 the ribbon's upper part swings toward the top-left and the coil settles. In frames 9-10 the ribbon has left at the top-left and a rounded end of ribbon appears at the top centre-right. In frames 11-16 that ribbon comes down the right side of the tub as a thick fat column and lays itself along the right wall toward the lower right.",
+ "named_subject": "An ice cream cone (the doodle) standing in for the tub of soft-serve, with a thin bent bar standing in for the extruded ice cream ribbon.",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement of the main beats match: e.png 1-16 the bar sits in the top-centre/left as the film's ribbon coils in f.png 1-16; e.png 17-24 the bar swings to the top-left as the film's ribbon moves to the top-left (f.png 17-24); e.png 25-32 a new tip enters top centre-right as the film's rounded ribbon end appears there (f.png 25-32); e.png 33-44 the bar descends on the right as the film's ribbon descends the right wall (f.png 33-44). Gaps: in e.png 21-31 the left tip is a small V floating detached above the scoop, unconnected to anything, shrinking to a dot at 31 and vanishing at 32; at e.png 24 the right tip first appears as an isolated dot at the top edge. In e.png 1-16 the bar is drawn on top of the scoop with both outlines visible through each other, while in the film the ribbon is the ice cream itself coiling and piling. In e.png 33-44 the bar tip stops at the scoop/cone seam (about one third down the frame) while the film's ribbon reaches the lower right of the tub (about three quarters down, f.png 40-44). The film's ribbon is a thick rounded tube; the animation's is a thin straight-sided bracket with a pointed V end, so the coiling and piling action of f.png 1-12 reads as a stick being poked into the scoop.",
+ "primary_gap": "The ice cream ribbon is drawn as a thin rigid bar laid over the scoop and as detached floating V-tips (e.png 21-31), so the film's event of a soft ribbon coiling and piling into the mass does not read.",
+ "closes_when": "The ribbon is drawn as a continuous rounded tube in the doodle's polyline stroke that stays connected to the top edge in every frame, whose coil merges into and reshapes the scoop outline in e.png 1-16, exits off the top-left edge without leaving a floating stub in e.png 21-31, and descends to the lower right in e.png 36-44.",
+ "protect": "The cone and scoop match c.png closely (rounded scoop of short straight segments, slightly tilted seam line, long tapering cone with a hooked point) and stay stable in size and position with no jitter; the left-then-right sequence of the ribbon follows the film's timing; consecutive frames of the bar move in small steps without pops in e.png 1-20 and 33-44.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  21,
+  24,
+  31,
+  32
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cone is the doodle unchanged in construction and stroke, but the added ribbon bar uses ruled straight edges and a sharp V end that are stiffer than the doodle's own loose rounded segments.",
+ "still_frames_only": true,
+ "_packet": "lotbb2f3dc2",
+ "_round": 5
+}
