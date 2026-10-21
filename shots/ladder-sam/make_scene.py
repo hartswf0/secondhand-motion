@@ -168,7 +168,7 @@ def check(f,J):
     for k in ('lf','rf'):
         r,kn,q=J[k]; u,v=r-kn,q-kn; ang=math.degrees(math.acos(np.clip(u@v/max(np.hypot(*u)*np.hypot(*v),1e-6),-1,1)))
         if ang<60: bad.append(f'{k} folded ({ang:.0f} deg)')
-        if f>=8:
+        if f>=7:   # once both hips are over the ladder (frame 6 is the step onto the bottom rung from the left)
             for s1 in segs[k]:
                 for rail in (0,1):
                     for a_,b_ in zip(LAD[rail][:-1],LAD[rail][1:]):
