@@ -15,7 +15,7 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument('slug'); ap.add_argument('--interval', nargs=2, type=float); ap.add_argument('--label')
     ap.add_argument('--doodle', type=int); ap.add_argument('--why', default=''); ap.add_argument('--step', type=float, default=0.5); ap.add_argument('--reject')
     a = ap.parse_args()
-    W = json.load(open(ROOT / 'data' / 'wave4.json')); S = next(s for s in W['subjects'] if s['slug'] == a.slug); d = ROOT / 'shots' / a.slug
+    S = next(s for w in ('wave5', 'wave4') if (ROOT / 'data' / f'{w}.json').exists() for s in json.load(open(ROOT / 'data' / f'{w}.json'))['subjects'] if s['slug'] == a.slug); d = ROOT / 'shots' / a.slug
     if a.reject:
         (d / 'rejected.txt').write_text(a.reject + '\n'); print(a.slug, 'rejected'); return
     A, B = a.interval; n = int(round((B - A) / a.step))
@@ -26,7 +26,7 @@ def main():
             'label': a.label, 'why': a.why, 'doodle_key_id': dr['key_id'], 'doodle_bank_index': a.doodle - 1, 'doodle_sheet_number': a.doodle}
     json.dump(plan, open(d / 'plan.json', 'w'), indent=1)
     src = {k: S[k] for k in ('clip_id', 'source_id', 'source_title', 'source_year', 'video_url', 'shot_page_url', 'source_page_url', 'original_source_url', 'rights_statement')}
-    src.update(start_seconds=A, end_seconds=B, category=S['category'], why_this_clip=a.why, pool='production/data/candidates-100.json')
+    src.update(start_seconds=A, end_seconds=B, category=S['category'], why_this_clip=a.why, pool=S.get('pool', 'production/data/candidates-100.json'))
     json.dump({'source': src}, open(d / 'source.json', 'w'), indent=1)
     design = {'key_id': dr['key_id'], 'word': S['category'], 'recognized': True, 'countrycode': dr['countrycode'], 'drawing': dr['drawing'], 'transform': None,
               'source_url': bank['source_url'], 'credit': bank['credit']}

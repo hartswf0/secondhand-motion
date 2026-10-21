@@ -10,7 +10,8 @@ d = ROOT / 'shots' / f'{slug}-gwp'; (d / 'reviews').mkdir(exist_ok=True)
 v = json.load(open(vp)); v.update(_packet=packet, _round=rnd); json.dump(v, open(d / 'reviews' / f'critic-{rnd}.json', 'w'), indent=1)
 S = json.load(open(d / 'shot.json')); Image.open(d / 'critic' / 'keys.png').crop((0, 0, S['W'], S['H'])).save(d / 'cover.png')
 w4 = [x['slug'] for x in json.load(open(ROOT / 'data' / 'wave4.json'))['subjects']] if (ROOT / 'data' / 'wave4.json').exists() else []
-wave = 4 if slug in w4 else 3 if (ROOT / 'shots' / slug / 'plan.json').exists() else 2 if (ROOT / 'shots' / slug / 'keyplan.json').exists() else 1
+w5 = [x['slug'] for x in json.load(open(ROOT / 'data' / 'wave5.json'))['subjects']] if (ROOT / 'data' / 'wave5.json').exists() else []
+wave = 5 if slug in w5 else 4 if slug in w4 else 3 if (ROOT / 'shots' / slug / 'plan.json').exists() else 2 if (ROOT / 'shots' / slug / 'keyplan.json').exists() else 1
 if not (d / 'item.json').exists():
     json.dump({'lot': next_lot(), 'id': f'{slug}-gwp', 'kind': 'shot', 'title': f"{slug.replace('-', ' ').capitalize()}, the Giraffe Walks Past Way", 'category': slug, 'wave': wave,
                'lane': 'join', 'stage': 10, 'status': 'in progress', 'added': '2026-10-20',

@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['data/wave4.json', 'tools/survey.py', '.github/workflows/survey.yml']
+    paths: ['data/wave5.json', 'tools/survey.py', '.github/workflows/survey.yml']
 permissions:
   contents: write
 jobs:
@@ -13,9 +13,9 @@ jobs:
       slugs: ${{ steps.s.outputs.slugs }}
     steps:
       - uses: actions/checkout@v4
-        with: { sparse-checkout: data/wave4.json }
+        with: { sparse-checkout: data/wave5.json }
       - id: s
-        run: echo "slugs=$(python3 -c "import json;print(json.dumps([s['slug'] for s in json.load(open('data/wave4.json'))['subjects'] if not s.get('surveyed') and not s.get('rejected')]))")" >> "$GITHUB_OUTPUT"
+        run: echo "slugs=$(python3 -c "import json;print(json.dumps([s['slug'] for s in json.load(open('data/wave5.json'))['subjects'] if not s.get('surveyed') and not s.get('rejected')]))")" >> "$GITHUB_OUTPUT"
   survey:
     needs: list
     runs-on: ubuntu-24.04
@@ -30,12 +30,12 @@ jobs:
         with:
           sparse-checkout: |
             tools
-            data/wave4.json
+            data/wave5.json
       - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg && python3 -m pip install --quiet --break-system-packages pillow numpy
       - shell: bash
         run: |
           mkdir -p "out/${{ matrix.slug }}"; set +e
-          python3 -u tools/survey.py --slug "${{ matrix.slug }}" --wave data/wave4.json --out "out/${{ matrix.slug }}" 2>&1 | tee "out/${{ matrix.slug }}/log.txt"; exit ${PIPESTATUS[0]}
+          python3 -u tools/survey.py --slug "${{ matrix.slug }}" --wave data/wave5.json --out "out/${{ matrix.slug }}" 2>&1 | tee "out/${{ matrix.slug }}/log.txt"; exit ${PIPESTATUS[0]}
       - if: always()
         shell: bash
         run: |

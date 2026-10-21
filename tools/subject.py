@@ -47,7 +47,7 @@ def all_slugs():
     out = []
     for p in sorted((ROOT / 'rigs').glob('*_spec.json')):
         n = p.name[:-10]; out.append(n.replace('_', '-'))
-    w3 = [x for w in ('wave3', 'wave4') if (ROOT / 'data' / f'{w}.json').exists() for x in json.load(open(ROOT / 'data' / f'{w}.json'))['subjects']]
+    w3 = [x for w in ('wave3', 'wave4', 'wave5') if (ROOT / 'data' / f'{w}.json').exists() for x in json.load(open(ROOT / 'data' / f'{w}.json'))['subjects']]
     out += [x['slug'] for x in w3 if x['slug'] not in out and not x.get('rejected')]
     return [x for x in out if (ROOT / 'shots' / x).exists() or (ROOT / 'shots' / f'{x}-sam').exists()]
 
