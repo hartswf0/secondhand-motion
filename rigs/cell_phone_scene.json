@@ -133,7 +133,11 @@
    ],
    "aspect": 1.0,
    "strokes": 1,
-   "skip": 0
+   "skip": 0,
+   "visible": [
+    34,
+    49
+   ]
   },
   {
    "id": "star2",
@@ -147,7 +151,11 @@
    ],
    "aspect": 1.0,
    "strokes": 1,
-   "skip": 1
+   "skip": 1,
+   "visible": [
+    24,
+    49
+   ]
   },
   {
    "id": "star3",
@@ -267,6 +275,6 @@
   "15": "it moves away from us and gets smaller, holding the same tilt",
   "30": "still receding; the phone number caption over it in the film is an overlay and is left out",
   "49": "smallest, the caption has faded; the tilt is unchanged",
-  "stars": "stars are placed on the steady bright stars of the footage (a median over every frame with the phone and the caption masked out)"
+  "stars": "stars are placed on the steady bright stars of the footage (a median over every frame with the phone and the caption masked out). The two stars beside the phone's right edge are shown only once the phone has shrunk clear of them, because the doodle is wider than the real handset and would otherwise cover them."
  }
 }

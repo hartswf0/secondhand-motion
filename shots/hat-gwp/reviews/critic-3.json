@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A line-drawn hat (domed crown, a band drawn as two crossing lines, a flat oval brim) sits level near the top-left-centre in frames 1-4 of a.png. In frame 5 it has moved right and begun to tilt, the brim sloping down to the right and its right end cut by the frame edge. Through frames 6-12 it tilts further and stays on the right side at about the same size, a little smaller in frames 9-10. In frames 13-16 it grows larger, the crown runs off the top of the frame, and the brim slopes steeply down to the right. No scenery is drawn.",
+ "seen_film": "A man in a white bucket hat and blue hooded sweatshirt sits slumped beside an aluminium chair frame. In frames 1-4 of d.png the hat is level, upper centre, and he looks down and to the left. From frames 5-8 he leans his head down and right and the camera shifts so the hat sits at the upper right, tilting with brim lower on the right. In frames 9-12 he hunches over his folded arm, fiddling with a strap or glasses; the hat stays tilted at upper right. In frames 13-16 the framing tightens, the hat gets larger and crops at the right and top edges, and he fiddles with a drawstring in his hand.",
+ "named_subject": "A brimmed hat (the white bucket hat worn by the man in the film), drawn as a domed crown with a band and an oval brim.",
+ "verdict": "reference stronger",
+ "evidence": "The path matches the film overall: level hat in e.png 1-8 (film 1-8 hat level, upper centre), moved right and tilted in 9-24 (film 9-24 hat tilted at upper right), large and cropped at top in 26-32 (film 26-32 hat large and cropped). Judged from still frames only. But the change happens in three steps instead of continuously: e.png 8->9 the hat goes from level and wide to tilted and shifted right in one frame, while film 8->9 shows only a small head movement; 16->17 the whole drawing shrinks by roughly 15 percent in one frame while film 16->17 keeps the hat the same size; 25->26 the crown jumps from fully visible to cut off at the top and the brim lengthens sharply, a larger size step than film 25->26. Within each block (1-8, 9-16, 17-24, 26-32) the drawing barely changes, so it holds still while the film's head keeps drifting and tilting. g.png shows the drawing positions clustered in a few groups rather than an even path.",
+ "primary_gap": "Tilt, position and scale change in jumps at frames 9, 17 and 26 and hold nearly still in between, instead of changing a little on every frame as the man's head does in the film.",
+ "closes_when": "Between consecutive e.png frames the brim angle, position and size change by small even amounts, so 8->9, 16->17 and 25->26 show no larger step than any other pair, and frames 2-8 and 18-24 show the gradual drift the film has.",
+ "protect": "The hat drawing itself matches c.png closely (lumpy domed crown, band as two crossing strokes that overshoot at both ends, wide rounded brim, thin single-weight polyline strokes); the overall sequence of level -> tilted right -> enlarged and cropped matches the film's framing at the right moments; brim slope direction matches the film.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  9,
+  17,
+  26
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "None of consequence: the crown, crossing band strokes and oval brim are the doodle's own construction, only rotated and scaled.",
+ "still_frames_only": true,
+ "_packet": "lotbfb57212",
+ "_round": 3
+}

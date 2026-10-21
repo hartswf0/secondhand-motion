@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A drawn mouth with no lips: a curved outer contour holding a row of four upper teeth and a row of four lower teeth, with grey nose and mustache scribbles above. In frames 1-4 the jaw is open with a moderate gap and the lower row slides up a little, so the gap narrows. In frames 5-8 the lower row drops and the gap widens, reaching its widest in frames 7-9 with long lower teeth. In frames 10-12 the lower row rises again to a narrow gap. In frames 13-16 the whole mouth shifts slightly left and down, the lower teeth become short and close under the upper row, and the mouth ends as a narrow strip of upper teeth over a thin lower row. The upper row stays fixed in shape throughout; only the lower jaw opens and closes.",
+ "seen_film": "A close-up of a man's mouth talking and smiling. Frame 1 shows a smile with upper and lower teeth. In frames 2-3 the lips come together and frame 3 is almost closed, with teeth barely showing. Frames 4-6 reopen a little with the lips pushed forward, upper teeth visible. Frames 7-8 open wide in a laugh, showing upper and lower teeth with a dark gap. Frames 9-10 are a broad smile with upper teeth exposed and lower teeth partly hidden. Frames 11-13 the lips close again, frame 11-12 nearly fully closed. Frames 14-16 open into a wide smile showing a full row of upper teeth with the lower teeth mostly hidden.",
+ "named_subject": "A mouth (teeth inside an open mouth contour), drawn as the doodle of teeth.",
+ "verdict": "reference stronger",
+ "evidence": "e.png against f.png: film frames 4-5 show the lips closed with no teeth visible, but animation frames 4-5 still show both tooth rows with a clear gap between them (only a small narrowing from frame 1). Film frames 11-13 open wide in a laugh; animation opens widest in frames 9-15, which is roughly aligned. Film frames 18-21 close the lips again to a thin line; animation frames 18-21 keep a visible gap and both full tooth rows, only narrowing gradually. Film frames 22-26 snap open to a wide smile with large upper teeth; animation frames 22-26 continue to narrow and shrink, so the reopening beat is missing. Motion between consecutive frames in e.png is gradual with no pops; g.png shows a steady path with a slow left-down drift and no reversals or gaps.",
+ "primary_gap": "The two mouth closures in the film (frames 3-5 and 18-21) are not performed: the doodle's jaw never brings the lower teeth up to meet or hide behind the upper row, so the talking rhythm of close-open-close-open reads as one slow open-then-narrow movement.",
+ "closes_when": "In e.png frames 3-5 and 18-21 the lower tooth row rises until it touches or tucks behind the upper row (gap closed, lower teeth hidden or nearly hidden), and in frames 22-26 the mouth reopens to a clear gap showing the upper row large, matching the film's smile.",
+ "protect": "The doodle's construction: the curved outer contour, four squared upper teeth with the pointed separations, the lower teeth with the long jagged tip strokes, and the loose open stroke on the right side; the grey nose and mustache scenery placed above; the smooth frame-to-frame movement with no doubling; the wide-open laugh around frames 9-15.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character reads as the c.png teeth drawing set in motion; the only drift is that the lower teeth shorten and lose their long jagged tips in frames 19-26.",
+ "still_frames_only": true,
+ "_packet": "lotb0a8a58b",
+ "_round": 1
+}

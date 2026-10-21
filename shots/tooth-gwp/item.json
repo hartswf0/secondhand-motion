@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0181",
+ "id": "tooth-gwp",
+ "kind": "shot",
+ "title": "Tooth, the Giraffe Walks Past Way",
+ "category": "tooth",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/tooth-gwp/cover.png",
+ "cover_alt": "shots/tooth-gwp/frames/f012.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/tooth-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#tooth-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/tooth_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/tooth/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/tooth-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A grid of grey bread slices sits on a diagonal table. Two open bottom slices in the second row are drawn in black. In frames 1-2 a black slice enters from the top-left corner. By frame 3 it is fully visible and it travels down and right (frames 3-4), then lands on the left open slice (frame 5) and stays there as a closed sandwich through frame 11. In frame 12 a second slice starts to enter at the top-left corner. In frames 13-14 it crosses over the first sandwich and moves right, and in frames 15-16 it settles onto the right open slice. Both sandwiches end closed.",
+ "seen_film": "An overhead view of rows of white bread slices on a wooden table. A bare arm reaches in from the lower left, holding a top slice. It lowers the slice onto the left open slice in the second row (frames 3-5), and that sandwich is closed by frame 6. The arm then pulls back to the left edge and holds there (frames 6-11). In frame 12 the arm comes back in with another slice, carries it right across the first sandwich (frames 13-14), and places it on the next open slice to the right (frames 15-16).",
+ "named_subject": "a slice of white bread being set onto an open sandwich (two slices placed in turn)",
+ "verdict": "bar met",
+ "evidence": "Judged from still frames only. Timing matches: the first slice enters at e1-3 (film: arm appears at f3-4), travels e4-8 and seats on the left open slice at e9-10 (film: placed around f9-11), then holds through e27 while the film's arm waits at the left edge (f12-27). The second slice enters at e28 (film arm returns at f28), crosses over the first sandwich at e30-32 (film f30-32 hand over the same spot), and lands on the right open slice at e34-35 (film f34-36). Placement matches: the same two bottom slices in row two receive the tops in the same order. g.png shows a continuous diagonal path from the top-left to each sandwich with no reversals. The size of the travelling slice stays constant (compare e5 with e12, and e32 with e36).",
+ "primary_gap": "The film's acting agent, the arm and hand carrying each slice, is absent, so the slices glide in by themselves, and the second slice's entry is abrupt: it goes from a small corner fragment at e28 to a whole slice well inside the frame at e29.",
+ "closes_when": "Frames 28-30 show the second slice sliding in from the corner by smaller, even steps, the way e1-4 does (part of the outline visible, then more), instead of appearing whole at e29.",
+ "protect": "The doodle's construction on every slice (notched crust top, slanted left side, doubled lower outline for the bottom slice); the matching two-placement timing (land around e9-10, hold e11-27, second land around e34-35); the same two target slices in row two; the constant slice size in flight; the static grey scenery grid.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  29
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "None of consequence: the moving and resting slices use the c.png outline with its stepped crust notch and doubled bottom stroke, though the in-flight slice at e30-33 is sometimes drawn without the doubled inner line.",
+ "still_frames_only": true,
+ "_packet": "lot940dda0c",
+ "_round": 1
+}

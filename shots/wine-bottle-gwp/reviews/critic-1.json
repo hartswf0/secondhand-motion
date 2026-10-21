@@ -1,0 +1,19 @@
+{
+ "seen_animation": "a.png: a black-line bottle stands upright, centred a little left of middle, over a grey field of circles (grapes) with a diagonal hill line at top left. Frames 1-4 the bottle is small (neck near the top, base about two-thirds down) and grows slightly. Frames 5-8 it keeps growing in place, the base moving down and the shoulders widening. By frame 9 it is large, filling most of the frame height, and frames 9-16 it holds at that size with only small line wobble. The bottle never translates sideways; it only scales up about a fixed point near its centre.",
+ "seen_film": "d.png: a translucent glass bottle with a grape label appears in front of a large pile of grapes. Frames 1-4 it is small and faint, centred slightly left of middle. Frames 5-8 it grows in place. Frame 9 it is large (top near the frame top, base near the bottom) and frames 9-12 hold at that size while the bottle stays semi-transparent. Frames 13-16 it becomes more opaque and solid, slightly larger, and the label gains detail; frame 16 adds hatching at the base of the label.",
+ "named_subject": "a wine bottle with two label lines (from the doodle) that grows from small to large in front of a pile of grapes",
+ "verdict": "bar met",
+ "evidence": "e.png 1-12 vs f.png 1-12: both bottles small and growing slowly at the same centre-left position. e.png 13-17 vs f.png 13-17: both grow quickly, with the largest single step at 16->17 in both. e.png 17-32 vs f.png 17-32: both hold large, top near frame top, base near frame bottom, same horizontal position. g.png shows nested outlines scaling about one centre with no sideways jumps or reversals. Every frame keeps the c.png construction: tall neck with a cap band and slanted top line, angular shoulders, straight sides, two horizontal label strokes, slanted base line. Judged from still frames only, not playback.",
+ "primary_gap": "The film's late change (f.png 25-32), where the bottle turns from translucent to solid and grows one more small step, has no counterpart in the animation, which simply holds from e.png 18 onward.",
+ "closes_when": "Across e.png 24-26 the bottle grows by a few percent more (matching f.png 24-25) or its lines thicken slightly, so the animation marks the same late moment the film does.",
+ "protect": "The doodle's exact construction and stroke habits (slanted neck top, cap band, angular shoulders, two label lines, slanted base); the fixed centre position matching the film; the slow-then-fast growth timing with the big step at 16->17; the unchanged grey grape-circle scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The bottle is the c.png drawing scaled up with only small line wobble; no meaningful identity gap.",
+ "still_frames_only": true,
+ "_packet": "lotb0ce74df",
+ "_round": 1
+}

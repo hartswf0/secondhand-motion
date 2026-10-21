@@ -112,17 +112,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca mug (cup with a loop handle) seen from above\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201cA cup or mug (standing in for the film's measuring beaker) seen from above, with its handle loop used as the beaker's pour spout.\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/mug-gwp/reviews/critic-1.json"
+  "evidence": "shots/mug-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The doodle's double rim and loop handle carry over, but the top-down view shows little of the doodle's tall body, and the handle is moved from the right to the left side.",
-  "evidence": "shots/mug-gwp/reviews/critic-1.json"
+  "ok": false,
+  "note": "Only the doubled polygonal rim carries over from c.png; the handle shrinks to a small rim tab, the tapered body becomes a second ring, and a foreign heavy diagonal stroke is added, so it reads as a different cup drawing.",
+  "evidence": "shots/mug-gwp/reviews/critic-2.json"
  }
 ]

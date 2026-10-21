@@ -32,7 +32,7 @@ for f in range(n):
     fr = rig[f]; extra = {}
     for k in range(N):
         a0 = -math.pi + (k + 0.5) * 2 * math.pi / N + turn[f]
-        if math.cos(a0) < 0.12: continue
+        if math.cos(a0) < 0.05: continue
         L, LW, LH, Y0 = MARKS[k % 2]
         for j, s in enumerate(L):
             pts = []

@@ -71,10 +71,10 @@ def joint(p,q,L,prefer,key=None):
     h=math.sqrt(max(L*L-(D2/2)**2,0)); m=p+d/D*(D2/2); nrm=np.array([-d[1],d[0]])/D
     a,b=m+nrm*h,m-nrm*h
     pick=a if prefer(a)>=prefer(b) else b
-    if key in PREV:
+    if key is not None and key in PREV:
         o=PREV[key]; alt=b if pick is a else a
         if np.hypot(*(alt-o))+12<np.hypot(*(pick-o)): pick=alt
-    PREV[key]=pick
+    if key is not None: PREV[key]=pick
     return pick
 # The doodle's ladder is drawn with a heavy, slightly wobbly line; the man is drawn in the same hand: each line is a few
 # points with a small fixed waver (the same waver every frame, so the line does not boil) and traced twice 1 px apart.

@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0182",
+ "id": "sandwich-gwp",
+ "kind": "shot",
+ "title": "Sandwich, the Giraffe Walks Past Way",
+ "category": "sandwich",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/sandwich-gwp/cover.png",
+ "cover_alt": "shots/sandwich-gwp/frames/f019.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/sandwich-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#sandwich-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/sandwich_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/sandwich/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/sandwich-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}
