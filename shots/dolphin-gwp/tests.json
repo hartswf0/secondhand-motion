@@ -1,7 +1,7 @@
 [
  {
   "id": "M2",
-  "value": 58,
+  "value": 50,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
@@ -10,34 +10,34 @@
    49,
    64,
    67,
-   65,
-   65,
-   65,
-   67,
-   67,
-   66,
-   65,
-   67,
-   62
+   62,
+   58,
+   52,
+   52,
+   52,
+   52,
+   51,
+   50,
+   47
   ]
  },
  {
   "id": "M2b",
-  "value": 0.81,
+  "value": 0.76,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 66
  },
  {
   "id": "M3",
-  "value": 0.25,
+  "value": 0.26,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.12
+  "min": 0.13
  },
  {
   "id": "M6",
-  "value": 3.1,
+  "value": 3.2,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -57,7 +57,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:5582764139085824; scenery quickdraw:6130267276181504, quickdraw:6108493100613632, quickdraw:4851402578853888, quickdraw:5183847324975104, quickdraw:6156633329631232, drawn by agent: a pale low rock or log lies along the bottom left edge of every frame; Quick, Draw! has no rock category, drawn by agent: a thin dark twig hangs into the top left corner in every frame; no Quick, Draw! category is a single twig",
+  "value": "rig quickdraw:5582764139085824; scenery quickdraw:6130267276181504, quickdraw:5559552546177024, quickdraw:4851402578853888, quickdraw:5183847324975104, quickdraw:6156633329631232, drawn by agent: a pale low rock or log lies along the bottom left edge of every frame; Quick, Draw! has no rock category, drawn by agent: a thin dark twig hangs into the top left corner in every frame; no Quick, Draw! category is a single twig",
   "unit": "",
   "ok": true
  },

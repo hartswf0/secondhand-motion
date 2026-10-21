@@ -5,26 +5,26 @@
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
+   4,
    5,
+   6,
+   6,
    6,
    7,
    7,
    7,
    8,
-   8,
-   8,
-   8,
-   8,
-   8,
    7,
    7,
-   5,
+   6,
+   6,
+   4,
    3,
    3,
-   5,
-   7,
-   7,
-   7,
+   4,
+   6,
+   6,
+   6,
    7,
    6,
    6,
@@ -34,21 +34,21 @@
  },
  {
   "id": "M2b",
-  "value": 0.78,
+  "value": 0.77,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 5
  },
  {
   "id": "M3",
-  "value": 0.32,
+  "value": 0.31,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
   "min": 0.14
  },
  {
   "id": "M6",
-  "value": 6.0,
+  "value": 5.9,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -93,17 +93,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cAn ambulance (boxy vehicle with a roof light and rays), seen from behind\u201d; motion broken; follows the film: yes",
+  "value": "named \u201cThe rear of an ambulance (box vehicle with roof light and wheels) driving away from the camera.\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/ambulance-gwp/reviews/critic-3.json"
+  "evidence": "shots/ambulance-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The character is the c.png ambulance doodle (roof box, rays, door seam, belt line, scribbled wheels), though its top-right corner alternates between rounded, chamfered and square instead of keeping the doodle's single rounded corner.",
-  "evidence": "shots/ambulance-gwp/reviews/critic-3.json"
+  "note": "The body is drawn wider and with straighter, more regular lines than c.png, whose roof slopes and whose divider lines curve, but its parts and stroke habits (double divider, roof box with radiating strokes, spiral-scribble wheels) match the doodle.",
+  "evidence": "shots/ambulance-gwp/reviews/critic-4.json"
  }
 ]

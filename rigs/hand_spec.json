@@ -1,0 +1,263 @@
+{
+ "category": "hand",
+ "doodle_key_id": "5762927632056320",
+ "facing": -1,
+ "face_from": [
+  "knuck",
+  "wrist"
+ ],
+ "note": "Quick, Draw! hand 5762927632056320, drawn in profile with the forearm at the left, the thumb raised and four fingers pointing right. Stroke 0 is the top of the forearm, the raised thumb and the inside of the thumb; strokes 1 to 4 are the four fingers; stroke 5 is the underside of the palm and forearm; stroke 6 is a short crease at the base of the thumb. In the film the hand comes in from the right and grips the top edge of a card, fingers pointing left and down, thumb below them on the near side. The doodle is turned half a circle by the root (wrist to knuckles), so the forearm lies at the right, the fingers point left and the thumb hangs below them, without mirroring. The four fingers turn together about the knuckles toward the fingertip point, so the grip can tighten and loosen; the thumb turns about its base toward the thumb point.",
+ "strokes": [
+  [
+   [
+    18,
+    48
+   ],
+   [
+    107,
+    47
+   ],
+   [
+    118,
+    26
+   ],
+   [
+    133,
+    7
+   ],
+   [
+    145,
+    1
+   ],
+   [
+    159,
+    0
+   ],
+   [
+    168,
+    5
+   ],
+   [
+    169,
+    12
+   ],
+   [
+    151,
+    30
+   ],
+   [
+    156,
+    48
+   ],
+   [
+    150,
+    60
+   ]
+  ],
+  [
+   [
+    154,
+    37
+   ],
+   [
+    197,
+    32
+   ],
+   [
+    222,
+    34
+   ],
+   [
+    225,
+    40
+   ],
+   [
+    223,
+    41
+   ],
+   [
+    168,
+    48
+   ]
+  ],
+  [
+   [
+    222,
+    41
+   ],
+   [
+    245,
+    43
+   ],
+   [
+    255,
+    51
+   ],
+   [
+    253,
+    53
+   ],
+   [
+    176,
+    59
+   ]
+  ],
+  [
+   [
+    201,
+    55
+   ],
+   [
+    246,
+    55
+   ],
+   [
+    253,
+    57
+   ],
+   [
+    254,
+    61
+   ],
+   [
+    242,
+    67
+   ],
+   [
+    193,
+    71
+   ]
+  ],
+  [
+   [
+    201,
+    70
+   ],
+   [
+    226,
+    68
+   ],
+   [
+    252,
+    72
+   ],
+   [
+    254,
+    75
+   ],
+   [
+    245,
+    80
+   ],
+   [
+    222,
+    85
+   ],
+   [
+    158,
+    85
+   ]
+  ],
+  [
+   [
+    156,
+    86
+   ],
+   [
+    140,
+    93
+   ],
+   [
+    93,
+    94
+   ],
+   [
+    24,
+    82
+   ],
+   [
+    0,
+    82
+   ]
+  ],
+  [
+   [
+    148,
+    67
+   ],
+   [
+    156,
+    72
+   ],
+   [
+    156,
+    77
+   ]
+  ]
+ ],
+ "root": [
+  "wrist",
+  "knuck"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "wrist": [
+   12,
+   65
+  ],
+  "knuck": [
+   160,
+   55
+  ],
+  "tip": [
+   252,
+   58
+  ],
+  "tbase": [
+   128,
+   42
+  ],
+  "thumb": [
+   156,
+   2
+  ]
+ },
+ "parts": [
+  {
+   "region": [
+    165,
+    25,
+    256,
+    90
+   ],
+   "joint": "knuck",
+   "aim": [
+    "knuck",
+    "tip"
+   ],
+   "stretch": 0.4
+  },
+  {
+   "stroke": 0,
+   "from": 2,
+   "to": 8,
+   "joint": "tbase",
+   "aim": [
+    "tbase",
+    "thumb"
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "wrist",
+   "aim": [
+    "wrist",
+    "knuck"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "track": false,
+ "smooth": 1.2
+}

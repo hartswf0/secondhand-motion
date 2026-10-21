@@ -137,7 +137,7 @@
     0,
     4
    ],
-   "why": "the second flamingo at the right edge in the first frames, which the camera pans away from; it is the character doodle in the same drawn resting pose (quickdraw:5600573673963520, copied from drawn key 13, scaled 0.85), standing still in the world",
+   "why": "the second flamingo at the right edge in the first frames, which the camera pans away from; it is the character doodle in the same drawn resting pose (quickdraw:5600573673963520, copied from drawn key 13, scaled 0.85), standing still in the world. Split by part so each part leaves the frame whole: body (its egg closed at the back so the last piece at the edge is one curve) and neck loop stay until frame 4",
    "strokes": [
     [
      [
@@ -191,34 +191,10 @@
      [
       293.0,
       108.6
-     ]
-    ],
-    [
-     [
-      330.4,
-      160.1
      ],
      [
-      333.0,
-      184.6
-     ],
-     [
-      327.0,
-      236.6
-     ]
-    ],
-    [
-     [
-      337.2,
-      159.2
-     ],
-     [
-      324.6,
-      173.8
-     ],
-     [
-      360.5,
-      172.9
+      299.8,
+      111.9
      ]
     ],
     [
@@ -250,7 +226,59 @@
       296.9,
       131.4
      ]
+    ]
+   ]
+  },
+  {
+   "id": "second_flamingo_leg",
+   "plane": "char",
+   "class": "flamingo",
+   "visible": [
+    0,
+    2
+   ],
+   "why": "the second flamingo's standing leg and folded-leg triangle; hidden from frame 3, when only a few pixels of them would be left at the right edge as loose dashes",
+   "strokes": [
+    [
+     [
+      330.4,
+      160.1
+     ],
+     [
+      333.0,
+      184.6
+     ],
+     [
+      327.0,
+      236.6
+     ]
     ],
+    [
+     [
+      337.2,
+      159.2
+     ],
+     [
+      324.6,
+      173.8
+     ],
+     [
+      360.5,
+      172.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "second_flamingo_head",
+   "plane": "char",
+   "class": "flamingo",
+   "visible": [
+    0,
+    2
+   ],
+   "why": "the second flamingo's head on its back; hidden from frame 3, when only a corner of it would be left at the right edge",
+   "strokes": [
     [
      [
       325.4,
@@ -292,7 +320,19 @@
       317.2,
       92.5
      ]
-    ],
+    ]
+   ]
+  },
+  {
+   "id": "second_flamingo_beak",
+   "plane": "char",
+   "class": "flamingo",
+   "visible": [
+    0,
+    0
+   ],
+   "why": "the second flamingo's beak; hidden from frame 1, when the edge would cut it into two short dashes",
+   "strokes": [
     [
      [
       352.5,

@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A spoked wheel drawn as a double-lined oval with straight spokes through a central hub, with a horizontal axle (two parallel lines) passing through it, set in front of grey scenery (trees, grass, ground cracks). In frames 1-4 the wheel is a narrow upright oval seen nearly edge-on, with a small zigzag mark at the top of the rim. Over frames 5-12 the oval widens as the wheel turns toward the viewer and moves slightly left, and the zigzag mark travels clockwise down the right side of the rim to about the 3 o'clock position by frame 11-12. In frames 13-16 the wheel is close to a full face-on oval, the zigzag mark continues down to about the 4-5 o'clock position, and a grey-to-black vertical post appears at the right edge. One spoke bends from the hub out to the zigzag mark in most frames.",
+ "seen_film": "A real spoked wagon wheel on an axle, standing on pale gravel with grass and trees behind. In frames 1-4 the wheel is seen nearly edge-on, with a white tape band at the top of the tire. Over frames 5-12 the wheel rotates and turns more toward the camera, its face widening, and the white band travels clockwise down the right side to about 3 o'clock. In frames 13-16 the wheel is close to face-on, the band reaches about 4-5 o'clock, the spokes visibly rotate with the tire, and a wooden post comes into view at the right edge.",
+ "named_subject": "a spoked wheel on an axle (wagon wheel) with a marker on its rim",
+ "verdict": "bar met",
+ "evidence": "a.png/d.png frame 1: both edge-on ovals, marker/band at top; frame 6: marker at about 1-2 o'clock in both; frames 11-12: marker at 3 o'clock in both, oval width matching the film's widened face; frames 13-16: marker at 4-5 o'clock and the right-edge post present in both. e.png frames 1-26 against f.png: oval width grows steadily, the wheel shifts slightly left as in the film, the post appears at e.png 20-21 when it appears in f.png 21. g.png shows a continuous widening outline and a marker path that moves smoothly with no reversals. Weak point: across e.png 1-26 the near-vertical spoke and the other straight spokes stay at roughly the same angle while the film's spokes turn; only the zigzag marker and one bent spoke carry the rotation, and spoke positions are redrawn slightly differently from frame to frame (e.g. e.png 13-14, 16-17).",
+ "primary_gap": "The spokes do not rotate with the rim: the straight spokes keep the same angles from e.png 1 to 26 while only the zigzag marker travels, joined to the hub by one bent spoke, so the rotation reads as a mark sliding along the rim rather than the whole wheel turning.",
+ "closes_when": "The straight spokes turn clockwise together with the zigzag marker by the same angle each frame (about a quarter turn over the shot), and the marker sits at the end of a straight spoke instead of a bent connecting line.",
+ "protect": "The double-line oval rim and straight-spoke construction of the doodle; the edge-on to face-on widening timed to the film; the marker's path from 12 o'clock to 4-5 o'clock matching the film frame for frame; the axle lines through the hub; the post entering at the right when the film's post enters; the steady size growth with no pops.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The wheel keeps the doodle's double outer ring and straight spokes crossing at the hub, but the added zigzag marker and the bent spoke leading to it are not in c.png and the spoke count/angles vary slightly between frames.",
+ "still_frames_only": true,
+ "_packet": "lot0a3b4fef",
+ "_round": 2
+}

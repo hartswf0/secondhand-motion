@@ -14,10 +14,19 @@ def series(name):
     b=a.copy(); b[1:-1]=0.25*a[:-2]+0.5*a[1:-1]+0.25*a[2:]   # light smoothing of the by-eye readings
     return b
 HEAD,WAIST=series('head'),series('waist')
+LAD=[np.array(q,float) for q in json.load(open(R+'shots/ladder-gwp/shot.json'))['cast']['frames'][0]]   # the ladder doodle as placed (it does not move)
+def snap(q,lim=9):
+    # a hand or foot put on the ladder lands on the nearest drawn rail or rung, if one is close
+    best,bd=q,lim
+    for s in LAD:
+        for a,b in zip(s[:-1],s[1:]):
+            d=b-a; t=np.clip(np.dot(q-a,d)/max(np.dot(d,d),1e-9),0,1); c=a+d*t; dd=np.hypot(*(q-c))
+            if dd<bd: best,bd=c,dd
+    return best
 def contact(f,limb):
     p=np.array(MK['start'][limb],float)
     for f0,f1,q in MK['moves'][limb]:
-        q=np.array(q,float)
+        q=snap(np.array(q,float))
         if f>=f1: p=q; continue
         if f>f0:
             t=(f-f0)/(f1-f0); t=t*t*(3-2*t); lift=math.sin(math.pi*t)*5
@@ -39,9 +48,9 @@ def man(f):
     st.append([N.tolist(),P.tolist()])                                                                                    # body
     S=N+ax*3; arms=[]; legs=[]
     for limb in ('lh','rh'):
-        q=contact(f,limb); e=joint(S,q,22,lambda z: z[1]); arms.append([S.tolist(),e.tolist(),q.tolist()])
+        q=contact(f,limb); e=joint(S,q,24,lambda z: z[1]); arms.append([S.tolist(),e.tolist(),q.tolist()])
     for limb in ('lf','rf'):
-        q=contact(f,limb); k=joint(P,q,40,lambda z: z[0]); legs.append([P.tolist(),k.tolist(),q.tolist()])
+        q=contact(f,limb); k=joint(P,q,44,lambda z: z[0]); legs.append([P.tolist(),k.tolist(),q.tolist()])
     th=np.mean([np.array(l[1])-P for l in legs],0); th/=max(np.hypot(*th),1e-6)   # the wrap hangs over the thighs, sagging behind
     dn=0.55*th+0.45*np.array([-0.25,1.0]); dn/=np.hypot(*dn); side=np.array([-dn[1],dn[0]])
     st.append([(P+side*5).tolist(),(P+side*15+dn*30).tolist(),(P-side*14+dn*30).tolist(),(P-side*5).tolist(),(P+side*5).tolist()])        # the white wrap, closed

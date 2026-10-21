@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A line-drawn mermaid lies diagonally in the centre of a scene framed by a grey zigzag top edge, a grey rock shape at left, a grey tree at right and a grey ground line. Her body and tail do not move or travel; only one arm, drawn as two straight lines meeting in a point, moves. In frames 1-3 the arm is bent up beside the head. In frames 4-6 it straightens and reaches forward to the right. In frames 7-10 it folds back so the point lies against the face and upper chest. In frames 11-12 the forearm is raised straight up beside the head. In frames 13-16 the arm swings forward again and ends extended to the right, pointing toward the tail.",
+ "seen_film": "A mermaid with long hair lies on her side in the centre of a dark grotto, tail curled up on the right. Her body stays in place for the whole shot. In frames 1-3 both hands are raised by her head holding a strand (a necklace or hair). In frames 4-6 she extends her right arm forward to the right. In frames 7-10 she brings that hand back to her face and head. In frames 11-12 she raises the hand up beside her head. In frames 13-16 she extends the arm forward and out to the right again.",
+ "named_subject": "a mermaid lying on the sea floor, gesturing with one arm",
+ "verdict": "bar met",
+ "evidence": "The animation's arm follows the film's arm phase for phase at matching e.png/f.png frame numbers: raised at head in e1-4 (film f1-4 hands at head), reaching forward e6-12 (film f6-12 arm extended), folded to face e14-24 (film f14-24 hand at face), forearm raised upright e25-28 (film f25-30 hand raised), extended forward again e30-38 (film f31-38). The body stays fixed in the centre of the frame in every frame, as the film's body does; g.png shows no body travel, only a fan of arm positions at the shoulder. Consecutive arm positions change by small angles in most frames. The one abrupt change is e12 to e13, where the arm goes from fully extended to bent upward with roughly half the length in a single frame; the film also changes quickly here (f12 to f13), so it reads as a fast gesture rather than a pop. Judged from still frames only, not playback.",
+ "primary_gap": "The arm is a two-line spike with no hand that, when extended (e9-12, e34-38), reaches nearly to the tail fin and is longer than the torso, so the forward reach reads as a lance rather than an arm.",
+ "closes_when": "In the extended frames (e8-12 and e33-38) the arm tip stops about halfway between the shoulder and the tail fin, with a small closed end for the hand, while keeping the same angles and timing.",
+ "protect": "The exact phase timing against the film (head, reach, face, raise, reach); the body, tail and fin held still and drawn with the doodle's straight angular strokes; the scene scenery staying fixed; the small step-to-step arm rotation with no body jumps.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  13
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body and forked tail match c.png, but the doodle's streaming hair lines are reduced to a small cap on the head and the added arm is a long closed spike that the doodle's construction does not contain.",
+ "still_frames_only": true,
+ "_packet": "lot2feab983",
+ "_round": 1
+}

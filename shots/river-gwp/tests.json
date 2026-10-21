@@ -1,0 +1,82 @@
+[
+ {
+  "id": "M2",
+  "value": 33,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   27,
+   34,
+   28,
+   34,
+   34,
+   34,
+   34,
+   34,
+   34,
+   34,
+   34,
+   34,
+   34,
+   34
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.82,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 41
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 0.3,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "6 strokes, 27 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:4624370859245568; scenery quickdraw:5807681665236992, quickdraw:6135531446468608, quickdraw:5567261018423296, quickdraw:6202198939664384, quickdraw:4650469748113408, quickdraw:4638263736270848, quickdraw:6316296255832064, quickdraw:6380946397855744, drawn by agent: the tall feathery weed standing in front of the right half of the water; Quick, Draw! grass doodles are short tufts, and none is one tall stem with side fronds, so it is drawn as one stem with three pairs of fronds; set 10 px left of where it stands in the film so it reads in front of the water rather than tangled with the drawn right bank",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "49/49",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

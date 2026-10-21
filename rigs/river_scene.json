@@ -141,7 +141,8 @@
     70,
     20
    ],
-   "strokes": 1
+   "strokes": null,
+   "aspect": 4
   },
   {
    "id": "tree2",
@@ -153,8 +154,9 @@
     160,
     19
    ],
-   "strokes": 1,
-   "skip": 1
+   "strokes": null,
+   "skip": 5,
+   "aspect": 4
   },
   {
    "id": "tree3",
@@ -166,8 +168,9 @@
     290,
     19
    ],
-   "strokes": 1,
-   "skip": 2
+   "strokes": null,
+   "skip": 2,
+   "aspect": 4
   },
   {
    "id": "tree4",
@@ -179,8 +182,9 @@
     384,
     20
    ],
-   "strokes": 1,
-   "skip": 3
+   "strokes": null,
+   "skip": 3,
+   "aspect": 4
   },
   {
    "id": "reedL",
@@ -208,19 +212,6 @@
    "skip": 1
   },
   {
-   "id": "weed",
-   "plane": "near",
-   "qd": "grass",
-   "box": [
-    195,
-    110,
-    250,
-    235
-   ],
-   "aspect": 0.45,
-   "skip": 2
-  },
-  {
    "id": "nearL",
    "plane": "near",
    "qd": "grass",
@@ -245,9 +236,95 @@
    ],
    "strokes": 1,
    "skip": 4
+  },
+  {
+   "id": "weed",
+   "plane": "near",
+   "class": "reed",
+   "why": "the tall feathery weed standing in front of the right half of the water; Quick, Draw! grass doodles are short tufts, and none is one tall stem with side fronds, so it is drawn as one stem with three pairs of fronds; set 10 px left of where it stands in the film so it reads in front of the water rather than tangled with the drawn right bank",
+   "strokes": [
+    [
+     [
+      220,
+      240
+     ],
+     [
+      216,
+      200
+     ],
+     [
+      211,
+      160
+     ],
+     [
+      206,
+      115
+     ]
+    ],
+    [
+     [
+      215,
+      192
+     ],
+     [
+      197,
+      174
+     ]
+    ],
+    [
+     [
+      215,
+      192
+     ],
+     [
+      233,
+      172
+     ]
+    ],
+    [
+     [
+      211,
+      160
+     ],
+     [
+      195,
+      141
+     ]
+    ],
+    [
+     [
+      211,
+      157
+     ],
+     [
+      229,
+      138
+     ]
+    ],
+    [
+     [
+      208,
+      132
+     ],
+     [
+      198,
+      117
+     ]
+    ],
+    [
+     [
+      208,
+      130
+     ],
+     [
+      221,
+      114
+     ]
+    ]
+   ]
   }
  ],
- "no_cel": false,
+ "no_cel": true,
  "notes": {
   "0": "a narrow river runs away from the camera between reed beds; the camera is locked off",
   "8": "the tall reed in front of the water leans left in the wind; the reed stem at lower left leans with it",

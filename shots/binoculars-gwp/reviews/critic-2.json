@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A line drawing of a figure seen from below, holding a pair of binoculars up to its face with both hands. The binoculars are two double-ringed lenses joined by a short bridge, with hands wrapped around each barrel; two big arcs form the raised arms, two inner lines suggest the torso, and a U-shape under the binoculars is the chin/face. Two grey clouds sit at the top. Across frames 1-16 the pose holds; the figure only sways a few pixels and the hand and lens strokes shift slightly, as if the person is steadying the binoculars while looking up.",
+ "seen_film": "A low-angle shot of a man in a blue padded jacket holding black binoculars to his eyes with both hands, arms raised and elbows out, against a grey sky. Frame 1 is a dissolve from a shot of water. From frame 2 on he stays in the same pose, with small sways of the head, binoculars and elbows; nothing else happens.",
+ "named_subject": "A person looking upward through binoculars held in both hands, seen from below.",
+ "verdict": "bar met",
+ "evidence": "The animation matches the film's composition: binoculars at upper centre, arms arcing out to the frame edges, face below the binoculars (a.png 1-16 vs d.png 1-16). The film is a held pose with small sway, and e.png frames 1-29 show the drawing holding the same pose with small drift and no change in size. The g.png overlay shows the copies stacked in a tight, evenly spaced band with no gaps or reversals. Stroke-level variation in the hands and lenses between e.png frames (for example 12-16 and 20-23) is small and reads as line boil, not as a jump. The film's frame 1 dissolve from water is not reproduced, but that is a cut transition, not character action. Judged from still frames only, not playback.",
+ "primary_gap": "The hand and lens strokes are redrawn slightly differently from frame to frame (e.png 12-16, 20-23), so the binocular cluster may shimmer in playback while the film's binoculars stay rigid.",
+ "closes_when": "Overlaying consecutive e.png frames shows the lens rings, bridge and hand outlines moving as one rigid group, offset only by the body sway, with no change in their shape.",
+ "protect": "The double-ring lenses joined by a short bridge, taken from c.png; the low-angle framing with arms arcing out to the frame edges matching the film; constant scale; the small continuous sway path shown in g.png; the grey clouds kept as static scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The binoculars keep c.png's double-ringed lenses and bridge, but the tall angular barrel tops that dominate c.png are mostly hidden behind the added hands, so the doodle's barrel shape is weaker than in the reference.",
+ "still_frames_only": true,
+ "_packet": "lot13a877b7",
+ "_round": 2
+}

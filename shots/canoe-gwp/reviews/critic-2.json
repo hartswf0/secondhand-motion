@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A line-drawn canoe with a double-line hull and a raised right-hand bow carries two stick figures, each holding a long straight paddle. In frame 1 the boat enters from the left edge, cut off, about two-fifths down the frame, below a grey band of doodled trees and a shoreline, with grey wave squiggles on the water. Across frames 2-16 the boat travels steadily to the right and slightly down while growing larger, as if approaching the camera at an angle. The two paddles swing through a repeating stroke: leaning with the blade down-right (frames 5, 9-10, 13-14), passing vertical (7, 11, 15), then sweeping back to the lower left, nearly horizontal at the stern (3, 8, 12, 16). By frame 16 the bow is cut off by the right edge.",
+ "seen_film": "A canoe with two paddlers crosses a lake from left to right in front of a dark tree line and a pale shore strip. In frame 1 the canoe is at the left edge, partly cut off, about 55-60 percent down the frame. Over frames 2-16 it moves steadily right and slightly lower and grows larger as it comes nearer. Both paddlers keep stroking; from about frame 9 onward the stern paddle is visible trailing back to the left almost horizontally. In frame 16 the bow is cut off by the right edge.",
+ "named_subject": "A canoe (the doodled boat with paddle) carrying two stick-figure paddlers, paddling left to right across a lake.",
+ "verdict": "bar met",
+ "evidence": "Placement and timing match: e.png frame 1 and f.png frame 1 both show the boat cut off at the left edge at the same height; e.png frames 36-38 and f.png 36-38 both show the bow cut off at the right edge, slightly lower in frame and larger. The g.png path is an even, gently descending row of drawings with steadily increasing size and no gaps or reversals, matching the film's steady crossing. Paddle strokes repeat continuously through the shot (e.png 1-8, 9-16, 17-24, 25-32, 33-38), and the stern paddle trails back nearly horizontal at e.png 6, 22, 30 and 38, matching the trailing stern paddle visible in f.png 25-38. The hull is redrawn consistently in every frame with no doubling. The weakest moments are e.png 9 and 25, where both paddles change from leaning back-left (8, 24) to an upright 'A' pose in one frame, and e.png 14-16 and 28-29, where the paddle shafts reach much further below the hull than elsewhere.",
+ "primary_gap": "The paddle stroke never leaves the water: after the pull ends with the blade back to the left (e.png 8, 24), the paddle swings forward again below the hull in one or two frames (e.png 9, 25), so the stroke reads as a wag back and forth rather than pull-lift-return, and the shaft length below the hull varies from frame to frame.",
+ "closes_when": "In the frames after each pull ends (around e.png 8-9, 16-17, 24-25, 32-33) the paddle lower end rises above the hull line as it returns forward, and the shaft length stays the same in every frame.",
+ "protect": "The boat's path, size growth and screen placement that match the film frame for frame (entering cut off at left in frame 1, exiting cut off at right in frame 38); the doodle's hull construction (double line, pointed left end, raised right bow) drawn the same in every frame; the simple stick-figure paddlers; the continuous, unbroken stroke cycle; the static grey tree band and wave squiggles.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  9,
+  25
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hull and paddle keep the doodle's construction and loose single-stroke lines; the two stick-figure paddlers and second paddle are additions not in c.png, but they are drawn in the same plain line language and the film calls for two paddlers.",
+ "still_frames_only": true,
+ "_packet": "lota6388067",
+ "_round": 2
+}

@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A drawn box-shaped vehicle seen from directly behind, with a small rectangular light on the roof and short radiating strokes above it, two parallel vertical lines dividing the back, and a horizontal waistline. In frames 1-4 the body fills the frame and is cut off at the bottom. From frames 5-10 the body gets smaller and rises in the frame, and the bottom edge comes into view; scribbled round wheels enter from the bottom edge at frames 9-10. By frames 11-16 the whole vehicle with both wheels and a bottom line is visible, smaller and centred, and it changes very little from frame 13 to 16. Grey scenery (parked shapes at right, ground lines at lower left and right, small circles as lights) stays in place.",
+ "seen_film": "A night shot of the rear of an ambulance driving away from the camera. A rotating light sits on the roof; the two rear windows show a patient on a stretcher (left) and two attendants (right); 'AMBULANCE' lettering and two bright tail lights are below. Over frames 1-12 the ambulance shrinks and rises in the frame as it moves away, and the lit licence plate enters from the bottom at frame 9-10. Over frames 13-16 it continues to recede only slightly, holding near the centre. Parked cars are visible at right.",
+ "named_subject": "The rear of an ambulance (box vehicle with roof light and wheels) driving away from the camera.",
+ "verdict": "bar met",
+ "evidence": "a.png 1-16 against d.png 1-16: both show the vehicle shrinking and rising from a frame-filling close view (1-4) to a smaller centred view (13-16), at the same rate and same frame positions; the roof light stays at the top centre throughout as in the film. e.png 1-10 vs f.png 1-10: the body shrinks a little each frame with no jumps, matching the film's steady recession. e.png 11-15: the wheels enter from the bottom edge as the body rises, at the moment the film's licence plate enters (f.png 14-16), so this is the same reveal, not a pop. e.png 17-25 vs f.png 17-25: both nearly hold, with only small shrinkage. g.png shows a single ordered, monotonic path (frames 1 through 25 stacked in order, upward and inward) with no reversals. Frame-to-frame the roof-light strokes change angle and length slightly (e.g. e.png 7-9, 21-23), which reads as the light flashing rather than as a redraw.",
+ "primary_gap": "The radiating strokes above the roof light and the scribbled wheels are re-sketched slightly differently in each frame (e.g. e.png 7-9 and 21-24), so the light and wheels may shimmer more than the body, while the body lines stay rigidly identical and only scale.",
+ "closes_when": "Consecutive frames such as e.png 21-24 show the wheel scribbles and roof strokes keeping the same shape from frame to frame except for a deliberate flash change in the light strokes every few frames.",
+ "protect": "The steady shrink-and-rise path that matches the film's timing; the wheels entering from the bottom edge at the same moment the film's plate appears; the doodle's construction (rounded box, double vertical divider, waistline, small roof box with radiating strokes, scribbled spiral wheels); the static grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body is drawn wider and with straighter, more regular lines than c.png, whose roof slopes and whose divider lines curve, but its parts and stroke habits (double divider, roof box with radiating strokes, spiral-scribble wheels) match the doodle.",
+ "still_frames_only": true,
+ "_packet": "lotee5f1506",
+ "_round": 4
+}

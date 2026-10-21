@@ -1,0 +1,24 @@
+{
+ "seen_animation": "a.png: A door drawn in black (window rectangle, octagonal knob on the right, lower bracket panel, slanted bottom) stands between grey scenery lines. A black stick figure with an octagon head stands to the right of the door with one straight arm reaching to the knob (frames 1-4). From frame 5 the door narrows as if swinging away, the window becoming a thin sliver, while the figure's arm bends to stay on the knob (5-9). In frame 10 the figure is suddenly about half its previous size, standing in the same spot. In frame 11 the figure is gone. Frames 11-16 show the door widening back to roughly its original width, ending closed with no figure.",
+ "seen_film": "d.png: A woman in a pink smock, back to camera, stands at a white door with a curtained window and reaches for the knob (1-4). The door swings open away from the camera; its visible face narrows and a lit yellow hallway appears in the gap (5-8). She steps forward through the gap, her body passing behind the door edge and being cut off by it (9-10); by 11 only a sliver of her is visible and by 12 she is gone. The door then swings back toward closed (12-16), ending nearly shut with a narrow gap still visible at its edge.",
+ "named_subject": "A door (the doodle in c.png: window, octagonal knob, lower panel), opened by an added stick figure who leaves through it.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-8 match f.png 1-8: figure at the knob, door closed, arm adjusting. e.png 9-18 match the film's door opening: the door outline narrows and the window thins in step with f.png 9-18, and the arm bends to stay on the knob. The break is at e.png 18-22: the stick figure keeps the same x position and the same straight-legged pose while its head and body shrink in large steps (18 full size, 19 about 75%, 20 about 50%, 21 about 25%), then disappear at 22. In f.png 17-22 the woman does not shrink; she walks forward and is progressively hidden behind the door edge. Throughout e.png 1-18 the figure's legs never move (same inverted V) while in f.png 9-18 the woman takes steps toward the doorway. e.png 22-32 the door widens back steadily, matching f.png 22-32 swinging back, though the animation ends with the door fully closed at its starting width while the film's door stays slightly ajar.",
+ "primary_gap": "The figure's exit is shown by shrinking in place over four frames and then vanishing (e.png 18-22), instead of walking into the door gap and being covered by the door edge as in f.png 17-22.",
+ "closes_when": "In e.png 15-22 the figure stays roughly constant in size, its legs alternate as it steps left into the gap at the door's moving edge, and its body is cut off by the door outline a little more each frame until only the arm or a sliver remains at 21 and nothing at 22.",
+ "protect": "The door's identity with c.png (window rectangle, octagonal knob, bracket-shaped lower panel, slanted bottom edge, single loose strokes); the gradual narrowing of the door in e.png 9-21 timed to f.png; the steady swing back in e.png 22-32; the arm bending to keep the hand on the knob; the grey scenery that holds still; the timing of frames 1-8 at the knob.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  19,
+  20,
+  21,
+  22
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The door is the c.png drawing with its own construction and stroke habits; the only identity issue is the added stick figure, which is not in the doodle but uses the same octagon and single-line habit.",
+ "still_frames_only": true,
+ "_packet": "lotea66aa43",
+ "_round": 1
+}

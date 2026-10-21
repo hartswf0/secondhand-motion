@@ -1,20 +1,27 @@
 [
  {
   "id": "M2",
-  "value": 3,
+  "value": 2,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
    1,
    1,
    1,
+   1,
+   1,
+   1,
    2,
    2,
    2,
    2,
-   3,
-   3,
-   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
    3,
    3,
    3,
@@ -23,26 +30,19 @@
    3,
    3,
    4,
-   4,
-   4,
-   4,
-   4,
-   4,
-   4,
-   5,
-   5
+   4
   ]
  },
  {
   "id": "M2b",
-  "value": 0.12,
+  "value": 0.13,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": false,
   "design_typicality": 35
  },
  {
   "id": "M3",
-  "value": 0.21,
+  "value": 0.2,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
   "min": 0.13
@@ -94,17 +94,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca spoked wagon wheel on an axle\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca spoked wheel on an axle (wagon wheel) with a marker on its rim\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/wheel-gwp/reviews/critic-1.json"
+  "evidence": "shots/wheel-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The wheel reads as the c.png doodle (double rim, eight crossing spokes, one wavy spoke), but it is redrawn each frame instead of being one consistent drawing that rotates.",
-  "evidence": "shots/wheel-gwp/reviews/critic-1.json"
+  "note": "The wheel keeps the doodle's double outer ring and straight spokes crossing at the hub, but the added zigzag marker and the bent spoke leading to it are not in c.png and the spoke count/angles vary slightly between frames.",
+  "evidence": "shots/wheel-gwp/reviews/critic-2.json"
  }
 ]

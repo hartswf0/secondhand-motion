@@ -1,0 +1,118 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -0.17,
+   0.78,
+   0.71,
+   0.7,
+   0.11,
+   1.38,
+   0.63,
+   0.5,
+   0.59,
+   0.36,
+   0.56,
+   0.62,
+   0.89,
+   1.66,
+   1.3,
+   1.59,
+   1.13,
+   1.06,
+   0.87,
+   1.36,
+   1.64,
+   2.17,
+   2.26,
+   1.77,
+   1.79,
+   1.68,
+   1.48,
+   1.65,
+   1.67,
+   1.82,
+   0.85,
+   1.26,
+   1.25,
+   1.09,
+   1.11,
+   1.11
+  ],
+  "y": [
+   0.0,
+   -0.92,
+   0.6,
+   0.85,
+   0.21,
+   0.62,
+   1.29,
+   0.42,
+   0.94,
+   0.75,
+   0.9,
+   0.55,
+   1.4,
+   1.15,
+   1.12,
+   1.17,
+   1.78,
+   1.96,
+   1.82,
+   1.59,
+   1.25,
+   1.58,
+   1.18,
+   1.53,
+   0.77,
+   1.17,
+   1.55,
+   0.91,
+   1.07,
+   1.53,
+   1.36,
+   1.86,
+   1.94,
+   1.98,
+   1.99,
+   2.28,
+   2.28
+  ],
+  "source": "shots/palm-tree-sam/camera.json, the per-frame camera shift measured from the footage; the camera is almost still (under 3 px over the shot)"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 6,
+   "label": "Foliage behind the tree",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Palm tree"
+  }
+ ],
+ "objects": [
+  {
+   "id": "bush1",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    334,
+    248,
+    384,
+    288
+   ],
+   "strokes": 3,
+   "why": "a dark leafy bush shows in the bottom right corner of the frame, below the right-hand fronds"
+  }
+ ],
+ "notes": {
+  "0": "The camera looks up the trunk at the whole crown against the sky.",
+  "12": "The fronds stir a little in the wind; the right-hand fronds lift by about half a degree.",
+  "28": "The left and upper fronds swing back the other way by under a degree.",
+  "36": "The tree is held as the shot ends."
+ }
+}
