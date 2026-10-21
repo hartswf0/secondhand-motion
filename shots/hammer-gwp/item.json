@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0150",
+ "id": "hammer-gwp",
+ "kind": "shot",
+ "title": "Hammer, the Giraffe Walks Past Way",
+ "category": "hammer",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/hammer-gwp/cover.png",
+ "cover_alt": "shots/hammer-gwp/frames/f018.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/hammer-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#hammer-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/hammer_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/hammer/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/hammer-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

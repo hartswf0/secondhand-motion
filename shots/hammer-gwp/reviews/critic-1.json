@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A hand grips a doodled hammer (rectangular head, two-line handle) in front of grey scenery: a tree trunk at right, a horizon line and zigzag grass at the bottom. Frames 1-2: the hammer stands upright, head high near the top left of the tree, hand low at the horizon line. Frame 3: the hammer is suddenly tilted about 45 degrees to the upper right, head against the tree trunk, forearm extending left along the horizon. Frames 4-10: this tilted pose holds, with only small shifts. Frames 11-16: the hammer rotates to a more upright angle with the head turned nearly horizontal, slightly lower and left, and holds there to the end.",
+ "seen_film": "A seated caveman holds a hammer made of a stone tied to a bundle of sticks. Frame 1: he leans forward and strikes the hammer down onto the rocks at bottom right. Frame 2: he jerks upright, the hammer swinging up (motion blur), and in frames 3-8 he holds it raised and tilted toward the upper right, head of the hammer near the tree trunk, while his other hand clutches his forehead. Frames 9-10: he brings his hand to his mouth and the hammer dips slightly (blur). Frames 11-16: he sits hunched, holding the hammer more upright and lower in front of his body, looking down at it.",
+ "named_subject": "A hand-held hammer (the doodle's rectangular-headed hammer/axe) with a gripping hand, standing in for the caveman's stone-and-stick hammer.",
+ "verdict": "reference stronger",
+ "evidence": "e.png frames 1-4: the hammer is held upright high and left of centre (head near top of panel) and barely moves, while f.png frames 1-4 show the hammer struck down on the rocks at bottom right (f1) and then swung up through blur (f2-f5); the animation never shows the downward strike at the rocks and starts already raised. e.png 4 to 5: the hammer rotates about 50 degrees and jumps right in a single step, with no in-between, while the film spreads that swing over f2-f6. e.png 5-24: tilted raised pose holds with small settling, matching the film's hold f6-f22 in place and angle. e.png 25 to 26: the head flips from a 45-degree tilt to nearly horizontal and the handle stands upright in one step; the film makes this change over f23-f27 with blur frames. e.png 26-38: held upright pose matches the film's hunched hold f27-f38 in position. g.png shows the path: the early grey drawings (1, 4) sit upper left, separated by a gap from the dense cluster of later drawings at right, confirming the jump.",
+ "primary_gap": "The opening strike is missing: the animation begins with the hammer already raised and upright at upper left, then snaps into the tilted pose at frame 5, instead of starting down at the rocks at bottom right and swinging up as the film does in frames 1-6.",
+ "closes_when": "e.png frame 1 shows the hammer head down at the bottom right near the zigzag grass/rock area (where the film's hammer hits the rocks), and frames 2-6 show it travelling up and rotating through intermediate positions into the tilted raised pose, with no single-frame jump of more than about a quarter of the head's width.",
+ "protect": "The doodle's construction (open-cornered rectangular head, two-line handle) and its wobbly single-weight black line; the steady stroke shape with no redraw boil during holds; the raised tilted pose position and angle in frames 5-24 and the lowered upright pose in frames 26-38, which match the film's placement and hold timing.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  26
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hammer reads as the c.png doodle, but the added hand and forearm (a lozenge shape and cuff) are not in the doodle and should stay as simple as the hammer's own line style.",
+ "still_frames_only": true,
+ "_packet": "lot43e99744",
+ "_round": 1
+}

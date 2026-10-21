@@ -6,18 +6,18 @@
   "top",
   "top"
  ],
- "note": "Quick, Draw! river 4624370859245568, drawn as a channel seen from above and ahead. Stroke 1 is the left bank and stroke 2 the right bank, running down the page side by side; strokes 5 and 4 are the far banks, where the channel turns away to the upper right; stroke 3 is the near bank at the bottom, where the channel turns to the lower right; stroke 0 is a short upright tick at the lower left, read here as one reed stem. The whole drawing is placed by two points on the channel's centre line, top (between the tops of the two banks) and bottom (between their feet), set on the film's river so the two banks lie along the water's edges; the camera is locked off, so these hold still at one size. The reed stem turns about its foot by the pose entry sway (radians, clockwise on screen), timed to the tall reed in front of the water, which leans left at frames 8, 23 and 38 and right at 30 and 45. Nothing else in the drawing moves, because the banks do not move in the film.",
+ "note": "Quick, Draw! river 4624370859245568, drawn as a channel running up the page. Stroke 1 is the left bank and stroke 2 the right bank, side by side; strokes 5 and 4 are the far banks at the top, where the channel turns away to the upper right; stroke 3 is the near bank at the bottom, where the channel turns to the lower right; stroke 0 is a short upright tick at the lower left, read here as one reed stem. The drawing is placed by two points on the channel's centre line, top and bottom, set on the film's river. The film looks along the river from low down, so the channel is foreshortened: the pose entry _scale (1.6 px per doodle unit) sets the width across the channel so the two banks lie near the water's edges, while the length along the channel comes from the top and bottom points (about 1.06 px per unit). The camera is locked off, so the banks hold still at one size. The reed stem turns about its foot by the pose entry sway (radians, clockwise on screen), timed to the tall reed in front of the water, which leans left at frames 8, 23 and 38 and right at 30 and 45. Nothing else in the drawing moves, because the banks do not move in the film.",
  "root": [
   "top",
   "bottom"
  ],
  "anchors": {
   "top": [
-   103,
+   107,
    40
   ],
   "bottom": [
-   110,
+   107,
    195
   ],
   "reed": [
@@ -173,5 +173,10 @@
     0
    ]
   ]
- ]
+ ],
+ "foreshorten": [
+  0.3,
+  1.4
+ ],
+ "max_tilt": 10
 }

@@ -1,0 +1,1156 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "source": "held still: the pan's SAM outline keeps the same box to within 2 px in all 25 frames and the stove does not move; the 17 px step at frame 5 in camera.json comes from the hand, lid and flames moving, not from the camera"
+ },
+ "planes": [
+  {
+   "id": "stove",
+   "z": 3,
+   "label": "Stove top",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Frying pan"
+  }
+ ],
+ "objects": [
+  {
+   "id": "stove",
+   "plane": "stove",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      0,
+      252
+     ],
+     [
+      60,
+      262
+     ],
+     [
+      160,
+      272
+     ],
+     [
+      260,
+      268
+     ],
+     [
+      384,
+      250
+     ]
+    ]
+   ],
+   "why": "the edge of the stove top under the pan; Quick, Draw! has no stove category, so the agent drew the line where the stove top meets the burner in the frames"
+  },
+  {
+   "id": "burner2",
+   "plane": "stove",
+   "qd": "wheel",
+   "box": [
+    292,
+    226,
+    384,
+    288
+   ],
+   "strokes": 2,
+   "why": "the round grate of the next burner at the bottom right of the frame"
+  },
+  {
+   "id": "lid1",
+   "plane": "char",
+   "class": "lid",
+   "strokes": [
+    [
+     [
+      212.0,
+      41.4
+     ],
+     [
+      206.2,
+      45.5
+     ],
+     [
+      188.7,
+      50.2
+     ],
+     [
+      162.3,
+      55.0
+     ],
+     [
+      130.9,
+      59.0
+     ],
+     [
+      99.5,
+      61.6
+     ],
+     [
+      72.6,
+      62.4
+     ],
+     [
+      54.6,
+      61.4
+     ],
+     [
+      48.0,
+      58.6
+     ],
+     [
+      53.8,
+      54.5
+     ],
+     [
+      71.3,
+      49.8
+     ],
+     [
+      97.7,
+      45.0
+     ],
+     [
+      129.1,
+      41.0
+     ],
+     [
+      160.5,
+      38.4
+     ],
+     [
+      187.4,
+      37.6
+     ],
+     [
+      205.4,
+      38.6
+     ],
+     [
+      212.0,
+      41.4
+     ]
+    ],
+    [
+     [
+      123.0,
+      43.7
+     ],
+     [
+      123.0,
+      37.7
+     ],
+     [
+      137.0,
+      37.7
+     ],
+     [
+      137.0,
+      43.7
+     ]
+    ]
+   ],
+   "visible": [
+    1,
+    1
+   ],
+   "why": "the lid the cook lowers onto the pan, drawn at its place in frame 1; there is no lid category in Quick, Draw!"
+  },
+  {
+   "id": "lid2",
+   "plane": "char",
+   "class": "lid",
+   "strokes": [
+    [
+     [
+      212.5,
+      83.1
+     ],
+     [
+      206.5,
+      88.0
+     ],
+     [
+      188.6,
+      93.5
+     ],
+     [
+      161.4,
+      98.7
+     ],
+     [
+      129.1,
+      102.9
+     ],
+     [
+      96.7,
+      105.5
+     ],
+     [
+      69.0,
+      106.0
+     ],
+     [
+      50.3,
+      104.4
+     ],
+     [
+      43.5,
+      100.9
+     ],
+     [
+      49.5,
+      96.0
+     ],
+     [
+      67.4,
+      90.5
+     ],
+     [
+      94.6,
+      85.3
+     ],
+     [
+      126.9,
+      81.1
+     ],
+     [
+      159.3,
+      78.5
+     ],
+     [
+      187.0,
+      78.0
+     ],
+     [
+      205.7,
+      79.6
+     ],
+     [
+      212.5,
+      83.1
+     ]
+    ],
+    [
+     [
+      121.0,
+      84.3
+     ],
+     [
+      121.0,
+      78.3
+     ],
+     [
+      135.0,
+      78.3
+     ],
+     [
+      135.0,
+      84.3
+     ]
+    ]
+   ],
+   "visible": [
+    2,
+    2
+   ],
+   "why": "the lid the cook lowers onto the pan, drawn at its place in frame 2; there is no lid category in Quick, Draw!"
+  },
+  {
+   "id": "lid3",
+   "plane": "char",
+   "class": "lid",
+   "strokes": [
+    [
+     [
+      239.5,
+      108.1
+     ],
+     [
+      233.0,
+      115.3
+     ],
+     [
+      213.1,
+      122.9
+     ],
+     [
+      182.8,
+      129.8
+     ],
+     [
+      146.8,
+      134.9
+     ],
+     [
+      110.5,
+      137.4
+     ],
+     [
+      79.4,
+      137.0
+     ],
+     [
+      58.4,
+      133.6
+     ],
+     [
+      50.5,
+      127.9
+     ],
+     [
+      57.0,
+      120.7
+     ],
+     [
+      76.9,
+      113.1
+     ],
+     [
+      107.2,
+      106.2
+     ],
+     [
+      143.2,
+      101.1
+     ],
+     [
+      179.5,
+      98.6
+     ],
+     [
+      210.6,
+      99.0
+     ],
+     [
+      231.6,
+      102.4
+     ],
+     [
+      239.5,
+      108.1
+     ]
+    ],
+    [
+     [
+      138.0,
+      106.1
+     ],
+     [
+      138.0,
+      97.6
+     ],
+     [
+      152.0,
+      97.6
+     ],
+     [
+      152.0,
+      106.1
+     ]
+    ]
+   ],
+   "visible": [
+    3,
+    3
+   ],
+   "why": "the lid the cook lowers onto the pan, drawn at its place in frame 3; there is no lid category in Quick, Draw!"
+  },
+  {
+   "id": "lid4",
+   "plane": "char",
+   "class": "lid",
+   "strokes": [
+    [
+     [
+      255.0,
+      149.8
+     ],
+     [
+      248.7,
+      161.6
+     ],
+     [
+      228.7,
+      173.2
+     ],
+     [
+      197.9,
+      182.7
+     ],
+     [
+      161.0,
+      188.8
+     ],
+     [
+      123.7,
+      190.5
+     ],
+     [
+      91.6,
+      187.6
+     ],
+     [
+      69.6,
+      180.5
+     ],
+     [
+      61.0,
+      170.2
+     ],
+     [
+      67.3,
+      158.4
+     ],
+     [
+      87.3,
+      146.8
+     ],
+     [
+      118.1,
+      137.3
+     ],
+     [
+      155.0,
+      131.2
+     ],
+     [
+      192.3,
+      129.5
+     ],
+     [
+      224.4,
+      132.4
+     ],
+     [
+      246.4,
+      139.5
+     ],
+     [
+      255.0,
+      149.8
+     ]
+    ],
+    [
+     [
+      151.0,
+      139.7
+     ],
+     [
+      151.0,
+      125.2
+     ],
+     [
+      165.0,
+      125.2
+     ],
+     [
+      165.0,
+      139.7
+     ]
+    ]
+   ],
+   "visible": [
+    4,
+    4
+   ],
+   "why": "the lid the cook lowers onto the pan, drawn at its place in frame 4; there is no lid category in Quick, Draw!"
+  },
+  {
+   "id": "lid5",
+   "plane": "char",
+   "class": "lid",
+   "strokes": [
+    [
+     [
+      249.5,
+      164.0
+     ],
+     [
+      243.5,
+      176.9
+     ],
+     [
+      223.9,
+      189.4
+     ],
+     [
+      193.6,
+      199.6
+     ],
+     [
+      157.3,
+      205.8
+     ],
+     [
+      120.6,
+      207.2
+     ],
+     [
+      88.9,
+      203.6
+     ],
+     [
+      67.1,
+      195.4
+     ],
+     [
+      58.5,
+      184.0
+     ],
+     [
+      64.5,
+      171.1
+     ],
+     [
+      84.1,
+      158.6
+     ],
+     [
+      114.4,
+      148.4
+     ],
+     [
+      150.7,
+      142.2
+     ],
+     [
+      187.4,
+      140.8
+     ],
+     [
+      219.1,
+      144.4
+     ],
+     [
+      240.9,
+      152.6
+     ],
+     [
+      249.5,
+      164.0
+     ]
+    ],
+    [
+     [
+      147.0,
+      151.6
+     ],
+     [
+      147.0,
+      135.6
+     ],
+     [
+      161.0,
+      135.6
+     ],
+     [
+      161.0,
+      151.6
+     ]
+    ]
+   ],
+   "visible": [
+    5,
+    5
+   ],
+   "why": "the lid the cook lowers onto the pan, drawn at its place in frame 5; there is no lid category in Quick, Draw!"
+  },
+  {
+   "id": "lid",
+   "plane": "char",
+   "class": "lid",
+   "strokes": [
+    [
+     [
+      246.5,
+      168.1
+     ],
+     [
+      240.6,
+      181.0
+     ],
+     [
+      221.2,
+      193.5
+     ],
+     [
+      191.2,
+      203.6
+     ],
+     [
+      155.3,
+      209.8
+     ],
+     [
+      118.9,
+      211.2
+     ],
+     [
+      87.6,
+      207.5
+     ],
+     [
+      66.0,
+      199.4
+     ],
+     [
+      57.5,
+      187.9
+     ],
+     [
+      63.4,
+      175.0
+     ],
+     [
+      82.8,
+      162.5
+     ],
+     [
+      112.8,
+      152.4
+     ],
+     [
+      148.7,
+      146.2
+     ],
+     [
+      185.1,
+      144.8
+     ],
+     [
+      216.4,
+      148.5
+     ],
+     [
+      238.0,
+      156.6
+     ],
+     [
+      246.5,
+      168.1
+     ]
+    ],
+    [
+     [
+      145.0,
+      155.6
+     ],
+     [
+      145.0,
+      139.6
+     ],
+     [
+      159.0,
+      139.6
+     ],
+     [
+      159.0,
+      155.6
+     ]
+    ]
+   ],
+   "visible": [
+    6,
+    24
+   ],
+   "why": "the lid seated on the pan from frame 6 to the end; there is no lid category in Quick, Draw!"
+  },
+  {
+   "id": "flame0",
+   "plane": "char",
+   "class": "flame",
+   "strokes": [
+    [
+     [
+      115,
+      222
+     ],
+     [
+      136.9,
+      161.5
+     ],
+     [
+      148.8,
+      189.0
+     ],
+     [
+      170.7,
+      112.0
+     ],
+     [
+      182.5,
+      189.0
+     ],
+     [
+      204.4,
+      145.0
+     ],
+     [
+      216.2,
+      189.0
+     ],
+     [
+      238.2,
+      123.0
+     ],
+     [
+      250,
+      222
+     ]
+    ]
+   ],
+   "visible": [
+    0,
+    0
+   ],
+   "why": "the flames rising from the pan in frame 0, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set"
+  },
+  {
+   "id": "flame1",
+   "plane": "char",
+   "class": "flame",
+   "strokes": [
+    [
+     [
+      165,
+      222
+     ],
+     [
+      184.5,
+      45.0
+     ],
+     [
+      195.0,
+      168.9
+     ],
+     [
+      214.5,
+      98.1
+     ],
+     [
+      225.0,
+      168.9
+     ],
+     [
+      244.5,
+      62.7
+     ],
+     [
+      255,
+      222
+     ]
+    ]
+   ],
+   "visible": [
+    1,
+    1
+   ],
+   "why": "the flames rising from the pan in frame 1, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set"
+  },
+  {
+   "id": "flame2",
+   "plane": "char",
+   "class": "flame",
+   "strokes": [
+    [
+     [
+      125,
+      222
+     ],
+     [
+      147.3,
+      147.1
+     ],
+     [
+      159.2,
+      189.9
+     ],
+     [
+      181.5,
+      125.7
+     ],
+     [
+      193.5,
+      189.9
+     ],
+     [
+      215.8,
+      168.5
+     ],
+     [
+      227.8,
+      189.9
+     ],
+     [
+      250.0,
+      136.4
+     ],
+     [
+      262,
+      222
+     ]
+    ]
+   ],
+   "visible": [
+    2,
+    2
+   ],
+   "why": "the flames rising from the pan in frame 2, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set"
+  },
+  {
+   "id": "flame3",
+   "plane": "char",
+   "class": "flame",
+   "strokes": [
+    [
+     [
+      225,
+      200
+     ],
+     [
+      243.5,
+      114.5
+     ],
+     [
+      253.5,
+      171.5
+     ],
+     [
+      272.0,
+      152.5
+     ],
+     [
+      282,
+      200
+     ]
+    ]
+   ],
+   "visible": [
+    3,
+    3
+   ],
+   "why": "the flames rising from the pan in frame 3, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set"
+  },
+  {
+   "id": "flame4",
+   "plane": "char",
+   "class": "flame",
+   "strokes": [
+    [
+     [
+      252,
+      192
+     ],
+     [
+      268.2,
+      148.5
+     ],
+     [
+      277.0,
+      165.9
+     ],
+     [
+      293.2,
+      122.4
+     ],
+     [
+      302,
+      192
+     ]
+    ]
+   ],
+   "visible": [
+    4,
+    4
+   ],
+   "why": "the flames rising from the pan in frame 4, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set"
+  },
+  {
+   "id": "flame5",
+   "plane": "char",
+   "class": "flame",
+   "strokes": [
+    [
+     [
+      238,
+      200
+     ],
+     [
+      253.3,
+      120.0
+     ],
+     [
+      261.5,
+      170.0
+     ],
+     [
+      276.8,
+      145.0
+     ],
+     [
+      285,
+      200
+     ]
+    ],
+    [
+     [
+      52,
+      195
+     ],
+     [
+      65.0,
+      164.8
+     ],
+     [
+      72.0,
+      178.5
+     ],
+     [
+      85.0,
+      140.0
+     ],
+     [
+      92,
+      195
+     ]
+    ]
+   ],
+   "visible": [
+    5,
+    5
+   ],
+   "why": "the flames rising from the pan in frame 5, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set"
+  },
+  {
+   "id": "hand1",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    70,
+    0,
+    190,
+    45
+   ],
+   "aspect": 0.8,
+   "strokes": 1,
+   "visible": [
+    1,
+    1
+   ],
+   "why": "the cook's hand that lowers the lid and then moves off to the left"
+  },
+  {
+   "id": "hand2",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    80,
+    0,
+    190,
+    70
+   ],
+   "aspect": 0.8,
+   "strokes": 1,
+   "visible": [
+    2,
+    2
+   ],
+   "why": "the cook's hand that lowers the lid and then moves off to the left"
+  },
+  {
+   "id": "hand3",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    85,
+    0,
+    170,
+    100
+   ],
+   "aspect": 0.8,
+   "strokes": 1,
+   "visible": [
+    3,
+    3
+   ],
+   "why": "the cook's hand that lowers the lid and then moves off to the left"
+  },
+  {
+   "id": "hand4",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    70,
+    0,
+    165,
+    138
+   ],
+   "aspect": 0.8,
+   "strokes": 1,
+   "visible": [
+    4,
+    4
+   ],
+   "why": "the cook's hand that lowers the lid and then moves off to the left"
+  },
+  {
+   "id": "hand5",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    60,
+    0,
+    170,
+    150
+   ],
+   "aspect": 0.8,
+   "strokes": 1,
+   "visible": [
+    5,
+    5
+   ],
+   "why": "the cook's hand that lowers the lid and then moves off to the left"
+  },
+  {
+   "id": "hand6",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    50,
+    0,
+    150,
+    110
+   ],
+   "aspect": 0.8,
+   "strokes": 1,
+   "visible": [
+    6,
+    6
+   ],
+   "why": "the cook's hand that lowers the lid and then moves off to the left"
+  },
+  {
+   "id": "hand7",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    35,
+    0,
+    125,
+    110
+   ],
+   "aspect": 0.8,
+   "strokes": 1,
+   "visible": [
+    7,
+    7
+   ],
+   "why": "the cook's hand that lowers the lid and then moves off to the left"
+  },
+  {
+   "id": "hand8",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    20,
+    0,
+    110,
+    115
+   ],
+   "aspect": 0.8,
+   "strokes": 1,
+   "visible": [
+    8,
+    8
+   ],
+   "why": "the cook's hand that lowers the lid and then moves off to the left"
+  },
+  {
+   "id": "hand9",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    5,
+    0,
+    95,
+    120
+   ],
+   "aspect": 0.8,
+   "strokes": 1,
+   "visible": [
+    9,
+    24
+   ],
+   "why": "the cook's hand that lowers the lid and then moves off to the left"
+  }
+ ],
+ "no_cel": true,
+ "notes": {
+  "0": "flames rise from the pan",
+  "1": "the cook lifts the lid over the pan",
+  "3": "the lid comes down over the flames",
+  "5": "the lid seats on the pan, the last flames at the edges",
+  "6": "the pan sits still under the lid",
+  "12": "the hand moves away to the left",
+  "24": "the pan still under the lid"
+ }
+}

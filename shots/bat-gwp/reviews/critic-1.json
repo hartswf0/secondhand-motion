@@ -1,0 +1,26 @@
+{
+ "seen_animation": "A line-drawn bat (two pointed ears with a notch, hexagonal body, one zigzag-edged wing on its left, right wing folded against the body as a short jagged line) clings at the right edge of a grey tree trunk with two leaves below-right. Frames 1-4: the bat holds near the top, its left wing first spread up-left, then shortened to a horizontal stub by frame 4 while the leaves slide down and out of frame. Frames 5-8: the left wing swings up to a long diagonal again, then lowers to horizontal; the bat stays near the trunk edge, slightly lower. Frames 9-12: the bat drifts left onto the trunk face; the left wing is spread wide and the right wing begins to lift as a small hooked shape. Frames 13-15: the bat hangs left of the trunk edge with the left wing spread and the right wing partly raised. Frame 16: the right wing is raised high beside the head and the left wing has shrunk to a short stub.",
+ "seen_film": "Frame 1 is a different shot (bare branches in fog) that dissolves into the main shot. Frames 2-4: a brown bat clings to the right edge of a pale tree trunk, head up, its left wing and shadow spread as a dark shape to its left, a plant with leaves below-right. Frames 5-8: the camera drifts and the leaves move down out of frame; the bat stays on the trunk edge, shifting its wing and body. Frames 9-12: the bat crawls slightly down and left onto the bark, left wing spread wide, right wing beginning to show at its right side. Frames 13-15: it holds on the bark with both wings partly open. Frame 16: the right wing is raised up beside the head while the left wing remains spread down-left.",
+ "named_subject": "A bat clinging to a tree trunk.",
+ "verdict": "reference stronger",
+ "evidence": "Placement and timing follow the film: the bat starts at the trunk's right edge with leaves below-right (e1-18 vs f3-18), leaves exit around e19-24 as in f19-24, the bat drifts left onto the bark face (e28-33 vs f28-33), and the right wing rises from about e37 and is fully up by e56-62 as in f37-62. The overlay g.png shows one continuous down-left drift with no reversals. Weak points: e1-2 already show the full bat while f1-2 are still the foggy branch shot/dissolve; the left wing changes length abruptly several times (e5->e6 long to stub, e15->e16 stub to tall diagonal, e40->e41 grows, e61->e62 shrinks back to a short stub) while in the film the wing/shadow shape changes more gradually; at e62 the left wing collapses to a stub while f62 still shows it spread wide down-left; e55 the raised right wing appears suddenly as a new shape.",
+ "primary_gap": "The left wing pops between a long spread triangle and a short horizontal stub between single frames (notably e5-6, e15-16, e40-41, e61-62), where the film's wing changes shape gradually and stays spread at the end.",
+ "closes_when": "The left wing's length and angle change over three or more in-between frames at each transition, and in e58-62 it stays spread down-left at the length of e59-60 while the right wing is raised.",
+ "protect": "The doodle's construction (notched pointed ears, hexagonal body, zigzag wing edge, thick black single strokes); the bat's position at the trunk's right edge and its gradual down-left drift; the leaves leaving frame at the film's timing; the right wing lifting in the second half to match the film; the sparse grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  13,
+  16,
+  41,
+  55,
+  62
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character keeps the doodle's ears, hexagonal body and zigzag wing; the folded right wing drawn as a jagged line inside the body edge is an addition not in c.png but reads as the same drawing with the wing closed.",
+ "still_frames_only": true,
+ "_packet": "lot59694e00",
+ "_round": 1
+}

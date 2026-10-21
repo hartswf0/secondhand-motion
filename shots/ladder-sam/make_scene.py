@@ -37,13 +37,15 @@ def man(f):
     st=[]
     st.append([(H+np.array([7*math.cos(a),7.5*math.sin(a)])).tolist() for a in np.linspace(-0.4,2*math.pi-0.1,9)])   # head: one loop, not quite closed
     st.append([N.tolist(),P.tolist()])                                                                                    # body
-    dn=np.array([-0.1,1.0]); dn/=np.hypot(*dn); side=np.array([-dn[1],dn[0]]); W0=P+np.array([-4,0])
-    st.append([(W0+side*10).tolist(),(W0+side*17+dn*34).tolist(),(W0-side*15+dn*34).tolist(),(W0-side*10).tolist()])   # the white wrap, hanging from the waist, fuller behind
-    S=N+ax*3
+    S=N+ax*3; arms=[]; legs=[]
     for limb in ('lh','rh'):
-        q=contact(f,limb); e=joint(S,q,22,lambda z: z[1]); st.append([S.tolist(),e.tolist(),q.tolist()])
+        q=contact(f,limb); e=joint(S,q,22,lambda z: z[1]); arms.append([S.tolist(),e.tolist(),q.tolist()])
     for limb in ('lf','rf'):
-        q=contact(f,limb); k=joint(P,q,40,lambda z: z[0]); st.append([P.tolist(),k.tolist(),q.tolist()])
+        q=contact(f,limb); k=joint(P,q,40,lambda z: z[0]); legs.append([P.tolist(),k.tolist(),q.tolist()])
+    th=np.mean([np.array(l[1])-P for l in legs],0); th/=max(np.hypot(*th),1e-6)   # the wrap hangs over the thighs, sagging behind
+    dn=0.55*th+0.45*np.array([-0.25,1.0]); dn/=np.hypot(*dn); side=np.array([-dn[1],dn[0]])
+    st.append([(P+side*5).tolist(),(P+side*15+dn*30).tolist(),(P-side*14+dn*30).tolist(),(P-side*5).tolist(),(P+side*5).tolist()])        # the white wrap, closed
+    st+=arms+legs
     return [[[round(x-cam[f][0],1),round(y-cam[f][1],1)] for x,y in s] for s in st]
 objs=[
  {"id":"trees","plane":"far","qd":"tree","box":[-10,-10,130,170],"skip":1},

@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A black stick figure with an open bowl-shaped head stands upright on a short, double-lined diving board over a grey pool edge, in front of a grey building with windows, a door and a ladder. In a.png frames 1-5 it stands still with arms down. In frames 6-7 the arms move slightly. In frames 8-9 the arms swing out horizontal. In frames 10-11 the arms come down and one knee bends. In frames 12-13 the arms go up in a V over the head. In frames 14-15 the arms are down again and the knee bends. In frame 16 the arms are up and the board tilts down at the front as the figure springs.",
+ "seen_film": "A man in swim trunks stands at the end of a low diving board in front of a pink pool house, with children beside the ladder and people moving at the left. In d.png frames 1-7 he stands still with arms at his sides. In frames 8-9 he swings his arms out horizontal. In frames 10-11 he drops his arms and bends his knees. In frames 12-13 he swings his arms up overhead. In frames 14-15 he drops them and bends again. In frame 16 his arms are overhead and the board dips under him as he springs.",
+ "named_subject": "a diver (stick figure) bouncing on the end of a diving board",
+ "verdict": "bar met",
+ "evidence": "Judged from still frames only. e.png 1-14 hold still with arms down while f.png 1-14 show the man standing; e.png 15-18 arms horizontal match f.png 15-18; e.png 19-22 arms down with a bent knee match the film's dip at f.png 19-22; e.png 23-26 arms raised overhead match f.png 23-26; e.png 27-30 arms down and knee bent match f.png 27-30; e.png 31 arms up with the board tilted matches the board dip in f.png 31. The figure stays at the same place on the board throughout and g.png shows no lateral jumps, only arm changes about one fixed body. Flaws: in e.png 23-26 the bowl head is replaced by a crossed tangle of lines where the raised arms overlap it, so the head looks redrawn; in e.png 31 the board pops to a tilt in one frame and the grey door at left loses its outline from e.png 29 on.",
+ "primary_gap": "In the raised-arm frames (e.png 23-26 and 31) the open bowl head disappears into crossing arm strokes, so the head pops to a different drawing and back at 27.",
+ "closes_when": "In e.png 23-26 and 31 the same open bowl head stays visible above the shoulders with the raised arms drawn beside it, not through it.",
+ "protect": "The exact timing of the four arm phases (still, horizontal, down-bend, overhead, down-bend, overhead) matched to f.png frame by frame; the fixed position on the board; the bent knee on each dip; the board tilt at the spring; the sparse single-line stick construction and open bowl head from c.png.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  23,
+  31
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The figure keeps the doodle's open bowl head and plain stick body, but the board is a short stub rather than the doodle's long slab, and the head is lost in frames 23-26.",
+ "still_frames_only": true,
+ "_packet": "lot53df8a72",
+ "_round": 1
+}

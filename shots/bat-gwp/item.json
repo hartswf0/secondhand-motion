@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0151",
+ "id": "bat-gwp",
+ "kind": "shot",
+ "title": "Bat, the Giraffe Walks Past Way",
+ "category": "bat",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/bat-gwp/cover.png",
+ "cover_alt": "shots/bat-gwp/frames/f023.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/bat-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#bat-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/bat_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/bat/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/bat-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

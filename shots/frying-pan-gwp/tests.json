@@ -1,0 +1,74 @@
+[
+ {
+  "id": "M2",
+  "value": 19,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   19,
+   20,
+   20,
+   19,
+   19,
+   20
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.67,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 29
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 1.0,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 38 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5503636144652288; scenery drawn by agent: the edge of the stove top under the pan; Quick, Draw! has no stove category, so the agent drew the line where the stove top meets the burner in the frames, quickdraw:5964980560068608, drawn by agent: the lid the cook lowers onto the pan, drawn at its place in frame 1; there is no lid category in Quick, Draw!, drawn by agent: the lid the cook lowers onto the pan, drawn at its place in frame 2; there is no lid category in Quick, Draw!, drawn by agent: the lid the cook lowers onto the pan, drawn at its place in frame 3; there is no lid category in Quick, Draw!, drawn by agent: the lid the cook lowers onto the pan, drawn at its place in frame 4; there is no lid category in Quick, Draw!, drawn by agent: the lid the cook lowers onto the pan, drawn at its place in frame 5; there is no lid category in Quick, Draw!, drawn by agent: the lid seated on the pan from frame 6 to the end; there is no lid category in Quick, Draw!, drawn by agent: the flames rising from the pan in frame 0, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set, drawn by agent: the flames rising from the pan in frame 1, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set, drawn by agent: the flames rising from the pan in frame 2, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set, drawn by agent: the flames rising from the pan in frame 3, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set, drawn by agent: the flames rising from the pan in frame 4, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set, drawn by agent: the flames rising from the pan in frame 5, drawn as pointed tongues where the flames are; no fire category is in the local Quick, Draw! set, quickdraw:6235784304656384, quickdraw:6235784304656384, quickdraw:6235784304656384, quickdraw:6235784304656384, quickdraw:6235784304656384, quickdraw:6235784304656384, quickdraw:6235784304656384, quickdraw:6235784304656384, quickdraw:6235784304656384",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "25/25",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
