@@ -170,14 +170,14 @@
    "plane": "wall",
    "qd": "river",
    "box": [
-    120,
-    95,
-    240,
-    150
+    150,
+    82,
+    262,
+    120
    ],
    "strokes": 1,
    "skip": 2,
-   "why": "a river running down the middle of the wall map, behind where the print is pressed"
+   "why": "a river crossing the wall map just above where the print is pressed"
   },
   {
    "id": "border",
@@ -413,5 +413,6 @@
   "18": "the man on the right points at the print",
   "42": "both men point at places on the print",
   "53": "they reach above the print to the wall map"
- }
+ },
+ "no_cel": "SAM followed the whole wall in the last two frames, so cel paint there erased every line of the scene; the scenery is kept clear of the print instead"
 }

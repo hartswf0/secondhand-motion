@@ -1,5 +1,5 @@
 {
- "note": "Read by eye from every film frame (frame pixels). head and waist: per frame, the head centre and the waist (top of the white wrap, centre); make_scene.py keeps the torso one fixed length and moves the waist onto the drawn ladder's left rail. start and moves: each hand and foot is held where it was put until it moves; a move is [frame lifted, frame put down, target]. On the ground a target is a frame point (already scaled to the drawn ladder). On the ladder a target is ['rung', i, u] (rung i of the drawn ladder from the bottom, u of the way along it from the left rail) or ['rail', r, u] (r 0 left, 1 right, u from the top). Feet climb one rung at a time: the right foot steps up to the next rung and the left foot follows it onto the same rung, so a foot is never more than a leg's length below the waist and never above it. Hands go up the rungs alternately, always on a rung above the shoulders' height or near it, and end on the tops of the two rails, where he stays bent over the ladder (frames 31-37).",
+ "note": "Read by eye from every film frame (frame pixels). head and waist: per frame, the head centre and the waist (top of the white wrap, centre); make_scene.py keeps the torso one fixed length and moves the waist onto the drawn ladder's left rail. start and moves: each hand and foot is held where it was put until it moves; a move is [frame lifted, frame put down, target]. On the ground a target is a frame point (already scaled to the drawn ladder). On the ladder a target is ['rung', i, u] (rung i of the drawn ladder from the bottom, u of the way along it from the left rail) or ['rail', r, u] (r 0 left, 1 right, u from the top). Feet climb one rung at a time: the right foot steps up to the next rung and the left foot follows it onto the same rung, so a foot is never more than a leg's length below the waist and never above it. Hands go up the rungs alternately, always on a rung above the shoulders' height or near it, and end on the tops of the two rails (right hand at frame 24, left at 32); both feet stay on the top-but-one rung, so he ends bent forward over the top of the ladder with his legs down along it (frames 31-37), as the film man does.",
  "head": {
   "0": [
    26,
@@ -425,15 +425,6 @@
      4,
      0.6
     ]
-   ],
-   [
-    32,
-    34,
-    [
-     "rung",
-     5,
-     0.55
-    ]
    ]
   ],
   "rh": [
@@ -511,12 +502,12 @@
     ]
    ],
    [
-    24,
-    26,
+    30,
+    32,
     [
      "rail",
      0,
-     0.04
+     0.03
     ]
    ]
   ]

@@ -1,0 +1,190 @@
+{
+ "category": "lantern",
+ "doodle_key_id": "6354663194492928",
+ "facing": 1,
+ "face_from": [
+  "base",
+  "base"
+ ],
+ "note": "Quick, Draw! lantern 6354663194492928 (Vietnam): stroke 0 is the body, a tall box drawn as one line from the middle of the left side down, across the bottom, up the right side, across the top and back down the left; stroke 1 is the domed cap on top of the box; stroke 2 is a horizontal band across the body; strokes 3 and 4 are two vertical bars inside the body. The whole drawing is placed by two points, the middle of the bottom edge (base) and the middle of the top edge of the box (shoulder), so it rises, sways and tilts with the safety lamp held in the miner's hand. The cap turns a little on its own about the shoulder toward the hook point, as the lamp's bail and hook rock above the cage.",
+ "strokes": [
+  [
+   [
+    19,
+    118
+   ],
+   [
+    18,
+    252
+   ],
+   [
+    23,
+    255
+   ],
+   [
+    39,
+    254
+   ],
+   [
+    129,
+    244
+   ],
+   [
+    147,
+    239
+   ],
+   [
+    152,
+    210
+   ],
+   [
+    152,
+    175
+   ],
+   [
+    136,
+    78
+   ],
+   [
+    7,
+    71
+   ],
+   [
+    9,
+    146
+   ]
+  ],
+  [
+   [
+    4,
+    71
+   ],
+   [
+    4,
+    50
+   ],
+   [
+    7,
+    41
+   ],
+   [
+    26,
+    18
+   ],
+   [
+    62,
+    2
+   ],
+   [
+    88,
+    0
+   ],
+   [
+    110,
+    9
+   ],
+   [
+    123,
+    22
+   ],
+   [
+    132,
+    46
+   ],
+   [
+    138,
+    81
+   ]
+  ],
+  [
+   [
+    0,
+    118
+   ],
+   [
+    133,
+    117
+   ]
+  ],
+  [
+   [
+    64,
+    108
+   ],
+   [
+    60,
+    124
+   ],
+   [
+    60,
+    164
+   ],
+   [
+    60,
+    238
+   ],
+   [
+    64,
+    222
+   ]
+  ],
+  [
+   [
+    96,
+    117
+   ],
+   [
+    106,
+    176
+   ],
+   [
+    106,
+    223
+   ]
+  ]
+ ],
+ "anchors": {
+  "base": [
+   85,
+   250
+  ],
+  "shoulder": [
+   71,
+   75
+  ],
+  "hook": [
+   88,
+   0
+  ]
+ },
+ "root": [
+  "base",
+  "shoulder"
+ ],
+ "size_from_mask": false,
+ "parts": [
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 9,
+   "joint": "shoulder",
+   "aim": [
+    "shoulder",
+    "hook"
+   ],
+   "turn": 0.5
+  },
+  {
+   "rest": true,
+   "joint": "base",
+   "aim": [
+    "base",
+    "shoulder"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "smooth": 1.2,
+ "track": false
+}

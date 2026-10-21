@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A line-drawn bottle/vase (the doodle) stands in frame with a drawn hand reaching in from the lower left, fingertips against the left side of the body. Two marks are drawn on the body: a narrow leaf shape and an oval. In frames 1-4 nothing changes. From frame 5 a new thin mark appears at the left edge behind the fingers, and across frames 5-12 all marks slide slowly to the right: the left mark widens into an oval, the middle leaf moves to centre, and the right oval narrows into a sliver against the right edge. In frames 13-14 the right sliver is gone, leaving two marks, and in frames 15-16 another thin mark appears at the left edge. The vase outline and the hand do not move. This reads as the vase being turned in place so its painted marks rotate from left to right.",
+ "seen_film": "A painted wide bowl on a foot sits in the lower half of the frame; a person's hand at the lower left holds and turns it. The bowl stays in place while its painted pattern (pointed leaf shapes and a round medallion) travels continuously from left to right as it rotates: the round medallion on the right moves to the right edge and goes out of view around frames 9-12, and a second medallion comes into view on the left from about frame 9 and moves right through frame 16. The hand stays at the left but its fingers and thumb shift as it turns the bowl. The rotation is steady from the first frame to the last.",
+ "named_subject": "A vase/bottle (the doodle) being turned in place by a hand, standing in for the film's painted bowl.",
+ "verdict": "reference stronger",
+ "evidence": "Judged from still frames only, not playback. Direction and event match: in e.png the marks travel left to right as the film's pattern does, foreshortening plausibly (left mark widens over 9-24, right mark narrows to a sliver over 17-31). But e.png frames 1-8 hold the two marks completely still while f.png frames 1-8 already show the medallion and leaves moving right; the turn does not start until frame 9. At frame 9 a new mark pops in at the left edge fully formed as a doubled vertical sliver overlapping the fingertips (absent in 8). At frame 32 the right-edge sliver, present in 31, vanishes in one frame instead of thinning to nothing. At frame 34 another left-edge sliver pops in (absent in 33). The hand is identical in every frame, while the film's hand fingers shift as it turns the bowl. g.png shows the marks as a dense band of small even steps, confirming the drift between 9 and 31 is continuous apart from those entries and exits.",
+ "primary_gap": "The rotation stalls for frames 1-8 while the film is already turning, and marks enter and leave the visible side by popping in or out in a single frame (9, 32, 34) instead of rotating into and out of view.",
+ "closes_when": "The marks move rightward by a small step from frame 1 to frame 2 onward, and each mark entering at the left edge or leaving at the right edge thins from or to a single line over several frames, so no mark appears or disappears between two consecutive frames.",
+ "protect": "The vase outline drawn exactly as the doodle in c.png and held steady; the single-weight wobbly stroke style of the added marks; the left-to-right travel direction matching the film; the foreshortening of marks (wide in the middle, narrow at the edges); the hand placement at lower left matching the film's hand position.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  9,
+  32,
+  34
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The vase body, neck, lip and open baseline match c.png's drawing and stroke closely; the only additions are the painted marks and hand, drawn in the same plain line, so identity holds.",
+ "still_frames_only": true,
+ "_packet": "lot38a62517",
+ "_round": 1
+}
