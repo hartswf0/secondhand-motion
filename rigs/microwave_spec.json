@@ -1,0 +1,287 @@
+{
+ "category": "microwave",
+ "doodle_key_id": "6562342215090176",
+ "facing": 1,
+ "face_from": [
+  "left",
+  "left"
+ ],
+ "size_from_mask": false,
+ "note": "Quick, Draw! microwave 6562342215090176, drawn from the front: stroke 0 is the left side of the cabinet, stroke 1 the top, stroke 2 the right side, stroke 3 the bottom with a small hook at its right end; stroke 5 is the window of the door, stroke 4 a short line on the window's right edge, stroke 6 the knob. The cabinet (strokes 0 to 3) is placed by two points, the top of its left side and the top of its right side, and does not move, because the camera and the appliance in the film are still. The door is the window, its edge line and the knob (strokes 4, 5, 6). In the film the door is hinged on the right side of the cabinet and a hand pulls it open from the left until it stands edge-on toward the camera. Seen from the front, a door swinging on a right-hand hinge gets narrower toward the hinge line, so the rig narrows strokes 4, 5 and 6 toward the line of stroke 2 (the right side) by the pose entry door_w: 1 is shut, at full width; 0.11 is open and edge-on, a thin sliver against the right side. The value at each key is the film door's free edge, measured as a share of the way from the hinge to the left side of the cabinet.",
+ "root": [
+  "left",
+  "right"
+ ],
+ "anchors": {
+  "left": [
+   2,
+   9
+  ],
+  "right": [
+   243,
+   15
+  ],
+  "hinge_top": [
+   243,
+   15
+  ],
+  "hinge_bot": [
+   249,
+   130
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 1,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 2,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 2,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 5,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 1,
+   "joint": "hinge_top",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "fold": "door_w",
+   "axis": [
+    "hinge_top",
+    "hinge_bot"
+   ]
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 9,
+   "joint": "hinge_top",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "fold": "door_w",
+   "axis": [
+    "hinge_top",
+    "hinge_bot"
+   ]
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 7,
+   "joint": "hinge_top",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "fold": "door_w",
+   "axis": [
+    "hinge_top",
+    "hinge_bot"
+   ]
+  }
+ ],
+ "strokes": [
+  [
+   [
+    2,
+    9
+   ],
+   [
+    1,
+    102
+   ]
+  ],
+  [
+   [
+    13,
+    1
+   ],
+   [
+    169,
+    0
+   ],
+   [
+    240,
+    10
+   ]
+  ],
+  [
+   [
+    243,
+    15
+   ],
+   [
+    249,
+    62
+   ],
+   [
+    249,
+    130
+   ]
+  ],
+  [
+   [
+    12,
+    124
+   ],
+   [
+    51,
+    126
+   ],
+   [
+    220,
+    151
+   ],
+   [
+    248,
+    150
+   ],
+   [
+    255,
+    146
+   ],
+   [
+    250,
+    142
+   ]
+  ],
+  [
+   [
+    170,
+    37
+   ],
+   [
+    168,
+    82
+   ]
+  ],
+  [
+   [
+    169,
+    43
+   ],
+   [
+    128,
+    40
+   ],
+   [
+    61,
+    42
+   ],
+   [
+    61,
+    55
+   ],
+   [
+    70,
+    78
+   ],
+   [
+    70,
+    96
+   ],
+   [
+    74,
+    97
+   ],
+   [
+    118,
+    95
+   ],
+   [
+    162,
+    97
+   ],
+   [
+    165,
+    57
+   ]
+  ],
+  [
+   [
+    195,
+    51
+   ],
+   [
+    189,
+    54
+   ],
+   [
+    187,
+    61
+   ],
+   [
+    187,
+    74
+   ],
+   [
+    189,
+    78
+   ],
+   [
+    212,
+    79
+   ],
+   [
+    215,
+    76
+   ],
+   [
+    218,
+    59
+   ]
+  ]
+ ],
+ "options": {
+  "size": "steady",
+  "smooth": 1.5,
+  "track": true
+ },
+ "size": "steady",
+ "smooth": 1.5,
+ "track": true
+}

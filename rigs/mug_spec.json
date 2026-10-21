@@ -6,7 +6,7 @@
   "rim_o",
   "rim_h"
  ],
- "note": "Quick, Draw! mug 6337386839539712 (DE), drawn from the side with the handle on the right, shown mirrored so the handle is on the left. Stroke 0 is the inner rim ellipse, stroke 1 the outer rim ellipse, stroke 2 the right side of the body (the side the handle is on), stroke 3 the other side of the body, stroke 4 the base, stroke 5 the handle. The film shows a white beaker-like cup seen from above, looking into its rim, with a pinched lip on the left that swings round to the lower left as the cup tumbles; the doodle's handle stands for that lip. The whole drawing is placed by the two ends of the rim (rim_h at the handle and lip side, rim_o at the far side), which sets its position, size and turn. The two rim strokes open toward a round rim by the pose value open (1 is the doodle's own ellipse, more is rounder), because the film looks down into the rim. The body, base and handle fold toward the rim line by the pose value depth (1 is the doodle's full height), because seen from above the body is foreshortened to a short band below the rim.",
+ "note": "Quick, Draw! mug 6337386839539712 (DE), drawn from the side with the handle on the right, shown mirrored so the handle is on the left. Stroke 0 is the inner rim ellipse, stroke 1 the outer rim ellipse, stroke 2 the right side of the body (the side the handle is on), stroke 3 the other side of the body, stroke 4 the base, stroke 5 the handle. The film shows a white beaker-like cup seen from above, looking into its rim, with a pinched lip on the left that swings round to the lower left as the cup tumbles; the doodle's handle stands for that lip. The whole drawing is placed by the two ends of the rim (rim_h at the handle and lip side, rim_o at the far side), which sets its position, size and turn. The two rim strokes open toward a round rim by the pose value open (1 is the doodle's own ellipse, more is rounder), because the film looks down into the rim. The body, base and handle fold toward the rim line by the pose value depth (1 is the doodle's full height), because seen from above the body is foreshortened to a short band below the rim. The handle also turns about the rim centre by the pose value swing (radians, clockwise on screen), because in the film the lip travels around the rim (from the upper left, down to the lower left, and back to the left) while the body keeps pointing to the lower right. The rim ends are keyed on the rim diameter square to the body, so the body always hangs toward the side where the film shows the cup's outside and lettering.",
  "strokes": [
   [
    [
@@ -322,6 +322,10 @@
    1,
    48
   ],
+  "rim_c": [
+   90.5,
+   42
+  ],
   "base": [
    85,
    232
@@ -421,7 +425,7 @@
    "stroke": 5,
    "from": 0,
    "to": 17,
-   "joint": "rim_h",
+   "joint": "rim_c",
    "aim": [
     "rim_h",
     "rim_o"
@@ -431,7 +435,8 @@
    "axis": [
     "rim_h",
     "rim_o"
-   ]
+   ],
+   "spin": "swing"
   }
  ],
  "size": "steady",

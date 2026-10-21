@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A black line-drawn boxy vehicle (side view, slanted front at right, arched wheel opening, chimney with two smoke squiggles, small diamond wheels, a small step bracket at the front-right corner) sits at left on a ground line, with grey scenery behind: clouds, a tall building outline at right, a low grey vehicle and power lines. A black stick figure stands at right. Over frames 1-8 the vehicle slowly grows and edges right toward the figure while the figure stands still. From about frame 7-8 the figure starts stepping left toward the vehicle's front corner. In frames 9-12 the figure leans in, reaches an arm to the vehicle's slanted front and lifts a leg toward the step. In frames 13-16 the figure is up on the step at the front-right corner, standing upright against the vehicle while the vehicle keeps growing and the tall building fades out.",
+ "seen_film": "A dark switcher locomotive numbered 53 faces the camera head-on and approaches slowly, growing in the frame across all 16 frames, while a white building at right and a red work car behind are gradually covered by it. A man in dark clothes stands to the right of the locomotive in frames 1-8. Around frames 9-10 he crouches and moves toward the locomotive's front-right corner, in frames 11-12 he grabs the handrail and steps up, and in frames 13-16 he is standing on the front step at the right corner, riding the locomotive as it keeps approaching.",
+ "named_subject": "A smoke-puffing boxy vehicle (standing in for the locomotive) and a stick-figure man who boards it at its front corner.",
+ "verdict": "bar met",
+ "evidence": "a.png 1-8 / d.png 1-8: vehicle grows slowly and the man stands at right in both. e.png 17-19 figure standing as in f.png 17-19; e.png 20-28 figure walks left to the front corner (film's man starts moving visibly around f.png 25-27, so the animation starts about 4-5 frames early). e.png 29-34 figure crouches with one foot lifted and arm reaching to the slanted front, matching f.png 29-34 where the man crouches and grabs the rail. e.png 36-50 figure stands on the step at the front-right corner, matching f.png 37-50 where the man rides the front step. g.png shows the vehicle growing in a steady, even series with no gaps or reversals, and the figure's heads moving in a short continuous arc. Small pops: e.png 34->35 the legs change from a wide reaching stance to a folded crouch in one frame, and 35->36 the head jumps up and both feet land on the step in one frame. Judged from still frames only, not playback.",
+ "primary_gap": "The step-up itself happens in about one frame (e.png 35 to 36), so the climb onto the step reads as a pop rather than the film's gradual pull up over f.png 33-38.",
+ "closes_when": "The figure's head rises and the feet transfer onto the step across 3-4 in-between frames spanning e.png 34-38 instead of between 35 and 36, and the walk toward the vehicle starts near e.png 24 rather than e.png 20.",
+ "protect": "The vehicle's steady, even growth and rightward drift that matches the locomotive's approach; the vehicle keeping the doodle's wobbly outline, chimney with two smoke squiggles, arched wheel opening and small diamond wheels; the stick figure's single-stroke construction and constant size; the figure's crouch-and-reach at the front corner and ending on the step; scenery staying grey and fading as the vehicle covers it.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  35,
+  36
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The vehicle keeps the doodle's outline, chimney, smoke squiggles and diamond wheels, but adds a vertical divider line not in c.png and shifts the arch toward the rear, which makes it look slightly redrawn rather than the identical doodle.",
+ "still_frames_only": true,
+ "_packet": "lotb82212a5",
+ "_round": 4
+}

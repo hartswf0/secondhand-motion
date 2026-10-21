@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A line-drawn basket (oval rim, tapered body, one arched handle) hangs in the middle of a grey-line scene with a tree, a small basket on a table at left, and a table with a basket at right. In frames 1-4 the handle is a narrow upright loop seen end-on and the basket is small and centred. In frames 5-8 the basket grows slightly and the handle loop widens. In frames 9-14 the basket is larger, moves left and down, its bottom goes out of frame, and the handle is a wide arch seen side-on. In frames 15-16 the handle narrows back to an upright loop and then a thin tilted loop, as if the basket has turned back toward its first orientation.",
+ "seen_film": "A hand holds a woven basket by its handle in front of seated people. In frames 1-4 the basket hangs with the handle seen end-on, the two handle strands close together. In frames 5-8 the basket turns and moves slightly right and down, the handle beginning to open out. In frames 9-14 the basket is turned so the handle is a full arch seen from the side, the basket is larger in frame and sits low and left with its bottom near the frame edge. In frames 15-16 the basket turns back so the handle is again seen end-on as two close strands.",
+ "named_subject": "A woven basket with one arched handle, turning on its handle.",
+ "verdict": "bar met",
+ "evidence": "e.png 1-16: handle is a narrow end-on loop and basket drifts right and down slightly, matching f.png 1-16 where the handle strands are together and the basket sways. e.png 17-24: handle loop widens step by step while the basket grows, matching f.png 17-24 where the handle opens out. e.png 25-44: handle is a full side-on arch, basket large and low-left with the bottom cropped from 31 on, matching f.png 25-44. e.png 45-50: handle narrows back to an upright loop and at 49-50 to a thin tilted loop, matching f.png 45-50 where the basket turns back end-on. g.png shows one continuous path that moves left-down then returns right with no reversal the film lacks. The largest single-frame change is 48 to 49 where the arch narrows sharply, but the film also narrows its handle quickly across 47-49.",
+ "primary_gap": "The turn back at the end is compressed: the handle stays a fairly wide arch through e.png 48 and then collapses to a narrow loop at 49, while the film starts narrowing visibly from 46.",
+ "closes_when": "The handle width in e.png 45-49 decreases in roughly equal steps so that 47-48 already show a medium-narrow loop and 49 is no more than one step narrower than 48.",
+ "protect": "The doodle's construction (open oval rim with the small hooked ends at left and right, tapered body, single-line arched handle), the slow end-on to side-on to end-on turn timed to the film, the leftward and downward drift with growing size, and the steady grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  49
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The basket keeps the doodle's single-stroke rim, hooked rim ends and single arched handle; the only departure is that in the end-on frames the handle becomes a thin pinched loop, which the doodle never shows but which is a reasonable rotation of it.",
+ "still_frames_only": true,
+ "_packet": "lot3bc5eb53",
+ "_round": 2
+}

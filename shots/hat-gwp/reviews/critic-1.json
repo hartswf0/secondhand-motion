@@ -1,0 +1,25 @@
+{
+ "seen_animation": "A line-drawn bowler-style hat (round crown, band, wide upturned-edge brim) sits level near the top centre in frame 1. Over frames 2-4 it slides right and up so the crown top leaves the frame. In frames 5-7 it drops lower, shrinks into the right half and tilts clockwise, with only the brim and band visible and the crown mostly cropped off the top and right edges. In frames 8-12 it stays in the right half, tilted about 30 degrees clockwise, the crown's right side appearing and disappearing at the frame edge; two parallel grey diagonal lines (scenery) appear at the left in frames 8-11 and then vanish. In frames 13-15 the hat comes down into the middle of the frame, still tilted, with the full rounded crown visible. In frame 16 it jumps back up and right with the crown cut off by the top edge again.",
+ "seen_film": "Close shot of a man in a white bucket hat and blue hooded sweatshirt, head bowed, seated against orange and grey gear with a silver pole beside him. Frames 1-5: the hat is upper centre-right, his head tilts down-right while he holds a pair of glasses on a cord near the pole. Frames 6-12: the camera and head lean further right; the hat moves to the upper right, tilted clockwise, and he fiddles with the glasses using both hands, with the pole running diagonally behind. Frames 13-16: the angle steepens, the hat fills the upper right, he looks down at the cord and drawstring of his sweatshirt in his hands. The hat stays in the upper right and changes gradually, with no sudden jumps.",
+ "named_subject": "A brimmed hat (the doodle of a hat), standing in for the man's white bucket hat",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-8: hat moves right and tilts gradually, matching the film's hat drifting right in f.png 1-8. e.png 8->9: the hat drops about a third of a frame and shrinks, the crown disappears, while in f.png 8->9 the hat stays in the upper right. e.png 9-13: crown right side missing, then e.png 14 crown edge reappears together with the grey pole lines that pop in at once (f.png shows the pole continuously from frame 2). e.png 22->23: grey pole lines vanish in one frame while the pole is still in f.png 23-24. e.png 24->25: the hat drops and its crown suddenly appears as a closed rounded dome lower in the frame; f.png 24->25 has no such change. e.png 25-31: hat sits lower-centre with full crown while the film's hat stays in the upper right. e.png 31->32: the hat jumps up and right and the crown is cut off again, a position pop the film does not have. g.png shows the path doubling back on itself (late frames 25-31 well below and left of frames 19-24, then 32 back up) instead of a single drift right and down.",
+ "primary_gap": "The hat's position jumps vertically at frames 8->9, 24->25 and 31->32, so the shot reads as three separate placements instead of the film's one continuous drift to the upper right.",
+ "closes_when": "The hat's centre moves smoothly frame to frame toward the upper right as in f.png, with the crown cropped consistently by the top edge and no vertical drop at 9, 25 or rise at 32.",
+ "protect": "The hat is drawn exactly in the c.png construction (dome crown, double band line crossing the crown sides, rounded-end brim with the small hook at the left) and keeps the same stroke weight and polygonal curves; the gradual clockwise tilt in frames 1-24 matches the film's head lean; frames 1-8 move smoothly.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  9,
+  14,
+  23,
+  25,
+  32
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hat keeps the doodle's construction and stroke habits throughout; only its placement jumps, not its drawing.",
+ "still_frames_only": true,
+ "_packet": "lot1dbfbdb4",
+ "_round": 1
+}

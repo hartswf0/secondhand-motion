@@ -1,0 +1,79 @@
+[
+ {
+  "id": "M2",
+  "value": 17,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   53,
+   38,
+   39,
+   17,
+   9,
+   7,
+   5,
+   5,
+   5,
+   5,
+   5
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.72,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 54
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 1.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "7 strokes, 34 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6562342215090176; scenery drawn by agent: no Quick, Draw! category is an oven tray; these are the four trays stacked at the left of the oven's inside, at x 48 to 112 and y 103 to 186 in the footage, which show once the door has swung past them",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

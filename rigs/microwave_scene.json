@@ -1,0 +1,192 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "source": "held still. The shared camera.json reads jumps of up to 45 px, but the top edge of the cabinet (row 66 to 67 in every frame) and its left edge (column 3 to 7) do not move in the footage; that measure followed the swinging door, so it is not used."
+ },
+ "planes": [
+  {
+   "id": "inside",
+   "z": 2.2,
+   "label": "Inside the oven: the rack of trays"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Microwave oven"
+  }
+ ],
+ "objects": [
+  {
+   "id": "trays",
+   "plane": "inside",
+   "class": "rack of trays",
+   "visible": [
+    4,
+    37
+   ],
+   "why": "no Quick, Draw! category is an oven tray; these are the four trays stacked at the left of the oven's inside, at x 48 to 112 and y 103 to 186 in the footage, which show once the door has swung past them",
+   "strokes": [
+    [
+     [
+      50,
+      103
+     ],
+     [
+      51,
+      114
+     ],
+     [
+      110,
+      113
+     ],
+     [
+      109,
+      104
+     ]
+    ],
+    [
+     [
+      49,
+      126
+     ],
+     [
+      50,
+      137
+     ],
+     [
+      111,
+      136
+     ],
+     [
+      110,
+      127
+     ]
+    ],
+    [
+     [
+      49,
+      150
+     ],
+     [
+      50,
+      161
+     ],
+     [
+      111,
+      160
+     ],
+     [
+      110,
+      151
+     ]
+    ],
+    [
+     [
+      50,
+      174
+     ],
+     [
+      51,
+      185
+     ],
+     [
+      110,
+      184
+     ],
+     [
+      109,
+      175
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the door is shut and a hand takes it at its left edge",
+  "6": "the door swings open toward the right; the trays inside show at the left",
+  "12": "the door is half open, its handle in the middle of the cabinet",
+  "18": "the door is nearly edge-on against the right side",
+  "24": "the door stands open at the right side and the inside of the oven is in full view"
+ },
+ "no_cel": "SAM covers the whole cabinet and the open door together in most frames, so cel paint from the masks would cover the trays and the inside"
+}

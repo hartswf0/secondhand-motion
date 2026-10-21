@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A black stick figure with a flat oval head stands upright on a short board on a cup-shaped pedestal, in front of grey scenery (two window frames, a door, a ladder/rail shape, a zigzag roofline, a water line). In a.png frames 1-7 it stands still with arms hanging. Frames 8-9 the arms swing out to horizontal. Frames 10-11 the arms come down and the knees bend. Frames 12-13 the arms swing out and up into a V. Frame 14 arms are horizontal again, frame 15 arms down and knees bent, frame 16 arms up in a V and the board tips down at its right end as the figure springs. The figure never leaves its spot on the board.",
+ "seen_film": "A man in swim trunks stands on a diving board seen from the front, in front of a pink building with a dark door, two windows, a rail and a ladder, with other swimmers moving on the deck at left and right. Frames 1-7 he stands still with arms down. Frames 8-9 he raises his arms out sideways. Frames 10-11 he lowers his arms and bends his knees. Frames 12-13 he swings his arms up and out. Frames 14-15 he lowers his arms and crouches. Frame 16 he springs upward with arms raised in a V and the board end dips. He stays at the same spot on the board throughout.",
+ "named_subject": "A diver on a diving board doing arm-swing preparation bounces before springing off the board.",
+ "verdict": "bar met",
+ "evidence": "e.png 1-14 hold still with arms down while f.png 1-14 also hold. e.png 15-18 arms go out to horizontal, matching f.png 15-18 arms spreading. e.png 19-22 arms drop and knees bend (20-21), matching f.png 19-22 crouch. e.png 23-26 arms rise into a V, matching f.png 23-26. e.png 27 arms horizontal and 28-30 arms down with bent knee, matching f.png 27-30. e.png 31 arms up in a V and the board tilts down at the right, matching f.png 31 where the man springs and the board dips. g.png shows the figure anchored at one spot with only limbs fanning, the same as the film, where the diver does not travel across the frame. Horizontal position (about the middle-left third, over the pedestal) matches the film's diver in every frame. Judged from still frames only, not playback.",
+ "primary_gap": "The arm changes are carried in large single-frame steps (e.g. e.png 16 to 17 arms go from short diagonals to a full horizontal span, 23 to 24 from horizontal to a raised V, 30 to 31 from down to a raised V with the board tilting at once), so the swings may read as pose-to-pose pops rather than continuous swings.",
+ "closes_when": "Frames 16-17, 23-24 and 30-31 show an in-between arm angle (about halfway between the neighbouring poses) and the board tilt at 31 begins with a smaller dip at 30, so each arm swing sweeps through intermediate angles across two frames.",
+ "protect": "The exact timing alignment with the film (long still hold through frame 14, arm-out at 15-18, crouch at 19-22, arm-up at 23-26, crouch at 28-30, spring at 31); the figure fixed in place on the board as in the film; the board dip at the spring; the doodle's flat oval head, single-line torso and straight-line limbs; the sparse grey scenery that mirrors the film's door, windows, rail and roofline.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  17,
+  24,
+  31
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The figure keeps the doodle's flat oval head and thin line body, but the board is drawn as a short front-on slab on a cup pedestal instead of the doodle's long side-view rectangle with a post at its left end, and the figure is larger relative to the board than in c.png.",
+ "still_frames_only": true,
+ "_packet": "lot179741c5",
+ "_round": 4
+}

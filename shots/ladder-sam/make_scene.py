@@ -12,7 +12,11 @@ MK=json.load(open(sys.argv[1]))
 def series(name):
     a=np.array([MK[name][str(f)] for f in range(n)],float)
     b=a.copy(); b[1:-1]=0.25*a[:-2]+0.5*a[1:-1]+0.25*a[2:]   # light smoothing of the by-eye readings
-    return b
+    # on the ladder (frame 8 on) each push is spread over its neighbours so the body rises a few px a frame, not in jumps
+    w=np.exp(-0.5*(np.arange(-4,5)/1.6)**2); c=b.copy()
+    for f in range(8,n):
+        idx=np.clip(np.arange(f-4,f+5),0,n-1); ww=w*(idx>=6); c[f]=(b[idx]*ww[:,None]).sum(0)/ww.sum()
+    return c
 HEAD,WAIST=series('head'),series('waist')
 # The drawn ladder is shorter than the film's (its top is at y 51 where the film's runs out of the frame), so every
 # reading is scaled about the ladder's foot so that the climb ends on the drawn ladder with the head inside the frame.
@@ -35,23 +39,32 @@ def snap(q,lim=30,rungs=False):
             d=b-a; t=np.clip(np.dot(q-a,d)/max(np.dot(d,d),1e-9),0,1); c=a+d*t; dd=np.hypot(*(q-c))
             if dd<bd: best,bd=c,dd
     return best
+STEP=12.0   # at most about half a rung spacing (the rungs are ~30 px apart) per frame for a hand or foot
 def contact(f,limb):
-    p=fit(MK['start'][limb]); onl=limb in('lf','rf')
+    p=fit(MK['start'][limb]); onl=limb in('lf','rf'); last=-99
     for f0,f1,q in MK['moves'][limb]:
         q=fit(q); q=snap(q,rungs=onl) if q[1]<270 else q
+        if f1>=8: f0=max(min(f0,f1-math.ceil(np.hypot(*(q-p))/STEP)),last)   # a long reach is lifted earlier so it travels over more frames
+        last=f1
         if f>=f1: p=q; continue
         if f>f0:
-            t=(f-f0)/(f1-f0); t=t*t*(3-2*t); lift=math.sin(math.pi*t)*5
+            t=(f-f0)/(f1-f0); t=0.5*t+0.5*t*t*(3-2*t); lift=math.sin(math.pi*t)*5
             d=q-p; nd=np.array([d[1],-d[0]])/max(np.hypot(*d),1e-6)   # the limb swings out from the ladder a little on the way
             return p+d*t+nd*lift*(1 if nd[0]<0 else -1)
         break
     return p
-def joint(p,q,L,prefer):
-    d=q-p; D=np.hypot(*d)
-    if D>=2*L-0.5: return (p+q)/2
-    h=math.sqrt(L*L-(D/2)**2); m=(p+q)/2; nrm=np.array([-d[1],d[0]])/D
+PREV={}
+def joint(p,q,L,prefer,key=None):
+    # the elbow or knee: keeps a slight bend even at full reach, and stays on the side it was on in the previous frame
+    d=q-p; D=max(np.hypot(*d),1e-6); D2=min(D,2*L*0.96)
+    h=math.sqrt(L*L-(D2/2)**2); m=(p+q)/2; nrm=np.array([-d[1],d[0]])/D
     a,b=m+nrm*h,m-nrm*h
-    return a if prefer(a)>=prefer(b) else b
+    pick=a if prefer(a)>=prefer(b) else b
+    if key in PREV:
+        o=PREV[key]; alt=b if pick is a else a
+        if np.hypot(*(alt-o))+12<np.hypot(*(pick-o)): pick=alt
+    PREV[key]=pick
+    return pick
 def man(f):
     H,P=HEAD[f],WAIST[f]
     ax=(P-H)/np.hypot(*(P-H)); N=H+ax*9; pr=np.array([-ax[1],ax[0]])
@@ -60,12 +73,14 @@ def man(f):
     st.append([N.tolist(),P.tolist()])                                                                                    # body
     S=N+ax*3; arms=[]; legs=[]
     for limb in ('lh','rh'):
-        q=contact(f,limb); e=joint(S,q,24,lambda z: z[1]); arms.append([S.tolist(),e.tolist(),q.tolist()])
+        q=contact(f,limb); e=joint(S,q,24,lambda z: z[1],limb); arms.append([S.tolist(),e.tolist(),q.tolist()])
     Q={l:contact(f,l) for l in ('lf','rf')}
     w=np.clip((Q['rf'][0]-Q['lf'][0])/10,-1,1)               # seen from behind, each leg hangs from the hip on the side its foot is on (eased, so the legs never cross)
     for limb,sg in (('lf',w),('rf',-w)):
         q=Q[limb]; Hp=P-np.array([1.0,0.0])*5*sg
-        k=joint(Hp,q,36,lambda z: z[0]+0.8*z[1]); legs.append([Hp.tolist(),k.tolist(),q.tolist()])   # the knee goes forward to the ladder, never up past the hip
+        D=np.hypot(*(q-Hp))
+        if D>70: q=Hp+(q-Hp)*70/D   # a foot left behind by a push comes up off its rung rather than the leg stretching
+        k=joint(Hp,q,36,lambda z: z[0]+0.8*z[1],limb); legs.append([Hp.tolist(),k.tolist(),q.tolist()])   # the knee goes forward to the ladder, never up past the hip
     th=np.mean([np.array(l[1])-np.array(l[0]) for l in legs],0); th/=max(np.hypot(*th),1e-6)
     dn=0.5*th+0.5*np.array([0.0,1.0]); dn/=np.hypot(*dn); side=np.array([-dn[1],dn[0]])   # the wrap hangs down over the tops of the thighs
     st.append([(P+side*8).tolist(),(P+side*13+dn*19).tolist(),(P-side*13+dn*19).tolist(),(P-side*8).tolist(),(P+side*8).tolist()])        # the white wrap, closed: a short band round the hips

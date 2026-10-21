@@ -1,0 +1,24 @@
+{
+ "seen_animation": "a.png: A black-line door with a window, a lower panel stroke and a hexagonal knob stands center-left; a black stick figure stands to its right with one arm reaching to the knob (frames 1-4). From frame 5 the door narrows from its right side toward a fixed left hinge, showing it swinging open, while the stick figure keeps its hand on the knob and moves left with the door edge (5-8). In frames 9-10 the door is a narrow sliver and the stick figure steps into the gap right of the door edge, its head partly cut by the edge in 10. In frame 11 the figure is gone and the door begins to widen again; frames 12-16 show the door back at full width, closed, knob on its right edge. Grey scenery (a coat/wall at left, a second door frame with a round knob at right) stays fixed throughout.",
+ "seen_film": "d.png: A woman in a pink smock with her back to the camera stands at a white door with a curtained window (frames 1-4), reaching to the knob. In frames 5-8 she pulls the door open toward the left, revealing a dark/yellow doorway on its right side, and steps into it holding the knob. In frames 9-10 she passes through the gap, partly hidden by the door edge; by frame 11 only a sliver of her remains and the door starts closing. Frames 12-16 show the door swinging back and resting closed with the knob on its right; the hall, coats and a second door at right stay fixed.",
+ "named_subject": "A door (the doodle's paneled door with window and hexagonal knob) being opened and closed, operated by a stick figure who walks out through it.",
+ "verdict": "bar met",
+ "evidence": "Judged from still frames only, not playback. e.png 1-8 vs f.png 1-8: figure at the knob, door leaf still wide, matching the woman reaching for the knob. e.png 9-16: door width shrinks steadily from the right edge (about full width at 8 to a narrow strip by 15-16) while the hand stays on the knob, matching the film's opening in f.png 9-16. e.png 17-20: figure steps into the gap right of the door edge and is cut by the edge (head clipped at 20), matching the woman passing through in f.png 17-21. e.png 21-22: figure is gone, matching f.png 22-23 where she has left. e.png 22-28: door widens step by step back to full width; f.png 22-25 shows the door closing, so the animation closes about 2-3 frames later than the film but in the same order. e.png 28-32: door closed and holding, matching f.png 26-32. g.png shows one leftward path with no reversals. Small faults: e.png 4-5 the forearm folds back over the knob into a 'V' that reads as an extra stroke; e.png 16-19 the figure's legs reduce to one broken, jagged line; e.png 20 the head is half drawn and the body line overlaps the door edge for one frame.",
+ "primary_gap": "The stick figure's legs break apart while walking through the gap (e.png 16-19: one leg vanishes, the other becomes a jagged segment) and its head is sliced at 20, so the exit reads as the figure falling apart rather than walking behind the door edge.",
+ "closes_when": "In e.png 15-21 the figure keeps two straight legs in an alternating step and is hidden progressively by the door edge as a clean occlusion line (whole head, then half, then gone) instead of losing strokes.",
+ "protect": "The door drawn exactly in the doodle's construction (open-cornered outline, slanted window, short lower panel stroke, small hexagonal knob) and its steady narrowing on a fixed left hinge then widening back; the timing of open (9-16), exit (17-21) and close (22-28) that follows the film; the fixed grey scenery; the knob staying on the door's moving right edge.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  5,
+  16,
+  17,
+  20
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The door is the c.png drawing with its own window, panel stroke and hexagonal knob; only when it narrows does the window become a thin slot whose strokes double slightly (e.png 15-18), which is acceptable foreshortening.",
+ "still_frames_only": true,
+ "_packet": "lot423cd4dd",
+ "_round": 3
+}

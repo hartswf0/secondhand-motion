@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A single popsicle drawn in black line (rounded-top bar, a short flat line across the base, a small tick mark at the lower right corner, a short rounded stick) hangs tilted about 30 degrees to the right, centred slightly left of the frame, over a grey perspective grid floor with three grey cloud outlines in the sky. In frames 1-10 nothing changes. From frame 11 thin grey vertical-line curtains enter from the left and right edges, and by frame 16 they have closed in to cover about a quarter of the frame on each side. The popsicle stays exactly the same drawing, in the same place, at the same angle in all 16 frames.",
+ "seen_film": "A chocolate-coated ice-cream bar on a stick floats in front of a pastel sky with clouds above a checkerboard floor. In frames 1-2 the faded 'ESKIMO PIE' lettering sits behind it and the bar is tilted further over (about 45-50 degrees) and slightly lower and further left. By frame 3 the lettering is gone and the bar has rotated more upright (about 30-35 degrees) and moved slightly up and to the right, where it then holds with very little movement through frame 16. From frame 11 blue striped curtains slide in from both edges and by frames 15-16 they cover roughly the outer quarter of the frame on each side.",
+ "named_subject": "A popsicle / ice-cream bar on a stick (the Eskimo Pie bar).",
+ "verdict": "reference stronger",
+ "evidence": "g.png shows one single drawing with all frame labels stacked at the same centre: the animated popsicle does not move at all across frames 1-26 of e.png. In f.png frames 1-4 the film's bar visibly rotates from about 45-50 degrees of tilt to about 30-35 degrees and shifts up and right as the logo fades; e.png frames 1-4 show the popsicle already at its final angle and position, so the opening settle is missing. From f.png frame 5 to 26 the film mostly holds, and e.png matches that hold. The curtains match the film in timing: a thin edge appears at e.png 19 (film 18-19), and they close to about a quarter of the frame per side by 25-26 (film 25-26). No jumps, doubling or size changes appear in the animation, because nothing in the character moves.",
+ "primary_gap": "The popsicle is a frozen drawing for the whole shot, so it misses the film's opening move in frames 1-4, where the bar rotates more upright and drifts up and to the right, and it has none of the slight float the film's bar has.",
+ "closes_when": "In e.png frames 1-4 the popsicle starts tilted about 15-20 degrees further clockwise, slightly lower and further left, and rotates and drifts over those frames into its current pose by about frame 4-5, with g.png then showing a short arc of overlaid drawings instead of one stacked drawing.",
+ "protect": "The doodle's construction (tall rounded-top bar, flat crossbar line at the base, small tick at the lower right corner, short rounded stick drawn with a few loose strokes), its constant size and line weight, its placement and final tilt, which match the film's hold from frame 5 on, and the curtain timing and scenery layout, which already match the film.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated popsicle is the c.png doodle (same rounded top, base crossbar with overhang on the left, tick mark at the lower right, short rounded stick) rotated to the film's angle; it carries no added detail.",
+ "still_frames_only": true,
+ "_packet": "lot6dab7192",
+ "_round": 1
+}
