@@ -1,0 +1,24 @@
+{
+ "seen_animation": "Frames 1-4: a closed book drawn as a tilted rectangle with short dash lines on its face, a long diagonal line running off to the lower left, and a grey sheet of paper behind at top left; a small scalloped hand rises from the bottom edge to the lower right corner of the book. Frames 5-6: the hand grips the lower right edge and the top cover lifts, drawn as a second slanted panel over the book. Frame 7: the cover stands up along the spine and the hand moves with it to the upper left; an open right-hand page appears under it. Frames 8-9: the cover has swung over to the left as a large left page, the hand at its upper left corner leaving the frame. Frames 10-16: an open two-page book with a doubled spine line and dash lines on both pages holds still; the grey paper is reduced to a short line at the top.",
+ "seen_film": "Frames 1-4: a black binder labelled Federal Reserve Regulations sits closed on a desk with a white sheet behind it; a hand enters from the lower right and takes hold of the cover's lower right edge. Frames 5-6: the hand lifts the cover quickly (motion blur), swinging it up and to the left, exposing the printed first page. Frames 7-8: the cover and first leaves stand upright on the left, the hand at their top left, while the right page lies open. Frames 9-16: the leaves fall open to the left, the hand leaves at upper left, and the open book holds with only small settling of the pages.",
+ "named_subject": "A book (thick binder) being opened by a hand, drawn in the doodle's open-book style.",
+ "verdict": "reference stronger",
+ "evidence": "The event and timing match the film: e.png 1-6 the hand reaches the lower right corner while f.png 1-6 shows the hand gripping the same corner; e.png 7-11 the cover lifts and stands at the spine as in f.png 7-11; e.png 12-15 the hand exits upper left while the left page settles, as in f.png 12-16; e.png 16-26 hold the open book as the film holds. The breaks are in the middle of the turn: e.png 8-9 the lifted cover is drawn as a second outline overlapping the closed book's outline with crossing dash lines, so the book reads doubled; e.png 9 to 10 the cover collapses from a wide panel to a thin sliver pointing upper right while a full right page with dash lines appears at once under it; e.png 11 to 12 the cover jumps from upright at the spine to a full left page bent far to the left, and the hand jumps from the spine area to the top left edge in one step; e.png 14-15 the hand shrinks to a fragment at the frame edge rather than moving off. g.png shows the cover/hand path skipping from the centre to the far upper left between drawings 10 and 13. In e.png 1-3 the hand starts cut off at the bottom edge, whereas the film's hand is already on the lower right of the cover.",
+ "primary_gap": "The cover turn in e.png 9-12 is drawn as three unrelated states (overlapping double outline, thin sliver with a popped-in right page, then a full left page) instead of one panel rotating about the spine.",
+ "closes_when": "Between e.png 8 and 13 the cover is one quadrilateral of constant size hinged on the spine line, its free edge passing through intermediate angles each frame (narrowing as it stands upright, widening as it lands left), with the right page's dash lines revealed gradually under it and the hand staying attached to the cover's moving edge.",
+ "protect": "The event timing that matches the film (reach in frames 1-6, lift 7-11, fall left 12-15, hold 16-26); the final open book, which matches c.png's construction with the doubled spine line extending below the pages and short dash lines on each page; the consistent book position and scale before and after the turn; the plain line weight.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  9,
+  10,
+  12,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The open book matches c.png's doubled spine and dash-line pages; the added scalloped hand and the closed-cover stage are not in the doodle but use its simple line habit, so they do not break identity.",
+ "still_frames_only": true,
+ "_packet": "lote0c852ff",
+ "_round": 7
+}

@@ -19325,7 +19325,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201cA ladder leaning against a slope (the doodle), held still while a stick figure climbs it, standing in for the film's man climbing a haystack ladder.\u201d; motion broken; follows the film: yes",
+    "value": "named \u201cA ladder (the doodle in c.png) leaning against a haystack, with a stick figure climbing it as the man in the film does.\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": true
    },
@@ -20780,7 +20780,7 @@
     "ok": null
    },
    "M6": {
-    "value": 24.1,
+    "value": 21.8,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
@@ -20815,7 +20815,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201cAn ice cream cone (dome scoop on a triangle cone) with a rope of soft-serve being dispensed onto it.\u201d; motion broken; follows the film: partly",
+    "value": "named \u201cAn ice cream cone (scoop on a cone) receiving a rope of soft-serve cream.\u201d; motion smooth; follows the film: yes",
     "unit": "",
     "ok": false
    },
@@ -23590,8 +23590,8 @@
    "wave 5"
   ],
   "t": {
-   "pass": 9,
-   "fail": 3,
+   "pass": 8,
+   "fail": 4,
    "total": 20
   },
   "r": {
@@ -23601,22 +23601,22 @@
     "ok": false
    },
    "M2b": {
-    "value": 0.67,
+    "value": 0.24,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-    "ok": true
+    "ok": false
    },
    "M3": {
-    "value": 0.44,
+    "value": 0.49,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 9.4,
+    "value": 13.0,
     "unit": "px jerk (drawing centre)",
     "ok": false
    },
    "T3": {
-    "value": "11 strokes, 40 vertices, every frame",
+    "value": "11 strokes, 75 vertices, every frame",
     "unit": "",
     "ok": true
    },
@@ -23646,7 +23646,7 @@
     "ok": true
    },
    "J1": {
-    "value": "named \u201cAn open book (a two-page spread with a center spine and text-line marks), shown first closed and then opened by a hand.\u201d; motion broken; follows the film: yes",
+    "value": "named \u201cA book (thick binder) being opened by a hand, drawn in the doodle's open-book style.\u201d; motion broken; follows the film: yes",
     "unit": "",
     "ok": true
    },

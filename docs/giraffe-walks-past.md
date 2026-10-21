@@ -394,7 +394,7 @@ The goal for this wave was fifty new subjects that a blind critic passes on all 
   footage (f.png) and the drawings overlaid on one panel (g.png). The critic reads frame-to-frame jumps from these
   instead of from a 16-frame strip.
 - **Drawn keys and repairs.** When a critic named a gap, a repair agent drew keys over the footage
-  (`shots/<slug>/drawn/`) or changed the scene, then a fresh blind critic judged it again. 140 critic verdicts
+  (`shots/<slug>/drawn/`) or changed the scene, then a fresh blind critic judged it again. 142 critic verdicts
   were written in all.
 - **What repairs learned** (now in the drawing instructions): keep each stroke's point count so resampling does not
   flicker corners; draw a key on every rig key frame; turn a rigid part by rotating one fixed shape, never by
@@ -404,7 +404,7 @@ The goal for this wave was fifty new subjects that a blind critic passes on all 
 
 Result: **54 subjects pass** (bar met, identity met, motion 4 or 5). 5 score 5
 (fish, baseball-bat, umbrella, popsicle, cell-phone). The rest score 4.
-1 did not pass after repeated rounds and are reported as they stand: book (5 rounds, motion 3). In each the critic still sees one gap: the timing of a fast event spread or bunched against the film, or a part that changes shape in one frame.
+1 did not pass after repeated rounds and are reported as they stand: book (7 rounds, motion 3). In each the critic still sees one gap: the timing of a fast event spread or bunched against the film, or a part that changes shape in one frame.
 
 Stated plainly: the critics judge still frames, not playback. Their requests sometimes conflict between rounds
 (one critic asked the apple to shrink at the end, the next said the film's apple does not shrink), and the
@@ -468,4 +468,4 @@ doodle's own left claw.
 | wine-bottle | 1 | bar met | 4 | bar met |
 | wine-glass | 1 | bar met | 4 | bar met |
 | yoga | 2 | bar met | 4 | bar met |
-| book | 5 | reference stronger | 3 | bar met |
+| book | 7 | reference stronger | 3 | bar met |
