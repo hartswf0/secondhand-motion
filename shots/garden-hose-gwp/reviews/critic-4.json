@@ -1,0 +1,21 @@
+{
+ "seen_animation": "a.png: a black-line hose (the doodle: two parallel lines arcing from upper left over to the right, then down to a ring cuff with short dangling lines under it) sits over a grey machine drawing with a spoked wheel. In frame 1 a small set of black finger loops shows at the right edge. In frames 2-3 a hand drawn as stacked finger loops with two lines for the wrist enters from the upper right. In frame 4 it has moved down-left onto the hose near the top of its downward run. In frames 5-16 the hand stays wrapped on the hose at that spot, and the hose and hand shift only a few pixels.",
+ "seen_film": "d.png: a black rubber hose runs from a fitting on top of a grey pump/reel, arcs over to the right and down out of the bottom of the frame. In frame 1 a hand is barely visible at the right edge. In frames 2-3 an open hand comes in from the upper right. In frame 4 it reaches the hose, and by frames 5-6 it has closed around the hose on the right side of the arc. In frames 7-16 the hand holds the hose there with small movements, and the hose shape stays nearly the same.",
+ "named_subject": "A hose with a ring-cuffed end (the doodle), gripped by a hand coming in from the right",
+ "verdict": "bar met",
+ "evidence": "The order of events matches the film. e.png 1: finger loops at the right edge, as in f.png 1, where a sliver of hand shows. e.png 2-6: the hand comes in from the upper right and moves toward the hose, matching the approach in f.png 2-6. e.png 7: the hand closes on the hose at about the height of the film's grip, as in f.png 7-8. e.png 8-38: the hand holds the hose with only small shifts, as in f.png 8-38, where the hand holds with small movements. The hose keeps the doodle's construction in every frame: two parallel lines, an angular bend, a ring cuff and broken dangling lines. g.png shows one short path: an entry from the right (1 to 4), then a tight cluster with no reversals. The largest change between consecutive frames is e.png 6 to 7, where the hand drops onto the hose and the wrist lines stretch from one line into two parallel lines. The film makes this same move across f.png 6-7, so it reads as fast rather than as a redraw. Judged from still frames only, not playback.",
+ "primary_gap": "From e.png 8 to 38 the hose barely responds to the grip: the film hose stays nearly the same too, but the film hand slides and adjusts slightly, while the drawn hose outline shimmers by a few pixels without any directed motion.",
+ "closes_when": "In e.png 8-38 the hand and the section of hose under it move together by the same small amount and in the same direction as the film hand (a slight drift up and right), while the hose fitting at the upper left stays fixed instead of jittering.",
+ "protect": "Keep the doodle's hose construction (parallel double line, angular bend, ring cuff, dangling broken strokes), the event timing (enter at 1-6, grip at 7, hold through 38), the grip placement on the right side of the arc, and the sparse grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  7
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hose matches c.png in line weight, bend shape, ring cuff and dangling strokes. The only addition is the hand, which is drawn in a compatible loop-and-line style.",
+ "still_frames_only": true,
+ "_packet": "lotd275f884",
+ "_round": 4
+}

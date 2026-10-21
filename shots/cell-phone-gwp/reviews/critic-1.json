@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A black-line doodle of a cordless phone (antenna at top left, earpiece slot with two small marks, a cap line, five block-shaped keypad cells, a bottom band with a round button) lies on a diagonal, top-left to bottom-right, among scattered grey hand-drawn stars. In frame 1 it is large and its top is cut by the top edge. Across frames 2-16 it steadily gets smaller and settles toward the middle of the frame, its top moving down from the edge, while its tilt becomes slightly more upright. The stars stay in place; a few extra grey stars appear near the phone in the later frames (around frames 9 and 12).",
+ "seen_film": "A beige cordless phone with an antenna floats on a diagonal against a black star field, with the blue text (912) 757-3000 over it. In frame 1 the phone is large with its top near the top edge. Through frames 2-16 it slowly recedes: it shrinks, its top moves down into the frame, it ends near the centre, and it turns a little toward upright. Stars twinkle. In frame 16 the phone number text fades out.",
+ "named_subject": "A cordless telephone handset with an antenna, receding diagonally through a star field.",
+ "verdict": "bar met",
+ "evidence": "e.png 1-50 against f.png 1-50: in both, the phone starts large with its top at the upper edge (e1 / f1) and shrinks continuously toward frame centre (e25 / f25 about two-thirds size; e50 / f50 smallest, centred slightly left of middle). The diagonal tilt eases toward upright at a similar rate in both. Consecutive e.png frames change size and position by small even amounts with no frame where the drawing jumps back, doubles or holds while the film moves; g.png shows evenly spaced nested outlines with no gaps or reversals. The only pops are scenery: grey stars appear near the phone's right side at e25 and e35 and near its lower right around e41, which the film's twinkling stars only loosely correspond to. The film's text overlay and its fade (f48-50) have no counterpart, which is acceptable since the overlay is not the character. Judged from still frames only, not playback.",
+ "primary_gap": "Grey scenery stars appear abruptly next to the phone at e25, e35 and e41 instead of being present from the start or appearing as gradual twinkles, which reads as a pop around the character.",
+ "closes_when": "The stars near the phone are visible from e1 (or fade in over several frames), so no new grey mark appears suddenly beside the phone in any single frame.",
+ "protect": "The doodle's construction from c.png (antenna line, earpiece marks, five blocky keypad cells, bottom band with round button, single-weight black strokes); the steady continuous shrink and recentering matched to the film's timing; the gentle turn toward upright; the sparse hand-drawn grey star field.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 5,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png phone doodle with the same parts and stroke habits, only rotated onto the film's diagonal; no identity gap is visible.",
+ "still_frames_only": true,
+ "_packet": "lot1c32d61d",
+ "_round": 1
+}
