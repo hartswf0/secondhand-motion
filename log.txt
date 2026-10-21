@@ -1,0 +1,54 @@
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Device set to use cpu
+You are using a model of type sam2_video to instantiate a model of type sam2. This is not supported for all configurations of models and can yield errors.
+Device set to use cpu
+0 dino 0.94 0.952 23732 10s
+1 dino 0.94 0.953 23267 20s
+2 dino 0.93 0.952 22787 30s
+3 dino 0.93 0.952 22377 40s
+4 dino 0.82 0.953 21815 50s
+5 dino 0.89 0.951 21286 60s
+6 dino 0.94 0.949 20992 69s
+7 dino 0.94 0.946 20192 79s
+8 dino 0.94 0.944 19629 89s
+9 dino 0.47 0.943 18992 100s
+10 dino 0.39 0.944 18658 110s
+11 dino 0.51 0.948 18462 119s
+12 dino 0.48 0.949 18078 129s
+13 dino 0.44 0.946 17598 139s
+14 dino 0.43 0.945 17082 149s
+15 dino 0.42 0.945 16694 159s
+16 dino 0.44 0.943 16643 169s
+17 dino 0.45 0.945 16470 179s
+18 dino 0.43 0.94 16171 189s
+19 dino 0.43 0.937 15824 199s
+20 dino 0.61 0.942 15827 208s
+21 dino 0.53 0.945 15737 218s
+22 dino 0.48 0.95 15505 228s
+23 dino 0.50 0.95 15104 238s
+24 dino 0.45 0.949 14845 248s
+25 dino 0.87 0.948 14497 258s
+26 dino 0.90 0.942 14017 268s
+27 dino 0.93 0.943 13798 278s
+28 dino 0.94 0.945 13487 288s
+29 dino 0.95 0.943 13242 297s
+30 dino 0.94 0.938 12879 307s
+31 dino 0.95 0.939 12821 317s
+32 dino 0.95 0.933 12427 327s
+33 dino 0.95 0.931 11867 337s
+34 dino 0.95 0.932 11743 347s
+35 dino 0.94 0.931 11592 357s
+36 dino 0.94 0.933 11400 367s
+37 dino 0.95 0.93 11163 377s
+38 dino 0.95 0.926 10860 387s
+39 dino 0.95 0.928 10939 397s
+40 dino 0.94 0.931 10781 407s
+41 dino 0.93 0.93 10450 417s
+42 dino 0.94 0.928 10142 427s
+43 dino 0.94 0.922 9627 437s
+44 dino 0.91 0.917 9397 447s
+45 dino 0.91 0.922 9430 457s
+46 dino 0.93 0.921 9481 467s
+47 dino 0.93 0.932 9410 478s
+48 dino 0.95 0.96 9489 488s
+49 dino 0.95 0.962 9369 498s
