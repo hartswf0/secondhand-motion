@@ -1,0 +1,417 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.07,
+   -0.04,
+   -0.0,
+   -0.12,
+   -0.25,
+   -0.26,
+   -0.4,
+   0.03,
+   0.04,
+   -0.04,
+   0.05,
+   -0.11,
+   -0.25,
+   -0.31,
+   -0.31,
+   -0.34,
+   -0.41,
+   -0.24,
+   -0.14,
+   -0.21,
+   -0.17,
+   -0.59,
+   -0.6,
+   -0.52,
+   -0.48,
+   -0.51,
+   -0.36,
+   -0.06,
+   -0.03,
+   -0.05,
+   0.13,
+   0.08,
+   0.72,
+   0.79,
+   0.76,
+   0.54,
+   0.89,
+   0.8,
+   0.83,
+   0.66,
+   0.71,
+   0.57,
+   0.51,
+   -0.04,
+   0.8,
+   0.75,
+   0.9,
+   0.77,
+   0.56,
+   1.06,
+   0.68,
+   0.82,
+   0.58,
+   -0.16,
+   0.23
+  ],
+  "y": [
+   -0.0,
+   -0.29,
+   -0.17,
+   -0.26,
+   -0.25,
+   -0.32,
+   -0.27,
+   -0.3,
+   -0.18,
+   -0.17,
+   -0.19,
+   -0.37,
+   -0.71,
+   -0.61,
+   -0.27,
+   -0.25,
+   -0.22,
+   -0.29,
+   -0.09,
+   0.09,
+   0.19,
+   0.07,
+   -0.03,
+   0.05,
+   0.08,
+   -0.05,
+   -0.05,
+   -0.27,
+   -0.01,
+   -0.04,
+   -0.07,
+   -0.21,
+   -0.32,
+   -0.11,
+   -0.02,
+   0.08,
+   -0.02,
+   -0.07,
+   -0.11,
+   -0.3,
+   -0.42,
+   -0.24,
+   -0.17,
+   -0.12,
+   -0.14,
+   0.15,
+   0.07,
+   0.01,
+   0.06,
+   -0.29,
+   -0.25,
+   0.12,
+   0.4,
+   0.33,
+   0.13,
+   0.11
+  ],
+  "source": "phase correlation on the wall above the men's heads (rows 5-85, columns 40-340); shots/map-sam/camera.json was not used because it followed the men's arms and drifted 14 px while the wall stays within 1 px"
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 2.4,
+   "label": "Wall map",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "men",
+   "z": 2.1,
+   "label": "The two men"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Map print"
+  }
+ ],
+ "objects": [
+  {
+   "id": "river1",
+   "plane": "wall",
+   "qd": "river",
+   "box": [
+    40,
+    20,
+    190,
+    105
+   ],
+   "strokes": 2,
+   "why": "the large wall map behind the men is drawn with branching rivers across its upper half"
+  },
+  {
+   "id": "river2",
+   "plane": "wall",
+   "qd": "river",
+   "box": [
+    230,
+    15,
+    375,
+    95
+   ],
+   "strokes": 2,
+   "skip": 1,
+   "why": "the rivers on the right half of the wall map"
+  },
+  {
+   "id": "river3",
+   "plane": "wall",
+   "qd": "river",
+   "box": [
+    120,
+    95,
+    240,
+    150
+   ],
+   "strokes": 1,
+   "skip": 2,
+   "why": "a river running down the middle of the wall map, behind where the print is pressed"
+  },
+  {
+   "id": "border",
+   "plane": "wall",
+   "class": "map border",
+   "strokes": [
+    [
+     [
+      8,
+      10
+     ],
+     [
+      380,
+      6
+     ]
+    ]
+   ],
+   "why": "the top edge of the wall map is a ruled line; no Quick, Draw! category is a single ruled line"
+  },
+  {
+   "id": "manL",
+   "plane": "men",
+   "class": "man",
+   "strokes": [
+    [
+     [
+      14.9,
+      155.7
+     ],
+     [
+      13.1,
+      139.0
+     ],
+     [
+      16.9,
+      122.9
+     ],
+     [
+      25.7,
+      110.1
+     ],
+     [
+      37.9,
+      103.0
+     ],
+     [
+      51.3,
+      102.8
+     ],
+     [
+      63.7,
+      109.5
+     ],
+     [
+      72.7,
+      122.0
+     ],
+     [
+      76.8,
+      138.0
+     ],
+     [
+      75.3,
+      154.7
+     ],
+     [
+      68.5,
+      169.2
+     ],
+     [
+      57.4,
+      178.9
+     ],
+     [
+      44.2,
+      182.0
+     ],
+     [
+      31.1,
+      178.0
+     ],
+     [
+      20.5,
+      167.7
+     ]
+    ],
+    [
+     [
+      0,
+      200
+     ],
+     [
+      30,
+      184
+     ],
+     [
+      60,
+      182
+     ],
+     [
+      85,
+      200
+     ]
+    ],
+    [
+     [
+      60,
+      190
+     ],
+     [
+      72,
+      240
+     ],
+     [
+      78,
+      288
+     ]
+    ]
+   ],
+   "why": "the man on the left, seen in profile facing the map: head, shoulders and the edge of his jacket; Quick, Draw! has no person in profile, and its face doodles are drawn from the front"
+  },
+  {
+   "id": "manR",
+   "plane": "men",
+   "class": "man",
+   "strokes": [
+    [
+     [
+      333.0,
+      152.0
+     ],
+     [
+      329.7,
+      170.2
+     ],
+     [
+      320.6,
+      184.8
+     ],
+     [
+      307.3,
+      192.9
+     ],
+     [
+      292.7,
+      192.9
+     ],
+     [
+      279.4,
+      184.8
+     ],
+     [
+      270.3,
+      170.2
+     ],
+     [
+      267.0,
+      152.0
+     ],
+     [
+      270.3,
+      133.8
+     ],
+     [
+      279.4,
+      119.2
+     ],
+     [
+      292.7,
+      111.1
+     ],
+     [
+      307.3,
+      111.1
+     ],
+     [
+      320.6,
+      119.2
+     ],
+     [
+      329.7,
+      133.8
+     ],
+     [
+      333.0,
+      152.0
+     ]
+    ],
+    [
+     [
+      262,
+      200
+     ],
+     [
+      285,
+      192
+     ],
+     [
+      320,
+      194
+     ],
+     [
+      350,
+      205
+     ],
+     [
+      384,
+      215
+     ]
+    ],
+    [
+     [
+      270,
+      200
+     ],
+     [
+      262,
+      250
+     ],
+     [
+      258,
+      288
+     ]
+    ]
+   ],
+   "why": "the man on the right, seen from behind and turned toward the map: head, collar and the line of his jacket; drawn by agent for the same reason"
+  }
+ ],
+ "notes": {
+  "0": "the man on the left brings the print in, held tilted in his right hand",
+  "4": "he turns it level as he lifts it to the wall",
+  "12": "the print is pressed flat on the wall map",
+  "18": "the man on the right points at the print",
+  "42": "both men point at places on the print",
+  "53": "they reach above the print to the wall map"
+ }
+}

@@ -1,0 +1,337 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -0.49,
+   -0.49,
+   -0.67,
+   -0.67,
+   6.07,
+   5.87,
+   6.06,
+   5.81,
+   6.01,
+   0.24,
+   0.24,
+   0.24,
+   0.24,
+   -0.62,
+   -0.62,
+   -0.46,
+   -2.28,
+   -2.28,
+   -2.28,
+   -2.28,
+   -3.87,
+   -5.55,
+   -8.42,
+   -6.98,
+   -5.16,
+   -0.58,
+   1.66,
+   3.31,
+   4.1,
+   4.62,
+   5.53
+  ],
+  "y": [
+   0.0,
+   0.77,
+   0.77,
+   0.81,
+   0.81,
+   9.29,
+   8.28,
+   8.38,
+   11.08,
+   12.04,
+   12.07,
+   12.07,
+   12.07,
+   12.07,
+   11.23,
+   11.23,
+   11.22,
+   12.93,
+   12.93,
+   12.93,
+   12.93,
+   14.53,
+   15.82,
+   17.0,
+   16.45,
+   18.26,
+   17.89,
+   17.55,
+   18.11,
+   19.95,
+   20.29,
+   20.27
+  ],
+  "source": "shots/eye-sam/camera.json, measured shift of the whole frame; the shot is a hand-held close-up that drifts down by about 20 px"
+ },
+ "planes": [
+  {
+   "id": "skin",
+   "z": 2.2,
+   "label": "Brow, lid crease and cheek, on the same face as the eye"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Eye"
+  }
+ ],
+ "objects": [
+  {
+   "id": "brow",
+   "plane": "skin",
+   "class": "eyebrow",
+   "strokes": [
+    [
+     [
+      30,
+      92
+     ],
+     [
+      70,
+      62
+     ],
+     [
+      120,
+      44
+     ],
+     [
+      170,
+      36
+     ],
+     [
+      220,
+      34
+     ],
+     [
+      270,
+      42
+     ],
+     [
+      315,
+      58
+     ],
+     [
+      350,
+      80
+     ]
+    ],
+    [
+     [
+      32,
+      96
+     ],
+     [
+      52,
+      78
+     ]
+    ],
+    [
+     [
+      48,
+      84
+     ],
+     [
+      68,
+      66
+     ]
+    ],
+    [
+     [
+      74,
+      68
+     ],
+     [
+      94,
+      50
+     ]
+    ],
+    [
+     [
+      94,
+      61
+     ],
+     [
+      114,
+      43
+     ]
+    ],
+    [
+     [
+      124,
+      52
+     ],
+     [
+      144,
+      34
+     ]
+    ],
+    [
+     [
+      144,
+      49
+     ],
+     [
+      164,
+      31
+     ]
+    ],
+    [
+     [
+      174,
+      46
+     ],
+     [
+      194,
+      28
+     ]
+    ],
+    [
+     [
+      194,
+      45
+     ],
+     [
+      214,
+      27
+     ]
+    ],
+    [
+     [
+      224,
+      46
+     ],
+     [
+      244,
+      28
+     ]
+    ],
+    [
+     [
+      244,
+      49
+     ],
+     [
+      264,
+      31
+     ]
+    ],
+    [
+     [
+      273,
+      55
+     ],
+     [
+      293,
+      37
+     ]
+    ],
+    [
+     [
+      291,
+      62
+     ],
+     [
+      311,
+      44
+     ]
+    ],
+    [
+     [
+      316,
+      72
+     ],
+     [
+      336,
+      54
+     ]
+    ],
+    [
+     [
+      330,
+      81
+     ],
+     [
+      350,
+      63
+     ]
+    ]
+   ],
+   "why": "The grey eyebrow arches over the eye across the top of the frame. Quick, Draw! has no eyebrow category, so the brow is one drawn arc with short slanted hairs along it, as the film's brow hairs slant up to the right."
+  },
+  {
+   "id": "crease",
+   "plane": "skin",
+   "class": "lid crease",
+   "strokes": [
+    [
+     [
+      200,
+      96
+     ],
+     [
+      260,
+      100
+     ],
+     [
+      315,
+      115
+     ],
+     [
+      350,
+      135
+     ],
+     [
+      372,
+      158
+     ]
+    ]
+   ],
+   "why": "The fold of the upper lid runs above the eye on the right, where the skin catches light. No Quick, Draw! category is a skin fold, so it is one drawn line."
+  },
+  {
+   "id": "cheek",
+   "plane": "skin",
+   "class": "cheek edge",
+   "strokes": [
+    [
+     [
+      215,
+      288
+     ],
+     [
+      245,
+      250
+     ],
+     [
+      285,
+      218
+     ],
+     [
+      330,
+      203
+     ],
+     [
+      384,
+      190
+     ]
+    ]
+   ],
+   "why": "The lit cheek meets the dark under-eye in a clear edge across the lower right of the frame. No Quick, Draw! category fits a cheek, so it is one drawn line."
+  }
+ ],
+ "notes": {
+  "1": "the eye is narrow, a small light on the right of the pupil",
+  "10": "the small light has gone",
+  "13": "a reflection appears left of the pupil",
+  "16": "the reflection is large",
+  "31": "the eye is at its widest"
+ }
+}

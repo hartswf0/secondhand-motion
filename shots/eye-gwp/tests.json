@@ -1,0 +1,82 @@
+[
+ {
+  "id": "M2",
+  "value": 73,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   65,
+   65,
+   78,
+   65,
+   91,
+   84,
+   77,
+   76,
+   70,
+   71,
+   69,
+   69,
+   66
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.86,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 73
+ },
+ {
+  "id": "M3",
+  "value": 0.32,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.3
+ },
+ {
+  "id": "M6",
+  "value": 6.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 42 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5110430580080640; scenery drawn by agent: The grey eyebrow arches over the eye across the top of the frame. Quick, Draw! has no eyebrow category, so the brow is one drawn arc with short slanted hairs along it, as the film's brow hairs slant up to the right., drawn by agent: The fold of the upper lid runs above the eye on the right, where the skin catches light. No Quick, Draw! category is a skin fold, so it is one drawn line., drawn by agent: The lit cheek meets the dark under-eye in a clear edge across the lower right of the frame. No Quick, Draw! category fits a cheek, so it is one drawn line.",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

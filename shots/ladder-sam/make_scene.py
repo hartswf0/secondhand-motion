@@ -60,8 +60,9 @@ def contact(f,limb):
         q=target(q)
         if f>=f1: p=q; continue
         if f>f0:
-            t=(f-f0)/(f1-f0); t=t*t*(3-2*t); lift=math.sin(math.pi*t)*4
-            return p+(q-p)*t+np.array([-0.4,-1.0])*lift   # the hand or foot comes off the rung a little, out from the ladder, on the way
+            t=(f-f0)/(f1-f0); t=t*t*(3-2*t); lift=math.sin(math.pi*t)
+            out={'lf':(-1.6,-4.0),'rf':(-1.6,-4.0),'lh':(-10.0,-3.0),'rh':(10.0,-2.0)}[limb]   # a foot comes up off its rung; a hand swings out to its own side, clear of the head
+            return p+(q-p)*t+np.array(out)*lift
         break
     return p
 PREV={}
@@ -101,7 +102,7 @@ def man(f):
     st+=hand([N,P])                                                                                                   # body: one line
     S=N+ax*3
     for limb in ('lh','rh'):
-        q=contact(f,limb); sg=-1 if limb=='lh' else 1; e=joint(S,q,30,lambda z,sg=sg: z[1]+sg*0.5*z[0]); st+=hand([S,e,q])   # the elbow hangs down and out on its own side (left elbow left, right elbow right)
+        q=contact(f,limb); sg=-1 if limb=='lh' else 1; e=joint(S,q,30,lambda z,sg=sg: z[1]+sg*0.3*z[0]); st+=hand([S,e,q])   # the elbow hangs down and out on its own side (left elbow left, right elbow right)
     for limb,sg in (('lf',1),('rf',-1)):
         q=contact(f,limb); Hp=P-np.array([2.5*sg,0.0])
         D=np.hypot(*(q-Hp))
