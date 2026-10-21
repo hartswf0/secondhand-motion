@@ -1,0 +1,83 @@
+[
+ {
+  "id": "M2",
+  "value": 70,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   69,
+   71,
+   73,
+   69,
+   67,
+   68,
+   68,
+   74,
+   72,
+   69,
+   72,
+   68,
+   68,
+   69
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.99,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 69
+ },
+ {
+  "id": "M3",
+  "value": 0.25,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.22
+ },
+ {
+  "id": "M6",
+  "value": 0.4,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "9 strokes, 75 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:4790471521992704; scenery quickdraw:6439323714977792, quickdraw:5345370928316416, quickdraw:5421389701971968, drawn by agent: overhead wires cross the whole frame above the yard; no Quick, Draw! category is a hanging wire, quickdraw:4790471521992704 (the character's own doodle, repeated small), quickdraw:4790471521992704 (the character's own doodle, repeated small), drawn by agent: the flat paved dock under the trains; no Quick, Draw! category is a ground line",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "50/50",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
