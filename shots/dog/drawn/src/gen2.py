@@ -26,7 +26,8 @@ def rotate(p, c, deg):
     return (p - c) @ R.T + c
 
 
-def key(rot, fb, face, hl=1.0):
+def key(rot, fb, face, hl=1.0, hx=0.0):
+    """hx: the head moves this far along the body (doodle units): seen end-on, the head comes in front of the body."""
     out = []
     for i, s in enumerate(ST):
         s = s - CH; hidx = set(range(len(s))) if HEAD.get(i, 0) is None else set(HEAD.get(i, []))
@@ -39,7 +40,7 @@ def key(rot, fb, face, hl=1.0):
         if i in LEGTOP:     # a leg keeps its own drawn shape, hung from its (foreshortened) top
             t = np.array(LEGTOP[i], float) - CH; q = s - t + [t[0] * fb, t[1]]
         idx = sorted(hidx)
-        if idx: q[idx] = rotate(q[idx], NECK, rot)
+        if idx: q[idx] = rotate(q[idx], NECK, rot) + [hx, 0]
         out.append(q * [-face, 1])
     return out
 
@@ -49,7 +50,7 @@ if __name__ == '__main__':
     for p in D.glob('k[0-9][0-9][0-9].json'):
         if str(int(p.stem[1:])) not in K: p.unlink()
     for f, k in K.items():
-        st = [s * k['s'] for s in key(k['rot'], k['fb'], k['face'], k.get('hl', 1.0))]
+        st = [s * k['s'] for s in key(k['rot'], k['fb'], k['face'], k.get('hl', 1.0), k.get('hx', 0.0))]
         if 'T' in k:   # T: where the middle of the drawing's bounding box goes (read off the film's dog)
             P = np.concatenate(st); off = np.array(k['T'], float) - (P.min(0) + P.max(0)) / 2
         else: off = np.array(k['C'], float)

@@ -1,54 +1,53 @@
 [
  {
   "id": "M2",
-  "value": 46,
+  "value": 8,
   "unit": "percentile among real doodles of the category",
-  "ok": true,
+  "ok": false,
   "per_key": [
-   30,
-   30,
-   30,
-   60,
-   52,
-   39,
-   40,
-   47,
-   51,
-   50,
-   50,
-   50,
-   46,
-   46,
-   60,
-   60,
-   30
+   9,
+   9,
+   9,
+   9,
+   9,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   9,
+   10,
+   9
   ]
  },
  {
   "id": "M2b",
-  "value": 0.53,
+  "value": 0.31,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-  "ok": true,
+  "ok": false,
   "design_typicality": 20
  },
  {
   "id": "M3",
-  "value": 0.1,
+  "value": 0.09,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
   "min": 0.0
  },
  {
   "id": "M6",
-  "value": 85.6,
+  "value": 9.8,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
  {
   "id": "T3",
-  "value": "varies",
+  "value": "6 strokes, 53 vertices, every frame",
   "unit": "",
-  "ok": false,
+  "ok": true,
   "note": "the doodle itself, bent by the rig"
  },
  {

@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Five loose zigzag strokes stacked down the frame: a long zigzag on top, a shorter curved stroke below it, a thin curved stroke with a small bump, a small Z-shaped mark at left, and a peaked stroke at the bottom. Frames 1-4 the whole drawing is almost still, with slight shifts in the bump of the middle stroke. Frames 5-8 the middle strokes sway: in frame 5 the thin stroke straightens into a slope, in frame 6 the bottom stroke's peak sharpens and leans, and the right end of the top stroke gains extra small bends. Frames 9-12 the right end of the top stroke rises and then bends into a downward hook (frame 12); a short grey line appears above the drawing at frame 12. Frames 13-16 a full grey horizon line sits at the top of the frame, and the top stroke's right end curls over (13-14) and then flattens into a falling slope (15-16). The lower strokes stay nearly unchanged after frame 9.",
+ "seen_film": "Overhead view of a rough sea. Frames 1-2: dark water with small ripples. Frames 3-4: the surface fills with white foam streaks and a whitecap breaks at the left edge. Frames 5-8: several whitecaps break in the lower left and centre, and a large swell crest builds across the upper half, breaking toward the right by frames 7-8. Frames 9-12: a big swell crest rises in the middle-right and its top foams. Frames 13-16: the camera tilts up so a pale horizon band enters at the top, and the crest at the right lowers and settles while the foreground swells roll.",
+ "named_subject": "Ocean waves (a doodle of stacked wave lines).",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-4 of the animation are nearly identical while the film in frames 3-4 turns from calm dark water to a foam-covered surface with a breaking whitecap. Frames 5-8 show only small sways of the middle strokes and a sharpened peak in frame 6, while the film shows multiple whitecaps breaking at lower left and centre. Frames 9-14 do match the film's crest event: the top stroke's right end rises and curls over, like the crest at middle-right in film frames 9-14, and frames 15-16 flatten it as the film's crest settles. The horizon appears in film frame 13; in the animation a short grey segment pops in at frame 12 and becomes a full line at frame 13. The film also shifts the waves downward as the camera tilts up in frames 13-16; the animation's strokes keep the same vertical positions.",
+ "primary_gap": "The film's foam and whitecap breaking in frames 3-8 has no matching action in the animation, whose strokes stay almost still until the crest curl that starts in frame 9.",
+ "closes_when": "In frames 3-8 the lower-left and centre strokes visibly lift, peak and break (the Z mark and bottom peaked stroke rise and tip over at the frames where film whitecaps break), and in frames 13-16 the whole set of wave strokes slides down as the horizon line enters from the top edge without a partial line in frame 12.",
+ "protect": "The doodle's exact stroke set and angular zigzag construction kept unchanged in every frame; the top stroke's right end rising, curling over and flattening across frames 9-16, timed to the film's crest; the horizon line arriving with the film's camera tilt; the absence of doubled or redrawn strokes.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  12
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated strokes match the doodle's five wave lines, their placement and their angular stroke habits, so no identity gap is visible.",
+ "still_frames_only": true,
+ "_packet": "lot9924d575",
+ "_round": 5
+}

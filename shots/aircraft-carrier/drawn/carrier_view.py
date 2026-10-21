@@ -46,10 +46,11 @@ UVW[0][0] = UVW[1][0].copy()              # S0 and S1 meet in one clean stern co
 # the near side as drawn up to the notch and then led to the stem's foot under the middle of the bow; S3 (the bow
 # end stroke) starts at the far bow corner on the deck and runs down to the same stem foot. Seen from ahead the two
 # draw the V of the bow below the deck; seen from the side, the hull's underside running forward to the stem.
-STEM = np.array([0.97, 0.5, 1.4])
+STEM = np.array([0.97, 0.5, 2.0])
 UVW[2][4] = STEM; UVW[2][5] = STEM
+UVW[2][0] = UVW[1][0] + np.array([0., 0., 0.45])   # the underside starts straight below the stern corner
 UVW[3][0] = np.array([1.0, 1.0, 0.0]); UVW[3][2] = STEM
-L, BEAM, DEPTH = 4.2, 1.1, 0.40            # ship size in world units (length, beam, depth of the hull per doodle unit)
+L, BEAM, DEPTH = 4.2, 1.1, 0.32            # ship size in world units (length, beam, depth of the hull per doodle unit)
 PITCH = np.radians(8)                       # camera looks down at this angle
 DIST = 30.0                                 # camera distance from the ship's centre
 

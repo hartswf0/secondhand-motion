@@ -76,10 +76,7 @@ def profile(P, N, wb=None, NT=(-10, 20), NB=(-10, 250), bulge=8, ref=None):
     sa = L / L0; sb = wb or sa
     T = lambda q: P + ((q - Pd) @ U0) * sa * U + ((q - Pd) @ V0) * sb * V
     K = [np.array([T(q) for q in s]) for s in D]
-    a, b = K[1][11], np.array(NT, float); m = (a + b) / 2; nn = np.array([-(b - a)[1], (b - a)[0]]); nn /= np.linalg.norm(nn)
-    if nn[1] > 0: nn = -nn
-    K[1][12] = a + (b - a) * 0.4 + nn * bulge; K[1][13] = b
-    a, b = K[2][0], np.array(NB, float); K[2][1] = a + (b - a) * 0.4; K[2][2] = b
+    K = neck(K, NT, NB, bulge)
     th = np.degrees(np.arctan2(*(N - P)[::-1]))
     if ref:   # the ears stay pricked up (as in the film) instead of swinging forward as the face tips down
         for i in (4, 5):
@@ -89,12 +86,31 @@ def profile(P, N, wb=None, NT=(-10, 20), NB=(-10, 250), bulge=8, ref=None):
     return neck_mane(K, D, (sa + sb) / 2)
 
 
-def front(off):
-    off = np.array(off, float); K = [None] * 9
-    for i, s in FRONT.items(): K[i] = np.array(s, float) + off
-    K[3] = scribble(EYE_L + off, 1.6)
-    K = neck_mane(K, D, 1.3, 45)
-    return K, scribble(EYE_R + off, 1.6)
+PF, NF = np.array([185., 50.]), np.array([205., 292.])   # poll and muzzle of the front drawing (frame 0)
+
+
+def neck(K, NT, NB, bulge=8):
+    """crest S1[12..13] out to NT and throat S2[1..2] out to NB, the same way for every view, so they blend cleanly."""
+    a, b = K[1][11], np.array(NT, float); nn = np.array([-(b - a)[1], (b - a)[0]]); nn /= np.linalg.norm(nn)
+    if nn[1] > 0: nn = -nn
+    K[1][12] = a + (b - a) * 0.4 + nn * bulge; K[1][13] = b
+    a, b = K[2][0], np.array(NB, float); K[2][1] = a + (b - a) * 0.4; K[2][2] = b
+    return K
+
+
+def front(P, N, NT, NB, fw=1.0):
+    """the front drawing carried onto the same poll P and muzzle N as the profile (so the two share one head axis
+    and blend point for point): rotated and scaled, fw widens or narrows it across the axis."""
+    P, N = np.array(P, float), np.array(N, float); u0 = (NF - PF) / np.linalg.norm(NF - PF); v0 = np.array([-u0[1], u0[0]])
+    k = np.linalg.norm(N - P) / np.linalg.norm(NF - PF); u = (N - P) / np.linalg.norm(N - P); v = np.array([-u[1], u[0]])
+    Tf = lambda q: P + ((q - PF) @ u0) * k * u + ((q - PF) @ v0) * k * fw * v
+    K = [None] * 9
+    for i, st in FRONT.items(): K[i] = np.array([Tf(q) for q in np.array(st, float)])
+    K[3] = np.array([Tf(q) for q in scribble(EYE_L, 1.6)]); e2 = np.array([Tf(q) for q in scribble(EYE_R, 1.6)])
+    K[3] = (K[3] - K[3].mean(0)) / k + K[3].mean(0); e2 = (e2 - e2.mean(0)) / k + e2.mean(0)   # eyes keep the doodle's size
+    K = neck(K, NT, NB)
+    K[7], K[8] = np.zeros((13, 2)), np.zeros((2, 2))
+    return K, e2, k
 
 
 # frame: (tau, front offset, P, N, width scale, NT, NB, why)
@@ -110,15 +126,17 @@ def build(f):
     pr = profile(t['P'], t['N'], t.get('wb'), t['NT'], t['NB'], ref=ear_ref())
     extra = {}
     if tau < 1:
-        fr, e2 = front(t['off'])
+        fr, e2, kf = front(t['P'], t['N'], t['NT'], t['NB'], t.get('fw', 1.0))
         K = [fr[i] * (1 - tau) + pr[i] * tau for i in range(9)]
-        K = neck_mane(K, D, 1.3 * (1 - tau) + (np.linalg.norm(np.array(t['N'], float) - t['P']) / L0) * tau, 45 * (1 - tau))
+        K = neck(K, t['NT'], t['NB'])
+        kp = np.linalg.norm(np.array(t['N'], float) - t['P']) / L0
+        K = neck_mane(K, D, 1.3 * kf * (1 - tau) + kp * tau, 45 * kf * (1 - tau))
         if tau <= 0.75:
-            # the far eye slides to the far edge of the face (the outline at eye level, S1[8]) and shrinks as the head turns;
-            # it is gone once the head is past three-quarter
+            # the far eye slides to the far edge of the face (the outline at eye level, S1[8]) and shrinks as the head
+            # turns away; it is gone past three-quarter. On the way back to the front (eating) it comes out again.
             q = min(tau / 0.75, 1); edge = K[1][8] + (K[3].mean(0) - K[1][8]) * 0.08
             c = e2.mean(0) * (1 - q) + edge * q
-            extra['eye2'] = ((e2 - e2.mean(0)) * max(1 - q * q * 0.75, 0.2) + c).round(1).tolist()
+            extra['eye2' if f < 20 else 'eye3'] = ((e2 - e2.mean(0)) * max(1 - q * q * 0.75, 0.35) + c).round(1).tolist()
     else:
         K = pr
     return {'why': t['why'], 'strokes': [s.round(1).tolist() for s in K], 'extra': extra}

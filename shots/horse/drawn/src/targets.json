@@ -1,10 +1,6 @@
 {
 "0": {
 "tau": 0,
-"off": [
-0,
-0
-],
 "P": [
 185,
 50
@@ -25,10 +21,6 @@
 },
 "4": {
 "tau": 0,
-"off": [
-14,
-4
-],
 "P": [
 195,
 52
@@ -49,10 +41,6 @@
 },
 "6": {
 "tau": 0.1,
-"off": [
-19,
-5
-],
 "P": [
 195,
 51
@@ -73,10 +61,6 @@
 },
 "8": {
 "tau": 0.2,
-"off": [
-24,
-6
-],
 "P": [
 195,
 50
@@ -97,10 +81,6 @@
 },
 "10": {
 "tau": 0.36,
-"off": [
-30,
-2
-],
 "P": [
 190,
 45
@@ -121,10 +101,6 @@
 },
 "12": {
 "tau": 0.55,
-"off": [
-34,
--6
-],
 "P": [
 184,
 38
@@ -145,10 +121,6 @@
 },
 "14": {
 "tau": 0.74,
-"off": [
-34,
--10
-],
 "P": [
 178,
 34
@@ -169,10 +141,6 @@
 },
 "16": {
 "tau": 0.9,
-"off": [
-34,
--10
-],
 "P": [
 173,
 36
@@ -232,7 +200,7 @@
 "why": "Holding the forward reach for a moment before the head drops."
 },
 "24": {
-"tau": 1,
+"tau": 0.88,
 "P": [
 206,
 70
@@ -249,10 +217,10 @@
 -10,
 236
 ],
-"why": "Profile, the head starts to tip down: the muzzle drops while the camera tilts after it."
+"why": "The head starts to tip down and, as it drops, begins to turn back toward us."
 },
 "28": {
-"tau": 1,
+"tau": 0.66,
 "P": [
 184,
 74
@@ -269,11 +237,11 @@
 -10,
 215
 ],
-"wb": 1.55,
-"why": "Head tipping down past the rails toward the hay, nose now under the eye."
+"wb": 1.2,
+"why": "Head tipping down past the rails toward the hay, turning back toward the camera: the far eye comes out at the edge of the face."
 },
 "30": {
-"tau": 1,
+"tau": 0.55,
 "P": [
 180,
 78
@@ -290,11 +258,11 @@
 -10,
 205
 ],
-"wb": 1.5,
-"why": "Breakdown: the head hangs straight down, muzzle just above the hay."
+"wb": 1.15,
+"why": "Breakdown: the head hangs nearly straight down, half turned back toward us."
 },
 "32": {
-"tau": 1,
+"tau": 0.45,
 "P": [
 176,
 74
@@ -311,11 +279,11 @@
 -10,
 195
 ],
-"wb": 1.3,
-"why": "THE LINE: the muzzle reaches the hay; the head, turned into profile and stretched out over the rail, now hangs nearly straight down from the poll."
+"wb": 1.15,
+"why": "THE LINE: the muzzle reaches the hay; the head hangs from the poll, turned back toward us so both eyes show."
 },
 "34": {
-"tau": 1,
+"tau": 0.38,
 "P": [
 172,
 62
@@ -332,18 +300,18 @@
 -10,
 180
 ],
-"wb": 1.3,
-"why": "Settle after the contact: the muzzle pushes into the pile and the head starts to swing left."
+"wb": 1.15,
+"why": "Settle after the contact: the muzzle pushes into the pile, the face nearly front-on."
 },
 "36": {
-"tau": 1,
+"tau": 0.32,
 "P": [
 150,
-40
+48
 ],
 "N": [
 120,
-234
+250
 ],
 "NT": [
 -10,
@@ -353,18 +321,18 @@
 -10,
 152
 ],
-"wb": 1.15,
-"why": "Muzzle pushed into the hay pile and swung left, the camera still tilting down."
+"wb": 1.1,
+"why": "Muzzle down in the hay pile, the head almost facing us, ears forward."
 },
 "38": {
-"tau": 1,
+"tau": 0.3,
 "P": [
 140,
-22
+34
 ],
 "N": [
 112,
-205
+226
 ],
 "NT": [
 -10,
@@ -374,18 +342,18 @@
 -10,
 126
 ],
-"wb": 1.15,
-"why": "Eating: the muzzle down in the pile, lowest point of the bite."
+"wb": 1.1,
+"why": "Eating: the muzzle in the pile, the lowest point of the bite."
 },
 "40": {
-"tau": 1,
+"tau": 0.3,
 "P": [
 155,
-12
+26
 ],
 "N": [
 130,
-180
+214
 ],
 "NT": [
 -10,
@@ -395,18 +363,18 @@
 -10,
 108
 ],
-"wb": 1.15,
+"wb": 1.1,
 "why": "Eating: the head lifts a little with a mouthful."
 },
 "42": {
-"tau": 1,
+"tau": 0.3,
 "P": [
 172,
-16
+30
 ],
 "N": [
 154,
-194
+224
 ],
 "NT": [
 -10,
@@ -416,18 +384,18 @@
 -10,
 110
 ],
-"wb": 1.15,
-"why": "Eating: the muzzle drops back into the hay further right."
+"wb": 1.1,
+"why": "Eating: the muzzle drops back into the hay a little to the right."
 },
 "44": {
-"tau": 1,
+"tau": 0.3,
 "P": [
 162,
-14
+28
 ],
 "N": [
 138,
-196
+222
 ],
 "NT": [
 -10,
@@ -437,7 +405,7 @@
 -10,
 108
 ],
-"wb": 1.15,
-"why": "Settle: nose in the hay, head down, chewing."
+"wb": 1.1,
+"why": "Settle: nose in the hay, head down and facing us, chewing."
 }
 }
