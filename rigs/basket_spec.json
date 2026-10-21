@@ -203,15 +203,15 @@
    140
   ],
   "rim_r": [
-   208,
+   218,
    152
   ],
   "h_mid": [
-   104,
-   144
+   111,
+   146
   ],
   "h_top": [
-   104,
+   111,
    0
   ]
  },
@@ -229,7 +229,7 @@
     "h_mid",
     "h_top"
    ],
-   "stretch": 0.6,
+   "stretch": 1.0,
    "fold": "fold",
    "axis": [
     "h_mid",
@@ -278,7 +278,7 @@
    "turn": 0
   }
  ],
- "note": "Quick, Draw! basket 6147165976002560, drawn from the side in four strokes: stroke 0 is the arched handle, stroke 1 the front edge of the rim, stroke 2 the back edge of the rim, stroke 3 the bowl of the basket. The whole drawing is placed by the two ends of the rim (rim_l, rim_r), which sets its position, size and tilt; a round basket's rim keeps its width as it turns about its handle, so this size follows the film's lift toward the camera. The handle turns about the middle of the rim toward the hand that holds it (h_top), lengthens or shortens part way toward it, and narrows toward its own centre line by the pose's fold value (1 broadside as drawn, near 0 seen edge-on), which is how the film's basket turns half a revolution under the hand. The two rim strokes open or close toward the rim line by rimopen as the basket tips toward or away from the camera.",
+ "note": "Quick, Draw! basket 6147165976002560, drawn from the side in four strokes: stroke 0 is the arched handle, stroke 1 the front edge of the rim, stroke 2 the back edge of the rim, stroke 3 the bowl of the basket. The whole drawing is placed by the two ends of the rim (rim_l, and rim_r set between the rim's right end and the bowl's right bulge so the whole drawing spans the film basket), which sets its position, size and tilt; a round basket's rim keeps its width as it turns about its handle, so this size follows the film's lift toward the camera. The handle turns about the middle of the rim toward the hand that holds it (h_top), lengthens or shortens so its top reaches the hand, and narrows toward its own centre line by the pose's fold value (1 broadside as drawn, near 0 seen edge-on), which is how the film's basket turns half a revolution under the hand. The two rim strokes open or close toward the rim line by rimopen as the basket tips toward or away from the camera.",
  "options": {
   "size": "varies with the lift toward the camera",
   "smooth": 1.2,

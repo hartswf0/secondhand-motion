@@ -1,0 +1,235 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -2.27,
+   -2.78,
+   -4.45,
+   -5.62,
+   -6.07,
+   -5.3,
+   -3.25,
+   -1.83,
+   0.41,
+   1.05,
+   2.21,
+   2.18,
+   1.22,
+   -0.27,
+   -2.52,
+   -4.13,
+   -4.69,
+   -5.22,
+   -6.31,
+   -6.92,
+   -6.48,
+   -6.52,
+   -6.69,
+   -6.58,
+   -6.6,
+   -5.94,
+   -5.24,
+   -5.62,
+   -6.26,
+   -6.3,
+   -5.47,
+   -4.4,
+   -3.53,
+   -3.69,
+   -4.82,
+   -5.47,
+   -6.21,
+   -7.64,
+   -9.13,
+   -7.21,
+   -3.73,
+   -1.71,
+   0.67,
+   2.75,
+   6.65,
+   8.03,
+   6.66,
+   5.86,
+   2.62
+  ],
+  "y": [
+   0.0,
+   0.59,
+   1.02,
+   1.95,
+   2.0,
+   -0.15,
+   -2.59,
+   -6.29,
+   -8.85,
+   -11.83,
+   -13.34,
+   -16.16,
+   -17.95,
+   -19.99,
+   -20.96,
+   -20.72,
+   -20.28,
+   -18.48,
+   -18.04,
+   -16.81,
+   -15.47,
+   -13.17,
+   -12.06,
+   -9.73,
+   -9.17,
+   -8.5,
+   -8.12,
+   -7.43,
+   -5.86,
+   -0.78,
+   0.13,
+   1.77,
+   2.58,
+   3.38,
+   3.06,
+   2.7,
+   1.76,
+   -1.16,
+   -0.23,
+   0.43,
+   0.86,
+   0.07,
+   -1.42,
+   -6.89,
+   -9.63,
+   -10.91,
+   -11.77,
+   -12.28,
+   -11.77,
+   -9.19
+  ],
+  "source": "shots/basket-sam/camera.json (per-frame shift measured from the footage; the camera is hand-held and drifts up to about 20 px)"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 7,
+   "label": "Trees and posts behind the workshop",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "mid",
+   "z": 4,
+   "label": "Weavers' tables and finished baskets",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "floor",
+   "z": 3,
+   "label": "Floor",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Basket"
+  }
+ ],
+ "objects": [
+  {
+   "id": "tree1",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    230,
+    -20,
+    330,
+    60
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "tree2",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    20,
+    -25,
+    110,
+    45
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "table1",
+   "plane": "mid",
+   "qd": "table",
+   "box": [
+    255,
+    150,
+    400,
+    215
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "table2",
+   "plane": "mid",
+   "qd": "table",
+   "box": [
+    -20,
+    95,
+    110,
+    150
+   ],
+   "strokes": 3,
+   "skip": 1
+  },
+  {
+   "id": "b1",
+   "plane": "mid",
+   "copy_of_design": true,
+   "box": [
+    300,
+    95,
+    350,
+    135
+   ]
+  },
+  {
+   "id": "b2",
+   "plane": "mid",
+   "copy_of_design": true,
+   "mirror": true,
+   "box": [
+    20,
+    62,
+    62,
+    96
+   ]
+  },
+  {
+   "id": "floor",
+   "plane": "floor",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a floor edge; one line where the concrete floor meets the workshop benches at the lower right of the film",
+   "strokes": [
+    [
+     [
+      -60,
+      262
+     ],
+     [
+      460,
+      248
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "1": "the basket hangs from the hand with its handle seen edge on",
+  "13": "the basket swings to the right and starts to turn",
+  "25": "lifted toward the camera, the handle broadside",
+  "37": "the basket swings down and left",
+  "49": "turned on, the handle edge on again"
+ }
+}

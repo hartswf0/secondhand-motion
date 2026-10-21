@@ -1,0 +1,78 @@
+[
+ {
+  "id": "M2",
+  "value": 71,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   64,
+   60,
+   53,
+   68,
+   85,
+   78,
+   82,
+   76,
+   76
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.69,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 99
+ },
+ {
+  "id": "M3",
+  "value": 0.64,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.53
+ },
+ {
+  "id": "M6",
+  "value": 1.3,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 45 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6147165976002560; scenery quickdraw:4661695031017472, quickdraw:5404010435575808, quickdraw:5922415139880960, quickdraw:4817430947823616, quickdraw:6147165976002560 (the character's own doodle, repeated small), quickdraw:6147165976002560 (the character's own doodle, repeated small), drawn by agent: no Quick, Draw! category is a floor edge; one line where the concrete floor meets the workshop benches at the lower right of the film",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "50/50",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

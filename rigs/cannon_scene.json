@@ -1,0 +1,488 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   2.92,
+   7.09,
+   9.98,
+   14.11,
+   17.33,
+   21.8,
+   24.3,
+   29.1,
+   31.83,
+   35.92,
+   38.85,
+   43.01,
+   45.65,
+   50.07,
+   52.9,
+   57.76,
+   67.38,
+   90.76,
+   101.09,
+   125.87,
+   125.87,
+   138.29,
+   149.88,
+   158.87,
+   169.4,
+   180.71,
+   187.44,
+   192.35,
+   197.26,
+   200.76,
+   204.83
+  ],
+  "y": [
+   0.0,
+   0.5,
+   0.04,
+   0.8,
+   0.57,
+   1.07,
+   0.53,
+   0.68,
+   -0.27,
+   -0.34,
+   -0.56,
+   -0.05,
+   0.06,
+   -0.05,
+   -0.8,
+   0.12,
+   -0.12,
+   0.46,
+   1.68,
+   2.69,
+   3.04,
+   3.04,
+   4.03,
+   5.02,
+   5.11,
+   4.38,
+   3.86,
+   3.98,
+   4.03,
+   4.01,
+   3.55,
+   2.72
+  ],
+  "source": "shots/cannon-sam/camera.json: phase correlation of the footage with the cannon masked out, which is the drift of the star field behind the model"
+ },
+ "planes": [
+  {
+   "id": "sky",
+   "z": 2,
+   "label": "Star field and haze (moves the full measured camera drift; depth is meaningless on a painted star field, so z is set to the measured motion)"
+  },
+  {
+   "id": "plinth",
+   "z": 4.6,
+   "label": "Turntable plinth (the cannon and its base drift about 90 px right while the star field drifts 205 px, so this plane is set at 2 x 205 / 90)"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Cannon"
+  }
+ ],
+ "objects": [
+  {
+   "id": "haze1",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    -230,
+    80,
+    -120,
+    112
+   ],
+   "strokes": 1
+  },
+  {
+   "id": "haze2",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    -40,
+    74,
+    60,
+    104
+   ],
+   "strokes": 1,
+   "skip": 1
+  },
+  {
+   "id": "haze3",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    150,
+    90,
+    250,
+    118
+   ],
+   "strokes": 1,
+   "skip": 2
+  },
+  {
+   "id": "haze4",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    310,
+    76,
+    400,
+    104
+   ],
+   "strokes": 1,
+   "skip": 3
+  },
+  {
+   "id": "stars",
+   "plane": "sky",
+   "class": "stars",
+   "why": "the film's background is a starry sky with white specks; Quick, Draw! has no star category in this archive, so each speck is a short cross drawn by the agent",
+   "strokes": [
+    [
+     [
+      -183,
+      40
+     ],
+     [
+      -177,
+      40
+     ]
+    ],
+    [
+     [
+      -180,
+      37
+     ],
+     [
+      -180,
+      43
+     ]
+    ],
+    [
+     [
+      -123,
+      150
+     ],
+     [
+      -117,
+      150
+     ]
+    ],
+    [
+     [
+      -120,
+      147
+     ],
+     [
+      -120,
+      153
+     ]
+    ],
+    [
+     [
+      -63,
+      30
+     ],
+     [
+      -57,
+      30
+     ]
+    ],
+    [
+     [
+      -60,
+      27
+     ],
+     [
+      -60,
+      33
+     ]
+    ],
+    [
+     [
+      17,
+      140
+     ],
+     [
+      23,
+      140
+     ]
+    ],
+    [
+     [
+      20,
+      137
+     ],
+     [
+      20,
+      143
+     ]
+    ],
+    [
+     [
+      57,
+      45
+     ],
+     [
+      63,
+      45
+     ]
+    ],
+    [
+     [
+      60,
+      42
+     ],
+     [
+      60,
+      48
+     ]
+    ],
+    [
+     [
+      117,
+      160
+     ],
+     [
+      123,
+      160
+     ]
+    ],
+    [
+     [
+      120,
+      157
+     ],
+     [
+      120,
+      163
+     ]
+    ],
+    [
+     [
+      202,
+      30
+     ],
+     [
+      208,
+      30
+     ]
+    ],
+    [
+     [
+      205,
+      27
+     ],
+     [
+      205,
+      33
+     ]
+    ],
+    [
+     [
+      247,
+      150
+     ],
+     [
+      253,
+      150
+     ]
+    ],
+    [
+     [
+      250,
+      147
+     ],
+     [
+      250,
+      153
+     ]
+    ],
+    [
+     [
+      327,
+      45
+     ],
+     [
+      333,
+      45
+     ]
+    ],
+    [
+     [
+      330,
+      42
+     ],
+     [
+      330,
+      48
+     ]
+    ],
+    [
+     [
+      357,
+      170
+     ],
+     [
+      363,
+      170
+     ]
+    ],
+    [
+     [
+      360,
+      167
+     ],
+     [
+      360,
+      173
+     ]
+    ],
+    [
+     [
+      -153,
+      210
+     ],
+     [
+      -147,
+      210
+     ]
+    ],
+    [
+     [
+      -150,
+      207
+     ],
+     [
+      -150,
+      213
+     ]
+    ],
+    [
+     [
+      27,
+      250
+     ],
+     [
+      33,
+      250
+     ]
+    ],
+    [
+     [
+      30,
+      247
+     ],
+     [
+      30,
+      253
+     ]
+    ],
+    [
+     [
+      317,
+      240
+     ],
+     [
+      323,
+      240
+     ]
+    ],
+    [
+     [
+      320,
+      237
+     ],
+     [
+      320,
+      243
+     ]
+    ],
+    [
+     [
+      87,
+      205
+     ],
+     [
+      93,
+      205
+     ]
+    ],
+    [
+     [
+      90,
+      202
+     ],
+     [
+      90,
+      208
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "plinth",
+   "plane": "plinth",
+   "class": "plinth",
+   "why": "the cannon stands on a white rectangular plinth on a turntable; no Quick, Draw! category is a plinth, so the agent drew its top face and front edge where it stands at the first frame",
+   "strokes": [
+    [
+     [
+      112,
+      238
+     ],
+     [
+      132,
+      222
+     ],
+     [
+      250,
+      222
+     ],
+     [
+      268,
+      238
+     ],
+     [
+      112,
+      238
+     ]
+    ],
+    [
+     [
+      112,
+      238
+     ],
+     [
+      112,
+      250
+     ],
+     [
+      268,
+      250
+     ],
+     [
+      268,
+      238
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "end-on, muzzle to camera: the drawing is narrow",
+  "6": "side view, muzzle to the left",
+  "14": "end-on from behind: the drawing narrows and flips facing",
+  "21": "side view, muzzle to the right",
+  "29": "end-on again: the drawing flips back"
+ },
+ "no_cel": true
+}

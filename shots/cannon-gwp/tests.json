@@ -1,0 +1,82 @@
+[
+ {
+  "id": "M2",
+  "value": 18,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   9,
+   29,
+   36,
+   30,
+   12,
+   8,
+   9,
+   17,
+   35,
+   33,
+   12,
+   8,
+   7,
+   9
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.59,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 37
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 30.4,
+  "unit": "px jerk (drawing centre)",
+  "ok": false
+ },
+ {
+  "id": "T3",
+  "value": "8 strokes, 59 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5140965633294336; scenery quickdraw:5345370928316416, quickdraw:5377782966124544, quickdraw:6430061731250176, quickdraw:4871479403479040, drawn by agent: the film's background is a starry sky with white specks; Quick, Draw! has no star category in this archive, so each speck is a short cross drawn by the agent, drawn by agent: the cannon stands on a white rectangular plinth on a turntable; no Quick, Draw! category is a plinth, so the agent drew its top face and front edge where it stands at the first frame",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

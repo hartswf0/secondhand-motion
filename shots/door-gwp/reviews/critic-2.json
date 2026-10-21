@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A black door drawn in the doodle's style (slanted outline, rectangular window, lower bracket panel, small octagonal knob) stands in a grey hallway with a coat on the left and a second grey door on the right. A black stick figure stands at the door's right edge with one arm reaching to the knob (frames 1-4). From frame 5 the door swings so it appears narrower and the figure, still holding the knob with a bent arm, moves left with the door's edge (frames 5-9). In frame 10 the figure is narrowed to a sliver at the door edge, and from frame 11 it is gone. From frame 11 to 16 the door swings back and widens to its original shape and stays closed.",
+ "seen_film": "A woman in a pink smock stands with her back to the camera at a white door with a curtained window, hands at the door (frames 1-4). The door opens toward the camera and appears narrower, revealing a dark doorway; she holds the knob and steps through (frames 5-9). She passes behind the door edge and is mostly hidden by frame 10, gone by frame 11. The door then swings back and is closed and full width by frames 12-16.",
+ "named_subject": "A door (the doodle is a door with window, panel and knob); a stick figure opens it and walks through.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-8 vs f.png 1-8: figure stands at the door with hand on knob while the door stays shut, matching the film. e.png 8->9 the door narrows sharply, as the film does at f.png 8->9. e.png 9-18: figure moves left with the door edge and holds the knob, matching f.png 9-18. e.png 19-20: the stick figure's head and body are drawn on top of the door's edge line instead of being hidden by it, while in f.png 19-20 the woman is already half hidden behind the door. e.png 21: the whole body vanishes at once and only a small head arc remains at the door edge; f.png 21 still shows a slice of the woman. e.png 22-24: the door is already widening while in f.png 21-24 the door is still narrow; it reaches full width in both by about frame 25. e.png 4-5: the hand at the knob is redrawn as a loose hook shape that changes between frames. e.png 25-32 hold steady like f.png 25-32.",
+ "primary_gap": "The figure exits by being drawn over the door edge in frames 19-20 and then vanishing almost all at once in frame 21, instead of sliding progressively behind the door edge as the woman does in the film.",
+ "closes_when": "Across e.png 17-22 the door's edge line stays in front of the figure and clips it a little more each frame, so that its body narrows to a sliver by frame 21 and is gone at frame 22, with the door staying narrow until about frame 24.",
+ "protect": "The door's construction matches c.png (slanted outline, curved top corner, rectangular window, open lower bracket, small octagonal knob) and keeps that construction while it narrows and widens; the timing of the door opening at frame 9 and closing to full width by frame 25 matches the film; the figure holds the knob and travels left with the door edge in frames 9-18; the figure keeps a constant size throughout; the grey scenery stays fixed.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  20,
+  21
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The door is clearly the c.png drawing set in motion; the stick figure is an added element not in the doodle, drawn in a matching plain line style.",
+ "still_frames_only": true,
+ "_packet": "lotbf4a127a",
+ "_round": 2
+}

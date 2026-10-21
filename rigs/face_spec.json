@@ -6,7 +6,7 @@
   "brow",
   "brow"
  ],
- "note": "Quick, Draw! face 5796259950493696, a frontal face. Stroke 0 is the head outline with an ear bump on each side; stroke 1 is the L-shaped nose; strokes 2 and 3 are the left eye (a dot and a short line); stroke 4 is the right eye; stroke 5 is the smiling mouth. The film shows a still head in profile, facing right, whose lips open and close twice. The whole drawing is placed by two points, the brow and the chin, held upright at one size; a constant yaw turns it toward the right so the nose, eyes and mouth slide toward the film's profile edge. The only moving part is the mouth: the middle four points of stroke 5 move up or down by the pose entry 'open' (-1 shut, a nearly flat line; 0 the doodle's own smile; +1 wide open, a deep curve), and the two lowest chin points move down a little with it.",
+ "note": "Quick, Draw! face 5796259950493696, a frontal face. Stroke 0 is the head outline with an ear bump on each side; stroke 1 is the L-shaped nose; strokes 2 and 3 are the left eye (a dot and a short line); stroke 4 is the right eye; stroke 5 is the smiling mouth. The film shows a still head in profile, facing right, whose lips open and close twice. The whole drawing is placed by two points, the brow and the chin, held upright at one size; a constant yaw turns it toward the right so the nose, eyes and mouth slide toward the film's profile edge. The only moving part is the mouth: the middle four points of stroke 5 move up or down by the pose entry 'open' (-1 shut, a nearly flat line; 0 the doodle's own smile; +1 wide open, a deep curve); the chin stays where it is, as in the film.",
  "strokes": [
   [
    [
@@ -253,23 +253,7 @@
    "shift_by": "open",
    "shift": [
     0,
-    14
-   ]
-  },
-  {
-   "stroke": 0,
-   "from": 14,
-   "to": 16,
-   "joint": "brow",
-   "aim": [
-    "brow",
-    "chin"
-   ],
-   "turn": 0,
-   "shift_by": "open",
-   "shift": [
-    0,
-    4
+    11
    ]
   },
   {

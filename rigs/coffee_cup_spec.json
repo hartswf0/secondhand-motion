@@ -7,7 +7,7 @@
   "rimL"
  ],
  "size_from_mask": false,
- "note": "Quick, Draw! coffee cup 5699704845238272, a side view of a tapered cup. Stroke 0 is one line that draws the rim ellipse (vertices 0-14 and 25) and then the cup's sides and base (vertices 15-24). Strokes 1, 2 and 3 are three short lines inside the rim, stroke 4 is a band across the upper body and stroke 5 a short line low on the body. The drawing is placed by the two ends of the rim (rimL, rimR), so it moves, tilts and turns with the rim of the cup in the film. Two pose numbers handle the view from above: 'rim' opens the rim ellipse toward a circle about the rim's middle line (1 is the doodle's ellipse, about 2.6 a circle), and 'body' folds the sides and base up toward that line (1 is the doodle's full side view, near 0 the body is hidden behind the rim as when the cup is seen from straight above). In the film the cup starts rim-on and tilts toward a side view, so 'rim' falls and 'body' rises over the shot.",
+ "note": "Quick, Draw! coffee cup 5699704845238272, a side view of a tapered cup. Stroke 0 is one line that draws the rim ellipse (vertices 0-14 and 25) and then the cup's sides and base (vertices 15-24). Strokes 1, 2 and 3 are three short lines inside the rim, stroke 4 is a band across the upper body and stroke 5 a short line low on the body. The drawing is placed by the two ends of the rim (rimL, rimR), so it moves, tilts and turns with the rim of the cup in the film. Two pose numbers handle the view from above: 'rim' opens the rim ellipse toward a circle about the line through the rim's two ends (1 is the doodle's ellipse, about 2.6 a circle), and 'body' folds the sides and base up toward that same line (1 is the doodle's full side view, near 0 the body is hidden behind the rim as when the cup is seen from straight above). In the film the cup starts rim-on and tilts toward a side view, so 'rim' falls and 'body' rises over the shot. A third number, 'ticks', opens the three short lines inside the rim (strokes 1-3) about the rim's middle line by less than the rim, so they stay short marks inside the opening rather than lines across it.",
  "strokes": [
   [
    [
@@ -185,11 +185,11 @@
   ],
   "axL": [
    1,
-   42
+   46
   ],
   "axR": [
    200,
-   36
+   35
   ],
   "base": [
    124,
@@ -206,8 +206,8 @@
    "turn": 0,
    "fold": "rim",
    "axis": [
-    "axL",
-    "axR"
+    "rimL",
+    "rimR"
    ],
    "stroke": 0,
    "from": 0,
@@ -222,8 +222,8 @@
    "turn": 0,
    "fold": "rim",
    "axis": [
-    "axL",
-    "axR"
+    "rimL",
+    "rimR"
    ],
    "stroke": 0,
    "from": 25,
@@ -236,7 +236,7 @@
     "rimR"
    ],
    "turn": 0,
-   "fold": "rim",
+   "fold": "ticks",
    "axis": [
     "axL",
     "axR"
@@ -252,7 +252,7 @@
     "rimR"
    ],
    "turn": 0,
-   "fold": "rim",
+   "fold": "ticks",
    "axis": [
     "axL",
     "axR"
@@ -268,7 +268,7 @@
     "rimR"
    ],
    "turn": 0,
-   "fold": "rim",
+   "fold": "ticks",
    "axis": [
     "axL",
     "axR"
@@ -286,8 +286,8 @@
    "turn": 0,
    "fold": "body",
    "axis": [
-    "axL",
-    "axR"
+    "rimL",
+    "rimR"
    ],
    "stroke": 0,
    "from": 15,
@@ -302,8 +302,8 @@
    "turn": 0,
    "fold": "body",
    "axis": [
-    "axL",
-    "axR"
+    "rimL",
+    "rimR"
    ],
    "stroke": 4,
    "from": 0,
@@ -318,8 +318,8 @@
    "turn": 0,
    "fold": "body",
    "axis": [
-    "axL",
-    "axR"
+    "rimL",
+    "rimR"
    ],
    "stroke": 5,
    "from": 0,

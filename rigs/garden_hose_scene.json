@@ -1,0 +1,300 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -0.05,
+   0.07,
+   0.12,
+   -0.04,
+   -0.04,
+   -0.02,
+   -0.02,
+   -0.02,
+   -0.11,
+   -0.07,
+   -0.07,
+   -0.16,
+   0.04,
+   0.02,
+   0.18,
+   0.13,
+   -0.01,
+   -0.31,
+   -0.34,
+   -0.4,
+   -0.14,
+   -0.55,
+   -0.69,
+   -1.56,
+   -2.75,
+   -3.74,
+   -3.68,
+   -5.48,
+   -7.17,
+   -7.85,
+   -9.28,
+   -10.97,
+   -12.69,
+   -14.93,
+   -15.72,
+   -17.0,
+   -17.46
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.58,
+   0.58,
+   0.6,
+   0.6,
+   0.6,
+   0.6,
+   0.6,
+   0.6,
+   0.64,
+   0.8,
+   0.81,
+   0.88,
+   0.88,
+   0.97,
+   0.97,
+   0.97,
+   0.97,
+   0.97,
+   0.92,
+   0.83,
+   0.83,
+   0.83,
+   0.83,
+   0.66,
+   0.25,
+   0.25,
+   0.25,
+   2.38,
+   1.41,
+   1.41,
+   1.41,
+   1.41,
+   1.15,
+   1.15,
+   1.15,
+   1.15
+  ],
+  "source": "shots/garden-hose-sam/camera.json: x as measured; y passed through a 7-frame median because the measured y jumps by 3 to 6 px on single frames where the hand enters the picture"
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 2.3,
+   "label": "Wood wall"
+  },
+  {
+   "id": "reel",
+   "z": 2.1,
+   "label": "Brake and disc"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Hose"
+  }
+ ],
+ "objects": [
+  {
+   "id": "grain",
+   "plane": "wall",
+   "class": "wood grain",
+   "why": "no Quick, Draw! category is a wood-grain wall; a few long vertical lines stand for the panelling behind the hose",
+   "strokes": [
+    [
+     [
+      30,
+      -5
+     ],
+     [
+      34,
+      80
+     ],
+     [
+      28,
+      160
+     ],
+     [
+      33,
+      300
+     ]
+    ],
+    [
+     [
+      120,
+      -5
+     ],
+     [
+      116,
+      40
+     ]
+    ],
+    [
+     [
+      255,
+      -5
+     ],
+     [
+      262,
+      30
+     ],
+     [
+      258,
+      45
+     ]
+    ],
+    [
+     [
+      370,
+      -5
+     ],
+     [
+      366,
+      90
+     ],
+     [
+      372,
+      200
+     ],
+     [
+      368,
+      300
+     ]
+    ],
+    [
+     [
+      395,
+      -5
+     ],
+     [
+      399,
+      150
+     ],
+     [
+      396,
+      300
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "disc",
+   "plane": "reel",
+   "qd": "wheel",
+   "box": [
+    112,
+    128,
+    302,
+    318
+   ],
+   "aspect": 1.0
+  },
+  {
+   "id": "caliper",
+   "plane": "reel",
+   "class": "brake caliper",
+   "why": "no Quick, Draw! category is a brake caliper; an outline of the metal block the hose is screwed into",
+   "strokes": [
+    [
+     [
+      178,
+      58
+     ],
+     [
+      150,
+      70
+     ],
+     [
+      110,
+      95
+     ],
+     [
+      60,
+      120
+     ],
+     [
+      40,
+      140
+     ],
+     [
+      45,
+      160
+     ],
+     [
+      75,
+      170
+     ],
+     [
+      75,
+      280
+     ]
+    ],
+    [
+     [
+      75,
+      200
+     ],
+     [
+      150,
+      200
+     ],
+     [
+      150,
+      280
+     ]
+    ],
+    [
+     [
+      120,
+      95
+     ],
+     [
+      180,
+      95
+     ],
+     [
+      195,
+      125
+     ],
+     [
+      190,
+      190
+     ],
+     [
+      150,
+      200
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "hand",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    292,
+    58,
+    392,
+    128
+   ],
+   "aspect": 1.4,
+   "visible": [
+    6,
+    37
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the hose hangs from the fitting, the hand comes in from the right",
+  "7": "the hand closes on the hose below the bend",
+  "19": "the hand pulls and the bend drops",
+  "31": "a second pull: the bend comes down and to the left, the hanging length swings in",
+  "37": "held"
+ }
+}

@@ -60,11 +60,13 @@ def man(f):
     S=N+ax*3; arms=[]; legs=[]
     for limb in ('lh','rh'):
         q=contact(f,limb); e=joint(S,q,24,lambda z: z[1]); arms.append([S.tolist(),e.tolist(),q.tolist()])
-    for limb in ('lf','rf'):
-        q=contact(f,limb); k=joint(P,q,44,lambda z: z[0]); legs.append([P.tolist(),k.tolist(),q.tolist()])
-    th=np.mean([np.array(l[1])-P for l in legs],0); th/=max(np.hypot(*th),1e-6)   # the wrap hangs over the thighs, sagging behind
-    dn=0.55*th+0.45*np.array([-0.25,1.0]); dn/=np.hypot(*dn); side=np.array([-dn[1],dn[0]])
-    st.append([(P+side*5).tolist(),(P+side*15+dn*30).tolist(),(P-side*14+dn*30).tolist(),(P-side*5).tolist(),(P+side*5).tolist()])        # the white wrap, closed
+    Q={l:contact(f,l) for l in ('lf','rf')}
+    w=np.clip((Q['rf'][0]-Q['lf'][0])/10,-1,1)               # seen from behind, each leg hangs from the hip on the side its foot is on (eased, so the legs never cross)
+    for limb,sg in (('lf',w),('rf',-w)):
+        q=Q[limb]; Hp=P-np.array([1.0,0.0])*5*sg
+        k=joint(Hp,q,40,lambda z: z[0]+0.8*z[1]); legs.append([Hp.tolist(),k.tolist(),q.tolist()])   # the knee goes forward to the ladder, never up past the hip
+    dn=ax.copy(); side=pr
+    st.append([(P+side*8).tolist(),(P+side*13+dn*19).tolist(),(P-side*13+dn*19).tolist(),(P-side*8).tolist(),(P+side*8).tolist()])        # the white wrap, closed: a short band round the hips
     st+=arms+legs
     return [[[round(x-cam[f][0],1),round(y-cam[f][1],1)] for x,y in s] for s in st]
 objs=[

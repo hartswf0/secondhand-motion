@@ -1,0 +1,361 @@
+{
+ "category": "animal migration",
+ "doodle_key_id": "6280704109314048",
+ "facing": -1,
+ "face_from": [
+  "b2",
+  "b4"
+ ],
+ "note": "Quick, Draw! animal migration 6280704109314048: four flying birds drawn as M shapes, a flock seen from behind. The biggest bird, at the top, is three strokes: stroke 0 is its left wing from the wing tip up over the shoulder and down to the body, stroke 3 is the right wing going up from the body, and stroke 1 is the rest of that right wing out to its tip. Stroke 2 is the middle-left bird, stroke 5 the middle-right bird and stroke 4 the bottom bird, each one stroke: wing, dip at the body, wing. The whole drawing is placed by the bodies of the two middle birds (b2 and b4), which sets where the flock is, how big it is and its tilt; that distance is the same in every key, so the drawing keeps one size. Each bird flaps on its own: its wings fold toward a level line through its body by the pose's w1, w2, w3 or w4 amount, 1 as drawn (wings up), 0 level, below 0 wings down. In the film the geese lift off the marsh, climb into the sky and fly on with the camera panning to follow them; the drawing rises with the flock and every bird beats its wings, neighbours out of step with each other as the real geese are.",
+ "strokes": [
+  [
+   [
+    1,
+    69
+   ],
+   [
+    0,
+    66
+   ],
+   [
+    10,
+    51
+   ],
+   [
+    41,
+    12
+   ],
+   [
+    60,
+    1
+   ],
+   [
+    69,
+    1
+   ],
+   [
+    95,
+    25
+   ],
+   [
+    102,
+    41
+   ],
+   [
+    112,
+    89
+   ]
+  ],
+  [
+   [
+    126,
+    34
+   ],
+   [
+    142,
+    18
+   ],
+   [
+    158,
+    12
+   ],
+   [
+    167,
+    12
+   ],
+   [
+    172,
+    16
+   ],
+   [
+    181,
+    36
+   ]
+  ],
+  [
+   [
+    11,
+    166
+   ],
+   [
+    40,
+    124
+   ],
+   [
+    53,
+    119
+   ],
+   [
+    61,
+    122
+   ],
+   [
+    65,
+    128
+   ],
+   [
+    70,
+    150
+   ],
+   [
+    74,
+    149
+   ],
+   [
+    104,
+    122
+   ],
+   [
+    109,
+    122
+   ],
+   [
+    116,
+    132
+   ],
+   [
+    119,
+    156
+   ]
+  ],
+  [
+   [
+    137,
+    24
+   ],
+   [
+    128,
+    28
+   ],
+   [
+    122,
+    37
+   ],
+   [
+    112,
+    77
+   ]
+  ],
+  [
+   [
+    28,
+    239
+   ],
+   [
+    41,
+    223
+   ],
+   [
+    69,
+    208
+   ],
+   [
+    78,
+    215
+   ],
+   [
+    82,
+    236
+   ],
+   [
+    86,
+    223
+   ],
+   [
+    91,
+    218
+   ],
+   [
+    103,
+    215
+   ],
+   [
+    128,
+    217
+   ],
+   [
+    125,
+    246
+   ]
+  ],
+  [
+   [
+    174,
+    156
+   ],
+   [
+    185,
+    130
+   ],
+   [
+    197,
+    115
+   ],
+   [
+    212,
+    104
+   ],
+   [
+    217,
+    115
+   ],
+   [
+    217,
+    139
+   ],
+   [
+    249,
+    115
+   ],
+   [
+    254,
+    115
+   ],
+   [
+    255,
+    147
+   ]
+  ]
+ ],
+ "anchors": {
+  "b1": [
+   112,
+   82
+  ],
+  "b1h": [
+   150,
+   82
+  ],
+  "b2": [
+   72,
+   150
+  ],
+  "b2h": [
+   110,
+   150
+  ],
+  "b3": [
+   82,
+   232
+  ],
+  "b3h": [
+   120,
+   232
+  ],
+  "b4": [
+   217,
+   139
+  ],
+  "b4h": [
+   250,
+   139
+  ]
+ },
+ "root": [
+  "b2",
+  "b4"
+ ],
+ "size_from_mask": false,
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 8,
+   "joint": "b1",
+   "aim": [
+    "b2",
+    "b4"
+   ],
+   "turn": 0,
+   "fold": "w1",
+   "axis": [
+    "b1",
+    "b1h"
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 3,
+   "joint": "b1",
+   "aim": [
+    "b2",
+    "b4"
+   ],
+   "turn": 0,
+   "fold": "w1",
+   "axis": [
+    "b1",
+    "b1h"
+   ]
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 5,
+   "joint": "b1",
+   "aim": [
+    "b2",
+    "b4"
+   ],
+   "turn": 0,
+   "fold": "w1",
+   "axis": [
+    "b1",
+    "b1h"
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 10,
+   "joint": "b2",
+   "aim": [
+    "b2",
+    "b4"
+   ],
+   "turn": 0,
+   "fold": "w2",
+   "axis": [
+    "b2",
+    "b2h"
+   ]
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 8,
+   "joint": "b4",
+   "aim": [
+    "b2",
+    "b4"
+   ],
+   "turn": 0,
+   "fold": "w4",
+   "axis": [
+    "b4",
+    "b4h"
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 9,
+   "joint": "b3",
+   "aim": [
+    "b2",
+    "b4"
+   ],
+   "turn": 0,
+   "fold": "w3",
+   "axis": [
+    "b3",
+    "b3h"
+   ]
+  }
+ ],
+ "size": "steady",
+ "smooth": 0.8,
+ "track": false,
+ "max_tilt": 20
+}
