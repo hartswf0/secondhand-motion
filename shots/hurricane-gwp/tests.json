@@ -1,23 +1,24 @@
 [
  {
   "id": "M2",
-  "value": 1,
+  "value": 3,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   1,
-   1,
-   1,
-   0,
-   1,
-   0
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3
   ]
  },
  {
   "id": "M2b",
-  "value": 0.12,
+  "value": 1.0,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-  "ok": false,
+  "ok": true,
   "design_typicality": 3
  },
  {
@@ -34,7 +35,7 @@
  },
  {
   "id": "T3",
-  "value": "the doodle's 7 strokes repeated as marks, 11-20 per frame",
+  "value": "the doodle's 7 strokes repeated as marks, 7-7 per frame",
   "unit": "",
   "ok": true,
   "note": "field rig: marks enter and leave the frame"
@@ -73,17 +74,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cwaves\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca wave or swell of water, drawn as a stack of long horizontal strokes that come to a point on the right\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/hurricane-gwp/reviews/critic-1.json"
+  "evidence": "shots/hurricane-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "Each cluster repeats the doodle's layered scribble with pointed right ends. The doodle is a single cluster, while the animation shows several copies at once.",
-  "evidence": "shots/hurricane-gwp/reviews/critic-1.json"
+  "note": "The animated figure is the same layered, right-pointing scribble as c.png, only smaller, with the same strokes and construction.",
+  "evidence": "shots/hurricane-gwp/reviews/critic-3.json"
  }
 ]

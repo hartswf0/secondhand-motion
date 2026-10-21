@@ -87,17 +87,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA pig (the doodle in c.png: a pig in side view with a spiral snout, zigzag ears and stick legs).\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca pig\u201d; motion broken; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/pig-gwp/reviews/critic-5.json"
+  "evidence": "shots/pig-gwp/reviews/critic-6.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The drawing keeps the doodle's snout, ears and segmented outline, but in frames 11-16 the body becomes a sharp-cornered wedge with the ear stroke separated from the back line, and the legs are reduced to a few strokes, which makes it less round and less complete than c.png.",
-  "evidence": "shots/pig-gwp/reviews/critic-5.json"
+  "ok": false,
+  "note": "Frames 1-6 are clearly the c.png pig, but from frame 8 on the head is a new V-eared front face and from frame 11 the body is a peaked dome, so the turned pig reads as a different drawing sharing only the snout spiral.",
+  "evidence": "shots/pig-gwp/reviews/critic-6.json"
  }
 ]

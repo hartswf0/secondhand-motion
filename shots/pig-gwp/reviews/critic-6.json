@@ -1,0 +1,25 @@
+{
+ "seen_animation": "Frames 1-6: the doodle pig stands in left-facing profile with its oval body, zigzag ears and spiral snout at upper left; a black diagonal line (a pole) touches the snout in 1-4 and in 5-6 has pulled back to a short hooked end just left of the snout. Frame 7: the pole is gone, the head drops slightly and a new chest line appears. Frame 8: the head is redrawn as a front-facing face with a wide V of two pointed ears, the snout below it, and the body behind. Frame 9: the same front-facing pig, but the whole figure is smaller. Frames 10-16: the pig is larger again and faces toward the viewer at three-quarters, head lower left, body rising behind it into a tall, peaked back; it drifts left in 13 and back right in 14-16. The legs stay as short near-static strokes from 10 onward.",
+ "seen_film": "Frames 1-6: a white pig stands in left-facing profile with a catch-pole loop on its snout, a handler's legs behind it. Frame 7: the pole is released and the pig starts turning its head toward the camera and stepping forward. Frames 8-10: the pig turns to three-quarters front view and walks toward the camera and left. Frames 11-16: the pig keeps walking toward the camera at three-quarters, filling more of the frame; in 13 it is at lower left, in 14-16 it is back toward center, legs stepping throughout.",
+ "named_subject": "a pig",
+ "verdict": "reference stronger",
+ "evidence": "Timing and placement match: profile with pole in 1-6, release and turn at 7, three-quarters approach 8-16, lower-left shift at 13 matching film 13. Weaknesses: 7 to 8 the profile head with zigzag ears is replaced by a different front-facing head with wide V ears, with no in-between drawing of the head rotating; 8 to 9 the whole pig shrinks and 9 to 10 it grows markedly, a scale pop the film does not have; from 11 to 16 the back contour becomes a tall pointed peak and the body loses the flat-topped oval of c.png; in 10-16 the legs are nearly static vertical strokes while the film pig is visibly stepping; in 5-6 the pole has already detached from the snout while in the film it is still on the snout until 6.",
+ "primary_gap": "The turn from profile to three-quarters view is a redraw (frames 7-8) followed by a size pop (8-10), and the turned body (11-16) loses the doodle's oval construction in favor of a pointed peaked back.",
+ "closes_when": "Frames 7-9 show the doodle's same zigzag ears and spiral snout rotating in steps toward the viewer at a constant body size, and frames 10-16 keep the flat-topped oval body of c.png foreshortened rather than a peaked dome, with front legs alternating position from frame to frame.",
+ "protect": "Event timing (pole on snout 1-6, release and turn at 7, approach 8-16), frame placement including the lower-left shift at 13, the doodle's square-spiral snout and sparse single-stroke line quality, faithful profile pose in 1-6 matching c.png.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Frames 1-6 are clearly the c.png pig, but from frame 8 on the head is a new V-eared front face and from frame 11 the body is a peaked dome, so the turned pig reads as a different drawing sharing only the snout spiral.",
+ "still_frames_only": true,
+ "_packet": "lote0b87c54",
+ "_round": 6
+}

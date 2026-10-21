@@ -1,7 +1,7 @@
 {
  "category": "hurricane",
  "doodle_key_id": "4791481996935168",
- "note": "Quick, Draw! hurricane 4791481996935168: a long scribble of wind lines (6) and six short strokes. Every frame repeats the doodle as a band of surf, moved by the water's own motion measured in the bottom of the frame.",
+ "note": "Quick, Draw! hurricane 4791481996935168: a long scribble of wind lines (6) and six short strokes. Every frame repeats the doodle as a band of surf, moved by the water's own motion measured in the bottom of the frame. Since the drawn-keys pass: one copy, held in place, performed by drawn keys (rise against the house corner, strike, fall back, roll forward, settle).",
  "strokes": [
   [
    [
@@ -315,22 +315,20 @@
   ]
  ],
  "field": {
-  "motion": "the surf band moves with the water, measured by phase correlation of the lower third of each frame",
+  "motion": "held: one copy of the doodle as the breaking wave in front of the house, anchored at the left corner where the film's surf strikes; its rise, strike and settle are drawn keys (shots/hurricane/drawn), not measured flow, because the measured flow slid it across the frame while the film's house and surf stay in place",
   "measure_band": [
    190,
    288
   ],
   "layers": [
    {
-    "scale": 0.8,
+    "scale": 0.9,
     "tile": [
      520,
      200
     ],
-    "velocity": "measured",
-    "flow_gain": 1.0,
-    "drift": [
-     1.0,
+    "velocity": [
+     0,
      0
     ],
     "band": [
