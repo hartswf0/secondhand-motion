@@ -94,7 +94,7 @@ def main():
         part = ROOT / 'data' / 'quickdraw' / f'{cat}.part'
         if not part.exists():   # the tests compare against real doodles of the category
             subprocess.run(['curl', '-sSf', '-r', '0-2500000', 'https://storage.googleapis.com/quickdraw_dataset/full/simplified/' + cat.replace(' ', '%20') + '.ndjson', '-o', str(part)], check=True)
-        for c in (['gwp_build.py', slug], ['gwp_tests.py', slug], ['critic_packet.py', slug, '--suffix=gwp']):
+        for c in (['gwp_build.py', slug], ['gwp_tests.py', slug], ['critic_packet.py', slug, '--suffix=gwp', '--dense']):
             subprocess.run([PY, str(ROOT / 'tools' / c[0]), *c[1:]], check=True)
 
 
