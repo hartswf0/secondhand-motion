@@ -1,0 +1,375 @@
+{
+ "category": "stove",
+ "doodle_key_id": "5938479424864256",
+ "facing": 1,
+ "face_from": [
+  "hr",
+  "hl"
+ ],
+ "size_from_mask": false,
+ "note": "Quick, Draw! stove 5938479424864256, drawn front on: the top edge (0), the left side and bottom line of the body (1), the right side (2), the line under the cooktop band (3), three burner spirals on the band (4, 5, 6), and two vertical lines in the lower body (7, 8). In the film the lower body is an oven with two doors hinged at its outer sides, so stroke 7 is the free edge of the left door and stroke 8 the free edge of the right door. The whole drawing is placed by the bottom corners of the body (hl, hr) and does not turn or change size. Stroke 7 folds toward the left side line by the pose value lfold and stroke 8 toward the right side line by rfold: about 1.4 puts the edge where the closed door's edge is in the film, 0 puts it on the hinge, and a negative value puts it outside the body, where the door's edge is when it is swung wide open toward the camera.",
+ "root": [
+  "hl",
+  "hr"
+ ],
+ "anchors": {
+  "hl": [
+   12,
+   150
+  ],
+  "hr": [
+   250,
+   150
+  ],
+  "lt": [
+   9,
+   60
+  ],
+  "rt": [
+   251,
+   60
+  ],
+  "rb": [
+   250,
+   150
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 7,
+   "from": 0,
+   "to": 2,
+   "joint": "hl",
+   "aim": [
+    "hl",
+    "hr"
+   ],
+   "turn": 0,
+   "fold": "lfold",
+   "axis": [
+    "lt",
+    "hl"
+   ]
+  },
+  {
+   "stroke": 8,
+   "from": 0,
+   "to": 2,
+   "joint": "hr",
+   "aim": [
+    "hl",
+    "hr"
+   ],
+   "turn": 0,
+   "fold": "rfold",
+   "axis": [
+    "rt",
+    "rb"
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "hl",
+   "aim": [
+    "hl",
+    "hr"
+   ],
+   "turn": 0
+  }
+ ],
+ "track": false,
+ "smooth": 1.0,
+ "size": "steady",
+ "strokes": [
+  [
+   [
+    5,
+    3
+   ],
+   [
+    59,
+    4
+   ],
+   [
+    153,
+    12
+   ],
+   [
+    233,
+    8
+   ],
+   [
+    244,
+    7
+   ],
+   [
+    246,
+    4
+   ]
+  ],
+  [
+   [
+    6,
+    9
+   ],
+   [
+    11,
+    87
+   ],
+   [
+    9,
+    144
+   ],
+   [
+    14,
+    153
+   ],
+   [
+    68,
+    159
+   ],
+   [
+    178,
+    154
+   ],
+   [
+    221,
+    147
+   ],
+   [
+    254,
+    147
+   ]
+  ],
+  [
+   [
+    249,
+    3
+   ],
+   [
+    252,
+    96
+   ],
+   [
+    248,
+    163
+   ]
+  ],
+  [
+   [
+    12,
+    59
+   ],
+   [
+    52,
+    63
+   ],
+   [
+    182,
+    66
+   ],
+   [
+    226,
+    63
+   ],
+   [
+    251,
+    57
+   ],
+   [
+    247,
+    55
+   ]
+  ],
+  [
+   [
+    86,
+    9
+   ],
+   [
+    51,
+    0
+   ],
+   [
+    22,
+    2
+   ],
+   [
+    11,
+    7
+   ],
+   [
+    4,
+    11
+   ],
+   [
+    0,
+    20
+   ],
+   [
+    4,
+    43
+   ],
+   [
+    16,
+    55
+   ],
+   [
+    38,
+    60
+   ],
+   [
+    66,
+    59
+   ],
+   [
+    101,
+    51
+   ],
+   [
+    108,
+    44
+   ],
+   [
+    100,
+    35
+   ],
+   [
+    62,
+    19
+   ],
+   [
+    61,
+    23
+   ]
+  ],
+  [
+   [
+    198,
+    24
+   ],
+   [
+    174,
+    14
+   ],
+   [
+    151,
+    13
+   ],
+   [
+    137,
+    16
+   ],
+   [
+    131,
+    35
+   ],
+   [
+    133,
+    55
+   ],
+   [
+    152,
+    66
+   ],
+   [
+    167,
+    68
+   ],
+   [
+    198,
+    62
+   ],
+   [
+    205,
+    53
+   ],
+   [
+    202,
+    46
+   ],
+   [
+    188,
+    37
+   ],
+   [
+    174,
+    34
+   ]
+  ],
+  [
+   [
+    225,
+    26
+   ],
+   [
+    218,
+    27
+   ],
+   [
+    211,
+    33
+   ],
+   [
+    208,
+    43
+   ],
+   [
+    210,
+    57
+   ],
+   [
+    223,
+    66
+   ],
+   [
+    240,
+    60
+   ],
+   [
+    246,
+    51
+   ],
+   [
+    244,
+    43
+   ],
+   [
+    240,
+    38
+   ],
+   [
+    231,
+    37
+   ]
+  ],
+  [
+   [
+    69,
+    67
+   ],
+   [
+    82,
+    178
+   ],
+   [
+    86,
+    185
+   ]
+  ],
+  [
+   [
+    194,
+    70
+   ],
+   [
+    194,
+    107
+   ],
+   [
+    182,
+    157
+   ]
+  ]
+ ]
+}

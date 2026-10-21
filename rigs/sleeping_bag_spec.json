@@ -6,7 +6,7 @@
   "head",
   "foot"
  ],
- "note": "Quick, Draw! sleeping bag 4517131834097664: a person in a tall sleeping bag seen from the front. Stroke 0 is the bag, an upright box with a rounded bottom. Stroke 1 is the hat with its brim pointing left, stroke 2 the face outline, strokes 3, 4, 6 and 7 the eyes, stroke 5 the mouth, strokes 8 and 9 the shoulders running from the chin down to the bag opening. In the film the person sits in the snow facing left, with the bag spread down and to the right, so the root runs from the neck to the foot of the bag and tilts the bag down to the right. The head (strokes 1 to 7) turns about the neck toward the pose's head point, so it nods and leans on its own; yaw slides the eyes and mouth to the left when the face turns into profile.",
+ "note": "Quick, Draw! sleeping bag 4517131834097664: a person in a tall sleeping bag seen from the front. Stroke 0 is the bag, an upright box with a rounded bottom. Stroke 1 is the hat with its brim pointing left, stroke 2 the face outline, strokes 3, 4, 6 and 7 the eyes, stroke 5 the mouth, strokes 8 and 9 the shoulders running from the chin down to the bag opening. In the film the person sits in the snow facing left, with the bag spread down and to the right, so the root runs from the bag opening at the collar (anchor neck, the pale toggle under the chin in the film) to the foot of the bag on the snow and tilts the bag down to the right. The head with its shoulder lines (strokes 1 to 9) turns about the collar toward the pose's head point, so it nods and leans on its own; yaw slides the eyes and mouth to the left when the face turns into profile. The two sides of the bag outline (stroke 0, vertices 1 to 6 and 9 to 11) swing outward at their top corners by most of the pose's turn, toward lfoot and rfoot, so the bag spreads on the ground the way the real bag spreads over the knees and behind the back.",
  "strokes": [
   [
    [
@@ -267,8 +267,8 @@
    26
   ],
   "neck": [
-   63,
-   52
+   62,
+   87
   ],
   "foot": [
    70,
@@ -367,15 +367,36 @@
    ]
   },
   {
+   "stroke": 8,
+   "from": 0,
+   "to": 5,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 9,
+   "from": 0,
+   "to": 2,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
    "stroke": 0,
    "from": 1,
-   "to": 8,
+   "to": 6,
    "joint": "lhip",
    "aim": [
     "lhip",
     "lfoot"
    ],
-   "stretch": 0.4
+   "stretch": 0.4,
+   "turn": 0.8
   },
   {
    "stroke": 0,
@@ -386,7 +407,8 @@
     "rhip",
     "rfoot"
    ],
-   "stretch": 0.4
+   "stretch": 0.4,
+   "turn": 0.8
   },
   {
    "rest": true,

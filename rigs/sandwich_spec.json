@@ -1,0 +1,292 @@
+{
+ "category": "sandwich",
+ "doodle_key_id": "4656649232973824",
+ "facing": 1,
+ "face_from": [
+  "right",
+  "left"
+ ],
+ "note": "Quick, Draw! sandwich 4656649232973824, drawn in three-quarter view from above. Stroke 0 is the top slice of bread (crown at the top, crust corner at the right). Stroke 1 is the bottom slice: its left side, bottom edge and right side, drawn below and around the top slice. Strokes 2 and 3 are two filling lines between the slices. Stroke 4 is a short line on the right side, the thickness of the bread. The root places the bottom slice by its lower left corner (left) and its upper right corner (right); in the film the bottom slice lies still on the tray, so it only moves with the camera. The top slice is the one part: it is carried in by the worker's hand and laid on the bottom slice. pose 'lift' moves it away from its resting place along the doodle direction (-100, -40) per unit (up and to the left, where the hand comes from); pose 'tilt' turns it clockwise about the centre of the resting top slice, which both tilts the slice in the hand and swings it along an arc. At lift 0 and tilt 0 the drawing is the doodle exactly.",
+ "strokes": [
+  [
+   [
+    102,
+    0
+   ],
+   [
+    79,
+    1
+   ],
+   [
+    56,
+    11
+   ],
+   [
+    27,
+    46
+   ],
+   [
+    16,
+    85
+   ],
+   [
+    16,
+    117
+   ],
+   [
+    24,
+    134
+   ],
+   [
+    37,
+    142
+   ],
+   [
+    60,
+    144
+   ],
+   [
+    88,
+    129
+   ],
+   [
+    101,
+    129
+   ],
+   [
+    161,
+    153
+   ],
+   [
+    191,
+    156
+   ],
+   [
+    198,
+    151
+   ],
+   [
+    221,
+    111
+   ],
+   [
+    232,
+    90
+   ],
+   [
+    241,
+    60
+   ],
+   [
+    182,
+    46
+   ],
+   [
+    152,
+    43
+   ],
+   [
+    149,
+    5
+   ],
+   [
+    142,
+    3
+   ],
+   [
+    114,
+    4
+   ]
+  ],
+  [
+   [
+    33,
+    49
+   ],
+   [
+    21,
+    55
+   ],
+   [
+    11,
+    71
+   ],
+   [
+    4,
+    90
+   ],
+   [
+    0,
+    173
+   ],
+   [
+    3,
+    181
+   ],
+   [
+    11,
+    187
+   ],
+   [
+    85,
+    188
+   ],
+   [
+    150,
+    215
+   ],
+   [
+    164,
+    220
+   ],
+   [
+    180,
+    220
+   ],
+   [
+    199,
+    206
+   ],
+   [
+    206,
+    197
+   ],
+   [
+    221,
+    165
+   ],
+   [
+    232,
+    124
+   ],
+   [
+    241,
+    109
+   ]
+  ],
+  [
+   [
+    20,
+    151
+   ],
+   [
+    54,
+    160
+   ],
+   [
+    84,
+    161
+   ],
+   [
+    102,
+    170
+   ],
+   [
+    190,
+    168
+   ],
+   [
+    233,
+    175
+   ]
+  ],
+  [
+   [
+    171,
+    179
+   ],
+   [
+    146,
+    180
+   ],
+   [
+    67,
+    152
+   ],
+   [
+    22,
+    149
+   ],
+   [
+    15,
+    146
+   ],
+   [
+    9,
+    140
+   ]
+  ],
+  [
+   [
+    203,
+    182
+   ],
+   [
+    208,
+    169
+   ],
+   [
+    232,
+    130
+   ],
+   [
+    240,
+    109
+   ],
+   [
+    255,
+    85
+   ]
+  ]
+ ],
+ "root": [
+  "left",
+  "right"
+ ],
+ "anchors": {
+  "left": [
+   0,
+   173
+  ],
+  "right": [
+   241,
+   109
+  ],
+  "tc": [
+   128,
+   78
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 21,
+   "joint": "tc",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "spin": "tilt",
+   "shift_by": "lift",
+   "shift": [
+    -100,
+    -40
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  }
+ ],
+ "size_from_mask": false,
+ "size": "steady",
+ "track": false,
+ "smooth": 1.0
+}

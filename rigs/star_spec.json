@@ -66,7 +66,7 @@
   {
    "stroke": 2,
    "from": 0,
-   "to": 1,
+   "to": 0,
    "joint": "c",
    "aim": [
     "c",
@@ -76,9 +76,21 @@
    "turn": 1.0
   },
   {
+   "stroke": 2,
+   "from": 1,
+   "to": 1,
+   "joint": "c",
+   "aim": [
+    "c",
+    "r"
+   ],
+   "stretch": 0.3,
+   "turn": 0.5
+  },
+  {
    "stroke": 1,
    "from": 1,
-   "to": 2,
+   "to": 1,
    "joint": "c",
    "aim": [
     "c",
@@ -86,6 +98,18 @@
    ],
    "stretch": 0.6,
    "turn": 1.0
+  },
+  {
+   "stroke": 1,
+   "from": 2,
+   "to": 2,
+   "joint": "c",
+   "aim": [
+    "c",
+    "l"
+   ],
+   "stretch": 0.3,
+   "turn": 0.5
   },
   {
    "stroke": 3,

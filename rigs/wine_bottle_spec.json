@@ -1,0 +1,144 @@
+{
+ "category": "wine bottle",
+ "doodle_key_id": "5665738343841792",
+ "facing": 1,
+ "face_from": [
+  "top",
+  "top"
+ ],
+ "note": "Quick, Draw! wine bottle 5665738343841792, seen from the front. Stroke 0 is the whole outline: the left side of the neck down to the shoulder, the body, the flat base, the right side, and the open top of the neck. Stroke 1 is the short line across the neck (the capsule edge). Strokes 2 and 3 are the top and bottom edges of the label. The bottle in the film does not bend or turn; it comes toward the camera and grows. The rig is rigid: it is placed by two points, the middle of the neck top and the middle of the base, so its position and size follow those two points and every stroke keeps the doodle's shape.",
+ "strokes": [
+  [
+   [
+    49,
+    0
+   ],
+   [
+    48,
+    82
+   ],
+   [
+    16,
+    126
+   ],
+   [
+    7,
+    151
+   ],
+   [
+    1,
+    197
+   ],
+   [
+    1,
+    253
+   ],
+   [
+    75,
+    254
+   ],
+   [
+    121,
+    247
+   ],
+   [
+    124,
+    240
+   ],
+   [
+    123,
+    204
+   ],
+   [
+    114,
+    132
+   ],
+   [
+    110,
+    117
+   ],
+   [
+    85,
+    78
+   ],
+   [
+    84,
+    11
+   ],
+   [
+    59,
+    7
+   ]
+  ],
+  [
+   [
+    51,
+    40
+   ],
+   [
+    83,
+    40
+   ]
+  ],
+  [
+   [
+    20,
+    156
+   ],
+   [
+    54,
+    159
+   ],
+   [
+    95,
+    159
+   ],
+   [
+    112,
+    156
+   ]
+  ],
+  [
+   [
+    3,
+    192
+   ],
+   [
+    48,
+    197
+   ],
+   [
+    99,
+    198
+   ]
+  ]
+ ],
+ "anchors": {
+  "top": [
+   66,
+   5
+  ],
+  "base": [
+   62,
+   254
+  ]
+ },
+ "root": [
+  "top",
+  "base"
+ ],
+ "size_from_mask": false,
+ "parts": [
+  {
+   "rest": true,
+   "joint": "top",
+   "aim": [
+    "top",
+    "base"
+   ],
+   "turn": 0
+  }
+ ],
+ "track": false,
+ "smooth": 1.2
+}
