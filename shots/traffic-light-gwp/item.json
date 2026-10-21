@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0191",
+ "id": "traffic-light-gwp",
+ "kind": "shot",
+ "title": "Traffic light, the Giraffe Walks Past Way",
+ "category": "traffic-light",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/traffic-light-gwp/cover.png",
+ "cover_alt": "shots/traffic-light-gwp/frames/f022.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/traffic-light-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#traffic-light-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/traffic_light_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/traffic-light/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/traffic-light-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

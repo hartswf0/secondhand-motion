@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A tilted traffic-light housing drawn in black lines, with a rounded-trapezoid top lens and two irregular round lenses below it, stands in front of grey scenery lines (a pole and diagonal wires). In frames 1 none of the lenses is lit. In frame 2 the middle lens fills with diagonal hatching, and from frame 3 short radiating tick marks surround it, showing it is lit. Frames 3-14 hold this state with the housing still and only the ray ticks shifting slightly. In frame 15 the middle lens goes back to an empty outline and the top lens is hatched with rays around it; frame 16 holds this. The event is a traffic light changing from its middle (amber) light to its top (red) light.",
+ "seen_film": "A low-angle, static close-up of a hooded three-lens traffic light tilted toward the upper right, with a pole and a wire-hung framework behind it. In frame 1 the bottom (green) lens is dimly lit and the others are dark. In frames 2-3 the middle lens comes on amber. Frames 3-14 hold the amber light with the camera and signal unmoving. In frames 15-16 the amber goes dark and the top lens shows red. The event is green to amber to red.",
+ "named_subject": "A three-lens traffic signal (traffic light) that changes from amber to red.",
+ "verdict": "bar met",
+ "evidence": "e.png vs f.png: the film's amber comes on around frames 4-5 and the animation hatches the middle lens at frame 4 and adds rays at frame 5, matching. Frames 5-38 in both hold steady with the housing in the same place and the same tilt; g.png shows the character's centre stays in one spot (no drift), which matches the static film camera. The film's amber goes off at frame 39 and red appears at frame 40; the animation drops the middle rays at 39, empties the middle lens and hatches the top lens at 40, and adds top rays at 41, matching to the frame. Housing, lens positions and scenery lines stay registered across all 44 frames. Weaknesses: at frame 40 the top lens outline is redrawn wider and rotated compared with its unlit shape in frames 1-39 (the lit top lens in 40-44 is a broader, flatter trapezoid set further left), so the lens visibly changes shape when it lights. The ray ticks around the lit lenses are redrawn in different positions every frame (frames 5-38, 41-44), giving a mild flicker; this can read as a glow but is not in the film. The film's dim green bottom light in frames 1-3 is not shown; the animation has all lenses empty there.",
+ "primary_gap": "When the top lens lights at frame 40 its outline is replaced by a wider, differently angled shape instead of the same trapezoid from frames 1-39 being filled, so the lens pops in shape at the change.",
+ "closes_when": "In frames 40-44 the hatched top lens has the same outline, size and position as the unlit top lens in frames 1-39, with only the hatching and rays added.",
+ "protect": "The frame-accurate timing of amber on (4-5) and red on (40); the locked, unmoving housing and scenery that match the static film; the doodle's construction (rounded-trapezoid top lens over two irregular round lenses, single-weight wobbly outline); the hatching-plus-ticks convention for a lit lamp; the middle lens returning to its plain outline when it goes dark.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  40
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The housing is tilted and its sides are more curved than the upright rectangle in c.png, and the lit top lens at frames 40-44 departs from the doodle's top-lens shape, but the three-lens construction and line habits are the doodle's.",
+ "still_frames_only": true,
+ "_packet": "lotfc2543eb",
+ "_round": 1
+}
