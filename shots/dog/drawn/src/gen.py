@@ -64,7 +64,7 @@ def front(hy=0.0, rx=0.0):
     c5 = ST[5].mean(0)
     o[5] = hd((ST[5] - c5) * [0.42, 0.85] + [-11, -7]); o[6] = hd((ST[6] - c5) * [0.42, 0.85] + [-11, -7])
     # front legs either side under the chest, hind legs behind, outside them and shorter, x narrowed
-    for i, (x, y, kx, ky) in {7: (-18, 22, -0.35, 0.95), 8: (17, 24, -0.35, 0.95), 9: (-30, 12, -0.35, 0.78), 10: (29, 12, -0.35, 0.78)}.items():
+    for i, (x, y, kx, ky) in {7: (-18, 22, -0.5, 0.95), 8: (17, 24, -0.5, 0.95), 9: (-30, 12, -0.5, 0.78), 10: (29, 12, -0.5, 0.78)}.items():
         o[i] = (ST[i] - LEGTOP[i]) * [kx, ky] + [x, y]
     # rear block and rump line: the far end of the body, showing past the head on the back
     c11 = ST[11].mean(0); o[11] = (ST[11] - c11) * [-0.5, 0.55] + [rx, c11[1] - CH[1] - 4]

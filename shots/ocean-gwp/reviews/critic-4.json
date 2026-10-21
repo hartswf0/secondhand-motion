@@ -1,0 +1,25 @@
+{
+ "seen_animation": "Frames 1-4: four wavy horizontal lines (a long top zigzag, a middle arc, a lower wavy line, a bottom peaked line) plus a small zigzag at left drift slightly as a group; very little changes. Frames 5-6: the small left zigzag spikes up to a tall point in 5, then collapses into a short squiggle in 6. Frames 7-8: the top line's right end begins to rise and kink; in frame 8 a new sharp bump appears on the right part of the bottom line and is gone again in frame 9. Frames 9-11: the top line's right end climbs higher and flattens into a raised lip. Frame 12: a grey horizon line appears at the top and the whole drawing drops lower in the frame; the top line's right end hooks down with a short vertical tick. Frames 13-16: the horizon line stays and creeps slightly lower; the top line's right end curls over (13-14) and then falls into a descending tail (15-16), so the rightmost peak of the top line is gone by the end. The other lines barely change through the shot. Still frames only; playback not seen.",
+ "seen_film": "A rough green sea seen from above with no horizon. Frames 1-2: dark, choppy water with fine streaks. Frames 3-4: the surface breaks up into white foam, with a whitecap at lower left. Frames 5-8: large white breaking crests move across the frame (one left-of-center, one lower-center moving right toward the lower right corner), and a long wave ridge forms across the upper half. Frames 9-12: one large wave builds and peaks at right-center with spray on its crest while the foam patches fade. Frames 13-14: the camera tilts up, a pale sky band and horizon appear at the top, and the crest is now small at right. Frames 15-16: the sea is calmer and flatter below the horizon, with a last small breaking crest at the right edge.",
+ "named_subject": "Ocean waves (several wavy lines representing a sea surface).",
+ "verdict": "reference stronger",
+ "evidence": "Matches: frames 9-11 raise the top line's right end into a crest at the right, in step with the film's large wave peaking at right-center in 9-12; frames 13-16 curl and drop that crest as the film's crest shrinks and the sea flattens; the horizon line appears in frame 12 and the drawing shifts down, close to the film's tilt-up revealing the horizon in 13. Misses: in frames 3-8 the film shows the sea breaking into foam and white crests travelling across the frame, while the animation's lines stay almost identical (frames 1-4 nearly unchanged); the only activity there is the left zigzag spiking in 5 and collapsing in 6, and a bump that appears on the bottom line only in frame 8 and vanishes in 9, which read as pops rather than waves travelling. The middle and lower lines never move as waves through the whole shot.",
+ "primary_gap": "The turbulent first half of the film (frames 3-8, crests breaking and travelling across the water) is performed as near-stillness plus isolated one-frame pops, so the sea does not look rough and moving until the right-end crest in frames 9-11.",
+ "closes_when": "In frames 3-8 the existing wave lines carry visible crests that travel steadily left to right across successive frames (a peak on the bottom line moving from lower-center toward lower-right, a rise on the middle lines moving across), with no bump that appears in one frame and disappears in the next.",
+ "protect": "The doodle's exact construction: the four loose polyline wave strokes and the small left zigzag, same stroke weight and angular joins, with no added detail. The right-end crest of the top line rising in 9-11 and curling over and falling in 13-16. The horizon line arriving around frame 12-13 with the drawing shifting down to show the camera tilt.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  6,
+  8,
+  9,
+  12
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png doodle itself, line for line, with its angular wave strokes and small left zigzag intact; only the left zigzag's spike in frame 5 distorts it briefly.",
+ "still_frames_only": true,
+ "_packet": "lot17c86d60",
+ "_round": 4
+}

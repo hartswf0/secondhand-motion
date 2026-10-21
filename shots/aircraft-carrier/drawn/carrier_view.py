@@ -44,27 +44,40 @@ UVW = ship_coords()
 # the doubled stern corner: in the doodle S0 starts a few pixels from S1's start; undoing the short oblique axis
 # spreads that gap across a fifth of the beam, so put S0's first point back next to S1's first point
 UVW[0][0] = UVW[1][0] + np.array([-0.02, 0.05, 0.])
-L, BEAM, DEPTH = 3.3, 1.25, 0.28           # ship size in world units (length, beam, deck-to-gallery depth)
-PITCH = np.radians(10)                      # camera looks down at this angle
+L, BEAM, DEPTH = 2.4, 1.25, 0.28           # ship size in world units (length, beam, deck-to-gallery depth)
+PITCH = np.radians(14)                      # camera looks down at this angle
 DIST = 30.0                                 # camera distance from the ship's centre
 
 
+STRUCT = [[0, 1, 3], [0, 5, 7], [0, 4, 5], [0, 1, 2], [0, 2]]   # per stroke: the corners that are placed in 3D
+DOODLE = [np.array(s, float) for s in D]
+
+
+def _sim(p0, p1, q0, q1, pts):
+    """the similarity (rotate + scale + move, no mirror) taking p0->q0, p1->q1, applied to pts"""
+    dp, dq = p1 - p0, q1 - q0
+    a = complex(*dq) / complex(*dp) if np.hypot(*dp) > 1e-6 else 1
+    z = ((pts[:, 0] - p0[0]) + 1j * (pts[:, 1] - p0[1])) * a
+    return np.c_[z.real + q0[0], z.imag + q0[1]]
+
+
 def project(phi_deg, cx, cy, scale):
-    """phi: heading in degrees; (cx, cy): where the ship's deck centre lands in the frame; scale: pixels per unit."""
+    """phi: heading in degrees; (cx, cy): where the ship's deck centre lands in the frame; scale: pixels per unit.
+    Only each stroke's corners (STRUCT) are placed in 3D. The doodle's points between two corners (the steps of
+    S1, the hook and notch of S2, the bend of S4) are carried over as drawn, by the rotation and scaling that takes
+    the doodle's segment onto the projected segment, so the steps stay small steps of the same edge in every view."""
     ph = np.radians(phi_deg)
     h = np.array([np.sin(ph), -np.cos(ph), 0.]); c = np.array([np.cos(ph), np.sin(ph), 0.])
     cam = np.array([0., -DIST * np.cos(PITCH), DIST * np.sin(PITCH)])
     fwd = -cam / np.linalg.norm(cam); right = np.array([1., 0, 0]); up = np.cross(right, fwd)
     res = []
-    # the near side face (S2) is edge on or turned away while the bow points at the camera: only its front end shows,
-    # and more of it slides into view as the bow swings right (fully out by 25 degrees)
-    t = min(max(phi_deg / 25., 0.), 1.); g = 0.12 + 0.88 * t * t * (3 - 2 * t)
-    for i, s in enumerate(UVW):
-        if i == 2:
-            s = s.copy(); s[:, 0] = 1 - (1 - s[:, 0]) * g
+    for s, d, st in zip(UVW, DOODLE, STRUCT):
         P = ((s[:, 0:1] - .5) * L * h + (s[:, 1:2] - .5) * BEAM * c + (s[:, 2:3]) * DEPTH * np.array([0, 0, -1.])) - cam
-        z = P @ fwd; x = (P @ right) / z * DIST; y = -(P @ up) / z * DIST
-        res.append(np.c_[cx + x * scale, cy + y * scale])
+        z = P @ fwd; q = np.c_[cx + (P @ right) / z * DIST * scale, cy - (P @ up) / z * DIST * scale]
+        out = q.copy()
+        for i0, i1 in zip(st[:-1], st[1:]):
+            out[i0:i1 + 1] = _sim(d[i0], d[i1], q[i0], q[i1], d[i0:i1 + 1])
+        res.append(out)
     return res
 
 

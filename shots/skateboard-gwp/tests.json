@@ -1,41 +1,45 @@
 [
  {
   "id": "M2",
-  "value": 32,
+  "value": 25,
   "unit": "percentile among real doodles of the category",
-  "ok": true,
+  "ok": false,
   "per_key": [
-   23,
-   32,
-   34,
+   19,
+   7,
+   11,
+   19,
    35,
-   34,
-   34,
+   38,
+   31,
+   25,
+   25,
+   30,
+   30,
    28,
-   36,
-   34,
-   34,
-   29,
-   33
+   23,
+   23,
+   28,
+   30
   ]
  },
  {
   "id": "M2b",
-  "value": 0.9,
+  "value": 0.87,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 26
  },
  {
   "id": "M3",
-  "value": 0.28,
+  "value": 0.26,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.08
+  "min": 0.0
  },
  {
   "id": "M6",
-  "value": 28.0,
+  "value": 17.5,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -55,7 +59,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:5264525936820224; scenery quickdraw:6018958220066816, quickdraw:6042966684598272, quickdraw:5224511622348800, drawn by agent: no Quick, Draw! category for a traffic cone; a triangle on a base",
+  "value": "rig quickdraw:5264525936820224; scenery quickdraw:6018958220066816, quickdraw:6042966684598272, quickdraw:5224511622348800, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone, drawn by agent: the orange cone the rider carves past, from the left of centre to off the left edge by frame 8 (no Quick, Draw! category is a traffic cone); one copy per frame, placed on the film cone",
   "unit": "",
   "ok": true
  },
@@ -80,17 +84,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca small car or monster truck: a long flat body on two large round wheels\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca small wheeled vehicle, a car or skateboard seen from the side, with a long flat body on two large round wheels\u201d; motion smooth; follows the film: partly",
   "unit": "",
-  "ok": false,
-  "evidence": "shots/skateboard-gwp/reviews/critic-2.json"
+  "ok": true,
+  "evidence": "shots/skateboard-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The body outline and the two loop wheels match the doodle's construction, including the short overlapping stroke on the top edge. The animated version is smaller, more tilted, and the wheels change shape slightly from frame to frame, sometimes crossing into the body line.",
-  "evidence": "shots/skateboard-gwp/reviews/critic-2.json"
+  "note": "The animated drawing keeps the doodle's long rounded deck, the overlapping stroke at the top front, and the two lumpy polygonal wheels, so it reads as the same drawing.",
+  "evidence": "shots/skateboard-gwp/reviews/critic-3.json"
  }
 ]

@@ -124,6 +124,11 @@
    "id": "char",
    "z": 2,
    "label": "Coaster hill"
+  },
+  {
+   "id": "tower",
+   "z": 1.9,
+   "label": "Lift tower (in front of the cel so the track fill does not hide it)"
   }
  ],
  "objects": [
@@ -138,11 +143,2875 @@
     60
    ],
    "strokes": 1
+  },
+  {
+   "id": "tower_00",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    0,
+    0
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      159.0,
+      -34.0
+     ],
+     [
+      207.0,
+      -34.0
+     ],
+     [
+      208.0,
+      -21.0
+     ],
+     [
+      160.0,
+      -20.0
+     ],
+     [
+      159.0,
+      -34.0
+     ]
+    ],
+    [
+     [
+      163.0,
+      -21.0
+     ],
+     [
+      165.0,
+      24.0
+     ]
+    ],
+    [
+     [
+      203.0,
+      -21.0
+     ],
+     [
+      202.0,
+      24.0
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_01",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    1,
+    1
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      158.2,
+      -31.8
+     ],
+     [
+      206.2,
+      -31.8
+     ],
+     [
+      207.2,
+      -18.8
+     ],
+     [
+      159.2,
+      -17.8
+     ],
+     [
+      158.2,
+      -31.8
+     ]
+    ],
+    [
+     [
+      162.2,
+      -18.8
+     ],
+     [
+      164.2,
+      26.2
+     ]
+    ],
+    [
+     [
+      202.2,
+      -18.8
+     ],
+     [
+      201.2,
+      26.2
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_02",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    2,
+    2
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      156.4,
+      -29.7
+     ],
+     [
+      204.3,
+      -29.7
+     ],
+     [
+      205.3,
+      -16.7
+     ],
+     [
+      157.4,
+      -15.7
+     ],
+     [
+      156.4,
+      -29.7
+     ]
+    ],
+    [
+     [
+      160.4,
+      -16.7
+     ],
+     [
+      162.4,
+      28.2
+     ]
+    ],
+    [
+     [
+      200.3,
+      -16.7
+     ],
+     [
+      199.3,
+      28.2
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_03",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    3,
+    3
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      156.7,
+      -30.2
+     ],
+     [
+      204.5,
+      -30.2
+     ],
+     [
+      205.5,
+      -17.3
+     ],
+     [
+      157.7,
+      -16.3
+     ],
+     [
+      156.7,
+      -30.2
+     ]
+    ],
+    [
+     [
+      160.7,
+      -17.3
+     ],
+     [
+      162.7,
+      27.5
+     ]
+    ],
+    [
+     [
+      200.5,
+      -17.3
+     ],
+     [
+      199.5,
+      27.5
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_04",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    4,
+    4
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      159.8,
+      -35.6
+     ],
+     [
+      207.3,
+      -35.6
+     ],
+     [
+      208.3,
+      -22.8
+     ],
+     [
+      160.8,
+      -21.8
+     ],
+     [
+      159.8,
+      -35.6
+     ]
+    ],
+    [
+     [
+      163.7,
+      -22.8
+     ],
+     [
+      165.7,
+      21.8
+     ]
+    ],
+    [
+     [
+      203.3,
+      -22.8
+     ],
+     [
+      202.4,
+      21.8
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_05",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    5,
+    5
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      160.0,
+      -35.4
+     ],
+     [
+      207.3,
+      -35.4
+     ],
+     [
+      208.3,
+      -22.6
+     ],
+     [
+      161.0,
+      -21.6
+     ],
+     [
+      160.0,
+      -35.4
+     ]
+    ],
+    [
+     [
+      163.9,
+      -22.6
+     ],
+     [
+      165.9,
+      21.7
+     ]
+    ],
+    [
+     [
+      203.3,
+      -22.6
+     ],
+     [
+      202.4,
+      21.7
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_06",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    6,
+    6
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      157.1,
+      -31.7
+     ],
+     [
+      204.2,
+      -31.7
+     ],
+     [
+      205.2,
+      -19.0
+     ],
+     [
+      158.1,
+      -18.0
+     ],
+     [
+      157.1,
+      -31.7
+     ]
+    ],
+    [
+     [
+      161.0,
+      -19.0
+     ],
+     [
+      163.0,
+      25.2
+     ]
+    ],
+    [
+     [
+      200.3,
+      -19.0
+     ],
+     [
+      199.3,
+      25.2
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_07",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    7,
+    7
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      154.1,
+      -27.8
+     ],
+     [
+      201.1,
+      -27.8
+     ],
+     [
+      202.1,
+      -15.1
+     ],
+     [
+      155.1,
+      -14.1
+     ],
+     [
+      154.1,
+      -27.8
+     ]
+    ],
+    [
+     [
+      158.0,
+      -15.1
+     ],
+     [
+      160.0,
+      28.9
+     ]
+    ],
+    [
+     [
+      197.2,
+      -15.1
+     ],
+     [
+      196.2,
+      28.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_08",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    8,
+    8
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      150.5,
+      -24.0
+     ],
+     [
+      197.3,
+      -24.0
+     ],
+     [
+      198.3,
+      -11.3
+     ],
+     [
+      151.5,
+      -10.3
+     ],
+     [
+      150.5,
+      -24.0
+     ]
+    ],
+    [
+     [
+      154.4,
+      -11.3
+     ],
+     [
+      156.3,
+      32.6
+     ]
+    ],
+    [
+     [
+      193.4,
+      -11.3
+     ],
+     [
+      192.4,
+      32.6
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_09",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    9,
+    9
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      147.9,
+      -20.0
+     ],
+     [
+      194.7,
+      -20.0
+     ],
+     [
+      195.7,
+      -7.3
+     ],
+     [
+      148.9,
+      -6.4
+     ],
+     [
+      147.9,
+      -20.0
+     ]
+    ],
+    [
+     [
+      151.8,
+      -7.3
+     ],
+     [
+      153.8,
+      36.5
+     ]
+    ],
+    [
+     [
+      190.8,
+      -7.3
+     ],
+     [
+      189.8,
+      36.5
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_10",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    10,
+    10
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      146.6,
+      -19.6
+     ],
+     [
+      193.4,
+      -19.6
+     ],
+     [
+      194.4,
+      -7.0
+     ],
+     [
+      147.6,
+      -6.0
+     ],
+     [
+      146.6,
+      -19.6
+     ]
+    ],
+    [
+     [
+      150.5,
+      -7.0
+     ],
+     [
+      152.5,
+      36.9
+     ]
+    ],
+    [
+     [
+      189.5,
+      -7.0
+     ],
+     [
+      188.6,
+      36.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_11",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    11,
+    11
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      144.4,
+      -19.3
+     ],
+     [
+      191.2,
+      -19.3
+     ],
+     [
+      192.2,
+      -6.6
+     ],
+     [
+      145.3,
+      -5.6
+     ],
+     [
+      144.4,
+      -19.3
+     ]
+    ],
+    [
+     [
+      148.3,
+      -6.6
+     ],
+     [
+      150.2,
+      37.3
+     ]
+    ],
+    [
+     [
+      187.3,
+      -6.6
+     ],
+     [
+      186.3,
+      37.3
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_12",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    12,
+    12
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      142.0,
+      -16.8
+     ],
+     [
+      189.0,
+      -16.8
+     ],
+     [
+      189.9,
+      -4.1
+     ],
+     [
+      142.9,
+      -3.1
+     ],
+     [
+      142.0,
+      -16.8
+     ]
+    ],
+    [
+     [
+      145.9,
+      -4.1
+     ],
+     [
+      147.8,
+      40.0
+     ]
+    ],
+    [
+     [
+      185.0,
+      -4.1
+     ],
+     [
+      184.1,
+      40.0
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_13",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    13,
+    13
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      139.0,
+      -14.3
+     ],
+     [
+      185.9,
+      -14.3
+     ],
+     [
+      186.9,
+      -1.6
+     ],
+     [
+      140.0,
+      -0.6
+     ],
+     [
+      139.0,
+      -14.3
+     ]
+    ],
+    [
+     [
+      142.9,
+      -1.6
+     ],
+     [
+      144.9,
+      42.4
+     ]
+    ],
+    [
+     [
+      182.0,
+      -1.6
+     ],
+     [
+      181.1,
+      42.4
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_14",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    14,
+    14
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      137.0,
+      -11.5
+     ],
+     [
+      184.1,
+      -11.5
+     ],
+     [
+      185.0,
+      1.2
+     ],
+     [
+      138.0,
+      2.2
+     ],
+     [
+      137.0,
+      -11.5
+     ]
+    ],
+    [
+     [
+      141.0,
+      1.2
+     ],
+     [
+      142.9,
+      45.3
+     ]
+    ],
+    [
+     [
+      180.2,
+      1.2
+     ],
+     [
+      179.2,
+      45.3
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_15",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    15,
+    15
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      134.8,
+      -8.1
+     ],
+     [
+      181.7,
+      -8.1
+     ],
+     [
+      182.7,
+      4.6
+     ],
+     [
+      135.8,
+      5.6
+     ],
+     [
+      134.8,
+      -8.1
+     ]
+    ],
+    [
+     [
+      138.7,
+      4.6
+     ],
+     [
+      140.7,
+      48.6
+     ]
+    ],
+    [
+     [
+      177.8,
+      4.6
+     ],
+     [
+      176.9,
+      48.6
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_16",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    16,
+    16
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      132.2,
+      -4.4
+     ],
+     [
+      178.8,
+      -4.4
+     ],
+     [
+      179.8,
+      8.3
+     ],
+     [
+      133.1,
+      9.2
+     ],
+     [
+      132.2,
+      -4.4
+     ]
+    ],
+    [
+     [
+      136.1,
+      8.3
+     ],
+     [
+      138.0,
+      52.0
+     ]
+    ],
+    [
+     [
+      175.0,
+      8.3
+     ],
+     [
+      174.0,
+      52.0
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_17",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    17,
+    17
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      130.2,
+      -2.4
+     ],
+     [
+      176.5,
+      -2.4
+     ],
+     [
+      177.5,
+      10.1
+     ],
+     [
+      131.2,
+      11.1
+     ],
+     [
+      130.2,
+      -2.4
+     ]
+    ],
+    [
+     [
+      134.1,
+      10.1
+     ],
+     [
+      136.0,
+      53.5
+     ]
+    ],
+    [
+     [
+      172.7,
+      10.1
+     ],
+     [
+      171.7,
+      53.5
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_18",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    18,
+    18
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      128.5,
+      0.3
+     ],
+     [
+      174.3,
+      0.3
+     ],
+     [
+      175.3,
+      12.7
+     ],
+     [
+      129.5,
+      13.6
+     ],
+     [
+      128.5,
+      0.3
+     ]
+    ],
+    [
+     [
+      132.3,
+      12.7
+     ],
+     [
+      134.3,
+      55.6
+     ]
+    ],
+    [
+     [
+      170.5,
+      12.7
+     ],
+     [
+      169.6,
+      55.6
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_19",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    19,
+    19
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      128.7,
+      2.3
+     ],
+     [
+      174.0,
+      2.3
+     ],
+     [
+      175.0,
+      14.6
+     ],
+     [
+      129.7,
+      15.5
+     ],
+     [
+      128.7,
+      2.3
+     ]
+    ],
+    [
+     [
+      132.5,
+      14.6
+     ],
+     [
+      134.4,
+      57.0
+     ]
+    ],
+    [
+     [
+      170.3,
+      14.6
+     ],
+     [
+      169.3,
+      57.0
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_20",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    20,
+    20
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      131.3,
+      3.7
+     ],
+     [
+      176.1,
+      3.7
+     ],
+     [
+      177.1,
+      15.8
+     ],
+     [
+      132.2,
+      16.7
+     ],
+     [
+      131.3,
+      3.7
+     ]
+    ],
+    [
+     [
+      135.0,
+      15.8
+     ],
+     [
+      136.9,
+      57.8
+     ]
+    ],
+    [
+     [
+      172.4,
+      15.8
+     ],
+     [
+      171.5,
+      57.8
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_21",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    21,
+    21
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      130.7,
+      4.3
+     ],
+     [
+      175.1,
+      4.3
+     ],
+     [
+      176.1,
+      16.3
+     ],
+     [
+      131.6,
+      17.2
+     ],
+     [
+      130.7,
+      4.3
+     ]
+    ],
+    [
+     [
+      134.4,
+      16.3
+     ],
+     [
+      136.3,
+      57.9
+     ]
+    ],
+    [
+     [
+      171.4,
+      16.3
+     ],
+     [
+      170.5,
+      57.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_22",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    22,
+    22
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      131.4,
+      1.6
+     ],
+     [
+      175.4,
+      1.6
+     ],
+     [
+      176.3,
+      13.5
+     ],
+     [
+      132.3,
+      14.4
+     ],
+     [
+      131.4,
+      1.6
+     ]
+    ],
+    [
+     [
+      135.1,
+      13.5
+     ],
+     [
+      136.9,
+      54.7
+     ]
+    ],
+    [
+     [
+      171.7,
+      13.5
+     ],
+     [
+      170.8,
+      54.7
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_23",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    23,
+    23
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      131.3,
+      0.7
+     ],
+     [
+      174.7,
+      0.7
+     ],
+     [
+      175.7,
+      12.5
+     ],
+     [
+      132.2,
+      13.4
+     ],
+     [
+      131.3,
+      0.7
+     ]
+    ],
+    [
+     [
+      134.9,
+      12.5
+     ],
+     [
+      136.7,
+      53.3
+     ]
+    ],
+    [
+     [
+      171.1,
+      12.5
+     ],
+     [
+      170.2,
+      53.3
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_24",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    24,
+    24
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      131.4,
+      -0.3
+     ],
+     [
+      174.4,
+      -0.3
+     ],
+     [
+      175.3,
+      11.3
+     ],
+     [
+      132.3,
+      12.2
+     ],
+     [
+      131.4,
+      -0.3
+     ]
+    ],
+    [
+     [
+      135.0,
+      11.3
+     ],
+     [
+      136.8,
+      51.6
+     ]
+    ],
+    [
+     [
+      170.8,
+      11.3
+     ],
+     [
+      169.9,
+      51.6
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_25",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    25,
+    25
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      133.1,
+      -0.8
+     ],
+     [
+      175.6,
+      -0.8
+     ],
+     [
+      176.5,
+      10.6
+     ],
+     [
+      134.0,
+      11.5
+     ],
+     [
+      133.1,
+      -0.8
+     ]
+    ],
+    [
+     [
+      136.7,
+      10.6
+     ],
+     [
+      138.5,
+      50.5
+     ]
+    ],
+    [
+     [
+      172.1,
+      10.6
+     ],
+     [
+      171.2,
+      50.5
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_26",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    26,
+    26
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      136.7,
+      -1.1
+     ],
+     [
+      178.5,
+      -1.1
+     ],
+     [
+      179.4,
+      10.2
+     ],
+     [
+      137.5,
+      11.1
+     ],
+     [
+      136.7,
+      -1.1
+     ]
+    ],
+    [
+     [
+      140.1,
+      10.2
+     ],
+     [
+      141.9,
+      49.4
+     ]
+    ],
+    [
+     [
+      175.0,
+      10.2
+     ],
+     [
+      174.2,
+      49.4
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_27",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    27,
+    27
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      137.4,
+      0.0
+     ],
+     [
+      178.7,
+      0.0
+     ],
+     [
+      179.6,
+      11.2
+     ],
+     [
+      138.3,
+      12.1
+     ],
+     [
+      137.4,
+      0.0
+     ]
+    ],
+    [
+     [
+      140.9,
+      11.2
+     ],
+     [
+      142.6,
+      49.9
+     ]
+    ],
+    [
+     [
+      175.3,
+      11.2
+     ],
+     [
+      174.4,
+      49.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_28",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    28,
+    28
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      139.0,
+      -1.5
+     ],
+     [
+      179.9,
+      -1.5
+     ],
+     [
+      180.8,
+      9.6
+     ],
+     [
+      139.9,
+      10.4
+     ],
+     [
+      139.0,
+      -1.5
+     ]
+    ],
+    [
+     [
+      142.4,
+      9.6
+     ],
+     [
+      144.1,
+      47.9
+     ]
+    ],
+    [
+     [
+      176.5,
+      9.6
+     ],
+     [
+      175.6,
+      47.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_29",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    29,
+    29
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      139.4,
+      -2.7
+     ],
+     [
+      179.9,
+      -2.7
+     ],
+     [
+      180.8,
+      8.3
+     ],
+     [
+      140.3,
+      9.2
+     ],
+     [
+      139.4,
+      -2.7
+     ]
+    ],
+    [
+     [
+      142.8,
+      8.3
+     ],
+     [
+      144.5,
+      46.3
+     ]
+    ],
+    [
+     [
+      176.6,
+      8.3
+     ],
+     [
+      175.7,
+      46.3
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_30",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    30,
+    30
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      139.8,
+      -5.0
+     ],
+     [
+      180.1,
+      -5.0
+     ],
+     [
+      180.9,
+      5.9
+     ],
+     [
+      140.7,
+      6.8
+     ],
+     [
+      139.8,
+      -5.0
+     ]
+    ],
+    [
+     [
+      143.2,
+      5.9
+     ],
+     [
+      144.9,
+      43.7
+     ]
+    ],
+    [
+     [
+      176.7,
+      5.9
+     ],
+     [
+      175.9,
+      43.7
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_31",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    31,
+    31
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      139.6,
+      -6.5
+     ],
+     [
+      179.7,
+      -6.5
+     ],
+     [
+      180.6,
+      4.3
+     ],
+     [
+      140.5,
+      5.1
+     ],
+     [
+      139.6,
+      -6.5
+     ]
+    ],
+    [
+     [
+      143.0,
+      4.3
+     ],
+     [
+      144.7,
+      41.9
+     ]
+    ],
+    [
+     [
+      176.4,
+      4.3
+     ],
+     [
+      175.6,
+      41.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_32",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    32,
+    32
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.2,
+      -7.5
+     ],
+     [
+      181.1,
+      -7.5
+     ],
+     [
+      181.9,
+      3.3
+     ],
+     [
+      142.0,
+      4.2
+     ],
+     [
+      141.2,
+      -7.5
+     ]
+    ],
+    [
+     [
+      144.5,
+      3.3
+     ],
+     [
+      146.2,
+      40.7
+     ]
+    ],
+    [
+     [
+      177.7,
+      3.3
+     ],
+     [
+      176.9,
+      40.7
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_33",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    33,
+    33
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      142.3,
+      -7.7
+     ],
+     [
+      182.0,
+      -7.7
+     ],
+     [
+      182.8,
+      3.1
+     ],
+     [
+      143.1,
+      3.9
+     ],
+     [
+      142.3,
+      -7.7
+     ]
+    ],
+    [
+     [
+      145.6,
+      3.1
+     ],
+     [
+      147.3,
+      40.3
+     ]
+    ],
+    [
+     [
+      178.7,
+      3.1
+     ],
+     [
+      177.9,
+      40.3
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_34",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    34,
+    34
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      142.8,
+      -6.8
+     ],
+     [
+      182.3,
+      -6.8
+     ],
+     [
+      183.1,
+      3.9
+     ],
+     [
+      143.6,
+      4.8
+     ],
+     [
+      142.8,
+      -6.8
+     ]
+    ],
+    [
+     [
+      146.1,
+      3.9
+     ],
+     [
+      147.7,
+      40.9
+     ]
+    ],
+    [
+     [
+      179.0,
+      3.9
+     ],
+     [
+      178.2,
+      40.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_35",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    35,
+    35
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      142.7,
+      -7.0
+     ],
+     [
+      181.9,
+      -7.0
+     ],
+     [
+      182.7,
+      3.6
+     ],
+     [
+      143.5,
+      4.5
+     ],
+     [
+      142.7,
+      -7.0
+     ]
+    ],
+    [
+     [
+      145.9,
+      3.6
+     ],
+     [
+      147.6,
+      40.4
+     ]
+    ],
+    [
+     [
+      178.6,
+      3.6
+     ],
+     [
+      177.8,
+      40.4
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_36",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    36,
+    36
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      142.6,
+      -7.8
+     ],
+     [
+      181.8,
+      -7.8
+     ],
+     [
+      182.6,
+      2.8
+     ],
+     [
+      143.4,
+      3.6
+     ],
+     [
+      142.6,
+      -7.8
+     ]
+    ],
+    [
+     [
+      145.9,
+      2.8
+     ],
+     [
+      147.5,
+      39.5
+     ]
+    ],
+    [
+     [
+      178.5,
+      2.8
+     ],
+     [
+      177.7,
+      39.5
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_37",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    37,
+    37
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      142.2,
+      -7.6
+     ],
+     [
+      181.2,
+      -7.6
+     ],
+     [
+      182.0,
+      3.0
+     ],
+     [
+      143.0,
+      3.8
+     ],
+     [
+      142.2,
+      -7.6
+     ]
+    ],
+    [
+     [
+      145.5,
+      3.0
+     ],
+     [
+      147.1,
+      39.6
+     ]
+    ],
+    [
+     [
+      178.0,
+      3.0
+     ],
+     [
+      177.2,
+      39.6
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_38",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    38,
+    38
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      142.0,
+      -7.3
+     ],
+     [
+      181.0,
+      -7.3
+     ],
+     [
+      181.8,
+      3.2
+     ],
+     [
+      142.8,
+      4.1
+     ],
+     [
+      142.0,
+      -7.3
+     ]
+    ],
+    [
+     [
+      145.3,
+      3.2
+     ],
+     [
+      146.9,
+      39.8
+     ]
+    ],
+    [
+     [
+      177.8,
+      3.2
+     ],
+     [
+      177.0,
+      39.8
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_39",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    39,
+    39
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.9,
+      -7.1
+     ],
+     [
+      180.9,
+      -7.1
+     ],
+     [
+      181.7,
+      3.5
+     ],
+     [
+      142.7,
+      4.3
+     ],
+     [
+      141.9,
+      -7.1
+     ]
+    ],
+    [
+     [
+      145.2,
+      3.5
+     ],
+     [
+      146.8,
+      40.0
+     ]
+    ],
+    [
+     [
+      177.7,
+      3.5
+     ],
+     [
+      176.9,
+      40.0
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_40",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    40,
+    40
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.5,
+      -8.0
+     ],
+     [
+      180.5,
+      -8.0
+     ],
+     [
+      181.3,
+      2.6
+     ],
+     [
+      142.3,
+      3.4
+     ],
+     [
+      141.5,
+      -8.0
+     ]
+    ],
+    [
+     [
+      144.7,
+      2.6
+     ],
+     [
+      146.3,
+      39.2
+     ]
+    ],
+    [
+     [
+      177.3,
+      2.6
+     ],
+     [
+      176.4,
+      39.2
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_41",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    41,
+    41
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.6,
+      -8.1
+     ],
+     [
+      180.6,
+      -8.1
+     ],
+     [
+      181.4,
+      2.5
+     ],
+     [
+      142.4,
+      3.3
+     ],
+     [
+      141.6,
+      -8.1
+     ]
+    ],
+    [
+     [
+      144.8,
+      2.5
+     ],
+     [
+      146.4,
+      39.1
+     ]
+    ],
+    [
+     [
+      177.4,
+      2.5
+     ],
+     [
+      176.6,
+      39.1
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_42",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    42,
+    42
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.8,
+      -7.9
+     ],
+     [
+      180.8,
+      -7.9
+     ],
+     [
+      181.7,
+      2.7
+     ],
+     [
+      142.6,
+      3.5
+     ],
+     [
+      141.8,
+      -7.9
+     ]
+    ],
+    [
+     [
+      145.0,
+      2.7
+     ],
+     [
+      146.7,
+      39.3
+     ]
+    ],
+    [
+     [
+      177.6,
+      2.7
+     ],
+     [
+      176.8,
+      39.3
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_43",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    43,
+    43
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.8,
+      -8.0
+     ],
+     [
+      180.8,
+      -8.0
+     ],
+     [
+      181.7,
+      2.6
+     ],
+     [
+      142.6,
+      3.4
+     ],
+     [
+      141.8,
+      -8.0
+     ]
+    ],
+    [
+     [
+      145.0,
+      2.6
+     ],
+     [
+      146.7,
+      39.2
+     ]
+    ],
+    [
+     [
+      177.6,
+      2.6
+     ],
+     [
+      176.8,
+      39.2
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_44",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    44,
+    44
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.5,
+      -8.3
+     ],
+     [
+      180.5,
+      -8.3
+     ],
+     [
+      181.3,
+      2.3
+     ],
+     [
+      142.3,
+      3.1
+     ],
+     [
+      141.5,
+      -8.3
+     ]
+    ],
+    [
+     [
+      144.7,
+      2.3
+     ],
+     [
+      146.3,
+      38.9
+     ]
+    ],
+    [
+     [
+      177.3,
+      2.3
+     ],
+     [
+      176.4,
+      38.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_45",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    45,
+    45
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.5,
+      -8.3
+     ],
+     [
+      180.5,
+      -8.3
+     ],
+     [
+      181.3,
+      2.3
+     ],
+     [
+      142.3,
+      3.1
+     ],
+     [
+      141.5,
+      -8.3
+     ]
+    ],
+    [
+     [
+      144.7,
+      2.3
+     ],
+     [
+      146.4,
+      38.9
+     ]
+    ],
+    [
+     [
+      177.3,
+      2.3
+     ],
+     [
+      176.4,
+      38.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_46",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    46,
+    46
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.8,
+      -8.3
+     ],
+     [
+      180.8,
+      -8.3
+     ],
+     [
+      181.6,
+      2.3
+     ],
+     [
+      142.6,
+      3.1
+     ],
+     [
+      141.8,
+      -8.3
+     ]
+    ],
+    [
+     [
+      145.0,
+      2.3
+     ],
+     [
+      146.7,
+      38.9
+     ]
+    ],
+    [
+     [
+      177.6,
+      2.3
+     ],
+     [
+      176.8,
+      38.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_47",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    47,
+    47
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.7,
+      -8.3
+     ],
+     [
+      180.7,
+      -8.3
+     ],
+     [
+      181.5,
+      2.3
+     ],
+     [
+      142.5,
+      3.1
+     ],
+     [
+      141.7,
+      -8.3
+     ]
+    ],
+    [
+     [
+      144.9,
+      2.3
+     ],
+     [
+      146.6,
+      38.9
+     ]
+    ],
+    [
+     [
+      177.5,
+      2.3
+     ],
+     [
+      176.7,
+      38.9
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_48",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    48,
+    48
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.6,
+      -8.9
+     ],
+     [
+      180.6,
+      -8.9
+     ],
+     [
+      181.4,
+      1.7
+     ],
+     [
+      142.4,
+      2.5
+     ],
+     [
+      141.6,
+      -8.9
+     ]
+    ],
+    [
+     [
+      144.8,
+      1.7
+     ],
+     [
+      146.5,
+      38.3
+     ]
+    ],
+    [
+     [
+      177.4,
+      1.7
+     ],
+     [
+      176.5,
+      38.3
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_49",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    49,
+    49
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.7,
+      -8.6
+     ],
+     [
+      180.7,
+      -8.6
+     ],
+     [
+      181.5,
+      2.0
+     ],
+     [
+      142.5,
+      2.8
+     ],
+     [
+      141.7,
+      -8.6
+     ]
+    ],
+    [
+     [
+      144.9,
+      2.0
+     ],
+     [
+      146.6,
+      38.6
+     ]
+    ],
+    [
+     [
+      177.5,
+      2.0
+     ],
+     [
+      176.6,
+      38.6
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_50",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    50,
+    50
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.6,
+      -8.0
+     ],
+     [
+      180.6,
+      -8.0
+     ],
+     [
+      181.4,
+      2.6
+     ],
+     [
+      142.4,
+      3.4
+     ],
+     [
+      141.6,
+      -8.0
+     ]
+    ],
+    [
+     [
+      144.9,
+      2.6
+     ],
+     [
+      146.5,
+      39.1
+     ]
+    ],
+    [
+     [
+      177.3,
+      2.6
+     ],
+     [
+      176.5,
+      39.1
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_51",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    51,
+    51
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      141.7,
+      -8.7
+     ],
+     [
+      180.7,
+      -8.7
+     ],
+     [
+      181.5,
+      1.8
+     ],
+     [
+      142.5,
+      2.6
+     ],
+     [
+      141.7,
+      -8.7
+     ]
+    ],
+    [
+     [
+      145.0,
+      1.8
+     ],
+     [
+      146.6,
+      38.4
+     ]
+    ],
+    [
+     [
+      177.4,
+      1.8
+     ],
+     [
+      176.6,
+      38.4
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "tower_52",
+   "plane": "tower",
+   "class": "line",
+   "visible": [
+    52,
+    52
+   ],
+   "why": "no Quick, Draw! category is a lift tower; the small tower standing over the lift crest in the film (a box on two legs), one copy per frame so its legs stay on the drawn crest as the camera tilts",
+   "strokes": [
+    [
+     [
+      142.2,
+      -8.9
+     ],
+     [
+      181.1,
+      -8.9
+     ],
+     [
+      181.9,
+      1.6
+     ],
+     [
+      143.0,
+      2.5
+     ],
+     [
+      142.2,
+      -8.9
+     ]
+    ],
+    [
+     [
+      145.4,
+      1.6
+     ],
+     [
+      147.0,
+      38.2
+     ]
+    ],
+    [
+     [
+      177.9,
+      1.6
+     ],
+     [
+      177.1,
+      38.2
+     ]
+    ]
+   ]
   }
  ],
  "notes": {
   "0": "the camera tilts up the lift hill",
   "40": "the top of the hill",
-  "cloud2": "left cloud removed: the SAM masks in frames 5-7 cover that sky and the cel paint erased it (a pop); the film has no clouds"
- }
+  "cloud2": "left cloud removed: the SAM masks in frames 5-7 cover that sky and the cel paint erased it (a pop); the film has no clouds",
+  "no_cel": "no cel: the SAM silhouette of the coaster covers the sky where the lift tower stands and the left cloud, so the paper fill erased the grey tower legs and made the cloud pop; the drawing is open line work on white, so nothing behind it needs hiding"
+ },
+ "no_cel": true
 }

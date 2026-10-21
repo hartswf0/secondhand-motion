@@ -1,49 +1,63 @@
 [
  {
   "id": "M2",
-  "value": 17,
+  "value": 9,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   13,
-   12,
-   28,
-   18,
-   23,
-   27,
-   31,
-   26,
-   16,
-   16,
+   2,
    17,
-   16,
+   15,
+   4,
+   2,
+   2,
+   2,
+   2,
    16,
    12,
-   5,
-   13,
-   10,
-   14,
+   12,
+   4,
    15,
-   13
+   16,
+   15,
+   15,
+   15,
+   15,
+   15,
+   18,
+   28,
+   13,
+   6,
+   6,
+   5,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   5,
+   4
   ]
  },
  {
   "id": "M2b",
-  "value": 0.68,
+  "value": 0.59,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 26
  },
  {
   "id": "M3",
-  "value": 0.41,
+  "value": 0.55,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.18
+  "min": 0.31
  },
  {
   "id": "M6",
-  "value": 41.8,
+  "value": 55.2,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -88,17 +102,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201crabbit\u201d; motion broken; follows the film: yes",
+  "value": "named \u201ca rabbit\u201d; motion broken; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/rabbit-gwp/reviews/critic-2.json"
+  "evidence": "shots/rabbit-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The animated rabbit is a mirror of the doodle (faces right instead of left) and its body is rounder and more hunched than the doodle's long low body. The ears keep the doodle's two pointed loops, but they often cross the head line or float loose from it, which the doodle's single continuous outline does not do.",
-  "evidence": "shots/rabbit-gwp/reviews/critic-2.json"
+  "note": "The animated rabbit uses the same open single-line outline, two long pointed ears, spike front leg and bumped rump as the doodle, mirrored to face right, though the head in frames 1-2 is drawn tall and narrow and loses the doodle's rounded snout.",
+  "evidence": "shots/rabbit-gwp/reviews/critic-3.json"
  }
 ]

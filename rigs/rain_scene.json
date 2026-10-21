@@ -138,87 +138,171 @@
  ],
  "objects": [
   {
-   "id": "tree",
+   "id": "waterline",
    "plane": "far",
-   "qd": "tree",
-   "box": [
-    270,
-    0,
-    384,
-    120
-   ],
-   "strokes": 2
+   "class": "line",
+   "why": "the far edge of the water and the base of the buildings behind the bridge, a level line at y 160 in the film",
+   "strokes": [
+    [
+     [
+      0,
+      161
+     ],
+     [
+      160,
+      160
+     ]
+    ],
+    [
+     [
+      224,
+      160
+     ],
+     [
+      384,
+      161
+     ]
+    ]
+   ]
   },
   {
-   "id": "house",
+   "id": "pole",
    "plane": "far",
-   "qd": "house",
+   "class": "line",
+   "why": "the tall post at the left of the film's frame, one line as a doodler would draw it",
+   "strokes": [
+    [
+     [
+      64,
+      0
+     ],
+     [
+      66,
+      158
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "lamp_post",
+   "plane": "far",
+   "class": "line",
+   "why": "the street lamp's post and arm at the upper right of the film's frame; the lamp hanging from the arm is a light bulb doodle drawn with rays",
+   "strokes": [
+    [
+     [
+      346,
+      6
+     ],
+     [
+      348,
+      158
+     ]
+    ],
+    [
+     [
+      346,
+      6
+     ],
+     [
+      326,
+      8
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "lamp",
+   "plane": "far",
+   "qd": "light bulb",
    "box": [
-    110,
-    40,
-    220,
-    120
+    308,
+    10,
+    344,
+    56
    ],
-   "strokes": 3
+   "skip": 3
   },
   {
    "id": "rails",
    "plane": "bridge",
    "class": "fence",
-   "why": "the Quick, Draw! fences are drawn flat to the page; the footbridge's two rails run in perspective to a point, so the agent drew them as two pairs of lines with posts",
+   "why": "the footbridge's two railings run in perspective toward a far end about 50 px wide at the water line (y 160), as in the film; each railing is a top rail, a lower rail and posts",
    "strokes": [
     [
      [
       0,
-      265
+      232
      ],
      [
-      190,
-      150
-     ],
-     [
-      384,
-      265
+      167,
+      155
      ]
     ],
     [
      [
       0,
-      235
+      252
      ],
      [
-      190,
-      140
+      167,
+      161
+     ]
+    ],
+    [
+     [
+      217,
+      155
      ],
      [
       384,
-      235
+      246
      ]
     ],
     [
      [
-      40,
-      262
+      217,
+      161
      ],
      [
-      40,
+      384,
+      268
+     ]
+    ],
+    [
+     [
+      30,
+      216
+     ],
+     [
+      30,
       236
      ]
     ],
     [
      [
-      100,
-      228
+      80,
+      188
      ],
      [
-      100,
-      203
+      80,
+      207
+     ]
+    ],
+    [
+     [
+      125,
+      163
+     ],
+     [
+      125,
+      178
      ]
     ],
     [
      [
       150,
-      180
+      155
      ],
      [
       150,
@@ -227,38 +311,60 @@
     ],
     [
      [
-      240,
+      234,
+      165
+     ],
+     [
+      234,
+      174
+     ]
+    ],
+    [
+     [
+      262,
       180
      ],
      [
-      240,
-      165
+      262,
+      192
      ]
     ],
     [
      [
-      290,
+      302,
+      202
+     ],
+     [
+      302,
+      218
+     ]
+    ],
+    [
+     [
+      350,
       228
      ],
      [
-      290,
-      203
-     ]
-    ],
-    [
-     [
-      345,
-      262
-     ],
-     [
-      345,
-      236
+      350,
+      250
      ]
     ]
    ]
+  },
+  {
+   "id": "downpour",
+   "plane": "char",
+   "rig_poses": "shots/rain-sam/downpour_keys.json",
+   "why": "a second copy of the rain, drawn by rigs/rain.py: the curtain over the bridge that thickens and the splashes on the deck, keyed to the film's beats"
   }
  ],
  "notes": {
-  "1": "rain on the footbridge"
+  "0": "light rain, a few splashes at the bottom centre",
+  "17": "the curtain thickens",
+  "20": "first spatter on the deck",
+  "31": "the curtain darkens again",
+  "36": "the line: splashes cover the deck",
+  "47": "splashing eases",
+  "54": "second surge"
  }
 }

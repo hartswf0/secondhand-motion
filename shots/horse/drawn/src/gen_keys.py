@@ -17,10 +17,10 @@ HEAD = {0: 'all', 1: range(0, 12), 2: [0], 3: 'all', 4: 'all', 5: 'all', 6: 'all
 
 # front view (frame 0 coordinates), same stroke order and point counts as the doodle
 FRONT = {
- 0: [(122, 178), (112, 152), (108, 126), (112, 106), (120, 93), (128, 86)],                       # cheek curve, left side
- 1: [(120, 178), (126, 222), (140, 260), (160, 284), (188, 290), (214, 280), (234, 248), (248, 198),
-     (252, 145), (244, 98), (218, 66), (175, 54), (110, 52), (-10, 34)],                            # face outline, then neck crest
- 2: [(120, 180), (55, 210), (-10, 245)],                                                          # throat
+ 0: [(122, 178), (114, 154), (110, 128), (114, 106), (120, 94), (126, 88)],                       # cheek curve, left side
+ 1: [(120, 178), (128, 224), (140, 258), (152, 280), (180, 291), (208, 289), (228, 272), (244, 226),
+     (252, 170), (244, 104), (198, 68), (134, 68), (60, 78), (-10, 92)],                            # face outline: long straight sides, blunt muzzle; then the crest going back behind the head
+ 2: [(120, 180), (55, 212), (-10, 248)],                                                          # throat
  4: [(150, 58), (132, 45), (114, 32), (100, 24), (112, 42), (136, 64)],                            # left ear (the doodle's back ear)
  5: [(214, 58), (228, 48), (246, 40), (257, 40), (255, 48), (240, 62), (228, 72)],                 # right ear (front ear)
  6: [(214, 64), (200, 52), (184, 47), (166, 48), (152, 52), (142, 58)],                            # line across the top between the ears
@@ -56,11 +56,18 @@ def place(s, n, Q, k):
     return Q[i] + u * (t - cum[i]) + v * n * k
 
 
-def neck_mane(K, Kd, k):
-    """mane (S7) and its end dot (S8) follow the crest S1[11..13] the way they follow it in the doodle."""
-    Qd, Q = Kd[1][11:14], K[1][11:14]
-    K[7] = np.array([place(*param(m, Qd), Q, k) for m in Kd[7]])
-    K[8] = K[7][-1] + (Kd[8] - Kd[7][-1]) * k
+def neck_mane(K, Kd, k, back=0.0):
+    """the mane (S7) and its end dot (S8): the doodle's one zigzag line, carried whole (rotated and scaled, not
+    re-bent) so it keeps lying along the back of the neck from behind the poll. It is laid along the crest chord
+    S1[11]->S1[13]; the doodle's mane drifts away from its crest toward the end (its crest bends), that drift is
+    taken out so the line keeps hugging the neck and stays in the frame."""
+    pd, cd = Kd[1][11], Kd[1][13]; ud = (cd - pd) / np.linalg.norm(cd - pd); vd = np.array([-ud[1], ud[0]])
+    p, c = K[1][11], K[1][13]; u = (c - p) / np.linalg.norm(c - p); v = np.array([-u[1], u[0]])
+    def carry(q):
+        r = q - pd; al, nm = r @ ud, r @ vd
+        nm = nm - max(al, 0) * 0.12          # take out the drift
+        return p + (al * u + nm * v) * k + u * back
+    K[7] = np.array([carry(q) for q in Kd[7]]); K[8] = np.array([carry(q) for q in Kd[8]])
     return K
 
 
@@ -86,8 +93,8 @@ def front(off):
     off = np.array(off, float); K = [None] * 9
     for i, s in FRONT.items(): K[i] = np.array(s, float) + off
     K[3] = scribble(EYE_L + off, 1.6)
-    K = neck_mane(K, D, 1.6)
-    return K, scribble(EYE_R + off, 1.6, 6)
+    K = neck_mane(K, D, 1.3, 45)
+    return K, scribble(EYE_R + off, 1.6)
 
 
 # frame: (tau, front offset, P, N, width scale, NT, NB, why)
@@ -105,14 +112,15 @@ def build(f):
     if tau < 1:
         fr, e2 = front(t['off'])
         K = [fr[i] * (1 - tau) + pr[i] * tau for i in range(9)]
-        # the far eye slides behind the nose bridge (toward S1[8]) and shrinks as the head turns
-        hid = pr[1][8] - (pr[1][8] - pr[3].mean(0)) * 0.15
-        c = e2.mean(0) * (1 - tau) + hid * tau
-        extra['eye2'] = ((e2 - e2.mean(0)) * (1 - tau) ** 1.5 + c).round(1).tolist()
+        K = neck_mane(K, D, 1.3 * (1 - tau) + (np.linalg.norm(np.array(t['N'], float) - t['P']) / L0) * tau, 45 * (1 - tau))
+        if tau <= 0.75:
+            # the far eye slides to the far edge of the face (the outline at eye level, S1[8]) and shrinks as the head turns;
+            # it is gone once the head is past three-quarter
+            q = min(tau / 0.75, 1); edge = K[1][8] + (K[3].mean(0) - K[1][8]) * 0.08
+            c = e2.mean(0) * (1 - q) + edge * q
+            extra['eye2'] = ((e2 - e2.mean(0)) * max(1 - q * q * 0.75, 0.2) + c).round(1).tolist()
     else:
         K = pr
-        # the far eye stays hidden behind the nose line for the rest of the shot (a tiny mark on the outline)
-        hid = pr[1][8]; e = scribble(np.zeros(2), 0.08, 6); extra['eye2'] = (e + hid).round(1).tolist()
     return {'why': t['why'], 'strokes': [s.round(1).tolist() for s in K], 'extra': extra}
 
 

@@ -1,7 +1,7 @@
 {
  "category": "rain",
  "doodle_key_id": "5897326906310656",
- "note": "Quick, Draw! rain 5897326906310656: nine short dashes. Every frame repeats the doodle's own nine dashes, two layers deep.",
+ "note": "Quick, Draw! rain 5897326906310656: nine short dashes. The cast is a light field of the doodle's own dashes; a second copy (rigs/rain.py) draws the curtain that thickens over the footbridge and the splashes on its deck, both from the same dashes, keyed to the film's beats: light rain 0-11, curtain thickens 12-17, deck spatter 20, curtain darkens 28-33, splashes cover the deck at 36, ease 45-49, second surge 50-54.",
  "strokes": [
   [
    [
@@ -103,7 +103,7 @@
   ]
  ],
  "field": {
-  "motion": "falling at a steady procedural speed, near layer twice as fast and twice as large as the far layer (individual drops in the source are not tracked)",
+  "motion": "light steady rain falling at a procedural speed (one layer); the downpour that builds over the bridge and the splashes on its deck are a second copy keyed per beat (rigs/rain.py, shots/rain-sam/downpour_keys.json); individual drops in the source are not tracked",
   "measure_band": [
    0,
    140
@@ -112,34 +112,18 @@
    {
     "scale": 0.35,
     "tile": [
-     100,
-     80
+     130,
+     100
     ],
     "velocity": [
      -0.3,
-     4
+     5
     ],
     "band": [
      0,
      288
     ],
-    "jitter": 10
-   },
-   {
-    "scale": 0.6,
-    "tile": [
-     170,
-     140
-    ],
-    "velocity": [
-     -0.6,
-     8
-    ],
-    "band": [
-     0,
-     288
-    ],
-    "jitter": 18
+    "jitter": 16
    }
   ]
  }

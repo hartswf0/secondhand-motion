@@ -34,7 +34,7 @@
  },
  {
   "id": "T3",
-  "value": "the doodle's 9 strokes repeated as marks, 171-196 per frame",
+  "value": "the doodle's 9 strokes repeated as marks, 76-95 per frame",
   "unit": "",
   "ok": true,
   "note": "field rig: marks enter and leave the frame"
@@ -48,7 +48,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:5897326906310656; scenery quickdraw:4905021353230336, quickdraw:5177445445533696, drawn by agent: the Quick, Draw! fences are drawn flat to the page; the footbridge's two rails run in perspective to a point, so the agent drew them as two pairs of lines with posts",
+  "value": "rig quickdraw:5897326906310656; scenery drawn by agent: the far edge of the water and the base of the buildings behind the bridge, a level line at y 160 in the film, drawn by agent: the tall post at the left of the film's frame, one line as a doodler would draw it, drawn by agent: the street lamp's post and arm at the upper right of the film's frame; the lamp hanging from the arm is a light bulb doodle drawn with rays, quickdraw:5264964543578112, drawn by agent: the footbridge's two railings run in perspective toward a far end about 50 px wide at the water line (y 160), as in the film; each railing is a top rail, a lower rail and posts, quickdraw:5897326906310656 (a second copy of the character's rig, keyed in shots/rain-sam/downpour_keys.json)",
   "unit": "",
   "ok": true
  },
@@ -73,17 +73,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201crain\u201d; motion jumbled; follows the film: yes",
+  "value": "named \u201crain: many short dark vertical streaks falling over a house, a tree and a zigzag fence\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/rain-gwp/reviews/critic-1.json"
+  "evidence": "shots/rain-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The dashes are the same short, slightly slanted strokes with occasional bends as in the doodle. The animation uses far more of them, densely packed.",
-  "evidence": "shots/rain-gwp/reviews/critic-1.json"
+  "note": "The streaks match the doodle's short, slightly slanted single strokes, including the occasional kinked stroke, but the animation uses far more of them at more uniform lengths than the doodle.",
+  "evidence": "shots/rain-gwp/reviews/critic-2.json"
  }
 ]

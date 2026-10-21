@@ -47,8 +47,32 @@
 ],
 "why": "Still facing us; the head has drifted a little right with the camera. Holding the front view."
 },
+"6": {
+"tau": 0.1,
+"off": [
+19,
+5
+],
+"P": [
+195,
+51
+],
+"N": [
+219,
+292
+],
+"NT": [
+-10,
+20
+],
+"NB": [
+-10,
+250
+],
+"why": "Still facing us, the muzzle just starting to slide right: the first small step of the turn."
+},
 "8": {
-"tau": 0.06,
+"tau": 0.2,
 "off": [
 24,
 6
@@ -69,10 +93,10 @@
 -10,
 250
 ],
-"why": "End of the front hold; the face starts to widen on its right side, the first sign of the turn."
+"why": "The turn is under way: the face narrows on its right side and the far eye moves toward the right edge."
 },
 "10": {
-"tau": 0.18,
+"tau": 0.36,
 "off": [
 30,
 2
@@ -93,10 +117,10 @@
 -10,
 250
 ],
-"why": "Turn begins: muzzle starts toward the right, the right ear swings back."
+"why": "Turning: the muzzle swings right, the far eye is near the right edge and smaller."
 },
 "12": {
-"tau": 0.38,
+"tau": 0.55,
 "off": [
 34,
 -6
@@ -111,16 +135,16 @@
 ],
 "NT": [
 -10,
-18
+24
 ],
 "NB": [
 -10,
 250
 ],
-"why": "Three-quarter view: the far eye slides toward the nose line, the muzzle points down-right."
+"why": "Half turned, three-quarter view: the far eye sits at the edge of the face, the muzzle points down-right."
 },
 "14": {
-"tau": 0.6,
+"tau": 0.74,
 "off": [
 34,
 -10
@@ -135,16 +159,16 @@
 ],
 "NT": [
 -10,
-15
+28
 ],
 "NB": [
 -10,
 252
 ],
-"why": "More than half turned: the face outline becomes the profile, the far ear is tucked behind the near one."
+"why": "Past three-quarter: the far eye is a small mark on the edge of the face, about to go behind it."
 },
 "16": {
-"tau": 0.82,
+"tau": 0.9,
 "off": [
 34,
 -10
@@ -159,13 +183,13 @@
 ],
 "NT": [
 -10,
-10
+32
 ],
 "NB": [
 -10,
 254
 ],
-"why": "Almost in profile; the head starts to reach forward and down."
+"why": "Almost in profile, the far eye gone behind the face; the head starts to reach forward and down."
 },
 "19": {
 "tau": 1,
@@ -179,7 +203,7 @@
 ],
 "NT": [
 -10,
-5
+38
 ],
 "NB": [
 -10,
@@ -199,7 +223,7 @@
 ],
 "NT": [
 -10,
-4
+40
 ],
 "NB": [
 -10,
@@ -219,7 +243,7 @@
 ],
 "NT": [
 -10,
--10
+30
 ],
 "NB": [
 -10,
@@ -239,7 +263,7 @@
 ],
 "NT": [
 -10,
--20
+12
 ],
 "NB": [
 -10,
@@ -260,7 +284,7 @@
 ],
 "NT": [
 -10,
--22
+6
 ],
 "NB": [
 -10,
@@ -281,13 +305,13 @@
 ],
 "NT": [
 -10,
--25
+0
 ],
 "NB": [
 -10,
 195
 ],
-"wb": 1.5,
+"wb": 1.3,
 "why": "THE LINE: the muzzle reaches the hay; the head, turned into profile and stretched out over the rail, now hangs nearly straight down from the poll."
 },
 "34": {
@@ -302,19 +326,19 @@
 ],
 "NT": [
 -10,
--28
+-6
 ],
 "NB": [
 -10,
-188
+180
 ],
-"wb": 1.5,
+"wb": 1.3,
 "why": "Settle after the contact: the muzzle pushes into the pile and the head starts to swing left."
 },
 "36": {
 "tau": 1,
 "P": [
-165,
+150,
 40
 ],
 "N": [
@@ -323,19 +347,19 @@
 ],
 "NT": [
 -10,
--30
+-14
 ],
 "NB": [
 -10,
-175
+152
 ],
-"wb": 1.45,
+"wb": 1.15,
 "why": "Muzzle pushed into the hay pile and swung left, the camera still tilting down."
 },
 "38": {
 "tau": 1,
 "P": [
-160,
+140,
 22
 ],
 "N": [
@@ -344,19 +368,19 @@
 ],
 "NT": [
 -10,
--40
+-22
 ],
 "NB": [
 -10,
-160
+126
 ],
-"wb": 1.45,
+"wb": 1.15,
 "why": "Eating: the muzzle down in the pile, lowest point of the bite."
 },
 "40": {
 "tau": 1,
 "P": [
-162,
+155,
 12
 ],
 "N": [
@@ -365,19 +389,19 @@
 ],
 "NT": [
 -10,
--45
+-25
 ],
 "NB": [
 -10,
-145
+108
 ],
-"wb": 1.45,
+"wb": 1.15,
 "why": "Eating: the head lifts a little with a mouthful."
 },
 "42": {
 "tau": 1,
 "P": [
-170,
+182,
 16
 ],
 "N": [
@@ -386,19 +410,19 @@
 ],
 "NT": [
 -10,
--45
+-25
 ],
 "NB": [
 -10,
-150
+110
 ],
-"wb": 1.45,
+"wb": 1.15,
 "why": "Eating: the muzzle drops back into the hay further right."
 },
 "44": {
 "tau": 1,
 "P": [
-165,
+162,
 14
 ],
 "N": [
@@ -407,13 +431,13 @@
 ],
 "NT": [
 -10,
--45
+-25
 ],
 "NB": [
 -10,
-150
+108
 ],
-"wb": 1.45,
+"wb": 1.15,
 "why": "Settle: nose in the hay, head down, chewing."
 }
 }

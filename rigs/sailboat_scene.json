@@ -176,6 +176,41 @@
  ],
  "objects": [
   {
+   "id": "st1",
+   "plane": "far",
+   "qd": "aircraft carrier",
+   "box": [
+    10,
+    150,
+    58,
+    170
+   ],
+   "strokes": 3,
+   "visible": [
+    0,
+    32
+   ],
+   "why_visible": "steamers on the horizon at left in the first seconds of the film; Quick, Draw! has no steamship, the long flat ship with a raised island is the nearest category"
+  },
+  {
+   "id": "st2",
+   "plane": "far",
+   "qd": "aircraft carrier",
+   "box": [
+    76,
+    156,
+    112,
+    170
+   ],
+   "strokes": 3,
+   "skip": 1,
+   "visible": [
+    0,
+    32
+   ],
+   "why_visible": "second steamer, as st1"
+  },
+  {
    "id": "b1",
    "plane": "far",
    "qd": "sailboat",
@@ -185,7 +220,12 @@
     62,
     166
    ],
-   "strokes": 3
+   "strokes": 3,
+   "visible": [
+    33,
+    73
+   ],
+   "why_visible": "the small sailboats on the horizon appear from about frame 30 on, after the steamers have gone"
   },
   {
    "id": "b2",
@@ -198,7 +238,12 @@
     166
    ],
    "strokes": 3,
-   "skip": 1
+   "skip": 1,
+   "visible": [
+    33,
+    73
+   ],
+   "why_visible": "the small sailboats on the horizon appear from about frame 30 on, after the steamers have gone"
   },
   {
    "id": "sea",

@@ -12,21 +12,21 @@ def feat(s, c, sx, dx=0, dy=0):   # squeeze a stroke about its centre c, then mo
 
 D60 = [None] * 11
 # outline: back of head grows to the left, the right side becomes the brow, nose bump and muzzle
-D60[0] = np.array([[150, 37], [149, 33], [104, 31], [66, 46], [52, 80], [56, 120], [88, 145], [130, 149],
-                   [165, 143], [184, 131], [200, 116], [186, 97], [189, 66], [185, 46], [177, 35], [147, 32]], float)
+D60[0] = np.array([[150, 37], [149, 33], [104, 31], [68, 46], [56, 80], [60, 120], [92, 145], [134, 149],
+                   [168, 141], [188, 128], [198, 114], [193, 98], [196, 66], [193, 46], [185, 35], [147, 32]], float)
 # eyes: the near (left) eye moves toward the middle, the far (right) eye narrows at the brow edge
-D60[9] = feat(D0[9], (96, 87), 0.85, 128 - 96, 2)
-D60[10] = feat(D0[10], (160, 91), 0.4, 171 - 160, 0)
+D60[9] = feat(D0[9], (96, 87), 0.8, 148 - 96, 2)
+D60[10] = feat(D0[10], (160, 91), 0.35, 184 - 160, 0)
 # ears: the near ear slides back over the crown, the far ear sits at the front and leans forward
 D60[5] = D0[5] + [-34, 6]
 e = feat(D0[4].copy(), (188, 30), 0.8, -4, 6); b = (e[0] + e[-1]) / 2; q = math.radians(38)
 D60[4] = (e - b) @ np.array([[math.cos(q), -math.sin(q)], [math.sin(q), math.cos(q)]]).T + b   # laid back toward screen right, as the film's far ear
 # far-side whiskers come off the muzzle, same angles
-for i, (x, y) in zip((1, 2, 3), ((195, 111), (192, 121), (183, 131))):
-    s = D0[i]; D60[i] = (s - s[0]) * 0.85 + [x, y]
+for i, (x, y) in zip((1, 2, 3), ((197, 108), (195, 118), (188, 127))):
+    s = D0[i]; D60[i] = (s - s[0]) * 0.6 + [x, y]
 # near-side whiskers still start at the near eye, as the doodler drew them, shorter (they point back)
 for i in (6, 7, 8):
-    s = D0[i]; o = s[0] + [128 - 96, 2]; D60[i] = (s - s[0]) * [0.6, 0.8] + o + [6, 4]
+    s = D0[i]; o = s[0] + [148 - 96, 2]; D60[i] = (s - s[0]) * [0.6, 0.8] + o + [6, 4]
 
 def eyes(D):
     return D[9].mean(0), D[10].mean(0)
@@ -50,17 +50,17 @@ def place(turn, up, E, ang, s):
 
 # frame: (turn, film eye midpoint, film eye-line angle in degrees, scale, why)
 KEYS = {
- 0:  (0.0, 1.0, (166, 106), -12.0, 1.08, 'Start: chin raised, head tilted up and a little to screen left, eyes half shut; the held, swaying pose of the first four seconds.'),
- 22: (0.0, 1.0, (156, 100), -11.0, 1.08, 'Extreme of the slow sway: the raised head has drifted up and left, its highest point.'),
- 40: (0.0, 0.9, (160, 108), -10.0, 1.09, 'The raised head starts to settle back down: the start of the move.'),
- 43: (0.04, 0.75, (163, 111), -10.0, 1.10, 'Anticipation: the chin begins to drop, head lowest and leftmost before it swings right.'),
- 45: (0.14, 0.55, (170, 114), -10.0, 1.12, 'The drop starts the turn: chin lowering, near eye beginning to move toward the middle.'),
- 47: (0.30, 0.35, (182, 119), -10.0, 1.14, 'Drop and turn under way: head lower, far eye narrowing.'),
- 49: (0.50, 0.15, (204, 127), -9.0, 1.17, 'Halfway round: muzzle reaching past the far eye, head lower and closer, as the film turns fastest.'),
- 51: (0.72, 0.0, (226, 136), -6.0, 1.20, 'The line: the cat is facing screen right, ears up, eye on what is off screen right.'),
- 53: (0.90, 0.0, (244, 145), -8.0, 1.22, 'Turn finishing: three-quarter view facing right, far ear laid back.'),
- 56: (1.0, 0.0, (268, 150), -9.0, 1.24, 'Settle: the head arrives a little further right and down and stops.'),
- 61: (1.0, 0.0, (271, 147), -9.0, 1.25, 'Holds to the end looking right, drifting back a few pixels to the left.'),
+ 0:  (0.0, 1.0, (162, 104), -11.5, 1.08, 'Start: chin raised, head tilted up and a little to screen left, eyes half shut; the held pose of the first four seconds.'),
+ 16: (0.0, 1.0, (162, 104), -11.5, 1.08, 'Still holding the raised head: the film barely moves here, so the drawing is pinned.'),
+ 30: (0.0, 1.0, (162, 104), -11.5, 1.08, 'Still holding the raised head.'),
+ 43: (0.0, 1.0, (162, 105), -11.5, 1.08, 'End of the hold: the last frame of the raised head before it drops.'),
+ 45: (0.06, 0.85, (165, 107), -11.0, 1.08, 'Anticipation: the chin just starts to drop.'),
+ 47: (0.22, 0.6, (175, 113), -10.5, 1.10, 'Drop and turn begin: eyes and whisker roots start sliding to the right inside the outline.'),
+ 49: (0.42, 0.35, (192, 121), -10.0, 1.13, 'Turning: features a third of the way across the face, right side of the outline flattening, head lowering.'),
+ 51: (0.62, 0.15, (210, 130), -9.0, 1.17, 'The line: the cat swings to face screen right, eyes now clearly right of centre.'),
+ 53: (0.80, 0.0, (226, 138), -9.0, 1.21, 'Turn finishing: three-quarter view facing right, far eye pressed against the flat right side, far ear laid back.'),
+ 56: (1.0, 0.0, (244, 145), -9.0, 1.24, 'Settle: full three-quarter view facing right, the head arrives low and right and stops.'),
+ 61: (1.0, 0.0, (246, 145), -9.0, 1.24, 'Holds to the end looking right.'),
 }
 
 if __name__ == '__main__':
