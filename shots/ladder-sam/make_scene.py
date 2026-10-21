@@ -37,6 +37,7 @@ def on(seg,u):
     return s[i]+(s[i+1]-s[i])*(t-L[i])/max(L[i+1]-L[i],1e-9)
 def target(q):
     # ["rung", i, u]: rung i (0 = bottom) of the drawn ladder, u along it; ["rail", r, u]: rail r (0 left, 1 right); else a frame point (ground)
+    if q[0]=='at': return rail_at(q[1],q[2])
     if isinstance(q[0],str): return on(q[1]+2 if q[0]=='rung' else q[1],q[2])
     return np.array(q,float)
 # On the ladder his waist sits over the left rail (seen from behind his body hangs over the left half of the
@@ -49,6 +50,9 @@ def pt(a,c): return LO+a*LU+c*LV
 _RA=[lc(q) for q in LAD[1]][::-1]; _LA=[lc(q) for q in LAD[0]][::-1]
 def cR(a): return float(np.interp(a,[q[0] for q in _RA],[q[1] for q in _RA]))   # the right rail's c at height a
 def cL(a): return float(np.interp(a,[q[0] for q in _LA],[q[1] for q in _LA]))
+def rail_at(r,a):
+    # ["at", r, a]: the point on rail r at height a up the ladder (a hand gripping the rail between rungs)
+    P=[lc(q) for q in LAD[r]][::-1]; c=float(np.interp(a,[q[0] for q in P],[q[1] for q in P])); return pt(a,c)
 WAIST_ACROSS=0.4   # seen from behind his body hangs over the middle-left of the ladder, so both legs stand between the rails
 for f in range(n):
     s=np.clip((f-4)/4,0,1); s=s*s*(3-2*s)
