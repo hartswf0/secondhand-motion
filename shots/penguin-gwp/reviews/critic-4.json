@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A line-drawn bird (round head with two dot-and-tick eyes, a long open wedge beak pointing left, an oval body with an inner oval belly, a long thin wing on the left and a rounded wing on the right) stands in the upper-left of the frame with grey scenery: a C-shaped outline at right and a low ledge plus a small bump along the bottom. Frames 1-4: the body leans strongly to the left, head at upper centre, beak opening and closing slightly (wider in 3-4). Frames 5-8: the bird is more upright and slightly lower and to the right, beak opening (wide V in 7) and closing. Frames 9-12: the body becomes nearly vertical, beak continues to open and close (open in 10-11, thin in 12). Frame 13: the drawing shifts left and leans left again. Frame 14: similar, beak half open. Frame 15: the head suddenly tips forward and down, the beak points down-left and its lower line crosses into the neck/body. Frame 16: head back upright, beak pointing left, body upright.",
+ "seen_film": "A dark animal with a pale, leaf-shaped bib/chest, a small pointed ear at upper right and a pale snout/mouth at left sits against a dark red background with a pale green ledge along the bottom edge. The body leans to the left at a steady angle through all 16 frames. Frame 1: the head is high and the eye half closed. Frames 2-4: the head dips lower and forward and the mouth opens. Frames 5-14: the figure holds roughly the same position and lean while the mouth repeatedly opens and closes (talking or chewing), with small head bobs; the eye stays open. Frame 15: the head turns slightly, the eye widens to a large white outline and the mouth opens toward the chest. Frame 16: back to the talking pose with a wide eye. The event is a seated character talking in place with small head movements and one brief head turn near the end.",
+ "named_subject": "A bird (penguin-like doodle with a long open beak, oval body and two wings).",
+ "verdict": "reference stronger",
+ "evidence": "Mouth timing partly follows the film: beak opens in frames 3-4, 7, 10-11, 13-14, roughly matching the film's repeated mouth opening in frames 3-14, and frame 15's head tip coincides with the film's head turn in frame 15. But the film keeps a constant leftward lean in all 16 frames, while the animation leans in 1-4, straightens upright in 5-12 (frames 11-12 nearly vertical), leans again in 13, and is upright again in 16. In frame 15 the head rotates abruptly downward and the beak's lower stroke crosses through the neck and into the body, which is a pop between 14 and 16. Frame 1's head height and closed-eye drop in film frames 1-3 are not reproduced; the animation head stays at the same height from 1 to 4.",
+ "primary_gap": "The body's lean changes from strongly left-tilted (frames 1-4, 13) to upright (frames 5-12, 16), while the film holds one steady leftward lean the whole shot, so the animation reads as rocking rather than talking in place.",
+ "closes_when": "The body oval and both wings keep the same leftward tilt and position in all 16 frames, with only the head bobbing and the beak opening and closing on the film's beats, and frame 15's head turn is a small rotation that keeps the beak outside the neck.",
+ "protect": "The doodle's construction is kept intact in every frame: round head with tick-and-dot eyes, two-line open wedge beak, open-ended oval body with inner oval, long thin left wing and rounded right wing, loose overshooting stroke ends. The beak open/close rhythm and the grey scenery placement (C shape at right, ledge at bottom) matching the film's layout should stay.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  13,
+  15
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is clearly the c.png bird with its own strokes; only frame 15, where the beak line runs into the neck, departs from the doodle's construction.",
+ "still_frames_only": true,
+ "_packet": "lotd7fa6ce6",
+ "_round": 4
+}
