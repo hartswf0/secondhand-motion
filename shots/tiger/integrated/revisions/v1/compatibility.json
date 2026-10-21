@@ -1,0 +1,57 @@
+{
+  "selected_key_id": "6296227597516800",
+  "selection_phase": "before first integrated key art",
+  "rejected_provisional_key_id": "5746588771155968",
+  "rejection_reason": "Face-only provisional drawing has no native body or paws, while source prominently shows lying torso and paws.",
+  "selected_reason": "Native crouched striped body, folded leg shapes, angular two-ear face, two eyes, nose and mouth correspond to the source lying subject without adding generic body parts.",
+  "parts": [
+    {
+      "stroke_ids": [
+        0,
+        1
+      ],
+      "part": "angular head and ears",
+      "source": "visible turning tiger head"
+    },
+    {
+      "stroke_ids": [
+        2,
+        3,
+        4
+      ],
+      "part": "nose and two mouth branches",
+      "source": "visible muzzle; no invented chewing"
+    },
+    {
+      "stroke_ids": [
+        5,
+        6
+      ],
+      "part": "eye ticks",
+      "source": "two visible eyes changing horizontal pose"
+    },
+    {
+      "stroke_ids": [
+        7
+      ],
+      "part": "crouched body, folded legs and tail",
+      "source": "held lying body/paws; source crop hides far body/tail"
+    },
+    {
+      "stroke_ids": [
+        8,
+        9,
+        10
+      ],
+      "part": "native body stripe zigzags",
+      "source": "original simplification retained rather than copying photographed stripe count"
+    }
+  ],
+  "native_stroke_count": 11,
+  "facing": "native faces right, source body extends left with head near camera; native semantic head/body mapping preserves this construction",
+  "limitations": [
+    "The source body is only partly in frame. Hidden tail and far body are not observed.",
+    "Native folded leg triangles simplify the source paws; no independently verified planted-contact intervals.",
+    "No classifier, playback approval or training has run."
+  ]
+}

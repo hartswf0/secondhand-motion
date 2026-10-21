@@ -1,0 +1,144 @@
+[
+  {
+    "id": "S6",
+    "value": "Archive source/interval/raw SHA and SAM pin retained; archive public-domain claim attributed",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "M1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J4",
+    "value": "Fresh blind v3: see unedited review-v3.json",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "B1",
+    "value": 1.0,
+    "unit": "fraction",
+    "ok": true,
+    "method": "One identical held wall geometry, no assigned camera motion."
+  },
+  {
+    "id": "T1",
+    "value": {
+      "min_recall": 0.9973455598455598,
+      "min_parts_kept": 1.0,
+      "keys": 11
+    },
+    "unit": "fraction",
+    "ok": true,
+    "method": "tools/trace_keys.py on separated character keys"
+  },
+  {
+    "id": "M3",
+    "value": {
+      "mean": 0.615983944717177,
+      "min": 0.5676503135374401,
+      "frames": 77
+    },
+    "unit": "IoU",
+    "ok": false,
+    "method": "Filled native head/body/ears vs nearest approximate 12fps SAM target; source PTS independent."
+  },
+  {
+    "id": "M4",
+    "value": "0 independently observed planted intervals; minimum-four gate fails",
+    "unit": "",
+    "ok": false
+  },
+  {
+    "id": "M5",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M6",
+    "value": "Nose-specific world-space jerk not measured; crown-anchor diagnostic is not this gate",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S1",
+    "value": "No independent depth/parallax validation; held wall",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S2",
+    "value": "12 native stroke identities and authored held wall are sourced in shot.json",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S3",
+    "value": {
+      "frames": 77,
+      "fps": 24,
+      "keys": [
+        0,
+        10,
+        16,
+        22,
+        27,
+        36,
+        46,
+        56,
+        63,
+        69,
+        76
+      ],
+      "per_frame_source_times": true
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S4",
+    "value": "Local links/scripts checked; phone browser/playback unrun",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S5",
+    "value": "Body and far ears painted before the opaque head; inspected exact paired keys",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "J1",
+    "value": "No independent normal-speed viewing",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J3",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S7",
+    "value": 3,
+    "unit": "verified hash-linked entries",
+    "ok": true
+  }
+]

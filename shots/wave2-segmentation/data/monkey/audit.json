@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "b922523a586a6110e2e2f752361cad0f7a2f456ba8bf84777df93d7fe2d88378",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "monkey head and cropped body",
+      "result": "plausible_subject",
+      "note": "This resampled CI image is already a clean monkey, unlike literal raw frame0. Nominal time is not exact source PTS; the drawing retains only the later clean interval.",
+      "model_iou_estimate": 0.955
+    },
+    {
+      "frame": 8,
+      "observed_target": "monkey head and cropped body",
+      "result": "plausible_subject",
+      "note": "The visible head and upper body are broadly selected; fur edges remain soft.",
+      "model_iou_estimate": 0.982
+    },
+    {
+      "frame": 24,
+      "observed_target": "monkey head and cropped body",
+      "result": "plausible_subject",
+      "note": "The lowered head and body are captured. Hidden limbs and tail are not established.",
+      "model_iou_estimate": 0.984
+    },
+    {
+      "frame": 42,
+      "observed_target": "monkey head and cropped body",
+      "result": "plausible_subject",
+      "note": "The returning head remains captured; the mask alone cannot verify facial identity or turn timing.",
+      "model_iou_estimate": 0.982
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "rendered_frames": 67,
+  "keys": 7,
+  "source_sha256_verified": true,
+  "full_decode": true,
+  "same_topology": true,
+  "original_strokes": 11,
+  "all_original_strokes_assigned": true,
+  "held_background_geometry": true,
+  "background_strokes_unchanged_fraction": 1.0,
+  "mask_fit": {
+    "metric": "filled native whole tiger head/body vs nearest approximate SAM12fps sample",
+    "mean": 0.7657050091875537,
+    "min": 0.7284452082139944,
+    "frames_measured": 67,
+    "mean_bar": 0.65,
+    "minimum_bar": 0.45,
+    "pass": true,
+    "target_validity": "Root inspected4samples: whole visible lying tiger selected, with small gaps/soft boundaries. Not a head-only mask."
+  },
+  "trace_fidelity": {
+    "min_recall": 0.9979306777030522,
+    "min_parts_kept": 1.0,
+    "keys": 7,
+    "pass": true
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "planted_intervals": 0,
+  "foot_slide_gate": false,
+  "release_approved": false,
+  "training_ran": false,
+  "independent_still_review": {
+    "source_framing_pose_bar_met": false,
+    "original_doodle_identity_bar_met": false,
+    "rounds": 1,
+    "evidence": "review-v1.json"
+  },
+  "ledger_entries": 1
+}

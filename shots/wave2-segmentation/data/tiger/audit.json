@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "fd18ca5c0a30fe12b1d6c8b00ec0c8f3304a89a576c57cb7f7793bdf8738ff5e",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "lying tiger head, body and paws",
+      "result": "plausible_subject",
+      "note": "The broad visible tiger is selected, including the paws; whiskers remain too fine to rely on.",
+      "model_iou_estimate": 0.953
+    },
+    {
+      "frame": 12,
+      "observed_target": "lying tiger head, body and paws",
+      "result": "plausible_subject",
+      "note": "The whole-tiger target is retained as the head turns. Small underside gaps remain.",
+      "model_iou_estimate": 0.956
+    },
+    {
+      "frame": 23,
+      "observed_target": "lying tiger head, body and paws",
+      "result": "plausible_subject",
+      "note": "The broad body and frontal head are selected; this cannot validate individual stripe identity.",
+      "model_iou_estimate": 0.961
+    },
+    {
+      "frame": 34,
+      "observed_target": "lying tiger head, body and paws",
+      "result": "plausible_subject",
+      "note": "The whole visible tiger is retained with soft outline and lower-edge gaps.",
+      "model_iou_estimate": 0.957
+    }
+  ]
+}

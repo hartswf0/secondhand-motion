@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "36a62d53eb8950592fd4d865b3eaa6e8e3086e43e3d385da0ef6f262eefce8da",
+  "samples": [
+    {
+      "frame": 0,
+      "observed_target": "mostly the left ant",
+      "result": "partial_subject",
+      "note": "Two ants are visible, but this mask mostly selects the left one. Thin feet and antennae are incomplete.",
+      "model_iou_estimate": 0.745
+    },
+    {
+      "frame": 6,
+      "observed_target": "mostly the left ant",
+      "result": "partial_subject",
+      "note": "The right ant is largely outside the mask; this is not a two-instance silhouette.",
+      "model_iou_estimate": 0.701
+    },
+    {
+      "frame": 16,
+      "observed_target": "both ants merged",
+      "result": "mixed_instances",
+      "note": "The target changes to a merged selection of both ants. No stable per-ant identity correspondence is established.",
+      "model_iou_estimate": 0.885
+    },
+    {
+      "frame": 24,
+      "observed_target": "mostly the left ant",
+      "result": "partial_subject",
+      "note": "The selection returns toward the left ant with partial legs. Cached observations end at nominal2.0s; later event frames have no independently sampled mask.",
+      "model_iou_estimate": 0.806
+    }
+  ]
+}

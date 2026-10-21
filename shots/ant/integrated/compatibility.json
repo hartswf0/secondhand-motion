@@ -1,0 +1,29 @@
+{
+  "status": "compatible_with_explicit_simplifications",
+  "doodle_key_id": "5421013154136064",
+  "native_strokes": 11,
+  "instances": 2,
+  "inventory": {
+    "body_sections": 3,
+    "antennae_strokes": 2,
+    "drawn_leg_strokes": 5
+  },
+  "observed_source": "Two ants face each other, alter antenna reach and body orientation above the same gap between rocks.",
+  "differences": [
+    "The native ant has five drawn leg strokes, not six anatomical legs; no sixth is added.",
+    "Native legs originate from thorax and abdomen; that construction is preserved rather than anatomically rewritten.",
+    "Antenna and foot endpoint observations are keyed pose estimates, not verified material contact tracks."
+  ],
+  "mapping": {
+    "0": "head",
+    "1,2": "antennae",
+    "3": "thorax outline and native short neck connector",
+    "4": "waist connector",
+    "5": "abdomen",
+    "6,7,8": "three native thorax leg strokes",
+    "9,10": "two native abdomen leg strokes"
+  },
+  "source_leg_visibility": "Six anatomical legs are expected per source ant, but overlap, body occlusion and archive softness prevent all material legs being verified at every sampled frame. Five native leg strokes are pose correspondences, not asserted anatomical identities.",
+  "facing": "Left instance reflects horizontal native body ordering, right instance keeps it. Both keep every original stroke and original point count.",
+  "source_plan_correction": "Original one-ant assumption rejected before keying. Source cut excluded; two instances explicitly represented."
+}

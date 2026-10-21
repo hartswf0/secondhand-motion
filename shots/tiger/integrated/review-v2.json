@@ -1,0 +1,37 @@
+{
+  "source_framing_pose_bar_met": false,
+  "original_doodle_identity_bar_met": true,
+  "actual_normal_speed_playback_occurred": false,
+  "motion_approved": false,
+  "most_important_gap": "The late sampled drawing does not clearly arrive at the source's frontal head pose. The head shifts and narrows, but its small left ear, large pointed right ear, eye marks and projecting right cheek retain essentially the starting orientation.",
+  "smallest_repair": "Adjust only the head's turn keys so the final held pose clearly faces forward: redistribute the existing angular ear, cheek, eye and triangular nose landmarks around the face center, then connect the starting pose to that endpoint. Keep the source's held reclining body and crop. Inspect the resulting video at normal speed before granting motion approval.",
+  "must_not_be_lost": "The original doodle's spare angular outline, unequal little eye marks, triangular nose, simple mouth, long pointed hanging stripe shapes and unpolished hand-drawn character. Preserve the close reclining composition and largely held body; do not add realistic tiger anatomy or stripe detail.",
+  "evidence_viewed": [
+    "source.json",
+    "source-contact-sheet.jpg",
+    "design.png",
+    "paired-keys-01.jpg",
+    "paired-keys-02.jpg",
+    "key-01.png",
+    "key-02.png",
+    "key-03.png",
+    "key-04.png",
+    "key-05.png",
+    "key-06.png",
+    "key-07.png",
+    "source-01.jpg",
+    "source-02.jpg",
+    "source-03.jpg",
+    "source-04.jpg",
+    "source-05.jpg",
+    "source-06.jpg",
+    "source-07.jpg"
+  ],
+  "observations": [
+    "The sampled source holds a reclining tiger with body entering from the left, head above the forequarters, and resting forepaws along the lower frame. Its head progresses from three-quarter to frontal during the retained interval.",
+    "The drawing broadly follows the close crop, body entry from the left and head placement. The terminal head orientation is the material pose mismatch.",
+    "The drawing remains recognizably the locked original doodle through its specific outline vocabulary and facial and stripe marks. The pose adaptation has not replaced it with a generic tiger design.",
+    "Static samples establish poses only. They do not establish temporal smoothness, cadence, settling, or a convincing turn at normal speed. No actual normal-speed playback occurred in this review."
+  ],
+  "review_scope": "Fresh blind visual review restricted to the listed allowed local artifacts for source interval 3.25–6.0 seconds. No builder notes, shot.json, tests, code, previous reviews, revisions or rationale were inspected. No video was played or decoded. Source framing/pose and original doodle identity are assessed separately; motion approval remains ungranted without actual normal-speed viewing."
+}

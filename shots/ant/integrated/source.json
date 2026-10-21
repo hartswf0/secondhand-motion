@@ -1,0 +1,33 @@
+{
+  "clip_id": "17c403a7-1f5c-5a7d-9bc5-aa1bac026b73",
+  "source_id": "20af9071-f8f0-545f-83a9-1e3e5e583f3e",
+  "source_title": "Ant City",
+  "source_year": "1949",
+  "video_url": "https://pub-075ff01374c04555b51c9bc50f258b42.r2.dev/sources/ant-city/clips/0000355388-0000360594.mp4",
+  "shot_page_url": "https://www.movingimagearchive.com/sources/ant-city?clip=17c403a7-1f5c-5a7d-9bc5-aa1bac026b73",
+  "source_page_url": "https://www.movingimagearchive.com/sources/ant-city",
+  "original_source_url": "https://archive.org/details/ant_city",
+  "rights_statement": "public_domain",
+  "start_seconds": 0.2,
+  "end_seconds": 2.2,
+  "category": "ant",
+  "pool": "production/data/candidates-100.json",
+  "original_plan_why_this_clip": "One black ant in side view walks slowly along a rock edge in the middle of the frame, stepping its legs and turning slightly. The clip has no cuts; the interval ends at 2.25 s before a second ant enters and overlaps it from below.",
+  "why_this_clip": "Two ants face one another and alter antenna reach at a rock gap. The retained interval excludes the initial cut; the original one-ant description is rejected.",
+  "interval_seconds": [
+    0.2,
+    2.2
+  ],
+  "time_basis": "clip_relative_seconds",
+  "source_sha256": "6c4cd2387f20f7bc910613008d3aa94b44b752f3f2638e462ce3e75cdd995d8d",
+  "source_kind": "archive macro footage",
+  "source_approved": false,
+  "motion_approved": false,
+  "train_eligible": false,
+  "original_plan_interval_seconds": [
+    0,
+    2.25
+  ],
+  "plan_correction": "The first raw frame is another shot. Two ants, not one, are visible throughout the retained interval. Both are represented. No claim that a second ant enters only at2.25s is retained as observation.",
+  "why_this_interval": "Eighteen preflight samples locate a cut before0.04s and show two ants facing and moving their antennae from0.2 to2.2s. The retained interval is continuous in sampled frames; actual normal-speed approval is unrun."
+}

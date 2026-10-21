@@ -1,0 +1,38 @@
+{
+  "source_framing_pose_bar_met": false,
+  "original_doodle_identity_bar_met": true,
+  "actual_normal_speed_playback_occurred": false,
+  "motion_approved": false,
+  "most_important_gap": "The source's resting, overlapping forepaws are not clearly carried into the drawing. The broad body placement and raised head correspond, but the drawing's lower-right contour reads as a single pointed leg/body edge rather than the source's two held forelimbs and paws, weakening the specific lying pose.",
+  "smallest_repair": "Make a local contour repair in the lower foreground: describe the nearer forepaw resting across the body and the farther forelimb descending at the right, using the original doodle's spare angular strokes. Keep their placement fixed across the keys as in the sampled source. Actual normal-speed playback is still required before motion can be approved.",
+  "must_not_be_lost": "Preserve the locked doodle's pointed asymmetric ears, tiny angular eyes, triangular nose and simple mouth, long angular stripe marks, sparse unshaded linework, and recognizable irregular silhouette. Preserve the current close framing, held body placement, and sampled progression from a rightward three-quarter head toward a frontal head.",
+  "evidence_viewed": [
+    "source.json",
+    "source-contact-sheet.jpg",
+    "design.png",
+    "paired-keys-01.jpg",
+    "paired-keys-02.jpg",
+    "key-01.png",
+    "key-02.png",
+    "key-03.png",
+    "key-04.png",
+    "key-05.png",
+    "key-06.png",
+    "key-07.png",
+    "source-01.jpg",
+    "source-02.jpg",
+    "source-03.jpg",
+    "source-04.jpg",
+    "source-05.jpg",
+    "source-06.jpg",
+    "source-07.jpg"
+  ],
+  "observations": [
+    "The sampled source retains a lying tiger, cropped body entering from the left, raised head near the upper center-right, and forepaws held in the lower foreground.",
+    "The drawing broadly follows that close composition and its sampled head silhouettes move from a projecting right muzzle toward a more centered face while the body remains held.",
+    "The drawing retains enough distinctive facial marks, pointed ear asymmetry, angular body stripes, and spare outline construction to read as the same original doodle in a new pose.",
+    "The source's held forepaw relationship is not legible in the drawing; this is the principal sampled-pose gap.",
+    "Only static source and drawing images were visually reviewed. No normal-speed video playback occurred, so timing, continuity, interpolation, and motion quality remain unassessed."
+  ],
+  "review_scope": "Fresh blind review restricted to the listed allowed artifacts for the retained 3.25–6.0-second source interval. Sampled framing/pose and original-doodle identity were assessed separately. The sampled-pose bar is not met; identity is met. No supported normal-speed playback surface was used, and motion approval is withheld without inferring playback from contact sheets or decoded frames. No builder notes, code, tests, previous reviews, revisions, or rationale were inspected."
+}

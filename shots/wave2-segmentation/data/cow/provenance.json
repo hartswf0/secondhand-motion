@@ -5,6 +5,8 @@
   "model": "facebook/sam2.1-hiera-small",
   "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
   "source_video_sha256": null,
+  "appearance_alignment": null,
+  "comparison_source_sha256": null,
   "source_video_note": "CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
   "detector": "IDEA-Research/grounding-dino-tiny",
   "track_sha256": "1dcef8a389ba61298f3b06b6089ec376159af05977aa95d664e47217acedd74a",

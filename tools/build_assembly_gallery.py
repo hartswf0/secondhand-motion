@@ -25,7 +25,7 @@ def build():
                          note=shot.get('review_note', 'Playback approval pending.'),
                          summary=shot.get('assembly_summary', ''),
                          W=shot['W'], H=shot['H']))
-    rows.sort(key=lambda row: (-row['wave'], row['lot']))
+    rows.sort(key=lambda row: (-row['wave'], -int(row['lot'].rsplit('-', 1)[-1])))
     template = (ROOT/'tools/templates/assembly_gallery.html').read_text()
     content = template.replace('__DATA__', json.dumps(rows, separators=(',', ':')).replace('</', '<\\/'))
     rel = 'shots/moving-drawings.html'

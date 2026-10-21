@@ -1,0 +1,46 @@
+{
+  "reviewer_role": "fresh blind critic",
+  "candidate": "Monkey integrated v1",
+  "bar_met": false,
+  "verdict": "Not yet. The sampled head-lower, low-hold and return event is legible, but the moving head no longer preserves the original doodle's face construction. Normal-speed motion is also unapproved because I could not actually view movie playback.",
+  "evidence_reviewed": {
+    "packet_only": true,
+    "files": [
+      "source.json",
+      "source-contact-sheet.jpg",
+      "design.png",
+      "source-01.jpg through source-11.jpg",
+      "key-01.png through key-11.png",
+      "comparison.mp4 at a decoded still at 1.5 seconds"
+    ],
+    "movie_metadata": "comparison.mp4 and cartoon.mp4 are H.264, 24 fps, 3.208333 seconds; comparison is 960x384 and cartoon is 480x360.",
+    "normal_speed_playback_viewed": false,
+    "limitation": "The available inspection path showed still images and a decoded movie frame. It did not provide actual normal-speed movie viewing. Movie metadata and sampled frames do not establish temporal quality."
+  },
+  "original_doodle_identity": {
+    "status": "needs repair",
+    "retained": "The thin angular black outline, broad polygonal head, asymmetrical eyes, distinctive brow/mask shape and sparse torso mark clearly come from the supplied doodle.",
+    "finding": "The lower face/muzzle becomes an elongated dangling shape that passes through and below the head contour onto the neck in keys 02-11. It is already distorted in key 01. In the original drawing the muzzle is contained comfortably inside the broad head. Several keys also leave the upper-right ear visibly separated from the head. These are changes to the doodle's construction, rather than merely a new pose."
+  },
+  "source_event_and_pose": {
+    "status": "sampled event broadly present; motion not approved",
+    "finding": "The eleven pairs show the correct broad sequence: head shifts toward screen-left and lowers, remains low across the middle samples, then returns toward the camera. The torso stays in a cropped seated position. The cartoon's elongated muzzle and detached ear interfere with reading the source head pose as one coherent head, so the sampled event alone is insufficient for approval."
+  },
+  "crop_and_part_honesty": {
+    "status": "acceptable in sampled frames",
+    "finding": "The torso is cut by the lower and left frame edges, consistent with the source close-up. The doodle's curled tail is omitted, which is appropriate because the source provides no visible tail evidence. No walking, limb action, or tail action has been invented. Preserve this restrained framing."
+  },
+  "actual_normal_speed_motion_viewing": {
+    "status": "unapproved",
+    "actually_viewed": false,
+    "finding": "I cannot approve pacing, interpolation, stability, or temporal head/body coherence from the still pairs. The decoded comparison frame confirms that the face-contour problem is in the encoded movie, but does not constitute playback."
+  },
+  "one_gap_that_matters_most": "The head deformation breaks the supplied doodle's facial topology: its muzzle hangs through the head boundary and its ear becomes detached.",
+  "smallest_repair": "Repair only the head-local construction across the existing poses: keep the mask and muzzle inside the same broad head silhouette, retain their original relative proportions, and keep the ear attached to that silhouette throughout the turn/lower/return. Reuse the present event timing and torso/crop. Then obtain actual normal-speed playback review of the encoded result; motion remains unapproved until that happens.",
+  "must_not_be_lost": [
+    "The original doodle's angular, irregular line character and recognisable asymmetrical face.",
+    "The observed down-left movement, low hold and return toward camera.",
+    "The source-supported close crop, quiet torso and absence of an invented tail or limb action."
+  ],
+  "style_change_requested": false
+}

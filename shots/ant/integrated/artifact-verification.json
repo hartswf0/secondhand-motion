@@ -1,0 +1,118 @@
+[
+  {
+    "subject": "ant",
+    "technical_pass": true,
+    "frames": 49,
+    "fps": 24,
+    "keys": 8,
+    "strict_json_files": 55,
+    "relative_links": 37,
+    "hash_verified_ledger_entries": 4,
+    "movies": [
+      {
+        "path": "shots/ant/integrated/cartoon.mp4",
+        "decoded_frames": 49,
+        "fps": 24.0,
+        "sha256": "7dfc4967f00d3f76953cf669f6b03e07b4cf9a8271cee8ec535a81f26e56b10d",
+        "key_pixel_checks": [
+          {
+            "key": 1,
+            "frame": 0,
+            "rgb_mae": 1.615646
+          },
+          {
+            "key": 2,
+            "frame": 6,
+            "rgb_mae": 1.667083
+          },
+          {
+            "key": 3,
+            "frame": 12,
+            "rgb_mae": 1.680654
+          },
+          {
+            "key": 4,
+            "frame": 18,
+            "rgb_mae": 1.68566
+          },
+          {
+            "key": 5,
+            "frame": 24,
+            "rgb_mae": 1.680079
+          },
+          {
+            "key": 6,
+            "frame": 30,
+            "rgb_mae": 1.686595
+          },
+          {
+            "key": 7,
+            "frame": 37,
+            "rgb_mae": 1.677643
+          },
+          {
+            "key": 8,
+            "frame": 48,
+            "rgb_mae": 1.737934
+          }
+        ]
+      },
+      {
+        "path": "shots/ant/integrated/source-excerpt.mp4",
+        "decoded_frames": 49,
+        "fps": 24.0,
+        "sha256": "ae99e1d85fe1904f49910b60661000beeaa4d60f7bc2a1c254c009306969b278",
+        "key_pixel_checks": []
+      },
+      {
+        "path": "shots/ant/integrated/comparison.mp4",
+        "decoded_frames": 49,
+        "fps": 24.0,
+        "sha256": "4955f3b588a0199adaac7668b294c558b797bb730209b3c72ecc8fc00fc40053",
+        "key_pixel_checks": [
+          {
+            "key": 1,
+            "frame": 0,
+            "rgb_mae": 1.621786
+          },
+          {
+            "key": 2,
+            "frame": 6,
+            "rgb_mae": 1.666032
+          },
+          {
+            "key": 3,
+            "frame": 12,
+            "rgb_mae": 1.680245
+          },
+          {
+            "key": 4,
+            "frame": 18,
+            "rgb_mae": 1.603447
+          },
+          {
+            "key": 5,
+            "frame": 24,
+            "rgb_mae": 1.649738
+          },
+          {
+            "key": 6,
+            "frame": 30,
+            "rgb_mae": 1.640654
+          },
+          {
+            "key": 7,
+            "frame": 37,
+            "rgb_mae": 1.68027
+          },
+          {
+            "key": 8,
+            "frame": 48,
+            "rgb_mae": 1.73303
+          }
+        ]
+      }
+    ],
+    "scope": "Artifact integrity and saved-key/movie agreement only; no artistic, recognition, normal-speed motion or training approval inferred."
+  }
+]

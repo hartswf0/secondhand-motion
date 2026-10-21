@@ -1,0 +1,10 @@
+{
+  "metric": "filled native body/head/ear regions vs nearest approximate12fps SAM sample",
+  "mean": 0.6307362953812324,
+  "min": 0.5693022730693964,
+  "frames_measured": 77,
+  "mean_bar": 0.65,
+  "minimum_bar": 0.45,
+  "pass": false,
+  "target_validity": "Root manually inspected4CI samples: broad head/body plausible, soft fur edges approximate. Source raw0dissolves, CI0nominal clean: source PTS not retained by CI."
+}

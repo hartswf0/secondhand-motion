@@ -1,0 +1,71 @@
+{
+  "identity_bar_met": true,
+  "source_framing_pose_bar_met": false,
+  "bar_met": false,
+  "motion_approved": false,
+  "same_original_doodle_identity": {
+    "assessment": "Met in the reviewed stills.",
+    "evidence": "The polygonal head and ears, asymmetric eyes, angular muzzle and small bent chest mark remain recognizably the original design throughout. The simplification and line vocabulary are preserved."
+  },
+  "source_pose_event": {
+    "assessment": "Not yet met.",
+    "evidence": "The source progresses from a turned head to a distinctly downward-facing, chin-tucked look, holds it, and returns toward the camera. Keys 04–08 mostly shift the original upright face left while its brow, muzzle and chin retain nearly the same upward-facing relationship to the head and neck. The head translation is visible, but the central downward-look event is weak. The final return is legible as a change of placement more than a lift of gaze."
+  },
+  "source_crop_part_honesty": {
+    "assessment": "Broadly met in the reviewed stills.",
+    "evidence": "The cartoon keeps the source’s upper-body crop and left-side body placement, with torso continuing beyond the lower and left edges. It does not expose the original design’s curled tail or invent a full-body action where the source shows only the head and upper torso."
+  },
+  "actually_viewed_normal_speed_motion": {
+    "assessment": "Unapproved: no actual normal-speed playback was viewed.",
+    "evidence": "comparison.mp4 and cartoon.mp4 exist, but this review used still-image inspection only. Neither timing, interpolation, hold quality nor perceptual continuity is approved by these samples."
+  },
+  "most_important_gap": "The source’s downward head pitch and lowered gaze have become mainly a sideways slide of an upright doodle face.",
+  "smallest_repair": "Revise only the existing head/face pose through the lowering and low-hold portion: make the brow, eyes and muzzle visibly turn and descend down-left relative to the ear line and neck, then lift them back toward the camera on the return. Keep the same angular features and contours; do not solve this by adding realism or detail. Then obtain actual normal-speed playback review of the repaired clip.",
+  "must_not_be_lost": "Keep the unmistakable original doodle identity: irregular polygonal outline, unequal angular eyes, distinctive muzzle, spare chest mark, simple black linework, and the honest source upper-body crop without a visible tail or invented limbs.",
+  "evidence_reviewed": {
+    "interval": {
+      "clip_relative_seconds": [
+        0.3333333333333333,
+        3.5
+      ],
+      "film_seconds": [
+        199.63233333333335,
+        202.799
+      ]
+    },
+    "read": [
+      "shots/monkey/integrated/source.json"
+    ],
+    "visually_reviewed": [
+      "shots/monkey/integrated/source-contact-sheet.jpg",
+      "shots/monkey/integrated/design.png",
+      "shots/monkey/integrated/source-01.jpg",
+      "shots/monkey/integrated/key-01.png",
+      "shots/monkey/integrated/source-02.jpg",
+      "shots/monkey/integrated/key-02.png",
+      "shots/monkey/integrated/source-03.jpg",
+      "shots/monkey/integrated/key-03.png",
+      "shots/monkey/integrated/source-04.jpg",
+      "shots/monkey/integrated/key-04.png",
+      "shots/monkey/integrated/source-05.jpg",
+      "shots/monkey/integrated/key-05.png",
+      "shots/monkey/integrated/source-06.jpg",
+      "shots/monkey/integrated/key-06.png",
+      "shots/monkey/integrated/source-07.jpg",
+      "shots/monkey/integrated/key-07.png",
+      "shots/monkey/integrated/source-08.jpg",
+      "shots/monkey/integrated/key-08.png",
+      "shots/monkey/integrated/source-09.jpg",
+      "shots/monkey/integrated/key-09.png",
+      "shots/monkey/integrated/source-10.jpg",
+      "shots/monkey/integrated/key-10.png",
+      "shots/monkey/integrated/source-11.jpg",
+      "shots/monkey/integrated/key-11.png"
+    ],
+    "available_but_not_played": [
+      "shots/monkey/integrated/comparison.mp4",
+      "shots/monkey/integrated/cartoon.mp4"
+    ],
+    "excluded": "No builder code, notes, checks, prior reviews, or revision history inspected."
+  }
+}
