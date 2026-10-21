@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A grey line scene (house, two trees, ground line) stays fixed at the top. Below it a black-line baseball bat is held by two long arm strokes that end in round hands. In frame 1 the bat is short and tilted up to the right, in the upper middle of the frame. Over frames 2-8 it moves down and slightly left, rotates toward horizontal, and gets longer. By frames 9-10 it is nearly horizontal and longer. In frames 11-16 the right end dips so the bat tilts down to the right; it reaches its full length near the bottom of the frame and holds there with small changes. The left arm stays bent at the elbow; the right arm becomes a straight vertical stroke whose hand slides toward the middle of the bat.",
+ "seen_film": "A boy in a patterned shirt stands in a schoolyard holding a baseball bat at waist height with both hands, looking down at it. Frame 1 to 2 shows a dissolve/cut into the shot. In frames 2-8 the bat is tilted up to the right and short (foreshortened); he lowers its far end so it becomes horizontal and longer. From about frame 8 he raises his head and looks to his left at the children behind him while the bat continues to tilt slightly down to the right. In frames 13-16 the bat is long, tilted down to the right, barrel on the left and knob on the right, low in the frame, and he looks down again at the end.",
+ "named_subject": "A baseball bat (thick barrel on the left, taped handle with knob on the right) held by two hands.",
+ "verdict": "bar met",
+ "evidence": "e.png 1-8: bat tilts up-right, short, upper middle, matching f.png 1-8 where the bat is foreshortened and tilted up. e.png 9-16: bat rotates through horizontal and lengthens, matching f.png 9-16. e.png 17-26: bat tilted down-right, full length, low in frame, small settling only, matching f.png 17-26 where the bat holds in the same pose. End position (e 26 vs f 26): bat spans roughly 20%-95% of frame width at about 75-95% of frame height in both. g.png shows one continuous fan of positions with no gaps or reversals; length grows steadily. Only minor flaws: e.png 7 the bat's top edge is drawn with a heavier, doubled segment near the right end, and e.png 14 the bottom edge is heavier for one frame.",
+ "primary_gap": "The bat's outline flickers in line weight on single frames (e.png 7 top edge, e.png 14 bottom edge), which reads as a brief redraw in playback.",
+ "closes_when": "Frames 7 and 14 show the bat edges at the same single-stroke weight as frames 6, 8, 13 and 15.",
+ "protect": "The bat's construction from c.png (barrel end, tapering handle, two tape ticks, curved knob); the steady rotation from up-tilt to down-tilt with matching foreshortening growth; the hold from frame 17 on; the end position low across the frame; the fixed grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  7,
+  14
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The bat is the c.png drawing with its ticks and knob; the added arm strokes are extra but drawn in the same plain single-line habit.",
+ "still_frames_only": true,
+ "_packet": "lot5a2e3eec",
+ "_round": 1
+}

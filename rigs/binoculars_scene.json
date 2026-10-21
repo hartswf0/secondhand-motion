@@ -75,7 +75,7 @@
   {
    "id": "char",
    "z": 2,
-   "label": "Binoculars (the hands, arms and chin are extra strokes on the drawn keys, carried with the binoculars)"
+   "label": "Binoculars, the man's hands and arms"
   }
  ],
  "objects": [
@@ -103,6 +103,5458 @@
    ],
    "strokes": 1,
    "skip": 1
+  },
+  {
+   "id": "hand_l_00",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    144.0,
+    80.0,
+    170.0,
+    114.0
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "hand_r_00",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    252.0,
+    78.0,
+    278.0,
+    112.0
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "arms_00",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      142.0,
+      100.0
+     ],
+     [
+      110.0,
+      104.0
+     ],
+     [
+      72.0,
+      118.0
+     ],
+     [
+      46.0,
+      146.0
+     ],
+     [
+      42.0,
+      186.0
+     ],
+     [
+      66.0,
+      224.0
+     ],
+     [
+      92.0,
+      258.0
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      272.0,
+      100.0
+     ],
+     [
+      304.0,
+      106.0
+     ],
+     [
+      340.0,
+      124.0
+     ],
+     [
+      368.0,
+      160.0
+     ],
+     [
+      370.0,
+      200.0
+     ],
+     [
+      346.0,
+      240.0
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      158.0,
+      114.0
+     ],
+     [
+      136.0,
+      132.0
+     ],
+     [
+      118.0,
+      158.0
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      258.0,
+      114.0
+     ],
+     [
+      280.0,
+      132.0
+     ],
+     [
+      298.0,
+      158.0
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "head_00",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      186.0,
+      120.0
+     ],
+     [
+      184.0,
+      142.0
+     ],
+     [
+      196.0,
+      164.0
+     ],
+     [
+      218.0,
+      172.0
+     ],
+     [
+      242.0,
+      165.0
+     ],
+     [
+      254.0,
+      142.0
+     ],
+     [
+      252.0,
+      120.0
+     ]
+    ]
+   ],
+   "visible": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "hand_l_01",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    146.0,
+    81.5,
+    172.0,
+    115.5
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "hand_r_01",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    254.0,
+    79.5,
+    280.0,
+    113.5
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "arms_01",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      144.0,
+      101.5
+     ],
+     [
+      111.6,
+      105.2
+     ],
+     [
+      73.2,
+      118.9
+     ],
+     [
+      46.9,
+      146.6
+     ],
+     [
+      42.6,
+      186.4
+     ],
+     [
+      66.3,
+      224.2
+     ],
+     [
+      92.1,
+      258.1
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      274.0,
+      101.5
+     ],
+     [
+      305.6,
+      107.1
+     ],
+     [
+      341.1,
+      124.8
+     ],
+     [
+      368.7,
+      160.5
+     ],
+     [
+      370.4,
+      200.3
+     ],
+     [
+      346.1,
+      240.1
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      160.0,
+      115.5
+     ],
+     [
+      137.1,
+      132.8
+     ],
+     [
+      118.4,
+      158.3
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      260.0,
+      115.5
+     ],
+     [
+      281.1,
+      132.8
+     ],
+     [
+      298.4,
+      158.3
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "head_01",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      188.0,
+      121.5
+     ],
+     [
+      186.0,
+      143.5
+     ],
+     [
+      198.0,
+      165.5
+     ],
+     [
+      220.0,
+      173.5
+     ],
+     [
+      244.0,
+      166.5
+     ],
+     [
+      256.0,
+      143.5
+     ],
+     [
+      254.0,
+      121.5
+     ]
+    ]
+   ],
+   "visible": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "hand_l_02",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    149.4,
+    81.6,
+    175.4,
+    115.6
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": "hand_r_02",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    257.4,
+    79.6,
+    283.4,
+    113.6
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": "arms_02",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      147.4,
+      101.6
+     ],
+     [
+      114.3,
+      105.3
+     ],
+     [
+      75.3,
+      119.0
+     ],
+     [
+      48.4,
+      146.7
+     ],
+     [
+      43.5,
+      186.4
+     ],
+     [
+      66.8,
+      224.2
+     ],
+     [
+      92.3,
+      258.1
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      277.4,
+      101.6
+     ],
+     [
+      308.1,
+      107.2
+     ],
+     [
+      343.0,
+      124.9
+     ],
+     [
+      369.9,
+      160.6
+     ],
+     [
+      371.0,
+      200.3
+     ],
+     [
+      346.4,
+      240.1
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      163.4,
+      115.6
+     ],
+     [
+      139.0,
+      132.9
+     ],
+     [
+      119.0,
+      158.3
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      263.4,
+      115.6
+     ],
+     [
+      283.0,
+      132.9
+     ],
+     [
+      299.0,
+      158.3
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": "head_02",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      191.4,
+      121.6
+     ],
+     [
+      189.4,
+      143.6
+     ],
+     [
+      201.4,
+      165.6
+     ],
+     [
+      223.4,
+      173.6
+     ],
+     [
+      247.4,
+      166.6
+     ],
+     [
+      259.4,
+      143.6
+     ],
+     [
+      257.4,
+      121.6
+     ]
+    ]
+   ],
+   "visible": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": "hand_l_03",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    150.0,
+    80.7,
+    176.0,
+    114.7
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    3,
+    3
+   ]
+  },
+  {
+   "id": "hand_r_03",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    258.0,
+    78.7,
+    284.0,
+    112.7
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    3,
+    3
+   ]
+  },
+  {
+   "id": "arms_03",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      148.0,
+      100.7
+     ],
+     [
+      114.7,
+      104.5
+     ],
+     [
+      75.6,
+      118.4
+     ],
+     [
+      48.6,
+      146.3
+     ],
+     [
+      43.7,
+      186.2
+     ],
+     [
+      66.9,
+      224.1
+     ],
+     [
+      92.3,
+      258.0
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      278.0,
+      100.7
+     ],
+     [
+      308.5,
+      106.5
+     ],
+     [
+      343.3,
+      124.4
+     ],
+     [
+      370.1,
+      160.2
+     ],
+     [
+      371.2,
+      200.1
+     ],
+     [
+      346.4,
+      240.0
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      164.0,
+      114.7
+     ],
+     [
+      139.3,
+      132.4
+     ],
+     [
+      119.2,
+      158.1
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      264.0,
+      114.7
+     ],
+     [
+      283.3,
+      132.4
+     ],
+     [
+      299.2,
+      158.1
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    3,
+    3
+   ]
+  },
+  {
+   "id": "head_03",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      192.0,
+      120.7
+     ],
+     [
+      190.0,
+      142.7
+     ],
+     [
+      202.0,
+      164.7
+     ],
+     [
+      224.0,
+      172.7
+     ],
+     [
+      248.0,
+      165.7
+     ],
+     [
+      260.0,
+      142.7
+     ],
+     [
+      258.0,
+      120.7
+     ]
+    ]
+   ],
+   "visible": [
+    3,
+    3
+   ]
+  },
+  {
+   "id": "hand_l_04",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    149.2,
+    80.7,
+    175.2,
+    114.7
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "hand_r_04",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    257.2,
+    78.7,
+    283.2,
+    112.7
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "arms_04",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      147.2,
+      100.7
+     ],
+     [
+      114.1,
+      104.6
+     ],
+     [
+      75.2,
+      118.4
+     ],
+     [
+      48.3,
+      146.3
+     ],
+     [
+      43.5,
+      186.2
+     ],
+     [
+      66.8,
+      224.1
+     ],
+     [
+      92.3,
+      258.0
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      277.2,
+      100.7
+     ],
+     [
+      308.0,
+      106.5
+     ],
+     [
+      342.8,
+      124.4
+     ],
+     [
+      369.8,
+      160.2
+     ],
+     [
+      371.0,
+      200.1
+     ],
+     [
+      346.4,
+      240.0
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      163.2,
+      114.7
+     ],
+     [
+      138.8,
+      132.4
+     ],
+     [
+      119.0,
+      158.1
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      263.2,
+      114.7
+     ],
+     [
+      282.8,
+      132.4
+     ],
+     [
+      299.0,
+      158.1
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "head_04",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      191.2,
+      120.7
+     ],
+     [
+      189.2,
+      142.7
+     ],
+     [
+      201.2,
+      164.7
+     ],
+     [
+      223.2,
+      172.7
+     ],
+     [
+      247.2,
+      165.7
+     ],
+     [
+      259.2,
+      142.7
+     ],
+     [
+      257.2,
+      120.7
+     ]
+    ]
+   ],
+   "visible": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "hand_l_05",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    149.0,
+    81.2,
+    175.0,
+    115.2
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    5,
+    5
+   ]
+  },
+  {
+   "id": "hand_r_05",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    257.0,
+    79.2,
+    283.0,
+    113.2
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    5,
+    5
+   ]
+  },
+  {
+   "id": "arms_05",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      147.0,
+      101.2
+     ],
+     [
+      114.0,
+      104.9
+     ],
+     [
+      75.0,
+      118.7
+     ],
+     [
+      48.2,
+      146.5
+     ],
+     [
+      43.4,
+      186.3
+     ],
+     [
+      66.8,
+      224.2
+     ],
+     [
+      92.3,
+      258.1
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      277.0,
+      101.2
+     ],
+     [
+      307.8,
+      106.9
+     ],
+     [
+      342.7,
+      124.6
+     ],
+     [
+      369.8,
+      160.4
+     ],
+     [
+      371.0,
+      200.2
+     ],
+     [
+      346.3,
+      240.1
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      163.0,
+      115.2
+     ],
+     [
+      138.7,
+      132.6
+     ],
+     [
+      119.0,
+      158.2
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      263.0,
+      115.2
+     ],
+     [
+      282.7,
+      132.6
+     ],
+     [
+      299.0,
+      158.2
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    5,
+    5
+   ]
+  },
+  {
+   "id": "head_05",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      191.0,
+      121.2
+     ],
+     [
+      189.0,
+      143.2
+     ],
+     [
+      201.0,
+      165.2
+     ],
+     [
+      223.0,
+      173.2
+     ],
+     [
+      247.0,
+      166.2
+     ],
+     [
+      259.0,
+      143.2
+     ],
+     [
+      257.0,
+      121.2
+     ]
+    ]
+   ],
+   "visible": [
+    5,
+    5
+   ]
+  },
+  {
+   "id": "hand_l_06",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    150.1,
+    81.3,
+    176.1,
+    115.3
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "hand_r_06",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    258.1,
+    79.3,
+    284.1,
+    113.3
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "arms_06",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      148.1,
+      101.3
+     ],
+     [
+      114.9,
+      105.0
+     ],
+     [
+      75.7,
+      118.8
+     ],
+     [
+      48.7,
+      146.5
+     ],
+     [
+      43.7,
+      186.4
+     ],
+     [
+      66.9,
+      224.2
+     ],
+     [
+      92.3,
+      258.1
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      278.1,
+      101.3
+     ],
+     [
+      308.7,
+      107.0
+     ],
+     [
+      343.3,
+      124.7
+     ],
+     [
+      370.2,
+      160.4
+     ],
+     [
+      371.2,
+      200.2
+     ],
+     [
+      346.4,
+      240.1
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      164.1,
+      115.3
+     ],
+     [
+      139.3,
+      132.7
+     ],
+     [
+      119.2,
+      158.2
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      264.1,
+      115.3
+     ],
+     [
+      283.3,
+      132.7
+     ],
+     [
+      299.2,
+      158.2
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "head_06",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      192.1,
+      121.3
+     ],
+     [
+      190.1,
+      143.3
+     ],
+     [
+      202.1,
+      165.3
+     ],
+     [
+      224.1,
+      173.3
+     ],
+     [
+      248.1,
+      166.3
+     ],
+     [
+      260.1,
+      143.3
+     ],
+     [
+      258.1,
+      121.3
+     ]
+    ]
+   ],
+   "visible": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "hand_l_07",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    151.7,
+    80.6,
+    177.7,
+    114.6
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    7,
+    7
+   ]
+  },
+  {
+   "id": "hand_r_07",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    259.7,
+    78.6,
+    285.7,
+    112.6
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    7,
+    7
+   ]
+  },
+  {
+   "id": "arms_07",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      149.7,
+      100.6
+     ],
+     [
+      116.1,
+      104.5
+     ],
+     [
+      76.7,
+      118.4
+     ],
+     [
+      49.3,
+      146.3
+     ],
+     [
+      44.2,
+      186.2
+     ],
+     [
+      67.2,
+      224.1
+     ],
+     [
+      92.4,
+      258.0
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      279.7,
+      100.6
+     ],
+     [
+      309.9,
+      106.5
+     ],
+     [
+      344.2,
+      124.3
+     ],
+     [
+      370.7,
+      160.2
+     ],
+     [
+      371.5,
+      200.1
+     ],
+     [
+      346.5,
+      240.0
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      165.7,
+      114.6
+     ],
+     [
+      140.2,
+      132.3
+     ],
+     [
+      119.5,
+      158.1
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      265.7,
+      114.6
+     ],
+     [
+      284.2,
+      132.3
+     ],
+     [
+      299.5,
+      158.1
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    7,
+    7
+   ]
+  },
+  {
+   "id": "head_07",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      193.7,
+      120.6
+     ],
+     [
+      191.7,
+      142.6
+     ],
+     [
+      203.7,
+      164.6
+     ],
+     [
+      225.7,
+      172.6
+     ],
+     [
+      249.7,
+      165.6
+     ],
+     [
+      261.7,
+      142.6
+     ],
+     [
+      259.7,
+      120.6
+     ]
+    ]
+   ],
+   "visible": [
+    7,
+    7
+   ]
+  },
+  {
+   "id": "hand_l_08",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    152.9,
+    80.7,
+    178.9,
+    114.7
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    8,
+    8
+   ]
+  },
+  {
+   "id": "hand_r_08",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    260.9,
+    78.7,
+    286.9,
+    112.7
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    8,
+    8
+   ]
+  },
+  {
+   "id": "arms_08",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      150.9,
+      100.7
+     ],
+     [
+      117.0,
+      104.6
+     ],
+     [
+      77.4,
+      118.4
+     ],
+     [
+      49.8,
+      146.3
+     ],
+     [
+      44.5,
+      186.2
+     ],
+     [
+      67.4,
+      224.1
+     ],
+     [
+      92.5,
+      258.0
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      280.9,
+      100.7
+     ],
+     [
+      310.8,
+      106.5
+     ],
+     [
+      344.8,
+      124.4
+     ],
+     [
+      371.1,
+      160.3
+     ],
+     [
+      371.7,
+      200.1
+     ],
+     [
+      346.6,
+      240.0
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      166.9,
+      114.7
+     ],
+     [
+      140.8,
+      132.4
+     ],
+     [
+      119.7,
+      158.1
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      266.9,
+      114.7
+     ],
+     [
+      284.8,
+      132.4
+     ],
+     [
+      299.7,
+      158.1
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    8,
+    8
+   ]
+  },
+  {
+   "id": "head_08",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      194.9,
+      120.7
+     ],
+     [
+      192.9,
+      142.7
+     ],
+     [
+      204.9,
+      164.7
+     ],
+     [
+      226.9,
+      172.7
+     ],
+     [
+      250.9,
+      165.7
+     ],
+     [
+      262.9,
+      142.7
+     ],
+     [
+      260.9,
+      120.7
+     ]
+    ]
+   ],
+   "visible": [
+    8,
+    8
+   ]
+  },
+  {
+   "id": "hand_l_09",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    154.7,
+    78.5,
+    180.7,
+    112.5
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    9,
+    9
+   ]
+  },
+  {
+   "id": "hand_r_09",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    262.7,
+    76.5,
+    288.7,
+    110.5
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    9,
+    9
+   ]
+  },
+  {
+   "id": "arms_09",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      152.7,
+      98.5
+     ],
+     [
+      118.5,
+      102.8
+     ],
+     [
+      78.5,
+      117.1
+     ],
+     [
+      50.6,
+      145.3
+     ],
+     [
+      45.0,
+      185.6
+     ],
+     [
+      67.6,
+      223.8
+     ],
+     [
+      92.6,
+      257.9
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      282.7,
+      98.5
+     ],
+     [
+      312.2,
+      104.8
+     ],
+     [
+      345.8,
+      123.2
+     ],
+     [
+      371.8,
+      159.5
+     ],
+     [
+      372.1,
+      199.7
+     ],
+     [
+      346.7,
+      239.9
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      168.7,
+      112.5
+     ],
+     [
+      141.8,
+      131.2
+     ],
+     [
+      120.1,
+      157.7
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      268.7,
+      112.5
+     ],
+     [
+      285.8,
+      131.2
+     ],
+     [
+      300.1,
+      157.7
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    9,
+    9
+   ]
+  },
+  {
+   "id": "head_09",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      196.7,
+      118.5
+     ],
+     [
+      194.7,
+      140.5
+     ],
+     [
+      206.7,
+      162.5
+     ],
+     [
+      228.7,
+      170.5
+     ],
+     [
+      252.7,
+      163.5
+     ],
+     [
+      264.7,
+      140.5
+     ],
+     [
+      262.7,
+      118.5
+     ]
+    ]
+   ],
+   "visible": [
+    9,
+    9
+   ]
+  },
+  {
+   "id": "hand_l_10",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    156.0,
+    77.3,
+    182.0,
+    111.3
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "hand_r_10",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    264.0,
+    75.3,
+    290.0,
+    109.3
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "arms_10",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      154.0,
+      97.3
+     ],
+     [
+      119.5,
+      101.9
+     ],
+     [
+      79.2,
+      116.4
+     ],
+     [
+      51.2,
+      144.8
+     ],
+     [
+      45.4,
+      185.3
+     ],
+     [
+      67.8,
+      223.6
+     ],
+     [
+      92.6,
+      257.9
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      284.0,
+      97.3
+     ],
+     [
+      313.1,
+      104.0
+     ],
+     [
+      346.5,
+      122.6
+     ],
+     [
+      372.2,
+      159.1
+     ],
+     [
+      372.3,
+      199.5
+     ],
+     [
+      346.8,
+      239.8
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      170.0,
+      111.3
+     ],
+     [
+      142.5,
+      130.6
+     ],
+     [
+      120.3,
+      157.5
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      270.0,
+      111.3
+     ],
+     [
+      286.5,
+      130.6
+     ],
+     [
+      300.3,
+      157.5
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "head_10",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      198.0,
+      117.3
+     ],
+     [
+      196.0,
+      139.3
+     ],
+     [
+      208.0,
+      161.3
+     ],
+     [
+      230.0,
+      169.3
+     ],
+     [
+      254.0,
+      162.3
+     ],
+     [
+      266.0,
+      139.3
+     ],
+     [
+      264.0,
+      117.3
+     ]
+    ]
+   ],
+   "visible": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "hand_l_11",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    156.0,
+    76.6,
+    182.0,
+    110.6
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "hand_r_11",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    264.0,
+    74.6,
+    290.0,
+    108.6
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "arms_11",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      154.0,
+      96.6
+     ],
+     [
+      119.5,
+      101.3
+     ],
+     [
+      79.2,
+      115.9
+     ],
+     [
+      51.2,
+      144.5
+     ],
+     [
+      45.4,
+      185.0
+     ],
+     [
+      67.8,
+      223.5
+     ],
+     [
+      92.6,
+      257.8
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      284.0,
+      96.6
+     ],
+     [
+      313.1,
+      103.4
+     ],
+     [
+      346.5,
+      122.2
+     ],
+     [
+      372.2,
+      158.8
+     ],
+     [
+      372.3,
+      199.3
+     ],
+     [
+      346.8,
+      239.8
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      170.0,
+      110.6
+     ],
+     [
+      142.5,
+      130.2
+     ],
+     [
+      120.3,
+      157.3
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      270.0,
+      110.6
+     ],
+     [
+      286.5,
+      130.2
+     ],
+     [
+      300.3,
+      157.3
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "head_11",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      198.0,
+      116.6
+     ],
+     [
+      196.0,
+      138.6
+     ],
+     [
+      208.0,
+      160.6
+     ],
+     [
+      230.0,
+      168.6
+     ],
+     [
+      254.0,
+      161.6
+     ],
+     [
+      266.0,
+      138.6
+     ],
+     [
+      264.0,
+      116.6
+     ]
+    ]
+   ],
+   "visible": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "hand_l_12",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    156.4,
+    77.9,
+    182.4,
+    111.9
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    12,
+    12
+   ]
+  },
+  {
+   "id": "hand_r_12",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    264.4,
+    75.9,
+    290.4,
+    109.9
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    12,
+    12
+   ]
+  },
+  {
+   "id": "arms_12",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      154.4,
+      97.9
+     ],
+     [
+      119.8,
+      102.4
+     ],
+     [
+      79.5,
+      116.8
+     ],
+     [
+      51.4,
+      145.1
+     ],
+     [
+      45.5,
+      185.4
+     ],
+     [
+      67.9,
+      223.7
+     ],
+     [
+      92.7,
+      257.9
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      284.4,
+      97.9
+     ],
+     [
+      313.4,
+      104.4
+     ],
+     [
+      346.7,
+      122.9
+     ],
+     [
+      372.4,
+      159.3
+     ],
+     [
+      372.4,
+      199.6
+     ],
+     [
+      346.8,
+      239.9
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      170.4,
+      111.9
+     ],
+     [
+      142.7,
+      130.9
+     ],
+     [
+      120.4,
+      157.6
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      270.4,
+      111.9
+     ],
+     [
+      286.7,
+      130.9
+     ],
+     [
+      300.4,
+      157.6
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    12,
+    12
+   ]
+  },
+  {
+   "id": "head_12",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      198.4,
+      117.9
+     ],
+     [
+      196.4,
+      139.9
+     ],
+     [
+      208.4,
+      161.9
+     ],
+     [
+      230.4,
+      169.9
+     ],
+     [
+      254.4,
+      162.9
+     ],
+     [
+      266.4,
+      139.9
+     ],
+     [
+      264.4,
+      117.9
+     ]
+    ]
+   ],
+   "visible": [
+    12,
+    12
+   ]
+  },
+  {
+   "id": "hand_l_13",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    157.0,
+    79.3,
+    183.0,
+    113.3
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "hand_r_13",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    265.0,
+    77.3,
+    291.0,
+    111.3
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "arms_13",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      155.0,
+      99.3
+     ],
+     [
+      120.3,
+      103.4
+     ],
+     [
+      79.9,
+      117.6
+     ],
+     [
+      51.6,
+      145.7
+     ],
+     [
+      45.7,
+      185.8
+     ],
+     [
+      68.0,
+      223.9
+     ],
+     [
+      92.7,
+      258.0
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      285.0,
+      99.3
+     ],
+     [
+      313.9,
+      105.4
+     ],
+     [
+      347.1,
+      123.6
+     ],
+     [
+      372.6,
+      159.7
+     ],
+     [
+      372.5,
+      199.9
+     ],
+     [
+      346.9,
+      240.0
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      171.0,
+      113.3
+     ],
+     [
+      143.1,
+      131.6
+     ],
+     [
+      120.5,
+      157.9
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      271.0,
+      113.3
+     ],
+     [
+      287.1,
+      131.6
+     ],
+     [
+      300.5,
+      157.9
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "head_13",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      199.0,
+      119.3
+     ],
+     [
+      197.0,
+      141.3
+     ],
+     [
+      209.0,
+      163.3
+     ],
+     [
+      231.0,
+      171.3
+     ],
+     [
+      255.0,
+      164.3
+     ],
+     [
+      267.0,
+      141.3
+     ],
+     [
+      265.0,
+      119.3
+     ]
+    ]
+   ],
+   "visible": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "hand_l_14",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    157.6,
+    80.6,
+    183.6,
+    114.6
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    14,
+    14
+   ]
+  },
+  {
+   "id": "hand_r_14",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    265.6,
+    78.6,
+    291.6,
+    112.6
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    14,
+    14
+   ]
+  },
+  {
+   "id": "arms_14",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      155.6,
+      100.6
+     ],
+     [
+      120.8,
+      104.5
+     ],
+     [
+      80.2,
+      118.4
+     ],
+     [
+      51.9,
+      146.3
+     ],
+     [
+      45.8,
+      186.2
+     ],
+     [
+      68.1,
+      224.1
+     ],
+     [
+      92.7,
+      258.0
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      285.6,
+      100.6
+     ],
+     [
+      314.3,
+      106.4
+     ],
+     [
+      347.4,
+      124.3
+     ],
+     [
+      372.8,
+      160.2
+     ],
+     [
+      372.6,
+      200.1
+     ],
+     [
+      346.9,
+      240.0
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      171.6,
+      114.6
+     ],
+     [
+      143.4,
+      132.3
+     ],
+     [
+      120.6,
+      158.1
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      271.6,
+      114.6
+     ],
+     [
+      287.4,
+      132.3
+     ],
+     [
+      300.6,
+      158.1
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    14,
+    14
+   ]
+  },
+  {
+   "id": "head_14",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      199.6,
+      120.6
+     ],
+     [
+      197.6,
+      142.6
+     ],
+     [
+      209.6,
+      164.6
+     ],
+     [
+      231.6,
+      172.6
+     ],
+     [
+      255.6,
+      165.6
+     ],
+     [
+      267.6,
+      142.6
+     ],
+     [
+      265.6,
+      120.6
+     ]
+    ]
+   ],
+   "visible": [
+    14,
+    14
+   ]
+  },
+  {
+   "id": "hand_l_15",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    157.9,
+    81.3,
+    183.9,
+    115.3
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "hand_r_15",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    265.9,
+    79.3,
+    291.9,
+    113.3
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "arms_15",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      155.9,
+      101.3
+     ],
+     [
+      121.1,
+      105.0
+     ],
+     [
+      80.4,
+      118.8
+     ],
+     [
+      52.0,
+      146.5
+     ],
+     [
+      45.9,
+      186.4
+     ],
+     [
+      68.1,
+      224.2
+     ],
+     [
+      92.8,
+      258.1
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      285.9,
+      101.3
+     ],
+     [
+      314.6,
+      107.0
+     ],
+     [
+      347.6,
+      124.7
+     ],
+     [
+      372.9,
+      160.4
+     ],
+     [
+      372.7,
+      200.2
+     ],
+     [
+      346.9,
+      240.1
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      171.9,
+      115.3
+     ],
+     [
+      143.6,
+      132.7
+     ],
+     [
+      120.7,
+      158.2
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      271.9,
+      115.3
+     ],
+     [
+      287.6,
+      132.7
+     ],
+     [
+      300.7,
+      158.2
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "head_15",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      199.9,
+      121.3
+     ],
+     [
+      197.9,
+      143.3
+     ],
+     [
+      209.9,
+      165.3
+     ],
+     [
+      231.9,
+      173.3
+     ],
+     [
+      255.9,
+      166.3
+     ],
+     [
+      267.9,
+      143.3
+     ],
+     [
+      265.9,
+      121.3
+     ]
+    ]
+   ],
+   "visible": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "hand_l_16",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    158.8,
+    81.3,
+    184.8,
+    115.3
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    16,
+    16
+   ]
+  },
+  {
+   "id": "hand_r_16",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    266.8,
+    79.3,
+    292.8,
+    113.3
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    16,
+    16
+   ]
+  },
+  {
+   "id": "arms_16",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      156.8,
+      101.3
+     ],
+     [
+      121.7,
+      105.1
+     ],
+     [
+      80.9,
+      118.8
+     ],
+     [
+      52.4,
+      146.6
+     ],
+     [
+      46.1,
+      186.4
+     ],
+     [
+      68.3,
+      224.2
+     ],
+     [
+      92.8,
+      258.1
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      286.8,
+      101.3
+     ],
+     [
+      315.2,
+      107.0
+     ],
+     [
+      348.0,
+      124.7
+     ],
+     [
+      373.2,
+      160.5
+     ],
+     [
+      372.8,
+      200.3
+     ],
+     [
+      347.0,
+      240.1
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      172.8,
+      115.3
+     ],
+     [
+      144.0,
+      132.7
+     ],
+     [
+      120.8,
+      158.3
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      272.8,
+      115.3
+     ],
+     [
+      288.0,
+      132.7
+     ],
+     [
+      300.8,
+      158.3
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    16,
+    16
+   ]
+  },
+  {
+   "id": "head_16",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      200.8,
+      121.3
+     ],
+     [
+      198.8,
+      143.3
+     ],
+     [
+      210.8,
+      165.3
+     ],
+     [
+      232.8,
+      173.3
+     ],
+     [
+      256.8,
+      166.3
+     ],
+     [
+      268.8,
+      143.3
+     ],
+     [
+      266.8,
+      121.3
+     ]
+    ]
+   ],
+   "visible": [
+    16,
+    16
+   ]
+  },
+  {
+   "id": "hand_l_17",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    159.2,
+    78.8,
+    185.2,
+    112.8
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "hand_r_17",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    267.2,
+    76.8,
+    293.2,
+    110.8
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "arms_17",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      157.2,
+      98.8
+     ],
+     [
+      122.0,
+      103.0
+     ],
+     [
+      81.2,
+      117.3
+     ],
+     [
+      52.6,
+      145.5
+     ],
+     [
+      46.3,
+      185.7
+     ],
+     [
+      68.3,
+      223.8
+     ],
+     [
+      92.8,
+      257.9
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      287.2,
+      98.8
+     ],
+     [
+      315.5,
+      105.1
+     ],
+     [
+      348.3,
+      123.3
+     ],
+     [
+      373.4,
+      159.6
+     ],
+     [
+      372.9,
+      199.8
+     ],
+     [
+      347.0,
+      239.9
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      173.2,
+      112.8
+     ],
+     [
+      144.3,
+      131.3
+     ],
+     [
+      120.9,
+      157.8
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      273.2,
+      112.8
+     ],
+     [
+      288.3,
+      131.3
+     ],
+     [
+      300.9,
+      157.8
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "head_17",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      201.2,
+      118.8
+     ],
+     [
+      199.2,
+      140.8
+     ],
+     [
+      211.2,
+      162.8
+     ],
+     [
+      233.2,
+      170.8
+     ],
+     [
+      257.2,
+      163.8
+     ],
+     [
+      269.2,
+      140.8
+     ],
+     [
+      267.2,
+      118.8
+     ]
+    ]
+   ],
+   "visible": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "hand_l_18",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    158.8,
+    79.1,
+    184.8,
+    113.1
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    18,
+    18
+   ]
+  },
+  {
+   "id": "hand_r_18",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    266.8,
+    77.1,
+    292.8,
+    111.1
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    18,
+    18
+   ]
+  },
+  {
+   "id": "arms_18",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      156.8,
+      99.1
+     ],
+     [
+      121.8,
+      103.3
+     ],
+     [
+      80.9,
+      117.5
+     ],
+     [
+      52.4,
+      145.6
+     ],
+     [
+      46.2,
+      185.7
+     ],
+     [
+      68.3,
+      223.9
+     ],
+     [
+      92.8,
+      258.0
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      286.8,
+      99.1
+     ],
+     [
+      315.3,
+      105.3
+     ],
+     [
+      348.1,
+      123.5
+     ],
+     [
+      373.2,
+      159.7
+     ],
+     [
+      372.9,
+      199.8
+     ],
+     [
+      347.0,
+      239.9
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      172.8,
+      113.1
+     ],
+     [
+      144.1,
+      131.5
+     ],
+     [
+      120.9,
+      157.8
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      272.8,
+      113.1
+     ],
+     [
+      288.1,
+      131.5
+     ],
+     [
+      300.9,
+      157.8
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    18,
+    18
+   ]
+  },
+  {
+   "id": "head_18",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      200.8,
+      119.1
+     ],
+     [
+      198.8,
+      141.1
+     ],
+     [
+      210.8,
+      163.1
+     ],
+     [
+      232.8,
+      171.1
+     ],
+     [
+      256.8,
+      164.1
+     ],
+     [
+      268.8,
+      141.1
+     ],
+     [
+      266.8,
+      119.1
+     ]
+    ]
+   ],
+   "visible": [
+    18,
+    18
+   ]
+  },
+  {
+   "id": "hand_l_19",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    157.0,
+    81.1,
+    183.0,
+    115.1
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    19,
+    19
+   ]
+  },
+  {
+   "id": "hand_r_19",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    265.0,
+    79.1,
+    291.0,
+    113.1
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    19,
+    19
+   ]
+  },
+  {
+   "id": "arms_19",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      155.0,
+      101.1
+     ],
+     [
+      120.3,
+      104.9
+     ],
+     [
+      79.9,
+      118.7
+     ],
+     [
+      51.6,
+      146.5
+     ],
+     [
+      45.7,
+      186.3
+     ],
+     [
+      68.0,
+      224.2
+     ],
+     [
+      92.7,
+      258.1
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      285.0,
+      101.1
+     ],
+     [
+      313.9,
+      106.9
+     ],
+     [
+      347.1,
+      124.6
+     ],
+     [
+      372.6,
+      160.4
+     ],
+     [
+      372.5,
+      200.2
+     ],
+     [
+      346.9,
+      240.1
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      171.0,
+      115.1
+     ],
+     [
+      143.1,
+      132.6
+     ],
+     [
+      120.5,
+      158.2
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      271.0,
+      115.1
+     ],
+     [
+      287.1,
+      132.6
+     ],
+     [
+      300.5,
+      158.2
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    19,
+    19
+   ]
+  },
+  {
+   "id": "head_19",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      199.0,
+      121.1
+     ],
+     [
+      197.0,
+      143.1
+     ],
+     [
+      209.0,
+      165.1
+     ],
+     [
+      231.0,
+      173.1
+     ],
+     [
+      255.0,
+      166.1
+     ],
+     [
+      267.0,
+      143.1
+     ],
+     [
+      265.0,
+      121.1
+     ]
+    ]
+   ],
+   "visible": [
+    19,
+    19
+   ]
+  },
+  {
+   "id": "hand_l_20",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    156.8,
+    82.7,
+    182.8,
+    116.7
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    20,
+    20
+   ]
+  },
+  {
+   "id": "hand_r_20",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    264.8,
+    80.7,
+    290.8,
+    114.7
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    20,
+    20
+   ]
+  },
+  {
+   "id": "arms_20",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      154.8,
+      102.7
+     ],
+     [
+      120.2,
+      106.1
+     ],
+     [
+      79.7,
+      119.6
+     ],
+     [
+      51.5,
+      147.1
+     ],
+     [
+      45.6,
+      186.7
+     ],
+     [
+      68.0,
+      224.4
+     ],
+     [
+      92.7,
+      258.1
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      284.8,
+      102.7
+     ],
+     [
+      313.8,
+      108.0
+     ],
+     [
+      347.0,
+      125.4
+     ],
+     [
+      372.5,
+      160.9
+     ],
+     [
+      372.5,
+      200.5
+     ],
+     [
+      346.9,
+      240.2
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      170.8,
+      116.7
+     ],
+     [
+      143.0,
+      133.4
+     ],
+     [
+      120.5,
+      158.5
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      270.8,
+      116.7
+     ],
+     [
+      287.0,
+      133.4
+     ],
+     [
+      300.5,
+      158.5
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    20,
+    20
+   ]
+  },
+  {
+   "id": "head_20",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      198.8,
+      122.7
+     ],
+     [
+      196.8,
+      144.7
+     ],
+     [
+      208.8,
+      166.7
+     ],
+     [
+      230.8,
+      174.7
+     ],
+     [
+      254.8,
+      167.7
+     ],
+     [
+      266.8,
+      144.7
+     ],
+     [
+      264.8,
+      122.7
+     ]
+    ]
+   ],
+   "visible": [
+    20,
+    20
+   ]
+  },
+  {
+   "id": "hand_l_21",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    157.8,
+    82.5,
+    183.8,
+    116.5
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    21,
+    21
+   ]
+  },
+  {
+   "id": "hand_r_21",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    265.8,
+    80.5,
+    291.8,
+    114.5
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    21,
+    21
+   ]
+  },
+  {
+   "id": "arms_21",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      155.8,
+      102.5
+     ],
+     [
+      121.0,
+      106.0
+     ],
+     [
+      80.3,
+      119.5
+     ],
+     [
+      52.0,
+      147.1
+     ],
+     [
+      45.9,
+      186.7
+     ],
+     [
+      68.1,
+      224.4
+     ],
+     [
+      92.7,
+      258.1
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      285.8,
+      102.5
+     ],
+     [
+      314.5,
+      107.9
+     ],
+     [
+      347.5,
+      125.3
+     ],
+     [
+      372.9,
+      160.9
+     ],
+     [
+      372.7,
+      200.5
+     ],
+     [
+      346.9,
+      240.2
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      171.8,
+      116.5
+     ],
+     [
+      143.5,
+      133.3
+     ],
+     [
+      120.7,
+      158.5
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      271.8,
+      116.5
+     ],
+     [
+      287.5,
+      133.3
+     ],
+     [
+      300.7,
+      158.5
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    21,
+    21
+   ]
+  },
+  {
+   "id": "head_21",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      199.8,
+      122.5
+     ],
+     [
+      197.8,
+      144.5
+     ],
+     [
+      209.8,
+      166.5
+     ],
+     [
+      231.8,
+      174.5
+     ],
+     [
+      255.8,
+      167.5
+     ],
+     [
+      267.8,
+      144.5
+     ],
+     [
+      265.8,
+      122.5
+     ]
+    ]
+   ],
+   "visible": [
+    21,
+    21
+   ]
+  },
+  {
+   "id": "hand_l_22",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    157.3,
+    82.8,
+    183.3,
+    116.8
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    22,
+    22
+   ]
+  },
+  {
+   "id": "hand_r_22",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    265.3,
+    80.8,
+    291.3,
+    114.8
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    22,
+    22
+   ]
+  },
+  {
+   "id": "arms_22",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      155.3,
+      102.8
+     ],
+     [
+      120.6,
+      106.2
+     ],
+     [
+      80.0,
+      119.7
+     ],
+     [
+      51.8,
+      147.2
+     ],
+     [
+      45.7,
+      186.8
+     ],
+     [
+      68.0,
+      224.4
+     ],
+     [
+      92.7,
+      258.2
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      285.3,
+      102.8
+     ],
+     [
+      314.1,
+      108.1
+     ],
+     [
+      347.3,
+      125.5
+     ],
+     [
+      372.7,
+      161.0
+     ],
+     [
+      372.6,
+      200.5
+     ],
+     [
+      346.9,
+      240.2
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      171.3,
+      116.8
+     ],
+     [
+      143.3,
+      133.5
+     ],
+     [
+      120.6,
+      158.5
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      271.3,
+      116.8
+     ],
+     [
+      287.3,
+      133.5
+     ],
+     [
+      300.6,
+      158.5
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    22,
+    22
+   ]
+  },
+  {
+   "id": "head_22",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      199.3,
+      122.8
+     ],
+     [
+      197.3,
+      144.8
+     ],
+     [
+      209.3,
+      166.8
+     ],
+     [
+      231.3,
+      174.8
+     ],
+     [
+      255.3,
+      167.8
+     ],
+     [
+      267.3,
+      144.8
+     ],
+     [
+      265.3,
+      122.8
+     ]
+    ]
+   ],
+   "visible": [
+    22,
+    22
+   ]
+  },
+  {
+   "id": "hand_l_23",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    155.8,
+    83.6,
+    181.8,
+    117.6
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    23,
+    23
+   ]
+  },
+  {
+   "id": "hand_r_23",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    263.8,
+    81.6,
+    289.8,
+    115.6
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    23,
+    23
+   ]
+  },
+  {
+   "id": "arms_23",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      153.8,
+      103.6
+     ],
+     [
+      119.4,
+      106.8
+     ],
+     [
+      79.1,
+      120.2
+     ],
+     [
+      51.1,
+      147.5
+     ],
+     [
+      45.3,
+      187.0
+     ],
+     [
+      67.8,
+      224.5
+     ],
+     [
+      92.6,
+      258.2
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      283.8,
+      103.6
+     ],
+     [
+      313.0,
+      108.7
+     ],
+     [
+      346.4,
+      126.0
+     ],
+     [
+      372.2,
+      161.3
+     ],
+     [
+      372.3,
+      200.7
+     ],
+     [
+      346.8,
+      240.2
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      169.8,
+      117.6
+     ],
+     [
+      142.4,
+      134.0
+     ],
+     [
+      120.3,
+      158.7
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      269.8,
+      117.6
+     ],
+     [
+      286.4,
+      134.0
+     ],
+     [
+      300.3,
+      158.7
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    23,
+    23
+   ]
+  },
+  {
+   "id": "head_23",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      197.8,
+      123.6
+     ],
+     [
+      195.8,
+      145.6
+     ],
+     [
+      207.8,
+      167.6
+     ],
+     [
+      229.8,
+      175.6
+     ],
+     [
+      253.8,
+      168.6
+     ],
+     [
+      265.8,
+      145.6
+     ],
+     [
+      263.8,
+      123.6
+     ]
+    ]
+   ],
+   "visible": [
+    23,
+    23
+   ]
+  },
+  {
+   "id": "hand_l_24",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    155.8,
+    83.9,
+    181.8,
+    117.9
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "hand_r_24",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    263.8,
+    81.9,
+    289.8,
+    115.9
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "arms_24",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      153.8,
+      103.9
+     ],
+     [
+      119.4,
+      107.1
+     ],
+     [
+      79.1,
+      120.4
+     ],
+     [
+      51.1,
+      147.7
+     ],
+     [
+      45.3,
+      187.1
+     ],
+     [
+      67.8,
+      224.6
+     ],
+     [
+      92.6,
+      258.2
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      283.8,
+      103.9
+     ],
+     [
+      313.0,
+      109.0
+     ],
+     [
+      346.4,
+      126.1
+     ],
+     [
+      372.2,
+      161.4
+     ],
+     [
+      372.3,
+      200.8
+     ],
+     [
+      346.8,
+      240.3
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      169.8,
+      117.9
+     ],
+     [
+      142.4,
+      134.1
+     ],
+     [
+      120.3,
+      158.8
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      269.8,
+      117.9
+     ],
+     [
+      286.4,
+      134.1
+     ],
+     [
+      300.3,
+      158.8
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "head_24",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      197.8,
+      123.9
+     ],
+     [
+      195.8,
+      145.9
+     ],
+     [
+      207.8,
+      167.9
+     ],
+     [
+      229.8,
+      175.9
+     ],
+     [
+      253.8,
+      168.9
+     ],
+     [
+      265.8,
+      145.9
+     ],
+     [
+      263.8,
+      123.9
+     ]
+    ]
+   ],
+   "visible": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "hand_l_25",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    155.2,
+    83.8,
+    181.2,
+    117.8
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    25,
+    25
+   ]
+  },
+  {
+   "id": "hand_r_25",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    263.2,
+    81.8,
+    289.2,
+    115.8
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    25,
+    25
+   ]
+  },
+  {
+   "id": "arms_25",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      153.2,
+      103.8
+     ],
+     [
+      118.9,
+      107.0
+     ],
+     [
+      78.8,
+      120.3
+     ],
+     [
+      50.8,
+      147.6
+     ],
+     [
+      45.1,
+      187.1
+     ],
+     [
+      67.7,
+      224.6
+     ],
+     [
+      92.6,
+      258.2
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      283.2,
+      103.8
+     ],
+     [
+      312.5,
+      108.9
+     ],
+     [
+      346.1,
+      126.0
+     ],
+     [
+      372.0,
+      161.3
+     ],
+     [
+      372.2,
+      200.7
+     ],
+     [
+      346.8,
+      240.3
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      169.2,
+      117.8
+     ],
+     [
+      142.1,
+      134.0
+     ],
+     [
+      120.2,
+      158.7
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      269.2,
+      117.8
+     ],
+     [
+      286.1,
+      134.0
+     ],
+     [
+      300.2,
+      158.7
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    25,
+    25
+   ]
+  },
+  {
+   "id": "head_25",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      197.2,
+      123.8
+     ],
+     [
+      195.2,
+      145.8
+     ],
+     [
+      207.2,
+      167.8
+     ],
+     [
+      229.2,
+      175.8
+     ],
+     [
+      253.2,
+      168.8
+     ],
+     [
+      265.2,
+      145.8
+     ],
+     [
+      263.2,
+      123.8
+     ]
+    ]
+   ],
+   "visible": [
+    25,
+    25
+   ]
+  },
+  {
+   "id": "hand_l_26",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    155.3,
+    84.2,
+    181.3,
+    118.2
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    26,
+    26
+   ]
+  },
+  {
+   "id": "hand_r_26",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    263.3,
+    82.2,
+    289.3,
+    116.2
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    26,
+    26
+   ]
+  },
+  {
+   "id": "arms_26",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      153.3,
+      104.2
+     ],
+     [
+      119.0,
+      107.4
+     ],
+     [
+      78.8,
+      120.5
+     ],
+     [
+      50.9,
+      147.8
+     ],
+     [
+      45.2,
+      187.2
+     ],
+     [
+      67.7,
+      224.6
+     ],
+     [
+      92.6,
+      258.2
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      283.3,
+      104.2
+     ],
+     [
+      312.6,
+      109.2
+     ],
+     [
+      346.1,
+      126.3
+     ],
+     [
+      372.0,
+      161.5
+     ],
+     [
+      372.2,
+      200.8
+     ],
+     [
+      346.8,
+      240.3
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      169.3,
+      118.2
+     ],
+     [
+      142.1,
+      134.3
+     ],
+     [
+      120.2,
+      158.8
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      269.3,
+      118.2
+     ],
+     [
+      286.1,
+      134.3
+     ],
+     [
+      300.2,
+      158.8
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    26,
+    26
+   ]
+  },
+  {
+   "id": "head_26",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      197.3,
+      124.2
+     ],
+     [
+      195.3,
+      146.2
+     ],
+     [
+      207.3,
+      168.2
+     ],
+     [
+      229.3,
+      176.2
+     ],
+     [
+      253.3,
+      169.2
+     ],
+     [
+      265.3,
+      146.2
+     ],
+     [
+      263.3,
+      124.2
+     ]
+    ]
+   ],
+   "visible": [
+    26,
+    26
+   ]
+  },
+  {
+   "id": "hand_l_27",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    155.2,
+    84.4,
+    181.2,
+    118.4
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    27,
+    27
+   ]
+  },
+  {
+   "id": "hand_r_27",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    263.2,
+    82.4,
+    289.2,
+    116.4
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    27,
+    27
+   ]
+  },
+  {
+   "id": "arms_27",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      153.2,
+      104.4
+     ],
+     [
+      118.9,
+      107.5
+     ],
+     [
+      78.8,
+      120.7
+     ],
+     [
+      50.8,
+      147.9
+     ],
+     [
+      45.1,
+      187.2
+     ],
+     [
+      67.7,
+      224.7
+     ],
+     [
+      92.6,
+      258.2
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      283.2,
+      104.4
+     ],
+     [
+      312.5,
+      109.4
+     ],
+     [
+      346.1,
+      126.4
+     ],
+     [
+      372.0,
+      161.6
+     ],
+     [
+      372.2,
+      200.9
+     ],
+     [
+      346.8,
+      240.3
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      169.2,
+      118.4
+     ],
+     [
+      142.1,
+      134.4
+     ],
+     [
+      120.2,
+      158.9
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      269.2,
+      118.4
+     ],
+     [
+      286.1,
+      134.4
+     ],
+     [
+      300.2,
+      158.9
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    27,
+    27
+   ]
+  },
+  {
+   "id": "head_27",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      197.2,
+      124.4
+     ],
+     [
+      195.2,
+      146.4
+     ],
+     [
+      207.2,
+      168.4
+     ],
+     [
+      229.2,
+      176.4
+     ],
+     [
+      253.2,
+      169.4
+     ],
+     [
+      265.2,
+      146.4
+     ],
+     [
+      263.2,
+      124.4
+     ]
+    ]
+   ],
+   "visible": [
+    27,
+    27
+   ]
+  },
+  {
+   "id": "hand_l_28",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    154.5,
+    84.6,
+    180.5,
+    118.6
+   ],
+   "aspect": 0.7,
+   "skip": 2,
+   "visible": [
+    28,
+    28
+   ]
+  },
+  {
+   "id": "hand_r_28",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    262.5,
+    82.6,
+    288.5,
+    116.6
+   ],
+   "aspect": 0.7,
+   "skip": 3,
+   "visible": [
+    28,
+    28
+   ]
+  },
+  {
+   "id": "arms_28",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; four lines trace the outer and inner edges of the man's raised arms in the blue jacket; the ends at the hands ride with the binoculars, the elbows and shoulders with the body",
+   "strokes": [
+    [
+     [
+      152.5,
+      104.6
+     ],
+     [
+      118.3,
+      107.7
+     ],
+     [
+      78.3,
+      120.8
+     ],
+     [
+      50.5,
+      148.0
+     ],
+     [
+      44.9,
+      187.3
+     ],
+     [
+      67.6,
+      224.7
+     ],
+     [
+      92.6,
+      258.2
+     ],
+     [
+      98.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      282.5,
+      104.6
+     ],
+     [
+      312.0,
+      109.5
+     ],
+     [
+      345.7,
+      126.5
+     ],
+     [
+      371.7,
+      161.6
+     ],
+     [
+      372.0,
+      200.9
+     ],
+     [
+      346.7,
+      240.3
+     ],
+     [
+      330.0,
+      292.0
+     ]
+    ],
+    [
+     [
+      168.5,
+      118.6
+     ],
+     [
+      141.7,
+      134.5
+     ],
+     [
+      120.0,
+      158.9
+     ],
+     [
+      112.0,
+      186.0
+     ]
+    ],
+    [
+     [
+      268.5,
+      118.6
+     ],
+     [
+      285.7,
+      134.5
+     ],
+     [
+      300.0,
+      158.9
+     ],
+     [
+      304.0,
+      186.0
+     ]
+    ]
+   ],
+   "visible": [
+    28,
+    28
+   ]
+  },
+  {
+   "id": "head_28",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars; it rides with the binoculars, which he holds to his eyes",
+   "strokes": [
+    [
+     [
+      196.5,
+      124.6
+     ],
+     [
+      194.5,
+      146.6
+     ],
+     [
+      206.5,
+      168.6
+     ],
+     [
+      228.5,
+      176.6
+     ],
+     [
+      252.5,
+      169.6
+     ],
+     [
+      264.5,
+      146.6
+     ],
+     [
+      262.5,
+      124.6
+     ]
+    ]
+   ],
+   "visible": [
+    28,
+    28
+   ]
   }
  ],
  "notes": {
@@ -113,5 +5565,5 @@
   "28": "he holds still, looking up"
  },
  "no_cel": "SAM followed the binoculars for frames 0 to 8 and then the man's hands, so cel paint from the silhouette would cover the hands and not the binoculars",
- "hands_note": "The man's hands, arms and chin were scene objects on the char plane; they slid with the measured camera (left) while the binoculars drifted right, so the hands slid against the barrels. They are now extra strokes in shots/binoculars/drawn/k*.json (the same Quick, Draw! hand doodles and agent-drawn arm and chin lines), kept relative to the binoculars so the hands stay on the barrels."
+ "people_note": "hand_l, hand_r, arms and head are repeated once per frame, each visible on its own frame: the hands and chin are placed with the binoculars' centre in the cast, and the arms bend from the hands (with the binoculars) to the elbows and shoulders (with the measured camera). Before this they slid with the camera alone, drifting left while the binoculars drifted right, so the hands slid against the barrels. Regenerate after the cast changes."
 }

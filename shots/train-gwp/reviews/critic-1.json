@@ -1,0 +1,27 @@
+{
+ "seen_animation": "A front-facing boxy train drawn in black wobbly lines: a tall rounded-top rectangle with an arch shape in the middle, a small bracket-shaped stack on top, a double-squiggle of smoke above it, and small pentagon wheels scribbled along the bottom edge. Grey scenery: a cloud band at top, horizontal wires, a tall grey building to the right, and two small grey side-view train cars at lower right. Across frames 1-16 the train grows steadily larger and drifts slightly right and down, as if approaching the viewer; by frames 9-16 it covers most of the grey building, which ends up as a thin sliver at its right edge. The smoke squiggle changes shape from frame to frame. Nothing else happens; there is no cut and no second action.",
+ "seen_film": "A head-on view of a dark switching locomotive (number 53) with a round headlight on its curved cab roof, standing in a rail yard under a pink sky. A white multi-storey building and an orange freight car are to its right, and a worker stands at the right. Through frames 1-16 the locomotive approaches slowly, growing and drifting slightly right so it occludes the building more and more. Meanwhile the worker walks left toward it (frames 5-10), reaches its right front corner and grabs the handrail/step (frames 10-12), and stays beside it at its right edge as it keeps coming (frames 13-16).",
+ "named_subject": "A steam-style train/locomotive seen from the front, with smokestack and smoke",
+ "verdict": "bar met",
+ "evidence": "Size and position track the film closely: in e.png frame 1 the body spans roughly 0.10-0.50 of the frame width and by frame 50 roughly 0.15-0.70, matching the film locomotive's growth in f.png 1 to 50; the grey building on the right is progressively covered (e.png 1-8 fully visible, 17-24 partly, 41-50 only a sliver), as the white building is in f.png. g.png shows an even, monotonic expansion down and to the right with no gaps or reversals. Consecutive frames in e.png change by small steady amounts; the only discontinuities are small tick strokes near the bottom-right wheels that appear and vanish (e.g. e.png 6, 15-16, 22, 30-31, 35, 42-46). The worker who walks to and grabs the locomotive in f.png 25-40 has no counterpart in the animation. Judged from still frames only, not playback.",
+ "primary_gap": "The second half of the film's event, the worker walking to the locomotive and grabbing its front corner (f.png about 25-40), is absent, so the animation shows only the approach.",
+ "closes_when": "A grey or black line figure appears at the train's right side in frames 1-24 and moves left to touch its lower right corner by about frame 30-36, then stays at that corner as the train grows through frame 50.",
+ "protect": "The steady, gap-free growth and rightward drift that matches the film's timing; the doodle's elements (squiggle smoke, bracket stack, arch, pentagon wheels, wobbly single-weight lines) kept consistent from frame to frame; the scenery being progressively occluded in step with the film.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  6,
+  15,
+  16,
+  22,
+  31,
+  35,
+  44
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The doodle is a long side view, and the animation turns it into a tall front view; it keeps the doodle's smoke squiggle, stack bracket, arch and pentagon wheels, but the doodle's slanted front edge and long low body are gone.",
+ "still_frames_only": true,
+ "_packet": "lot6fb1cd74",
+ "_round": 1
+}

@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0142",
+ "id": "train-gwp",
+ "kind": "shot",
+ "title": "Train, the Giraffe Walks Past Way",
+ "category": "train",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/train-gwp/cover.png",
+ "cover_alt": "shots/train-gwp/frames/f028.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/train-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#train-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/train_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/train/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/train-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}
