@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0167",
+ "id": "hourglass-gwp",
+ "kind": "shot",
+ "title": "Hourglass, the Giraffe Walks Past Way",
+ "category": "hourglass",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/hourglass-gwp/cover.png",
+ "cover_alt": "shots/hourglass-gwp/frames/f007.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/hourglass-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#hourglass-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/hourglass_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/hourglass/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/hourglass-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

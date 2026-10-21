@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Frame 1: a dome-and-brim shape (a helmet drawn as a dome arc, a separate lower dome line, and a long flat brim band with an upturned right tip) is cut off at the upper left corner; grey scenery shows a vertical line at left, a small octagon badge top right and an L-shaped grey line at lower left. Frames 2-3: the helmet slides right and down into the frame and its left diagonal edge appears. Frame 4: the helmet is nearly centred; grey hands appear, one under the brim at left with fingertips and one open hand at right. Frames 5-16: the helmet holds in the centre with only very slight shifts, held by the two grey hands; the scenery holds.",
+ "seen_film": "Frame 1: a white helmet dome is cut off at the upper left against a dark uniform with a badge at top right. Frames 2-3: the helmet moves right and down into the frame while a right hand rises from the bottom right and a left hand is visible under the brim at left. Frame 4: the right hand grips the brim edge and the helmet is near centre. Frames 5-16: the helmet is held still in the centre by both hands, with minor camera jitter.",
+ "named_subject": "a police-style motorcycle helmet (white dome, black brim) held up in two hands",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-5 against f.png 1-5: the helmet enters from the upper left and travels right and down at the same rate and to the same place as the film; g.png shows a continuous path 1 -> 4 -> 7 and then a stack at the rest position from about frame 8, matching the film settling at f.png 8-9. e.png 6-32 hold the helmet still while f.png 6-32 also hold, so timing matches. The break is at e.png 5 -> 6: in frames 1-5 there are no hands and a grey L-shaped line sits at lower left; at frame 6 that line disappears and both grey hands plus the little arcs under the brim appear at once, already in their final grip pose. In the film (f.png 2-7) the right hand is visible from frame 2 and rises up to grip the brim over frames 3-7, and the left hand is under the brim from frame 2. So the animation drops the hand-reaching part of the event and replaces it with a pop. The helmet itself also takes a slightly larger step between 5 and 6 than between 4 and 5.",
+ "primary_gap": "The two hands that hold the helmet are absent in frames 1-5 and pop into place fully formed at frame 6, so the film's action of the right hand rising to grip the brim is missing and the frame visibly redraws.",
+ "closes_when": "The right hand is drawn from about frame 2, entering at bottom right and rising frame by frame to reach the brim's right tip by frame 7, the left hand is under the brim from frame 2 moving with the helmet, and the grey lower-left line fades or turns into the left hand's arm instead of vanishing at frame 6.",
+ "protect": "The helmet drawing is the doodle in c.png: separate dome arc, separate lower dome line, open left diagonal stroke, long brim band with the upturned right tip and the small hook at the left end; keep its entry path from upper left, its arrival at centre by about frame 8, and the steady hold from frame 8 to 32 that matches the film; keep the stroke weight and sparse line style.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The helmet keeps the doodle's construction and stroke habits in every frame, with only a slight stretch of the brim when it is at rest, so no identity change is needed.",
+ "still_frames_only": true,
+ "_packet": "lot26275cd3",
+ "_round": 1
+}

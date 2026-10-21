@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A static grey scene (tree outline at left, a large diagonal hill outline, vertical post lines at right, a ground line) with a black leaning ladder in the middle. A black stick figure (circle head, straight-line body, a small box shape at the hips like a wrap) stands at the far left in frames 1-2, steps right to the ladder foot in frames 3-4, mounts the bottom rungs in frame 5, and climbs the ladder rung by rung through frames 6-14, its hands reaching to the rung above and its legs bending on the rungs below. By frames 15-16 it is at the top of the ladder, standing near the top rungs with its legs on the upper rungs. The ladder itself does not move.",
+ "seen_film": "A grainy black-and-white shot of a large conical haystack with a bamboo ladder leaning against it and a fence at right. A man in a white wrap comes in from the bottom-left corner (frame 1), runs/steps right toward the ladder (frames 2-4), reaches the ladder foot and starts climbing (frames 4-6), and then climbs steadily up the ladder through frames 7-14, ending near the top of the ladder against the stack in frames 15-16. The ladder and stack do not move; the camera holds.",
+ "named_subject": "A leaning ladder (the doodle in c.png); the animation adds a stick-figure man who climbs it.",
+ "verdict": "reference stronger",
+ "evidence": "Placement and timing follow the film closely: e.png 1-4 the figure is at far left like the man in f.png 1-4; e.png 5-8 it reaches the ladder foot as in f.png 5-8; e.png 9-31 head rises steadily from about 55% to 17% of frame height along the ladder, matching f.png 9-31; e.png 33-38 it is at the ladder top at about x 54%, y 5% of the frame, matching the man's position in f.png 33-38. The ladder in every frame is the c.png drawing (same rail kinks, same crooked short rung near the base, same uneven rung spacing) and is held still as in the film. Weak points: e.png 12->13 the bent climbing legs switch to two straight parallel standing legs in one frame; e.png 16->17 a leg suddenly extends into a long straight line down-left past the ladder rail; e.png 31->32 the figure jumps up and right (head moves about 10 px right and 7 px up versus 1-3 px steps elsewhere) and folds into a compact crouch; e.png 32->33 it pops from that crouch to an upright pose with crossed straight legs. In e.png 1-4 and 33-38 the torso and limb lines overlap into a crossed tangle so the pose is hard to read. The film shows a continuous climb with no such pose switches.",
+ "primary_gap": "The climber's limb poses switch abruptly between consecutive frames (13, 17, 32, 33) instead of passing through in-between positions, so the climb reads as a series of pose pops rather than one continuous climbing motion.",
+ "closes_when": "Across e.png 12-13, 16-17 and 31-33 each foot and hand moves at most about one rung-spacing per frame to the next rung, with the knee bend changing gradually, and the head's per-frame step at 31-32 matches the 1-3 px steps of neighbouring frames.",
+ "protect": "The ladder drawn exactly as the c.png doodle and held still; the climber's route and timing (left approach in frames 1-4, mount at 5-8, steady rise 9-31, top at 33-38) that matches the film's frame positions; the steady upward path shown in g.png with no reversals; the plain thin-line drawing with no added detail.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  13,
+  17,
+  32,
+  33
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The ladder matches the doodle stroke for stroke, but the climber is a thin, straight-lined stick figure that is not part of the doodle and does not share the ladder's heavier, wobbly stroke habit.",
+ "still_frames_only": true,
+ "_packet": "lot5547b6de",
+ "_round": 2
+}

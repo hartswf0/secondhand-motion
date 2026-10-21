@@ -1,0 +1,23 @@
+{
+ "seen_animation": "a.png shows an ice cream scoop (a large segmented black dome) sitting on a cone, cropped so that only the rim line and the upper sides of the cone show at the bottom. Frames 1-8: the dome holds almost still and sinks slightly, with two grey diagonal strands crossing its upper left. Frames 9-13: the grey strands are replaced by a grey U-shaped loop hanging from the top edge of the dome, and the dome's right shoulder steepens a little. Frames 14-16: the U loop is replaced by a long grey diagonal and a grey arc running down the right side inside the dome, and the dome's top develops a flat notch. The black character barely moves. All of the change happens in the grey lines, and they swap from one shape to the next rather than travelling.",
+ "seen_film": "d.png is a close-up of soft-serve or whipped ice cream being piped into a paper cup. Frames 1-4: a thick rope of cream comes down from the top left and coils around the cup. Frames 5-8: the rope keeps feeding in from the upper left and the coil builds up into a mound. Frames 9-10: the rope at the left thins and leaves, and the mound settles. Frames 10-13: a new rounded blob of cream comes in at the top centre-right and presses down into the mound. Frames 14-16: a second thick rope descends down the right side of the cup and folds over the mound at the lower right.",
+ "named_subject": "An ice cream cone: a scoop drawn as a segmented dome on top of a cone, standing in for the cream mound in the cup.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-22: the black dome and rim hold in nearly the same place, sinking a few pixels and drifting slightly right, while in f.png 1-22 a rope of cream pours in continuously from the upper left and coils around the cup; the only motion in the animation is the grey strands sliding slightly. e.png 22->23: the grey diagonal strands vanish and a grey U loop appears at the top in one frame; in f.png the new blob does not enter at the top until about frames 26-27, so the change is early and is a cut, not an entry. e.png 23-36: the U loop holds in place with minor jitter while in f.png 27-36 the blob moves down and right into the mound. e.png 36->37: the U loop vanishes and a long grey diagonal plus a grey arc on the right appear in one frame; in f.png 34-37 the second rope slides in gradually from the top right. e.png 40-41: the top of the black dome changes from a smooth arc to a notched, flattened top within one frame. g.png: the centre labels cluster in a small patch, confirming the character stays put; the dome outlines are stacked, with the latest (black) drawings shifted right and flattened at the top.",
+ "primary_gap": "The pouring and coiling of cream that drives the film is not performed by the character or by continuous lines; the dome stays still and the grey interior lines replace each other in single-frame swaps at e.png 23 and 37.",
+ "closes_when": "Across e.png 1-44 a grey or black rope line visibly travels in from the upper left and wraps around the dome in frames 1-20, a rounded blob outline moves in from the top centre-right and down into the dome during frames 26-36, and a second rope slides down the right side during frames 34-44, each moving a little every frame with no frame where one line set disappears and another appears.",
+ "protect": "The doodle's construction: a segmented polyline dome of roughly equal straight segments, a single slightly bent rim line, and two straight cone sides; the dome filling the frame at the same place as the cream mound in the cup; the low line count and plain black/grey stroke weight; the slight rightward drift and settling of the dome.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  23,
+  37,
+  41
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The dome, rim line and cone sides are drawn in the doodle's segmented straight-line style, but the shot is cropped so tightly that the cone's point never shows and the character reads mainly as a large dome.",
+ "still_frames_only": true,
+ "_packet": "lot398f477c",
+ "_round": 1
+}

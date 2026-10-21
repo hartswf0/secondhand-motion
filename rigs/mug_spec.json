@@ -1,0 +1,440 @@
+{
+ "category": "mug",
+ "doodle_key_id": "6337386839539712",
+ "facing": -1,
+ "face_from": [
+  "rim_o",
+  "rim_h"
+ ],
+ "note": "Quick, Draw! mug 6337386839539712 (DE), drawn from the side with the handle on the right, shown mirrored so the handle is on the left. Stroke 0 is the inner rim ellipse, stroke 1 the outer rim ellipse, stroke 2 the right side of the body (the side the handle is on), stroke 3 the other side of the body, stroke 4 the base, stroke 5 the handle. The film shows a white beaker-like cup seen from above, looking into its rim, with a pinched lip on the left that swings round to the lower left as the cup tumbles; the doodle's handle stands for that lip. The whole drawing is placed by the two ends of the rim (rim_h at the handle and lip side, rim_o at the far side), which sets its position, size and turn. The two rim strokes open toward a round rim by the pose value open (1 is the doodle's own ellipse, more is rounder), because the film looks down into the rim. The body, base and handle fold toward the rim line by the pose value depth (1 is the doodle's full height), because seen from above the body is foreshortened to a short band below the rim.",
+ "strokes": [
+  [
+   [
+    103,
+    14
+   ],
+   [
+    44,
+    19
+   ],
+   [
+    19,
+    32
+   ],
+   [
+    10,
+    44
+   ],
+   [
+    5,
+    57
+   ],
+   [
+    8,
+    62
+   ],
+   [
+    26,
+    67
+   ],
+   [
+    112,
+    71
+   ],
+   [
+    150,
+    60
+   ],
+   [
+    168,
+    50
+   ],
+   [
+    175,
+    30
+   ],
+   [
+    167,
+    20
+   ],
+   [
+    149,
+    10
+   ],
+   [
+    116,
+    8
+   ],
+   [
+    95,
+    13
+   ]
+  ],
+  [
+   [
+    173,
+    54
+   ],
+   [
+    131,
+    73
+   ],
+   [
+    112,
+    77
+   ],
+   [
+    77,
+    79
+   ],
+   [
+    46,
+    76
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    1,
+    54
+   ],
+   [
+    1,
+    42
+   ],
+   [
+    16,
+    24
+   ],
+   [
+    29,
+    16
+   ],
+   [
+    95,
+    0
+   ],
+   [
+    119,
+    0
+   ],
+   [
+    156,
+    6
+   ],
+   [
+    168,
+    12
+   ],
+   [
+    182,
+    29
+   ],
+   [
+    178,
+    47
+   ],
+   [
+    164,
+    58
+   ]
+  ],
+  [
+   [
+    168,
+    53
+   ],
+   [
+    174,
+    58
+   ],
+   [
+    177,
+    102
+   ],
+   [
+    171,
+    124
+   ],
+   [
+    167,
+    189
+   ],
+   [
+    160,
+    202
+   ],
+   [
+    138,
+    224
+   ],
+   [
+    127,
+    227
+   ]
+  ],
+  [
+   [
+    14,
+    62
+   ],
+   [
+    2,
+    118
+   ],
+   [
+    0,
+    143
+   ],
+   [
+    2,
+    177
+   ],
+   [
+    9,
+    197
+   ],
+   [
+    24,
+    222
+   ],
+   [
+    39,
+    232
+   ]
+  ],
+  [
+   [
+    27,
+    231
+   ],
+   [
+    147,
+    237
+   ],
+   [
+    132,
+    233
+   ],
+   [
+    59,
+    231
+   ],
+   [
+    27,
+    234
+   ],
+   [
+    63,
+    236
+   ],
+   [
+    101,
+    227
+   ],
+   [
+    118,
+    228
+   ]
+  ],
+  [
+   [
+    176,
+    67
+   ],
+   [
+    188,
+    68
+   ],
+   [
+    238,
+    84
+   ],
+   [
+    244,
+    89
+   ],
+   [
+    255,
+    107
+   ],
+   [
+    253,
+    134
+   ],
+   [
+    235,
+    156
+   ],
+   [
+    225,
+    164
+   ],
+   [
+    210,
+    169
+   ],
+   [
+    162,
+    173
+   ],
+   [
+    174,
+    164
+   ],
+   [
+    222,
+    142
+   ],
+   [
+    228,
+    136
+   ],
+   [
+    235,
+    118
+   ],
+   [
+    235,
+    102
+   ],
+   [
+    231,
+    95
+   ],
+   [
+    193,
+    80
+   ],
+   [
+    177,
+    77
+   ]
+  ]
+ ],
+ "anchors": {
+  "rim_h": [
+   180,
+   36
+  ],
+  "rim_o": [
+   1,
+   48
+  ],
+  "base": [
+   85,
+   232
+  ],
+  "lip": [
+   255,
+   107
+  ]
+ },
+ "root": [
+  "rim_h",
+  "rim_o"
+ ],
+ "size_from_mask": false,
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 14,
+   "joint": "rim_h",
+   "aim": [
+    "rim_h",
+    "rim_o"
+   ],
+   "turn": 0,
+   "fold": "open",
+   "axis": [
+    "rim_h",
+    "rim_o"
+   ]
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 16,
+   "joint": "rim_h",
+   "aim": [
+    "rim_h",
+    "rim_o"
+   ],
+   "turn": 0,
+   "fold": "open",
+   "axis": [
+    "rim_h",
+    "rim_o"
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 7,
+   "joint": "rim_h",
+   "aim": [
+    "rim_h",
+    "rim_o"
+   ],
+   "turn": 0,
+   "fold": "depth",
+   "axis": [
+    "rim_h",
+    "rim_o"
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 6,
+   "joint": "rim_h",
+   "aim": [
+    "rim_h",
+    "rim_o"
+   ],
+   "turn": 0,
+   "fold": "depth",
+   "axis": [
+    "rim_h",
+    "rim_o"
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 7,
+   "joint": "rim_h",
+   "aim": [
+    "rim_h",
+    "rim_o"
+   ],
+   "turn": 0,
+   "fold": "depth",
+   "axis": [
+    "rim_h",
+    "rim_o"
+   ]
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 17,
+   "joint": "rim_h",
+   "aim": [
+    "rim_h",
+    "rim_o"
+   ],
+   "turn": 0,
+   "fold": "depth",
+   "axis": [
+    "rim_h",
+    "rim_o"
+   ]
+  }
+ ],
+ "size": "steady",
+ "smooth": 1.0,
+ "track": false
+}

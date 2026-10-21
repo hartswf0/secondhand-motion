@@ -1,0 +1,23 @@
+{
+ "seen_animation": "The character is a doodled hourglass: a flat slab top with pointed ends, two wavy side strokes pinched at the waist, and a bottom line with a small curl at the left. In frames 1-2 it is upright, small and high in a grey circle above a grey table. In frames 3-4 it tilts slightly clockwise, the bottom line slants, and the drawing grows taller and moves lower. In frames 5-8 it straightens and its base comes down onto the table top. Frames 9-12 hold it standing still on the table. In frames 13-16 a vertical line appears inside from the waist down to a small mound at the base, which reads as sand falling into a pile; the hourglass otherwise holds still.",
+ "seen_film": "A gloved hand holds an hourglass in front of a bright circular backdrop. In frames 1-4 the hourglass is held turned on its side and is being rotated over, so its round base is seen as a large dark ellipse low in the frame. In frames 5-6 it is brought upright and set down on a stand. In frames 7-12 the hand keeps holding the upright hourglass on the stand while it stays still. In frame 13 the hand slides away to the left, and in frames 14-16 the hourglass stands alone with dark sand in the upper bulb running down into the lower bulb.",
+ "named_subject": "an hourglass (sand timer)",
+ "verdict": "reference stronger",
+ "evidence": "Timing of the second half matches: e.png 9-20 hold the hourglass still on the table while film f.png 9-19 show it held still on the stand, and the sand stream appears at e.png 21, matching the sand running from f.png 21-22 onward. The first half does not perform the film's event: in f.png 1-8 the hourglass is held on its side and turned over (its base seen as a large ellipse that swings from upper left down to the stand), while e.png 1-8 keep the hourglass upright the whole time with at most a few degrees of tilt (e.png 3-6), so the turning-over that sets the sand running is not shown. The position path also differs: in the film the object starts high and to the left and swings down and right into place; in g.png the drawing only stretches downward in place, growing from a short hourglass (e.png 1-2) to a tall one (e.png 9). Minor pops: e.png 4 to 5 the bottom line drops and changes slant in one step; e.png 8 the top slab is drawn as a heavy solid bar, unlike frames 7 and 9; e.png 20 to 21 the full-length sand line and mound appear at once with no growth.",
+ "primary_gap": "The film's main action in frames 1-8, the hourglass being turned over from its side to upright and set down, is replaced by an upright hourglass that only stretches taller and settles in place.",
+ "closes_when": "In e.png 1-8 the hourglass drawing starts rotated well onto its side (about 90 degrees or more) high and to the left as in f.png 1-3, and rotates through consecutive frames to upright as it moves down onto the table by frame 9, keeping the same size throughout instead of growing.",
+ "protect": "The doodle construction from c.png (pointed-end slab top, wobbly pinched side strokes, slanted bottom line with the left curl) and its thin hand-drawn line weight; the still hold on the table from e.png 9-20 matching the film's held pose; the sand stream and small mound starting at e.png 21 in step with the film; the stable grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  5,
+  8,
+  21
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is clearly the c.png hourglass doodle with its slab top, wavy pinched sides and curled bottom line; only e.png 8 departs from it by thickening the top slab into a solid bar.",
+ "still_frames_only": true,
+ "_packet": "lotb7923c61",
+ "_round": 1
+}
