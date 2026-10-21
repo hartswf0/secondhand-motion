@@ -1,0 +1,21 @@
+{
+ "seen_animation": "a.png: a static black-line ladder leans to the upper right in front of grey scenery (a tree at left, a large triangle, vertical lines at right). Frames 1-2: a stick figure stands crouched at the far left on the ground line. Frame 3: it has moved to the ladder base and reaches an arm to a rung. Frame 4: it steps onto the bottom rungs. Frames 5-8: it climbs the lower half of the ladder, arms reaching up, knees bent out. Frames 9-12: it continues up the middle and upper rungs. Frames 13-16: it is at the top end of the ladder, legs folded in a diamond shape, head finally above the ladder's top end. The ladder does not move in any frame.",
+ "seen_film": "d.png: a man in a white wrap, back to camera, enters from the bottom-left edge (frame 1, blurred), moves to the base of a bamboo ladder leaning up a large haystack (frames 2-3), mounts it (frame 4), and climbs steadily: lower rungs at frames 5-7, middle at 8-11, upper at 12-14, and near the top of the ladder at the peak of the stack in frames 15-16. The ladder and haystack stay fixed; a fence is at right.",
+ "named_subject": "A ladder (the doodle in c.png), with a stick-figure climber added to perform the man's action.",
+ "verdict": "reference stronger",
+ "evidence": "Placement and timing match the film closely: the ladder in every e.png frame sits where the film's ladder is (base lower left of centre, top near the upper middle) and keeps c.png's construction (two rails with the right rail running higher, the bent second rung from the top, the short hooked rung near the bottom). The climber's height on the ladder tracks the film: e.png 1-4 at the left on the ground vs f.png 1-4 entering at left; e.png 5-8 at the ladder base vs f.png 5-8 mounting; e.png 21 head about one third below the ladder top vs f.png 21 at the same height; e.png 33-38 at the top end vs f.png 33-38 at the top. g.png shows one continuous path from left to the ladder base and then up the ladder with no reversals. The weakness is at e.png 8 to 9: in frame 8 the figure stands beside the left rail with its legs on the ground and one arm reaching across; in frame 9 it is redrawn inside the rails with both arms raised and the legs in a spread diamond, a full pose change in one frame while f.png 8 to 9 shows only a small step up. Through frames 9-38 the hands and feet are re-posed each frame rather than staying planted on a rung while the other limbs move (for example 27 to 28 to 29 the raised arm switches sides and the legs re-fold), so the climb reads as a series of poses more than hand-over-hand gripping. Judged from still frames only, not playback.",
+ "primary_gap": "The climber's step onto the ladder at e.png frame 8 to 9 is a one-frame redraw from standing beside the ladder to spread-eagled inside it, and during the climb the hands and feet are not held on specific rungs between moves.",
+ "closes_when": "Frames 7-10 show the figure lifting one foot onto the bottom rung and then pulling up over two or three frames, and from then on each hand and foot stays on the same rung for several consecutive frames until it moves to the next rung.",
+ "protect": "The ladder drawn exactly as c.png (bent upper rung, hooked low rung, longer right rail) held fixed in the film's position; the climber's height on the ladder matching the film frame by frame, reaching the top at frames 33-38; the continuous left-to-ladder-to-top path in g.png; the plain single-weight line style and sparse grey scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  9
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The ladder is c.png's drawing reproduced faithfully; the stick-figure climber is an addition not present in c.png, but it uses the same thin single-stroke line and does not alter the ladder.",
+ "still_frames_only": true,
+ "_packet": "lotdaeec1ed",
+ "_round": 6
+}
