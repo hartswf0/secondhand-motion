@@ -1,41 +1,45 @@
 [
  {
   "id": "M2",
-  "value": 10,
+  "value": 12,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   25,
-   24,
-   8,
+   23,
+   17,
+   21,
+   26,
+   16,
+   10,
+   9,
+   10,
+   13,
+   10,
+   9,
+   9,
+   9,
+   6,
    5,
-   8,
-   12,
-   9,
-   9,
-   8,
-   4,
-   4,
-   4
+   6
   ]
  },
  {
   "id": "M2b",
-  "value": 0.47,
+  "value": 0.62,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-  "ok": false,
+  "ok": true,
   "design_typicality": 31
  },
  {
   "id": "M3",
-  "value": 0.4,
+  "value": 0.56,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.37
+  "min": 0.51
  },
  {
   "id": "M6",
-  "value": 8.9,
+  "value": 10.6,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -55,7 +59,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:6301565671440384; scenery quickdraw:5009649608687616, quickdraw:5300426310156288",
+  "value": "rig quickdraw:6301565671440384; scenery quickdraw:6555002631880704",
   "unit": "",
   "ok": true
  },
@@ -80,17 +84,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA giraffe's head and upper neck, chewing and opening its mouth while turning toward the viewer.\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA giraffe's head and upper neck, chewing.\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/giraffe-gwp/reviews/critic-6.json"
+  "evidence": "shots/giraffe-gwp/reviews/critic-7.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "The head reads as c.png's giraffe (P ossicone, flag ear, dash eye, rounded snout), but the neck loses c.png's double neck outline and its interior marking strokes, and the cheek loop that sits under the eye in c.png is moved to a large diamond at the lower left.",
-  "evidence": "shots/giraffe-gwp/reviews/critic-6.json"
+  "ok": true,
+  "note": "The character is recognisably the doodle's giraffe (same ossicones, eye stroke, jaw loop, angular outline), though the head is drawn larger with a shortened, cropped neck and thinner lines than the doodle's long diagonal neck.",
+  "evidence": "shots/giraffe-gwp/reviews/critic-7.json"
  }
 ]

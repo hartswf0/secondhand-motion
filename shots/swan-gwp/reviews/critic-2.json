@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A black-line swan with a flat oval body and an inner wing line floats on a water surface marked by grey dashes, in front of a grey bank of grass and trees. In frames 1-12 its neck bends forward and down so the head is under or at the waterline, as if feeding, while the swan drifts slowly left (from about 53% of frame width in frame 1 to about 47% in frame 12) and the scenery shifts slightly. In frame 13 the neck starts to come up, and in frames 14-16 the head is above the water on a short curved neck while the swan keeps drifting left; the body also tips so its back end rises a little.",
+ "seen_film": "A white swan on a lake in front of a reed bank and trees, small in the frame and just below the far shoreline. In frames 1-12 it has its head and neck down at or in the water, feeding, and drifts slowly left (from about 53% to about 47% of frame width). Around frame 12 the head begins to lift, and in frames 13-16 the swan holds its neck upright in a tall S-curve with the head well above the body, still drifting slightly left.",
+ "named_subject": "a swan feeding with its head down on a lake, then raising its head",
+ "verdict": "reference stronger",
+ "evidence": "Placement and timing match: in both, the swan sits just below the far bank near frame center in frame 1 and has drifted to about 47% width by frame 12, head down through frames 1-12, head up from 13-16. Frames 1-12 of the animation keep a consistent body drawing with only small changes in the hanging neck, reading as one continuous drift. The gap is in frames 13-16: in the film (frames 14-16) the neck stands tall, roughly as high as the body is long divided by two, with the head clearly above the back; in the animation the raised neck is a short hook whose head reaches only slightly above the back line, and the body tips upward at the rear in frames 14-16, which the film does not show. The change from head-down in frame 12 to head-raised in frame 14 also happens over about two sampled frames with a visible redraw of the neck shape in frame 13.",
+ "primary_gap": "When the swan raises its head in frames 13-16 the neck stays short and hooked, so the head never rises to the tall upright S-curve the film shows and the doodle draws.",
+ "closes_when": "In frames 14-16 the neck extends upward in the doodle's long S-curve so the head sits well above the back (about the body's height again above the waterline), with the body staying level instead of tipping at the rear.",
+ "protect": "The doodle's oval body with the single inner wing line, the slow leftward drift that matches the film's position frame for frame, the head-down feeding pose held steadily through frames 1-12, and the timing of the head lift starting at frame 12-13.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  13
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The body and wing line match the doodle, but the doodle's defining long upright S-neck with the head held high never appears; the raised neck in frames 14-16 is a short stub and the body is flatter than in c.png.",
+ "still_frames_only": true,
+ "_packet": "lot41c2e520",
+ "_round": 2
+}

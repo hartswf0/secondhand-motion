@@ -1,0 +1,25 @@
+{
+ "seen_animation": "A single black-line sheep (cloud-shaped body, boxy head with ears and dot eyes, two stick legs) faces left with its head lowered toward the ground line, in front of a grey backdrop of three trees and a row of small grey sheep. Across frames 1-16 the black sheep drifts steadily leftward, from about 85% of the frame width in frame 1 to about 35-40% in frame 16, while the grey row of sheep also slides slightly. Frames 1-8 keep the head tilted down at the front of the body. In frames 9-11 the head turns nearly vertical and is tucked under the front of the body, nose pointing at the ground, and it appears smaller; in frame 12 it returns to the tilted-down pose of frames 1-8 and stays there through frame 16. The legs change from frame to frame: in frames 3, 4 and 5 one leg is a short stub or a short diagonal mark inside the body outline rather than a full leg reaching the ground.",
+ "seen_film": "A large flock of sheep grazes in a meadow in front of a dark line of conifer trees. The foreground sheep keep their heads down to the grass and walk slowly to the left, a few steps at a time, while the flock as a whole drifts leftward across the frame through all 16 frames. The camera holds roughly still with slight reframing. Nothing sudden happens; the event is continuous slow grazing-while-walking.",
+ "named_subject": "A sheep grazing with its head down, walking left in front of a flock",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-8 and 12-16: the black sheep keeps its head down and moves left at a steady rate, matching the film's slow leftward grazing walk, and the grey row of sheep behind matches the film's flock. Frames 9-11: the head pops into a vertical, tucked, smaller pose that the film does not show at those moments (film sheep in 9-11 keep the same head-down grazing posture), and frame 12 snaps back to the earlier pose. Frames 3-5: one leg becomes a short stub or interior stroke, so the gait reads as a leg disappearing rather than a step. The sheep does not walk with alternating legs anywhere; it slides with legs fixed, while the film sheep visibly step.",
+ "primary_gap": "The head jumps to a different, vertical tucked pose in frames 9-11 and snaps back in frame 12, and the legs do not perform a walking step, so the slide-left reads as pose swaps on a gliding body rather than one continuous grazing walk.",
+ "closes_when": "The head stays at the same down-tilted angle and size from frame 1 to 16 (dipping only slightly to nibble), and the two legs alternate their angles in a regular stepping cycle that matches the leftward travel, with both legs always drawn reaching the ground line.",
+ "protect": "The doodle's construction (scalloped cloud body, boxy head with two pointed ears, dot eyes and short mouth stroke, two straight stick legs, thick uniform black line); the steady leftward travel across the frame matching the film's timing; the head-down grazing posture of frames 1-8 and 12-16; the grey tree and flock backdrop kept separate from the character.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  4,
+  5,
+  9,
+  12
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png sheep mirrored to face left with its head lowered, keeping the cloud body, boxy eared head and stick legs, though in frames 9-11 the head is redrawn smaller and rotated so it reads less like the doodle's head.",
+ "still_frames_only": true,
+ "_packet": "lot26a3eb52",
+ "_round": 3
+}

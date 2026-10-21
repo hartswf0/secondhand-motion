@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A windmill drawn in black lines: a tall rectangular body with a curved cap across the top, a small door mark near the bottom, and four petal-shaped sails joined at a small oval hub near the top of the body. Grey scenery: a bush at lower left, a large tree at right, a ground line. Across frames 1-16 the body stays still and the four sails turn clockwise about the fixed hub. In frame 1 the sails point up (slightly left), upper-right (long), down, and lower-left. By frame 8 they are close to a plus sign: up, right, down, left. By frame 16 they have turned on to roughly upper-right, lower-right, lower-left and upper-left, an X shape. The turn is gradual, a few degrees per frame, about 60-70 degrees in total.",
+ "seen_film": "A low-angle shot of a real windmill with four lattice sails, framed by dark foliage silhouettes. The sails turn clockwise. In frame 1 one sail points up and to the left and a long sail runs from lower left to upper right. Around frames 6-9 the sails pass through a near-plus position (one vertical, one horizontal). By frame 16 the former up-left sail points up and to the right and the sails form an X. The hub stays near x 40% / y 50% of the frame with slight camera drift; the rotation is steady across the 16 frames, about 60-70 degrees in total.",
+ "named_subject": "a windmill with four sails",
+ "verdict": "bar met",
+ "evidence": "Frame 1: animation sails at up-slightly-left and long upper-right, matching film frame 1 (up-left sail, long lower-left to upper-right sail). Frames 6-9: animation sails reach the plus position (vertical and horizontal) as the film does in frames 6-9. Frame 16: animation upper sail leans about 35-40 degrees right of vertical and the sails form an X, matching film frame 16. The hub stays at roughly the same place in the frame as the film's hub (upper-left third) throughout. Rotation per frame is even in both, with no frame where the sails skip ahead or reverse. Judged from still frames only, not playback.",
+ "primary_gap": "The sails change length and width from frame to frame instead of rotating as rigid shapes, most visibly the right sail, which is long in frame 1, a short thin wedge in frames 8-11, and long again in frames 14-16, while the left sail grows and shrinks in the opposite way.",
+ "closes_when": "Each of the four sails keeps the same petal outline and length from c.png in every frame, so frames 1, 8 and 16 show the same four shapes merely rotated about the hub (any foreshortening applied consistently by angle, as in the film).",
+ "protect": "The fixed body, cap and door mark drawn exactly as in c.png; the hub position; clockwise rotation at an even rate that matches the film's angles at frames 1, 8 and 16; the wobbly single-stroke line quality of the doodle; the plain grey scenery not competing with the character.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body, cap, hub and door mark are the doodle's own strokes, but the sails are stretched thinner and longer than the fat petal shapes in c.png and their outlines vary between frames.",
+ "still_frames_only": true,
+ "_packet": "lot82d5ca8b",
+ "_round": 3
+}

@@ -5,20 +5,22 @@
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
+   38,
+   28,
+   35,
+   27,
    24,
-   25,
-   35,
-   21,
-   36,
-   35,
+   38,
+   31,
    30,
+   24,
    20,
-   34
+   27
   ]
  },
  {
   "id": "M2b",
-  "value": 0.78,
+  "value": 0.82,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 22
@@ -31,7 +33,7 @@
  },
  {
   "id": "M6",
-  "value": 0.6,
+  "value": 0.5,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -76,17 +78,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca sheep (cloud-shaped woolly body, small boxy head with ears, stick legs)\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA sheep grazing with its head lowered while walking left.\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/sheep-gwp/reviews/critic-2.json"
+  "evidence": "shots/sheep-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The body, boxy head with two ears, dot eyes and short line legs match c.png, but the head is tilted down and redrawn smaller, and the legs shift between two and three across frames.",
-  "evidence": "shots/sheep-gwp/reviews/critic-2.json"
+  "note": "The character is the c.png drawing mirrored to face left with its head rotated downward; the head is drawn slightly smaller and more cramped relative to the body than in the doodle, so the face marks are harder to read, but the construction and stroke habits match.",
+  "evidence": "shots/sheep-gwp/reviews/critic-4.json"
  }
 ]

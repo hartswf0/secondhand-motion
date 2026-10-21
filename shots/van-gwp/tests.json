@@ -1,31 +1,31 @@
 [
  {
   "id": "M2",
-  "value": 66,
+  "value": 67,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   75,
-   55,
-   71,
-   72,
-   73,
+   69,
+   69,
+   79,
    76,
-   71,
-   67,
-   66,
    73,
-   57,
+   65,
+   65,
+   62,
+   64,
+   74,
+   62,
    66,
+   62,
+   57,
    59,
-   56,
-   56,
-   60
+   67
   ]
  },
  {
   "id": "M2b",
-  "value": 0.71,
+  "value": 0.69,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 89
@@ -35,11 +35,11 @@
   "value": 0.77,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": true,
-  "min": 0.69
+  "min": 0.68
  },
  {
   "id": "M6",
-  "value": 17.8,
+  "value": 15.3,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -84,17 +84,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca van (boxy passenger van seen from the side, front facing left)\u201d; motion smooth; follows the film: yes",
+  "value": "named \u201cA boxy passenger van (minivan) in side view.\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/van-gwp/reviews/critic-1.json"
+  "evidence": "shots/van-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The body outline, sloped hood line and open wobbly wheel circles with a stray tail match the doodle; only the wheel tails change position from frame to frame.",
-  "evidence": "shots/van-gwp/reviews/critic-1.json"
+  "note": "The van mostly matches c.png's outline and octagonal wheels, but frames 1-7 add a vertical stroke at the windshield base and frames 9-16 redraw the nose as a step that c.png does not have.",
+  "evidence": "shots/van-gwp/reviews/critic-3.json"
  }
 ]

@@ -1,27 +1,29 @@
 [
  {
   "id": "M2",
-  "value": 9,
+  "value": 7,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   9,
-   6,
-   6,
-   6,
-   13,
-   13,
-   12,
-   10,
+   8,
    9,
    10,
    9,
-   11
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6
   ]
  },
  {
   "id": "M2b",
-  "value": 0.86,
+  "value": 0.91,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 6
@@ -79,17 +81,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca tornado funnel: an inverted cone with a looping swirl at the top\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201cA tornado funnel, drawn as the doodle's cone with a swirling oval rim.\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/tornado-gwp/reviews/critic-4.json"
+  "evidence": "shots/tornado-gwp/reviews/critic-6.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The animated funnel keeps the doodle's construction (loop rim, open swirl tail, kinked left side, long right side) but parts of the rim turn grey in some frames, so the drawing loses strokes the doodle has.",
-  "evidence": "shots/tornado-gwp/reviews/critic-4.json"
+  "note": "The cone is the c.png drawing with the same rim, curl and kinked sides; only the per-frame redistribution of the side kinks slightly loosens its fidelity.",
+  "evidence": "shots/tornado-gwp/reviews/critic-6.json"
  }
 ]

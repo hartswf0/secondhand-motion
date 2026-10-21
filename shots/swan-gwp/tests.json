@@ -13,30 +13,30 @@
    5,
    7,
    6,
-   11,
-   19,
-   17,
-   21,
-   19
+   9,
+   10,
+   25,
+   20,
+   21
   ]
  },
  {
   "id": "M2b",
-  "value": 0.51,
+  "value": 0.53,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 25
  },
  {
   "id": "M3",
-  "value": 0.54,
+  "value": 0.51,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
   "min": 0.35
  },
  {
   "id": "M6",
-  "value": 1.0,
+  "value": 0.6,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -81,17 +81,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca swan (or duck) floating on water\u201d; motion smooth; follows the film: yes",
+  "value": "named \u201cA swan floating on water (feeding with its head down, then raising its neck).\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/swan-gwp/reviews/critic-1.json"
+  "evidence": "shots/swan-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "In frames 1-12 the head-down pose reduces the bird to a closed oval with a small hook at the right, so the doodle's long neck and wedge head only become recognizable in frames 13-16.",
-  "evidence": "shots/swan-gwp/reviews/critic-1.json"
+  "note": "The character matches the doodle in c.png; the only difference is that in the head-down frames the head becomes a small scribbled shape rather than the doodle's clear head-and-beak outline.",
+  "evidence": "shots/swan-gwp/reviews/critic-3.json"
  }
 ]

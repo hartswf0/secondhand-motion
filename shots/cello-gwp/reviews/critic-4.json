@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A single-line cello drawing (scroll at top, notched C-bout body, a lens-shaped sound hole, two long lines running from the neck down across the body) stands tilted slightly right in front of grey scenery: a stand and score boxes at left, a seated head-and-shoulders figure behind, a rectangle with two small pentagons and a polygon head at right. Frames 1-4: the cello holds still while a short cluster of diagonal marks beside the pegbox (a hand-like set of short strokes) sits at the upper neck. Frames 5-12: the cello sways a few pixels left and back, the body outline slightly changes width, and the short marks on the neck shift a little down and up. Frames 13-16: the cello moves left and lower in the frame and tilts more; in frame 14 a short bow-like double line appears at the lower right of the body, and it grows into a longer diagonal stroke in frames 15-16. No player figure is drawn; only the instrument moves.",
+ "seen_film": "A cellist in a red dress plays in a rehearsal room, framed from the chest up, with the cello neck and scroll rising past her head at right of center and orchestra members seated behind. Frames 1-4: her left arm is raised high with the hand on the upper neck near the scroll, head bowed. Frames 5-8: the left hand slides down the fingerboard to the middle of the neck, elbow lowering. Frames 9-12: the hand moves further down toward her chest and back up; her head turns slightly. Frames 13-16: the camera framing shifts so the cello and player sit a bit further left and lower; the bow becomes visible at lower right in frames 14-16 and her head lifts and turns in frame 16. The cello itself stays nearly fixed; the main motion is the left hand travelling down the neck and the bow arm at the bottom.",
+ "named_subject": "A cello (the instrument alone, no player).",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-12 of a.png show the cello almost static with only a small cluster of short strokes near the pegbox nudging a few pixels, while d.png frames 1-12 show the left hand making a large slide from the scroll (frames 1-4) down to mid-neck (5-8) and toward the chest (9-12); that hand travel is the film's main event and is not legibly performed. Frames 13-16 do match the film's leftward/lower shift of the instrument and the bow entering at lower right in 14-16, which is correct timing. In frame 14 the bow appears suddenly as a short doubled tick and in frames 15-16 becomes a long stroke, and the body outline in frame 13 is redrawn narrower than in frame 12.",
+ "primary_gap": "The film's central action, the left hand sliding from the scroll down the fingerboard over frames 1-12, is reduced to a few short strokes that barely move near the pegbox, so a viewer sees a still cello rather than playing.",
+ "closes_when": "A clear hand mark (in the doodle's line style) sits at the top of the neck in frames 1-4, travels visibly down the two neck lines to the middle by frames 5-8 and to the upper body by frames 9-12, and the bow enters as one consistent stroke growing from frame 13 rather than popping in at 14.",
+ "protect": "The cello's construction matches c.png (scroll knob, notched C-bouts, lens-shaped sound hole, two long crossing lines, single unshaded outline); the instrument's position and tilt line up with the film's cello; the leftward/lower shift in frames 13-16 and the bow appearing at lower right in frames 14-16 follow the film's timing; scenery stays grey and stable.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  13,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cello reads as the doodle, though the extra doubled neck lines and the cluster of short strokes at the pegbox add marks the doodle does not have.",
+ "still_frames_only": true,
+ "_packet": "lot1b210b90",
+ "_round": 4
+}

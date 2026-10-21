@@ -1,31 +1,30 @@
 [
  {
   "id": "M2",
-  "value": 41,
+  "value": 39,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
+   41,
    40,
+   39,
+   38,
+   38,
+   38,
+   38,
+   38,
+   38,
+   38,
+   39,
    40,
-   40,
-   41,
-   42,
-   42,
-   41,
-   42,
-   42,
-   42,
-   42,
-   42,
-   41,
-   41,
-   42,
-   41
+   39,
+   36,
+   38
   ]
  },
  {
   "id": "M2b",
-  "value": 0.62,
+  "value": 0.63,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 72
@@ -38,7 +37,7 @@
  },
  {
   "id": "M6",
-  "value": 1.0,
+  "value": 0.8,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -83,17 +82,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA cello (the instrument alone, with a simplified left hand/forearm on its neck; the cellist herself is not drawn)\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA cello (the instrument alone, no player).\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/cello-gwp/reviews/critic-3.json"
+  "evidence": "shots/cello-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "Only the scroll and upper bout of the doodle are visible because the cello is enlarged past the frame bottom, so the doodle's C-bout waist, lower bout and f-hole are lost and the added doubled neck lines and hand box are not part of its construction.",
-  "evidence": "shots/cello-gwp/reviews/critic-3.json"
+  "ok": true,
+  "note": "The cello reads as the doodle, though the extra doubled neck lines and the cluster of short strokes at the pegbox add marks the doodle does not have.",
+  "evidence": "shots/cello-gwp/reviews/critic-4.json"
  }
 ]

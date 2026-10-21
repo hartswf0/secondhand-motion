@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A paintbrush drawn in black line: a closed pointed bristle shape filled with zigzag scribble at the top, and two lines for the handle running down and off the bottom edge. Grey scenery is a wavy mark at top-left, a curved line at lower-left, and a vertical line near the right edge. In frame 1 the bristle tip is at upper centre with a short grey line beside it. In frame 2 the brush is shifted right and slightly up. In frames 3-5 it sits back near the frame 1 position while a grey line grows up and to the right from the tip. In frames 6-15 the brush moves down and to the left in steps, and the grey line behind it lengthens, so the brush is drawing a long diagonal stroke from upper right toward lower left. In frame 16 the brush has been lifted back up and to the right, to the upper part of the stroke.",
+ "seen_film": "A close-up of a real paintbrush with dark bristles and a clear plastic ferrule, tip pointing up, held over a tan surface with a dark curl at top-left and a curved dark mark at lower-left. Frame 1 has the tip at upper centre; frame 2 the brush jumps right; frames 3-5 it returns to the upper-centre area and a faint diagonal line appears up-right of the tip. Frames 6-15 the brush travels down and left, leaving a lengthening faint diagonal stroke; frames 11, 12 and 15 show motion blur from fast movement. Frame 16 the brush has moved back up and right and is blurred.",
+ "named_subject": "a paintbrush (bristle tip with hatched scribble, handle below)",
+ "verdict": "bar met",
+ "evidence": "Tip positions match the film within a few pixels in every frame: frame 1 (about 148,125 vs 145,125), frame 2 shifted right (about 168,110 vs 160,105 in-cell), frame 6 dropped down-left (about 118,148 in-cell in both), frame 8 (about 105,160 in both), frame 11 (about 92,165 in both), frame 13 (about 100,160 in both), frame 15 lowest-left point (about 72,185 vs 75,180), frame 16 jump back up-right (about 170,130 vs 170,120). The grey diagonal stroke line lengthens from short in frames 1-5 to long in frames 6-16, as the faint painted line does in the film. The jumps at frames 2, 6 and 16 are present in the film too. The bristle outline with zigzag hatching in every frame is the same construction as the bristles in c.png.",
+ "primary_gap": "The handle is drawn as two open lines that run off the frame, whereas the doodle's handle is a closed outline with a narrow neck at the bristles, so the brush body is less recognisably the doodle's than the bristle tip is.",
+ "closes_when": "Where the handle is visible, its two lines join the bristle at a narrow neck that matches c.png's neck width and keep that same pair of lines with the same spacing and taper in every frame.",
+ "protect": "The per-frame placement of the bristle tip that tracks the film exactly; the growing grey stroke line; the jumps only at frames 2, 6 and 16 where the film has them; the doodle's closed pointed bristle outline with zigzag hatching; the tip-up orientation that follows the film.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The bristle tip is the doodle's drawing, but the handle is simplified to two open lines and the bristle hatching is redrawn slightly differently from frame to frame.",
+ "still_frames_only": true,
+ "_packet": "lotfc1462f9",
+ "_round": 2
+}

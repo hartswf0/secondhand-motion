@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A single black-line cone (wide oval rim at the top with an inner oval and a short curl stroke rising off the rim, tapering to a point at the bottom) stands in front of grey scenery: a wavy cloud line across the top and a gently rising ground line near the bottom. In frame 1 the cone sits high, its rim cut off by the top edge and its tip at about 70% of the frame height, with no cloud line visible. Over frames 2-4 the whole cone and the ground line move down in the frame, the rim and cloud line come into view, and the tip settles near the bottom edge (about 87-90% height). From frame 5 to 16 the cone stays in roughly the same place, centred a little left of the frame centre, with small changes: the kinks along its left and right sides shift position from frame to frame, the rim tilts slightly, and the inner oval and curl shift a little. In frame 13 the cone is a little narrower and further left than in frames 12 and 14. Frames 14 and 15 have one or two small stray grey marks at the top right.",
+ "seen_film": "Black-and-white footage of a large tornado: a broad grey funnel column hangs from the storm-cloud base, centre-left of the frame, down to a dark tree line at the bottom, with a utility pole and power lines on the right. In frame 1 the camera is lower and a person in white runs across the bottom of the frame past cars and a building. Over frames 1-4 the camera tilts upward so the trees, pole and funnel move down in the frame and the ground disappears. From frame 5 to 16 the view is nearly steady, with slight camera shake; the funnel stays in the same place, its edges slowly changing shape as it churns, and the bright gap under the cloud on the right stays visible.",
+ "named_subject": "A tornado funnel, drawn as the doodle's cone with a swirling oval rim.",
+ "verdict": "bar met",
+ "evidence": "Frames 1-4: the cone and ground line move down in the frame (tip about 69% -> 79% -> 85% -> 87% of tile height) and the rim and cloud line come into view, matching the film's upward camera tilt in frames 1-4 where the trees and funnel drop in frame. Frames 5-16: the cone holds position centre-left, matching the film's steady funnel centre-left of frame in frames 5-16. Every frame keeps the doodle's construction from c.png: open double-line rim with inner oval, the curl stroke off the rim's top, the double stroke at the rim's right corner, and the bent, kinked side lines meeting at a sharp tip. The only visible irregularities are frame 13 (cone narrower and shifted left relative to 12 and 14) and stray grey marks in frames 14-15. Judged from still frames only, not playback.",
+ "primary_gap": "In frames 5-16 the side kinks and rim tilt change in small unrelated ways from frame to frame (and frame 13 jumps narrower and left), so the funnel reads as a cone that jitters in place rather than one that slowly churns the way the film's funnel edges do.",
+ "closes_when": "Across frames 5-16 the kinks on the side lines and the inner-oval curl travel steadily in one direction around the cone (for example a kink sliding down the left side over several frames) and frame 13 keeps the same width and left edge as frames 12 and 14.",
+ "protect": "The exact doodle construction (double-line open rim, inner oval, curl stroke, kinked sides, sharp tip, few black strokes); the downward drift in frames 1-4 that matches the film's camera tilt; the cone's centre-left placement and steady hold in frames 5-16; the sparse grey cloud and ground scenery.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  13
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cone is the c.png drawing with the same rim, curl and kinked sides; only the per-frame redistribution of the side kinks slightly loosens its fidelity.",
+ "still_frames_only": true,
+ "_packet": "lotd8860cc3",
+ "_round": 6
+}

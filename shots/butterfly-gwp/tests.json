@@ -1,12 +1,10 @@
 [
  {
   "id": "M2",
-  "value": 5,
+  "value": 6,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   2,
-   5,
    6,
    6,
    6,
@@ -19,26 +17,28 @@
    6,
    6,
    6,
-   5
+   6,
+   6,
+   6
   ]
  },
  {
   "id": "M2b",
-  "value": 0.57,
+  "value": 0.67,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 12
  },
  {
   "id": "M3",
-  "value": 0.29,
+  "value": 0.28,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.11
+  "min": 0.13
  },
  {
   "id": "M6",
-  "value": 3.8,
+  "value": 3.2,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -83,17 +83,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca butterfly (side view, wings folded) perched on a fingertip\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA butterfly with closed wings perched on a fingertip\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/butterfly-gwp/reviews/critic-4.json"
+  "evidence": "shots/butterfly-gwp/reviews/critic-5.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The wing outline with its notched lobe and the looped antennae come from the doodle, but the doodle's long body with tick marks is reduced to a short doubled line and is missing entirely in frames 1-2.",
-  "evidence": "shots/butterfly-gwp/reviews/critic-4.json"
+  "note": "The character is the doodle's lobed wing, curled antennae and tick-marked abdomen seen from the side with wings closed; the short doubled line along the wing's leading edge (visible in frames 4, 5, 13, 16) is close to the doodle's own double-line habit but is slightly heavier than the doodle uses there.",
+  "evidence": "shots/butterfly-gwp/reviews/critic-5.json"
  }
 ]

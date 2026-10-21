@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A line-drawn swan floats on water in front of a grey row of trees and grass. In frames 1-11 the swan sits low with its oval body and wing line held steady, its neck bent forward and down so the small head points into the water just ahead of the breast; the head bobs slightly from frame to frame and the swan drifts a short distance left (body centre about x=200 in frame 1, about x=185 by frame 9). The scenery shifts left a little around frames 8-9. In frame 12 the head starts to lift, in frame 13 the neck is curved up halfway, and in frames 14-16 the neck stands upright in an S-curve with the head and beak pointing right, while the body stays in place.",
+ "seen_film": "A white mute swan swims on a lake in front of reeds and dark trees, small in the frame at roughly one third of the image height. In frames 1-11 its head and neck are dipped down into the water in front of its body (feeding), with only small changes. The camera pans slightly so the background shifts a little and the swan stays near frame centre-left, drifting slightly left. In frame 12 the neck begins to rise, by frame 13 the head is up on a curved neck, and in frames 14-16 the swan holds its neck upright in an S-curve, head facing right.",
+ "named_subject": "A swan floating on water (feeding with its head down, then raising its neck).",
+ "verdict": "bar met",
+ "evidence": "Frames 1-11 of a.png show the neck bent down with the head at the water, matching the dipped-head feeding in d.png frames 1-11. a.png frame 12 shows the head lifting and frame 13 the neck half raised, matching d.png frames 12-13 where the neck comes up. a.png frames 14-16 show the upright S-neck facing right, matching d.png 14-16. Screen position matches: the swan sits just below the shoreline at about horizontal centre-left in both, with the same slight leftward drift (frames 1 to 9). The body oval with its inner wing line and the long single-line neck with small head are carried through all 16 frames without doubling. Judged from still frames only, not playback.",
+ "primary_gap": "The rise of the neck lags the film by about half a frame step: in a.png frame 13 the neck is only half up while in d.png frame 13 the head is already raised high, so the change from frame 13 to 14 in the animation is larger than any other step.",
+ "closes_when": "In a.png frame 13 the head stands near the height it reaches in frame 14 (neck mostly upright), so frames 12-13-14 show even increments of lift.",
+ "protect": "The doodle's construction (open oval body with the single diagonal wing line, single-stroke neck, small angular head with beak); the long held feeding pose in frames 1-11 with small head bobs; the placement just below the shoreline and the slight leftward drift; the upright S-neck in frames 14-16; the grey scenery that shifts with the film's pan.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character matches the doodle in c.png; the only difference is that in the head-down frames the head becomes a small scribbled shape rather than the doodle's clear head-and-beak outline.",
+ "still_frames_only": true,
+ "_packet": "lot635da05a",
+ "_round": 3
+}

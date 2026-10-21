@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A boxy van drawn in black line, in left-facing side profile with a sloped windshield, two octagonal wheels and a flat roof, sits large in the lower middle of frame 1 in front of grey scenery (a house outline with a zigzag fence, a tree at top right). Over frames 1-16 the van gets steadily smaller and drifts left and slightly down, while the grey scenery slides right and new grey trees and a pole enter from the left (frames 5-16), as if the camera pans left following the van. Frames 1-7 have an extra short vertical stroke at the base of the windshield; it is gone from frame 8 on. From frame 9 the front of the van is drawn as a shorter step (hood corner) rather than one long slanted line. In frames 3-4 the rear wheel and in frame 4 the front wheel carry extra tail strokes that break their outline. By frame 16 the van is about half its starting size, at left-centre, with a small grey square to its right.",
+ "seen_film": "A white 1970s passenger van starts large in the frame, seen in three-quarter front view facing left, in front of a white farmhouse and bare trees (frames 1-4). It drives left and away from the camera; the camera pans left to follow it, so tall trees and a pole enter from the left and the house slides right (frames 5-12). As it moves, the van turns so that by frames 9-16 it is seen in near side profile, and it shrinks steadily, ending small at left-centre in frame 16 with a white box and shed beside it.",
+ "named_subject": "A boxy passenger van (minivan) in side view.",
+ "verdict": "reference stronger",
+ "evidence": "The event matches: in both a.png and d.png the van starts large at frame 1, shrinks steadily through frame 16, ends small at left-centre, and the scenery pans right with trees and a pole entering from the left from frame 5 onward (a.png frames 5-12 match d.png frames 5-12 in the pan). Weaknesses: a.png frames 1-7 carry a vertical stroke at the windshield base that is not in c.png and vanishes at frame 8; a.png frames 3-4 show the rear wheel with an extra tail stroke and frame 4 the front wheel dropped below the body line with a tail, breaking the wheel outlines; between frames 8 and 9 the front of the van changes from one long sloped line to a short stepped hood, a visible redraw. The film's opening three-quarter front view (d.png frames 1-6) is not shown; the animation stays in profile throughout.",
+ "primary_gap": "The van drawing changes construction mid-shot (the extra windshield-base stroke appearing in frames 1-7 then vanishing at frame 8, the nose redrawn as a step at frame 9, and wheel outlines breaking in frames 3-4), which reads as pops rather than one continuous drawing in motion.",
+ "closes_when": "Every frame draws the van with the same strokes as c.png (no extra vertical stroke at the windshield base, the same sloped nose throughout, wheels as closed octagons without tail strokes), changing only size and position, with any turn toward profile done gradually across several frames.",
+ "protect": "The timing and path of the van (large at frame 1, steady shrink, ending small at left-centre at frame 16), the leftward camera pan with grey trees and pole entering from the left at the same frames as the film, the sparse single-weight line style of the doodle, and the octagonal wheels.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  8,
+  9
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The van mostly matches c.png's outline and octagonal wheels, but frames 1-7 add a vertical stroke at the windshield base and frames 9-16 redraw the nose as a step that c.png does not have.",
+ "still_frames_only": true,
+ "_packet": "lotbb24b3c2",
+ "_round": 3
+}

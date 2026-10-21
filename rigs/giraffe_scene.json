@@ -60,30 +60,18 @@
    "qd": "tree",
    "box": [
     0,
-    15,
-    85,
-    140
+    8,
+    72,
+    118
    ],
    "strokes": 2
-  },
-  {
-   "id": "tree2",
-   "plane": "far",
-   "qd": "tree",
-   "box": [
-    300,
-    30,
-    384,
-    150
-   ],
-   "strokes": 2,
-   "skip": 1
   }
  ],
  "notes": {
   "0": "muzzle forward",
   "4": "muzzle lifts, mouth opens",
   "8": "muzzle pulls back",
-  "14": "muzzle drops again"
+  "14": "muzzle drops again",
+  "scenery": "tree2 removed and tree1 kept in the open sky at top left: the giraffe silhouette whites out any tree behind the head, so a tree overlapping the head changed shape from frame to frame"
  }
 }

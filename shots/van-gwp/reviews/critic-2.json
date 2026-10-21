@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frames 1-4: a large boxy vehicle outline fills most of the frame, drawn as two panels split by a vertical line (a slanted front face on the left and a long side on the right), with a front wheel hanging below the body line and a small rear wheel tucked into the lower right corner; it shifts slightly right and its roof flattens. Frames 5-6: the same two-panel box, a little smaller and lower, the left panel narrowing. Frame 7: the vertical dividing line is gone and the outline becomes a single side profile with a short stepped hood on the left, like the doodle. Frames 8-12: the profile van shrinks and moves down-left, wheels now sitting on the bottom line. Frames 13-16: the van keeps shrinking at the lower left while grey scenery (trees, a house roof, a pole, a fence, a small square) slides in from the right as if the view pans.",
+ "seen_film": "A white passenger van is first seen large in three-quarter front view, nose at lower left, filling the frame (frames 1-4). It drives forward and turns so that by frames 5-8 it shows more of its side and is slightly smaller. By frames 9-12 it is in near side profile facing left, smaller and lower-left in frame. In frames 13-16 it is farther away, small, in side profile at the lower left, as it passes trees and a farmhouse; the camera stays roughly on the van so the background shifts.",
+ "named_subject": "a van (boxy minivan/passenger van) seen from the side",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-6 show the van as a two-panel box with a vertical line separating a front face from the side, which matches the film's three-quarter view in placement and size but not the doodle's single-profile construction; frames 1-4 also have the front wheel drawn entirely below the body line, detached from the car. Between frames 6 and 7 the front face and dividing line vanish and a stepped hood appears in one step, a redraw rather than a turn. Frames 8-16 match the film well: the side-profile van shrinks and drifts to the lower left at the same moments the film's van does, and the shape there matches c.png. In frames 14-16 the rear wheel becomes a small upright oval, narrower than the front wheel.",
+ "primary_gap": "The turn from three-quarter view to side profile happens as a single redraw between frames 6 and 7 instead of the front face narrowing gradually across frames 4-9 as it does in the film.",
+ "closes_when": "Across frames 4-9 the left front-face panel visibly narrows step by step while the doodle's stepped hood line forms, so that no frame pair shows the dividing line disappearing all at once.",
+ "protect": "The size and position track of the van matching the film (large and frame-filling at 1-4, shrinking to lower left by 13-16); the doodle-matching profile in frames 9-16 with its stepped hood, slightly tilted roof and loose polygonal wheels; the grey scenery that slides past to suggest the following camera.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  7,
+  8
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Frames 1-6 draw the van as a hard-edged two-panel box with a vertical divider and a wheel hanging below the body, which is not how the doodle is built, so the character only becomes the c.png drawing from frame 7 onward.",
+ "still_frames_only": true,
+ "_packet": "lot5a2951c0",
+ "_round": 2
+}

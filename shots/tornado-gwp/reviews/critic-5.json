@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A black-line inverted cone with a wide rim at the top, an inner polygonal loop inside the rim, and a hooked stroke rising from the loop stands with its point down on a grey ground line, under a grey scalloped cloud line. In frame 1 the cone sits high, its rim cut off by the top edge and the cloud line not visible. From frame 2 the whole view sits lower: cone, ground and clouds shift down together and stay roughly in place through frame 16, with the ground line sloping slightly. The cone body barely changes. What changes is the top: in frames 2-7 the inner loop sits centered-right in the rim; in frame 8 it is redrawn heavier and flatter; in frames 9-13 the loop slides left toward the rim's left corner and the hook separates from it; in frames 14-15 the hook becomes a near-vertical stroke cutting into the loop; in frame 16 the loop changes shape again and a short tick appears inside it. Grey scenery lines show through the rim in most frames.",
+ "seen_film": "Grainy black-and-white handheld footage of a large, wide tornado funnel hanging from a dark cloud base, left of center, behind a dark tree on the left and a lit tree on the right, with a utility pole and wires on the right. In frame 1 a person runs across the foreground at the bottom and the camera is tilted lower; over frames 2-4 the camera tilts up so the trees and pole drop toward the bottom of the frame. From frame 5 to 16 the framing is fairly steady with small handheld shifts; the funnel stays in the left-center as a broad, slightly tapering column from the cloud base to the tree line, its edges churning slightly. The event is a tornado holding its position on the ground while the camera steadies on it.",
+ "named_subject": "A tornado funnel (cone with a spiral top), drawn as the doodle's inverted cone.",
+ "verdict": "reference stronger",
+ "evidence": "Frames 1-4: the animation's downward shift of cone, ground and cloud lines matches the film's upward camera tilt in film frames 1-4, which is correct. Frames 5-16: the film's funnel sits in the left-center (roughly 25-45% of frame width) as a broad column whose top merges into a cloud deck spanning the whole width; the animation's cone sits centered (roughly 25-70% width) with a narrow point, and the cloud line runs behind rather than feeding into the rim. Frame 8: inner loop is redrawn heavier and flatter with no in-between from frame 7. Frames 9-13: the loop jumps leftward and detaches from the hook. Frames 14-15: the hook flips to a vertical stroke crossing the loop. Frame 16: loop shape changes again with a new tick mark. The film's funnel shows continuous slow churning, not discrete changes of the top.",
+ "primary_gap": "The rotation at the top of the cone is shown as discrete redraws of the inner loop and hook (frames 8, 9, 14, 16) instead of one continuous spin, while the cone body, which in the film churns along its whole length, stays rigid.",
+ "closes_when": "Across frames 5-16 the inner loop and hook keep one shape and travel in small, evenly spaced steps around the rim (with the hook staying attached to the loop as in c.png), and the cone's side lines wobble slightly from frame to frame, with the cone placed slightly left of center to match the film's funnel.",
+ "protect": "The doodle's construction: inverted cone with kinked left side, wide rim with right-side overhang, inner loop continuing into a hook; the single-weight black line; the tip touching the ground line; the whole-scene downward shift in frames 1-4 that tracks the film's camera tilt; the steady framing in frames 5-16.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  8,
+  9,
+  14,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cone body and rim match c.png, but in frames 9-16 the hook separates from the inner loop and in frames 14-15 turns vertical, which breaks the doodle's single continuous spiral stroke at the top.",
+ "still_frames_only": true,
+ "_packet": "lot4e693d41",
+ "_round": 5
+}
