@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0144",
+ "id": "canoe-gwp",
+ "kind": "shot",
+ "title": "Canoe, the Giraffe Walks Past Way",
+ "category": "canoe",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/canoe-gwp/cover.png",
+ "cover_alt": "shots/canoe-gwp/frames/f017.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/canoe-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#canoe-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/canoe_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/canoe/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/canoe-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

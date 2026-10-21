@@ -6,7 +6,7 @@
   "head",
   "tail"
  ],
- "note": "Quick, Draw! mermaid 6332888129732608, drawn reclining with the head at upper left and the tail curling up at the right, which is how the mermaid lies in the film. Stroke 0 is the fish body and tail: it runs from the waist down and right, rises into an upright fin and ends in a second fin lobe at the far right. Strokes 1 and 2 are the waistband where the body meets the tail. Stroke 3 is the head, the long hair falling at the left, and the arm: vertices 13 to 17 are the arm reaching out to the right from the shoulder. Strokes 4, 5 and 6 are hair lines across the top of the head. The whole drawing is placed by the head and the tail end and held at one size; only the arm turns at the shoulder, so it rises overhead, comes down to the chest and face, and stretches out to the right as the film's arm does.",
+ "note": "Quick, Draw! mermaid 6332888129732608, drawn reclining with the head at upper left and the tail curling up at the right, which is how the mermaid lies in the film. Stroke 0 is the fish body and tail: it runs from the waist down and right, rises into an upright fin and ends in a second fin lobe at the far right. Strokes 1 and 2 are the waistband where the body meets the tail. Stroke 3 is the head, the long hair falling at the left, and the arm: vertices 13 to 17 are the arm reaching out to the right from the shoulder. Strokes 4, 5 and 6 are hair lines across the top of the head. The whole drawing is placed by the head and the tail end and held at one size; only the arm turns at the shoulder, so it rises overhead, comes down to the chest and face, and stretches out to the right as the film's arm does. The pose gives a fixed size (_scale 0.56) and the drawing is tilted back by up to 15 degrees so the upright doodle lies along the film's reclining body; the size is the same along and across the body, so the doodle keeps its own proportions. The arm may lengthen by half the difference to the film's arm, so a full reach stays a short arm and does not become a sail.",
  "strokes": [
   [
    [
@@ -329,7 +329,7 @@
  ],
  "size": "steady",
  "smooth": 1.2,
- "track": true,
+ "track": false,
  "max_tilt": 15,
  "foreshorten": [
   1,

@@ -1,42 +1,42 @@
 [
  {
   "id": "M2",
-  "value": 82,
+  "value": 6,
   "unit": "percentile among real doodles of the category",
-  "ok": true,
+  "ok": false,
   "per_key": [
-   76,
-   77,
-   78,
-   76,
-   91,
-   89,
-   73,
-   90,
-   92,
-   76,
-   95,
-   75,
-   74
+   6,
+   6,
+   6,
+   6,
+   5,
+   5,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   5
   ]
  },
  {
   "id": "M2b",
-  "value": 0.97,
+  "value": 0.45,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
-  "ok": true,
+  "ok": false,
   "design_typicality": 76
  },
  {
   "id": "M3",
-  "value": 0.76,
+  "value": 0.69,
   "unit": "fit to the SAM silhouette, frames with a mask",
-  "ok": true,
-  "min": 0.54
+  "ok": false,
+  "min": 0.45
  },
  {
   "id": "M6",
-  "value": 0.3,
+  "value": 0.7,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },

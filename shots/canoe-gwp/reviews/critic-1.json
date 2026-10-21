@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A double-lined pointed boat hull (black) sits on a lake under a grey tree line with grey wave squiggles. Frames 1-4: the boat enters from the left edge with a short stick lying flat off its left (stern) end, and moves right. Frames 5-8: the stick has stood up near the stern, first leaning, then vertical, crossing through the hull. Frames 9-10: the stick tilts to a diagonal crossing the stern from lower left to upper right. Frames 11-16: the stick lies nearly flat again, sticking out past the stern to the left like a tail, while the boat keeps drifting right and slightly down, growing larger until it runs off the right edge in frames 15-16. The boat itself never changes shape; the only internal motion is the single stick rotating once through the shot.",
+ "seen_film": "A canoe with two seated paddlers crosses a lake from the left edge toward the lower right, with a dark tree line along the far shore. It grows somewhat larger as it comes closer and is cut off by the right edge by frames 15-16. Throughout, both paddlers make repeated paddle strokes: the paddles rise above their heads and dip into the water on alternating sides many times (visible as raised paddles in frames 5-10 and paddles reaching back into the water in frames 11-16). The canoe moves at a steady speed with no stops.",
+ "named_subject": "A canoe or rowboat with one paddle/oar stick (the doodle in c.png: double-lined hull with a single straight paddle angled down into the water).",
+ "verdict": "reference stronger",
+ "evidence": "Travel matches the film well: in e.png/f.png the boat and the canoe enter at the left edge in frame 1, are at frame centre around frames 17-20, and reach the right edge by frames 36-38; g.png shows one continuous left-to-right, slightly descending path with even spacing and no reversals, and the size growth roughly matches the film. The action inside the boat does not match: the film shows many repeated paddle strokes (paddles up in f.png 9-12, 17-19; down and back in 25-38), but the animation's stick makes one slow rotation across the whole shot: flat at the stern in e.png 1-8, rising in 9-12, vertical in 13-18, diagonal in 19-23, flat and trailing behind the stern in 24-38. From frame 24 to 38 the stick is static, a horizontal line behind the boat, while the film's paddlers are still stroking. The stick also changes pose abruptly between e.png 8-9 (flat to leaning up), 12-13 (short stub above the gunwale to a long vertical crossing the hull), 18-19 (vertical to diagonal) and 23-24 (diagonal to flat). Still frames only; playback was not seen.",
+ "primary_gap": "The paddle does one slow rotation over 38 frames and then sits flat behind the stern for the last 15 frames, so the boat glides instead of being paddled as in the film.",
+ "closes_when": "The stick repeatedly swings in a stroke cycle (about every 6-8 frames: raised forward, dipping down into the water at the doodle's angle beside the hull, pulled back, lifted) for the whole shot, including frames 24-38, with each pose change spread over several in-between frames.",
+ "protect": "The hull drawing (double line, pointed ends, raised right bow) copied faithfully from the doodle; the continuous, evenly spaced left-to-right descending path that matches the film's position and timing at every frame; the gradual size increase; the grey tree line and wave scenery that stays out of the way.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  9,
+  13,
+  19,
+  24
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hull is clearly the doodle's hull, but the doodle's paddle is a long straight line angled from mid-hull down into the water, while the animation's stick is shorter, sits at the stern, and spends most frames flat behind the boat where the doodle never puts it.",
+ "still_frames_only": true,
+ "_packet": "lota8423d55",
+ "_round": 1
+}
