@@ -1,0 +1,14 @@
+{
+  "branch": "wave2-track/sailboat",
+  "commit": "e9dd70601b9540492132b8e7906343bfba65070a",
+  "clip_id": "4c3c2e00-a804-5f5a-a743-66e58774123a",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "source_video_note": "CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "ae5131d4885d9b77d042464630de5fcfcba4215199256db143fff6aca5b916f8",
+  "source_record": "../../../sailboat/source.json",
+  "assembly_source_record": "../../../sailboat/integrated/source.json",
+  "note": "The main sailing barge approaches into the top/right crop. Thin rigging and late hull edges remain approximate."
+}

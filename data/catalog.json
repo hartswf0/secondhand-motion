@@ -6620,8 +6620,8 @@
    "wave 2"
   ],
   "t": {
-   "pass": 9,
-   "fail": 3,
+   "pass": 8,
+   "fail": 4,
    "total": 20
   },
   "r": {
@@ -6631,19 +6631,19 @@
     "ok": false
    },
    "M2b": {
-    "value": 0.87,
+    "value": 0.61,
     "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
     "ok": true
    },
    "M3": {
-    "value": 0.34,
+    "value": 0.49,
     "unit": "fit to the SAM silhouette, frames with a mask",
     "ok": false
    },
    "M6": {
-    "value": 3.9,
+    "value": 16.8,
     "unit": "px jerk (drawing centre)",
-    "ok": true
+    "ok": false
    },
    "T3": {
     "value": "10 strokes, 74 vertices, every frame",
@@ -12986,5 +12986,298 @@
   },
   "href": "pages/camera-gwp.html",
   "gait": "goose step"
+ },
+ {
+  "lot": "SM-0106",
+  "id": "cow",
+  "kind": "subject",
+  "title": "Cow",
+  "category": "cow",
+  "wave": 3,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "84 rendered frames at 24 fps; 10 source-paired keys. Still identity and source pose pass; mean mask fit remains below its threshold. Playback approval pending.",
+  "cover": "shots/cow/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5459491900358656; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/cow/integrated/index.html"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#cow/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#cow"
+   },
+   {
+    "label": "Earlier vector study",
+    "href": "pages/cow-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/cow/integrated/source.json"
+   }
+  ],
+  "tests": "shots/cow/tests.json",
+  "tags": [
+   "assembled review",
+   "wave 3",
+   "native QuickDraw",
+   "SAM inspected"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "S6": {
+    "value": "Archive source/interval/hash retained; reported public-domain status explicitly attributed",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "Fresh blind v2: same-drawing identity bar met on individual keys",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": 1.0,
+    "unit": "fraction",
+    "ok": true
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9997738579828132,
+     "min_parts_kept": 1.0,
+     "keys": 10
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 3,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "shots/cow/integrated/index.html",
+  "gait": "shuffle"
+ },
+ {
+  "lot": "SM-0107",
+  "id": "spider",
+  "kind": "subject",
+  "title": "Spider",
+  "category": "spider",
+  "wave": 3,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "73 rendered frames at 24 fps; 8 source-paired keys. Still identity and source pose pass; mask fit fails and leg/web contacts remain unverified. Playback approval pending.",
+  "cover": "shots/spider/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5924220649340928; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/spider/integrated/index.html"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#spider/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#spider"
+   },
+   {
+    "label": "Earlier vector study",
+    "href": "pages/spider-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/spider/integrated/source.json"
+   }
+  ],
+  "tests": "shots/spider/tests.json",
+  "tags": [
+   "assembled review",
+   "wave 3",
+   "native QuickDraw",
+   "SAM inspected"
+  ],
+  "t": {
+   "pass": 4,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "S6": {
+    "value": "Archive ids, original/retained intervals, source SHA, URLs and reported public_domain retained in integrated/source.json; rights independently unverified",
+    "unit": "",
+    "ok": true
+   },
+   "J4": {
+    "value": "Fresh blind v1 accepted original doodle identity across eight still pairs",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "One held background geometry under measured camera; locked-shot ink test not run",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 1.0,
+     "min_parts_kept": 1.0,
+     "pass": true,
+     "keys": 8
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "T3": {
+    "value": "All nine native strokes and each original point count retained in all 73 dense frames",
+    "unit": "",
+    "ok": true
+   },
+   "S7": {
+    "value": 1,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   }
+  },
+  "href": "shots/spider/integrated/index.html",
+  "gait": "sprint"
+ },
+ {
+  "lot": "SM-0108",
+  "id": "sailboat",
+  "kind": "subject",
+  "title": "Sailboat",
+  "category": "sailboat",
+  "wave": 3,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "145 rendered frames at 24 fps; 9 source-paired keys. The native one-sail drawing omits the source right-hand jib; mean mask fit fails. Playback approval pending.",
+  "cover": "shots/sailboat/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5193394433294336; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+   {
+    "label": "Watch assembled comparison",
+    "href": "shots/sailboat/integrated/index.html"
+   },
+   {
+    "label": "Watch in shared player",
+    "href": "shots/moving-drawings.html#sailboat/comparison"
+   },
+   {
+    "label": "Inspect source / mask / drawing",
+    "href": "shots/wave2-segmentation/index.html#sailboat"
+   },
+   {
+    "label": "Earlier vector study",
+    "href": "pages/sailboat-gwp.html"
+   },
+   {
+    "label": "Source record",
+    "href": "shots/sailboat/integrated/source.json"
+   }
+  ],
+  "tests": "shots/sailboat/tests.json",
+  "tags": [
+   "assembled review",
+   "wave 3",
+   "native QuickDraw",
+   "SAM inspected"
+  ],
+  "t": {
+   "pass": 3,
+   "fail": 0,
+   "total": 7
+  },
+  "r": {
+   "S6": {
+    "value": "Archive source and reported public-domain rights recorded; exact raw source SHA256 retained.",
+    "unit": "",
+    "ok": true
+   },
+   "M1": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "M2": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   },
+   "J4": {
+    "value": "Fresh blind v3: original native drawing identity passes on sampled stills.",
+    "unit": "",
+    "ok": true
+   },
+   "B1": {
+    "value": "One held distant-vessel/water geometry under source-observed screen drift; locked-shot 90% ink test not run.",
+    "unit": "",
+    "ok": null
+   },
+   "T1": {
+    "value": {
+     "min_recall": 0.9833035181872392,
+     "min_parts_kept": 1.0,
+     "keys": 9,
+     "pass_gate": true
+    },
+    "unit": "fraction",
+    "ok": true
+   },
+   "S7": {
+    "value": 3,
+    "unit": "verified hash-linked entries",
+    "ok": true
+   },
+   "T3": {
+    "value": "not run",
+    "unit": "",
+    "ok": null
+   }
+  },
+  "href": "shots/sailboat/integrated/index.html",
+  "gait": "jelly"
  }
 ]

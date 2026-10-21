@@ -1,0 +1,14 @@
+{
+  "branch": "wave2-track/cow",
+  "commit": "44af07db8fe9559e69b56fb94f65aa9179aca08c",
+  "clip_id": "1f60b8f5-a603-5713-b971-a95ca6401d04",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "source_video_note": "CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "1dcef8a389ba61298f3b06b6089ec376159af05977aa95d664e47217acedd74a",
+  "source_record": "../../../cow/source.json",
+  "assembly_source_record": "../../../cow/integrated/source.json",
+  "note": "A frontal chewing close-up. The mask follows the visible head; the dark shoulder edges and jaw pose need direct comparison."
+}

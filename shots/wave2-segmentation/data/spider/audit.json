@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "a516af279c83889f744db71220b890456f68fe57d990446d6e0e13f5f5cc9f52",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "spider body and most visible legs",
+      "result": "partial_subject",
+      "note": "Most legs are captured, with some thin tips missing. Web attachment points need direct source inspection.",
+      "model_iou_estimate": 0.902
+    },
+    {
+      "frame": 13,
+      "observed_target": "spider body and several legs",
+      "result": "partial_subject",
+      "note": "Thin leg ends and near-web strands are ambiguous; this is not a contact annotation.",
+      "model_iou_estimate": 0.899
+    },
+    {
+      "frame": 25,
+      "observed_target": "spider body and legs",
+      "result": "partial_subject",
+      "note": "The broad pose is captured; leg tips are incomplete.",
+      "model_iou_estimate": 0.902
+    },
+    {
+      "frame": 37,
+      "observed_target": "spider body and most legs",
+      "result": "partial_subject",
+      "note": "The changing leg spread is visible; contact identity is not established by this mask.",
+      "model_iou_estimate": 0.878
+    }
+  ]
+}

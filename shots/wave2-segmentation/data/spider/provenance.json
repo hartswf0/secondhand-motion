@@ -1,0 +1,14 @@
+{
+  "branch": "wave2-track/spider",
+  "commit": "d9578e140af9ce94fd8ff6942b0702e6892d94b7",
+  "clip_id": "a975d12c-ffcb-58f5-9c3f-4abf577b102e",
+  "model": "facebook/sam2.1-hiera-small",
+  "time_basis": "approximate clip-relative seconds from 12 fps resampling; paired to nearest recorded render source time, not exact decoded source PTS",
+  "source_video_sha256": null,
+  "source_video_note": "CI did not retain the downloaded video hash or per-frame source PTS. Snapshot bytes are pinned; known shot mismatches are blocked by audit notes.",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "track_sha256": "a516af279c83889f744db71220b890456f68fe57d990446d6e0e13f5f5cc9f52",
+  "source_record": "../../../spider/source.json",
+  "assembly_source_record": "../../../spider/integrated/source.json",
+  "note": "Turning and stepping on a web. The mask retains much of the legs but does not establish every foot/web contact."
+}

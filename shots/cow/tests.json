@@ -1,0 +1,144 @@
+[
+  {
+    "id": "S6",
+    "value": "Archive source/interval/hash retained; reported public-domain status explicitly attributed",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "M1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J4",
+    "value": "Fresh blind v2: same-drawing identity bar met on individual keys",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "B1",
+    "value": 1.0,
+    "unit": "fraction",
+    "ok": true,
+    "method": "One literal background geometry string is reused unchanged across every frame; no camera transform."
+  },
+  {
+    "id": "T1",
+    "value": {
+      "min_recall": 0.9997738579828132,
+      "min_parts_kept": 1.0,
+      "keys": 10
+    },
+    "unit": "fraction",
+    "ok": true,
+    "method": "tools/trace_keys.py on separated visible character PNGs"
+  },
+  {
+    "id": "M3",
+    "value": {
+      "mean": 0.6250390377441656,
+      "min": 0.5629802095459837,
+      "frames": 84
+    },
+    "unit": "IoU",
+    "ok": false,
+    "method": "filled native rig / SAM IoU, nearest approximate 12fps CI sample; model estimates are not fit scores."
+  },
+  {
+    "id": "M4",
+    "value": "0 independently observed planted intervals; minimum-four gate fails",
+    "unit": "",
+    "ok": false
+  },
+  {
+    "id": "M5",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M6",
+    "value": 0.2812503375000972,
+    "unit": "render px/frame^3",
+    "ok": true,
+    "method": "Third finite difference of source-keyed poll anchor in 24fps 480x360 render coordinates"
+  },
+  {
+    "id": "S1",
+    "value": "No independent depth/parallax validation; held distant scene",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S2",
+    "value": "17 native cow stroke IDs and agent-drawn held sky/horizon sourced in integrated/shot.json",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S3",
+    "value": {
+      "frames": 84,
+      "fps": 24,
+      "keys": [
+        0,
+        6,
+        12,
+        17,
+        25,
+        39,
+        45,
+        62,
+        74,
+        83
+      ],
+      "per_frame_source_times": true
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S4",
+    "value": "Local links/scripts checked; no 390px browser layout or interactive playback check",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S5",
+    "value": "Far body lines painted before opaque face/muzzle; inspected ten source-key pairs",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "J1",
+    "value": "No normal-speed blind viewing",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J3",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S7",
+    "value": 3,
+    "unit": "verified hash-linked entries",
+    "ok": true
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "rendered_frames": 84,
+  "keys": 10,
+  "source_sha256_verified": true,
+  "full_decode": true,
+  "same_topology": true,
+  "original_strokes": 17,
+  "all_original_strokes_assigned": true,
+  "held_background_geometry": true,
+  "background_strokes_unchanged_fraction": 1.0,
+  "mask_fit": {
+    "metric": "filled native rig / SAM IoU, nearest approximate 12fps CI sample",
+    "mean": 0.6281044605307118,
+    "min": 0.56563173998094,
+    "frames_measured": 84,
+    "mean_bar": 0.65,
+    "minimum_bar": 0.45,
+    "pass": false,
+    "target_validity": "manual target audit pending"
+  },
+  "trace_fidelity": {
+    "min_recall": 0.9997503121098626,
+    "min_parts_kept": 1.0,
+    "keys": 10,
+    "pass": true
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "planted_intervals": 0,
+  "foot_slide_gate": false,
+  "release_approved": false,
+  "training_ran": false
+}

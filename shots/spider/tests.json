@@ -1,0 +1,152 @@
+[
+  {
+    "id": "M1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M2b",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M5",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "M6",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J1",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J2",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "J3",
+    "value": "not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S6",
+    "value": "Archive ids, original/retained intervals, source SHA, URLs and reported public_domain retained in integrated/source.json; rights independently unverified",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "J4",
+    "value": "Fresh blind v1 accepted original doodle identity across eight still pairs",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "B1",
+    "value": "One held background geometry under measured camera; locked-shot ink test not run",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "T1",
+    "value": {
+      "min_recall": 1.0,
+      "min_parts_kept": 1.0,
+      "pass": true,
+      "keys": 8
+    },
+    "unit": "fraction",
+    "ok": true
+  },
+  {
+    "id": "T3",
+    "value": "All nine native strokes and each original point count retained in all 73 dense frames",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "M3",
+    "value": {
+      "mean_iou": 0.2535297608167863,
+      "min_iou": 0.17537261457027442,
+      "samples": 73,
+      "method": "filled native body +2px legs vs nearest SAM12fps sample, approximate time pairing"
+    },
+    "unit": "IoU",
+    "ok": false
+  },
+  {
+    "id": "M4",
+    "value": 0,
+    "unit": "verified planted intervals; minimum four required",
+    "ok": false
+  },
+  {
+    "id": "S1",
+    "value": "Background factors 0.5 and 1.0 authored; depth ordering not measured",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S2",
+    "value": "QuickDraw key5924220649340928; macro stems/web drawn once by agent from source",
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S3",
+    "value": {
+      "frames": 73,
+      "fps": 24,
+      "keys": [
+        0,
+        10,
+        18,
+        26,
+        34,
+        45,
+        58,
+        72
+      ],
+      "source_time_every_frame": true
+    },
+    "unit": "",
+    "ok": true
+  },
+  {
+    "id": "S5",
+    "value": "Opaque body hides background strands; limb/body depth contacts not independently verified",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S4",
+    "value": "Links and JS syntax verified; no 390px browser layout inspection",
+    "unit": "",
+    "ok": null
+  },
+  {
+    "id": "S7",
+    "value": 1,
+    "unit": "verified hash-linked entries",
+    "ok": true
+  }
+]

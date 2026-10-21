@@ -1,0 +1,47 @@
+{
+  "rendered_frames": 84,
+  "keys": 10,
+  "source_sha256_verified": true,
+  "full_decode": true,
+  "same_topology": true,
+  "original_strokes": 17,
+  "all_original_strokes_assigned": true,
+  "held_background_geometry": true,
+  "background_strokes_unchanged_fraction": 1.0,
+  "mask_fit": {
+    "metric": "filled native rig / SAM IoU, nearest approximate 12fps CI sample",
+    "mean": 0.6250390377441656,
+    "min": 0.5629802095459837,
+    "frames_measured": 84,
+    "mean_bar": 0.65,
+    "minimum_bar": 0.45,
+    "pass": false,
+    "target_validity": "Manually inspected CI samples1,15,29,43 capture broad cow head/ears; dark shoulder edges are ragged. Jaw motion not validated by segmentation."
+  },
+  "trace_fidelity": {
+    "min_recall": 0.9997738579828132,
+    "min_parts_kept": 1.0,
+    "keys": 10,
+    "pass": true
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "planted_intervals": 0,
+  "foot_slide_gate": false,
+  "release_approved": false,
+  "training_ran": false,
+  "independent_still_review": {
+    "identity_bar_met": true,
+    "source_framing_pose_bar_met": true,
+    "rounds": 2,
+    "evidence": "review-v2.json",
+    "scope": "Individual still keys and contact sheets; not normal-speed playback"
+  },
+  "head_arc": {
+    "max_jerk": 0.2812503375000972,
+    "unit": "render pixels per frame cubed",
+    "bar": 4,
+    "method": "Third finite difference of source-keyed poll anchor in 24fps 480x360 render coordinates",
+    "pass": true
+  }
+}

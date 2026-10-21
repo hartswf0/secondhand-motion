@@ -1,0 +1,42 @@
+{
+  "rendered_frames": 145,
+  "keys": 9,
+  "source_sha256": "4e2ea304be9e966569acdeee93663d88542aead15ff175b7e7aa7c7e83aa2ceb",
+  "raw_source_size": [
+    1440,
+    1080
+  ],
+  "raw_source_fps": 25.0,
+  "original_strokes": 4,
+  "same_topology": true,
+  "held_background_geometry": true,
+  "trace_fidelity": {
+    "min_recall": 0.9833035181872392,
+    "min_parts_kept": 1.0,
+    "keys": 9,
+    "pass_gate": true
+  },
+  "mask_fit": {
+    "method": "Filled native sail and hull compared against the nearest 12 fps SAM sample at 145 rendered frames; excludes drawn dinghy/reflection/background.",
+    "mean": 0.6110088744561366,
+    "minimum": 0.5468894009216589,
+    "mean_bar": 0.65,
+    "min_bar": 0.45,
+    "pass_gate": false,
+    "target_caveat": "Main sail and hull broadly selected in sampled frames1,24,48; sample72 omits left hull. Model estimates are separate from measured filled-rig intersection-over-union.",
+    "pass": false
+  },
+  "recognition": "not run",
+  "normal_speed_playback": "not run",
+  "independently_observed_planted_intervals": 0,
+  "foot_slide_gate": false,
+  "release_approved": false,
+  "training_ran": false,
+  "independent_still_review": {
+    "rounds": 3,
+    "source_framing_pose_bar_met": false,
+    "drawing_identity_bar_met": true,
+    "gap": "Source pose: the prominent source sail spreads to both sides of the mast, whereas the rendered sail ends at the mast. In pairs 01 through 06 this omits a large right-hand part of the source silhouette and makes the boat read as a narrow single-sided sail rather than the source barge. The approach, hull placement, growth, and late frame exit otherwise track the source convincingly. The original QuickDraw identity remains legible in the triangular sail, doubled irregular mast, angular open-top hull, and unpolished thin contour.",
+    "evidence": "review-v3.json"
+  }
+}

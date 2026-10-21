@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "1dcef8a389ba61298f3b06b6089ec376159af05977aa95d664e47217acedd74a",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "cow head and partial shoulders",
+      "result": "partial_subject",
+      "note": "The head and ears are broadly captured; dark shoulder edges break into fragments.",
+      "model_iou_estimate": 0.913
+    },
+    {
+      "frame": 13,
+      "observed_target": "cow head and open jaw",
+      "result": "plausible_subject",
+      "note": "The head and visibly open jaw are selected; the mask alone cannot establish chewing timing.",
+      "model_iou_estimate": 0.955
+    },
+    {
+      "frame": 25,
+      "observed_target": "cow head and lower neck",
+      "result": "partial_subject",
+      "note": "Head and ears are captured; dark lower neck boundary remains ragged.",
+      "model_iou_estimate": 0.952
+    },
+    {
+      "frame": 43,
+      "observed_target": "cow head and partial shoulders",
+      "result": "partial_subject",
+      "note": "Visible face and ears are selected; hidden lower body is not established.",
+      "model_iou_estimate": 0.94
+    }
+  ]
+}

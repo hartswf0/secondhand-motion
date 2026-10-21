@@ -1,0 +1,49 @@
+<style>
+.watch-intro{max-width:72ch}.watch-intro h1{font-size:clamp(36px,7vw,72px);line-height:1.03;margin-bottom:14px}.watch-intro p{font-size:18px}.watch-nav,.watch-controls,.watch-modes,.watch-links{display:flex;gap:10px 20px;align-items:center;flex-wrap:wrap}.watch-nav,.watch-links{font-size:14px}.watch-stage{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--sheet)}.watch-controls{padding:16px}.watch-controls label{display:flex;align-items:center;gap:10px;flex:1;min-width:180px}.watch-controls select{font:inherit;max-width:100%;min-width:0;flex:1;padding:10px;border:1px solid var(--rule-strong);border-radius:5px;background:var(--paper);color:var(--ink)}.watch-stage button,.watch-card button{font:inherit;cursor:pointer;padding:9px 13px;color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}.watch-modes{padding:0 16px 16px;gap:8px}.watch-modes button[aria-pressed=true]{color:var(--paper);background:var(--ink)}.watch-stage video{display:block;width:100%;height:auto;max-height:72vh;background:#fffcf5;object-fit:contain}.watch-description{padding:16px;border-top:1px solid var(--rule)}.watch-description h2{margin:0 0 8px;font-size:28px}.watch-description p{margin:8px 0}.watch-note{border-left:3px solid #b97027;padding-left:12px}.watch-meta{font:12px/1.5 var(--mono);color:var(--muted)}.watch-links{margin-top:15px}.watch-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.watch-card{border:1px solid var(--rule);border-radius:7px;background:var(--sheet);overflow:hidden;min-width:0}.watch-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#fffcf5}.watch-card .watch-card-copy{padding:14px}.watch-card h3{font-size:22px;margin:0 0 6px}.watch-card p{font-size:13px;margin:8px 0}.watch-card button{width:100%;text-align:left;font-size:14px}.watch-card[aria-current=true]{outline:2px solid #b97027;outline-offset:2px}.watch-footer{font-size:13px;color:var(--muted);border-top:1px solid var(--rule);padding-top:18px}#watch-status:empty{display:none}@media(max-width:750px){.watch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.watch-controls{gap:9px;padding:12px}.watch-controls label{flex-basis:100%}.watch-modes{padding:0 12px 12px}.watch-description{padding:12px}}@media(max-width:420px){.watch-grid{grid-template-columns:1fr}.watch-controls select{font-size:15px}.watch-intro p{font-size:16px}}
+</style>
+<header class="watch-intro"><div class="eyebrow">Archive footage / moving drawings</div><h1>Watch the motion<br>change hands.</h1><p>Choose a clip. Watch the drawing beside its footage, then switch to either one.</p></header>
+<nav class="watch-nav"><a href="../index.html">← Rack</a><a href="wave2-segmentation/index.html">Source / mask / drawing</a><a href="wave2-keyframes.html">Earlier Wave 2 key sheets</a></nav>
+<section class="watch-stage" aria-label="Clip player" id="watch-stage">
+<div class="watch-controls"><label>Shot <select id="watch-shot" aria-label="Choose a moving drawing"></select></label><button id="watch-prev" aria-label="Previous shot">←</button><button id="watch-next" aria-label="Next shot">→</button></div>
+<div class="watch-modes" aria-label="Viewing mode"><button data-mode="comparison" aria-pressed="true">Together</button><button data-mode="cartoon" aria-pressed="false">Drawing</button><button data-mode="source" aria-pressed="false">Footage</button></div>
+<video id="watch-video" controls playsinline preload="metadata" aria-label="Selected archive drawing comparison"></video>
+<div class="watch-description"><h2 id="watch-title"></h2><p class="watch-meta" id="watch-meta"></p><p id="watch-summary"></p><p class="watch-note" id="watch-note"></p><p id="watch-status" role="status" aria-live="polite"></p><div class="watch-links"><a id="watch-review" href="#">Inspect the paired keyframes →</a><a id="watch-mask" href="#">Check the extraction</a><a id="watch-file" href="#">Open this movie</a></div></div>
+</section>
+<section><h2 id="watch-count">The review clips</h2><div class="watch-grid" id="watch-grid"></div></section>
+<footer class="watch-footer">These assemblies remain review copies. Still-image verdicts and normal-speed motion approval are recorded separately on each clip. Only accepted playback can make a training pair eligible. No training ran. Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Archive records and reported rights are retained with each assembly.</footer>
+<script id="watch-data" type="application/json">__DATA__</script>
+<script>
+'use strict';
+const clips=JSON.parse(document.getElementById('watch-data').textContent),$=s=>document.querySelector(s),video=$('#watch-video'),select=$('#watch-shot');
+const files={comparison:'comparison.mp4',cartoon:'cartoon.mp4',source:'source-excerpt.mp4'};
+let selected=0,mode='comparison',resumeTime=0,resumePlaying=false;
+function render(index,nextMode='comparison',preserve=false){
+ if(!clips.length)return;
+ resumeTime=preserve?video.currentTime:0;resumePlaying=preserve&&!video.paused;
+ video.pause();selected=(index+clips.length)%clips.length;mode=Object.hasOwn(files,nextMode)?nextMode:'comparison';
+ const c=clips[selected],base=`${c.slug}/integrated/`;select.value=String(selected);
+ $('#watch-title').textContent=c.title;$('#watch-meta').textContent=`${c.keys} keys · ${c.frames} frames · ${c.fps} fps · ${(c.frames/c.fps).toFixed(2)} s`;
+ $('#watch-summary').textContent=typeof c.summary==='string'?c.summary:'';$('#watch-note').textContent=c.note;
+ $('#watch-review').href=base+'index.html';$('#watch-mask').href=`wave2-segmentation/index.html#${c.slug}`;$('#watch-file').href=base+files[mode];
+ video.poster=base+(mode==='comparison'?'comparison-poster.jpg':mode==='source'?'source-01.jpg':'poster.png');video.src=base+files[mode];$('#watch-status').textContent='';
+ for(const b of document.querySelectorAll('[data-mode]'))b.setAttribute('aria-pressed',String(b.dataset.mode===mode));
+ for(const card of document.querySelectorAll('.watch-card'))card.setAttribute('aria-current',String(card.dataset.slug===c.slug));
+ history.replaceState(null,'',`#${c.slug}/${mode}`);
+}
+video.addEventListener('loadedmetadata',()=>{video.currentTime=Math.min(resumeTime,Math.max(0,video.duration-.001));if(resumePlaying)video.play().catch(()=>{$('#watch-status').textContent='Press play to continue.';});});
+video.addEventListener('error',()=>{$('#watch-status').textContent='This movie could not load. Try the full review page.';});
+select.addEventListener('change',()=>render(Number(select.value)));
+$('#watch-prev').addEventListener('click',()=>render(selected-1));$('#watch-next').addEventListener('click',()=>render(selected+1));
+for(const b of document.querySelectorAll('[data-mode]'))b.addEventListener('click',()=>render(selected,b.dataset.mode,true));
+for(const [i,c]of clips.entries()){
+ const o=document.createElement('option');o.value=String(i);o.textContent=c.title;select.append(o);
+ const card=document.createElement('article');card.className='watch-card';card.dataset.slug=c.slug;card.setAttribute('aria-current','false');
+ const img=document.createElement('img');img.src=`${c.slug}/integrated/poster.png`;img.alt=`${c.title}: moving drawing`;img.loading='lazy';card.append(img);
+ const copy=document.createElement('div');copy.className='watch-card-copy';const title=document.createElement('h3');title.textContent=c.title;copy.append(title);
+ const meta=document.createElement('p');meta.className='watch-meta';meta.textContent=`${c.keys} keys · ${c.frames} frames`;copy.append(meta);
+ const b=document.createElement('button');b.textContent='Load comparison →';b.addEventListener('click',()=>{render(i);$('#watch-stage').scrollIntoView({behavior:'smooth',block:'start'});});copy.append(b);card.append(copy);$('#watch-grid').append(card);
+}
+$('#watch-count').textContent=`${clips.length} integrated review clips`;
+function route(){const [slug,m]=location.hash.slice(1).split('/'),i=clips.findIndex(c=>c.slug===slug);render(i<0?0:i,m);}
+window.addEventListener('hashchange',route);if(clips.length)route();else $('#watch-status').textContent='No integrated clips are available yet.';
+</script>

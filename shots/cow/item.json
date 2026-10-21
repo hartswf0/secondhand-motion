@@ -1,0 +1,44 @@
+{
+  "lot": "SM-0106",
+  "id": "cow",
+  "kind": "subject",
+  "title": "Cow",
+  "category": "cow",
+  "wave": 3,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "84 rendered frames at 24 fps; 10 source-paired keys. Still identity and source pose pass; mean mask fit remains below its threshold. Playback approval pending.",
+  "cover": "shots/cow/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5459491900358656; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+    {
+      "label": "Watch assembled comparison",
+      "href": "shots/cow/integrated/index.html"
+    },
+    {
+      "label": "Watch in shared player",
+      "href": "shots/moving-drawings.html#cow/comparison"
+    },
+    {
+      "label": "Inspect source / mask / drawing",
+      "href": "shots/wave2-segmentation/index.html#cow"
+    },
+    {
+      "label": "Earlier vector study",
+      "href": "pages/cow-gwp.html"
+    },
+    {
+      "label": "Source record",
+      "href": "shots/cow/integrated/source.json"
+    }
+  ],
+  "tests": "shots/cow/tests.json",
+  "tags": [
+    "assembled review",
+    "wave 3",
+    "native QuickDraw",
+    "SAM inspected"
+  ]
+}

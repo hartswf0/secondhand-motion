@@ -1,0 +1,25 @@
+{
+  "inspected_pairs": [
+    "source-01.jpg/key-01.png",
+    "source-02.jpg/key-02.png",
+    "source-03.jpg/key-03.png",
+    "source-04.jpg/key-04.png",
+    "source-05.jpg/key-05.png",
+    "source-06.jpg/key-06.png",
+    "source-07.jpg/key-07.png",
+    "source-08.jpg/key-08.png",
+    "source-09.jpg/key-09.png"
+  ],
+  "source_framing_pose_bar_met": false,
+  "drawing_identity_bar_met": true,
+  "actual_normal_speed_playback_occurred": false,
+  "motion_approved": false,
+  "most_important_gap": "Source pose: the prominent source sail spreads to both sides of the mast, whereas the rendered sail ends at the mast. In pairs 01 through 06 this omits a large right-hand part of the source silhouette and makes the boat read as a narrow single-sided sail rather than the source barge. The approach, hull placement, growth, and late frame exit otherwise track the source convincingly. The original QuickDraw identity remains legible in the triangular sail, doubled irregular mast, angular open-top hull, and unpolished thin contour.",
+  "smallest_repair": "Retain the existing QuickDraw triangle and hull, and add only a sparse native-looking outer contour for the right-hand source sail, attached to the existing mast and following the paired source silhouette. Keep the current placement, approach, and cropping; avoid detailed rigging, shading, or a polished redraw.",
+  "must_not_be_lost": [
+    "The recognizable original triangular sail, slightly doubled crooked mast, and irregular angular hull.",
+    "Thin uneven doodle outlines and sparse visual detail.",
+    "The source-matched approach, increasing scale, late top/right cropping, and small trailing dinghy.",
+    "The clear separation between the main dark boat and faint background boats and water marks."
+  ]
+}

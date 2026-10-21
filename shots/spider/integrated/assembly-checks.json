@@ -1,0 +1,34 @@
+{
+  "rendered_frames": 73,
+  "keys": 8,
+  "source_sha256_verified": true,
+  "original_strokes_assigned": 9,
+  "same_topology": true,
+  "held_background_geometry": true,
+  "mask_fit": {
+    "method": "filled native body +2px legs vs nearest SAM12fps sample, approximate time pairing",
+    "mean_iou": 0.2535297608167863,
+    "min_iou": 0.17537261457027442,
+    "pass": false,
+    "limitations": "Four overlay samples visually capture body and most visible legs; thin distal parts are partial, and some web streaks join the mask. Model IoU estimate is not measured drawing fit."
+  },
+  "trace_fidelity": {
+    "min_recall": 1.0,
+    "min_parts_kept": 1.0,
+    "pass": true,
+    "keys": 8
+  },
+  "recognition": "not run",
+  "independent_playback": "not run",
+  "planted_intervals": 0,
+  "foot_slide_gate": false,
+  "release_approved": false,
+  "training_ran": false,
+  "independent_still_review": {
+    "source_framing_pose_bar_met": true,
+    "original_doodle_identity_bar_met": true,
+    "rounds": 1,
+    "evidence": "review-v1.json"
+  },
+  "ledger_entries": 1
+}

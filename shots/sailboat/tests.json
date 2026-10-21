@@ -1,0 +1,128 @@
+[
+  {
+    "id": "S6",
+    "value": "Archive source and reported public-domain rights recorded; exact raw source SHA256 retained.",
+    "ok": true
+  },
+  {
+    "id": "M1",
+    "value": "not run",
+    "ok": null
+  },
+  {
+    "id": "M2",
+    "value": "not run",
+    "ok": null
+  },
+  {
+    "id": "J4",
+    "value": "Fresh blind v3: original native drawing identity passes on sampled stills.",
+    "ok": true
+  },
+  {
+    "id": "B1",
+    "value": "One held distant-vessel/water geometry under source-observed screen drift; locked-shot 90% ink test not run.",
+    "ok": null
+  },
+  {
+    "id": "T1",
+    "value": {
+      "min_recall": 0.9833035181872392,
+      "min_parts_kept": 1.0,
+      "keys": 9,
+      "pass_gate": true
+    },
+    "unit": "fraction",
+    "ok": true
+  },
+  {
+    "id": "M3",
+    "value": {
+      "mean": 0.6110088744561366,
+      "minimum": 0.5468894009216589,
+      "mean_bar": 0.65,
+      "min_bar": 0.45,
+      "pass_gate": false,
+      "pass": false
+    },
+    "unit": "IoU",
+    "ok": false,
+    "method": "Filled native sail and hull compared against the nearest 12 fps SAM sample at 145 rendered frames; excludes drawn dinghy/reflection/background. Partial SAM hull target, not ground truth."
+  },
+  {
+    "id": "M4",
+    "value": "0 independently observed planted intervals; minimum-four gate not passed.",
+    "ok": false
+  },
+  {
+    "id": "M5",
+    "value": "not run",
+    "ok": null
+  },
+  {
+    "id": "M6",
+    "value": "not run",
+    "ok": null
+  },
+  {
+    "id": "S1",
+    "value": "No independent depth/parallax measurement; far-vessel drift is a screen-space camera proxy.",
+    "ok": null
+  },
+  {
+    "id": "S2",
+    "value": "Native sailboat key5193394433294336; other drawn objects sourced in integrated/shot.json.",
+    "ok": true
+  },
+  {
+    "id": "S3",
+    "value": {
+      "frames": 145,
+      "fps": 24,
+      "key_indices": [
+        0,
+        24,
+        48,
+        60,
+        72,
+        84,
+        108,
+        120,
+        144
+      ],
+      "per_frame_source_time": true
+    },
+    "ok": true
+  },
+  {
+    "id": "S4",
+    "value": "Static links and JavaScript checked; no 390px browser layout inspection.",
+    "ok": null
+  },
+  {
+    "id": "S5",
+    "value": "Opaque native sail and hull are ordered after far-water/vessel plane.",
+    "ok": true
+  },
+  {
+    "id": "J1",
+    "value": "normal-speed action/story review not run",
+    "ok": null
+  },
+  {
+    "id": "J2",
+    "value": "not run",
+    "ok": null
+  },
+  {
+    "id": "J3",
+    "value": "not run",
+    "ok": null
+  },
+  {
+    "id": "S7",
+    "value": 3,
+    "unit": "verified hash-linked entries",
+    "ok": true
+  }
+]

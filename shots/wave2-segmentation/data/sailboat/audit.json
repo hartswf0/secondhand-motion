@@ -1,0 +1,35 @@
+{
+  "author": "agent manual source/mask inspection",
+  "scope": "Only the listed samples were visually inspected; these are mask QA notes, not accepted cartoon training pairs.",
+  "track_sha256": "ae5131d4885d9b77d042464630de5fcfcba4215199256db143fff6aca5b916f8",
+  "samples": [
+    {
+      "frame": 1,
+      "observed_target": "main sailing barge",
+      "result": "plausible_subject",
+      "note": "Main sail and hull are selected separately from distant boats; thin rigging is approximate.",
+      "model_iou_estimate": 0.946
+    },
+    {
+      "frame": 25,
+      "observed_target": "main sailing barge",
+      "result": "plausible_subject",
+      "note": "Main hull and sail are broadly retained; the trailing dinghy is outside this target.",
+      "model_iou_estimate": 0.962
+    },
+    {
+      "frame": 49,
+      "observed_target": "main sailing barge cropped at top",
+      "result": "partial_subject",
+      "note": "The crop is retained, but rigging and hull edges are approximate.",
+      "model_iou_estimate": 0.961
+    },
+    {
+      "frame": 73,
+      "observed_target": "main sailing barge cropped at top and right",
+      "result": "partial_subject",
+      "note": "The visible hull and sail are broadly selected; some deck and edge details merge.",
+      "model_iou_estimate": 0.972
+    }
+  ]
+}

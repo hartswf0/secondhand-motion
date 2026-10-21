@@ -1,0 +1,44 @@
+{
+  "lot": "SM-0108",
+  "id": "sailboat",
+  "kind": "subject",
+  "title": "Sailboat",
+  "category": "sailboat",
+  "wave": 3,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "145 rendered frames at 24 fps; 9 source-paired keys. The native one-sail drawing omits the source right-hand jib; mean mask fit fails. Playback approval pending.",
+  "cover": "shots/sailboat/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5193394433294336; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+    {
+      "label": "Watch assembled comparison",
+      "href": "shots/sailboat/integrated/index.html"
+    },
+    {
+      "label": "Watch in shared player",
+      "href": "shots/moving-drawings.html#sailboat/comparison"
+    },
+    {
+      "label": "Inspect source / mask / drawing",
+      "href": "shots/wave2-segmentation/index.html#sailboat"
+    },
+    {
+      "label": "Earlier vector study",
+      "href": "pages/sailboat-gwp.html"
+    },
+    {
+      "label": "Source record",
+      "href": "shots/sailboat/integrated/source.json"
+    }
+  ],
+  "tests": "shots/sailboat/tests.json",
+  "tags": [
+    "assembled review",
+    "wave 3",
+    "native QuickDraw",
+    "SAM inspected"
+  ]
+}

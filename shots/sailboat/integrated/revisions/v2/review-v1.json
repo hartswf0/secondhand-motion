@@ -1,0 +1,25 @@
+{
+  "inspected_pairs": [
+    "source-01.jpg / key-01.png",
+    "source-02.jpg / key-02.png",
+    "source-03.jpg / key-03.png",
+    "source-04.jpg / key-04.png",
+    "source-05.jpg / key-05.png",
+    "source-06.jpg / key-06.png",
+    "source-07.jpg / key-07.png",
+    "source-08.jpg / key-08.png",
+    "source-09.jpg / key-09.png"
+  ],
+  "source_framing_pose_bar_met": true,
+  "drawing_identity_bar_met": false,
+  "actual_normal_speed_playback_occurred": false,
+  "motion_approved": false,
+  "most_important_gap": "The main sail has been redrawn into a broad triangle crossed by a central mast. In design.png the sail sits to the left of, and terminates at, the irregular doubled right-edge mast. That distinctive sail/mast relationship is lost in every key, so the result reads as a generic sailboat doodle rather than the original QuickDraw drawing animated.",
+  "smallest_repair": "Restore the design's sail-to-mast topology and irregular contour character: keep the sail on one side of the mast with its trailing edge meeting the mast, then retarget that recognizable contour through the existing approach, position, scale, and crop sequence. Preserve the present framing trajectory.",
+  "must_not_be_lost": [
+    "The source's clear growth from a fully visible boat to a large top/right-cropped close approach across all nine pairs.",
+    "The matched lateral movement and late framing, including the trailing small boat and sparse distant boats as spatial cues.",
+    "The simple doodle treatment and recognizable angular hull outline without added visual complexity."
+  ],
+  "scope_note": "Inspected source.json, source-contact-sheet.jpg, design.png, and all nine source/key pairs. No actual normal-speed video playback occurred, so temporal motion remains unapproved. The source framing/pose decision is based on paired stills."
+}

@@ -9,6 +9,9 @@ import argparse, hashlib, json, shutil, subprocess
 
 ROOT = Path(__file__).resolve().parent.parent
 SUBJECTS = {
+    'cow': ('Cow', 'A frontal chewing close-up. The mask follows the visible head; the dark shoulder edges and jaw pose need direct comparison.'),
+    'spider': ('Spider', 'Turning and stepping on a web. The mask retains much of the legs but does not establish every foot/web contact.'),
+    'sailboat': ('Sailboat', 'The main sailing barge approaches into the top/right crop. Thin rigging and late hull edges remain approximate.'),
     'fan': ('Fan', 'The final CI sample crosses into the next cooking shot. It is retained for inspection and blocked from cartoon pairing.'),
     'tractor': ('Tractor', 'The masks combine the tractor with its trailer and sometimes the driver; they are not tractor-only outlines.'),
     'raccoon': ('Raccoon', 'The visible body is captured broadly. Hidden legs and the head turn still need direct source inspection.'),
@@ -29,6 +32,8 @@ def build(cache):
     audits = json.loads(audit_file.read_text()) if audit_file.exists() else {}
     for slug, (title, note) in SUBJECTS.items():
         src = cache/slug
+        if not (src/'track.json').is_file():
+            src = out/'data'/slug
         if not (src/'track.json').is_file():
             continue
         target = out/'data'/slug
@@ -77,6 +82,7 @@ def build(cache):
             'detector': 'IDEA-Research/grounding-dino-tiny',
             'track_sha256': track_hash,
             'source_record': '../../../'+slug+'/source.json',
+            'assembly_source_record': '../../../'+slug+'/integrated/source.json' if (assembly.parent/'source.json').exists() else None,
             'note': note,
         }
         audit = audits.get(slug, {})

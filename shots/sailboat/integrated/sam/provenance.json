@@ -1,0 +1,11 @@
+{
+  "branch": "wave2-track/sailboat",
+  "commit": "e9dd70601b9540492132b8e7906343bfba65070a",
+  "model": "facebook/sam2.1-hiera-small",
+  "track_sha256": "ae5131d4885d9b77d042464630de5fcfcba4215199256db143fff6aca5b916f8",
+  "target_audit": "Main sail and hull broadly selected in sampled frames1,24,48; sample72 omits left hull. Model estimates are separate from measured filled-rig intersection-over-union.",
+  "valid_for_object_fit": "partial target; numeric fit is against observed SAM, not ground truth",
+  "render_source_sha256": "4e2ea304be9e966569acdeee93663d88542aead15ff175b7e7aa7c7e83aa2ceb",
+  "ci_source_video_sha256": null,
+  "ci_time_note": "CI 12 fps sample time is approximate; decoded source PTS and downloaded input hash were not retained upstream."
+}

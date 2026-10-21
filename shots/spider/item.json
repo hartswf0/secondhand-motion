@@ -1,0 +1,44 @@
+{
+  "lot": "SM-0107",
+  "id": "spider",
+  "kind": "subject",
+  "title": "Spider",
+  "category": "spider",
+  "wave": 3,
+  "lane": "join",
+  "stage": 4,
+  "status": "in progress",
+  "added": "2026-10-20",
+  "blurb": "73 rendered frames at 24 fps; 8 source-paired keys. Still identity and source pose pass; mask fit fails and leg/web contacts remain unverified. Playback approval pending.",
+  "cover": "shots/spider/integrated/poster.png",
+  "cover_credit": "Native Quick, Draw! vectors, key 5924220649340928; Quick, Draw! contributors / Google Creative Lab, CC BY 4.0. Background drawn by agent.",
+  "links": [
+    {
+      "label": "Watch assembled comparison",
+      "href": "shots/spider/integrated/index.html"
+    },
+    {
+      "label": "Watch in shared player",
+      "href": "shots/moving-drawings.html#spider/comparison"
+    },
+    {
+      "label": "Inspect source / mask / drawing",
+      "href": "shots/wave2-segmentation/index.html#spider"
+    },
+    {
+      "label": "Earlier vector study",
+      "href": "pages/spider-gwp.html"
+    },
+    {
+      "label": "Source record",
+      "href": "shots/spider/integrated/source.json"
+    }
+  ],
+  "tests": "shots/spider/tests.json",
+  "tags": [
+    "assembled review",
+    "wave 3",
+    "native QuickDraw",
+    "SAM inspected"
+  ]
+}
