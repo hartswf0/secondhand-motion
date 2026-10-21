@@ -297,3 +297,85 @@ drawing to get wrong. The 3s share the earlier kinds of gap: motion the doodle h
 the ocean's foam, the cloud's swelling contour), turns shown by narrowing instead of turning (alarm clock), and a
 fast sweep that the smoothing either lags or lets jump (broom: rounds 2 and 3 scored lower than round 1, and
 round 1's build was restored).
+
+## Drawn keys: keyframes drawn by hand over the footage (`tools/drawn.py`, `tools/draw_key.py`)
+
+The rig can only bend the doodle. It cannot turn a head toward the camera, open a mouth, or add a bow, a pedal leg or a splash. This pass adds keys drawn by hand over the footage at the frames that matter, in the manner of the CINEOSIS handmade film, and judges every subject with a fresh blind critic using the SCION brief (`docs/scion-brief.md`).
+
+- **A drawn key** is `shots/<slug>/drawn/k###.json`: the doodle's own strokes at that frame with their points moved, plus optional `extra` strokes for parts the doodle never drew (a bow, a crank and leg, eyestalks, a second eye, a hand). Each key has a one-line `why`. `xsheet.json` names the line (the one beat the shot exists for), holds, and `ease` (`linear` for steady travel).
+- **How it is applied** (`tools/drawn.py`, called by `tools/gwp_build.py`). At a drawn frame the drawing is the key. Between keys the difference from the rig is eased from key to key. An undrawn rig key counts as a key with no change, so drawers either draw every rig key or rewrite the pose file so its keys fall on the drawn frames.
+- **Sheets for drawing** (`tools/draw_key.py`). `frames` shows every frame with the drawing on it. `key` shows a frame enlarged with a grid in frame pixels and numbered strokes and points, and writes the template. `check` shows the key over the footage and alone on white.
+- **Procedure.** One drawer per subject reads the baseline critic's description of the film, finds the line, the extremes, contacts and turns, draws the keys, rebuilds and looks at least three times. Then a blind critic judges the 16-frame strip against the footage. When the verdict is "reference stronger", the drawer repairs from the critic's `primary_gap` and `closes_when`. A subject gets at most three rounds.
+- **Baseline.** Before any drawing, every subject was judged by the same critic prompt (`shots/<slug>/drawn/baseline.json`).
+
+Result (52 subjects with a baseline; pig was run separately and ended at 3 after three rounds, with a written inquiry in `shots/pig/drawn/inquiry.md`):
+
+- **Mean motion score** rose from 3.23 to 3.71.
+- **Verdicts.** "Bar met" went from 20 subjects to 38.
+- **Per subject.** 22 rose, 26 stayed the same and 4 fell.
+  - **Fell:** aircraft carrier, cello, rabbit and see-saw. Each fell for a reason the critics named: a three-quarter view the doodle has no construction for (carrier, rabbit), a scaled-down instrument plus an added hand (cello), and added figures whose lift reads in jumps (see-saw).
+- **Common gap among the subjects still at 3** (cat, alarm clock, horse, raccoon, rhinoceros, giraffe, penguin, bicycle, hurricane, ocean). A turn or a change of construction still reads as one drawing swapped for another rather than one drawing rotating.
+
+What the critics taught the drawers, stated plainly:
+
+- At strip size, a drawing that is redrawn reads as a pop even when the in-betweens are smooth. Turns have to be built from one outline whose points move, not two constructions that switch.
+- Keep the doodle's own proportions before matching the film's: identity failed whenever a key was stretched to fit the footage.
+- Undrawn rig keys and the rig's own in-betweens leak into the shot. Several fixes were keys on every frame of a fast passage.
+- Props and other actors the subject reacts to (a pole, a hand, a bow, a second ant, a woman lifting a child) need to be drawn, as scene objects with `visible` windows or as extra strokes.
+
+| Subject | Baseline | Drawn-key rounds | Final verdict | Identity |
+|---|---|---|---|---|
+| aircraft-carrier | 3 | 2 → 2 → 2 | reference stronger | bar_not_met |
+| alarm-clock | 3 | 3 → 3 → 3 | reference stronger | bar_met |
+| ant | 3 | 3 → 4 | bar met | bar_met |
+| bicycle | 3 | 3 → 3 → 3 | reference stronger | bar_met |
+| broom | 3 | 4 | bar met | bar_met |
+| butterfly | 4 | 4 → 3 → 4 | bar met | bar_met |
+| camera | 5 | 5 | bar met | bar_met |
+| cat | 2 | 3 → 3 → 3 | reference stronger | bar_met |
+| cello | 4 | 3 → 3 → 3 | reference stronger | bar_met |
+| cloud | 2 | 4 | bar met | bar_met |
+| cow | 2 | 4 | bar met | bar_met |
+| crab | 4 | 4 | bar met | bar_met |
+| dog | 2 | 2 → 4 | bar met | bar_met |
+| dragon | 3 | 4 | bar met | bar_met |
+| duck | 2 | 4 | bar met | bar_met |
+| fan | 4 | 4 | bar met | bar_met |
+| flower | 4 | 4 | bar met | bar_met |
+| flying-saucer | 4 | 4 | bar met | bar_met |
+| frog | 4 | 4 | bar met | bar_met |
+| giraffe | 2 | 3 → 3 → 3 | reference stronger | bar_met |
+| guitar | 4 | 4 | bar met | bar_met |
+| helicopter | 4 | 4 | bar met | bar_met |
+| horse | 3 | 3 → 3 → 3 | reference stronger | bar_met |
+| hurricane | 2 | 2 → 3 → 3 | reference stronger | bar_met |
+| light-bulb | 3 | 4 | bar met | bar_met |
+| lighthouse | 4 | 4 | bar met | bar_met |
+| lion | 3 | 3 → 4 | bar met | bar_met |
+| monkey | 3 | 4 | bar met | bar_met |
+| mosquito | 3 | 3 → 4 | bar met | bar_met |
+| ocean | 3 | 3 → 3 → 3 | reference stronger | bar_met |
+| paintbrush | 4 | 4 | bar met | bar_met |
+| penguin | 3 | 3 → 3 → 3 | reference stronger | bar_met |
+| rabbit | 3 | 3 → 3 → 2 | reference stronger | bar_not_met |
+| raccoon | 2 | 3 → 3 → 3 | reference stronger | bar_met |
+| rain | 3 | 4 | bar met | bar_met |
+| rhinoceros | 3 | 2 → 2 → 3 | reference stronger | bar_met |
+| roller-coaster | 2 | 3 → 3 → 4 | bar met | bar_met |
+| sailboat | 2 | 4 → 4 | bar met | bar_met |
+| see-saw | 4 | 2 → 3 → 3 | reference stronger | bar_met |
+| sheep | 4 | 3 → 4 | bar met | bar_met |
+| shovel | 4 | 4 → 4 | bar met | bar_met |
+| skateboard | 3 | 3 → 3 → 4 | bar met | bar_met |
+| snake | 4 | 4 | bar met | bar_met |
+| speedboat | 4 | 3 → 4 → 4 | bar met | bar_met |
+| spider | 2 | 3 → 4 | bar met | bar_met |
+| swan | 4 | 4 → 4 | bar met | bar_met |
+| tiger | 3 | 3 → 4 | bar met | bar_met |
+| tornado | 4 | 3 → 4 | bar met | bar_met |
+| tractor | 3 | 4 | bar met | bar_met |
+| trumpet | 4 | 4 | bar met | bar_met |
+| van | 4 | 3 → 4 → 4 | bar met | bar_met |
+| windmill | 4 | 4 | bar met | bar_met |
+
+Baseline is the motion score before drawn keys; the rounds column lists each critic's motion score in order (1-5). Verdicts and identity are from the last round.

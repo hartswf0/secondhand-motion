@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A small black-line spider (oval body, about eight short radiating leg strokes, one short bent stroke on top) hangs near the middle-left of the frame between grey web lines, with a grey leaf at the top and another at lower left. Frames 1-4: the spider holds its place and its legs shift slightly. Frames 5-6: the body dips a little lower; in frame 6 one upper-right leg sticks out as a straight horizontal stroke. Frames 7-8: a lower-left leg lengthens down toward the lower leaf and an upper-left leg begins to lift. Frames 9-12: the upper-left leg rises higher and bends, reaching toward the top-left web line, while the right-side legs fan out. Frames 13-16: the upper-left leg is fully extended up and to the left, and a grey thread continues from its tip to the top edge, so the spider now hangs from a new line; the other legs stay spread and the body stays in roughly the same spot.",
+ "seen_film": "An orb-weaver spider with long banded legs hangs in the center-left of the frame against a dark blurred background, with silk threads crossing from the upper left. Frames 1-4: it hangs with legs gathered, one long leg on the right curled upward. Frames 5-8: it settles slightly lower and spreads its lower-left legs outward. Frames 9-12: its front-left leg rises and reaches toward the thread running from the upper left; its legs are spread wide. Frames 13-16: a new thread runs from the top-left corner down to the raised front-left leg, and the spider hangs from it, legs spread, body in about the same place.",
+ "named_subject": "A spider hanging on its web.",
+ "verdict": "bar met",
+ "evidence": "Placement: in both a.png and d.png the body stays near x=40% and the middle height of the frame across all 16 frames. Timing: the lower-left legs spread in frames 7-8 in both; the front-left leg lifts in frames 8-12 in both (a.png 9 and 11 show it bent upward, matching film 9 and 11); the new thread from the top-left corner to that raised leg appears at frame 13 in both and holds through 16. Continuity: leg positions change in small steps between adjacent frames 1-16, with no doubled bodies or redrawn shapes; the only abrupt change is frame 6, where one upper-right leg becomes a straight horizontal line and then returns to an angled line in frame 7. Identity: the body is the doodle's slightly lopsided open oval with a gap at the top, and the legs are single straight or once-bent strokes as in c.png.",
+ "primary_gap": "The right-side legs, especially the upper-right leg that the film shows curled upward and moving in frames 1-12, are nearly frozen in the animation, so the spider's activity is carried by the left legs alone and frame 6 shows one right leg snapping to a horizontal line.",
+ "closes_when": "Across frames 1-12 the upper-right leg bends upward and changes angle gradually from frame to frame, and in frame 6 that leg sits at an angle between its frame 5 and frame 7 positions instead of horizontal.",
+ "protect": "The steady body position matching the film; the frame-13 arrival of the thread from the top-left corner to the raised front-left leg; the gradual lift of that leg across frames 8-12; the doodle's open oval body and single-stroke legs; the sparse grey scenery that does not compete with the character.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  6
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The legs are shorter and more evenly spaced than in c.png, where two long strokes reach far out to the lower left, but the body and stroke habits match the doodle.",
+ "still_frames_only": true,
+ "_packet": "lot75a0baee",
+ "_round": 4
+}
