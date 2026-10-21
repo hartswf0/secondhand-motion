@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A mug drawn with a doubled, slightly polygonal rim is seen from above at an angle, its loop handle sticking out to the left and the side of the body showing as a crescent at the right and bottom. In frames 1-4 it is cut off by the top edge with two small grey circles below it; it slides down and to the left into the middle of the frame. In frames 5-12 the handle swings from the left side down toward the bottom-left, and in frames 7-11 the handle points down out of the bottom edge. In frames 12-16 the handle swings back to the left, the cup rises slightly, and a grey circle appears at the upper right. The inside of the cup stays empty throughout.",
+ "seen_film": "A white plastic measuring cup with a pour spout and a printed label is seen from above, held close to the camera against a dark background with a pale blurred shape at the right. In frames 1-3 it is high in the frame, tilted, with the spout at upper-left and a paper label visible inside. Through frames 4-12 it drifts down and left, the spout settling at the lower-left, the inside empty with a few specks. In frames 13-16 the cup tilts back, the spout moves to the left, and a pile of dark granules appears and grows at the bottom of the cup.",
+ "named_subject": "a mug (cup with a loop handle) seen from above",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-8 vs f.png 1-8: the drawn cup moves from cut-off at the top down and left into frame, matching the film's drift. e.png 9-32 vs f.png 9-32: the handle sits at lower-left/bottom like the film's spout, and the cup holds roughly the film's position. e.png 17-28: the handle points straight down and is cropped by the bottom edge, while in f.png 17-28 the spout stays a short point at lower-left inside the frame. e.png 37-44: a grey circle appears at upper right with no counterpart in the film, while f.png 38-44 show dark granules filling the bottom of the cup; the drawn cup stays empty, so the shot's one event (contents appearing in the cup) is missing. e.png 16->17 the handle swings from a lower-left loop to a downward point in one step; e.png 40->41 the handle flattens into a horizontal loop in one step. g.png shows a compact path with no large reversals.",
+ "primary_gap": "The film's event, dark granules appearing and piling up in the bottom of the cup in frames 38-44, is not performed; the drawn cup stays empty and instead a grey circle appears outside it.",
+ "closes_when": "From e.png frame 38 onward a cluster of dark scribbled grains in the doodle's line style appears at the lower inside of the rim and grows through frame 44, and the grey circle at upper right is removed.",
+ "protect": "The doubled polygonal rim and loop handle taken from the doodle; the downward-left drift in frames 1-12 that matches the film; the handle standing in for the spout at the film's spout position; the steady per-frame motion with no doubling of the cup.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  17,
+  41
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The doodle's double rim and loop handle carry over, but the top-down view shows little of the doodle's tall body, and the handle is moved from the right to the left side.",
+ "still_frames_only": true,
+ "_packet": "lot1a630437",
+ "_round": 1
+}

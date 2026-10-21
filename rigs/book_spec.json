@@ -1,0 +1,311 @@
+{
+ "category": "book",
+ "doodle_key_id": "5023411405324288",
+ "facing": 1,
+ "face_from": [
+  "top",
+  "top"
+ ],
+ "note": "Quick, Draw! book 5023411405324288, an open book seen from above. Stroke 0 is the outline of both pages; strokes 1 and 10 are the spine (10 runs past the bottom edge like a ribbon); strokes 2-5 are text lines on the left page; strokes 6-9 are text lines on the right page. The root places the spine by its two ends (bot, top), which sit on the binder's ring edge in the film. The right page stays flat: it is the binder's page stack. The left page (outline vertices 0-3 and 10-13 and strokes 2-5) folds about the spine by the pose value 'open': -1 lies mirrored over the right page as the closed cover, 0 stands on edge along the spine, 1 lies flat open. The film's hand lifts the cover and then the pages over to the left, so 'open' runs from -1 to about 0.5 across the shot.",
+ "strokes": [
+  [
+   [
+    5,
+    145
+   ],
+   [
+    8,
+    51
+   ],
+   [
+    16,
+    7
+   ],
+   [
+    54,
+    0
+   ],
+   [
+    251,
+    2
+   ],
+   [
+    255,
+    147
+   ],
+   [
+    255,
+    157
+   ],
+   [
+    252,
+    159
+   ],
+   [
+    220,
+    162
+   ],
+   [
+    168,
+    174
+   ],
+   [
+    35,
+    168
+   ],
+   [
+    1,
+    155
+   ],
+   [
+    0,
+    144
+   ],
+   [
+    3,
+    137
+   ]
+  ],
+  [
+   [
+    130,
+    2
+   ],
+   [
+    124,
+    66
+   ],
+   [
+    123,
+    153
+   ],
+   [
+    127,
+    168
+   ]
+  ],
+  [
+   [
+    34,
+    16
+   ],
+   [
+    81,
+    19
+   ]
+  ],
+  [
+   [
+    51,
+    60
+   ],
+   [
+    83,
+    59
+   ]
+  ],
+  [
+   [
+    60,
+    99
+   ],
+   [
+    85,
+    103
+   ]
+  ],
+  [
+   [
+    60,
+    141
+   ],
+   [
+    82,
+    142
+   ]
+  ],
+  [
+   [
+    179,
+    39
+   ],
+   [
+    220,
+    37
+   ]
+  ],
+  [
+   [
+    181,
+    87
+   ],
+   [
+    214,
+    83
+   ]
+  ],
+  [
+   [
+    167,
+    125
+   ],
+   [
+    221,
+    127
+   ]
+  ],
+  [
+   [
+    167,
+    153
+   ],
+   [
+    208,
+    151
+   ]
+  ],
+  [
+   [
+    120,
+    0
+   ],
+   [
+    120,
+    101
+   ],
+   [
+    110,
+    153
+   ],
+   [
+    108,
+    200
+   ]
+  ]
+ ],
+ "anchors": {
+  "bot": [
+   120,
+   168
+  ],
+  "top": [
+   124,
+   0
+  ]
+ },
+ "root": [
+  "bot",
+  "top"
+ ],
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 3,
+   "joint": "bot",
+   "aim": [
+    "bot",
+    "top"
+   ],
+   "turn": 0,
+   "fold": "open",
+   "axis": [
+    "bot",
+    "top"
+   ]
+  },
+  {
+   "stroke": 0,
+   "from": 10,
+   "to": 13,
+   "joint": "bot",
+   "aim": [
+    "bot",
+    "top"
+   ],
+   "turn": 0,
+   "fold": "open",
+   "axis": [
+    "bot",
+    "top"
+   ]
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 1,
+   "joint": "bot",
+   "aim": [
+    "bot",
+    "top"
+   ],
+   "turn": 0,
+   "fold": "open",
+   "axis": [
+    "bot",
+    "top"
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 1,
+   "joint": "bot",
+   "aim": [
+    "bot",
+    "top"
+   ],
+   "turn": 0,
+   "fold": "open",
+   "axis": [
+    "bot",
+    "top"
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 1,
+   "joint": "bot",
+   "aim": [
+    "bot",
+    "top"
+   ],
+   "turn": 0,
+   "fold": "open",
+   "axis": [
+    "bot",
+    "top"
+   ]
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 1,
+   "joint": "bot",
+   "aim": [
+    "bot",
+    "top"
+   ],
+   "turn": 0,
+   "fold": "open",
+   "axis": [
+    "bot",
+    "top"
+   ]
+  },
+  {
+   "rest": true,
+   "joint": "bot",
+   "aim": [
+    "bot",
+    "top"
+   ],
+   "turn": 0
+  }
+ ],
+ "size_from_mask": false,
+ "size": "steady",
+ "track": false,
+ "smooth": 1.2
+}

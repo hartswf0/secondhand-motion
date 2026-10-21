@@ -1,0 +1,167 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "source": "held still: the dark post at the right edge of the frame stays at x 362 in every frame (column minimum, checked every third frame). camera.json drifts 42 px right and 26 px down because its phase correlation followed the pot's painted pattern as the pot turned, so it is not used."
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 4,
+   "label": "Wall and post behind the pot",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Vase"
+  }
+ ],
+ "objects": [
+  {
+   "id": "post",
+   "plane": "wall",
+   "class": "post",
+   "why": "the vertical dark post or door edge at the right of the frame, x 362, broken where the film shows a gap near y 100; no Quick, Draw! category is a plain post",
+   "strokes": [
+    [
+     [
+      362,
+      0
+     ],
+     [
+      362,
+      96
+     ]
+    ],
+    [
+     [
+      362,
+      106
+     ],
+     [
+      363,
+      288
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "stand",
+   "plane": "wall",
+   "class": "table",
+   "why": "the dark top edge of the stand the pot rests on, visible right of the foot at y 271; no category is one table edge",
+   "strokes": [
+    [
+     [
+      272,
+      271
+     ],
+     [
+      336,
+      270
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "hand",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    0,
+    192,
+    132,
+    284
+   ],
+   "strokes": 2,
+   "why": "the hand at the left holding and turning the pot through the whole shot"
+  }
+ ],
+ "notes": {
+  "0": "the painted bowl held still, a hand at its left",
+  "8": "the hand starts turning the pot; the pattern slides right faster",
+  "14": "the turn slows for a moment",
+  "17": "the turn picks up again and runs steadily to the end",
+  "37": "a new oval of the pattern has come round to the left side"
+ }
+}
