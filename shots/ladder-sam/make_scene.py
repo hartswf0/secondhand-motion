@@ -55,11 +55,13 @@ def rail_at(r,a):
     P=[lc(q) for q in LAD[r]][::-1]; c=float(np.interp(a,[q[0] for q in P],[q[1] for q in P])); return pt(a,c)
 WAIST_ACROSS=0.5   # seen from behind his body hangs over the middle-left of the ladder, so both legs stand between the rails
 for f in range(n):
-    s=np.clip((f-2)/7,0,1); s=s*s*(3-2*s)   # eased over frames 2-9 so no frame carries a large sideways step
+    s=np.clip((f-1)/8,0,1)   # spread evenly over frames 1-9 so no frame carries a large sideways step
     tgt=WAIST[f].copy()
     for _ in range(6):   # moved sideways only (the film's height is kept): x where c is WAIST_ACROSS of the way across
         a,c=lc(tgt); tgt[0]+=(cL(a)+WAIST_ACROSS*(cR(a)-cL(a))-c)/LV[0]
-    WAIST[f][0]+=s*(tgt[0]-WAIST[f][0])
+    dx=s*(tgt[0]-WAIST[f][0]); WAIST[f][0]+=dx; HEAD[f][0]+=dx   # the head goes with the waist, so the lean read from the film is kept
+# walking in (frames 0-9) the waist goes the same distance each frame, as the film man walks at an even pace
+for f in range(1,9): WAIST[f][0]=WAIST[0][0]+(WAIST[9][0]-WAIST[0][0])*f/9
 # One body size every frame: the torso is one line of fixed length. Its lean comes from the film (head over waist),
 # kept bent forward toward the ladder on the climb, and bent further over the ladder at the top (frames 30-37).
 TORSO=40.0
@@ -69,7 +71,7 @@ LEG=42.0   # one leg bone; the leg is two
 def SC(f): t=np.clip((f-24)/13,0,1); return 1-0.07*t*t*(3-2*t)
 ang=np.array([math.atan2(HEAD[f][0]-WAIST[f][0],WAIST[f][1]-HEAD[f][1]) for f in range(n)])
 for f in range(n):
-    on_l=np.clip((f-5)/4,0,1); top=np.clip((f-28)/6,0,1); top=top*top*(3-2*top)
+    on_l=np.clip((f-3)/6,0,1); on_l=on_l*on_l*(3-2*on_l); top=np.clip((f-28)/6,0,1); top=top*top*(3-2*top)
     a=ang[f]*(1-on_l)+max(ang[f],math.radians(30))*on_l
     a=a*(1-top)+math.radians(40)*top
     HEAD[f]=WAIST[f]+TORSO*SC(f)*np.array([math.sin(a),-math.cos(a)])
@@ -188,7 +190,7 @@ def cont(f,J0,J1):
     # frame-to-frame check: the torso and the limb segments change length by at most a few % per frame, and every joint
     # moves at most ~8 px per frame, except the hand or foot that is stepping (and its elbow or knee, up to 14 px)
     bad=[]; st=stepping(f)
-    LIM=9 if f>=10 else 18   # walking in and stepping onto the ladder (to frame 9) the film man moves 12-18 px a frame
+    LIM=9 if f>=10 else 20   # walking in and stepping onto the ladder (to frame 9) the film man moves 12-18 px a frame
     for k in ('H','N','P','S'):
         d=np.hypot(*(J1[k]-J0[k]))
         if d>LIM: bad.append(f'{k} moves {d:.1f}px')

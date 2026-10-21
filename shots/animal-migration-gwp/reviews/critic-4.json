@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Frames 1-2: a ground strip with grey trees, bushes and grass on a horizon line, a field of grass tufts below and water lines at the bottom; about 30 short black flat strokes lie in rows across the field. Frame 3: the strokes have become M-shaped birds and the upper rows start to rise past the horizon. Frame 4: most birds are above the horizon in the sky band while the field below is empty. Frames 5-8: the view tilts upward (the horizon and field move down the frame, the water line leaves at the bottom) and the flock of M-birds fills the top half. Frames 9-16: the view keeps tilting and slides sideways; the flock thins slightly, birds hold roughly the top 60 percent of the frame, and the ground with two trees stays near the bottom with an empty band between birds and ground.",
+ "seen_film": "Frames 1-2: a large flock of dark geese sits on the bank in front of reeds and bare trees, with a frozen river at the bottom. Frames 3-4: geese begin lifting off from the left and centre, a few at a time, while many remain on the ground. Frames 5-8: the camera tilts up and most of the flock is airborne in front of the reeds and trees, with a dark band of geese still on the ground near the water until about frame 8. Frames 9-12: the camera has tilted up further, the sky fills the upper two thirds, and geese are spread through the whole sky from the top edge down to the reed line. Frames 13-16: the camera pans right across bare trees; the flock flies through the full sky band, including low over the tree tops.",
+ "named_subject": "A flock of geese (M-shaped bird doodles) taking off from a field and flying up into the sky.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-3 show resting birds as flat dashes, matching f.png 1-3 where geese sit on the bank. In e.png 3-4 every dash turns into an M-shaped bird at once and the whole flock lifts together; in f.png 3-24 the takeoff is staggered and a dark band of geese is still on the ground near the water through about f.png 24-32. By e.png 12-16 the field below the horizon is empty of birds, while f.png 12-16 still shows grounded geese. The upward tilt of the scenery in e.png 9-40 (horizon moving from about one third to about two thirds down each cell) follows the tilt in f.png 17-40, and the sideways slide in e.png 41-56 follows the pan in f.png 41-56. In e.png 41-56 the birds stay in the top half with a clear empty band above the trees, whereas f.png 41-56 shows geese spread down to the tree tops. g.png shows mostly vertical upward streaks that end clustered at the top, with no reversals.",
+ "primary_gap": "The takeoff happens for the whole flock at once in frames 3-8, while in the film birds lift off in a staggered wave over frames 3-32 and some remain on the ground near the water until about frame 32.",
+ "closes_when": "Frames 3-32 show birds leaving the ground row a few at a time from left and centre, with a row of resting dashes still visible near the water line until around frame 24-32, and in frames 41-56 some birds fly low enough to overlap the tree tops.",
+ "protect": "Keep the M-shaped bird glyph taken directly from the doodle with its single-stroke angular wings and the mix of large and small birds; keep the flat-dash resting pose at the start; keep the scenery tilt in frames 9-40 and the sideways pan in frames 41-56 timed to the film's camera; keep the steady upward paths with no reversals.",
+ "follows_film": "partly",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  4
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The birds use the doodle's M-shaped wing strokes at varied sizes and read as the doodle's birds multiplied into a flock; only the frame-4 switch from flat dashes to M shapes for all birds at the same moment looks like a redraw rather than wings opening.",
+ "still_frames_only": true,
+ "_packet": "lota5fe586a",
+ "_round": 4
+}
