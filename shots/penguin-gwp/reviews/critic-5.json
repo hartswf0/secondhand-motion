@@ -1,0 +1,27 @@
+{
+ "seen_animation": "A doodle bird (small round head with two dot eyes and an eyebrow tick, a long open two-line beak pointing left, a large looped oval body, a thin wing strip on the left and a rounded wing on the right) stands on the left half of the frame in front of fixed grey scenery (a rounded box at right, a ledge line and small arch at the bottom). Across frames 1-16 the bird stays in place and makes small movements: the beak opens wider in frames 3, 7, 10 and 11 and narrows in frames 1, 2, 5, 13 and 16, as if talking; the head and body shift a few pixels up, down and sideways (body lower in 5-9, slightly left in 13). In frame 15 the head tilts down and to the left with the beak angled downward, then in frame 16 it returns upright. From frame 4 onward extra straight strokes appear between the beak base and the shoulder (frames 4, 8, 9, 12, 14, 15, 16), and in frame 10 the beak base is drawn as a thick doubled line.",
+ "seen_film": "A dark bird with a large pale green-white belly shape tilted diagonally, a small pale ear tuft on top right of the head, one large eye, and a pale beak on the left side of the head, stands against a dark red-and-black background with a pale ledge at the bottom. Across the 16 frames the bird talks: the beak opens and closes repeatedly (more open in 4, 9-10, 13-14; closed or small in 1, 6, 11, 16), and the head and body sway slightly left and right and bob up and down. In frame 15 the head dips and the eye goes blank (a blink or turn), then in 16 the head is back up with the beak closing. There is no change of place; the event is a bird speaking on the spot.",
+ "named_subject": "a bird (penguin-like, with a long beak) talking while standing in place",
+ "verdict": "reference stronger",
+ "evidence": "Both show a standing bird whose beak opens and closes while the body sways slightly: animation frames 3, 7, 10, 11 show the beak open, as film frames 4, 9-10, 13-14 do; animation frame 15 dips the head down and left as film frame 15 dips the head. The character in all frames is clearly the c.png doodle (round head with tick eyebrow, two-line beak, looped oval body, thin left wing, rounded right wing). But the beak openings do not line up with the film's frame timing (animation frame 11 is wide open where film 11 is near closed; film 14 is wide open where animation 14 is narrow), and frames 4, 8, 9, 12, 14, 15 and 16 carry stray straight strokes running from the beak base down to the shoulder, plus a thickened doubled beak base in frame 10, which the doodle does not have. Frame 15 also has crossed neck lines at the head tilt. Judged from still frames only, not playback.",
+ "primary_gap": "The beak/neck area accumulates extra doubled strokes (beak lower edge extending into the shoulder line) in frames 4, 8-10, 12 and 14-16, and the beak open/close timing does not match the film's frames.",
+ "closes_when": "Every frame shows exactly the doodle's two beak lines meeting at the head with no additional stroke reaching the shoulder, and the beak is widest in frames 4, 9-10 and 13-14 and closed in 1, 6, 11 and 16 as in the film.",
+ "protect": "The doodle's construction and stroke habits (round head with tick eyebrow and dot eyes, two-line beak, looped oval body with inner loop, thin left wing, rounded right wing); the bird staying in place at the film's screen position with the beak on the left; the small body sway; the head dip in frame 15 returning in 16; the fixed grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  4,
+  8,
+  10,
+  12,
+  14,
+  15,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png doodle; only the extra strokes at the beak base and neck in several frames depart from the doodle's drawing.",
+ "still_frames_only": true,
+ "_packet": "lot0918b22b",
+ "_round": 5
+}
