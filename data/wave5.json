@@ -204,7 +204,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/panda/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "scorpion",
@@ -699,7 +700,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/piano/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "door",
@@ -841,7 +843,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/scissors/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "sword",
@@ -861,7 +864,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/sword/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "trombone",
@@ -881,7 +885,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/trombone/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "violin",
@@ -901,7 +906,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/violin/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "umbrella",
@@ -941,7 +947,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/rollerskates/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "swing-set",
@@ -961,7 +968,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/swing-set/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "ceiling-fan",
@@ -981,7 +989,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/ceiling-fan/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "washing-machine",
@@ -1001,7 +1010,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/washing-machine/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "tennis-racquet",
@@ -1021,7 +1031,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/tennis-racquet/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "axe",
@@ -1041,7 +1052,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/axe/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "rake",
@@ -1061,7 +1073,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/rake/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "campfire",
@@ -1081,7 +1094,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/campfire/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "candle",
@@ -1101,7 +1115,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/candle/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "lightning",
@@ -1121,7 +1136,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/lightning/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "hand",
@@ -1181,7 +1197,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/telephone/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "harp",
@@ -1201,7 +1218,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/harp/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "clarinet",
@@ -1221,7 +1239,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/clarinet/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "microphone",
@@ -1241,7 +1260,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/microphone/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "teapot",
@@ -1261,7 +1281,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/teapot/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "frying-pan",
@@ -1341,7 +1362,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/feather/plan.json",
-   "surveyed": true
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "diving-board",
@@ -1401,7 +1423,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/animal-migration/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "anvil",
@@ -1421,7 +1443,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/anvil/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "backpack",
@@ -1441,7 +1464,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/backpack/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "banana",
@@ -1461,7 +1485,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/banana/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "basket",
@@ -1481,7 +1506,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/basket/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "bed",
@@ -1501,7 +1526,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/bed/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "bench",
@@ -1521,7 +1547,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/bench/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "binoculars",
@@ -1541,7 +1568,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/binoculars/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "bucket",
@@ -1561,7 +1588,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/bucket/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "cake",
@@ -1581,7 +1609,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/cake/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "calculator",
@@ -1601,7 +1630,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/calculator/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "camouflage",
@@ -1621,7 +1651,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/camouflage/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "cannon",
@@ -1641,7 +1672,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/cannon/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "castle",
@@ -1661,7 +1692,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/castle/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "chandelier",
@@ -1681,7 +1713,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/chandelier/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "clock",
@@ -1701,7 +1734,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/clock/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "coffee-cup",
@@ -1721,7 +1755,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/coffee-cup/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "compass",
@@ -1741,7 +1775,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/compass/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "couch",
@@ -1761,7 +1796,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/couch/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "crown",
@@ -1781,7 +1817,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/crown/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "dumbbell",
@@ -1801,7 +1838,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/dumbbell/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "envelope",
@@ -1821,7 +1859,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/envelope/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "eyeglasses",
@@ -1841,7 +1880,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/eyeglasses/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "face",
@@ -1861,7 +1901,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/face/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "finger",
@@ -1881,7 +1921,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/finger/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "fireplace",
@@ -1901,7 +1942,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/fireplace/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "flip-flops",
@@ -1921,7 +1963,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/flip-flops/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "foot",
@@ -1941,7 +1984,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/foot/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "fork",
@@ -1961,7 +2005,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/fork/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "garden-hose",
@@ -1981,7 +2026,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/garden-hose/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "grass",
@@ -2001,7 +2046,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/grass/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "hat",
@@ -2021,7 +2067,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/hat/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "helmet",
@@ -2041,7 +2087,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/helmet/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "hot-dog",
@@ -2061,7 +2107,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/hot-dog/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "hourglass",
@@ -2081,7 +2128,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/hourglass/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "house-plant",
@@ -2101,7 +2148,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/house-plant/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "ice-cream",
@@ -2121,7 +2169,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/ice-cream/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "key",
@@ -2141,7 +2189,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/key/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "knee",
@@ -2161,7 +2210,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/knee/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "knife",
@@ -2181,7 +2231,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/knife/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "leaf",
@@ -2201,7 +2252,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/leaf/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "lighter",
@@ -2221,7 +2273,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/lighter/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "lipstick",
@@ -2241,7 +2294,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/lipstick/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "lollipop",
@@ -2261,7 +2315,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/lollipop/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "mailbox",
@@ -2281,7 +2335,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/mailbox/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "matches",
@@ -2301,7 +2356,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/matches/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "megaphone",
@@ -2321,7 +2377,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/megaphone/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "microwave",
@@ -2341,7 +2398,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/microwave/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "moon",
@@ -2361,7 +2418,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/moon/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "mountain",
@@ -2381,7 +2439,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/mountain/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "mouth",
@@ -2401,7 +2460,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/mouth/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "mug",
@@ -2421,7 +2481,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/mug/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "nail",
@@ -2441,7 +2501,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/nail/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "necklace",
@@ -2461,7 +2522,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/necklace/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "nose",
@@ -2481,7 +2543,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/nose/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "onion",
@@ -2501,7 +2564,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/onion/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "pencil",
@@ -2521,7 +2585,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/pencil/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "pliers",
@@ -2541,7 +2605,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/pliers/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "popsicle",
@@ -2561,7 +2626,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/popsicle/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "potato",
@@ -2581,7 +2646,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/potato/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "purse",
@@ -2601,7 +2667,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/purse/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "radio",
@@ -2621,7 +2688,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/radio/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "rainbow",
@@ -2641,7 +2709,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/rainbow/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "remote-control",
@@ -2661,7 +2730,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/remote-control/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "rifle",
@@ -2681,7 +2751,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/rifle/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "sandwich",
@@ -2701,7 +2772,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/sandwich/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "screwdriver",
@@ -2721,7 +2792,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/screwdriver/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "skull",
@@ -2741,7 +2813,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/skull/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "sleeping-bag",
@@ -2761,7 +2834,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/sleeping-bag/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "snowman",
@@ -2781,7 +2854,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/snowman/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "sock",
@@ -2801,7 +2875,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/sock/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "spoon",
@@ -2821,7 +2896,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/spoon/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "stairs",
@@ -2841,7 +2917,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/stairs/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "star",
@@ -2861,7 +2938,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/star/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "stop-sign",
@@ -2881,7 +2958,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/stop-sign/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "stove",
@@ -2901,7 +2979,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/stove/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "strawberry",
@@ -2921,7 +2999,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/strawberry/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "streetlight",
@@ -2941,7 +3020,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/streetlight/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "sun",
@@ -2961,7 +3041,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/sun/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "sweater",
@@ -2981,7 +3062,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/sweater/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "teddy-bear",
@@ -3001,7 +3083,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/teddy-bear/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "television",
@@ -3021,7 +3104,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/television/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "tent",
@@ -3041,7 +3125,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/tent/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "toe",
@@ -3061,7 +3146,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/toe/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "toilet",
@@ -3081,7 +3167,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/toilet/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "tooth",
@@ -3101,7 +3188,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/tooth/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "tree",
@@ -3121,7 +3208,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/tree/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "vase",
@@ -3141,7 +3229,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/vase/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "watermelon",
@@ -3161,7 +3249,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/watermelon/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "wine-bottle",
@@ -3181,7 +3270,7 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/wine-bottle/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "wristwatch",
@@ -3201,7 +3290,8 @@
    "interval_hint": null,
    "pool": "production/data/candidate-reserves.json",
    "plan": "shots/wristwatch/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "apple",
@@ -3221,7 +3311,7 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/apple/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "bandage",
@@ -3241,7 +3331,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/bandage/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "barn",
@@ -3261,7 +3352,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/barn/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "baseball",
@@ -3281,7 +3373,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/baseball/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "bathtub",
@@ -3301,7 +3394,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/bathtub/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "book",
@@ -3321,7 +3415,7 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/book/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "bridge",
@@ -3341,7 +3435,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/bridge/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "broccoli",
@@ -3361,7 +3456,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/broccoli/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "cactus",
@@ -3381,7 +3477,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/cactus/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "calendar",
@@ -3401,7 +3498,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/calendar/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "cell-phone",
@@ -3421,7 +3519,7 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/cell-phone/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "chair",
@@ -3441,7 +3539,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/chair/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "church",
@@ -3461,7 +3560,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/church/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "computer",
@@ -3481,7 +3581,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/computer/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "crayon",
@@ -3501,7 +3602,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/crayon/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "cup",
@@ -3521,7 +3623,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/cup/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "ear",
@@ -3541,7 +3644,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/ear/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "eye",
@@ -3561,7 +3665,7 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/eye/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "fire-hydrant",
@@ -3581,7 +3685,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/fire-hydrant/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "flashlight",
@@ -3601,7 +3706,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/flashlight/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "floor-lamp",
@@ -3621,7 +3727,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/floor-lamp/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "grapes",
@@ -3641,7 +3748,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/grapes/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "hamburger",
@@ -3661,7 +3769,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/hamburger/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "headphones",
@@ -3681,7 +3790,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/headphones/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "lantern",
@@ -3701,7 +3811,7 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/lantern/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "laptop",
@@ -3721,7 +3831,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/laptop/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "map",
@@ -3741,7 +3852,7 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/map/plan.json",
-   "surveyed": false
+   "surveyed": true
   },
   {
    "slug": "mushroom",
@@ -3761,7 +3872,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/mushroom/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "oven",
@@ -3781,7 +3893,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/oven/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "paint-can",
@@ -3801,7 +3914,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/paint-can/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "pizza",
@@ -3821,7 +3935,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/pizza/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "sink",
@@ -3841,7 +3956,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/sink/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "syringe",
@@ -3861,7 +3977,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/syringe/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "rejected": true
   },
   {
    "slug": "table",
@@ -3881,7 +3998,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/table/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "toaster",
@@ -3901,7 +4019,8 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/toaster/plan.json",
-   "surveyed": false
+   "surveyed": true,
+   "static": true
   },
   {
    "slug": "wine-glass",
@@ -3921,7 +4040,7 @@
    "interval_hint": null,
    "pool": "production/data/candidates-100.json",
    "plan": "shots/wine-glass/plan.json",
-   "surveyed": false
+   "surveyed": true
   }
  ]
 }
