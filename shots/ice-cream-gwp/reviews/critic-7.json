@@ -1,0 +1,23 @@
+{
+ "seen_animation": "An ice cream cone drawn as a triangle cone with a dome scoop stays fixed in the centre throughout. In frames 1-4 a thick rope of soft-serve comes down from the top edge and curls into a hook over the scoop. In frames 5-7 the rope swings to the left, its lower end pressed against the left side of the scoop, and the full dome outline becomes visible. In frame 8 the rope has separated from the scoop and floats as a U-shape at the top left; by frame 9 only a small arc of it remains at the top-left corner. In frames 9-10 the scoop is alone, then a small rounded tip appears at the top right (frame 10). In frames 11-14 that tip descends on the right side of the dome as a U-shaped tube end. In frames 15-16 the tube curls inward into a spiral over the right half of the scoop, and the right edge of the dome is broken off into a short separate stroke outside the cone.",
+ "seen_film": "Close-up from above of soft-serve being dispensed into a paper cup. In frames 1-4 a thick rope of ice cream comes down from the top centre and coils around to the right and down into the cup. In frames 5-8 the rope's source swings to the left, and the rope forms a long band from the top left down into the coil. In frames 9-10 the rope moves off the top-left corner, still attached as a band along the left edge, and the coil in the cup sits still. In frames 10-12 a rounded rope end appears at the top centre-right and rests there. In frames 13-16 the rope comes down on the right side as a long straight tube and lays along the right side of the cup down toward the rim; it does not curl back inward to the left.",
+ "named_subject": "An ice cream cone (dome scoop on a triangle cone) with a rope of soft-serve being dispensed onto it.",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-16 match f.png 1-16: the rope enters from the top, coils right, then its source swings left (e 9-16, film 9-16). e 17-19: rope at left still touching the scoop, consistent with film 17-19. e 20-24: the rope detaches from the scoop and drifts up to the top-left as a free-floating hook that shrinks and leaves frame by 25; in film 20-24 the rope remains a continuous band along the left edge of the cup attached to the coil, and only fades off the top-left around 25-26. e 25-26: empty scoop, film 25-26 also has no rope over the scoop, matching. e 27-32: a rounded tip appears at top right and sits on the dome's right shoulder, matching the rounded end in film 27-32. e 33-40: the tip grows down on the right side as a vertical U-ended tube, matching film 33-40. e 41-44: the tube end abruptly turns into an inward spiral curling left over the scoop (frame 40 U-bottom to frame 41 spiral is a shape pop), while film 41-44 shows the tube continuing straight down along the right side to the cup rim. From e 32 onward the dome's right outline is cut and left as a separate diagonal stroke outside the cone (clearest in 39-44), which is not part of the doodle. The g.png overlay shows the character centre jumping from the right cluster (10-19) to the left cluster (22-43) with no in-between path, and the rope's left-hand path in the overlay ends as detached outlines rather than a continuous sweep.",
+ "primary_gap": "The final frames 41-44 curl the descending rope into an inward spiral over the scoop, a turn of events the film does not have, where the film's rope keeps travelling straight down the right side to the rim.",
+ "closes_when": "In e 41-44 the rope end on the right keeps extending downward along the right edge of the dome toward the cone rim as a straight U-ended tube, with no inward spiral, and the dome's right outline stays joined to the cone corner instead of floating as a separate stroke.",
+ "protect": "The cone and dome drawn exactly in the doodle's construction and line weight; the fixed position of the cone across all frames; the rope's entrance from the top and its leftward swing in frames 1-19; the empty scoop in 25-26; the rounded tip arriving at top right in 27-32 and descending in 33-40 at the film's timing.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  20,
+  21,
+  41
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cone and dome match c.png in construction and stroke habit, but from frame 32 the dome's right edge is broken off into a stray diagonal stroke outside the cone, which the doodle does not have.",
+ "still_frames_only": true,
+ "_packet": "lota5e08a8b",
+ "_round": 7
+}
