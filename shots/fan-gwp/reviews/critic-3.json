@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A desk-fan doodle stands in the upper middle of the frame: a rounded, slightly tilted body outline with a small hook at the top, three curved blade strokes meeting at a scribbled hub, and a short trapezoid base with hatching. A grey bowl sketch sits at lower left and a grey table line runs across. Across all 16 frames the body outline, base and scenery stay fixed while the three blade strokes and the hub scribble turn around the center. The hub scribble's long axis steps steadily: diagonal in 1-2, vertical in 3, the opposite diagonal in 4-5, horizontal in 6, back through diagonal in 7-8, vertical in 9, and so on, repeating the same cycle in 9-12 and 13-16, so the blades rotate in one direction at a steady rate for the whole shot.",
+ "seen_film": "A front view of a metal desk fan with a wire grille and a horizontal black badge bar across the center, standing on a table with a brown bowl at lower left and books at lower right. The fan runs for the whole shot: the blades are a motion blur behind the grille in every frame, with the blurred blade shapes shifting position from frame to frame. The fan body, grille and stand stay in place; the camera does not move. Nothing else happens.",
+ "named_subject": "A running electric desk fan (three-bladed) on a table.",
+ "verdict": "bar met",
+ "evidence": "Hub scribble angle steps monotonically through each six-frame cycle (frames 1-2 diagonal, 3 vertical, 4-5 opposite diagonal, 6 horizontal, 7-8 diagonal, 9 vertical, 10-11, 12 horizontal, 13-14, 15 vertical, 16), matching the film's continuous spinning in all 16 frames. Body outline, top hook and hatched base are identical in every frame, as the fan housing is stationary in the film frames 1-16. The fan sits at the same place as the film's fan (center-top), and the grey bowl at lower left matches the film's bowl position in every frame. No frame shows a doubled outline or a jump in body position. Judged from still frames only, not playback.",
+ "primary_gap": "The blade strokes change length and curl between frames (for example the left blade is a long hook reaching the outline in frame 3 but ends short inside the body in frames 8 and 12), so the three blades read as redrawn each frame rather than the same three strokes carried around the hub.",
+ "closes_when": "Each of the three blade strokes keeps the same length and curvature as in c.png in every frame and only its angle around the hub changes, with each tip ending on the body outline as in the doodle.",
+ "protect": "The fixed body outline, top hook and hatched base copied from c.png; the steady one-direction rotation rate of the hub and blades across all 16 frames; the fan's placement and the grey bowl/table scenery matching the film layout; the sparse single-line stroke habit with no added shading or grille detail.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is clearly the c.png fan drawing (same tilted outline, hook, hub scribble and hatched base), with only minor drift in blade stroke length between frames.",
+ "still_frames_only": true,
+ "_packet": "lot2bd92f4e",
+ "_round": 3
+}

@@ -1,0 +1,19 @@
+{
+ "seen_animation": "All 16 frames show the same black-line drawing of a camera seen from the front: a slightly tilted rounded rectangle body, a small viewfinder bump on top right, a large outer lens ring and an inner lens circle drawn as an open spiral-like loop. Grey scenery is fixed around it: a small circle-with-bar at left, two bracket shapes at right, a small scribbled circle below center, and a vertical line with a diagonal at bottom right. Nothing moves across the frames except a slight line wobble in the inner lens loop (its opening and right side shift by a few pixels, e.g. frames 7, 8, 15, 16) and small shifts in the bottom scribble. The camera stays in the same place and size throughout.",
+ "seen_film": "All 16 frames are a static close-up of a real camera front: a large lens with a toothed outer ring, a dark lens barrel and a small bright central element, a mounting screw at top left, a knob below the lens, and a mechanism panel at right. The framing does not change; the only differences between frames are film grain, slight exposure flicker and a pixel-level weave of the image. No action or event takes place.",
+ "named_subject": "A camera seen from the front, with its lens drawn as concentric rings.",
+ "verdict": "bar met",
+ "evidence": "Film frames 1-16 hold the same lens close-up with no action. Animation frames 1-16 hold the camera doodle at the same position and scale, with the lens centered at about the same frame location as the film's lens (left-center), the grey bracket shapes on the right matching the film's side mechanism and the grey scribbled circle below matching the film's knob under the lens. The only change across the animation is a small line wobble in the inner lens loop (frames 7, 8, 15, 16 show the right side of the inner loop shifted slightly), which corresponds to the film's own grain and weave rather than a jump. Judged from still frames only, not playback.",
+ "primary_gap": "The inner lens loop's wobble is slightly larger and more shape-changing than the film's near-zero frame-to-frame change, so in playback it may read as a nervous redraw of the lens rather than a held shot.",
+ "closes_when": "The inner lens loop keeps the same shape and gap position across frames 1-16, varying by no more than a pixel or two, as the outer ring and body already do.",
+ "protect": "The exact doodle construction from c.png (tilted body, viewfinder bump, outer ring, open inner spiral with its gap at top), its single-weight black strokes, the held position and scale matching the film's static framing, and the sparse grey scenery placed where the film's screw, side mechanism and knob are.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 5,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png drawing stroke for stroke, including the top-right viewfinder bump and the open inner loop, with no added detail.",
+ "still_frames_only": true,
+ "_packet": "lote7eb900a",
+ "_round": 2
+}

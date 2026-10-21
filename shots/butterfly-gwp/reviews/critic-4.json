@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A butterfly drawn in side view (one large notched wing, two looped antennae, a thin body line) sits on the tip of a grey-outlined hand. Frame 1: the butterfly is at upper right-center, its wing tilted far to the right so the leading edge runs diagonally and the wing is wide and rounded; the body is a single straight base line. Frames 2-3: the butterfly moves left and the wing swings upward toward vertical, and its outline narrows. Frame 4: the wing stands upright with a heart-like notch on its trailing edge and a doubled body line now extends to the right under the wing. Frames 5-12: the butterfly stays upright at left-center with only small shifts of position and wing outline. Frames 13-16: it sits a little further left and slightly higher, still upright, and holds. The grey hand outline is redrawn with different finger shapes in frames 1-4 and settles into one large mitten shape from frame 5 on.",
+ "seen_film": "A monarch butterfly with wings closed upright is perched on the fingertip of a hand against a black background. Frames 1-3: the hand is at the right side of frame and the butterfly's wings lean to the right. Frame 4: the hand has moved left and the wings rise to upright. Frames 5-12: hand and butterfly stay near left-center, the butterfly upright, with small shifts. Frames 13-16: the hand has moved further left and lower, the butterfly sits higher in the frame, turned so that the orange-and-white underside of the wing faces the camera and is brightly lit.",
+ "named_subject": "a butterfly (side view, wings folded) perched on a fingertip",
+ "verdict": "reference stronger",
+ "evidence": "Placement and timing follow the film: frames 1-3 butterfly at right-center with wing leaning right, frame 4 upright at left-center, frames 5-12 holding, frames 13-16 shifted left and up, matching d.png's positions. But the drawing changes construction between frames 1 and 4: frame 1 wing is wide and rounded with no notch and a closed straight base, frame 2 the wing is a different narrower outline, frame 4 a notched heart-shaped wing with a new doubled body line extending right appears. These read as redraws, not one wing rotating. Frames 13-16 show no turn of the wing to present its underside as in the film, only a small translation.",
+ "primary_gap": "Across frames 1-4 the wing outline and body are redrawn into different shapes (rounded wide wing without body line in frame 1, notched upright wing with an added body line in frame 4) instead of one constant wing shape rotating upward on the fingertip.",
+ "closes_when": "Frames 1-4 show the same notched wing outline and the same body line as frames 5-16, only rotated from leaning right to upright about the point where the body touches the fingertip, with no strokes appearing or disappearing.",
+ "protect": "The film-matched positions and timing (right-leaning start, upright by frame 4, hold through 12, shift left and up at 13); the doodle's looped antennae and notched lobed wing outline; the steady hold in frames 5-16; the thin single-stroke line weight.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  4
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The wing outline with its notched lobe and the looped antennae come from the doodle, but the doodle's long body with tick marks is reduced to a short doubled line and is missing entirely in frames 1-2.",
+ "still_frames_only": true,
+ "_packet": "lotb1e4e10f",
+ "_round": 4
+}

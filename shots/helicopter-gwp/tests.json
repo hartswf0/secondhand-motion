@@ -1,44 +1,44 @@
 [
  {
   "id": "M2",
-  "value": 89,
+  "value": 61,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   91,
+   82,
+   73,
    81,
-   93,
-   92,
-   94,
-   89,
-   93,
-   83,
-   87,
-   87,
-   93,
-   89,
-   92,
-   91,
-   84
+   58,
+   58,
+   53,
+   54,
+   44,
+   51,
+   49,
+   55,
+   48,
+   55,
+   74,
+   74
   ]
  },
  {
   "id": "M2b",
-  "value": 0.92,
+  "value": 0.66,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 95
  },
  {
   "id": "M3",
-  "value": 0.44,
+  "value": 0.56,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.28
+  "min": 0.27
  },
  {
   "id": "M6",
-  "value": 1.8,
+  "value": 2.7,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -83,17 +83,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca helicopter (side view, with main rotor, cockpit, skid struts, landing skid and tail boom)\u201d; motion broken; follows the film: yes",
+  "value": "named \u201ca helicopter (two-blade rotor, cabin with windscreen line, long tail boom with hooked fin, two struts and a single skid)\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/helicopter-gwp/reviews/critic-2.json"
+  "evidence": "shots/helicopter-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The animated helicopter uses the same body outline, cockpit line, two struts, flat skid, hooked tail and three-blade rotor as the doodle, so it reads as that drawing; only the cropped opening frames hide the tail and skid.",
-  "evidence": "shots/helicopter-gwp/reviews/critic-2.json"
+  "note": "The helicopter keeps the doodle's construction; the only drift is that the rotor blades are drawn at varying short lengths in frames 8 and 14-16, shorter than the long uneven blades in the doodle.",
+  "evidence": "shots/helicopter-gwp/reviews/critic-3.json"
  }
 ]

@@ -80,17 +80,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA giraffe's head and upper neck in close-up, chewing\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA giraffe's head and upper neck, chewing and opening its mouth while turning toward the viewer.\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/giraffe-gwp/reviews/critic-5.json"
+  "evidence": "shots/giraffe-gwp/reviews/critic-6.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The head matches the doodle's parts and stroke habits, though the doodle's open P ossicone is drawn as a closed pentagon and the jaw strokes cross where the doodle's lines meet cleanly at corners.",
-  "evidence": "shots/giraffe-gwp/reviews/critic-5.json"
+  "ok": false,
+  "note": "The head reads as c.png's giraffe (P ossicone, flag ear, dash eye, rounded snout), but the neck loses c.png's double neck outline and its interior marking strokes, and the cheek loop that sits under the eye in c.png is moved to a large diamond at the lower left.",
+  "evidence": "shots/giraffe-gwp/reviews/critic-6.json"
  }
 ]

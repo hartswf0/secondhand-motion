@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A line-drawn snake shaped like a '2' sits on a grey ground line with grey ground dashes. Its head is at upper left facing left, the body curves right and down into a loop, and the tail at lower right turns up into a tall narrow triangle (a rattle). Frames 1-10: the snake holds the pose with only a slight up-and-down bob of the whole body; no tongue. Frame 11: a short forked tongue appears at the nose, angled up-left. Frame 12: the fork is wider and points left. Frames 13-15: the tongue points down-left from the nose. Frame 16: the tongue points up-left again and the tip of the rattle triangle is drawn with an extra short stroke, as if it is shaking.",
+ "seen_film": "A coiled rattlesnake rests on a rock against a plain sky. Its head is raised at upper center-left facing left, the coil fills the lower left, and the rattle stands upright at the right of the head. Frames 1-10: the snake stays still (frame 1 has a faint dissolve overlay from a previous shot). Frame 11: the tongue flicks out to the left. Frame 12: the forked tongue is out, angled left and up. Frames 13-15: the tongue hangs down-left from the mouth. Frame 16: the tongue flicks up-left and the rattle tip blurs, showing it is shaking.",
+ "named_subject": "a rattlesnake (the doodle's S-shaped snake with a rattle added at the tail)",
+ "verdict": "bar met",
+ "evidence": "Frames 1-10 in both are a held pose with the head at upper left facing left and the raised tail at right; the animation's head (nose near x=125, y=120 of the panel) and rattle (x=300, y=155-235) sit where the film's head and rattle sit. The tongue first appears in frame 11 in both, points up-left in 12 in both, points down-left in 13-15 in both, and flicks up-left in 16 in both. Frame 16 adds a stroke at the rattle tip in the animation where the film's rattle blurs. The body outline keeps the same construction across all 16 frames, with no redraw or doubling.",
+ "primary_gap": "The rattle is a rigid thin triangle that does not move at all in frames 1-15, so the tail reads as a static prop rather than part of the snake, and the single extra stroke at its tip in frame 16 appears suddenly rather than as part of a shaking motion.",
+ "closes_when": "The rattle triangle shows a small side-to-side offset or a repeated short tip stroke that builds over several frames (for example from frame 13 onward) instead of appearing only in frame 16.",
+ "protect": "The doodle's '2'-shaped double-line body, the notched nose and single-dash eye, the short forked tongue in the doodle's two-stroke fork style, the head and rattle positions matching the film, and the tongue timing (out at 11, up at 12, down at 13-15, up at 16).",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  16
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body, head, eye and forked tongue keep the doodle's construction; the added upright rattle triangle and the shorter tongue are the only departures from c.png, and they are needed to perform the film's action.",
+ "still_frames_only": true,
+ "_packet": "lota6a263ab",
+ "_round": 2
+}

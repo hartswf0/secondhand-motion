@@ -1,0 +1,27 @@
+{
+ "seen_animation": "Frame 1: a small partial rabbit head with one ear, facing left, sits against a vertical black line at the left edge; the body is missing. Frame 2: two ears and a head facing left, with the head contour open and a vertical stroke beside it. Frame 3: a head facing left with two ears, joined to a separate rounded lump on the right, which reads as two pieces. Frame 4: a new construction with ears straight up in a V, a head, and a box-shaped body with a crossing diagonal stroke. Frame 5: the V ears again, but the head and body are rearranged into a different blob with crossed strokes at the neck. Frame 6: the full doodle appears suddenly, mirrored to face right and about twice as large: two pointed ears, a head with a snout, front leg, back leg and a rounded rear. Frames 6-12: this full drawing sits almost still in the middle of the frame with only slight shifts. Frame 13: the rabbit moves right and lower; the back and rear contour is redrawn as a lumpy line and the tail curl is separate. Frame 14: the body is flattened and stretched, with the head partly cut off at the right edge. Frames 15-16: only the rear half and one ear remain as the rabbit exits right.",
+ "seen_film": "Frames 1-2: a white rabbit comes out from behind the edge of the dark door at the left side, partly hidden. Frames 3-4: it steps forward, faces the camera with ears up, standing at center-left. Frame 5: it begins turning to its right. Frames 6-12: it sits in profile facing right at center-left, mostly still, with small head and ear movements. Frame 13: it starts to hop right. Frames 14-16: it hops right and leaves the frame at the right edge.",
+ "named_subject": "a rabbit (white rabbit coming out from behind a door, sitting, then hopping off to the right)",
+ "verdict": "reference stronger",
+ "evidence": "Frames 6-12 match the film well: the doodle sits in profile facing right at the same place and size as the film's sitting rabbit, and frames 13-16 exit right on the same frames as the film. Frames 1-5 do not hold one drawing: frame 1 is a one-ear fragment, frame 2 a two-ear head facing left, frame 3 a head plus a detached lump, frame 4 a V-eared front view with a box body and stray diagonal, frame 5 another rearrangement with crossed neck strokes; each is a new construction rather than the same doodle moving. Between frames 5 and 6 the character flips direction and roughly doubles in size in one step. In frame 13 the back contour is redrawn as a lumpy line and in frame 14 the body is squashed flat, so the hop reads as a deformation rather than the doodle's shape moving.",
+ "primary_gap": "In frames 1-5 the emerging and turning rabbit is a different, broken construction in each frame instead of the doodle in c.png partly hidden by the door and then turning, so the entrance and turn read as a series of redraws that ends in a pop at frame 6.",
+ "closes_when": "Frames 1-5 show the same c.png outline (same ears, head, leg notch and rear curve) clipped by the door edge and sliding out from it, then rotating through a short foreshortened turn with stroke count and shapes kept, so frame 5 to frame 6 changes only slightly in size and pose.",
+ "protect": "The sitting pose in frames 6-12, which is a faithful mirrored copy of c.png with its pointed ears, single front-leg notch and open rear contour, placed where the film's rabbit sits; the timing of the sit (6-12) and the rightward exit (13-16) on the film's frames; the sparse grey scenery lines for door edge and baseboard.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  3,
+  4,
+  5,
+  6,
+  13,
+  14
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Frames 6-12 are the c.png doodle, but frames 1-5 and 13-14 are redrawn shapes (V ears, box body, crossed strokes, flattened lumpy back) that do not keep the doodle's construction.",
+ "still_frames_only": true,
+ "_packet": "lot510278c0",
+ "_round": 6
+}

@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A black-line trumpet, drawn with a tall narrow oval bell on the left, a tapering lower body line, a straight upper tube, four looping valve strokes and a small angled mouthpiece on the right, is held horizontally at the mouth of a grey-line man seen in profile on the right of the frame. Grey scenery shows horizontal building lines, the man's head and back, his hands under the valves, and window shapes at lower left. Across frames 1-16 the trumpet stays at the mouth in nearly the same place; the only motion is a slight tilt of the bell (its lower tip shifts a few pixels left and right, most visible in frames 4, 7, 8 and 16) and a small shift of the valve strokes and mouthpiece angle. Nothing else happens: the man keeps playing a held note.",
+ "seen_film": "A man in a dark suit and glasses stands in profile on the right, in front of a pale building facade with a cornice, playing a long trumpet whose bell points to the left and slightly downward. Both hands hold the instrument at the valves. Over the 16 frames he holds the pose and plays; there is only a small sway of the head and trumpet (the instrument dips and rises by a few pixels, the head leans slightly forward around frames 9-12 and returns by 13-16). No change of action occurs.",
+ "named_subject": "A trumpet (held at the mouth of a man playing it)",
+ "verdict": "bar met",
+ "evidence": "In every frame 1-16 the animation's trumpet sits where the film's does: mouthpiece at the man's lips at about x=215-230 of the panel, bell at the far left near x=45-60, valves over the hands near x=150-180, matching d.png frames 1-16. The film's event is a sustained held pose with small sway, and the animation performs the same: frames 1-3, 5-6, 9-15 hold steady, frames 4, 7-8 and 16 show a small bell tilt, comparable in size to the film's dips in frames 4, 8 and 16. No frame shows the trumpet jumping position, a second copy of a stroke, or a redraw of the shape; the valve strokes keep their count of four and their looping hand-drawn quality from c.png throughout.",
+ "primary_gap": "The animated trumpet's sway is slightly jittery and not tied to the film's timing: the bell tilt appears in isolated frames (4, 7-8, 16) instead of following the film's gentle dip and rise of the whole instrument with the head lean around frames 9-13.",
+ "closes_when": "The whole trumpet (bell, tube and mouthpiece together) dips and rises by a few pixels as one rigid piece in step with the film's head sway, with the largest offset around frames 9-12 and a return by 13-16, instead of only the bell tip shifting in single frames.",
+ "protect": "Keep the c.png construction exactly: the tall narrow oval bell with its pointed lower tip, the gap in the upper line near the bell, the four looping valve strokes, the small open angled mouthpiece, and the single-weight wobbly black line. Keep the placement at the man's mouth and the left-pointing horizontal orientation matching the film, and keep the absence of doubling or redraw flicker.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The trumpet is recognizably the c.png drawing; only its bell is drawn a little more symmetric and taller than the doodle's lopsided bell, which is a minor difference.",
+ "still_frames_only": true,
+ "_packet": "lot87c88953",
+ "_round": 2
+}

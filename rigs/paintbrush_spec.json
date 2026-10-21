@@ -6,7 +6,7 @@
   "ferrule",
   "ferrule"
  ],
- "note": "Quick, Draw! paintbrush 6685610360176640. Stroke 0 is the long handle, drawn as one narrow loop from the ferrule up to the butt end. Stroke 1 is the outline of the bristle head, a teardrop that ends in the pointed tip. Stroke 2 is one line inside the bristles and stroke 3 is the zigzag scribble of paint loaded on them; stroke 4 is a short tick at the tip. The rig places the drawing by two points on the handle (the ferrule, where handle meets bristles, and a heel point a third of the way up the handle), so the handle stays straight and keeps one length. The bristle strokes turn at the ferrule toward the pose's tip point by 0.6 of the angle, so the head flexes a little when the brush presses on the paper and dabs.",
+ "note": "Quick, Draw! paintbrush 6685610360176640. Stroke 0 is the long handle, drawn as one narrow loop from the ferrule up to the butt end. Stroke 1 is the outline of the bristle head, a teardrop that ends in the pointed tip. Stroke 2 is one line inside the bristles and stroke 3 is the zigzag scribble of paint loaded on them; stroke 4 is a short tick at the tip. The rig places the drawing by two points on the handle (the ferrule, where handle meets bristles, and a heel point a third of the way up the handle), so the handle stays straight and keeps one length. The bristle strokes turn at the ferrule toward the pose's tip point by 0.6 of the angle, so the head flexes a little when the brush presses on the paper and dabs. The film scrubs the brush back and forth along the painted line about every four frames; smoothing and optical-flow tracking are off so the rig hits every measured pose key (pose_agent_v3) instead of averaging the scrub away.",
  "strokes": [
   [
    [
@@ -270,6 +270,6 @@
   }
  ],
  "size": "steady",
- "track": true,
- "smooth": 2.0
+ "track": false,
+ "smooth": 0
 }

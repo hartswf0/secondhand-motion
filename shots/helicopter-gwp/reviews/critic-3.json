@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Frames 1-4: a line-drawn helicopter fills the frame in close-up, cabin and rotor mast at center-right, tail boom running off the left edge, skid and two struts at the bottom; it is tilted nose-down and the two-blade rotor changes angle each frame. Frames 5-7: the helicopter has shifted lower and slightly right and begins to shrink; the boom still exits the left edge. Frame 8: the boom ends inside the frame for the first time, showing the hooked tail fin at the upper left. Frames 9-12: the whole helicopter is visible, still nose-down, shrinking and drifting toward the center-right; a ground line appears at frame 10 and a third cloud at lower left from frame 9. Frames 13-16: the helicopter keeps shrinking and settles small in the right-center of the frame above the ground line, rotor still turning. Two grey clouds sit at upper left and right throughout.",
+ "seen_film": "A Huey-type helicopter passes close to the camera in profile, nose to the right and nose-down. Frames 1-4: cabin and rotor fill the frame, tail boom off the left edge. Frames 5-7: it moves lower and right, getting smaller; the tail fin enters at the left edge in frame 7. Frame 8: the tail fin is fully visible at upper left. Frames 9-12: the full helicopter is visible and recedes, shrinking, toward center-right; ground and treeline appear at the bottom from frame 9. Frames 13-16: it is small at right of center, flying away above a field. Clouds drift in the sky; a 'Helicopters' caption bar stays at the bottom.",
+ "named_subject": "a helicopter (two-blade rotor, cabin with windscreen line, long tail boom with hooked fin, two struts and a single skid)",
+ "verdict": "bar met",
+ "evidence": "Placement and timing track the film frame for frame: frames 1-4 close-up with boom off the left edge (film 1-4); frame 8 first full tail fin at upper left (film 8, fin at the same spot); frame 12 tail at about x=80 and nose at about x=320 of the cell, film 12 at about x=85 and x=330; frame 16 helicopter spans about x=205-325, film 16 about x=210-335. The nose-down tilt matches throughout. Shrinking from frame 8 to 16 is steady with no size jumps. The ground line enters at frame 10 versus film frame 9, close in time. The drawing keeps the doodle's construction in every frame: hump-top cabin, diagonal windscreen line ending in a small tick past the nose, two straight struts on one skid line, crossed two-stroke rotor on a single mast, hooked tail tip with the short inner tick.",
+ "primary_gap": "The scenery pops while the character moves smoothly: the left and right clouds are drawn partially in frames 1-2, a third cloud appears all at once at lower left in frame 9, and the clouds stay fixed while the film's clouds drift.",
+ "closes_when": "All clouds are complete from frame 1, any new cloud slides in from an edge instead of appearing whole, and the cloud positions shift slightly from frame to frame as in the film.",
+ "protect": "The frame-accurate position and scale path of the helicopter, the nose-down tilt, the tail fin entering at frame 8, the steady shrink from frame 8 to 16, and the doodle's exact stroke construction (hump cabin, windscreen tick, two struts on a skid, hooked tail with inner tick, crossed rotor strokes).",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  9
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The helicopter keeps the doodle's construction; the only drift is that the rotor blades are drawn at varying short lengths in frames 8 and 14-16, shorter than the long uneven blades in the doodle.",
+ "still_frames_only": true,
+ "_packet": "lotbfb33ace",
+ "_round": 3
+}

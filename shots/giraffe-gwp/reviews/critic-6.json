@@ -1,0 +1,25 @@
+{
+ "seen_animation": "Still frames only. A black-line giraffe head in profile facing right, with a P-shaped ossicone on top, a small flag-shaped ear at upper left, a short dash eye, a long snout ending in a rounded nose, a diamond-shaped loop low on the left (cheek), and one long neck line running down the left edge; grey trees stand at left and right. Frames 1-4 are identical: mouth closed, snout long. In frame 5 a notch cuts into the front of the snout; in frames 6-7 the mouth is open as a wide sideways V that reaches past the nose, with faint grey strokes over the opening and a tiny stray mark below the jaw in frame 7. In frame 8 the mouth is closed again, the snout is suddenly shorter and rounder, and a new open box shape (a second ear) appears under the jaw. Frames 9-13 hold this shorter closed snout with the box ear under the jaw. In frames 14-16 the mouth opens again into the same wide V, the lower jaw line now running far right to a point. The grey right-hand tree grows from a partial outline (frames 1-4) to a full tree with a trunk (from frame 9).",
+ "seen_film": "A close-up of a real giraffe head, turned toward the right of frame, against hazy trees. Frames 1-4: head in three-quarter view, lips parted slightly, chewing, a thin stem or tongue at the mouth. Frames 5-6: mouth opens wider, dark mouth interior visible, the muzzle blurred by motion. Frames 7-8: the head rotates toward the camera, the muzzle shortens in the frame, the mouth closes on a stem, and the far ear appears below and right of the jaw. Frames 9-12: head nearly frontal, mouth closed, chewing, far ear visible to the lower right. Frame 13: mouth begins to part. Frames 14-16: the mouth opens again with lips and tongue showing, the head turns slightly back to the right and the far ear partly hides behind the jaw by frame 16.",
+ "named_subject": "A giraffe's head and upper neck, chewing and opening its mouth while turning toward the viewer.",
+ "verdict": "reference stronger",
+ "evidence": "Timing broadly follows the film: open mouth at 6-7 (film 5-6), head turn with shorter snout and far ear appearing at 8 (film 7-8), closed chewing hold 9-13 (film 9-13), mouth opening again at 14-16 (film 14-16). But the changes happen as cuts between poses: frames 1-4 are frozen while the film already chews with parted lips; frame 5 to 6 jumps from a small notch to a fully open V; frame 7 has faint grey strokes overlapping the opening and a stray mark below the jaw; frame 8 shortens the snout and adds the under-jaw ear in a single step with no in-between; frame 13 to 14 jumps from closed to wide open. The open mouth is drawn as a pointed V whose lower jaw runs past the nose (frames 6, 7, 14-16), which reads as a bird beak rather than parted lips. The grey right tree changes shape between frames 4-5 and 8-9 although the film background stays still. Compared to c.png, the neck markings, the second neck line and the cheek loop placed under the eye are missing; the cheek loop is moved down to the lower left and enlarged.",
+ "primary_gap": "The mouth and head-turn changes happen as single-frame pose swaps (5-6, 7-8, 13-14) instead of a gradual parting of the lips and a gradual shortening of the snout as in the film.",
+ "closes_when": "Across frames 4-8 and 12-15 the lips part and close in visible steps that stay within the snout outline, and the snout shortens and the under-jaw ear grows in over at least three frames, with no stray marks or grey overlaps and the background trees fixed.",
+ "protect": "The overall timing that matches the film (open around 5-7, turn and far ear at 7-8, closed hold 9-13, reopening 14-16); the P-shaped ossicone, dash eye, flag ear and single-weight straight-segment line habit from c.png; the stable placement of the head in the frame.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  6,
+  7,
+  8,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The head reads as c.png's giraffe (P ossicone, flag ear, dash eye, rounded snout), but the neck loses c.png's double neck outline and its interior marking strokes, and the cheek loop that sits under the eye in c.png is moved to a large diamond at the lower left.",
+ "still_frames_only": true,
+ "_packet": "lot3d448a58",
+ "_round": 6
+}

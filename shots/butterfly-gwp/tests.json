@@ -7,40 +7,40 @@
   "per_key": [
    2,
    5,
-   5,
-   6,
-   6,
-   6,
-   5,
    6,
    6,
    6,
    6,
-   4,
-   4,
-   4,
-   4
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   5
   ]
  },
  {
   "id": "M2b",
-  "value": 0.54,
+  "value": 0.57,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 12
  },
  {
   "id": "M3",
-  "value": 0.26,
+  "value": 0.29,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.1
+  "min": 0.11
  },
  {
   "id": "M6",
-  "value": 5.9,
+  "value": 3.8,
   "unit": "px jerk (drawing centre)",
-  "ok": false
+  "ok": true
  },
  {
   "id": "T3",
@@ -83,17 +83,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca butterfly perched on a person's fingertips (character: butterfly; scenery: hand)\u201d; motion smooth; follows the film: yes",
+  "value": "named \u201ca butterfly (side view, wings folded) perched on a fingertip\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/butterfly-gwp/reviews/critic-3.json"
+  "evidence": "shots/butterfly-gwp/reviews/critic-4.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "Only the looped antennae and dashed body come from c.png; the wings are a new pointed, double-lined shape instead of the doodle's rounded lobed single-line wings.",
-  "evidence": "shots/butterfly-gwp/reviews/critic-3.json"
+  "ok": true,
+  "note": "The wing outline with its notched lobe and the looped antennae come from the doodle, but the doodle's long body with tick marks is reduced to a short doubled line and is missing entirely in frames 1-2.",
+  "evidence": "shots/butterfly-gwp/reviews/critic-4.json"
  }
 ]

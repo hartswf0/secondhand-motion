@@ -1,33 +1,31 @@
 [
  {
   "id": "M2",
-  "value": 53,
+  "value": 41,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
-   54,
-   53,
-   53,
-   53,
-   53,
-   55,
-   53,
-   53,
-   53,
-   53,
-   53,
-   53,
-   53,
-   53,
-   52,
-   52,
-   53,
-   54
+   40,
+   40,
+   40,
+   41,
+   42,
+   42,
+   41,
+   42,
+   42,
+   42,
+   42,
+   42,
+   41,
+   41,
+   42,
+   41
   ]
  },
  {
   "id": "M2b",
-  "value": 0.77,
+  "value": 0.62,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 72
@@ -40,13 +38,13 @@
  },
  {
   "id": "M6",
-  "value": 1.9,
+  "value": 1.0,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
  {
   "id": "T3",
-  "value": "6 strokes, 68 vertices, every frame",
+  "value": "7 strokes, 75 vertices, every frame",
   "unit": "",
   "ok": true,
   "note": "the doodle itself, bent by the rig"
@@ -85,17 +83,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca cello\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA cello (the instrument alone, with a simplified left hand/forearm on its neck; the cellist herself is not drawn)\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/cello-gwp/reviews/critic-2.json"
+  "evidence": "shots/cello-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The cello reads as the c.png doodle (same scroll loop, two string lines, rounded bout), though the crop hides the waist and f-hole loop that are the doodle's most distinctive marks.",
-  "evidence": "shots/cello-gwp/reviews/critic-2.json"
+  "ok": false,
+  "note": "Only the scroll and upper bout of the doodle are visible because the cello is enlarged past the frame bottom, so the doodle's C-bout waist, lower bout and f-hole are lost and the added doubled neck lines and hand box are not part of its construction.",
+  "evidence": "shots/cello-gwp/reviews/critic-3.json"
  }
 ]

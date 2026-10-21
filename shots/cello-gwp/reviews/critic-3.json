@@ -1,0 +1,25 @@
+{
+ "seen_animation": "A black line drawing of a cello stands at frame centre, tilted slightly so the neck leans right toward the top, with only the scroll, neck and the upper bout visible (the body is cut off by the bottom edge). Grey scenery stays fixed: a wall corner at top left, a music stand and a shelf box at left, a round head and shoulders at left of the cello, a box with two small pentagons and a round head at right. A small box with two parallel diagonal lines running down-right (a hand and forearm) sits on the neck. Frames 1-4: the hand sits high on the neck, near the scroll. Frames 5-8: it slides down the neck in steps; in frame 6 the box shrinks and in frames 7-8 the two lines move lower and lengthen. Frames 9-12: the hand sits at mid-neck, just above the upper bout, and the cello body shifts slightly left. Frames 13-16: the hand stays at mid-neck, the neck lines near the hand become doubled, and a short double-line stroke (a bow) appears at the bottom right in frame 14 and moves up and right through frames 15-16.",
+ "seen_film": "A cellist in a red dress plays in a rehearsal room with other players and a yellow wall behind her. The cello neck rises at frame centre with the scroll near the top. Frames 1-4: her left hand is high on the neck near the scroll, head bowed. Frames 5-8: the left hand moves down the neck to a middle position. Frames 9-12: the hand stays around the middle of the neck, slightly lower, and she leans a little. Frames 13-16: the hand stays low-middle on the neck while she lifts her head, and the bow becomes visible at the lower right crossing the strings in frames 14-16. The camera framing stays nearly fixed; the cello drifts slightly left over the shot.",
+ "named_subject": "A cello (the instrument alone, with a simplified left hand/forearm on its neck; the cellist herself is not drawn)",
+ "verdict": "reference stronger",
+ "evidence": "Timing of the hand shift matches the film: hand high in frames 1-4, moving down in 5-8, mid-neck in 9-16, as in the film. The bow appears at bottom right in frames 14-16 as in the film. But the hand moves in discrete jumps: frame 5 to 6 the box shrinks and drops, frame 7 to 8 the lines lengthen and jump down. The neck near the hand becomes doubled lines in frames 13-16 that the film does not have. The bow pops in at frame 14 with no lead-in and jumps right in frame 16. The cello body is cropped at the upper bout in every frame, so the doodle's waist and lower bout never appear. The player's body and head, which carry most of the film's motion, are absent.",
+ "primary_gap": "The left hand slides down the neck in visible steps (frames 5-8) and the neck strokes double near the hand in frames 13-16, so the shift does not read as one continuous slide.",
+ "closes_when": "Across frames 4-9 the hand box keeps the same size and moves down the neck by roughly equal increments each frame, and the neck is drawn as the same two strokes in every frame with no extra parallel lines at the hand.",
+ "protect": "The fixed grey scenery; the timing of the hand shift (high in 1-4, down through 5-8, mid-neck after 9); the bow entering at bottom right only in the last frames; the doodle's scroll shape with its rounded knob and single-weight wobbly outline.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  8,
+  13,
+  14,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Only the scroll and upper bout of the doodle are visible because the cello is enlarged past the frame bottom, so the doodle's C-bout waist, lower bout and f-hole are lost and the added doubled neck lines and hand box are not part of its construction.",
+ "still_frames_only": true,
+ "_packet": "lot907a93af",
+ "_round": 3
+}

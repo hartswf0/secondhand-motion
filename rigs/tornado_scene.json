@@ -88,15 +88,13 @@
  "planes": [
   {
    "id": "sky",
-   "z": 8,
-   "label": "Storm clouds",
-   "z_from_depth": "top"
+   "z": 2,
+   "label": "Storm clouds"
   },
   {
    "id": "ground",
-   "z": 3,
-   "label": "Ground",
-   "z_from_depth": "bottom"
+   "z": 2,
+   "label": "Ground"
   },
   {
    "id": "char",
@@ -111,9 +109,9 @@
    "qd": "cloud",
    "box": [
     -20,
-    0,
+    10,
     180,
-    60
+    70
    ],
    "strokes": 1
   },
@@ -123,9 +121,9 @@
    "qd": "cloud",
    "box": [
     220,
-    5,
+    15,
     400,
-    65
+    75
    ],
    "strokes": 1,
    "skip": 1
@@ -146,5 +144,6 @@
  "notes": {
   "1": "funnel under the cloud"
  },
- "no_cel": "SAM masked the storm cloud with the funnel, so the cel erased the cloud scenery"
+ "no_cel": "SAM masked the storm cloud with the funnel, so the cel erased the cloud scenery",
+ "planes_note": "Sky and ground are at the character's depth (z 2): the camera only tilts and shakes in this shot, and a tilt moves near and far things by the same amount, as the trees, the pole and the funnel do in the measurements. Clouds sit just above the cloud base the funnel hangs from (y about 80 at frame 10), lowered 10 px from before so they stay in frame through the camera's upward bobs."
 }

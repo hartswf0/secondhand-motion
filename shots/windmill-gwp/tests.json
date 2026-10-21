@@ -5,42 +5,35 @@
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   4,
-   4,
+   3,
    5,
+   7,
+   9,
+   9,
+   8,
    5,
-   5,
-   6,
-   7,
-   7,
-   6,
-   8,
-   8,
-   8,
-   8,
-   7,
-   7
+   3
   ]
  },
  {
   "id": "M2b",
-  "value": 0.73,
+  "value": 0.64,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 4
  },
  {
   "id": "M3",
-  "value": 0.25,
+  "value": 0.3,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.07
+  "min": 0.1
  },
  {
   "id": "M6",
-  "value": 35.7,
+  "value": 1.2,
   "unit": "px jerk (drawing centre)",
-  "ok": false
+  "ok": true
  },
  {
   "id": "T3",
@@ -58,7 +51,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:4794921946972160; scenery quickdraw:4865878715793408, quickdraw:4687322077462528, quickdraw:4725335608262656, quickdraw:5633852527607808",
+  "value": "rig quickdraw:4794921946972160; scenery quickdraw:4865878715793408, quickdraw:5798786049769472, quickdraw:5807681665236992, quickdraw:5242381458735104",
   "unit": "",
   "ok": true
  },
@@ -83,17 +76,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca windmill: a tall tower with four sails turning on a central hub\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201ca windmill: a tall box-shaped tower with a domed top and several long blades joined at a central hub\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/windmill-gwp/reviews/critic-1.json"
+  "evidence": "shots/windmill-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "Frame 1 is nearly the reference doodle itself; in later frames the sails get longer and thinner than the doodle's wide petal-shaped sails, and the top cap loop is redrawn wider. The bottom vertical tick and the open-topped tower outline stay the same.",
-  "evidence": "shots/windmill-gwp/reviews/critic-1.json"
+  "note": "The animated windmill uses the same box tower, wobbly roof ellipse, small hub loop, short door tick and five loose petal-shaped blades as the doodle, so it reads as the same drawing.",
+  "evidence": "shots/windmill-gwp/reviews/critic-2.json"
  }
 ]

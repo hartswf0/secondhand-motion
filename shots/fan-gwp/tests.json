@@ -1,35 +1,17 @@
 [
  {
   "id": "M2",
-  "value": 3,
+  "value": 2,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
    3,
    3,
-   3,
-   3,
-   2,
-   2,
    2,
    3,
-   3,
    2,
    2,
    2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   3,
-   3,
-   3,
-   2,
-   2,
-   3,
-   3,
-   3,
    3,
    3,
    2,
@@ -38,30 +20,48 @@
    2,
    3,
    3,
-   3,
+   2,
+   2,
    2,
    3,
    2,
-   2
+   2,
+   2,
+   2,
+   3,
+   2,
+   2,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   3
   ]
  },
  {
   "id": "M2b",
-  "value": 0.9,
+  "value": 0.91,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 2
  },
  {
   "id": "M3",
-  "value": 0.63,
+  "value": 0.61,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
   "min": 0.6
  },
  {
   "id": "M6",
-  "value": 0.0,
+  "value": 0.3,
   "unit": "px jerk (drawing centre)",
   "ok": true
  },
@@ -106,17 +106,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201can electric desk fan seen from the front: a rounded housing with three curved blades around a scribbled hub, standing on a short hatched base\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA running electric desk fan (three-bladed) on a table.\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/fan-gwp/reviews/critic-2.json"
+  "evidence": "shots/fan-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The animated fan keeps the doodle's lopsided outline, small tick at the top, dense scribbled hub, three curved blade lines and hatched base, so it reads as the same drawing.",
-  "evidence": "shots/fan-gwp/reviews/critic-2.json"
+  "note": "The character is clearly the c.png fan drawing (same tilted outline, hook, hub scribble and hatched base), with only minor drift in blade stroke length between frames.",
+  "evidence": "shots/fan-gwp/reviews/critic-3.json"
  }
 ]
