@@ -1,0 +1,269 @@
+{
+ "category": "flamingo",
+ "doodle_key_id": "5600573673963520",
+ "facing": -1,
+ "face_from": [
+  "chest",
+  "tail"
+ ],
+ "note": "Quick, Draw! flamingo 5600573673963520, facing left. Stroke 0 is the body, an egg drawn from the back of the neck round the tail and under the belly. Stroke 1 is the standing leg, one straight line down from the belly. Stroke 2 is the folded second leg, a triangle under the belly. Stroke 3 is the neck, a thin loop up from the front of the body; stroke 4 is the head and stroke 5 the beak. In the film the flamingo stands on one leg with its head tucked on its back, so the root places the body from chest to tail, the neck, head and beak turn together at the base of the neck so the head lies back over the body, and the standing leg turns and lengthens at the hip to reach the foot in the film.",
+ "strokes": [
+  [
+   [
+    104,
+    100
+   ],
+   [
+    176,
+    87
+   ],
+   [
+    212,
+    85
+   ],
+   [
+    230,
+    101
+   ],
+   [
+    234,
+    113
+   ],
+   [
+    234,
+    132
+   ],
+   [
+    230,
+    138
+   ],
+   [
+    218,
+    144
+   ],
+   [
+    193,
+    150
+   ],
+   [
+    132,
+    148
+   ],
+   [
+    93,
+    119
+   ],
+   [
+    89,
+    106
+   ],
+   [
+    94,
+    98
+   ]
+  ],
+  [
+   [
+    167,
+    146
+   ],
+   [
+    172,
+    180
+   ],
+   [
+    173,
+    254
+   ]
+  ],
+  [
+   [
+    153,
+    150
+   ],
+   [
+    119,
+    194
+   ],
+   [
+    216,
+    191
+   ]
+  ],
+  [
+   [
+    115,
+    88
+   ],
+   [
+    99,
+    43
+   ],
+   [
+    93,
+    14
+   ],
+   [
+    88,
+    20
+   ],
+   [
+    85,
+    38
+   ],
+   [
+    85,
+    80
+   ],
+   [
+    88,
+    97
+   ]
+  ],
+  [
+   [
+    85,
+    9
+   ],
+   [
+    83,
+    3
+   ],
+   [
+    77,
+    1
+   ],
+   [
+    53,
+    1
+   ],
+   [
+    36,
+    12
+   ],
+   [
+    33,
+    36
+   ],
+   [
+    45,
+    42
+   ],
+   [
+    57,
+    42
+   ],
+   [
+    84,
+    30
+   ],
+   [
+    96,
+    21
+   ]
+  ],
+  [
+   [
+    26,
+    26
+   ],
+   [
+    1,
+    26
+   ],
+   [
+    0,
+    32
+   ],
+   [
+    12,
+    36
+   ]
+  ]
+ ],
+ "anchors": {
+  "chest": [
+   90,
+   110
+  ],
+  "tail": [
+   234,
+   122
+  ],
+  "neck": [
+   100,
+   92
+  ],
+  "head": [
+   60,
+   20
+  ],
+  "hip": [
+   167,
+   146
+  ],
+  "foot": [
+   173,
+   254
+  ]
+ },
+ "root": [
+  "chest",
+  "tail"
+ ],
+ "size_from_mask": false,
+ "parts": [
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 6,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 9,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 3,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ]
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 2,
+   "joint": "hip",
+   "aim": [
+    "hip",
+    "foot"
+   ],
+   "stretch": 0.6
+  },
+  {
+   "rest": true,
+   "joint": "chest",
+   "aim": [
+    "chest",
+    "tail"
+   ]
+  }
+ ],
+ "size": "steady",
+ "track": false,
+ "smooth": 1.0
+}

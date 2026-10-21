@@ -3,10 +3,10 @@
  "doodle_key_id": "6409748716978176",
  "facing": -1,
  "face_from": [
-  "fwheel",
-  "rwheel"
+  "front",
+  "back"
  ],
- "note": "Quick, Draw! bus 6409748716978176, facing left. Stroke 0 is the body: a stepped front with the windshield at the left, the long roof, the back end and the bottom edge. Stroke 1 is the row of windows drawn as one zigzag line. Stroke 2 is the front wheel and stroke 3 the rear wheel, each a lumpy loop. The rig places the whole drawing by the two wheel centres, so it moves, grows and tilts with the bus as one rigid body; the two wheels turn about their own centres as the bus rolls.",
+ "note": "Quick, Draw! bus 6409748716978176, facing left. Stroke 0 is the body: a stepped front with the windshield at the left, the long roof, the back end and the bottom edge. Stroke 1 is the row of windows drawn as one zigzag line. Stroke 2 is the front wheel and stroke 3 the rear wheel, each a lumpy loop. The rig places the whole drawing by two points at mid height on its front and back ends (front and back), keyed on the front edge of the bus and its length, so it moves, grows and tilts with the bus as one rigid body; the two wheels turn about their own centres as the bus rolls.",
  "strokes": [
   [
    [
@@ -222,11 +222,19 @@
   ]
  ],
  "root": [
-  "fwheel",
-  "rwheel"
+  "front",
+  "back"
  ],
  "size_from_mask": false,
  "anchors": {
+  "front": [
+   0,
+   58
+  ],
+  "back": [
+   254,
+   58
+  ],
   "fwheel": [
    46,
    97
@@ -243,8 +251,8 @@
    "to": 11,
    "joint": "fwheel",
    "aim": [
-    "fwheel",
-    "rwheel"
+    "front",
+    "back"
    ],
    "turn": 0,
    "spin": "spin"
@@ -255,18 +263,18 @@
    "to": 11,
    "joint": "rwheel",
    "aim": [
-    "fwheel",
-    "rwheel"
+    "front",
+    "back"
    ],
    "turn": 0,
    "spin": "spin"
   },
   {
    "rest": true,
-   "joint": "fwheel",
+   "joint": "front",
    "aim": [
-    "fwheel",
-    "rwheel"
+    "front",
+    "back"
    ],
    "turn": 0
   }
