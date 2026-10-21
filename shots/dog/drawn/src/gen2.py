@@ -49,6 +49,10 @@ if __name__ == '__main__':
     for p in D.glob('k[0-9][0-9][0-9].json'):
         if str(int(p.stem[1:])) not in K: p.unlink()
     for f, k in K.items():
-        st = [s * k['s'] + k['C'] for s in key(k['rot'], k['fb'], k['face'], k.get('hl', 1.0))]
+        st = [s * k['s'] for s in key(k['rot'], k['fb'], k['face'], k.get('hl', 1.0))]
+        if 'T' in k:   # T: where the middle of the drawing's bounding box goes (read off the film's dog)
+            P = np.concatenate(st); off = np.array(k['T'], float) - (P.min(0) + P.max(0)) / 2
+        else: off = np.array(k['C'], float)
+        st = [s + off for s in st]
         json.dump({'why': k['why'], 'strokes': [np.round(s, 1).tolist() for s in st], 'extra': {}}, open(D / f'k{int(f):03d}.json', 'w'))
     print(len(K), 'keys')

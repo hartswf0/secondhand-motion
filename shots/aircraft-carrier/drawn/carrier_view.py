@@ -41,22 +41,20 @@ def ship_coords():
 
 
 UVW = ship_coords()
-# the doubled stern corner: in the doodle S0 starts a few pixels from S1's start; undoing the short oblique axis
-# spreads that gap across a fifth of the beam, so put S0's first point back next to S1's first point
 UVW[0][0] = UVW[1][0].copy()              # S0 and S1 meet in one clean stern corner
-# The doodle's hull runs under the deck to the bow. Its two strokes that end at the bow end are led to the stem's
-# foot under the middle of the bow, so seen from ahead they draw the V of the bow below the deck:
-# S2 (the near side's underside, notch kept) ends at the stem foot and its last segment climbs back to the near
-# bow corner; S3 (the bow end stroke) starts at the far bow corner on the deck and runs down to the same stem foot.
-STEM = np.array([0.97, 0.5, 1.25])
-UVW[2][4] = STEM
+# The doodle's hull runs under the deck to the bow. S2 (the underside of the near side, with its notch) is kept on
+# the near side as drawn up to the notch and then led to the stem's foot under the middle of the bow; S3 (the bow
+# end stroke) starts at the far bow corner on the deck and runs down to the same stem foot. Seen from ahead the two
+# draw the V of the bow below the deck; seen from the side, the hull's underside running forward to the stem.
+STEM = np.array([0.97, 0.5, 1.4])
+UVW[2][4] = STEM; UVW[2][5] = STEM
 UVW[3][0] = np.array([1.0, 1.0, 0.0]); UVW[3][2] = STEM
-L, BEAM, DEPTH = 4.2, 1.1, 0.45            # ship size in world units (length, beam, depth of the hull per doodle unit)
+L, BEAM, DEPTH = 4.2, 1.1, 0.40            # ship size in world units (length, beam, depth of the hull per doodle unit)
 PITCH = np.radians(8)                       # camera looks down at this angle
 DIST = 30.0                                 # camera distance from the ship's centre
 
 
-STRUCT = [[0, 1, 3], [0, 5, 7], [0, 4, 5], [0, 1, 2], [0, 2]]   # per stroke: the corners that are placed in 3D
+STRUCT = [[0, 1, 3], [0, 5, 7], [0, 1, 2, 3, 4, 5], [0, 1, 2], [0, 2]]   # per stroke: the corners that are placed in 3D
 DOODLE = [np.array(s, float) for s in D]
 
 
