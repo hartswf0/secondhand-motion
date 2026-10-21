@@ -77,7 +77,6 @@ for f in range(n):
         return math.asin(max(-1.0, min(1.0, (tx - cx) / hw)))
     for k in range(N):
         a0 = -math.pi + (k + 0.5) * 2 * math.pi / N + turn[f]
-        a0 = (a0 + math.pi) % (2 * math.pi) - math.pi
         L, LW, LH, Y0 = MARKS[k % 2]
         for j, s in enumerate(L):
             pts = []

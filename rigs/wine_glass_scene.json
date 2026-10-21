@@ -2,62 +2,62 @@
  "z_ref": 2,
  "camera": {
   "x": [
-   0.0,
-   -7.5,
-   -12.39,
-   -16.28,
-   -17.47,
-   -12.89,
-   -2.57,
-   10.13,
-   14.73,
-   18.45,
-   20.21,
-   21.44,
-   21.03,
-   15.68,
-   8.9,
-   -2.71,
-   -8.42,
-   -13.07,
-   -15.06,
-   -16.09,
-   -15.95,
-   -15.74,
-   -15.7,
-   -16.22,
-   -15.89,
-   -15.4
+   -2.56,
+   -6.95,
+   -11.7,
+   -14.84,
+   -14.83,
+   -10.32,
+   -1.83,
+   7.3,
+   13.79,
+   17.61,
+   19.77,
+   20.49,
+   19.02,
+   14.57,
+   7.41,
+   -0.8,
+   -7.51,
+   -11.95,
+   -14.47,
+   -15.59,
+   -15.86,
+   -15.82,
+   -15.86,
+   -15.94,
+   -15.81,
+   -15.56
   ],
   "y": [
-   0.0,
-   -3.28,
-   -3.56,
-   -3.44,
-   -4.07,
-   -4.33,
-   -4.65,
-   -8.16,
-   -11.65,
-   -13.34,
-   -13.47,
-   -13.75,
-   -13.4,
-   -12.96,
-   -12.38,
-   -11.48,
-   -11.04,
-   -10.64,
-   -10.64,
-   -11.48,
-   -11.55,
+   -1.0,
+   -2.37,
+   -3.29,
+   -3.65,
+   -4.0,
+   -4.53,
+   -5.8,
+   -8.23,
+   -10.91,
+   -12.67,
+   -13.38,
+   -13.52,
+   -13.32,
+   -12.88,
+   -12.28,
+   -11.63,
+   -11.11,
+   -10.84,
+   -10.93,
+   -11.3,
+   -11.76,
    -12.32,
-   -13.03,
-   -13.57,
-   -13.22,
-   -13.09
+   -12.91,
+   -13.25,
+   -13.25,
+   -13.15
   ],
-  "source": "shots/wine-glass-sam/camera.json, the shift measured from the footage; the glass keeps one place in these coordinates on every frame, so the camera is a pan with a slight zoom"
+  "source": "shots/wine-glass-sam/camera.json (shift measured from the footage), smoothed with a Gaussian of 1 frame to take out frame-to-frame jitter; the glass keeps one place in these coordinates on every frame, so the camera is a pan with a slight zoom"
  },
  "planes": [
   {
@@ -140,12 +140,22 @@
       92
      ],
      [
+      93,
+      92
+     ]
+    ],
+    [
+     [
+      289,
+      92
+     ],
+     [
       470,
       93
      ]
     ]
    ],
-   "why": "the top edge of the long pink counter behind the box; no Quick, Draw! category is a plain counter edge"
+   "why": "the top edge of the long pink counter behind the box; no Quick, Draw! category is a plain counter edge; drawn only outside the box, because inside the frosted box the counter is faint and the line would cross the glass"
   },
   {
    "id": "counter_rail",
@@ -158,12 +168,22 @@
       111
      ],
      [
+      93,
+      111
+     ]
+    ],
+    [
+     [
+      289,
+      111
+     ],
+     [
       470,
       112
      ]
     ]
    ],
-   "why": "the pale stripe along the front of the same counter"
+   "why": "the pale stripe along the front of the same counter; drawn only outside the box, because inside the frosted box the counter is faint and the line would cross the glass"
   },
   {
    "id": "counter_low",
@@ -176,12 +196,22 @@
       160
      ],
      [
+      93,
+      160
+     ]
+    ],
+    [
+     [
+      289,
+      160
+     ],
+     [
       470,
       161
      ]
     ]
    ],
-   "why": "the lower seam of the counter front"
+   "why": "the lower seam of the counter front; drawn only outside the box, because inside the frosted box the counter is faint and the line would cross the glass"
   },
   {
    "id": "rod00",
