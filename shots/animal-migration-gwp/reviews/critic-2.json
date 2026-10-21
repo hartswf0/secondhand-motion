@@ -1,0 +1,24 @@
+{
+ "seen_animation": "a.png: Frames 1-2 show a grey scenery of three simple trees and bushes on a ground line at the top, with a band of many black M-shaped bird doodles packed in rows on a strip below it, above grey water lines. Frames 3-4 the birds begin to rise; some now overlap the ground line and the tree trunks. Frames 5-7 the scenery is redrawn larger (camera closer and tilted up): trees fill the frame, birds are spread among the trunks and crowns, with a cluster still below the ground line at lower left. Frames 8-12 the ground line sits near the bottom and the birds fill the upper two thirds of the frame among the tree crowns. Frames 13-16 the trees are larger again and the birds are spread across the top half of the frame, as a flock in the sky above the treeline.",
+ "seen_film": "d.png: Frames 1-3 a large flock of dark geese sits on a strip of ground/water edge below a brown reed bank and bare trees, with a pale water band at the bottom; a few birds lift off. Frame 4 many birds are in the air just above the flock. Frames 5-8 the camera tilts up and follows; the flock rises through the reeds and in front of the trees, with the remaining birds on the ground at the bottom. Frames 9-12 the camera is pointed higher; the flock fills the sky above the reeds and a bush. Frames 13-16 the flock flies across the sky in front of bare trees, the reed bank at the bottom.",
+ "named_subject": "A flock of geese (M-shaped bird marks) taking off from the ground and flying up into the sky.",
+ "verdict": "reference stronger",
+ "evidence": "Event and timing match broadly: e1-e8 birds sit in rows below the ground line as in f1-f8; e9-e16 birds lift above the ground line while f9-f16 shows lift-off; e17-e24 the scenery is enlarged and birds are among the trees as f17-f24 tilts up; e25-e56 birds fill the upper frame over trees as in f25-f56. Problems: e16->e17 the trees and ground line jump to a much larger scale in one frame and the bird band jumps with it; e24->e25 the scenery changes again (water lines reappear at the top of the cell, ground line drops) and bird positions reshuffle; in e17-e24 a cluster of birds is drawn below the ground line in white space where the film shows birds on the ground under the trees, so they read as floating; across e25-e56 individual M marks do not hold a consistent position from frame to frame and the flock reads as reshuffled rather than travelling; in many frames (e.g. e20, e24, e33, e45) M marks overlap each other into clotted doubled shapes. g.png shows a general upward drift but no traceable individual paths. Judged from still frames only, not playback.",
+ "primary_gap": "Individual bird marks are not carried continuously from frame to frame, so the flock reshuffles and pops (most visibly at e16->e17 and e24->e25) instead of reading as birds flying upward.",
+ "closes_when": "Each M mark can be followed across consecutive e.png frames moving a small step upward and sideways in the same direction, with no change of count, overlap clot, or reposition at e17 and e25.",
+ "protect": "The c.png stroke style of simple open M/arch birds in small clustered groups; the overall timing of sitting band (e1-e8), lift-off (e9-e16), rising among trees (e17-e24) and sky-filling flock (e25-e56); the sparse grey tree scenery and the upward camera move that matches the film.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  9,
+  17,
+  25,
+  33
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The birds use the doodle's open single-stroke M and arch shapes in small groups, though in dense frames overlapping marks merge into clotted shapes the doodle does not have.",
+ "still_frames_only": true,
+ "_packet": "lot532d5f4e",
+ "_round": 2
+}

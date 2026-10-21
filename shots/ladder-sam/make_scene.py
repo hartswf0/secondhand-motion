@@ -61,15 +61,16 @@ def contact(f,limb):
         if f>=f1: p=q; continue
         if f>f0:
             t=(f-f0)/(f1-f0); t=t*t*(3-2*t); lift=math.sin(math.pi*t)
-            out={'lf':(-1.6,-4.0),'rf':(-1.6,-4.0),'lh':(-10.0,-3.0),'rh':(10.0,-2.0)}[limb]   # a foot comes up off its rung; a hand swings out to its own side, clear of the head
+            out={'lf':(-1.6,-4.0),'rf':(-1.6,-4.0),'lh':(-5.0,-3.0),'rh':(6.0,-2.0)}[limb]   # a foot comes up off its rung; a hand swings out to its own side, clear of the head
             return p+(q-p)*t+np.array(out)*lift
         break
     return p
 PREV={}
-def joint(p,q,L,prefer,key=None):
+def joint(p,q,L,prefer,key=None,fore=False):
     # the elbow or knee: keeps a slight bend even at full reach, and stays on the side it was on in the previous frame
     d=q-p; D=max(np.hypot(*d),1e-6); D2=min(D,2*L*0.97)
     h=math.sqrt(max(L*L-(D2/2)**2,0)); m=p+d/D*(D2/2); nrm=np.array([-d[1],d[0]])/D
+    if fore: h=min(h,0.45*D+4)   # an arm whose hand is close to the shoulder is reaching into the ladder (toward the haystack), so it is foreshortened, not folded out sideways
     a,b=m+nrm*h,m-nrm*h
     pick=a if prefer(a)>=prefer(b) else b
     if key is not None and key in PREV:
@@ -102,7 +103,7 @@ def man(f):
     st+=hand([N,P])                                                                                                   # body: one line
     S=N+ax*3
     for limb in ('lh','rh'):
-        q=contact(f,limb); sg=-1 if limb=='lh' else 1; e=joint(S,q,30,lambda z,sg=sg: z[1]+sg*0.3*z[0]); st+=hand([S,e,q])   # the elbow hangs down and out on its own side (left elbow left, right elbow right)
+        q=contact(f,limb); sg=-1 if limb=='lh' else 1; e=joint(S,q,30,lambda z,sg=sg: z[1]+sg*0.3*z[0],fore=True); st+=hand([S,e,q])   # the elbow hangs down and out on its own side (left elbow left, right elbow right)
     for limb,sg in (('lf',1),('rf',-1)):
         q=contact(f,limb); Hp=P-np.array([2.5*sg,0.0])
         D=np.hypot(*(q-Hp))
@@ -124,7 +125,7 @@ S={"z_ref":2,
            {"id":"char","z":2,"label":"Ladder and the man climbing it"},
            {"id":"ground","z":1.8,"label":"Sand in front","z_from_depth":"bottom"}],
  "objects":objs,
- "notes":{"0":"the ladder leans against the haystack; a man walks in from the left","4":"he reaches the ladder and takes the left rail with his right hand","6":"right foot on the bottom rung","8":"first push: he steps up, left foot on the second rung","16":"halfway up, one rung at a time, hand then foot","26":"a push brings his head level with the top of the ladder","32":"the last push stands him up at the top of the ladder, feet on the top-but-one rung, hands on the top","37":"he stands at the top of the ladder against the haystack, head inside the frame"},
+ "notes":{"0":"the ladder leans against the haystack; a man walks in from the left","4":"he reaches the ladder and takes the left rail with his right hand","6":"right foot on the bottom rung","8":"first push: he steps up, left foot on the second rung","16":"halfway up, one rung at a time, hand then foot","26":"a push brings his head level with the top of the ladder","32":"the last push brings him to the top of the ladder, feet on the top-but-one rung, hands on the tops of the rails","37":"he stays bent forward over the top of the ladder against the haystack, head inside the frame"},
  "no_cel":"the SAM mask covers the man in most frames, so cel paint would erase the man and leave the ladder alone"}
 json.dump(S,open(R+'rigs/ladder_scene.json','w'),indent=1)
 print(len(objs))

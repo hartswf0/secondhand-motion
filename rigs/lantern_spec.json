@@ -6,7 +6,7 @@
   "base",
   "base"
  ],
- "note": "Quick, Draw! lantern 6354663194492928 (Vietnam): stroke 0 is the body, a tall box drawn as one line from the middle of the left side down, across the bottom, up the right side, across the top and back down the left; stroke 1 is the domed cap on top of the box; stroke 2 is a horizontal band across the body; strokes 3 and 4 are two vertical bars inside the body. The whole drawing is placed by two points, the middle of the bottom edge (base) and the middle of the top edge of the box (shoulder), so it rises, sways and tilts with the safety lamp held in the miner's hand. The cap turns a little on its own about the shoulder toward the hook point, as the lamp's bail and hook rock above the cage.",
+ "note": "Quick, Draw! lantern 6354663194492928 (Vietnam): stroke 0 is the body, a tall box drawn as one line from the middle of the left side down, across the bottom, up the right side, across the top and back down the left; stroke 1 is the domed cap on top of the box; stroke 2 is a horizontal band across the body; strokes 3 and 4 are two vertical bars inside the body. The safety lamp in the film is rigid, so the drawing is moved whole: it is placed by two points, the top of the cap (top, on the lamp's hook knob) and the middle of the bottom edge (base, where the lamp goes into the miner's fist), so it rises, slides, sways and tilts with the lamp and keeps one size.",
  "strokes": [
   [
    [
@@ -148,38 +148,23 @@
    85,
    250
   ],
-  "shoulder": [
-   71,
-   75
-  ],
-  "hook": [
+  "top": [
    88,
    0
   ]
  },
  "root": [
   "base",
-  "shoulder"
+  "top"
  ],
  "size_from_mask": false,
  "parts": [
-  {
-   "stroke": 1,
-   "from": 0,
-   "to": 9,
-   "joint": "shoulder",
-   "aim": [
-    "shoulder",
-    "hook"
-   ],
-   "turn": 0.5
-  },
   {
    "rest": true,
    "joint": "base",
    "aim": [
     "base",
-    "shoulder"
+    "top"
    ],
    "turn": 0
   }

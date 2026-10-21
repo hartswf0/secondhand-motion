@@ -1,0 +1,26 @@
+{
+ "seen_animation": "a.png frames 1-3: a closed, tilted book drawn as long diagonal edge lines with short dash marks on its face, a grey triangle of paper behind it at top left, and a small mitten-like hand at the lower right edge. Frame 4: the hand has grown and moved up onto the middle of the book. Frames 5-6: the hand is now at the left side of the book and the book's right part has become a larger rectangular page shape; the grey paper is still there. Frame 7: the grey paper is gone, the hand sits at the top-left corner with fingers up, and the book is now an open book seen as a diamond, two pages split by a double spine line with a tail. Frame 8: same, hand still at top left. Frames 9-16: the hand is gone and the open book holds still in the same place.",
+ "seen_film": "d.png frames 1-3: a hand with red nails holds the lower-right edge of a closed black binder labelled Federal Reserve Regulations on a desk, white paper behind it at top left. Frame 4: the hand begins lifting the cover at the right. Frames 5-6: the cover swings up and over toward the upper left, blurred, the hand travelling with it, white pages appearing underneath. Frames 7-8: the cover is gone off the left, the hand pushes a standing stack of pages over to the left. Frame 9: the hand leaves at top left. Frames 10-16: the binder lies open, pages slowly settling, with a small drift of the camera.",
+ "named_subject": "an open book (a binder of regulations) with a hand opening its cover",
+ "verdict": "reference stronger",
+ "evidence": "e.png 1-5 hold the closed book with the hand at lower right while f.png 1-5 also hold, which matches. e.png 6: the hand jumps from the lower-right edge to the centre of the cover and doubles in size in one frame, while in f.png 6 the hand has only begun to rise. e.png 7: the hand redraws in a new pose with a vertical line through it. e.png 8: the closed book is replaced by a different, larger page outline and the hand jumps to the left edge; no cover is seen swinging over, whereas f.png 7-10 show the black cover arcing up and over to the upper left. e.png 9: the hand drops to lower left and the book outline shifts again. e.png 10: the grey paper vanishes, the hand teleports to the top-left corner in a new upright pose, and the book snaps into the open diamond drawing in one frame. e.png 10-13 the hand is frozen at top left while in f.png 11-14 the hand is pushing pages across. e.png 14: the hand disappears in one frame with no exit motion; f.png 14-15 show it sliding off. e.png 14-26 hold the open book completely still while f.png 15-26 show pages settling and a slight drift. g.png shows the hand positions scattered (bottom right, centre, left, top left) with no connecting path. The broad timing (closed, opening around frames 6-10, open from about 14) matches the film.",
+ "primary_gap": "The cover never visibly turns: the book swaps from the closed drawing to the open drawing between e.png 7 and 10 by redrawing, and the hand teleports between four separate positions instead of travelling with the cover.",
+ "closes_when": "Across e.png 6-12 an outline of the cover is seen rotating about the left spine edge from lying flat to standing up to falling left, with the hand attached to its free edge and moving a short, consistent distance each frame from lower right to upper left before sliding out over 2-3 frames.",
+ "protect": "The open-book drawing in e.png 10-26 closely matches c.png (diamond page outline, double spine line with a tail running past the bottom edge, short dash marks on each page, the small hook at the left corner); the overall placement and timing of closed, opening and open phases matches the film; the line style is sparse and loose like the doodle.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  7,
+  8,
+  9,
+  10,
+  14
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The open book from e.png 10 onward is the c.png drawing, but the closed book in e.png 1-9 is a different, busier construction of many parallel diagonal strokes that does not share c.png's single outline and spine, so the book changes identity when it opens.",
+ "still_frames_only": true,
+ "_packet": "lot8dd60972",
+ "_round": 1
+}

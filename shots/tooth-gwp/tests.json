@@ -7,41 +7,45 @@
   "per_key": [
    4,
    3,
-   3,
-   3,
-   3,
-   3,
-   3,
-   4,
-   4,
-   4,
-   3,
-   3,
+   2,
+   2,
+   2,
+   2,
    3,
    3,
    4,
-   4
+   4,
+   4,
+   4,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3
   ]
  },
  {
   "id": "M2b",
-  "value": 0.53,
+  "value": 0.68,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 4
  },
  {
   "id": "M3",
-  "value": 0.34,
+  "value": 0.29,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.03
+  "min": 0.02
  },
  {
   "id": "M6",
-  "value": 2.8,
+  "value": 20.1,
   "unit": "px jerk (drawing centre)",
-  "ok": true
+  "ok": false
  },
  {
   "id": "T3",

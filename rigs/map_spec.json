@@ -6,7 +6,7 @@
   "L",
   "L"
  ],
- "note": "Quick, Draw! map 5040573540990976 (Czech Republic). Stroke 0 is the sheet itself: one closed outline, a box with rounded corners about 255 wide and 168 tall. Strokes 1 to 5 are the marks drawn on the sheet: stroke 1 a stepped line down the left side (a road or border), stroke 2 a short line at the lower left, stroke 3 a looping line across the upper right (a river), strokes 4 and 5 two short lines in the lower middle. In the film the map is a flat photographic print: the man on the left brings it in tilted, turns it level and presses it to the wall, then both men point at it while it stays still. Nothing on the sheet bends, so the rig is rigid: the whole doodle is placed by two points, the middle of the left edge and the middle of the right edge of the sheet, which set its place, its tilt and its size. In the first frames, where the print is held at an angle to the camera and looks narrower, the pose entry _xscale narrows the drawing a little.",
+ "note": "Quick, Draw! map 5040573540990976 (Czech Republic). Stroke 0 is the sheet itself: one closed outline, a box with rounded corners about 255 wide and 168 tall. Strokes 1 to 5 are the marks drawn on the sheet: stroke 1 a stepped line down the left side (a road or border), stroke 2 a short line at the lower left, stroke 3 a looping line across the upper right (a river), strokes 4 and 5 two short lines in the lower middle. In the film the map is a flat photographic print: the man on the left brings it in tilted, turns it level and presses it to the wall, then both men point at it while it stays still. Nothing on the sheet bends, so the rig is rigid: the whole doodle is placed by two points, the middle of the left edge and the middle of the right edge of the sheet, which set its place, its tilt and its size. In the first frames, where the print is held at an angle to the camera and looks narrower, the pose entry _xscale narrows the drawing a little. Keys were placed from the print's measured outline (a fitted rectangle on the SAM outline: centre, tilt of the long edge, and its visible length for the narrowing) and checked on the key grids; in the last two frames SAM covered the whole wall, so those keys hold the print where it was pressed. Optical-flow tracking is off: it changed the pops by less than 0.001, and the hands cover the print while the men point.",
  "strokes": [
   [
    [
@@ -267,9 +267,9 @@
  "size": "steady",
  "options": {
   "size": "steady",
-  "smooth": 1.2,
+  "smooth": 1.6,
   "track": false
  },
  "track": false,
- "smooth": 1.2
+ "smooth": 1.6
 }

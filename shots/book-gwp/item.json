@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0185",
+ "id": "book-gwp",
+ "kind": "shot",
+ "title": "Book, the Giraffe Walks Past Way",
+ "category": "book",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/book-gwp/cover.png",
+ "cover_alt": "shots/book-gwp/frames/f010.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/book-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#book-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/book_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/book/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/book-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}
