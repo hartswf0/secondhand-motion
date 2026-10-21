@@ -1,7 +1,7 @@
 [
  {
   "id": "M2",
-  "value": 10,
+  "value": 11,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
@@ -10,20 +10,21 @@
    14,
    14,
    14,
-   14,
-   14,
-   12,
+   9,
+   10,
    8,
    7,
-   5,
+   15,
+   12,
+   10,
+   8,
    4,
-   4,
-   4
+   7
   ]
  },
  {
   "id": "M2b",
-  "value": 0.8,
+  "value": 0.76,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 13
@@ -36,9 +37,9 @@
  },
  {
   "id": "M6",
-  "value": 2.1,
+  "value": 6.2,
   "unit": "px jerk (drawing centre)",
-  "ok": true
+  "ok": false
  },
  {
   "id": "T3",
@@ -56,7 +57,7 @@
  },
  {
   "id": "S2",
-  "value": "rig quickdraw:6643650639429632; scenery quickdraw:5912319831834624, quickdraw:4979217567580160, quickdraw:6557173054177280, quickdraw:4759138007515136, drawn by agent: the top edge of the rock ledge both lions lie on; no Quick, Draw! category is a rock ledge, drawn by agent: the foot of the rock face, where the grass starts; no Quick, Draw! category is a rock ledge, quickdraw:5095253159706624, quickdraw:6686884283547648, quickdraw:6672611050258432, quickdraw:5401520432480256, quickdraw:6643650639429632 (a second copy of the character's rig, keyed in shots/lion-sam/lionA_poses.json)",
+  "value": "rig quickdraw:6643650639429632; scenery quickdraw:5912319831834624, quickdraw:4979217567580160, quickdraw:6557173054177280, quickdraw:4759138007515136, drawn by agent: the top edge of the rock ledge both lions lie on; no Quick, Draw! category is a rock ledge, drawn by agent: the foot of the rock face, where the grass starts; no Quick, Draw! category is a rock ledge, quickdraw:5095253159706624, quickdraw:6686884283547648, quickdraw:6672611050258432, quickdraw:5401520432480256, quickdraw:6643650639429632 (a second copy of the character's rig, keyed in shots/lion-sam/lionA_poses_v2.json)",
   "unit": "",
   "ok": true
  },

@@ -270,8 +270,8 @@
   {
    "id": "lion2",
    "plane": "char",
-   "why": "the first lion, which lies still on the ledge in profile, turns its head toward the camera at frames 10 to 12 and leaves the frame at the right as the camera pans; the character's own doodle drawn by rigs/lion.py. Its head turn is keyed by eye at frames 0, 10, 11, 12 and 31; its place is one spot on the ledge plus the measured camera on every frame, because the char plane is in frame coordinates",
-   "rig_poses": "shots/lion-sam/lionA_poses.json"
+   "why": "the first lion, which lies still on the ledge in profile looking right and leaves the frame at the right as the camera pans; the character's own doodle drawn by rigs/lion.py. It keeps the profile head (look 1) on every frame, because in the film its head stays turned to the right until it is cut off by the frame edge (v1 turned it to the camera at frames 10 to 12, which took the head drawing apart); its place is one spot on the ledge plus the measured camera on every frame, because the char plane is in frame coordinates",
+   "rig_poses": "shots/lion-sam/lionA_poses_v2.json"
   }
  ],
  "notes": {
@@ -282,7 +282,7 @@
   "20": "the lion turns its head to the right",
   "24": "the lion looks right in profile",
   "31": "the lion lies still in profile",
-  "11": "the first lion turns its head toward the camera"
+  "11": "the first lion keeps looking right as it nears the right edge"
  },
  "no_cel": "SAM follows the other lion until frame 16 and then this one, so the cel paint would cover the other lion's lines"
 }

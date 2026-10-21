@@ -1,21 +1,20 @@
 [
  {
   "id": "M2",
-  "value": 92,
+  "value": 91,
   "unit": "percentile among real doodles of the category",
   "ok": true,
   "per_key": [
+   91,
+   91,
+   91,
+   91,
+   91,
+   91,
    92,
    92,
-   92,
-   92,
-   92,
-   92,
-   92,
-   92,
-   92,
-   92,
-   92
+   91,
+   91
   ]
  },
  {
@@ -34,9 +33,9 @@
  },
  {
   "id": "M6",
-  "value": 16.4,
+  "value": 0.8,
   "unit": "px jerk (drawing centre)",
-  "ok": false
+  "ok": true
  },
  {
   "id": "T3",
@@ -79,17 +78,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca spider (round body with short leg lines radiating from it) hanging on web threads\u201d; motion broken; follows the film: partly",
+  "value": "named \u201ca spider: an oval body with short legs on both sides, sitting where two web threads meet\u201d; motion smooth; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/spider-gwp/reviews/critic-1.json"
+  "evidence": "shots/spider-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The body oval, the long lower-left leg pair, and the short upper-right leg strokes match c.png closely. The drawing is smaller and slightly tilted, and a few leg ends are shortened, but it reads as the same doodle.",
-  "evidence": "shots/spider-gwp/reviews/critic-1.json"
+  "note": "The animated body and leg strokes match the doodle's lumpy oval, the gaps at the top of the outline and the uneven long and short legs, so the gap is small.",
+  "evidence": "shots/spider-gwp/reviews/critic-2.json"
  }
 ]
