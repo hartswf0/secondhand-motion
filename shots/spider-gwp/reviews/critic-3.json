@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A black oval body with straight single-stroke legs sits at the center of the frame, with a grey line running from the body to the top-right corner, a short grey line at upper left, and two grey leaves (top center, bottom left). Frames 1-4: legs are short and bunched, mostly on the right side, with two legs hanging straight down. Frames 5-8: the body stays in place while legs lengthen and spread; long legs reach down-left toward the lower leaf and down-right. Frames 9-12: a left leg rises upward-left as a bent stroke, a long leg points down-left, two legs hang straight down. Frames 13-16: the upper-left leg is now a long bent stroke that reaches toward the top-left edge of the frame, ending near the upper-left grey line; the rest of the pose holds with small changes.",
+ "seen_film": "A striped orb-weaver spider hangs in a web in front of a blurred dark background, near the center of the frame. Frames 1-4: legs are drawn in close to the body. Frames 5-8: the spider sits slightly lower and spreads its legs outward, left legs extending down-left and right legs out to the right. Frames 9-12: legs are fully spread in a wide star; the front-left leg points up. Frames 13-16: a silk line from the top-left corner runs down to the spider's raised front-left leg, which is extended along that line toward upper left; the body holds roughly the same position throughout.",
+ "named_subject": "a spider",
+ "verdict": "reference stronger",
+ "evidence": "The overall arc matches: tucked legs in 1-4 (film 1-4 also tucked), spreading in 5-8, a raised left leg in 9-12, and a long upper-left leg reaching along a line toward the top-left in 13-16 (film 13-16 shows the silk line from top-left to the raised leg). Body position is held near center as in the film. But the leg spread arrives as a sudden reconfiguration between frames 4 and 5 (new long down-left legs appear at once), and between frames 12 and 13 the upper-left leg jumps from a short bent stroke to a stroke nearly twice as long reaching the frame edge. The leg count also changes from frame to frame (about 7 in 1-4, about 8-9 in 9-12), so legs appear and vanish rather than move. In the film the right-side legs extend wide and out to the right in 9-16; in the animation the right legs stay short and bunched against the grey line.",
+ "primary_gap": "Legs change length and count abruptly between frames 4-5 and 12-13 instead of extending gradually, so the spreading and reaching read as pose swaps rather than one continuous movement.",
+ "closes_when": "Each leg stroke keeps its identity and attachment point across all 16 frames, with the down-left legs lengthening a little per frame from 3 to 7 and the upper-left leg lengthening steadily from 9 to 14 so no frame pair shows a leg doubling in length or appearing from nothing.",
+ "protect": "The doodle's lumpy single-stroke oval body and straight unjointed leg strokes; the body held stationary near frame center as in the film; the timing of tucked legs (1-4), spread (5-12) and the upper-left reach along the silk line (13-16); the sparse grey scenery.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character keeps the doodle's irregular oval body and straight stroke legs with a short bent leg at the top, though the right-side legs are shorter and more bunched than in the doodle and the film.",
+ "still_frames_only": true,
+ "_packet": "lota6ef8e0f",
+ "_round": 3
+}
