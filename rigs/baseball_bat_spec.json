@@ -1,0 +1,149 @@
+{
+ "category": "baseball bat",
+ "doodle_key_id": "5597649845616640",
+ "facing": 1,
+ "face_from": [
+  "knob",
+  "barrel"
+ ],
+ "note": "Quick, Draw! baseball bat 5597649845616640, drawn with the barrel at upper left and the handle at lower right. Stroke 3 is the outline of the whole bat, from the handle up along the top edge to the rounded barrel end and back along the bottom edge. Strokes 0, 1 and 2 are the knob at the handle end. Strokes 4 and 5 are two short cross marks on the handle, like grip tape. The bat is rigid in the film, so the rig has no joints: the whole drawing is placed by two points, the centre of the barrel end and the knob, which sets where it is, how long it is and its tilt as the boy swings it from a slant to level and turns it.",
+ "strokes": [
+  [
+   [
+    255,
+    103
+   ],
+   [
+    254,
+    112
+   ],
+   [
+    249,
+    121
+   ],
+   [
+    235,
+    127
+   ]
+  ],
+  [
+   [
+    235,
+    124
+   ],
+   [
+    237,
+    113
+   ]
+  ],
+  [
+   [
+    252,
+    99
+   ],
+   [
+    246,
+    101
+   ]
+  ],
+  [
+   [
+    246,
+    106
+   ],
+   [
+    166,
+    61
+   ],
+   [
+    48,
+    9
+   ],
+   [
+    10,
+    0
+   ],
+   [
+    6,
+    2
+   ],
+   [
+    0,
+    24
+   ],
+   [
+    2,
+    41
+   ],
+   [
+    48,
+    47
+   ],
+   [
+    155,
+    93
+   ],
+   [
+    178,
+    96
+   ],
+   [
+    219,
+    115
+   ],
+   [
+    244,
+    119
+   ]
+  ],
+  [
+   [
+    222,
+    93
+   ],
+   [
+    215,
+    107
+   ]
+  ],
+  [
+   [
+    202,
+    85
+   ],
+   [
+    194,
+    94
+   ]
+  ]
+ ],
+ "root": [
+  "barrel",
+  "knob"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "barrel": [
+   3,
+   22
+  ],
+  "knob": [
+   250,
+   112
+  ]
+ },
+ "parts": [
+  {
+   "rest": true,
+   "joint": "barrel",
+   "aim": [
+    "barrel",
+    "knob"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "smooth": 1.0,
+ "track": false
+}

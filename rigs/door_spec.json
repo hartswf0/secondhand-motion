@@ -1,0 +1,244 @@
+{
+ "category": "door",
+ "doodle_key_id": "6107831826644992",
+ "facing": 1,
+ "face_from": [
+  "latch",
+  "hinge"
+ ],
+ "strokes": [
+  [
+   [
+    7,
+    8
+   ],
+   [
+    0,
+    162
+   ],
+   [
+    4,
+    217
+   ],
+   [
+    14,
+    255
+   ],
+   [
+    20,
+    248
+   ],
+   [
+    78,
+    245
+   ],
+   [
+    138,
+    234
+   ],
+   [
+    172,
+    223
+   ],
+   [
+    180,
+    216
+   ],
+   [
+    169,
+    175
+   ],
+   [
+    157,
+    41
+   ],
+   [
+    148,
+    16
+   ],
+   [
+    138,
+    5
+   ],
+   [
+    129,
+    0
+   ],
+   [
+    66,
+    7
+   ],
+   [
+    31,
+    4
+   ]
+  ],
+  [
+   [
+    136,
+    112
+   ],
+   [
+    129,
+    112
+   ],
+   [
+    124,
+    116
+   ],
+   [
+    121,
+    132
+   ],
+   [
+    130,
+    142
+   ],
+   [
+    144,
+    139
+   ],
+   [
+    147,
+    125
+   ],
+   [
+    138,
+    116
+   ]
+  ],
+  [
+   [
+    35,
+    45
+   ],
+   [
+    37,
+    81
+   ],
+   [
+    41,
+    88
+   ],
+   [
+    47,
+    92
+   ],
+   [
+    85,
+    90
+   ],
+   [
+    133,
+    81
+   ],
+   [
+    120,
+    39
+   ],
+   [
+    113,
+    29
+   ],
+   [
+    79,
+    27
+   ],
+   [
+    46,
+    36
+   ]
+  ],
+  [
+   [
+    118,
+    166
+   ],
+   [
+    50,
+    173
+   ],
+   [
+    47,
+    184
+   ],
+   [
+    48,
+    195
+   ],
+   [
+    58,
+    221
+   ],
+   [
+    63,
+    224
+   ]
+  ]
+ ],
+ "anchors": {
+  "hinge": [
+   2,
+   130
+  ],
+  "latch": [
+   166,
+   130
+  ],
+  "hinge_top": [
+   7,
+   8
+  ],
+  "latch_top": [
+   150,
+   18
+  ],
+  "hinge_bot": [
+   14,
+   250
+  ],
+  "latch_bot": [
+   178,
+   220
+  ]
+ },
+ "root": [
+  "hinge",
+  "latch"
+ ],
+ "size_from_mask": false,
+ "foreshorten": [
+  0.12,
+  1.3
+ ],
+ "max_tilt": 20,
+ "parts": [
+  {
+   "region": [
+    -10,
+    -10,
+    300,
+    108
+   ],
+   "joint": "hinge_top",
+   "aim": [
+    "hinge_top",
+    "latch_top"
+   ],
+   "stretch": 1.0
+  },
+  {
+   "rest": true,
+   "joint": "hinge_bot",
+   "aim": [
+    "hinge_bot",
+    "latch_bot"
+   ],
+   "stretch": 1.0
+  }
+ ],
+ "note": "Quick, Draw! door 6107831826644992, hinge on the left: stroke 0 is the door outline, stroke 1 the round knob, stroke 2 the window at the top, stroke 3 a kick-plate mark near the bottom left. The root runs from the middle of the hinge edge to the middle of the latch edge; the door's height is held by a fixed _scale in every key, and the hinge-to-latch width shortens as the door swings toward edge-on, so the drawing narrows about its hinge the way the film's door does. The upper half (window and top edge) turns about the top hinge toward the pose's top latch corner and the lower half (knob, kick plate, bottom edge) about the bottom hinge toward the bottom latch corner, both stretching, so the latch edge can grow taller than the hinge edge when it swings toward the camera.",
+ "size": "steady",
+ "smooth": 1.0,
+ "track": false
+}

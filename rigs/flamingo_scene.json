@@ -1,0 +1,195 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0,
+   20,
+   40,
+   56,
+   75,
+   88,
+   104,
+   117,
+   132,
+   143,
+   154,
+   163,
+   168,
+   171,
+   171,
+   169,
+   166,
+   165,
+   164,
+   163,
+   161,
+   161,
+   160,
+   160,
+   162,
+   163
+  ],
+  "y": [
+   0,
+   0,
+   -2,
+   -3,
+   -2,
+   0,
+   2,
+   3,
+   4,
+   5,
+   5,
+   5,
+   4,
+   4,
+   4,
+   3,
+   3,
+   2,
+   1,
+   2,
+   3,
+   4,
+   3,
+   4,
+   4,
+   3
+  ],
+  "source": "template match of a patch of sunlit ground (frame 13, x 180-300, y 200-280) in every frame, correlation 0.92 to 1.0; camera.json reads zero for frames 0 and 1 while the ground already moves 20 px, so the ground track is used instead"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 2.1,
+   "label": "Tree trunk behind the bird (set by measurement: the trunk slides the same 170 px as the ground, the camera only pans)"
+  },
+  {
+   "id": "ground",
+   "z": 2,
+   "label": "Ground of the enclosure"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Flamingo"
+  },
+  {
+   "id": "fence",
+   "z": 1.9,
+   "label": "Wire fence in front of the bird"
+  }
+ ],
+ "objects": [
+  {
+   "id": "tree",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    140,
+    -120,
+    230,
+    82
+   ],
+   "strokes": 3,
+   "aspect": 0.45
+  },
+  {
+   "id": "ground",
+   "plane": "ground",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a ground line; this is the edge of the sunlit sand the flamingo stands on",
+   "strokes": [
+    [
+     [
+      -60,
+      224
+     ],
+     [
+      120,
+      222
+     ],
+     [
+      300,
+      225
+     ],
+     [
+      600,
+      223
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "fence1",
+   "plane": "fence",
+   "qd": "fence",
+   "box": [
+    -60,
+    150,
+    90,
+    215
+   ],
+   "strokes": 4
+  },
+  {
+   "id": "fence2",
+   "plane": "fence",
+   "qd": "fence",
+   "box": [
+    90,
+    150,
+    240,
+    215
+   ],
+   "strokes": 4,
+   "skip": 1
+  },
+  {
+   "id": "fence3",
+   "plane": "fence",
+   "qd": "fence",
+   "box": [
+    240,
+    150,
+    390,
+    215
+   ],
+   "strokes": 4,
+   "skip": 2
+  },
+  {
+   "id": "fence4",
+   "plane": "fence",
+   "qd": "fence",
+   "box": [
+    390,
+    150,
+    540,
+    215
+   ],
+   "strokes": 4,
+   "skip": 3
+  },
+  {
+   "id": "second_flamingo",
+   "plane": "char",
+   "rig_poses": "shots/flamingo-sam/second_bird.json",
+   "visible": [
+    0,
+    4
+   ]
+  }
+ ],
+ "notes": {
+  "0": "A second flamingo stands at the right edge; ours is still off frame to the left.",
+  "2": "The camera pans left fast; the tail of our flamingo comes in at the left edge.",
+  "4": "Half of our flamingo is in frame; the second flamingo leaves at the right.",
+  "8": "Our flamingo is fully in frame, standing on one leg with its head on its back.",
+  "13": "The pan stops; the flamingo stands still.",
+  "16": "The camera drifts back a little to the right.",
+  "22": "The bird settles a few pixels to the left on its leg.",
+  "25": "End: the flamingo still stands on one leg."
+ }
+}

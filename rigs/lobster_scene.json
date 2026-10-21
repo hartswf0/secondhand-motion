@@ -1,0 +1,203 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.12,
+   -0.43,
+   -0.63,
+   -0.96,
+   -0.96,
+   -0.96,
+   -0.96,
+   -0.96,
+   -0.96,
+   -2.41,
+   -2.41,
+   -2.26,
+   -2.36,
+   -2.36,
+   -2.36,
+   -3.41,
+   -3.99,
+   -4.14,
+   -4.26,
+   -4.54,
+   -5.55,
+   -6.09,
+   -6.35,
+   -6.42,
+   -6.01,
+   -5.6,
+   -5.55,
+   -5.66,
+   -5.84,
+   -5.1,
+   -5.08,
+   -5.33,
+   -5.28,
+   -5.27,
+   -5.41,
+   -5.52,
+   -5.2,
+   -5.05,
+   -5.28,
+   -6.06,
+   -6.06,
+   -5.78,
+   -5.64,
+   -5.97,
+   -5.66,
+   -5.85,
+   -5.85,
+   -5.85,
+   -5.08
+  ],
+  "y": [
+   0.0,
+   -0.31,
+   0.28,
+   -0.62,
+   -1.33,
+   -1.33,
+   -1.33,
+   -1.33,
+   -1.33,
+   -1.33,
+   -1.23,
+   -1.23,
+   -0.83,
+   -0.9,
+   -0.9,
+   -0.9,
+   -2.6,
+   -2.34,
+   -1.95,
+   -2.05,
+   -1.43,
+   -1.6,
+   -1.28,
+   -1.18,
+   -0.31,
+   -0.46,
+   -0.91,
+   -1.07,
+   -0.01,
+   -0.32,
+   -1.19,
+   -1.14,
+   -0.78,
+   -0.93,
+   -0.88,
+   -0.72,
+   -0.32,
+   -0.72,
+   -0.82,
+   -0.81,
+   -0.79,
+   -0.79,
+   -0.18,
+   0.75,
+   0.58,
+   -0.06,
+   -0.28,
+   -0.28,
+   -0.28,
+   -0.52
+  ],
+  "source": "shots/lobster-sam/camera.json, measured from the footage (a slow drift of about 6 px left and 4 px up)"
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 6,
+   "label": "Back wall",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "table",
+   "z": 2.4,
+   "label": "Table",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "front",
+   "z": 2,
+   "label": "Table front",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Lobster"
+  }
+ ],
+ "objects": [
+  {
+   "id": "second",
+   "plane": "table",
+   "rig_poses": "shots/lobster-sam/second_lobster.json"
+  },
+  {
+   "id": "tablefront",
+   "plane": "front",
+   "class": "table edge",
+   "why": "the dark front edge of the cloth-covered table runs across the bottom of the frame; no Quick, Draw! category is a table edge seen this close",
+   "strokes": [
+    [
+     [
+      22,
+      290
+     ],
+     [
+      26,
+      232
+     ],
+     [
+      120,
+      229
+     ],
+     [
+      250,
+      228
+     ],
+     [
+      390,
+      226
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "cloth",
+   "plane": "table",
+   "class": "cloth fold",
+   "why": "a fold in the table cloth runs up the left side behind the small lobster; no Quick, Draw! category is a cloth fold",
+   "strokes": [
+    [
+     [
+      4,
+      140
+     ],
+     [
+      8,
+      200
+     ],
+     [
+      14,
+      260
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "The right claw reaches out to the right.",
+  "6": "The right claw hangs down to the table.",
+  "9": "The right claw curls in under itself.",
+  "12": "The right claw swings up and across the front.",
+  "15": "The right claw lies across the front of the body and stays there.",
+  "49": "Both claws hold still; the small lobster on the left lies on its side throughout."
+ },
+ "no_cel": true
+}

@@ -6,7 +6,7 @@
   "neck",
   "neck"
  ],
- "note": "Quick, Draw! bat 6315771342880768, drawn from the front with both wings spread. Stroke 0 is the left wing, a long upper edge and a zigzag lower edge; stroke 1 is the body, a closed oval; stroke 2 is the head with two pointed ears; stroke 3 is the right wing, drawn the same way as the left. The whole drawing is placed by the neck and the bottom of the body, which sets where the bat is, how big and how it leans. The head turns at the neck toward the pose's head point. Each wing turns at its shoulder toward the pose's wing tip and folds toward the body line by the pose's lfold or rfold amount (1 as drawn, 0 shut), because in the film the bat clings to a trunk with its wings half open and hanging down, and opens and closes them as it crawls.",
+ "note": "Quick, Draw! bat 6315771342880768, drawn from the front with both wings spread. Stroke 0 is the left wing, a long upper edge and a zigzag lower edge; stroke 1 is the body, a closed oval; stroke 2 is the head with two pointed ears; stroke 3 is the right wing, drawn the same way as the left. The whole drawing is placed by the neck and the bottom of the body, which sets where the bat is, how big and how it leans. The head turns at the neck toward the pose's head point. Each wing turns at its shoulder so that its outer tip points at the pose's wing tip, and grows or shrinks with the shoulder-to-tip distance, so a wing held close is the same wing drawn smaller, because in the film the bat clings to a trunk with its wings half open and hanging down, and opens and closes them as it crawls.",
  "strokes": [
   [
    [
@@ -268,11 +268,7 @@
     "lsh",
     "ltip"
    ],
-   "fold": "lfold",
-   "axis": [
-    "neck",
-    "bottom"
-   ]
+   "stretch": 1.0
   },
   {
    "stroke": 3,
@@ -283,11 +279,7 @@
     "rsh",
     "rtip"
    ],
-   "fold": "rfold",
-   "axis": [
-    "neck",
-    "bottom"
-   ]
+   "stretch": 1.0
   }
  ],
  "size": "steady",

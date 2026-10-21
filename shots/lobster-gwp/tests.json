@@ -1,0 +1,80 @@
+[
+ {
+  "id": "M2",
+  "value": 3,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   10,
+   6,
+   2,
+   3,
+   3,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.74,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 2
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 1.6,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "10 strokes, 50 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6137959747158016; scenery quickdraw:6137959747158016 (a second copy of the character's rig, keyed in shots/lobster-sam/second_lobster.json), drawn by agent: the dark front edge of the cloth-covered table runs across the bottom of the frame; no Quick, Draw! category is a table edge seen this close, drawn by agent: a fold in the table cloth runs up the left side behind the small lobster; no Quick, Draw! category is a cloth fold",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "50/50",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

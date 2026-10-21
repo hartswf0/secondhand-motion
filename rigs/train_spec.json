@@ -1,0 +1,474 @@
+{
+ "category": "train",
+ "doodle_key_id": "4790471521992704",
+ "facing": 1,
+ "face_from": [
+  "right",
+  "left"
+ ],
+ "note": "Quick, Draw! train 4790471521992704, a side view facing right: stroke 0 is the body outline (flat roof, square back on the left, sloped nose on the right, a wavy underside); strokes 1 to 4 are four small looped wheels along the bottom; stroke 5 is an arched door; stroke 6 is the smoke stack on the roof; strokes 7 and 8 are two curls of smoke above it. The film's locomotive faces the camera and rolls toward it, so the doodle is placed by two points at the left and right ends of its underside, set to the locomotive's left and right edges, with its roof line at the locomotive's roof; it grows as the locomotive grows and drifts right with it. The four wheels turn about their own centres as it rolls (pose entry spin), and the two smoke curls sway about the top of the stack (pose entry sway). The body, door and stack do not bend.",
+ "strokes": [
+  [
+   [
+    33,
+    80
+   ],
+   [
+    72,
+    72
+   ],
+   [
+    190,
+    71
+   ],
+   [
+    198,
+    83
+   ],
+   [
+    214,
+    94
+   ],
+   [
+    239,
+    121
+   ],
+   [
+    255,
+    155
+   ],
+   [
+    255,
+    158
+   ],
+   [
+    174,
+    165
+   ],
+   [
+    156,
+    172
+   ],
+   [
+    136,
+    165
+   ],
+   [
+    120,
+    165
+   ],
+   [
+    96,
+    157
+   ],
+   [
+    67,
+    155
+   ],
+   [
+    59,
+    150
+   ],
+   [
+    50,
+    155
+   ],
+   [
+    10,
+    162
+   ],
+   [
+    0,
+    156
+   ],
+   [
+    5,
+    139
+   ],
+   [
+    4,
+    97
+   ],
+   [
+    7,
+    79
+   ],
+   [
+    8,
+    74
+   ],
+   [
+    33,
+    78
+   ]
+  ],
+  [
+   [
+    8,
+    158
+   ],
+   [
+    8,
+    165
+   ],
+   [
+    13,
+    165
+   ],
+   [
+    9,
+    159
+   ],
+   [
+    7,
+    163
+   ]
+  ],
+  [
+   [
+    61,
+    153
+   ],
+   [
+    61,
+    163
+   ],
+   [
+    67,
+    160
+   ],
+   [
+    70,
+    153
+   ],
+   [
+    67,
+    148
+   ],
+   [
+    59,
+    149
+   ],
+   [
+    57,
+    156
+   ],
+   [
+    66,
+    159
+   ],
+   [
+    71,
+    155
+   ]
+  ],
+  [
+   [
+    150,
+    163
+   ],
+   [
+    146,
+    174
+   ],
+   [
+    161,
+    177
+   ],
+   [
+    159,
+    170
+   ],
+   [
+    153,
+    174
+   ],
+   [
+    156,
+    178
+   ],
+   [
+    161,
+    175
+   ],
+   [
+    160,
+    172
+   ]
+  ],
+  [
+   [
+    237,
+    158
+   ],
+   [
+    237,
+    168
+   ],
+   [
+    244,
+    167
+   ],
+   [
+    249,
+    158
+   ],
+   [
+    245,
+    148
+   ],
+   [
+    239,
+    154
+   ],
+   [
+    239,
+    159
+   ],
+   [
+    245,
+    158
+   ]
+  ],
+  [
+   [
+    121,
+    158
+   ],
+   [
+    118,
+    139
+   ],
+   [
+    122,
+    117
+   ],
+   [
+    128,
+    112
+   ],
+   [
+    136,
+    112
+   ],
+   [
+    151,
+    126
+   ],
+   [
+    167,
+    177
+   ]
+  ],
+  [
+   [
+    151,
+    66
+   ],
+   [
+    152,
+    57
+   ],
+   [
+    164,
+    56
+   ],
+   [
+    166,
+    67
+   ]
+  ],
+  [
+   [
+    158,
+    44
+   ],
+   [
+    152,
+    43
+   ],
+   [
+    145,
+    35
+   ],
+   [
+    148,
+    28
+   ],
+   [
+    164,
+    12
+   ],
+   [
+    157,
+    0
+   ]
+  ],
+  [
+   [
+    163,
+    38
+   ],
+   [
+    165,
+    32
+   ],
+   [
+    178,
+    24
+   ],
+   [
+    179,
+    16
+   ],
+   [
+    176,
+    9
+   ]
+  ]
+ ],
+ "root": [
+  "left",
+  "right"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "left": [
+   0,
+   160
+  ],
+  "right": [
+   255,
+   160
+  ],
+  "w1": [
+   10,
+   162
+  ],
+  "w2": [
+   64,
+   155
+  ],
+  "w3": [
+   155,
+   173
+  ],
+  "w4": [
+   243,
+   158
+  ],
+  "stack": [
+   158,
+   46
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 22,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 6,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 3,
+   "joint": "left",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 4,
+   "joint": "w1",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 8,
+   "joint": "w2",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 7,
+   "joint": "w3",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 7,
+   "joint": "w4",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 7,
+   "from": 0,
+   "to": 5,
+   "joint": "stack",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "spin": "sway"
+  },
+  {
+   "stroke": 8,
+   "from": 0,
+   "to": 4,
+   "joint": "stack",
+   "aim": [
+    "left",
+    "right"
+   ],
+   "turn": 0,
+   "spin": "sway"
+  }
+ ],
+ "track": false,
+ "smooth": 1.5
+}

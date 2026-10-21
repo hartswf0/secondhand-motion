@@ -1,0 +1,286 @@
+{
+ "category": "pickup truck",
+ "doodle_key_id": "5413949325443072",
+ "facing": -1,
+ "face_from": [
+  "fwheel",
+  "rwheel"
+ ],
+ "note": "Quick, Draw! pickup truck 5413949325443072, drawn in profile facing left: a short line at the front (0) and the low hood box (1) at the left, the tall cab and the long bed behind it (2), the front wheel (3) and the rear wheel (4). The footage shows the truck from the front, coming slowly toward the camera through tall grass, so the doodle is placed rigidly by its two wheel centres over the truck: the distance between them sets its size, which grows a little as the truck comes closer, and the line between them sets its tilt, which rocks as the truck rides over the rough ground. Both wheels turn slowly about their own centres as it drives.",
+ "strokes": [
+  [
+   [
+    3,
+    54
+   ],
+   [
+    0,
+    105
+   ]
+  ],
+  [
+   [
+    1,
+    56
+   ],
+   [
+    56,
+    54
+   ],
+   [
+    106,
+    61
+   ],
+   [
+    104,
+    87
+   ],
+   [
+    95,
+    112
+   ],
+   [
+    9,
+    106
+   ]
+  ],
+  [
+   [
+    111,
+    73
+   ],
+   [
+    114,
+    51
+   ],
+   [
+    113,
+    8
+   ],
+   [
+    172,
+    0
+   ],
+   [
+    200,
+    4
+   ],
+   [
+    199,
+    61
+   ],
+   [
+    215,
+    63
+   ],
+   [
+    251,
+    58
+   ],
+   [
+    255,
+    115
+   ],
+   [
+    249,
+    119
+   ],
+   [
+    167,
+    126
+   ],
+   [
+    95,
+    114
+   ]
+  ],
+  [
+   [
+    54,
+    170
+   ],
+   [
+    41,
+    160
+   ],
+   [
+    39,
+    153
+   ],
+   [
+    46,
+    144
+   ],
+   [
+    65,
+    134
+   ],
+   [
+    95,
+    132
+   ],
+   [
+    108,
+    134
+   ],
+   [
+    118,
+    146
+   ],
+   [
+    122,
+    163
+   ],
+   [
+    119,
+    178
+   ],
+   [
+    102,
+    186
+   ],
+   [
+    84,
+    183
+   ],
+   [
+    67,
+    170
+   ],
+   [
+    63,
+    157
+   ]
+  ],
+  [
+   [
+    188,
+    172
+   ],
+   [
+    171,
+    152
+   ],
+   [
+    166,
+    141
+   ],
+   [
+    167,
+    136
+   ],
+   [
+    182,
+    128
+   ],
+   [
+    195,
+    125
+   ],
+   [
+    221,
+    128
+   ],
+   [
+    238,
+    136
+   ],
+   [
+    241,
+    140
+   ],
+   [
+    239,
+    148
+   ],
+   [
+    225,
+    162
+   ],
+   [
+    213,
+    167
+   ],
+   [
+    196,
+    166
+   ]
+  ]
+ ],
+ "root": [
+  "fwheel",
+  "rwheel"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "fwheel": [
+   80,
+   159
+  ],
+  "rwheel": [
+   203,
+   147
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 1,
+   "joint": "fwheel",
+   "aim": [
+    "fwheel",
+    "rwheel"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 5,
+   "joint": "fwheel",
+   "aim": [
+    "fwheel",
+    "rwheel"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 11,
+   "joint": "fwheel",
+   "aim": [
+    "fwheel",
+    "rwheel"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 13,
+   "joint": "fwheel",
+   "aim": [
+    "fwheel",
+    "rwheel"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 12,
+   "joint": "rwheel",
+   "aim": [
+    "fwheel",
+    "rwheel"
+   ],
+   "turn": 0,
+   "spin": "spin"
+  }
+ ],
+ "track": false,
+ "smooth": 1.5
+}

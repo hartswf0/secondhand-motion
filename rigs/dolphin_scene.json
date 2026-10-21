@@ -1,0 +1,241 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "y": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "source": "shots/dolphin-sam/camera.json: phase correlation with the subject masked out measured no camera motion; the shot is locked off"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 6,
+   "label": "Far water",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "sea",
+   "z": 3,
+   "label": "Near water and the rock",
+   "z_from_depth": "bottom"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Dolphin"
+  }
+ ],
+ "objects": [
+  {
+   "id": "wave_far1",
+   "plane": "far",
+   "qd": "ocean",
+   "box": [
+    0,
+    20,
+    190,
+    50
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "wave_far2",
+   "plane": "far",
+   "qd": "ocean",
+   "box": [
+    200,
+    10,
+    384,
+    40
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "wave_mid1",
+   "plane": "sea",
+   "qd": "ocean",
+   "box": [
+    20,
+    130,
+    200,
+    170
+   ],
+   "strokes": 2,
+   "skip": 2
+  },
+  {
+   "id": "wave_mid2",
+   "plane": "sea",
+   "qd": "ocean",
+   "box": [
+    210,
+    150,
+    384,
+    190
+   ],
+   "strokes": 2,
+   "skip": 3
+  },
+  {
+   "id": "wave_near",
+   "plane": "sea",
+   "qd": "ocean",
+   "box": [
+    120,
+    215,
+    360,
+    255
+   ],
+   "strokes": 2,
+   "skip": 4
+  },
+  {
+   "id": "rock",
+   "plane": "sea",
+   "class": "rock",
+   "strokes": [
+    [
+     [
+      12,
+      276
+     ],
+     [
+      30,
+      266
+     ],
+     [
+      60,
+      262
+     ],
+     [
+      95,
+      264
+     ],
+     [
+      125,
+      268
+     ],
+     [
+      140,
+      276
+     ]
+    ],
+    [
+     [
+      18,
+      270
+     ],
+     [
+      28,
+      264
+     ],
+     [
+      42,
+      266
+     ]
+    ]
+   ],
+   "why": "a pale low rock or log lies along the bottom left edge of every frame; Quick, Draw! has no rock category"
+  },
+  {
+   "id": "twig",
+   "plane": "far",
+   "class": "twig",
+   "strokes": [
+    [
+     [
+      0,
+      48
+     ],
+     [
+      8,
+      38
+     ],
+     [
+      18,
+      22
+     ],
+     [
+      26,
+      8
+     ],
+     [
+      30,
+      0
+     ]
+    ],
+    [
+     [
+      18,
+      22
+     ],
+     [
+      10,
+      18
+     ]
+    ]
+   ],
+   "why": "a thin dark twig hangs into the top left corner in every frame; no Quick, Draw! category is a single twig"
+  }
+ ],
+ "notes": {
+  "0": "the dolphin's head breaks the surface at the right edge, its back and tail still rising steeply out of frame",
+  "8": "the back flattens as the body comes level along the surface",
+  "16": "the whole back is out, level, swimming left",
+  "25": "the back arches up in the middle and the tail stock starts down for the dive"
+ }
+}

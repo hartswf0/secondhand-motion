@@ -1,0 +1,265 @@
+{
+ "category": "submarine",
+ "doodle_key_id": "6108454060032000",
+ "facing": 1,
+ "face_from": [
+  "bow",
+  "stern"
+ ],
+ "note": "Quick, Draw! submarine 6108454060032000, drawn with the bow to the right. Stroke 0 is the hull, a long closed oval. Strokes 1 to 6 are the propeller and rudder fins at the stern on the left. Stroke 7 is the conning tower on top of the hull and stroke 8 is the periscope line inside it. In the film the bow is to the left, so the drawing is mirrored. The whole drawing is placed by two points on the hull line, the bow end and the stern end, so it bobs, pitches and drifts with the hull. The conning tower and periscope turn about the tower's base to follow the lean of the real mast, which rocks from side to side as the boat rolls in the waves. The propeller does not move because the real one is under water.",
+ "strokes": [
+  [
+   [
+    63,
+    72
+   ],
+   [
+    67,
+    63
+   ],
+   [
+    73,
+    60
+   ],
+   [
+    121,
+    46
+   ],
+   [
+    145,
+    43
+   ],
+   [
+    208,
+    45
+   ],
+   [
+    229,
+    51
+   ],
+   [
+    249,
+    64
+   ],
+   [
+    255,
+    80
+   ],
+   [
+    247,
+    94
+   ],
+   [
+    236,
+    100
+   ],
+   [
+    215,
+    103
+   ],
+   [
+    113,
+    105
+   ],
+   [
+    87,
+    102
+   ],
+   [
+    59,
+    95
+   ],
+   [
+    65,
+    70
+   ]
+  ],
+  [
+   [
+    68,
+    72
+   ],
+   [
+    62,
+    68
+   ],
+   [
+    39,
+    71
+   ],
+   [
+    42,
+    90
+   ],
+   [
+    64,
+    90
+   ]
+  ],
+  [
+   [
+    38,
+    72
+   ],
+   [
+    23,
+    61
+   ],
+   [
+    0,
+    57
+   ]
+  ],
+  [
+   [
+    43,
+    85
+   ],
+   [
+    39,
+    111
+   ]
+  ],
+  [
+   [
+    39,
+    71
+   ],
+   [
+    35,
+    112
+   ]
+  ],
+  [
+   [
+    39,
+    69
+   ],
+   [
+    24,
+    81
+   ],
+   [
+    20,
+    88
+   ]
+  ],
+  [
+   [
+    37,
+    61
+   ],
+   [
+    30,
+    39
+   ]
+  ],
+  [
+   [
+    140,
+    40
+   ],
+   [
+    147,
+    5
+   ],
+   [
+    151,
+    3
+   ],
+   [
+    166,
+    2
+   ],
+   [
+    172,
+    4
+   ],
+   [
+    176,
+    12
+   ],
+   [
+    176,
+    33
+   ],
+   [
+    172,
+    45
+   ]
+  ],
+  [
+   [
+    163,
+    0
+   ],
+   [
+    157,
+    19
+   ],
+   [
+    179,
+    23
+   ]
+  ]
+ ],
+ "anchors": {
+  "bow": [
+   255,
+   82
+  ],
+  "stern": [
+   60,
+   84
+  ],
+  "tbase": [
+   156,
+   43
+  ],
+  "ttop": [
+   160,
+   2
+  ]
+ },
+ "root": [
+  "stern",
+  "bow"
+ ],
+ "size_from_mask": false,
+ "parts": [
+  {
+   "stroke": 7,
+   "from": 0,
+   "to": 7,
+   "joint": "tbase",
+   "aim": [
+    "tbase",
+    "ttop"
+   ],
+   "turn": 0.6
+  },
+  {
+   "stroke": 8,
+   "from": 0,
+   "to": 2,
+   "joint": "tbase",
+   "aim": [
+    "tbase",
+    "ttop"
+   ],
+   "turn": 0.6
+  },
+  {
+   "rest": true,
+   "joint": "stern",
+   "aim": [
+    "stern",
+    "bow"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "smooth": 1.2,
+ "track": false
+}

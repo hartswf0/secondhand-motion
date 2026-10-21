@@ -47,7 +47,7 @@
     "lbase",
     "ltip"
    ],
-   "stretch": 0.5
+   "stretch": 0.8
   },
   {
    "stroke": 8,
@@ -58,7 +58,12 @@
     "rbase",
     "rtip"
    ],
-   "stretch": 0.5
+   "stretch": 0.8,
+   "shift_by": "rshift",
+   "shift": [
+    -39.4,
+    10.6
+   ]
   },
   {
    "rest": true,
@@ -294,5 +299,10 @@
     167
    ]
   ]
+ ],
+ "max_tilt": 180,
+ "foreshorten": [
+  0.9,
+  1.1
  ]
 }
