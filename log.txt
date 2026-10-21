@@ -1,0 +1,54 @@
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Device set to use cpu
+You are using a model of type sam2_video to instantiate a model of type sam2. This is not supported for all configurations of models and can yield errors.
+Device set to use cpu
+0 dino 0.95 0.926 3234 13s
+1 dino 0.91 0.956 4066 27s
+2 dino 0.95 0.939 3237 40s
+3 dino 0.95 0.946 3596 54s
+4 dino 0.94 0.951 3670 67s
+5 dino 0.94 0.961 5317 81s
+6 dino 0.94 0.964 5558 94s
+7 dino 0.95 0.966 6501 107s
+8 dino 0.95 0.966 6670 120s
+9 dino 0.95 0.965 7061 133s
+10 dino 0.95 0.967 7288 147s
+11 dino 0.95 0.967 7681 160s
+12 dino 0.95 0.968 7830 173s
+13 dino 0.95 0.971 8153 186s
+14 dino 0.95 0.97 8311 200s
+15 dino 0.94 0.97 8645 213s
+16 dino 0.94 0.967 8857 226s
+17 dino 0.94 0.962 10128 240s
+18 dino 0.93 0.964 10151 254s
+19 dino 0.93 0.964 10594 267s
+20 dino 0.93 0.968 10762 280s
+21 dino 0.93 0.965 11058 294s
+22 dino 0.94 0.966 11140 307s
+23 dino 0.94 0.965 11386 321s
+24 dino 0.94 0.965 11553 334s
+25 dino 0.94 0.965 11755 348s
+26 dino 0.95 0.967 11985 361s
+27 dino 0.94 0.964 12174 375s
+28 dino 0.94 0.963 12271 388s
+29 dino 0.95 0.961 12437 402s
+30 dino 0.95 0.957 12405 416s
+31 dino 0.95 0.963 12692 429s
+32 dino 0.95 0.957 12865 443s
+33 dino 0.94 0.96 13039 457s
+34 dino 0.94 0.96 13103 470s
+35 dino 0.94 0.96 13247 484s
+36 dino 0.95 0.961 13273 497s
+37 dino 0.94 0.956 13065 511s
+38 dino 0.94 0.952 13483 524s
+39 dino 0.94 0.956 13201 538s
+40 dino 0.94 0.959 13510 551s
+41 dino 0.94 0.955 13418 565s
+42 dino 0.94 0.954 14035 579s
+43 dino 0.95 0.955 14084 593s
+44 dino 0.95 0.948 13345 607s
+45 dino 0.95 0.95 13491 620s
+46 dino 0.95 0.954 13580 634s
+47 dino 0.95 0.955 13602 648s
+48 dino 0.95 0.956 13686 662s
+49 dino 0.95 0.967 14435 675s
