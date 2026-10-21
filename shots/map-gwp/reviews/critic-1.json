@@ -1,0 +1,19 @@
+{
+ "seen_animation": "a.png: In frame 1 a black-lined rounded rectangle with wandering inner lines (a drawn map or aerial photo) sits low in the centre of the frame, tilted about 35 degrees and foreshortened into a diamond shape, between two grey head-and-shoulders figures, with grey river lines across the top. In frames 2-3 it rises and rotates toward level while growing wider. In frame 4 it is almost level, at upper centre between the two heads. From frame 5 to 16 it sits level at the same spot between the two heads and holds there, with only small redraw variation in the inner lines.",
+ "seen_film": "d.png: Two men stand in front of a wall map of rivers. In frame 1 the man on the left holds a tilted aerial photograph low in the centre. In frames 2-4 he lifts it and turns it level, pressing it against the map between the two men. From frame 5 he holds it in place with his left hand and points into it with his right; the man on the right points at it too (frame 6). Frames 7-11 the left man keeps pointing at spots in the photo. In frames 12-13 he turns to look at the other man while holding the photo. In frames 14-16 both men point at it and their hands cross over it; the photo stays in place, shifting only slightly.",
+ "named_subject": "the aerial photograph / map print that the man lifts and holds against the wall map",
+ "verdict": "bar met",
+ "evidence": "e.png 1-3 vs f.png 1-3: the drawing is tilted and foreshortened low in the centre exactly where the photo is held low and tilted. e.png 4-9 vs f.png 4-9: the drawing rises and rotates level in the same frames as the film, reaching the same position between the two heads at frame 9. e.png 10-56 vs f.png 10-56: the photo is held still on the wall in the film and the drawing holds still at the same place and size. g.png shows one continuous path 1-4-7-10 converging on the rest position with no gaps or reversals. No frame shows doubling, popping or a size jump.",
+ "primary_gap": "During the long hold (e.png 10-56) the drawing is completely static, while in the film (f.png 46-56) the photo is nudged slightly right and the men's hands press and cross over it, so the last second of the animation carries no response to that handling.",
+ "closes_when": "In e.png 46-56 the drawing shifts a few pixels right and slightly tilts or settles back, in step with the film's frames where the second man's hand presses on the photo.",
+ "protect": "The doodle's construction (rounded-rectangle outline with the left vertical branch, the curved upper-right loop, the small knot at centre and the two hanging lines) kept intact through the rotation; the matched lift-and-level timing in frames 1-9; the rest position between the two heads; the clean single path in g.png with no jumps.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png doodle throughout; only in e.png 1-3 is it squashed into a diamond by the foreshortening, which matches the film's tilted photo and does not change its stroke habits.",
+ "still_frames_only": true,
+ "_packet": "lotd1b67299",
+ "_round": 1
+}

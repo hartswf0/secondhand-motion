@@ -117,17 +117,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA lobster (the large lobster), drawn from the doodle's body-with-crossline and V-pincer claws, swinging its right claw down and across its body.\u201d; motion broken; follows the film: yes",
+  "value": "named \u201cA lobster (the large foreground lobster), seen from the front with its claws hanging down, which brings its right claw across the front of its body.\u201d; motion broken; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/lobster-gwp/reviews/critic-6.json"
+  "evidence": "shots/lobster-gwp/reviews/critic-7.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The body with its crossline and the left V-shaped pincer match c.png, but the right claw in its held horizontal pose becomes a flat parallelogram of crossing lines that no longer uses the doodle's open V-pincer shape.",
-  "evidence": "shots/lobster-gwp/reviews/critic-6.json"
+  "ok": false,
+  "note": "The body and the left claw match c.png's construction, but from frame 13 the right claw is a wide closed outline with small inner prongs that c.png never draws, and the body's lower outline disappears behind it.",
+  "evidence": "shots/lobster-gwp/reviews/critic-7.json"
  }
 ]

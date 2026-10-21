@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A black line lobster seen from the front with its claws hanging downward: a tall body with a cross line at the neck, the top running off the top of the frame, and a left claw drawn as an open two-pronged V that rests near the grey table line. A small grey lobster sits on the far left. In a.png frames 1-2 the right claw hangs at the right edge of the frame with its prongs below the table line. In frames 3-4 it swings in and up toward the body, and in frame 4 it points down-left under the body. In frame 5 it has folded across the front of the body as a wide flat shape. From frame 6 to frame 16 it holds horizontally across the lower body: a wide closed outline with two inner prongs pointing left, with only small changes in its outline. The left claw and the body do not move.",
+ "seen_film": "A large dark lobster faces the camera on a cloth-covered table, with a small lobster on the left. Its left claw hangs down on the left and its long antennae hang down the centre. In d.png frames 1-2 the right claw is at the right edge, partly out of frame. In frames 3-4 the claw curls inward and its tip comes round at the lower right. In frame 5 it turns flat, showing its broad side, and moves to the front of the body. From frame 6 to frame 16 it holds horizontally across the front of the body with its pincer tips pointing left, settling slightly while the antennae sway.",
+ "named_subject": "A lobster (the large foreground lobster), seen from the front with its claws hanging down, which brings its right claw across the front of its body.",
+ "verdict": "reference stronger",
+ "evidence": "The timing matches. In e.png the claw stays at the right edge through frames 1-8 while film frames 1-8 also hold it there. It swings inward in frames 9-14 as the film claw does in frames 9-14, and it holds across the body from frame 15 to frame 50 as the film does. The positions match: the left claw, the body and the small grey lobster sit where the film has them. The swing breaks in the middle. In e.png frame 10 the right claw is an open V pointing down-left at the lower right. In frame 11 it has rotated to point left under the body. In frame 12 the open V becomes a flattened, elongated shape at a different angle. In frame 13 it is redrawn as a wide closed polygon about twice the area of the claw in frame 11, with its prongs moved to the left end. In frame 14 the outline changes again before it settles in frame 15. The film rotates the claw in one continuous turn over its frames 11-14, without the claw changing its make-up. g.png shows the change from a fan of open-V claw drawings at the lower right to a stacked closed shape across the body, with no in-between drawings bridging the two. From e.png frame 13 onward the bottom of the body outline is gone, and the vertical body lines run through the claw shape. After frame 15 the hold is clean, with no jitter. Judged from still frames only, not playback.",
+ "primary_gap": "In e.png frames 11-14 the right claw changes from the doodle's open two-pronged V into a much larger closed polygon in about three frames, so the swing reads as a swap to a different drawing instead of one claw turning.",
+ "closes_when": "The right claw across e.png frames 10-15 keeps the same open-V construction and roughly the same stroke length while it rotates and moves from the lower right to the front of the body, and the change in its width is spread evenly over those frames, with no frame where the outline is redrawn or its area doubles.",
+ "protect": "The timing that matches the film (hold at the edge through frame 8, swing over frames 9-14, steady hold from frame 15 to frame 50); the unmoving left claw, body and small grey lobster in the film's positions; the doodle's sparse straight-segment strokes and open two-pronged V claws; the clean, jitter-free hold.",
+ "follows_film": "yes",
+ "motion_reads": "broken",
+ "broken_frames": [
+  11,
+  12,
+  13,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The body and the left claw match c.png's construction, but from frame 13 the right claw is a wide closed outline with small inner prongs that c.png never draws, and the body's lower outline disappears behind it.",
+ "still_frames_only": true,
+ "_packet": "lot15d437ef",
+ "_round": 7
+}

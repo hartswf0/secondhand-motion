@@ -1,0 +1,21 @@
+{
+ "seen_animation": "A line-drawn eye: an almond lid outline, a loose looping iris circle, and a small hexagon pupil with a tick at its upper-left, under a grey hatched brow with grey cheek/lid lines. In a.png frames 1-4 the hexagon sits upper-right inside the iris at full size. In frames 5-7 it shrinks to a small speck while drifting slightly left and down. In frame 8 it reappears at full or larger size at the lower-left of the iris, and frames 9-16 hold it there, with the tick now drawn as a larger quadrilateral overlapping the hexagon's left side. The whole eye shifts slightly left and down between frames 7 and 9.",
+ "seen_film": "An extreme close-up of a human eye in dark shadow under a bushy brow. In d.png frames 1-2 a bright light patch sits at the upper-right of the dark eye. From frame 3 to frame 7 it shrinks to a faint small dot. In frame 8 a larger bright patch appears at the lower-left of the eye, and frames 9-16 hold it there while the framing settles slightly lower and left.",
+ "named_subject": "A human eye (lid, iris and pupil/light spot) under a brow",
+ "verdict": "bar met",
+ "evidence": "e.png 1-4: full-size hexagon upper-right, matching the bright patch in f.png 1-4. f.png 5: the patch drops abruptly to a small dot and holds small through 14; e.png 5-13 shrink the hexagon gradually (5-8 slightly smaller, 9-10 smaller, 11-13 a speck), so the shrink lags the film by about 4-6 frames but ends in the same small state. f.png 15-16: the large patch appears lower-left; e.png 14-16 grow the hexagon from small to full size at lower-left over three frames, matching the film's moment. f.png 17-32 hold; e.png 17-32 hold with only small line wobble. g.png shows one continuous path from upper-right (4, 10) through 13 to lower-left (16) with no reversal. The eye outline and iris loop keep the size and construction of c.png throughout. From e.png 16 onward, the pupil's tick is enlarged into a separate quadrilateral overlapping the hexagon's left edge, which reads as a second outline.",
+ "primary_gap": "The pupil's upper-left tick from c.png becomes a large overlapping quadrilateral from e.png 16 to 32, so the pupil reads as two stacked shapes instead of one hexagon with a small tick.",
+ "closes_when": "In e.png 16-32 the tick stays the same small hook at the hexagon's upper-left that it is in e.png 1-4 and in c.png, scaled with the hexagon but not detached from it.",
+ "protect": "The c.png construction (wide almond lid, overlapping open iris loop, hexagon pupil) held at a constant scale; the light-grey scenery not competing with the character; the hold on frames 17-32; the timing of the reappearance at e.png 14-16 matching f.png 15-16; the continuous upper-right to lower-left path in g.png.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  16
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The eye matches c.png, except that from frame 16 the pupil's small tick is drawn as a large separate quadrilateral that c.png does not have.",
+ "still_frames_only": true,
+ "_packet": "lot0dc19373",
+ "_round": 1
+}

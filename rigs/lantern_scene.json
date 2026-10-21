@@ -1,0 +1,181 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   3.2,
+   9.0,
+   11.5,
+   14.0,
+   15.5,
+   18.5,
+   22.2,
+   27.2,
+   29.2,
+   32.2,
+   33.2,
+   34.2,
+   35.0,
+   36.5,
+   37.5,
+   39.8,
+   41.5,
+   43.2,
+   45.2,
+   47.8,
+   49.8,
+   53.2,
+   56.2,
+   60.8,
+   65.0,
+   73.5,
+   79.2,
+   85.0,
+   87.8,
+   90.2,
+   92.5
+  ],
+  "y": [
+   0.0,
+   -0.04,
+   0.01,
+   -0.36,
+   -0.2,
+   -0.76,
+   -1.09,
+   -0.16,
+   0.27,
+   -0.42,
+   -1.53,
+   -0.88,
+   1.44,
+   3.06,
+   5.28,
+   7.25,
+   8.84,
+   9.17,
+   10.49,
+   11.45,
+   9.21,
+   9.21,
+   9.21,
+   8.83,
+   8.44,
+   10.21,
+   10.44,
+   9.72,
+   8.11,
+   7.17,
+   8.1,
+   9.45
+  ],
+  "source": "x: the left edge of the vertical pipe behind the lamp, tracked frame to frame by matching its brightness profile across the top 40 rows of the frame (the wall is blank, so this is the only fixed scenery the whole interval); it moves 92 px right over the shot, where phase correlation on the whole frame (camera.json) gave 66 px because the lamp and hand fill much of the frame. y: camera.json (phase correlation)."
+ },
+ "planes": [
+  {
+   "id": "wall",
+   "z": 2,
+   "label": "Wall and pipe behind the lamp (z set equal to the character plane, not from depth: depth puts the wall six times further than the lamp, but the pipe's measured slide is the camera itself)"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Safety lamp"
+  }
+ ],
+ "objects": [
+  {
+   "id": "pipe",
+   "plane": "wall",
+   "class": "pipe",
+   "strokes": [
+    [
+     [
+      212,
+      0
+     ],
+     [
+      212,
+      172
+     ]
+    ],
+    [
+     [
+      227,
+      0
+     ],
+     [
+      227,
+      172
+     ]
+    ],
+    [
+     [
+      212,
+      248
+     ],
+     [
+      212,
+      288
+     ]
+    ],
+    [
+     [
+      227,
+      248
+     ],
+     [
+      227,
+      288
+     ]
+    ]
+   ],
+   "why": "the vertical metal pipe on the wall behind the lamp, two edges, broken where the white bag on the bench hides it; Quick, Draw! has no pipe category, so it is drawn by the agent as two straight lines"
+  },
+  {
+   "id": "helmet",
+   "plane": "wall",
+   "qd": "helmet",
+   "box": [
+    258,
+    0,
+    384,
+    72
+   ],
+   "strokes": 3,
+   "why": "the miner's hard hat with its cap lamp at the top right; it slides out of frame to the right as the camera pans"
+  },
+  {
+   "id": "bench",
+   "plane": "wall",
+   "class": "bench edge",
+   "strokes": [
+    [
+     [
+      150,
+      262
+     ],
+     [
+      384,
+      262
+     ]
+    ]
+   ],
+   "visible": [
+    0,
+    12
+   ],
+   "why": "the edge of the bench with the electrical outlet below the lamp in the first second, before the miner's forearm covers it; no Quick, Draw! category fits a bench edge, so one line is drawn by the agent"
+  }
+ ],
+ "no_cel": true,
+ "notes": {
+  "0": "the lamp, already lifted into frame, is low at the left and slightly blurred",
+  "6": "it has swung up and right, leaning its top to the left",
+  "11": "it is at its furthest right and almost upright",
+  "15": "it sways back a little to the left",
+  "18": "it sways right again and starts to come toward the camera",
+  "24": "the fist rises; the lamp swings left and grows as it nears the camera",
+  "31": "the lamp is held high at the top of the frame, larger than at the start"
+ }
+}

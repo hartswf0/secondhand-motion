@@ -5,7 +5,8 @@ Marks: each mark is one real Quick, Draw! leaf doodle placed on the vase body as
 x = centre(y) + halfwidth(y) * sin(angle + turn). All six marks are on every frame with the same points, so no
 mark appears or vanishes between two frames. A part of a mark that has turned past the right edge is pressed onto
 the body outline and drawn in toward the mark's middle height; a part still behind the hand's fingertips on the
-left is pressed onto the fingertip line and drawn in toward the fingertip. So a mark thins in from the fingertips
+left is pressed onto the hand's own outline (so it lies under the finger lines) and drawn in toward the longest
+fingertip. So a mark thins in from the fingertips
 over several frames and thins out into the right outline over several frames, continuously, down to zero width.
 
 turn(f) = the film's measured pattern slide (phase correlation of the painted band, rows 140-235, cols 110-270,
@@ -41,9 +42,12 @@ def hand(f):
         out.append(q)
     return out
 HANDS = [hand(f) for f in range(n)]
-def tip_line(f):   # the fingertips' right ends (x, y), top to bottom: the left horizon of the visible painted band
-    P = np.concatenate(HANDS[f]); tips = [P[np.argmax(np.where(np.abs(P[:, 1] - yy) < 5, P[:, 0], -1))] for yy in (199, 216, 233)]
-    return np.array(tips)
+def hand_right(f, y):   # the right-most crossing of the hand's own outline at height y (None above or below the hand)
+    xs = []
+    for q in HANDS[f]:
+        for (x0, y0), (x1, y1) in zip(q[:-1], q[1:]):
+            if (y0 - y) * (y1 - y) <= 0 and y0 != y1: xs.append(x0 + (x1 - x0) * (y - y0) / (y1 - y0))
+    return max(xs) if xs else None
 sc = json.load(open(ROOT / 'rigs/vase_scene.json'))
 sc['objects'] = [o for o in sc['objects'] if not o['id'].startswith('hand')]
 for f in range(n):
@@ -61,13 +65,14 @@ def unit(kid):
 MARKS = [(unit('4928285815341056'), 0.40, 58.0, 212.0), (unit('6535184159604736'), 0.62, 60.0, 210.0)]
 def side_x(stroke, y):
     s = np.array(stroke); i = np.argsort(s[:, 1]); return float(np.interp(y, s[i, 1], s[i, 0]))
-N = 6; FADE = 0.35   # radians behind an edge over which a hidden part is drawn in to one point
+N = 6; FADE = 0.15   # radians behind an edge over which a hidden part is drawn in to one point
 for f in range(n):
-    fr = rig[f]; extra = {}; T = tip_line(f); ty = float(T[2, 1])
+    fr = rig[f]; extra = {}; P = np.concatenate(HANDS[f]); ty = float(P[np.argmax(P[:, 0]), 1])   # the lowest, longest fingertip
     def body(y):
         xl, xr = side_x(fr[3], y), side_x(fr[1], y); xl, xr = min(xl, xr), max(xl, xr); return (xl + xr) / 2, (xr - xl) / 2
-    def a_left(y):   # angle of the fingertip line at height y
-        cx, hw = body(y); tx = float(np.interp(y, T[:, 1], T[:, 0])); return math.asin(max(-1.0, min(1.0, (tx - cx) / hw)))
+    def a_left(y):   # angle of the left horizon at height y: the hand's outline where the hand covers the body, else the body outline
+        cx, hw = body(y); tx = hand_right(f, y); tx = cx - hw if tx is None else max(tx, cx - hw)
+        return math.asin(max(-1.0, min(1.0, (tx - cx) / hw)))
     for k in range(N):
         a0 = -math.pi + (k + 0.5) * 2 * math.pi / N + turn[f]
         a0 = (a0 + math.pi) % (2 * math.pi) - math.pi

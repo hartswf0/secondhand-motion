@@ -1,0 +1,768 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -7.5,
+   -12.39,
+   -16.28,
+   -17.47,
+   -12.89,
+   -2.57,
+   10.13,
+   14.73,
+   18.45,
+   20.21,
+   21.44,
+   21.03,
+   15.68,
+   8.9,
+   -2.71,
+   -8.42,
+   -13.07,
+   -15.06,
+   -16.09,
+   -15.95,
+   -15.74,
+   -15.7,
+   -16.22,
+   -15.89,
+   -15.4
+  ],
+  "y": [
+   0.0,
+   -3.28,
+   -3.56,
+   -3.44,
+   -4.07,
+   -4.33,
+   -4.65,
+   -8.16,
+   -11.65,
+   -13.34,
+   -13.47,
+   -13.75,
+   -13.4,
+   -12.96,
+   -12.38,
+   -11.48,
+   -11.04,
+   -10.64,
+   -10.64,
+   -11.48,
+   -11.55,
+   -12.32,
+   -13.03,
+   -13.57,
+   -13.22,
+   -13.09
+  ],
+  "source": "shots/wine-glass-sam/camera.json, the shift measured from the footage; the glass keeps one place in these coordinates on every frame, so the camera is a pan with a slight zoom"
+ },
+ "planes": [
+  {
+   "id": "back",
+   "z": 2.6,
+   "label": "Counter behind the box"
+  },
+  {
+   "id": "box",
+   "z": 2.1,
+   "label": "Plastic box"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Wine glass and rod"
+  }
+ ],
+ "objects": [
+  {
+   "id": "box",
+   "plane": "box",
+   "qd": "picture frame",
+   "box": [
+    92,
+    8,
+    290,
+    300
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "post",
+   "plane": "box",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      304,
+      22
+     ],
+     [
+      305,
+      240
+     ]
+    ],
+    [
+     [
+      300,
+      14
+     ],
+     [
+      310,
+      14
+     ],
+     [
+      310,
+      24
+     ],
+     [
+      300,
+      24
+     ],
+     [
+      300,
+      14
+     ]
+    ]
+   ],
+   "why": "the metal rod and its clamp at the right corner of the plastic box; Quick, Draw! has no category for a lab clamp"
+  },
+  {
+   "id": "counter_top",
+   "plane": "back",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      -80,
+      92
+     ],
+     [
+      470,
+      93
+     ]
+    ]
+   ],
+   "why": "the top edge of the long pink counter behind the box; no Quick, Draw! category is a plain counter edge"
+  },
+  {
+   "id": "counter_rail",
+   "plane": "back",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      -80,
+      111
+     ],
+     [
+      470,
+      112
+     ]
+    ]
+   ],
+   "why": "the pale stripe along the front of the same counter"
+  },
+  {
+   "id": "counter_low",
+   "plane": "back",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      -80,
+      160
+     ],
+     [
+      470,
+      161
+     ]
+    ]
+   ],
+   "why": "the lower seam of the counter front"
+  },
+  {
+   "id": "rod00",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      224,
+      50.6
+     ],
+     [
+      196.7,
+      158.5
+     ]
+    ]
+   ],
+   "visible": [
+    0,
+    0
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod01",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      223.6,
+      49.3
+     ],
+     [
+      194,
+      156
+     ]
+    ]
+   ],
+   "visible": [
+    1,
+    1
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod02",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      218,
+      49
+     ],
+     [
+      194,
+      156
+     ]
+    ]
+   ],
+   "visible": [
+    2,
+    2
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod03",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      220,
+      48.5
+     ],
+     [
+      196,
+      158.5
+     ]
+    ]
+   ],
+   "visible": [
+    3,
+    3
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod04",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      221.5,
+      48
+     ],
+     [
+      196.7,
+      158.5
+     ]
+    ]
+   ],
+   "visible": [
+    4,
+    4
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod05",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      197,
+      45
+     ],
+     [
+      195,
+      160.6
+     ]
+    ]
+   ],
+   "visible": [
+    5,
+    5
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod06",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      185.4,
+      46.4
+     ],
+     [
+      197,
+      156.4
+     ]
+    ]
+   ],
+   "visible": [
+    6,
+    6
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod07",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      220,
+      45
+     ],
+     [
+      198.8,
+      153.5
+     ]
+    ]
+   ],
+   "visible": [
+    7,
+    7
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod08",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      213,
+      45
+     ],
+     [
+      204.7,
+      154
+     ]
+    ]
+   ],
+   "visible": [
+    8,
+    8
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod09",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      221.5,
+      45
+     ],
+     [
+      197.5,
+      154
+     ]
+    ]
+   ],
+   "visible": [
+    9,
+    9
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod10",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      208.5,
+      45
+     ],
+     [
+      196,
+      154
+     ]
+    ]
+   ],
+   "visible": [
+    10,
+    10
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod11",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      198.4,
+      46.4
+     ],
+     [
+      193.3,
+      156.4
+     ]
+    ]
+   ],
+   "visible": [
+    11,
+    11
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod12",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      196,
+      45
+     ],
+     [
+      193,
+      154
+     ]
+    ]
+   ],
+   "visible": [
+    12,
+    12
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod13",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      210,
+      45
+     ],
+     [
+      195,
+      154
+     ]
+    ]
+   ],
+   "visible": [
+    13,
+    13
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod14",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      219,
+      48
+     ],
+     [
+      196.7,
+      156.4
+     ]
+    ]
+   ],
+   "visible": [
+    14,
+    14
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod15",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      218,
+      48
+     ],
+     [
+      196,
+      156.4
+     ]
+    ]
+   ],
+   "visible": [
+    15,
+    15
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod16",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      209,
+      48
+     ],
+     [
+      196,
+      158.5
+     ]
+    ]
+   ],
+   "visible": [
+    16,
+    16
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod17",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      183,
+      47
+     ],
+     [
+      194,
+      158.5
+     ]
+    ]
+   ],
+   "visible": [
+    17,
+    17
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod18",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      220.6,
+      48
+     ],
+     [
+      197,
+      158
+     ]
+    ]
+   ],
+   "visible": [
+    18,
+    18
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod19",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      210.6,
+      23
+     ],
+     [
+      197,
+      135
+     ]
+    ]
+   ],
+   "visible": [
+    19,
+    19
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod20",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      199,
+      32.5
+     ],
+     [
+      196,
+      156
+     ]
+    ]
+   ],
+   "visible": [
+    20,
+    20
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod21",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      217,
+      33.8
+     ],
+     [
+      196.7,
+      141
+     ]
+    ]
+   ],
+   "visible": [
+    21,
+    21
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod22",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      192,
+      33.8
+     ],
+     [
+      206.8,
+      153.5
+     ]
+    ]
+   ],
+   "visible": [
+    22,
+    22
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod23",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      180.7,
+      33.8
+     ],
+     [
+      196,
+      153.5
+     ]
+    ]
+   ],
+   "visible": [
+    23,
+    23
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod24",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      200,
+      38
+     ],
+     [
+      194,
+      153.5
+     ]
+    ]
+   ],
+   "visible": [
+    24,
+    24
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  },
+  {
+   "id": "rod25",
+   "plane": "char",
+   "class": "line",
+   "strokes": [
+    [
+     [
+      222.7,
+      27.5
+     ],
+     [
+      180.7,
+      136.7
+     ]
+    ]
+   ],
+   "visible": [
+    25,
+    25
+   ],
+   "why": "the thin rod that leans in the glass and rattles as the glass rings; it is not part of the glass doodle and no Quick, Draw! category is a plain rod, so it is drawn as one line, measured on this frame"
+  }
+ ],
+ "no_cel": true,
+ "notes": {
+  "0": "the glass stands still inside a clear box; the rod leans right in the bowl",
+  "5": "the rod snaps upright and then to the left as the glass starts to ring",
+  "11": "the camera stops panning right; the rod rattles between upright and leaning right",
+  "19": "the rod jumps up out of the bottom of the bowl",
+  "23": "the rod leans left",
+  "25": "the rod flies out of the glass as the bowl breaks"
+ }
+}

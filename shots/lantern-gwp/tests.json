@@ -1,0 +1,81 @@
+[
+ {
+  "id": "M2",
+  "value": 42,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   41,
+   43,
+   43,
+   42,
+   41,
+   49,
+   41,
+   40,
+   38,
+   41,
+   48,
+   40,
+   40
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.98,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 41
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 2.7,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "5 strokes, 31 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6354663194492928; scenery drawn by agent: the vertical metal pipe on the wall behind the lamp, two edges, broken where the white bag on the bench hides it; Quick, Draw! has no pipe category, so it is drawn by the agent as two straight lines, quickdraw:6266305151762432, drawn by agent: the edge of the bench with the electrical outlet below the lamp in the first second, before the miner's forearm covers it; no Quick, Draw! category fits a bench edge, so one line is drawn by the agent",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "32/32",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
