@@ -1,0 +1,222 @@
+{
+ "category": "yoga",
+ "doodle_key_id": "5957605895700480",
+ "facing": 1,
+ "face_from": [
+  "hip",
+  "hip"
+ ],
+ "note": "Quick, Draw! yoga 5957605895700480: a person in a bridge, drawn as four strokes. Stroke 0 is one line from the left foot up the leg to the hips at the peak (vertices 0-5) and down the back to the shoulders (vertices 6-8). Strokes 1 and 2 are the two arms going from the shoulders down to the hands on the ground. Stroke 3 is the round head hanging between the arms. The root carries the whole drawing on the back line, hips to shoulders, so the body can turn all the way round as the woman goes over. The leg line turns at the hips toward the feet and may lengthen or shorten a little; both arms turn together at the shoulders toward the hands. The facing never flips: the woman in the film turns through a handstand, so the drawing turns with her instead of mirroring.",
+ "strokes": [
+  [
+   [
+    0,
+    148
+   ],
+   [
+    14,
+    132
+   ],
+   [
+    31,
+    103
+   ],
+   [
+    52,
+    77
+   ],
+   [
+    102,
+    36
+   ],
+   [
+    133,
+    0
+   ],
+   [
+    137,
+    2
+   ],
+   [
+    174,
+    66
+   ],
+   [
+    189,
+    102
+   ]
+  ],
+  [
+   [
+    189,
+    102
+   ],
+   [
+    181,
+    108
+   ],
+   [
+    147,
+    119
+   ],
+   [
+    143,
+    124
+   ],
+   [
+    143,
+    149
+   ],
+   [
+    154,
+    199
+   ]
+  ],
+  [
+   [
+    193,
+    103
+   ],
+   [
+    227,
+    89
+   ],
+   [
+    232,
+    94
+   ],
+   [
+    247,
+    170
+   ],
+   [
+    255,
+    185
+   ]
+  ],
+  [
+   [
+    189,
+    110
+   ],
+   [
+    183,
+    111
+   ],
+   [
+    174,
+    122
+   ],
+   [
+    173,
+    134
+   ],
+   [
+    178,
+    145
+   ],
+   [
+    190,
+    151
+   ],
+   [
+    204,
+    150
+   ],
+   [
+    213,
+    137
+   ],
+   [
+    216,
+    125
+   ],
+   [
+    214,
+    116
+   ],
+   [
+    209,
+    113
+   ],
+   [
+    183,
+    106
+   ]
+  ]
+ ],
+ "anchors": {
+  "foot": [
+   0,
+   148
+  ],
+  "hip": [
+   135,
+   1
+  ],
+  "shoulder": [
+   189,
+   102
+  ],
+  "head": [
+   195,
+   130
+  ],
+  "hands": [
+   204,
+   192
+  ]
+ },
+ "root": [
+  "hip",
+  "shoulder"
+ ],
+ "size_from_mask": false,
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 5,
+   "joint": "hip",
+   "aim": [
+    "hip",
+    "foot"
+   ],
+   "stretch": 0.35
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 5,
+   "joint": "shoulder",
+   "aim": [
+    "shoulder",
+    "hands"
+   ],
+   "stretch": 0.4
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 4,
+   "joint": "shoulder",
+   "aim": [
+    "shoulder",
+    "hands"
+   ],
+   "stretch": 0.4
+  },
+  {
+   "rest": true,
+   "joint": "hip",
+   "aim": [
+    "hip",
+    "shoulder"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "smooth": 1.0,
+ "track": false
+}

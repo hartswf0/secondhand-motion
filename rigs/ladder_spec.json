@@ -1,0 +1,239 @@
+{
+ "category": "ladder",
+ "doodle_key_id": "6159270586351616",
+ "facing": 1,
+ "face_from": [
+  "foot",
+  "foot"
+ ],
+ "note": "Quick, Draw! ladder 6159270586351616, leaning up to the right: the left rail (0) and right rail (1), and six rungs drawn between them (2 to 7; rung 3 and rung 6 are drawn crooked and do not reach both rails). The ladder in the film leans against the haystack and does not move while the man climbs it, so the rig is rigid: it is placed by the foot and the top of the left rail and held there; only the camera shake moves it.",
+ "strokes": [
+  [
+   [
+    155,
+    0
+   ],
+   [
+    151,
+    2
+   ],
+   [
+    126,
+    42
+   ],
+   [
+    45,
+    179
+   ],
+   [
+    0,
+    244
+   ]
+  ],
+  [
+   [
+    206,
+    10
+   ],
+   [
+    169,
+    60
+   ],
+   [
+    87,
+    189
+   ],
+   [
+    45,
+    242
+   ],
+   [
+    26,
+    255
+   ]
+  ],
+  [
+   [
+    15,
+    219
+   ],
+   [
+    26,
+    222
+   ],
+   [
+    49,
+    234
+   ]
+  ],
+  [
+   [
+    43,
+    206
+   ],
+   [
+    64,
+    205
+   ],
+   [
+    81,
+    217
+   ]
+  ],
+  [
+   [
+    62,
+    153
+   ],
+   [
+    100,
+    178
+   ]
+  ],
+  [
+   [
+    78,
+    118
+   ],
+   [
+    123,
+    141
+   ]
+  ],
+  [
+   [
+    116,
+    68
+   ],
+   [
+    130,
+    73
+   ],
+   [
+    154,
+    90
+   ]
+  ],
+  [
+   [
+    138,
+    23
+   ],
+   [
+    186,
+    39
+   ]
+  ]
+ ],
+ "root": [
+  "foot",
+  "top"
+ ],
+ "size_from_mask": false,
+ "anchors": {
+  "foot": [
+   0,
+   244
+  ],
+  "top": [
+   155,
+   0
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 4,
+   "joint": "foot",
+   "aim": [
+    "foot",
+    "top"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 4,
+   "joint": "foot",
+   "aim": [
+    "foot",
+    "top"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 2,
+   "joint": "foot",
+   "aim": [
+    "foot",
+    "top"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 2,
+   "joint": "foot",
+   "aim": [
+    "foot",
+    "top"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 4,
+   "from": 0,
+   "to": 1,
+   "joint": "foot",
+   "aim": [
+    "foot",
+    "top"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 5,
+   "from": 0,
+   "to": 1,
+   "joint": "foot",
+   "aim": [
+    "foot",
+    "top"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 6,
+   "from": 0,
+   "to": 2,
+   "joint": "foot",
+   "aim": [
+    "foot",
+    "top"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 7,
+   "from": 0,
+   "to": 1,
+   "joint": "foot",
+   "aim": [
+    "foot",
+    "top"
+   ],
+   "turn": 0
+  }
+ ],
+ "options": {
+  "size": "steady",
+  "smooth": 1.0,
+  "track": false
+ },
+ "track": false
+}

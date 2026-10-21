@@ -1,0 +1,164 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   0.0,
+   -6.98,
+   -9.38,
+   -16.28,
+   -19.42,
+   -24.08,
+   -26.01,
+   -29.06,
+   -30.86,
+   -31.77,
+   -32.31,
+   -33.47,
+   -34.92,
+   -38.74,
+   -40.51,
+   -44.29,
+   -45.1,
+   -46.23,
+   -47.96,
+   -48.98,
+   -49.79,
+   -49.48,
+   -48.07,
+   -46.0,
+   -45.47
+  ],
+  "y": [
+   0.0,
+   0.0,
+   9.07,
+   12.49,
+   14.49,
+   14.86,
+   13.57,
+   12.97,
+   12.42,
+   13.1,
+   14.87,
+   15.59,
+   16.13,
+   16.61,
+   16.97,
+   17.26,
+   16.78,
+   17.41,
+   17.38,
+   17.63,
+   17.47,
+   16.55,
+   15.78,
+   15.98,
+   16.02,
+   16.54
+  ],
+  "source": "shots/baseball-bat-sam/camera.json, phase correlation on the footage with the subject masked out"
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 8,
+   "label": "School building and trees",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "yard",
+   "z": 3,
+   "label": "Schoolyard",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Baseball bat"
+  }
+ ],
+ "objects": [
+  {
+   "id": "school",
+   "plane": "far",
+   "qd": "house",
+   "box": [
+    22,
+    -6,
+    146,
+    70
+   ],
+   "aspect": 1.6,
+   "strokes": 4
+  },
+  {
+   "id": "tree1",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    150,
+    18,
+    200,
+    58
+   ],
+   "strokes": 2
+  },
+  {
+   "id": "tree2",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    285,
+    22,
+    335,
+    60
+   ],
+   "strokes": 2,
+   "skip": 1
+  },
+  {
+   "id": "horizon",
+   "plane": "yard",
+   "class": "ground",
+   "why": "no Quick, Draw! category is the far edge of a flat schoolyard; one line where the yard meets the trees and buildings",
+   "strokes": [
+    [
+     [
+      -80,
+      62
+     ],
+     [
+      470,
+      60
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "shadow",
+   "plane": "yard",
+   "class": "ground",
+   "why": "the long shadow of the girl on the yard, a flat dark streak; no category is a shadow",
+   "strokes": [
+    [
+     [
+      240,
+      132
+     ],
+     [
+      300,
+      140
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the boy looks down at the bat held slanting across his body, barrel low at his left hip",
+  "7": "he lifts the barrel and the bat comes level",
+  "14": "the bat is level across his belt",
+  "19": "the knob end dips to his right as he turns the bat",
+  "25": "the bat slopes down to the right, held at his belt"
+ }
+}

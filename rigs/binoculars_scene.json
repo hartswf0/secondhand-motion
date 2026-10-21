@@ -1,0 +1,251 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -2.89,
+   -7.28,
+   -8.5,
+   -7.95,
+   -7.86,
+   -8.98,
+   -10.61,
+   -11.64,
+   -12.86,
+   -13.25,
+   -12.33,
+   -12.05,
+   -12.54,
+   -12.88,
+   -12.92,
+   -13.17,
+   -12.98,
+   -12.05,
+   -10.09,
+   -10.0,
+   -11.02,
+   -10.14,
+   -7.68,
+   -6.56,
+   -5.22,
+   -5.02,
+   -4.95,
+   -4.37
+  ],
+  "y": [
+   0.0,
+   -1.75,
+   -2.23,
+   -1.13,
+   -0.47,
+   -0.17,
+   0.7,
+   2.57,
+   4.18,
+   8.52,
+   11.91,
+   14.91,
+   15.57,
+   16.31,
+   16.87,
+   17.64,
+   18.3,
+   21.38,
+   22.04,
+   21.05,
+   20.72,
+   22.11,
+   22.79,
+   22.81,
+   23.12,
+   23.81,
+   23.83,
+   23.97,
+   24.08
+  ],
+  "source": "shots/binoculars-sam/camera.json: phase correlation on the footage; the camera tilts up as the man looks up, so he and the binoculars sink about 25 px in the frame"
+ },
+ "planes": [
+  {
+   "id": "sky",
+   "z": 10,
+   "label": "Overcast sky",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Binoculars, the man's hands and arms"
+  }
+ ],
+ "objects": [
+  {
+   "id": "cloud1",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    8,
+    14,
+    110,
+    52
+   ],
+   "strokes": 1
+  },
+  {
+   "id": "cloud2",
+   "plane": "sky",
+   "qd": "cloud",
+   "box": [
+    290,
+    22,
+    380,
+    56
+   ],
+   "strokes": 1,
+   "skip": 1
+  },
+  {
+   "id": "hand_l",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    146,
+    70,
+    178,
+    118
+   ],
+   "aspect": 0.7
+  },
+  {
+   "id": "hand_r",
+   "plane": "char",
+   "qd": "hand",
+   "box": [
+    240,
+    68,
+    270,
+    116
+   ],
+   "aspect": 0.7,
+   "skip": 1
+  },
+  {
+   "id": "arms",
+   "plane": "char",
+   "class": "arms",
+   "why": "no Quick, Draw! category is a jacket sleeve; two lines trace the outer edge of the man's raised arms in the blue jacket",
+   "strokes": [
+    [
+     [
+      150,
+      95
+     ],
+     [
+      112,
+      100
+     ],
+     [
+      72,
+      116
+     ],
+     [
+      46,
+      146
+     ],
+     [
+      42,
+      186
+     ],
+     [
+      66,
+      224
+     ],
+     [
+      92,
+      258
+     ],
+     [
+      98,
+      292
+     ]
+    ],
+    [
+     [
+      264,
+      95
+     ],
+     [
+      302,
+      102
+     ],
+     [
+      340,
+      122
+     ],
+     [
+      368,
+      160
+     ],
+     [
+      370,
+      200
+     ],
+     [
+      346,
+      240
+     ],
+     [
+      330,
+      292
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "head",
+   "plane": "char",
+   "class": "head",
+   "why": "no Quick, Draw! category is a face seen from below; one line traces the man's cheeks and chin under the binoculars",
+   "strokes": [
+    [
+     [
+      182,
+      120
+     ],
+     [
+      180,
+      142
+     ],
+     [
+      192,
+      164
+     ],
+     [
+      214,
+      172
+     ],
+     [
+      238,
+      165
+     ],
+     [
+      250,
+      142
+     ],
+     [
+      248,
+      120
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "1": "the dissolve has ended; the man holds the binoculars to his eyes, tilted a little to his left",
+  "8": "he begins to tip his head back to look higher; the camera tilts up with him",
+  "13": "the binoculars come level and sink in the frame",
+  "22": "the binoculars tilt slightly the other way",
+  "28": "he holds still, looking up"
+ },
+ "no_cel": "SAM followed the binoculars for frames 0 to 8 and then the man's hands, so cel paint from the silhouette would cover the hands and not the binoculars"
+}

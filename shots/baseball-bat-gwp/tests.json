@@ -1,0 +1,80 @@
+[
+ {
+  "id": "M2",
+  "value": 3,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   7,
+   7,
+   5,
+   1,
+   1,
+   1,
+   0,
+   1,
+   1,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.37,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": false,
+  "design_typicality": 8
+ },
+ {
+  "id": "M3",
+  "value": 0.41,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.09
+ },
+ {
+  "id": "M6",
+  "value": 3.2,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "6 strokes, 24 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5597649845616640; scenery quickdraw:6594618453917696, quickdraw:4661695031017472, quickdraw:5404010435575808, drawn by agent: no Quick, Draw! category is the far edge of a flat schoolyard; one line where the yard meets the trees and buildings, drawn by agent: the long shadow of the girl on the yard, a flat dark streak; no category is a shadow",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "26/26",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]
