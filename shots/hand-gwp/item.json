@@ -1,0 +1,40 @@
+{
+ "lot": "SM-0159",
+ "id": "hand-gwp",
+ "kind": "shot",
+ "title": "Hand, the Giraffe Walks Past Way",
+ "category": "hand",
+ "wave": 5,
+ "lane": "join",
+ "stage": 10,
+ "status": "in progress",
+ "added": "2026-10-20",
+ "blurb": "Survey, frames, SAM 2.1 masks and depth on GitHub; the chosen doodle itself as the rig, keyed by eye on the silhouettes; Quick, Draw! scenery on planes set from measured depth.",
+ "cover": "shots/hand-gwp/cover.png",
+ "cover_alt": "shots/hand-gwp/frames/f031.jpg",
+ "links": [
+  {
+   "label": "Shot page",
+   "href": "pages/hand-gwp.html"
+  },
+  {
+   "label": "Open in the projector",
+   "href": "pages/projector.html#hand-gwp"
+  },
+  {
+   "label": "Rig spec",
+   "href": "rigs/hand_spec.json"
+  },
+  {
+   "label": "Survey",
+   "href": "shots/hand/survey/sheet.jpg"
+  }
+ ],
+ "tests": "shots/hand-gwp/tests.json",
+ "tags": [
+  "SAM",
+  "depth",
+  "doodle rig",
+  "wave 5"
+ ]
+}

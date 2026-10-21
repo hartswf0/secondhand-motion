@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A black line drawing of a hand and forearm enters from the right edge of the frame and holds the top edge of a tilted grey rectangular card with a double-line border and the word SORROW written across it at an angle. Across all 16 frames the hand stays at the top centre-right of the card, fingers pointing left and resting over the card's top edge, wrist and forearm extending to the right edge. The card stays at the same tilt and position. Nothing visibly changes from frame 1 to frame 16: it is a held pose.",
+ "seen_film": "A real hand and forearm enter from the right and hold a tilted grey card printed with SORROW against a dark background, gripping the top edge with the thumb on the front of the card. Across the 16 frames the card and hand stay in nearly the same place, with at most a few pixels of drift and no change in grip. It is a held insert shot of the card.",
+ "named_subject": "A hand (mirrored version of the doodle, fingers pointing left) holding a card that reads SORROW.",
+ "verdict": "bar met",
+ "evidence": "a.png frames 1-16 and d.png frames 1-16 both show a hold: hand at the top-right of a card tilted the same way, word SORROW in the same diagonal position, forearm leaving the frame at the upper right. e.png frames 1-62 show the hand drawn identically in every frame with no jump, size change or doubling; f.png frames 1-62 show the film hand and card also nearly motionless, so the animation's hold matches the film's hold. g.png shows every overlaid drawing stacked in one place with a single centre marker, consistent with a hold and no path reversals. Judged from still frames only, not playback.",
+ "primary_gap": "The fingertips are drawn as a cluster of short overlapping strokes (visible in b.png and every e.png frame), which reads busier than the four clean parallel finger lines of the doodle in c.png.",
+ "closes_when": "The fingers in each frame are drawn as four separate parallel lines ending in single rounded tips, as in c.png, with no extra short strokes at the tips.",
+ "protect": "The steady hold that matches the film's hold for all 62 frames; the hand's placement at the top-right edge of the card with the forearm exiting right, matching the film; the card's tilt, double border and SORROW lettering in the same position as the film; the doodle's thin single-weight outline with no shading.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The hand is the c.png doodle mirrored and recognisable by its wrist hook and long forearm lines, but the finger region carries extra overlapping strokes the doodle does not have.",
+ "still_frames_only": true,
+ "_packet": "lotdbf44e29",
+ "_round": 1
+}

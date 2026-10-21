@@ -1,0 +1,19 @@
+{
+ "seen_animation": "a.png shows a static view of a river drawn in black lines: two long bank lines run from the top of the frame down to the bottom, with a short angled stroke at the top left, a long top edge stroke, a lower-left diagonal stroke, and a small vertical tick at the bottom-left corner. Grey scenery surrounds it: rows of reed or grass strokes on both upper banks and along the bottom, a thin branching plant standing in the middle of the river, and small cloud and horizon marks along the top. Across frames 1-16 the black river lines stay in place with only very small shifts of a few pixels; the grey plant in the middle tilts slightly left and right. No large movement or event happens.",
+ "seen_film": "d.png shows a fixed camera looking down a narrow river or drainage channel between banks of tall reeds and grass under an overcast sky, with a bright patch of sky reflected at the far end. A tall thin weed stands in the foreground in front of the water. Across frames 1-16 the camera does not move; the foreground weed and grasses sway slightly in the wind and the water surface shimmers. Nothing else happens.",
+ "named_subject": "a river (the channel of water between two banks)",
+ "verdict": "bar met",
+ "evidence": "In e.png frames 1-49 the black bank lines keep the same shape, size and position as in the film's channel in f.png frames 1-49, where the channel also stays fixed; g.png shows all overlaid drawings of the character stacked almost exactly on one another around a single centre, matching the film's locked-off camera with no travel. The grey foreground plant in e.png shifts slightly between frames (for example frames 5-8 and 37-40), matching the gentle sway of the foreground weed in f.png. No frame shows doubling, a size change or a jump of the black lines. The river is placed where the film's water is: left bank line around the left third, right bank line right of centre, with the plant in front of the water as in the film. Judged from still frames only, not playback.",
+ "primary_gap": "The film's only motion is wind in the reeds and shimmer on the water, and the drawing shows almost none of this: the reed rows are fixed and the black river lines are effectively frozen, so the shot reads as close to a still image.",
+ "closes_when": "Consecutive frames in e.png show the grey reed strokes and the middle plant leaning a few pixels back and forth in a slow cycle, while the black river lines keep only a light line-boil of one or two pixels, without moving out of place.",
+ "protect": "Keep the black river drawn with the doodle's own strokes from c.png (the angled top-left stroke, the long sloping top edge, the two long bank lines, the stepped lower-left diagonal and the small vertical tick), keep it fixed in the same place and size as the film's channel, and keep the absence of jumps, pops or doubling.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The black lines are the c.png doodle stroke for stroke at the film's channel position; only the slightly uneven placement of the top-left angled stroke relative to the top edge differs marginally between frames.",
+ "still_frames_only": true,
+ "_packet": "lot269a88ec",
+ "_round": 1
+}

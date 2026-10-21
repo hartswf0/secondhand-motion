@@ -1,0 +1,27 @@
+{
+ "seen_animation": "A side-view locomotive drawn in black (boxy body, arched cab opening, chimney with two wavy smoke lines, small wheel marks, a slanted front end with a step) sits on the left of the frame against grey scenery (clouds, a tall building outline, a second smaller train outline). A black stick figure stands to the right of the train. Across frames 1-8 the train grows slowly and its front edge moves right toward the figure; the figure stands, then begins small walking steps. In frames 9-12 the figure turns toward the train and bends down at its front corner, reaching for the step. In frames 13-16 the figure is upright on the train's front step, holding on, while the train continues to grow slightly and the grey building is covered.",
+ "seen_film": "A dark switcher locomotive faces the camera head-on in a rail yard and slowly approaches, growing larger in frame. A man in dark clothes stands to the right of the locomotive near a red flatcar. In frames 1-8 he stands mostly still. In frames 9-11 he steps left to the locomotive's right front corner and grabs the handrail, crouching onto the front step. In frames 12-16 he rides upright on the front step at the right corner while the locomotive keeps approaching and fills more of the frame.",
+ "named_subject": "A locomotive (the doodle's train with smoke and chimney) approaching, with a stick-figure yard worker who walks to it and climbs onto its front step.",
+ "verdict": "reference stronger",
+ "evidence": "Still frames only, no playback. Event match: e.png 1-14 figure stands right of train (film 1-14 man stands); e.png 31-36 figure crouches at the train's front step (film 28-34 man grabs rail and steps up); e.png 37-50 figure upright on step at train's front corner (film 36-50 man riding the step). The train grows and drifts right steadily across e.png 1-50, matching the film's approach. Weaknesses: the figure starts leg movement around e.png 15-24 while the film man in f.png 15-24 is essentially standing; the figure only covers a short horizontal distance and its feet shuffle in place rather than travel. In e.png 31-35 the crouching figure overlaps the train's step and front corner and its limbs and the step lines tangle, reading as a doubled or redrawn shape for several frames. Between e.png 35 and 37 the figure snaps from a low crouch to fully upright and slightly higher, a larger change than the film's f.png 35-37 rise. g.png shows the head positions climbing in an even arc with no reversal, so the gross path is continuous.",
+ "primary_gap": "The boarding moment (e.png 31-37) is drawn as tangled overlapping limbs at the step followed by a pop to upright, so the climb onto the step does not read as one clear movement.",
+ "closes_when": "In e.png 31-37 the figure shows a distinct sequence of one hand on the train's front edge, one foot lifted onto the step, then the body rising over 3-4 frames, with its lines kept separate from the step and train outline.",
+ "protect": "The doodle's train construction (boxy body, arched opening, chimney with two wavy smoke strokes, small hexagon wheel marks, thin wobbly lines); the steady growth and rightward drift of the train matching the film's approach; the figure standing still early and ending on the front step at the train's right front corner, at the same time as in the film; the grey scenery being covered as the train grows.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The train keeps the doodle's construction and stroke habits, though the animation adds a vertical dividing line and a longer slanted nose that the doodle draws more compactly.",
+ "still_frames_only": true,
+ "_packet": "lota7279682",
+ "_round": 3
+}

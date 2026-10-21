@@ -1,0 +1,22 @@
+{
+ "seen_animation": "Frame 1: the character (small head cluster with a short beak dash, an oval body, a short triangle-and-bar leg joint and one long leg) is cut off at the right edge of the frame. Frames 2-4: the same clipped figure stays at the right edge while a separate partial body arc appears at the left edge, so two fragments show at once. Frames 5-8: the figure comes in from the left edge, its leg appears, and it settles at the left-centre. Frames 9-16: the figure stands on one leg with the head tucked against the top of the body and holds almost still, with a small left-right drift, while the grey scenery (vertical posts, two horizontal lines, a tree trunk outline at upper right) moves slightly.",
+ "seen_film": "Frame 1: the rounded pink body of a flamingo is at the right edge, partly out of frame. Frames 2-4: the camera pans; a pink head/neck fragment appears at the left edge while the body is still at the right edge. Frames 5-8: a flamingo comes in from the left edge and settles at left-centre, standing on one leg. Frames 9-16: the flamingo stands on one leg with its head tucked into its back, holding still behind a wire fence, with a small drift of the frame from camera movement.",
+ "named_subject": "A flamingo standing on one leg with its head tucked into its back, drawn as the duck/bird doodle (round head with beak dash, oval body, triangle leg joint, long leg).",
+ "verdict": "bar met",
+ "evidence": "e.png 1 vs f.png 1: figure clipped at the right edge where the film's flamingo body is. e.png 2-4 vs f.png 2-4: a fragment at the left edge and a figure at the right edge in both. e.png 6-8 vs f.png 6-8: figure enters from the left edge and settles at left-centre at the same frames as the film; leg visible from about frame 6-8 in both. e.png 9-26 vs f.png 9-26: the figure holds at left-centre on one leg with head tucked, small drift matching the film's slight camera drift (frame 9 is near the left edge in both, frames 10-26 hold at about the same x). g.png shows the held frames 7-26 stacked tightly with no reversals. Minor pops: e.png 5, where the right-edge figure disappears while f.png 5-6 still show pink at the right edge, and e.png 6, where the leg appears in one step. These are judged from still frames only, not playback.",
+ "primary_gap": "In frames 2-6 the opening pan is drawn as disconnected fragments (a loose body arc at the left edge and a clipped figure at the right), and the right-edge figure vanishes at frame 5 one to two frames before the film's flamingo leaves the right edge.",
+ "closes_when": "In e.png 2-6 the right-edge figure stays partly visible and slides out of frame through frame 6 as in f.png, and the left-edge fragment is drawn as the head/neck of the bird coming in rather than a lone body arc, with the leg growing in over frames 5-7 instead of appearing at once in frame 6.",
+ "protect": "The tucked-head, one-leg standing pose built from the doodle's own parts (round head with beak dash, oval body, triangle leg joint, single long leg); the left-centre placement and long still hold from frame 9 onward that matches the film; the timing of the entry at frames 5-8; the sparse line style without added detail.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  5,
+  6
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The neck of c.png is absent because the head is tucked onto the body, which matches the film's pose; the head, beak dash, oval body and triangle leg joint keep the doodle's construction.",
+ "still_frames_only": true,
+ "_packet": "lotc0c0370f",
+ "_round": 2
+}

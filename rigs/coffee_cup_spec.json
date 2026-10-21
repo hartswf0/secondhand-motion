@@ -1,0 +1,332 @@
+{
+ "category": "coffee cup",
+ "doodle_key_id": "5699704845238272",
+ "facing": 1,
+ "face_from": [
+  "rimL",
+  "rimL"
+ ],
+ "size_from_mask": false,
+ "note": "Quick, Draw! coffee cup 5699704845238272, a side view of a tapered cup. Stroke 0 is one line that draws the rim ellipse (vertices 0-14 and 25) and then the cup's sides and base (vertices 15-24). Strokes 1, 2 and 3 are three short lines inside the rim, stroke 4 is a band across the upper body and stroke 5 a short line low on the body. The drawing is placed by the two ends of the rim (rimL, rimR), so it moves, tilts and turns with the rim of the cup in the film. Two pose numbers handle the view from above: 'rim' opens the rim ellipse toward a circle about the rim's middle line (1 is the doodle's ellipse, about 2.6 a circle), and 'body' folds the sides and base up toward that line (1 is the doodle's full side view, near 0 the body is hidden behind the rim as when the cup is seen from straight above). In the film the cup starts rim-on and tilts toward a side view, so 'rim' falls and 'body' rises over the shot.",
+ "strokes": [
+  [
+   [
+    10,
+    55
+   ],
+   [
+    98,
+    75
+   ],
+   [
+    130,
+    76
+   ],
+   [
+    157,
+    73
+   ],
+   [
+    181,
+    65
+   ],
+   [
+    197,
+    54
+   ],
+   [
+    200,
+    48
+   ],
+   [
+    179,
+    23
+   ],
+   [
+    164,
+    12
+   ],
+   [
+    136,
+    3
+   ],
+   [
+    85,
+    3
+   ],
+   [
+    56,
+    9
+   ],
+   [
+    35,
+    17
+   ],
+   [
+    15,
+    36
+   ],
+   [
+    1,
+    58
+   ],
+   [
+    2,
+    81
+   ],
+   [
+    17,
+    123
+   ],
+   [
+    75,
+    234
+   ],
+   [
+    86,
+    245
+   ],
+   [
+    103,
+    252
+   ],
+   [
+    135,
+    255
+   ],
+   [
+    150,
+    251
+   ],
+   [
+    165,
+    230
+   ],
+   [
+    174,
+    204
+   ],
+   [
+    188,
+    128
+   ],
+   [
+    209,
+    52
+   ]
+  ],
+  [
+   [
+    51,
+    14
+   ],
+   [
+    57,
+    55
+   ]
+  ],
+  [
+   [
+    104,
+    0
+   ],
+   [
+    111,
+    64
+   ]
+  ],
+  [
+   [
+    155,
+    13
+   ],
+   [
+    160,
+    76
+   ]
+  ],
+  [
+   [
+    30,
+    98
+   ],
+   [
+    122,
+    112
+   ],
+   [
+    203,
+    110
+   ]
+  ],
+  [
+   [
+    39,
+    179
+   ],
+   [
+    113,
+    185
+   ]
+  ]
+ ],
+ "root": [
+  "rimL",
+  "rimR"
+ ],
+ "anchors": {
+  "rimL": [
+   1,
+   58
+  ],
+  "rimR": [
+   200,
+   48
+  ],
+  "axL": [
+   1,
+   42
+  ],
+  "axR": [
+   200,
+   36
+  ],
+  "base": [
+   124,
+   253
+  ]
+ },
+ "parts": [
+  {
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0,
+   "fold": "rim",
+   "axis": [
+    "axL",
+    "axR"
+   ],
+   "stroke": 0,
+   "from": 0,
+   "to": 14
+  },
+  {
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0,
+   "fold": "rim",
+   "axis": [
+    "axL",
+    "axR"
+   ],
+   "stroke": 0,
+   "from": 25,
+   "to": 25
+  },
+  {
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0,
+   "fold": "rim",
+   "axis": [
+    "axL",
+    "axR"
+   ],
+   "stroke": 1,
+   "from": 0,
+   "to": 1
+  },
+  {
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0,
+   "fold": "rim",
+   "axis": [
+    "axL",
+    "axR"
+   ],
+   "stroke": 2,
+   "from": 0,
+   "to": 1
+  },
+  {
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0,
+   "fold": "rim",
+   "axis": [
+    "axL",
+    "axR"
+   ],
+   "stroke": 3,
+   "from": 0,
+   "to": 1
+  },
+  {
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0,
+   "fold": "body",
+   "axis": [
+    "axL",
+    "axR"
+   ],
+   "stroke": 0,
+   "from": 15,
+   "to": 24
+  },
+  {
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0,
+   "fold": "body",
+   "axis": [
+    "axL",
+    "axR"
+   ],
+   "stroke": 4,
+   "from": 0,
+   "to": 2
+  },
+  {
+   "joint": "rimL",
+   "aim": [
+    "rimL",
+    "rimR"
+   ],
+   "turn": 0,
+   "fold": "body",
+   "axis": [
+    "axL",
+    "axR"
+   ],
+   "stroke": 5,
+   "from": 0,
+   "to": 1
+  }
+ ],
+ "track": false,
+ "smooth": 1.2,
+ "size": "steady"
+}

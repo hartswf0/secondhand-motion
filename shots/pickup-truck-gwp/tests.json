@@ -108,17 +108,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201cA car or truck carrying a horizontal boom with hanging boxes on each side.\u201d; motion smooth; follows the film: partly",
+  "value": "named \u201ca tractor (standing in for the film's boom-carrying pickup truck) with boxes hanging from a side boom\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": false,
-  "evidence": "shots/pickup-truck-gwp/reviews/critic-1.json"
+  "evidence": "shots/pickup-truck-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
-  "value": "bar_not_met",
+  "value": "bar_met",
   "unit": "",
-  "ok": false,
-  "note": "The vehicle is a redrawn generic box car with small inset wheels rather than the doodle's stepped cab-and-hood shape with big loose wheel loops.",
-  "evidence": "shots/pickup-truck-gwp/reviews/critic-1.json"
+  "ok": true,
+  "note": "The cab, hood and two looped wheels are the c.png drawing; the boom and four boxes are additions not in the doodle, but they are drawn in its plain straight-line style and do not change the core drawing.",
+  "evidence": "shots/pickup-truck-gwp/reviews/critic-2.json"
  }
 ]
