@@ -6,7 +6,7 @@
   "top",
   "top"
  ],
- "note": "",
+ "note": "Quick, Draw! wine glass 5256943679569920. Stroke 4 is the rim, a shallow arc across the top. Stroke 3 is the bowl: the rim line, then down the left side, round the bottom and up the right side. Strokes 1 and 2 are the two lines of the stem. Stroke 0 is the oval foot. In the film the glass stands still inside a clear plastic box while the camera pans left, right and back, and moves up a little; the glass does not turn, bend or change size, so the rig is rigid: no part moves on its own. The whole doodle is placed by two points on one vertical line through the doodle's bowl, the top of the rim (top) and the bottom of the bowl where the stem starts (base), 108 px apart. The pose entry _scale 0.72 makes the doodle 0.72 px per doodle unit across the glass and 0.89 along it, because the doodle's bowl is wider for its height than the film's glass; the doodle's strokes and their order are unchanged. The foot of the doodle falls below the frame, as the foot of the real glass does. Because the glass is fixed in the scene, its place on every frame is the measured camera shift (smoothed over about one frame) plus one fixed point, so the keys are on every frame; optical-flow tracking was tried and changed nothing, since there are no in-between frames for it to fill. The rod that rattles in the bowl is not part of the glass doodle; it is a scene object, one line per frame, measured on each frame.",
  "strokes": [
   [
    [

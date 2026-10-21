@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A tall rounded doodle object (domed cap, a horizontal band, a crossbar with a short tick at its left end, three vertical bars inside a slightly tapering body) starts in the upper left of the frame, tilted with its top leaning left. Over a.png frames 1-5 it slides right and down a little and straightens upright. From frames 5 to 12 it stands nearly still near the left-centre, upright. From frames 13 to 16 it is slightly larger and its top sits a little higher, still upright in the same place. Grey scenery (a double vertical line and a cap-like outline at the top right) shifts slightly right with the character. The crossbar line is drawn heavy in some frames (1, 7, 9, 11, 13) and thin in others (2-6, 8, 10, 12, 14-16).",
+ "seen_film": "A hand holds up a metal miner's safety lamp (cylindrical gauze cage with window slots, a hook on top, glass and pillars below). In d.png frames 1-2 the lamp is at the left, tilted with its top leaning left, a cord trailing from it and a miner's helmeted head at the right edge. Frames 2-5 the lamp moves right and straightens upright as the hand lifts it toward the camera. Frames 5-10 it holds upright near the left-centre. Frame 11 the hand blurs as it regrips, and frames 12-16 the lamp is held slightly closer to camera, a little larger and higher, steady.",
+ "named_subject": "a miner's safety lamp, drawn as the doodle's domed cylinder with vertical bars",
+ "verdict": "bar met",
+ "evidence": "e.png 1-8 against f.png 1-8: both move the lamp from the upper left rightward and straighten its tilt over the same span, with the drawing advancing a few pixels per frame and no gaps (g.png path 1 to 7 is a continuous rightward drift). e.png 9-20 hold upright at the same spot while f.png 9-20 also hold. e.png 21-25 the drawing grows slightly and rises, matching f.png 21-25 where the regrip brings the lamp closer; e.png 25-32 then holds at the larger size as f.png 25-32 holds. g.png shows a single tight cluster after frame 7 with no reversals. The construction of c.png (dome, slanted band, crossbar with left tick, three vertical strokes of unequal length, open bottom-left corner of the body outline) is kept in every frame. Only still frames were examined, not playback.",
+ "primary_gap": "The crossbar and its left tick change line weight from frame to frame (heavy in e.png 1, 9-11, 17-24; thin in 2-8, 12-16, 25-32), which will read as flicker of that stroke in playback while the rest of the drawing holds steady.",
+ "closes_when": "The crossbar stroke keeps one constant thickness and the left tick keeps one constant length in all 32 frames of e.png.",
+ "protect": "The c.png construction and stroke habits (wobbly dome, slanted band, crossbar overshooting left with a short drop tick, three uneven vertical strokes, tapered body); the film-matched path: left-tilted start, rightward slide and straightening over frames 1-8, hold from 9, slight growth and rise around 21-25 then hold; the stable size within each hold.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png drawing throughout; only the varying weight of the crossbar stroke departs from the doodle's single consistent pen weight.",
+ "still_frames_only": true,
+ "_packet": "lotf7c9bd0a",
+ "_round": 1
+}
