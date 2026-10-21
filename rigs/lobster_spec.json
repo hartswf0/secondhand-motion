@@ -1,0 +1,298 @@
+{
+ "category": "lobster",
+ "doodle_key_id": "6137959747158016",
+ "facing": 1,
+ "face_from": [
+  "head",
+  "head"
+ ],
+ "note": "Quick, Draw! lobster 6137959747158016, drawn from above with the head at the top and both claws reaching up. Strokes 0 and 2 are the left and right sides of the head and body, stroke 9 is a cross line at the base of the body, strokes 3, 5 and 6 are the narrowing tail, strokes 1 and 4 are dots. Stroke 7 is the claw on the doodle's right, stroke 8 the claw on its left; each is one closed line from the body out to an open pincer and back. The film shows the lobster facing the camera with its tail rising away at the top of the frame and its claws hanging toward the camera, so the root (head to tail) places the doodle turned upside down: tail at the top of the carapace, head at the front. That puts stroke 7 on the screen-left claw, which hangs still, and stroke 8 on the screen-right claw, which the film swings down to the table, curls in and then lays across the front of the body. Each claw turns about its base on the body and lengthens toward the pose's claw tip by half the difference, because the film's claws are longer than the doodle's.",
+ "root": [
+  "head",
+  "tail"
+ ],
+ "anchors": {
+  "head": [
+   130,
+   64
+  ],
+  "tail": [
+   132,
+   254
+  ],
+  "lbase": [
+   158,
+   132
+  ],
+  "ltip": [
+   241,
+   5
+  ],
+  "rbase": [
+   77,
+   150
+  ],
+  "rtip": [
+   17,
+   39
+  ]
+ },
+ "parts": [
+  {
+   "stroke": 7,
+   "from": 0,
+   "to": 11,
+   "joint": "lbase",
+   "aim": [
+    "lbase",
+    "ltip"
+   ],
+   "stretch": 0.5
+  },
+  {
+   "stroke": 8,
+   "from": 0,
+   "to": 9,
+   "joint": "rbase",
+   "aim": [
+    "rbase",
+    "rtip"
+   ],
+   "stretch": 0.5
+  },
+  {
+   "rest": true,
+   "joint": "head",
+   "aim": [
+    "head",
+    "tail"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "smooth": 1.2,
+ "track": false,
+ "strokes": [
+  [
+   [
+    116,
+    63
+   ],
+   [
+    102,
+    77
+   ],
+   [
+    84,
+    115
+   ],
+   [
+    78,
+    171
+   ]
+  ],
+  [
+   [
+    117,
+    64
+   ],
+   [
+    117,
+    64
+   ]
+  ],
+  [
+   [
+    117,
+    65
+   ],
+   [
+    142,
+    67
+   ],
+   [
+    153,
+    86
+   ],
+   [
+    160,
+    135
+   ],
+   [
+    157,
+    178
+   ]
+  ],
+  [
+   [
+    80,
+    173
+   ],
+   [
+    82,
+    195
+   ],
+   [
+    98,
+    227
+   ],
+   [
+    98,
+    251
+   ],
+   [
+    101,
+    253
+   ],
+   [
+    128,
+    253
+   ]
+  ],
+  [
+   [
+    138,
+    254
+   ],
+   [
+    138,
+    254
+   ]
+  ],
+  [
+   [
+    164,
+    254
+   ],
+   [
+    167,
+    249
+   ],
+   [
+    165,
+    233
+   ]
+  ],
+  [
+   [
+    159,
+    179
+   ],
+   [
+    156,
+    206
+   ],
+   [
+    166,
+    232
+   ]
+  ],
+  [
+   [
+    161,
+    120
+   ],
+   [
+    204,
+    61
+   ],
+   [
+    225,
+    17
+   ],
+   [
+    230,
+    0
+   ],
+   [
+    229,
+    27
+   ],
+   [
+    214,
+    74
+   ],
+   [
+    253,
+    10
+   ],
+   [
+    255,
+    32
+   ],
+   [
+    253,
+    51
+   ],
+   [
+    240,
+    82
+   ],
+   [
+    224,
+    106
+   ],
+   [
+    154,
+    145
+   ]
+  ],
+  [
+   [
+    72,
+    161
+   ],
+   [
+    38,
+    132
+   ],
+   [
+    19,
+    106
+   ],
+   [
+    3,
+    74
+   ],
+   [
+    0,
+    45
+   ],
+   [
+    4,
+    45
+   ],
+   [
+    46,
+    91
+   ],
+   [
+    40,
+    70
+   ],
+   [
+    35,
+    32
+   ],
+   [
+    83,
+    101
+   ]
+  ],
+  [
+   [
+    83,
+    174
+   ],
+   [
+    123,
+    168
+   ],
+   [
+    168,
+    167
+   ]
+  ]
+ ]
+}

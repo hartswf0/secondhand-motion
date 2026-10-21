@@ -1,0 +1,77 @@
+[
+ {
+  "id": "M2",
+  "value": 68,
+  "unit": "percentile among real doodles of the category",
+  "ok": true,
+  "per_key": [
+   73,
+   60,
+   69,
+   67,
+   71,
+   70,
+   67,
+   66,
+   70
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.6,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 85
+ },
+ {
+  "id": "M3",
+  "value": "not measured",
+  "unit": "no usable silhouette (SAM masked a group, not the subject)",
+  "ok": null
+ },
+ {
+  "id": "M6",
+  "value": 0.6,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 32 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5549221702795264; scenery quickdraw:5549221702795264 (a second copy of the character's rig, keyed in shots/fish-sam/pose_koi2.json), quickdraw:5549221702795264 (a second copy of the character's rig, keyed in shots/fish-sam/pose_school1.json), quickdraw:5549221702795264 (a second copy of the character's rig, keyed in shots/fish-sam/pose_school2.json), quickdraw:5549221702795264 (a second copy of the character's rig, keyed in shots/fish-sam/pose_school3.json), quickdraw:5549221702795264 (a second copy of the character's rig, keyed in shots/fish-sam/pose_school4.json), quickdraw:5549221702795264 (a second copy of the character's rig, keyed in shots/fish-sam/pose_school5.json), quickdraw:5549221702795264 (a second copy of the character's rig, keyed in shots/fish-sam/pose_school6.json), quickdraw:5549221702795264 (a second copy of the character's rig, keyed in shots/fish-sam/pose_school7.json), quickdraw:5549221702795264 (a second copy of the character's rig, keyed in shots/fish-sam/pose_school8.json), quickdraw:5549221702795264 (a second copy of the character's rig, keyed in shots/fish-sam/pose_school9.json), drawn by agent: no Quick, Draw! category is a ripple ring; each ring is drawn as two broken arcs round the centre of the rings in the film, a little wider every four frames as the rings spread, drawn by agent: no Quick, Draw! category is a ripple ring; each ring is drawn as two broken arcs round the centre of the rings in the film, a little wider every four frames as the rings spread, drawn by agent: no Quick, Draw! category is a ripple ring; each ring is drawn as two broken arcs round the centre of the rings in the film, a little wider every four frames as the rings spread, drawn by agent: no Quick, Draw! category is a ripple ring; each ring is drawn as two broken arcs round the centre of the rings in the film, a little wider every four frames as the rings spread, drawn by agent: no Quick, Draw! category is a ripple ring; each ring is drawn as two broken arcs round the centre of the rings in the film, a little wider every four frames as the rings spread, drawn by agent: no Quick, Draw! category is a ripple ring; each ring is drawn as two broken arcs round the centre of the rings in the film, a little wider every four frames as the rings spread, drawn by agent: no Quick, Draw! category is a floating twig; one line along the dark branch lying across the top of the pond, drawn by agent: no Quick, Draw! category is a pond wall; one line along the pale stone edge of the pond at the right",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "25/25",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

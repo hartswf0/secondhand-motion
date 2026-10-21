@@ -1,0 +1,297 @@
+{
+ "category": "bat",
+ "doodle_key_id": "6315771342880768",
+ "facing": 1,
+ "face_from": [
+  "neck",
+  "neck"
+ ],
+ "note": "Quick, Draw! bat 6315771342880768, drawn from the front with both wings spread. Stroke 0 is the left wing, a long upper edge and a zigzag lower edge; stroke 1 is the body, a closed oval; stroke 2 is the head with two pointed ears; stroke 3 is the right wing, drawn the same way as the left. The whole drawing is placed by the neck and the bottom of the body, which sets where the bat is, how big and how it leans. The head turns at the neck toward the pose's head point. Each wing turns at its shoulder toward the pose's wing tip and folds toward the body line by the pose's lfold or rfold amount (1 as drawn, 0 shut), because in the film the bat clings to a trunk with its wings half open and hanging down, and opens and closes them as it crawls.",
+ "strokes": [
+  [
+   [
+    130,
+    54
+   ],
+   [
+    78,
+    17
+   ],
+   [
+    60,
+    0
+   ],
+   [
+    44,
+    15
+   ],
+   [
+    23,
+    49
+   ],
+   [
+    0,
+    98
+   ],
+   [
+    3,
+    99
+   ],
+   [
+    56,
+    66
+   ],
+   [
+    59,
+    82
+   ],
+   [
+    64,
+    90
+   ],
+   [
+    80,
+    72
+   ],
+   [
+    89,
+    104
+   ],
+   [
+    93,
+    107
+   ],
+   [
+    126,
+    73
+   ]
+  ],
+  [
+   [
+    135,
+    55
+   ],
+   [
+    123,
+    88
+   ],
+   [
+    125,
+    105
+   ],
+   [
+    129,
+    110
+   ],
+   [
+    136,
+    112
+   ],
+   [
+    152,
+    109
+   ],
+   [
+    160,
+    85
+   ],
+   [
+    154,
+    58
+   ],
+   [
+    137,
+    55
+   ]
+  ],
+  [
+   [
+    129,
+    53
+   ],
+   [
+    123,
+    41
+   ],
+   [
+    128,
+    22
+   ],
+   [
+    133,
+    20
+   ],
+   [
+    140,
+    32
+   ],
+   [
+    157,
+    15
+   ],
+   [
+    159,
+    20
+   ],
+   [
+    155,
+    45
+   ],
+   [
+    144,
+    53
+   ]
+  ],
+  [
+   [
+    151,
+    59
+   ],
+   [
+    217,
+    31
+   ],
+   [
+    249,
+    14
+   ],
+   [
+    251,
+    16
+   ],
+   [
+    254,
+    27
+   ],
+   [
+    255,
+    88
+   ],
+   [
+    251,
+    96
+   ],
+   [
+    245,
+    93
+   ],
+   [
+    216,
+    60
+   ],
+   [
+    205,
+    84
+   ],
+   [
+    191,
+    73
+   ],
+   [
+    184,
+    63
+   ],
+   [
+    176,
+    80
+   ],
+   [
+    159,
+    77
+   ]
+  ]
+ ],
+ "anchors": {
+  "neck": [
+   140,
+   55
+  ],
+  "bottom": [
+   138,
+   112
+  ],
+  "head": [
+   141,
+   22
+  ],
+  "lsh": [
+   128,
+   58
+  ],
+  "ltip": [
+   0,
+   98
+  ],
+  "rsh": [
+   153,
+   60
+  ],
+  "rtip": [
+   255,
+   90
+  ]
+ },
+ "root": [
+  "neck",
+  "bottom"
+ ],
+ "size_from_mask": false,
+ "parts": [
+  {
+   "stroke": 2,
+   "from": 0,
+   "to": 8,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "head"
+   ],
+   "turn": 0.7
+  },
+  {
+   "stroke": 1,
+   "from": 0,
+   "to": 8,
+   "joint": "neck",
+   "aim": [
+    "neck",
+    "bottom"
+   ],
+   "turn": 0
+  },
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 13,
+   "joint": "lsh",
+   "aim": [
+    "lsh",
+    "ltip"
+   ],
+   "fold": "lfold",
+   "axis": [
+    "neck",
+    "bottom"
+   ]
+  },
+  {
+   "stroke": 3,
+   "from": 0,
+   "to": 13,
+   "joint": "rsh",
+   "aim": [
+    "rsh",
+    "rtip"
+   ],
+   "fold": "rfold",
+   "axis": [
+    "neck",
+    "bottom"
+   ]
+  }
+ ],
+ "size": "steady",
+ "smooth": 1.2,
+ "track": false,
+ "max_tilt": 40
+}

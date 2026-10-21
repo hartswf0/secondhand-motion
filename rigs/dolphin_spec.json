@@ -1,0 +1,227 @@
+{
+ "category": "dolphin",
+ "doodle_key_id": "5582764139085824",
+ "facing": 1,
+ "note": "Quick, Draw! dolphin 5582764139085824, drawn facing right. Stroke 1 is the head and front body: the rounded forehead, the pointed snout at the right tip and the throat line back to the belly. Stroke 0 is the dorsal fin. Stroke 2 is the pectoral fin under the body. Stroke 3 is the back line running left to the tail, the two-lobed fluke at the left end, and the belly line back toward the middle. The root places the drawing by the snout tip and the hip (where the back line starts to narrow); the rear body and fluke turn at the tail stock to follow the film's tail rising and settling as the animal rolls along the surface. In the film the animal swims left, so the drawing is mirrored.",
+ "root": [
+  "nose",
+  "hip"
+ ],
+ "anchors": {
+  "nose": [
+   255,
+   74
+  ],
+  "hip": [
+   75,
+   72
+  ],
+  "stock": [
+   40,
+   76
+  ],
+  "tail": [
+   4,
+   82
+  ]
+ },
+ "parts": [
+  {
+   "region": [
+    -1,
+    0,
+    58,
+    120
+   ],
+   "joint": "stock",
+   "aim": [
+    "stock",
+    "tail"
+   ],
+   "turn": 0.8
+  },
+  {
+   "rest": true,
+   "joint": "nose",
+   "aim": [
+    "nose",
+    "hip"
+   ],
+   "turn": 0
+  }
+ ],
+ "size": "steady",
+ "foreshorten": [
+  0.7,
+  1.15
+ ],
+ "max_tilt": 35,
+ "track": false,
+ "smooth": 1.2,
+ "strokes": [
+  [
+   [
+    143,
+    17
+   ],
+   [
+    134,
+    6
+   ],
+   [
+    121,
+    1
+   ],
+   [
+    109,
+    0
+   ],
+   [
+    87,
+    8
+   ],
+   [
+    111,
+    23
+   ],
+   [
+    120,
+    38
+   ]
+  ],
+  [
+   [
+    136,
+    24
+   ],
+   [
+    147,
+    21
+   ],
+   [
+    157,
+    24
+   ],
+   [
+    178,
+    49
+   ],
+   [
+    189,
+    56
+   ],
+   [
+    249,
+    66
+   ],
+   [
+    255,
+    74
+   ],
+   [
+    251,
+    80
+   ],
+   [
+    219,
+    87
+   ],
+   [
+    190,
+    89
+   ],
+   [
+    170,
+    98
+   ],
+   [
+    130,
+    106
+   ],
+   [
+    127,
+    104
+   ]
+  ],
+  [
+   [
+    121,
+    88
+   ],
+   [
+    111,
+    91
+   ],
+   [
+    106,
+    110
+   ],
+   [
+    90,
+    122
+   ],
+   [
+    99,
+    110
+   ],
+   [
+    98,
+    90
+   ]
+  ],
+  [
+   [
+    118,
+    42
+   ],
+   [
+    75,
+    42
+   ],
+   [
+    60,
+    45
+   ],
+   [
+    38,
+    56
+   ],
+   [
+    21,
+    72
+   ],
+   [
+    0,
+    60
+   ],
+   [
+    6,
+    70
+   ],
+   [
+    9,
+    83
+   ],
+   [
+    4,
+    104
+   ],
+   [
+    22,
+    97
+   ],
+   [
+    33,
+    101
+   ],
+   [
+    45,
+    101
+   ],
+   [
+    102,
+    97
+   ]
+  ]
+ ]
+}

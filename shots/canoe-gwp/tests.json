@@ -1,0 +1,79 @@
+[
+ {
+  "id": "M2",
+  "value": 16,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   15,
+   15,
+   14,
+   13,
+   14,
+   15,
+   16,
+   19,
+   19,
+   19
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 0.88,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 13
+ },
+ {
+  "id": "M3",
+  "value": 0.17,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": false,
+  "min": 0.07
+ },
+ {
+  "id": "M6",
+  "value": 1.7,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "5 strokes, 28 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:5064209014456320; scenery quickdraw:6441091291152384, quickdraw:6280902432784384, quickdraw:6305779894190080, quickdraw:4897376768622592, quickdraw:5976910066614272, quickdraw:5634744702205952, quickdraw:4514511304261632, quickdraw:5912015409250304, quickdraw:6282217464528896, quickdraw:6631439896412160, quickdraw:6047984158507008, quickdraw:4909698086076416, quickdraw:4745449359540224, quickdraw:4919937862729728, quickdraw:6670294439690240, quickdraw:5796850290393088, quickdraw:5090884271996928, quickdraw:5149662208065536, quickdraw:6148663078289408, quickdraw:5796850290393088, quickdraw:5090884271996928, quickdraw:5149662208065536, drawn by agent: the pale strip of beach between the trees and the lake: its top edge and the water's edge, two near-level lines; no Quick, Draw! category is a shoreline, quickdraw:5893259022827520, quickdraw:6720979294224384, quickdraw:6031248671637504, quickdraw:5946652378529792, quickdraw:6748667828502528, quickdraw:6237294090518528, quickdraw:5611240195883008, quickdraw:5893259022827520, quickdraw:6720979294224384, quickdraw:6031248671637504, quickdraw:5946652378529792, quickdraw:6748667828502528",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "38/38",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

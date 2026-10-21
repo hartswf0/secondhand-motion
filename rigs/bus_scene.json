@@ -1,0 +1,272 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   7.9,
+   18.1,
+   28.2,
+   38.3,
+   49.6,
+   62.1,
+   75.2,
+   88.8,
+   102.6,
+   116.5,
+   132.0,
+   149.7,
+   172.0,
+   199.3,
+   228.5,
+   258.0,
+   288.7,
+   321.7,
+   359.2,
+   401.2,
+   446.1,
+   494.7,
+   546.9,
+   594.3
+  ],
+  "y": [
+   0.0,
+   -0.5,
+   -0.2,
+   0.1,
+   -0.0,
+   -0.2,
+   -0.3,
+   -0.3,
+   -0.3,
+   -0.2,
+   0.1,
+   -0.0,
+   -0.5,
+   -1.1,
+   -2.3,
+   -3.6,
+   -5.1,
+   -6.0,
+   -6.5,
+   -6.9,
+   -7.4,
+   -8.0,
+   -9.1,
+   -10.8,
+   -11.6
+  ],
+  "source": "shots/bus-sam/camera.json (phase correlation with the bus masked out) for frames 0 to 13; from frame 13 on that measure stops moving because the bus fills the frame, so the shift is measured again by phase correlation on the band of buildings above the bus roof (vertical shift only where the match was confident). The footage advances in alternating short and long steps (about 5 and 15 px); the list is smoothed with a 1-2-1 average over neighbouring frames so the scenery does not stutter."
+ },
+ "planes": [
+  {
+   "id": "road",
+   "z": 12,
+   "label": "Road lines"
+  },
+  {
+   "id": "street",
+   "z": 2,
+   "label": "Buildings and poles"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Bus"
+  }
+ ],
+ "objects": [
+  {
+   "id": "h1",
+   "plane": "street",
+   "qd": "house",
+   "box": [
+    300,
+    -20,
+    450,
+    150
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "h2",
+   "plane": "street",
+   "qd": "house",
+   "box": [
+    110,
+    -40,
+    300,
+    150
+   ],
+   "strokes": 3,
+   "skip": 1
+  },
+  {
+   "id": "h3",
+   "plane": "street",
+   "qd": "house",
+   "box": [
+    -25,
+    20,
+    105,
+    150
+   ],
+   "strokes": 3,
+   "skip": 2
+  },
+  {
+   "id": "h4",
+   "plane": "street",
+   "qd": "house",
+   "box": [
+    -190,
+    -20,
+    -35,
+    155
+   ],
+   "strokes": 3,
+   "skip": 3
+  },
+  {
+   "id": "h5",
+   "plane": "street",
+   "qd": "house",
+   "box": [
+    -350,
+    -10,
+    -200,
+    160
+   ],
+   "strokes": 3,
+   "skip": 4
+  },
+  {
+   "id": "h6",
+   "plane": "street",
+   "qd": "house",
+   "box": [
+    -520,
+    -20,
+    -360,
+    165
+   ],
+   "strokes": 3,
+   "skip": 5
+  },
+  {
+   "id": "h7",
+   "plane": "street",
+   "qd": "house",
+   "box": [
+    -690,
+    -10,
+    -530,
+    170
+   ],
+   "strokes": 3,
+   "skip": 6
+  },
+  {
+   "id": "car",
+   "plane": "street",
+   "qd": "van",
+   "box": [
+    345,
+    145,
+    420,
+    185
+   ],
+   "strokes": 3
+  },
+  {
+   "id": "poles",
+   "plane": "street",
+   "class": "pole",
+   "why": "Quick, Draw! has no telephone pole in this archive's set; one straight line for each utility pole and lamp post seen in the film, at the positions measured with the camera shift (the pole at x -79 is tracked from frame 10 to frame 16)",
+   "strokes": [
+    [
+     [
+      295,
+      -20
+     ],
+     [
+      295,
+      150
+     ]
+    ],
+    [
+     [
+      95,
+      60
+     ],
+     [
+      95,
+      160
+     ]
+    ],
+    [
+     [
+      -79,
+      -20
+     ],
+     [
+      -79,
+      185
+     ]
+    ],
+    [
+     [
+      -164,
+      -20
+     ],
+     [
+      -164,
+      195
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "curb",
+   "plane": "road",
+   "class": "ground",
+   "why": "no Quick, Draw! category is a curb or a lane line; one line for the sidewalk edge behind the bus and two for the white lane stripes, drawn along their direction in the first frame. They run the way the camera follows the bus, so in the film they barely move, and they sit on a far plane to hold nearly still.",
+   "strokes": [
+    [
+     [
+      -120,
+      215
+     ],
+     [
+      480,
+      140
+     ]
+    ],
+    [
+     [
+      -120,
+      285
+     ],
+     [
+      480,
+      190
+     ]
+    ],
+    [
+     [
+      230,
+      260
+     ],
+     [
+      480,
+      225
+     ]
+    ]
+   ]
+  }
+ ],
+ "notes": {
+  "0": "the bus comes along the street toward the camera, front to the left",
+  "12": "the camera pans with it and the bus fills half the frame",
+  "24": "the bus is so close its back end leaves the frame on the right"
+ }
+}

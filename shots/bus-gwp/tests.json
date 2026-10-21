@@ -1,0 +1,76 @@
+[
+ {
+  "id": "M2",
+  "value": 8,
+  "unit": "percentile among real doodles of the category",
+  "ok": false,
+  "per_key": [
+   6,
+   10,
+   6,
+   10,
+   10,
+   10,
+   6
+  ]
+ },
+ {
+  "id": "M2b",
+  "value": 1.0,
+  "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
+  "ok": true,
+  "design_typicality": 6
+ },
+ {
+  "id": "M3",
+  "value": 0.83,
+  "unit": "fit to the SAM silhouette, frames with a mask",
+  "ok": true,
+  "min": 0.74
+ },
+ {
+  "id": "M6",
+  "value": 0.4,
+  "unit": "px jerk (drawing centre)",
+  "ok": true
+ },
+ {
+  "id": "T3",
+  "value": "4 strokes, 51 vertices, every frame",
+  "unit": "",
+  "ok": true,
+  "note": "the doodle itself, bent by the rig"
+ },
+ {
+  "id": "B1",
+  "value": 100,
+  "unit": "% scenery drawn once",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S2",
+  "value": "rig quickdraw:6409748716978176; scenery quickdraw:5953648674734080, quickdraw:5179458690482176, quickdraw:6319189788721152, quickdraw:5959358502404096, quickdraw:4644507930853376, quickdraw:5266871139958784, quickdraw:6164430674984960, quickdraw:6640095312478208, drawn by agent: Quick, Draw! has no telephone pole in this archive's set; one straight line for each utility pole and lamp post seen in the film, at the positions measured with the camera shift (the pole at x -79 is tracked from frame 10 to frame 16), drawn by agent: no Quick, Draw! category is a curb or a lane line; one line for the sidewalk edge behind the bus and two for the white lane stripes, drawn along their direction in the first frame. They run the way the camera follows the bus, so in the film they barely move, and they sit on a far plane to hold nearly still.",
+  "unit": "",
+  "ok": true
+ },
+ {
+  "id": "S3",
+  "value": "25/25",
+  "unit": "frames",
+  "ok": true
+ },
+ {
+  "id": "S5",
+  "value": "SAM silhouette painted under the character",
+  "unit": "",
+  "ok": true,
+  "note": "by construction"
+ },
+ {
+  "id": "S6",
+  "value": "complete",
+  "unit": "",
+  "ok": true
+ }
+]

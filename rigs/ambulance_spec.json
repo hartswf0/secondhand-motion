@@ -6,7 +6,7 @@
   "right",
   "left"
  ],
- "note": "Quick, Draw! ambulance 5404586804248576. Stroke 0 is the box body outline with its rounded back end and the bottom line running between the wheels. Stroke 1 is the front window, stroke 2 the line under the windows, stroke 3 the post between the two windows. Stroke 4 is the roof light, strokes 5 to 9 are the five short lines of light drawn around it. Strokes 10 and 11 are the two wheels, each drawn as a scribbled spiral. The film shows the back of a real ambulance driving away at night; the doodle is placed rigidly by two points on the left and right sides of the body at window-line height, so it sways and shrinks slightly with the van. The lines of light stretch out and pull back toward the roof light as the real roof light flashes brighter and dimmer (pose value beam, read from the brightness of the light in each frame). The wheels turn as the van drives.",
+ "note": "Quick, Draw! ambulance 5404586804248576. Stroke 0 is the box body outline with its rounded back end and the bottom line running between the wheels. Stroke 1 is the front window, stroke 2 the line under the windows, stroke 3 the post between the two windows. Stroke 4 is the roof light, strokes 5 to 9 are the five short lines of light drawn around it. Strokes 10 and 11 are the two wheels, each drawn as a scribbled spiral. The film shows the back of a real ambulance driving away at night; the doodle is placed rigidly by two points on the left and right sides of the body at window-line height, so it sways and shrinks slightly with the van. The lines of light stretch out and pull back toward the roof light as the real roof light flashes brighter and dimmer (pose value beam, read from the brightness of the light in each frame). The wheels turn as the van drives. Optical-flow tracking is off: it measured the same pops as without it, and in the dark footage the wheel and roof points have little to follow.",
  "strokes": [
   [
    [
@@ -745,6 +745,6 @@
    "spin": "spin"
   }
  ],
- "track": true,
+ "track": false,
  "smooth": 1.2
 }

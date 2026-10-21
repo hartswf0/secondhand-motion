@@ -1,0 +1,607 @@
+{
+ "z_ref": 2,
+ "camera": {
+  "x": [
+   0.0,
+   -1.54,
+   -2.84,
+   -6.39,
+   -9.39,
+   -12.64,
+   -15.68,
+   -19.43,
+   -23.19,
+   -26.93,
+   -30.75,
+   -35.23,
+   -39.34,
+   -43.58,
+   -47.82,
+   -52.27,
+   -56.99,
+   -62.01,
+   -66.38,
+   -71.34,
+   -76.26,
+   -80.74,
+   -85.0,
+   -90.38,
+   -95.26,
+   -100.32,
+   -105.4,
+   -110.65,
+   -115.6,
+   -120.65,
+   -124.94,
+   -129.77,
+   -135.03,
+   -139.78,
+   -144.57,
+   -150.72,
+   -153.59,
+   -156.0
+  ],
+  "y": [
+   0.0,
+   0.29,
+   0.43,
+   1.4,
+   1.87,
+   2.66,
+   3.28,
+   4.0,
+   4.21,
+   4.34,
+   4.3,
+   4.53,
+   4.9,
+   5.35,
+   6.0,
+   7.01,
+   8.08,
+   8.52,
+   9.26,
+   10.05,
+   10.5,
+   10.92,
+   11.91,
+   13.1,
+   14.25,
+   15.94,
+   17.24,
+   18.94,
+   20.21,
+   21.65,
+   22.56,
+   24.14,
+   25.05,
+   25.88,
+   26.5,
+   26.95,
+   26.86,
+   26.92
+  ],
+  "source": "phase correlation of the treeline and shore band (rows 10-75) frame to frame, accumulated and smoothed over 5 frames, scaled by the far plane's depth so the trees slide exactly as measured (about 50 px left and 8 px down over the shot). camera.json was not used: its values follow the canoe, which SAM's mask did not fully remove, and run 150 px the wrong way."
+ },
+ "planes": [
+  {
+   "id": "far",
+   "z": 7,
+   "label": "Trees and shore",
+   "z_from_depth": "top"
+  },
+  {
+   "id": "water",
+   "z": 3,
+   "label": "Lake surface",
+   "z_from_depth": "middle"
+  },
+  {
+   "id": "char",
+   "z": 2,
+   "label": "Canoe"
+  }
+ ],
+ "objects": [
+  {
+   "id": "tree0",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    -20,
+    13,
+    10,
+    58
+   ],
+   "skip": 0,
+   "strokes": 2
+  },
+  {
+   "id": "tree1",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    14,
+    9,
+    44,
+    58
+   ],
+   "skip": 1,
+   "strokes": 2
+  },
+  {
+   "id": "tree2",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    48,
+    10,
+    78,
+    58
+   ],
+   "skip": 2,
+   "strokes": 2
+  },
+  {
+   "id": "tree3",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    82,
+    16,
+    112,
+    58
+   ],
+   "skip": 3,
+   "strokes": 2
+  },
+  {
+   "id": "tree4",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    116,
+    9,
+    146,
+    58
+   ],
+   "skip": 4,
+   "strokes": 2
+  },
+  {
+   "id": "tree5",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    150,
+    9,
+    180,
+    58
+   ],
+   "skip": 5,
+   "strokes": 2
+  },
+  {
+   "id": "tree6",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    184,
+    9,
+    214,
+    58
+   ],
+   "skip": 0,
+   "strokes": 2
+  },
+  {
+   "id": "tree7",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    218,
+    23,
+    248,
+    58
+   ],
+   "skip": 1,
+   "strokes": 2
+  },
+  {
+   "id": "tree8",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    252,
+    17,
+    282,
+    58
+   ],
+   "skip": 2,
+   "strokes": 2
+  },
+  {
+   "id": "tree9",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    286,
+    15,
+    316,
+    58
+   ],
+   "skip": 3,
+   "strokes": 2
+  },
+  {
+   "id": "tree10",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    320,
+    20,
+    350,
+    58
+   ],
+   "skip": 4,
+   "strokes": 2
+  },
+  {
+   "id": "tree11",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    354,
+    18,
+    384,
+    58
+   ],
+   "skip": 5,
+   "strokes": 2
+  },
+  {
+   "id": "tree12",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    388,
+    14,
+    418,
+    58
+   ],
+   "skip": 0,
+   "strokes": 2
+  },
+  {
+   "id": "tree13",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    422,
+    12,
+    452,
+    58
+   ],
+   "skip": 1,
+   "strokes": 2
+  },
+  {
+   "id": "tree14",
+   "plane": "far",
+   "qd": "tree",
+   "box": [
+    456,
+    15,
+    486,
+    58
+   ],
+   "skip": 2,
+   "strokes": 2
+  },
+  {
+   "id": "bush0",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    0,
+    48,
+    40,
+    64
+   ],
+   "skip": 0
+  },
+  {
+   "id": "bush1",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    70,
+    48,
+    110,
+    64
+   ],
+   "skip": 1
+  },
+  {
+   "id": "bush2",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    140,
+    48,
+    180,
+    64
+   ],
+   "skip": 2
+  },
+  {
+   "id": "bush3",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    210,
+    48,
+    250,
+    64
+   ],
+   "skip": 3
+  },
+  {
+   "id": "bush4",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    280,
+    48,
+    320,
+    64
+   ],
+   "skip": 0
+  },
+  {
+   "id": "bush5",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    350,
+    48,
+    390,
+    64
+   ],
+   "skip": 1
+  },
+  {
+   "id": "bush6",
+   "plane": "far",
+   "qd": "bush",
+   "box": [
+    420,
+    48,
+    460,
+    64
+   ],
+   "skip": 2
+  },
+  {
+   "id": "shore",
+   "plane": "far",
+   "class": "shoreline",
+   "strokes": [
+    [
+     [
+      -10,
+      62
+     ],
+     [
+      120,
+      61
+     ],
+     [
+      250,
+      59
+     ],
+     [
+      460,
+      57
+     ]
+    ],
+    [
+     [
+      -10,
+      77
+     ],
+     [
+      150,
+      76
+     ],
+     [
+      300,
+      74
+     ],
+     [
+      460,
+      73
+     ]
+    ]
+   ],
+   "why": "the pale strip of beach between the trees and the lake: its top edge and the water's edge, two near-level lines; no Quick, Draw! category is a shoreline"
+  },
+  {
+   "id": "water0",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    30,
+    100,
+    70,
+    107
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 0
+  },
+  {
+   "id": "water1",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    170,
+    95,
+    216,
+    103
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 1
+  },
+  {
+   "id": "water2",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    300,
+    104,
+    340,
+    111
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 2
+  },
+  {
+   "id": "water3",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    400,
+    98,
+    440,
+    105
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 3
+  },
+  {
+   "id": "water4",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    90,
+    130,
+    140,
+    139
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 4
+  },
+  {
+   "id": "water5",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    250,
+    128,
+    300,
+    137
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 5
+  },
+  {
+   "id": "water6",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    380,
+    135,
+    430,
+    144
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 6
+  },
+  {
+   "id": "water7",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    10,
+    215,
+    70,
+    225
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 0
+  },
+  {
+   "id": "water8",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    150,
+    250,
+    214,
+    261
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 1
+  },
+  {
+   "id": "water9",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    330,
+    262,
+    394,
+    273
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 2
+  },
+  {
+   "id": "water10",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    440,
+    230,
+    500,
+    240
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 3
+  },
+  {
+   "id": "water11",
+   "plane": "water",
+   "qd": "ocean",
+   "box": [
+    60,
+    272,
+    120,
+    282
+   ],
+   "aspect": 5.5,
+   "strokes": 1,
+   "skip": 4
+  }
+ ],
+ "notes": {
+  "1": "The canoe enters at the left edge, stern still out of frame; the paddle reaches forward.",
+  "9": "The stern paddler lifts the paddle toward upright.",
+  "13": "The paddle is upright, blade down in the water.",
+  "21": "The paddle has pulled through and swings back past the paddler.",
+  "25": "The paddle trails behind, low toward the stern, as the canoe glides.",
+  "33": "The bow reaches the right edge of the frame; the canoe is larger as it comes nearer.",
+  "37": "The bow is out of frame at the right; the paddle still trails."
+ }
+}
