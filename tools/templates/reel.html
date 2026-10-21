@@ -1,0 +1,197 @@
+__HEAD__
+<title>Reel</title>
+<meta name="description" content="Every shot made the Giraffe Walks Past way, in one player: footage beside its doodle cartoon, one after another or all at once.">
+<style>
+/* Layout: header; toolbar; player (footage | cartoon, scrub with key ticks, caption) beside the shot list; wall of every shot. */
+.bar{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--rule-strong);border-radius:6px;overflow:hidden}
+.seg button{font:600 13px var(--body);background:var(--sheet);color:var(--ink);border:0;border-right:1px solid var(--rule);padding:6px 11px;cursor:pointer}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.btn{font:600 13px var(--body);background:var(--sheet);color:var(--ink);border:1px solid var(--rule-strong);border-radius:6px;padding:6px 11px;cursor:pointer}
+.btn.play{background:var(--ink);color:var(--paper);border-color:var(--ink);min-width:78px}
+.chk{display:inline-flex;gap:6px;align-items:center;font-size:14px;cursor:pointer}
+select{font:14px var(--body);background:var(--sheet);color:var(--ink);border:1px solid var(--rule-strong);border-radius:6px;padding:5px 8px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+@media (max-width:900px){.layout{grid-template-columns:1fr}}
+.screens{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.screens.one{grid-template-columns:1fr}
+.screen{background:var(--card);border:1px solid var(--rule-strong);border-radius:6px;overflow:hidden;min-width:0}
+.screen canvas{display:block;width:100%;height:auto;aspect-ratio:4/3}
+.screen .lab{font:600 11px var(--mono);color:var(--muted);padding:5px 8px;border-top:1px solid var(--rule);background:var(--sheet)}
+.scrub{width:100%;margin:10px 0 0;accent-color:var(--tag)}
+.ticks{position:relative;height:14px;margin:2px 0 0}
+.ticks i{position:absolute;top:0;width:2px;height:8px;background:var(--rule-strong);transform:translateX(-1px)}
+.ticks i.d{background:var(--ink);height:10px}
+.ticks i.l{background:var(--tag);width:4px;height:14px;transform:translateX(-2px)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);align-items:center}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px;background:var(--c)}
+.cap{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.cap h2 a{color:inherit;text-decoration:none}
+.cap p{margin:0;font-size:15px;max-width:72ch}
+.clock{font:600 13px var(--mono)}
+.list{display:flex;flex-direction:column;gap:2px;max-height:78vh;overflow:auto;border:1px solid var(--rule);border-radius:8px;background:var(--sheet);padding:4px}
+.list button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:6px 8px;border-radius:5px;font-size:14px}
+.list button:hover{background:var(--tag-soft)}
+.list button[aria-current="true"]{background:var(--ink);color:var(--paper)}
+.list button:focus-visible{outline:2px solid var(--tag)}
+.sc{font:600 11px var(--mono);padding:1px 6px;border-radius:3px;white-space:nowrap}
+.sc.met{background:var(--pass-soft);color:var(--pass)}
+.sc.ref{background:var(--fail-soft);color:var(--fail)}
+.list button[aria-current="true"] .sc{background:transparent;color:inherit;border:1px solid currentColor}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.cell{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--rule-strong);border-radius:6px;overflow:hidden}
+.cell canvas{display:block;width:100%;height:auto;aspect-ratio:4/3}
+.cell span{font:600 11px var(--mono);color:#6B6259;padding:4px 6px;border-top:1px solid #DED2BF;background:#FFFBF4;display:flex;justify-content:space-between;gap:6px}
+.cell:focus-visible{outline:2px solid var(--tag)}
+[hidden]{display:none!important}
+</style>
+<body>
+__NAV__
+<main class="wrap">
+<header class="page">
+  <span class="eyebrow">Every shot, one player</span>
+  <h1>Reel</h1>
+  <p class="lede">Each archive clip beside the doodle cartoon made from it, the Giraffe Walks Past way with keys drawn by hand over the footage. Play one shot, play them all in order, or watch every shot at once on the wall.</p>
+  <p class="meta" id="count"></p>
+</header>
+
+<section>
+  <div class="bar" role="toolbar" aria-label="Player controls">
+    <button class="btn play" id="play" type="button">Play</button>
+    <button class="btn" id="prev" type="button" aria-label="Previous shot">Previous shot</button>
+    <button class="btn" id="next" type="button" aria-label="Next shot">Next shot</button>
+    <button class="btn" id="back" type="button" aria-label="Back one frame">Frame −1</button>
+    <button class="btn" id="fwd" type="button" aria-label="Forward one frame">Frame +1</button>
+    <div class="seg" id="view" aria-label="View"><button data-v="side" aria-pressed="true">Side by side</button><button data-v="over" aria-pressed="false">Over footage</button><button data-v="draw" aria-pressed="false">Drawing only</button><button data-v="wall" aria-pressed="false">Wall</button></div>
+    <div class="seg" id="speed" aria-label="Speed"><button data-s="0.25" aria-pressed="false">¼×</button><button data-s="0.5" aria-pressed="false">½×</button><button data-s="1" aria-pressed="true">1×</button><button data-s="2" aria-pressed="false">2×</button></div>
+    <label class="chk"><input type="checkbox" id="auto" checked> Play all in order</label>
+    <label class="chk">Show <select id="filter"><option value="all">all shots</option><option value="met">bar met</option><option value="ref">reference stronger</option></select></label>
+  </div>
+</section>
+
+<section id="playerSec">
+  <div class="layout">
+    <div>
+      <div class="screens" id="screens">
+        <div class="screen" id="footBox"><canvas id="cf" width="384" height="288" aria-label="Archive footage"></canvas><div class="lab">Footage</div></div>
+        <div class="screen"><canvas id="cc" width="384" height="288" aria-label="Doodle cartoon"></canvas><div class="lab" id="clab">Cartoon</div></div>
+      </div>
+      <input class="scrub" id="scrub" type="range" min="0" max="0" value="0" aria-label="Frame">
+      <div class="ticks" id="ticks" aria-hidden="true"></div>
+      <div class="legend"><span style="--c:var(--tag)">the line</span><span style="--c:var(--ink)">drawn key</span><span style="--c:var(--rule-strong)">rig key</span><span class="clock" id="clock" style="margin-left:auto"></span></div>
+      <div class="cap" id="cap"></div>
+    </div>
+    <nav class="list" id="list" aria-label="Shots"></nav>
+  </div>
+</section>
+
+<section id="wallSec" hidden>
+  <p class="meta">Every shot plays at once, drawing only. Select one to open it in the player.</p>
+  <div class="wall" id="wall"></div>
+</section>
+</main>
+
+<script>
+const D=__DATA__;
+const INK='#161412',PAPER='#FFFFFF',MUTED='#8C8378';
+const $=id=>document.getElementById(id);
+const ALL=D.shots;let shown=ALL.slice();
+const cache={},foot={};
+let cur=0,f=0,playing=false,speed=1,view='side',acc=0,last=0;
+
+/* ---------- data ---------- */
+function load(slug){if(!cache[slug])cache[slug]=fetch(`../shots/${slug}-gwp/shot.json`).then(r=>{if(!r.ok)throw new Error(slug+' '+r.status);return r.json();})
+  .then(S=>{S.order=[...S.planes].sort((a,b)=>b.z-a.z);return S;});return cache[slug];}
+function frames(slug,S){if(!foot[slug])foot[slug]=S.footage.map(u=>{const i=new Image();i.decoding='async';i.onload=()=>{if(!playing&&shown[cur]&&shown[cur].slug===slug&&view!=='wall')draw();};i.src=`../shots/${slug}-gwp/${u}`;return i;});return foot[slug];}
+
+/* ---------- drawing (same planes, camera slide, cel and ink as the shot pages) ---------- */
+function poly(g,p,s,ox,oy){g.beginPath();p.forEach(([x,y],i)=>i?g.lineTo((x+ox)*s,(y+oy)*s):g.moveTo((x+ox)*s,(y+oy)*s));}
+function ink(g,set,s,col,lw,ox,oy){g.strokeStyle=col;g.lineWidth=lw;g.lineCap=g.lineJoin='round';for(const p of set){if(!p||!p.length)continue;if(p.length===1){g.fillStyle=col;g.beginPath();g.arc((p[0][0]+ox)*s,(p[0][1]+oy)*s,lw/2,0,7);g.fill();continue;}poly(g,p,s,ox,oy);g.stroke();}}
+function closed(st){if(st.length<4)return false;const a=st[0],b=st[st.length-1];let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;for(const [x,y] of st){x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x);y1=Math.max(y1,y);}return Math.hypot(a[0]-b[0],a[1]-b[1])<0.18*Math.max(x1-x0,y1-y0,1);}
+function drawShot(g,S,fr,s,wash){
+  const cam=S.camera[fr]||[0,0];
+  for(const p of S.order){const k=S.z_ref/p.z,dx=cam[0]*k,dy=cam[1]*k,far=p.z>=6;
+    const lw=(p.id==='char'?3.2:p.id==='fore'?2.4:far?1.6:2.2)*s/2;
+    for(const o of S.objects){if(o.plane!==p.id)continue;const st=o.frames?o.frames[fr]:o.strokes;if(!st||!st.length)continue;
+      if(!wash&&o.class!=='grass'&&o.class!=='ground'){g.fillStyle=PAPER;for(const q of st)if(closed(q)){poly(g,q,s,dx,dy);g.closePath();g.fill();}}
+      if(wash)ink(g,st,s,'#fff',lw*2.6,dx,dy);ink(g,st,s,far?MUTED:INK,lw,dx,dy);}
+    if(p.id==='char'){if(!wash){g.fillStyle=PAPER;for(const m of (S.masks[fr]||[])){poly(g,m,s,0,0);g.closePath();g.fill();}}
+      const c=S.cast.frames[fr]||[];if(wash)ink(g,c,s,'#fff',lw*2.6,0,0);ink(g,c,s,INK,lw,0,0);}}}
+function fit(c,W,H){const r=Math.min(2,devicePixelRatio||1),w=Math.round(c.clientWidth*r)||W;if(c.width!==w){c.width=w;c.height=Math.round(w*H/W);}return c.width/W;}
+
+/* ---------- player ---------- */
+const cf=$('cf'),cc=$('cc'),gf=cf.getContext('2d'),gc=cc.getContext('2d');
+let S=null,F=[],token=0;
+async function select(i,keepPlaying){cur=(i+shown.length)%shown.length;const m=shown[cur];const my=++token;f=0;acc=0;
+  S=null;draw();renderList();caption(m);
+  try{const s=await load(m.slug);if(my!==token)return;S=s;F=frames(m.slug,S);}catch(e){$('cap').insertAdjacentHTML('beforeend',`<p class="meta">Could not load ${m.slug}: ${e.message}</p>`);return;}
+  $('scrub').max=String(m.n-1);ticks(m);draw();if(keepPlaying)setPlay(true);
+  history.replaceState(null,'','#'+m.slug);for(const n of [1,-1]){const o=shown[(cur+n+shown.length)%shown.length];load(o.slug).then(x=>frames(o.slug,x));}}
+function draw(){const m=shown[cur];
+  if(!S){gf.fillStyle=gc.fillStyle='#fff';gf.fillRect(0,0,cf.width,cf.height);gc.fillRect(0,0,cc.width,cc.height);$('clock').textContent='loading';return;}
+  const s=fit(cc,S.W,S.H);fit(cf,S.W,S.H);const im=F[f];const ok=im&&im.complete&&im.naturalWidth;
+  gf.fillStyle='#fff';gf.fillRect(0,0,cf.width,cf.height);if(ok)gf.drawImage(im,0,0,cf.width,cf.height);
+  gc.fillStyle=PAPER;gc.fillRect(0,0,cc.width,cc.height);
+  if(view==='over'&&ok){gc.drawImage(im,0,0,cc.width,cc.height);gc.fillStyle='rgba(255,255,255,.35)';gc.fillRect(0,0,cc.width,cc.height);}
+  drawShot(gc,S,f,s,view==='over');
+  const isLine=f===m.line,isDrawn=m.drawn.includes(f),isKey=m.keys.includes(f);
+  $('clab').textContent='Cartoon · '+(isLine?'the line':isDrawn?'drawn key':isKey?'rig key':'in-between');
+  $('clock').textContent=`frame ${String(f+1).padStart(2,'0')} / ${m.n} · ${(f/S.fps).toFixed(2)} s · ${m.fps} fps`;
+  $('scrub').value=String(f);}
+function ticks(m){const t=$('ticks');t.replaceChildren();const pos=k=>`${100*k/Math.max(1,m.n-1)}%`;
+  for(const k of m.keys){if(m.drawn.includes(k))continue;const i=document.createElement('i');i.style.left=pos(k);t.append(i);}
+  for(const k of m.drawn){const i=document.createElement('i');i.className='d';i.style.left=pos(k);t.append(i);}
+  if(m.line!=null){const i=document.createElement('i');i.className='l';i.style.left=pos(m.line);t.append(i);}}
+function esc(x){return String(x??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function caption(m){const v=m.verdict==='bar met'?'<span class="sc met">bar met</span>':m.verdict?'<span class="sc ref">reference stronger</span>':'';
+  $('cap').innerHTML=`<h2><a href="${esc(m.slug)}-gwp.html">${esc(m.title)}</a></h2>
+  <p class="meta">${esc(m.film)}${m.url?` · <a href="${esc(m.url)}">source clip</a>`:''} · ${m.n} frames · ${m.drawn.length} drawn keys</p>
+  ${m.line!=null?`<p><b>The line, frame ${m.line+1}.</b> ${esc(m.line_why)}</p>`:''}
+  <p>${v} Motion ${m.score??'not judged'} of 5${m.baseline!=null?` (was ${m.baseline} before drawn keys)`:''} after ${m.rounds} critic round${m.rounds===1?'':'s'}. ${m.identity==='bar_met'?'Reads as the doodle.':m.identity?'Does not yet read as the doodle.':''}</p>
+  ${m.gap?`<p class="meta" style="white-space:normal">Latest critic's gap: ${esc(m.gap)}</p>`:''}`;}
+function renderList(){const L=$('list');if(L.childElementCount!==shown.length){L.replaceChildren();shown.forEach((m,i)=>{const b=document.createElement('button');b.type='button';
+    b.innerHTML=`<span>${esc(m.title)}</span><span class="sc ${m.verdict==='bar met'?'met':'ref'}">${m.score??'–'}</span>`;b.onclick=()=>select(i,playing);L.append(b);});}
+  [...L.children].forEach((b,i)=>{const on=i===cur;b.setAttribute('aria-current',String(on));if(on)b.scrollIntoView({block:'nearest'});});}
+function setPlay(on){playing=on;$('play').textContent=on?'Pause':'Play';last=performance.now();acc=0;}
+function tick(t){const dt=Math.min(0.25,(t-last)/1000);last=t;
+  if(view==='wall')wallTick(dt);
+  else if(playing&&S){acc+=dt*speed*S.fps;let step=false;while(acc>=1){acc-=1;f++;step=true;
+      if(f>=S.cast.frames.length){if($('auto').checked){setPlay(false);select(cur+1,true);break;}f=0;}}
+    if(step)draw();}
+  requestAnimationFrame(tick);}
+
+/* ---------- wall ---------- */
+const cells=[];
+function buildWall(){const W=$('wall');W.replaceChildren();cells.length=0;
+  shown.forEach((m,i)=>{const b=document.createElement('button');b.className='cell';b.type='button';b.setAttribute('aria-label',`Open ${m.title} in the player`);
+    const c=document.createElement('canvas');c.width=240;c.height=180;const lab=document.createElement('span');lab.innerHTML=`<b>${esc(m.title)}</b><i>${m.score??'–'}</i>`;
+    b.append(c,lab);b.onclick=()=>{setView('side');select(i,true);};W.append(b);
+    const cell={m,c,g:c.getContext('2d'),S:null,f:0,acc:0};cells.push(cell);load(m.slug).then(S=>{cell.S=S;paint(cell);});});}
+function paint(x){const S=x.S;if(!S)return;const s=x.c.width/S.W;x.g.fillStyle=PAPER;x.g.fillRect(0,0,x.c.width,x.c.height);drawShot(x.g,S,x.f,s,false);}
+function wallTick(dt){if(!playing)return;for(const x of cells){if(!x.S)continue;x.acc+=dt*speed*x.S.fps;let st=false;while(x.acc>=1){x.acc-=1;x.f=(x.f+1)%x.S.cast.frames.length;st=true;}if(st)paint(x);}}
+
+/* ---------- controls ---------- */
+function setView(v){view=v;document.querySelectorAll('#view button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v===v)));
+  $('playerSec').hidden=v==='wall';$('wallSec').hidden=v!=='wall';$('footBox').hidden=v==='draw';$('screens').classList.toggle('one',v==='draw');
+  if(v==='wall'){buildWall();setPlay(true);}else draw();}
+document.querySelectorAll('#view button').forEach(b=>b.onclick=()=>setView(b.dataset.v));
+document.querySelectorAll('#speed button').forEach(b=>b.onclick=()=>{speed=+b.dataset.s;document.querySelectorAll('#speed button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));});
+$('play').onclick=()=>setPlay(!playing);
+$('prev').onclick=()=>select(cur-1,playing);$('next').onclick=()=>select(cur+1,playing);
+$('back').onclick=()=>{if(!S)return;setPlay(false);f=(f-1+S.cast.frames.length)%S.cast.frames.length;draw();};
+$('fwd').onclick=()=>{if(!S)return;setPlay(false);f=(f+1)%S.cast.frames.length;draw();};
+$('scrub').oninput=e=>{if(!S)return;setPlay(false);f=+e.target.value;draw();};
+$('filter').onchange=e=>{const v=e.target.value;const slug=shown[cur]?.slug;shown=ALL.filter(m=>v==='all'||(v==='met')===(m.verdict==='bar met'));
+  if(!shown.length)shown=ALL.slice();$('list').replaceChildren();const j=Math.max(0,shown.findIndex(m=>m.slug===slug));if(view==='wall')buildWall();select(j,playing);};
+document.addEventListener('keydown',e=>{if(e.target.closest('input,select,button')&&e.key!==' ')return;
+  if(e.key===' '){e.preventDefault();setPlay(!playing);}else if(e.key==='ArrowRight')$('fwd').click();else if(e.key==='ArrowLeft')$('back').click();
+  else if(e.key===']')$('next').click();else if(e.key==='[')$('prev').click();});
+addEventListener('resize',()=>draw());
+const met=ALL.filter(m=>m.verdict==='bar met').length;
+$('count').textContent=`${ALL.length} shots · ${met} meet the film by the latest blind critic · keys: space plays, arrows step frames, [ and ] change shot`;
+const h=decodeURIComponent(location.hash.slice(1));select(Math.max(0,shown.findIndex(m=>m.slug===h)),false);
+requestAnimationFrame(t=>{last=t;tick(t);});
+</script>
+</body>
+</html>

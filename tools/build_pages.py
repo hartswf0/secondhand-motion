@@ -15,7 +15,7 @@ BATCH = 'batches/2026-10-20-selected-drawings'
 DATE = '20 Oct 2026'
 HEAD = (T / 'head.html').read_text()
 
-NAV = [('index.html', 'Rack'), ('shots/moving-drawings.html', 'Watch'), ('pages/projector.html', 'Projector'), ('production/index.html', 'Production'), ('pages/pipeline.html', 'Pipeline'), ('pages/line.html', 'Line'),
+NAV = [('index.html', 'Rack'), ('shots/moving-drawings.html', 'Watch'), ('pages/reel.html', 'Reel'), ('pages/projector.html', 'Projector'), ('production/index.html', 'Production'), ('pages/pipeline.html', 'Pipeline'), ('pages/line.html', 'Line'),
        ('pages/tests.html', 'Tests'), ('pages/agent-prompt.html', 'Agent prompt'), ('pages/archive-doodle-index.html', 'Dataset')]
 sys.path.insert(0, str(ROOT / 'tools'))
 import brand
@@ -130,6 +130,7 @@ def main():
          DATA=js({'lots': [{k: v for k, v in l.items() if k != 'r'} for l in lots], 'stages': reg['stages'], 'brand': brand.data(), 'mark': mark,
                   'n_active': sum(t['status'] == 'active' for t in reg['tests']), 'n_planned': sum(t['status'] == 'planned' for t in reg['tests'])}))
 
+    __import__('build_reel').build(page)
     __import__('build_wave2_pages').build(ROOT, HEAD, nav, icons, write)
     __import__('build_assembly_gallery').build()
 
