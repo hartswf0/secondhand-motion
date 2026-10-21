@@ -1,0 +1,23 @@
+{
+ "seen_animation": "A large line-drawn cello stands in the center-right of the frame, scroll near the top and the body cropped by the bottom edge just below the upper bout, with two string lines running down the neck. Grey scenery surrounds it: a box-like stand and drawer shape at left, a round head outline at left of the neck, a rectangle with lines and round shapes at right. Frames 1-8: the cello holds almost still, with the scroll drifting slightly left and the body lowering slightly. Frames 9-10: a short double-line stroke appears at the lower right of the body near the bottom edge. Frames 11-12: that stroke is gone. Frames 13-16: the double-line stroke returns, growing longer each frame and angling up to the right, reaching past the right edge of the body by frame 16, while the cello leans slightly more to the left.",
+ "seen_film": "A cellist in a red dress plays a cello in a rehearsal room, with other players and music stands behind her. The cello scroll sits near the top center-right of the frame. Frames 1-4: her left hand is high on the neck and her head is bowed. Frames 5-12: her left hand moves down the neck and her head tilts and turns; the cello neck tilts a little to the left over time. Frames 13-16: her left hand is near the lower neck, her head lifts and turns to the right, and in frames 15-16 the bow becomes visible at the lower right, angled up to the right across the bottom of the cello body.",
+ "named_subject": "a cello",
+ "verdict": "reference stronger",
+ "evidence": "Placement matches: the scroll sits at roughly the same place in a.png frame 1 and d.png frame 1, and both lean slightly left by frames 13-16. The bow is the main event change in the film and it appears only in d.png frames 15-16 (faintly from 14); in the animation a bow stroke appears early in frames 9-10, disappears in frames 11-12, and returns in frames 13-16, so it pops in and out where the film has no bow at all in 9-12. The bow line in frames 9, 10, 13 and 14 is drawn as a short doubled stroke that changes length abruptly between frames. The left-hand movement down the neck in film frames 5-12 has no counterpart in the animation, which is acceptable since only the cello is drawn, but it means frames 1-12 show nearly no motion.",
+ "primary_gap": "The bow appears in frames 9-10, vanishes in 11-12 and reappears in 13, while in the film it only enters at frames 14-16.",
+ "closes_when": "Frames 1-13 show no bow stroke, and the bow enters only in frames 14-16 at the lower right, lengthening steadily across those frames at the same up-right angle as in the film.",
+ "protect": "The cello's position and scale in frame matching the film's cello; the doodle's scroll shape, two string lines and rounded upper bout; the slight leftward lean across the shot; the sparse grey scenery placed where the film's background objects are.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  9,
+  11,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cello reads as the c.png doodle (same scroll loop, two string lines, rounded bout), though the crop hides the waist and f-hole loop that are the doodle's most distinctive marks.",
+ "still_frames_only": true,
+ "_packet": "lot950ff94b",
+ "_round": 2
+}

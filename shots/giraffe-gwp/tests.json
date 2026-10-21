@@ -1,26 +1,27 @@
 [
  {
   "id": "M2",
-  "value": 11,
+  "value": 10,
   "unit": "percentile among real doodles of the category",
   "ok": false,
   "per_key": [
-   19,
    25,
-   9,
-   9,
+   24,
+   8,
+   5,
+   8,
    12,
    9,
    9,
-   9,
    8,
-   7,
-   6
+   4,
+   4,
+   4
   ]
  },
  {
   "id": "M2b",
-  "value": 0.48,
+  "value": 0.47,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": false,
   "design_typicality": 31
@@ -30,11 +31,11 @@
   "value": 0.4,
   "unit": "fit to the SAM silhouette, frames with a mask",
   "ok": false,
-  "min": 0.38
+  "min": 0.37
  },
  {
   "id": "M6",
-  "value": 10.9,
+  "value": 8.9,
   "unit": "px jerk (drawing centre)",
   "ok": false
  },
@@ -79,17 +80,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca giraffe's head and upper neck, seen in close-up with two ossicones, an eye mark and a long muzzle\u201d; motion broken; follows the film: partly",
+  "value": "named \u201cA giraffe's head and upper neck in close-up, chewing\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/giraffe-gwp/reviews/critic-4.json"
+  "evidence": "shots/giraffe-gwp/reviews/critic-5.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The head uses the doodle's own parts (the flag-shaped and P-shaped ossicones, the arrow eye, the cheek loop and the muzzle line), but most of the doodle's long neck with its extra strokes is cropped out of frame.",
-  "evidence": "shots/giraffe-gwp/reviews/critic-4.json"
+  "note": "The head matches the doodle's parts and stroke habits, though the doodle's open P ossicone is drawn as a closed pentagon and the jaw strokes cross where the doodle's lines meet cleanly at corners.",
+  "evidence": "shots/giraffe-gwp/reviews/critic-5.json"
  }
 ]

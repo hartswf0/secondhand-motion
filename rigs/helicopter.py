@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from template_rig import TemplateRig
 _R = TemplateRig(Path(__file__).parent / 'helicopter_spec.json')
 POINTS = _R.POINTS
-ROTOR_K = 0.3   # depth squash of the rotor disc seen from the side
+ROTOR_K = 0.2   # depth squash of the rotor disc seen from the side
 # (stroke, vertex of the blade's root, vertex of the blade's end) in the doodle
 BLADES = [(1, 1, 2), (2, 0, 1), (3, 0, 1), (4, 0, 1)]
 

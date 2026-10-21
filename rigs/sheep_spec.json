@@ -6,7 +6,7 @@
   "head",
   "tail"
  ],
- "note": "Quick, Draw! sheep 5557017609502720. A cloud-bodied sheep facing right with a small face and two legs. Root tail to head; the head turns at the neck (to graze), the legs swing.",
+ "note": "Quick, Draw! sheep 5557017609502720. A cloud-bodied sheep facing right with a small face and two legs; in this shot it is mirrored to face left like the film's flock. Root tail to neck joint, so the back stays level while the head turns down at the neck to graze; the legs swing.",
  "strokes": [
   [
    [
@@ -351,7 +351,7 @@
  ],
  "root": [
   "tail",
-  "head"
+  "neckj"
  ],
  "size_from_mask": false,
  "anchors": {
@@ -382,9 +382,24 @@
   "hfoot": [
    25,
    145
+  ],
+  "nape": [
+   160,
+   30
   ]
  },
  "parts": [
+  {
+   "stroke": 0,
+   "from": 0,
+   "to": 27,
+   "joint": "tail",
+   "aim": [
+    "tail",
+    "neckj"
+   ],
+   "turn": 0
+  },
   {
    "region": [
     150,
@@ -392,7 +407,7 @@
     256,
     130
    ],
-   "joint": "neckj",
+   "joint": "nape",
    "aim": [
     "neckj",
     "head"

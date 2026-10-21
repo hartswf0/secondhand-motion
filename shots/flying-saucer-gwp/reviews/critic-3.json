@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A flying saucer drawn in thick black line, its long rounded hull tilted almost upright with the dome on its right side, hangs in the upper-left of the frame next to a grey cloud at upper right and a grey hill scribble at lower left. In frames 1-4 it sits high, at about one third of the frame width, tilted with its bottom end pointing down-right. In frames 5-8 it has moved right and slightly down and stands a little more upright. In frames 9-12 it is lower, its bottom end touching the frame edge, and it drifts back left a little each frame. In frames 13-16 it has shifted further left (to about the frame-1 x position) and sits lower, cut off by the bottom edge, with its top leaning slightly to the right. The cloud stays near the same place with small shifts; the hill scribble shrinks and is only a small arc by frames 13-16.",
+ "seen_film": "A cream-colored entry capsule, heat shield on the left and conical backshell with a round cap on the right, falls through a hazy orange sky with grey cloud patches, seen through a dark vignette. Frames 1-4: capsule high, at about a third of the width, tilted so its lower end points down-right. Frames 5-8: it is a little further right and lower and more upright. Frames 9-12: lower still, its bottom touching the frame edge, drifting slightly left. Frames 13-16: it has moved left and down, cut off at the bottom, the top leaning toward the right; the camera drifts with a slight wobble throughout.",
+ "named_subject": "a flying saucer (hull with a dome) standing in for a descending spacecraft entry capsule",
+ "verdict": "bar met",
+ "evidence": "Judged from still frames only, not playback. Position and tilt track the film in every group: frames 1-4 both objects sit high at about x=150/385 with the same down-right lean; frame 5 both move right and lower (animation hull top about x=155,y=40 in tile; film the same); frames 9-12 both are cut by the bottom edge and step left; frames 13-16 both jump left to about x=110 and lower, with the top leaning right. The saucer's dome is on the same side (right) as the film's backshell, so the orientation maps correctly. Between consecutive frames the hull outline, dome, and the join gap keep the same shape with only small rotation, with no doubled outlines or redraws in b.png's key frames either.",
+ "primary_gap": "The hull's interior dots change in number and visibility from frame to frame (three distinct dots in frames 1-3 and 5-7, only one clear dot in frames 13-16), and the grey hill scribble at lower left shrinks and vanishes, which is scenery change the film does not have.",
+ "closes_when": "Each frame shows the same two or three hull dots at fixed positions along the hull and the lower-left hill scribble keeps a constant size, shifting only with the camera.",
+ "protect": "The correct path and timing (high left, right-and-down, down-left, low-left at frames 1, 5, 9, 13), the near-upright tilt with dome on the right matching the capsule's backshell, the doodle's own wobbly single-stroke hull and dome with the small gap at the dome join, the plain line weight, and the steady cloud.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The character is the c.png saucer rotated about 70 degrees, keeping its hull, dome, join notch and dots, though the dots thin out in later frames.",
+ "still_frames_only": true,
+ "_packet": "lot4b2ccc1f",
+ "_round": 3
+}

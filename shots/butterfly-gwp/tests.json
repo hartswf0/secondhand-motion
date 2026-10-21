@@ -83,17 +83,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201ca butterfly with two lobed wings, a long segmented body, a round head and antennae\u201d; motion smooth; follows the film: yes",
+  "value": "named \u201ca butterfly perched on a person's fingertips (character: butterfly; scenery: hand)\u201d; motion smooth; follows the film: yes",
   "unit": "",
   "ok": true,
-  "evidence": "shots/butterfly-gwp/reviews/critic-2.json"
+  "evidence": "shots/butterfly-gwp/reviews/critic-3.json"
  },
  {
   "id": "J4",
-  "value": "bar_met",
+  "value": "bar_not_met",
   "unit": "",
-  "ok": true,
-  "note": "The animated butterfly keeps the doodle's lobed wing outlines, the ladder-marked body line that extends past the wings, the small circle head and the two antennae, only made smaller and narrower.",
-  "evidence": "shots/butterfly-gwp/reviews/critic-2.json"
+  "ok": false,
+  "note": "Only the looped antennae and dashed body come from c.png; the wings are a new pointed, double-lined shape instead of the doodle's rounded lobed single-line wings.",
+  "evidence": "shots/butterfly-gwp/reviews/critic-3.json"
  }
 ]

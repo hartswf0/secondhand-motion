@@ -1,0 +1,25 @@
+{
+ "seen_animation": "A close-up of a line-drawn giraffe head in right-facing profile, cropped at the neck, with grey trees left and right. Frames 1-4: the head is still and the muzzle is closed, its front edge a vertical line near x=360. Frame 5: the front of the muzzle starts to split. Frames 6-7: the mouth opens into a wide sideways V; the upper and lower jaw strokes run past the mouth corner and cross each other. Frame 8: the mouth is closed again, the muzzle front is shorter and rounded, and a small separate angled shape appears under the muzzle. Frames 9-13: the muzzle stays closed and shorter (front edge near x=320) and the small shape hangs below the jaw line. Frames 14-16: the mouth opens into the V again, with crossing jaw strokes. The ossicones, eye, top of the head, throat loop and neck lines do not move in any frame. The grey tree on the right gets larger and fuller from frame 5 onward.",
+ "seen_film": "A sepia close-up of a giraffe head facing right, chewing, with a tree line behind. Frames 1-4: profile view, lips slightly parted, chewing. Frames 5-6: the mouth opens wider and the lips part. Frames 7-8: the mouth closes and the head turns toward the camera; the muzzle comes back toward the centre and the far ear appears below and right of the muzzle. Frames 9-12: the head is nearly frontal, muzzle closed and moved left, far ear visible under the muzzle, small chewing movements of the lips. Frames 13-16: the lips part again and the mouth opens at frames 14-15, closing partly at 16. The whole head rotates and shifts slightly through the shot, not just the mouth.",
+ "named_subject": "A giraffe's head and upper neck in close-up, chewing",
+ "verdict": "reference stronger",
+ "evidence": "Timing matches: the mouth opens at 5-7 (film 5-6), closes with a shorter muzzle at 8-13 (film turns toward camera at 7-9), the far-ear shape appears at 8 (film 7), and the mouth reopens at 14-16 (film 14-15). But in frames 1-16 the ossicones, eye arrow, top-of-head line, throat loop and neck lines are pixel-identical, so the head-turn the film shows from frames 7 to 9 is carried only by the muzzle tip getting shorter. In frames 6, 7, 14, 15 and 16 the upper and lower jaw strokes overshoot the mouth corner and cross into an X instead of meeting at a hinge. Between 7 and 8 the open V changes to a closed rounded front and the ear shape appears at full size in one step.",
+ "primary_gap": "The head-turn toward camera in frames 7-9 is not performed: only the muzzle tip changes while the rest of the head stays frozen, so the change at frame 8 reads as a redraw of the snout rather than the head rotating.",
+ "closes_when": "Across frames 7-10 the eye, ossicones and top-of-head line shift a few pixels right and the muzzle shortens in steps over several frames, with the ear shape growing in from the jaw line, so that each frame is a small change from the one before.",
+ "protect": "The doodle's construction (flag-shaped left ossicone, P-shaped ossicone on a stick, small arrow eye, mouth slash, angular throat loop, single-stroke lines); the correct timing of the two mouth openings at 5-7 and 14-16; the far-ear appearing around frame 8; the still grey background trees.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  6,
+  7,
+  8,
+  14,
+  15
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The head matches the doodle's parts and stroke habits, though the doodle's open P ossicone is drawn as a closed pentagon and the jaw strokes cross where the doodle's lines meet cleanly at corners.",
+ "still_frames_only": true,
+ "_packet": "lot7af32781",
+ "_round": 5
+}

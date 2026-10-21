@@ -1,0 +1,21 @@
+{
+ "seen_animation": "Frame 1: a small butterfly drawn in black, wings low and swept back to the right, sits at upper right on top of a grey outline of a hand/fingers. Frame 2: the butterfly is suddenly about twice as large, wings lifting, shifted slightly left. Frames 3-4: the wings rise to a tall upright point and the butterfly and grey hand drift left. Frames 5-12: the butterfly stays in the left-center of the frame on the grey fingertips, wings upright, with small changes in the notch of the rear wing and slight left-right sway. Frames 13-16: the upright wing becomes taller and narrower and the butterfly sits further left on the grey hand, holding that pose to the end. Antennae with loop ends point left; the body under the wing is hatched with short dashes.",
+ "seen_film": "A monarch-type butterfly is held between the fingertips of a hand against a black background. Frame 1: hand at lower right, butterfly wings low and spread, at upper right. Frames 2-4: the wings rise and the hand and butterfly move left and up. Frames 5-12: the hand holds steady at left-center while the butterfly keeps its wings raised, with small opening and closing changes. Frames 13-16: the view shifts so the hand points up from lower left, and the butterfly's closed wings stand tall and narrow at upper left, lit so the orange pattern shows; it holds that pose to the end.",
+ "named_subject": "a butterfly perched on a person's fingertips (character: butterfly; scenery: hand)",
+ "verdict": "reference stronger",
+ "evidence": "Placement and timing match the film: frame 1 butterfly at upper right with low wings over the hand as in film frame 1; frames 3-4 wings rise and move left as in film 3-4; frames 5-12 hold at left-center as in film 5-12; frames 13-16 the wing becomes tall and narrow at upper left as in film 13-16. Weaknesses: between frames 1 and 2 the butterfly roughly doubles in size while the film butterfly stays about the same size, which reads as a pop. In all frames 2-16 the wing is a single sharp pointed triangle with a jagged notch, not the rounded multi-segment lobed wings of the doodle in c.png, and the leading edge of the wing is drawn as two parallel lines (a doubled stroke) which the doodle never does.",
+ "primary_gap": "The wing is redrawn as a sharp pointed triangle with doubled edge lines, so the character does not read as the c.png doodle's rounded, lobed, single-stroke wings seen from the side.",
+ "closes_when": "The upright wing in frames 2-16 is built from the doodle's own rounded polygonal lobe outline (upper lobe plus smaller lower lobe, single black line), folded to a side view, and frame 1 starts at nearly the same size as frame 2 so the butterfly does not grow abruptly.",
+ "protect": "Keep the positions and timing that track the film (upper right in 1, leftward rise in 2-4, hold at left-center 5-12, tall narrow wing at upper left 13-16), the looped antennae, the dash-marked body, and the grey hand scenery following the film's hand.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  2
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "Only the looped antennae and dashed body come from c.png; the wings are a new pointed, double-lined shape instead of the doodle's rounded lobed single-line wings.",
+ "still_frames_only": true,
+ "_packet": "lot58002501",
+ "_round": 3
+}

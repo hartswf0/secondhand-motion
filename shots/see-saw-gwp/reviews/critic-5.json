@@ -1,0 +1,24 @@
+{
+ "seen_animation": "A black-line seesaw (long plank, high end at upper left, low end at lower right, on a triangular stand) stays fixed in the same place in all 16 frames, with grey trees and a ground line behind it. A tall stick figure stands at the left, bent forward over a small stick child near the ground in frames 1-8; these eight frames are nearly identical. In frame 9 the tall figure straightens and the child is at hip height. In frame 10 the child is suddenly at the level of the plank's high end. In frames 11-14 the child is above the high end of the plank, held there by the tall figure's long arm line. In frames 15-16 the child is back below the plank end at chest height of the tall figure, drawn over the plank's left edge.",
+ "seen_film": "Frame 1 is nearly black (fade-in). Frames 2-8: a woman at the left edge bends forward beside the high, left end of a seesaw plank that slopes down to the lower right, and reaches down to a small child near the ground; she moves little. Frame 9: she has stood up holding the child at chest height. Frame 10: the child is lifted to the top of the plank's high end. Frames 11-13: the child sits on the high end of the plank while the woman holds it. Frames 14-15: the child is lowered back off the end toward the woman. Frame 16: the woman bends again with the child low, near the plank. The seesaw planks themselves do not visibly tilt during the shot.",
+ "named_subject": "A seesaw (the plank on its triangular stand), with a stick-figure woman and child performing the lift beside it.",
+ "verdict": "reference stronger",
+ "evidence": "The seesaw is the doodle in c.png drawn unchanged and held still in all 16 frames, which matches the film where the plank does not move. The order of events matches: bent woman and low child in 1-8 (film 2-8), child raised in 9-10, child at the high end in 11-14 (film 11-13), child lowered in 15-16 (film 14-16). But the child changes position in large steps rather than moving: from hip height in 9 to plank height in 10, then to well above the plank in 11 with the woman's arm becoming a single long diagonal line; from above the plank in 14 to chest height below it in 15. In 11-14 the child floats above the plank's top edge instead of sitting on it as in film 11-13. In 9 the child is still at hip height while the film already shows it at chest height. In film 16 the woman is bending down again; in animation 16 she is upright. Frames 1-8 show almost no change, while the film shows small bending and reaching motion. In 10, 15 and 16 the child's lines cross the plank's left-end outline, so the two drawings overlap.",
+ "primary_gap": "The child is moved between three fixed positions (low, above the plank, chest height) with no in-between poses, so the lift up in frames 9-11 and the lowering in frames 14-15 read as jumps rather than one lifting motion, and the child never actually sits on the plank.",
+ "closes_when": "Across frames 9-11 and 14-16 the child moves up and down in steps of similar size along one arc, with the woman's arms bending to carry it, and in frames 11-13 the child's seat rests on the plank's top edge at the high end instead of above it.",
+ "protect": "The seesaw drawn exactly as the c.png doodle (same plank outline, stand triangle and stray dot) and held still, its slope and placement matching the film; the woman at the left edge beside the high end; the overall event order of bend, lift, place on the high end, lower; the grey scenery staying constant.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  10,
+  11,
+  15,
+  16
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The seesaw is the same drawing as c.png with the same strokes, and it stays still as the film's seesaw does; only the added stick figures are not from the doodle.",
+ "still_frames_only": true,
+ "_packet": "lot5ba61af0",
+ "_round": 5
+}

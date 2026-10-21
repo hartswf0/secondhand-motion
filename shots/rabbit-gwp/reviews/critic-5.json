@@ -1,0 +1,23 @@
+{
+ "seen_animation": "Frames 1-2: only part of a rabbit is visible at the left, a head facing left with two ears, cut by a vertical black line where the door edge would be. Frame 3: the rabbit, still facing left, is further into the room, with a separate curled stroke at lower right that reads as the rump and tail, not joined to the head. Frame 4: the rabbit stands upright facing left, ears straight up, a front leg dropping down and a small rear bump at right. Frame 5: the drawing is suddenly mirrored, the head now faces right with the face at right, ears tilted, legs hanging below and the back left open. Frames 6-12: the rabbit sits facing right, nearly the same pose in each frame with small shifts of the ears and outline, a sitting hold. Frames 13-14: the outline stretches into a long low horizontal body, head at right, and moves right. Frames 15-16: the rabbit leaves frame at the right; only the lower body and one ear remain in 15, the rump and an ear tip in 16.",
+ "seen_film": "Frames 1-2: a white rabbit comes out from behind the edge of the dark door at left, partly hidden, head down. Frame 3: it is fully out, body turning, head low toward the left. Frames 4-5: it sits up facing the camera with both ears up, near the door edge. Frames 6-12: it settles into a sitting crouch facing right, head at right, ears back, holding almost still while shifting slightly. Frames 13-14: it hops forward to the right, body stretched long and low. Frames 15-16: it exits frame at the right, only the rear and hind feet visible in 16.",
+ "named_subject": "a rabbit",
+ "verdict": "reference stronger",
+ "evidence": "The overall event matches: entry from behind the door edge in 1-2, a sitting hold facing right in 6-12, and a stretched hop out to the right in 13-16, all at the same frames as the film. But in frames 3-4 the animation keeps the rabbit facing left in profile while the film shows it turning to face the camera; then between frame 4 and frame 5 the drawing flips to face right in one step, which reads as a mirror pop rather than a turn. In frame 3 the rump/tail stroke at lower right floats separate from the head, so the body looks split. Between frames 12 and 13 the sitting outline is replaced by a differently built long horizontal outline (the dropped front leg and lower-left hind loop are redrawn into a flat belly line), a redraw rather than a stretch. In frames 5-12 the back line between the ears and the rump is missing, so the sitting body reads as a head plus hanging legs rather than the doodle's closed back.",
+ "primary_gap": "The turn from facing left (frame 4) to facing right (frame 5) happens as an instant mirror flip with no intermediate frontal pose, while the film shows the rabbit facing the camera in frames 4-5 and turning gradually.",
+ "closes_when": "Frames 3-5 show the rabbit's head rotating through a front-facing pose (both ears up, face toward camera, body centered) so that the outline in frame 5 is visibly between frame 4's left profile and frame 6's right profile.",
+ "protect": "The timing of the three phases (entry 1-3, sitting hold 6-12, hop exit 13-16) at the same frames and screen positions as the film; the door-edge occlusion in frames 1-2; the doodle's long pointed ears with one ear crossing in front of the other; the steady low-jitter hold in 6-12; the exit off the right edge in 15-16.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  3,
+  5,
+  13
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_not_met",
+ "identity_gap": "The ears and head match the doodle, but in frames 5-12 the doodle's continuous back line from head to tail is dropped and the body is rebuilt as hanging legs and a lower-left loop, so the sitting rabbit does not read as the doodle's closed body outline.",
+ "still_frames_only": true,
+ "_packet": "lot2fec8969",
+ "_round": 5
+}

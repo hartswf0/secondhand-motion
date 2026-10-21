@@ -6,7 +6,7 @@
   "top",
   "top"
  ],
- "note": "Quick, Draw! tornado 6522189199179776: a looping top (0) over a funnel drawn as two sides (1, 2). Placed by the top's centre and the tip, so it leans and sways with the footage. No spin: a 2D turn would tip the top loop on its side, and the source does not show rotation.",
+ "note": "Quick, Draw! tornado 6522189199179776: a looping top (0) over a funnel drawn as two sides (1, 2). Placed by the top's centre and the tip, so it leans and sways with the footage. No spin: a 2D turn would tip the top loop on its side, and the source does not show rotation. Pose keys v4 follow the hand-held camera's bob (measured on the trees); optical-flow tracking is off because the film grain made it jitter. The turning of the funnel is drawn by hand in shots/tornado/drawn: the top spiral turns about the funnel's axis.",
  "strokes": [
   [
    [
@@ -189,6 +189,6 @@
    "turn": 0
   }
  ],
- "track": true,
- "smooth": 2.0
+ "track": false,
+ "smooth": 0.8
 }

@@ -6,17 +6,48 @@
   "ok": false,
   "per_key": [
    3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
    2,
    3,
    2,
-   3,
-   3,
    2
   ]
  },
  {
   "id": "M2b",
-  "value": 0.91,
+  "value": 0.9,
   "unit": "likeness to the chosen doodle (1 = same stroke statistics)",
   "ok": true,
   "design_typicality": 2
@@ -30,9 +61,9 @@
  },
  {
   "id": "M6",
-  "value": 5.1,
+  "value": 0.0,
   "unit": "px jerk (drawing centre)",
-  "ok": false
+  "ok": true
  },
  {
   "id": "T3",
@@ -75,17 +106,17 @@
  },
  {
   "id": "J1",
-  "value": "named \u201celectric desk fan\u201d; motion smooth; follows the film: yes",
+  "value": "named \u201can electric desk fan seen from the front: a rounded housing with three curved blades around a scribbled hub, standing on a short hatched base\u201d; motion broken; follows the film: partly",
   "unit": "",
   "ok": true,
-  "evidence": "shots/fan-gwp/reviews/critic-1.json"
+  "evidence": "shots/fan-gwp/reviews/critic-2.json"
  },
  {
   "id": "J4",
   "value": "bar_met",
   "unit": "",
   "ok": true,
-  "note": "The round cage outline, three curved blades, scribbled hub and base with scribble match the doodle. In frame 7 one blade extends past the outer outline, which the doodle never does.",
-  "evidence": "shots/fan-gwp/reviews/critic-1.json"
+  "note": "The animated fan keeps the doodle's lopsided outline, small tick at the top, dense scribbled hub, three curved blade lines and hatched base, so it reads as the same drawing.",
+  "evidence": "shots/fan-gwp/reviews/critic-2.json"
  }
 ]

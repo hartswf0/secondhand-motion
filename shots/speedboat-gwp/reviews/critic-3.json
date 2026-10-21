@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A small black speedboat drawing appears low in frame 1 in front of grey trees and a bush line. In frames 2-4 it grows larger and rises nose-up to the left, moving rightward across the trees. In frames 5-7 it levels out above the bush line and drifts left, then in frame 8 tips nose-down toward the lower left. In frames 9-10 the hull is steeply angled with the left end down and a small spiky mark appears at the left tip in frame 10. In frames 11-12 the boat lands level on the line with a spiky crown mark at its left end and trailing lines at the right. In frames 13-16 the trees are gone and the boat travels left-to-centre, shrinking until it is small in frame 16.",
+ "seen_film": "A speedboat bursts out of a cypress swamp: in frame 1 its dark bow is barely visible low left; frames 2-4 it rises nose-up through the trees, growing larger; frames 5-7 it flies level and airborne leftward past the trees with spray behind; frame 8 the bow tips down; frames 9-10 it plunges bow-first toward the open water at a steep angle with riders visible; frames 11-12 it lands and skids flat with spray at the bow; frames 13-16 it planes away across the lake with a large spray plume, getting smaller toward centre frame.",
+ "named_subject": "a speedboat (racing boat with cabin windows)",
+ "verdict": "reference stronger",
+ "evidence": "Positions and timing follow the film closely: frame 1 small boat low left (film 1 bow low left), frames 3-4 nose-up rise matching film 3-4, frames 5-7 level flight left of centre matching film 5-7, frames 9-10 steep bow-down plunge matching film 9-10, frames 11-12 landing with mark at left end matching film 11-12 bow spray, frame 16 small boat centre-left matching film 16. Weaknesses: in frames 9 and 10 the hull is stretched to roughly 1.5 times its length in frames 7-8 and 11, so the drawing lengthens and then snaps back shorter in frame 11; the spiky crown mark pops in at frame 10, is large in 11-12, shrinks in 13-14 and vanishes in 16 without a transition; in frame 13 the boat is noticeably smaller than the film boat, which fills most of the width.",
+ "primary_gap": "The hull is stretched long in frames 9-10 and snaps back to normal length in frame 11, so the plunge reads as the drawing deforming rather than the same boat rotating.",
+ "closes_when": "Frames 9-10 show the hull at the same length as in frames 7-8 and 11, rotated bow-down rather than lengthened, with the landing splash mark growing in from frame 10 to 11 rather than appearing whole.",
+ "protect": "The frame-by-frame placement and timing that match the film (emergence in 1-4, level flight 5-7, plunge 9-10, landing 11-12, receding 13-16); the doodle's own construction kept throughout: single-line hull, the three small window marks, and the short trailing wake strokes at one end; the sparse grey scenery that pans away from the trees to open water as in the film.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  10,
+  11
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The boat keeps the doodle's hull line, window marks and trailing strokes (drawn mirrored), but it is stretched out of proportion in frames 9-10 and gains a spiky crown mark at the bow in frames 10-15 that the doodle does not have.",
+ "still_frames_only": true,
+ "_packet": "lot8907d6aa",
+ "_round": 3
+}

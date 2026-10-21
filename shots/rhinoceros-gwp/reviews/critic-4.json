@@ -1,0 +1,26 @@
+{
+ "seen_animation": "A line-drawn animal with a large oval body on the left and a teardrop-shaped head on the right, pointing down to the ground. The pointed tip of the head is at ground level, with two zigzag horn shapes sticking out to the right of it. Two slanted short legs are at the rear, two short vertical legs are under the belly, and a grey fence and a post are behind it. Frames 1-8: the animal stands in place. The head shape and horns change slightly from frame to frame. In frame 2 the head's right edge becomes a straight vertical line and the horns change shape. In frame 8 the horns are redrawn with a different spread. Frame 9: the whole body is drawn further left, the rear legs move partly out of frame, and the fence post moves left. Frames 9-16: it stands in this new position with small changes. In frame 12 the head moves left and lower, and a horn piece sits apart from the head. In frame 16 the lower horn is drawn as a flat wedge. The head never visibly lifts or lowers in a clear arc. The animal stays put and the head quivers.",
+ "seen_film": "A black rhinoceros stands side-on, facing right, in a sandy enclosure with a fence behind it. Its head is lowered to the ground the whole time, and it roots or grazes in the sand. In frames 1-2 dust rises around its snout. Frames 3-5: the head moves lower and forward, and the horn and snout press into the ground. Frames 5-8: it holds the low head and nudges the ground, while the tail swings. Frame 9: the framing or the rhino shifts so that the body sits further left. Frames 9-16: it keeps its head down at the ground, making small nodding and rooting movements, with the ears flicking and the tail swishing. It does not walk away.",
+ "named_subject": "A rhinoceros (oval body, teardrop head with zigzag horns), the doodle mirrored to face right.",
+ "verdict": "reference stronger",
+ "evidence": "The overall pose matches the film: a head-down rhino at the right of the frame with its nose at the ground in all 16 frames, and the leftward shift at frame 9 matches the film's shift at frame 9. The film's rooting action does not come through. In film frames 1-5 the head drives down and forward into the sand, but in animation frames 1-5 the head stays at the same height and only its outline and horns change. The motion is carried by redraws, not by movement: in frame 2 the head's right side becomes a straight vertical edge and the horns change; in frame 8 the horns fan out differently; in frame 9 the whole figure jumps left in one frame; in frame 12 the head drops and moves left and a horn piece separates from the head; in frame 13 it snaps back; in frame 16 the horns change to a flat wedge. The rear legs and belly legs also shift position between frames 8 and 9 and between frames 12 and 13, with no stepping motion in between.",
+ "primary_gap": "The head does not perform the film's rooting nod (going down and forward into the ground, then small up-down nudges); instead its outline and horns are redrawn each frame, so the head reads as flickering rather than moving.",
+ "closes_when": "The head keeps one fixed teardrop outline with the horns attached at the same points, and that whole unit rotates down and forward over frames 1-5, then nods in small even steps over frames 6-16, with no change to the shape between neighbouring frames.",
+ "protect": "The doodle's construction (a large loose oval body, an overlapping teardrop head, zigzag horn strokes, short single-stroke legs); the head-down pose with the nose at the ground; the placement in the right half of the frame; the leftward reframe at frame 9 that matches the film; the sparse grey fence.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  2,
+  8,
+  9,
+  12,
+  13,
+  16
+ ],
+ "motion_score": 2,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The body oval, the overlapping teardrop head and the zigzag horns match the doodle, mirrored to face right, though the horns change shape between frames instead of keeping the doodle's two fixed zigzags.",
+ "still_frames_only": true,
+ "_packet": "lot9ad7dbc1",
+ "_round": 4
+}

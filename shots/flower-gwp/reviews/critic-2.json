@@ -1,0 +1,22 @@
+{
+ "seen_animation": "A black-line five-petal flower with a small rounded centre and a long straight stem stands in the middle of the frame through all 16 frames. It barely moves: between frames 1 and 5 the whole flower drifts slightly right and up by a few pixels, and from 5 to 16 it holds nearly the same position with only tiny shifts. Grey scenery stays fixed around it: three curved parallel lines at upper left, a leaf at top right, two leaves at lower right, and an open leaf-like shape at lower left. The lower-left grey shape gains an extra closed stroke at its bottom from frame 5 to frame 12 and loses it again from frame 13.",
+ "seen_film": "A pink water lily, seen from above, sits in the centre of the frame on dark water with lily pads around it and pale stems running in from the upper left. Across the 16 frames the flower stays open and in place, with only a slight sway or drift of a few pixels; small dark insects move on the yellow centre. No opening, closing or larger action occurs: it is a held shot of a still flower.",
+ "named_subject": "a five-petal flower on a stem (standing in for the water lily)",
+ "verdict": "bar met",
+ "evidence": "Frames 1-16 of a.png keep the flower centred at the same place as the lily in d.png frames 1-16, with the same near-still behaviour; the small drift between frames 1 and 5 in a.png matches the slight settling seen in d.png frames 1-5. The grey stems at upper left in a.png sit where the pale lily stems enter in d.png, and the grey leaves at the right and lower left sit where the lily pads are. The flower drawing in every frame keeps c.png's construction: five looped petals, a small polygonal centre, a stem stroke that crosses the lower petals. Judged from still frames only, not playback.",
+ "primary_gap": "The grey lower-left scenery shape changes outline at frame 5 (an extra closed stroke appears at its bottom) and reverts at frame 13, which would read as a scenery redraw that the film does not have.",
+ "closes_when": "The lower-left grey shape has the identical outline in all 16 frames, so no stroke appears at frame 5 or disappears at frame 13.",
+ "protect": "The exact c.png flower construction (five open-ended looped petals, polygon centre, stem crossing the petals); the near-still hold that matches the film; the flower's position at frame centre; the grey stems at upper left matching the film's stems; the absence of any added detail or petals.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [
+  5,
+  13
+ ],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The animated flower is the c.png drawing with the same petals, centre and stem strokes; no identity gap is visible beyond the c.png petal count (five) differing from the film lily's many petals, which is acceptable as the doodle's own language.",
+ "still_frames_only": true,
+ "_packet": "lot0ccfec5e",
+ "_round": 2
+}
