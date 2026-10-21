@@ -1,0 +1,19 @@
+{
+ "seen_animation": "A single line drawing of a hat with a domed crown, a two-line band whose ends cross past the crown, and an oval brim with a small hooked left end. In frames 1-4 it sits level at the top of the frame, left of centre. In frames 5-8 it has moved right and begins to tip so the left side of the brim drops. In frames 9-12 it keeps tipping down to the left and gets smaller, staying in the upper half. In frames 13-16 it grows again and is tipped steeply down-left, with the crown cut off by the top edge of the frame and the brim reaching the right edge.",
+ "seen_film": "Close shot of a man in a white bucket hat and blue hooded sweatshirt sitting by a folding chair frame. In frames 1-4 he looks down to the left, hat at top centre, nearly level. In frames 5-8 he leans further down to his left toward a pair of glasses hanging on a cord at his chest; the hat moves right and tips with its left side lower. In frames 9-12 his hands work at the glasses and cord near his shoulder; the hat stays at top right, tipped down-left. In frames 13-16 he bends his head further down to his chest, pulling on the white drawstring; the hat is larger in frame, tipped steeply down-left and cropped at the top and right edges.",
+ "named_subject": "the man's white hat (drawn as the domed hat with band and brim from the doodle)",
+ "verdict": "bar met",
+ "evidence": "Placement and tilt track the film closely in e.png vs f.png: frame 1 both hats sit top centre-left and near level (animation x about 52-207 of a 250 cell, film about 45-215); frames 2-8 both drift right by roughly 90 px per cell while the left brim begins to drop; frames 9-24 both stay against the top edge on the right half, brim lower on the left; frames 25-32 both are tipped steeply down-left with the crown cropped by the top edge (animation 26-31, film 25-32) and the brim running to the right edge. g.png shows the drawing centres clustered in one continuous path with no reversals. Frame-to-frame steps in e.png are small and even; no frame doubles or redraws. The one mismatch is size: from about frame 10 to frame 20 the animated hat shrinks to about 110 px wide (frame 17) while the film hat stays about 150 px wide (f.png frame 17), then the animated hat grows back through frames 21-26.",
+ "primary_gap": "Between frames 10 and 22 the animated hat shrinks by about a quarter and then grows back, while the film hat stays about the same size in frame, so the hat appears to move away from and back toward the camera when the film does not.",
+ "closes_when": "In e.png frames 12-22 the hat brim stays about 145-155 px wide (as in frames 1-8 and as the film hat in f.png 12-22) while keeping its current position and tilt.",
+ "protect": "The exact doodle construction (domed polyline crown, crossed two-line band, oval brim with the small hooked left end), the steady rightward drift in frames 1-8, the progressive down-left tilt matching the man's lean, the top-edge cropping in frames 26-31 matching the film, and the small even frame-to-frame steps with no pops.",
+ "follows_film": "yes",
+ "motion_reads": "smooth",
+ "broken_frames": [],
+ "motion_score": 4,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The drawing keeps the doodle's crown, crossed band and hooked brim in every frame; only the late frames (27-31) stretch the crown into a taller, narrower dome than the doodle has.",
+ "still_frames_only": true,
+ "_packet": "lot36059c4a",
+ "_round": 4
+}
