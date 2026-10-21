@@ -1,0 +1,24 @@
+{
+ "seen_animation": "An ice cream cone drawn like the doodle (rounded scoop dome, slanted rim line, long pointed cone with a kinked tip) stays fixed in the centre of the frame while a thick tube of soft-serve curls down onto the scoop from the top. In frames 1-4 the tube presses into the top of the scoop and its curled end folds to the right over the rim. In frames 5-8 the tube bends further to the left, its curl sweeping across the scoop, and the left part of the scoop dome disappears behind it. In frame 9 the tube's end has separated and floats as a U-shape in the top-left corner, and the full scoop dome is drawn alone. In frame 10 a second U-shaped end appears at the top right while the first is still at the top left. In frames 11-16 the new tube comes down along the right side of the scoop, reaches the rim in frame 14, and keeps sliding down past the rim along the outside of the cone until its end hangs near the middle of the cone in frame 16.",
+ "seen_film": "A close-up from above of soft-serve ice cream being dispensed into a paper cup. In frames 1-4 a thick stream comes down from the top and folds into a curled loop over the mound. In frames 5-8 the stream shifts toward the left edge of the frame and lays a coil around the mound, which now fills the cup. In frames 9-10 the stream at the top left thins and leaves the frame, and a new rounded end of stream appears at the top centre-right. In frames 11-16 this second stream descends along the right inside wall of the cup, pressing down onto the right side of the mound, and by frame 16 it lies along the right side of the cup down to near the bottom of the visible frame, inside the cup rim.",
+ "named_subject": "an ice cream cone (soft-serve scoop on a cone) receiving a stream of soft-serve",
+ "verdict": "reference stronger",
+ "evidence": "Timing matches the film well: e.png 1-16 the stream curls over the mound as in f.png 1-16; e.png 23-27 the first stream leaves at the top left and a new end appears at the top right as in f.png 23-28; e.png 28-37 the second stream descends on the right as in f.png 28-37. Weaknesses: in e.png 11 the small left wedge of scoop dome (present 3-10) vanishes in one frame; e.png 17-22 the left side of the scoop dome is missing and the rim line starts short, then e.png 23 the full dome reappears at once as the stream end detaches into a free-floating U in the corner; e.png 26-27 two separate U-shaped stream ends are visible at once (top left and top right); e.png 38-44 the second stream keeps descending below the rim line and hangs outside the cone over its right edge (the cone's right outline is cut at e.png 39-44), whereas in f.png 38-44 the stream stays inside the cup, landing on the mound.",
+ "primary_gap": "From e.png 38 to 44 the second stream slides down past the rim and hangs outside the cone, so it reads as falling off the side of the cone instead of landing on the scoop as the film's stream lands on the mound inside the cup.",
+ "closes_when": "In e.png 38-44 the end of the right-hand stream stops at or above the rim line and folds onto the right side of the scoop dome, with the cone's right outline left intact below it.",
+ "protect": "The cone and scoop drawn exactly in c.png's construction and stroke habits (rounded dome, slanted rim, kinked cone tip) and held at a constant size and place (g.png shows almost no drift); the tube drawn as a simple two-line outline with a rounded end; the overall timing of the film's two-stream event (curl, departure top-left around frame 23, new stream from top right around 26, descent on the right through 44).",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  11,
+  17,
+  23,
+  26
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The cone and scoop match c.png, but in frames 11-22 the left half of the scoop dome is erased rather than hidden behind the tube, so the doodle's outline is incomplete for those frames.",
+ "still_frames_only": true,
+ "_packet": "lot07cc4bae",
+ "_round": 6
+}

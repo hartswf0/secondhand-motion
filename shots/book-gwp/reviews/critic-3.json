@@ -1,0 +1,23 @@
+{
+ "seen_animation": "a.png frames 1-3: a closed book drawn as a tilted rectangle (about 45 degrees) with short dash lines for text, a grey sheet of paper at top left, and a small scribbled hand of three or four loops at the bottom edge. Frame 4: the hand has moved up onto the cover and a second, narrower rectangle appears inside the book outline, as if the cover is starting to lift. Frames 5-6: the cover becomes a narrowing strip along the upper-left edge, the hand rides with it toward the left. Frame 7: the cover is nearly edge-on (a thin sliver) and a left page area begins to show; the hand is large at the left. Frame 8: the book is open, a left page with dashes is visible, the hand is at the top-left corner. Frames 9-16: the hand is gone and the drawing holds as an open two-page book with a double spine line, the left page partly cut off by the left frame edge.",
+ "seen_film": "d.png frames 1-3: a hand rests on the front of a closed black binder labelled Federal Reserve Regulations, with a white sheet on the table behind. Frame 4: the hand grips the lower right corner and starts lifting the cover. Frames 5-6: the cover swings up and over to the left, blurred, the hand carrying it. Frames 7-8: the cover has gone past vertical and the first white pages flip up with it; the hand is at upper left. Frames 9-10: pages settle to the left, hand fingertips at the left edge. Frames 11-16: the binder lies open, left pages fanned up, right page flat with text; the camera holds.",
+ "named_subject": "A book (binder) being opened by a hand, ending as the open two-page book of the doodle.",
+ "verdict": "reference stronger",
+ "evidence": "Timing matches the film: in e.png the hand sits at the bottom edge 1-4 while film 1-4 has the hand resting on the cover; the cover lifts 5-10 against film 5-10; the book is open and holding from 15-26 as in film 15-26. Weaknesses: e.png 5 a second, narrower rectangle pops in inside the book outline, so the cover and the book body read as two overlapping drawings (double outline) instead of one cover hinging at the spine; 6-8 the cover is a strip that slides and narrows inside the book outline rather than rotating up off the right side as the film's cover does (film 6-8 the cover tilts up and out toward the viewer). e.png 10 to 11 the left page with its dash lines appears in full in one step while the cover sliver is still at the spine, a pop. e.png 11-13 the hand grows larger than in 1-9 (about twice its earlier size). e.png 13 to 14 the hand vanishes in one frame, while film 13-14 still show fingertips at the left edge. e.png 13 to 14 the lower-left contour of the left page also redraws (a short line at the left edge appears and a curve shifts). The grey paper scenery disappears at 11 in one frame.",
+ "primary_gap": "The cover does not visibly hinge and swing over: frames 5-10 show a narrowing strip inside the book outline, and the left page then pops in complete at frame 11, so the opening reads as a redraw rather than one cover turning over.",
+ "closes_when": "In e.png 5-12 the cover is the same outline as the closed book in 1-4, rotating about the left spine edge (right edge lifting up and travelling leftward past the spine), with the left page dashes appearing progressively as the cover passes, so that no second rectangle appears inside the book and no page appears complete in one frame.",
+ "protect": "The overall timing (hold 1-4, open 5-12, settle and hold 15-26) which matches the film; the final open book with the double spine line and short text dashes, which matches c.png's construction; the plain single-weight line style and minimal scribbled hand; the 45-degree placement matching the film's framing.",
+ "follows_film": "partly",
+ "motion_reads": "broken",
+ "broken_frames": [
+  5,
+  11,
+  14
+ ],
+ "motion_score": 3,
+ "identity_verdict": "bar_met",
+ "identity_gap": "The final open book reads as c.png (two pages, text dashes, doubled wavy spine line, plain outline) rotated to the film's angle; only the closed-book and mid-turn frames depart from it by adding a doubled inner rectangle.",
+ "still_frames_only": true,
+ "_packet": "lot9c17a7b5",
+ "_round": 3
+}

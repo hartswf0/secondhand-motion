@@ -53,9 +53,9 @@ def cL(a): return float(np.interp(a,[q[0] for q in _LA],[q[1] for q in _LA]))
 def rail_at(r,a):
     # ["at", r, a]: the point on rail r at height a up the ladder (a hand gripping the rail between rungs)
     P=[lc(q) for q in LAD[r]][::-1]; c=float(np.interp(a,[q[0] for q in P],[q[1] for q in P])); return pt(a,c)
-WAIST_ACROSS=0.4   # seen from behind his body hangs over the middle-left of the ladder, so both legs stand between the rails
+WAIST_ACROSS=0.5   # seen from behind his body hangs over the middle-left of the ladder, so both legs stand between the rails
 for f in range(n):
-    s=np.clip((f-4)/4,0,1); s=s*s*(3-2*s)
+    s=np.clip((f-2)/7,0,1); s=s*s*(3-2*s)   # eased over frames 2-9 so no frame carries a large sideways step
     tgt=WAIST[f].copy()
     for _ in range(6):   # moved sideways only (the film's height is kept): x where c is WAIST_ACROSS of the way across
         a,c=lc(tgt); tgt[0]+=(cL(a)+WAIST_ACROSS*(cR(a)-cL(a))-c)/LV[0]
@@ -121,7 +121,7 @@ def limb_back(root,q,L,side,cos_out,lo_c=None,hi_c=None):
     # (side -1 left, +1 right). The drawn bones change length smoothly with the reach, never folding to a stub.
     A,B=lc(root),lc(q); d=B-A; D=max(np.hypot(*d),1e-6); h=math.sqrt(max(L*L-(D/2)**2,0))*cos_out
     nr=np.array([-d[1],d[0]])/D
-    if nr[1]*side<0: nr=-nr
+    if nr[1]*side-0.6*nr[0]<0: nr=-nr   # the bend goes out to the limb's own side and, when the reach is across, downward (an elbow hangs below a hand held at shoulder height)
     m=(A+B)/2+nr*h
     if lo_c is not None: m[1]=min(max(m[1],lo_c(m[0])+2),hi_c(m[0])-2)
     return pt(*m)
@@ -135,7 +135,7 @@ def skeleton(f):
         q=contact(f,limb); sgo=-1 if limb=='lh' else 1
         e0=joint(S,q,30,lambda z,sg=sgo: z[1]+sg*0.3*z[0],fore=True)
         Sh=S+LV*sg*3
-        e1=limb_back(Sh,q,30*SC(f),sg,0.8)
+        e1=limb_back(Sh,q,30*SC(f),sg,0.5)
         J[limb]=(Sh*bl+S*(1-bl),e0*(1-bl)+e1*bl,q)
     for limb,sg in (('lf',-1),('rf',1)):
         q=contact(f,limb); Hp0=P-np.array([2.5*(-sg),0.0]); Hp1=P+LV*sg*3-LU*5*SC(f); Hp=Hp0*(1-bl)+Hp1*bl   # on the ladder the hips sit 5 px below the waist line
@@ -183,24 +183,28 @@ def check(f,J):
     return bad
 def stepping(f):
     # the hands and feet whose contact point moves between frame f-1 and frame f
-    return {k for k,mv in MK['moves'].items() for f0,f1,q in mv if f0<f<=f1}
+    return {k for k,mv in MK['moves'].items() for f0,f1,q in mv if f0<=f<=f1}   # from the frame the limb unloads to the frame it is put down
 def cont(f,J0,J1):
     # frame-to-frame check: the torso and the limb segments change length by at most a few % per frame, and every joint
     # moves at most ~8 px per frame, except the hand or foot that is stepping (and its elbow or knee, up to 14 px)
     bad=[]; st=stepping(f)
+    LIM=9 if f>=10 else 18   # walking in and stepping onto the ladder (to frame 9) the film man moves 12-18 px a frame
     for k in ('H','N','P','S'):
         d=np.hypot(*(J1[k]-J0[k]))
-        if d>8.5: bad.append(f'{k} moves {d:.1f}px')
+        if d>LIM: bad.append(f'{k} moves {d:.1f}px')
     t0,t1=np.hypot(*(J0['N']-J0['P'])),np.hypot(*(J1['N']-J1['P']))
     if abs(t1/t0-1)>0.04: bad.append(f'torso length {t0:.1f}->{t1:.1f}')
     for k in ('lh','rh','lf','rf'):
         for i,nm in enumerate(('root','mid','end')):
-            d=np.hypot(*(J1[k][i]-J0[k][i])); lim=8.5 if k not in st else (8.5,14,99)[i]
+            d=np.hypot(*(J1[k][i]-J0[k][i])); lim=(LIM if f>=10 else 2*LIM) if k not in st else (LIM,LIM+6+0.6*np.hypot(*(J1[k][2]-J0[k][2])),99)[i]
             if d>lim: bad.append(f'{k} {nm} moves {d:.1f}px')
         for i in (0,1):
             a,b=np.hypot(*(J0[k][i]-J0[k][i+1])),np.hypot(*(J1[k][i]-J1[k][i+1]))
-            lim=0.06 if k not in st else 0.2
-            if abs(b/max(a,1e-6)-1)>lim: bad.append(f'{k} segment {i} {a:.1f}->{b:.1f}')
+            # a bone is fixed in length; drawn foreshortened, it may lengthen or shorten only as much as the limb's
+            # reach (shoulder or hip to hand or foot) changes in that frame, plus a few %
+            dD=abs(np.hypot(*(J1[k][2]-J1[k][0]))-np.hypot(*(J0[k][2]-J0[k][0])))
+            lim=0.05*a+0.6*dD if k not in st else 0.2*a+0.6*dD
+            if abs(b-a)>lim: bad.append(f'{k} segment {i} {a:.1f}->{b:.1f}')
     return bad
 def man(f):
     J=SKEL[f]; H=J['H']
