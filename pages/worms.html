@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-<title>Secondhand Motion — Multi-Depth 4D Time Worms (108 Tracked Shots)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>4D Multi-Depth Worms (108 Shots)</title>
 <style>
   :root {
-    --bg: #090b10;
-    --panel: #11151f;
-    --panel-alt: #161b28;
-    --border: #252d42;
-    --fg: #f1f3f9;
-    --muted: #8b95ab;
-    --gold: #f2bc57;
-    --cyan: #4fd1c5;
-    --coral: #ff6b6b;
-    --blue: #63b3ed;
+    --bg: #07090e;
+    --panel: #10141d;
+    --panel-alt: #161c28;
+    --border: #263044;
+    --fg: #f3f5fa;
+    --muted: #8e99b0;
+    --gold: #ffd166;
+    --cyan: #00f5d4;
+    --coral: #ff5e5b;
+    --blue: #5bc0eb;
     --violet: #b794f4;
     --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -24,223 +24,148 @@
   html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
     background: var(--bg);
     color: var(--fg);
     font-family: var(--sans);
-    font-size: 13px;
-    line-height: 1.35;
-    overscroll-behavior-y: contain;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
   }
   a { color: var(--cyan); text-decoration: none; }
 
-  /* Ultra-compact sticky top bar */
-  .topbar {
+  /* Row 1: Ultra-compact 34px Top & Shot Bar */
+  .top-bar {
+    flex: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 6px;
-    padding: 6px 10px;
-    background: rgba(17, 21, 31, 0.96);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-  }
-  .brand {
-    font-weight: 800;
-    font-size: 12px;
-    letter-spacing: 0.03em;
-    white-space: nowrap;
-    color: var(--gold);
-  }
-  .brand span { color: var(--muted); font-weight: 500; }
-  .nav-pills {
-    display: flex;
     gap: 5px;
-    align-items: center;
-    overflow-x: auto;
-  }
-  .pill-link {
-    font-size: 11px;
-    font-family: var(--mono);
     padding: 4px 8px;
-    border-radius: 5px;
-    background: var(--panel-alt);
-    border: 1px solid var(--border);
-    color: var(--fg);
-    white-space: nowrap;
-  }
-
-  .wrap {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 6px 8px 24px;
-  }
-
-  /* Single-Screen Studio Card */
-  .studio {
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 10px;
-  }
-
-  /* Row 1: Shot selector + View Mode + Video Source */
-  .ctrl-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-    padding: 6px 8px;
-    background: var(--panel-alt);
     border-bottom: 1px solid var(--border);
-    flex-wrap: wrap;
   }
   .shot-nav {
     display: flex;
     align-items: center;
     gap: 4px;
     flex: 1;
-    min-width: 200px;
+    min-width: 0;
   }
   .btn {
-    background: #1d2436;
+    background: #1d2538;
     color: var(--fg);
     border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 5px 9px;
-    font-size: 11.5px;
-    font-weight: 600;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
   }
-  .btn:hover { border-color: var(--gold); }
   .btn-gold {
     background: var(--gold);
-    color: #090b10;
+    color: #07090e;
     border-color: var(--gold);
-    font-weight: 700;
   }
   .shot-select {
     flex: 1;
-    min-width: 140px;
+    min-width: 90px;
     background: var(--bg);
     color: var(--fg);
     border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 5px 7px;
-    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px 6px;
+    font-size: 11.5px;
     font-weight: 700;
   }
   .mode-group {
     display: flex;
     gap: 3px;
-    overflow-x: auto;
+    align-items: center;
   }
-  .mode-btn {
+  .m-btn {
     background: var(--bg);
     color: var(--muted);
     border: 1px solid var(--border);
     border-radius: 5px;
-    padding: 4px 8px;
-    font-size: 11px;
+    padding: 4px 7px;
+    font-size: 10.5px;
     font-family: var(--mono);
     cursor: pointer;
     white-space: nowrap;
   }
-  .mode-btn.active {
-    background: rgba(242, 188, 87, 0.16);
+  .m-btn.active {
+    background: rgba(255, 209, 102, 0.18);
     color: var(--gold);
     border-color: var(--gold);
     font-weight: 700;
   }
 
-  /* Row 2: Horizontal Scrollable Multi-Depth Stratum Pill Bar */
+  /* Row 2: 28px Multi-Depth Stratum Pills (Tap to solo any depth) */
   .depth-bar {
+    flex: none;
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding: 5px 8px;
-    background: #0d1018;
+    gap: 4px;
+    padding: 4px 8px;
+    background: #0b0e15;
     border-bottom: 1px solid var(--border);
     overflow-x: auto;
     scrollbar-width: none;
   }
   .depth-bar::-webkit-scrollbar { display: none; }
-  .depth-lbl {
-    font-size: 10px;
-    font-family: var(--mono);
-    color: var(--muted);
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-  .depth-pill {
+  .d-pill {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 3px 8px;
+    gap: 4px;
+    padding: 2px 8px;
     border-radius: 999px;
-    font-size: 11px;
+    font-size: 10.5px;
     font-family: var(--mono);
     background: var(--panel);
-    color: var(--fg);
     border: 1px solid var(--border);
     cursor: pointer;
     white-space: nowrap;
-    opacity: 0.45;
-    transition: opacity 0.12s, border-color 0.12s;
+    opacity: 0.42;
   }
-  .depth-pill.active {
+  .d-pill.active {
     opacity: 1;
     border-color: currentColor;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.08);
     font-weight: 700;
   }
-  .depth-dot {
+  .d-dot {
     width: 7px;
     height: 7px;
     border-radius: 50%;
     display: inline-block;
   }
 
-  /* Dual Viewport Stage — Compact on Mobile so Zero Scrolling Needed */
-  .stage-grid {
+  /* Row 3: Side-by-Side Stage (3D Multi-Depth Worms + 2D Video) — Side-by-Side Even on Mobile! */
+  .stage-row {
+    flex: 0 0 44dvh;
+    min-height: 195px;
+    max-height: 360px;
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    background: #040609;
+    grid-template-columns: 1.3fr 0.7fr;
+    background: #030508;
+    border-bottom: 1px solid var(--border);
   }
-  .stage-grid.view-3d .pane-2d { display: none; }
-  .stage-grid.view-3d { grid-template-columns: 1fr; }
-  .stage-grid.view-2d .pane-3d { display: none; }
-  .stage-grid.view-2d { grid-template-columns: 1fr; }
+  .stage-row.only-3d { grid-template-columns: 1fr; }
+  .stage-row.only-3d .pane-2d { display: none; }
+  .stage-row.only-2d { grid-template-columns: 1fr; }
+  .stage-row.only-2d .pane-3d { display: none; }
 
   .pane-3d, .pane-2d {
     position: relative;
-    height: 340px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    border-right: 1px solid var(--border);
   }
-  .pane-2d { border-right: none; }
-
-  @media (max-width: 768px) {
-    .stage-grid {
-      grid-template-columns: 1fr;
-    }
-    .pane-3d {
-      height: 215px;
-      border-right: none;
-      border-bottom: 1px solid var(--border);
-    }
-    .pane-2d {
-      height: 175px;
-    }
-    .stage-grid.view-3d .pane-3d,
-    .stage-grid.view-2d .pane-2d {
-      height: 340px;
-    }
-  }
-
+  .pane-3d { border-right: 1px solid var(--border); }
   .pane-3d canvas {
     width: 100%;
     height: 100%;
@@ -248,8 +173,6 @@
     cursor: grab;
     touch-action: none;
   }
-  .pane-3d canvas:active { cursor: grabbing; }
-
   .pane-2d video, .pane-2d img {
     width: 100%;
     height: 100%;
@@ -264,136 +187,142 @@
     height: 100%;
     pointer-events: none;
   }
-
-  /* Floating mini-HUD inside panes */
-  .hud-tag {
+  .hud-pill {
     position: absolute;
-    top: 6px;
-    left: 6px;
-    background: rgba(9, 11, 16, 0.82);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 5px;
-    padding: 2px 7px;
+    top: 4px;
+    left: 5px;
+    background: rgba(7, 9, 14, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    padding: 1px 5px;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 9.5px;
     color: var(--muted);
     pointer-events: none;
   }
-  .hud-actions {
+  .hud-Corner {
     position: absolute;
-    top: 6px;
-    right: 6px;
+    top: 4px;
+    right: 5px;
     display: flex;
-    gap: 4px;
+    gap: 3px;
   }
-  .hud-btn {
-    background: rgba(17, 21, 31, 0.86);
+  .tiny-btn {
+    background: rgba(16, 20, 29, 0.88);
     color: var(--fg);
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 2px 6px;
+    padding: 2px 5px;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 9.5px;
     cursor: pointer;
   }
-  .hud-btn.active {
+  .tiny-btn.active {
     color: var(--gold);
     border-color: var(--gold);
   }
 
-  /* Row 3: Compact Scrubber + 1-Line Telemetry */
-  .scrub-row {
+  /* Row 4: 28px Scrubber + Telemetry Bar */
+  .scrub-bar {
+    flex: none;
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 10px;
+    gap: 6px;
+    padding: 4px 8px;
     background: var(--panel-alt);
-    border-top: 1px solid var(--border);
-    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
   }
-  .time-Slider {
+  .scrubber {
     flex: 1;
-    min-width: 120px;
+    min-width: 80px;
     accent-color: var(--gold);
-    cursor: pointer;
     height: 5px;
+    cursor: pointer;
   }
-  .telemetry-line {
+  .stat-txt {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 10px;
     color: var(--muted);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 48vw;
   }
-  .telemetry-line b { color: var(--fg); }
+  .stat-txt b { color: var(--fg); }
 
-  /* Compact Filter + Mini-Grid Drawer */
-  .drawer-bar {
+  /* Row 5: Filter + Internal Scrollable 108-Shot Multi-Depth Grid (Fills Remaining Viewport) */
+  .filter-bar {
+    flex: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 6px;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
-  }
-  .filter-scroll {
-    display: flex;
     gap: 4px;
+    padding: 4px 8px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+  }
+  .filter-pills {
+    display: flex;
+    gap: 3px;
     overflow-x: auto;
     scrollbar-width: none;
   }
-  .filter-scroll::-webkit-scrollbar { display: none; }
-  .search-mini {
-    background: var(--panel);
+  .filter-pills::-webkit-scrollbar { display: none; }
+  .search-box {
+    background: var(--bg);
     color: var(--fg);
     border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 4px 8px;
-    font-size: 11.5px;
-    width: 170px;
+    border-radius: 4px;
+    padding: 3px 6px;
+    font-size: 10.5px;
+    width: 110px;
   }
 
+  .grid-pane {
+    flex: 1;
+    overflow-y: auto;
+    padding: 6px 8px 14px;
+    -webkit-overflow-scrolling: touch;
+  }
   .mini-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-    gap: 6px;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    gap: 5px;
   }
   @media (max-width: 520px) {
     .mini-grid {
       grid-template-columns: repeat(3, 1fr);
-      gap: 5px;
+      gap: 4px;
     }
   }
   .mini-card {
     background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: 7px;
-    padding: 5px;
+    border-radius: 6px;
+    padding: 4px;
     cursor: pointer;
-    transition: border-color 0.12s;
   }
-  .mini-card:hover, .mini-card.active {
+  .mini-card.active {
     border-color: var(--gold);
-    background: rgba(242, 188, 87, 0.07);
+    background: rgba(255, 209, 102, 0.09);
   }
   .mini-card canvas {
     width: 100%;
-    height: 54px;
+    height: 44px;
     display: block;
-    background: #05070b;
-    border-radius: 4px;
-    margin-bottom: 4px;
+    background: #04060a;
+    border-radius: 3px;
+    margin-bottom: 3px;
   }
-  .mini-title {
-    font-size: 11px;
+  .mc-title {
+    font-size: 10px;
     font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .mini-sub {
-    font-size: 9.5px;
+  .mc-sub {
+    font-size: 9px;
     font-family: var(--mono);
     color: var(--muted);
     white-space: nowrap;
@@ -404,87 +333,73 @@
 </head>
 <body>
 
-<header class="topbar">
-  <div class="brand">4D DEPTH WORMS <span>// 108 SHOTS · 375 DEPTH STRATA</span></div>
-  <nav class="nav-pills">
-    <a class="pill-link" href="../index.html">← Rack</a>
-    <a class="pill-link" id="gwpLink" href="https://hartswf0.github.io/secondhand-motion/" target="_blank">Shot Dossier ↗</a>
-  </nav>
-</header>
-
-<main class="wrap">
-  <section class="studio">
-    <!-- ROW 1: SHOT SELECTOR + VIEW SWITCHER -->
-    <div class="ctrl-row">
-      <div class="shot-nav">
-        <button class="btn" id="prevShotBtn" title="Previous Shot">◀</button>
-        <button class="btn btn-gold" id="playBtn">▶</button>
-        <select class="shot-select" id="shotSelect" aria-label="Select Shot"></select>
-        <button class="btn" id="nextShotBtn" title="Next Shot">▶</button>
-      </div>
-      <div class="mode-group" id="projBar">
-        <button class="mode-btn active" data-proj="orbit3d">3D Depth Volume</button>
-        <button class="mode-btn" data-proj="lanes">Depth Lanes (Z×τ)</button>
-        <button class="mode-btn" data-proj="layout-split">Split</button>
-        <button class="mode-btn" data-proj="layout-3d">3D Only</button>
-      </div>
-    </div>
-
-    <!-- ROW 2: MULTI-DEPTH STRATA PILLS (TAP ANY DEPTH TO SOLO / TOGGLE) -->
-    <div class="depth-bar" id="depthBar">
-      <span class="depth-lbl">Depth Worms:</span>
-    </div>
-
-    <!-- COMPACT SYNCHRONIZED STAGE (3D MULTI-DEPTH WORMS + 2D VIDEO/CONTOURS) -->
-    <div class="stage-grid" id="stageGrid">
-      <!-- 3D MULTI-DEPTH WORM STAGE (FIRST ON MOBILE FOR INSTANT VISIBILITY) -->
-      <div class="pane-3d">
-        <canvas id="canvas3d" width="760" height="440"></canvas>
-        <div class="hud-tag" id="hud3dTag">Drag to orbit · Tap any worm slice to seek</div>
-        <div class="hud-actions">
-          <button class="hud-btn active" id="toggleSubBtn" title="Toggle Anatomical Limb & Object Sub-Worms">Sub-Worms</button>
-          <button class="hud-btn" id="resetOrbitBtn">Reset</button>
-        </div>
-      </div>
-
-      <!-- 2D VIDEO + DEPTH CONTOURS STAGE -->
-      <div class="pane-2d">
-        <video id="video2d" playsinline muted loop preload="metadata"></video>
-        <img id="fallbackImg" style="display:none;" alt="Shot strip">
-        <canvas id="canvas2d" width="640" height="400"></canvas>
-        <div class="hud-tag" id="hud2dTag">2D Frame + Multi-Depth Contours</div>
-        <div class="hud-actions" id="srcSwitch">
-          <button class="hud-btn active" data-src="comp">3-Way</button>
-          <button class="hud-btn" data-src="src">Raw</button>
-          <button class="hud-btn" data-src="art">Cartoon</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- ROW 3: SCRUBBER + 1-LINE TELEMETRY -->
-    <div class="scrub-row">
-      <button class="btn" id="stepPrevBtn" style="padding:3px 7px;">-1f</button>
-      <input type="range" class="time-Slider" id="frameSlider" min="0" max="24" value="0" step="1">
-      <button class="btn" id="stepNextBtn" style="padding:3px 7px;">+1f</button>
-      <div class="telemetry-line" id="telemetryLine">Loading 108 multi-depth worms...</div>
-    </div>
-  </section>
-
-  <!-- COMPACT FILTER & MINI-CARD GRID -->
-  <div class="drawer-bar">
-    <div class="filter-scroll" id="topoFilterBar">
-      <button class="mode-btn active" data-topo="ALL">All 108</button>
-      <button class="mode-btn" data-topo="CAMERA_SHEAR_RIBBON">Shear Ribbon (37)</button>
-      <button class="mode-btn" data-topo="LOOMING_FUNNEL_CONE">Funnel Cone (27)</button>
-      <button class="mode-btn" data-topo="ARTICULATED_LIMB_BRAID">Limb Braid (23)</button>
-      <button class="mode-btn" data-topo="SERPENTINE_CORKSCREW">Corkscrew (13)</button>
-      <button class="mode-btn" data-topo="LOCKED_PILLAR">Pillar (8)</button>
-    </div>
-    <input type="search" class="search-mini" id="searchInput" placeholder="Filter 108 shots...">
+<!-- ROW 1: COMPACT SHOT SELECTOR + VIEW MODE -->
+<div class="top-bar">
+  <a class="m-btn" href="../index.html">← Rack</a>
+  <div class="shot-nav">
+    <button class="btn" id="prevBtn">◀</button>
+    <button class="btn btn-gold" id="playBtn">▶</button>
+    <select class="shot-select" id="shotSelect" aria-label="Select Shot"></select>
+    <button class="btn" id="nextBtn">▶</button>
   </div>
+  <div class="mode-group" id="modeBar">
+    <button class="m-btn active" data-proj="orbit3d">3D</button>
+    <button class="m-btn" data-proj="lanes">Z×τ</button>
+    <button class="m-btn" data-layout="split">Split</button>
+    <button class="m-btn" data-layout="only-3d">Full 3D</button>
+  </div>
+</div>
 
+<!-- ROW 2: MULTI-DEPTH STRATA PILLS -->
+<div class="depth-bar" id="depthBar"></div>
+
+<!-- ROW 3: SIDE-BY-SIDE 3D MULTI-DEPTH WORMS + 2D VIDEO (ZERO SCROLL ON MOBILE) -->
+<div class="stage-row" id="stageRow">
+  <div class="pane-3d">
+    <canvas id="canvas3d" width="680" height="400"></canvas>
+    <div class="hud-pill" id="hud3d">3D Depth Worms · Drag / Tap</div>
+    <div class="hud-Corner">
+      <button class="tiny-btn active" id="subBtn">Sub</button>
+      <button class="tiny-btn" id="resetBtn">Reset</button>
+    </div>
+  </div>
+  <div class="pane-2d">
+    <video id="video2d" playsinline muted loop preload="metadata"></video>
+    <img id="fallbackImg" style="display:none;" alt="Strip">
+    <canvas id="canvas2d" width="480" height="360"></canvas>
+    <div class="hud-pill">2D + Depth</div>
+    <div class="hud-Corner" id="srcBar">
+      <button class="tiny-btn active" data-src="comp">3W</button>
+      <button class="tiny-btn" data-src="src">Raw</button>
+      <button class="tiny-btn" data-src="art">Art</button>
+    </div>
+  </div>
+</div>
+
+<!-- ROW 4: SCRUBBER + 1-LINE TELEMETRY -->
+<div class="scrub-bar">
+  <button class="btn" id="stepPrev" style="padding:2px 6px;">-1f</button>
+  <input type="range" class="scrubber" id="slider" min="0" max="24" value="0" step="1">
+  <button class="btn" id="stepNext" style="padding:2px 6px;">+1f</button>
+  <span class="stat-txt" id="statTxt">Loading...</span>
+</div>
+
+<!-- ROW 5: FILTER + INTERNAL SCROLLABLE 108-SHOT MULTI-DEPTH GRID -->
+<div class="filter-bar">
+  <div class="filter-pills" id="topoBar">
+    <button class="m-btn active" data-topo="ALL">All 108</button>
+    <button class="m-btn" data-topo="CAMERA_SHEAR_RIBBON">Shear (37)</button>
+    <button class="m-btn" data-topo="LOOMING_FUNNEL_CONE">Cone (27)</button>
+    <button class="m-btn" data-topo="ARTICULATED_LIMB_BRAID">Braid (23)</button>
+    <button class="m-btn" data-topo="SERPENTINE_CORKSCREW">Spiral (13)</button>
+    <button class="m-btn" data-topo="LOCKED_PILLAR">Pillar (8)</button>
+  </div>
+  <input type="search" class="search-box" id="searchBox" placeholder="Search...">
+</div>
+
+<div class="grid-pane">
   <div class="mini-grid" id="miniGrid"></div>
-</main>
+</div>
 
 <script>
 (function() {
@@ -494,12 +409,12 @@
   let worms = [];
   let curIdx = 0;
   let curFrame = 0;
-  let projMode = "orbit3d"; // "orbit3d" or "lanes"
+  let projMode = "orbit3d";
   let srcMode = "comp";
-  let showSubWorms = true;
-  let activeDepthIds = new Set(); // empty = all active
+  let showSub = true;
+  let activeDepths = new Set();
   let topoFilter = "ALL";
-  let yaw = -0.58, pitch = 0.34;
+  let yaw = -0.56, pitch = 0.32;
   let dragging = false, lx = 0, ly = 0, moved = false;
   let hitNodes = [];
 
@@ -510,60 +425,47 @@
   const video = document.getElementById("video2d");
   const fbImg = document.getElementById("fallbackImg");
   const shotSelect = document.getElementById("shotSelect");
-  const slider = document.getElementById("frameSlider");
+  const slider = document.getElementById("slider");
 
   function projPoint(u, v, tau, zNorm, W, H) {
-    // Offset vertical/depth placement slightly by zNorm so depth strata separate cleanly in 3D
     const x = (u - 0.5);
-    const y = (0.5 - v) + (zNorm - 0.35) * 0.28;
+    const y = (0.5 - v) + (zNorm - 0.35) * 0.34;
     const z = (tau - 0.5) * 1.55;
     const cy = Math.cos(yaw), sy = Math.sin(yaw);
     const cp = Math.cos(pitch), sp = Math.sin(pitch);
-    const x1 = x * cy + z * sy;
-    const z1 = -x * sy + z * cy;
-    const y2 = y * cp - z1 * sp;
-    const z2 = y * sp + z1 * cp;
-    const sc = (Math.min(W, H) * 0.78) / Math.max(0.55, 2.35 - z2 * 0.5);
+    const x1 = x * cy + z * sy, z1 = -x * sy + z * cy;
+    const y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
+    const sc = (Math.min(W, H) * 0.84) / Math.max(0.55, 2.25 - z2 * 0.5);
     return { sx: W * 0.50 + x1 * sc, sy: H * 0.52 - y2 * sc, sc };
   }
 
   function isDepthOn(id) {
-    return activeDepthIds.size === 0 || activeDepthIds.has(id);
+    return activeDepths.size === 0 || activeDepths.has(id);
   }
 
   function renderDepthPills(w) {
     const bar = document.getElementById("depthBar");
     const dws = w.depth_worms || [];
-    bar.innerHTML = `<span class="depth-lbl">Depths (${dws.length}):</span>`;
-
-    const allBtn = document.createElement("button");
-    allBtn.className = "depth-pill" + (activeDepthIds.size === 0 ? " active" : "");
-    allBtn.style.color = "#f1f3f9";
-    allBtn.textContent = `All (${dws.length})`;
-    allBtn.addEventListener("click", () => {
-      activeDepthIds.clear();
-      renderDepthPills(w);
-      drawAll();
-    });
-    bar.appendChild(allBtn);
+    bar.innerHTML = "";
+    const allB = document.createElement("button");
+    allB.className = "d-pill" + (activeDepths.size === 0 ? " active" : "");
+    allB.style.color = "#f3f5fa";
+    allB.textContent = `All ${dws.length} Depths`;
+    allB.onclick = () => { activeDepths.clear(); renderDepthPills(w); drawAll(); };
+    bar.appendChild(allB);
 
     dws.forEach(dw => {
-      const btn = document.createElement("button");
-      const on = isDepthOn(dw.id);
-      btn.className = "depth-pill" + (on ? " active" : "");
-      btn.style.color = dw.color || "#4fd1c5";
-      btn.innerHTML = `<span class="depth-dot" style="background:${dw.color}"></span>z=${dw.z} ${dw.label}`;
-      btn.addEventListener("click", () => {
-        if (activeDepthIds.size === 1 && activeDepthIds.has(dw.id)) {
-          activeDepthIds.clear();
-        } else {
-          activeDepthIds.clear();
-          activeDepthIds.add(dw.id);
-        }
+      const b = document.createElement("button");
+      b.className = "d-pill" + (isDepthOn(dw.id) ? " active" : "");
+      b.style.color = dw.color || "#00f5d4";
+      b.innerHTML = `<span class="d-dot" style="background:${dw.color}"></span>z=${dw.z} ${dw.label.slice(0, 14)}`;
+      b.onclick = () => {
+        if (activeDepths.size === 1 && activeDepths.has(dw.id)) activeDepths.clear();
+        else { activeDepths.clear(); activeDepths.add(dw.id); }
         renderDepthPills(w);
         drawAll();
-      });
-      bar.appendChild(btn);
+      };
+      bar.appendChild(b);
     });
   }
 
@@ -577,200 +479,121 @@
     hitNodes = [];
 
     if (projMode === "lanes") {
-      // CLEAN MINIMAL DEPTH × TIME (Z × τ) PARALLAX LANES VIEW
-      const padL = 115, padR = 24, padT = 26, padB = 28;
-      const plotW = W - padL - padR;
-      const plotH = H - padT - padB;
-      const nLanes = Math.max(1, dws.length);
-
-      // Vertical time cursor
+      const padL = 96, padR = 14, padT = 20, padB = 20;
+      const plotW = W - padL - padR, plotH = H - padT - padB;
+      const nL = Math.max(1, dws.length);
       const curX = padL + (fIdx / Math.max(1, nf - 1)) * plotW;
-      ctx3.strokeStyle = "rgba(242, 188, 87, 0.55)";
-      ctx3.lineWidth = 1.5;
-      ctx3.beginPath(); ctx3.moveTo(curX, padT - 8); ctx3.lineTo(curX, H - padB + 6); ctx3.stroke();
+      ctx3.strokeStyle = "rgba(255, 209, 102, 0.7)";
+      ctx3.lineWidth = 2;
+      ctx3.beginPath(); ctx3.moveTo(curX, padT - 6); ctx3.lineTo(curX, H - padB + 6); ctx3.stroke();
 
       dws.forEach((dw, dIdx) => {
         const on = isDepthOn(dw.id);
-        const laneY = padT + (dIdx + 0.5) * (plotH / nLanes);
-        const laneH = (plotH / nLanes) * 0.72;
-        const col = dw.color || "#4fd1c5";
-
-        // Lane guide line & label
-        ctx3.strokeStyle = "rgba(139, 149, 171, 0.16)";
-        ctx3.lineWidth = 1;
-        ctx3.beginPath(); ctx3.moveTo(padL, laneY); ctx3.lineTo(W - padR, laneY); ctx3.stroke();
-
-        ctx3.fillStyle = on ? col : "rgba(139,149,171,0.4)";
-        ctx3.font = "bold 11px ui-monospace, SFMono-Regular, Menlo, monospace";
-        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 11)}`, 8, laneY - 2);
-        ctx3.fillStyle = "rgba(139,149,171,0.75)";
-        ctx3.font = "10px ui-monospace, SFMono-Regular, Menlo, monospace";
-        ctx3.fillText(`parallax k=${dw.k}x`, 8, laneY + 11);
-
+        const ly0 = padT + (dIdx + 0.5) * (plotH / nL);
+        const lh = (plotH / nL) * 0.76;
+        const col = dw.color || "#00f5d4";
+        ctx3.fillStyle = on ? col : "rgba(142,153,176,0.35)";
+        ctx3.font = "bold 11px monospace";
+        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 9)}`, 6, ly0 + 4);
         if (!on) return;
 
-        // Draw extruded ribbon thickness (r) + horizontal displacement (u - 0.5)
         const trk = dw.track || [];
-        ctx3.fillStyle = col + "28";
+        ctx3.fillStyle = col + "35";
         ctx3.strokeStyle = col;
-        ctx3.lineWidth = dw.role === "subject" ? 2.6 : 1.8;
+        ctx3.lineWidth = dw.role === "subject" ? 3.2 : 2.2;
 
-        // Upper/lower ribbon envelope
         ctx3.beginPath();
         trk.forEach((pt, fi) => {
           const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-          const uShift = (pt[0] - 0.5) * laneH * 0.95;
-          const rThick = Math.max(3, pt[2] * laneH * 0.55);
-          const ty = laneY + uShift - rThick;
+          const ty = ly0 + (pt[0] - 0.5) * lh - Math.max(4, pt[2] * lh * 0.5);
           if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
         });
         for (let fi = trk.length - 1; fi >= 0; fi--) {
           const pt = trk[fi];
           const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-          const uShift = (pt[0] - 0.5) * laneH * 0.95;
-          const rThick = Math.max(3, pt[2] * laneH * 0.55);
-          const ty = laneY + uShift + rThick;
+          const ty = ly0 + (pt[0] - 0.5) * lh + Math.max(4, pt[2] * lh * 0.5);
           ctx3.lineTo(tx, ty);
         }
-        ctx3.closePath();
-        ctx3.fill();
+        ctx3.closePath(); ctx3.fill();
 
-        // Spine curve
         ctx3.beginPath();
         trk.forEach((pt, fi) => {
           const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-          const ty = laneY + (pt[0] - 0.5) * laneH * 0.95;
+          const ty = ly0 + (pt[0] - 0.5) * lh;
           if (dw.role === "subject") hitNodes.push({ fi, sx: tx, sy: ty });
           if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
         });
         ctx3.stroke();
-
-        // Sub-worms (limbs or scenic objects on this depth stratum)
-        if (showSubWorms && dw.sub_worms) {
-          dw.sub_worms.forEach(sw => {
-            ctx3.strokeStyle = col + "99";
-            ctx3.lineWidth = 1.1;
-            ctx3.setLineDash([3, 3]);
-            ctx3.beginPath();
-            if (sw.pts) {
-              sw.pts.forEach((uv, fi) => {
-                const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-                const ty = laneY + (uv[0] - 0.5) * laneH * 0.95;
-                if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
-              });
-            } else if (sw.u0 !== undefined) {
-              trk.forEach((pt, fi) => {
-                const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-                const ty = laneY + (sw.u0 - 0.5 + (pt[0] - trk[0][0])) * laneH * 0.95;
-                if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
-              });
-            }
-            ctx3.stroke();
-            ctx3.setLineDash([]);
-          });
-        }
       });
       return;
     }
 
-    // 3D ORBIT SPATIOTEMPORAL PRISM WITH MULTIPLE DEPTH WORMS
-    const box = [
-      [0,0,0],[1,0,0],[1,1,0],[0,1,0],
-      [0,0,1],[1,0,1],[1,1,1],[0,1,1]
-    ].map(c => projPoint(c[0], c[1], c[2], 0.35, W, H));
-    const edges = [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
-    ctx3.strokeStyle = "rgba(139, 149, 171, 0.22)";
-    ctx3.lineWidth = 1;
-    edges.forEach(([a, b]) => {
-      ctx3.beginPath(); ctx3.moveTo(box[a].sx, box[a].sy); ctx3.lineTo(box[b].sx, box[b].sy); ctx3.stroke();
+    // 3D Wireframe Box
+    const box = [[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]].map(c => projPoint(c[0],c[1],c[2],0.35,W,H));
+    [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]].forEach(([a,b]) => {
+      ctx3.beginPath(); ctx3.moveTo(box[a].sx, box[a].sy); ctx3.lineTo(box[b].sx, box[b].sy);
+      ctx3.strokeStyle = "rgba(142,153,176,0.22)"; ctx3.lineWidth = 1; ctx3.stroke();
     });
 
-    // Render each Depth-Stratum Worm from Far (back) to Near (front)
+    // Draw each Depth Worm from Far (back) to Near (front)
     [...dws].reverse().forEach(dw => {
       if (!isDepthOn(dw.id)) return;
-      const col = dw.color || "#4fd1c5";
+      const col = dw.color || "#00f5d4";
       const trk = dw.track || [];
       const zNorm = Math.min(1.0, Math.log(Math.max(1.0, dw.z || 2.0)) / Math.log(12.0));
       const isSubj = dw.role === "subject";
 
       if (isSubj) {
-        // Draw longitudinal polygon ribbons
-        for (let k = 0; k < 16; k += 4) {
-          ctx3.strokeStyle = col + "44";
-          ctx3.lineWidth = 1;
-          ctx3.beginPath();
-          frames.forEach((fr, fi) => {
-            if (!fr.ring || !fr.ring.length) return;
-            const uv = fr.ring[k % fr.ring.length];
-            const p = projPoint(uv[0], uv[1], fi / Math.max(1, nf - 1), zNorm, W, H);
-            if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-          });
-          ctx3.stroke();
-        }
-
-        // Draw cross-section polygon rings along time
-        const step = Math.max(1, Math.floor(nf / 16));
+        const step = Math.max(1, Math.floor(nf / 14));
         frames.forEach((fr, fi) => {
           if (fi !== fIdx && fi % step !== 0 && !(w.keys || []).includes(fi)) return;
           if (!fr.ring || fr.ring.length < 3) return;
           const isCur = (fi === fIdx);
-          ctx3.strokeStyle = isCur ? "#ffffff" : col + "bb";
-          ctx3.fillStyle = isCur ? col + "55" : col + "18";
-          ctx3.lineWidth = isCur ? 2.6 : 1.2;
+          ctx3.strokeStyle = isCur ? "#ffffff" : col;
+          ctx3.fillStyle = isCur ? col + "66" : col + "24";
+          ctx3.lineWidth = isCur ? 3.0 : 1.5;
           ctx3.beginPath();
           fr.ring.forEach((uv, j) => {
             const p = projPoint(uv[0], uv[1], fi / Math.max(1, nf - 1), zNorm, W, H);
             if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
           });
-          ctx3.closePath();
-          ctx3.fill();
-          ctx3.stroke();
+          ctx3.closePath(); ctx3.fill(); ctx3.stroke();
         });
       } else {
-        // Scenic / Depth-Stratum Worm cross-section ellipses + longitudinal rails
-        const step = Math.max(1, Math.floor(nf / 10));
+        const step = Math.max(1, Math.floor(nf / 8));
         trk.forEach((pt, fi) => {
           if (fi !== fIdx && fi % step !== 0) return;
-          const tau = fi / Math.max(1, nf - 1);
-          const p = projPoint(pt[0], pt[1], tau, zNorm, W, H);
+          const p = projPoint(pt[0], pt[1], fi / Math.max(1, nf - 1), zNorm, W, H);
           const rx = Math.max(6, pt[2] * p.sc * 0.55);
-          const ry = rx * 0.62;
-          ctx3.strokeStyle = (fi === fIdx) ? "#ffffff" : col + "99";
-          ctx3.fillStyle = col + "18";
-          ctx3.lineWidth = (fi === fIdx) ? 2.0 : 1.0;
-          ctx3.beginPath();
-          ctx3.ellipse(p.sx, p.sy, rx, ry, 0, 0, Math.PI * 2);
-          ctx3.fill();
-          ctx3.stroke();
+          ctx3.strokeStyle = (fi === fIdx) ? "#ffffff" : col;
+          ctx3.fillStyle = col + "22";
+          ctx3.lineWidth = (fi === fIdx) ? 2.4 : 1.3;
+          ctx3.beginPath(); ctx3.ellipse(p.sx, p.sy, rx, rx * 0.6, 0, 0, Math.PI * 2);
+          ctx3.fill(); ctx3.stroke();
         });
       }
 
-      // Spine of this depth worm
+      // Bold Spine for each Depth Worm
       ctx3.strokeStyle = col;
-      ctx3.lineWidth = isSubj ? 2.8 : 2.0;
+      ctx3.lineWidth = isSubj ? 3.6 : 2.6;
       ctx3.beginPath();
       trk.forEach((pt, fi) => {
-        const tau = fi / Math.max(1, nf - 1);
-        const p = projPoint(pt[0], pt[1], tau, zNorm, W, H);
+        const p = projPoint(pt[0], pt[1], fi / Math.max(1, nf - 1), zNorm, W, H);
         if (isSubj) hitNodes.push({ fi, sx: p.sx, sy: p.sy });
         if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
       });
       ctx3.stroke();
 
-      // Label at start of worm
       if (trk.length) {
         const p0 = projPoint(trk[0][0], trk[0][1], 0, zNorm, W, H);
         ctx3.fillStyle = col;
-        ctx3.font = "bold 10px ui-monospace, SFMono-Regular, Menlo, monospace";
-        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 12)}`, p0.sx + 5, p0.sy - 4);
+        ctx3.font = "bold 11px monospace";
+        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 10)}`, p0.sx + 4, p0.sy - 5);
       }
 
-      // Sub-worms (articulated limbs or individual scenic objects on this depth plane)
-      if (showSubWorms && dw.sub_worms) {
+      if (showSub && dw.sub_worms) {
         dw.sub_worms.forEach(sw => {
-          ctx3.strokeStyle = col + "aa";
-          ctx3.lineWidth = 1.2;
-          ctx3.setLineDash([3, 3]);
+          ctx3.strokeStyle = col + "bb"; ctx3.lineWidth = 1.4; ctx3.setLineDash([3, 3]);
           ctx3.beginPath();
           if (sw.pts) {
             sw.pts.forEach((uv, fi) => {
@@ -779,13 +602,11 @@
             });
           } else if (sw.u0 !== undefined) {
             trk.forEach((pt, fi) => {
-              const du = pt[0] - trk[0][0], dv = pt[1] - trk[0][1];
-              const p = projPoint(sw.u0 + du, sw.v0 + dv, fi / Math.max(1, nf - 1), zNorm, W, H);
+              const p = projPoint(sw.u0 + (pt[0] - trk[0][0]), sw.v0 + (pt[1] - trk[0][1]), fi / Math.max(1, nf - 1), zNorm, W, H);
               if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
             });
           }
-          ctx3.stroke();
-          ctx3.setLineDash([]);
+          ctx3.stroke(); ctx3.setLineDash([]);
         });
       }
     });
@@ -797,38 +618,20 @@
     const frames = w.frames || [];
     if (!frames.length) return;
     const fr = frames[Math.min(frames.length - 1, fIdx)];
-    const dws = w.depth_worms || [];
-
-    dws.forEach(dw => {
+    (w.depth_worms || []).forEach(dw => {
       if (!isDepthOn(dw.id)) return;
-      const col = dw.color || "#4fd1c5";
+      const col = dw.color || "#00f5d4";
       const pt = (dw.track || [])[Math.min((dw.track || []).length - 1, fIdx)];
       if (!pt) return;
-
       if (dw.role === "subject" && fr.ring && fr.ring.length >= 3) {
-        ctx2.strokeStyle = col;
-        ctx2.fillStyle = col + "24";
-        ctx2.lineWidth = 2.4;
+        ctx2.strokeStyle = col; ctx2.fillStyle = col + "28"; ctx2.lineWidth = 2.6;
         ctx2.beginPath();
-        fr.ring.forEach((uv, i) => {
-          if (i === 0) ctx2.moveTo(uv[0] * W, uv[1] * H);
-          else ctx2.lineTo(uv[0] * W, uv[1] * H);
-        });
-        ctx2.closePath();
-        ctx2.fill();
-        ctx2.stroke();
+        fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
+        ctx2.closePath(); ctx2.fill(); ctx2.stroke();
       } else {
-        const cx = pt[0] * W, cy = pt[1] * H, rx = pt[2] * W * 0.65, ry = pt[2] * H * 0.42;
-        ctx2.strokeStyle = col + "cc";
-        ctx2.lineWidth = 1.6;
-        ctx2.setLineDash([5, 4]);
-        ctx2.beginPath();
-        ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
-        ctx2.stroke();
-        ctx2.setLineDash([]);
-        ctx2.fillStyle = col;
-        ctx2.font = "bold 10px ui-monospace, SFMono-Regular, Menlo, monospace";
-        ctx2.fillText(`z=${dw.z} ${dw.label.slice(0, 14)}`, Math.max(6, cx - rx), Math.max(14, cy - ry - 4));
+        const cx = pt[0]*W, cy = pt[1]*H, rx = pt[2]*W*0.62, ry = pt[2]*H*0.42;
+        ctx2.strokeStyle = col; ctx2.lineWidth = 1.8; ctx2.setLineDash([4, 4]);
+        ctx2.beginPath(); ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2); ctx2.stroke(); ctx2.setLineDash([]);
       }
     });
   }
@@ -839,24 +642,19 @@
     draw3dStage(w, curFrame);
     draw2dStage(w, curFrame);
     const dws = w.depth_worms || [];
-    const fr = (w.frames || [])[curFrame] || { f: 0, t: 0 };
-    document.getElementById("telemetryLine").innerHTML =
-      `<b>f${String(fr.f).padStart(2, "0")}</b> (${fr.t.toFixed(2)}s) · <b>${dws.length} Depth Worms</b> (${dws.map(d => "z=" + d.z).join(" → ")}) · ${w.topology.replace(/_/g, " ")} · Rule: <b>${w.best_rule} (${w.best_fit}%)</b>`;
+    document.getElementById("statTxt").innerHTML =
+      `<b>f${String(curFrame).padStart(2,"0")}</b>/${w.n_frames-1} · <b>${dws.length} Depths</b> (${dws.map(d=>"z="+d.z).join("→")})`;
   }
 
   function applyMedia(w) {
     let url = w.comp_mp4 || w.src_mp4 || w.art_mp4 || "";
     if (srcMode === "src") url = w.src_mp4 || w.comp_mp4 || "";
     else if (srcMode === "art") url = w.art_mp4 || w.comp_mp4 || "";
-
     if (!url) {
-      video.pause();
-      video.style.display = "none";
-      fbImg.style.display = "block";
-      fbImg.src = w.strip_img || w.sil_img || "";
+      video.pause(); video.style.display = "none";
+      fbImg.style.display = "block"; fbImg.src = w.strip_img || w.sil_img || "";
     } else {
-      fbImg.style.display = "none";
-      video.style.display = "block";
+      fbImg.style.display = "none"; video.style.display = "block";
       if (video.src !== url) video.src = url;
     }
   }
@@ -867,61 +665,48 @@
     shotSelect.value = curIdx;
     const w = worms[curIdx];
     curFrame = 0;
-    activeDepthIds.clear();
-
+    activeDepths.clear();
     slider.max = Math.max(1, (w.frames || []).length - 1);
     slider.value = 0;
-    document.getElementById("gwpLink").href = w.gwp_page || "https://hartswf0.github.io/secondhand-motion/";
-
     renderDepthPills(w);
     applyMedia(w);
     drawAll();
-
     document.querySelectorAll(".mini-card").forEach(c => {
       c.classList.toggle("active", parseInt(c.dataset.idx, 10) === curIdx);
     });
-
-    if (autoPlay && video.style.display !== "none") {
-      video.play().catch(() => {});
-    }
+    if (autoPlay && video.style.display !== "none") video.play().catch(() => {});
   }
 
   function renderMiniGrid() {
     const grid = document.getElementById("miniGrid");
-    const q = (document.getElementById("searchInput").value || "").toLowerCase();
+    const q = (document.getElementById("searchBox").value || "").toLowerCase();
     grid.innerHTML = "";
-
     worms.forEach((w, idx) => {
       if (topoFilter !== "ALL" && w.topology !== topoFilter) return;
-      const hay = `${w.slug} ${w.title} ${w.topology} ${w.best_rule}`.toLowerCase();
+      const hay = `${w.slug} ${w.title} ${w.topology}`.toLowerCase();
       if (q && !hay.includes(q)) return;
-
       const card = document.createElement("div");
       card.className = "mini-card" + (idx === curIdx ? " active" : "");
       card.dataset.idx = idx;
       const dws = w.depth_worms || [];
       card.innerHTML = `
-        <canvas width="180" height="58"></canvas>
-        <div class="mini-title">${idx + 1}. ${w.slug}</div>
-        <div class="mini-sub">${dws.length} depths (${dws.map(d => "z=" + d.z).slice(0, 3).join(",")})</div>
+        <canvas width="160" height="48"></canvas>
+        <div class="mc-title">${idx + 1}. ${w.slug}</div>
+        <div class="mc-sub">${dws.length} depths (${dws.map(d => "z=" + d.z).slice(0, 3).join(",")})</div>
       `;
-      card.addEventListener("click", () => {
-        selectShot(idx, true);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
+      card.onclick = () => selectShot(idx, true);
       grid.appendChild(card);
 
-      // Draw multi-depth ribbons in mini canvas
       const mc = card.querySelector("canvas");
       const mctx = mc.getContext("2d");
       const nf = Math.max(1, (w.frames || []).length);
       dws.forEach((dw, dIdx) => {
-        mctx.strokeStyle = dw.color || "#4fd1c5";
-        mctx.lineWidth = dw.role === "subject" ? 2.0 : 1.2;
+        mctx.strokeStyle = dw.color || "#00f5d4";
+        mctx.lineWidth = dw.role === "subject" ? 2.2 : 1.3;
         mctx.beginPath();
         (dw.track || []).forEach((pt, fi) => {
-          const x = 8 + (fi / Math.max(1, nf - 1)) * 164;
-          const y = 12 + (dIdx / Math.max(1, dws.length - 1)) * 34 + (pt[0] - 0.5) * 18;
+          const x = 6 + (fi / Math.max(1, nf - 1)) * 148;
+          const y = 8 + (dIdx / Math.max(1, dws.length - 1)) * 32 + (pt[0] - 0.5) * 16;
           if (fi === 0) mctx.moveTo(x, y); else mctx.lineTo(x, y);
         });
         mctx.stroke();
@@ -929,107 +714,61 @@
     });
   }
 
-  // Wire Controls
-  shotSelect.addEventListener("change", () => selectShot(parseInt(shotSelect.value, 10), true));
-  document.getElementById("prevShotBtn").addEventListener("click", () => selectShot(curIdx - 1, true));
-  document.getElementById("nextShotBtn").addEventListener("click", () => selectShot(curIdx + 1, true));
+  shotSelect.onchange = () => selectShot(parseInt(shotSelect.value, 10), true);
+  document.getElementById("prevBtn").onclick = () => selectShot(curIdx - 1, true);
+  document.getElementById("nextBtn").onclick = () => selectShot(curIdx + 1, true);
+  document.getElementById("playBtn").onclick = () => { if (video.paused) video.play().catch(()=>{}); else video.pause(); };
+  video.onplay = () => { document.getElementById("playBtn").textContent = "⏸"; };
+  video.onpause = () => { document.getElementById("playBtn").textContent = "▶"; };
 
-  document.getElementById("playBtn").addEventListener("click", () => {
-    if (video.paused) video.play().catch(() => {});
-    else video.pause();
-  });
-  video.addEventListener("play", () => { document.getElementById("playBtn").textContent = "⏸"; });
-  video.addEventListener("pause", () => { document.getElementById("playBtn").textContent = "▶"; });
-
-  document.querySelectorAll("#projBar .mode-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const p = btn.dataset.proj;
-      const sg = document.getElementById("stageGrid");
-      if (p === "layout-split") {
-        sg.className = "stage-grid";
-      } else if (p === "layout-3d") {
-        sg.className = "stage-grid view-3d";
-      } else {
-        projMode = p;
-        document.querySelectorAll('#projBar .mode-btn[data-proj="orbit3d"], #projBar .mode-btn[data-proj="lanes"]').forEach(b => b.classList.remove("active"));
+  document.querySelectorAll("#modeBar .m-btn").forEach(btn => {
+    btn.onclick = () => {
+      if (btn.dataset.proj) {
+        projMode = btn.dataset.proj;
+        document.querySelectorAll("#modeBar .m-btn[data-proj]").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
-        document.getElementById("hud3dTag").textContent =
-          projMode === "lanes"
-            ? "Depth × Time Lanes (Z × τ) · Tap any point to seek"
-            : "3D Multi-Depth Worm Volume · Drag to orbit";
         drawAll();
+      } else if (btn.dataset.layout) {
+        const sr = document.getElementById("stageRow");
+        sr.className = "stage-row " + (btn.dataset.layout === "split" ? "" : btn.dataset.layout);
       }
-    });
+    };
   });
 
-  document.getElementById("toggleSubBtn").addEventListener("click", e => {
-    showSubWorms = !showSubWorms;
-    e.target.classList.toggle("active", showSubWorms);
-    drawAll();
-  });
-  document.getElementById("resetOrbitBtn").addEventListener("click", () => {
-    yaw = -0.58; pitch = 0.34;
-    drawAll();
-  });
+  document.getElementById("subBtn").onclick = e => { showSub = !showSub; e.target.classList.toggle("active", showSub); drawAll(); };
+  document.getElementById("resetBtn").onclick = () => { yaw = -0.56; pitch = 0.32; drawAll(); };
 
-  document.querySelectorAll("#srcSwitch .hud-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll("#srcSwitch .hud-btn").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll("#srcBar .tiny-btn").forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll("#srcBar .tiny-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       srcMode = btn.dataset.src;
       if (worms[curIdx]) applyMedia(worms[curIdx]);
-    });
+    };
   });
 
-  slider.addEventListener("input", () => {
+  slider.oninput = () => {
     curFrame = parseInt(slider.value, 10) || 0;
     const w = worms[curIdx];
-    if (w && video.duration) {
-      video.currentTime = (curFrame / Math.max(1, w.frames.length - 1)) * video.duration;
-    }
+    if (w && video.duration) video.currentTime = (curFrame / Math.max(1, w.frames.length - 1)) * video.duration;
     drawAll();
-  });
-  document.getElementById("stepPrevBtn").addEventListener("click", () => {
-    video.pause();
-    curFrame = Math.max(0, curFrame - 1);
-    slider.value = curFrame;
-    drawAll();
-  });
-  document.getElementById("stepNextBtn").addEventListener("click", () => {
-    video.pause();
-    const w = worms[curIdx];
-    curFrame = Math.min((w ? w.frames.length : 1) - 1, curFrame + 1);
-    slider.value = curFrame;
-    drawAll();
-  });
+  };
+  document.getElementById("stepPrev").onclick = () => { video.pause(); curFrame = Math.max(0, curFrame - 1); slider.value = curFrame; drawAll(); };
+  document.getElementById("stepNext").onclick = () => { video.pause(); const w = worms[curIdx]; curFrame = Math.min((w ? w.frames.length : 1) - 1, curFrame + 1); slider.value = curFrame; drawAll(); };
 
-  video.addEventListener("timeupdate", () => {
+  video.ontimeupdate = () => {
     const w = worms[curIdx];
     if (!w || !w.frames || !video.duration) return;
-    const f = Math.round((video.currentTime / video.duration) * (w.frames.length - 1));
-    const clamped = Math.max(0, Math.min(w.frames.length - 1, f));
-    if (clamped !== curFrame) {
-      curFrame = clamped;
-      slider.value = curFrame;
-      drawAll();
-    }
-  });
+    const f = Math.max(0, Math.min(w.frames.length - 1, Math.round((video.currentTime / video.duration) * (w.frames.length - 1))));
+    if (f !== curFrame) { curFrame = f; slider.value = curFrame; drawAll(); }
+  };
 
-  // 3D Orbit Drag & Tap-to-Seek
-  c3d.addEventListener("pointerdown", e => {
-    dragging = true; moved = false; lx = e.clientX; ly = e.clientY;
-    c3d.setPointerCapture(e.pointerId);
-  });
+  c3d.addEventListener("pointerdown", e => { dragging = true; moved = false; lx = e.clientX; ly = e.clientY; c3d.setPointerCapture(e.pointerId); });
   c3d.addEventListener("pointermove", e => {
     if (!dragging) return;
     const dx = e.clientX - lx, dy = e.clientY - ly;
     if (Math.abs(dx) > 2 || Math.abs(dy) > 2) moved = true;
-    if (projMode === "orbit3d") {
-      yaw += dx * 0.008;
-      pitch = Math.max(-1.1, Math.min(1.1, pitch + dy * 0.008));
-      lx = e.clientX; ly = e.clientY;
-      drawAll();
-    }
+    if (projMode === "orbit3d") { yaw += dx * 0.008; pitch = Math.max(-1.1, Math.min(1.1, pitch + dy * 0.008)); lx = e.clientX; ly = e.clientY; drawAll(); }
   });
   c3d.addEventListener("pointerup", e => {
     dragging = false;
@@ -1038,28 +777,24 @@
       const mx = (e.clientX - rect.left) * (c3d.width / rect.width);
       const my = (e.clientY - rect.top) * (c3d.height / rect.height);
       let best = -1, bestD = 9999;
-      hitNodes.forEach(n => {
-        const d = Math.hypot(n.sx - mx, n.sy - my);
-        if (d < bestD) { bestD = d; best = n.fi; }
-      });
-      if (best !== -1 && bestD < 52) {
-        curFrame = best;
-        slider.value = curFrame;
+      hitNodes.forEach(n => { const d = Math.hypot(n.sx - mx, n.sy - my); if (d < bestD) { bestD = d; best = n.fi; } });
+      if (best !== -1 && bestD < 50) {
+        curFrame = best; slider.value = curFrame;
         if (video.duration) video.currentTime = (curFrame / Math.max(1, worms[curIdx].frames.length - 1)) * video.duration;
         drawAll();
       }
     }
   });
 
-  document.querySelectorAll("#topoFilterBar .mode-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll("#topoFilterBar .mode-btn").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll("#topoBar .m-btn").forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll("#topoBar .m-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       topoFilter = btn.dataset.topo;
       renderMiniGrid();
-    });
+    };
   });
-  document.getElementById("searchInput").addEventListener("input", renderMiniGrid);
+  document.getElementById("searchBox").oninput = renderMiniGrid;
 
   fetch(PRIMARY_JSON)
     .then(r => r.ok ? r.json() : fetch(FALLBACK_JSON).then(r2 => r2.json()))
@@ -1070,8 +805,7 @@
       worms.forEach((w, idx) => {
         const opt = document.createElement("option");
         opt.value = idx;
-        const nD = (w.depth_worms || []).length;
-        opt.textContent = `${idx + 1}. ${w.slug} (${nD} Depth Worms · ${w.n_frames}f)`;
+        opt.textContent = `${idx + 1}. ${w.slug} (${(w.depth_worms || []).length} Depths)`;
         shotSelect.appendChild(opt);
       });
       renderMiniGrid();
