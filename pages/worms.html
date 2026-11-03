@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>4D Multi-Depth Worms (108 Shots)</title>
+<title>4D Multi-Plane & Cutout Worms (108 Shots · 560 Worms)</title>
 <style>
   :root {
     --bg: #07090e;
@@ -104,7 +104,7 @@
     font-weight: 700;
   }
 
-  /* Row 2: 28px Multi-Depth Stratum Pills (Tap to solo any depth) */
+  /* Row 2: 28px Multi-Plane & Rig-Part Pills (Tap to solo any plane/part worm) */
   .depth-bar {
     flex: none;
     display: flex;
@@ -123,7 +123,7 @@
     gap: 4px;
     padding: 2px 8px;
     border-radius: 999px;
-    font-size: 10.5px;
+    font-size: 10px;
     font-family: var(--mono);
     background: var(--panel);
     border: 1px solid var(--border);
@@ -134,7 +134,7 @@
   .d-pill.active {
     opacity: 1;
     border-color: currentColor;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.09);
     font-weight: 700;
   }
   .d-dot {
@@ -144,13 +144,13 @@
     display: inline-block;
   }
 
-  /* Row 3: Side-by-Side Stage (3D Multi-Depth Worms + 2D Video) — Side-by-Side Even on Mobile! */
+  /* Row 3: Side-by-Side Stage (3D Multi-Plane Worms + 2D Footage Cutouts) — Zero Scroll on Mobile */
   .stage-row {
     flex: 0 0 44dvh;
     min-height: 195px;
     max-height: 360px;
     display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-columns: 1.25fr 0.75fr;
     background: #030508;
     border-bottom: 1px solid var(--border);
   }
@@ -164,34 +164,33 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: #04060b;
   }
   .pane-3d { border-right: 1px solid var(--border); }
-  .pane-3d canvas {
+  .pane-3d canvas, .pane-2d canvas {
     width: 100%;
     height: 100%;
     display: block;
+  }
+  .pane-3d canvas {
     cursor: grab;
     touch-action: none;
   }
+  /* Keep raw video hidden when canvas renders the die-cut footage cutouts so it never bleeds through */
   .pane-2d video, .pane-2d img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    background: #000;
-  }
-  .pane-2d canvas {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
+    object-fit: contain;
+    display: none;
+    background: #000;
   }
   .hud-pill {
     position: absolute;
     top: 4px;
     left: 5px;
-    background: rgba(7, 9, 14, 0.82);
+    background: rgba(7, 9, 14, 0.84);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 4px;
     padding: 1px 5px;
@@ -199,6 +198,7 @@
     font-size: 9.5px;
     color: var(--muted);
     pointer-events: none;
+    z-index: 3;
   }
   .hud-Corner {
     position: absolute;
@@ -206,9 +206,10 @@
     right: 5px;
     display: flex;
     gap: 3px;
+    z-index: 3;
   }
   .tiny-btn {
-    background: rgba(16, 20, 29, 0.88);
+    background: rgba(16, 20, 29, 0.9);
     color: var(--fg);
     border: 1px solid var(--border);
     border-radius: 4px;
@@ -220,6 +221,7 @@
   .tiny-btn.active {
     color: var(--gold);
     border-color: var(--gold);
+    font-weight: 700;
   }
 
   /* Row 4: 28px Scrubber + Telemetry Bar */
@@ -246,11 +248,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 48vw;
+    max-width: 50vw;
   }
   .stat-txt b { color: var(--fg); }
 
-  /* Row 5: Filter + Internal Scrollable 108-Shot Multi-Depth Grid (Fills Remaining Viewport) */
+  /* Row 5: Filter + Internal Scrollable 108-Shot Multi-Plane Grid */
   .filter-bar {
     flex: none;
     display: flex;
@@ -350,30 +352,31 @@
   </div>
 </div>
 
-<!-- ROW 2: MULTI-DEPTH STRATA PILLS -->
+<!-- ROW 2: MULTI-PLANE & RIG-PART PILLS -->
 <div class="depth-bar" id="depthBar"></div>
 
-<!-- ROW 3: SIDE-BY-SIDE 3D MULTI-DEPTH WORMS + 2D VIDEO (ZERO SCROLL ON MOBILE) -->
+<!-- ROW 3: SIDE-BY-SIDE 3D MULTI-PLANE WORMS + 2D FOOTAGE CUTOUTS -->
 <div class="stage-row" id="stageRow">
   <div class="pane-3d">
     <canvas id="canvas3d" width="680" height="400"></canvas>
-    <div class="hud-pill" id="hud3d">3D Mask-Video Worms · Drag / Tap</div>
+    <div class="hud-pill" id="hud3d">3D Multiplane Cutout Worms</div>
     <div class="hud-Corner">
-      <button class="tiny-btn active" id="texBtn" title="Draw video inside 3D mask">MaskVid</button>
-      <button class="tiny-btn active" id="subBtn">Sub</button>
+      <button class="tiny-btn active" id="texBtn" title="Stamp footage cutouts inside 3D worms">Cutout3D</button>
+      <button class="tiny-btn active" id="rigBtn" title="Show parsed multiplane vector drawings">Drawings</button>
+      <button class="tiny-btn active" id="subBtn" title="Show object & joint sub-worms">Sub</button>
       <button class="tiny-btn" id="resetBtn">Reset</button>
     </div>
   </div>
   <div class="pane-2d">
-    <video id="video2d" crossorigin="anonymous" playsinline muted loop preload="auto"></video>
-    <img id="fallbackImg" crossorigin="anonymous" style="display:none;" alt="Strip">
+    <video id="video2d" playsinline muted loop preload="auto"></video>
+    <img id="fallbackImg" alt="Strip">
     <canvas id="canvas2d" width="480" height="360"></canvas>
-    <div class="hud-pill" id="hud2d">Mask Video Cutout</div>
+    <div class="hud-pill" id="hud2d">Footage Cutouts + Multiplane Rig</div>
     <div class="hud-Corner" id="srcBar">
-      <button class="tiny-btn active" data-src="cutout">Cutout</button>
-      <button class="tiny-btn" data-src="iso">Iso</button>
-      <button class="tiny-btn" data-src="comp">3W</button>
-      <button class="tiny-btn" data-src="src">Full</button>
+      <button class="tiny-btn active" data-src="cutout" title="Dimmed footage + vivid die-cut plane cutouts">Cutout</button>
+      <button class="tiny-btn" data-src="pop" title="Explode multiplane cutouts apart by depth z">Pop</button>
+      <button class="tiny-btn" data-src="iso" title="Isolated footage cutouts on dark stage">Iso</button>
+      <button class="tiny-btn" data-src="src" title="Full unmasked footage + multiplane overlays">Full</button>
     </div>
   </div>
 </div>
@@ -386,10 +389,10 @@
   <span class="stat-txt" id="statTxt">Loading...</span>
 </div>
 
-<!-- ROW 5: FILTER + INTERNAL SCROLLABLE 108-SHOT MULTI-DEPTH GRID -->
+<!-- ROW 5: FILTER + INTERNAL SCROLLABLE 108-SHOT MULTI-PLANE GRID -->
 <div class="filter-bar">
   <div class="filter-pills" id="topoBar">
-    <button class="m-btn active" data-topo="ALL">All 108</button>
+    <button class="m-btn active" data-topo="ALL">All 108 (560 Worms)</button>
     <button class="m-btn" data-topo="CAMERA_SHEAR_RIBBON">Shear (37)</button>
     <button class="m-btn" data-topo="LOOMING_FUNNEL_CONE">Cone (27)</button>
     <button class="m-btn" data-topo="ARTICULATED_LIMB_BRAID">Braid (23)</button>
@@ -405,8 +408,8 @@
 
 <script>
 (function() {
-  const PRIMARY_JSON = "../data/worms_108.json";
-  const FALLBACK_JSON = "https://hartswf0.github.io/secondhand-motion/data/worms_108.json";
+  const PRIMARY_JSON = "../data/worms_108.json?v=6";
+  const FALLBACK_JSON = "https://hartswf0.github.io/secondhand-motion/data/worms_108.json?v=6";
 
   let worms = [];
   let curIdx = 0;
@@ -415,11 +418,12 @@
   let srcMode = "cutout";
   let showSub = true;
   let showMaskVid = true;
+  let showDrawings = true;
   let isPlaying = false;
   let lastTick = 0;
   let activeDepths = new Set();
   let topoFilter = "ALL";
-  let yaw = -0.56, pitch = 0.32;
+  let yaw = -0.56, pitch = 0.30;
   let dragging = false, lx = 0, ly = 0, moved = false;
   let hitNodes = [];
   const frameCache = {};
@@ -429,19 +433,26 @@
   const c2d = document.getElementById("canvas2d");
   const ctx2 = c2d.getContext("2d");
   const video = document.getElementById("video2d");
-  const fbImg = document.getElementById("fallbackImg");
   const shotSelect = document.getElementById("shotSelect");
   const slider = document.getElementById("slider");
 
+  function getFrameDir(w) {
+    if (!w) return "";
+    if (w.frame_dir) return w.frame_dir;
+    const s = (w.slug === "giraffe-walks-past") ? "giraffe" : w.slug;
+    return "https://hartswf0.github.io/secondhand-motion/shots/" + s + "-gwp/frames";
+  }
+
   function ensureFrameImg(w, fi) {
-    if (!w || !w.frame_dir) return null;
+    if (!w) return null;
+    const fDir = getFrameDir(w);
+    if (!fDir) return null;
     if (!frameCache[w.slug]) frameCache[w.slug] = {};
     const bag = frameCache[w.slug];
     if (bag[fi]) return (bag[fi].complete && bag[fi].naturalWidth > 0) ? bag[fi] : null;
     const im = new Image();
-    im.crossOrigin = "anonymous";
     im.onload = () => { if (worms[curIdx] && worms[curIdx].slug === w.slug) drawAll(); };
-    im.src = `${w.frame_dir}/f${String(fi).padStart(3, "0")}.jpg`;
+    im.src = `${fDir}/f${String(fi).padStart(3, "0")}.jpg`;
     bag[fi] = im;
     return null;
   }
@@ -453,32 +464,72 @@
     ensureFrameImg(w, Math.floor(nf / 2));
     ensureFrameImg(w, Math.max(0, nf - 1));
     (w.keys || []).forEach(k => { if (k >= 0 && k < nf) ensureFrameImg(w, k); });
+    // Progressively preload remaining frames of active shot
+    for (let i = 0; i < nf; i += 2) ensureFrameImg(w, i);
   }
 
   function getMediaForFrame(w, fi) {
     const im = ensureFrameImg(w, fi);
-    if (fi === curFrame && srcMode === "comp" && video.readyState >= 2 && video.videoWidth > 0) {
-      return video;
-    }
     if (im) return im;
-    if (fi === curFrame && video.readyState >= 2 && video.videoWidth > 0) {
-      return video;
-    }
-    return null;
+    if (video.readyState >= 2 && video.videoWidth > 0) return video;
+    // Fallback to nearest loaded frame JPEG in cache so cutouts are ALWAYS visible immediately
+    const bag = frameCache[w.slug] || {};
+    let bestImg = null, bestDist = 9999;
+    Object.keys(bag).forEach(k => {
+      const cand = bag[k];
+      if (cand && cand.complete && cand.naturalWidth > 0) {
+        const d = Math.abs(parseInt(k, 10) - fi);
+        if (d < bestDist) { bestDist = d; bestImg = cand; }
+      }
+    });
+    return bestImg;
   }
 
-  function makeEllipsePoly(u, v, r, nPts = 14) {
-    const pts = [];
-    const rx = Math.max(0.03, r * 0.75);
-    const ry = Math.max(0.03, r * 0.55);
-    for (let i = 0; i < nPts; i++) {
-      const a = (i / nPts) * Math.PI * 2;
-      pts.push([
-        Math.max(0.01, Math.min(0.99, u + Math.cos(a) * rx)),
-        Math.max(0.01, Math.min(0.99, v + Math.sin(a) * ry))
+  function getPlanePolyUV(dw, fr, pt) {
+    if (dw.role === "subject" && fr && fr.ring && fr.ring.length >= 3) {
+      return fr.ring;
+    }
+    if (dw.poly0 && dw.poly0.length >= 3 && pt) {
+      return dw.poly0.map(duv => [
+        Math.max(0.01, Math.min(0.99, pt[0] + duv[0])),
+        Math.max(0.01, Math.min(0.99, pt[1] + duv[1]))
       ]);
     }
-    return pts;
+    const u = pt ? pt[0] : 0.5, v = pt ? pt[1] : 0.5, r = pt ? pt[2] : 0.1;
+    const out = [];
+    for (let i = 0; i < 12; i++) {
+      const a = (i / 12) * Math.PI * 2;
+      out.push([
+        Math.max(0.01, Math.min(0.99, u + Math.cos(a) * r * 0.85)),
+        Math.max(0.01, Math.min(0.99, v + Math.sin(a) * r * 0.65))
+      ]);
+    }
+    return out;
+  }
+
+  function getPlaneStrokesUV(dw, fr, pt) {
+    if (dw.role === "subject" && fr && fr.doodle && fr.doodle.length) {
+      return fr.doodle;
+    }
+    if (dw.strokes0 && dw.strokes0.length && pt) {
+      return dw.strokes0.map(st => st.map(duv => [
+        Math.max(0.01, Math.min(0.99, pt[0] + duv[0])),
+        Math.max(0.01, Math.min(0.99, pt[1] + duv[1]))
+      ]));
+    }
+    return [];
+  }
+
+  function projPoint(u, v, tau, zNorm, W, H) {
+    const x = (u - 0.5);
+    const y = (0.5 - v) + (zNorm - 0.35) * 0.36;
+    const z = (tau - 0.5) * 1.55;
+    const cy = Math.cos(yaw), sy = Math.sin(yaw);
+    const cp = Math.cos(pitch), sp = Math.sin(pitch);
+    const x1 = x * cy + z * sy, z1 = -x * sy + z * cy;
+    const y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
+    const sc = (Math.min(W, H) * 0.84) / Math.max(0.55, 2.25 - z2 * 0.5);
+    return { sx: W * 0.50 + x1 * sc, sy: H * 0.52 - y2 * sc, sc };
   }
 
   function drawMediaIn3DMask(media, poly, tau, zNorm, W, H, alpha) {
@@ -510,18 +561,6 @@
     return true;
   }
 
-  function projPoint(u, v, tau, zNorm, W, H) {
-    const x = (u - 0.5);
-    const y = (0.5 - v) + (zNorm - 0.35) * 0.34;
-    const z = (tau - 0.5) * 1.55;
-    const cy = Math.cos(yaw), sy = Math.sin(yaw);
-    const cp = Math.cos(pitch), sp = Math.sin(pitch);
-    const x1 = x * cy + z * sy, z1 = -x * sy + z * cy;
-    const y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
-    const sc = (Math.min(W, H) * 0.84) / Math.max(0.55, 2.25 - z2 * 0.5);
-    return { sx: W * 0.50 + x1 * sc, sy: H * 0.52 - y2 * sc, sc };
-  }
-
   function isDepthOn(id) {
     return activeDepths.size === 0 || activeDepths.has(id);
   }
@@ -533,7 +572,7 @@
     const allB = document.createElement("button");
     allB.className = "d-pill" + (activeDepths.size === 0 ? " active" : "");
     allB.style.color = "#f3f5fa";
-    allB.textContent = `All ${dws.length} Depths`;
+    allB.textContent = `All ${dws.length} Planes/Parts`;
     allB.onclick = () => { activeDepths.clear(); renderDepthPills(w); drawAll(); };
     bar.appendChild(allB);
 
@@ -541,7 +580,8 @@
       const b = document.createElement("button");
       b.className = "d-pill" + (isDepthOn(dw.id) ? " active" : "");
       b.style.color = dw.color || "#00f5d4";
-      b.innerHTML = `<span class="d-dot" style="background:${dw.color}"></span>z=${dw.z} ${dw.label.slice(0, 14)}`;
+      const tag = dw.role === "part" ? "✦" : `z=${dw.z}`;
+      b.innerHTML = `<span class="d-dot" style="background:${dw.color}"></span>${tag} ${dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 14)}`;
       b.onclick = () => {
         if (activeDepths.size === 1 && activeDepths.has(dw.id)) activeDepths.clear();
         else { activeDepths.clear(); activeDepths.add(dw.id); }
@@ -562,11 +602,11 @@
     hitNodes = [];
 
     if (projMode === "lanes") {
-      const padL = 96, padR = 14, padT = 20, padB = 20;
+      const padL = 104, padR = 14, padT = 18, padB = 18;
       const plotW = W - padL - padR, plotH = H - padT - padB;
       const nL = Math.max(1, dws.length);
       const curX = padL + (fIdx / Math.max(1, nf - 1)) * plotW;
-      ctx3.strokeStyle = "rgba(255, 209, 102, 0.7)";
+      ctx3.strokeStyle = "rgba(255, 209, 102, 0.75)";
       ctx3.lineWidth = 2;
       ctx3.beginPath(); ctx3.moveTo(curX, padT - 6); ctx3.lineTo(curX, H - padB + 6); ctx3.stroke();
 
@@ -576,25 +616,26 @@
         const lh = (plotH / nL) * 0.76;
         const col = dw.color || "#00f5d4";
         ctx3.fillStyle = on ? col : "rgba(142,153,176,0.35)";
-        ctx3.font = "bold 11px monospace";
-        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 9)}`, 6, ly0 + 4);
+        ctx3.font = "bold 10.5px monospace";
+        const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 10);
+        ctx3.fillText(`z=${dw.z} ${shortLbl}`, 5, ly0 + 4);
         if (!on) return;
 
         const trk = dw.track || [];
-        ctx3.fillStyle = col + "35";
+        ctx3.fillStyle = col + "32";
         ctx3.strokeStyle = col;
-        ctx3.lineWidth = dw.role === "subject" ? 3.2 : 2.2;
+        ctx3.lineWidth = dw.role === "subject" ? 3.0 : 2.1;
 
         ctx3.beginPath();
         trk.forEach((pt, fi) => {
           const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-          const ty = ly0 + (pt[0] - 0.5) * lh - Math.max(4, pt[2] * lh * 0.5);
+          const ty = ly0 + (pt[0] - 0.5) * lh - Math.max(3, pt[2] * lh * 0.45);
           if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
         });
         for (let fi = trk.length - 1; fi >= 0; fi--) {
           const pt = trk[fi];
           const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-          const ty = ly0 + (pt[0] - 0.5) * lh + Math.max(4, pt[2] * lh * 0.5);
+          const ty = ly0 + (pt[0] - 0.5) * lh + Math.max(3, pt[2] * lh * 0.45);
           ctx3.lineTo(tx, ty);
         }
         ctx3.closePath(); ctx3.fill();
@@ -615,76 +656,73 @@
     const box = [[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]].map(c => projPoint(c[0],c[1],c[2],0.35,W,H));
     [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]].forEach(([a,b]) => {
       ctx3.beginPath(); ctx3.moveTo(box[a].sx, box[a].sy); ctx3.lineTo(box[b].sx, box[b].sy);
-      ctx3.strokeStyle = "rgba(142,153,176,0.22)"; ctx3.lineWidth = 1; ctx3.stroke();
+      ctx3.strokeStyle = "rgba(142,153,176,0.20)"; ctx3.lineWidth = 1; ctx3.stroke();
     });
 
-    // Draw each Depth Worm from Far (back) to Near (front)
+    // Draw each Plane & Articulated Part Worm from Far (back) to Near (front)
     [...dws].reverse().forEach(dw => {
       if (!isDepthOn(dw.id)) return;
       const col = dw.color || "#00f5d4";
       const trk = dw.track || [];
-      const zNorm = Math.min(1.0, Math.log(Math.max(1.0, dw.z || 2.0)) / Math.log(12.0));
+      const zNorm = Math.min(1.0, Math.log(Math.max(0.8, dw.z || 2.0)) / Math.log(12.0));
       const isSubj = dw.role === "subject";
+      const isPart = dw.role === "part";
+      const step = Math.max(1, Math.floor(nf / (isSubj ? 10 : 6)));
 
-      if (isSubj) {
-        const step = Math.max(1, Math.floor(nf / 12));
-        frames.forEach((fr, fi) => {
-          const isKey = (w.keys || []).includes(fi);
-          if (fi !== fIdx && fi % step !== 0 && !isKey) return;
-          const ring = fr.ring || fr.poly;
-          if (!ring || ring.length < 3) return;
-          const isCur = (fi === fIdx);
-          const tau = fi / Math.max(1, nf - 1);
+      trk.forEach((pt, fi) => {
+        const isKey = (w.keys || []).includes(fi);
+        const isCur = (fi === fIdx);
+        if (!isCur && fi % step !== 0 && !(isSubj && isKey)) return;
+        const fr = frames[Math.min(nf - 1, fi)];
+        const tau = fi / Math.max(1, nf - 1);
+        const polyUV = getPlanePolyUV(dw, fr, pt);
+        if (!polyUV || polyUV.length < 3) return;
 
-          // Grab & clip the video element inside the 3D SAM mask slice!
-          let drewVid = false;
-          if (showMaskVid && (isCur || isKey)) {
-            const media = getMediaForFrame(w, fi);
-            if (media) {
-              drewVid = drawMediaIn3DMask(media, ring, tau, zNorm, W, H, isCur ? 0.96 : 0.48);
-            }
+        // Stamp actual footage cutout inside the 3D polygon slice!
+        let drewVid = false;
+        if (showMaskVid && (isCur || (isSubj && isKey) || (activeDepths.size === 1 && isKey))) {
+          const media = getMediaForFrame(w, fi);
+          if (media) {
+            drewVid = drawMediaIn3DMask(media, polyUV, tau, zNorm, W, H, isCur ? 0.96 : 0.52);
           }
+        }
 
-          ctx3.strokeStyle = isCur ? "#ffffff" : col;
-          ctx3.fillStyle = drewVid ? "rgba(0,0,0,0)" : (isCur ? col + "66" : col + "22");
-          ctx3.lineWidth = isCur ? 2.8 : 1.4;
-          ctx3.beginPath();
-          ring.forEach((uv, j) => {
-            const p = projPoint(uv[0], uv[1], tau, zNorm, W, H);
-            if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-          });
-          ctx3.closePath();
-          if (!drewVid) ctx3.fill();
-          ctx3.stroke();
+        // Polygon contour ring
+        ctx3.beginPath();
+        polyUV.forEach((uv, j) => {
+          const p = projPoint(uv[0], uv[1], tau, zNorm, W, H);
+          if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
         });
-      } else {
-        const step = Math.max(1, Math.floor(nf / 8));
-        trk.forEach((pt, fi) => {
-          if (fi !== fIdx && fi % step !== 0) return;
-          const isCur = (fi === fIdx);
-          const tau = fi / Math.max(1, nf - 1);
-          let drewVid = false;
-          if (showMaskVid && isCur) {
-            const media = getMediaForFrame(w, fi);
-            if (media) {
-              const ePoly = makeEllipsePoly(pt[0], pt[1], pt[2]);
-              drewVid = drawMediaIn3DMask(media, ePoly, tau, zNorm, W, H, 0.78);
-            }
+        ctx3.closePath();
+        if (!drewVid) {
+          ctx3.fillStyle = isCur ? (col + "55") : (col + "1c");
+          ctx3.fill();
+        }
+        ctx3.strokeStyle = isCur ? "#ffffff" : col;
+        ctx3.lineWidth = isCur ? 2.6 : (isSubj ? 1.5 : 1.15);
+        ctx3.stroke();
+
+        // Render parsed multiplane vector drawing strokes inside the 3D slice!
+        if (showDrawings && (isCur || fi === 0 || (isPart && isKey))) {
+          const strokesUV = getPlaneStrokesUV(dw, fr, pt);
+          if (strokesUV.length) {
+            ctx3.strokeStyle = isCur ? "#ffffff" : col;
+            ctx3.lineWidth = isCur ? 1.9 : 1.2;
+            strokesUV.forEach(st => {
+              ctx3.beginPath();
+              st.forEach((uv, k) => {
+                const p = projPoint(uv[0], uv[1], tau, zNorm, W, H);
+                if (k === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+              });
+              ctx3.stroke();
+            });
           }
-          const p = projPoint(pt[0], pt[1], tau, zNorm, W, H);
-          const rx = Math.max(6, pt[2] * p.sc * 0.55);
-          ctx3.strokeStyle = isCur ? "#ffffff" : col;
-          ctx3.fillStyle = drewVid ? "rgba(0,0,0,0)" : (col + "22");
-          ctx3.lineWidth = isCur ? 2.4 : 1.3;
-          ctx3.beginPath(); ctx3.ellipse(p.sx, p.sy, rx, rx * 0.6, 0, 0, Math.PI * 2);
-          if (!drewVid) ctx3.fill();
-          ctx3.stroke();
-        });
-      }
+        }
+      });
 
-      // Bold Spine for each Depth Worm
+      // Bold Spine for each Worm
       ctx3.strokeStyle = col;
-      ctx3.lineWidth = isSubj ? 3.6 : 2.6;
+      ctx3.lineWidth = isSubj ? 3.5 : (isPart ? 2.6 : 2.2);
       ctx3.beginPath();
       trk.forEach((pt, fi) => {
         const p = projPoint(pt[0], pt[1], fi / Math.max(1, nf - 1), zNorm, W, H);
@@ -696,20 +734,21 @@
       if (trk.length) {
         const p0 = projPoint(trk[0][0], trk[0][1], 0, zNorm, W, H);
         ctx3.fillStyle = col;
-        ctx3.font = "bold 11px monospace";
-        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 10)}`, p0.sx + 4, p0.sy - 5);
+        ctx3.font = "bold 10.5px monospace";
+        const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 11);
+        ctx3.fillText(`z=${dw.z} ${shortLbl}`, p0.sx + 4, p0.sy - 4);
       }
 
       if (showSub && dw.sub_worms) {
         dw.sub_worms.forEach(sw => {
-          ctx3.strokeStyle = col + "bb"; ctx3.lineWidth = 1.4; ctx3.setLineDash([3, 3]);
+          ctx3.strokeStyle = col + "bb"; ctx3.lineWidth = 1.3; ctx3.setLineDash([3, 3]);
           ctx3.beginPath();
           if (sw.pts) {
             sw.pts.forEach((uv, fi) => {
               const p = projPoint(uv[0], uv[1], fi / Math.max(1, nf - 1), zNorm, W, H);
               if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
             });
-          } else if (sw.u0 !== undefined) {
+          } else if (sw.u0 !== undefined && trk.length) {
             trk.forEach((pt, fi) => {
               const p = projPoint(sw.u0 + (pt[0] - trk[0][0]), sw.v0 + (pt[1] - trk[0][1]), fi / Math.max(1, nf - 1), zNorm, W, H);
               if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
@@ -727,64 +766,141 @@
     const frames = w.frames || [];
     if (!frames.length) return;
     const fr = frames[Math.min(frames.length - 1, fIdx)];
-    const ring = fr.ring || fr.poly;
     const media = getMediaForFrame(w, fIdx);
-    const isCutoutMode = (srcMode === "cutout" || srcMode === "iso");
 
     // Preload next 2 frames for smooth playback
     ensureFrameImg(w, (fIdx + 1) % frames.length);
     ensureFrameImg(w, (fIdx + 2) % frames.length);
 
-    if (isCutoutMode && media) {
-      ctx2.fillStyle = "#04060b";
-      ctx2.fillRect(0, 0, W, H);
-      if (srcMode === "cutout") {
+    // Always paint solid dark studio backing so raw video never bleeds through unmasked
+    ctx2.fillStyle = "#05070c";
+    ctx2.fillRect(0, 0, W, H);
+
+    if (media) {
+      if (srcMode === "src") {
         ctx2.save();
-        ctx2.globalAlpha = 0.16;
+        ctx2.globalAlpha = 0.92;
+        try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+        ctx2.restore();
+      } else if (srcMode === "cutout" || srcMode === "pop") {
+        // Dim & desaturate background footage so the vivid die-cut cutouts pop out unmistakably!
+        ctx2.save();
+        ctx2.globalAlpha = 0.22;
         try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
         ctx2.restore();
       }
     }
 
-    (w.depth_worms || []).forEach(dw => {
+    // Draw every enabled Plane & Articulated Part from Far (back) to Near (front)
+    const dws = [...(w.depth_worms || [])].reverse();
+    dws.forEach((dw, idx) => {
       if (!isDepthOn(dw.id)) return;
       const col = dw.color || "#00f5d4";
-      const pt = (dw.track || [])[Math.min((dw.track || []).length - 1, fIdx)];
+      const trk = dw.track || [];
+      const pt = trk[Math.min(trk.length - 1, fIdx)];
       if (!pt) return;
 
-      if (dw.role === "subject" && ring && ring.length >= 3) {
-        if (isCutoutMode && media) {
+      const polyUV = getPlanePolyUV(dw, fr, pt);
+      const strokesUV = getPlaneStrokesUV(dw, fr, pt);
+      const zNorm = Math.min(1.0, Math.log(Math.max(0.8, dw.z || 2.0)) / Math.log(12.0));
+
+      // In 'pop' mode, explode each plane cutout outward by its depth z!
+      const offX = (srcMode === "pop") ? (zNorm - 0.32) * 38.0 : 0.0;
+      const offY = (srcMode === "pop") ? (zNorm - 0.32) * -26.0 : 0.0;
+
+      const shouldClipCutout = (srcMode !== "src") && media && (
+        dw.role === "subject" || dw.role === "part" || activeDepths.size === 1 || srcMode === "pop" || (dw.strokes0 && dw.strokes0.length > 0)
+      );
+
+      if (polyUV && polyUV.length >= 3) {
+        if (shouldClipCutout) {
+          // 1. Dark drop shadow behind die-cut sticker cutout
           ctx2.save();
           ctx2.beginPath();
-          ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
+          polyUV.forEach((uv, i) => {
+            const x = uv[0] * W + offX, y = uv[1] * H + offY;
+            if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
+          });
+          ctx2.closePath();
+          ctx2.shadowColor = "rgba(0, 0, 0, 0.9)";
+          ctx2.shadowBlur = 12;
+          ctx2.shadowOffsetX = 3;
+          ctx2.shadowOffsetY = 4;
+          ctx2.fillStyle = "#000000";
+          ctx2.fill();
+          ctx2.restore();
+
+          // 2. Clip vivid 100% footage cutout inside polygon mask
+          ctx2.save();
+          ctx2.beginPath();
+          polyUV.forEach((uv, i) => {
+            const x = uv[0] * W + offX, y = uv[1] * H + offY;
+            if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
+          });
           ctx2.closePath();
           ctx2.clip();
           ctx2.globalAlpha = 1.0;
-          try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+          try { ctx2.drawImage(media, offX, offY, W, H); } catch(e) {}
           ctx2.restore();
+        }
+
+        // 3. Die-Cut Sticker Rim (Outer Depth Color + Inner White Rim on Subject/Parts)
+        ctx2.save();
+        ctx2.beginPath();
+        polyUV.forEach((uv, i) => {
+          const x = uv[0] * W + offX, y = uv[1] * H + offY;
+          if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
+        });
+        ctx2.closePath();
+        if (!shouldClipCutout) {
+          ctx2.fillStyle = col + "1f";
+          ctx2.fill();
         }
         ctx2.strokeStyle = col;
-        ctx2.fillStyle = (isCutoutMode && media) ? "rgba(0,0,0,0)" : (col + "28");
-        ctx2.lineWidth = 2.6;
-        ctx2.beginPath();
-        ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
-        ctx2.closePath();
-        if (!(isCutoutMode && media)) ctx2.fill();
+        ctx2.lineWidth = dw.role === "subject" ? 3.2 : (dw.role === "part" ? 2.4 : 1.8);
+        if (dw.role !== "subject" && dw.role !== "part" && !shouldClipCutout) ctx2.setLineDash([4, 3]);
         ctx2.stroke();
-      } else {
-        const cx = pt[0]*W, cy = pt[1]*H, rx = pt[2]*W*0.62, ry = pt[2]*H*0.42;
-        if (isCutoutMode && media && activeDepths.size === 1) {
-          ctx2.save();
-          ctx2.beginPath();
-          ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
-          ctx2.clip();
-          ctx2.globalAlpha = 0.96;
-          try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
-          ctx2.restore();
+        ctx2.setLineDash([]);
+
+        if (shouldClipCutout && (dw.role === "subject" || dw.role === "part")) {
+          ctx2.strokeStyle = "rgba(255, 255, 255, 0.85)";
+          ctx2.lineWidth = 1.2;
+          ctx2.stroke();
         }
-        ctx2.strokeStyle = col; ctx2.lineWidth = 1.8; ctx2.setLineDash([4, 4]);
-        ctx2.beginPath(); ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2); ctx2.stroke(); ctx2.setLineDash([]);
+        ctx2.restore();
       }
+
+      // 4. Overlay the parsed multiplane vector drawing strokes!
+      if (showDrawings && strokesUV && strokesUV.length) {
+        ctx2.save();
+        ctx2.lineCap = "round";
+        ctx2.lineJoin = "round";
+        strokesUV.forEach(st => {
+          if (st.length < 2) return;
+          ctx2.beginPath();
+          st.forEach((uv, i) => {
+            const x = uv[0] * W + offX, y = uv[1] * H + offY;
+            if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
+          });
+          ctx2.strokeStyle = "rgba(5, 7, 12, 0.85)";
+          ctx2.lineWidth = 4.2;
+          ctx2.stroke();
+          ctx2.strokeStyle = dw.role === "subject" ? "#ffffff" : col;
+          ctx2.lineWidth = 2.1;
+          ctx2.stroke();
+        });
+        ctx2.restore();
+      }
+
+      // 5. Compact plane/part tag on 2D cutout
+      const tx = Math.max(8, Math.min(W - 88, pt[0] * W + offX - 24));
+      const ty = Math.max(16, Math.min(H - 8, pt[1] * H + offY - Math.max(18, pt[2] * H * 0.55)));
+      const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 11);
+      ctx2.fillStyle = "rgba(7, 9, 14, 0.82)";
+      ctx2.fillRect(tx - 2, ty - 10, shortLbl.length * 6.2 + 28, 13);
+      ctx2.fillStyle = col;
+      ctx2.font = "bold 9.5px monospace";
+      ctx2.fillText(`z=${dw.z} ${shortLbl}`, tx, ty);
     });
   }
 
@@ -794,10 +910,12 @@
     draw3dStage(w, curFrame);
     draw2dStage(w, curFrame);
     const dws = w.depth_worms || [];
+    const nParts = dws.filter(d => d.role === "part").length;
+    const nPlanes = dws.length - nParts;
     const fr = (w.frames || [])[curFrame] || {};
     const areaPct = ((fr.area || 0) * 100).toFixed(1);
     document.getElementById("statTxt").innerHTML =
-      `<b>f${String(curFrame).padStart(2,"0")}</b>/${w.n_frames-1} · mask <b>${areaPct}%</b> · <b>${dws.length} Depths</b> (${dws.map(d=>"z="+d.z).join("→")})`;
+      `<b>f${String(curFrame).padStart(2,"0")}</b>/${w.n_frames-1} · mask <b>${areaPct}%</b> · <b>${nPlanes} Planes + ${nParts} Parts</b>`;
   }
 
   function syncVideoTime(w, fIdx) {
@@ -811,21 +929,20 @@
   }
 
   function applyMedia(w) {
-    let url = w.src_mp4 || w.comp_mp4 || w.r2_mp4 || "";
-    if (srcMode === "comp") url = w.comp_mp4 || w.src_mp4 || "";
+    const url = w.src_mp4 || w.comp_mp4 || w.r2_mp4 || "";
     const hud2d = document.getElementById("hud2d");
     if (hud2d) {
-      hud2d.textContent = srcMode === "cutout" ? "Mask Cutout Video" : (srcMode === "iso" ? "Isolated Mask Only" : "Full Video + Mask");
+      const map = {
+        cutout: "Die-Cut Footage Cutouts + Multiplane Rig",
+        pop: "Exploded Multiplane Cutouts (Offset by z)",
+        iso: "Isolated Footage Cutouts + Vector Rig",
+        src: "Full Source Footage + Multiplane Rig"
+      };
+      hud2d.textContent = map[srcMode] || "Footage Cutouts";
     }
-    if (!url) {
-      video.pause(); video.style.display = "none";
-      fbImg.style.display = "block"; fbImg.src = w.strip_img || w.sil_img || "";
-    } else {
-      fbImg.style.display = "none"; video.style.display = "block";
-      if (video.src !== url) {
-        video.src = url;
-        video.onloadedmetadata = () => { syncVideoTime(w, curFrame); drawAll(); };
-      }
+    if (url && video.src !== url) {
+      video.src = url;
+      video.onloadedmetadata = () => { syncVideoTime(w, curFrame); drawAll(); };
     }
   }
 
@@ -848,7 +965,7 @@
     if (autoPlay) {
       isPlaying = true;
       document.getElementById("playBtn").textContent = "⏸";
-      if (video.style.display !== "none") video.play().catch(() => {});
+      video.play().catch(() => {});
     }
   }
 
@@ -883,7 +1000,7 @@
       card.innerHTML = `
         <canvas width="160" height="48"></canvas>
         <div class="mc-title">${idx + 1}. ${w.slug}</div>
-        <div class="mc-sub">${dws.length} depths (${dws.map(d => "z=" + d.z).slice(0, 3).join(",")})</div>
+        <div class="mc-sub">${dws.length} worms (${dws.map(d => "z=" + d.z).slice(0, 3).join(",")})</div>
       `;
       card.onclick = () => selectShot(idx, true);
       grid.appendChild(card);
@@ -929,8 +1046,9 @@
   });
 
   document.getElementById("texBtn").onclick = e => { showMaskVid = !showMaskVid; e.target.classList.toggle("active", showMaskVid); drawAll(); };
+  document.getElementById("rigBtn").onclick = e => { showDrawings = !showDrawings; e.target.classList.toggle("active", showDrawings); drawAll(); };
   document.getElementById("subBtn").onclick = e => { showSub = !showSub; e.target.classList.toggle("active", showSub); drawAll(); };
-  document.getElementById("resetBtn").onclick = () => { yaw = -0.56; pitch = 0.32; drawAll(); };
+  document.getElementById("resetBtn").onclick = () => { yaw = -0.56; pitch = 0.30; drawAll(); };
 
   document.querySelectorAll("#srcBar .tiny-btn").forEach(btn => {
     btn.onclick = () => {
@@ -1004,7 +1122,7 @@
       worms.forEach((w, idx) => {
         const opt = document.createElement("option");
         opt.value = idx;
-        opt.textContent = `${idx + 1}. ${w.slug} (${(w.depth_worms || []).length} Depths)`;
+        opt.textContent = `${idx + 1}. ${w.slug} (${(w.depth_worms || []).length} Worms)`;
         shotSelect.appendChild(opt);
       });
       renderMiniGrid();

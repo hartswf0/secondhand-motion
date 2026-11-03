@@ -180,14 +180,14 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     #time-worms-studio .tw-dpill { display:inline-flex; align-items:center; gap:4px; padding:2px 7px; border-radius:999px; font:700 10px var(--mono); background:#121724; border:1px solid #2b3550; cursor:pointer; white-space:nowrap; opacity:0.42; }
     #time-worms-studio .tw-dpill.on { opacity:1; border-color:currentColor; background:rgba(255,255,255,0.08); }
     /* Side-by-side even on mobile so ZERO vertical scroll is needed! */
-    #time-worms-studio .tw-grid { display:grid; grid-template-columns:1.28fr 0.72fr; gap:5px; }
+    #time-worms-studio .tw-grid { display:grid; grid-template-columns:1.25fr 0.75fr; gap:5px; }
     #time-worms-studio .tw-grid.full3d { grid-template-columns:1fr; }
     #time-worms-studio .tw-grid.full3d .p2d { display:none; }
-    #time-worms-studio .tw-pane { position:relative; height:220px; background:#04060a; border:1px solid #242d42; border-radius:6px; overflow:hidden; }
+    #time-worms-studio .tw-pane { position:relative; height:225px; background:#04060a; border:1px solid #242d42; border-radius:6px; overflow:hidden; }
     @media (max-width: 760px) {
-      #time-worms-studio .tw-pane { height:185px; }
+      #time-worms-studio .tw-pane { height:188px; }
     }
-    /* Built-in horizontal swipe strip of all 108 Multi-Depth Worms */
+    /* Built-in horizontal swipe strip of all 108 Multi-Plane Worms */
     #time-worms-studio .tw-strip { display:flex; gap:5px; overflow-x:auto; padding:3px 0 1px; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
     #time-worms-studio .tw-strip::-webkit-scrollbar { display:none; }
     #time-worms-studio .tw-tile { flex:0 0 92px; background:#111622; border:1px solid #242d42; border-radius:5px; padding:3px; cursor:pointer; }
@@ -202,7 +202,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       <button type="button" class="tw-btn" id="twPrevBtn">◀</button>
       <button type="button" class="tw-btn gold" id="twPlayPause">▶</button>
       <select id="twSelect" style="flex:1;min-width:100px;background:#080a10;color:#f3f5fa;border:1px solid #2b3550;border-radius:5px;padding:3px 5px;font:700 11px var(--sans);" aria-label="Select tracked shot">
-        <option>Loading 108 multi-depth worms...</option>
+        <option>Loading 108 multi-plane worms...</option>
       </select>
       <button type="button" class="tw-btn" id="twNextBtn">▶</button>
     </div>
@@ -214,27 +214,28 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     </div>
   </div>
 
-  <!-- Row 2: Multi-Depth Stratum Pills (Tap any depth to solo) -->
+  <!-- Row 2: Multi-Plane & Rig-Part Pills (Tap any plane/part to solo) -->
   <div class="tw-depth-bar" id="twDepthBar"></div>
 
-  <!-- Row 3: Side-by-Side 3D Multi-Depth Worms + 2D Video (Fits on 1 screen on mobile!) -->
+  <!-- Row 3: Side-by-Side 3D Multi-Plane Worms + 2D Footage Cutouts (Fits on 1 screen on mobile!) -->
   <div class="tw-grid" id="twStageGrid">
     <div class="tw-pane p3d">
       <canvas id="twCanvas3D" width="640" height="360" style="width:100%;height:100%;display:block;cursor:grab;touch-action:none;"></canvas>
-      <span style="position:absolute;top:4px;left:5px;background:rgba(8,10,16,0.82);padding:1px 5px;border-radius:3px;font:600 9px var(--mono);color:#8e99b0;pointer-events:none;">3D Mask-Video Worms</span>
+      <span style="position:absolute;top:4px;left:5px;background:rgba(8,10,16,0.84);padding:1px 5px;border-radius:3px;font:600 9px var(--mono);color:#8e99b0;pointer-events:none;">3D Multiplane Cutout Worms</span>
       <div style="position:absolute;top:4px;right:5px;display:flex;gap:3px;">
-        <button type="button" class="tw-btn" id="twMaskVidBtn" aria-pressed="true" style="padding:1px 5px;font-size:9px;">MaskVid</button>
+        <button type="button" class="tw-btn" id="twMaskVidBtn" aria-pressed="true" style="padding:1px 5px;font-size:9px;">Cutout3D</button>
+        <button type="button" class="tw-btn" id="twDrawBtn" aria-pressed="true" style="padding:1px 5px;font-size:9px;">Drawings</button>
         <button type="button" class="tw-btn" id="twResetAngle" style="padding:1px 5px;font-size:9px;">Reset</button>
       </div>
     </div>
     <div class="tw-pane p2d">
-      <video id="twVideo" crossorigin="anonymous" playsinline loop muted style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"></video>
-      <canvas id="twCanvas2D" width="480" height="360" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;"></canvas>
-      <span id="twHud2D" style="position:absolute;top:4px;left:5px;background:rgba(8,10,16,0.82);padding:1px 5px;border-radius:3px;font:600 9px var(--mono);color:#8e99b0;pointer-events:none;">Mask Cutout Video</span>
+      <video id="twVideo" playsinline loop muted style="display:none;"></video>
+      <canvas id="twCanvas2D" width="480" height="360" style="width:100%;height:100%;display:block;"></canvas>
+      <span id="twHud2D" style="position:absolute;top:4px;left:5px;background:rgba(8,10,16,0.84);padding:1px 5px;border-radius:3px;font:600 9px var(--mono);color:#8e99b0;pointer-events:none;">Footage Cutouts + Rig</span>
       <div style="position:absolute;top:4px;right:5px;display:flex;gap:2px;" id="twVidSourceBar">
         <button type="button" class="tw-btn" data-vmode="cutout" aria-pressed="true" style="padding:1px 5px;font-size:9px;">Cutout</button>
+        <button type="button" class="tw-btn" data-vmode="pop" aria-pressed="false" style="padding:1px 5px;font-size:9px;">Pop</button>
         <button type="button" class="tw-btn" data-vmode="iso" aria-pressed="false" style="padding:1px 5px;font-size:9px;">Iso</button>
-        <button type="button" class="tw-btn" data-vmode="comp" aria-pressed="false" style="padding:1px 5px;font-size:9px;">3W</button>
         <button type="button" class="tw-btn" data-vmode="src" aria-pressed="false" style="padding:1px 5px;font-size:9px;">Full</button>
       </div>
     </div>
@@ -245,10 +246,10 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     <button type="button" class="tw-btn" id="twStepPrev" style="padding:2px 6px;">-1f</button>
     <input type="range" id="twSlider" min="0" max="49" value="0" step="1" style="flex:1;min-width:80px;accent-color:#ffd166;height:5px;">
     <button type="button" class="tw-btn" id="twStepNext" style="padding:2px 6px;">+1f</button>
-    <span id="twFrameReadout" style="font:600 10px var(--mono);color:#8e99b0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46vw;">Loading...</span>
+    <span id="twFrameReadout" style="font:600 10px var(--mono);color:#8e99b0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:48vw;">Loading...</span>
   </div>
 
-  <!-- Row 5: Built-in Horizontal Touch-Swipe Strip of All 108 Multi-Depth Worms -->
+  <!-- Row 5: Built-in Horizontal Touch-Swipe Strip of All 108 Multi-Plane Worms -->
   <div class="tw-strip" id="twSwipeStrip"></div>
 </section>
 <!-- END TIME-WORM STUDIO -->
@@ -460,6 +461,7 @@ render();
 
 
 
+
 /* === 4D SPATIOTEMPORAL TIME-WORM STUDIO & RACK CARD INTEGRATION === */
 (function(){
   let WORMS = [];
@@ -469,10 +471,11 @@ render();
   let vMode = "cutout";
   let wMode = "orbit3d";
   let showMaskVid = true;
+  let showDrawings = true;
   let isPlaying = false;
   let lastTick = 0;
   let activeDepths = new Set();
-  let yaw = -0.56, pitch = 0.32, dragging = false, lx = 0, ly = 0, moved = false;
+  let yaw = -0.56, pitch = 0.30, dragging = false, lx = 0, ly = 0, moved = false;
   let hitPts = [];
   const frameCache = {};
 
@@ -484,15 +487,23 @@ render();
   const sel = document.getElementById("twSelect");
   const sld = document.getElementById("twSlider");
 
+  function getFrameDir(w) {
+    if (!w) return "";
+    if (w.frame_dir) return w.frame_dir;
+    const s = (w.slug === "giraffe-walks-past") ? "giraffe" : w.slug;
+    return "https://hartswf0.github.io/secondhand-motion/shots/" + s + "-gwp/frames";
+  }
+
   function ensureFrameImg(w, fi) {
-    if (!w || !w.frame_dir) return null;
+    if (!w) return null;
+    const fDir = getFrameDir(w);
+    if (!fDir) return null;
     if (!frameCache[w.slug]) frameCache[w.slug] = {};
     const bag = frameCache[w.slug];
     if (bag[fi]) return (bag[fi].complete && bag[fi].naturalWidth > 0) ? bag[fi] : null;
     const im = new Image();
-    im.crossOrigin = "anonymous";
     im.onload = () => { if (WORMS[curIdx] && WORMS[curIdx].slug === w.slug) drawAll(); };
-    im.src = `${w.frame_dir}/f${String(fi).padStart(3, "0")}.jpg`;
+    im.src = `${fDir}/f${String(fi).padStart(3, "0")}.jpg`;
     bag[fi] = im;
     return null;
   }
@@ -504,32 +515,70 @@ render();
     ensureFrameImg(w, Math.floor(nf / 2));
     ensureFrameImg(w, Math.max(0, nf - 1));
     (w.keys || []).forEach(k => { if (k >= 0 && k < nf) ensureFrameImg(w, k); });
+    for (let i = 0; i < nf; i += 2) ensureFrameImg(w, i);
   }
 
   function getMediaForFrame(w, fi) {
     const im = ensureFrameImg(w, fi);
-    if (fi === curF && vMode === "comp" && vid && vid.readyState >= 2 && vid.videoWidth > 0) {
-      return vid;
-    }
     if (im) return im;
-    if (fi === curF && vid && vid.readyState >= 2 && vid.videoWidth > 0) {
-      return vid;
-    }
-    return null;
+    if (vid && vid.readyState >= 2 && vid.videoWidth > 0) return vid;
+    const bag = frameCache[w.slug] || {};
+    let bestImg = null, bestDist = 9999;
+    Object.keys(bag).forEach(k => {
+      const cand = bag[k];
+      if (cand && cand.complete && cand.naturalWidth > 0) {
+        const d = Math.abs(parseInt(k, 10) - fi);
+        if (d < bestDist) { bestDist = d; bestImg = cand; }
+      }
+    });
+    return bestImg;
   }
 
-  function makeEllipsePoly(u, v, r, nPts = 14) {
-    const pts = [];
-    const rx = Math.max(0.03, r * 0.75);
-    const ry = Math.max(0.03, r * 0.55);
-    for (let i = 0; i < nPts; i++) {
-      const a = (i / nPts) * Math.PI * 2;
-      pts.push([
-        Math.max(0.01, Math.min(0.99, u + Math.cos(a) * rx)),
-        Math.max(0.01, Math.min(0.99, v + Math.sin(a) * ry))
+  function getPlanePolyUV(dw, fr, pt) {
+    if (dw.role === "subject" && fr && fr.ring && fr.ring.length >= 3) {
+      return fr.ring;
+    }
+    if (dw.poly0 && dw.poly0.length >= 3 && pt) {
+      return dw.poly0.map(duv => [
+        Math.max(0.01, Math.min(0.99, pt[0] + duv[0])),
+        Math.max(0.01, Math.min(0.99, pt[1] + duv[1]))
       ]);
     }
-    return pts;
+    const u = pt ? pt[0] : 0.5, v = pt ? pt[1] : 0.5, r = pt ? pt[2] : 0.1;
+    const out = [];
+    for (let i = 0; i < 12; i++) {
+      const a = (i / 12) * Math.PI * 2;
+      out.push([
+        Math.max(0.01, Math.min(0.99, u + Math.cos(a) * r * 0.85)),
+        Math.max(0.01, Math.min(0.99, v + Math.sin(a) * r * 0.65))
+      ]);
+    }
+    return out;
+  }
+
+  function getPlaneStrokesUV(dw, fr, pt) {
+    if (dw.role === "subject" && fr && fr.doodle && fr.doodle.length) {
+      return fr.doodle;
+    }
+    if (dw.strokes0 && dw.strokes0.length && pt) {
+      return dw.strokes0.map(st => st.map(duv => [
+        Math.max(0.01, Math.min(0.99, pt[0] + duv[0])),
+        Math.max(0.01, Math.min(0.99, pt[1] + duv[1]))
+      ]));
+    }
+    return [];
+  }
+
+  function proj3(u, v, tau, zNorm, W, H) {
+    const x = u - 0.5;
+    const y = (0.5 - v) + (zNorm - 0.35) * 0.36;
+    const z = (tau - 0.5) * 1.55;
+    const cy = Math.cos(yaw), sy = Math.sin(yaw);
+    const cp = Math.cos(pitch), sp = Math.sin(pitch);
+    const x1 = x * cy + z * sy, z1 = -x * sy + z * cy;
+    const y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
+    const sc = (Math.min(W, H) * 0.84) / Math.max(0.55, 2.25 - z2 * 0.5);
+    return { sx: W * 0.50 + x1 * sc, sy: H * 0.52 - y2 * sc, sc };
   }
 
   function drawMediaIn3DMask(media, poly, tau, zNorm, W, H, alpha) {
@@ -561,18 +610,6 @@ render();
     return true;
   }
 
-  function proj3(u, v, tau, zNorm, W, H) {
-    const x = u - 0.5;
-    const y = (0.5 - v) + (zNorm - 0.35) * 0.34;
-    const z = (tau - 0.5) * 1.55;
-    const cy = Math.cos(yaw), sy = Math.sin(yaw);
-    const cp = Math.cos(pitch), sp = Math.sin(pitch);
-    const x1 = x * cy + z * sy, z1 = -x * sy + z * cy;
-    const y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
-    const sc = (Math.min(W, H) * 0.84) / Math.max(0.55, 2.25 - z2 * 0.5);
-    return { sx: W * 0.50 + x1 * sc, sy: H * 0.52 - y2 * sc, sc };
-  }
-
   function isDepthOn(id) {
     return activeDepths.size === 0 || activeDepths.has(id);
   }
@@ -586,7 +623,7 @@ render();
     allB.type = "button";
     allB.className = "tw-dpill" + (activeDepths.size === 0 ? " on" : "");
     allB.style.color = "#f3f5fa";
-    allB.textContent = `All ${dws.length} Depths`;
+    allB.textContent = `All ${dws.length} Planes/Parts`;
     allB.onclick = () => { activeDepths.clear(); renderDepthPills(w); drawAll(); };
     bar.appendChild(allB);
 
@@ -595,7 +632,9 @@ render();
       b.type = "button";
       b.className = "tw-dpill" + (isDepthOn(dw.id) ? " on" : "");
       b.style.color = dw.color || "#00f5d4";
-      b.innerHTML = `<span style="width:6px;height:6px;border-radius:50%;background:${dw.color};display:inline-block;"></span>z=${dw.z} ${dw.label.slice(0,12)}`;
+      const tag = dw.role === "part" ? "✦" : `z=${dw.z}`;
+      const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0,12);
+      b.innerHTML = `<span style="width:6px;height:6px;border-radius:50%;background:${dw.color};display:inline-block;"></span>${tag} ${shortLbl}`;
       b.onclick = () => {
         if (activeDepths.size === 1 && activeDepths.has(dw.id)) activeDepths.clear();
         else { activeDepths.clear(); activeDepths.add(dw.id); }
@@ -618,11 +657,11 @@ render();
     hitPts = [];
 
     if (wMode === "lanes") {
-      const padL = 92, padR = 14, padT = 18, padB = 18;
+      const padL = 96, padR = 14, padT = 18, padB = 18;
       const plotW = W - padL - padR, plotH = H - padT - padB;
       const nL = Math.max(1, dws.length);
       const curX = padL + (fIdx / Math.max(1, nf - 1)) * plotW;
-      ctx3.strokeStyle = "rgba(255,209,102,0.7)"; ctx3.lineWidth = 2;
+      ctx3.strokeStyle = "rgba(255,209,102,0.75)"; ctx3.lineWidth = 2;
       ctx3.beginPath(); ctx3.moveTo(curX, padT - 4); ctx3.lineTo(curX, H - padB + 4); ctx3.stroke();
 
       dws.forEach((dw, dIdx) => {
@@ -631,8 +670,9 @@ render();
         const lh = (plotH / nL) * 0.76;
         const col = dw.color || "#00f5d4";
         ctx3.fillStyle = on ? col : "rgba(142,153,176,0.35)";
-        ctx3.font = "bold 10.5px monospace";
-        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 8)}`, 5, ly0 + 3);
+        ctx3.font = "bold 10px monospace";
+        const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 9);
+        ctx3.fillText(`z=${dw.z} ${shortLbl}`, 5, ly0 + 3);
         if (!on) return;
         const trk = dw.track || [];
         ctx3.strokeStyle = col; ctx3.lineWidth = dw.role === "subject" ? 3.2 : 2.2;
@@ -651,72 +691,67 @@ render();
     const box = [[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]].map(c => proj3(c[0],c[1],c[2],0.35,W,H));
     [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]].forEach(([a,b]) => {
       ctx3.beginPath(); ctx3.moveTo(box[a].sx, box[a].sy); ctx3.lineTo(box[b].sx, box[b].sy);
-      ctx3.strokeStyle = "rgba(142,153,176,0.22)"; ctx3.lineWidth = 1; ctx3.stroke();
+      ctx3.strokeStyle = "rgba(142,153,176,0.20)"; ctx3.lineWidth = 1; ctx3.stroke();
     });
 
     [...dws].reverse().forEach(dw => {
       if (!isDepthOn(dw.id)) return;
       const col = dw.color || "#00f5d4";
       const trk = dw.track || [];
-      const zNorm = Math.min(1.0, Math.log(Math.max(1.0, dw.z || 2.0)) / Math.log(12.0));
+      const zNorm = Math.min(1.0, Math.log(Math.max(0.8, dw.z || 2.0)) / Math.log(12.0));
       const isSubj = dw.role === "subject";
+      const isPart = dw.role === "part";
+      const step = Math.max(1, Math.floor(nf / (isSubj ? 10 : 6)));
 
-      if (isSubj) {
-        const step = Math.max(1, Math.floor(nf / 12));
-        frames.forEach((fr, fi) => {
-          const isKey = (w.keys || []).includes(fi);
-          if (fi !== fIdx && fi % step !== 0 && !isKey) return;
-          const ring = fr.ring || fr.poly;
-          if (!ring || ring.length < 3) return;
-          const isCur = (fi === fIdx);
-          const tau = fi / Math.max(1, nf - 1);
+      trk.forEach((pt, fi) => {
+        const isKey = (w.keys || []).includes(fi);
+        const isCur = (fi === fIdx);
+        if (!isCur && fi % step !== 0 && !(isSubj && isKey)) return;
+        const fr = frames[Math.min(nf - 1, fi)];
+        const tau = fi / Math.max(1, nf - 1);
+        const polyUV = getPlanePolyUV(dw, fr, pt);
+        if (!polyUV || polyUV.length < 3) return;
 
-          let drewVid = false;
-          if (showMaskVid && (isCur || isKey)) {
-            const media = getMediaForFrame(w, fi);
-            if (media) {
-              drewVid = drawMediaIn3DMask(media, ring, tau, zNorm, W, H, isCur ? 0.96 : 0.48);
-            }
+        let drewVid = false;
+        if (showMaskVid && (isCur || (isSubj && isKey) || (activeDepths.size === 1 && isKey))) {
+          const media = getMediaForFrame(w, fi);
+          if (media) {
+            drewVid = drawMediaIn3DMask(media, polyUV, tau, zNorm, W, H, isCur ? 0.96 : 0.52);
           }
+        }
 
-          ctx3.strokeStyle = isCur ? "#ffffff" : col;
-          ctx3.fillStyle = drewVid ? "rgba(0,0,0,0)" : (isCur ? col + "60" : col + "22");
-          ctx3.lineWidth = isCur ? 2.8 : 1.4;
-          ctx3.beginPath();
-          ring.forEach((uv, j) => {
-            const p = proj3(uv[0], uv[1], tau, zNorm, W, H);
-            if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-          });
-          ctx3.closePath();
-          if (!drewVid) ctx3.fill();
-          ctx3.stroke();
+        ctx3.beginPath();
+        polyUV.forEach((uv, j) => {
+          const p = proj3(uv[0], uv[1], tau, zNorm, W, H);
+          if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
         });
-      } else {
-        const step = Math.max(1, Math.floor(nf / 8));
-        trk.forEach((pt, fi) => {
-          if (fi !== fIdx && fi % step !== 0) return;
-          const isCur = (fi === fIdx);
-          const tau = fi / Math.max(1, nf - 1);
-          let drewVid = false;
-          if (showMaskVid && isCur) {
-            const media = getMediaForFrame(w, fi);
-            if (media) {
-              const ePoly = makeEllipsePoly(pt[0], pt[1], pt[2]);
-              drewVid = drawMediaIn3DMask(media, ePoly, tau, zNorm, W, H, 0.78);
-            }
+        ctx3.closePath();
+        if (!drewVid) {
+          ctx3.fillStyle = isCur ? (col + "55") : (col + "1c");
+          ctx3.fill();
+        }
+        ctx3.strokeStyle = isCur ? "#ffffff" : col;
+        ctx3.lineWidth = isCur ? 2.6 : (isSubj ? 1.5 : 1.15);
+        ctx3.stroke();
+
+        if (showDrawings && (isCur || fi === 0 || (isPart && isKey))) {
+          const strokesUV = getPlaneStrokesUV(dw, fr, pt);
+          if (strokesUV.length) {
+            ctx3.strokeStyle = isCur ? "#ffffff" : col;
+            ctx3.lineWidth = isCur ? 1.9 : 1.2;
+            strokesUV.forEach(st => {
+              ctx3.beginPath();
+              st.forEach((uv, k) => {
+                const p = proj3(uv[0], uv[1], tau, zNorm, W, H);
+                if (k === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+              });
+              ctx3.stroke();
+            });
           }
-          const p = proj3(pt[0], pt[1], tau, zNorm, W, H);
-          const rx = Math.max(6, pt[2] * p.sc * 0.52);
-          ctx3.strokeStyle = isCur ? "#ffffff" : col;
-          ctx3.fillStyle = drewVid ? "rgba(0,0,0,0)" : (col + "20");
-          ctx3.lineWidth = isCur ? 2.2 : 1.2;
-          ctx3.beginPath(); ctx3.ellipse(p.sx, p.sy, rx, rx * 0.6, 0, 0, Math.PI * 2);
-          if (!drewVid) ctx3.fill();
-          ctx3.stroke();
-        });
-      }
+        }
+      });
 
-      ctx3.strokeStyle = col; ctx3.lineWidth = isSubj ? 3.4 : 2.4;
+      ctx3.strokeStyle = col; ctx3.lineWidth = isSubj ? 3.4 : (isPart ? 2.5 : 2.1);
       ctx3.beginPath();
       trk.forEach((pt, fi) => {
         const p = proj3(pt[0], pt[1], fi / Math.max(1, nf - 1), zNorm, W, H);
@@ -727,8 +762,9 @@ render();
 
       if (trk.length) {
         const p0 = proj3(trk[0][0], trk[0][1], 0, zNorm, W, H);
-        ctx3.fillStyle = col; ctx3.font = "bold 10.5px monospace";
-        ctx3.fillText(`z=${dw.z}`, p0.sx + 4, p0.sy - 4);
+        ctx3.fillStyle = col; ctx3.font = "bold 10px monospace";
+        const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 9);
+        ctx3.fillText(`z=${dw.z} ${shortLbl}`, p0.sx + 4, p0.sy - 4);
       }
     });
   }
@@ -741,62 +777,130 @@ render();
     if (!w || !w.frames || !w.frames.length) return;
     const fIdx = Math.max(0, Math.min(w.frames.length - 1, curF));
     const fr = w.frames[fIdx];
-    const ring = fr.ring || fr.poly;
     const media = getMediaForFrame(w, fIdx);
-    const isCutoutMode = (vMode === "cutout" || vMode === "iso");
 
     ensureFrameImg(w, (fIdx + 1) % w.frames.length);
     ensureFrameImg(w, (fIdx + 2) % w.frames.length);
 
-    if (isCutoutMode && media) {
-      ctx2.fillStyle = "#04060b";
-      ctx2.fillRect(0, 0, W, H);
-      if (vMode === "cutout") {
+    ctx2.fillStyle = "#05070c";
+    ctx2.fillRect(0, 0, W, H);
+
+    if (media) {
+      if (vMode === "src") {
         ctx2.save();
-        ctx2.globalAlpha = 0.16;
+        ctx2.globalAlpha = 0.92;
+        try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+        ctx2.restore();
+      } else if (vMode === "cutout" || vMode === "pop") {
+        ctx2.save();
+        ctx2.globalAlpha = 0.22;
         try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
         ctx2.restore();
       }
     }
 
-    (w.depth_worms || []).forEach(dw => {
+    const dws = [...(w.depth_worms || [])].reverse();
+    dws.forEach(dw => {
       if (!isDepthOn(dw.id)) return;
       const col = dw.color || "#00f5d4";
-      const pt = (dw.track || [])[Math.min((dw.track || []).length - 1, fIdx)];
+      const trk = dw.track || [];
+      const pt = trk[Math.min(trk.length - 1, fIdx)];
       if (!pt) return;
-      if (dw.role === "subject" && ring && ring.length >= 3) {
-        if (isCutoutMode && media) {
+
+      const polyUV = getPlanePolyUV(dw, fr, pt);
+      const strokesUV = getPlaneStrokesUV(dw, fr, pt);
+      const zNorm = Math.min(1.0, Math.log(Math.max(0.8, dw.z || 2.0)) / Math.log(12.0));
+      const offX = (vMode === "pop") ? (zNorm - 0.32) * 36.0 : 0.0;
+      const offY = (vMode === "pop") ? (zNorm - 0.32) * -24.0 : 0.0;
+
+      const shouldClipCutout = (vMode !== "src") && media && (
+        dw.role === "subject" || dw.role === "part" || activeDepths.size === 1 || vMode === "pop" || (dw.strokes0 && dw.strokes0.length > 0)
+      );
+
+      if (polyUV && polyUV.length >= 3) {
+        if (shouldClipCutout) {
           ctx2.save();
           ctx2.beginPath();
-          ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
+          polyUV.forEach((uv, i) => {
+            const x = uv[0] * W + offX, y = uv[1] * H + offY;
+            if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
+          });
+          ctx2.closePath();
+          ctx2.shadowColor = "rgba(0,0,0,0.9)";
+          ctx2.shadowBlur = 11;
+          ctx2.shadowOffsetX = 3;
+          ctx2.shadowOffsetY = 4;
+          ctx2.fillStyle = "#000000";
+          ctx2.fill();
+          ctx2.restore();
+
+          ctx2.save();
+          ctx2.beginPath();
+          polyUV.forEach((uv, i) => {
+            const x = uv[0] * W + offX, y = uv[1] * H + offY;
+            if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
+          });
           ctx2.closePath();
           ctx2.clip();
           ctx2.globalAlpha = 1.0;
-          try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+          try { ctx2.drawImage(media, offX, offY, W, H); } catch(e) {}
           ctx2.restore();
+        }
+
+        ctx2.save();
+        ctx2.beginPath();
+        polyUV.forEach((uv, i) => {
+          const x = uv[0] * W + offX, y = uv[1] * H + offY;
+          if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
+        });
+        ctx2.closePath();
+        if (!shouldClipCutout) {
+          ctx2.fillStyle = col + "1f";
+          ctx2.fill();
         }
         ctx2.strokeStyle = col;
-        ctx2.fillStyle = (isCutoutMode && media) ? "rgba(0,0,0,0)" : (col + "28");
-        ctx2.lineWidth = 2.5;
-        ctx2.beginPath();
-        ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
-        ctx2.closePath();
-        if (!(isCutoutMode && media)) ctx2.fill();
+        ctx2.lineWidth = dw.role === "subject" ? 3.2 : (dw.role === "part" ? 2.4 : 1.8);
+        if (dw.role !== "subject" && dw.role !== "part" && !shouldClipCutout) ctx2.setLineDash([4, 3]);
         ctx2.stroke();
-      } else {
-        const cx = pt[0]*W, cy = pt[1]*H, rx = pt[2]*W*0.6, ry = pt[2]*H*0.4;
-        if (isCutoutMode && media && activeDepths.size === 1) {
-          ctx2.save();
-          ctx2.beginPath();
-          ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
-          ctx2.clip();
-          ctx2.globalAlpha = 0.96;
-          try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
-          ctx2.restore();
+        ctx2.setLineDash([]);
+
+        if (shouldClipCutout && (dw.role === "subject" || dw.role === "part")) {
+          ctx2.strokeStyle = "rgba(255,255,255,0.85)";
+          ctx2.lineWidth = 1.2;
+          ctx2.stroke();
         }
-        ctx2.strokeStyle = col; ctx2.lineWidth = 1.6; ctx2.setLineDash([4, 4]);
-        ctx2.beginPath(); ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2); ctx2.stroke(); ctx2.setLineDash([]);
+        ctx2.restore();
       }
+
+      if (showDrawings && strokesUV && strokesUV.length) {
+        ctx2.save();
+        ctx2.lineCap = "round";
+        ctx2.lineJoin = "round";
+        strokesUV.forEach(st => {
+          if (st.length < 2) return;
+          ctx2.beginPath();
+          st.forEach((uv, i) => {
+            const x = uv[0] * W + offX, y = uv[1] * H + offY;
+            if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
+          });
+          ctx2.strokeStyle = "rgba(5,7,12,0.85)";
+          ctx2.lineWidth = 4.0;
+          ctx2.stroke();
+          ctx2.strokeStyle = dw.role === "subject" ? "#ffffff" : col;
+          ctx2.lineWidth = 2.0;
+          ctx2.stroke();
+        });
+        ctx2.restore();
+      }
+
+      const tx = Math.max(8, Math.min(W - 88, pt[0] * W + offX - 24));
+      const ty = Math.max(16, Math.min(H - 8, pt[1] * H + offY - Math.max(18, pt[2] * H * 0.55)));
+      const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 10);
+      ctx2.fillStyle = "rgba(7,9,14,0.82)";
+      ctx2.fillRect(tx - 2, ty - 10, shortLbl.length * 6.0 + 28, 13);
+      ctx2.fillStyle = col;
+      ctx2.font = "bold 9.5px monospace";
+      ctx2.fillText(`z=${dw.z} ${shortLbl}`, tx, ty);
     });
   }
 
@@ -809,8 +913,10 @@ render();
     const fr = w.frames[fIdx] || {};
     const areaPct = ((fr.area || 0) * 100).toFixed(1);
     const dws = w.depth_worms || [];
+    const nParts = dws.filter(d => d.role === "part").length;
+    const nPlanes = dws.length - nParts;
     document.getElementById("twFrameReadout").textContent =
-      `f${String(fIdx).padStart(2,"0")}/${w.n_frames-1} · mask ${areaPct}% · ${dws.length} Depths (${dws.map(d=>"z="+d.z).join("→")})`;
+      `f${String(fIdx).padStart(2,"0")}/${w.n_frames-1} · mask ${areaPct}% · ${nPlanes} Planes + ${nParts} Parts`;
   }
 
   function syncVidTime(w, fIdx) {
@@ -846,10 +952,18 @@ render();
     sld.value = 0;
     preloadShotFrames(w);
     renderDepthPills(w);
-    const vUrl = (vMode === "comp") ? (w.comp_mp4 || w.src_mp4) : (w.src_mp4 || w.comp_mp4);
+    const vUrl = w.src_mp4 || w.comp_mp4 || w.r2_mp4 || "";
     const hud2d = document.getElementById("twHud2D");
-    if (hud2d) hud2d.textContent = vMode === "cutout" ? "Mask Cutout Video" : (vMode === "iso" ? "Isolated Mask Only" : "Full Video + Mask");
-    if (vid.src !== vUrl) {
+    if (hud2d) {
+      const map = {
+        cutout: "Footage Cutouts + Rig",
+        pop: "Exploded Multiplane Cutouts",
+        iso: "Isolated Footage Cutouts",
+        src: "Full Footage + Multiplane Rig"
+      };
+      hud2d.textContent = map[vMode] || "Footage Cutouts";
+    }
+    if (vUrl && vid.src !== vUrl) {
       vid.src = vUrl;
       vid.onloadedmetadata = () => { syncVidTime(w, curF); drawAll(); };
     }
@@ -950,7 +1064,7 @@ render();
       btn.type = "button";
       btn.className = "chip";
       btn.style.cssText = "font-size:10.5px;padding:2px 6px;background:#ffd166;color:#080a10;border-color:#ffd166;font-weight:700;";
-      btn.textContent = `▶ ${dws.length} Depths`;
+      btn.textContent = `▶ ${dws.length} Worms`;
       btn.onclick = (e) => {
         e.preventDefault(); e.stopPropagation();
         window.loadSecondhandWorm(slug, true);
@@ -1005,6 +1119,14 @@ render();
       drawAll();
     };
   }
+  const drBtn = document.getElementById("twDrawBtn");
+  if (drBtn) {
+    drBtn.onclick = () => {
+      showDrawings = !showDrawings;
+      drBtn.setAttribute("aria-pressed", String(showDrawings));
+      drawAll();
+    };
+  }
   document.querySelectorAll("#twVidSourceBar .tw-btn").forEach(b => {
     b.onclick = () => {
       document.querySelectorAll("#twVidSourceBar .tw-btn").forEach(x => x.setAttribute("aria-pressed", "false"));
@@ -1013,9 +1135,15 @@ render();
       const w = WORMS[curIdx];
       if (w) {
         const hud2d = document.getElementById("twHud2D");
-        if (hud2d) hud2d.textContent = vMode === "cutout" ? "Mask Cutout Video" : (vMode === "iso" ? "Isolated Mask Only" : "Full Video + Mask");
-        const vUrl = (vMode === "comp") ? (w.comp_mp4 || w.src_mp4) : (w.src_mp4 || w.comp_mp4);
-        if (vid.src !== vUrl) vid.src = vUrl;
+        if (hud2d) {
+          const map = {
+            cutout: "Footage Cutouts + Rig",
+            pop: "Exploded Multiplane Cutouts",
+            iso: "Isolated Footage Cutouts",
+            src: "Full Footage + Multiplane Rig"
+          };
+          hud2d.textContent = map[vMode] || "Footage Cutouts";
+        }
         drawAll();
       }
     };
@@ -1044,13 +1172,13 @@ render();
       if (best !== -1 && bestD < 50) setFrame(best, true);
     }
   });
-  document.getElementById("twResetAngle").onclick = () => { yaw = -0.56; pitch = 0.32; drawAll(); };
+  document.getElementById("twResetAngle").onclick = () => { yaw = -0.56; pitch = 0.30; drawAll(); };
 
   const outEl = document.getElementById("out");
   if (outEl) new MutationObserver(() => decorateRackCards()).observe(outEl, { childList: true, subtree: true });
 
-  fetch("data/worms_108.json")
-    .catch(() => fetch("https://hartswf0.github.io/secondhand-motion/data/worms_108.json"))
+  fetch("data/worms_108.json?v=6")
+    .catch(() => fetch("https://hartswf0.github.io/secondhand-motion/data/worms_108.json?v=6"))
     .then(r => r.json())
     .then(d => {
       WORMS = d.worms || [];
@@ -1059,7 +1187,7 @@ render();
       WORMS.forEach((w, idx) => {
         const opt = document.createElement("option");
         opt.value = idx;
-        opt.textContent = `${idx+1}. ${w.slug} (${(w.depth_worms||[]).length} Depths · ${w.n_frames}f)`;
+        opt.textContent = `${idx+1}. ${w.slug} (${(w.depth_worms||[]).length} Worms · ${w.n_frames}f)`;
         sel.appendChild(opt);
       });
       buildSwipeStrip();
