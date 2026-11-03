@@ -184,7 +184,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 }
 .worms-bar{
   display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 .w-seg{
   display:inline-flex;border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;
@@ -210,6 +210,12 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   padding:4px 9px;border:1.5px solid var(--ink);border-radius:6px;
   background:var(--card);color:var(--ink);cursor:pointer;max-width:310px;
 }
+.w-lens-banner{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  padding:5px 10px;margin-bottom:9px;border-radius:6px;
+  background:var(--tag-soft);border:1px solid var(--tag);color:var(--ink);font-size:12px;
+}
+.w-lens-banner b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:var(--tag-ink)}
 .w-screens{
   display:grid;grid-template-columns:1.22fr 1fr;gap:12px;align-items:stretch;
 }
@@ -241,8 +247,12 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   pointer-events:none;z-index:2;font-weight:600;
 }
 .w-controls{
-  display:grid;grid-template-columns:auto auto 1fr auto;gap:10px;align-items:center;
+  display:grid;grid-template-columns:auto auto auto 1fr auto;gap:8px;align-items:center;
   margin-top:10px;padding-top:9px;border-top:1px solid var(--rule);
+}
+@media (max-width:680px){
+  .w-controls{grid-template-columns:auto auto 1fr;gap:6px}
+  .w-controls .w-readout{grid-column:1/-1;text-align:left}
 }
 .w-scrub{position:relative;display:flex;align-items:center;height:24px}
 .w-scrub input[type=range]{width:100%;accent-color:var(--tag);cursor:pointer;margin:0}
@@ -266,6 +276,25 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 .w-planes label.soloed{outline:2px solid var(--ink)}
 .w-planes input{accent-color:var(--tag);margin:0}
 
+.w-decoder-grid{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;
+  margin-top:9px;padding-top:9px;border-top:1px solid var(--rule);
+}
+@media (max-width:900px){.w-decoder-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.w-decoder-grid{grid-template-columns:1fr}}
+.w-dec-card{
+  background:var(--card);border:1px solid var(--rule-strong);border-radius:6px;
+  padding:7px 9px;display:flex;flex-direction:column;gap:2px;
+}
+.w-dec-card .dk{
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;
+  letter-spacing:0.05em;color:var(--tag-ink);font-weight:600;
+}
+.w-dec-card .dv{
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:13px;color:var(--ink);
+}
+.w-dec-card .dp{font-size:11px;color:var(--muted);line-height:1.3;margin:0}
+
 /* Warm-paper mini worm badge on Rack cards */
 .mini-worm-box{
   margin-top:6px;padding:5px 7px;border-radius:6px;
@@ -284,15 +313,15 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 .mini-worm-meta b{color:var(--tag-ink);display:block;font-size:10.5px}
 </style>
 
-<section class="worms-stage" id="shmWormsHero" aria-label="Multiplane Time-Worms Scrubber">
+<section class="worms-stage" id="shmWormsHero" aria-label="Multiplane Space-Worms Explorer">
   <div class="worms-head">
     <div>
       <h2>
         <span class="lot-pill" id="idxWormLot">SM-0004</span>
-        <span id="idxWormTitle">Giraffe Walks Past — Multiplane Time-Worm Scrubber</span>
+        <span id="idxWormTitle">Giraffe Walks Past — Multiplane Space-Worm Explorer</span>
       </h2>
       <div style="font-size:12.5px;color:var(--muted);margin-top:2px" id="idxWormSub">
-        Prelinger Archives · Wonderful World (Part II) · Drag horizontally across the worm on the left to scrub frame-by-frame through every depth plane.
+        Prelinger Archives · Wonderful World (Part II) · Switch between 6 Space-Worm Lenses and drag horizontally across the left screen to scrub.
       </div>
     </div>
     <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
@@ -305,13 +334,23 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 
   <div class="worms-bar">
     <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-      <div class="w-seg" role="group" aria-label="Worm scrubber mode">
-        <button type="button" data-idxwmode="lanes" aria-pressed="true">Plane Worms (Scrub)</button>
-        <button type="button" data-idxwmode="tunnel" aria-pressed="false">3D Cutout Worm</button>
-        <button type="button" data-idxwmode="box" aria-pressed="false">Planes in Depth</button>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;color:var(--muted)">LENS:</span>
+      <div class="w-seg" role="group" aria-label="Space-Worm Interpretation Lens">
+        <button type="button" data-idxwmode="lanes" aria-pressed="true">1 · Plane Worms</button>
+        <button type="button" data-idxwmode="strobe" aria-pressed="false">2 · Stroboscopic Trail</button>
+        <button type="button" data-idxwmode="kymo" aria-pressed="false">3 · Slit-Scan &amp; Graphs</button>
+        <button type="button" data-idxwmode="anatomy" aria-pressed="false">4 · Anatomy &amp; Joints</button>
+        <button type="button" data-idxwmode="tunnel" aria-pressed="false">5 · 3D Cutout Worm</button>
+        <button type="button" data-idxwmode="box" aria-pressed="false">6 · Planes in Depth</button>
       </div>
     </div>
     <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <div class="w-seg" role="group" aria-label="Version">
+        <button type="button" id="idxVarGwp" data-idxvar="gwp" aria-pressed="true">Multiplane (GWP)</button>
+        <button type="button" id="idxVarSam" data-idxvar="sam" aria-pressed="false" style="display:none">SAM Cutout</button>
+        <button type="button" id="idxVarRedraw" data-idxvar="redraw" aria-pressed="false" style="display:none">Puppet Redraw</button>
+        <button type="button" id="idxVarInt" data-idxvar="int" aria-pressed="false" style="display:none">Integrated 24fps</button>
+      </div>
       <div class="w-seg" role="group" aria-label="Stage view">
         <button type="button" data-idxview="cartoon" aria-pressed="false">Cartoon</button>
         <button type="button" data-idxview="composite" aria-pressed="true">Over footage</button>
@@ -324,10 +363,17 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     </div>
   </div>
 
+  <div class="w-lens-banner">
+    <div>
+      <b id="idxLensTitle">Lens 1 · Disentangled Plane Worms:</b>
+      <span id="idxLensDesc">One horizontal cel strip per depth plane (Near → Subject → Far). Shows how fast foreground vs. background scrolls and stamps real SAM video cutouts + ink drawings along time.</span>
+    </div>
+  </div>
+
   <div class="w-screens">
     <div class="w-screen">
       <div class="w-canvas-wrap worm-scrub-area">
-        <canvas id="idxCvWorm" width="580" height="435"></canvas>
+        <canvas id="idxCvWorm" width="600" height="450"></canvas>
         <span class="w-lbl" id="idxLblWorm">disentangled plane worms · drag horizontally to scrub f</span>
         <span class="w-lbl-r" id="idxLblWormR">6 planes · f 01/33</span>
       </div>
@@ -347,6 +393,11 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       <button type="button" class="w-btn" id="idxStepPrev">&#8592;</button>
       <button type="button" class="w-btn" id="idxStepNext">&#8594;</button>
     </div>
+    <div class="w-seg" role="group" aria-label="Playback speed">
+      <button type="button" data-idxspeed="1" aria-pressed="true">1×</button>
+      <button type="button" data-idxspeed="0.5" aria-pressed="false">0.5×</button>
+      <button type="button" data-idxspeed="0.25" aria-pressed="false">0.25×</button>
+    </div>
     <div class="w-scrub">
       <div class="w-ticks" id="idxTicks"></div>
       <input type="range" id="idxScrub" min="0" max="32" value="0" step="1" aria-label="Scrub frame">
@@ -357,6 +408,29 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   <div class="w-foot">
     <span id="idxCaption">Drag horizontally across the left worm canvas to scrub through the SAM cutouts &amp; multiplane drawings.</span>
     <div class="w-planes" id="idxPlanes"></div>
+  </div>
+
+  <div class="w-decoder-grid">
+    <div class="w-dec-card">
+      <span class="dk">1 · What the Worm Does in Space</span>
+      <div class="dv" id="idxDecShapeT">—</div>
+      <p class="dp" id="idxDecShapeP">—</p>
+    </div>
+    <div class="w-dec-card">
+      <span class="dk">2 · Camera Pan vs. Depth Parallax</span>
+      <div class="dv" id="idxDecCamT">—</div>
+      <p class="dp" id="idxDecCamP">—</p>
+    </div>
+    <div class="w-dec-card">
+      <span class="dk">3 · Drawing Rig &amp; Sub-Worm Anatomy</span>
+      <div class="dv" id="idxDecRigT">—</div>
+      <p class="dp" id="idxDecRigP">—</p>
+    </div>
+    <div class="w-dec-card">
+      <span class="dk">4 · Live Frame Telemetry &amp; Versions</span>
+      <div class="dv" id="idxDecLiveT">—</div>
+      <p class="dp" id="idxDecLiveP">—</p>
+    </div>
   </div>
 </section>
 
@@ -373,9 +447,15 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   const ticksEl = document.getElementById('idxTicks');
   const planesEl = document.getElementById('idxPlanes');
 
+  const varGwp = document.getElementById('idxVarGwp');
+  const varSam = document.getElementById('idxVarSam');
+  const varRedraw = document.getElementById('idxVarRedraw');
+  const varInt = document.getElementById('idxVarInt');
+
   let WORMS = [];
   let curIdx = 0;
   let curWorm = null;
+  let curVariant = 'gwp';
   let S = null;
   let shotCache = new Map();
   let frameImgCache = new Map();
@@ -385,10 +465,52 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   let boilOn = true;
   let celOn = true;
   let playing = false;
+  let speedMult = 1.0;
   let f = 0;
   let lastTick = 0;
   let planeOn = {};
   let soloPlaneId = null;
+
+  const LENS_META = {
+    lanes: {
+      title: 'Lens 1 · Disentangled Plane Worms:',
+      desc: 'One horizontal cel strip per depth plane (Near → Subject → Far). Shows how fast foreground vs. background scrolls and stamps real SAM video cutouts + ink drawings along time.',
+      lbl: 'disentangled plane worms · drag horizontally to scrub f'
+    },
+    strobe: {
+      title: 'Lens 2 · Space-Time Stroboscopic Trail (Muybridge View):',
+      desc: 'Lays the entire space-worm directly over the 4:3 scene: ghost SAM cutouts + ink poses from Start (green) to End (red), connected by the centroid spine, joint curves, and planted-foot anchors.',
+      lbl: 'stroboscopic motion trail over scene · drag horizontally to scrub f'
+    },
+    kymo: {
+      title: 'Lens 3 · Slit-Scan & Motion Graphs (X-T, Y-T & Looming):',
+      desc: 'Separates horizontal travel X(t), vertical gait bounce Y(t), and silhouette scale R(t) vs. camera pan so you can read speed, direction, and rhythm at a glance.',
+      lbl: 'spatiotemporal graphs X(t), Y(t), R(t) · drag horizontally to scrub f'
+    },
+    anatomy: {
+      title: 'Lens 4 · Anatomy, Seed Line & Joint Braids:',
+      desc: 'Compares The Line (f=0 Quick, Draw! seed doodle) against Frame f’s warped rig + skeleton joints on top, with anatomical joint sub-worms and 2D limb-crossing (braid) markers below.',
+      lbl: 'seed line vs warped rig + joint sub-worms · drag horizontally to scrub f'
+    },
+    tunnel: {
+      title: 'Lens 5 · 3D Cutout Worm (X × Y × Time):',
+      desc: 'Slices the SAM video cutouts and ink drawings along a 3D spatiotemporal tube where time t flows left-to-right and depth planes recede.',
+      lbl: '3D cutout worm (t × z) · drag horizontally to scrub f'
+    },
+    box: {
+      title: 'Lens 6 · Planes in Depth (Multiplane Camera Box):',
+      desc: 'Secondhand Motion’s receding multiplane cards (z=10 far horizon down to z=1.2 foreground), showing how each plane shifts by k = z_ref / z as the camera pans.',
+      lbl: 'multiplane depth box (z) · drag horizontally to scrub f'
+    }
+  };
+
+  const TOPO_HUMAN = {
+    LOCKED_PILLAR: 'Anchored / Stationary Subject',
+    DIAGONAL_SHEAR_BAND: 'Cross-Frame Traverse',
+    SERPENTINE_CORKSCREW: 'Oscillating / Winding Path',
+    LOOMING_FUNNEL_CONE: 'Looming / Approaching Camera',
+    RADIAL_BURST: 'Radial Expansion / Turn'
+  };
 
   const PLANE_TINTS = {
     far:   {fill:'rgba(92, 128, 188, 0.22)', stroke:'#3A5F9CD0'},
@@ -490,7 +612,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   }
 
   function drawSamCutoutInRect(ctx, worm, fi, tx, ty, tw, th, opts){
-    const o = Object.assign({cropToMask:false, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true}, opts||{});
+    const o = Object.assign({cropToMask:false, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true, alpha:1.0}, opts||{});
     const img = getFrameImg(worm, fi);
     const W = (S && S.W) || worm.W || 480;
     const H = (S && S.H) || worm.H || 360;
@@ -534,6 +656,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     const ox = tx + (tw-dw)*0.5, oy = ty + (th-dh)*0.5;
 
     ctx.save();
+    ctx.globalAlpha = o.alpha;
     if(img && polysPx.length){
       ctx.save();
       ctx.beginPath();
@@ -566,7 +689,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     }
     if(o.drawDoodle){
       if(strokesPx && strokesPx.length){
-        ctx.strokeStyle = '#161412';
+        ctx.strokeStyle = o.doodleColor || '#161412';
         ctx.lineWidth = Math.max(1.3, 2.2*Math.min(1, scale*1.3));
         ctx.lineCap = 'round'; ctx.lineJoin = 'round';
         for(const s of strokesPx){
@@ -579,7 +702,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
           ctx.stroke();
         }
       } else if(worm.frames && worm.frames[fi] && worm.frames[fi].doodle){
-        ctx.strokeStyle = '#161412';
+        ctx.strokeStyle = o.doodleColor || '#161412';
         ctx.lineWidth = 1.5;
         for(const s of worm.frames[fi].doodle){
           if(!s || s.length<2) continue;
@@ -725,9 +848,133 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     ctx.fillRect(0,0,W,H);
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
     const planes = getActivePlanes();
+    const meta = LENS_META[wormMode] || LENS_META.lanes;
+    document.getElementById('idxLblWorm').textContent = meta.lbl;
     document.getElementById('idxLblWormR').textContent = `${planes.length} planes · f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
 
     const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
+
+    if(wormMode === 'strobe'){
+      const padT = 30, padB = 30, padL = 14, padR = 14;
+      const stageW = W - padL - padR, stageH = H - padT - padB;
+      ctx.save();
+      ctx.beginPath(); ctx.roundRect(padL, padT, stageW, stageH, 6); ctx.clip();
+      const bgImg = getFrameImg(curWorm, fi) || getFrameImg(curWorm, 0);
+      if(bgImg){ ctx.globalAlpha = 0.25; ctx.drawImage(bgImg, padL, padT, stageW, stageH); ctx.globalAlpha = 1; }
+      ctx.fillStyle = 'rgba(251,250,246,0.45)'; ctx.fillRect(padL, padT, stageW, stageH);
+
+      const nGhosts = Math.min(N, 7);
+      for(let g=0; g<nGhosts; g++){
+        const ti = nGhosts===1 ? 0 : Math.round((g/(nGhosts-1))*(N-1));
+        if(ti === fi) continue;
+        drawSamCutoutInRect(ctx, curWorm, ti, padL, padT, stageW, stageH, {
+          cropToMask:false, drawOutline:true, outlineColor: ti===0 ? '#2E7A4A' : (ti===N-1 ? '#B8432F' : '#8A6114'),
+          drawDoodle:true, doodleColor:'rgba(22,20,18,0.55)', alpha: 0.32
+        });
+      }
+      const frames = curWorm.frames || [];
+      if(frames.length >= 2){
+        ctx.beginPath();
+        frames.forEach((fr, ti)=>{
+          const c = fr.c || [0.5,0.5];
+          const x = padL + c[0]*stageW, y = padT + c[1]*stageH;
+          if(ti===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+        });
+        ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 3.2; ctx.stroke();
+      }
+      drawSamCutoutInRect(ctx, curWorm, fi, padL, padT, stageW, stageH, {
+        cropToMask:false, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true, doodleColor:'#161412', alpha:1.0
+      });
+      ctx.restore();
+      ctx.strokeStyle = '#161412'; ctx.lineWidth = 1.4;
+      ctx.beginPath(); ctx.roundRect(padL, padT, stageW, stageH, 6); ctx.stroke();
+      return;
+    }
+
+    if(wormMode === 'kymo'){
+      const padL = 116, padR = 16, padT = 30, padB = 22;
+      const trackW = W - padL - padR, availH = H - padT - padB, gap = 7;
+      const bandH = (availH - gap*2) / 3;
+      const frames = curWorm.frames || [];
+      const bands = [
+        {title:'Horizontal X(t)', sub:'Left ↔ Right', color:'#EF9F3A', getVal:fr=>fr.c?fr.c[0]:0.5, stamps:true},
+        {title:'Vertical Bounce Y(t)', sub:'Top ↕ Bottom', color:'#2E7A4A', getVal:fr=>fr.c?fr.c[1]:0.5},
+        {title:'Scale R(t) & Cam Pan', sub:'Size & Camera', color:'#2B6CB0', getVal:fr=>Math.min(1,(fr.r||0.15)*2.5)}
+      ];
+      bands.forEach((b, bIdx)=>{
+        const y0 = padT + bIdx*(bandH + gap);
+        ctx.fillStyle = '#FFFFFF'; ctx.strokeStyle = '#BFAF97'; ctx.lineWidth = 1.1;
+        ctx.beginPath(); ctx.roundRect(8, y0, W-16, bandH, 5); ctx.fill(); ctx.stroke();
+        ctx.fillStyle = 'rgba(239,159,58,0.12)'; ctx.fillRect(9, y0+1, padL-14, bandH-2);
+        ctx.fillStyle = '#161412'; ctx.font = '700 10.5px "Bricolage Grotesque", sans-serif';
+        ctx.fillText(b.title, 13, y0 + bandH*0.42);
+        ctx.fillStyle = '#6B6259'; ctx.font = '500 9px "JetBrains Mono", monospace';
+        ctx.fillText(b.sub, 13, y0 + bandH*0.72);
+        if(frames.length >= 2){
+          ctx.beginPath();
+          frames.forEach((fr, ti)=>{
+            const x = padL + (N>1 ? (ti/(N-1))*trackW : trackW*0.5);
+            const y = y0 + 8 + Math.max(0,Math.min(1,b.getVal(fr)))*(bandH-16);
+            if(ti===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+          });
+          ctx.strokeStyle = b.color; ctx.lineWidth = 2.4; ctx.stroke();
+        }
+      });
+      const scrubX = padL + (N>1 ? (fi/(N-1))*trackW : trackW*0.5);
+      ctx.save(); ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 2; ctx.setLineDash([4,3]);
+      ctx.beginPath(); ctx.moveTo(scrubX, padT-4); ctx.lineTo(scrubX, H-padB+4); ctx.stroke(); ctx.restore();
+      return;
+    }
+
+    if(wormMode === 'anatomy'){
+      const padL = 12, padR = 12, padT = 28, padB = 20;
+      const topH = Math.round((H - padT - padB)*0.52);
+      const botY = padT + topH + 8, botH = H - padB - botY;
+      const halfW = Math.round((W - padL - padR - 8)*0.5);
+      ctx.fillStyle = '#FFFFFF'; ctx.strokeStyle = '#BFAF97'; ctx.lineWidth = 1.2;
+      ctx.beginPath(); ctx.roundRect(padL, padT, halfW, topH, 5); ctx.fill(); ctx.stroke();
+      drawSamCutoutInRect(ctx, curWorm, 0, padL+6, padT+20, halfW-12, topH-26, {cropToMask:true, drawOutline:true, outlineColor:'#BFAF97', drawDoodle:true, doodleColor:'#EF9F3A'});
+      ctx.fillStyle = '#8A4A05'; ctx.font = '700 10px "JetBrains Mono", monospace';
+      ctx.fillText('THE LINE (f=01 Seed Doodle)', padL+8, padT+14);
+
+      const rx0 = padL + halfW + 8;
+      ctx.fillStyle = '#FFFDF8'; ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 1.6;
+      ctx.beginPath(); ctx.roundRect(rx0, padT, halfW, topH, 5); ctx.fill(); ctx.stroke();
+      drawSamCutoutInRect(ctx, curWorm, fi, rx0+6, padT+20, halfW-12, topH-26, {cropToMask:true, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true, doodleColor:'#161412'});
+      ctx.fillStyle = '#161412';
+      ctx.fillText(`WARPED RIG @ f=${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`, rx0+8, padT+14);
+
+      ctx.fillStyle = '#FFFFFF'; ctx.strokeStyle = '#BFAF97'; ctx.lineWidth = 1.1;
+      ctx.beginPath(); ctx.roundRect(padL, botY, W-padL-padR, botH, 5); ctx.fill(); ctx.stroke();
+      const jPadL = padL + 104, jTrackW = W - padR - jPadL - 8;
+      const joints = curWorm.joints || {};
+      const jNames = Object.keys(joints);
+      const colors = ['#EF9F3A','#2E7A4A','#2B6CB0','#B8432F','#6B46C1'];
+      const rows = jNames.length
+        ? jNames.slice(0,5).map((jn,i)=>({label:jn.replace(/_/g,' '), pts:joints[jn], color:colors[i%colors.length]}))
+        : (curWorm.depth_worms||[]).slice(0,5).map((dw,i)=>({label:dw.label, pts:(dw.track||[]).map(t=>[t[0],t[1]]), color:dw.color||colors[i%colors.length]}));
+      const rTop = botY + 18, rH = Math.max(16, (botH - 24)/Math.max(1, rows.length));
+      rows.forEach((r, idx)=>{
+        const ry = rTop + idx*rH;
+        ctx.fillStyle = '#6B6259'; ctx.font = '600 9.5px "JetBrains Mono", monospace';
+        ctx.fillText(String(r.label).slice(0,13), padL+8, ry + rH*0.65);
+        const pts = r.pts || [];
+        if(pts.length >= 2){
+          ctx.beginPath();
+          pts.forEach((uv, ti)=>{
+            const x = jPadL + (N>1 ? (ti/(N-1))*jTrackW : jTrackW*0.5);
+            const y = ry + 3 + Math.max(0,Math.min(1,uv[1]))*(rH-6);
+            if(ti===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+          });
+          ctx.strokeStyle = r.color; ctx.lineWidth = 2; ctx.stroke();
+        }
+      });
+      const scrubX = jPadL + (N>1 ? (fi/(N-1))*jTrackW : jTrackW*0.5);
+      ctx.save(); ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 2; ctx.setLineDash([4,3]);
+      ctx.beginPath(); ctx.moveTo(scrubX, rTop-4); ctx.lineTo(scrubX, botY+botH-4); ctx.stroke(); ctx.restore();
+      return;
+    }
+
     if(wormMode === 'tunnel'){
       const padL=38, padR=28, padT=34, padB=28;
       const availW = W-padL-padR, availH = H-padT-padB;
@@ -861,6 +1108,51 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     ctx.restore();
   }
 
+  function updateDecoder(fi){
+    if(!curWorm) return;
+    const frames = curWorm.frames || [];
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
+    const planes = getActivePlanes();
+    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
+
+    const c0 = (frames[0] && frames[0].c) ? frames[0].c : [0.5, 0.5];
+    const c1 = (frames[frames.length-1] && frames[frames.length-1].c) ? frames[frames.length-1].c : [0.5, 0.5];
+    const dxPct = Math.round((c1[0] - c0[0]) * 100);
+    const dyPct = Math.round((c1[1] - c0[1]) * 100);
+    const dirStr = Math.abs(dxPct) < 5 && Math.abs(dyPct) < 5
+      ? 'Holds position near frame center'
+      : `${dxPct > 3 ? 'Moves Right (+' + dxPct + '%)' : (dxPct < -3 ? 'Moves Left (' + dxPct + '%)' : 'Steady X')}${Math.abs(dyPct) > 3 ? ', ' + (dyPct > 0 ? 'Down +' + dyPct + '%' : 'Up ' + dyPct + '%') : ''}`;
+    document.getElementById('idxDecShapeT').textContent = TOPO_HUMAN[curWorm.topology] || curWorm.topology || 'Tracked Motion';
+    document.getElementById('idxDecShapeP').textContent =
+      `${dirStr} from (${c0[0].toFixed(2)}, ${c0[1].toFixed(2)}) to (${c1[0].toFixed(2)}, ${c1[1].toFixed(2)}) over ${curWorm.duration_s || (N/12).toFixed(1)}s.`;
+
+    const minZ = Math.min(...planes.map(p=>p.z));
+    const maxZ = Math.max(...planes.map(p=>p.z));
+    const panMag = Math.round((curWorm.cam_pan_mag || 0) * ((S && S.W) || curWorm.W || 480));
+    document.getElementById('idxDecCamT').textContent = `${planes.length} Depth Planes (z=${minZ} → z=${maxZ})`;
+    document.getElementById('idxDecCamP').textContent =
+      panMag > 4
+        ? `Camera pans ~${panMag}px. Near plane (z=${minZ}) moves ${(zRef/minZ).toFixed(2)}× camera speed; far (z=${maxZ}) moves ${(zRef/maxZ).toFixed(2)}×.`
+        : `Minimal camera pan (~${panMag}px). Subject moves across ${planes.length} depth strata.`;
+
+    const nJoints = Object.keys(curWorm.joints || {}).length;
+    const keys = (S && S.keys) || curWorm.keys || {};
+    const nDrawn = (keys.drawn || [0]).length;
+    document.getElementById('idxDecRigT').textContent = `${nDrawn} Drawn Keys · ${nJoints || planes.length} Sub-Worms`;
+    document.getElementById('idxDecRigP').textContent =
+      `Quick, Draw! seed (f=01) tracked across ${N} SAM masks with ${curWorm.braid_count || 0} braid crossings & ${curWorm.planted_count || 0} planted contacts.`;
+
+    const fr = frames[Math.min(frames.length-1, fi)] || {};
+    const fc = fr.c || [0.5, 0.5];
+    const vers = ['Multiplane GWP'];
+    if(curWorm.is_flagship) vers.push('Flagship 6-Plane');
+    if(curWorm.has_sam_shot) vers.push('SAM Cutout');
+    if(curWorm.has_redraw_shot) vers.push('Puppet Redraw');
+    if(curWorm.has_integrated) vers.push('Integrated 24fps');
+    document.getElementById('idxDecLiveT').textContent = `f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')} · (${fc[0].toFixed(2)}, ${fc[1].toFixed(2)})`;
+    document.getElementById('idxDecLiveP').textContent = `Versions (${vers.length}): ${vers.join(', ')}.`;
+  }
+
   function renderAll(){
     if(!curWorm) return;
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
@@ -871,6 +1163,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     scrub.max = Math.max(0, N - 1);
     scrub.value = String(f);
     readout.textContent = `f ${String(f+1).padStart(2,'0')} / ${String(N).padStart(2,'0')}`;
+    updateDecoder(f);
   }
 
   function buildPlanesAndTicks(){
@@ -908,34 +1201,30 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     }
   }
 
-  async function selectShot(idx){
-    if(idx < 0 || idx >= WORMS.length) return;
-    curIdx = idx;
-    curWorm = WORMS[idx];
-    S = null;
-    f = 0;
-    sel.value = String(idx);
-    document.getElementById('idxWormLot').textContent = curWorm.lot || 'SM-SHOT';
-    document.getElementById('idxWormTitle').textContent = `${curWorm.title || curWorm.slug} — Multiplane Time-Worm Scrubber`;
-    document.getElementById('idxWormSub').textContent =
-      `Prelinger Archives · ${curWorm.source_title}${curWorm.source_year ? ' ('+curWorm.source_year+')' : ''} · ${curWorm.n_frames} frames @ ${curWorm.fps} fps · Drag horizontally across the left worm canvas to scrub.`;
-    document.getElementById('idxFullWormsLink').href = `pages/worms.html?shot=${encodeURIComponent(curWorm.shot_id)}`;
+  async function loadVariant(worm, variant){
+    curVariant = variant;
+    [varGwp, varSam, varRedraw, varInt].forEach(b=>{
+      b.setAttribute('aria-pressed', b.dataset.idxvar === variant ? 'true' : 'false');
+    });
+    let relUrl = `shots/${worm.shot_id}/shot.json`;
+    if(variant === 'sam' && worm.has_sam_shot) relUrl = `shots/${worm.slug}-sam/shot.json`;
+    else if(variant === 'redraw' && worm.has_redraw_shot) relUrl = `shots/${worm.slug}-redraw/shot.json`;
+    else if(variant === 'int' && worm.has_integrated) relUrl = `shots/${worm.slug}/integrated/shot.json`;
 
-    planeOn = {};
-    soloPlaneId = null;
-    buildPlanesAndTicks();
-    renderAll();
-
-    const relUrl = `shots/${curWorm.shot_id}/shot.json`;
     if(shotCache.has(relUrl)){
       S = shotCache.get(relUrl);
-      onReady(curWorm);
+      onReady(worm);
       return;
     }
     try{
       const res = await fetch(relUrl);
       if(res.ok){
         const data = await res.json();
+        if(!data.W && data.canvas){
+          data.W = data.canvas.width || 480;
+          data.H = data.canvas.height || 360;
+          data.fps = data.canvas.fps || 24;
+        }
         if(Array.isArray(data.footage)){
           data._imgs = data.footage.map(src=>{
             if(typeof src === 'string' && src.startsWith('data:')){
@@ -948,9 +1237,33 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
           });
         }
         shotCache.set(relUrl, data);
-        if(curWorm === WORMS[idx]){ S = data; onReady(curWorm); }
+        if(curWorm === worm && curVariant === variant){ S = data; onReady(worm); }
       }
     }catch(e){}
+  }
+
+  function selectShot(idx){
+    if(idx < 0 || idx >= WORMS.length) return;
+    curIdx = idx;
+    curWorm = WORMS[idx];
+    S = null;
+    f = 0;
+    sel.value = String(idx);
+    document.getElementById('idxWormLot').textContent = curWorm.lot || 'SM-SHOT';
+    document.getElementById('idxWormTitle').textContent = `${curWorm.title || curWorm.slug} — Multiplane Space-Worm Explorer`;
+    document.getElementById('idxWormSub').textContent =
+      `Prelinger Archives · ${curWorm.source_title}${curWorm.source_year ? ' ('+curWorm.source_year+')' : ''} · ${curWorm.n_frames} frames @ ${curWorm.fps} fps · Switch between 6 Space-Worm Lenses and drag horizontally across the left screen to scrub.`;
+    document.getElementById('idxFullWormsLink').href = `pages/worms.html?shot=${encodeURIComponent(curWorm.shot_id)}`;
+
+    varSam.style.display = curWorm.has_sam_shot ? '' : 'none';
+    varRedraw.style.display = curWorm.has_redraw_shot ? '' : 'none';
+    varInt.style.display = curWorm.has_integrated ? '' : 'none';
+
+    planeOn = {};
+    soloPlaneId = null;
+    buildPlanesAndTicks();
+    renderAll();
+    loadVariant(curWorm, 'gwp');
   }
 
   function onReady(worm){
@@ -959,7 +1272,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     const fps = (S && S.fps) || worm.fps || 12;
     document.getElementById('idxLblStageR').textContent = `${W}×${H} · ${fps} fps`;
     buildPlanesAndTicks();
-    for(let i=0;i<Math.min(worm.n_frames||1, 6);i++) getFrameImg(worm, i);
+    for(let i=0;i<Math.min(worm.n_frames||1, 8);i++) getFrameImg(worm, i);
     renderAll();
   }
 
@@ -970,8 +1283,10 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     const rect = cvWorm.getBoundingClientRect();
     const clientX = (e.touches && e.touches.length) ? e.touches[0].clientX : e.clientX;
     const xRel = (clientX - rect.left) / Math.max(1, rect.width);
-    const padLFrac = (wormMode === 'lanes') ? (114 / cvWorm.width) : (38 / cvWorm.width);
-    const padRFrac = (wormMode === 'lanes') ? (14 / cvWorm.width)  : (28 / cvWorm.width);
+    let padLFrac = 38 / cvWorm.width, padRFrac = 28 / cvWorm.width;
+    if(wormMode === 'lanes' || wormMode === 'kymo'){ padLFrac = 114 / cvWorm.width; padRFrac = 14 / cvWorm.width; }
+    else if(wormMode === 'strobe'){ padLFrac = 14 / cvWorm.width; padRFrac = 14 / cvWorm.width; }
+    else if(wormMode === 'anatomy'){ padLFrac = 116 / cvWorm.width; padRFrac = 20 / cvWorm.width; }
     const u = Math.max(0, Math.min(1, (xRel - padLFrac) / Math.max(0.1, 1 - padLFrac - padRFrac)));
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
     const nf = Math.round(u * Math.max(0, N - 1));
@@ -989,7 +1304,23 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     btn.addEventListener('click', ()=>{
       wormMode = btn.dataset.idxwmode;
       document.querySelectorAll('[data-idxwmode]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
+      const m = LENS_META[wormMode] || LENS_META.lanes;
+      document.getElementById('idxLensTitle').textContent = m.title;
+      document.getElementById('idxLensDesc').textContent = m.desc;
+      if(curWorm && (wormMode === 'strobe' || wormMode === 'kymo')){
+        const N = curWorm.n_frames || 1;
+        for(let i=0;i<N;i+=Math.max(1, Math.floor(N/8))) getFrameImg(curWorm, i);
+      }
       renderAll();
+    });
+  });
+  [varGwp, varSam, varRedraw, varInt].forEach(btn=>{
+    btn.addEventListener('click', ()=>{ if(curWorm) loadVariant(curWorm, btn.dataset.idxvar); });
+  });
+  document.querySelectorAll('[data-idxspeed]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      speedMult = parseFloat(btn.dataset.idxspeed) || 1.0;
+      document.querySelectorAll('[data-idxspeed]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
     });
   });
   document.querySelectorAll('[data-idxview]').forEach(btn=>{
@@ -1031,9 +1362,9 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 
   function loop(now){
     if(!playing || !curWorm) return;
-    const fps = (S && S.fps) || curWorm.fps || 12;
+    const fps = ((S && S.fps) || curWorm.fps || 12) * speedMult;
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
-    if(now - lastTick >= 1000 / fps){
+    if(now - lastTick >= 1000 / Math.max(1, fps)){
       f = (f + 1) % N;
       getFrameImg(curWorm, (f + 1) % N);
       renderAll();
@@ -1061,6 +1392,11 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       const key = mPage ? mPage[1] : (mShot ? mShot[1] : (mHash ? mHash[1] : ''));
 
       let match = key ? byShotId.get(key) : null;
+      let targetVar = 'gwp';
+      if(key && key.endsWith('-sam')) targetVar = 'sam';
+      else if(key && key.endsWith('-redraw')) targetVar = 'redraw';
+      else if(href.includes('/integrated/')) targetVar = 'int';
+
       if(!match && key){
         const base = key.replace(/-(gwp|sam|redraw)$/, '');
         match = byShotId.get(base + '-gwp') || bySlug.get(base);
@@ -1075,13 +1411,13 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       const {w, idx} = match;
       const box = document.createElement('div');
       box.className = 'mini-worm-box';
-      box.title = 'Click to scrub this Multiplane Time-Worm at the top of the page';
+      box.title = 'Click to explore & scrub this Space-Worm at the top of the page';
       const nP = (w.depth_worms && w.depth_worms.length) || (w.planes && w.planes.length) || 2;
       box.innerHTML = `
         <canvas width="118" height="32"></canvas>
         <div class="mini-worm-meta">
           <b>${nP} Planes · ${w.n_frames}f</b>
-          <span>Scrub worm &#8593;</span>
+          <span>Explore worm &#8593;</span>
         </div>
       `;
       const cv = box.querySelector('canvas');
@@ -1125,6 +1461,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
         e.preventDefault();
         e.stopPropagation();
         selectShot(idx);
+        if(targetVar !== 'gwp') loadVariant(w, targetVar);
         document.getElementById('shmWormsHero').scrollIntoView({behavior:'smooth', block:'start'});
       });
       const bodyEl = card.querySelector('.body') || card;
@@ -1144,7 +1481,8 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
         const opt = document.createElement('option');
         opt.value = String(i);
         const nP = (w.depth_worms && w.depth_worms.length) || (w.planes && w.planes.length) || 2;
-        opt.textContent = `${w.lot ? w.lot + ' · ' : ''}${w.title || w.slug} (${nP} planes · ${w.n_frames}f)`;
+        const nV = 1 + (w.has_sam_shot?1:0) + (w.has_redraw_shot?1:0) + (w.has_integrated?1:0);
+        opt.textContent = `${w.lot ? w.lot + ' · ' : ''}${w.title || w.slug} (${nP} planes · ${nV} ver · ${w.n_frames}f)`;
         sel.appendChild(opt);
       });
       selectShot(0);
