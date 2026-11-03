@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Secondhand Motion // 4D Spatiotemporal Time-Worm Studio (108 Tracked Shots)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Secondhand Motion — Multi-Depth 4D Time Worms (108 Tracked Shots)</title>
 <style>
   :root {
-    --bg: #0b0d12;
-    --panel: #131722;
-    --panel-alt: #191f2e;
-    --border: #283147;
-    --fg: #f3f0ea;
-    --muted: #9aa3b5;
+    --bg: #090b10;
+    --panel: #11151f;
+    --panel-alt: #161b28;
+    --border: #252d42;
+    --fg: #f1f3f9;
+    --muted: #8b95ab;
     --gold: #f2bc57;
-    --cyan: #5bc8eb;
-    --green: #68d391;
-    --rose: #f56565;
-    --purple: #b794f4;
-    --mono: "SFMono-Regular", ui-monospace, Consolas, monospace;
+    --cyan: #4fd1c5;
+    --coral: #ff6b6b;
+    --blue: #63b3ed;
+    --violet: #b794f4;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html, body {
@@ -25,1219 +26,1059 @@
     padding: 0;
     background: var(--bg);
     color: var(--fg);
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
-    font-size: 14px;
-    line-height: 1.45;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.35;
+    overscroll-behavior-y: contain;
   }
-  a { color: var(--gold); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  a { color: var(--cyan); text-decoration: none; }
 
-  .header {
+  /* Ultra-compact sticky top bar */
+  .topbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    padding: 10px 16px;
-    background: var(--panel);
+    gap: 6px;
+    padding: 6px 10px;
+    background: rgba(17, 21, 31, 0.96);
     border-bottom: 1px solid var(--border);
-    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 50;
   }
   .brand {
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-  }
-  .brand span { color: var(--gold); }
-  .nav-links {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .nav-links a {
+    font-weight: 800;
     font-size: 12px;
-    color: var(--fg);
-    padding: 5px 10px;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    background: var(--panel-alt);
-    font-weight: 600;
-  }
-  .nav-links a:hover { border-color: var(--gold); color: var(--gold); text-decoration: none; }
-
-  .container {
-    max-width: 1260px;
-    margin: 0 auto;
-    padding: 12px;
-  }
-
-  /* Quick Subject Pills */
-  .quick-bar {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    overflow-x: auto;
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-    scrollbar-width: thin;
-  }
-  .q-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--muted);
+    letter-spacing: 0.03em;
     white-space: nowrap;
-  }
-  .q-pill {
-    background: var(--panel);
-    color: var(--muted);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 5px 10px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  .q-pill:hover { color: var(--fg); border-color: #465375; }
-  .q-pill.active {
-    background: rgba(242, 188, 87, 0.16);
     color: var(--gold);
-    border-color: var(--gold);
+  }
+  .brand span { color: var(--muted); font-weight: 500; }
+  .nav-pills {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    overflow-x: auto;
+  }
+  .pill-link {
+    font-size: 11px;
+    font-family: var(--mono);
+    padding: 4px 8px;
+    border-radius: 5px;
+    background: var(--panel-alt);
+    border: 1px solid var(--border);
+    color: var(--fg);
+    white-space: nowrap;
   }
 
-  /* Main Studio Card */
-  .studio-card {
+  .wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6px 8px 24px;
+  }
+
+  /* Single-Screen Studio Card */
+  .studio {
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
-  .toolbar {
+
+  /* Row 1: Shot selector + View Mode + Video Source */
+  .ctrl-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
-    padding: 10px 12px;
+    gap: 6px;
+    padding: 6px 8px;
     background: var(--panel-alt);
     border-bottom: 1px solid var(--border);
     flex-wrap: wrap;
   }
-  .select-group {
+  .shot-nav {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     flex: 1;
-    min-width: 240px;
-  }
-  select.shot-select {
-    flex: 1;
-    background: var(--bg);
-    color: var(--fg);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 7px 10px;
-    font-size: 13px;
-    font-weight: 600;
+    min-width: 200px;
   }
   .btn {
-    background: var(--bg);
+    background: #1d2436;
     color: var(--fg);
     border: 1px solid var(--border);
     border-radius: 6px;
-    padding: 6px 10px;
-    font-size: 12px;
+    padding: 5px 9px;
+    font-size: 11.5px;
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
   }
-  .btn:hover { border-color: var(--gold); color: var(--gold); }
-  .btn.active {
-    background: rgba(91, 200, 235, 0.16);
-    color: var(--cyan);
-    border-color: var(--cyan);
-  }
+  .btn:hover { border-color: var(--gold); }
   .btn-gold {
     background: var(--gold);
-    color: #0b0d12;
+    color: #090b10;
     border-color: var(--gold);
     font-weight: 700;
   }
-  .btn-gold:hover { background: #ffd175; color: #0b0d12; }
-
-  /* Dual Viewport Grid: Left = Video + 2D Mask/Joints, Right = 3D Extruded Worm */
-  .dual-stage {
-    display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    border-bottom: 1px solid var(--border);
+  .shot-select {
+    flex: 1;
+    min-width: 140px;
+    background: var(--bg);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 7px;
+    font-size: 12px;
+    font-weight: 700;
   }
-  @media (max-width: 900px) {
-    .dual-stage { grid-template-columns: 1fr; }
-  }
-  .pane {
+  .mode-group {
     display: flex;
-    flex-direction: column;
-    border-right: 1px solid var(--border);
-    min-width: 0;
-  }
-  .pane:last-child { border-right: none; }
-  .pane-subbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-    padding: 7px 10px;
-    background: #0e121b;
-    border-bottom: 1px solid var(--border);
+    gap: 3px;
     overflow-x: auto;
-    scrollbar-width: thin;
   }
-  .sub-group {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .mini-pill {
-    background: var(--panel);
+  .mode-btn {
+    background: var(--bg);
     color: var(--muted);
     border: 1px solid var(--border);
     border-radius: 5px;
-    padding: 3px 8px;
+    padding: 4px 8px;
     font-size: 11px;
-    font-weight: 600;
+    font-family: var(--mono);
     cursor: pointer;
     white-space: nowrap;
   }
-  .mini-pill.active {
+  .mode-btn.active {
     background: rgba(242, 188, 87, 0.16);
     color: var(--gold);
     border-color: var(--gold);
+    font-weight: 700;
   }
 
-  .viewport-box {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    max-height: 440px;
-    background: #05070a;
+  /* Row 2: Horizontal Scrollable Multi-Depth Stratum Pill Bar */
+  .depth-bar {
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    gap: 5px;
+    padding: 5px 8px;
+    background: #0d1018;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: none;
   }
-  .viewport-box video {
+  .depth-bar::-webkit-scrollbar { display: none; }
+  .depth-lbl {
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--muted);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .depth-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-family: var(--mono);
+    background: var(--panel);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    white-space: nowrap;
+    opacity: 0.45;
+    transition: opacity 0.12s, border-color 0.12s;
+  }
+  .depth-pill.active {
+    opacity: 1;
+    border-color: currentColor;
+    background: rgba(255, 255, 255, 0.06);
+    font-weight: 700;
+  }
+  .depth-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* Dual Viewport Stage — Compact on Mobile so Zero Scrolling Needed */
+  .stage-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    background: #040609;
+  }
+  .stage-grid.view-3d .pane-2d { display: none; }
+  .stage-grid.view-3d { grid-template-columns: 1fr; }
+  .stage-grid.view-2d .pane-3d { display: none; }
+  .stage-grid.view-2d { grid-template-columns: 1fr; }
+
+  .pane-3d, .pane-2d {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    border-right: 1px solid var(--border);
+  }
+  .pane-2d { border-right: none; }
+
+  @media (max-width: 768px) {
+    .stage-grid {
+      grid-template-columns: 1fr;
+    }
+    .pane-3d {
+      height: 215px;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .pane-2d {
+      height: 175px;
+    }
+    .stage-grid.view-3d .pane-3d,
+    .stage-grid.view-2d .pane-2d {
+      height: 340px;
+    }
+  }
+
+  .pane-3d canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: grab;
+    touch-action: none;
+  }
+  .pane-3d canvas:active { cursor: grabbing; }
+
+  .pane-2d video, .pane-2d img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
+    background: #000;
   }
-  .viewport-box canvas.overlay-2d {
+  .pane-2d canvas {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
   }
-  .viewport-box canvas.worm-3d {
-    width: 100%;
-    height: 100%;
-    display: block;
-    cursor: grab;
-  }
-  .viewport-box canvas.worm-3d:active { cursor: grabbing; }
 
-  /* Transport + Frame & Keyframe Scrubber */
-  .transport-bar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 9px 12px;
-    background: #0e121b;
-    border-bottom: 1px solid var(--border);
-    flex-wrap: wrap;
-  }
-  .frame-readout {
+  /* Floating mini-HUD inside panes */
+  .hud-tag {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(9, 11, 16, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 5px;
+    padding: 2px 7px;
     font-family: var(--mono);
-    font-size: 12px;
-    color: var(--gold);
-    min-width: 140px;
-  }
-  .frame-slider {
-    flex: 1;
-    min-width: 160px;
-    accent-color: var(--gold);
-    cursor: pointer;
-  }
-  .key-bar {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 7px 12px;
-    background: var(--panel);
-    border-bottom: 1px solid var(--border);
-    overflow-x: auto;
-  }
-  .key-pill {
-    font-family: var(--mono);
-    font-size: 11px;
-    padding: 3px 8px;
-    border-radius: 4px;
-    background: var(--panel-alt);
-    border: 1px solid var(--border);
+    font-size: 10px;
     color: var(--muted);
-    cursor: pointer;
-    white-space: nowrap;
+    pointer-events: none;
   }
-  .key-pill:hover { border-color: var(--gold); color: var(--fg); }
-  .key-pill.active {
-    background: rgba(242, 188, 87, 0.2);
+  .hud-actions {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: flex;
+    gap: 4px;
+  }
+  .hud-btn {
+    background: rgba(17, 21, 31, 0.86);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: var(--mono);
+    font-size: 10px;
+    cursor: pointer;
+  }
+  .hud-btn.active {
     color: var(--gold);
     border-color: var(--gold);
-    font-weight: 700;
   }
 
-  /* Ground-Truth Inspector Cards */
-  .inspector-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 10px;
-    padding: 12px;
-    background: var(--panel-alt);
-  }
-  .ins-box {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 12px;
-  }
-  .ins-label {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--muted);
-    margin-bottom: 4px;
-  }
-  .ins-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--fg);
-    margin-bottom: 4px;
-  }
-  .ins-body {
-    font-size: 12px;
-    color: #d0d6e2;
-  }
-
-  /* Filter & 108-Worm Rack */
-  .filter-bar {
+  /* Row 3: Compact Scrubber + 1-Line Telemetry */
+  .scrub-row {
     display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
     align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: var(--panel-alt);
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
   }
-  .search-input {
+  .time-Slider {
     flex: 1;
-    min-width: 200px;
+    min-width: 120px;
+    accent-color: var(--gold);
+    cursor: pointer;
+    height: 5px;
+  }
+  .telemetry-line {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .telemetry-line b { color: var(--fg); }
+
+  /* Compact Filter + Mini-Grid Drawer */
+  .drawer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .filter-scroll {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .filter-scroll::-webkit-scrollbar { display: none; }
+  .search-mini {
     background: var(--panel);
     color: var(--fg);
     border: 1px solid var(--border);
     border-radius: 6px;
-    padding: 8px 12px;
-    font-size: 13px;
+    padding: 4px 8px;
+    font-size: 11.5px;
+    width: 170px;
   }
-  .worm-rack {
+
+  .mini-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 6px;
   }
-  .w-card {
+  @media (max-width: 520px) {
+    .mini-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+    }
+  }
+  .mini-card {
     background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 12px;
+    border-radius: 7px;
+    padding: 5px;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
     transition: border-color 0.12s;
   }
-  .w-card:hover { border-color: var(--gold); }
-  .w-card.active {
+  .mini-card:hover, .mini-card.active {
     border-color: var(--gold);
     background: rgba(242, 188, 87, 0.07);
   }
-  .w-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 6px;
-  }
-  .w-slug {
-    font-weight: 700;
-    font-size: 14px;
-    text-transform: capitalize;
-  }
-  .w-topo {
-    font-family: var(--mono);
-    font-size: 10px;
-    padding: 2px 6px;
+  .mini-card canvas {
+    width: 100%;
+    height: 54px;
+    display: block;
+    background: #05070b;
     border-radius: 4px;
-    background: rgba(91, 200, 235, 0.14);
-    color: var(--cyan);
+    margin-bottom: 4px;
+  }
+  .mini-title {
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mini-sub {
+    font-size: 9.5px;
+    font-family: var(--mono);
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="brand">SECONDHAND MOTION <span>// 4D SPATIOTEMPORAL TIME-WORM STUDIO (108 TRACKED SHOTS)</span></div>
-  <nav class="nav-links">
-    <a href="../index.html">← Back to Secondhand Motion Rack</a>
-    <a href="https://hartswf0.github.io/bolas/allways-tensor/" target="_blank">ALLWAYS Studio ↗</a>
+<header class="topbar">
+  <div class="brand">4D DEPTH WORMS <span>// 108 SHOTS · 375 DEPTH STRATA</span></div>
+  <nav class="nav-pills">
+    <a class="pill-link" href="../index.html">← Rack</a>
+    <a class="pill-link" id="gwpLink" href="https://hartswf0.github.io/secondhand-motion/" target="_blank">Shot Dossier ↗</a>
   </nav>
 </header>
 
-<main class="container">
+<main class="wrap">
+  <section class="studio">
+    <!-- ROW 1: SHOT SELECTOR + VIEW SWITCHER -->
+    <div class="ctrl-row">
+      <div class="shot-nav">
+        <button class="btn" id="prevShotBtn" title="Previous Shot">◀</button>
+        <button class="btn btn-gold" id="playBtn">▶</button>
+        <select class="shot-select" id="shotSelect" aria-label="Select Shot"></select>
+        <button class="btn" id="nextShotBtn" title="Next Shot">▶</button>
+      </div>
+      <div class="mode-group" id="projBar">
+        <button class="mode-btn active" data-proj="orbit3d">3D Depth Volume</button>
+        <button class="mode-btn" data-proj="lanes">Depth Lanes (Z×τ)</button>
+        <button class="mode-btn" data-proj="layout-split">Split</button>
+        <button class="mode-btn" data-proj="layout-3d">3D Only</button>
+      </div>
+    </div>
 
-  <!-- 1-CLICK FLAGSHIP WORM SWITCHER -->
-  <div class="quick-bar" id="quickBar">
-    <span class="q-label">Flagship Tracked Worms:</span>
-    <button class="q-pill active" data-slug="aircraft-carrier">Aircraft Carrier (50f Cone)</button>
-    <button class="q-pill" data-slug="ant">Ant (25f · 12 Limb Braids)</button>
-    <button class="q-pill" data-slug="camera">Camera Lens (37f Locked Pillar)</button>
-    <button class="q-pill" data-slug="dragon">Dragon (32f Articulated)</button>
-    <button class="q-pill" data-slug="flying-saucer">Flying Saucer (28f Shear Ribbon)</button>
-    <button class="q-pill" data-slug="giraffe">Giraffe (17f Walk / Pan)</button>
-    <button class="q-pill" data-slug="horse">Horse (Gallop Braid)</button>
-    <button class="q-pill" data-slug="hurricane">Hurricane (39f Spiral Vortex)</button>
-    <button class="q-pill" data-slug="crab">Crab (38f Multi-Leg Braid)</button>
-    <button class="q-pill" data-slug="roller-coaster">Roller Coaster (Depth Plunge)</button>
-    <button class="q-pill" data-slug="sailboat">Sailboat (Horizon Shear)</button>
+    <!-- ROW 2: MULTI-DEPTH STRATA PILLS (TAP ANY DEPTH TO SOLO / TOGGLE) -->
+    <div class="depth-bar" id="depthBar">
+      <span class="depth-lbl">Depth Worms:</span>
+    </div>
+
+    <!-- COMPACT SYNCHRONIZED STAGE (3D MULTI-DEPTH WORMS + 2D VIDEO/CONTOURS) -->
+    <div class="stage-grid" id="stageGrid">
+      <!-- 3D MULTI-DEPTH WORM STAGE (FIRST ON MOBILE FOR INSTANT VISIBILITY) -->
+      <div class="pane-3d">
+        <canvas id="canvas3d" width="760" height="440"></canvas>
+        <div class="hud-tag" id="hud3dTag">Drag to orbit · Tap any worm slice to seek</div>
+        <div class="hud-actions">
+          <button class="hud-btn active" id="toggleSubBtn" title="Toggle Anatomical Limb & Object Sub-Worms">Sub-Worms</button>
+          <button class="hud-btn" id="resetOrbitBtn">Reset</button>
+        </div>
+      </div>
+
+      <!-- 2D VIDEO + DEPTH CONTOURS STAGE -->
+      <div class="pane-2d">
+        <video id="video2d" playsinline muted loop preload="metadata"></video>
+        <img id="fallbackImg" style="display:none;" alt="Shot strip">
+        <canvas id="canvas2d" width="640" height="400"></canvas>
+        <div class="hud-tag" id="hud2dTag">2D Frame + Multi-Depth Contours</div>
+        <div class="hud-actions" id="srcSwitch">
+          <button class="hud-btn active" data-src="comp">3-Way</button>
+          <button class="hud-btn" data-src="src">Raw</button>
+          <button class="hud-btn" data-src="art">Cartoon</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 3: SCRUBBER + 1-LINE TELEMETRY -->
+    <div class="scrub-row">
+      <button class="btn" id="stepPrevBtn" style="padding:3px 7px;">-1f</button>
+      <input type="range" class="time-Slider" id="frameSlider" min="0" max="24" value="0" step="1">
+      <button class="btn" id="stepNextBtn" style="padding:3px 7px;">+1f</button>
+      <div class="telemetry-line" id="telemetryLine">Loading 108 multi-depth worms...</div>
+    </div>
+  </section>
+
+  <!-- COMPACT FILTER & MINI-CARD GRID -->
+  <div class="drawer-bar">
+    <div class="filter-scroll" id="topoFilterBar">
+      <button class="mode-btn active" data-topo="ALL">All 108</button>
+      <button class="mode-btn" data-topo="CAMERA_SHEAR_RIBBON">Shear Ribbon (37)</button>
+      <button class="mode-btn" data-topo="LOOMING_FUNNEL_CONE">Funnel Cone (27)</button>
+      <button class="mode-btn" data-topo="ARTICULATED_LIMB_BRAID">Limb Braid (23)</button>
+      <button class="mode-btn" data-topo="SERPENTINE_CORKSCREW">Corkscrew (13)</button>
+      <button class="mode-btn" data-topo="LOCKED_PILLAR">Pillar (8)</button>
+    </div>
+    <input type="search" class="search-mini" id="searchInput" placeholder="Filter 108 shots...">
   </div>
 
-  <section class="studio-card">
-    <!-- SHOT SELECTOR TOOLBAR -->
-    <div class="toolbar">
-      <div class="select-group">
-        <button class="btn" id="prevWormBtn">◀</button>
-        <select class="shot-select" id="wormSelect" aria-label="Select Tracked Shot">
-          <option>Loading 108 tracked time worms...</option>
-        </select>
-        <button class="btn" id="nextWormBtn">▶</button>
-      </div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;">
-        <a class="btn" id="openGwpBtn" href="https://hartswf0.github.io/secondhand-motion/" target="_blank">Shot Lot Page ↗</a>
-      </div>
-    </div>
-
-    <!-- DUAL STAGE: LEFT = VIDEO + 2D SAM MASK/JOINTS, RIGHT = 3D EXTRUDED TIME WORM -->
-    <div class="dual-stage">
-
-      <!-- LEFT PANE: SYNCHRONIZED VIDEO + 2D OVERLAY -->
-      <div class="pane">
-        <div class="pane-subbar">
-          <div class="sub-group" id="videoSourceBar">
-            <span class="q-label">Video:</span>
-            <button class="mini-pill active" data-vmode="comp">Comparison</button>
-            <button class="mini-pill" data-vmode="src">Raw Footage</button>
-            <button class="mini-pill" data-vmode="art">Redraw</button>
-          </div>
-          <div class="sub-group">
-            <span class="q-label">2D Overlay:</span>
-            <button class="mini-pill active" id="togMask2D">SAM Polygon</button>
-            <button class="mini-pill active" id="togJoints2D">Joints</button>
-            <button class="mini-pill active" id="togCam2D">Camera Vec</button>
-            <button class="mini-pill" id="togGrid2D">Rule Grid</button>
-          </div>
-        </div>
-        <div class="viewport-box">
-          <video id="wormVideo" playsinline loop muted></video>
-          <canvas class="overlay-2d" id="canvas2D" width="640" height="480"></canvas>
-        </div>
-      </div>
-
-      <!-- RIGHT PANE: INTERACTIVE 3D EXTRUDED SPATIOTEMPORAL WORM -->
-      <div class="pane">
-        <div class="pane-subbar">
-          <div class="sub-group" id="wormModeBar">
-            <span class="q-label">3D Worm Mode:</span>
-            <button class="mini-pill active" data-wmode="tube">1 · 3D Polygon Tube (u,v,τ)</button>
-            <button class="mini-pill" data-wmode="world">2 · Camera-Stabilized World Worm</button>
-            <button class="mini-pill" data-wmode="braid">3 · Articulated Joint Braid (B_n)</button>
-            <button class="mini-pill" data-wmode="depth">4 · 4D Depth Stratigraphy (u,d,τ)</button>
-          </div>
-          <button class="mini-pill" id="resetViewBtn" title="Reset 3D rotation">Reset 3D Angle</button>
-        </div>
-        <div class="viewport-box">
-          <canvas class="worm-3d" id="canvas3D" width="720" height="480"></canvas>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- TRANSPORT & FRAME SCRUBBER -->
-    <div class="transport-bar">
-      <button class="btn" id="stepPrevFrameBtn" title="Step back 1 tracked frame">◀ -1f</button>
-      <button class="btn btn-gold" id="playPauseWormBtn">▶ Play</button>
-      <button class="btn" id="stepNextFrameBtn" title="Step forward 1 tracked frame">+1f ▶</button>
-      <span class="frame-readout" id="frameReadout">Frame 0 / 49 (0.00s)</span>
-      <input type="range" class="frame-slider" id="frameSlider" min="0" max="49" value="0" step="1">
-    </div>
-
-    <!-- CLICKABLE KEYFRAME (K) BAR -->
-    <div class="key-bar" id="keyBar">
-      <span class="q-label">Tracked Keyframes (K):</span>
-    </div>
-
-    <!-- 4-BOX GROUND-TRUTH GEOMETRIC INSPECTOR -->
-    <div class="inspector-grid">
-      <div class="ins-box">
-        <div class="ins-label">1. Shot &amp; 3D Worm Topology</div>
-        <div class="ins-title" id="insTopoTitle">—</div>
-        <div class="ins-body" id="insTopoBody">—</div>
-      </div>
-      <div class="ins-box">
-        <div class="ins-label">2. True SAM Polygon Silhouette (Frame f)</div>
-        <div class="ins-title" id="insMaskTitle">—</div>
-        <div class="ins-body" id="insMaskBody">—</div>
-      </div>
-      <div class="ins-box">
-        <div class="ins-label">3. 4D Depth &amp; Camera Parallax Decoupling</div>
-        <div class="ins-title" id="insDepthTitle">—</div>
-        <div class="ins-body" id="insDepthBody">—</div>
-      </div>
-      <div class="ins-box">
-        <div class="ins-label">4. Articulated Joints, Braid (B_n) &amp; Planted Feet</div>
-        <div class="ins-title" id="insBraidTitle">—</div>
-        <div class="ins-body" id="insBraidBody">—</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ALL 108 TRACKED WORMS RACK -->
-  <section>
-    <div class="filter-bar">
-      <input type="search" class="search-input" id="rackSearch" placeholder="Search 108 tracked subjects by name, source film, or topology...">
-      <select class="shot-select" id="topoFilter" style="max-width:250px;">
-        <option value="ALL">All 5 Worm Topologies (108)</option>
-        <option value="CAMERA_SHEAR_RIBBON">Camera Shear Ribbon (37)</option>
-        <option value="LOOMING_FUNNEL_CONE">Looming Funnel Cone (27)</option>
-        <option value="ARTICULATED_LIMB_BRAID">Articulated Limb Braid (23)</option>
-        <option value="SERPENTINE_CORKSCREW">Serpentine Corkscrew (13)</option>
-        <option value="LOCKED_PILLAR">Locked Pillar (8)</option>
-      </select>
-      <select class="shot-select" id="tierFilter" style="max-width:250px;">
-        <option value="ALL">All Tracking Tiers (108)</option>
-        <option value="INTEGRATED">41 Integrated (3 Synced MP4s)</option>
-        <option value="BATCH">10 Flagship Puppet Redraws</option>
-      </select>
-    </div>
-    <div class="worm-rack" id="wormRack"></div>
-  </section>
-
+  <div class="mini-grid" id="miniGrid"></div>
 </main>
 
 <script>
-const DATA_URL = "../data/worms_108.json";
+(function() {
+  const PRIMARY_JSON = "../data/worms_108.json";
+  const FALLBACK_JSON = "https://hartswf0.github.io/secondhand-motion/data/worms_108.json";
 
-const TOPO_EXPLAIN = {
-  "LOCKED_PILLAR": "Straight vertical cylinder parallel to the time axis: both camera and subject hold steady inside a fixed channel.",
-  "CAMERA_SHEAR_RIBBON": "Diagonal sheared ribbon: lateral camera pan or subject translation sweeps across the horizontal u-axis over time.",
-  "LOOMING_FUNNEL_CONE": "Expanding or contracting 3D cone: the segmented polygon radius r(τ) or subject depth d(τ) grows/shrinks along τ.",
-  "ARTICULATED_LIMB_BRAID": "Multi-strand articulated bundle: tracked skeletal joints cross over one another in time, forming Artin Braid words σ_i^±1.",
-  "SERPENTINE_CORKSCREW": "Curved helical tube: the polygon centroid winds across both u and v with high Frenet-Serret curvature."
-};
+  let worms = [];
+  let curIdx = 0;
+  let curFrame = 0;
+  let projMode = "orbit3d"; // "orbit3d" or "lanes"
+  let srcMode = "comp";
+  let showSubWorms = true;
+  let activeDepthIds = new Set(); // empty = all active
+  let topoFilter = "ALL";
+  let yaw = -0.58, pitch = 0.34;
+  let dragging = false, lx = 0, ly = 0, moved = false;
+  let hitNodes = [];
 
-const JOINT_COLORS = [
-  "#5bc8eb", "#f56565", "#68d391", "#b794f4", "#f2bc57", "#ed64a6", "#4fd1c5", "#fbd38d"
-];
+  const c3d = document.getElementById("canvas3d");
+  const ctx3 = c3d.getContext("2d");
+  const c2d = document.getElementById("canvas2d");
+  const ctx2 = c2d.getContext("2d");
+  const video = document.getElementById("video2d");
+  const fbImg = document.getElementById("fallbackImg");
+  const shotSelect = document.getElementById("shotSelect");
+  const slider = document.getElementById("frameSlider");
 
-let WORMS = [];
-let currentWormIdx = 0;
-let currentFrameIdx = 0;
-let videoSourceMode = "comp"; // "comp", "src", "art"
-let wormViewMode = "tube";    // "tube", "world", "braid", "depth"
-
-let showMask2D = true;
-let showJoints2D = true;
-let showCam2D = true;
-let showGrid2D = false;
-
-// 3D interactive rotation angles
-let yaw3D = 0.62;
-let pitch3D = -0.34;
-let isDragging3D = false;
-let dragStartX = 0, dragStartY = 0;
-
-const videoEl = document.getElementById("wormVideo");
-const canvas2D = document.getElementById("canvas2D");
-const ctx2D = canvas2D.getContext("2d");
-const canvas3D = document.getElementById("canvas3D");
-const ctx3D = canvas3D.getContext("2d");
-const wormSelect = document.getElementById("wormSelect");
-const frameSlider = document.getElementById("frameSlider");
-
-/* Project normalized 3D coordinates (X in [-0.5,0.5], Y in [-0.5,0.5], T in [-0.5,0.5]) onto canvas3D */
-function project3D(X, Y, T, W, H) {
-  // Rotate around vertical Y axis by yaw3D (mixing X and T)
-  const cosY = Math.cos(yaw3D), sinY = Math.sin(yaw3D);
-  const x1 = X * cosY + T * sinY;
-  const z1 = -X * sinY + T * cosY;
-
-  // Rotate around horizontal X axis by pitch3D (mixing Y and z1)
-  const cosP = Math.cos(pitch3D), sinP = Math.sin(pitch3D);
-  const y2 = Y * cosP - z1 * sinP;
-  const z2 = Y * sinP + z1 * cosP;
-
-  const fov = 1.9 / (2.3 + z2 * 0.55);
-  const sx = W * 0.50 + x1 * W * 0.44 * fov;
-  const sy = H * 0.52 + y2 * H * 0.48 * fov;
-  return [sx, sy, z2];
-}
-
-/* Draw the 2D ground-truth overlay on the synchronized video frame */
-function render2DOverlay() {
-  const W = canvas2D.width, H = canvas2D.height;
-  ctx2D.clearRect(0, 0, W, H);
-  const w = WORMS[currentWormIdx];
-  if (!w || !w.frames || !w.frames.length) return;
-
-  const fIdx = Math.max(0, Math.min(w.frames.length - 1, currentFrameIdx));
-  const fr = w.frames[fIdx];
-
-  ctx2D.save();
-
-  // Optional 8-Rule Compositional Grid
-  if (showGrid2D) {
-    ctx2D.strokeStyle = "rgba(242, 188, 87, 0.55)";
-    ctx2D.lineWidth = 1.8;
-    const rule = w.best_rule;
-    if (rule === "symmetry") {
-      ctx2D.beginPath(); ctx2D.moveTo(W * 0.5, 0); ctx2D.lineTo(W * 0.5, H); ctx2D.stroke();
-    } else if (rule === "rule_of_thirds") {
-      ctx2D.beginPath();
-      ctx2D.moveTo(W/3, 0); ctx2D.lineTo(W/3, H); ctx2D.moveTo(2*W/3, 0); ctx2D.lineTo(2*W/3, H);
-      ctx2D.moveTo(0, H/3); ctx2D.lineTo(W, H/3); ctx2D.moveTo(0, 2*H/3); ctx2D.lineTo(W, 2*H/3);
-      ctx2D.stroke();
-    } else if (rule === "centered") {
-      ctx2D.beginPath();
-      ctx2D.moveTo(W * 0.42, 0); ctx2D.lineTo(W * 0.42, H);
-      ctx2D.moveTo(W * 0.58, 0); ctx2D.lineTo(W * 0.58, H);
-      ctx2D.moveTo(0, H * 0.67); ctx2D.lineTo(W, H * 0.67);
-      ctx2D.stroke();
-    } else if (rule === "v_shape") {
-      ctx2D.beginPath();
-      ctx2D.moveTo(W * 0.1, 0); ctx2D.lineTo(W * 0.5, H * 0.88); ctx2D.lineTo(W * 0.9, 0);
-      ctx2D.stroke();
-    } else if (rule === "frame_in_frame") {
-      ctx2D.strokeRect(W * 0.16, H * 0.14, W * 0.68, H * 0.72);
-    } else if (rule === "negative_space") {
-      ctx2D.strokeRect(W * 0.06, H * 0.06, W * 0.88, H * 0.54);
-    } else {
-      // Golden spiral / S-curve
-      ctx2D.strokeRect(W * 0.04, H * 0.04, W * 0.92, H * 0.92);
-      ctx2D.beginPath(); ctx2D.moveTo(W * 0.618, H * 0.04); ctx2D.lineTo(W * 0.618, H * 0.96); ctx2D.stroke();
-    }
+  function projPoint(u, v, tau, zNorm, W, H) {
+    // Offset vertical/depth placement slightly by zNorm so depth strata separate cleanly in 3D
+    const x = (u - 0.5);
+    const y = (0.5 - v) + (zNorm - 0.35) * 0.28;
+    const z = (tau - 0.5) * 1.55;
+    const cy = Math.cos(yaw), sy = Math.sin(yaw);
+    const cp = Math.cos(pitch), sp = Math.sin(pitch);
+    const x1 = x * cy + z * sy;
+    const z1 = -x * sy + z * cy;
+    const y2 = y * cp - z1 * sp;
+    const z2 = y * sp + z1 * cp;
+    const sc = (Math.min(W, H) * 0.78) / Math.max(0.55, 2.35 - z2 * 0.5);
+    return { sx: W * 0.50 + x1 * sc, sy: H * 0.52 - y2 * sc, sc };
   }
 
-  // 1. True SAM Polygon Silhouette at current frame f
-  if (showMask2D && fr.ring && fr.ring.length >= 3) {
-    ctx2D.beginPath();
-    fr.ring.forEach((uv, idx) => {
-      const x = uv[0] * W, y = uv[1] * H;
-      if (idx === 0) ctx2D.moveTo(x, y); else ctx2D.lineTo(x, y);
+  function isDepthOn(id) {
+    return activeDepthIds.size === 0 || activeDepthIds.has(id);
+  }
+
+  function renderDepthPills(w) {
+    const bar = document.getElementById("depthBar");
+    const dws = w.depth_worms || [];
+    bar.innerHTML = `<span class="depth-lbl">Depths (${dws.length}):</span>`;
+
+    const allBtn = document.createElement("button");
+    allBtn.className = "depth-pill" + (activeDepthIds.size === 0 ? " active" : "");
+    allBtn.style.color = "#f1f3f9";
+    allBtn.textContent = `All (${dws.length})`;
+    allBtn.addEventListener("click", () => {
+      activeDepthIds.clear();
+      renderDepthPills(w);
+      drawAll();
     });
-    ctx2D.closePath();
-    ctx2D.fillStyle = "rgba(91, 200, 235, 0.16)";
-    ctx2D.fill();
-    ctx2D.strokeStyle = "rgba(91, 200, 235, 0.92)";
-    ctx2D.lineWidth = 2.5;
-    ctx2D.stroke();
+    bar.appendChild(allBtn);
 
-    // Centroid trail up to frame fIdx
-    ctx2D.beginPath();
-    for (let i = 0; i <= fIdx; i++) {
-      const c = w.frames[i].c;
-      if (i === 0) ctx2D.moveTo(c[0] * W, c[1] * H);
-      else ctx2D.lineTo(c[0] * W, c[1] * H);
-    }
-    ctx2D.strokeStyle = "#f2bc57";
-    ctx2D.lineWidth = 2.5;
-    ctx2D.stroke();
-
-    // Current centroid dot
-    const cx = fr.c[0] * W, cy = fr.c[1] * H;
-    ctx2D.beginPath();
-    ctx2D.arc(cx, cy, 5.5, 0, Math.PI * 2);
-    ctx2D.fillStyle = "#f2bc57";
-    ctx2D.fill();
-  }
-
-  // 2. Articulated Joint Skeleton & Trails
-  if (showJoints2D && w.joints) {
-    const jnames = Object.keys(w.joints);
-    jnames.forEach((jn, jIdx) => {
-      const tr = w.joints[jn];
-      if (!tr || !tr.length) return;
-      const col = JOINT_COLORS[jIdx % JOINT_COLORS.length];
-
-      ctx2D.beginPath();
-      for (let i = 0; i <= Math.min(fIdx, tr.length - 1); i++) {
-        const pt = tr[i];
-        if (i === 0) ctx2D.moveTo(pt[0] * W, pt[1] * H);
-        else ctx2D.lineTo(pt[0] * W, pt[1] * H);
-      }
-      ctx2D.strokeStyle = col;
-      ctx2D.lineWidth = 1.8;
-      ctx2D.stroke();
-
-      const curPt = tr[Math.min(fIdx, tr.length - 1)];
-      const jx = curPt[0] * W, jy = curPt[1] * H;
-      ctx2D.beginPath();
-      ctx2D.arc(jx, jy, 4.5, 0, Math.PI * 2);
-      ctx2D.fillStyle = col;
-      ctx2D.fill();
-
-      ctx2D.fillStyle = "#fff";
-      ctx2D.font = "bold 11px -apple-system, sans-serif";
-      ctx2D.fillText(jn, jx + 6, jy - 4);
-    });
-  }
-
-  // 3. Camera Pan Vector vs. World-Stabilized Centroid
-  if (showCam2D && (Math.abs(fr.cam[0]) > 0.001 || Math.abs(fr.cam[1]) > 0.001)) {
-    const ox = W * 0.5, oy = H * 0.90;
-    const tx = ox + fr.cam[0] * W * 2.0;
-    const ty = oy + fr.cam[1] * H * 2.0;
-    ctx2D.strokeStyle = "#f56565";
-    ctx2D.lineWidth = 2.5;
-    ctx2D.beginPath();
-    ctx2D.moveTo(ox, oy);
-    ctx2D.lineTo(tx, ty);
-    ctx2D.stroke();
-    ctx2D.fillStyle = "#f56565";
-    ctx2D.font = "bold 11px monospace";
-    ctx2D.fillText(`CAM PAN Δ(${(fr.cam[0]*100).toFixed(1)}%, ${(fr.cam[1]*100).toFixed(1)}%)`, ox - 65, oy - 8);
-  }
-
-  ctx2D.restore();
-}
-
-/* Draw the 3D Extruded Spatiotemporal Time Worm on canvas3D */
-function render3DWorm() {
-  const W = canvas3D.width, H = canvas3D.height;
-  ctx3D.clearRect(0, 0, W, H);
-
-  const w = WORMS[currentWormIdx];
-  if (!w || !w.frames || !w.frames.length) return;
-  const frames = w.frames;
-  const nf = frames.length;
-  const fIdx = Math.max(0, Math.min(nf - 1, currentFrameIdx));
-
-  ctx3D.save();
-
-  // Draw 3D Spatiotemporal Bounding Volume Wireframe Box [-0.5..0.5]^3
-  const corners = [
-    [-0.5, -0.5, -0.5], [0.5, -0.5, -0.5], [0.5, 0.5, -0.5], [-0.5, 0.5, -0.5],
-    [-0.5, -0.5,  0.5], [0.5, -0.5,  0.5], [0.5, 0.5,  0.5], [-0.5, 0.5,  0.5]
-  ].map(c => project3D(c[0], c[1], c[2], W, H));
-
-  const edges = [
-    [0,1],[1,2],[2,3],[3,0],
-    [4,5],[5,6],[6,7],[7,4],
-    [0,4],[1,5],[2,6],[3,7]
-  ];
-  ctx3D.strokeStyle = "rgba(65, 80, 115, 0.45)";
-  ctx3D.lineWidth = 1;
-  edges.forEach(([a, b]) => {
-    ctx3D.beginPath();
-    ctx3D.moveTo(corners[a][0], corners[a][1]);
-    ctx3D.lineTo(corners[b][0], corners[b][1]);
-    ctx3D.stroke();
-  });
-
-  // Label Time Axis τ (from front -0.5 to back +0.5)
-  const tStartPt = project3D(-0.52, 0.55, -0.5, W, H);
-  const tEndPt = project3D(-0.52, 0.55, 0.5, W, H);
-  ctx3D.fillStyle = "#9aa3b5";
-  ctx3D.font = "11px monospace";
-  ctx3D.fillText("f=0 (Start)", tStartPt[0], tStartPt[1]);
-  ctx3D.fillText(`f=${nf-1} (End τ)`, tEndPt[0], tEndPt[1]);
-
-  if (wormViewMode === "tube" || wormViewMode === "world") {
-    const useWorld = (wormViewMode === "world");
-
-    // 1. Connect longitudinal ribs between consecutive polygon rings
-    const ribIndices = [0, 4, 8, 12];
-    ribIndices.forEach(rIdx => {
-      ctx3D.beginPath();
-      for (let i = 0; i < nf; i++) {
-        const fr = frames[i];
-        const tau = (i / Math.max(1, nf - 1)) - 0.5;
-        const dx = useWorld ? -fr.cam[0] : 0;
-        const dy = useWorld ? -fr.cam[1] : 0;
-        const uv = fr.ring[rIdx % fr.ring.length];
-        const p = project3D((uv[0] + dx) - 0.5, (uv[1] + dy) - 0.5, tau, W, H);
-        if (i === 0) ctx3D.moveTo(p[0], p[1]);
-        else ctx3D.lineTo(p[0], p[1]);
-      }
-      ctx3D.strokeStyle = "rgba(91, 200, 235, 0.22)";
-      ctx3D.lineWidth = 1;
-      ctx3D.stroke();
-    });
-
-    // 2. Draw stacked Polygon Cross-Section Rings along τ
-    for (let i = 0; i < nf; i++) {
-      const fr = frames[i];
-      const tau = (i / Math.max(1, nf - 1)) - 0.5;
-      const isCurrent = (i === fIdx);
-      const isKey = w.keys && w.keys.includes(i);
-      const isPast = (i <= fIdx);
-
-      // Draw every frame if nf <= 35, or every 2nd frame + keyframes + current frame
-      if (nf > 38 && !isCurrent && !isKey && (i % 2 !== 0)) continue;
-
-      const dx = useWorld ? -fr.cam[0] : 0;
-      const dy = useWorld ? -fr.cam[1] : 0;
-
-      ctx3D.beginPath();
-      fr.ring.forEach((uv, idx) => {
-        const p = project3D((uv[0] + dx) - 0.5, (uv[1] + dy) - 0.5, tau, W, H);
-        if (idx === 0) ctx3D.moveTo(p[0], p[1]);
-        else ctx3D.lineTo(p[0], p[1]);
+    dws.forEach(dw => {
+      const btn = document.createElement("button");
+      const on = isDepthOn(dw.id);
+      btn.className = "depth-pill" + (on ? " active" : "");
+      btn.style.color = dw.color || "#4fd1c5";
+      btn.innerHTML = `<span class="depth-dot" style="background:${dw.color}"></span>z=${dw.z} ${dw.label}`;
+      btn.addEventListener("click", () => {
+        if (activeDepthIds.size === 1 && activeDepthIds.has(dw.id)) {
+          activeDepthIds.clear();
+        } else {
+          activeDepthIds.clear();
+          activeDepthIds.add(dw.id);
+        }
+        renderDepthPills(w);
+        drawAll();
       });
-      ctx3D.closePath();
+      bar.appendChild(btn);
+    });
+  }
 
-      if (isCurrent) {
-        ctx3D.fillStyle = "rgba(242, 188, 87, 0.30)";
-        ctx3D.fill();
-        ctx3D.strokeStyle = "#5bc8eb";
-        ctx3D.lineWidth = 3.0;
-        ctx3D.stroke();
-      } else if (isKey) {
-        ctx3D.fillStyle = "rgba(242, 188, 87, 0.08)";
-        ctx3D.fill();
-        ctx3D.strokeStyle = "rgba(242, 188, 87, 0.85)";
-        ctx3D.lineWidth = 1.8;
-        ctx3D.stroke();
+  function draw3dStage(w, fIdx) {
+    const W = c3d.width, H = c3d.height;
+    ctx3.clearRect(0, 0, W, H);
+    const frames = w.frames || [];
+    const nf = frames.length;
+    if (!nf) return;
+    const dws = w.depth_worms || [];
+    hitNodes = [];
+
+    if (projMode === "lanes") {
+      // CLEAN MINIMAL DEPTH × TIME (Z × τ) PARALLAX LANES VIEW
+      const padL = 115, padR = 24, padT = 26, padB = 28;
+      const plotW = W - padL - padR;
+      const plotH = H - padT - padB;
+      const nLanes = Math.max(1, dws.length);
+
+      // Vertical time cursor
+      const curX = padL + (fIdx / Math.max(1, nf - 1)) * plotW;
+      ctx3.strokeStyle = "rgba(242, 188, 87, 0.55)";
+      ctx3.lineWidth = 1.5;
+      ctx3.beginPath(); ctx3.moveTo(curX, padT - 8); ctx3.lineTo(curX, H - padB + 6); ctx3.stroke();
+
+      dws.forEach((dw, dIdx) => {
+        const on = isDepthOn(dw.id);
+        const laneY = padT + (dIdx + 0.5) * (plotH / nLanes);
+        const laneH = (plotH / nLanes) * 0.72;
+        const col = dw.color || "#4fd1c5";
+
+        // Lane guide line & label
+        ctx3.strokeStyle = "rgba(139, 149, 171, 0.16)";
+        ctx3.lineWidth = 1;
+        ctx3.beginPath(); ctx3.moveTo(padL, laneY); ctx3.lineTo(W - padR, laneY); ctx3.stroke();
+
+        ctx3.fillStyle = on ? col : "rgba(139,149,171,0.4)";
+        ctx3.font = "bold 11px ui-monospace, SFMono-Regular, Menlo, monospace";
+        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 11)}`, 8, laneY - 2);
+        ctx3.fillStyle = "rgba(139,149,171,0.75)";
+        ctx3.font = "10px ui-monospace, SFMono-Regular, Menlo, monospace";
+        ctx3.fillText(`parallax k=${dw.k}x`, 8, laneY + 11);
+
+        if (!on) return;
+
+        // Draw extruded ribbon thickness (r) + horizontal displacement (u - 0.5)
+        const trk = dw.track || [];
+        ctx3.fillStyle = col + "28";
+        ctx3.strokeStyle = col;
+        ctx3.lineWidth = dw.role === "subject" ? 2.6 : 1.8;
+
+        // Upper/lower ribbon envelope
+        ctx3.beginPath();
+        trk.forEach((pt, fi) => {
+          const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
+          const uShift = (pt[0] - 0.5) * laneH * 0.95;
+          const rThick = Math.max(3, pt[2] * laneH * 0.55);
+          const ty = laneY + uShift - rThick;
+          if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
+        });
+        for (let fi = trk.length - 1; fi >= 0; fi--) {
+          const pt = trk[fi];
+          const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
+          const uShift = (pt[0] - 0.5) * laneH * 0.95;
+          const rThick = Math.max(3, pt[2] * laneH * 0.55);
+          const ty = laneY + uShift + rThick;
+          ctx3.lineTo(tx, ty);
+        }
+        ctx3.closePath();
+        ctx3.fill();
+
+        // Spine curve
+        ctx3.beginPath();
+        trk.forEach((pt, fi) => {
+          const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
+          const ty = laneY + (pt[0] - 0.5) * laneH * 0.95;
+          if (dw.role === "subject") hitNodes.push({ fi, sx: tx, sy: ty });
+          if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
+        });
+        ctx3.stroke();
+
+        // Sub-worms (limbs or scenic objects on this depth stratum)
+        if (showSubWorms && dw.sub_worms) {
+          dw.sub_worms.forEach(sw => {
+            ctx3.strokeStyle = col + "99";
+            ctx3.lineWidth = 1.1;
+            ctx3.setLineDash([3, 3]);
+            ctx3.beginPath();
+            if (sw.pts) {
+              sw.pts.forEach((uv, fi) => {
+                const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
+                const ty = laneY + (uv[0] - 0.5) * laneH * 0.95;
+                if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
+              });
+            } else if (sw.u0 !== undefined) {
+              trk.forEach((pt, fi) => {
+                const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
+                const ty = laneY + (sw.u0 - 0.5 + (pt[0] - trk[0][0])) * laneH * 0.95;
+                if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
+              });
+            }
+            ctx3.stroke();
+            ctx3.setLineDash([]);
+          });
+        }
+      });
+      return;
+    }
+
+    // 3D ORBIT SPATIOTEMPORAL PRISM WITH MULTIPLE DEPTH WORMS
+    const box = [
+      [0,0,0],[1,0,0],[1,1,0],[0,1,0],
+      [0,0,1],[1,0,1],[1,1,1],[0,1,1]
+    ].map(c => projPoint(c[0], c[1], c[2], 0.35, W, H));
+    const edges = [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
+    ctx3.strokeStyle = "rgba(139, 149, 171, 0.22)";
+    ctx3.lineWidth = 1;
+    edges.forEach(([a, b]) => {
+      ctx3.beginPath(); ctx3.moveTo(box[a].sx, box[a].sy); ctx3.lineTo(box[b].sx, box[b].sy); ctx3.stroke();
+    });
+
+    // Render each Depth-Stratum Worm from Far (back) to Near (front)
+    [...dws].reverse().forEach(dw => {
+      if (!isDepthOn(dw.id)) return;
+      const col = dw.color || "#4fd1c5";
+      const trk = dw.track || [];
+      const zNorm = Math.min(1.0, Math.log(Math.max(1.0, dw.z || 2.0)) / Math.log(12.0));
+      const isSubj = dw.role === "subject";
+
+      if (isSubj) {
+        // Draw longitudinal polygon ribbons
+        for (let k = 0; k < 16; k += 4) {
+          ctx3.strokeStyle = col + "44";
+          ctx3.lineWidth = 1;
+          ctx3.beginPath();
+          frames.forEach((fr, fi) => {
+            if (!fr.ring || !fr.ring.length) return;
+            const uv = fr.ring[k % fr.ring.length];
+            const p = projPoint(uv[0], uv[1], fi / Math.max(1, nf - 1), zNorm, W, H);
+            if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+          });
+          ctx3.stroke();
+        }
+
+        // Draw cross-section polygon rings along time
+        const step = Math.max(1, Math.floor(nf / 16));
+        frames.forEach((fr, fi) => {
+          if (fi !== fIdx && fi % step !== 0 && !(w.keys || []).includes(fi)) return;
+          if (!fr.ring || fr.ring.length < 3) return;
+          const isCur = (fi === fIdx);
+          ctx3.strokeStyle = isCur ? "#ffffff" : col + "bb";
+          ctx3.fillStyle = isCur ? col + "55" : col + "18";
+          ctx3.lineWidth = isCur ? 2.6 : 1.2;
+          ctx3.beginPath();
+          fr.ring.forEach((uv, j) => {
+            const p = projPoint(uv[0], uv[1], fi / Math.max(1, nf - 1), zNorm, W, H);
+            if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+          });
+          ctx3.closePath();
+          ctx3.fill();
+          ctx3.stroke();
+        });
       } else {
-        ctx3D.strokeStyle = isPast ? "rgba(91, 200, 235, 0.45)" : "rgba(154, 163, 181, 0.18)";
-        ctx3D.lineWidth = 1.0;
-        ctx3D.stroke();
+        // Scenic / Depth-Stratum Worm cross-section ellipses + longitudinal rails
+        const step = Math.max(1, Math.floor(nf / 10));
+        trk.forEach((pt, fi) => {
+          if (fi !== fIdx && fi % step !== 0) return;
+          const tau = fi / Math.max(1, nf - 1);
+          const p = projPoint(pt[0], pt[1], tau, zNorm, W, H);
+          const rx = Math.max(6, pt[2] * p.sc * 0.55);
+          const ry = rx * 0.62;
+          ctx3.strokeStyle = (fi === fIdx) ? "#ffffff" : col + "99";
+          ctx3.fillStyle = col + "18";
+          ctx3.lineWidth = (fi === fIdx) ? 2.0 : 1.0;
+          ctx3.beginPath();
+          ctx3.ellipse(p.sx, p.sy, rx, ry, 0, 0, Math.PI * 2);
+          ctx3.fill();
+          ctx3.stroke();
+        });
       }
-    }
 
-    // 3. Draw Centroid Spine Worldline
-    ctx3D.beginPath();
-    for (let i = 0; i < nf; i++) {
-      const fr = frames[i];
-      const tau = (i / Math.max(1, nf - 1)) - 0.5;
-      const c = useWorld ? fr.c_world : fr.c;
-      const p = project3D(c[0] - 0.5, c[1] - 0.5, tau, W, H);
-      if (i === 0) ctx3D.moveTo(p[0], p[1]);
-      else ctx3D.lineTo(p[0], p[1]);
-    }
-    ctx3D.strokeStyle = "#f2bc57";
-    ctx3D.lineWidth = 3.0;
-    ctx3D.stroke();
+      // Spine of this depth worm
+      ctx3.strokeStyle = col;
+      ctx3.lineWidth = isSubj ? 2.8 : 2.0;
+      ctx3.beginPath();
+      trk.forEach((pt, fi) => {
+        const tau = fi / Math.max(1, nf - 1);
+        const p = projPoint(pt[0], pt[1], tau, zNorm, W, H);
+        if (isSubj) hitNodes.push({ fi, sx: p.sx, sy: p.sy });
+        if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+      });
+      ctx3.stroke();
 
-  } else if (wormViewMode === "braid") {
-    // Mode 3: Articulated Joint Strands & Artin Braid Crossings
-    const jnames = Object.keys(w.joints || {});
-    if (jnames.length === 0) {
-      // Fallback to centroid + left/right polygon extrema strands
-      ctx3D.fillStyle = "#f2bc57";
-      ctx3D.font = "13px sans-serif";
-      ctx3D.fillText("Single-body silhouette worm (switch to Mode 1 for 3D Polygon Tube)", 20, H - 20);
-    }
-
-    jnames.forEach((jn, jIdx) => {
-      const tr = w.joints[jn];
-      const col = JOINT_COLORS[jIdx % JOINT_COLORS.length];
-      ctx3D.beginPath();
-      for (let i = 0; i < tr.length; i++) {
-        const tau = (i / Math.max(1, nf - 1)) - 0.5;
-        const p = project3D(tr[i][0] - 0.5, tr[i][1] - 0.5, tau, W, H);
-        if (i === 0) ctx3D.moveTo(p[0], p[1]);
-        else ctx3D.lineTo(p[0], p[1]);
+      // Label at start of worm
+      if (trk.length) {
+        const p0 = projPoint(trk[0][0], trk[0][1], 0, zNorm, W, H);
+        ctx3.fillStyle = col;
+        ctx3.font = "bold 10px ui-monospace, SFMono-Regular, Menlo, monospace";
+        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 12)}`, p0.sx + 5, p0.sy - 4);
       }
-      ctx3D.strokeStyle = col;
-      ctx3D.lineWidth = 2.6;
-      ctx3D.stroke();
 
-      // Current frame bead on strand
-      const cur = tr[Math.min(fIdx, tr.length - 1)];
-      const curTau = (fIdx / Math.max(1, nf - 1)) - 0.5;
-      const cp = project3D(cur[0] - 0.5, cur[1] - 0.5, curTau, W, H);
-      ctx3D.beginPath();
-      ctx3D.arc(cp[0], cp[1], 5.5, 0, Math.PI * 2);
-      ctx3D.fillStyle = col;
-      ctx3D.fill();
-      ctx3D.fillStyle = "#fff";
-      ctx3D.font = "bold 11px sans-serif";
-      ctx3D.fillText(jn, cp[0] + 7, cp[1] + 3);
-    });
-
-    // Mark Artin Braid Crossing events (σ_i^±1)
-    (w.braid_events || []).forEach(ev => {
-      const tau = (ev.f / Math.max(1, nf - 1)) - 0.5;
-      const p = project3D(ev.u - 0.5, ev.v - 0.5, tau, W, H);
-      ctx3D.beginPath();
-      ctx3D.arc(p[0], p[1], 7, 0, Math.PI * 2);
-      ctx3D.fillStyle = "rgba(245, 101, 101, 0.9)";
-      ctx3D.fill();
-      ctx3D.fillStyle = "#fff";
-      ctx3D.font = "bold 10px monospace";
-      ctx3D.fillText(ev.gen, p[0] + 8, p[1] - 4);
-    });
-
-    // Mark Planted Contact Pillars (M4)
-    (w.planted_contacts || []).forEach(pl => {
-      const t0 = (pl.f_start / Math.max(1, nf - 1)) - 0.5;
-      const t1 = (pl.f_end / Math.max(1, nf - 1)) - 0.5;
-      const p0 = project3D(pl.u - 0.5, pl.v - 0.5, t0, W, H);
-      const p1 = project3D(pl.u - 0.5, pl.v - 0.5, t1, W, H);
-      ctx3D.strokeStyle = "#68d391";
-      ctx3D.lineWidth = 5.0;
-      ctx3D.beginPath();
-      ctx3D.moveTo(p0[0], p0[1]);
-      ctx3D.lineTo(p1[0], p1[1]);
-      ctx3D.stroke();
-    });
-
-  } else if (wormViewMode === "depth") {
-    // Mode 4: 4D Depth Stratigraphy (u, d, τ) — vertical axis is measured Depth d in [0..1]
-    const strataNames = ["Top Sky/Wall", "Middle Plane", "Bottom Ground"];
-    const strataCols = ["rgba(91,200,235,0.4)", "rgba(183,148,244,0.4)", "rgba(104,211,145,0.4)"];
-
-    for (let sIdx = 0; sIdx < 3; sIdx++) {
-      ctx3D.beginPath();
-      for (let i = 0; i < nf; i++) {
-        const fr = frames[i];
-        const tau = (i / Math.max(1, nf - 1)) - 0.5;
-        const dVal = fr.d_strata ? fr.d_strata[sIdx] : 0.5;
-        const p = project3D(fr.c[0] - 0.5, (1.0 - dVal) - 0.5, tau, W, H);
-        if (i === 0) ctx3D.moveTo(p[0], p[1]);
-        else ctx3D.lineTo(p[0], p[1]);
+      // Sub-worms (articulated limbs or individual scenic objects on this depth plane)
+      if (showSubWorms && dw.sub_worms) {
+        dw.sub_worms.forEach(sw => {
+          ctx3.strokeStyle = col + "aa";
+          ctx3.lineWidth = 1.2;
+          ctx3.setLineDash([3, 3]);
+          ctx3.beginPath();
+          if (sw.pts) {
+            sw.pts.forEach((uv, fi) => {
+              const p = projPoint(uv[0], uv[1], fi / Math.max(1, nf - 1), zNorm, W, H);
+              if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+            });
+          } else if (sw.u0 !== undefined) {
+            trk.forEach((pt, fi) => {
+              const du = pt[0] - trk[0][0], dv = pt[1] - trk[0][1];
+              const p = projPoint(sw.u0 + du, sw.v0 + dv, fi / Math.max(1, nf - 1), zNorm, W, H);
+              if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+            });
+          }
+          ctx3.stroke();
+          ctx3.setLineDash([]);
+        });
       }
-      ctx3D.strokeStyle = strataCols[sIdx];
-      ctx3D.lineWidth = 2.0;
-      ctx3D.stroke();
-    }
+    });
+  }
 
-    // Draw Subject Worm at its measured Subject Depth d_subj(τ)
-    for (let i = 0; i < nf; i++) {
-      const fr = frames[i];
-      const tau = (i / Math.max(1, nf - 1)) - 0.5;
-      const p = project3D(fr.c[0] - 0.5, (1.0 - fr.d_subj) - 0.5, tau, W, H);
-      ctx3D.beginPath();
-      ctx3D.arc(p[0], p[1], Math.max(4, fr.r * 38), 0, Math.PI * 2);
-      ctx3D.strokeStyle = (i === fIdx) ? "#5bc8eb" : "rgba(242, 188, 87, 0.55)";
-      ctx3D.lineWidth = (i === fIdx) ? 3.0 : 1.3;
-      ctx3D.stroke();
+  function draw2dStage(w, fIdx) {
+    const W = c2d.width, H = c2d.height;
+    ctx2.clearRect(0, 0, W, H);
+    const frames = w.frames || [];
+    if (!frames.length) return;
+    const fr = frames[Math.min(frames.length - 1, fIdx)];
+    const dws = w.depth_worms || [];
+
+    dws.forEach(dw => {
+      if (!isDepthOn(dw.id)) return;
+      const col = dw.color || "#4fd1c5";
+      const pt = (dw.track || [])[Math.min((dw.track || []).length - 1, fIdx)];
+      if (!pt) return;
+
+      if (dw.role === "subject" && fr.ring && fr.ring.length >= 3) {
+        ctx2.strokeStyle = col;
+        ctx2.fillStyle = col + "24";
+        ctx2.lineWidth = 2.4;
+        ctx2.beginPath();
+        fr.ring.forEach((uv, i) => {
+          if (i === 0) ctx2.moveTo(uv[0] * W, uv[1] * H);
+          else ctx2.lineTo(uv[0] * W, uv[1] * H);
+        });
+        ctx2.closePath();
+        ctx2.fill();
+        ctx2.stroke();
+      } else {
+        const cx = pt[0] * W, cy = pt[1] * H, rx = pt[2] * W * 0.65, ry = pt[2] * H * 0.42;
+        ctx2.strokeStyle = col + "cc";
+        ctx2.lineWidth = 1.6;
+        ctx2.setLineDash([5, 4]);
+        ctx2.beginPath();
+        ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
+        ctx2.stroke();
+        ctx2.setLineDash([]);
+        ctx2.fillStyle = col;
+        ctx2.font = "bold 10px ui-monospace, SFMono-Regular, Menlo, monospace";
+        ctx2.fillText(`z=${dw.z} ${dw.label.slice(0, 14)}`, Math.max(6, cx - rx), Math.max(14, cy - ry - 4));
+      }
+    });
+  }
+
+  function drawAll() {
+    const w = worms[curIdx];
+    if (!w) return;
+    draw3dStage(w, curFrame);
+    draw2dStage(w, curFrame);
+    const dws = w.depth_worms || [];
+    const fr = (w.frames || [])[curFrame] || { f: 0, t: 0 };
+    document.getElementById("telemetryLine").innerHTML =
+      `<b>f${String(fr.f).padStart(2, "0")}</b> (${fr.t.toFixed(2)}s) · <b>${dws.length} Depth Worms</b> (${dws.map(d => "z=" + d.z).join(" → ")}) · ${w.topology.replace(/_/g, " ")} · Rule: <b>${w.best_rule} (${w.best_fit}%)</b>`;
+  }
+
+  function applyMedia(w) {
+    let url = w.comp_mp4 || w.src_mp4 || w.art_mp4 || "";
+    if (srcMode === "src") url = w.src_mp4 || w.comp_mp4 || "";
+    else if (srcMode === "art") url = w.art_mp4 || w.comp_mp4 || "";
+
+    if (!url) {
+      video.pause();
+      video.style.display = "none";
+      fbImg.style.display = "block";
+      fbImg.src = w.strip_img || w.sil_img || "";
+    } else {
+      fbImg.style.display = "none";
+      video.style.display = "block";
+      if (video.src !== url) video.src = url;
     }
   }
 
-  // HUD Legend on 3D Canvas
-  ctx3D.fillStyle = "rgba(11, 13, 18, 0.84)";
-  ctx3D.fillRect(12, 12, 315, 44);
-  ctx3D.strokeStyle = "rgba(242, 188, 87, 0.5)";
-  ctx3D.strokeRect(12, 12, 315, 44);
-  ctx3D.fillStyle = "#f2bc57";
-  ctx3D.font = "bold 12px -apple-system, sans-serif";
-  ctx3D.fillText(`${w.slug.toUpperCase()} · ${w.topology.replace(/_/g, " ")}`, 20, 30);
-  ctx3D.fillStyle = "#9aa3b5";
-  ctx3D.font = "11px monospace";
-  ctx3D.fillText(`Drag to rotate 3D · Gold = Keyframes (K) · Cyan = Frame ${fIdx}`, 20, 47);
+  function selectShot(idx, autoPlay = false) {
+    if (!worms.length) return;
+    curIdx = (idx + worms.length) % worms.length;
+    shotSelect.value = curIdx;
+    const w = worms[curIdx];
+    curFrame = 0;
+    activeDepthIds.clear();
 
-  ctx3D.restore();
-}
+    slider.max = Math.max(1, (w.frames || []).length - 1);
+    slider.value = 0;
+    document.getElementById("gwpLink").href = w.gwp_page || "https://hartswf0.github.io/secondhand-motion/";
 
-/* Update text inspector cards for the active shot & frame */
-function updateInspector() {
-  const w = WORMS[currentWormIdx];
-  if (!w) return;
-  const fIdx = Math.max(0, Math.min(w.frames.length - 1, currentFrameIdx));
-  const fr = w.frames[fIdx];
-  const isKey = w.keys && w.keys.includes(fIdx);
+    renderDepthPills(w);
+    applyMedia(w);
+    drawAll();
 
-  document.getElementById("frameReadout").textContent =
-    `Frame ${fIdx} / ${w.n_frames - 1} (${fr.t.toFixed(2)}s) ${isKey ? "★ KEY" : ""}`;
-  frameSlider.value = fIdx;
+    document.querySelectorAll(".mini-card").forEach(c => {
+      c.classList.toggle("active", parseInt(c.dataset.idx, 10) === curIdx);
+    });
 
-  // Highlight active keyframe pill
-  document.querySelectorAll("#keyBar .key-pill").forEach(btn => {
-    btn.classList.toggle("active", parseInt(btn.dataset.f, 10) === fIdx);
-  });
-
-  // Box 1: Topology & Source
-  const yr = w.source_year ? ` (${w.source_year})` : "";
-  document.getElementById("insTopoTitle").textContent =
-    `${w.topology.replace(/_/g, " ")} · ${w.best_rule.replace(/_/g, " ").toUpperCase()} (${w.best_fit}% Fit)`;
-  document.getElementById("insTopoBody").textContent =
-    `Source: "${w.source_title}"${yr}. ${w.why_clip}`;
-
-  // Box 2: True SAM Polygon Silhouette at Frame f
-  document.getElementById("insMaskTitle").textContent =
-    `Centroid (${fr.c[0].toFixed(3)}, ${fr.c[1].toFixed(3)}) · Radius r = ${fr.r.toFixed(3)}`;
-  document.getElementById("insMaskBody").textContent =
-    `Polygon covers ${(fr.area * 100).toFixed(1)}% of frame area (principal axis angle ${(fr.angle * 57.3).toFixed(1)}°). ` +
-    `World-stabilized centroid: (${fr.c_world[0].toFixed(3)}, ${fr.c_world[1].toFixed(3)}).`;
-
-  // Box 3: 4D Depth & Camera Parallax
-  const dDiff = (fr.d_subj - fr.d_scene).toFixed(3);
-  const planeLabels = (w.planes || []).map(p => `${p.id}(z=${p.z})`).join(", ");
-  document.getElementById("insDepthTitle").textContent =
-    `Subject Depth ${fr.d_subj.toFixed(2)} vs Scene ${fr.d_scene.toFixed(2)} (Δd = ${dDiff})`;
-  document.getElementById("insDepthBody").textContent =
-    `Camera shift at frame ${fIdx}: Δu=${(fr.cam[0]*100).toFixed(1)}%, Δv=${(fr.cam[1]*100).toFixed(1)}%. ` +
-    `Parallax planes: ${planeLabels}.`;
-
-  // Box 4: Articulated Joints, Braid & Planted Contacts
-  const jnames = Object.keys(w.joints || {});
-  document.getElementById("insBraidTitle").textContent =
-    `${jnames.length} Tracked Joints · ${w.braid_count} Braid Crossings · ${w.planted_count} Planted Intervals`;
-  if (w.braid_events && w.braid_events.length) {
-    const evStr = w.braid_events.slice(0, 4).map(e => `f${e.f}:${e.pair}(${e.gen})`).join(", ");
-    document.getElementById("insBraidBody").textContent =
-      `Joints [${jnames.join(", ")}] cross at: ${evStr}.`;
-  } else if (jnames.length) {
-    document.getElementById("insBraidBody").textContent =
-      `Tracked joints [${jnames.join(", ")}] move in parallel laminar paths (Braid word = trivial).`;
-  } else {
-    document.getElementById("insBraidBody").textContent =
-      `Rigid silhouette body tracked via 16-vertex SAM contour rings across ${w.n_frames} frames.`;
-  }
-}
-
-function setFrameIndex(fIdx, syncVideo = true) {
-  const w = WORMS[currentWormIdx];
-  if (!w) return;
-  currentFrameIdx = Math.max(0, Math.min(w.n_frames - 1, fIdx));
-
-  if (syncVideo && videoEl.duration && isFinite(videoEl.duration)) {
-    const targetT = (currentFrameIdx / Math.max(1, w.n_frames - 1)) * videoEl.duration;
-    if (Math.abs(videoEl.currentTime - targetT) > 0.04) {
-      videoEl.currentTime = targetT;
+    if (autoPlay && video.style.display !== "none") {
+      video.play().catch(() => {});
     }
   }
 
-  render2DOverlay();
-  render3DWorm();
-  updateInspector();
-}
+  function renderMiniGrid() {
+    const grid = document.getElementById("miniGrid");
+    const q = (document.getElementById("searchInput").value || "").toLowerCase();
+    grid.innerHTML = "";
 
-function loadWormByIndex(idx, autoPlay = true) {
-  if (!WORMS.length) return;
-  if (idx < 0) idx = WORMS.length - 1;
-  if (idx >= WORMS.length) idx = 0;
-  currentWormIdx = idx;
-  wormSelect.value = idx;
-  currentFrameIdx = 0;
+    worms.forEach((w, idx) => {
+      if (topoFilter !== "ALL" && w.topology !== topoFilter) return;
+      const hay = `${w.slug} ${w.title} ${w.topology} ${w.best_rule}`.toLowerCase();
+      if (q && !hay.includes(q)) return;
 
-  const w = WORMS[idx];
-  document.getElementById("openGwpBtn").href = w.gwp_page;
+      const card = document.createElement("div");
+      card.className = "mini-card" + (idx === curIdx ? " active" : "");
+      card.dataset.idx = idx;
+      const dws = w.depth_worms || [];
+      card.innerHTML = `
+        <canvas width="180" height="58"></canvas>
+        <div class="mini-title">${idx + 1}. ${w.slug}</div>
+        <div class="mini-sub">${dws.length} depths (${dws.map(d => "z=" + d.z).slice(0, 3).join(",")})</div>
+      `;
+      card.addEventListener("click", () => {
+        selectShot(idx, true);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+      grid.appendChild(card);
 
-  // Highlight quick bar pill & rack card
-  document.querySelectorAll("#quickBar .q-pill").forEach(b => {
-    b.classList.toggle("active", b.dataset.slug === w.slug);
+      // Draw multi-depth ribbons in mini canvas
+      const mc = card.querySelector("canvas");
+      const mctx = mc.getContext("2d");
+      const nf = Math.max(1, (w.frames || []).length);
+      dws.forEach((dw, dIdx) => {
+        mctx.strokeStyle = dw.color || "#4fd1c5";
+        mctx.lineWidth = dw.role === "subject" ? 2.0 : 1.2;
+        mctx.beginPath();
+        (dw.track || []).forEach((pt, fi) => {
+          const x = 8 + (fi / Math.max(1, nf - 1)) * 164;
+          const y = 12 + (dIdx / Math.max(1, dws.length - 1)) * 34 + (pt[0] - 0.5) * 18;
+          if (fi === 0) mctx.moveTo(x, y); else mctx.lineTo(x, y);
+        });
+        mctx.stroke();
+      });
+    });
+  }
+
+  // Wire Controls
+  shotSelect.addEventListener("change", () => selectShot(parseInt(shotSelect.value, 10), true));
+  document.getElementById("prevShotBtn").addEventListener("click", () => selectShot(curIdx - 1, true));
+  document.getElementById("nextShotBtn").addEventListener("click", () => selectShot(curIdx + 1, true));
+
+  document.getElementById("playBtn").addEventListener("click", () => {
+    if (video.paused) video.play().catch(() => {});
+    else video.pause();
   });
-  document.querySelectorAll("#wormRack .w-card").forEach(c => {
-    c.classList.toggle("active", parseInt(c.dataset.idx, 10) === idx);
-  });
+  video.addEventListener("play", () => { document.getElementById("playBtn").textContent = "⏸"; });
+  video.addEventListener("pause", () => { document.getElementById("playBtn").textContent = "▶"; });
 
-  frameSlider.max = Math.max(1, w.n_frames - 1);
-  frameSlider.value = 0;
-
-  // Build Keyframe pills
-  const keyBar = document.getElementById("keyBar");
-  keyBar.innerHTML = `<span class="q-label">Tracked Keyframes (K):</span>`;
-  (w.keys || []).forEach((kf, kIdx) => {
-    const btn = document.createElement("button");
-    btn.className = "key-pill" + (kf === 0 ? " active" : "");
-    btn.dataset.f = kf;
-    btn.textContent = `K${String(kIdx + 1).padStart(2, "0")} (f${kf})`;
+  document.querySelectorAll("#projBar .mode-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      videoEl.pause();
-      setFrameIndex(kf, true);
+      const p = btn.dataset.proj;
+      const sg = document.getElementById("stageGrid");
+      if (p === "layout-split") {
+        sg.className = "stage-grid";
+      } else if (p === "layout-3d") {
+        sg.className = "stage-grid view-3d";
+      } else {
+        projMode = p;
+        document.querySelectorAll('#projBar .mode-btn[data-proj="orbit3d"], #projBar .mode-btn[data-proj="lanes"]').forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById("hud3dTag").textContent =
+          projMode === "lanes"
+            ? "Depth × Time Lanes (Z × τ) · Tap any point to seek"
+            : "3D Multi-Depth Worm Volume · Drag to orbit";
+        drawAll();
+      }
     });
-    keyBar.appendChild(btn);
   });
 
-  // Choose video URL
-  const vUrl = (videoSourceMode === "src") ? w.src_mp4 : ((videoSourceMode === "art") ? w.art_mp4 : w.comp_mp4);
-  if (videoEl.src !== vUrl) {
-    videoEl.src = vUrl;
-  }
-
-  setFrameIndex(0, false);
-  if (autoPlay) {
-    videoEl.play().catch(() => {});
-  }
-}
-
-/* Synchronize frame index from video timeupdate */
-videoEl.addEventListener("timeupdate", () => {
-  const w = WORMS[currentWormIdx];
-  if (!w || !videoEl.duration || !isFinite(videoEl.duration)) return;
-  const f = Math.round((videoEl.currentTime / videoEl.duration) * (w.n_frames - 1));
-  if (f !== currentFrameIdx) {
-    setFrameIndex(f, false);
-  }
-});
-
-videoEl.addEventListener("play", () => {
-  document.getElementById("playPauseWormBtn").textContent = "⏸ Pause";
-});
-videoEl.addEventListener("pause", () => {
-  document.getElementById("playPauseWormBtn").textContent = "▶ Play";
-});
-
-/* Controls wiring */
-document.getElementById("playPauseWormBtn").addEventListener("click", () => {
-  if (videoEl.paused) videoEl.play().catch(() => {});
-  else videoEl.pause();
-});
-document.getElementById("stepPrevFrameBtn").addEventListener("click", () => {
-  videoEl.pause();
-  setFrameIndex(currentFrameIdx - 1, true);
-});
-document.getElementById("stepNextFrameBtn").addEventListener("click", () => {
-  videoEl.pause();
-  setFrameIndex(currentFrameIdx + 1, true);
-});
-frameSlider.addEventListener("input", () => {
-  videoEl.pause();
-  setFrameIndex(parseInt(frameSlider.value, 10), true);
-});
-
-wormSelect.addEventListener("change", () => loadWormByIndex(parseInt(wormSelect.value, 10), true));
-document.getElementById("prevWormBtn").addEventListener("click", () => loadWormByIndex(currentWormIdx - 1, true));
-document.getElementById("nextWormBtn").addEventListener("click", () => loadWormByIndex(currentWormIdx + 1, true));
-
-document.querySelectorAll("#quickBar .q-pill").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const idx = WORMS.findIndex(w => w.slug === btn.dataset.slug);
-    if (idx !== -1) loadWormByIndex(idx, true);
+  document.getElementById("toggleSubBtn").addEventListener("click", e => {
+    showSubWorms = !showSubWorms;
+    e.target.classList.toggle("active", showSubWorms);
+    drawAll();
   });
-});
-
-document.querySelectorAll("#videoSourceBar .mini-pill").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll("#videoSourceBar .mini-pill").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    videoSourceMode = btn.dataset.vmode;
-    loadWormByIndex(currentWormIdx, !videoEl.paused);
+  document.getElementById("resetOrbitBtn").addEventListener("click", () => {
+    yaw = -0.58; pitch = 0.34;
+    drawAll();
   });
-});
 
-document.querySelectorAll("#wormModeBar .mini-pill").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll("#wormModeBar .mini-pill").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    wormViewMode = btn.dataset.wmode;
-    render3DWorm();
-  });
-});
-
-function bindToggle(id, getter, setter) {
-  const el = document.getElementById(id);
-  el.addEventListener("click", () => {
-    setter(!getter());
-    el.classList.toggle("active", getter());
-    render2DOverlay();
-  });
-}
-bindToggle("togMask2D", () => showMask2D, v => showMask2D = v);
-bindToggle("togJoints2D", () => showJoints2D, v => showJoints2D = v);
-bindToggle("togCam2D", () => showCam2D, v => showCam2D = v);
-bindToggle("togGrid2D", () => showGrid2D, v => showGrid2D = v);
-
-/* 3D Canvas Drag-to-Rotate */
-canvas3D.addEventListener("pointerdown", e => {
-  isDragging3D = true;
-  dragStartX = e.clientX;
-  dragStartY = e.clientY;
-  canvas3D.setPointerCapture(e.pointerId);
-});
-canvas3D.addEventListener("pointermove", e => {
-  if (!isDragging3D) return;
-  const dx = e.clientX - dragStartX;
-  const dy = e.clientY - dragStartY;
-  dragStartX = e.clientX;
-  dragStartY = e.clientY;
-  yaw3D += dx * 0.008;
-  pitch3D = Math.max(-1.2, Math.min(1.2, pitch3D + dy * 0.008));
-  render3DWorm();
-});
-canvas3D.addEventListener("pointerup", () => { isDragging3D = false; });
-document.getElementById("resetViewBtn").addEventListener("click", () => {
-  yaw3D = 0.62;
-  pitch3D = -0.34;
-  render3DWorm();
-});
-
-/* Render 108-Worm Filterable Rack */
-function renderWormRack() {
-  const q = (document.getElementById("rackSearch").value || "").toLowerCase();
-  const topo = document.getElementById("topoFilter").value;
-  const tier = document.getElementById("tierFilter").value;
-  const rack = document.getElementById("wormRack");
-  rack.innerHTML = "";
-
-  WORMS.forEach((w, idx) => {
-    if (topo !== "ALL" && w.topology !== topo) return;
-    if (tier === "INTEGRATED" && !w.has_integrated) return;
-    if (tier === "BATCH" && !w.has_batch) return;
-    const hay = `${w.slug} ${w.title} ${w.source_title} ${w.topology} ${w.best_rule}`.toLowerCase();
-    if (q && !hay.includes(q)) return;
-
-    const card = document.createElement("div");
-    card.className = "w-card" + (idx === currentWormIdx ? " active" : "");
-    card.dataset.idx = idx;
-    const jCount = Object.keys(w.joints || {}).length;
-    card.innerHTML = `
-      <div class="w-head">
-        <span class="w-slug">${idx + 1}. ${w.slug.replace(/-/g, " ")}</span>
-        <span class="w-topo">${w.topology.replace(/_/g, " ")}</span>
-      </div>
-      <div style="font-size:12px;color:var(--fg);font-weight:600;">${w.title}</div>
-      <div style="font-size:11px;color:var(--muted);">
-        Source: <em>${w.source_title}</em> · ${w.n_frames}f (${w.duration_s}s)<br>
-        Rule: <b style="color:var(--gold);">${w.best_rule.replace(/_/g, " ")} (${w.best_fit}%)</b> ·
-        Joints: ${jCount} · Braids: ${w.braid_count}
-      </div>
-    `;
-    card.addEventListener("click", () => {
-      loadWormByIndex(idx, true);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+  document.querySelectorAll("#srcSwitch .hud-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("#srcSwitch .hud-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      srcMode = btn.dataset.src;
+      if (worms[curIdx]) applyMedia(worms[curIdx]);
     });
-    rack.appendChild(card);
   });
-}
 
-document.getElementById("rackSearch").addEventListener("input", renderWormRack);
-document.getElementById("topoFilter").addEventListener("change", renderWormRack);
-document.getElementById("tierFilter").addEventListener("change", renderWormRack);
+  slider.addEventListener("input", () => {
+    curFrame = parseInt(slider.value, 10) || 0;
+    const w = worms[curIdx];
+    if (w && video.duration) {
+      video.currentTime = (curFrame / Math.max(1, w.frames.length - 1)) * video.duration;
+    }
+    drawAll();
+  });
+  document.getElementById("stepPrevBtn").addEventListener("click", () => {
+    video.pause();
+    curFrame = Math.max(0, curFrame - 1);
+    slider.value = curFrame;
+    drawAll();
+  });
+  document.getElementById("stepNextBtn").addEventListener("click", () => {
+    video.pause();
+    const w = worms[curIdx];
+    curFrame = Math.min((w ? w.frames.length : 1) - 1, curFrame + 1);
+    slider.value = curFrame;
+    drawAll();
+  });
 
-/* Load 108 Worms JSON */
-fetch(DATA_URL)
-  .then(r => r.json())
-  .then(data => {
-    WORMS = data.worms || [];
-    wormSelect.innerHTML = "";
-    WORMS.forEach((w, idx) => {
-      const opt = document.createElement("option");
-      opt.value = idx;
-      const tag = w.has_integrated ? "★" : (w.has_batch ? "◆" : "○");
-      opt.textContent = `${tag} ${idx + 1}. ${w.slug.toUpperCase()} — ${w.title} (${w.n_frames}f · ${w.topology.replace(/_/g, " ")})`;
-      wormSelect.appendChild(opt);
+  video.addEventListener("timeupdate", () => {
+    const w = worms[curIdx];
+    if (!w || !w.frames || !video.duration) return;
+    const f = Math.round((video.currentTime / video.duration) * (w.frames.length - 1));
+    const clamped = Math.max(0, Math.min(w.frames.length - 1, f));
+    if (clamped !== curFrame) {
+      curFrame = clamped;
+      slider.value = curFrame;
+      drawAll();
+    }
+  });
+
+  // 3D Orbit Drag & Tap-to-Seek
+  c3d.addEventListener("pointerdown", e => {
+    dragging = true; moved = false; lx = e.clientX; ly = e.clientY;
+    c3d.setPointerCapture(e.pointerId);
+  });
+  c3d.addEventListener("pointermove", e => {
+    if (!dragging) return;
+    const dx = e.clientX - lx, dy = e.clientY - ly;
+    if (Math.abs(dx) > 2 || Math.abs(dy) > 2) moved = true;
+    if (projMode === "orbit3d") {
+      yaw += dx * 0.008;
+      pitch = Math.max(-1.1, Math.min(1.1, pitch + dy * 0.008));
+      lx = e.clientX; ly = e.clientY;
+      drawAll();
+    }
+  });
+  c3d.addEventListener("pointerup", e => {
+    dragging = false;
+    if (!moved && worms[curIdx] && hitNodes.length) {
+      const rect = c3d.getBoundingClientRect();
+      const mx = (e.clientX - rect.left) * (c3d.width / rect.width);
+      const my = (e.clientY - rect.top) * (c3d.height / rect.height);
+      let best = -1, bestD = 9999;
+      hitNodes.forEach(n => {
+        const d = Math.hypot(n.sx - mx, n.sy - my);
+        if (d < bestD) { bestD = d; best = n.fi; }
+      });
+      if (best !== -1 && bestD < 52) {
+        curFrame = best;
+        slider.value = curFrame;
+        if (video.duration) video.currentTime = (curFrame / Math.max(1, worms[curIdx].frames.length - 1)) * video.duration;
+        drawAll();
+      }
+    }
+  });
+
+  document.querySelectorAll("#topoFilterBar .mode-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("#topoFilterBar .mode-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      topoFilter = btn.dataset.topo;
+      renderMiniGrid();
     });
-    renderWormRack();
-    loadWormByIndex(0, false);
   });
+  document.getElementById("searchInput").addEventListener("input", renderMiniGrid);
+
+  fetch(PRIMARY_JSON)
+    .then(r => r.ok ? r.json() : fetch(FALLBACK_JSON).then(r2 => r2.json()))
+    .catch(() => fetch(FALLBACK_JSON).then(r2 => r2.json()))
+    .then(data => {
+      worms = data.worms || [];
+      shotSelect.innerHTML = "";
+      worms.forEach((w, idx) => {
+        const opt = document.createElement("option");
+        opt.value = idx;
+        const nD = (w.depth_worms || []).length;
+        opt.textContent = `${idx + 1}. ${w.slug} (${nD} Depth Worms · ${w.n_frames}f)`;
+        shotSelect.appendChild(opt);
+      });
+      renderMiniGrid();
+      const gIdx = worms.findIndex(w => w.slug === "giraffe");
+      selectShot(gIdx !== -1 ? gIdx : 0, false);
+    });
+})();
 </script>
 </body>
 </html>
