@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>4D Multiplane Cutout Worms (108 Shots)</title>
+<title>Disentangled 4D Multiplane Cutout Worms (108 Shots)</title>
 <style>
   :root {
     --bg: #07090e;
@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 5px;
-    padding: 4px 8px;
+    padding: 5px 8px;
     background: var(--panel);
     border-bottom: 1px solid var(--border);
   }
@@ -102,76 +102,13 @@
     font-weight: 700;
   }
 
-  /* Row 2: LIVE VISUAL DEPTH LAYER STRIP (Shows what is inside each depth layer!) */
-  .depth-bar {
-    flex: none;
-    display: flex;
-    align-items: stretch;
-    gap: 5px;
-    padding: 4px 8px;
-    background: #0a0d14;
-    border-bottom: 1px solid var(--border);
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .depth-bar::-webkit-scrollbar { display: none; }
-  .layer-card {
-    flex: 0 0 auto;
-    width: 108px;
-    background: #121723;
-    border: 1.5px solid #252f45;
-    border-radius: 6px;
-    padding: 3px 4px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    opacity: 0.48;
-    transition: opacity 0.12s, border-color 0.12s;
-  }
-  .layer-card.active {
-    opacity: 1;
-    background: #171f30;
-  }
-  .layer-card.solo {
-    opacity: 1;
-    background: rgba(255, 209, 102, 0.14);
-    box-shadow: 0 0 0 1px var(--gold);
-  }
-  .lc-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: var(--mono);
-    font-size: 9.5px;
-    font-weight: 700;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .layer-card canvas {
-    width: 100%;
-    height: 32px;
-    display: block;
-    background: #06080e;
-    border-radius: 3px;
-    border: 1px solid rgba(255,255,255,0.07);
-  }
-  .lc-sub {
-    font-size: 9px;
-    color: var(--muted);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* Row 3: Side-by-Side Stage (3D Cutout Worm / 3D Planes + 2D Cutout Stage) */
+  /* Row 2: Side-by-Side Disentangled Worm Stage + 2D Cutout Stage (Generous 52dvh height!) */
   .stage-row {
-    flex: 0 0 42dvh;
-    min-height: 185px;
-    max-height: 350px;
+    flex: 0 0 52dvh;
+    min-height: 230px;
+    max-height: 440px;
     display: grid;
-    grid-template-columns: 1.22fr 0.78fr;
+    grid-template-columns: 1.32fr 0.68fr;
     background: #030508;
     border-bottom: 1px solid var(--border);
   }
@@ -192,7 +129,7 @@
     display: block;
   }
   .pane-3d canvas {
-    cursor: grab;
+    cursor: pointer;
     touch-action: none;
   }
   .pane-2d video {
@@ -202,7 +139,7 @@
     position: absolute;
     top: 4px;
     left: 5px;
-    background: rgba(7, 9, 14, 0.86);
+    background: rgba(7, 9, 14, 0.88);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 4px;
     padding: 2px 6px;
@@ -236,8 +173,15 @@
     background: rgba(255, 209, 102, 0.16);
     font-weight: 700;
   }
+  .tiny-btn.solo-reset {
+    background: var(--gold);
+    color: #07090e;
+    border-color: var(--gold);
+    font-weight: 700;
+    display: none;
+  }
 
-  /* Row 4: Scrubber + Telemetry Bar */
+  /* Row 3: Scrubber + Telemetry Bar */
   .scrub-bar {
     flex: none;
     display: flex;
@@ -265,7 +209,7 @@
   }
   .stat-txt b { color: var(--fg); }
 
-  /* Row 5: Filter + Internal Scrollable 108-Shot Grid */
+  /* Row 4: Filter + Internal Scrollable 108-Shot Grid */
   .filter-bar {
     flex: none;
     display: flex;
@@ -348,7 +292,7 @@
 </head>
 <body>
 
-<!-- ROW 1: COMPACT SHOT SELECTOR + 3D VIEW MODE -->
+<!-- ROW 1: COMPACT SHOT SELECTOR + DISENTANGLED VIEW MODE -->
 <div class="top-bar">
   <a class="m-btn" href="../index.html">← Rack</a>
   <div class="shot-nav">
@@ -358,24 +302,21 @@
     <button class="btn" id="nextBtn">▶</button>
   </div>
   <div class="mode-group" id="modeBar">
-    <button class="m-btn active" data-proj="orbit3d" title="3D Spatiotemporal Cutout Worm">Cutout Worm</button>
-    <button class="m-btn" data-proj="box3d" title="3D Multiplane Cel Stack (like giraffe-walks-past)">3D Planes</button>
-    <button class="m-btn" data-proj="lanes" title="Horizontal Multiplane Swimlanes">Z×τ</button>
-    <button class="m-btn" data-layout="toggle-full">Full 3D</button>
+    <button class="m-btn active" data-proj="stack" title="Disentangled Depth Worm Rows (One clean worm track per depth layer)">Disentangled</button>
+    <button class="m-btn" data-proj="box3d" title="Rotatable 3D Multiplane Cel Stack">3D Planes</button>
+    <button class="m-btn" data-proj="orbit3d" title="Rotatable 3D Exploded Cutout Worm">3D Worm</button>
+    <button class="m-btn" data-layout="toggle-full">Full</button>
   </div>
 </div>
 
-<!-- ROW 2: VISUAL DEPTH LAYER CARDS (Each card shows a live preview of what is in that depth layer!) -->
-<div class="depth-bar" id="depthBar"></div>
-
-<!-- ROW 3: SIDE-BY-SIDE 3D STAGE + 2D CUTOUT STAGE -->
+<!-- ROW 2: SIDE-BY-SIDE DISENTANGLED WORM STAGE + 2D CUTOUT STAGE -->
 <div class="stage-row" id="stageRow">
   <div class="pane-3d">
-    <canvas id="canvas3d" width="680" height="400"></canvas>
-    <div class="hud-pill" id="hud3d">3D Cutout Worm · Tap any Layer Card above to solo</div>
+    <canvas id="canvas3d" width="760" height="460"></canvas>
+    <div class="hud-pill" id="hud3d">Disentangled Depth Worms · Tap any worm row to solo</div>
     <div class="hud-Corner">
-      <button class="tiny-btn active" id="texBtn">Video Cutouts</button>
-      <button class="tiny-btn" id="resetBtn">Reset</button>
+      <button class="tiny-btn solo-reset" id="unsoloBtn">← All Disentangled Worms</button>
+      <button class="tiny-btn active" id="texBtn">Cutouts</button>
     </div>
   </div>
   <div class="pane-2d">
@@ -384,14 +325,13 @@
     <div class="hud-pill" id="hud2d">SAM Video Cutout</div>
     <div class="hud-Corner" id="srcBar">
       <button class="tiny-btn active" data-src="cutout" title="Clean SAM video cutout over dimmed frame">Cutout</button>
-      <button class="tiny-btn" data-src="scene" title="SAM video cutout + multiplane drawings in depth order">Cutout+Planes</button>
-      <button class="tiny-btn" data-src="cel" title="Clean multiplane vector cel sheet">Cel Sheet</button>
+      <button class="tiny-btn" data-src="scene" title="SAM video cutout + multiplane drawings in depth order">Planes</button>
       <button class="tiny-btn" data-src="src" title="Raw unannotated footage">Raw</button>
     </div>
   </div>
 </div>
 
-<!-- ROW 4: SCRUBBER + 1-LINE TELEMETRY -->
+<!-- ROW 3: SCRUBBER + 1-LINE TELEMETRY -->
 <div class="scrub-bar">
   <button class="btn" id="stepPrev" style="padding:2px 6px;">-1f</button>
   <input type="range" class="scrubber" id="slider" min="0" max="24" value="0" step="1">
@@ -399,7 +339,7 @@
   <span class="stat-txt" id="statTxt">Loading...</span>
 </div>
 
-<!-- ROW 5: FILTER + INTERNAL SCROLLABLE 108-SHOT GRID -->
+<!-- ROW 4: FILTER + INTERNAL SCROLLABLE 108-SHOT GRID -->
 <div class="filter-bar">
   <div class="filter-pills" id="topoBar">
     <button class="m-btn active" data-topo="ALL">All 108</button>
@@ -418,21 +358,22 @@
 
 <script>
 (function() {
-  const PRIMARY_JSON = "../data/worms_108.json?v=7";
-  const FALLBACK_JSON = "https://hartswf0.github.io/secondhand-motion/data/worms_108.json?v=7";
+  const PRIMARY_JSON = "../data/worms_108.json?v=8";
+  const FALLBACK_JSON = "https://hartswf0.github.io/secondhand-motion/data/worms_108.json?v=8";
 
   let worms = [];
   let curIdx = 0;
   let curFrame = 0;
-  let projMode = "orbit3d";
+  let projMode = "stack"; // DEFAULT = "stack" (Every depth worm cleanly disentangled!)
   let srcMode = "cutout";
   let showMaskVid = true;
   let isPlaying = false;
   let lastTick = 0;
-  let soloLayerId = null; // null = All Layers, or specific dw.id when user taps a Layer Card
+  let soloLayerId = null; // null = Show all disentangled worm rows; or dw.id when a row is tapped
   let topoFilter = "ALL";
   let yaw = -0.48, pitch = 0.24;
   let dragging = false, lx = 0, ly = 0, moved = false;
+  let bandHitBoxes = []; // { id, y0, y1, xTrack0, xTrack1 } for tapping/scrubbing disentangled rows
   let hitNodes = [];
   const frameCache = {};
 
@@ -443,6 +384,7 @@
   const video = document.getElementById("video2d");
   const shotSelect = document.getElementById("shotSelect");
   const slider = document.getElementById("slider");
+  const unsoloBtn = document.getElementById("unsoloBtn");
 
   function getFrameDir(w) {
     if (!w) return "";
@@ -460,10 +402,7 @@
     if (bag[fi]) return (bag[fi].complete && bag[fi].naturalWidth > 0) ? bag[fi] : null;
     const im = new Image();
     im.onload = () => {
-      if (worms[curIdx] && worms[curIdx].slug === w.slug) {
-        drawLayerCardThumbs(w, curFrame);
-        drawAll();
-      }
+      if (worms[curIdx] && worms[curIdx].slug === w.slug) drawAll();
     };
     im.src = `${fDir}/f${String(fi).padStart(3, "0")}.jpg`;
     bag[fi] = im;
@@ -473,11 +412,7 @@
   function preloadShotFrames(w) {
     if (!w) return;
     const nf = (w.frames || []).length;
-    ensureFrameImg(w, 0);
-    ensureFrameImg(w, Math.floor(nf / 2));
-    ensureFrameImg(w, Math.max(0, nf - 1));
-    (w.keys || []).forEach(k => { if (k >= 0 && k < nf) ensureFrameImg(w, k); });
-    for (let i = 0; i < nf; i += 2) ensureFrameImg(w, i);
+    for (let i = 0; i < nf; i++) ensureFrameImg(w, i);
   }
 
   function getMediaForFrame(w, fi) {
@@ -525,151 +460,254 @@
     return soloLayerId === null || soloLayerId === id;
   }
 
-  /* ======================================================================== */
-  /* ROW 2: VISUAL DEPTH LAYER CARDS (Shows exactly what is in each layer!)   */
-  /* ======================================================================== */
-  function renderDepthPills(w) {
-    const bar = document.getElementById("depthBar");
-    const dws = w.depth_worms || [];
-    bar.innerHTML = "";
-
-    // 'All Layers' reset button
-    const allCard = document.createElement("div");
-    allCard.className = "layer-card" + (soloLayerId === null ? " solo" : " active");
-    allCard.style.width = "78px";
-    allCard.style.justifyContent = "center";
-    allCard.style.alignItems = "center";
-    allCard.innerHTML = `
-      <div style="font:700 10px var(--mono);color:var(--gold);">ALL ${dws.length}</div>
-      <div style="font:600 9px var(--sans);color:var(--fg);">Layers</div>
-      <div style="font:500 8.5px var(--mono);color:var(--muted);">Tap to reset</div>
-    `;
-    allCard.onclick = () => {
-      soloLayerId = null;
-      renderDepthPills(w);
-      drawAll();
-    };
-    bar.appendChild(allCard);
-
-    // One Visual Layer Card per Depth Plane / Parsed Part (sorted Near -> Far)
-    dws.forEach((dw, idx) => {
-      const isSolo = (soloLayerId === dw.id);
-      const isOn = isLayerActive(dw.id);
-      const card = document.createElement("div");
-      card.className = "layer-card" + (isSolo ? " solo" : (isOn ? " active" : ""));
-      card.style.borderColor = isSolo ? "#ffd166" : (isOn ? (dw.color + "88") : "#252f45");
-      const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig: ","").slice(0, 11);
-      card.innerHTML = `
-        <div class="lc-head" style="color:${dw.color}">
-          <span>z=${dw.z} ${shortLbl}</span>
-        </div>
-        <canvas width="100" height="32" data-dwidx="${idx}"></canvas>
-        <div class="lc-sub" title="${dw.desc || dw.label}">${dw.desc || dw.label}</div>
-      `;
-      card.onclick = () => {
-        soloLayerId = (soloLayerId === dw.id) ? null : dw.id;
-        renderDepthPills(w);
-        drawAll();
-      };
-      bar.appendChild(card);
-    });
-
-    drawLayerCardThumbs(w, curFrame);
+  function setSoloLayer(id) {
+    soloLayerId = id;
+    if (unsoloBtn) unsoloBtn.style.display = soloLayerId ? "inline-block" : "none";
+    drawAll();
   }
 
-  function drawLayerCardThumbs(w, fIdx) {
-    const bar = document.getElementById("depthBar");
-    if (!bar || !w) return;
+  /* ======================================================================== */
+  /* HELPER: Draw a Tightly-Cropped SAM Video Cutout Stamp at (cx, cy, w, h)  */
+  /* ======================================================================== */
+  function drawCroppedCutoutStamp(ctx, media, ringUV, cx, cy, maxW, maxH, borderCol, isCur, alpha) {
+    if (!ringUV || ringUV.length < 3) return false;
+    let u0 = 1, v0 = 1, u1 = 0, v1 = 0;
+    ringUV.forEach(([u, v]) => {
+      if (u < u0) u0 = u; if (u > u1) u1 = u;
+      if (v < v0) v0 = v; if (v > v1) v1 = v;
+    });
+    const pad = 0.025;
+    u0 = Math.max(0, u0 - pad); v0 = Math.max(0, v0 - pad);
+    u1 = Math.min(1, u1 + pad); v1 = Math.min(1, v1 + pad);
+    const bw = Math.max(0.06, u1 - u0), bh = Math.max(0.06, v1 - v0);
+    const aspect = (bw * 4) / (bh * 3);
+    let sw = maxH * aspect, sh = maxH;
+    if (sw > maxW) { sw = maxW; sh = maxW / Math.max(0.2, aspect); }
+    const x0 = cx - sw * 0.5, y0 = cy - sh * 0.5;
+    const mapX = u => x0 + ((u - u0) / bw) * sw;
+    const mapY = v => y0 + ((v - v0) / bh) * sh;
+
+    ctx.save();
+    ctx.beginPath();
+    ringUV.forEach(([u, v], i) => {
+      if (i === 0) ctx.moveTo(mapX(u), mapY(v)); else ctx.lineTo(mapX(u), mapY(v));
+    });
+    ctx.closePath();
+
+    let drewImg = false;
+    if (media && showMaskVid) {
+      const mw = media.videoWidth || media.naturalWidth || 0;
+      const mh = media.videoHeight || media.naturalHeight || 0;
+      if (mw > 0 && mh > 0) {
+        ctx.save();
+        ctx.clip();
+        ctx.globalAlpha = alpha;
+        try {
+          ctx.drawImage(media, u0 * mw, v0 * mh, bw * mw, bh * mh, x0, y0, sw, sh);
+          drewImg = true;
+        } catch(e) {}
+        ctx.restore();
+      }
+    }
+    if (!drewImg) {
+      ctx.fillStyle = isCur ? (borderCol + "55") : (borderCol + "22");
+      ctx.fill();
+    }
+    ctx.strokeStyle = isCur ? "#ffd166" : borderCol;
+    ctx.lineWidth = isCur ? 2.8 : 1.5;
+    ctx.stroke();
+    if (isCur) {
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 1.0;
+      ctx.stroke();
+    }
+    ctx.restore();
+    return true;
+  }
+
+  /* ======================================================================== */
+  /* HELPER: Draw Auto-Fitted Layer Vector Objects Stamp at (cx, cy, w, h)    */
+  /* ======================================================================== */
+  function drawCroppedStrokesStamp(ctx, strokesUV, cx, cy, maxW, maxH, col, isCur) {
+    if (!strokesUV || !strokesUV.length) return;
+    let u0 = 1e9, v0 = 1e9, u1 = -1e9, v1 = -1e9;
+    strokesUV.forEach(st => st.forEach(([u, v]) => {
+      if (u < u0) u0 = u; if (u > u1) u1 = u;
+      if (v < v0) v0 = v; if (v > v1) v1 = v;
+    }));
+    if (u0 > u1) return;
+    const bw = Math.max(0.06, u1 - u0), bh = Math.max(0.06, v1 - v0);
+    const sc = Math.min(maxW / bw, maxH / bh);
+    const mu = 0.5 * (u0 + u1), mv = 0.5 * (v0 + v1);
+
+    ctx.save();
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.strokeStyle = isCur ? "#ffffff" : col;
+    ctx.lineWidth = isCur ? 2.1 : 1.35;
+    ctx.globalAlpha = isCur ? 1.0 : 0.78;
+    strokesUV.forEach(st => {
+      if (st.length < 2) return;
+      ctx.beginPath();
+      st.forEach(([u, v], i) => {
+        const x = cx + (u - mu) * sc;
+        const y = cy + (v - mv) * sc;
+        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+    });
+    ctx.restore();
+  }
+
+  /* ======================================================================== */
+  /* MODE 1 (DEFAULT): DISENTANGLED DEPTH WORM STACK (`stack`)                */
+  /* Every depth layer gets its own non-overlapping horizontal Worm Row!      */
+  /* ======================================================================== */
+  function drawDisentangledStack(w, fIdx, W, H) {
     const frames = w.frames || [];
-    const fr = frames[Math.min(frames.length - 1, fIdx)] || frames[0] || {};
-    const media = getMediaForFrame(w, fIdx);
+    const nf = frames.length;
     const dws = w.depth_worms || [];
+    bandHitBoxes = [];
+    if (!dws.length) return;
 
-    bar.querySelectorAll("canvas[data-dwidx]").forEach(cv => {
-      const idx = parseInt(cv.dataset.dwidx, 10);
-      const dw = dws[idx];
-      if (!dw) return;
-      const g = cv.getContext("2d");
-      const cw = cv.width, ch = cv.height;
-      g.clearRect(0, 0, cw, ch);
-      g.fillStyle = "#06080e";
-      g.fillRect(0, 0, cw, ch);
+    // Order from Far (Sky z=10 at top) to Near (Grass z=1.2 at bottom)
+    const rows = [...dws].reverse();
+    const padL = 138, padR = 14, padT = 26, padB = 8;
+    const plotW = W - padL - padR;
+    const availH = H - padT - padB;
 
-      const trk = dw.track || [];
-      const pt = trk[Math.min(trk.length - 1, fIdx)] || [dw.u0 || 0.5, dw.v0 || 0.5, dw.r0 || 0.15];
+    // Give the Subject Cutout Worm row 1.75x weight so its SAM video cutouts are large and unmistakable!
+    const weights = rows.map(dw => dw.role === "subject" ? 1.75 : 1.0);
+    const totalWeight = weights.reduce((a, b) => a + b, 0);
+
+    // Draw Playhead Time Cursor across all disentangled worm rows
+    const curX = padL + (fIdx / Math.max(1, nf - 1)) * plotW;
+
+    let yCursor = padT;
+    rows.forEach((dw, rIdx) => {
+      const rowH = (weights[rIdx] / totalWeight) * availH;
+      const y0 = yCursor;
+      const y1 = yCursor + rowH - 3;
+      const bandH = Math.max(24, y1 - y0);
+      const yMid = 0.5 * (y0 + y1);
+      yCursor += rowH;
+
+      bandHitBoxes.push({ id: dw.id, y0, y1, xTrack0: padL, xTrack1: padL + plotW });
+
       const col = dw.color || "#00f5d4";
+      const isSubj = (dw.role === "subject");
+      const trk = dw.track || [];
 
-      if (dw.role === "subject" && fr.ring && fr.ring.length >= 3) {
-        // Compute bounding box of subject SAM ring so we crop & zoom right into the subject cutout!
-        let u0 = 1, v0 = 1, u1 = 0, v1 = 0;
-        fr.ring.forEach(([u, v]) => {
-          if (u < u0) u0 = u; if (u > u1) u1 = u;
-          if (v < v0) v0 = v; if (v > v1) v1 = v;
-        });
-        const pad = 0.05;
-        u0 = Math.max(0, u0 - pad); v0 = Math.max(0, v0 - pad);
-        u1 = Math.min(1, u1 + pad); v1 = Math.min(1, v1 + pad);
-        const su = Math.max(0.12, u1 - u0), sv = Math.max(0.12, v1 - v0);
-        const mapX = u => ((u - u0) / su) * (cw - 8) + 4;
-        const mapY = v => ((v - v0) / sv) * (ch - 4) + 2;
+      // 1. Disentangled Row Background Card
+      ctx3.fillStyle = isSubj ? "rgba(255, 209, 102, 0.06)" : "rgba(18, 24, 38, 0.65)";
+      ctx3.fillRect(4, y0, W - 8, bandH);
+      ctx3.strokeStyle = isSubj ? "rgba(255, 209, 102, 0.55)" : (col + "55");
+      ctx3.lineWidth = isSubj ? 1.5 : 1.0;
+      ctx3.strokeRect(4, y0, W - 8, bandH);
 
-        if (media) {
-          const mw = media.videoWidth || media.naturalWidth || 384;
-          const mh = media.videoHeight || media.naturalHeight || 288;
-          g.save();
-          g.beginPath();
-          fr.ring.forEach(([u, v], i) => {
-            if (i === 0) g.moveTo(mapX(u), mapY(v)); else g.lineTo(mapX(u), mapY(v));
-          });
-          g.closePath();
-          g.clip();
-          try {
-            g.drawImage(media, u0 * mw, v0 * mh, su * mw, sv * mh, 4, 2, cw - 8, ch - 4);
-          } catch(e) {}
-          g.restore();
+      // 2. Left Header Column (Layer Z, Name, Contents Description, Tap-to-Solo hint)
+      ctx3.fillStyle = col;
+      ctx3.font = "bold 10.5px monospace";
+      const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig: ","").slice(0, 12);
+      ctx3.fillText(`z=${dw.z} ${shortLbl}`, 10, yMid - 3);
+
+      ctx3.fillStyle = isSubj ? "#ffd166" : "#b0bacd";
+      ctx3.font = isSubj ? "bold 9.5px sans-serif" : "9.5px sans-serif";
+      const descTxt = (dw.desc || dw.label).slice(0, 19);
+      ctx3.fillText(descTxt, 10, yMid + 10);
+
+      // Divider between label and worm track
+      ctx3.strokeStyle = "rgba(255,255,255,0.08)";
+      ctx3.beginPath(); ctx3.moveTo(padL - 4, y0 + 2); ctx3.lineTo(padL - 4, y1 - 2); ctx3.stroke();
+
+      if (!trk.length) return;
+
+      // 3. Compute the Disentangled Worm Spine & Thickness Envelope inside this band
+      let vMin = 1e9, vMax = -1e9, uStart = trk[0][0], rMax = 0.04;
+      trk.forEach(pt => {
+        if (pt[1] < vMin) vMin = pt[1];
+        if (pt[1] > vMax) vMax = pt[1];
+        if (pt[2] > rMax) rMax = pt[2];
+      });
+      const vMean = 0.5 * (vMin + vMax);
+      const vSpan = Math.max(0.10, vMax - vMin);
+
+      const spinePts = trk.map((pt, fi) => {
+        const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
+        // Combine vertical motion + horizontal parallax drift so static-v panning planes show their shear curve!
+        const dyNorm = isSubj
+          ? ((pt[1] - vMean) / vSpan) * 0.42
+          : ((pt[0] - uStart) * 0.85 + (pt[1] - vMean) * 0.5);
+        const ty = Math.max(y0 + 8, Math.min(y1 - 8, yMid + dyNorm * (bandH * 0.55)));
+        const rad = Math.max(4, Math.min(bandH * 0.38, (pt[2] / Math.max(0.05, rMax)) * (bandH * (isSubj ? 0.34 : 0.24))));
+        return { tx, ty, rad, pt, fi };
+      });
+
+      // Draw translucent 3D Worm Tube Envelope (Top Rim -> Bottom Rim)
+      ctx3.beginPath();
+      spinePts.forEach((s, i) => { if (i === 0) ctx3.moveTo(s.tx, s.ty - s.rad); else ctx3.lineTo(s.tx, s.ty - s.rad); });
+      for (let i = spinePts.length - 1; i >= 0; i--) {
+        const s = spinePts[i];
+        ctx3.lineTo(s.tx, s.ty + s.rad);
+      }
+      ctx3.closePath();
+      ctx3.fillStyle = col + "24";
+      ctx3.fill();
+      ctx3.strokeStyle = col + "88";
+      ctx3.lineWidth = 1.2;
+      ctx3.stroke();
+
+      // Draw Center Trajectory Spine
+      ctx3.beginPath();
+      spinePts.forEach((s, i) => { if (i === 0) ctx3.moveTo(s.tx, s.ty); else ctx3.lineTo(s.tx, s.ty); });
+      ctx3.strokeStyle = col;
+      ctx3.lineWidth = isSubj ? 2.4 : 1.6;
+      ctx3.stroke();
+
+      // 4. Stamp Disentangled Cutouts / Vector Objects along the Worm Track!
+      const nStamps = isSubj ? 6 : 5;
+      const stampFrames = [];
+      for (let k = 0; k < nStamps; k++) {
+        stampFrames.push(Math.round((k / (nStamps - 1)) * (nf - 1)));
+      }
+      if (!stampFrames.includes(fIdx)) stampFrames.push(fIdx);
+      stampFrames.sort((a, b) => a - b);
+
+      // Draw non-current stamps first, then curF stamp on top
+      const orderedStamps = stampFrames.filter(f => f !== fIdx).concat([fIdx]);
+      orderedStamps.forEach(fi => {
+        const isCur = (fi === fIdx);
+        const sp = spinePts[Math.min(spinePts.length - 1, fi)];
+        if (!sp) return;
+        const fr = frames[Math.min(nf - 1, fi)] || {};
+
+        if (isSubj && fr.ring && fr.ring.length >= 3) {
+          const media = getMediaForFrame(w, fi);
+          const maxH = bandH * (isCur ? 0.92 : 0.78);
+          const maxW = (plotW / nStamps) * (isCur ? 1.15 : 0.92);
+          drawCroppedCutoutStamp(ctx3, media, fr.ring, sp.tx, sp.ty, maxW, maxH, col, isCur, isCur ? 1.0 : 0.78);
+        } else {
+          const strokesUV = getPlaneStrokesUV(dw, fr, sp.pt);
+          const maxH = bandH * (isCur ? 0.84 : 0.68);
+          const maxW = (plotW / nStamps) * 0.85;
+          drawCroppedStrokesStamp(ctx3, strokesUV, sp.tx, sp.ty, maxW, maxH, col, isCur);
         }
-        g.strokeStyle = col;
-        g.lineWidth = 1.6;
-        g.beginPath();
-        fr.ring.forEach(([u, v], i) => {
-          if (i === 0) g.moveTo(mapX(u), mapY(v)); else g.lineTo(mapX(u), mapY(v));
-        });
-        g.closePath();
-        g.stroke();
-        return;
-      }
-
-      // For scenic planes & parsed drawing parts: auto-fit their strokes into the card canvas!
-      const strokesUV = getPlaneStrokesUV(dw, fr, pt);
-      if (strokesUV.length) {
-        let u0 = 1e9, v0 = 1e9, u1 = -1e9, v1 = -1e9;
-        strokesUV.forEach(st => st.forEach(([u, v]) => {
-          if (u < u0) u0 = u; if (u > u1) u1 = u;
-          if (v < v0) v0 = v; if (v > v1) v1 = v;
-        }));
-        const su = Math.max(0.08, u1 - u0), sv = Math.max(0.08, v1 - v0);
-        const sc = Math.min((cw - 10) / su, (ch - 6) / sv);
-        const cx = 0.5 * (u0 + u1), cy = 0.5 * (v0 + v1);
-        g.strokeStyle = col;
-        g.lineWidth = 1.5;
-        g.lineCap = "round";
-        g.lineJoin = "round";
-        strokesUV.forEach(st => {
-          if (st.length < 2) return;
-          g.beginPath();
-          st.forEach(([u, v], i) => {
-            const x = cw * 0.5 + (u - cx) * sc;
-            const y = ch * 0.5 + (v - cy) * sc;
-            if (i === 0) g.moveTo(x, y); else g.lineTo(x, y);
-          });
-          g.stroke();
-        });
-      }
+      });
     });
+
+    // Vertical Gold Playhead Line across all rows
+    ctx3.strokeStyle = "rgba(255, 209, 102, 0.85)";
+    ctx3.lineWidth = 1.5;
+    ctx3.setLineDash([4, 3]);
+    ctx3.beginPath();
+    ctx3.moveTo(curX, padT - 4);
+    ctx3.lineTo(curX, H - padB);
+    ctx3.stroke();
+    ctx3.setLineDash([]);
   }
 
   /* ======================================================================== */
-  /* LEFT PANE: 3D CUTOUT WORM / 3D MULTIPLANE CEL BOX / Z×τ LANES            */
+  /* LEFT PANE: 3D STAGE (Disentangled Stack / Solo 3D Worm / 3D Cel Planes)  */
   /* ======================================================================== */
   function projPoint(u, v, tau, zOff, W, H) {
     const x = (u - 0.5);
@@ -681,35 +719,6 @@
     const y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
     const sc = (Math.min(W, H) * 0.88) / Math.max(0.55, 2.20 - z2 * 0.5);
     return { sx: W * 0.50 + x1 * sc, sy: H * 0.52 - y2 * sc, sc };
-  }
-
-  function drawMediaIn3DMask(media, poly, tau, zOff, W, H, alpha) {
-    if (!media || !poly || poly.length < 3) return false;
-    const mw = media.videoWidth || media.naturalWidth || 0;
-    const mh = media.videoHeight || media.naturalHeight || 0;
-    if (!mw || !mh) return false;
-
-    const p00 = projPoint(0, 0, tau, zOff, W, H);
-    const p10 = projPoint(1, 0, tau, zOff, W, H);
-    const p01 = projPoint(0, 1, tau, zOff, W, H);
-
-    ctx3.save();
-    ctx3.beginPath();
-    poly.forEach((uv, idx) => {
-      const p = projPoint(uv[0], uv[1], tau, zOff, W, H);
-      if (idx === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-    });
-    ctx3.closePath();
-    ctx3.clip();
-    ctx3.globalAlpha = alpha;
-    ctx3.transform(
-      (p10.sx - p00.sx) / mw, (p10.sy - p00.sy) / mw,
-      (p01.sx - p00.sx) / mh, (p01.sy - p00.sy) / mh,
-      p00.sx, p00.sy
-    );
-    try { ctx3.drawImage(media, 0, 0, mw, mh); } catch(e) {}
-    ctx3.restore();
-    return true;
   }
 
   function draw3dStage(w, fIdx) {
@@ -725,68 +734,33 @@
     if (hud3d) {
       if (soloLayerId) {
         const sdw = dws.find(d => d.id === soloLayerId);
-        hud3d.textContent = sdw ? `SOLO LAYER: z=${sdw.z} ${sdw.label} (${sdw.desc || ""})` : "3D Cutout Worm";
+        hud3d.textContent = sdw ? `SOLO WORM: z=${sdw.z} ${sdw.label} (${sdw.desc || ""}) · Drag to orbit` : "Solo Worm";
+      } else if (projMode === "stack") {
+        hud3d.textContent = `Disentangled ${dws.length} Depth Worms (τ = f00→f${nf-1}) · Tap any row to solo`;
+      } else if (projMode === "box3d") {
+        hud3d.textContent = "3D Multiplane Cel Stack · Drag to rotate turntable";
       } else {
-        hud3d.textContent = projMode === "box3d"
-          ? "3D Multiplane Cel Stack (Drag to turn · Tap Layer Card to solo)"
-          : (projMode === "lanes" ? "Z×τ Multiplane Swimlanes" : "3D Cutout Worm · Tap any Layer Card above to solo");
+        hud3d.textContent = "3D Exploded Cutout Worm · Drag to orbit";
       }
     }
 
-    /* --- MODE A: Z×τ HORIZONTAL MULTIPLANE SWIMLANES --- */
-    if (projMode === "lanes") {
-      const padL = 118, padR = 14, padT = 24, padB = 18;
-      const plotW = W - padL - padR, plotH = H - padT - padB;
-      const nL = Math.max(1, dws.length);
-      const curX = padL + (fIdx / Math.max(1, nf - 1)) * plotW;
-      ctx3.strokeStyle = "rgba(255, 209, 102, 0.75)";
-      ctx3.lineWidth = 2;
-      ctx3.beginPath(); ctx3.moveTo(curX, padT - 6); ctx3.lineTo(curX, H - padB + 6); ctx3.stroke();
-
-      // Order lanes from Far (top) to Near (bottom)
-      [...dws].reverse().forEach((dw, dIdx) => {
-        const on = isLayerActive(dw.id);
-        const ly0 = padT + (dIdx + 0.5) * (plotH / nL);
-        const lh = (plotH / nL) * 0.78;
-        const col = dw.color || "#00f5d4";
-
-        ctx3.fillStyle = on ? "rgba(255,255,255,0.03)" : "rgba(0,0,0,0.2)";
-        ctx3.fillRect(padL, ly0 - lh * 0.5, plotW, lh);
-
-        ctx3.fillStyle = on ? col : "rgba(142,153,176,0.35)";
-        ctx3.font = "bold 10.5px monospace";
-        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 10)}`, 6, ly0 - 2);
-        ctx3.fillStyle = "rgba(142,153,176,0.75)";
-        ctx3.font = "9.5px sans-serif";
-        ctx3.fillText((dw.desc || "").slice(0, 16), 6, ly0 + 10);
-        if (!on) return;
-
-        const trk = dw.track || [];
-        ctx3.fillStyle = col + "2b";
-        ctx3.strokeStyle = col;
-        ctx3.lineWidth = dw.role === "subject" ? 3.0 : 2.0;
-
-        ctx3.beginPath();
-        trk.forEach((pt, fi) => {
-          const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-          const ty = ly0 + (pt[0] - 0.5) * lh;
-          if (dw.role === "subject") hitNodes.push({ fi, sx: tx, sy: ty });
-          if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
-        });
-        ctx3.stroke();
-      });
+    // If in Default Disentangled Stack mode AND no single worm is soloed:
+    if (projMode === "stack" && !soloLayerId) {
+      drawDisentangledStack(w, fIdx, W, H);
       return;
     }
 
-    /* --- MODE B: 3D MULTIPLANE CEL STACK (Like giraffe-walks-past.html!) --- */
-    if (projMode === "box3d") {
+    bandHitBoxes = [];
+
+    /* --- MODE B: 3D MULTIPLANE CEL STACK (`box3d`) --- */
+    if (projMode === "box3d" && !soloLayerId) {
       const nPlanes = Math.max(1, dws.length);
       const sc = Math.min(W, H) * 0.62;
       const cy = Math.cos(yaw), sy = Math.sin(yaw);
       const tilt = 0.34;
       const PBox = (u, v, rankIdx) => {
         const X = (u - 0.5);
-        const Zd = (rankIdx / Math.max(1, nPlanes - 1) - 0.5) * 1.15;
+        const Zd = (rankIdx / Math.max(1, nPlanes - 1) - 0.5) * 1.25;
         const rx = X * cy - Zd * sy;
         const rz = X * sy + Zd * cy;
         return {
@@ -796,13 +770,10 @@
         };
       };
 
-      // Sort planes back-to-front by camera depth
       const ordered = dws.map((dw, idx) => ({ dw, idx, d: PBox(0.5, 0.5, idx).depth }))
                          .sort((a, b) => a.d - b.d);
 
-      // 1. Draw translucent cel sheets first so far planes never wash out
       ordered.forEach(({ dw, idx }) => {
-        if (!isLayerActive(dw.id)) return;
         const corners = [PBox(0, 0, idx), PBox(1, 0, idx), PBox(1, 1, idx), PBox(0, 1, idx)];
         ctx3.beginPath();
         corners.forEach((c, i) => { if (i === 0) ctx3.moveTo(c.sx, c.sy); else ctx3.lineTo(c.sx, c.sy); });
@@ -810,23 +781,20 @@
         ctx3.fillStyle = "rgba(18, 24, 38, 0.42)";
         ctx3.fill();
         ctx3.strokeStyle = dw.color || "#00f5d4";
-        ctx3.lineWidth = (soloLayerId === dw.id || dw.role === "subject") ? 2.2 : 1.1;
+        ctx3.lineWidth = dw.role === "subject" ? 2.2 : 1.1;
         ctx3.stroke();
       });
 
-      // 2. Draw each sheet's actual video cutout + full Quick, Draw! objects on top
       const fr = frames[Math.min(nf - 1, fIdx)];
       const media = getMediaForFrame(w, fIdx);
 
       ordered.forEach(({ dw, idx }) => {
-        if (!isLayerActive(dw.id)) return;
         const col = dw.color || "#00f5d4";
         const trk = dw.track || [];
         const pt = trk[Math.min(trk.length - 1, fIdx)] || [dw.u0 || 0.5, dw.v0 || 0.5, dw.r0 || 0.12];
-
-        // Stamp SAM Video Cutout on Subject sheet (and scene_rings on giraffe Trees sheet!)
         const polyUV = getPlanePolyUV(dw, fr, pt);
-        if (showMaskVid && media && (dw.role === "subject" || dw.scene_rings || soloLayerId === dw.id) && polyUV.length >= 3) {
+
+        if (showMaskVid && media && (dw.role === "subject" || dw.scene_rings) && polyUV.length >= 3) {
           const mw = media.videoWidth || media.naturalWidth || 0;
           const mh = media.videoHeight || media.naturalHeight || 0;
           if (mw && mh) {
@@ -859,7 +827,6 @@
           }
         }
 
-        // Draw full-resolution Quick, Draw! vector objects on this plane sheet
         const strokesUV = getPlaneStrokesUV(dw, fr, pt);
         if (strokesUV.length) {
           ctx3.strokeStyle = dw.role === "subject" ? "#ffffff" : col;
@@ -877,7 +844,6 @@
           });
         }
 
-        // Sheet header label
         const topL = PBox(0, 0, idx);
         ctx3.fillStyle = col;
         ctx3.font = "bold 11px monospace";
@@ -886,15 +852,13 @@
       return;
     }
 
-    /* --- MODE C: 3D SPATIOTEMPORAL CUTOUT WORM (Default 'orbit3d') --- */
-    // Subtle 3D bounding prism
+    /* --- MODE C: 3D EXPLODED / SOLO CUTOUT WORM (`orbit3d` or Soloed Row) --- */
     const box = [[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]].map(c => projPoint(c[0],c[1],c[2],0,W,H));
     [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]].forEach(([a,b]) => {
       ctx3.beginPath(); ctx3.moveTo(box[a].sx, box[a].sy); ctx3.lineTo(box[b].sx, box[b].sy);
       ctx3.strokeStyle = "rgba(142,153,176,0.16)"; ctx3.lineWidth = 1; ctx3.stroke();
     });
 
-    // Give each depth layer a well-separated vertical offset zOff so layers NEVER pile on top of each other!
     const nL = Math.max(1, dws.length);
     [...dws].reverse().forEach((dw, revIdx) => {
       const origIdx = nL - 1 - revIdx;
@@ -903,94 +867,12 @@
       const trk = dw.track || [];
       const isSubj = (dw.role === "subject");
       const isSolo = (soloLayerId === dw.id);
-      const zOff = isSolo ? 0.0 : (isSubj ? 0.0 : ((origIdx / Math.max(1, nL - 1)) - 0.45) * 0.52);
+      // Wide vertical explosion (-0.52 to +0.52) when multiple layers are shown in 3D
+      const zOff = isSolo ? 0.0 : ((origIdx / Math.max(1, nL - 1)) - 0.5) * 1.04;
 
-      // If this is the Subject layer OR a soloed layer, stamp clear, high-contrast cross-section slices along τ!
-      if (isSubj || isSolo) {
-        const sliceIndices = [];
-        const step = Math.max(1, Math.floor((nf - 1) / 5));
-        for (let s = 0; s < nf; s += step) sliceIndices.push(s);
-        if (!sliceIndices.includes(nf - 1)) sliceIndices.push(nf - 1);
-        if (!sliceIndices.includes(fIdx)) sliceIndices.push(fIdx);
-        sliceIndices.sort((a, b) => a - b);
-
-        sliceIndices.forEach(fi => {
-          const isCur = (fi === fIdx);
-          const fr = frames[Math.min(nf - 1, fi)];
-          const pt = trk[Math.min(trk.length - 1, fi)];
-          const tau = fi / Math.max(1, nf - 1);
-          const polyUV = getPlanePolyUV(dw, fr, pt);
-
-          // 1. Stamp the actual video cutout inside the polygon mask!
-          let drewVid = false;
-          if (showMaskVid && polyUV.length >= 3 && (isSubj || dw.scene_rings || isSolo)) {
-            const media = getMediaForFrame(w, fi);
-            if (media) {
-              drewVid = drawMediaIn3DMask(media, polyUV, tau, zOff, W, H, isCur ? 1.0 : 0.62);
-            }
-          }
-
-          // 2. Draw crisp die-cut border around the 3D slice
-          if (polyUV.length >= 3) {
-            ctx3.beginPath();
-            polyUV.forEach((uv, j) => {
-              const p = projPoint(uv[0], uv[1], tau, zOff, W, H);
-              if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-            });
-            ctx3.closePath();
-            if (!drewVid) {
-              ctx3.fillStyle = isCur ? (col + "44") : (col + "18");
-              ctx3.fill();
-            }
-            ctx3.strokeStyle = isCur ? "#ffffff" : col;
-            ctx3.lineWidth = isCur ? 3.0 : 1.6;
-            ctx3.stroke();
-          }
-
-          // 3. Draw the layer's vector objects inside the 3D slice (always for scenic/part solo, or on curF)
-          if (!isSubj || !drewVid || isSolo) {
-            const strokesUV = getPlaneStrokesUV(dw, fr, pt);
-            if (strokesUV.length) {
-              ctx3.strokeStyle = isCur ? "#ffffff" : col;
-              ctx3.lineWidth = isCur ? 2.0 : 1.3;
-              strokesUV.forEach(st => {
-                if (st.length < 2) return;
-                ctx3.beginPath();
-                st.forEach((uv, k) => {
-                  const p = projPoint(uv[0], uv[1], tau, zOff, W, H);
-                  if (k === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-                });
-                ctx3.stroke();
-              });
-            }
-          }
-        });
-      } else {
-        // Non-soloed background/foreground layers: draw their actual object drawing at τ=0 and τ=curF without cluttering the subject cutout!
-        [0, fIdx].forEach(fi => {
-          const fr = frames[Math.min(nf - 1, fi)];
-          const pt = trk[Math.min(trk.length - 1, fi)];
-          const tau = fi / Math.max(1, nf - 1);
-          const strokesUV = getPlaneStrokesUV(dw, fr, pt);
-          if (strokesUV.length) {
-            ctx3.strokeStyle = (fi === fIdx) ? col : (col + "88");
-            ctx3.lineWidth = (fi === fIdx) ? 1.5 : 1.0;
-            strokesUV.forEach(st => {
-              if (st.length < 2) return;
-              ctx3.beginPath();
-              st.forEach((uv, k) => {
-                const p = projPoint(uv[0], uv[1], tau, zOff, W, H);
-                if (k === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-              });
-              ctx3.stroke();
-            });
-          }
-        });
-      }
-
-      // Trajectory Spine for this depth layer
+      // Trajectory spine
       ctx3.strokeStyle = col;
-      ctx3.lineWidth = (isSubj || isSolo) ? 3.4 : 1.8;
+      ctx3.lineWidth = (isSubj || isSolo) ? 3.5 : 1.8;
       ctx3.beginPath();
       trk.forEach((pt, fi) => {
         const p = projPoint(pt[0], pt[1], fi / Math.max(1, nf - 1), zOff, W, H);
@@ -999,17 +881,43 @@
       });
       ctx3.stroke();
 
+      // Stamp large, tightly-cropped cutouts/drawings along the 3D spine!
+      const nSlices = (isSubj || isSolo) ? 7 : 3;
+      const sliceIndices = [];
+      for (let k = 0; k < nSlices; k++) sliceIndices.push(Math.round((k / Math.max(1, nSlices - 1)) * (nf - 1)));
+      if (!sliceIndices.includes(fIdx)) sliceIndices.push(fIdx);
+      sliceIndices.sort((a, b) => a - b);
+
+      sliceIndices.forEach(fi => {
+        const isCur = (fi === fIdx);
+        const fr = frames[Math.min(nf - 1, fi)] || {};
+        const pt = trk[Math.min(trk.length - 1, fi)];
+        if (!pt) return;
+        const tau = fi / Math.max(1, nf - 1);
+        const centerP = projPoint(pt[0], pt[1], tau, zOff, W, H);
+
+        if (isSubj && fr.ring && fr.ring.length >= 3) {
+          const media = getMediaForFrame(w, fi);
+          const stampSz = (isSolo ? 135 : 92) * (isCur ? 1.18 : 0.92);
+          drawCroppedCutoutStamp(ctx3, media, fr.ring, centerP.sx, centerP.sy, stampSz * 1.25, stampSz, col, isCur, isCur ? 1.0 : 0.72);
+        } else if (isSolo || isCur || fi === 0 || fi === nf - 1) {
+          const strokesUV = getPlaneStrokesUV(dw, fr, pt);
+          const stampSz = (isSolo ? 130 : 68) * (isCur ? 1.15 : 0.88);
+          drawCroppedStrokesStamp(ctx3, strokesUV, centerP.sx, centerP.sy, stampSz * 1.3, stampSz, col, isCur);
+        }
+      });
+
       if (trk.length) {
         const p0 = projPoint(trk[0][0], trk[0][1], 0, zOff, W, H);
         ctx3.fillStyle = col;
         ctx3.font = "bold 10.5px monospace";
-        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 12)}`, p0.sx + 4, p0.sy - 4);
+        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 14)}`, p0.sx + 6, p0.sy - 6);
       }
     });
   }
 
   /* ======================================================================== */
-  /* RIGHT PANE: UNOBSTRUCTED 2D CUTOUT & MULTIPLANE LAYER STAGE              */
+  /* RIGHT PANE: SYNCHRONIZED 2D CUTOUT & LAYER STAGE                         */
   /* ======================================================================== */
   function draw2dStage(w, fIdx) {
     const W = c2d.width, H = c2d.height;
@@ -1023,11 +931,10 @@
     ensureFrameImg(w, (fIdx + 1) % frames.length);
     ensureFrameImg(w, (fIdx + 2) % frames.length);
 
-    ctx2.fillStyle = (srcMode === "cel") ? "#0c1018" : "#05070c";
+    ctx2.fillStyle = "#05070c";
     ctx2.fillRect(0, 0, W, H);
 
-    // 1. Background footage layer
-    if (media && srcMode !== "cel") {
+    if (media) {
       ctx2.save();
       ctx2.globalAlpha = (srcMode === "src") ? 1.0 : 0.18;
       try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
@@ -1036,13 +943,10 @@
 
     if (srcMode === "src") return;
 
-    // 2. If 'Cutout' mode (Default) and no non-subject layer is soloed:
-    //    Show the crystal-clear, UNOBSTRUCTED SAM Video Cutout of the subject!
     const subjDw = dws.find(d => d.role === "subject");
     if (srcMode === "cutout" && (soloLayerId === null || (subjDw && soloLayerId === subjDw.id))) {
       if (fr.ring && fr.ring.length >= 3) {
         if (media) {
-          // Drop shadow behind SAM cutout
           ctx2.save();
           ctx2.beginPath();
           fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
@@ -1055,7 +959,6 @@
           ctx2.fill();
           ctx2.restore();
 
-          // 100% vivid SAM footage cutout
           ctx2.save();
           ctx2.beginPath();
           fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
@@ -1066,7 +969,6 @@
           ctx2.restore();
         }
 
-        // Crisp die-cut sticker rim (outer gold + inner white) — NO text or lines scribbled over the cutout!
         ctx2.save();
         ctx2.beginPath();
         fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
@@ -1082,8 +984,6 @@
       return;
     }
 
-    // 3. 'Cutout+Planes' ('scene'), 'Cel Sheet' ('cel'), or when a specific non-subject Layer Card is soloed:
-    //    Draw active layers in back-to-front order (Far -> Mid -> Subject Cutout -> Fore)!
     [...dws].reverse().forEach(dw => {
       if (!isLayerActive(dw.id)) return;
       const col = dw.color || "#00f5d4";
@@ -1092,8 +992,7 @@
       const polyUV = getPlanePolyUV(dw, fr, pt);
       const strokesUV = getPlaneStrokesUV(dw, fr, pt);
 
-      // Clip video cutout for Subject, scene_rings (giraffe Trees), or a soloed layer in 'cutout' mode
-      const doCutout = (srcMode !== "cel") && media && (dw.role === "subject" || dw.scene_rings || soloLayerId === dw.id);
+      const doCutout = media && (dw.role === "subject" || dw.scene_rings || soloLayerId === dw.id);
       if (doCutout && polyUV.length >= 3) {
         ctx2.save();
         ctx2.beginPath();
@@ -1112,8 +1011,7 @@
         ctx2.stroke();
       }
 
-      // Draw full-resolution Quick, Draw! strokes for this layer
-      if (strokesUV.length && (srcMode === "cel" || dw.role !== "subject" || soloLayerId === dw.id)) {
+      if (strokesUV.length && (dw.role !== "subject" || soloLayerId === dw.id)) {
         ctx2.save();
         ctx2.lineCap = "round";
         ctx2.lineJoin = "round";
@@ -1143,9 +1041,9 @@
     const dws = w.depth_worms || [];
     const fr = (w.frames || [])[curFrame] || {};
     const areaPct = ((fr.area || 0) * 100).toFixed(1);
-    const soloTxt = soloLayerId ? ` · SOLO: <b>${soloLayerId}</b>` : "";
+    const soloTxt = soloLayerId ? ` · SOLO: <b>${soloLayerId}</b>` : ` · <b>${dws.length} Disentangled Worms</b>`;
     document.getElementById("statTxt").innerHTML =
-      `<b>f${String(curFrame).padStart(2,"0")}</b>/${w.n_frames-1} · cutout <b>${areaPct}%</b> · <b>${dws.length} Layers</b>${soloTxt}`;
+      `<b>f${String(curFrame).padStart(2,"0")}</b>/${w.n_frames-1} · cutout <b>${areaPct}%</b>${soloTxt}`;
   }
 
   function syncVideoTime(w, fIdx) {
@@ -1163,9 +1061,8 @@
     const hud2d = document.getElementById("hud2d");
     if (hud2d) {
       const map = {
-        cutout: "SAM Video Cutout (Unobstructed)",
+        cutout: "SAM Video Cutout",
         scene: "Video Cutout + Multiplane Drawings",
-        cel: "Multiplane Vector Cel Sheet",
         src: "Raw Source Footage"
       };
       hud2d.textContent = map[srcMode] || "SAM Video Cutout";
@@ -1182,11 +1079,10 @@
     shotSelect.value = curIdx;
     const w = worms[curIdx];
     curFrame = 0;
-    soloLayerId = null;
+    setSoloLayer(null);
     slider.max = Math.max(1, (w.frames || []).length - 1);
     slider.value = 0;
     preloadShotFrames(w);
-    renderDepthPills(w);
     applyMedia(w);
     drawAll();
     document.querySelectorAll(".mini-card").forEach(c => {
@@ -1230,21 +1126,24 @@
       card.innerHTML = `
         <canvas width="160" height="48"></canvas>
         <div class="mc-title">${idx + 1}. ${w.slug}</div>
-        <div class="mc-sub">${dws.length} layers (${dws.map(d => d.label.slice(0,6)).slice(0, 3).join(", ")})</div>
+        <div class="mc-sub">${dws.length} disentangled worms</div>
       `;
       card.onclick = () => selectShot(idx, true);
       grid.appendChild(card);
 
+      // Draw cleanly disentangled bands inside the mini-card canvas
       const mc = card.querySelector("canvas");
       const mctx = mc.getContext("2d");
       const nf = Math.max(1, (w.frames || []).length);
-      dws.forEach((dw, dIdx) => {
+      const rows = [...dws].reverse();
+      rows.forEach((dw, rIdx) => {
+        const yBand = 6 + (rIdx / Math.max(1, rows.length - 1)) * 36;
         mctx.strokeStyle = dw.color || "#00f5d4";
-        mctx.lineWidth = dw.role === "subject" ? 2.2 : 1.3;
+        mctx.lineWidth = dw.role === "subject" ? 2.4 : 1.2;
         mctx.beginPath();
         (dw.track || []).forEach((pt, fi) => {
           const x = 6 + (fi / Math.max(1, nf - 1)) * 148;
-          const y = 8 + (dIdx / Math.max(1, dws.length - 1)) * 32 + (pt[0] - 0.5) * 16;
+          const y = yBand + (pt[1] - (dw.v0 || 0.5)) * 10;
           if (fi === 0) mctx.moveTo(x, y); else mctx.lineTo(x, y);
         });
         mctx.stroke();
@@ -1265,6 +1164,8 @@
     btn.onclick = () => {
       if (btn.dataset.proj) {
         projMode = btn.dataset.proj;
+        soloLayerId = null;
+        if (unsoloBtn) unsoloBtn.style.display = "none";
         document.querySelectorAll("#modeBar .m-btn[data-proj]").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
         drawAll();
@@ -1276,8 +1177,8 @@
     };
   });
 
+  if (unsoloBtn) unsoloBtn.onclick = () => setSoloLayer(null);
   document.getElementById("texBtn").onclick = e => { showMaskVid = !showMaskVid; e.target.classList.toggle("active", showMaskVid); drawAll(); };
-  document.getElementById("resetBtn").onclick = () => { yaw = -0.48; pitch = 0.24; soloLayerId = null; if (worms[curIdx]) renderDepthPills(worms[curIdx]); drawAll(); };
 
   document.querySelectorAll("#srcBar .tiny-btn").forEach(btn => {
     btn.onclick = () => {
@@ -1293,42 +1194,88 @@
     document.getElementById("playBtn").textContent = "▶";
     video.pause();
     curFrame = parseInt(slider.value, 10) || 0;
-    if (worms[curIdx]) { syncVideoTime(worms[curIdx], curFrame); drawLayerCardThumbs(worms[curIdx], curFrame); }
+    if (worms[curIdx]) syncVideoTime(worms[curIdx], curFrame);
     drawAll();
   };
   document.getElementById("stepPrev").onclick = () => {
     isPlaying = false; document.getElementById("playBtn").textContent = "▶"; video.pause();
     curFrame = Math.max(0, curFrame - 1); slider.value = curFrame;
-    if (worms[curIdx]) { syncVideoTime(worms[curIdx], curFrame); drawLayerCardThumbs(worms[curIdx], curFrame); }
+    if (worms[curIdx]) syncVideoTime(worms[curIdx], curFrame);
     drawAll();
   };
   document.getElementById("stepNext").onclick = () => {
     isPlaying = false; document.getElementById("playBtn").textContent = "▶"; video.pause();
     const w = worms[curIdx]; curFrame = Math.min((w ? w.frames.length : 1) - 1, curFrame + 1); slider.value = curFrame;
-    if (w) { syncVideoTime(w, curFrame); drawLayerCardThumbs(w, curFrame); }
+    if (w) syncVideoTime(w, curFrame);
     drawAll();
   };
 
-  c3d.addEventListener("pointerdown", e => { dragging = true; moved = false; lx = e.clientX; ly = e.clientY; c3d.setPointerCapture(e.pointerId); });
+  c3d.addEventListener("pointerdown", e => {
+    dragging = true; moved = false; lx = e.clientX; ly = e.clientY;
+    c3d.setPointerCapture(e.pointerId);
+  });
   c3d.addEventListener("pointermove", e => {
     if (!dragging) return;
     const dx = e.clientX - lx, dy = e.clientY - ly;
-    if (Math.abs(dx) > 2 || Math.abs(dy) > 2) moved = true;
-    if (projMode === "orbit3d" || projMode === "box3d") { yaw += dx * 0.008; pitch = Math.max(-1.0, Math.min(1.0, pitch + dy * 0.008)); lx = e.clientX; ly = e.clientY; drawAll(); }
+    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
+
+    if (projMode === "stack" && !soloLayerId) {
+      // Dragging horizontally inside Disentangled Stack scrubs time τ directly!
+      const rect = c3d.getBoundingClientRect();
+      const mx = (e.clientX - rect.left) * (c3d.width / rect.width);
+      const w = worms[curIdx];
+      if (w && bandHitBoxes.length) {
+        const b0 = bandHitBoxes[0];
+        if (mx >= b0.xTrack0) {
+          const tau = Math.max(0, Math.min(1, (mx - b0.xTrack0) / Math.max(1, b0.xTrack1 - b0.xTrack0)));
+          curFrame = Math.round(tau * Math.max(1, w.frames.length - 1));
+          slider.value = curFrame;
+          syncVideoTime(w, curFrame);
+          drawAll();
+        }
+      }
+      return;
+    }
+
+    yaw += dx * 0.008;
+    pitch = Math.max(-1.0, Math.min(1.0, pitch + dy * 0.008));
+    lx = e.clientX; ly = e.clientY;
+    drawAll();
   });
   c3d.addEventListener("pointerup", e => {
     dragging = false;
-    if (!moved && worms[curIdx] && hitNodes.length) {
+    if (!moved && worms[curIdx]) {
       const rect = c3d.getBoundingClientRect();
       const mx = (e.clientX - rect.left) * (c3d.width / rect.width);
       const my = (e.clientY - rect.top) * (c3d.height / rect.height);
-      let best = -1, bestD = 9999;
-      hitNodes.forEach(n => { const d = Math.hypot(n.sx - mx, n.sy - my); if (d < bestD) { bestD = d; best = n.fi; } });
-      if (best !== -1 && bestD < 50) {
-        curFrame = best; slider.value = curFrame;
-        syncVideoTime(worms[curIdx], curFrame);
-        drawLayerCardThumbs(worms[curIdx], curFrame);
-        drawAll();
+
+      // In Disentangled Stack mode: tapping the Left Header column (or double-tapping a row) SOLOS that worm row;
+      // tapping along the track jumps the playhead to that frame AND solos if you tap the label!
+      if (projMode === "stack" && !soloLayerId && bandHitBoxes.length) {
+        for (const box of bandHitBoxes) {
+          if (my >= box.y0 && my <= box.y1) {
+            if (mx < box.xTrack0 + 24) {
+              setSoloLayer(box.id);
+            } else {
+              const tau = Math.max(0, Math.min(1, (mx - box.xTrack0) / Math.max(1, box.xTrack1 - box.xTrack0)));
+              curFrame = Math.round(tau * Math.max(1, worms[curIdx].frames.length - 1));
+              slider.value = curFrame;
+              syncVideoTime(worms[curIdx], curFrame);
+              setSoloLayer(box.id);
+            }
+            return;
+          }
+        }
+      }
+
+      if (hitNodes.length) {
+        let best = -1, bestD = 9999;
+        hitNodes.forEach(n => { const d = Math.hypot(n.sx - mx, n.sy - my); if (d < bestD) { bestD = d; best = n.fi; } });
+        if (best !== -1 && bestD < 50) {
+          curFrame = best; slider.value = curFrame;
+          syncVideoTime(worms[curIdx], curFrame);
+          drawAll();
+        }
       }
     }
   });
@@ -1352,7 +1299,7 @@
       worms.forEach((w, idx) => {
         const opt = document.createElement("option");
         opt.value = idx;
-        opt.textContent = `${idx + 1}. ${w.slug} (${(w.depth_worms || []).length} Layers)`;
+        opt.textContent = `${idx + 1}. ${w.slug} (${(w.depth_worms || []).length} Disentangled Worms)`;
         shotSelect.appendChild(opt);
       });
       renderMiniGrid();
