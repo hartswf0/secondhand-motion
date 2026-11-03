@@ -357,21 +357,23 @@
 <div class="stage-row" id="stageRow">
   <div class="pane-3d">
     <canvas id="canvas3d" width="680" height="400"></canvas>
-    <div class="hud-pill" id="hud3d">3D Depth Worms · Drag / Tap</div>
+    <div class="hud-pill" id="hud3d">3D Mask-Video Worms · Drag / Tap</div>
     <div class="hud-Corner">
+      <button class="tiny-btn active" id="texBtn" title="Draw video inside 3D mask">MaskVid</button>
       <button class="tiny-btn active" id="subBtn">Sub</button>
       <button class="tiny-btn" id="resetBtn">Reset</button>
     </div>
   </div>
   <div class="pane-2d">
-    <video id="video2d" playsinline muted loop preload="metadata"></video>
-    <img id="fallbackImg" style="display:none;" alt="Strip">
+    <video id="video2d" crossorigin="anonymous" playsinline muted loop preload="auto"></video>
+    <img id="fallbackImg" crossorigin="anonymous" style="display:none;" alt="Strip">
     <canvas id="canvas2d" width="480" height="360"></canvas>
-    <div class="hud-pill">2D + Depth</div>
+    <div class="hud-pill" id="hud2d">Mask Video Cutout</div>
     <div class="hud-Corner" id="srcBar">
-      <button class="tiny-btn active" data-src="comp">3W</button>
-      <button class="tiny-btn" data-src="src">Raw</button>
-      <button class="tiny-btn" data-src="art">Art</button>
+      <button class="tiny-btn active" data-src="cutout">Cutout</button>
+      <button class="tiny-btn" data-src="iso">Iso</button>
+      <button class="tiny-btn" data-src="comp">3W</button>
+      <button class="tiny-btn" data-src="src">Full</button>
     </div>
   </div>
 </div>
@@ -410,13 +412,17 @@
   let curIdx = 0;
   let curFrame = 0;
   let projMode = "orbit3d";
-  let srcMode = "comp";
+  let srcMode = "cutout";
   let showSub = true;
+  let showMaskVid = true;
+  let isPlaying = false;
+  let lastTick = 0;
   let activeDepths = new Set();
   let topoFilter = "ALL";
   let yaw = -0.56, pitch = 0.32;
   let dragging = false, lx = 0, ly = 0, moved = false;
   let hitNodes = [];
+  const frameCache = {};
 
   const c3d = document.getElementById("canvas3d");
   const ctx3 = c3d.getContext("2d");
@@ -426,6 +432,83 @@
   const fbImg = document.getElementById("fallbackImg");
   const shotSelect = document.getElementById("shotSelect");
   const slider = document.getElementById("slider");
+
+  function ensureFrameImg(w, fi) {
+    if (!w || !w.frame_dir) return null;
+    if (!frameCache[w.slug]) frameCache[w.slug] = {};
+    const bag = frameCache[w.slug];
+    if (bag[fi]) return (bag[fi].complete && bag[fi].naturalWidth > 0) ? bag[fi] : null;
+    const im = new Image();
+    im.crossOrigin = "anonymous";
+    im.onload = () => { if (worms[curIdx] && worms[curIdx].slug === w.slug) drawAll(); };
+    im.src = `${w.frame_dir}/f${String(fi).padStart(3, "0")}.jpg`;
+    bag[fi] = im;
+    return null;
+  }
+
+  function preloadShotFrames(w) {
+    if (!w) return;
+    const nf = (w.frames || []).length;
+    ensureFrameImg(w, 0);
+    ensureFrameImg(w, Math.floor(nf / 2));
+    ensureFrameImg(w, Math.max(0, nf - 1));
+    (w.keys || []).forEach(k => { if (k >= 0 && k < nf) ensureFrameImg(w, k); });
+  }
+
+  function getMediaForFrame(w, fi) {
+    const im = ensureFrameImg(w, fi);
+    if (fi === curFrame && srcMode === "comp" && video.readyState >= 2 && video.videoWidth > 0) {
+      return video;
+    }
+    if (im) return im;
+    if (fi === curFrame && video.readyState >= 2 && video.videoWidth > 0) {
+      return video;
+    }
+    return null;
+  }
+
+  function makeEllipsePoly(u, v, r, nPts = 14) {
+    const pts = [];
+    const rx = Math.max(0.03, r * 0.75);
+    const ry = Math.max(0.03, r * 0.55);
+    for (let i = 0; i < nPts; i++) {
+      const a = (i / nPts) * Math.PI * 2;
+      pts.push([
+        Math.max(0.01, Math.min(0.99, u + Math.cos(a) * rx)),
+        Math.max(0.01, Math.min(0.99, v + Math.sin(a) * ry))
+      ]);
+    }
+    return pts;
+  }
+
+  function drawMediaIn3DMask(media, poly, tau, zNorm, W, H, alpha) {
+    if (!media || !poly || poly.length < 3) return false;
+    const mw = media.videoWidth || media.naturalWidth || 0;
+    const mh = media.videoHeight || media.naturalHeight || 0;
+    if (!mw || !mh) return false;
+
+    const p00 = projPoint(0, 0, tau, zNorm, W, H);
+    const p10 = projPoint(1, 0, tau, zNorm, W, H);
+    const p01 = projPoint(0, 1, tau, zNorm, W, H);
+
+    ctx3.save();
+    ctx3.beginPath();
+    poly.forEach((uv, idx) => {
+      const p = projPoint(uv[0], uv[1], tau, zNorm, W, H);
+      if (idx === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+    });
+    ctx3.closePath();
+    ctx3.clip();
+    ctx3.globalAlpha = alpha;
+    ctx3.transform(
+      (p10.sx - p00.sx) / mw, (p10.sy - p00.sy) / mw,
+      (p01.sx - p00.sx) / mh, (p01.sy - p00.sy) / mh,
+      p00.sx, p00.sy
+    );
+    try { ctx3.drawImage(media, 0, 0, mw, mh); } catch(e) {}
+    ctx3.restore();
+    return true;
+  }
 
   function projPoint(u, v, tau, zNorm, W, H) {
     const x = (u - 0.5);
@@ -544,32 +627,58 @@
       const isSubj = dw.role === "subject";
 
       if (isSubj) {
-        const step = Math.max(1, Math.floor(nf / 14));
+        const step = Math.max(1, Math.floor(nf / 12));
         frames.forEach((fr, fi) => {
-          if (fi !== fIdx && fi % step !== 0 && !(w.keys || []).includes(fi)) return;
-          if (!fr.ring || fr.ring.length < 3) return;
+          const isKey = (w.keys || []).includes(fi);
+          if (fi !== fIdx && fi % step !== 0 && !isKey) return;
+          const ring = fr.ring || fr.poly;
+          if (!ring || ring.length < 3) return;
           const isCur = (fi === fIdx);
+          const tau = fi / Math.max(1, nf - 1);
+
+          // Grab & clip the video element inside the 3D SAM mask slice!
+          let drewVid = false;
+          if (showMaskVid && (isCur || isKey)) {
+            const media = getMediaForFrame(w, fi);
+            if (media) {
+              drewVid = drawMediaIn3DMask(media, ring, tau, zNorm, W, H, isCur ? 0.96 : 0.48);
+            }
+          }
+
           ctx3.strokeStyle = isCur ? "#ffffff" : col;
-          ctx3.fillStyle = isCur ? col + "66" : col + "24";
-          ctx3.lineWidth = isCur ? 3.0 : 1.5;
+          ctx3.fillStyle = drewVid ? "rgba(0,0,0,0)" : (isCur ? col + "66" : col + "22");
+          ctx3.lineWidth = isCur ? 2.8 : 1.4;
           ctx3.beginPath();
-          fr.ring.forEach((uv, j) => {
-            const p = projPoint(uv[0], uv[1], fi / Math.max(1, nf - 1), zNorm, W, H);
+          ring.forEach((uv, j) => {
+            const p = projPoint(uv[0], uv[1], tau, zNorm, W, H);
             if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
           });
-          ctx3.closePath(); ctx3.fill(); ctx3.stroke();
+          ctx3.closePath();
+          if (!drewVid) ctx3.fill();
+          ctx3.stroke();
         });
       } else {
         const step = Math.max(1, Math.floor(nf / 8));
         trk.forEach((pt, fi) => {
           if (fi !== fIdx && fi % step !== 0) return;
-          const p = projPoint(pt[0], pt[1], fi / Math.max(1, nf - 1), zNorm, W, H);
+          const isCur = (fi === fIdx);
+          const tau = fi / Math.max(1, nf - 1);
+          let drewVid = false;
+          if (showMaskVid && isCur) {
+            const media = getMediaForFrame(w, fi);
+            if (media) {
+              const ePoly = makeEllipsePoly(pt[0], pt[1], pt[2]);
+              drewVid = drawMediaIn3DMask(media, ePoly, tau, zNorm, W, H, 0.78);
+            }
+          }
+          const p = projPoint(pt[0], pt[1], tau, zNorm, W, H);
           const rx = Math.max(6, pt[2] * p.sc * 0.55);
-          ctx3.strokeStyle = (fi === fIdx) ? "#ffffff" : col;
-          ctx3.fillStyle = col + "22";
-          ctx3.lineWidth = (fi === fIdx) ? 2.4 : 1.3;
+          ctx3.strokeStyle = isCur ? "#ffffff" : col;
+          ctx3.fillStyle = drewVid ? "rgba(0,0,0,0)" : (col + "22");
+          ctx3.lineWidth = isCur ? 2.4 : 1.3;
           ctx3.beginPath(); ctx3.ellipse(p.sx, p.sy, rx, rx * 0.6, 0, 0, Math.PI * 2);
-          ctx3.fill(); ctx3.stroke();
+          if (!drewVid) ctx3.fill();
+          ctx3.stroke();
         });
       }
 
@@ -618,18 +727,61 @@
     const frames = w.frames || [];
     if (!frames.length) return;
     const fr = frames[Math.min(frames.length - 1, fIdx)];
+    const ring = fr.ring || fr.poly;
+    const media = getMediaForFrame(w, fIdx);
+    const isCutoutMode = (srcMode === "cutout" || srcMode === "iso");
+
+    // Preload next 2 frames for smooth playback
+    ensureFrameImg(w, (fIdx + 1) % frames.length);
+    ensureFrameImg(w, (fIdx + 2) % frames.length);
+
+    if (isCutoutMode && media) {
+      ctx2.fillStyle = "#04060b";
+      ctx2.fillRect(0, 0, W, H);
+      if (srcMode === "cutout") {
+        ctx2.save();
+        ctx2.globalAlpha = 0.16;
+        try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+        ctx2.restore();
+      }
+    }
+
     (w.depth_worms || []).forEach(dw => {
       if (!isDepthOn(dw.id)) return;
       const col = dw.color || "#00f5d4";
       const pt = (dw.track || [])[Math.min((dw.track || []).length - 1, fIdx)];
       if (!pt) return;
-      if (dw.role === "subject" && fr.ring && fr.ring.length >= 3) {
-        ctx2.strokeStyle = col; ctx2.fillStyle = col + "28"; ctx2.lineWidth = 2.6;
+
+      if (dw.role === "subject" && ring && ring.length >= 3) {
+        if (isCutoutMode && media) {
+          ctx2.save();
+          ctx2.beginPath();
+          ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
+          ctx2.closePath();
+          ctx2.clip();
+          ctx2.globalAlpha = 1.0;
+          try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+          ctx2.restore();
+        }
+        ctx2.strokeStyle = col;
+        ctx2.fillStyle = (isCutoutMode && media) ? "rgba(0,0,0,0)" : (col + "28");
+        ctx2.lineWidth = 2.6;
         ctx2.beginPath();
-        fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
-        ctx2.closePath(); ctx2.fill(); ctx2.stroke();
+        ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
+        ctx2.closePath();
+        if (!(isCutoutMode && media)) ctx2.fill();
+        ctx2.stroke();
       } else {
         const cx = pt[0]*W, cy = pt[1]*H, rx = pt[2]*W*0.62, ry = pt[2]*H*0.42;
+        if (isCutoutMode && media && activeDepths.size === 1) {
+          ctx2.save();
+          ctx2.beginPath();
+          ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
+          ctx2.clip();
+          ctx2.globalAlpha = 0.96;
+          try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+          ctx2.restore();
+        }
         ctx2.strokeStyle = col; ctx2.lineWidth = 1.8; ctx2.setLineDash([4, 4]);
         ctx2.beginPath(); ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2); ctx2.stroke(); ctx2.setLineDash([]);
       }
@@ -642,20 +794,38 @@
     draw3dStage(w, curFrame);
     draw2dStage(w, curFrame);
     const dws = w.depth_worms || [];
+    const fr = (w.frames || [])[curFrame] || {};
+    const areaPct = ((fr.area || 0) * 100).toFixed(1);
     document.getElementById("statTxt").innerHTML =
-      `<b>f${String(curFrame).padStart(2,"0")}</b>/${w.n_frames-1} · <b>${dws.length} Depths</b> (${dws.map(d=>"z="+d.z).join("→")})`;
+      `<b>f${String(curFrame).padStart(2,"0")}</b>/${w.n_frames-1} · mask <b>${areaPct}%</b> · <b>${dws.length} Depths</b> (${dws.map(d=>"z="+d.z).join("→")})`;
+  }
+
+  function syncVideoTime(w, fIdx) {
+    if (!w || !video.duration) return;
+    const t0 = w.vid_t0 || 0;
+    const fps = w.fps || 12;
+    const targetT = t0 + (fIdx / fps);
+    if (Math.abs(video.currentTime - targetT) > 0.08) {
+      try { video.currentTime = Math.min(video.duration - 0.05, targetT); } catch(e) {}
+    }
   }
 
   function applyMedia(w) {
-    let url = w.comp_mp4 || w.src_mp4 || w.art_mp4 || "";
-    if (srcMode === "src") url = w.src_mp4 || w.comp_mp4 || "";
-    else if (srcMode === "art") url = w.art_mp4 || w.comp_mp4 || "";
+    let url = w.src_mp4 || w.comp_mp4 || w.r2_mp4 || "";
+    if (srcMode === "comp") url = w.comp_mp4 || w.src_mp4 || "";
+    const hud2d = document.getElementById("hud2d");
+    if (hud2d) {
+      hud2d.textContent = srcMode === "cutout" ? "Mask Cutout Video" : (srcMode === "iso" ? "Isolated Mask Only" : "Full Video + Mask");
+    }
     if (!url) {
       video.pause(); video.style.display = "none";
       fbImg.style.display = "block"; fbImg.src = w.strip_img || w.sil_img || "";
     } else {
       fbImg.style.display = "none"; video.style.display = "block";
-      if (video.src !== url) video.src = url;
+      if (video.src !== url) {
+        video.src = url;
+        video.onloadedmetadata = () => { syncVideoTime(w, curFrame); drawAll(); };
+      }
     }
   }
 
@@ -668,14 +838,35 @@
     activeDepths.clear();
     slider.max = Math.max(1, (w.frames || []).length - 1);
     slider.value = 0;
+    preloadShotFrames(w);
     renderDepthPills(w);
     applyMedia(w);
     drawAll();
     document.querySelectorAll(".mini-card").forEach(c => {
       c.classList.toggle("active", parseInt(c.dataset.idx, 10) === curIdx);
     });
-    if (autoPlay && video.style.display !== "none") video.play().catch(() => {});
+    if (autoPlay) {
+      isPlaying = true;
+      document.getElementById("playBtn").textContent = "⏸";
+      if (video.style.display !== "none") video.play().catch(() => {});
+    }
   }
+
+  function tickLoop(ts) {
+    if (isPlaying && worms[curIdx]) {
+      const w = worms[curIdx];
+      const interval = 1000 / (w.fps || 12);
+      if (ts - lastTick >= interval) {
+        lastTick = ts;
+        curFrame = (curFrame + 1) % Math.max(1, (w.frames || []).length);
+        slider.value = curFrame;
+        syncVideoTime(w, curFrame);
+        drawAll();
+      }
+    }
+    requestAnimationFrame(tickLoop);
+  }
+  requestAnimationFrame(tickLoop);
 
   function renderMiniGrid() {
     const grid = document.getElementById("miniGrid");
@@ -717,9 +908,11 @@
   shotSelect.onchange = () => selectShot(parseInt(shotSelect.value, 10), true);
   document.getElementById("prevBtn").onclick = () => selectShot(curIdx - 1, true);
   document.getElementById("nextBtn").onclick = () => selectShot(curIdx + 1, true);
-  document.getElementById("playBtn").onclick = () => { if (video.paused) video.play().catch(()=>{}); else video.pause(); };
-  video.onplay = () => { document.getElementById("playBtn").textContent = "⏸"; };
-  video.onpause = () => { document.getElementById("playBtn").textContent = "▶"; };
+  document.getElementById("playBtn").onclick = () => {
+    isPlaying = !isPlaying;
+    document.getElementById("playBtn").textContent = isPlaying ? "⏸" : "▶";
+    if (isPlaying) video.play().catch(()=>{}); else video.pause();
+  };
 
   document.querySelectorAll("#modeBar .m-btn").forEach(btn => {
     btn.onclick = () => {
@@ -735,6 +928,7 @@
     };
   });
 
+  document.getElementById("texBtn").onclick = e => { showMaskVid = !showMaskVid; e.target.classList.toggle("active", showMaskVid); drawAll(); };
   document.getElementById("subBtn").onclick = e => { showSub = !showSub; e.target.classList.toggle("active", showSub); drawAll(); };
   document.getElementById("resetBtn").onclick = () => { yaw = -0.56; pitch = 0.32; drawAll(); };
 
@@ -743,24 +937,29 @@
       document.querySelectorAll("#srcBar .tiny-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       srcMode = btn.dataset.src;
-      if (worms[curIdx]) applyMedia(worms[curIdx]);
+      if (worms[curIdx]) { applyMedia(worms[curIdx]); drawAll(); }
     };
   });
 
   slider.oninput = () => {
+    isPlaying = false;
+    document.getElementById("playBtn").textContent = "▶";
+    video.pause();
     curFrame = parseInt(slider.value, 10) || 0;
-    const w = worms[curIdx];
-    if (w && video.duration) video.currentTime = (curFrame / Math.max(1, w.frames.length - 1)) * video.duration;
+    if (worms[curIdx]) syncVideoTime(worms[curIdx], curFrame);
     drawAll();
   };
-  document.getElementById("stepPrev").onclick = () => { video.pause(); curFrame = Math.max(0, curFrame - 1); slider.value = curFrame; drawAll(); };
-  document.getElementById("stepNext").onclick = () => { video.pause(); const w = worms[curIdx]; curFrame = Math.min((w ? w.frames.length : 1) - 1, curFrame + 1); slider.value = curFrame; drawAll(); };
-
-  video.ontimeupdate = () => {
-    const w = worms[curIdx];
-    if (!w || !w.frames || !video.duration) return;
-    const f = Math.max(0, Math.min(w.frames.length - 1, Math.round((video.currentTime / video.duration) * (w.frames.length - 1))));
-    if (f !== curFrame) { curFrame = f; slider.value = curFrame; drawAll(); }
+  document.getElementById("stepPrev").onclick = () => {
+    isPlaying = false; document.getElementById("playBtn").textContent = "▶"; video.pause();
+    curFrame = Math.max(0, curFrame - 1); slider.value = curFrame;
+    if (worms[curIdx]) syncVideoTime(worms[curIdx], curFrame);
+    drawAll();
+  };
+  document.getElementById("stepNext").onclick = () => {
+    isPlaying = false; document.getElementById("playBtn").textContent = "▶"; video.pause();
+    const w = worms[curIdx]; curFrame = Math.min((w ? w.frames.length : 1) - 1, curFrame + 1); slider.value = curFrame;
+    if (w) syncVideoTime(w, curFrame);
+    drawAll();
   };
 
   c3d.addEventListener("pointerdown", e => { dragging = true; moved = false; lx = e.clientX; ly = e.clientY; c3d.setPointerCapture(e.pointerId); });
@@ -780,7 +979,7 @@
       hitNodes.forEach(n => { const d = Math.hypot(n.sx - mx, n.sy - my); if (d < bestD) { bestD = d; best = n.fi; } });
       if (best !== -1 && bestD < 50) {
         curFrame = best; slider.value = curFrame;
-        if (video.duration) video.currentTime = (curFrame / Math.max(1, worms[curIdx].frames.length - 1)) * video.duration;
+        syncVideoTime(worms[curIdx], curFrame);
         drawAll();
       }
     }

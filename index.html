@@ -221,16 +221,21 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   <div class="tw-grid" id="twStageGrid">
     <div class="tw-pane p3d">
       <canvas id="twCanvas3D" width="640" height="360" style="width:100%;height:100%;display:block;cursor:grab;touch-action:none;"></canvas>
-      <span style="position:absolute;top:4px;left:5px;background:rgba(8,10,16,0.82);padding:1px 5px;border-radius:3px;font:600 9px var(--mono);color:#8e99b0;pointer-events:none;">3D Depth Worms · Drag/Tap</span>
-      <button type="button" class="tw-btn" id="twResetAngle" style="position:absolute;top:4px;right:5px;padding:1px 5px;font-size:9px;">Reset</button>
+      <span style="position:absolute;top:4px;left:5px;background:rgba(8,10,16,0.82);padding:1px 5px;border-radius:3px;font:600 9px var(--mono);color:#8e99b0;pointer-events:none;">3D Mask-Video Worms</span>
+      <div style="position:absolute;top:4px;right:5px;display:flex;gap:3px;">
+        <button type="button" class="tw-btn" id="twMaskVidBtn" aria-pressed="true" style="padding:1px 5px;font-size:9px;">MaskVid</button>
+        <button type="button" class="tw-btn" id="twResetAngle" style="padding:1px 5px;font-size:9px;">Reset</button>
+      </div>
     </div>
     <div class="tw-pane p2d">
-      <video id="twVideo" playsinline loop muted style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"></video>
+      <video id="twVideo" crossorigin="anonymous" playsinline loop muted style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"></video>
       <canvas id="twCanvas2D" width="480" height="360" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;"></canvas>
+      <span id="twHud2D" style="position:absolute;top:4px;left:5px;background:rgba(8,10,16,0.82);padding:1px 5px;border-radius:3px;font:600 9px var(--mono);color:#8e99b0;pointer-events:none;">Mask Cutout Video</span>
       <div style="position:absolute;top:4px;right:5px;display:flex;gap:2px;" id="twVidSourceBar">
-        <button type="button" class="tw-btn" data-vmode="comp" aria-pressed="true" style="padding:1px 5px;font-size:9px;">3W</button>
-        <button type="button" class="tw-btn" data-vmode="src" aria-pressed="false" style="padding:1px 5px;font-size:9px;">Raw</button>
-        <button type="button" class="tw-btn" data-vmode="art" aria-pressed="false" style="padding:1px 5px;font-size:9px;">Art</button>
+        <button type="button" class="tw-btn" data-vmode="cutout" aria-pressed="true" style="padding:1px 5px;font-size:9px;">Cutout</button>
+        <button type="button" class="tw-btn" data-vmode="iso" aria-pressed="false" style="padding:1px 5px;font-size:9px;">Iso</button>
+        <button type="button" class="tw-btn" data-vmode="comp" aria-pressed="false" style="padding:1px 5px;font-size:9px;">3W</button>
+        <button type="button" class="tw-btn" data-vmode="src" aria-pressed="false" style="padding:1px 5px;font-size:9px;">Full</button>
       </div>
     </div>
   </div>
@@ -454,17 +459,22 @@ render();
 
 
 
+
 /* === 4D SPATIOTEMPORAL TIME-WORM STUDIO & RACK CARD INTEGRATION === */
 (function(){
   let WORMS = [];
   let BY_SLUG = {};
   let curIdx = 0;
   let curF = 0;
-  let vMode = "comp";
+  let vMode = "cutout";
   let wMode = "orbit3d";
+  let showMaskVid = true;
+  let isPlaying = false;
+  let lastTick = 0;
   let activeDepths = new Set();
   let yaw = -0.56, pitch = 0.32, dragging = false, lx = 0, ly = 0, moved = false;
   let hitPts = [];
+  const frameCache = {};
 
   const vid = document.getElementById("twVideo");
   const c2d = document.getElementById("twCanvas2D");
@@ -473,6 +483,83 @@ render();
   const ctx3 = c3d ? c3d.getContext("2d") : null;
   const sel = document.getElementById("twSelect");
   const sld = document.getElementById("twSlider");
+
+  function ensureFrameImg(w, fi) {
+    if (!w || !w.frame_dir) return null;
+    if (!frameCache[w.slug]) frameCache[w.slug] = {};
+    const bag = frameCache[w.slug];
+    if (bag[fi]) return (bag[fi].complete && bag[fi].naturalWidth > 0) ? bag[fi] : null;
+    const im = new Image();
+    im.crossOrigin = "anonymous";
+    im.onload = () => { if (WORMS[curIdx] && WORMS[curIdx].slug === w.slug) drawAll(); };
+    im.src = `${w.frame_dir}/f${String(fi).padStart(3, "0")}.jpg`;
+    bag[fi] = im;
+    return null;
+  }
+
+  function preloadShotFrames(w) {
+    if (!w) return;
+    const nf = (w.frames || []).length;
+    ensureFrameImg(w, 0);
+    ensureFrameImg(w, Math.floor(nf / 2));
+    ensureFrameImg(w, Math.max(0, nf - 1));
+    (w.keys || []).forEach(k => { if (k >= 0 && k < nf) ensureFrameImg(w, k); });
+  }
+
+  function getMediaForFrame(w, fi) {
+    const im = ensureFrameImg(w, fi);
+    if (fi === curF && vMode === "comp" && vid && vid.readyState >= 2 && vid.videoWidth > 0) {
+      return vid;
+    }
+    if (im) return im;
+    if (fi === curF && vid && vid.readyState >= 2 && vid.videoWidth > 0) {
+      return vid;
+    }
+    return null;
+  }
+
+  function makeEllipsePoly(u, v, r, nPts = 14) {
+    const pts = [];
+    const rx = Math.max(0.03, r * 0.75);
+    const ry = Math.max(0.03, r * 0.55);
+    for (let i = 0; i < nPts; i++) {
+      const a = (i / nPts) * Math.PI * 2;
+      pts.push([
+        Math.max(0.01, Math.min(0.99, u + Math.cos(a) * rx)),
+        Math.max(0.01, Math.min(0.99, v + Math.sin(a) * ry))
+      ]);
+    }
+    return pts;
+  }
+
+  function drawMediaIn3DMask(media, poly, tau, zNorm, W, H, alpha) {
+    if (!media || !poly || poly.length < 3 || !ctx3) return false;
+    const mw = media.videoWidth || media.naturalWidth || 0;
+    const mh = media.videoHeight || media.naturalHeight || 0;
+    if (!mw || !mh) return false;
+
+    const p00 = proj3(0, 0, tau, zNorm, W, H);
+    const p10 = proj3(1, 0, tau, zNorm, W, H);
+    const p01 = proj3(0, 1, tau, zNorm, W, H);
+
+    ctx3.save();
+    ctx3.beginPath();
+    poly.forEach((uv, idx) => {
+      const p = proj3(uv[0], uv[1], tau, zNorm, W, H);
+      if (idx === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+    });
+    ctx3.closePath();
+    ctx3.clip();
+    ctx3.globalAlpha = alpha;
+    ctx3.transform(
+      (p10.sx - p00.sx) / mw, (p10.sy - p00.sy) / mw,
+      (p01.sx - p00.sx) / mh, (p01.sy - p00.sy) / mh,
+      p00.sx, p00.sy
+    );
+    try { ctx3.drawImage(media, 0, 0, mw, mh); } catch(e) {}
+    ctx3.restore();
+    return true;
+  }
 
   function proj3(u, v, tau, zNorm, W, H) {
     const x = u - 0.5;
@@ -577,29 +664,55 @@ render();
       if (isSubj) {
         const step = Math.max(1, Math.floor(nf / 12));
         frames.forEach((fr, fi) => {
-          if (fi !== fIdx && fi % step !== 0 && !(w.keys || []).includes(fi)) return;
-          if (!fr.ring || fr.ring.length < 3) return;
-          ctx3.strokeStyle = (fi === fIdx) ? "#ffffff" : col;
-          ctx3.fillStyle = (fi === fIdx) ? col + "60" : col + "22";
-          ctx3.lineWidth = (fi === fIdx) ? 2.8 : 1.4;
+          const isKey = (w.keys || []).includes(fi);
+          if (fi !== fIdx && fi % step !== 0 && !isKey) return;
+          const ring = fr.ring || fr.poly;
+          if (!ring || ring.length < 3) return;
+          const isCur = (fi === fIdx);
+          const tau = fi / Math.max(1, nf - 1);
+
+          let drewVid = false;
+          if (showMaskVid && (isCur || isKey)) {
+            const media = getMediaForFrame(w, fi);
+            if (media) {
+              drewVid = drawMediaIn3DMask(media, ring, tau, zNorm, W, H, isCur ? 0.96 : 0.48);
+            }
+          }
+
+          ctx3.strokeStyle = isCur ? "#ffffff" : col;
+          ctx3.fillStyle = drewVid ? "rgba(0,0,0,0)" : (isCur ? col + "60" : col + "22");
+          ctx3.lineWidth = isCur ? 2.8 : 1.4;
           ctx3.beginPath();
-          fr.ring.forEach((uv, j) => {
-            const p = proj3(uv[0], uv[1], fi / Math.max(1, nf - 1), zNorm, W, H);
+          ring.forEach((uv, j) => {
+            const p = proj3(uv[0], uv[1], tau, zNorm, W, H);
             if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
           });
-          ctx3.closePath(); ctx3.fill(); ctx3.stroke();
+          ctx3.closePath();
+          if (!drewVid) ctx3.fill();
+          ctx3.stroke();
         });
       } else {
         const step = Math.max(1, Math.floor(nf / 8));
         trk.forEach((pt, fi) => {
           if (fi !== fIdx && fi % step !== 0) return;
-          const p = proj3(pt[0], pt[1], fi / Math.max(1, nf - 1), zNorm, W, H);
+          const isCur = (fi === fIdx);
+          const tau = fi / Math.max(1, nf - 1);
+          let drewVid = false;
+          if (showMaskVid && isCur) {
+            const media = getMediaForFrame(w, fi);
+            if (media) {
+              const ePoly = makeEllipsePoly(pt[0], pt[1], pt[2]);
+              drewVid = drawMediaIn3DMask(media, ePoly, tau, zNorm, W, H, 0.78);
+            }
+          }
+          const p = proj3(pt[0], pt[1], tau, zNorm, W, H);
           const rx = Math.max(6, pt[2] * p.sc * 0.52);
-          ctx3.strokeStyle = (fi === fIdx) ? "#ffffff" : col;
-          ctx3.fillStyle = col + "20";
-          ctx3.lineWidth = (fi === fIdx) ? 2.2 : 1.2;
+          ctx3.strokeStyle = isCur ? "#ffffff" : col;
+          ctx3.fillStyle = drewVid ? "rgba(0,0,0,0)" : (col + "20");
+          ctx3.lineWidth = isCur ? 2.2 : 1.2;
           ctx3.beginPath(); ctx3.ellipse(p.sx, p.sy, rx, rx * 0.6, 0, 0, Math.PI * 2);
-          ctx3.fill(); ctx3.stroke();
+          if (!drewVid) ctx3.fill();
+          ctx3.stroke();
         });
       }
 
@@ -628,18 +741,59 @@ render();
     if (!w || !w.frames || !w.frames.length) return;
     const fIdx = Math.max(0, Math.min(w.frames.length - 1, curF));
     const fr = w.frames[fIdx];
+    const ring = fr.ring || fr.poly;
+    const media = getMediaForFrame(w, fIdx);
+    const isCutoutMode = (vMode === "cutout" || vMode === "iso");
+
+    ensureFrameImg(w, (fIdx + 1) % w.frames.length);
+    ensureFrameImg(w, (fIdx + 2) % w.frames.length);
+
+    if (isCutoutMode && media) {
+      ctx2.fillStyle = "#04060b";
+      ctx2.fillRect(0, 0, W, H);
+      if (vMode === "cutout") {
+        ctx2.save();
+        ctx2.globalAlpha = 0.16;
+        try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+        ctx2.restore();
+      }
+    }
+
     (w.depth_worms || []).forEach(dw => {
       if (!isDepthOn(dw.id)) return;
       const col = dw.color || "#00f5d4";
       const pt = (dw.track || [])[Math.min((dw.track || []).length - 1, fIdx)];
       if (!pt) return;
-      if (dw.role === "subject" && fr.ring && fr.ring.length >= 3) {
-        ctx2.strokeStyle = col; ctx2.fillStyle = col + "28"; ctx2.lineWidth = 2.5;
+      if (dw.role === "subject" && ring && ring.length >= 3) {
+        if (isCutoutMode && media) {
+          ctx2.save();
+          ctx2.beginPath();
+          ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
+          ctx2.closePath();
+          ctx2.clip();
+          ctx2.globalAlpha = 1.0;
+          try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+          ctx2.restore();
+        }
+        ctx2.strokeStyle = col;
+        ctx2.fillStyle = (isCutoutMode && media) ? "rgba(0,0,0,0)" : (col + "28");
+        ctx2.lineWidth = 2.5;
         ctx2.beginPath();
-        fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
-        ctx2.closePath(); ctx2.fill(); ctx2.stroke();
+        ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
+        ctx2.closePath();
+        if (!(isCutoutMode && media)) ctx2.fill();
+        ctx2.stroke();
       } else {
         const cx = pt[0]*W, cy = pt[1]*H, rx = pt[2]*W*0.6, ry = pt[2]*H*0.4;
+        if (isCutoutMode && media && activeDepths.size === 1) {
+          ctx2.save();
+          ctx2.beginPath();
+          ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
+          ctx2.clip();
+          ctx2.globalAlpha = 0.96;
+          try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+          ctx2.restore();
+        }
         ctx2.strokeStyle = col; ctx2.lineWidth = 1.6; ctx2.setLineDash([4, 4]);
         ctx2.beginPath(); ctx2.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2); ctx2.stroke(); ctx2.setLineDash([]);
       }
@@ -652,9 +806,21 @@ render();
     draw3D();
     draw2D();
     const fIdx = Math.max(0, Math.min(w.frames.length - 1, curF));
+    const fr = w.frames[fIdx] || {};
+    const areaPct = ((fr.area || 0) * 100).toFixed(1);
     const dws = w.depth_worms || [];
     document.getElementById("twFrameReadout").textContent =
-      `f${String(fIdx).padStart(2,"0")}/${w.n_frames-1} · ${dws.length} Depths (${dws.map(d=>"z="+d.z).join("→")})`;
+      `f${String(fIdx).padStart(2,"0")}/${w.n_frames-1} · mask ${areaPct}% · ${dws.length} Depths (${dws.map(d=>"z="+d.z).join("→")})`;
+  }
+
+  function syncVidTime(w, fIdx) {
+    if (!w || !vid || !vid.duration || !isFinite(vid.duration)) return;
+    const t0 = w.vid_t0 || 0;
+    const fps = w.fps || 12;
+    const targetT = t0 + (fIdx / fps);
+    if (Math.abs(vid.currentTime - targetT) > 0.08) {
+      try { vid.currentTime = Math.min(vid.duration - 0.05, targetT); } catch(e) {}
+    }
   }
 
   function setFrame(fIdx, syncV) {
@@ -662,10 +828,7 @@ render();
     if (!w) return;
     curF = Math.max(0, Math.min(w.n_frames - 1, fIdx));
     sld.value = curF;
-    if (syncV && vid.duration && isFinite(vid.duration)) {
-      const targetT = (curF / Math.max(1, w.n_frames - 1)) * vid.duration;
-      if (Math.abs(vid.currentTime - targetT) > 0.04) vid.currentTime = targetT;
-    }
+    if (syncV) syncVidTime(w, curF);
     drawAll();
   }
 
@@ -681,15 +844,41 @@ render();
     const w = WORMS[idx];
     sld.max = Math.max(1, w.n_frames - 1);
     sld.value = 0;
+    preloadShotFrames(w);
     renderDepthPills(w);
-    const vUrl = (vMode === "src") ? w.src_mp4 : ((vMode === "art") ? w.art_mp4 : w.comp_mp4);
-    if (vid.src !== vUrl) vid.src = vUrl;
+    const vUrl = (vMode === "comp") ? (w.comp_mp4 || w.src_mp4) : (w.src_mp4 || w.comp_mp4);
+    const hud2d = document.getElementById("twHud2D");
+    if (hud2d) hud2d.textContent = vMode === "cutout" ? "Mask Cutout Video" : (vMode === "iso" ? "Isolated Mask Only" : "Full Video + Mask");
+    if (vid.src !== vUrl) {
+      vid.src = vUrl;
+      vid.onloadedmetadata = () => { syncVidTime(w, curF); drawAll(); };
+    }
     setFrame(0, false);
     document.querySelectorAll("#twSwipeStrip .tw-tile").forEach(t => {
       t.classList.toggle("active", parseInt(t.dataset.idx, 10) === curIdx);
     });
-    if (autoPlay) vid.play().catch(() => {});
+    if (autoPlay) {
+      isPlaying = true;
+      document.getElementById("twPlayPause").textContent = "⏸";
+      vid.play().catch(() => {});
+    }
   };
+
+  function tickLoop(ts) {
+    if (isPlaying && WORMS[curIdx]) {
+      const w = WORMS[curIdx];
+      const interval = 1000 / (w.fps || 12);
+      if (ts - lastTick >= interval) {
+        lastTick = ts;
+        curF = (curF + 1) % Math.max(1, w.n_frames);
+        sld.value = curF;
+        syncVidTime(w, curF);
+        drawAll();
+      }
+    }
+    requestAnimationFrame(tickLoop);
+  }
+  requestAnimationFrame(tickLoop);
 
   function buildSwipeStrip() {
     const strip = document.getElementById("twSwipeStrip");
@@ -773,21 +962,23 @@ render();
     });
   }
 
-  if (vid) {
-    vid.addEventListener("timeupdate", () => {
-      const w = WORMS[curIdx];
-      if (!w || !vid.duration || !isFinite(vid.duration)) return;
-      const f = Math.round((vid.currentTime / vid.duration) * (w.n_frames - 1));
-      if (f !== curF) setFrame(f, false);
-    });
-    vid.addEventListener("play", () => { document.getElementById("twPlayPause").textContent = "⏸"; });
-    vid.addEventListener("pause", () => { document.getElementById("twPlayPause").textContent = "▶"; });
-  }
-
-  document.getElementById("twPlayPause").onclick = () => { if (vid.paused) vid.play().catch(()=>{}); else vid.pause(); };
-  document.getElementById("twStepPrev").onclick = () => { vid.pause(); setFrame(curF - 1, true); };
-  document.getElementById("twStepNext").onclick = () => { vid.pause(); setFrame(curF + 1, true); };
-  sld.oninput = () => { vid.pause(); setFrame(parseInt(sld.value, 10), true); };
+  document.getElementById("twPlayPause").onclick = () => {
+    isPlaying = !isPlaying;
+    document.getElementById("twPlayPause").textContent = isPlaying ? "⏸" : "▶";
+    if (isPlaying) vid.play().catch(()=>{}); else vid.pause();
+  };
+  document.getElementById("twStepPrev").onclick = () => {
+    isPlaying = false; document.getElementById("twPlayPause").textContent = "▶"; vid.pause();
+    setFrame(curF - 1, true);
+  };
+  document.getElementById("twStepNext").onclick = () => {
+    isPlaying = false; document.getElementById("twPlayPause").textContent = "▶"; vid.pause();
+    setFrame(curF + 1, true);
+  };
+  sld.oninput = () => {
+    isPlaying = false; document.getElementById("twPlayPause").textContent = "▶"; vid.pause();
+    setFrame(parseInt(sld.value, 10), true);
+  };
   sel.onchange = () => window.loadSecondhandWorm(parseInt(sel.value, 10), true);
   document.getElementById("twPrevBtn").onclick = () => window.loadSecondhandWorm(curIdx - 1, true);
   document.getElementById("twNextBtn").onclick = () => window.loadSecondhandWorm(curIdx + 1, true);
@@ -806,12 +997,27 @@ render();
     e.target.setAttribute("aria-pressed", String(full));
     drawAll();
   };
+  const mvBtn = document.getElementById("twMaskVidBtn");
+  if (mvBtn) {
+    mvBtn.onclick = () => {
+      showMaskVid = !showMaskVid;
+      mvBtn.setAttribute("aria-pressed", String(showMaskVid));
+      drawAll();
+    };
+  }
   document.querySelectorAll("#twVidSourceBar .tw-btn").forEach(b => {
     b.onclick = () => {
       document.querySelectorAll("#twVidSourceBar .tw-btn").forEach(x => x.setAttribute("aria-pressed", "false"));
       b.setAttribute("aria-pressed", "true");
       vMode = b.dataset.vmode;
-      window.loadSecondhandWorm(curIdx, !vid.paused);
+      const w = WORMS[curIdx];
+      if (w) {
+        const hud2d = document.getElementById("twHud2D");
+        if (hud2d) hud2d.textContent = vMode === "cutout" ? "Mask Cutout Video" : (vMode === "iso" ? "Isolated Mask Only" : "Full Video + Mask");
+        const vUrl = (vMode === "comp") ? (w.comp_mp4 || w.src_mp4) : (w.src_mp4 || w.comp_mp4);
+        if (vid.src !== vUrl) vid.src = vUrl;
+        drawAll();
+      }
     };
   });
 
