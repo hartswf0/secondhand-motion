@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Secondhand Motion // 4D Spatiotemporal Time-Worm Studio (108 Tracked Shots)</title>
+<style>
+  :root {
+    --bg: #0b0d12;
+    --panel: #131722;
+    --panel-alt: #191f2e;
+    --border: #283147;
+    --fg: #f3f0ea;
+    --muted: #9aa3b5;
+    --gold: #f2bc57;
+    --cyan: #5bc8eb;
+    --green: #68d391;
+    --rose: #f56565;
+    --purple: #b794f4;
+    --mono: "SFMono-Regular", ui-monospace, Consolas, monospace;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 16px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+  }
+  .brand span { color: var(--gold); }
+  .nav-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    font-size: 12px;
+    color: var(--fg);
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--panel-alt);
+    font-weight: 600;
+  }
+  .nav-links a:hover { border-color: var(--gold); color: var(--gold); text-decoration: none; }
+
+  .container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 12px;
+  }
+
+  /* Quick Subject Pills */
+  .quick-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    scrollbar-width: thin;
+  }
+  .q-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .q-pill {
+    background: var(--panel);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .q-pill:hover { color: var(--fg); border-color: #465375; }
+  .q-pill.active {
+    background: rgba(242, 188, 87, 0.16);
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  /* Main Studio Card */
+  .studio-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 12px;
+    background: var(--panel-alt);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .select-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    min-width: 240px;
+  }
+  select.shot-select {
+    flex: 1;
+    background: var(--bg);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .btn {
+    background: var(--bg);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn:hover { border-color: var(--gold); color: var(--gold); }
+  .btn.active {
+    background: rgba(91, 200, 235, 0.16);
+    color: var(--cyan);
+    border-color: var(--cyan);
+  }
+  .btn-gold {
+    background: var(--gold);
+    color: #0b0d12;
+    border-color: var(--gold);
+    font-weight: 700;
+  }
+  .btn-gold:hover { background: #ffd175; color: #0b0d12; }
+
+  /* Dual Viewport Grid: Left = Video + 2D Mask/Joints, Right = 3D Extruded Worm */
+  .dual-stage {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    border-bottom: 1px solid var(--border);
+  }
+  @media (max-width: 900px) {
+    .dual-stage { grid-template-columns: 1fr; }
+  }
+  .pane {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+    min-width: 0;
+  }
+  .pane:last-child { border-right: none; }
+  .pane-subbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 7px 10px;
+    background: #0e121b;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .sub-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .mini-pill {
+    background: var(--panel);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .mini-pill.active {
+    background: rgba(242, 188, 87, 0.16);
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .viewport-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    max-height: 440px;
+    background: #05070a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .viewport-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .viewport-box canvas.overlay-2d {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .viewport-box canvas.worm-3d {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: grab;
+  }
+  .viewport-box canvas.worm-3d:active { cursor: grabbing; }
+
+  /* Transport + Frame & Keyframe Scrubber */
+  .transport-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    background: #0e121b;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .frame-readout {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold);
+    min-width: 140px;
+  }
+  .frame-slider {
+    flex: 1;
+    min-width: 160px;
+    accent-color: var(--gold);
+    cursor: pointer;
+  }
+  .key-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 12px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+  }
+  .key-pill {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: var(--panel-alt);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .key-pill:hover { border-color: var(--gold); color: var(--fg); }
+  .key-pill.active {
+    background: rgba(242, 188, 87, 0.2);
+    color: var(--gold);
+    border-color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* Ground-Truth Inspector Cards */
+  .inspector-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+    padding: 12px;
+    background: var(--panel-alt);
+  }
+  .ins-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .ins-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .ins-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--fg);
+    margin-bottom: 4px;
+  }
+  .ins-body {
+    font-size: 12px;
+    color: #d0d6e2;
+  }
+
+  /* Filter & 108-Worm Rack */
+  .filter-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .search-input {
+    flex: 1;
+    min-width: 200px;
+    background: var(--panel);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .worm-rack {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 10px;
+  }
+  .w-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color 0.12s;
+  }
+  .w-card:hover { border-color: var(--gold); }
+  .w-card.active {
+    border-color: var(--gold);
+    background: rgba(242, 188, 87, 0.07);
+  }
+  .w-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+  }
+  .w-slug {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+  .w-topo {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(91, 200, 235, 0.14);
+    color: var(--cyan);
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="brand">SECONDHAND MOTION <span>// 4D SPATIOTEMPORAL TIME-WORM STUDIO (108 TRACKED SHOTS)</span></div>
+  <nav class="nav-links">
+    <a href="../index.html">← Back to Secondhand Motion Rack</a>
+    <a href="https://hartswf0.github.io/bolas/allways-tensor/" target="_blank">ALLWAYS Studio ↗</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- 1-CLICK FLAGSHIP WORM SWITCHER -->
+  <div class="quick-bar" id="quickBar">
+    <span class="q-label">Flagship Tracked Worms:</span>
+    <button class="q-pill active" data-slug="aircraft-carrier">Aircraft Carrier (50f Cone)</button>
+    <button class="q-pill" data-slug="ant">Ant (25f · 12 Limb Braids)</button>
+    <button class="q-pill" data-slug="camera">Camera Lens (37f Locked Pillar)</button>
+    <button class="q-pill" data-slug="dragon">Dragon (32f Articulated)</button>
+    <button class="q-pill" data-slug="flying-saucer">Flying Saucer (28f Shear Ribbon)</button>
+    <button class="q-pill" data-slug="giraffe">Giraffe (17f Walk / Pan)</button>
+    <button class="q-pill" data-slug="horse">Horse (Gallop Braid)</button>
+    <button class="q-pill" data-slug="hurricane">Hurricane (39f Spiral Vortex)</button>
+    <button class="q-pill" data-slug="crab">Crab (38f Multi-Leg Braid)</button>
+    <button class="q-pill" data-slug="roller-coaster">Roller Coaster (Depth Plunge)</button>
+    <button class="q-pill" data-slug="sailboat">Sailboat (Horizon Shear)</button>
+  </div>
+
+  <section class="studio-card">
+    <!-- SHOT SELECTOR TOOLBAR -->
+    <div class="toolbar">
+      <div class="select-group">
+        <button class="btn" id="prevWormBtn">◀</button>
+        <select class="shot-select" id="wormSelect" aria-label="Select Tracked Shot">
+          <option>Loading 108 tracked time worms...</option>
+        </select>
+        <button class="btn" id="nextWormBtn">▶</button>
+      </div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        <a class="btn" id="openGwpBtn" href="https://hartswf0.github.io/secondhand-motion/" target="_blank">Shot Lot Page ↗</a>
+      </div>
+    </div>
+
+    <!-- DUAL STAGE: LEFT = VIDEO + 2D SAM MASK/JOINTS, RIGHT = 3D EXTRUDED TIME WORM -->
+    <div class="dual-stage">
+
+      <!-- LEFT PANE: SYNCHRONIZED VIDEO + 2D OVERLAY -->
+      <div class="pane">
+        <div class="pane-subbar">
+          <div class="sub-group" id="videoSourceBar">
+            <span class="q-label">Video:</span>
+            <button class="mini-pill active" data-vmode="comp">Comparison</button>
+            <button class="mini-pill" data-vmode="src">Raw Footage</button>
+            <button class="mini-pill" data-vmode="art">Redraw</button>
+          </div>
+          <div class="sub-group">
+            <span class="q-label">2D Overlay:</span>
+            <button class="mini-pill active" id="togMask2D">SAM Polygon</button>
+            <button class="mini-pill active" id="togJoints2D">Joints</button>
+            <button class="mini-pill active" id="togCam2D">Camera Vec</button>
+            <button class="mini-pill" id="togGrid2D">Rule Grid</button>
+          </div>
+        </div>
+        <div class="viewport-box">
+          <video id="wormVideo" playsinline loop muted></video>
+          <canvas class="overlay-2d" id="canvas2D" width="640" height="480"></canvas>
+        </div>
+      </div>
+
+      <!-- RIGHT PANE: INTERACTIVE 3D EXTRUDED SPATIOTEMPORAL WORM -->
+      <div class="pane">
+        <div class="pane-subbar">
+          <div class="sub-group" id="wormModeBar">
+            <span class="q-label">3D Worm Mode:</span>
+            <button class="mini-pill active" data-wmode="tube">1 · 3D Polygon Tube (u,v,τ)</button>
+            <button class="mini-pill" data-wmode="world">2 · Camera-Stabilized World Worm</button>
+            <button class="mini-pill" data-wmode="braid">3 · Articulated Joint Braid (B_n)</button>
+            <button class="mini-pill" data-wmode="depth">4 · 4D Depth Stratigraphy (u,d,τ)</button>
+          </div>
+          <button class="mini-pill" id="resetViewBtn" title="Reset 3D rotation">Reset 3D Angle</button>
+        </div>
+        <div class="viewport-box">
+          <canvas class="worm-3d" id="canvas3D" width="720" height="480"></canvas>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TRANSPORT & FRAME SCRUBBER -->
+    <div class="transport-bar">
+      <button class="btn" id="stepPrevFrameBtn" title="Step back 1 tracked frame">◀ -1f</button>
+      <button class="btn btn-gold" id="playPauseWormBtn">▶ Play</button>
+      <button class="btn" id="stepNextFrameBtn" title="Step forward 1 tracked frame">+1f ▶</button>
+      <span class="frame-readout" id="frameReadout">Frame 0 / 49 (0.00s)</span>
+      <input type="range" class="frame-slider" id="frameSlider" min="0" max="49" value="0" step="1">
+    </div>
+
+    <!-- CLICKABLE KEYFRAME (K) BAR -->
+    <div class="key-bar" id="keyBar">
+      <span class="q-label">Tracked Keyframes (K):</span>
+    </div>
+
+    <!-- 4-BOX GROUND-TRUTH GEOMETRIC INSPECTOR -->
+    <div class="inspector-grid">
+      <div class="ins-box">
+        <div class="ins-label">1. Shot &amp; 3D Worm Topology</div>
+        <div class="ins-title" id="insTopoTitle">—</div>
+        <div class="ins-body" id="insTopoBody">—</div>
+      </div>
+      <div class="ins-box">
+        <div class="ins-label">2. True SAM Polygon Silhouette (Frame f)</div>
+        <div class="ins-title" id="insMaskTitle">—</div>
+        <div class="ins-body" id="insMaskBody">—</div>
+      </div>
+      <div class="ins-box">
+        <div class="ins-label">3. 4D Depth &amp; Camera Parallax Decoupling</div>
+        <div class="ins-title" id="insDepthTitle">—</div>
+        <div class="ins-body" id="insDepthBody">—</div>
+      </div>
+      <div class="ins-box">
+        <div class="ins-label">4. Articulated Joints, Braid (B_n) &amp; Planted Feet</div>
+        <div class="ins-title" id="insBraidTitle">—</div>
+        <div class="ins-body" id="insBraidBody">—</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL 108 TRACKED WORMS RACK -->
+  <section>
+    <div class="filter-bar">
+      <input type="search" class="search-input" id="rackSearch" placeholder="Search 108 tracked subjects by name, source film, or topology...">
+      <select class="shot-select" id="topoFilter" style="max-width:250px;">
+        <option value="ALL">All 5 Worm Topologies (108)</option>
+        <option value="CAMERA_SHEAR_RIBBON">Camera Shear Ribbon (37)</option>
+        <option value="LOOMING_FUNNEL_CONE">Looming Funnel Cone (27)</option>
+        <option value="ARTICULATED_LIMB_BRAID">Articulated Limb Braid (23)</option>
+        <option value="SERPENTINE_CORKSCREW">Serpentine Corkscrew (13)</option>
+        <option value="LOCKED_PILLAR">Locked Pillar (8)</option>
+      </select>
+      <select class="shot-select" id="tierFilter" style="max-width:250px;">
+        <option value="ALL">All Tracking Tiers (108)</option>
+        <option value="INTEGRATED">41 Integrated (3 Synced MP4s)</option>
+        <option value="BATCH">10 Flagship Puppet Redraws</option>
+      </select>
+    </div>
+    <div class="worm-rack" id="wormRack"></div>
+  </section>
+
+</main>
+
+<script>
+const DATA_URL = "../data/worms_108.json";
+
+const TOPO_EXPLAIN = {
+  "LOCKED_PILLAR": "Straight vertical cylinder parallel to the time axis: both camera and subject hold steady inside a fixed channel.",
+  "CAMERA_SHEAR_RIBBON": "Diagonal sheared ribbon: lateral camera pan or subject translation sweeps across the horizontal u-axis over time.",
+  "LOOMING_FUNNEL_CONE": "Expanding or contracting 3D cone: the segmented polygon radius r(τ) or subject depth d(τ) grows/shrinks along τ.",
+  "ARTICULATED_LIMB_BRAID": "Multi-strand articulated bundle: tracked skeletal joints cross over one another in time, forming Artin Braid words σ_i^±1.",
+  "SERPENTINE_CORKSCREW": "Curved helical tube: the polygon centroid winds across both u and v with high Frenet-Serret curvature."
+};
+
+const JOINT_COLORS = [
+  "#5bc8eb", "#f56565", "#68d391", "#b794f4", "#f2bc57", "#ed64a6", "#4fd1c5", "#fbd38d"
+];
+
+let WORMS = [];
+let currentWormIdx = 0;
+let currentFrameIdx = 0;
+let videoSourceMode = "comp"; // "comp", "src", "art"
+let wormViewMode = "tube";    // "tube", "world", "braid", "depth"
+
+let showMask2D = true;
+let showJoints2D = true;
+let showCam2D = true;
+let showGrid2D = false;
+
+// 3D interactive rotation angles
+let yaw3D = 0.62;
+let pitch3D = -0.34;
+let isDragging3D = false;
+let dragStartX = 0, dragStartY = 0;
+
+const videoEl = document.getElementById("wormVideo");
+const canvas2D = document.getElementById("canvas2D");
+const ctx2D = canvas2D.getContext("2d");
+const canvas3D = document.getElementById("canvas3D");
+const ctx3D = canvas3D.getContext("2d");
+const wormSelect = document.getElementById("wormSelect");
+const frameSlider = document.getElementById("frameSlider");
+
+/* Project normalized 3D coordinates (X in [-0.5,0.5], Y in [-0.5,0.5], T in [-0.5,0.5]) onto canvas3D */
+function project3D(X, Y, T, W, H) {
+  // Rotate around vertical Y axis by yaw3D (mixing X and T)
+  const cosY = Math.cos(yaw3D), sinY = Math.sin(yaw3D);
+  const x1 = X * cosY + T * sinY;
+  const z1 = -X * sinY + T * cosY;
+
+  // Rotate around horizontal X axis by pitch3D (mixing Y and z1)
+  const cosP = Math.cos(pitch3D), sinP = Math.sin(pitch3D);
+  const y2 = Y * cosP - z1 * sinP;
+  const z2 = Y * sinP + z1 * cosP;
+
+  const fov = 1.9 / (2.3 + z2 * 0.55);
+  const sx = W * 0.50 + x1 * W * 0.44 * fov;
+  const sy = H * 0.52 + y2 * H * 0.48 * fov;
+  return [sx, sy, z2];
+}
+
+/* Draw the 2D ground-truth overlay on the synchronized video frame */
+function render2DOverlay() {
+  const W = canvas2D.width, H = canvas2D.height;
+  ctx2D.clearRect(0, 0, W, H);
+  const w = WORMS[currentWormIdx];
+  if (!w || !w.frames || !w.frames.length) return;
+
+  const fIdx = Math.max(0, Math.min(w.frames.length - 1, currentFrameIdx));
+  const fr = w.frames[fIdx];
+
+  ctx2D.save();
+
+  // Optional 8-Rule Compositional Grid
+  if (showGrid2D) {
+    ctx2D.strokeStyle = "rgba(242, 188, 87, 0.55)";
+    ctx2D.lineWidth = 1.8;
+    const rule = w.best_rule;
+    if (rule === "symmetry") {
+      ctx2D.beginPath(); ctx2D.moveTo(W * 0.5, 0); ctx2D.lineTo(W * 0.5, H); ctx2D.stroke();
+    } else if (rule === "rule_of_thirds") {
+      ctx2D.beginPath();
+      ctx2D.moveTo(W/3, 0); ctx2D.lineTo(W/3, H); ctx2D.moveTo(2*W/3, 0); ctx2D.lineTo(2*W/3, H);
+      ctx2D.moveTo(0, H/3); ctx2D.lineTo(W, H/3); ctx2D.moveTo(0, 2*H/3); ctx2D.lineTo(W, 2*H/3);
+      ctx2D.stroke();
+    } else if (rule === "centered") {
+      ctx2D.beginPath();
+      ctx2D.moveTo(W * 0.42, 0); ctx2D.lineTo(W * 0.42, H);
+      ctx2D.moveTo(W * 0.58, 0); ctx2D.lineTo(W * 0.58, H);
+      ctx2D.moveTo(0, H * 0.67); ctx2D.lineTo(W, H * 0.67);
+      ctx2D.stroke();
+    } else if (rule === "v_shape") {
+      ctx2D.beginPath();
+      ctx2D.moveTo(W * 0.1, 0); ctx2D.lineTo(W * 0.5, H * 0.88); ctx2D.lineTo(W * 0.9, 0);
+      ctx2D.stroke();
+    } else if (rule === "frame_in_frame") {
+      ctx2D.strokeRect(W * 0.16, H * 0.14, W * 0.68, H * 0.72);
+    } else if (rule === "negative_space") {
+      ctx2D.strokeRect(W * 0.06, H * 0.06, W * 0.88, H * 0.54);
+    } else {
+      // Golden spiral / S-curve
+      ctx2D.strokeRect(W * 0.04, H * 0.04, W * 0.92, H * 0.92);
+      ctx2D.beginPath(); ctx2D.moveTo(W * 0.618, H * 0.04); ctx2D.lineTo(W * 0.618, H * 0.96); ctx2D.stroke();
+    }
+  }
+
+  // 1. True SAM Polygon Silhouette at current frame f
+  if (showMask2D && fr.ring && fr.ring.length >= 3) {
+    ctx2D.beginPath();
+    fr.ring.forEach((uv, idx) => {
+      const x = uv[0] * W, y = uv[1] * H;
+      if (idx === 0) ctx2D.moveTo(x, y); else ctx2D.lineTo(x, y);
+    });
+    ctx2D.closePath();
+    ctx2D.fillStyle = "rgba(91, 200, 235, 0.16)";
+    ctx2D.fill();
+    ctx2D.strokeStyle = "rgba(91, 200, 235, 0.92)";
+    ctx2D.lineWidth = 2.5;
+    ctx2D.stroke();
+
+    // Centroid trail up to frame fIdx
+    ctx2D.beginPath();
+    for (let i = 0; i <= fIdx; i++) {
+      const c = w.frames[i].c;
+      if (i === 0) ctx2D.moveTo(c[0] * W, c[1] * H);
+      else ctx2D.lineTo(c[0] * W, c[1] * H);
+    }
+    ctx2D.strokeStyle = "#f2bc57";
+    ctx2D.lineWidth = 2.5;
+    ctx2D.stroke();
+
+    // Current centroid dot
+    const cx = fr.c[0] * W, cy = fr.c[1] * H;
+    ctx2D.beginPath();
+    ctx2D.arc(cx, cy, 5.5, 0, Math.PI * 2);
+    ctx2D.fillStyle = "#f2bc57";
+    ctx2D.fill();
+  }
+
+  // 2. Articulated Joint Skeleton & Trails
+  if (showJoints2D && w.joints) {
+    const jnames = Object.keys(w.joints);
+    jnames.forEach((jn, jIdx) => {
+      const tr = w.joints[jn];
+      if (!tr || !tr.length) return;
+      const col = JOINT_COLORS[jIdx % JOINT_COLORS.length];
+
+      ctx2D.beginPath();
+      for (let i = 0; i <= Math.min(fIdx, tr.length - 1); i++) {
+        const pt = tr[i];
+        if (i === 0) ctx2D.moveTo(pt[0] * W, pt[1] * H);
+        else ctx2D.lineTo(pt[0] * W, pt[1] * H);
+      }
+      ctx2D.strokeStyle = col;
+      ctx2D.lineWidth = 1.8;
+      ctx2D.stroke();
+
+      const curPt = tr[Math.min(fIdx, tr.length - 1)];
+      const jx = curPt[0] * W, jy = curPt[1] * H;
+      ctx2D.beginPath();
+      ctx2D.arc(jx, jy, 4.5, 0, Math.PI * 2);
+      ctx2D.fillStyle = col;
+      ctx2D.fill();
+
+      ctx2D.fillStyle = "#fff";
+      ctx2D.font = "bold 11px -apple-system, sans-serif";
+      ctx2D.fillText(jn, jx + 6, jy - 4);
+    });
+  }
+
+  // 3. Camera Pan Vector vs. World-Stabilized Centroid
+  if (showCam2D && (Math.abs(fr.cam[0]) > 0.001 || Math.abs(fr.cam[1]) > 0.001)) {
+    const ox = W * 0.5, oy = H * 0.90;
+    const tx = ox + fr.cam[0] * W * 2.0;
+    const ty = oy + fr.cam[1] * H * 2.0;
+    ctx2D.strokeStyle = "#f56565";
+    ctx2D.lineWidth = 2.5;
+    ctx2D.beginPath();
+    ctx2D.moveTo(ox, oy);
+    ctx2D.lineTo(tx, ty);
+    ctx2D.stroke();
+    ctx2D.fillStyle = "#f56565";
+    ctx2D.font = "bold 11px monospace";
+    ctx2D.fillText(`CAM PAN Δ(${(fr.cam[0]*100).toFixed(1)}%, ${(fr.cam[1]*100).toFixed(1)}%)`, ox - 65, oy - 8);
+  }
+
+  ctx2D.restore();
+}
+
+/* Draw the 3D Extruded Spatiotemporal Time Worm on canvas3D */
+function render3DWorm() {
+  const W = canvas3D.width, H = canvas3D.height;
+  ctx3D.clearRect(0, 0, W, H);
+
+  const w = WORMS[currentWormIdx];
+  if (!w || !w.frames || !w.frames.length) return;
+  const frames = w.frames;
+  const nf = frames.length;
+  const fIdx = Math.max(0, Math.min(nf - 1, currentFrameIdx));
+
+  ctx3D.save();
+
+  // Draw 3D Spatiotemporal Bounding Volume Wireframe Box [-0.5..0.5]^3
+  const corners = [
+    [-0.5, -0.5, -0.5], [0.5, -0.5, -0.5], [0.5, 0.5, -0.5], [-0.5, 0.5, -0.5],
+    [-0.5, -0.5,  0.5], [0.5, -0.5,  0.5], [0.5, 0.5,  0.5], [-0.5, 0.5,  0.5]
+  ].map(c => project3D(c[0], c[1], c[2], W, H));
+
+  const edges = [
+    [0,1],[1,2],[2,3],[3,0],
+    [4,5],[5,6],[6,7],[7,4],
+    [0,4],[1,5],[2,6],[3,7]
+  ];
+  ctx3D.strokeStyle = "rgba(65, 80, 115, 0.45)";
+  ctx3D.lineWidth = 1;
+  edges.forEach(([a, b]) => {
+    ctx3D.beginPath();
+    ctx3D.moveTo(corners[a][0], corners[a][1]);
+    ctx3D.lineTo(corners[b][0], corners[b][1]);
+    ctx3D.stroke();
+  });
+
+  // Label Time Axis τ (from front -0.5 to back +0.5)
+  const tStartPt = project3D(-0.52, 0.55, -0.5, W, H);
+  const tEndPt = project3D(-0.52, 0.55, 0.5, W, H);
+  ctx3D.fillStyle = "#9aa3b5";
+  ctx3D.font = "11px monospace";
+  ctx3D.fillText("f=0 (Start)", tStartPt[0], tStartPt[1]);
+  ctx3D.fillText(`f=${nf-1} (End τ)`, tEndPt[0], tEndPt[1]);
+
+  if (wormViewMode === "tube" || wormViewMode === "world") {
+    const useWorld = (wormViewMode === "world");
+
+    // 1. Connect longitudinal ribs between consecutive polygon rings
+    const ribIndices = [0, 4, 8, 12];
+    ribIndices.forEach(rIdx => {
+      ctx3D.beginPath();
+      for (let i = 0; i < nf; i++) {
+        const fr = frames[i];
+        const tau = (i / Math.max(1, nf - 1)) - 0.5;
+        const dx = useWorld ? -fr.cam[0] : 0;
+        const dy = useWorld ? -fr.cam[1] : 0;
+        const uv = fr.ring[rIdx % fr.ring.length];
+        const p = project3D((uv[0] + dx) - 0.5, (uv[1] + dy) - 0.5, tau, W, H);
+        if (i === 0) ctx3D.moveTo(p[0], p[1]);
+        else ctx3D.lineTo(p[0], p[1]);
+      }
+      ctx3D.strokeStyle = "rgba(91, 200, 235, 0.22)";
+      ctx3D.lineWidth = 1;
+      ctx3D.stroke();
+    });
+
+    // 2. Draw stacked Polygon Cross-Section Rings along τ
+    for (let i = 0; i < nf; i++) {
+      const fr = frames[i];
+      const tau = (i / Math.max(1, nf - 1)) - 0.5;
+      const isCurrent = (i === fIdx);
+      const isKey = w.keys && w.keys.includes(i);
+      const isPast = (i <= fIdx);
+
+      // Draw every frame if nf <= 35, or every 2nd frame + keyframes + current frame
+      if (nf > 38 && !isCurrent && !isKey && (i % 2 !== 0)) continue;
+
+      const dx = useWorld ? -fr.cam[0] : 0;
+      const dy = useWorld ? -fr.cam[1] : 0;
+
+      ctx3D.beginPath();
+      fr.ring.forEach((uv, idx) => {
+        const p = project3D((uv[0] + dx) - 0.5, (uv[1] + dy) - 0.5, tau, W, H);
+        if (idx === 0) ctx3D.moveTo(p[0], p[1]);
+        else ctx3D.lineTo(p[0], p[1]);
+      });
+      ctx3D.closePath();
+
+      if (isCurrent) {
+        ctx3D.fillStyle = "rgba(242, 188, 87, 0.30)";
+        ctx3D.fill();
+        ctx3D.strokeStyle = "#5bc8eb";
+        ctx3D.lineWidth = 3.0;
+        ctx3D.stroke();
+      } else if (isKey) {
+        ctx3D.fillStyle = "rgba(242, 188, 87, 0.08)";
+        ctx3D.fill();
+        ctx3D.strokeStyle = "rgba(242, 188, 87, 0.85)";
+        ctx3D.lineWidth = 1.8;
+        ctx3D.stroke();
+      } else {
+        ctx3D.strokeStyle = isPast ? "rgba(91, 200, 235, 0.45)" : "rgba(154, 163, 181, 0.18)";
+        ctx3D.lineWidth = 1.0;
+        ctx3D.stroke();
+      }
+    }
+
+    // 3. Draw Centroid Spine Worldline
+    ctx3D.beginPath();
+    for (let i = 0; i < nf; i++) {
+      const fr = frames[i];
+      const tau = (i / Math.max(1, nf - 1)) - 0.5;
+      const c = useWorld ? fr.c_world : fr.c;
+      const p = project3D(c[0] - 0.5, c[1] - 0.5, tau, W, H);
+      if (i === 0) ctx3D.moveTo(p[0], p[1]);
+      else ctx3D.lineTo(p[0], p[1]);
+    }
+    ctx3D.strokeStyle = "#f2bc57";
+    ctx3D.lineWidth = 3.0;
+    ctx3D.stroke();
+
+  } else if (wormViewMode === "braid") {
+    // Mode 3: Articulated Joint Strands & Artin Braid Crossings
+    const jnames = Object.keys(w.joints || {});
+    if (jnames.length === 0) {
+      // Fallback to centroid + left/right polygon extrema strands
+      ctx3D.fillStyle = "#f2bc57";
+      ctx3D.font = "13px sans-serif";
+      ctx3D.fillText("Single-body silhouette worm (switch to Mode 1 for 3D Polygon Tube)", 20, H - 20);
+    }
+
+    jnames.forEach((jn, jIdx) => {
+      const tr = w.joints[jn];
+      const col = JOINT_COLORS[jIdx % JOINT_COLORS.length];
+      ctx3D.beginPath();
+      for (let i = 0; i < tr.length; i++) {
+        const tau = (i / Math.max(1, nf - 1)) - 0.5;
+        const p = project3D(tr[i][0] - 0.5, tr[i][1] - 0.5, tau, W, H);
+        if (i === 0) ctx3D.moveTo(p[0], p[1]);
+        else ctx3D.lineTo(p[0], p[1]);
+      }
+      ctx3D.strokeStyle = col;
+      ctx3D.lineWidth = 2.6;
+      ctx3D.stroke();
+
+      // Current frame bead on strand
+      const cur = tr[Math.min(fIdx, tr.length - 1)];
+      const curTau = (fIdx / Math.max(1, nf - 1)) - 0.5;
+      const cp = project3D(cur[0] - 0.5, cur[1] - 0.5, curTau, W, H);
+      ctx3D.beginPath();
+      ctx3D.arc(cp[0], cp[1], 5.5, 0, Math.PI * 2);
+      ctx3D.fillStyle = col;
+      ctx3D.fill();
+      ctx3D.fillStyle = "#fff";
+      ctx3D.font = "bold 11px sans-serif";
+      ctx3D.fillText(jn, cp[0] + 7, cp[1] + 3);
+    });
+
+    // Mark Artin Braid Crossing events (σ_i^±1)
+    (w.braid_events || []).forEach(ev => {
+      const tau = (ev.f / Math.max(1, nf - 1)) - 0.5;
+      const p = project3D(ev.u - 0.5, ev.v - 0.5, tau, W, H);
+      ctx3D.beginPath();
+      ctx3D.arc(p[0], p[1], 7, 0, Math.PI * 2);
+      ctx3D.fillStyle = "rgba(245, 101, 101, 0.9)";
+      ctx3D.fill();
+      ctx3D.fillStyle = "#fff";
+      ctx3D.font = "bold 10px monospace";
+      ctx3D.fillText(ev.gen, p[0] + 8, p[1] - 4);
+    });
+
+    // Mark Planted Contact Pillars (M4)
+    (w.planted_contacts || []).forEach(pl => {
+      const t0 = (pl.f_start / Math.max(1, nf - 1)) - 0.5;
+      const t1 = (pl.f_end / Math.max(1, nf - 1)) - 0.5;
+      const p0 = project3D(pl.u - 0.5, pl.v - 0.5, t0, W, H);
+      const p1 = project3D(pl.u - 0.5, pl.v - 0.5, t1, W, H);
+      ctx3D.strokeStyle = "#68d391";
+      ctx3D.lineWidth = 5.0;
+      ctx3D.beginPath();
+      ctx3D.moveTo(p0[0], p0[1]);
+      ctx3D.lineTo(p1[0], p1[1]);
+      ctx3D.stroke();
+    });
+
+  } else if (wormViewMode === "depth") {
+    // Mode 4: 4D Depth Stratigraphy (u, d, τ) — vertical axis is measured Depth d in [0..1]
+    const strataNames = ["Top Sky/Wall", "Middle Plane", "Bottom Ground"];
+    const strataCols = ["rgba(91,200,235,0.4)", "rgba(183,148,244,0.4)", "rgba(104,211,145,0.4)"];
+
+    for (let sIdx = 0; sIdx < 3; sIdx++) {
+      ctx3D.beginPath();
+      for (let i = 0; i < nf; i++) {
+        const fr = frames[i];
+        const tau = (i / Math.max(1, nf - 1)) - 0.5;
+        const dVal = fr.d_strata ? fr.d_strata[sIdx] : 0.5;
+        const p = project3D(fr.c[0] - 0.5, (1.0 - dVal) - 0.5, tau, W, H);
+        if (i === 0) ctx3D.moveTo(p[0], p[1]);
+        else ctx3D.lineTo(p[0], p[1]);
+      }
+      ctx3D.strokeStyle = strataCols[sIdx];
+      ctx3D.lineWidth = 2.0;
+      ctx3D.stroke();
+    }
+
+    // Draw Subject Worm at its measured Subject Depth d_subj(τ)
+    for (let i = 0; i < nf; i++) {
+      const fr = frames[i];
+      const tau = (i / Math.max(1, nf - 1)) - 0.5;
+      const p = project3D(fr.c[0] - 0.5, (1.0 - fr.d_subj) - 0.5, tau, W, H);
+      ctx3D.beginPath();
+      ctx3D.arc(p[0], p[1], Math.max(4, fr.r * 38), 0, Math.PI * 2);
+      ctx3D.strokeStyle = (i === fIdx) ? "#5bc8eb" : "rgba(242, 188, 87, 0.55)";
+      ctx3D.lineWidth = (i === fIdx) ? 3.0 : 1.3;
+      ctx3D.stroke();
+    }
+  }
+
+  // HUD Legend on 3D Canvas
+  ctx3D.fillStyle = "rgba(11, 13, 18, 0.84)";
+  ctx3D.fillRect(12, 12, 315, 44);
+  ctx3D.strokeStyle = "rgba(242, 188, 87, 0.5)";
+  ctx3D.strokeRect(12, 12, 315, 44);
+  ctx3D.fillStyle = "#f2bc57";
+  ctx3D.font = "bold 12px -apple-system, sans-serif";
+  ctx3D.fillText(`${w.slug.toUpperCase()} · ${w.topology.replace(/_/g, " ")}`, 20, 30);
+  ctx3D.fillStyle = "#9aa3b5";
+  ctx3D.font = "11px monospace";
+  ctx3D.fillText(`Drag to rotate 3D · Gold = Keyframes (K) · Cyan = Frame ${fIdx}`, 20, 47);
+
+  ctx3D.restore();
+}
+
+/* Update text inspector cards for the active shot & frame */
+function updateInspector() {
+  const w = WORMS[currentWormIdx];
+  if (!w) return;
+  const fIdx = Math.max(0, Math.min(w.frames.length - 1, currentFrameIdx));
+  const fr = w.frames[fIdx];
+  const isKey = w.keys && w.keys.includes(fIdx);
+
+  document.getElementById("frameReadout").textContent =
+    `Frame ${fIdx} / ${w.n_frames - 1} (${fr.t.toFixed(2)}s) ${isKey ? "★ KEY" : ""}`;
+  frameSlider.value = fIdx;
+
+  // Highlight active keyframe pill
+  document.querySelectorAll("#keyBar .key-pill").forEach(btn => {
+    btn.classList.toggle("active", parseInt(btn.dataset.f, 10) === fIdx);
+  });
+
+  // Box 1: Topology & Source
+  const yr = w.source_year ? ` (${w.source_year})` : "";
+  document.getElementById("insTopoTitle").textContent =
+    `${w.topology.replace(/_/g, " ")} · ${w.best_rule.replace(/_/g, " ").toUpperCase()} (${w.best_fit}% Fit)`;
+  document.getElementById("insTopoBody").textContent =
+    `Source: "${w.source_title}"${yr}. ${w.why_clip}`;
+
+  // Box 2: True SAM Polygon Silhouette at Frame f
+  document.getElementById("insMaskTitle").textContent =
+    `Centroid (${fr.c[0].toFixed(3)}, ${fr.c[1].toFixed(3)}) · Radius r = ${fr.r.toFixed(3)}`;
+  document.getElementById("insMaskBody").textContent =
+    `Polygon covers ${(fr.area * 100).toFixed(1)}% of frame area (principal axis angle ${(fr.angle * 57.3).toFixed(1)}°). ` +
+    `World-stabilized centroid: (${fr.c_world[0].toFixed(3)}, ${fr.c_world[1].toFixed(3)}).`;
+
+  // Box 3: 4D Depth & Camera Parallax
+  const dDiff = (fr.d_subj - fr.d_scene).toFixed(3);
+  const planeLabels = (w.planes || []).map(p => `${p.id}(z=${p.z})`).join(", ");
+  document.getElementById("insDepthTitle").textContent =
+    `Subject Depth ${fr.d_subj.toFixed(2)} vs Scene ${fr.d_scene.toFixed(2)} (Δd = ${dDiff})`;
+  document.getElementById("insDepthBody").textContent =
+    `Camera shift at frame ${fIdx}: Δu=${(fr.cam[0]*100).toFixed(1)}%, Δv=${(fr.cam[1]*100).toFixed(1)}%. ` +
+    `Parallax planes: ${planeLabels}.`;
+
+  // Box 4: Articulated Joints, Braid & Planted Contacts
+  const jnames = Object.keys(w.joints || {});
+  document.getElementById("insBraidTitle").textContent =
+    `${jnames.length} Tracked Joints · ${w.braid_count} Braid Crossings · ${w.planted_count} Planted Intervals`;
+  if (w.braid_events && w.braid_events.length) {
+    const evStr = w.braid_events.slice(0, 4).map(e => `f${e.f}:${e.pair}(${e.gen})`).join(", ");
+    document.getElementById("insBraidBody").textContent =
+      `Joints [${jnames.join(", ")}] cross at: ${evStr}.`;
+  } else if (jnames.length) {
+    document.getElementById("insBraidBody").textContent =
+      `Tracked joints [${jnames.join(", ")}] move in parallel laminar paths (Braid word = trivial).`;
+  } else {
+    document.getElementById("insBraidBody").textContent =
+      `Rigid silhouette body tracked via 16-vertex SAM contour rings across ${w.n_frames} frames.`;
+  }
+}
+
+function setFrameIndex(fIdx, syncVideo = true) {
+  const w = WORMS[currentWormIdx];
+  if (!w) return;
+  currentFrameIdx = Math.max(0, Math.min(w.n_frames - 1, fIdx));
+
+  if (syncVideo && videoEl.duration && isFinite(videoEl.duration)) {
+    const targetT = (currentFrameIdx / Math.max(1, w.n_frames - 1)) * videoEl.duration;
+    if (Math.abs(videoEl.currentTime - targetT) > 0.04) {
+      videoEl.currentTime = targetT;
+    }
+  }
+
+  render2DOverlay();
+  render3DWorm();
+  updateInspector();
+}
+
+function loadWormByIndex(idx, autoPlay = true) {
+  if (!WORMS.length) return;
+  if (idx < 0) idx = WORMS.length - 1;
+  if (idx >= WORMS.length) idx = 0;
+  currentWormIdx = idx;
+  wormSelect.value = idx;
+  currentFrameIdx = 0;
+
+  const w = WORMS[idx];
+  document.getElementById("openGwpBtn").href = w.gwp_page;
+
+  // Highlight quick bar pill & rack card
+  document.querySelectorAll("#quickBar .q-pill").forEach(b => {
+    b.classList.toggle("active", b.dataset.slug === w.slug);
+  });
+  document.querySelectorAll("#wormRack .w-card").forEach(c => {
+    c.classList.toggle("active", parseInt(c.dataset.idx, 10) === idx);
+  });
+
+  frameSlider.max = Math.max(1, w.n_frames - 1);
+  frameSlider.value = 0;
+
+  // Build Keyframe pills
+  const keyBar = document.getElementById("keyBar");
+  keyBar.innerHTML = `<span class="q-label">Tracked Keyframes (K):</span>`;
+  (w.keys || []).forEach((kf, kIdx) => {
+    const btn = document.createElement("button");
+    btn.className = "key-pill" + (kf === 0 ? " active" : "");
+    btn.dataset.f = kf;
+    btn.textContent = `K${String(kIdx + 1).padStart(2, "0")} (f${kf})`;
+    btn.addEventListener("click", () => {
+      videoEl.pause();
+      setFrameIndex(kf, true);
+    });
+    keyBar.appendChild(btn);
+  });
+
+  // Choose video URL
+  const vUrl = (videoSourceMode === "src") ? w.src_mp4 : ((videoSourceMode === "art") ? w.art_mp4 : w.comp_mp4);
+  if (videoEl.src !== vUrl) {
+    videoEl.src = vUrl;
+  }
+
+  setFrameIndex(0, false);
+  if (autoPlay) {
+    videoEl.play().catch(() => {});
+  }
+}
+
+/* Synchronize frame index from video timeupdate */
+videoEl.addEventListener("timeupdate", () => {
+  const w = WORMS[currentWormIdx];
+  if (!w || !videoEl.duration || !isFinite(videoEl.duration)) return;
+  const f = Math.round((videoEl.currentTime / videoEl.duration) * (w.n_frames - 1));
+  if (f !== currentFrameIdx) {
+    setFrameIndex(f, false);
+  }
+});
+
+videoEl.addEventListener("play", () => {
+  document.getElementById("playPauseWormBtn").textContent = "⏸ Pause";
+});
+videoEl.addEventListener("pause", () => {
+  document.getElementById("playPauseWormBtn").textContent = "▶ Play";
+});
+
+/* Controls wiring */
+document.getElementById("playPauseWormBtn").addEventListener("click", () => {
+  if (videoEl.paused) videoEl.play().catch(() => {});
+  else videoEl.pause();
+});
+document.getElementById("stepPrevFrameBtn").addEventListener("click", () => {
+  videoEl.pause();
+  setFrameIndex(currentFrameIdx - 1, true);
+});
+document.getElementById("stepNextFrameBtn").addEventListener("click", () => {
+  videoEl.pause();
+  setFrameIndex(currentFrameIdx + 1, true);
+});
+frameSlider.addEventListener("input", () => {
+  videoEl.pause();
+  setFrameIndex(parseInt(frameSlider.value, 10), true);
+});
+
+wormSelect.addEventListener("change", () => loadWormByIndex(parseInt(wormSelect.value, 10), true));
+document.getElementById("prevWormBtn").addEventListener("click", () => loadWormByIndex(currentWormIdx - 1, true));
+document.getElementById("nextWormBtn").addEventListener("click", () => loadWormByIndex(currentWormIdx + 1, true));
+
+document.querySelectorAll("#quickBar .q-pill").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const idx = WORMS.findIndex(w => w.slug === btn.dataset.slug);
+    if (idx !== -1) loadWormByIndex(idx, true);
+  });
+});
+
+document.querySelectorAll("#videoSourceBar .mini-pill").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("#videoSourceBar .mini-pill").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    videoSourceMode = btn.dataset.vmode;
+    loadWormByIndex(currentWormIdx, !videoEl.paused);
+  });
+});
+
+document.querySelectorAll("#wormModeBar .mini-pill").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("#wormModeBar .mini-pill").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    wormViewMode = btn.dataset.wmode;
+    render3DWorm();
+  });
+});
+
+function bindToggle(id, getter, setter) {
+  const el = document.getElementById(id);
+  el.addEventListener("click", () => {
+    setter(!getter());
+    el.classList.toggle("active", getter());
+    render2DOverlay();
+  });
+}
+bindToggle("togMask2D", () => showMask2D, v => showMask2D = v);
+bindToggle("togJoints2D", () => showJoints2D, v => showJoints2D = v);
+bindToggle("togCam2D", () => showCam2D, v => showCam2D = v);
+bindToggle("togGrid2D", () => showGrid2D, v => showGrid2D = v);
+
+/* 3D Canvas Drag-to-Rotate */
+canvas3D.addEventListener("pointerdown", e => {
+  isDragging3D = true;
+  dragStartX = e.clientX;
+  dragStartY = e.clientY;
+  canvas3D.setPointerCapture(e.pointerId);
+});
+canvas3D.addEventListener("pointermove", e => {
+  if (!isDragging3D) return;
+  const dx = e.clientX - dragStartX;
+  const dy = e.clientY - dragStartY;
+  dragStartX = e.clientX;
+  dragStartY = e.clientY;
+  yaw3D += dx * 0.008;
+  pitch3D = Math.max(-1.2, Math.min(1.2, pitch3D + dy * 0.008));
+  render3DWorm();
+});
+canvas3D.addEventListener("pointerup", () => { isDragging3D = false; });
+document.getElementById("resetViewBtn").addEventListener("click", () => {
+  yaw3D = 0.62;
+  pitch3D = -0.34;
+  render3DWorm();
+});
+
+/* Render 108-Worm Filterable Rack */
+function renderWormRack() {
+  const q = (document.getElementById("rackSearch").value || "").toLowerCase();
+  const topo = document.getElementById("topoFilter").value;
+  const tier = document.getElementById("tierFilter").value;
+  const rack = document.getElementById("wormRack");
+  rack.innerHTML = "";
+
+  WORMS.forEach((w, idx) => {
+    if (topo !== "ALL" && w.topology !== topo) return;
+    if (tier === "INTEGRATED" && !w.has_integrated) return;
+    if (tier === "BATCH" && !w.has_batch) return;
+    const hay = `${w.slug} ${w.title} ${w.source_title} ${w.topology} ${w.best_rule}`.toLowerCase();
+    if (q && !hay.includes(q)) return;
+
+    const card = document.createElement("div");
+    card.className = "w-card" + (idx === currentWormIdx ? " active" : "");
+    card.dataset.idx = idx;
+    const jCount = Object.keys(w.joints || {}).length;
+    card.innerHTML = `
+      <div class="w-head">
+        <span class="w-slug">${idx + 1}. ${w.slug.replace(/-/g, " ")}</span>
+        <span class="w-topo">${w.topology.replace(/_/g, " ")}</span>
+      </div>
+      <div style="font-size:12px;color:var(--fg);font-weight:600;">${w.title}</div>
+      <div style="font-size:11px;color:var(--muted);">
+        Source: <em>${w.source_title}</em> · ${w.n_frames}f (${w.duration_s}s)<br>
+        Rule: <b style="color:var(--gold);">${w.best_rule.replace(/_/g, " ")} (${w.best_fit}%)</b> ·
+        Joints: ${jCount} · Braids: ${w.braid_count}
+      </div>
+    `;
+    card.addEventListener("click", () => {
+      loadWormByIndex(idx, true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    rack.appendChild(card);
+  });
+}
+
+document.getElementById("rackSearch").addEventListener("input", renderWormRack);
+document.getElementById("topoFilter").addEventListener("change", renderWormRack);
+document.getElementById("tierFilter").addEventListener("change", renderWormRack);
+
+/* Load 108 Worms JSON */
+fetch(DATA_URL)
+  .then(r => r.json())
+  .then(data => {
+    WORMS = data.worms || [];
+    wormSelect.innerHTML = "";
+    WORMS.forEach((w, idx) => {
+      const opt = document.createElement("option");
+      opt.value = idx;
+      const tag = w.has_integrated ? "★" : (w.has_batch ? "◆" : "○");
+      opt.textContent = `${tag} ${idx + 1}. ${w.slug.toUpperCase()} — ${w.title} (${w.n_frames}f · ${w.topology.replace(/_/g, " ")})`;
+      wormSelect.appendChild(opt);
+    });
+    renderWormRack();
+    loadWormByIndex(0, false);
+  });
+</script>
+</body>
+</html>
