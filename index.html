@@ -162,90 +162,999 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px}
 .tree a{text-decoration:none}
 </style>
-<style>.sm-head{max-width:1200px;margin:0 auto;padding:14px 0 12px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap;border-bottom:2px solid currentColor;color:#161412}.sm-head .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;font:800 20px/1 "Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;letter-spacing:-.01em;margin-right:auto}.sm-head .brand svg{display:block;flex:none}.sm-head nav{display:flex;gap:4px 16px;flex-wrap:wrap;font:600 14px "Atkinson Hyperlegible","Segoe UI",sans-serif}.sm-head nav a{color:inherit;opacity:.72;text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}.sm-head nav a:hover{opacity:1}.sm-head nav a[aria-current]{opacity:1;border-bottom-color:#EF9F3A}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-head{color:#F1EADD}}:root[data-theme="dark"] .sm-head{color:#F1EADD}</style><header class="sm-head"><a class="brand" href="index.html" aria-label="Secondhand Motion, the rack"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="34" height="34"><g fill="none" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"><path d="M27.5 13.2C27.6 9.4 30.6 7 34 7.4c3.2.4 5.2 3.2 4.6 6.2-.5 2.6-2.8 3.9-5.1 4.4-1.2.3-1.5 1-1.5 2.2V22"/><path d="M32 22 7.5 35.5c-1.6.9-1 3 .8 3h47.4c1.8 0 2.4-2.1.8-3L32 22Z"/><path d="M28 38.5L24 49L17 58.5L23.5 59.5M36 38.5L41 49L46 58.5L52.5 58"/></g></svg><span>Secondhand Motion</span></a><nav aria-label="Site"><a href="index.html" aria-current="page">Rack</a><a href="pages/worms.html">Time Worms (108)</a><a href="shots/moving-drawings.html">Watch</a><a href="pages/reel.html">Reel</a><a href="pages/projector.html">Projector</a><a href="production/index.html">Production</a><a href="pages/pipeline.html">Pipeline</a><a href="pages/line.html">Line</a><a href="pages/tests.html">Tests</a><a href="pages/agent-prompt.html">Agent prompt</a><a href="pages/archive-doodle-index.html">Dataset</a></nav></header>
+<style>.sm-head{max-width:1200px;margin:0 auto;padding:14px 0 12px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap;border-bottom:2px solid currentColor;color:#161412}.sm-head .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;font:800 20px/1 "Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;letter-spacing:-.01em;margin-right:auto}.sm-head .brand svg{display:block;flex:none}.sm-head nav{display:flex;gap:4px 16px;flex-wrap:wrap;font:600 14px "Atkinson Hyperlegible","Segoe UI",sans-serif}.sm-head nav a{color:inherit;opacity:.72;text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}.sm-head nav a:hover{opacity:1}.sm-head nav a[aria-current]{opacity:1;border-bottom-color:#EF9F3A}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-head{color:#F1EADD}}:root[data-theme="dark"] .sm-head{color:#F1EADD}</style><header class="sm-head"><a class="brand" href="index.html" aria-label="Secondhand Motion, the rack"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="34" height="34"><g fill="none" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"><path d="M27.5 13.2C27.6 9.4 30.6 7 34 7.4c3.2.4 5.2 3.2 4.6 6.2-.5 2.6-2.8 3.9-5.1 4.4-1.2.3-1.5 1-1.5 2.2V22"/><path d="M32 22 7.5 35.5c-1.6.9-1 3 .8 3h47.4c1.8 0 2.4-2.1.8-3L32 22Z"/><path d="M28 38.5L24 49L17 58.5L23.5 59.5M36 38.5L41 49L46 58.5L52.5 58"/></g></svg><span>Secondhand Motion</span></a><nav aria-label="Site"><a href="index.html" aria-current="page">Rack</a><a href="pages/worms.html">Worms (109)</a><a href="shots/moving-drawings.html">Watch</a><a href="pages/reel.html">Reel</a><a href="pages/projector.html">Projector</a><a href="production/index.html">Production</a><a href="pages/pipeline.html">Pipeline</a><a href="pages/line.html">Line</a><a href="pages/tests.html">Tests</a><a href="pages/agent-prompt.html">Agent prompt</a><a href="pages/archive-doodle-index.html">Dataset</a></nav></header>
 <div class="wrap">
-<!-- INTERACTIVE 4D SPATIOTEMPORAL TIME-WORM STUDIO (108 TRACKED SHOTS) -->
-<section id="time-worms-studio" aria-labelledby="tw-h" style="border:2px solid var(--ink);border-radius:10px;background:#080a10;color:#f3f5fa;padding:6px 8px;gap:5px;margin-top:8px;">
-  <style>
-    @media (max-width:760px) {
-      .wrap { gap:14px !important; }
-      .sm-head { padding:6px 0 !important; gap:4px 10px !important; }
-      .sm-head nav { font-size:12px !important; gap:2px 10px !important; }
-    }
-    #time-worms-studio .tw-row { display:flex; align-items:center; justify-content:space-between; gap:5px; flex-wrap:wrap; }
-    #time-worms-studio .tw-btn { background:#1a2234; color:#f3f5fa; border:1px solid #2b3550; border-radius:5px; padding:3px 7px; font:700 10.5px var(--mono); cursor:pointer; white-space:nowrap; }
-    #time-worms-studio .tw-btn[aria-pressed="true"], #time-worms-studio .tw-btn.gold { background:#ffd166; color:#080a10; border-color:#ffd166; }
+<!-- BEGIN SECONDHAND MOTION WORMS STUDIO -->
+<style>
+.worms-stage{
+  background:var(--sheet); border:1.5px solid var(--ink); border-radius:10px;
+  padding:14px; box-shadow:0 6px 0 var(--rule-strong); margin:0 0 26px;
+}
+.worms-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule);
+}
+.worms-head h2{
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:20px;
+  letter-spacing:-0.015em;margin:0;display:inline-flex;align-items:center;gap:8px;
+}
+.worms-head .lot-pill{
+  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;
+  padding:2px 7px;border-radius:4px;background:var(--tag-soft);color:var(--tag-ink);
+}
+.worms-bar{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;
+  margin-bottom:10px;
+}
+.w-seg{
+  display:inline-flex;border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;
+  background:var(--card);flex-wrap:wrap;
+}
+.w-seg button{
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11.5px;
+  padding:4px 9px;border:0;background:transparent;color:var(--ink);cursor:pointer;
+  border-right:1px solid var(--rule);
+}
+.w-seg button:last-child{border-right:0}
+.w-seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.w-btn{
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11.5px;
+  padding:4px 9px;border:1.5px solid var(--ink);border-radius:6px;
+  background:var(--card);color:var(--ink);cursor:pointer;text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.w-btn:hover{border-color:var(--tag)}
+.w-btn[aria-pressed="true"]{background:var(--tag);color:#161412;border-color:var(--ink)}
+.w-select{
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;
+  padding:4px 9px;border:1.5px solid var(--ink);border-radius:6px;
+  background:var(--card);color:var(--ink);cursor:pointer;max-width:310px;
+}
+.w-screens{
+  display:grid;grid-template-columns:1.22fr 1fr;gap:12px;align-items:stretch;
+}
+@media (max-width:900px){
+  .w-screens{grid-template-columns:1fr}
+}
+.w-screen{
+  position:relative;background:var(--cel);border:1.5px solid var(--ink);
+  border-radius:6px;overflow:hidden;
+}
+.w-canvas-wrap{
+  position:relative;width:100%;aspect-ratio:4/3;background:var(--cel);
+  touch-action:none;user-select:none;
+}
+.w-canvas-wrap.worm-scrub-area{cursor:ew-resize}
+.w-screen canvas{display:block;width:100%;height:100%}
+.w-screen .w-lbl{
+  position:absolute;top:7px;left:9px;
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  background:rgba(246,239,227,0.92);color:#161412;
+  padding:2px 7px;border-radius:4px;border:1px solid var(--rule-strong);
+  pointer-events:none;z-index:2;
+}
+.w-screen .w-lbl-r{
+  position:absolute;top:7px;right:9px;
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  background:var(--tag-soft);color:var(--tag-ink);
+  padding:2px 7px;border-radius:4px;border:1px solid var(--tag);
+  pointer-events:none;z-index:2;font-weight:600;
+}
+.w-controls{
+  display:grid;grid-template-columns:auto auto 1fr auto;gap:10px;align-items:center;
+  margin-top:10px;padding-top:9px;border-top:1px solid var(--rule);
+}
+.w-scrub{position:relative;display:flex;align-items:center;height:24px}
+.w-scrub input[type=range]{width:100%;accent-color:var(--tag);cursor:pointer;margin:0}
+.w-ticks{position:absolute;left:6px;right:6px;top:2px;height:6px;pointer-events:none}
+.w-ticks span{position:absolute;top:0;width:2px;height:6px;background:var(--rule-strong);transform:translateX(-1px)}
+.w-ticks span.drawn{background:var(--ink);height:8px;width:2.5px}
+.w-ticks span.line{background:var(--tag);height:10px;width:3px}
+.w-readout{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);min-width:86px;text-align:right}
+.w-foot{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  margin-top:8px;font-size:12px;color:var(--muted);
+}
+.w-planes{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.w-planes label{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  padding:2px 7px;border:1px solid var(--rule-strong);border-radius:4px;
+  background:var(--card);cursor:pointer;user-select:none;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.w-planes label.subj{border-color:var(--tag);background:var(--tag-soft);color:var(--tag-ink);font-weight:600}
+.w-planes label.soloed{outline:2px solid var(--ink)}
+.w-planes input{accent-color:var(--tag);margin:0}
 
-    /* Side-by-side even on mobile so ZERO vertical scroll is needed! */
-    #time-worms-studio .tw-grid { display:grid; grid-template-columns:1.32fr 0.68fr; gap:5px; }
-    #time-worms-studio .tw-grid.full3d { grid-template-columns:1fr; }
-    #time-worms-studio .tw-grid.full3d .p2d { display:none; }
-    #time-worms-studio .tw-pane { position:relative; height:265px; background:#04060a; border:1px solid #242d42; border-radius:6px; overflow:hidden; }
-    @media (max-width: 760px) {
-      #time-worms-studio .tw-pane { height:228px; }
-    }
-    /* Built-in horizontal swipe strip of all 108 Disentangled Multi-Depth Worms */
-    #time-worms-studio .tw-strip { display:flex; gap:5px; overflow-x:auto; padding:3px 0 1px; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
-    #time-worms-studio .tw-strip::-webkit-scrollbar { display:none; }
-    #time-worms-studio .tw-tile { flex:0 0 92px; background:#111622; border:1px solid #242d42; border-radius:5px; padding:3px; cursor:pointer; }
-    #time-worms-studio .tw-tile.active { border-color:#ffd166; background:rgba(255,209,102,0.1); }
-    #time-worms-studio .tw-tile canvas { width:100%; height:32px; display:block; background:#04060a; border-radius:3px; }
-    #time-worms-studio .tw-tile-t { font:700 9.5px var(--sans); color:#f3f5fa; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-top:2px; }
-  </style>
+/* Warm-paper mini worm badge on Rack cards */
+.mini-worm-box{
+  margin-top:6px;padding:5px 7px;border-radius:6px;
+  background:var(--cel);border:1px solid var(--rule-strong);
+  display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer;
+}
+.mini-worm-box:hover{border-color:var(--ink);background:var(--tag-soft)}
+.mini-worm-box canvas{
+  width:118px;height:32px;border-radius:3px;background:var(--sheet);
+  border:1px solid var(--rule);flex-shrink:0;
+}
+.mini-worm-meta{
+  font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);
+  line-height:1.25;text-align:right;
+}
+.mini-worm-meta b{color:var(--tag-ink);display:block;font-size:10.5px}
+</style>
 
-  <!-- Row 1: Compact Shot Selector + View Mode (Defaults to DISENTANGLED!) -->
-  <div class="tw-row">
-    <div style="display:flex;align-items:center;gap:4px;flex:1;min-width:140px;">
-      <button type="button" class="tw-btn" id="twPrevBtn">◀</button>
-      <button type="button" class="tw-btn gold" id="twPlayPause">▶</button>
-      <select id="twSelect" style="flex:1;min-width:95px;background:#080a10;color:#f3f5fa;border:1px solid #2b3550;border-radius:5px;padding:3px 5px;font:700 11px var(--sans);" aria-label="Select tracked shot">
-        <option>Loading 108 disentangled worms...</option>
-      </select>
-      <button type="button" class="tw-btn" id="twNextBtn">▶</button>
-    </div>
-    <div style="display:flex;gap:3px;align-items:center;" id="twModeBtns">
-      <button type="button" class="tw-btn" data-wmode="stack" aria-pressed="true" title="Disentangled Depth Worm Rows (One clean worm track per depth layer)">Disentangled</button>
-      <button type="button" class="tw-btn" data-wmode="box3d" aria-pressed="false" title="Rotatable 3D Multiplane Cel Stack">3D Planes</button>
-      <button type="button" class="tw-btn" data-wmode="orbit3d" aria-pressed="false" title="Rotatable 3D Exploded Cutout Worm">3D Worm</button>
-      <button type="button" class="tw-btn" id="twFull3dBtn" aria-pressed="false">Full</button>
-      <a href="pages/worms.html" class="tw-btn" style="text-decoration:none;color:#00f5d4;">App ↗</a>
-    </div>
-  </div>
-
-  <!-- Row 2: Side-by-Side Disentangled Depth Worms + Synchronized 2D Cutout Stage -->
-  <div class="tw-grid" id="twStageGrid">
-    <div class="tw-pane p3d">
-      <canvas id="twCanvas3D" width="720" height="420" style="width:100%;height:100%;display:block;cursor:pointer;touch-action:none;"></canvas>
-      <span id="twHud3D" style="position:absolute;top:4px;left:5px;background:rgba(8,10,16,0.88);padding:1px 6px;border-radius:3px;font:600 9px var(--mono);color:#f3f5fa;pointer-events:none;">Disentangled Depth Worms · Tap any worm row to solo</span>
-      <div style="position:absolute;top:4px;right:5px;display:flex;gap:3px;">
-        <button type="button" class="tw-btn gold" id="twUnsoloBtn" style="padding:1px 6px;font-size:9px;display:none;">← All Disentangled Worms</button>
-        <button type="button" class="tw-btn" id="twMaskVidBtn" aria-pressed="true" style="padding:1px 5px;font-size:9px;">Cutouts</button>
+<section class="worms-stage" id="shmWormsHero" aria-label="Multiplane Time-Worms Scrubber">
+  <div class="worms-head">
+    <div>
+      <h2>
+        <span class="lot-pill" id="idxWormLot">SM-0004</span>
+        <span id="idxWormTitle">Giraffe Walks Past — Multiplane Time-Worm Scrubber</span>
+      </h2>
+      <div style="font-size:12.5px;color:var(--muted);margin-top:2px" id="idxWormSub">
+        Prelinger Archives · Wonderful World (Part II) · Drag horizontally across the worm on the left to scrub frame-by-frame through every depth plane.
       </div>
     </div>
-    <div class="tw-pane p2d">
-      <video id="twVideo" playsinline loop muted style="display:none;"></video>
-      <canvas id="twCanvas2D" width="480" height="360" style="width:100%;height:100%;display:block;"></canvas>
-      <span id="twHud2D" style="position:absolute;top:4px;left:5px;background:rgba(8,10,16,0.88);padding:1px 6px;border-radius:3px;font:600 9px var(--mono);color:#f3f5fa;pointer-events:none;">SAM Video Cutout</span>
-      <div style="position:absolute;top:4px;right:5px;display:flex;gap:2px;" id="twVidSourceBar">
-        <button type="button" class="tw-btn" data-vmode="cutout" aria-pressed="true" style="padding:1px 5px;font-size:9px;">Cutout</button>
-        <button type="button" class="tw-btn" data-vmode="scene" aria-pressed="false" style="padding:1px 5px;font-size:9px;">Planes</button>
-        <button type="button" class="tw-btn" data-vmode="src" aria-pressed="false" style="padding:1px 5px;font-size:9px;">Raw</button>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <button type="button" class="w-btn" id="idxPrevShot">&#9664;</button>
+      <select class="w-select" id="idxShotSelect" aria-label="Select shot"></select>
+      <button type="button" class="w-btn" id="idxNextShot">&#9654;</button>
+      <a class="w-btn" id="idxFullWormsLink" href="pages/worms.html">Full Worms Studio (109) &#8599;</a>
+    </div>
+  </div>
+
+  <div class="worms-bar">
+    <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <div class="w-seg" role="group" aria-label="Worm scrubber mode">
+        <button type="button" data-idxwmode="lanes" aria-pressed="true">Plane Worms (Scrub)</button>
+        <button type="button" data-idxwmode="tunnel" aria-pressed="false">3D Cutout Worm</button>
+        <button type="button" data-idxwmode="box" aria-pressed="false">Planes in Depth</button>
+      </div>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <div class="w-seg" role="group" aria-label="Stage view">
+        <button type="button" data-idxview="cartoon" aria-pressed="false">Cartoon</button>
+        <button type="button" data-idxview="composite" aria-pressed="true">Over footage</button>
+        <button type="button" data-idxview="cutout" aria-pressed="false">SAM Cutout</button>
+        <button type="button" data-idxview="footage" aria-pressed="false">Footage</button>
+        <button type="button" data-idxview="masks" aria-pressed="false">Silhouettes</button>
+      </div>
+      <button type="button" class="w-btn" id="idxBoilBtn" aria-pressed="true">Boil</button>
+      <button type="button" class="w-btn" id="idxCelBtn" aria-pressed="true">Paint cels</button>
+    </div>
+  </div>
+
+  <div class="w-screens">
+    <div class="w-screen">
+      <div class="w-canvas-wrap worm-scrub-area">
+        <canvas id="idxCvWorm" width="580" height="435"></canvas>
+        <span class="w-lbl" id="idxLblWorm">disentangled plane worms · drag horizontally to scrub f</span>
+        <span class="w-lbl-r" id="idxLblWormR">6 planes · f 01/33</span>
+      </div>
+    </div>
+    <div class="w-screen">
+      <div class="w-canvas-wrap">
+        <canvas id="idxCvStage" width="480" height="360"></canvas>
+        <span class="w-lbl" id="idxLblStage">composite over footage · camera pans with shot</span>
+        <span class="w-lbl-r" id="idxLblStageR">480×360 · 12 fps</span>
       </div>
     </div>
   </div>
 
-  <!-- Row 3: Scrubber + 1-Line Telemetry -->
-  <div class="tw-row">
-    <button type="button" class="tw-btn" id="twStepPrev" style="padding:2px 6px;">-1f</button>
-    <input type="range" id="twSlider" min="0" max="49" value="0" step="1" style="flex:1;min-width:80px;accent-color:#ffd166;height:5px;">
-    <button type="button" class="tw-btn" id="twStepNext" style="padding:2px 6px;">+1f</button>
-    <span id="twFrameReadout" style="font:600 10px var(--mono);color:#8e99b0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:50vw;">Loading...</span>
+  <div class="w-controls">
+    <button type="button" class="w-btn" id="idxPlayBtn" aria-pressed="false">&#9654; Play</button>
+    <div style="display:inline-flex;gap:4px">
+      <button type="button" class="w-btn" id="idxStepPrev">&#8592;</button>
+      <button type="button" class="w-btn" id="idxStepNext">&#8594;</button>
+    </div>
+    <div class="w-scrub">
+      <div class="w-ticks" id="idxTicks"></div>
+      <input type="range" id="idxScrub" min="0" max="32" value="0" step="1" aria-label="Scrub frame">
+    </div>
+    <div class="w-readout" id="idxReadout">f 01 / 33</div>
   </div>
 
-  <!-- Row 4: Built-in Horizontal Touch-Swipe Strip of All 108 Disentangled Worms -->
-  <div class="tw-strip" id="twSwipeStrip"></div>
+  <div class="w-foot">
+    <span id="idxCaption">Drag horizontally across the left worm canvas to scrub through the SAM cutouts &amp; multiplane drawings.</span>
+    <div class="w-planes" id="idxPlanes"></div>
+  </div>
 </section>
-<!-- END TIME-WORM STUDIO -->
+
+<script>
+(function(){
+  const cvWorm = document.getElementById('idxCvWorm');
+  const ctxWorm = cvWorm.getContext('2d');
+  const cvStage = document.getElementById('idxCvStage');
+  const ctxStage = cvStage.getContext('2d');
+  const sel = document.getElementById('idxShotSelect');
+  const playBtn = document.getElementById('idxPlayBtn');
+  const scrub = document.getElementById('idxScrub');
+  const readout = document.getElementById('idxReadout');
+  const ticksEl = document.getElementById('idxTicks');
+  const planesEl = document.getElementById('idxPlanes');
+
+  let WORMS = [];
+  let curIdx = 0;
+  let curWorm = null;
+  let S = null;
+  let shotCache = new Map();
+  let frameImgCache = new Map();
+
+  let wormMode = 'lanes';
+  let view = 'composite';
+  let boilOn = true;
+  let celOn = true;
+  let playing = false;
+  let f = 0;
+  let lastTick = 0;
+  let planeOn = {};
+  let soloPlaneId = null;
+
+  const PLANE_TINTS = {
+    far:   {fill:'rgba(92, 128, 188, 0.22)', stroke:'#3A5F9CD0'},
+    mid:   {fill:'rgba(58, 125, 68, 0.24)',  stroke:'#2E6B3AD0'},
+    near:  {fill:'rgba(196, 148, 52, 0.28)', stroke:'#8A6114D0'},
+    char:  {fill:'rgba(239, 159, 58, 0.34)', stroke:'#8A4A05'}
+  };
+  function tintForPlane(pid, z, zRef){
+    if(pid === 'char') return PLANE_TINTS.char;
+    if(PLANE_TINTS[pid]) return PLANE_TINTS[pid];
+    if(z < (zRef || 2)) return PLANE_TINTS.near;
+    if(z <= (zRef || 2) * 2.2) return PLANE_TINTS.mid;
+    return PLANE_TINTS.far;
+  }
+
+  function jitter(pt, seed, amp){
+    const x = pt[0], y = pt[1];
+    const h1 = Math.sin(x*12.9898 + y*78.233 + seed*43.1) * 43758.5453;
+    const h2 = Math.cos(x*93.9898 + y*12.233 + seed*19.7) * 28413.1234;
+    return [x + (h1 - Math.floor(h1) - 0.5)*2*amp, y + (h2 - Math.floor(h2) - 0.5)*2*amp];
+  }
+
+  function drawStrokes(ctx, strokes, opts){
+    const o = Object.assign({color:'#161412', width:2.4, dx:0, dy:0, boilSeed:0, boilAmp:0, fill:null}, opts||{});
+    ctx.save();
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = o.color;
+    ctx.lineWidth = o.width;
+    if(o.fill && strokes && strokes.length){
+      ctx.fillStyle = o.fill;
+      for(const s of strokes){
+        if(!s || s.length < 4) continue;
+        ctx.beginPath();
+        for(let i=0;i<s.length;i++){
+          let x = s[i][0] + o.dx, y = s[i][1] + o.dy;
+          if(o.boilAmp>0){ const j = jitter([x,y], o.boilSeed+i*0.07, o.boilAmp); x=j[0]; y=j[1]; }
+          if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+        }
+        ctx.closePath();
+        ctx.fill();
+      }
+    }
+    for(const s of (strokes||[])){
+      if(!s || s.length < 2) continue;
+      ctx.beginPath();
+      for(let i=0;i<s.length;i++){
+        let x = s[i][0] + o.dx, y = s[i][1] + o.dy;
+        if(o.boilAmp>0){ const j = jitter([x,y], o.boilSeed+i*0.1, o.boilAmp); x=j[0]; y=j[1]; }
+        if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+      }
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function getFrameImg(worm, fi){
+    if(!worm) return null;
+    if(S && S._imgs && S._imgs[fi] && S._imgs[fi].complete && S._imgs[fi].naturalWidth > 0){
+      return S._imgs[fi];
+    }
+    const key = worm.shot_id + ':' + fi;
+    if(frameImgCache.has(key)){
+      const im = frameImgCache.get(key);
+      return (im.complete && im.naturalWidth > 0) ? im : null;
+    }
+    const im = new Image();
+    im.crossOrigin = 'anonymous';
+    const pad = String(fi).padStart(3, '0');
+    im.src = `shots/${worm.shot_id}/frames/f${pad}.jpg`;
+    im.onload = () => { if(curWorm === worm) renderAll(); };
+    frameImgCache.set(key, im);
+    return null;
+  }
+
+  function getActivePlanes(){
+    if(S && Array.isArray(S.planes) && S.planes.length) return S.planes.slice().sort((a,b)=>b.z - a.z);
+    if(curWorm && Array.isArray(curWorm.planes) && curWorm.planes.length) return curWorm.planes.slice().sort((a,b)=>b.z - a.z);
+    return [{id:'char', z:2, label:'Subject'}];
+  }
+
+  function isPlaneVisible(pid){
+    if(soloPlaneId) return pid === soloPlaneId;
+    return planeOn[pid] !== false;
+  }
+
+  function camOffset(planeZ, fi){
+    const zRef = (S && S.z_ref) || (curWorm && curWorm.z_ref) || 2;
+    if(S && Array.isArray(S.camera) && S.camera[fi]){
+      return {dx: S.camera[fi].dx * (zRef / planeZ), dy: S.camera[fi].dy * (zRef / planeZ)};
+    }
+    if(curWorm && curWorm.frames && curWorm.frames[fi]){
+      const cam = curWorm.frames[fi].cam || [0,0];
+      const W = (S && S.W) || curWorm.W || 480;
+      const H = (S && S.H) || curWorm.H || 360;
+      return {dx: cam[0]*W*(zRef/planeZ), dy: cam[1]*H*(zRef/planeZ)};
+    }
+    return {dx:0, dy:0};
+  }
+
+  function drawSamCutoutInRect(ctx, worm, fi, tx, ty, tw, th, opts){
+    const o = Object.assign({cropToMask:false, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true}, opts||{});
+    const img = getFrameImg(worm, fi);
+    const W = (S && S.W) || worm.W || 480;
+    const H = (S && S.H) || worm.H || 360;
+
+    let polysPx = [];
+    if(S && Array.isArray(S.masks) && S.masks[fi] && S.masks[fi].length){
+      polysPx = S.masks[fi];
+    } else if(worm.frames && worm.frames[fi] && worm.frames[fi].ring && worm.frames[fi].ring.length){
+      polysPx = [worm.frames[fi].ring.map(p => [p[0]*W, p[1]*H])];
+    }
+
+    let minX = W, minY = H, maxX = 0, maxY = 0;
+    for(const poly of polysPx){
+      for(const p of poly){
+        if(p[0]<minX) minX=p[0]; if(p[1]<minY) minY=p[1];
+        if(p[0]>maxX) maxX=p[0]; if(p[1]>maxY) maxY=p[1];
+      }
+    }
+    const strokesPx = (S && S.cast && S.cast.frames && S.cast.frames[fi]) ? S.cast.frames[fi] : null;
+    if(strokesPx){
+      for(const s of strokesPx){
+        for(const p of (s||[])){
+          if(p[0]<minX) minX=p[0]; if(p[1]<minY) minY=p[1];
+          if(p[0]>maxX) maxX=p[0]; if(p[1]>maxY) maxY=p[1];
+        }
+      }
+    }
+    if(minX >= maxX || minY >= maxY){
+      minX = W*0.15; maxX = W*0.85; minY = H*0.15; maxY = H*0.85;
+    } else {
+      const padX = Math.max(14, (maxX-minX)*0.18), padY = Math.max(14, (maxY-minY)*0.18);
+      minX = Math.max(0, minX-padX); minY = Math.max(0, minY-padY);
+      maxX = Math.min(W, maxX+padX); maxY = Math.min(H, maxY+padY);
+    }
+
+    const srcX = o.cropToMask ? minX : 0, srcY = o.cropToMask ? minY : 0;
+    const srcW = o.cropToMask ? Math.max(16, maxX-minX) : W;
+    const srcH = o.cropToMask ? Math.max(16, maxY-minY) : H;
+    const scale = Math.min(tw/srcW, th/srcH);
+    const dw = srcW*scale, dh = srcH*scale;
+    const ox = tx + (tw-dw)*0.5, oy = ty + (th-dh)*0.5;
+
+    ctx.save();
+    if(img && polysPx.length){
+      ctx.save();
+      ctx.beginPath();
+      for(const poly of polysPx){
+        if(!poly || poly.length<3) continue;
+        for(let i=0;i<poly.length;i++){
+          const px = ox + (poly[i][0]-srcX)*scale, py = oy + (poly[i][1]-srcY)*scale;
+          if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+        }
+        ctx.closePath();
+      }
+      ctx.clip();
+      ctx.drawImage(img, srcX, srcY, srcW, srcH, ox, oy, dw, dh);
+      ctx.restore();
+
+      if(o.drawOutline){
+        ctx.strokeStyle = o.outlineColor;
+        ctx.lineWidth = 1.5;
+        for(const poly of polysPx){
+          if(!poly || poly.length<3) continue;
+          ctx.beginPath();
+          for(let i=0;i<poly.length;i++){
+            const px = ox + (poly[i][0]-srcX)*scale, py = oy + (poly[i][1]-srcY)*scale;
+            if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+          }
+          ctx.closePath();
+          ctx.stroke();
+        }
+      }
+    }
+    if(o.drawDoodle){
+      if(strokesPx && strokesPx.length){
+        ctx.strokeStyle = '#161412';
+        ctx.lineWidth = Math.max(1.3, 2.2*Math.min(1, scale*1.3));
+        ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+        for(const s of strokesPx){
+          if(!s || s.length<2) continue;
+          ctx.beginPath();
+          for(let i=0;i<s.length;i++){
+            const px = ox + (s[i][0]-srcX)*scale, py = oy + (s[i][1]-srcY)*scale;
+            if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+          }
+          ctx.stroke();
+        }
+      } else if(worm.frames && worm.frames[fi] && worm.frames[fi].doodle){
+        ctx.strokeStyle = '#161412';
+        ctx.lineWidth = 1.5;
+        for(const s of worm.frames[fi].doodle){
+          if(!s || s.length<2) continue;
+          ctx.beginPath();
+          for(let i=0;i<s.length;i++){
+            const px = ox + (s[i][0]*W-srcX)*scale, py = oy + (s[i][1]*H-srcY)*scale;
+            if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+          }
+          ctx.stroke();
+        }
+      }
+    }
+    ctx.restore();
+  }
+
+  function drawPlaneObjectsInRect(ctx, plane, fi, tx, ty, tw, th, cropToPlane){
+    const W = (S && S.W) || curWorm.W || 480;
+    const H = (S && S.H) || curWorm.H || 360;
+    const objs = (S && Array.isArray(S.objects)) ? S.objects.filter(o => o.plane === plane.id) : [];
+    const off = camOffset(plane.z, fi);
+    const allStrokes = [];
+    for(const o of objs){
+      const ost = (o.frames && o.frames[fi]) ? o.frames[fi] : o.strokes;
+      if(ost && ost.length){
+        for(const s of ost){
+          if(s && s.length>=2) allStrokes.push(s.map(p => [p[0]+off.dx, p[1]+off.dy]));
+        }
+      }
+    }
+    let minX = W, minY = H, maxX = 0, maxY = 0;
+    for(const s of allStrokes){
+      for(const p of s){
+        if(p[0]<minX) minX=p[0]; if(p[1]<minY) minY=p[1];
+        if(p[0]>maxX) maxX=p[0]; if(p[1]>maxY) maxY=p[1];
+      }
+    }
+    if(!cropToPlane || minX >= maxX || minY >= maxY){
+      minX = 0; minY = 0; maxX = W; maxY = H;
+    } else {
+      const padX = Math.max(16, (maxX-minX)*0.18), padY = Math.max(16, (maxY-minY)*0.18);
+      minX = Math.max(0, minX-padX); minY = Math.max(0, minY-padY);
+      maxX = Math.min(W, maxX+padX); maxY = Math.min(H, maxY+padY);
+    }
+    const srcW = Math.max(20, maxX-minX), srcH = Math.max(20, maxY-minY);
+    const scale = Math.min(tw/srcW, th/srcH);
+    const dw = srcW*scale, dh = srcH*scale;
+    const ox = tx + (tw-dw)*0.5, oy = ty + (th-dh)*0.5;
+    if(allStrokes.length){
+      ctx.save();
+      ctx.strokeStyle = '#161412';
+      ctx.lineWidth = Math.max(1.2, 1.9*Math.min(1, scale*1.4));
+      ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      for(const s of allStrokes){
+        ctx.beginPath();
+        for(let i=0;i<s.length;i++){
+          const px = ox + (s[i][0]-minX)*scale, py = oy + (s[i][1]-minY)*scale;
+          if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+        }
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+  }
+
+  function renderStage(fi){
+    if(!curWorm) return;
+    const W = (S && S.W) || curWorm.W || 480;
+    const H = (S && S.H) || curWorm.H || 360;
+    if(cvStage.width !== W || cvStage.height !== H){ cvStage.width = W; cvStage.height = H; }
+    const ctx = ctxStage;
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle = '#FBFAF6';
+    ctx.fillRect(0,0,W,H);
+    const img = getFrameImg(curWorm, fi);
+
+    if(view === 'footage'){
+      if(img) ctx.drawImage(img,0,0,W,H);
+      return;
+    }
+    if(view === 'masks'){
+      if(img){ ctx.save(); ctx.globalAlpha=0.3; ctx.drawImage(img,0,0,W,H); ctx.restore(); }
+      const masks = (S && S.masks && S.masks[fi]) ? S.masks[fi] :
+        ((curWorm.frames && curWorm.frames[fi] && curWorm.frames[fi].ring) ? [curWorm.frames[fi].ring.map(p=>[p[0]*W,p[1]*H])] : []);
+      masks.forEach(poly=>{
+        if(!poly || poly.length<3) return;
+        ctx.beginPath();
+        poly.forEach((p,j)=>{ if(j===0) ctx.moveTo(p[0],p[1]); else ctx.lineTo(p[0],p[1]); });
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(239,159,58,0.52)'; ctx.fill();
+        ctx.strokeStyle = '#8A4A05'; ctx.lineWidth = 2; ctx.stroke();
+      });
+      return;
+    }
+    if(view === 'cutout'){
+      if(img){ ctx.save(); ctx.globalAlpha=0.16; ctx.drawImage(img,0,0,W,H); ctx.restore(); }
+      drawSamCutoutInRect(ctx, curWorm, fi, 0, 0, W, H, {cropToMask:false, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true});
+      return;
+    }
+    if(view === 'composite'){
+      if(img){
+        ctx.save(); ctx.globalAlpha = 0.55; ctx.drawImage(img,0,0,W,H); ctx.restore();
+        ctx.fillStyle = 'rgba(246,239,227,0.22)'; ctx.fillRect(0,0,W,H);
+      }
+    } else {
+      const g = ctx.createLinearGradient(0,0,0,H*0.72);
+      g.addColorStop(0,'#F4E8D1'); g.addColorStop(1,'#FBFAF6');
+      ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+      ctx.fillStyle = '#EDE0C5'; ctx.fillRect(0,H*0.68,W,H*0.32);
+    }
+
+    const boilSeed = boilOn ? ((fi%3)+1) : 0;
+    const boilAmp  = boilOn ? 0.85 : 0;
+    const planes = getActivePlanes();
+    const celFill = celOn ? '#FBFAF6' : null;
+
+    for(const plane of planes){
+      if(!isPlaneVisible(plane.id)) continue;
+      const off = camOffset(plane.z, fi);
+      if(plane.id === 'char'){
+        const strokes = (S && S.cast && S.cast.frames && S.cast.frames[fi]) ? S.cast.frames[fi] :
+          ((curWorm.frames && curWorm.frames[fi] && curWorm.frames[fi].doodle) ? curWorm.frames[fi].doodle.map(s=>s.map(p=>[p[0]*W,p[1]*H])) : []);
+        if(celFill && strokes.length) drawStrokes(ctx, strokes, {color:'rgba(0,0,0,0)', width:0.1, boilSeed, boilAmp, fill:celFill});
+        if(fi===0 && view==='cartoon') drawStrokes(ctx, strokes, {color:'#EF9F3A', width:6, boilSeed, boilAmp});
+        drawStrokes(ctx, strokes, {color:'#161412', width:2.5, boilSeed, boilAmp});
+      } else if(S && Array.isArray(S.objects)){
+        const objs = S.objects.filter(o => o.plane === plane.id);
+        const depthAlpha = plane.z>=10 ? 0.50 : (plane.z>=6 ? 0.65 : (plane.z>=3 ? 0.85 : 0.95));
+        for(const o of objs){
+          const ost = (o.frames && o.frames[fi]) ? o.frames[fi] : o.strokes;
+          if(!ost) continue;
+          drawStrokes(ctx, ost, {color:`rgba(22,20,18,${depthAlpha})`, width:1.9, dx:off.dx, dy:off.dy, boilSeed:boilSeed+1, boilAmp:boilAmp*0.6, fill:(celFill && plane.z<10)?celFill:null});
+        }
+      }
+    }
+  }
+
+  function renderWorm(fi){
+    if(!curWorm) return;
+    const W = cvWorm.width, H = cvWorm.height;
+    const ctx = ctxWorm;
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle = '#FBFAF6';
+    ctx.fillRect(0,0,W,H);
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
+    const planes = getActivePlanes();
+    document.getElementById('idxLblWormR').textContent = `${planes.length} planes · f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
+
+    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
+    if(wormMode === 'tunnel'){
+      const padL=38, padR=28, padT=34, padB=28;
+      const availW = W-padL-padR, availH = H-padT-padB;
+      const step = Math.max(1, Math.floor(N/8));
+      const sliceW = Math.min(110, availW*0.24), sliceH = Math.round(sliceW*0.78);
+      for(let ti=0; ti<N; ti+=step){
+        if(ti===fi) continue;
+        const u = N>1 ? ti/(N-1) : 0.5;
+        const fr = (curWorm.frames && curWorm.frames[ti]) ? curWorm.frames[ti] : {c:[0.5,0.5]};
+        const rx = padL + u*availW - sliceW*0.5, ry = padT + (fr.c?fr.c[1]:0.5)*availH - sliceH*0.5;
+        ctx.save(); ctx.globalAlpha = 0.6;
+        ctx.fillStyle = '#FBFAF6'; ctx.strokeStyle = '#BFAF97';
+        ctx.fillRect(rx,ry,sliceW,sliceH); ctx.strokeRect(rx,ry,sliceW,sliceH);
+        drawSamCutoutInRect(ctx, curWorm, ti, rx+2, ry+2, sliceW-4, sliceH-4, {cropToMask:true, drawOutline:true, outlineColor:'#8A4A05', drawDoodle:true});
+        ctx.restore();
+      }
+      const uAct = N>1 ? fi/(N-1) : 0.5;
+      const frAct = (curWorm.frames && curWorm.frames[fi]) ? curWorm.frames[fi] : {c:[0.5,0.5]};
+      const actW = Math.min(148, availW*0.32), actH = Math.round(actW*0.78);
+      const ax = Math.max(padL, Math.min(padL+availW-actW, padL+uAct*availW-actW*0.5));
+      const ay = Math.max(padT, Math.min(padT+availH-actH, padT+(frAct.c?frAct.c[1]:0.5)*availH-actH*0.5));
+      ctx.fillStyle = '#FFFBF4'; ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 2.4;
+      ctx.fillRect(ax,ay,actW,actH);
+      drawSamCutoutInRect(ctx, curWorm, fi, ax+2, ay+2, actW-4, actH-4, {cropToMask:true, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true});
+      ctx.strokeRect(ax,ay,actW,actH);
+      return;
+    }
+
+    if(wormMode === 'box'){
+      const padX=26, padY=28, availW=W-padX*2, availH=H-padY*2, nP=planes.length;
+      const srcW = (S && S.W) || curWorm.W || 480, srcH = (S && S.H) || curWorm.H || 360;
+      planes.forEach((plane, idx)=>{
+        const vis = isPlaneVisible(plane.id);
+        const u = nP===1 ? 0.5 : idx/(nP-1);
+        const scale = 0.54 + u*0.34;
+        const pw = availW*scale, ph = availH*scale;
+        const cx = padX + (1-u)*(availW-pw)*0.85 + u*(availW-pw)*0.12;
+        const cy = padY + (1-u)*4 + u*(availH-ph)*0.82;
+        const off = camOffset(plane.z, fi);
+        const sx = pw/srcW, sy = ph/srcH;
+        const t = tintForPlane(plane.id, plane.z, zRef);
+        ctx.save(); ctx.globalAlpha = vis ? 1 : 0.22;
+        ctx.fillStyle = t.fill; ctx.strokeStyle = t.stroke; ctx.lineWidth = plane.id==='char'?2.2:1.3;
+        ctx.beginPath(); ctx.roundRect(cx,cy,pw,ph,4); ctx.fill(); ctx.stroke();
+        ctx.save(); ctx.beginPath(); ctx.rect(cx,cy,pw,ph); ctx.clip();
+        if(plane.id==='char'){
+          drawSamCutoutInRect(ctx, curWorm, fi, cx, cy, pw, ph, {cropToMask:false, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true});
+        } else if(S && Array.isArray(S.objects)){
+          for(const o of S.objects.filter(x=>x.plane===plane.id)){
+            const ost = (o.frames && o.frames[fi]) ? o.frames[fi] : o.strokes;
+            if(ost) drawStrokes(ctx, ost.map(s=>s.map(p=>[cx+(p[0]+off.dx)*sx, cy+(p[1]+off.dy)*sy])), {color:'#161412', width:1.4});
+          }
+        }
+        ctx.restore();
+        ctx.fillStyle='#161412'; ctx.font='600 10px "JetBrains Mono", monospace';
+        ctx.fillText(`${plane.label} · z=${plane.z}`, cx+6, cy+13);
+        ctx.restore();
+      });
+      return;
+    }
+
+    // Default: Disentangled Plane Worms ('lanes')
+    const planesNearFirst = planes.slice().reverse();
+    const padL = 114, padR = 14, padT = 28, padB = 20;
+    const availH = H - padT - padB;
+    const nP = Math.max(1, planesNearFirst.length);
+    const laneGap = 5;
+    const laneH = Math.max(34, (availH - laneGap*(nP-1)) / nP);
+    const trackW = W - padL - padR;
+
+    for(let pIdx=0; pIdx<planesNearFirst.length; pIdx++){
+      const plane = planesNearFirst[pIdx];
+      const vis = isPlaneVisible(plane.id);
+      const y0 = padT + pIdx*(laneH + laneGap);
+      const t = tintForPlane(plane.id, plane.z, zRef);
+      const isChar = (plane.id === 'char');
+
+      ctx.save();
+      ctx.globalAlpha = vis ? 1 : 0.32;
+      ctx.fillStyle = isChar ? '#FFFDF8' : '#FFFFFF';
+      ctx.strokeStyle = isChar ? '#EF9F3A' : '#BFAF97';
+      ctx.lineWidth = isChar ? 1.8 : 1.1;
+      ctx.beginPath(); ctx.roundRect(8, y0, W-16, laneH, 5); ctx.fill(); ctx.stroke();
+
+      ctx.fillStyle = t.fill;
+      ctx.fillRect(9, y0+1, padL-14, laneH-2);
+      ctx.fillStyle = '#161412';
+      ctx.font = '700 11px "Bricolage Grotesque", sans-serif';
+      ctx.fillText(String(plane.label||plane.id).split('(')[0].trim().slice(0,15), 13, y0 + Math.min(19, laneH*0.44));
+      ctx.fillStyle = '#6B6259';
+      ctx.font = '500 9.5px "JetBrains Mono", monospace';
+      ctx.fillText(`z=${plane.z} · k=${(zRef/Math.max(0.2,plane.z)).toFixed(2)}x`, 13, y0 + Math.min(33, laneH*0.78));
+
+      ctx.save();
+      ctx.beginPath(); ctx.rect(padL, y0+2, trackW, laneH-4); ctx.clip();
+
+      const nStamps = Math.min(N, isChar ? 6 : 5);
+      const celH = Math.max(24, laneH - 8), celW = Math.round(celH * 1.22);
+      for(let sIdx=0; sIdx<nStamps; sIdx++){
+        const ti = nStamps===1 ? 0 : Math.round((sIdx/(nStamps-1))*(N-1));
+        if(Math.abs(ti - fi) <= Math.max(1, Math.floor(N/(nStamps*2.4)))) continue;
+        const cx = padL + (N>1 ? (ti/(N-1))*trackW : trackW*0.5);
+        const rx = Math.max(padL+2, Math.min(padL+trackW-celW-2, cx-celW*0.5));
+        const ry = y0 + (laneH-celH)*0.5;
+        ctx.save(); ctx.globalAlpha = vis ? 0.7 : 0.25;
+        ctx.fillStyle = '#FBFAF6'; ctx.strokeStyle = '#DED2BF';
+        ctx.fillRect(rx,ry,celW,celH); ctx.strokeRect(rx,ry,celW,celH);
+        if(isChar) drawSamCutoutInRect(ctx, curWorm, ti, rx+1, ry+1, celW-2, celH-2, {cropToMask:true, drawOutline:false, drawDoodle:true});
+        else drawPlaneObjectsInRect(ctx, plane, ti, rx+1, ry+1, celW-2, celH-2, true);
+        ctx.restore();
+      }
+
+      const actX = padL + (N>1 ? (fi/(N-1))*trackW : trackW*0.5);
+      const actH = Math.max(28, laneH - 4), actW = Math.round(actH * 1.32);
+      const arx = Math.max(padL+2, Math.min(padL+trackW-actW-2, actX-actW*0.5));
+      const ary = y0 + (laneH-actH)*0.5;
+      ctx.fillStyle = '#FFFBF4'; ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 2.1;
+      ctx.fillRect(arx,ary,actW,actH);
+      if(isChar) drawSamCutoutInRect(ctx, curWorm, fi, arx+1, ary+1, actW-2, actH-2, {cropToMask:true, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true});
+      else drawPlaneObjectsInRect(ctx, plane, fi, arx+1, ary+1, actW-2, actH-2, true);
+      ctx.strokeRect(arx,ary,actW,actH);
+
+      ctx.restore();
+      ctx.restore();
+    }
+
+    const scrubX = padL + (N>1 ? (fi/(N-1))*trackW : trackW*0.5);
+    ctx.save();
+    ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 2; ctx.setLineDash([4,3]);
+    ctx.beginPath(); ctx.moveTo(scrubX, padT-4); ctx.lineTo(scrubX, H-padB+4); ctx.stroke();
+    ctx.restore();
+  }
+
+  function renderAll(){
+    if(!curWorm) return;
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
+    if(f >= N) f = N - 1;
+    if(f < 0) f = 0;
+    renderWorm(f);
+    renderStage(f);
+    scrub.max = Math.max(0, N - 1);
+    scrub.value = String(f);
+    readout.textContent = `f ${String(f+1).padStart(2,'0')} / ${String(N).padStart(2,'0')}`;
+  }
+
+  function buildPlanesAndTicks(){
+    planesEl.innerHTML = '';
+    ticksEl.innerHTML = '';
+    if(!curWorm) return;
+    const planes = getActivePlanes();
+    planes.forEach(p=>{
+      if(!(p.id in planeOn)) planeOn[p.id] = true;
+      const lab = document.createElement('label');
+      if(p.id === 'char') lab.classList.add('subj');
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.checked = planeOn[p.id] !== false;
+      cb.addEventListener('change', ()=>{
+        planeOn[p.id] = cb.checked;
+        soloPlaneId = null;
+        renderAll();
+      });
+      const sp = document.createElement('span');
+      sp.textContent = `${p.label} · z=${p.z}`;
+      lab.appendChild(cb); lab.appendChild(sp);
+      planesEl.appendChild(lab);
+    });
+
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
+    const keys = (S && S.keys) || curWorm.keys || {};
+    const drawn = new Set(keys.drawn || [0]);
+    for(let i=0;i<N;i++){
+      const s = document.createElement('span');
+      s.style.left = (N===1 ? 0 : (i/(N-1))*100) + '%';
+      if(i===0) s.className = 'line';
+      else if(drawn.has(i)) s.className = 'drawn';
+      ticksEl.appendChild(s);
+    }
+  }
+
+  async function selectShot(idx){
+    if(idx < 0 || idx >= WORMS.length) return;
+    curIdx = idx;
+    curWorm = WORMS[idx];
+    S = null;
+    f = 0;
+    sel.value = String(idx);
+    document.getElementById('idxWormLot').textContent = curWorm.lot || 'SM-SHOT';
+    document.getElementById('idxWormTitle').textContent = `${curWorm.title || curWorm.slug} — Multiplane Time-Worm Scrubber`;
+    document.getElementById('idxWormSub').textContent =
+      `Prelinger Archives · ${curWorm.source_title}${curWorm.source_year ? ' ('+curWorm.source_year+')' : ''} · ${curWorm.n_frames} frames @ ${curWorm.fps} fps · Drag horizontally across the left worm canvas to scrub.`;
+    document.getElementById('idxFullWormsLink').href = `pages/worms.html?shot=${encodeURIComponent(curWorm.shot_id)}`;
+
+    planeOn = {};
+    soloPlaneId = null;
+    buildPlanesAndTicks();
+    renderAll();
+
+    const relUrl = `shots/${curWorm.shot_id}/shot.json`;
+    if(shotCache.has(relUrl)){
+      S = shotCache.get(relUrl);
+      onReady(curWorm);
+      return;
+    }
+    try{
+      const res = await fetch(relUrl);
+      if(res.ok){
+        const data = await res.json();
+        if(Array.isArray(data.footage)){
+          data._imgs = data.footage.map(src=>{
+            if(typeof src === 'string' && src.startsWith('data:')){
+              const im = new Image();
+              im.onload = () => { if(S === data) renderAll(); };
+              im.src = src;
+              return im;
+            }
+            return null;
+          });
+        }
+        shotCache.set(relUrl, data);
+        if(curWorm === WORMS[idx]){ S = data; onReady(curWorm); }
+      }
+    }catch(e){}
+  }
+
+  function onReady(worm){
+    const W = (S && S.W) || worm.W || 480;
+    const H = (S && S.H) || worm.H || 360;
+    const fps = (S && S.fps) || worm.fps || 12;
+    document.getElementById('idxLblStageR').textContent = `${W}×${H} · ${fps} fps`;
+    buildPlanesAndTicks();
+    for(let i=0;i<Math.min(worm.n_frames||1, 6);i++) getFrameImg(worm, i);
+    renderAll();
+  }
+
+  // Horizontal worm scrubbing on #idxCvWorm
+  let isScrubbing = false;
+  function scrubFromWorm(e){
+    if(!curWorm) return;
+    const rect = cvWorm.getBoundingClientRect();
+    const clientX = (e.touches && e.touches.length) ? e.touches[0].clientX : e.clientX;
+    const xRel = (clientX - rect.left) / Math.max(1, rect.width);
+    const padLFrac = (wormMode === 'lanes') ? (114 / cvWorm.width) : (38 / cvWorm.width);
+    const padRFrac = (wormMode === 'lanes') ? (14 / cvWorm.width)  : (28 / cvWorm.width);
+    const u = Math.max(0, Math.min(1, (xRel - padLFrac) / Math.max(0.1, 1 - padLFrac - padRFrac)));
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
+    const nf = Math.round(u * Math.max(0, N - 1));
+    if(nf !== f){ f = nf; getFrameImg(curWorm, f); renderAll(); }
+  }
+  cvWorm.addEventListener('pointerdown', (e)=>{
+    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.innerHTML='&#9654; Play';
+    isScrubbing = true; cvWorm.setPointerCapture(e.pointerId); scrubFromWorm(e);
+  });
+  cvWorm.addEventListener('pointermove', (e)=>{ if(isScrubbing) scrubFromWorm(e); });
+  cvWorm.addEventListener('pointerup', ()=>{ isScrubbing = false; });
+  cvWorm.addEventListener('pointercancel', ()=>{ isScrubbing = false; });
+
+  document.querySelectorAll('[data-idxwmode]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      wormMode = btn.dataset.idxwmode;
+      document.querySelectorAll('[data-idxwmode]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
+      renderAll();
+    });
+  });
+  document.querySelectorAll('[data-idxview]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      view = btn.dataset.idxview;
+      document.querySelectorAll('[data-idxview]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
+      renderAll();
+    });
+  });
+  document.getElementById('idxBoilBtn').addEventListener('click', (e)=>{
+    boilOn = !boilOn; e.currentTarget.setAttribute('aria-pressed', String(boilOn)); renderAll();
+  });
+  document.getElementById('idxCelBtn').addEventListener('click', (e)=>{
+    celOn = !celOn; e.currentTarget.setAttribute('aria-pressed', String(celOn)); renderAll();
+  });
+  playBtn.addEventListener('click', ()=>{
+    playing = !playing;
+    playBtn.setAttribute('aria-pressed', String(playing));
+    playBtn.innerHTML = playing ? '&#9646;&#9646; Pause' : '&#9654; Play';
+    if(playing){ lastTick = performance.now(); requestAnimationFrame(loop); }
+  });
+  document.getElementById('idxStepPrev').addEventListener('click', ()=>{
+    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.innerHTML='&#9654; Play';
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm ? curWorm.n_frames : 1);
+    f = (f - 1 + N) % N; renderAll();
+  });
+  document.getElementById('idxStepNext').addEventListener('click', ()=>{
+    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.innerHTML='&#9654; Play';
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm ? curWorm.n_frames : 1);
+    f = (f + 1) % N; renderAll();
+  });
+  scrub.addEventListener('input', ()=>{
+    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.innerHTML='&#9654; Play';
+    f = parseInt(scrub.value, 10) || 0; renderAll();
+  });
+  document.getElementById('idxPrevShot').addEventListener('click', ()=> selectShot((curIdx - 1 + WORMS.length) % WORMS.length));
+  document.getElementById('idxNextShot').addEventListener('click', ()=> selectShot((curIdx + 1) % WORMS.length));
+  sel.addEventListener('change', ()=> selectShot(parseInt(sel.value, 10) || 0));
+
+  function loop(now){
+    if(!playing || !curWorm) return;
+    const fps = (S && S.fps) || curWorm.fps || 12;
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
+    if(now - lastTick >= 1000 / fps){
+      f = (f + 1) % N;
+      getFrameImg(curWorm, (f + 1) % N);
+      renderAll();
+      lastTick = now;
+    }
+    requestAnimationFrame(loop);
+  }
+
+  // Inject warm-paper mini worm badges onto Rack hang-tags (#out .tag)
+  function decorateRackCards(){
+    if(!WORMS.length) return;
+    const byShotId = new Map();
+    const bySlug = new Map();
+    WORMS.forEach((w, idx)=>{
+      byShotId.set(w.shot_id, {w, idx});
+      if(!bySlug.has(w.slug)) bySlug.set(w.slug, {w, idx});
+    });
+
+    document.querySelectorAll('#out .tag').forEach(card=>{
+      if(card.querySelector('.mini-worm-box')) return;
+      const href = card.getAttribute('href') || '';
+      const mPage = href.match(/pages\/([a-z0-9-]+)\.html/i);
+      const mShot = href.match(/shots\/([a-z0-9-]+)\//i);
+      const mHash = href.match(/#([a-z0-9-]+)$/i);
+      const key = mPage ? mPage[1] : (mShot ? mShot[1] : (mHash ? mHash[1] : ''));
+
+      let match = key ? byShotId.get(key) : null;
+      if(!match && key){
+        const base = key.replace(/-(gwp|sam|redraw)$/, '');
+        match = byShotId.get(base + '-gwp') || bySlug.get(base);
+      }
+      if(!match){
+        const bEl = card.querySelector('.body b');
+        const tSlug = bEl ? bEl.textContent.trim().toLowerCase().replace(/\s+/g, '-') : '';
+        if(tSlug) match = byShotId.get(tSlug) || bySlug.get(tSlug);
+      }
+      if(!match) return;
+
+      const {w, idx} = match;
+      const box = document.createElement('div');
+      box.className = 'mini-worm-box';
+      box.title = 'Click to scrub this Multiplane Time-Worm at the top of the page';
+      const nP = (w.depth_worms && w.depth_worms.length) || (w.planes && w.planes.length) || 2;
+      box.innerHTML = `
+        <canvas width="118" height="32"></canvas>
+        <div class="mini-worm-meta">
+          <b>${nP} Planes · ${w.n_frames}f</b>
+          <span>Scrub worm &#8593;</span>
+        </div>
+      `;
+      const cv = box.querySelector('canvas');
+      const c = cv.getContext('2d');
+      c.fillStyle = '#FBFAF6'; c.fillRect(0,0,118,32);
+      const dws = w.depth_worms || [];
+      for(let i=dws.length-1;i>=0;i--){
+        const dw = dws[i], tr = dw.track || [];
+        if(!tr.length) continue;
+        c.beginPath();
+        for(let ti=0;ti<tr.length;ti++){
+          const x = 4 + (tr.length>1 ? (ti/(tr.length-1))*110 : 55);
+          const y = 4 + Math.max(0.08, Math.min(0.92, tr[ti][1]))*24;
+          if(ti===0) c.moveTo(x,y); else c.lineTo(x,y);
+        }
+        c.strokeStyle = dw.role==='subject' ? '#EF9F3A' : (dw.color || '#8A6114');
+        c.lineWidth = dw.role==='subject' ? 2.5 : 1.3;
+        c.globalAlpha = dw.role==='subject' ? 0.95 : 0.45;
+        c.stroke();
+      }
+      c.globalAlpha = 1;
+      const nf = (w.frames && w.frames.length) || 1;
+      for(const q of [0, Math.floor(nf/2), nf-1]){
+        const fr = w.frames && w.frames[q];
+        if(!fr || !fr.doodle) continue;
+        const xOff = (nf>1 ? (q/(nf-1)) : 0.5) * 90;
+        c.strokeStyle = q===0 ? '#8A4A05' : '#161412';
+        c.lineWidth = 0.95;
+        for(const s of fr.doodle){
+          if(!s || s.length<2) continue;
+          c.beginPath();
+          for(let k=0;k<s.length;k++){
+            const px = 3 + xOff + s[k][0]*24, py = 2 + s[k][1]*28;
+            if(k===0) c.moveTo(px,py); else c.lineTo(px,py);
+          }
+          c.stroke();
+        }
+      }
+
+      box.addEventListener('click', (e)=>{
+        e.preventDefault();
+        e.stopPropagation();
+        selectShot(idx);
+        document.getElementById('shmWormsHero').scrollIntoView({behavior:'smooth', block:'start'});
+      });
+      const bodyEl = card.querySelector('.body') || card;
+      bodyEl.insertBefore(box, bodyEl.querySelector('.rail') || null);
+    });
+  }
+
+  const outEl = document.getElementById('out');
+  if(outEl) new MutationObserver(()=> decorateRackCards()).observe(outEl, {childList:true, subtree:true});
+
+  fetch('data/worms_108.json')
+    .then(r => r.json())
+    .then(data => {
+      WORMS = data.worms || [];
+      sel.innerHTML = '';
+      WORMS.forEach((w, i)=>{
+        const opt = document.createElement('option');
+        opt.value = String(i);
+        const nP = (w.depth_worms && w.depth_worms.length) || (w.planes && w.planes.length) || 2;
+        opt.textContent = `${w.lot ? w.lot + ' · ' : ''}${w.title || w.slug} (${nP} planes · ${w.n_frames}f)`;
+        sel.appendChild(opt);
+      });
+      selectShot(0);
+      decorateRackCards();
+      setTimeout(decorateRackCards, 600);
+    })
+    .catch(err => console.warn('Worms load err:', err));
+})();
+</script>
+<!-- END SECONDHAND MOTION WORMS STUDIO -->
 
 <div class="intro">
   <div style="display:flex;flex-direction:column;gap:12px">
@@ -449,965 +1358,5 @@ addEventListener('hashchange',()=>{readHash();render();});
 readHash();
 if(matchMedia('(max-width:760px)').matches){$('filters').open=FAC.some(([k])=>S[k].size>0);}
 render();
-})();
-
-
-
-
-
-
-
-/* === 4D SPATIOTEMPORAL TIME-WORM STUDIO & RACK CARD INTEGRATION === */
-(function(){
-  let WORMS = [];
-  let BY_SLUG = {};
-  let curIdx = 0;
-  let curF = 0;
-  let vMode = "cutout";
-  let wMode = "stack"; // DEFAULT = Disentangled Worm Stack!
-  let showMaskVid = true;
-  let isPlaying = false;
-  let lastTick = 0;
-  let soloLayerId = null;
-  let yaw = -0.48, pitch = 0.24, dragging = false, lx = 0, ly = 0, moved = false;
-  let bandHitBoxes = [];
-  let hitPts = [];
-  const frameCache = {};
-
-  const vid = document.getElementById("twVideo");
-  const c2d = document.getElementById("twCanvas2D");
-  const ctx2 = c2d ? c2d.getContext("2d") : null;
-  const c3d = document.getElementById("twCanvas3D");
-  const ctx3 = c3d ? c3d.getContext("2d") : null;
-  const sel = document.getElementById("twSelect");
-  const sld = document.getElementById("twSlider");
-  const unsoloBtn = document.getElementById("twUnsoloBtn");
-
-  function getFrameDir(w) {
-    if (!w) return "";
-    if (w.frame_dir) return w.frame_dir;
-    const s = (w.slug === "giraffe-walks-past") ? "giraffe" : w.slug;
-    return "https://hartswf0.github.io/secondhand-motion/shots/" + s + "-gwp/frames";
-  }
-
-  function ensureFrameImg(w, fi) {
-    if (!w) return null;
-    const fDir = getFrameDir(w);
-    if (!fDir) return null;
-    if (!frameCache[w.slug]) frameCache[w.slug] = {};
-    const bag = frameCache[w.slug];
-    if (bag[fi]) return (bag[fi].complete && bag[fi].naturalWidth > 0) ? bag[fi] : null;
-    const im = new Image();
-    im.onload = () => {
-      if (WORMS[curIdx] && WORMS[curIdx].slug === w.slug) drawAll();
-    };
-    im.src = `${fDir}/f${String(fi).padStart(3, "0")}.jpg`;
-    bag[fi] = im;
-    return null;
-  }
-
-  function preloadShotFrames(w) {
-    if (!w) return;
-    const nf = (w.frames || []).length;
-    for (let i = 0; i < nf; i++) ensureFrameImg(w, i);
-  }
-
-  function getMediaForFrame(w, fi) {
-    const im = ensureFrameImg(w, fi);
-    if (im) return im;
-    if (vid && vid.readyState >= 2 && vid.videoWidth > 0) return vid;
-    const bag = frameCache[w.slug] || {};
-    let bestImg = null, bestDist = 9999;
-    Object.keys(bag).forEach(k => {
-      const cand = bag[k];
-      if (cand && cand.complete && cand.naturalWidth > 0) {
-        const d = Math.abs(parseInt(k, 10) - fi);
-        if (d < bestDist) { bestDist = d; bestImg = cand; }
-      }
-    });
-    return bestImg;
-  }
-
-  function getPlanePolyUV(dw, fr, pt) {
-    if (dw.role === "subject" && fr && fr.ring && fr.ring.length >= 3) {
-      return fr.ring;
-    }
-    if (dw.scene_rings && dw.scene_rings.length && dw.scene_rings[0].length >= 3) {
-      const dx = pt ? (pt[0] - (dw.u0 || 0.5)) : 0;
-      const dy = pt ? (pt[1] - (dw.v0 || 0.5)) : 0;
-      return dw.scene_rings[0].map(uv => [uv[0] + dx, uv[1] + dy]);
-    }
-    if (dw.poly0 && dw.poly0.length >= 3 && pt) {
-      return dw.poly0.map(duv => [pt[0] + duv[0], pt[1] + duv[1]]);
-    }
-    return [];
-  }
-
-  function getPlaneStrokesUV(dw, fr, pt) {
-    if (dw.role === "subject" && fr && fr.doodle && fr.doodle.length) {
-      return fr.doodle;
-    }
-    if (dw.strokes0 && dw.strokes0.length && pt) {
-      return dw.strokes0.map(st => st.map(duv => [pt[0] + duv[0], pt[1] + duv[1]]));
-    }
-    return [];
-  }
-
-  function isLayerActive(id) {
-    return soloLayerId === null || soloLayerId === id;
-  }
-
-  function setSoloLayer(id) {
-    soloLayerId = id;
-    if (unsoloBtn) unsoloBtn.style.display = soloLayerId ? "inline-block" : "none";
-    drawAll();
-  }
-
-  function drawCroppedCutoutStamp(ctx, media, ringUV, cx, cy, maxW, maxH, borderCol, isCur, alpha) {
-    if (!ringUV || ringUV.length < 3) return false;
-    let u0 = 1, v0 = 1, u1 = 0, v1 = 0;
-    ringUV.forEach(([u, v]) => {
-      if (u < u0) u0 = u; if (u > u1) u1 = u;
-      if (v < v0) v0 = v; if (v > v1) v1 = v;
-    });
-    const pad = 0.025;
-    u0 = Math.max(0, u0 - pad); v0 = Math.max(0, v0 - pad);
-    u1 = Math.min(1, u1 + pad); v1 = Math.min(1, v1 + pad);
-    const bw = Math.max(0.06, u1 - u0), bh = Math.max(0.06, v1 - v0);
-    const aspect = (bw * 4) / (bh * 3);
-    let sw = maxH * aspect, sh = maxH;
-    if (sw > maxW) { sw = maxW; sh = maxW / Math.max(0.2, aspect); }
-    const x0 = cx - sw * 0.5, y0 = cy - sh * 0.5;
-    const mapX = u => x0 + ((u - u0) / bw) * sw;
-    const mapY = v => y0 + ((v - v0) / bh) * sh;
-
-    ctx.save();
-    ctx.beginPath();
-    ringUV.forEach(([u, v], i) => {
-      if (i === 0) ctx.moveTo(mapX(u), mapY(v)); else ctx.lineTo(mapX(u), mapY(v));
-    });
-    ctx.closePath();
-
-    let drewImg = false;
-    if (media && showMaskVid) {
-      const mw = media.videoWidth || media.naturalWidth || 0;
-      const mh = media.videoHeight || media.naturalHeight || 0;
-      if (mw > 0 && mh > 0) {
-        ctx.save();
-        ctx.clip();
-        ctx.globalAlpha = alpha;
-        try {
-          ctx.drawImage(media, u0 * mw, v0 * mh, bw * mw, bh * mh, x0, y0, sw, sh);
-          drewImg = true;
-        } catch(e) {}
-        ctx.restore();
-      }
-    }
-    if (!drewImg) {
-      ctx.fillStyle = isCur ? (borderCol + "55") : (borderCol + "22");
-      ctx.fill();
-    }
-    ctx.strokeStyle = isCur ? "#ffd166" : borderCol;
-    ctx.lineWidth = isCur ? 2.8 : 1.5;
-    ctx.stroke();
-    if (isCur) {
-      ctx.strokeStyle = "#ffffff";
-      ctx.lineWidth = 1.0;
-      ctx.stroke();
-    }
-    ctx.restore();
-    return true;
-  }
-
-  function drawCroppedStrokesStamp(ctx, strokesUV, cx, cy, maxW, maxH, col, isCur) {
-    if (!strokesUV || !strokesUV.length) return;
-    let u0 = 1e9, v0 = 1e9, u1 = -1e9, v1 = -1e9;
-    strokesUV.forEach(st => st.forEach(([u, v]) => {
-      if (u < u0) u0 = u; if (u > u1) u1 = u;
-      if (v < v0) v0 = v; if (v > v1) v1 = v;
-    }));
-    if (u0 > u1) return;
-    const bw = Math.max(0.06, u1 - u0), bh = Math.max(0.06, v1 - v0);
-    const sc = Math.min(maxW / bw, maxH / bh);
-    const mu = 0.5 * (u0 + u1), mv = 0.5 * (v0 + v1);
-
-    ctx.save();
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-    ctx.strokeStyle = isCur ? "#ffffff" : col;
-    ctx.lineWidth = isCur ? 2.0 : 1.3;
-    ctx.globalAlpha = isCur ? 1.0 : 0.78;
-    strokesUV.forEach(st => {
-      if (st.length < 2) return;
-      ctx.beginPath();
-      st.forEach(([u, v], i) => {
-        const x = cx + (u - mu) * sc;
-        const y = cy + (v - mv) * sc;
-        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-      });
-      ctx.stroke();
-    });
-    ctx.restore();
-  }
-
-  function drawDisentangledStack(w, fIdx, W, H) {
-    const frames = w.frames || [];
-    const nf = frames.length;
-    const dws = w.depth_worms || [];
-    bandHitBoxes = [];
-    if (!dws.length) return;
-
-    const rows = [...dws].reverse();
-    const padL = 132, padR = 12, padT = 24, padB = 6;
-    const plotW = W - padL - padR;
-    const availH = H - padT - padB;
-
-    const weights = rows.map(dw => dw.role === "subject" ? 1.75 : 1.0);
-    const totalWeight = weights.reduce((a, b) => a + b, 0);
-    const curX = padL + (fIdx / Math.max(1, nf - 1)) * plotW;
-
-    let yCursor = padT;
-    rows.forEach((dw, rIdx) => {
-      const rowH = (weights[rIdx] / totalWeight) * availH;
-      const y0 = yCursor;
-      const y1 = yCursor + rowH - 3;
-      const bandH = Math.max(22, y1 - y0);
-      const yMid = 0.5 * (y0 + y1);
-      yCursor += rowH;
-
-      bandHitBoxes.push({ id: dw.id, y0, y1, xTrack0: padL, xTrack1: padL + plotW });
-
-      const col = dw.color || "#00f5d4";
-      const isSubj = (dw.role === "subject");
-      const trk = dw.track || [];
-
-      ctx3.fillStyle = isSubj ? "rgba(255, 209, 102, 0.06)" : "rgba(18, 24, 38, 0.65)";
-      ctx3.fillRect(4, y0, W - 8, bandH);
-      ctx3.strokeStyle = isSubj ? "rgba(255, 209, 102, 0.55)" : (col + "55");
-      ctx3.lineWidth = isSubj ? 1.5 : 1.0;
-      ctx3.strokeRect(4, y0, W - 8, bandH);
-
-      ctx3.fillStyle = col;
-      ctx3.font = "bold 10px monospace";
-      const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig: ","").slice(0, 12);
-      ctx3.fillText(`z=${dw.z} ${shortLbl}`, 8, yMid - 2);
-
-      ctx3.fillStyle = isSubj ? "#ffd166" : "#b0bacd";
-      ctx3.font = isSubj ? "bold 9px sans-serif" : "9px sans-serif";
-      const descTxt = (dw.desc || dw.label).slice(0, 18);
-      ctx3.fillText(descTxt, 8, yMid + 9);
-
-      ctx3.strokeStyle = "rgba(255,255,255,0.08)";
-      ctx3.beginPath(); ctx3.moveTo(padL - 4, y0 + 2); ctx3.lineTo(padL - 4, y1 - 2); ctx3.stroke();
-
-      if (!trk.length) return;
-
-      let vMin = 1e9, vMax = -1e9, uStart = trk[0][0], rMax = 0.04;
-      trk.forEach(pt => {
-        if (pt[1] < vMin) vMin = pt[1];
-        if (pt[1] > vMax) vMax = pt[1];
-        if (pt[2] > rMax) rMax = pt[2];
-      });
-      const vMean = 0.5 * (vMin + vMax);
-      const vSpan = Math.max(0.10, vMax - vMin);
-
-      const spinePts = trk.map((pt, fi) => {
-        const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-        const dyNorm = isSubj
-          ? ((pt[1] - vMean) / vSpan) * 0.42
-          : ((pt[0] - uStart) * 0.85 + (pt[1] - vMean) * 0.5);
-        const ty = Math.max(y0 + 7, Math.min(y1 - 7, yMid + dyNorm * (bandH * 0.55)));
-        const rad = Math.max(4, Math.min(bandH * 0.38, (pt[2] / Math.max(0.05, rMax)) * (bandH * (isSubj ? 0.34 : 0.24))));
-        return { tx, ty, rad, pt, fi };
-      });
-
-      ctx3.beginPath();
-      spinePts.forEach((s, i) => { if (i === 0) ctx3.moveTo(s.tx, s.ty - s.rad); else ctx3.lineTo(s.tx, s.ty - s.rad); });
-      for (let i = spinePts.length - 1; i >= 0; i--) {
-        const s = spinePts[i];
-        ctx3.lineTo(s.tx, s.ty + s.rad);
-      }
-      ctx3.closePath();
-      ctx3.fillStyle = col + "24";
-      ctx3.fill();
-      ctx3.strokeStyle = col + "88";
-      ctx3.lineWidth = 1.2;
-      ctx3.stroke();
-
-      ctx3.beginPath();
-      spinePts.forEach((s, i) => { if (i === 0) ctx3.moveTo(s.tx, s.ty); else ctx3.lineTo(s.tx, s.ty); });
-      ctx3.strokeStyle = col;
-      ctx3.lineWidth = isSubj ? 2.4 : 1.6;
-      ctx3.stroke();
-
-      const nStamps = isSubj ? 6 : 5;
-      const stampFrames = [];
-      for (let k = 0; k < nStamps; k++) {
-        stampFrames.push(Math.round((k / (nStamps - 1)) * (nf - 1)));
-      }
-      if (!stampFrames.includes(fIdx)) stampFrames.push(fIdx);
-      stampFrames.sort((a, b) => a - b);
-
-      const orderedStamps = stampFrames.filter(f => f !== fIdx).concat([fIdx]);
-      orderedStamps.forEach(fi => {
-        const isCur = (fi === fIdx);
-        const sp = spinePts[Math.min(spinePts.length - 1, fi)];
-        if (!sp) return;
-        const fr = frames[Math.min(nf - 1, fi)] || {};
-
-        if (isSubj && fr.ring && fr.ring.length >= 3) {
-          const media = getMediaForFrame(w, fi);
-          const maxH = bandH * (isCur ? 0.92 : 0.78);
-          const maxW = (plotW / nStamps) * (isCur ? 1.15 : 0.92);
-          drawCroppedCutoutStamp(ctx3, media, fr.ring, sp.tx, sp.ty, maxW, maxH, col, isCur, isCur ? 1.0 : 0.78);
-        } else {
-          const strokesUV = getPlaneStrokesUV(dw, fr, sp.pt);
-          const maxH = bandH * (isCur ? 0.84 : 0.68);
-          const maxW = (plotW / nStamps) * 0.85;
-          drawCroppedStrokesStamp(ctx3, strokesUV, sp.tx, sp.ty, maxW, maxH, col, isCur);
-        }
-      });
-    });
-
-    ctx3.strokeStyle = "rgba(255, 209, 102, 0.85)";
-    ctx3.lineWidth = 1.5;
-    ctx3.setLineDash([4, 3]);
-    ctx3.beginPath();
-    ctx3.moveTo(curX, padT - 4);
-    ctx3.lineTo(curX, H - padB);
-    ctx3.stroke();
-    ctx3.setLineDash([]);
-  }
-
-  function proj3(u, v, tau, zOff, W, H) {
-    const x = u - 0.5;
-    const y = (0.5 - v) + zOff;
-    const z = (tau - 0.5) * 1.55;
-    const cy = Math.cos(yaw), sy = Math.sin(yaw);
-    const cp = Math.cos(pitch), sp = Math.sin(pitch);
-    const x1 = x * cy + z * sy, z1 = -x * sy + z * cy;
-    const y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
-    const sc = (Math.min(W, H) * 0.88) / Math.max(0.55, 2.20 - z2 * 0.5);
-    return { sx: W * 0.50 + x1 * sc, sy: H * 0.52 - y2 * sc, sc };
-  }
-
-  function draw3D() {
-    if (!ctx3 || !WORMS.length) return;
-    const W = c3d.width, H = c3d.height;
-    ctx3.clearRect(0, 0, W, H);
-    const w = WORMS[curIdx];
-    if (!w || !w.frames || !w.frames.length) return;
-    const frames = w.frames, nf = frames.length;
-    const fIdx = Math.max(0, Math.min(nf - 1, curF));
-    const dws = w.depth_worms || [];
-    hitPts = [];
-
-    const hud3 = document.getElementById("twHud3D");
-    if (hud3) {
-      if (soloLayerId) {
-        const sdw = dws.find(d => d.id === soloLayerId);
-        hud3.textContent = sdw ? `SOLO WORM: z=${sdw.z} ${sdw.label} (${sdw.desc || ""}) · Drag to orbit` : "Solo Worm";
-      } else if (wMode === "stack") {
-        hud3.textContent = `Disentangled ${dws.length} Depth Worms (τ = f00→f${nf-1}) · Tap any row to solo`;
-      } else if (wMode === "box3d") {
-        hud3.textContent = "3D Multiplane Cel Stack · Drag to rotate turntable";
-      } else {
-        hud3.textContent = "3D Exploded Cutout Worm · Drag to orbit";
-      }
-    }
-
-    if (wMode === "stack" && !soloLayerId) {
-      drawDisentangledStack(w, fIdx, W, H);
-      return;
-    }
-
-    bandHitBoxes = [];
-
-    if (wMode === "box3d" && !soloLayerId) {
-      const nPlanes = Math.max(1, dws.length);
-      const sc = Math.min(W, H) * 0.62;
-      const cy = Math.cos(yaw), sy = Math.sin(yaw);
-      const tilt = 0.34;
-      const PBox = (u, v, rankIdx) => {
-        const X = (u - 0.5);
-        const Zd = (rankIdx / Math.max(1, nPlanes - 1) - 0.5) * 1.25;
-        const rx = X * cy - Zd * sy;
-        const rz = X * sy + Zd * cy;
-        return {
-          sx: W * 0.50 + rx * sc,
-          sy: H * 0.54 + (v - 0.5) * sc * 0.75 - rz * sc * tilt,
-          depth: rz
-        };
-      };
-
-      const ordered = dws.map((dw, idx) => ({ dw, idx, d: PBox(0.5, 0.5, idx).depth }))
-                         .sort((a, b) => a.d - b.d);
-
-      ordered.forEach(({ dw, idx }) => {
-        const corners = [PBox(0, 0, idx), PBox(1, 0, idx), PBox(1, 1, idx), PBox(0, 1, idx)];
-        ctx3.beginPath();
-        corners.forEach((c, i) => { if (i === 0) ctx3.moveTo(c.sx, c.sy); else ctx3.lineTo(c.sx, c.sy); });
-        ctx3.closePath();
-        ctx3.fillStyle = "rgba(18, 24, 38, 0.42)";
-        ctx3.fill();
-        ctx3.strokeStyle = dw.color || "#00f5d4";
-        ctx3.lineWidth = dw.role === "subject" ? 2.2 : 1.1;
-        ctx3.stroke();
-      });
-
-      const fr = frames[Math.min(nf - 1, fIdx)];
-      const media = getMediaForFrame(w, fIdx);
-
-      ordered.forEach(({ dw, idx }) => {
-        const col = dw.color || "#00f5d4";
-        const trk = dw.track || [];
-        const pt = trk[Math.min(trk.length - 1, fIdx)] || [dw.u0 || 0.5, dw.v0 || 0.5, dw.r0 || 0.12];
-        const polyUV = getPlanePolyUV(dw, fr, pt);
-
-        if (showMaskVid && media && (dw.role === "subject" || dw.scene_rings) && polyUV.length >= 3) {
-          const mw = media.videoWidth || media.naturalWidth || 0;
-          const mh = media.videoHeight || media.naturalHeight || 0;
-          if (mw && mh) {
-            const p00 = PBox(0, 0, idx), p10 = PBox(1, 0, idx), p01 = PBox(0, 1, idx);
-            ctx3.save();
-            ctx3.beginPath();
-            polyUV.forEach((uv, i) => {
-              const p = PBox(uv[0], uv[1], idx);
-              if (i === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-            });
-            ctx3.closePath();
-            ctx3.clip();
-            ctx3.transform(
-              (p10.sx - p00.sx) / mw, (p10.sy - p00.sy) / mw,
-              (p01.sx - p00.sx) / mh, (p01.sy - p00.sy) / mh,
-              p00.sx, p00.sy
-            );
-            try { ctx3.drawImage(media, 0, 0, mw, mh); } catch(e) {}
-            ctx3.restore();
-
-            ctx3.beginPath();
-            polyUV.forEach((uv, i) => {
-              const p = PBox(uv[0], uv[1], idx);
-              if (i === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-            });
-            ctx3.closePath();
-            ctx3.strokeStyle = "#ffffff";
-            ctx3.lineWidth = 2.0;
-            ctx3.stroke();
-          }
-        }
-
-        const strokesUV = getPlaneStrokesUV(dw, fr, pt);
-        if (strokesUV.length) {
-          ctx3.strokeStyle = dw.role === "subject" ? "#ffffff" : col;
-          ctx3.lineWidth = dw.role === "subject" ? 2.2 : 1.7;
-          ctx3.lineCap = "round";
-          ctx3.lineJoin = "round";
-          strokesUV.forEach(st => {
-            if (st.length < 2) return;
-            ctx3.beginPath();
-            st.forEach((uv, i) => {
-              const p = PBox(uv[0], uv[1], idx);
-              if (i === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-            });
-            ctx3.stroke();
-          });
-        }
-
-        const topL = PBox(0, 0, idx);
-        ctx3.fillStyle = col;
-        ctx3.font = "bold 10.5px monospace";
-        ctx3.fillText(`z=${dw.z} ${dw.label} (${dw.desc || ""})`, topL.sx + 4, topL.sy - 5);
-      });
-      return;
-    }
-
-    const box = [[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]].map(c => proj3(c[0],c[1],c[2],0,W,H));
-    [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]].forEach(([a,b]) => {
-      ctx3.beginPath(); ctx3.moveTo(box[a].sx, box[a].sy); ctx3.lineTo(box[b].sx, box[b].sy);
-      ctx3.strokeStyle = "rgba(142,153,176,0.16)"; ctx3.lineWidth = 1; ctx3.stroke();
-    });
-
-    const nL = Math.max(1, dws.length);
-    [...dws].reverse().forEach((dw, revIdx) => {
-      const origIdx = nL - 1 - revIdx;
-      if (!isLayerActive(dw.id)) return;
-      const col = dw.color || "#00f5d4";
-      const trk = dw.track || [];
-      const isSubj = (dw.role === "subject");
-      const isSolo = (soloLayerId === dw.id);
-      const zOff = isSolo ? 0.0 : ((origIdx / Math.max(1, nL - 1)) - 0.5) * 1.04;
-
-      ctx3.strokeStyle = col; ctx3.lineWidth = (isSubj || isSolo) ? 3.4 : 1.8;
-      ctx3.beginPath();
-      trk.forEach((pt, fi) => {
-        const p = proj3(pt[0], pt[1], fi / Math.max(1, nf - 1), zOff, W, H);
-        if (isSubj || isSolo) hitPts.push({ fi, sx: p.sx, sy: p.sy });
-        if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-      });
-      ctx3.stroke();
-
-      const nSlices = (isSubj || isSolo) ? 7 : 3;
-      const sliceIndices = [];
-      for (let k = 0; k < nSlices; k++) sliceIndices.push(Math.round((k / Math.max(1, nSlices - 1)) * (nf - 1)));
-      if (!sliceIndices.includes(fIdx)) sliceIndices.push(fIdx);
-      sliceIndices.sort((a, b) => a - b);
-
-      sliceIndices.forEach(fi => {
-        const isCur = (fi === fIdx);
-        const fr = frames[Math.min(nf - 1, fi)] || {};
-        const pt = trk[Math.min(trk.length - 1, fi)];
-        if (!pt) return;
-        const tau = fi / Math.max(1, nf - 1);
-        const centerP = proj3(pt[0], pt[1], tau, zOff, W, H);
-
-        if (isSubj && fr.ring && fr.ring.length >= 3) {
-          const media = getMediaForFrame(w, fi);
-          const stampSz = (isSolo ? 130 : 88) * (isCur ? 1.18 : 0.92);
-          drawCroppedCutoutStamp(ctx3, media, fr.ring, centerP.sx, centerP.sy, stampSz * 1.25, stampSz, col, isCur, isCur ? 1.0 : 0.72);
-        } else if (isSolo || isCur || fi === 0 || fi === nf - 1) {
-          const strokesUV = getPlaneStrokesUV(dw, fr, pt);
-          const stampSz = (isSolo ? 125 : 64) * (isCur ? 1.15 : 0.88);
-          drawCroppedStrokesStamp(ctx3, strokesUV, centerP.sx, centerP.sy, stampSz * 1.3, stampSz, col, isCur);
-        }
-      });
-
-      if (trk.length) {
-        const p0 = proj3(trk[0][0], trk[0][1], 0, zOff, W, H);
-        ctx3.fillStyle = col; ctx3.font = "bold 10px monospace";
-        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 12)}`, p0.sx + 4, p0.sy - 4);
-      }
-    });
-  }
-
-  function draw2D() {
-    if (!ctx2 || !WORMS.length) return;
-    const W = c2d.width, H = c2d.height;
-    ctx2.clearRect(0, 0, W, H);
-    const w = WORMS[curIdx];
-    if (!w || !w.frames || !w.frames.length) return;
-    const fIdx = Math.max(0, Math.min(w.frames.length - 1, curF));
-    const fr = w.frames[fIdx];
-    const media = getMediaForFrame(w, fIdx);
-    const dws = w.depth_worms || [];
-
-    ensureFrameImg(w, (fIdx + 1) % w.frames.length);
-    ensureFrameImg(w, (fIdx + 2) % w.frames.length);
-
-    ctx2.fillStyle = "#05070c";
-    ctx2.fillRect(0, 0, W, H);
-
-    if (media) {
-      ctx2.save();
-      ctx2.globalAlpha = (vMode === "src") ? 1.0 : 0.18;
-      try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
-      ctx2.restore();
-    }
-
-    if (vMode === "src") return;
-
-    const subjDw = dws.find(d => d.role === "subject");
-    if (vMode === "cutout" && (soloLayerId === null || (subjDw && soloLayerId === subjDw.id))) {
-      if (fr.ring && fr.ring.length >= 3) {
-        if (media) {
-          ctx2.save();
-          ctx2.beginPath();
-          fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
-          ctx2.closePath();
-          ctx2.shadowColor = "rgba(0,0,0,0.95)";
-          ctx2.shadowBlur = 14;
-          ctx2.shadowOffsetX = 3;
-          ctx2.shadowOffsetY = 4;
-          ctx2.fillStyle = "#000";
-          ctx2.fill();
-          ctx2.restore();
-
-          ctx2.save();
-          ctx2.beginPath();
-          fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
-          ctx2.closePath();
-          ctx2.clip();
-          ctx2.globalAlpha = 1.0;
-          try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
-          ctx2.restore();
-        }
-
-        ctx2.save();
-        ctx2.beginPath();
-        fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
-        ctx2.closePath();
-        ctx2.strokeStyle = "#ffd166";
-        ctx2.lineWidth = 3.2;
-        ctx2.stroke();
-        ctx2.strokeStyle = "#ffffff";
-        ctx2.lineWidth = 1.2;
-        ctx2.stroke();
-        ctx2.restore();
-      }
-      return;
-    }
-
-    [...dws].reverse().forEach(dw => {
-      if (!isLayerActive(dw.id)) return;
-      const col = dw.color || "#00f5d4";
-      const trk = dw.track || [];
-      const pt = trk[Math.min(trk.length - 1, fIdx)] || [dw.u0 || 0.5, dw.v0 || 0.5, dw.r0 || 0.12];
-      const polyUV = getPlanePolyUV(dw, fr, pt);
-      const strokesUV = getPlaneStrokesUV(dw, fr, pt);
-
-      const doCutout = media && (dw.role === "subject" || dw.scene_rings || soloLayerId === dw.id);
-      if (doCutout && polyUV.length >= 3) {
-        ctx2.save();
-        ctx2.beginPath();
-        polyUV.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
-        ctx2.closePath();
-        ctx2.clip();
-        ctx2.globalAlpha = 1.0;
-        try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
-        ctx2.restore();
-
-        ctx2.beginPath();
-        polyUV.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
-        ctx2.closePath();
-        ctx2.strokeStyle = col;
-        ctx2.lineWidth = 2.6;
-        ctx2.stroke();
-      }
-
-      if (strokesUV.length && (dw.role !== "subject" || soloLayerId === dw.id)) {
-        ctx2.save();
-        ctx2.lineCap = "round";
-        ctx2.lineJoin = "round";
-        strokesUV.forEach(st => {
-          if (st.length < 2) return;
-          ctx2.beginPath();
-          st.forEach((uv, i) => {
-            if (i === 0) ctx2.moveTo(uv[0] * W, uv[1] * H); else ctx2.lineTo(uv[0] * W, uv[1] * H);
-          });
-          ctx2.strokeStyle = "rgba(5, 7, 12, 0.85)";
-          ctx2.lineWidth = 4.2;
-          ctx2.stroke();
-          ctx2.strokeStyle = col;
-          ctx2.lineWidth = 2.2;
-          ctx2.stroke();
-        });
-        ctx2.restore();
-      }
-    });
-  }
-
-  function drawAll() {
-    const w = WORMS[curIdx];
-    if (!w) return;
-    draw3D();
-    draw2D();
-    const fIdx = Math.max(0, Math.min(w.frames.length - 1, curF));
-    const fr = w.frames[fIdx] || {};
-    const areaPct = ((fr.area || 0) * 100).toFixed(1);
-    const dws = w.depth_worms || [];
-    const soloTxt = soloLayerId ? ` · SOLO: ${soloLayerId}` : ` · ${dws.length} Disentangled Worms`;
-    document.getElementById("twFrameReadout").textContent =
-      `f${String(fIdx).padStart(2,"0")}/${w.n_frames-1} · cutout ${areaPct}%${soloTxt}`;
-  }
-
-  function syncVidTime(w, fIdx) {
-    if (!w || !vid || !vid.duration || !isFinite(vid.duration)) return;
-    const t0 = w.vid_t0 || 0;
-    const fps = w.fps || 12;
-    const targetT = t0 + (fIdx / fps);
-    if (Math.abs(vid.currentTime - targetT) > 0.08) {
-      try { vid.currentTime = Math.min(vid.duration - 0.05, targetT); } catch(e) {}
-    }
-  }
-
-  function setFrame(fIdx, syncV) {
-    const w = WORMS[curIdx];
-    if (!w) return;
-    curF = Math.max(0, Math.min(w.n_frames - 1, fIdx));
-    sld.value = curF;
-    if (syncV) syncVidTime(w, curF);
-    drawAll();
-  }
-
-  window.loadSecondhandWorm = function(slugOrIdx, autoPlay) {
-    if (!WORMS.length) return;
-    let idx = typeof slugOrIdx === "number" ? slugOrIdx : WORMS.findIndex(w => w.slug === slugOrIdx);
-    if (idx < 0) idx = 0;
-    if (idx >= WORMS.length) idx = 0;
-    curIdx = idx;
-    sel.value = idx;
-    curF = 0;
-    setSoloLayer(null);
-    const w = WORMS[idx];
-    sld.max = Math.max(1, w.n_frames - 1);
-    sld.value = 0;
-    preloadShotFrames(w);
-    const vUrl = w.src_mp4 || w.comp_mp4 || w.r2_mp4 || "";
-    const hud2d = document.getElementById("twHud2D");
-    if (hud2d) {
-      const map = {
-        cutout: "SAM Video Cutout",
-        scene: "Video Cutout + Multiplane Drawings",
-        src: "Raw Source Footage"
-      };
-      hud2d.textContent = map[vMode] || "SAM Video Cutout";
-    }
-    if (vUrl && vid.src !== vUrl) {
-      vid.src = vUrl;
-      vid.onloadedmetadata = () => { syncVidTime(w, curF); drawAll(); };
-    }
-    setFrame(0, false);
-    document.querySelectorAll("#twSwipeStrip .tw-tile").forEach(t => {
-      t.classList.toggle("active", parseInt(t.dataset.idx, 10) === curIdx);
-    });
-    if (autoPlay) {
-      isPlaying = true;
-      document.getElementById("twPlayPause").textContent = "⏸";
-      vid.play().catch(() => {});
-    }
-  };
-
-  function tickLoop(ts) {
-    if (isPlaying && WORMS[curIdx]) {
-      const w = WORMS[curIdx];
-      const interval = 1000 / (w.fps || 12);
-      if (ts - lastTick >= interval) {
-        lastTick = ts;
-        curF = (curF + 1) % Math.max(1, w.n_frames);
-        sld.value = curF;
-        syncVidTime(w, curF);
-        drawAll();
-      }
-    }
-    requestAnimationFrame(tickLoop);
-  }
-  requestAnimationFrame(tickLoop);
-
-  function buildSwipeStrip() {
-    const strip = document.getElementById("twSwipeStrip");
-    if (!strip) return;
-    strip.innerHTML = "";
-    WORMS.forEach((w, idx) => {
-      const tile = document.createElement("div");
-      tile.className = "tw-tile" + (idx === curIdx ? " active" : "");
-      tile.dataset.idx = idx;
-      tile.innerHTML = `<canvas width="110" height="34"></canvas><div class="tw-tile-t">${idx+1}. ${w.slug}</div>`;
-      tile.onclick = () => window.loadSecondhandWorm(idx, true);
-      strip.appendChild(tile);
-
-      const mc = tile.querySelector("canvas").getContext("2d");
-      const nf = Math.max(1, w.frames.length);
-      const rows = [...(w.depth_worms || [])].reverse();
-      rows.forEach((dw, rIdx) => {
-        const yBand = 5 + (rIdx / Math.max(1, rows.length - 1)) * 24;
-        mc.strokeStyle = dw.color || "#00f5d4";
-        mc.lineWidth = dw.role === "subject" ? 2.2 : 1.1;
-        mc.beginPath();
-        (dw.track || []).forEach((pt, fi) => {
-          const x = 4 + (fi / Math.max(1, nf - 1)) * 102;
-          const y = yBand + (pt[1] - (dw.v0 || 0.5)) * 8;
-          if (fi === 0) mc.moveTo(x, y); else mc.lineTo(x, y);
-        });
-        mc.stroke();
-      });
-    });
-  }
-
-  function decorateRackCards() {
-    if (!WORMS.length) return;
-    document.querySelectorAll("#out .tag").forEach(card => {
-      if (card.dataset.wormDecorated) return;
-      const href = card.getAttribute("href") || "";
-      const titleEl = card.querySelector(".body b");
-      const titleTxt = titleEl ? titleEl.textContent.toLowerCase().replace(/\s+/g, "-") : "";
-      let slug = BY_SLUG[titleTxt] ? titleTxt : null;
-      if (!slug) {
-        for (const s of Object.keys(BY_SLUG)) {
-          if (href.includes("/" + s + "/") || href.includes("#" + s) || href.includes(s + "-")) { slug = s; break; }
-        }
-      }
-      if (!slug || !BY_SLUG[slug]) return;
-      card.dataset.wormDecorated = "1";
-      const w = BY_SLUG[slug];
-      const rows = [...(w.depth_worms || [])].reverse();
-
-      const stripWrap = document.createElement("div");
-      stripWrap.style.cssText = "margin-top:4px;padding:4px 6px;background:#080a10;border-radius:5px;border:1px solid var(--rule-strong);display:flex;align-items:center;justify-content:space-between;gap:6px;";
-      const miniC = document.createElement("canvas");
-      miniC.width = 120; miniC.height = 34;
-      miniC.style.cssText = "width:104px;height:30px;display:block;";
-      const mc = miniC.getContext("2d");
-      const nf = Math.max(1, w.frames.length);
-      rows.forEach((dw, rIdx) => {
-        const yBand = 5 + (rIdx / Math.max(1, rows.length - 1)) * 24;
-        mc.strokeStyle = dw.color || "#00f5d4";
-        mc.lineWidth = dw.role === "subject" ? 2.2 : 1.1;
-        mc.beginPath();
-        (dw.track || []).forEach((pt, fi) => {
-          const x = 5 + (fi / Math.max(1, nf - 1)) * 110;
-          const y = yBand + (pt[1] - (dw.v0 || 0.5)) * 8;
-          if (fi === 0) mc.moveTo(x, y); else mc.lineTo(x, y);
-        });
-        mc.stroke();
-      });
-
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "chip";
-      btn.style.cssText = "font-size:10.5px;padding:2px 6px;background:#ffd166;color:#080a10;border-color:#ffd166;font-weight:700;";
-      btn.textContent = `▶ ${rows.length} Worms`;
-      btn.onclick = (e) => {
-        e.preventDefault(); e.stopPropagation();
-        window.loadSecondhandWorm(slug, true);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      };
-      stripWrap.append(miniC, btn);
-      const bodyEl = card.querySelector(".body");
-      if (bodyEl) bodyEl.insertBefore(stripWrap, bodyEl.querySelector(".rail") || bodyEl.firstChild);
-    });
-  }
-
-  document.getElementById("twPlayPause").onclick = () => {
-    isPlaying = !isPlaying;
-    document.getElementById("twPlayPause").textContent = isPlaying ? "⏸" : "▶";
-    if (isPlaying) vid.play().catch(()=>{}); else vid.pause();
-  };
-  document.getElementById("twStepPrev").onclick = () => {
-    isPlaying = false; document.getElementById("twPlayPause").textContent = "▶"; vid.pause();
-    setFrame(curF - 1, true);
-  };
-  document.getElementById("twStepNext").onclick = () => {
-    isPlaying = false; document.getElementById("twPlayPause").textContent = "▶"; vid.pause();
-    setFrame(curF + 1, true);
-  };
-  sld.oninput = () => {
-    isPlaying = false; document.getElementById("twPlayPause").textContent = "▶"; vid.pause();
-    setFrame(parseInt(sld.value, 10), true);
-  };
-  sel.onchange = () => window.loadSecondhandWorm(parseInt(sel.value, 10), true);
-  document.getElementById("twPrevBtn").onclick = () => window.loadSecondhandWorm(curIdx - 1, true);
-  document.getElementById("twNextBtn").onclick = () => window.loadSecondhandWorm(curIdx + 1, true);
-
-  document.querySelectorAll("#twModeBtns .tw-btn[data-wmode]").forEach(b => {
-    b.onclick = () => {
-      document.querySelectorAll("#twModeBtns .tw-btn[data-wmode]").forEach(x => x.setAttribute("aria-pressed", "false"));
-      b.setAttribute("aria-pressed", "true");
-      wMode = b.dataset.wmode;
-      setSoloLayer(null);
-      drawAll();
-    };
-  });
-  if (unsoloBtn) unsoloBtn.onclick = () => setSoloLayer(null);
-  document.getElementById("twFull3dBtn").onclick = (e) => {
-    const g = document.getElementById("twStageGrid");
-    const full = g.classList.toggle("full3d");
-    e.target.setAttribute("aria-pressed", String(full));
-    drawAll();
-  };
-  const mvBtn = document.getElementById("twMaskVidBtn");
-  if (mvBtn) {
-    mvBtn.onclick = () => {
-      showMaskVid = !showMaskVid;
-      mvBtn.setAttribute("aria-pressed", String(showMaskVid));
-      drawAll();
-    };
-  }
-  document.querySelectorAll("#twVidSourceBar .tw-btn").forEach(b => {
-    b.onclick = () => {
-      document.querySelectorAll("#twVidSourceBar .tw-btn").forEach(x => x.setAttribute("aria-pressed", "false"));
-      b.setAttribute("aria-pressed", "true");
-      vMode = b.dataset.vmode;
-      const w = WORMS[curIdx];
-      if (w) {
-        const hud2d = document.getElementById("twHud2D");
-        if (hud2d) {
-          const map = {
-            cutout: "SAM Video Cutout",
-            scene: "Video Cutout + Multiplane Drawings",
-            src: "Raw Source Footage"
-          };
-          hud2d.textContent = map[vMode] || "SAM Video Cutout";
-        }
-        drawAll();
-      }
-    };
-  });
-
-  c3d.addEventListener("pointerdown", e => { dragging = true; moved = false; lx = e.clientX; ly = e.clientY; c3d.setPointerCapture(e.pointerId); });
-  c3d.addEventListener("pointermove", e => {
-    if (!dragging) return;
-    const dx = e.clientX - lx, dy = e.clientY - ly;
-    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
-
-    if (wMode === "stack" && !soloLayerId) {
-      const rect = c3d.getBoundingClientRect();
-      const mx = (e.clientX - rect.left) * (c3d.width / rect.width);
-      const w = WORMS[curIdx];
-      if (w && bandHitBoxes.length) {
-        const b0 = bandHitBoxes[0];
-        if (mx >= b0.xTrack0) {
-          const tau = Math.max(0, Math.min(1, (mx - b0.xTrack0) / Math.max(1, b0.xTrack1 - b0.xTrack0)));
-          setFrame(Math.round(tau * Math.max(1, w.frames.length - 1)), true);
-        }
-      }
-      return;
-    }
-
-    yaw += dx * 0.008;
-    pitch = Math.max(-1.0, Math.min(1.0, pitch + dy * 0.008));
-    lx = e.clientX; ly = e.clientY;
-    drawAll();
-  });
-  c3d.addEventListener("pointerup", e => {
-    dragging = false;
-    if (!moved && WORMS[curIdx]) {
-      const rect = c3d.getBoundingClientRect();
-      const mx = (e.clientX - rect.left) * (c3d.width / rect.width);
-      const my = (e.clientY - rect.top) * (c3d.height / rect.height);
-
-      if (wMode === "stack" && !soloLayerId && bandHitBoxes.length) {
-        for (const box of bandHitBoxes) {
-          if (my >= box.y0 && my <= box.y1) {
-            if (mx >= box.xTrack0) {
-              const tau = Math.max(0, Math.min(1, (mx - box.xTrack0) / Math.max(1, box.xTrack1 - box.xTrack0)));
-              curF = Math.round(tau * Math.max(1, WORMS[curIdx].frames.length - 1));
-              sld.value = curF;
-              syncVidTime(WORMS[curIdx], curF);
-            }
-            setSoloLayer(box.id);
-            return;
-          }
-        }
-      }
-
-      if (hitPts.length) {
-        let best = -1, bestD = 9999;
-        hitPts.forEach(p => { const d = Math.hypot(p.sx - mx, p.sy - my); if (d < bestD) { bestD = d; best = p.fi; } });
-        if (best !== -1 && bestD < 50) setFrame(best, true);
-      }
-    }
-  });
-
-  const outEl = document.getElementById("out");
-  if (outEl) new MutationObserver(() => decorateRackCards()).observe(outEl, { childList: true, subtree: true });
-
-  fetch("data/worms_108.json?v=8")
-    .catch(() => fetch("https://hartswf0.github.io/secondhand-motion/data/worms_108.json?v=8"))
-    .then(r => r.json())
-    .then(d => {
-      WORMS = d.worms || [];
-      WORMS.forEach(w => { BY_SLUG[w.slug] = w; });
-      sel.innerHTML = "";
-      WORMS.forEach((w, idx) => {
-        const opt = document.createElement("option");
-        opt.value = idx;
-        opt.textContent = `${idx+1}. ${w.slug} (${(w.depth_worms||[]).length} Disentangled Worms)`;
-        sel.appendChild(opt);
-      });
-      buildSwipeStrip();
-      const gIdx = WORMS.findIndex(w => w.slug === "giraffe");
-      window.loadSecondhandWorm(gIdx !== -1 ? gIdx : 0, false);
-      decorateRackCards();
-    });
 })();
 </script>
