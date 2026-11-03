@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>4D Multi-Plane & Cutout Worms (108 Shots · 560 Worms)</title>
+<title>4D Multiplane Cutout Worms (108 Shots)</title>
 <style>
   :root {
     --bg: #07090e;
@@ -14,9 +14,7 @@
     --muted: #8e99b0;
     --gold: #ffd166;
     --cyan: #00f5d4;
-    --coral: #ff5e5b;
-    --blue: #5bc0eb;
-    --violet: #b794f4;
+    --coral: #ff6b6b;
     --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
@@ -36,7 +34,7 @@
   }
   a { color: var(--cyan); text-decoration: none; }
 
-  /* Row 1: Ultra-compact 34px Top & Shot Bar */
+  /* Row 1: Compact Top & Shot Selector Bar */
   .top-bar {
     flex: none;
     display: flex;
@@ -104,67 +102,88 @@
     font-weight: 700;
   }
 
-  /* Row 2: 28px Multi-Plane & Rig-Part Pills (Tap to solo any plane/part worm) */
+  /* Row 2: LIVE VISUAL DEPTH LAYER STRIP (Shows what is inside each depth layer!) */
   .depth-bar {
     flex: none;
     display: flex;
-    align-items: center;
-    gap: 4px;
+    align-items: stretch;
+    gap: 5px;
     padding: 4px 8px;
-    background: #0b0e15;
+    background: #0a0d14;
     border-bottom: 1px solid var(--border);
     overflow-x: auto;
     scrollbar-width: none;
   }
   .depth-bar::-webkit-scrollbar { display: none; }
-  .d-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 2px 8px;
-    border-radius: 999px;
-    font-size: 10px;
-    font-family: var(--mono);
-    background: var(--panel);
-    border: 1px solid var(--border);
+  .layer-card {
+    flex: 0 0 auto;
+    width: 108px;
+    background: #121723;
+    border: 1.5px solid #252f45;
+    border-radius: 6px;
+    padding: 3px 4px;
     cursor: pointer;
-    white-space: nowrap;
-    opacity: 0.42;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    opacity: 0.48;
+    transition: opacity 0.12s, border-color 0.12s;
   }
-  .d-pill.active {
+  .layer-card.active {
     opacity: 1;
-    border-color: currentColor;
-    background: rgba(255, 255, 255, 0.09);
-    font-weight: 700;
+    background: #171f30;
   }
-  .d-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    display: inline-block;
+  .layer-card.solo {
+    opacity: 1;
+    background: rgba(255, 209, 102, 0.14);
+    box-shadow: 0 0 0 1px var(--gold);
+  }
+  .lc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .layer-card canvas {
+    width: 100%;
+    height: 32px;
+    display: block;
+    background: #06080e;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .lc-sub {
+    font-size: 9px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  /* Row 3: Side-by-Side Stage (3D Multi-Plane Worms + 2D Footage Cutouts) — Zero Scroll on Mobile */
+  /* Row 3: Side-by-Side Stage (3D Cutout Worm / 3D Planes + 2D Cutout Stage) */
   .stage-row {
-    flex: 0 0 44dvh;
-    min-height: 195px;
-    max-height: 360px;
+    flex: 0 0 42dvh;
+    min-height: 185px;
+    max-height: 350px;
     display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
+    grid-template-columns: 1.22fr 0.78fr;
     background: #030508;
     border-bottom: 1px solid var(--border);
   }
   .stage-row.only-3d { grid-template-columns: 1fr; }
   .stage-row.only-3d .pane-2d { display: none; }
-  .stage-row.only-2d { grid-template-columns: 1fr; }
-  .stage-row.only-2d .pane-3d { display: none; }
 
   .pane-3d, .pane-2d {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #04060b;
+    background: #05070c;
   }
   .pane-3d { border-right: 1px solid var(--border); }
   .pane-3d canvas, .pane-2d canvas {
@@ -176,27 +195,20 @@
     cursor: grab;
     touch-action: none;
   }
-  /* Keep raw video hidden when canvas renders the die-cut footage cutouts so it never bleeds through */
-  .pane-2d video, .pane-2d img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  .pane-2d video {
     display: none;
-    background: #000;
   }
   .hud-pill {
     position: absolute;
     top: 4px;
     left: 5px;
-    background: rgba(7, 9, 14, 0.84);
+    background: rgba(7, 9, 14, 0.86);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 4px;
-    padding: 1px 5px;
+    padding: 2px 6px;
     font-family: var(--mono);
     font-size: 9.5px;
-    color: var(--muted);
+    color: var(--fg);
     pointer-events: none;
     z-index: 3;
   }
@@ -209,11 +221,11 @@
     z-index: 3;
   }
   .tiny-btn {
-    background: rgba(16, 20, 29, 0.9);
+    background: rgba(16, 20, 29, 0.92);
     color: var(--fg);
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 2px 5px;
+    padding: 2px 6px;
     font-family: var(--mono);
     font-size: 9.5px;
     cursor: pointer;
@@ -221,10 +233,11 @@
   .tiny-btn.active {
     color: var(--gold);
     border-color: var(--gold);
+    background: rgba(255, 209, 102, 0.16);
     font-weight: 700;
   }
 
-  /* Row 4: 28px Scrubber + Telemetry Bar */
+  /* Row 4: Scrubber + Telemetry Bar */
   .scrub-bar {
     flex: none;
     display: flex;
@@ -248,11 +261,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 50vw;
+    max-width: 52vw;
   }
   .stat-txt b { color: var(--fg); }
 
-  /* Row 5: Filter + Internal Scrollable 108-Shot Multi-Plane Grid */
+  /* Row 5: Filter + Internal Scrollable 108-Shot Grid */
   .filter-bar {
     flex: none;
     display: flex;
@@ -335,7 +348,7 @@
 </head>
 <body>
 
-<!-- ROW 1: COMPACT SHOT SELECTOR + VIEW MODE -->
+<!-- ROW 1: COMPACT SHOT SELECTOR + 3D VIEW MODE -->
 <div class="top-bar">
   <a class="m-btn" href="../index.html">← Rack</a>
   <div class="shot-nav">
@@ -345,38 +358,35 @@
     <button class="btn" id="nextBtn">▶</button>
   </div>
   <div class="mode-group" id="modeBar">
-    <button class="m-btn active" data-proj="orbit3d">3D</button>
-    <button class="m-btn" data-proj="lanes">Z×τ</button>
-    <button class="m-btn" data-layout="split">Split</button>
-    <button class="m-btn" data-layout="only-3d">Full 3D</button>
+    <button class="m-btn active" data-proj="orbit3d" title="3D Spatiotemporal Cutout Worm">Cutout Worm</button>
+    <button class="m-btn" data-proj="box3d" title="3D Multiplane Cel Stack (like giraffe-walks-past)">3D Planes</button>
+    <button class="m-btn" data-proj="lanes" title="Horizontal Multiplane Swimlanes">Z×τ</button>
+    <button class="m-btn" data-layout="toggle-full">Full 3D</button>
   </div>
 </div>
 
-<!-- ROW 2: MULTI-PLANE & RIG-PART PILLS -->
+<!-- ROW 2: VISUAL DEPTH LAYER CARDS (Each card shows a live preview of what is in that depth layer!) -->
 <div class="depth-bar" id="depthBar"></div>
 
-<!-- ROW 3: SIDE-BY-SIDE 3D MULTI-PLANE WORMS + 2D FOOTAGE CUTOUTS -->
+<!-- ROW 3: SIDE-BY-SIDE 3D STAGE + 2D CUTOUT STAGE -->
 <div class="stage-row" id="stageRow">
   <div class="pane-3d">
     <canvas id="canvas3d" width="680" height="400"></canvas>
-    <div class="hud-pill" id="hud3d">3D Multiplane Cutout Worms</div>
+    <div class="hud-pill" id="hud3d">3D Cutout Worm · Tap any Layer Card above to solo</div>
     <div class="hud-Corner">
-      <button class="tiny-btn active" id="texBtn" title="Stamp footage cutouts inside 3D worms">Cutout3D</button>
-      <button class="tiny-btn active" id="rigBtn" title="Show parsed multiplane vector drawings">Drawings</button>
-      <button class="tiny-btn active" id="subBtn" title="Show object & joint sub-worms">Sub</button>
+      <button class="tiny-btn active" id="texBtn">Video Cutouts</button>
       <button class="tiny-btn" id="resetBtn">Reset</button>
     </div>
   </div>
   <div class="pane-2d">
     <video id="video2d" playsinline muted loop preload="auto"></video>
-    <img id="fallbackImg" alt="Strip">
     <canvas id="canvas2d" width="480" height="360"></canvas>
-    <div class="hud-pill" id="hud2d">Footage Cutouts + Multiplane Rig</div>
+    <div class="hud-pill" id="hud2d">SAM Video Cutout</div>
     <div class="hud-Corner" id="srcBar">
-      <button class="tiny-btn active" data-src="cutout" title="Dimmed footage + vivid die-cut plane cutouts">Cutout</button>
-      <button class="tiny-btn" data-src="pop" title="Explode multiplane cutouts apart by depth z">Pop</button>
-      <button class="tiny-btn" data-src="iso" title="Isolated footage cutouts on dark stage">Iso</button>
-      <button class="tiny-btn" data-src="src" title="Full unmasked footage + multiplane overlays">Full</button>
+      <button class="tiny-btn active" data-src="cutout" title="Clean SAM video cutout over dimmed frame">Cutout</button>
+      <button class="tiny-btn" data-src="scene" title="SAM video cutout + multiplane drawings in depth order">Cutout+Planes</button>
+      <button class="tiny-btn" data-src="cel" title="Clean multiplane vector cel sheet">Cel Sheet</button>
+      <button class="tiny-btn" data-src="src" title="Raw unannotated footage">Raw</button>
     </div>
   </div>
 </div>
@@ -389,10 +399,10 @@
   <span class="stat-txt" id="statTxt">Loading...</span>
 </div>
 
-<!-- ROW 5: FILTER + INTERNAL SCROLLABLE 108-SHOT MULTI-PLANE GRID -->
+<!-- ROW 5: FILTER + INTERNAL SCROLLABLE 108-SHOT GRID -->
 <div class="filter-bar">
   <div class="filter-pills" id="topoBar">
-    <button class="m-btn active" data-topo="ALL">All 108 (560 Worms)</button>
+    <button class="m-btn active" data-topo="ALL">All 108</button>
     <button class="m-btn" data-topo="CAMERA_SHEAR_RIBBON">Shear (37)</button>
     <button class="m-btn" data-topo="LOOMING_FUNNEL_CONE">Cone (27)</button>
     <button class="m-btn" data-topo="ARTICULATED_LIMB_BRAID">Braid (23)</button>
@@ -408,22 +418,20 @@
 
 <script>
 (function() {
-  const PRIMARY_JSON = "../data/worms_108.json?v=6";
-  const FALLBACK_JSON = "https://hartswf0.github.io/secondhand-motion/data/worms_108.json?v=6";
+  const PRIMARY_JSON = "../data/worms_108.json?v=7";
+  const FALLBACK_JSON = "https://hartswf0.github.io/secondhand-motion/data/worms_108.json?v=7";
 
   let worms = [];
   let curIdx = 0;
   let curFrame = 0;
   let projMode = "orbit3d";
   let srcMode = "cutout";
-  let showSub = true;
   let showMaskVid = true;
-  let showDrawings = true;
   let isPlaying = false;
   let lastTick = 0;
-  let activeDepths = new Set();
+  let soloLayerId = null; // null = All Layers, or specific dw.id when user taps a Layer Card
   let topoFilter = "ALL";
-  let yaw = -0.56, pitch = 0.30;
+  let yaw = -0.48, pitch = 0.24;
   let dragging = false, lx = 0, ly = 0, moved = false;
   let hitNodes = [];
   const frameCache = {};
@@ -451,7 +459,12 @@
     const bag = frameCache[w.slug];
     if (bag[fi]) return (bag[fi].complete && bag[fi].naturalWidth > 0) ? bag[fi] : null;
     const im = new Image();
-    im.onload = () => { if (worms[curIdx] && worms[curIdx].slug === w.slug) drawAll(); };
+    im.onload = () => {
+      if (worms[curIdx] && worms[curIdx].slug === w.slug) {
+        drawLayerCardThumbs(w, curFrame);
+        drawAll();
+      }
+    };
     im.src = `${fDir}/f${String(fi).padStart(3, "0")}.jpg`;
     bag[fi] = im;
     return null;
@@ -464,7 +477,6 @@
     ensureFrameImg(w, Math.floor(nf / 2));
     ensureFrameImg(w, Math.max(0, nf - 1));
     (w.keys || []).forEach(k => { if (k >= 0 && k < nf) ensureFrameImg(w, k); });
-    // Progressively preload remaining frames of active shot
     for (let i = 0; i < nf; i += 2) ensureFrameImg(w, i);
   }
 
@@ -472,7 +484,6 @@
     const im = ensureFrameImg(w, fi);
     if (im) return im;
     if (video.readyState >= 2 && video.videoWidth > 0) return video;
-    // Fallback to nearest loaded frame JPEG in cache so cutouts are ALWAYS visible immediately
     const bag = frameCache[w.slug] || {};
     let bestImg = null, bestDist = 9999;
     Object.keys(bag).forEach(k => {
@@ -489,22 +500,15 @@
     if (dw.role === "subject" && fr && fr.ring && fr.ring.length >= 3) {
       return fr.ring;
     }
+    if (dw.scene_rings && dw.scene_rings.length && dw.scene_rings[0].length >= 3) {
+      const dx = pt ? (pt[0] - (dw.u0 || 0.5)) : 0;
+      const dy = pt ? (pt[1] - (dw.v0 || 0.5)) : 0;
+      return dw.scene_rings[0].map(uv => [uv[0] + dx, uv[1] + dy]);
+    }
     if (dw.poly0 && dw.poly0.length >= 3 && pt) {
-      return dw.poly0.map(duv => [
-        Math.max(0.01, Math.min(0.99, pt[0] + duv[0])),
-        Math.max(0.01, Math.min(0.99, pt[1] + duv[1]))
-      ]);
+      return dw.poly0.map(duv => [pt[0] + duv[0], pt[1] + duv[1]]);
     }
-    const u = pt ? pt[0] : 0.5, v = pt ? pt[1] : 0.5, r = pt ? pt[2] : 0.1;
-    const out = [];
-    for (let i = 0; i < 12; i++) {
-      const a = (i / 12) * Math.PI * 2;
-      out.push([
-        Math.max(0.01, Math.min(0.99, u + Math.cos(a) * r * 0.85)),
-        Math.max(0.01, Math.min(0.99, v + Math.sin(a) * r * 0.65))
-      ]);
-    }
-    return out;
+    return [];
   }
 
   function getPlaneStrokesUV(dw, fr, pt) {
@@ -512,40 +516,187 @@
       return fr.doodle;
     }
     if (dw.strokes0 && dw.strokes0.length && pt) {
-      return dw.strokes0.map(st => st.map(duv => [
-        Math.max(0.01, Math.min(0.99, pt[0] + duv[0])),
-        Math.max(0.01, Math.min(0.99, pt[1] + duv[1]))
-      ]));
+      return dw.strokes0.map(st => st.map(duv => [pt[0] + duv[0], pt[1] + duv[1]]));
     }
     return [];
   }
 
-  function projPoint(u, v, tau, zNorm, W, H) {
+  function isLayerActive(id) {
+    return soloLayerId === null || soloLayerId === id;
+  }
+
+  /* ======================================================================== */
+  /* ROW 2: VISUAL DEPTH LAYER CARDS (Shows exactly what is in each layer!)   */
+  /* ======================================================================== */
+  function renderDepthPills(w) {
+    const bar = document.getElementById("depthBar");
+    const dws = w.depth_worms || [];
+    bar.innerHTML = "";
+
+    // 'All Layers' reset button
+    const allCard = document.createElement("div");
+    allCard.className = "layer-card" + (soloLayerId === null ? " solo" : " active");
+    allCard.style.width = "78px";
+    allCard.style.justifyContent = "center";
+    allCard.style.alignItems = "center";
+    allCard.innerHTML = `
+      <div style="font:700 10px var(--mono);color:var(--gold);">ALL ${dws.length}</div>
+      <div style="font:600 9px var(--sans);color:var(--fg);">Layers</div>
+      <div style="font:500 8.5px var(--mono);color:var(--muted);">Tap to reset</div>
+    `;
+    allCard.onclick = () => {
+      soloLayerId = null;
+      renderDepthPills(w);
+      drawAll();
+    };
+    bar.appendChild(allCard);
+
+    // One Visual Layer Card per Depth Plane / Parsed Part (sorted Near -> Far)
+    dws.forEach((dw, idx) => {
+      const isSolo = (soloLayerId === dw.id);
+      const isOn = isLayerActive(dw.id);
+      const card = document.createElement("div");
+      card.className = "layer-card" + (isSolo ? " solo" : (isOn ? " active" : ""));
+      card.style.borderColor = isSolo ? "#ffd166" : (isOn ? (dw.color + "88") : "#252f45");
+      const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig: ","").slice(0, 11);
+      card.innerHTML = `
+        <div class="lc-head" style="color:${dw.color}">
+          <span>z=${dw.z} ${shortLbl}</span>
+        </div>
+        <canvas width="100" height="32" data-dwidx="${idx}"></canvas>
+        <div class="lc-sub" title="${dw.desc || dw.label}">${dw.desc || dw.label}</div>
+      `;
+      card.onclick = () => {
+        soloLayerId = (soloLayerId === dw.id) ? null : dw.id;
+        renderDepthPills(w);
+        drawAll();
+      };
+      bar.appendChild(card);
+    });
+
+    drawLayerCardThumbs(w, curFrame);
+  }
+
+  function drawLayerCardThumbs(w, fIdx) {
+    const bar = document.getElementById("depthBar");
+    if (!bar || !w) return;
+    const frames = w.frames || [];
+    const fr = frames[Math.min(frames.length - 1, fIdx)] || frames[0] || {};
+    const media = getMediaForFrame(w, fIdx);
+    const dws = w.depth_worms || [];
+
+    bar.querySelectorAll("canvas[data-dwidx]").forEach(cv => {
+      const idx = parseInt(cv.dataset.dwidx, 10);
+      const dw = dws[idx];
+      if (!dw) return;
+      const g = cv.getContext("2d");
+      const cw = cv.width, ch = cv.height;
+      g.clearRect(0, 0, cw, ch);
+      g.fillStyle = "#06080e";
+      g.fillRect(0, 0, cw, ch);
+
+      const trk = dw.track || [];
+      const pt = trk[Math.min(trk.length - 1, fIdx)] || [dw.u0 || 0.5, dw.v0 || 0.5, dw.r0 || 0.15];
+      const col = dw.color || "#00f5d4";
+
+      if (dw.role === "subject" && fr.ring && fr.ring.length >= 3) {
+        // Compute bounding box of subject SAM ring so we crop & zoom right into the subject cutout!
+        let u0 = 1, v0 = 1, u1 = 0, v1 = 0;
+        fr.ring.forEach(([u, v]) => {
+          if (u < u0) u0 = u; if (u > u1) u1 = u;
+          if (v < v0) v0 = v; if (v > v1) v1 = v;
+        });
+        const pad = 0.05;
+        u0 = Math.max(0, u0 - pad); v0 = Math.max(0, v0 - pad);
+        u1 = Math.min(1, u1 + pad); v1 = Math.min(1, v1 + pad);
+        const su = Math.max(0.12, u1 - u0), sv = Math.max(0.12, v1 - v0);
+        const mapX = u => ((u - u0) / su) * (cw - 8) + 4;
+        const mapY = v => ((v - v0) / sv) * (ch - 4) + 2;
+
+        if (media) {
+          const mw = media.videoWidth || media.naturalWidth || 384;
+          const mh = media.videoHeight || media.naturalHeight || 288;
+          g.save();
+          g.beginPath();
+          fr.ring.forEach(([u, v], i) => {
+            if (i === 0) g.moveTo(mapX(u), mapY(v)); else g.lineTo(mapX(u), mapY(v));
+          });
+          g.closePath();
+          g.clip();
+          try {
+            g.drawImage(media, u0 * mw, v0 * mh, su * mw, sv * mh, 4, 2, cw - 8, ch - 4);
+          } catch(e) {}
+          g.restore();
+        }
+        g.strokeStyle = col;
+        g.lineWidth = 1.6;
+        g.beginPath();
+        fr.ring.forEach(([u, v], i) => {
+          if (i === 0) g.moveTo(mapX(u), mapY(v)); else g.lineTo(mapX(u), mapY(v));
+        });
+        g.closePath();
+        g.stroke();
+        return;
+      }
+
+      // For scenic planes & parsed drawing parts: auto-fit their strokes into the card canvas!
+      const strokesUV = getPlaneStrokesUV(dw, fr, pt);
+      if (strokesUV.length) {
+        let u0 = 1e9, v0 = 1e9, u1 = -1e9, v1 = -1e9;
+        strokesUV.forEach(st => st.forEach(([u, v]) => {
+          if (u < u0) u0 = u; if (u > u1) u1 = u;
+          if (v < v0) v0 = v; if (v > v1) v1 = v;
+        }));
+        const su = Math.max(0.08, u1 - u0), sv = Math.max(0.08, v1 - v0);
+        const sc = Math.min((cw - 10) / su, (ch - 6) / sv);
+        const cx = 0.5 * (u0 + u1), cy = 0.5 * (v0 + v1);
+        g.strokeStyle = col;
+        g.lineWidth = 1.5;
+        g.lineCap = "round";
+        g.lineJoin = "round";
+        strokesUV.forEach(st => {
+          if (st.length < 2) return;
+          g.beginPath();
+          st.forEach(([u, v], i) => {
+            const x = cw * 0.5 + (u - cx) * sc;
+            const y = ch * 0.5 + (v - cy) * sc;
+            if (i === 0) g.moveTo(x, y); else g.lineTo(x, y);
+          });
+          g.stroke();
+        });
+      }
+    });
+  }
+
+  /* ======================================================================== */
+  /* LEFT PANE: 3D CUTOUT WORM / 3D MULTIPLANE CEL BOX / Z×τ LANES            */
+  /* ======================================================================== */
+  function projPoint(u, v, tau, zOff, W, H) {
     const x = (u - 0.5);
-    const y = (0.5 - v) + (zNorm - 0.35) * 0.36;
+    const y = (0.5 - v) + zOff;
     const z = (tau - 0.5) * 1.55;
     const cy = Math.cos(yaw), sy = Math.sin(yaw);
     const cp = Math.cos(pitch), sp = Math.sin(pitch);
     const x1 = x * cy + z * sy, z1 = -x * sy + z * cy;
     const y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
-    const sc = (Math.min(W, H) * 0.84) / Math.max(0.55, 2.25 - z2 * 0.5);
+    const sc = (Math.min(W, H) * 0.88) / Math.max(0.55, 2.20 - z2 * 0.5);
     return { sx: W * 0.50 + x1 * sc, sy: H * 0.52 - y2 * sc, sc };
   }
 
-  function drawMediaIn3DMask(media, poly, tau, zNorm, W, H, alpha) {
+  function drawMediaIn3DMask(media, poly, tau, zOff, W, H, alpha) {
     if (!media || !poly || poly.length < 3) return false;
     const mw = media.videoWidth || media.naturalWidth || 0;
     const mh = media.videoHeight || media.naturalHeight || 0;
     if (!mw || !mh) return false;
 
-    const p00 = projPoint(0, 0, tau, zNorm, W, H);
-    const p10 = projPoint(1, 0, tau, zNorm, W, H);
-    const p01 = projPoint(0, 1, tau, zNorm, W, H);
+    const p00 = projPoint(0, 0, tau, zOff, W, H);
+    const p10 = projPoint(1, 0, tau, zOff, W, H);
+    const p01 = projPoint(0, 1, tau, zOff, W, H);
 
     ctx3.save();
     ctx3.beginPath();
     poly.forEach((uv, idx) => {
-      const p = projPoint(uv[0], uv[1], tau, zNorm, W, H);
+      const p = projPoint(uv[0], uv[1], tau, zOff, W, H);
       if (idx === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
     });
     ctx3.closePath();
@@ -561,37 +712,6 @@
     return true;
   }
 
-  function isDepthOn(id) {
-    return activeDepths.size === 0 || activeDepths.has(id);
-  }
-
-  function renderDepthPills(w) {
-    const bar = document.getElementById("depthBar");
-    const dws = w.depth_worms || [];
-    bar.innerHTML = "";
-    const allB = document.createElement("button");
-    allB.className = "d-pill" + (activeDepths.size === 0 ? " active" : "");
-    allB.style.color = "#f3f5fa";
-    allB.textContent = `All ${dws.length} Planes/Parts`;
-    allB.onclick = () => { activeDepths.clear(); renderDepthPills(w); drawAll(); };
-    bar.appendChild(allB);
-
-    dws.forEach(dw => {
-      const b = document.createElement("button");
-      b.className = "d-pill" + (isDepthOn(dw.id) ? " active" : "");
-      b.style.color = dw.color || "#00f5d4";
-      const tag = dw.role === "part" ? "✦" : `z=${dw.z}`;
-      b.innerHTML = `<span class="d-dot" style="background:${dw.color}"></span>${tag} ${dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 14)}`;
-      b.onclick = () => {
-        if (activeDepths.size === 1 && activeDepths.has(dw.id)) activeDepths.clear();
-        else { activeDepths.clear(); activeDepths.add(dw.id); }
-        renderDepthPills(w);
-        drawAll();
-      };
-      bar.appendChild(b);
-    });
-  }
-
   function draw3dStage(w, fIdx) {
     const W = c3d.width, H = c3d.height;
     ctx3.clearRect(0, 0, W, H);
@@ -601,8 +721,21 @@
     const dws = w.depth_worms || [];
     hitNodes = [];
 
+    const hud3d = document.getElementById("hud3d");
+    if (hud3d) {
+      if (soloLayerId) {
+        const sdw = dws.find(d => d.id === soloLayerId);
+        hud3d.textContent = sdw ? `SOLO LAYER: z=${sdw.z} ${sdw.label} (${sdw.desc || ""})` : "3D Cutout Worm";
+      } else {
+        hud3d.textContent = projMode === "box3d"
+          ? "3D Multiplane Cel Stack (Drag to turn · Tap Layer Card to solo)"
+          : (projMode === "lanes" ? "Z×τ Multiplane Swimlanes" : "3D Cutout Worm · Tap any Layer Card above to solo");
+      }
+    }
+
+    /* --- MODE A: Z×τ HORIZONTAL MULTIPLANE SWIMLANES --- */
     if (projMode === "lanes") {
-      const padL = 104, padR = 14, padT = 18, padB = 18;
+      const padL = 118, padR = 14, padT = 24, padB = 18;
       const plotW = W - padL - padR, plotH = H - padT - padB;
       const nL = Math.max(1, dws.length);
       const curX = padL + (fIdx / Math.max(1, nf - 1)) * plotW;
@@ -610,35 +743,28 @@
       ctx3.lineWidth = 2;
       ctx3.beginPath(); ctx3.moveTo(curX, padT - 6); ctx3.lineTo(curX, H - padB + 6); ctx3.stroke();
 
-      dws.forEach((dw, dIdx) => {
-        const on = isDepthOn(dw.id);
+      // Order lanes from Far (top) to Near (bottom)
+      [...dws].reverse().forEach((dw, dIdx) => {
+        const on = isLayerActive(dw.id);
         const ly0 = padT + (dIdx + 0.5) * (plotH / nL);
-        const lh = (plotH / nL) * 0.76;
+        const lh = (plotH / nL) * 0.78;
         const col = dw.color || "#00f5d4";
+
+        ctx3.fillStyle = on ? "rgba(255,255,255,0.03)" : "rgba(0,0,0,0.2)";
+        ctx3.fillRect(padL, ly0 - lh * 0.5, plotW, lh);
+
         ctx3.fillStyle = on ? col : "rgba(142,153,176,0.35)";
         ctx3.font = "bold 10.5px monospace";
-        const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 10);
-        ctx3.fillText(`z=${dw.z} ${shortLbl}`, 5, ly0 + 4);
+        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 10)}`, 6, ly0 - 2);
+        ctx3.fillStyle = "rgba(142,153,176,0.75)";
+        ctx3.font = "9.5px sans-serif";
+        ctx3.fillText((dw.desc || "").slice(0, 16), 6, ly0 + 10);
         if (!on) return;
 
         const trk = dw.track || [];
-        ctx3.fillStyle = col + "32";
+        ctx3.fillStyle = col + "2b";
         ctx3.strokeStyle = col;
-        ctx3.lineWidth = dw.role === "subject" ? 3.0 : 2.1;
-
-        ctx3.beginPath();
-        trk.forEach((pt, fi) => {
-          const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-          const ty = ly0 + (pt[0] - 0.5) * lh - Math.max(3, pt[2] * lh * 0.45);
-          if (fi === 0) ctx3.moveTo(tx, ty); else ctx3.lineTo(tx, ty);
-        });
-        for (let fi = trk.length - 1; fi >= 0; fi--) {
-          const pt = trk[fi];
-          const tx = padL + (fi / Math.max(1, nf - 1)) * plotW;
-          const ty = ly0 + (pt[0] - 0.5) * lh + Math.max(3, pt[2] * lh * 0.45);
-          ctx3.lineTo(tx, ty);
-        }
-        ctx3.closePath(); ctx3.fill();
+        ctx3.lineWidth = dw.role === "subject" ? 3.0 : 2.0;
 
         ctx3.beginPath();
         trk.forEach((pt, fi) => {
@@ -652,114 +778,239 @@
       return;
     }
 
-    // 3D Wireframe Box
-    const box = [[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]].map(c => projPoint(c[0],c[1],c[2],0.35,W,H));
-    [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]].forEach(([a,b]) => {
-      ctx3.beginPath(); ctx3.moveTo(box[a].sx, box[a].sy); ctx3.lineTo(box[b].sx, box[b].sy);
-      ctx3.strokeStyle = "rgba(142,153,176,0.20)"; ctx3.lineWidth = 1; ctx3.stroke();
-    });
+    /* --- MODE B: 3D MULTIPLANE CEL STACK (Like giraffe-walks-past.html!) --- */
+    if (projMode === "box3d") {
+      const nPlanes = Math.max(1, dws.length);
+      const sc = Math.min(W, H) * 0.62;
+      const cy = Math.cos(yaw), sy = Math.sin(yaw);
+      const tilt = 0.34;
+      const PBox = (u, v, rankIdx) => {
+        const X = (u - 0.5);
+        const Zd = (rankIdx / Math.max(1, nPlanes - 1) - 0.5) * 1.15;
+        const rx = X * cy - Zd * sy;
+        const rz = X * sy + Zd * cy;
+        return {
+          sx: W * 0.50 + rx * sc,
+          sy: H * 0.54 + (v - 0.5) * sc * 0.75 - rz * sc * tilt,
+          depth: rz
+        };
+      };
 
-    // Draw each Plane & Articulated Part Worm from Far (back) to Near (front)
-    [...dws].reverse().forEach(dw => {
-      if (!isDepthOn(dw.id)) return;
-      const col = dw.color || "#00f5d4";
-      const trk = dw.track || [];
-      const zNorm = Math.min(1.0, Math.log(Math.max(0.8, dw.z || 2.0)) / Math.log(12.0));
-      const isSubj = dw.role === "subject";
-      const isPart = dw.role === "part";
-      const step = Math.max(1, Math.floor(nf / (isSubj ? 10 : 6)));
+      // Sort planes back-to-front by camera depth
+      const ordered = dws.map((dw, idx) => ({ dw, idx, d: PBox(0.5, 0.5, idx).depth }))
+                         .sort((a, b) => a.d - b.d);
 
-      trk.forEach((pt, fi) => {
-        const isKey = (w.keys || []).includes(fi);
-        const isCur = (fi === fIdx);
-        if (!isCur && fi % step !== 0 && !(isSubj && isKey)) return;
-        const fr = frames[Math.min(nf - 1, fi)];
-        const tau = fi / Math.max(1, nf - 1);
+      // 1. Draw translucent cel sheets first so far planes never wash out
+      ordered.forEach(({ dw, idx }) => {
+        if (!isLayerActive(dw.id)) return;
+        const corners = [PBox(0, 0, idx), PBox(1, 0, idx), PBox(1, 1, idx), PBox(0, 1, idx)];
+        ctx3.beginPath();
+        corners.forEach((c, i) => { if (i === 0) ctx3.moveTo(c.sx, c.sy); else ctx3.lineTo(c.sx, c.sy); });
+        ctx3.closePath();
+        ctx3.fillStyle = "rgba(18, 24, 38, 0.42)";
+        ctx3.fill();
+        ctx3.strokeStyle = dw.color || "#00f5d4";
+        ctx3.lineWidth = (soloLayerId === dw.id || dw.role === "subject") ? 2.2 : 1.1;
+        ctx3.stroke();
+      });
+
+      // 2. Draw each sheet's actual video cutout + full Quick, Draw! objects on top
+      const fr = frames[Math.min(nf - 1, fIdx)];
+      const media = getMediaForFrame(w, fIdx);
+
+      ordered.forEach(({ dw, idx }) => {
+        if (!isLayerActive(dw.id)) return;
+        const col = dw.color || "#00f5d4";
+        const trk = dw.track || [];
+        const pt = trk[Math.min(trk.length - 1, fIdx)] || [dw.u0 || 0.5, dw.v0 || 0.5, dw.r0 || 0.12];
+
+        // Stamp SAM Video Cutout on Subject sheet (and scene_rings on giraffe Trees sheet!)
         const polyUV = getPlanePolyUV(dw, fr, pt);
-        if (!polyUV || polyUV.length < 3) return;
+        if (showMaskVid && media && (dw.role === "subject" || dw.scene_rings || soloLayerId === dw.id) && polyUV.length >= 3) {
+          const mw = media.videoWidth || media.naturalWidth || 0;
+          const mh = media.videoHeight || media.naturalHeight || 0;
+          if (mw && mh) {
+            const p00 = PBox(0, 0, idx), p10 = PBox(1, 0, idx), p01 = PBox(0, 1, idx);
+            ctx3.save();
+            ctx3.beginPath();
+            polyUV.forEach((uv, i) => {
+              const p = PBox(uv[0], uv[1], idx);
+              if (i === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+            });
+            ctx3.closePath();
+            ctx3.clip();
+            ctx3.transform(
+              (p10.sx - p00.sx) / mw, (p10.sy - p00.sy) / mw,
+              (p01.sx - p00.sx) / mh, (p01.sy - p00.sy) / mh,
+              p00.sx, p00.sy
+            );
+            try { ctx3.drawImage(media, 0, 0, mw, mh); } catch(e) {}
+            ctx3.restore();
 
-        // Stamp actual footage cutout inside the 3D polygon slice!
-        let drewVid = false;
-        if (showMaskVid && (isCur || (isSubj && isKey) || (activeDepths.size === 1 && isKey))) {
-          const media = getMediaForFrame(w, fi);
-          if (media) {
-            drewVid = drawMediaIn3DMask(media, polyUV, tau, zNorm, W, H, isCur ? 0.96 : 0.52);
+            ctx3.beginPath();
+            polyUV.forEach((uv, i) => {
+              const p = PBox(uv[0], uv[1], idx);
+              if (i === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+            });
+            ctx3.closePath();
+            ctx3.strokeStyle = "#ffffff";
+            ctx3.lineWidth = 2.0;
+            ctx3.stroke();
           }
         }
 
-        // Polygon contour ring
-        ctx3.beginPath();
-        polyUV.forEach((uv, j) => {
-          const p = projPoint(uv[0], uv[1], tau, zNorm, W, H);
-          if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-        });
-        ctx3.closePath();
-        if (!drewVid) {
-          ctx3.fillStyle = isCur ? (col + "55") : (col + "1c");
-          ctx3.fill();
+        // Draw full-resolution Quick, Draw! vector objects on this plane sheet
+        const strokesUV = getPlaneStrokesUV(dw, fr, pt);
+        if (strokesUV.length) {
+          ctx3.strokeStyle = dw.role === "subject" ? "#ffffff" : col;
+          ctx3.lineWidth = dw.role === "subject" ? 2.2 : 1.7;
+          ctx3.lineCap = "round";
+          ctx3.lineJoin = "round";
+          strokesUV.forEach(st => {
+            if (st.length < 2) return;
+            ctx3.beginPath();
+            st.forEach((uv, i) => {
+              const p = PBox(uv[0], uv[1], idx);
+              if (i === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+            });
+            ctx3.stroke();
+          });
         }
-        ctx3.strokeStyle = isCur ? "#ffffff" : col;
-        ctx3.lineWidth = isCur ? 2.6 : (isSubj ? 1.5 : 1.15);
-        ctx3.stroke();
 
-        // Render parsed multiplane vector drawing strokes inside the 3D slice!
-        if (showDrawings && (isCur || fi === 0 || (isPart && isKey))) {
+        // Sheet header label
+        const topL = PBox(0, 0, idx);
+        ctx3.fillStyle = col;
+        ctx3.font = "bold 11px monospace";
+        ctx3.fillText(`z=${dw.z} ${dw.label} (${dw.desc || ""})`, topL.sx + 4, topL.sy - 6);
+      });
+      return;
+    }
+
+    /* --- MODE C: 3D SPATIOTEMPORAL CUTOUT WORM (Default 'orbit3d') --- */
+    // Subtle 3D bounding prism
+    const box = [[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]].map(c => projPoint(c[0],c[1],c[2],0,W,H));
+    [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]].forEach(([a,b]) => {
+      ctx3.beginPath(); ctx3.moveTo(box[a].sx, box[a].sy); ctx3.lineTo(box[b].sx, box[b].sy);
+      ctx3.strokeStyle = "rgba(142,153,176,0.16)"; ctx3.lineWidth = 1; ctx3.stroke();
+    });
+
+    // Give each depth layer a well-separated vertical offset zOff so layers NEVER pile on top of each other!
+    const nL = Math.max(1, dws.length);
+    [...dws].reverse().forEach((dw, revIdx) => {
+      const origIdx = nL - 1 - revIdx;
+      if (!isLayerActive(dw.id)) return;
+      const col = dw.color || "#00f5d4";
+      const trk = dw.track || [];
+      const isSubj = (dw.role === "subject");
+      const isSolo = (soloLayerId === dw.id);
+      const zOff = isSolo ? 0.0 : (isSubj ? 0.0 : ((origIdx / Math.max(1, nL - 1)) - 0.45) * 0.52);
+
+      // If this is the Subject layer OR a soloed layer, stamp clear, high-contrast cross-section slices along τ!
+      if (isSubj || isSolo) {
+        const sliceIndices = [];
+        const step = Math.max(1, Math.floor((nf - 1) / 5));
+        for (let s = 0; s < nf; s += step) sliceIndices.push(s);
+        if (!sliceIndices.includes(nf - 1)) sliceIndices.push(nf - 1);
+        if (!sliceIndices.includes(fIdx)) sliceIndices.push(fIdx);
+        sliceIndices.sort((a, b) => a - b);
+
+        sliceIndices.forEach(fi => {
+          const isCur = (fi === fIdx);
+          const fr = frames[Math.min(nf - 1, fi)];
+          const pt = trk[Math.min(trk.length - 1, fi)];
+          const tau = fi / Math.max(1, nf - 1);
+          const polyUV = getPlanePolyUV(dw, fr, pt);
+
+          // 1. Stamp the actual video cutout inside the polygon mask!
+          let drewVid = false;
+          if (showMaskVid && polyUV.length >= 3 && (isSubj || dw.scene_rings || isSolo)) {
+            const media = getMediaForFrame(w, fi);
+            if (media) {
+              drewVid = drawMediaIn3DMask(media, polyUV, tau, zOff, W, H, isCur ? 1.0 : 0.62);
+            }
+          }
+
+          // 2. Draw crisp die-cut border around the 3D slice
+          if (polyUV.length >= 3) {
+            ctx3.beginPath();
+            polyUV.forEach((uv, j) => {
+              const p = projPoint(uv[0], uv[1], tau, zOff, W, H);
+              if (j === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+            });
+            ctx3.closePath();
+            if (!drewVid) {
+              ctx3.fillStyle = isCur ? (col + "44") : (col + "18");
+              ctx3.fill();
+            }
+            ctx3.strokeStyle = isCur ? "#ffffff" : col;
+            ctx3.lineWidth = isCur ? 3.0 : 1.6;
+            ctx3.stroke();
+          }
+
+          // 3. Draw the layer's vector objects inside the 3D slice (always for scenic/part solo, or on curF)
+          if (!isSubj || !drewVid || isSolo) {
+            const strokesUV = getPlaneStrokesUV(dw, fr, pt);
+            if (strokesUV.length) {
+              ctx3.strokeStyle = isCur ? "#ffffff" : col;
+              ctx3.lineWidth = isCur ? 2.0 : 1.3;
+              strokesUV.forEach(st => {
+                if (st.length < 2) return;
+                ctx3.beginPath();
+                st.forEach((uv, k) => {
+                  const p = projPoint(uv[0], uv[1], tau, zOff, W, H);
+                  if (k === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
+                });
+                ctx3.stroke();
+              });
+            }
+          }
+        });
+      } else {
+        // Non-soloed background/foreground layers: draw their actual object drawing at τ=0 and τ=curF without cluttering the subject cutout!
+        [0, fIdx].forEach(fi => {
+          const fr = frames[Math.min(nf - 1, fi)];
+          const pt = trk[Math.min(trk.length - 1, fi)];
+          const tau = fi / Math.max(1, nf - 1);
           const strokesUV = getPlaneStrokesUV(dw, fr, pt);
           if (strokesUV.length) {
-            ctx3.strokeStyle = isCur ? "#ffffff" : col;
-            ctx3.lineWidth = isCur ? 1.9 : 1.2;
+            ctx3.strokeStyle = (fi === fIdx) ? col : (col + "88");
+            ctx3.lineWidth = (fi === fIdx) ? 1.5 : 1.0;
             strokesUV.forEach(st => {
+              if (st.length < 2) return;
               ctx3.beginPath();
               st.forEach((uv, k) => {
-                const p = projPoint(uv[0], uv[1], tau, zNorm, W, H);
+                const p = projPoint(uv[0], uv[1], tau, zOff, W, H);
                 if (k === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
               });
               ctx3.stroke();
             });
           }
-        }
-      });
+        });
+      }
 
-      // Bold Spine for each Worm
+      // Trajectory Spine for this depth layer
       ctx3.strokeStyle = col;
-      ctx3.lineWidth = isSubj ? 3.5 : (isPart ? 2.6 : 2.2);
+      ctx3.lineWidth = (isSubj || isSolo) ? 3.4 : 1.8;
       ctx3.beginPath();
       trk.forEach((pt, fi) => {
-        const p = projPoint(pt[0], pt[1], fi / Math.max(1, nf - 1), zNorm, W, H);
-        if (isSubj) hitNodes.push({ fi, sx: p.sx, sy: p.sy });
+        const p = projPoint(pt[0], pt[1], fi / Math.max(1, nf - 1), zOff, W, H);
+        if (isSubj || isSolo) hitNodes.push({ fi, sx: p.sx, sy: p.sy });
         if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
       });
       ctx3.stroke();
 
       if (trk.length) {
-        const p0 = projPoint(trk[0][0], trk[0][1], 0, zNorm, W, H);
+        const p0 = projPoint(trk[0][0], trk[0][1], 0, zOff, W, H);
         ctx3.fillStyle = col;
         ctx3.font = "bold 10.5px monospace";
-        const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 11);
-        ctx3.fillText(`z=${dw.z} ${shortLbl}`, p0.sx + 4, p0.sy - 4);
-      }
-
-      if (showSub && dw.sub_worms) {
-        dw.sub_worms.forEach(sw => {
-          ctx3.strokeStyle = col + "bb"; ctx3.lineWidth = 1.3; ctx3.setLineDash([3, 3]);
-          ctx3.beginPath();
-          if (sw.pts) {
-            sw.pts.forEach((uv, fi) => {
-              const p = projPoint(uv[0], uv[1], fi / Math.max(1, nf - 1), zNorm, W, H);
-              if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-            });
-          } else if (sw.u0 !== undefined && trk.length) {
-            trk.forEach((pt, fi) => {
-              const p = projPoint(sw.u0 + (pt[0] - trk[0][0]), sw.v0 + (pt[1] - trk[0][1]), fi / Math.max(1, nf - 1), zNorm, W, H);
-              if (fi === 0) ctx3.moveTo(p.sx, p.sy); else ctx3.lineTo(p.sx, p.sy);
-            });
-          }
-          ctx3.stroke(); ctx3.setLineDash([]);
-        });
+        ctx3.fillText(`z=${dw.z} ${dw.label.slice(0, 12)}`, p0.sx + 4, p0.sy - 4);
       }
     });
   }
 
+  /* ======================================================================== */
+  /* RIGHT PANE: UNOBSTRUCTED 2D CUTOUT & MULTIPLANE LAYER STAGE              */
+  /* ======================================================================== */
   function draw2dStage(w, fIdx) {
     const W = c2d.width, H = c2d.height;
     ctx2.clearRect(0, 0, W, H);
@@ -767,111 +1018,102 @@
     if (!frames.length) return;
     const fr = frames[Math.min(frames.length - 1, fIdx)];
     const media = getMediaForFrame(w, fIdx);
+    const dws = w.depth_worms || [];
 
-    // Preload next 2 frames for smooth playback
     ensureFrameImg(w, (fIdx + 1) % frames.length);
     ensureFrameImg(w, (fIdx + 2) % frames.length);
 
-    // Always paint solid dark studio backing so raw video never bleeds through unmasked
-    ctx2.fillStyle = "#05070c";
+    ctx2.fillStyle = (srcMode === "cel") ? "#0c1018" : "#05070c";
     ctx2.fillRect(0, 0, W, H);
 
-    if (media) {
-      if (srcMode === "src") {
-        ctx2.save();
-        ctx2.globalAlpha = 0.92;
-        try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
-        ctx2.restore();
-      } else if (srcMode === "cutout" || srcMode === "pop") {
-        // Dim & desaturate background footage so the vivid die-cut cutouts pop out unmistakably!
-        ctx2.save();
-        ctx2.globalAlpha = 0.22;
-        try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
-        ctx2.restore();
-      }
+    // 1. Background footage layer
+    if (media && srcMode !== "cel") {
+      ctx2.save();
+      ctx2.globalAlpha = (srcMode === "src") ? 1.0 : 0.18;
+      try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+      ctx2.restore();
     }
 
-    // Draw every enabled Plane & Articulated Part from Far (back) to Near (front)
-    const dws = [...(w.depth_worms || [])].reverse();
-    dws.forEach((dw, idx) => {
-      if (!isDepthOn(dw.id)) return;
-      const col = dw.color || "#00f5d4";
-      const trk = dw.track || [];
-      const pt = trk[Math.min(trk.length - 1, fIdx)];
-      if (!pt) return;
+    if (srcMode === "src") return;
 
-      const polyUV = getPlanePolyUV(dw, fr, pt);
-      const strokesUV = getPlaneStrokesUV(dw, fr, pt);
-      const zNorm = Math.min(1.0, Math.log(Math.max(0.8, dw.z || 2.0)) / Math.log(12.0));
-
-      // In 'pop' mode, explode each plane cutout outward by its depth z!
-      const offX = (srcMode === "pop") ? (zNorm - 0.32) * 38.0 : 0.0;
-      const offY = (srcMode === "pop") ? (zNorm - 0.32) * -26.0 : 0.0;
-
-      const shouldClipCutout = (srcMode !== "src") && media && (
-        dw.role === "subject" || dw.role === "part" || activeDepths.size === 1 || srcMode === "pop" || (dw.strokes0 && dw.strokes0.length > 0)
-      );
-
-      if (polyUV && polyUV.length >= 3) {
-        if (shouldClipCutout) {
-          // 1. Dark drop shadow behind die-cut sticker cutout
+    // 2. If 'Cutout' mode (Default) and no non-subject layer is soloed:
+    //    Show the crystal-clear, UNOBSTRUCTED SAM Video Cutout of the subject!
+    const subjDw = dws.find(d => d.role === "subject");
+    if (srcMode === "cutout" && (soloLayerId === null || (subjDw && soloLayerId === subjDw.id))) {
+      if (fr.ring && fr.ring.length >= 3) {
+        if (media) {
+          // Drop shadow behind SAM cutout
           ctx2.save();
           ctx2.beginPath();
-          polyUV.forEach((uv, i) => {
-            const x = uv[0] * W + offX, y = uv[1] * H + offY;
-            if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
-          });
+          fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
           ctx2.closePath();
-          ctx2.shadowColor = "rgba(0, 0, 0, 0.9)";
-          ctx2.shadowBlur = 12;
+          ctx2.shadowColor = "rgba(0, 0, 0, 0.95)";
+          ctx2.shadowBlur = 14;
           ctx2.shadowOffsetX = 3;
           ctx2.shadowOffsetY = 4;
-          ctx2.fillStyle = "#000000";
+          ctx2.fillStyle = "#000";
           ctx2.fill();
           ctx2.restore();
 
-          // 2. Clip vivid 100% footage cutout inside polygon mask
+          // 100% vivid SAM footage cutout
           ctx2.save();
           ctx2.beginPath();
-          polyUV.forEach((uv, i) => {
-            const x = uv[0] * W + offX, y = uv[1] * H + offY;
-            if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
-          });
+          fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
           ctx2.closePath();
           ctx2.clip();
           ctx2.globalAlpha = 1.0;
-          try { ctx2.drawImage(media, offX, offY, W, H); } catch(e) {}
+          try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
           ctx2.restore();
         }
 
-        // 3. Die-Cut Sticker Rim (Outer Depth Color + Inner White Rim on Subject/Parts)
+        // Crisp die-cut sticker rim (outer gold + inner white) — NO text or lines scribbled over the cutout!
         ctx2.save();
         ctx2.beginPath();
-        polyUV.forEach((uv, i) => {
-          const x = uv[0] * W + offX, y = uv[1] * H + offY;
-          if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
-        });
+        fr.ring.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
         ctx2.closePath();
-        if (!shouldClipCutout) {
-          ctx2.fillStyle = col + "1f";
-          ctx2.fill();
-        }
-        ctx2.strokeStyle = col;
-        ctx2.lineWidth = dw.role === "subject" ? 3.2 : (dw.role === "part" ? 2.4 : 1.8);
-        if (dw.role !== "subject" && dw.role !== "part" && !shouldClipCutout) ctx2.setLineDash([4, 3]);
+        ctx2.strokeStyle = "#ffd166";
+        ctx2.lineWidth = 3.2;
         ctx2.stroke();
-        ctx2.setLineDash([]);
-
-        if (shouldClipCutout && (dw.role === "subject" || dw.role === "part")) {
-          ctx2.strokeStyle = "rgba(255, 255, 255, 0.85)";
-          ctx2.lineWidth = 1.2;
-          ctx2.stroke();
-        }
+        ctx2.strokeStyle = "#ffffff";
+        ctx2.lineWidth = 1.2;
+        ctx2.stroke();
         ctx2.restore();
       }
+      return;
+    }
 
-      // 4. Overlay the parsed multiplane vector drawing strokes!
-      if (showDrawings && strokesUV && strokesUV.length) {
+    // 3. 'Cutout+Planes' ('scene'), 'Cel Sheet' ('cel'), or when a specific non-subject Layer Card is soloed:
+    //    Draw active layers in back-to-front order (Far -> Mid -> Subject Cutout -> Fore)!
+    [...dws].reverse().forEach(dw => {
+      if (!isLayerActive(dw.id)) return;
+      const col = dw.color || "#00f5d4";
+      const trk = dw.track || [];
+      const pt = trk[Math.min(trk.length - 1, fIdx)] || [dw.u0 || 0.5, dw.v0 || 0.5, dw.r0 || 0.12];
+      const polyUV = getPlanePolyUV(dw, fr, pt);
+      const strokesUV = getPlaneStrokesUV(dw, fr, pt);
+
+      // Clip video cutout for Subject, scene_rings (giraffe Trees), or a soloed layer in 'cutout' mode
+      const doCutout = (srcMode !== "cel") && media && (dw.role === "subject" || dw.scene_rings || soloLayerId === dw.id);
+      if (doCutout && polyUV.length >= 3) {
+        ctx2.save();
+        ctx2.beginPath();
+        polyUV.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
+        ctx2.closePath();
+        ctx2.clip();
+        ctx2.globalAlpha = 1.0;
+        try { ctx2.drawImage(media, 0, 0, W, H); } catch(e) {}
+        ctx2.restore();
+
+        ctx2.beginPath();
+        polyUV.forEach((uv, i) => { if (i === 0) ctx2.moveTo(uv[0]*W, uv[1]*H); else ctx2.lineTo(uv[0]*W, uv[1]*H); });
+        ctx2.closePath();
+        ctx2.strokeStyle = col;
+        ctx2.lineWidth = 2.6;
+        ctx2.stroke();
+      }
+
+      // Draw full-resolution Quick, Draw! strokes for this layer
+      if (strokesUV.length && (srcMode === "cel" || dw.role !== "subject" || soloLayerId === dw.id)) {
         ctx2.save();
         ctx2.lineCap = "round";
         ctx2.lineJoin = "round";
@@ -879,28 +1121,17 @@
           if (st.length < 2) return;
           ctx2.beginPath();
           st.forEach((uv, i) => {
-            const x = uv[0] * W + offX, y = uv[1] * H + offY;
-            if (i === 0) ctx2.moveTo(x, y); else ctx2.lineTo(x, y);
+            if (i === 0) ctx2.moveTo(uv[0] * W, uv[1] * H); else ctx2.lineTo(uv[0] * W, uv[1] * H);
           });
           ctx2.strokeStyle = "rgba(5, 7, 12, 0.85)";
           ctx2.lineWidth = 4.2;
           ctx2.stroke();
-          ctx2.strokeStyle = dw.role === "subject" ? "#ffffff" : col;
-          ctx2.lineWidth = 2.1;
+          ctx2.strokeStyle = col;
+          ctx2.lineWidth = 2.2;
           ctx2.stroke();
         });
         ctx2.restore();
       }
-
-      // 5. Compact plane/part tag on 2D cutout
-      const tx = Math.max(8, Math.min(W - 88, pt[0] * W + offX - 24));
-      const ty = Math.max(16, Math.min(H - 8, pt[1] * H + offY - Math.max(18, pt[2] * H * 0.55)));
-      const shortLbl = dw.label.replace("Drawing Plane: ","").replace("Rig Part: ","").replace("Rig Root: ","").slice(0, 11);
-      ctx2.fillStyle = "rgba(7, 9, 14, 0.82)";
-      ctx2.fillRect(tx - 2, ty - 10, shortLbl.length * 6.2 + 28, 13);
-      ctx2.fillStyle = col;
-      ctx2.font = "bold 9.5px monospace";
-      ctx2.fillText(`z=${dw.z} ${shortLbl}`, tx, ty);
     });
   }
 
@@ -910,12 +1141,11 @@
     draw3dStage(w, curFrame);
     draw2dStage(w, curFrame);
     const dws = w.depth_worms || [];
-    const nParts = dws.filter(d => d.role === "part").length;
-    const nPlanes = dws.length - nParts;
     const fr = (w.frames || [])[curFrame] || {};
     const areaPct = ((fr.area || 0) * 100).toFixed(1);
+    const soloTxt = soloLayerId ? ` · SOLO: <b>${soloLayerId}</b>` : "";
     document.getElementById("statTxt").innerHTML =
-      `<b>f${String(curFrame).padStart(2,"0")}</b>/${w.n_frames-1} · mask <b>${areaPct}%</b> · <b>${nPlanes} Planes + ${nParts} Parts</b>`;
+      `<b>f${String(curFrame).padStart(2,"0")}</b>/${w.n_frames-1} · cutout <b>${areaPct}%</b> · <b>${dws.length} Layers</b>${soloTxt}`;
   }
 
   function syncVideoTime(w, fIdx) {
@@ -933,12 +1163,12 @@
     const hud2d = document.getElementById("hud2d");
     if (hud2d) {
       const map = {
-        cutout: "Die-Cut Footage Cutouts + Multiplane Rig",
-        pop: "Exploded Multiplane Cutouts (Offset by z)",
-        iso: "Isolated Footage Cutouts + Vector Rig",
-        src: "Full Source Footage + Multiplane Rig"
+        cutout: "SAM Video Cutout (Unobstructed)",
+        scene: "Video Cutout + Multiplane Drawings",
+        cel: "Multiplane Vector Cel Sheet",
+        src: "Raw Source Footage"
       };
-      hud2d.textContent = map[srcMode] || "Footage Cutouts";
+      hud2d.textContent = map[srcMode] || "SAM Video Cutout";
     }
     if (url && video.src !== url) {
       video.src = url;
@@ -952,7 +1182,7 @@
     shotSelect.value = curIdx;
     const w = worms[curIdx];
     curFrame = 0;
-    activeDepths.clear();
+    soloLayerId = null;
     slider.max = Math.max(1, (w.frames || []).length - 1);
     slider.value = 0;
     preloadShotFrames(w);
@@ -1000,7 +1230,7 @@
       card.innerHTML = `
         <canvas width="160" height="48"></canvas>
         <div class="mc-title">${idx + 1}. ${w.slug}</div>
-        <div class="mc-sub">${dws.length} worms (${dws.map(d => "z=" + d.z).slice(0, 3).join(",")})</div>
+        <div class="mc-sub">${dws.length} layers (${dws.map(d => d.label.slice(0,6)).slice(0, 3).join(", ")})</div>
       `;
       card.onclick = () => selectShot(idx, true);
       grid.appendChild(card);
@@ -1038,17 +1268,16 @@
         document.querySelectorAll("#modeBar .m-btn[data-proj]").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
         drawAll();
-      } else if (btn.dataset.layout) {
+      } else if (btn.dataset.layout === "toggle-full") {
         const sr = document.getElementById("stageRow");
-        sr.className = "stage-row " + (btn.dataset.layout === "split" ? "" : btn.dataset.layout);
+        const full = sr.classList.toggle("only-3d");
+        btn.classList.toggle("active", full);
       }
     };
   });
 
   document.getElementById("texBtn").onclick = e => { showMaskVid = !showMaskVid; e.target.classList.toggle("active", showMaskVid); drawAll(); };
-  document.getElementById("rigBtn").onclick = e => { showDrawings = !showDrawings; e.target.classList.toggle("active", showDrawings); drawAll(); };
-  document.getElementById("subBtn").onclick = e => { showSub = !showSub; e.target.classList.toggle("active", showSub); drawAll(); };
-  document.getElementById("resetBtn").onclick = () => { yaw = -0.56; pitch = 0.30; drawAll(); };
+  document.getElementById("resetBtn").onclick = () => { yaw = -0.48; pitch = 0.24; soloLayerId = null; if (worms[curIdx]) renderDepthPills(worms[curIdx]); drawAll(); };
 
   document.querySelectorAll("#srcBar .tiny-btn").forEach(btn => {
     btn.onclick = () => {
@@ -1064,19 +1293,19 @@
     document.getElementById("playBtn").textContent = "▶";
     video.pause();
     curFrame = parseInt(slider.value, 10) || 0;
-    if (worms[curIdx]) syncVideoTime(worms[curIdx], curFrame);
+    if (worms[curIdx]) { syncVideoTime(worms[curIdx], curFrame); drawLayerCardThumbs(worms[curIdx], curFrame); }
     drawAll();
   };
   document.getElementById("stepPrev").onclick = () => {
     isPlaying = false; document.getElementById("playBtn").textContent = "▶"; video.pause();
     curFrame = Math.max(0, curFrame - 1); slider.value = curFrame;
-    if (worms[curIdx]) syncVideoTime(worms[curIdx], curFrame);
+    if (worms[curIdx]) { syncVideoTime(worms[curIdx], curFrame); drawLayerCardThumbs(worms[curIdx], curFrame); }
     drawAll();
   };
   document.getElementById("stepNext").onclick = () => {
     isPlaying = false; document.getElementById("playBtn").textContent = "▶"; video.pause();
     const w = worms[curIdx]; curFrame = Math.min((w ? w.frames.length : 1) - 1, curFrame + 1); slider.value = curFrame;
-    if (w) syncVideoTime(w, curFrame);
+    if (w) { syncVideoTime(w, curFrame); drawLayerCardThumbs(w, curFrame); }
     drawAll();
   };
 
@@ -1085,7 +1314,7 @@
     if (!dragging) return;
     const dx = e.clientX - lx, dy = e.clientY - ly;
     if (Math.abs(dx) > 2 || Math.abs(dy) > 2) moved = true;
-    if (projMode === "orbit3d") { yaw += dx * 0.008; pitch = Math.max(-1.1, Math.min(1.1, pitch + dy * 0.008)); lx = e.clientX; ly = e.clientY; drawAll(); }
+    if (projMode === "orbit3d" || projMode === "box3d") { yaw += dx * 0.008; pitch = Math.max(-1.0, Math.min(1.0, pitch + dy * 0.008)); lx = e.clientX; ly = e.clientY; drawAll(); }
   });
   c3d.addEventListener("pointerup", e => {
     dragging = false;
@@ -1098,6 +1327,7 @@
       if (best !== -1 && bestD < 50) {
         curFrame = best; slider.value = curFrame;
         syncVideoTime(worms[curIdx], curFrame);
+        drawLayerCardThumbs(worms[curIdx], curFrame);
         drawAll();
       }
     }
@@ -1122,7 +1352,7 @@
       worms.forEach((w, idx) => {
         const opt = document.createElement("option");
         opt.value = idx;
-        opt.textContent = `${idx + 1}. ${w.slug} (${(w.depth_worms || []).length} Worms)`;
+        opt.textContent = `${idx + 1}. ${w.slug} (${(w.depth_worms || []).length} Layers)`;
         shotSelect.appendChild(opt);
       });
       renderMiniGrid();
