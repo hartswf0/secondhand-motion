@@ -543,12 +543,14 @@
       <div class="pane-bar">
         <div class="strip">
           <div class="seg" role="group" aria-label="Worm Lens">
-            <button type="button" data-wmode="parallel" aria-pressed="true">1 · 3D Stretch</button>
+            <button type="button" data-wmode="all" aria-pressed="false">All 6</button>
+            <button type="button" data-wmode="parallel" aria-pressed="true">1 · 3D Butter</button>
             <button type="button" data-wmode="lanes" aria-pressed="false">2 · Planes</button>
             <button type="button" data-wmode="strobe" aria-pressed="false">3 · Trail</button>
             <button type="button" data-wmode="kymo" aria-pressed="false">4 · Graphs</button>
             <button type="button" data-wmode="anatomy" aria-pressed="false">5 · Rig</button>
             <button type="button" data-wmode="box" aria-pressed="false">6 · Depth Box</button>
+            <button type="button" data-wmode="wall" aria-pressed="false">All 109</button>
           </div>
           <!-- Bound strictly to valid state: only visible when Lens 1 (3D Stretch) is active -->
           <div class="seg" id="parallelSubSeg" role="group" aria-label="3D Timeline Mode">
@@ -571,6 +573,7 @@
       <div class="pane-bar">
         <div class="strip">
           <div class="seg" role="group" aria-label="Scene View">
+            <button type="button" data-view="all4" aria-pressed="false">All 4</button>
             <button type="button" data-view="composite" aria-pressed="true">Composite</button>
             <button type="button" data-view="cutout" aria-pressed="false">Cutout</button>
             <button type="button" data-view="cartoon" aria-pressed="false">Cartoon</button>
@@ -684,7 +687,17 @@
   let f = 0;
   let lastTick = 0;
   let soloPlaneId = null;
+  let planeOn = {};
   let wormHitBoxes = [];
+  let hitTransform = {tx: 0, ty: 0, sx: 1, sy: 1};
+  function pushHitBox(b){
+    wormHitBoxes.push(Object.assign({}, b, {
+      x: hitTransform.tx + b.x * hitTransform.sx,
+      y: hitTransform.ty + b.y * hitTransform.sy,
+      w: b.w * hitTransform.sx,
+      h: b.h * hitTransform.sy
+    }));
+  }
 
   const PLANE_TINTS = {
     far:   {fill:'rgba(92, 128, 188, 0.22)', stroke:'#3A5F9CD0'},
@@ -772,6 +785,7 @@
 
   function isPlaneVisible(pid){
     if(soloPlaneId) return pid === soloPlaneId;
+    if(pid in planeOn) return planeOn[pid] !== false;
     return true;
   }
 
@@ -1004,7 +1018,7 @@
     }, opts || {});
 
     if(!o.noHit){
-      wormHitBoxes.push({
+      pushHitBox({
         x: cx - cw * 0.56,
         y: cy - ch * 0.56,
         w: cw * 1.12,
@@ -1195,7 +1209,7 @@
         ctx.lineWidth = isCur ? 2.4 : 1.1;
         ctx.strokeRect(x, y, cellW, cellH);
 
-        wormHitBoxes.push({x, y, w: cellW, h: cellH, fi: ti, planeId: null, togglePlane: false});
+        pushHitBox({x, y, w: cellW, h: cellH, fi: ti, planeId: null, togglePlane: false});
       }
       return;
     }
@@ -1215,9 +1229,28 @@
       };
     }
 
-    // Sub-mode: BUTTER LOAF (3D Sliced Stick of Butter that parts open at fi + clickable depth pats)
+    const visPlanes = planes.filter(p => isPlaneVisible(p.id));
+    const activeList = visPlanes.length ? visPlanes : planes;
+    const K = Math.max(1, activeList.length);
+    const RAIL_COLORS = ['#EF9F3A', '#FF453A', '#32D74B', '#409CFF', '#BF5AF2', '#FFD60A', '#64D2FF'];
+    const baseRad = Math.min(W, H) * 0.31;
+
+    function railAngle(rIdx){
+      return -Math.PI * 0.72 + (rIdx / Math.max(2, K)) * (Math.PI * 2);
+    }
+
+    function railPt(rIdx, u){
+      const c = spinePt(u);
+      const ang = railAngle(rIdx);
+      const radScale = Math.max(0.68, c.s);
+      const rx = Math.cos(ang) * baseRad * 1.12 * radScale;
+      const ry = Math.sin(ang) * baseRad * 0.82 * radScale;
+      return {x: c.x + rx, y: c.y + ry, s: c.s, ang, radScale};
+    }
+
+    // Sub-mode: BUTTER LOAF (All time slices AND all parallel depth rails sliced simultaneously!)
     if(parallelSubMode === 'butter'){
-      const maxSlices = Math.min(N, 18);
+      const maxSlices = Math.min(N, K > 2 ? 10 : 14);
       const sliceSet = new Set([0, N - 1, fi]);
       drawnArr.forEach(k => { if(k >= 0 && k < N) sliceSet.add(k); });
       for(let s = 0; s < maxSlices; s++){
@@ -1226,84 +1259,119 @@
       }
       const sliceFrames = Array.from(sliceSet).sort((a, b) => a - b);
 
-      // Draw 3D butter-block guide rails
-      const cStart = spinePt(0.02), cEnd = spinePt(0.98);
-      ctx.strokeStyle = `rgba(${lineRGB}, 0.45)`;
-      ctx.lineWidth = 1.4;
-      ctx.beginPath();
-      ctx.moveTo(cStart.x, cStart.y);
-      ctx.lineTo(cEnd.x, cEnd.y);
-      ctx.stroke();
+      // Draw all parallel rail lines + correspondence fans
+      const cStart = spinePt(0.03), cEnd = spinePt(0.97);
+      ctx.strokeStyle = `rgba(${lineRGB}, 0.55)`;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(cStart.x, cStart.y); ctx.lineTo(cEnd.x, cEnd.y); ctx.stroke();
 
-      // Compute parted position for each slice in the stick of butter
+      for(let rIdx = 0; rIdx < K; rIdx++){
+        const plane = activeList[rIdx];
+        const isSubj = (plane.id === 'char');
+        const col = isSubj ? '#EF9F3A' : RAIL_COLORS[rIdx % RAIL_COLORS.length];
+        const p0 = railPt(rIdx, 0.05), p1 = railPt(rIdx, 0.95);
+        ctx.strokeStyle = col;
+        ctx.globalAlpha = isSubj ? 0.85 : 0.55;
+        ctx.lineWidth = isSubj ? 2.0 : 1.2;
+        ctx.beginPath(); ctx.moveTo(p0.x, p0.y); ctx.lineTo(p1.x, p1.y); ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+
       let activePt = spinePt(0.5);
       const sliceNodes = sliceFrames.map(ti => {
         const rawU = N > 1 ? (ti / (N - 1)) : 0.5;
-        // Part the loaf open around fi so adjacent slices never obscure the active slice
         let partShift = 0;
-        if(ti < fi) partShift = -0.055;
-        else if(ti > fi) partShift = 0.055;
-        const u = Math.max(0.03, Math.min(0.97, 0.07 + rawU * 0.84 + partShift));
+        if(ti < fi) partShift = -0.05;
+        else if(ti > fi) partShift = 0.05;
+        const u = Math.max(0.04, Math.min(0.96, 0.08 + rawU * 0.84 + partShift));
         const pt = spinePt(u);
         if(ti === fi) activePt = pt;
         return {ti, rawU, u, pt};
       });
 
-      // Draw all non-active slices in back-to-front order (every slice is clickable!)
+      // Draw ALL slices across ALL rails simultaneously in back-to-front order (every slice on every rail is clickable!)
       for(const sn of sliceNodes){
         if(sn.ti === fi) continue;
         const isKey = (sn.ti === 0 || drawnSet.has(sn.ti));
-        const cw = Math.round(68 * sn.pt.s);
-        const ch = Math.round(56 * sn.pt.s);
+
+        // First draw outer depth-plane butter slices for this time step sn.ti
+        for(let rIdx = 0; rIdx < K; rIdx++){
+          const plane = activeList[rIdx];
+          const isSubj = (plane.id === 'char');
+          if(isSubj && K > 1) continue;
+          const kSpeed = zRef / Math.max(0.3, plane.z);
+          const fLayer = Math.max(0, Math.min(N - 1, Math.round(sn.ti * Math.min(1.2, Math.max(0.35, kSpeed)))));
+          const rp = railPt(rIdx, sn.u);
+          const cx = Math.max(36, Math.min(W - 36, rp.x));
+          const cy = Math.max(topSafe + 26, Math.min(H - botSafe - 26, rp.y));
+          const col = RAIL_COLORS[rIdx % RAIL_COLORS.length];
+
+          // White correspondence ray from spine slice to rail slice
+          ctx.strokeStyle = `rgba(${lineRGB}, ${isKey ? 0.42 : 0.20})`;
+          ctx.lineWidth = 0.85;
+          ctx.beginPath(); ctx.moveTo(sn.pt.x, sn.pt.y); ctx.lineTo(cx, cy); ctx.stroke();
+
+          const pw = Math.round(48 * sn.pt.s);
+          const ph = Math.round(40 * sn.pt.s);
+          drawUpright3DCard(ctx, cx, cy, pw, ph, fLayer, {
+            plane: plane,
+            borderColor: col,
+            borderWidth: 1.3,
+            bgFill: '#FFFDF5',
+            alpha: 0.82,
+            cropToMask: false,
+            butterSlab: true,
+            slabDepth: Math.max(3, 4.5 * sn.pt.s),
+            togglePlane: true,
+            label: isKey ? `z=${plane.z} f${fLayer+1}` : null,
+            labelColor: col
+          });
+        }
+
+        // Then draw central spine butter slice for time step sn.ti
+        const cw = Math.round(64 * sn.pt.s);
+        const ch = Math.round(52 * sn.pt.s);
         drawUpright3DCard(ctx, sn.pt.x, sn.pt.y, cw, ch, sn.ti, {
           plane: null,
           borderColor: isKey ? '#F5C469' : `rgba(${lineRGB}, 0.78)`,
           borderWidth: isKey ? 1.8 : 1.2,
           bgFill: '#FFFDF5',
-          alpha: 0.90,
+          alpha: 0.92,
           cropToMask: true,
           butterSlab: true,
-          slabDepth: Math.max(4, 6.5 * sn.pt.s),
+          slabDepth: Math.max(4, 6.0 * sn.pt.s),
           label: `f${String(sn.ti+1).padStart(2,'0')}`,
           labelColor: isKey ? '#FFD60A' : '#FFFFFF'
         });
       }
 
-      // Draw the active cross-section ring & fanned depth-plane butter pats around activePt
-      const visPlanes = planes.filter(p => isPlaneVisible(p.id));
-      const activeList = visPlanes.length ? visPlanes : planes;
-      const K = Math.max(1, activeList.length);
-      const RAIL_COLORS = ['#EF9F3A', '#FF453A', '#32D74B', '#409CFF', '#BF5AF2', '#FFD60A', '#64D2FF'];
+      // Now draw the active cross-section ring at fi parting all rails open at once
+      const popX = Math.max(66, Math.min(W - 66, activePt.x - 18));
+      const popY = Math.max(topSafe + 48, Math.min(H - botSafe - 48, activePt.y - 14));
 
-      const popX = Math.max(66, Math.min(W - 66, activePt.x - 28));
-      const popY = Math.max(topSafe + 48, Math.min(H - botSafe - 48, activePt.y - 22));
-
-      // Knife-cut ring around the parted butter slice
       ctx.save();
       ctx.strokeStyle = '#EF9F3A';
-      ctx.lineWidth = 1.6;
+      ctx.lineWidth = 1.8;
       ctx.setLineDash([5, 3]);
       ctx.beginPath();
-      ctx.ellipse(activePt.x, activePt.y, 118, 86, -0.14, 0, Math.PI * 2);
+      ctx.ellipse(activePt.x, activePt.y, baseRad * 1.08, baseRad * 0.80, -0.12, 0, Math.PI * 2);
       ctx.stroke();
       ctx.restore();
 
-      // Fan out the K depth-plane slices for frame fi around the parted slot
       const planeCards = [];
       for(let rIdx = 0; rIdx < K; rIdx++){
         const plane = activeList[rIdx];
         if(plane.id === 'char' && K > 1) continue;
-        const ang = -Math.PI * 0.42 + (rIdx / Math.max(1, K - 1)) * (Math.PI * 1.15);
-        const radX = 132, radY = 96;
-        const cx = Math.max(46, Math.min(W - 46, activePt.x + Math.cos(ang) * radX));
-        const cy = Math.max(topSafe + 34, Math.min(H - botSafe - 34, activePt.y + Math.sin(ang) * radY));
+        const rp = railPt(rIdx, N > 1 ? (0.08 + (fi / (N - 1)) * 0.84) : 0.5);
+        const cx = Math.max(46, Math.min(W - 46, rp.x));
+        const cy = Math.max(topSafe + 34, Math.min(H - botSafe - 34, rp.y));
         const col = RAIL_COLORS[rIdx % RAIL_COLORS.length];
         planeCards.push({plane, cx, cy, col});
       }
 
       ctx.save();
-      ctx.strokeStyle = `rgba(${lineRGB}, 0.85)`;
-      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = `rgba(${lineRGB}, 0.90)`;
+      ctx.lineWidth = 1.7;
       ctx.beginPath();
       ctx.moveTo(activePt.x, activePt.y);
       ctx.lineTo(popX, popY);
@@ -1318,29 +1386,28 @@
 
       for(const pc of planeCards){
         const shortLbl = String(pc.plane.label || pc.plane.id).split('(')[0].trim().slice(0, 9);
-        drawUpright3DCard(ctx, pc.cx, pc.cy, 66, 54, fi, {
+        drawUpright3DCard(ctx, pc.cx, pc.cy, 68, 56, fi, {
           plane: pc.plane,
           borderColor: pc.col,
-          borderWidth: 1.8,
+          borderWidth: 2.0,
           bgFill: '#FFFDF5',
           cropToMask: false,
           butterSlab: true,
-          slabDepth: 5,
+          slabDepth: 5.5,
           togglePlane: true,
           label: `${shortLbl} z=${pc.plane.z}`,
           labelColor: pc.col
         });
       }
 
-      // Popped-out active butter slice (Subject + Composite)
-      drawUpright3DCard(ctx, popX, popY, 96, 80, fi, {
+      drawUpright3DCard(ctx, popX, popY, 92, 76, fi, {
         plane: null,
         borderColor: '#EF9F3A',
         borderWidth: 2.8,
         bgFill: '#FFFDF5',
         cropToMask: false,
         butterSlab: true,
-        slabDepth: 9,
+        slabDepth: 8.5,
         label: `SLICE f${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`,
         labelColor: '#EF9F3A'
       });
@@ -1363,7 +1430,7 @@
         return {x: c.x + blueOff.dx * c.s, y: c.y + blueOff.dy * c.s, s: c.s};
       }
 
-      const nBlocks = Math.max(3, Math.min(8, drawnArr.length));
+      const nBlocks = Math.max(4, Math.min(7, drawnArr.length));
       for(let b = 0; b < nBlocks; b++){
         const uIn0 = (b / nBlocks) * 0.88;
         const uIn1 = ((b + 1) / nBlocks) * 0.88;
@@ -1425,6 +1492,31 @@
       ctx.lineWidth = 2.4;
       ctx.beginPath(); ctx.moveTo(bStart.x, bStart.y); ctx.lineTo(bEnd.x, bEnd.y); ctx.stroke();
 
+      const bgPlane = planes.find(p => p.id !== 'char') || planes[0];
+
+      // Draw distributed slices along ALL 3 rails (Red, Spine, Blue) across time simultaneously!
+      for(let b = 0; b < nBlocks; b++){
+        const uStep = 0.10 + (b / Math.max(1, nBlocks - 1)) * 0.80;
+        if(Math.abs(uStep - uPlay) < 0.08) continue;
+        const ti = Math.max(0, Math.min(N - 1, Math.round((b / Math.max(1, nBlocks - 1)) * (N - 1))));
+        const fR = Math.max(0, Math.min(N - 1, Math.round(ti * 0.5)));
+        const fB = Math.max(0, Math.min(N - 1, Math.round(ti * 0.5 + N * 0.25)));
+        const pc = spinePt(uStep);
+        const pr = redPt(uStep);
+        const pb = bluePt(uStep);
+        const cw = Math.round(54 * pc.s), ch = Math.round(44 * pc.s);
+
+        drawUpright3DCard(ctx, Math.max(40, Math.min(W-40, pb.x)), Math.max(topSafe+26, Math.min(H-botSafe-26, pb.y)), cw, ch, fB, {
+          plane: bgPlane, borderColor: '#2E7CF6', borderWidth: 1.3, alpha: 0.78, cropToMask: false, butterSlab: true, slabDepth: 3.5
+        });
+        drawUpright3DCard(ctx, pc.x, pc.y, cw, ch, ti, {
+          plane: null, borderColor: `rgba(${lineRGB}, 0.65)`, borderWidth: 1.2, alpha: 0.80, cropToMask: false, butterSlab: true, slabDepth: 3.5
+        });
+        drawUpright3DCard(ctx, Math.max(40, Math.min(W-40, pr.x)), Math.max(topSafe+26, Math.min(H-botSafe-26, pr.y)), cw, ch, fR, {
+          plane: null, borderColor: '#FF3B30', borderWidth: 1.4, alpha: 0.82, cropToMask: true, butterSlab: true, slabDepth: 3.5
+        });
+      }
+
       const rPlay = redPt(uPlay);
       const bPlay = bluePt(uPlay);
       const ringRx = Math.hypot(bPlay.x - rPlay.x, bPlay.y - rPlay.y) * 0.54;
@@ -1440,7 +1532,6 @@
 
       const fStretched1 = Math.max(0, Math.min(N - 1, Math.round(fi * 0.5)));
       const fStretched2 = Math.max(0, Math.min(N - 1, Math.round(fi * 0.5 + N * 0.25)));
-      const bgPlane = planes.find(p => p.id !== 'char') || planes[0];
 
       const bx = Math.max(54, Math.min(W - 54, bPlay.x));
       const by = Math.max(topSafe + 38, Math.min(H - botSafe - 38, bPlay.y));
@@ -1454,16 +1545,6 @@
         cropToMask: false,
         label: `out 2 · f${fStretched2+1}`,
         labelColor: '#6CA6FF'
-      });
-
-      const fPrev = Math.max(0, fi - 2);
-      const spEcho = spinePt(Math.max(0.08, uPlay - 0.05));
-      drawUpright3DCard(ctx, spEcho.x, spEcho.y, 76, 64, fPrev, {
-        plane: null,
-        borderColor: `rgba(${lineRGB}, 0.50)`,
-        borderWidth: 1.2,
-        alpha: 0.65,
-        cropToMask: false
       });
 
       drawUpright3DCard(ctx, spPlay.x, spPlay.y, 86, 72, fi, {
@@ -1498,28 +1579,8 @@
       return;
     }
 
-    // Sub-mode 1: Radial Multi-Worm Fan
-    const visPlanes = planes.filter(p => isPlaneVisible(p.id));
-    const activeList = visPlanes.length ? visPlanes : planes;
-    const K = Math.max(1, activeList.length);
-    const RAIL_COLORS = ['#EF9F3A', '#FF453A', '#32D74B', '#409CFF', '#BF5AF2', '#FFD60A', '#64D2FF'];
-
-    const baseRad = Math.min(W, H) * 0.32;
-
-    function railAngle(rIdx){
-      return -Math.PI * 0.72 + (rIdx / Math.max(2, K)) * (Math.PI * 2);
-    }
-
-    function railPt(rIdx, u){
-      const c = spinePt(u);
-      const ang = railAngle(rIdx);
-      const radScale = Math.max(0.70, c.s);
-      const rx = Math.cos(ang) * baseRad * 1.15 * radScale;
-      const ry = Math.sin(ang) * baseRad * 0.85 * radScale;
-      return {x: c.x + rx, y: c.y + ry, s: c.s, ang, radScale};
-    }
-
-    const nSegs = Math.max(4, Math.min(7, drawnArr.length));
+    // Sub-mode: Radial Multi-Worm Fan (with slices distributed along all K rails simultaneously!)
+    const nSegs = Math.max(4, Math.min(6, drawnArr.length));
     for(let rIdx = 0; rIdx < K; rIdx++){
       const plane = activeList[rIdx];
       const isSubj = (plane.id === 'char');
@@ -1572,6 +1633,30 @@
     ctx.lineWidth = 1.6;
     ctx.beginPath(); ctx.moveTo(c0.x, c0.y); ctx.lineTo(c1.x, c1.y); ctx.stroke();
 
+    // Draw distributed slices along all K radial rails & central spine across time simultaneously
+    for(let s = 0; s < nSegs; s++){
+      const uStep = 0.12 + (s / Math.max(1, nSegs - 1)) * 0.76;
+      if(Math.abs(uStep - uPlay) < 0.08) continue;
+      const ti = Math.max(0, Math.min(N - 1, Math.round((s / Math.max(1, nSegs - 1)) * (N - 1))));
+      const pe = spinePt(uStep);
+      drawUpright3DCard(ctx, pe.x, pe.y, Math.round(52 * pe.s), Math.round(42 * pe.s), ti, {
+        plane: null, borderColor: `rgba(${lineRGB}, 0.55)`, borderWidth: 1.1, alpha: 0.72, cropToMask: false, butterSlab: true, slabDepth: 3
+      });
+      for(let rIdx = 0; rIdx < K; rIdx++){
+        const plane = activeList[rIdx];
+        const isSubj = (plane.id === 'char');
+        const col = isSubj ? '#EF9F3A' : RAIL_COLORS[rIdx % RAIL_COLORS.length];
+        const rp = railPt(rIdx, uStep);
+        const cx = Math.max(38, Math.min(W - 38, rp.x));
+        const cy = Math.max(topSafe + 24, Math.min(H - botSafe - 24, rp.y));
+        const kSpeed = zRef / Math.max(0.3, plane.z);
+        const fLayer = isSubj ? ti : Math.max(0, Math.min(N - 1, Math.round(ti * Math.min(1.2, Math.max(0.35, kSpeed)))));
+        drawUpright3DCard(ctx, cx, cy, Math.round(46 * rp.s), Math.round(38 * rp.s), fLayer, {
+          plane: isSubj ? null : plane, borderColor: col, borderWidth: 1.2, alpha: 0.75, cropToMask: isSubj, butterSlab: true, slabDepth: 3, togglePlane: !isSubj
+        });
+      }
+    }
+
     const ringScale = Math.max(0.70, spPlay.s);
     const ringR = baseRad * ringScale;
     ctx.save();
@@ -1581,19 +1666,6 @@
     ctx.ellipse(spPlay.x, spPlay.y, ringR * 1.15, ringR * 0.85, -0.08, 0, Math.PI * 2);
     ctx.stroke();
     ctx.restore();
-
-    for(let e = 2; e >= 1; e--){
-      const fEcho = Math.max(0, fi - e * 2);
-      const uEcho = Math.max(0.08, uPlay - e * 0.035);
-      const pe = spinePt(uEcho);
-      drawUpright3DCard(ctx, pe.x, pe.y, 60, 50, fEcho, {
-        plane: null,
-        borderColor: `rgba(${lineRGB}, 0.42)`,
-        borderWidth: 1.0,
-        alpha: 0.45 + (2 - e) * 0.15,
-        cropToMask: false
-      });
-    }
 
     const railCards = [];
     for(let rIdx = 0; rIdx < K; rIdx++){
@@ -1640,32 +1712,22 @@
         borderColor: rc.col,
         borderWidth: rc.isSubj ? 2.4 : 1.7,
         cropToMask: rc.isSubj,
+        togglePlane: !rc.isSubj,
         label: `${shortLbl} z=${rc.plane.z}`,
         labelColor: rc.col
       });
     }
   }
 
-  function renderStage(fi){
-    if(!curWorm) return;
-    const W = (S && S.W) || curWorm.W || 480;
-    const H = (S && S.H) || curWorm.H || 360;
-    if(cvStage.width !== W || cvStage.height !== H){
-      cvStage.width = W; cvStage.height = H;
-    }
-    const ctx = ctxStage;
-    ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = '#FBFAF6';
-    ctx.fillRect(0, 0, W, H);
-
+  function renderSingleStageView(ctx, W, H, fi, vMode){
     const img = getFrameImg(curWorm, fi);
 
-    if(view === 'footage'){
+    if(vMode === 'footage'){
       if(img) ctx.drawImage(img, 0, 0, W, H);
       return;
     }
 
-    if(view === 'masks'){
+    if(vMode === 'masks'){
       if(img){
         ctx.save(); ctx.globalAlpha = 0.30; ctx.drawImage(img, 0, 0, W, H); ctx.restore();
       }
@@ -1686,7 +1748,7 @@
       return;
     }
 
-    if(view === 'cutout'){
+    if(vMode === 'cutout'){
       if(img){
         ctx.save(); ctx.globalAlpha = 0.16; ctx.drawImage(img, 0, 0, W, H); ctx.restore();
       }
@@ -1696,7 +1758,7 @@
       return;
     }
 
-    if(view === 'composite'){
+    if(vMode === 'composite'){
       if(img){
         ctx.save();
         ctx.globalAlpha = 0.55;
@@ -1732,7 +1794,7 @@
         if(strokes.length){
           drawStrokes(ctx, strokes, {color:'rgba(0,0,0,0)', width:0.1, boilSeed, boilAmp, fill:celFill});
         }
-        if(fi === 0 && view === 'cartoon'){
+        if(fi === 0 && vMode === 'cartoon'){
           drawStrokes(ctx, strokes, {color:'#EF9F3A', width:6.0, boilSeed, boilAmp});
         }
         drawStrokes(ctx, strokes, {color:'#161412', width:2.5, boilSeed, boilAmp});
@@ -1755,27 +1817,56 @@
     }
   }
 
-  function renderWorm(fi){
+  function renderStage(fi){
     if(!curWorm) return;
-    wormHitBoxes = [];
-    const W = cvWorm.width, H = cvWorm.height;
-    const ctx = ctxWorm;
+    const W = (S && S.W) || curWorm.W || 480;
+    const H = (S && S.H) || curWorm.H || 360;
+    if(cvStage.width !== W || cvStage.height !== H){
+      cvStage.width = W; cvStage.height = H;
+    }
+    const ctx = ctxStage;
     ctx.clearRect(0, 0, W, H);
     ctx.fillStyle = '#FBFAF6';
     ctx.fillRect(0, 0, W, H);
 
-    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
-    const planes = getActivePlanes();
-    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
-    const soloText = soloPlaneId ? `Solo: ${soloPlaneId}` : `${planes.length} planes`;
-    document.getElementById('wormStatePill').textContent = `${soloText} · f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
+    if(view === 'all4'){
+      const qViews = [
+        {id:'composite', lbl:'Composite'},
+        {id:'cutout',    lbl:'SAM Cutout + Line'},
+        {id:'cartoon',   lbl:'Multiplane Cartoon'},
+        {id:'footage',   lbl:'Archive Footage'}
+      ];
+      const hw = W * 0.5, hh = H * 0.5;
+      qViews.forEach((qv, idx)=>{
+        const qx = (idx % 2) * hw, qy = Math.floor(idx / 2) * hh;
+        ctx.save();
+        ctx.beginPath(); ctx.rect(qx, qy, hw, hh); ctx.clip();
+        ctx.translate(qx, qy);
+        ctx.scale(0.5, 0.5);
+        renderSingleStageView(ctx, W, H, fi, qv.id);
+        ctx.restore();
 
-    if(wormMode === 'parallel'){
+        ctx.strokeStyle = '#161412'; ctx.lineWidth = 1.2;
+        ctx.strokeRect(qx, qy, hw, hh);
+        ctx.fillStyle = 'rgba(22, 20, 18, 0.82)';
+        ctx.fillRect(qx + 4, qy + 4, 108, 15);
+        ctx.fillStyle = '#FBFAF6';
+        ctx.font = '700 9.5px "JetBrains Mono", monospace';
+        ctx.fillText(qv.lbl, qx + 8, qy + 14.5);
+      });
+      return;
+    }
+
+    renderSingleStageView(ctx, W, H, fi, view);
+  }
+
+  function renderSingleWormLens(ctx, W, H, fi, N, planes, zRef, mode){
+    if(mode === 'parallel'){
       renderParallelTimelinesMode(ctx, W, H, fi, N, planes, zRef);
       return;
     }
 
-    if(wormMode === 'strobe'){
+    if(mode === 'strobe'){
       const padT = 14, padB = 14, padL = 14, padR = 14;
       const stageW = W - padL - padR, stageH = H - padT - padB;
       ctx.save();
@@ -1829,7 +1920,7 @@
       return;
     }
 
-    if(wormMode === 'kymo'){
+    if(mode === 'kymo'){
       const padL = 124, padR = 14, padT = 14, padB = 14;
       const trackW = W - padL - padR;
       const availH = H - padT - padB;
@@ -1874,6 +1965,7 @@
             const rx = Math.max(padL+2, Math.min(padL+trackW-cw-2, cx - cw*0.5));
             ctx.globalAlpha = 0.55;
             drawSamCutoutInRect(ctx, curWorm, ti, rx, y0+5, cw, ch, {cropToMask:true, drawOutline:false, drawDoodle:true});
+            pushHitBox({x: rx, y: y0+5, w: cw, h: ch, fi: ti, planeId: null, togglePlane: false});
           }
           ctx.globalAlpha = 1;
         }
@@ -1902,7 +1994,7 @@
       return;
     }
 
-    if(wormMode === 'anatomy'){
+    if(mode === 'anatomy'){
       const padL = 14, padR = 14, padT = 14, padB = 14;
       const topH = Math.round((H - padT - padB) * 0.50);
       const botY = padT + topH + 10;
@@ -1916,6 +2008,7 @@
       });
       ctx.fillStyle = '#8A4A05'; ctx.font = '700 10.5px "JetBrains Mono", monospace';
       ctx.fillText('THE LINE (f=01 Seed Doodle)', padL+10, padT+15);
+      pushHitBox({x: padL, y: padT, w: halfW, h: topH, fi: 0, planeId: null, togglePlane: false});
 
       const rx0 = padL + halfW + 10;
       ctx.fillStyle = '#FFFDF8'; ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 1.8;
@@ -1967,7 +2060,7 @@
       return;
     }
 
-    if(wormMode === 'box'){
+    if(mode === 'box'){
       const padX = 24, padT = 18, padB = 18;
       const availW = W - padX*2, availH = H - padT - padB;
       const nP = planes.length;
@@ -2022,7 +2115,7 @@
         ctx.fillText(lblText, lx + 4, ly + 10);
         ctx.restore();
 
-        wormHitBoxes.push({x: cx, y: cy, w: pw, h: ph, fi, planeId: plane.id, togglePlane: true});
+        pushHitBox({x: cx, y: cy, w: pw, h: ph, fi, planeId: plane.id, togglePlane: true});
       });
       return;
     }
@@ -2067,7 +2160,7 @@
       const kMult = (zRef / Math.max(0.2, plane.z)).toFixed(2);
       ctx.fillText(`z=${plane.z} · k=${kMult}x`, 16, y0 + Math.min(33, laneH*0.76));
       ctx.restore();
-      wormHitBoxes.push({x: 11, y: y0 + 1, w: padL - 16, h: laneH - 2, fi, planeId: plane.id, togglePlane: true});
+      pushHitBox({x: 11, y: y0 + 1, w: padL - 16, h: laneH - 2, fi, planeId: plane.id, togglePlane: true});
 
       ctx.save();
       ctx.beginPath();
@@ -2107,7 +2200,7 @@
           drawPlaneObjectsInRect(ctx, plane, ti, rx+1, ry+1, celW-2, celH-2, true);
         }
         ctx.restore();
-        wormHitBoxes.push({x: rx, y: ry, w: celW, h: celH, fi: ti, planeId: null, togglePlane: false});
+        pushHitBox({x: rx, y: ry, w: celW, h: celH, fi: ti, planeId: null, togglePlane: false});
       }
 
       const arx = Math.max(padL + 2, Math.min(padL + trackW - actW - 2, actX - actW * 0.5));
@@ -2141,12 +2234,183 @@
     ctx.restore();
   }
 
-  function syncConditionalRecoveryUI(){
-    // Law 4 & Law 8: Display recovery actions only while state is changed
-    if(restorePlanesBtn){
-      restorePlanesBtn.style.display = soloPlaneId ? '' : 'none';
+  function renderAll109WormsWall(ctx, W, H, fi, N){
+    ctx.fillStyle = '#0D0C0A';
+    ctx.fillRect(0, 0, W, H);
+    const total = WORMS.length || 1;
+    const cols = 11;
+    const rows = Math.ceil(total / cols);
+    const pad = 6, gap = 3;
+    const cw = (W - pad*2 - gap*(cols - 1)) / cols;
+    const ch = (H - pad*2 - gap*(rows - 1)) / rows;
+    const uNorm = N > 1 ? fi / (N - 1) : 0;
+
+    WORMS.forEach((w, idx)=>{
+      const c = idx % cols;
+      const r = Math.floor(idx / cols);
+      const cx = pad + c * (cw + gap);
+      const cy = pad + r * (ch + gap);
+      const isCur = (idx === curIdx);
+
+      ctx.save();
+      ctx.fillStyle = isCur ? '#2B2214' : '#161411';
+      ctx.strokeStyle = isCur ? '#EF9F3A' : '#332E27';
+      ctx.lineWidth = isCur ? 2.0 : 1.0;
+      ctx.beginPath();
+      ctx.roundRect(cx, cy, cw, ch, 3);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.rect(cx + 1, cy + 1, cw - 2, ch - 2);
+      ctx.clip();
+
+      const dws = w.depth_worms || [];
+      for(let i = dws.length - 1; i >= 0; i--){
+        const dw = dws[i];
+        const tr = dw.track || [];
+        if(!tr.length) continue;
+        ctx.beginPath();
+        for(let ti = 0; ti < tr.length; ti++){
+          const tx = cx + 4 + (tr.length > 1 ? (ti / (tr.length - 1)) * (cw - 8) : (cw - 8) * 0.5);
+          const ty = cy + 12 + Math.max(0.05, Math.min(0.95, tr[ti][1])) * (ch - 15);
+          if(ti === 0) ctx.moveTo(tx, ty); else ctx.lineTo(tx, ty);
+        }
+        ctx.strokeStyle = dw.role === 'subject' ? '#EF9F3A' : (dw.color || '#6E98D6');
+        ctx.lineWidth = dw.role === 'subject' ? 1.7 : 0.9;
+        ctx.globalAlpha = dw.role === 'subject' ? 0.95 : 0.45;
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+
+      const wfCount = (w.frames && w.frames.length) || w.n_frames || 1;
+      const wFi = Math.min(wfCount - 1, Math.max(0, Math.round(uNorm * (wfCount - 1))));
+      const playX = cx + 4 + uNorm * (cw - 8);
+      ctx.strokeStyle = isCur ? '#FFFFFF' : 'rgba(239, 159, 58, 0.72)';
+      ctx.lineWidth = 1.1;
+      ctx.beginPath();
+      ctx.moveTo(playX, cy + 11);
+      ctx.lineTo(playX, cy + ch - 2);
+      ctx.stroke();
+
+      const fr = w.frames && w.frames[wFi];
+      if(fr && fr.doodle){
+        ctx.strokeStyle = '#FFFDF8';
+        ctx.lineWidth = 0.95;
+        const dBox = Math.min(cw * 0.36, ch - 13);
+        const dx0 = Math.max(cx + 2, Math.min(cx + cw - dBox - 2, playX - dBox * 0.5));
+        const dy0 = cy + 11 + (ch - 12 - dBox) * 0.5;
+        for(const s of fr.doodle){
+          if(!s || s.length < 2) continue;
+          ctx.beginPath();
+          for(let k = 0; k < s.length; k++){
+            const px = dx0 + s[k][0] * dBox;
+            const py = dy0 + s[k][1] * dBox;
+            if(k === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+          }
+          ctx.stroke();
+        }
+      }
+
+      ctx.fillStyle = isCur ? '#EF9F3A' : '#CFC6B8';
+      ctx.font = '700 8px "JetBrains Mono", monospace';
+      const lbl = `${(w.lot || '').replace('SM-','')} ${(w.title || w.slug || '').slice(0, 8)}`.trim();
+      ctx.fillText(lbl, cx + 3, cy + 9);
+      ctx.restore();
+
+      pushHitBox({x: cx, y: cy, w: cw, h: ch, selectShotIdx: idx});
+    });
+  }
+
+  function areAllPlanesOn(planes){
+    if(soloPlaneId !== null) return false;
+    return planes.every(p => planeOn[p.id] !== false);
+  }
+
+  function renderWorm(fi){
+    if(!curWorm) return;
+    wormHitBoxes = [];
+    hitTransform = {tx: 0, ty: 0, sx: 1, sy: 1};
+    const W = cvWorm.width, H = cvWorm.height;
+    const ctx = ctxWorm;
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = '#FBFAF6';
+    ctx.fillRect(0, 0, W, H);
+
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
+    const planes = getActivePlanes();
+    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
+    const visCount = planes.filter(p => isPlaneVisible(p.id)).length;
+    const planeText = (visCount === planes.length) ? `All ${planes.length} planes` : `${visCount}/${planes.length} planes`;
+    document.getElementById('wormStatePill').textContent = `${planeText} · f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
+
+    if(wormMode === 'wall'){
+      renderAll109WormsWall(ctx, W, H, fi, N);
+      return;
     }
-    const isModified = (f !== 0) || (soloPlaneId !== null) || (view !== 'composite') || (curVariant !== 'gwp');
+
+    if(wormMode === 'all'){
+      const lenses = [
+        {id:'parallel', lbl:'1 · 3D Butter'},
+        {id:'lanes',    lbl:'2 · Planes'},
+        {id:'strobe',   lbl:'3 · Trail'},
+        {id:'kymo',     lbl:'4 · Graphs'},
+        {id:'anatomy',  lbl:'5 · Rig'},
+        {id:'box',      lbl:'6 · Depth Box'}
+      ];
+      const cols = 3, rows = 2;
+      const pad = 6, gap = 6;
+      const pw = (W - pad*2 - gap*(cols - 1)) / cols;
+      const ph = (H - pad*2 - gap*(rows - 1)) / rows;
+      lenses.forEach((m, idx)=>{
+        const c = idx % cols, r = Math.floor(idx / cols);
+        const px = pad + c * (pw + gap);
+        const py = pad + r * (ph + gap);
+        const sx = pw / W, sy = ph / H;
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.roundRect(px, py, pw, ph, 6);
+        ctx.clip();
+        ctx.fillStyle = '#FBFAF6';
+        ctx.fillRect(px, py, pw, ph);
+        ctx.translate(px, py);
+        ctx.scale(sx, sy);
+        hitTransform = {tx: px, ty: py, sx, sy};
+        renderSingleWormLens(ctx, W, H, fi, N, planes, zRef, m.id);
+        ctx.restore();
+
+        hitTransform = {tx: 0, ty: 0, sx: 1, sy: 1};
+        ctx.strokeStyle = '#161412';
+        ctx.lineWidth = 1.4;
+        ctx.beginPath();
+        ctx.roundRect(px, py, pw, ph, 6);
+        ctx.stroke();
+
+        // Clickable lens header badge to expand any of the 6 lenses
+        const bx = px + 6, by = py + 5, bw = 96, bh = 16;
+        ctx.fillStyle = 'rgba(22, 20, 18, 0.86)';
+        ctx.beginPath();
+        ctx.roundRect(bx, by, bw, bh, 3);
+        ctx.fill();
+        ctx.fillStyle = '#EF9F3A';
+        ctx.font = '700 9.5px "JetBrains Mono", monospace';
+        ctx.fillText(m.lbl, bx + 6, by + 11.5);
+        pushHitBox({x: bx, y: by, w: bw, h: bh, setMode: m.id});
+      });
+      return;
+    }
+
+    renderSingleWormLens(ctx, W, H, fi, N, planes, zRef, wormMode);
+  }
+
+  function syncConditionalRecoveryUI(){
+    const planes = getActivePlanes();
+    const allPlanesActive = areAllPlanesOn(planes);
+    if(restorePlanesBtn){
+      restorePlanesBtn.style.display = allPlanesActive ? 'none' : '';
+    }
+    const isModified = (f !== 0) || !allPlanesActive || (view !== 'composite') || (curVariant !== 'gwp');
     if(resetStateBtn){
       resetStateBtn.style.display = isModified ? '' : 'none';
     }
@@ -2166,31 +2430,44 @@
     syncConditionalRecoveryUI();
   }
 
+  function togglePlaneVisibility(pid){
+    const planes = getActivePlanes();
+    soloPlaneId = null;
+    planeOn[pid] = (planeOn[pid] === false) ? true : false;
+    const anyVisible = planes.some(p => planeOn[p.id] !== false);
+    if(!anyVisible){
+      planeOn = {};
+    }
+  }
+
   function buildPlanesUI(){
     planesRow.innerHTML = '';
     const planes = getActivePlanes();
+    const allActive = areAllPlanesOn(planes);
 
     const allBtn = document.createElement('button');
     allBtn.type = 'button';
     allBtn.className = 'plane-pill';
-    allBtn.setAttribute('aria-pressed', soloPlaneId === null ? 'true' : 'false');
+    allBtn.setAttribute('aria-pressed', allActive ? 'true' : 'false');
     allBtn.textContent = `All (${planes.length})`;
     allBtn.addEventListener('click', ()=>{
       soloPlaneId = null;
+      planeOn = {};
       buildPlanesUI();
       renderAll();
     });
     planesRow.appendChild(allBtn);
 
     planes.slice().reverse().forEach(p=>{
+      const vis = isPlaneVisible(p.id);
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'plane-pill' + (p.id === 'char' ? ' subj' : '');
-      btn.setAttribute('aria-pressed', soloPlaneId === p.id ? 'true' : 'false');
+      btn.setAttribute('aria-pressed', vis ? 'true' : 'false');
       const shortLbl = String(p.label || p.id).split('(')[0].trim().slice(0, 14);
       btn.textContent = `${shortLbl} z=${p.z}`;
       btn.addEventListener('click', ()=>{
-        soloPlaneId = (soloPlaneId === p.id) ? null : p.id;
+        togglePlaneVisibility(p.id);
         buildPlanesUI();
         renderAll();
       });
@@ -2280,6 +2557,7 @@
     varBtnInt.style.display = curWorm.has_integrated ? '' : 'none';
 
     soloPlaneId = null;
+    planeOn = {};
     buildPlanesUI();
     buildKeyTicks();
     renderAll();
@@ -2408,8 +2686,25 @@
       const pt = eventToCanvasPt(cvWorm, e);
       const hit = findWormHit(pt) || findWormHit(wormDownPt);
       if(hit){
+        if(hit.selectShotIdx !== undefined){
+          selectShot(hit.selectShotIdx);
+          isScrubbingWorm = false;
+          wormDownPt = null;
+          return;
+        }
+        if(hit.setMode){
+          wormMode = hit.setMode;
+          document.querySelectorAll('[data-wmode]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.wmode===wormMode?'true':'false'));
+          const isPar = (wormMode === 'parallel' || wormMode === 'all');
+          if(parallelSubSeg) parallelSubSeg.style.display = isPar ? '' : 'none';
+          if(parThemeBtn) parThemeBtn.style.display = isPar ? '' : 'none';
+          renderAll();
+          isScrubbingWorm = false;
+          wormDownPt = null;
+          return;
+        }
         if(hit.togglePlane && hit.planeId){
-          soloPlaneId = (soloPlaneId === hit.planeId) ? null : hit.planeId;
+          togglePlaneVisibility(hit.planeId);
           buildPlanesUI();
         }
         if(hit.fi !== undefined && hit.fi !== null){
@@ -2426,15 +2721,15 @@
   });
   cvWorm.addEventListener('pointercancel', ()=>{ isScrubbingWorm = false; wormDownPt = null; });
 
-  // Lens buttons (Law 4: bind 3D sub-controls strictly to Parallel mode)
+  // Lens buttons (Law 4: bind 3D sub-controls to Parallel & All-6 modes)
   document.querySelectorAll('[data-wmode]').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       wormMode = btn.dataset.wmode;
       document.querySelectorAll('[data-wmode]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
-      const isPar = (wormMode === 'parallel');
+      const isPar = (wormMode === 'parallel' || wormMode === 'all');
       if(parallelSubSeg) parallelSubSeg.style.display = isPar ? '' : 'none';
       if(parThemeBtn) parThemeBtn.style.display = isPar ? '' : 'none';
-      if(curWorm && (wormMode === 'strobe' || wormMode === 'kymo' || wormMode === 'parallel')){
+      if(curWorm && (wormMode === 'strobe' || wormMode === 'kymo' || wormMode === 'parallel' || wormMode === 'all')){
         const N = curWorm.n_frames || 1;
         for(let i=0;i<N;i+=Math.max(1, Math.floor(N/8))) getFrameImg(curWorm, i);
       }
@@ -2480,6 +2775,7 @@
   if(restorePlanesBtn){
     restorePlanesBtn.addEventListener('click', ()=>{
       soloPlaneId = null;
+      planeOn = {};
       buildPlanesUI();
       renderAll();
     });
@@ -2489,6 +2785,7 @@
       stopPlayback();
       f = 0;
       soloPlaneId = null;
+      planeOn = {};
       view = 'composite';
       document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.view==='composite'?'true':'false'));
       if(curVariant !== 'gwp' && curWorm) loadVariantJson(curWorm, 'gwp');

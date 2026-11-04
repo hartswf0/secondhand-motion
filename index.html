@@ -307,8 +307,9 @@ body.worms-no-scroll{
   display:inline-flex;align-items:center;gap:4px;white-space:nowrap;flex-shrink:0;
 }
 .w-plane-pill.subj{border-color:var(--tag);background:var(--tag-soft);color:var(--tag-ink);font-weight:600}
-.w-plane-pill.soloed{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.w-plane-pill.muted{opacity:0.38}
+.w-plane-pill[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.w-plane-pill.subj[aria-pressed="true"]{background:var(--tag);color:#161412;border-color:var(--ink)}
+.w-plane-pill[aria-pressed="false"]{opacity:0.45}
 .w-controls{
   display:grid;grid-template-columns:auto auto 1fr auto auto;gap:6px;align-items:center;
 }
@@ -408,12 +409,14 @@ body.worms-no-scroll{
       <div class="w-pane-bar">
         <div class="w-scroll-strip">
           <div class="w-seg" role="group" aria-label="Space-Worm Interpretation Lens">
-            <button type="button" data-idxwmode="parallel" aria-pressed="true">1 · 3D Stretch</button>
+            <button type="button" data-idxwmode="all" aria-pressed="false">All 6</button>
+            <button type="button" data-idxwmode="parallel" aria-pressed="true">1 · 3D Butter</button>
             <button type="button" data-idxwmode="lanes" aria-pressed="false">2 · Planes</button>
             <button type="button" data-idxwmode="strobe" aria-pressed="false">3 · Trail</button>
             <button type="button" data-idxwmode="kymo" aria-pressed="false">4 · Graphs</button>
             <button type="button" data-idxwmode="anatomy" aria-pressed="false">5 · Rig</button>
             <button type="button" data-idxwmode="box" aria-pressed="false">6 · Depth Box</button>
+            <button type="button" data-idxwmode="wall" aria-pressed="false">All 109</button>
           </div>
         </div>
         <div class="w-scroll-strip" id="idxParallelTools">
@@ -437,6 +440,7 @@ body.worms-no-scroll{
       <div class="w-pane-bar">
         <div class="w-scroll-strip">
           <div class="w-seg" role="group" aria-label="Stage view">
+            <button type="button" data-idxview="all4" aria-pressed="false">All 4</button>
             <button type="button" data-idxview="composite" aria-pressed="true">Over Footage</button>
             <button type="button" data-idxview="cutout" aria-pressed="false">SAM Cutout</button>
             <button type="button" data-idxview="cartoon" aria-pressed="false">Cartoon</button>
@@ -533,6 +537,17 @@ body.worms-no-scroll{
   let planeOn = {};
   let soloPlaneId = null;
   let wormHitBoxes = [];
+  let hitTransform = {tx: 0, ty: 0, sx: 1, sy: 1};
+  let rackMiniWorms = [];
+
+  function pushHitBox(b){
+    wormHitBoxes.push(Object.assign({}, b, {
+      x: hitTransform.tx + b.x * hitTransform.sx,
+      y: hitTransform.ty + b.y * hitTransform.sy,
+      w: b.w * hitTransform.sx,
+      h: b.h * hitTransform.sy
+    }));
+  }
 
   const LENS_META = {
     parallel: {
@@ -849,7 +864,7 @@ body.worms-no-scroll{
     }, opts || {});
 
     if(!o.noHit){
-      wormHitBoxes.push({
+      pushHitBox({
         x: cx - cw * 0.56,
         y: cy - ch * 0.56,
         w: cw * 1.12,
@@ -979,7 +994,7 @@ body.worms-no-scroll{
     const drawnSet = new Set(drawnArr);
     const lineRGB = dark ? '255,255,255' : '22,20,18';
 
-    // Sub-mode: SLICES (All N Slices flat contact sheet — click any slice)
+    // Sub-mode: SLICES (All N Slices flat contact sheet — shows ALL active depth planes + subject at each frame)
     if(parallelSubMode === 'slices'){
       const pad = 10, padBot = 28;
       const availW = W - pad * 2;
@@ -1017,6 +1032,11 @@ body.worms-no-scroll{
           ctx.drawImage(img, x + 1, y + 1, cellW - 2, bodyH - 1);
           ctx.globalAlpha = 1;
         }
+        for(const p of planes){
+          if(p.id !== 'char' && isPlaneVisible(p.id)){
+            drawPlaneObjectsInRect(ctx, p, ti, x + 2, y + 2, cellW - 4, bodyH - 3, false);
+          }
+        }
         drawSamCutoutInRect(ctx, curWorm, ti, x + 2, y + 2, cellW - 4, bodyH - 3, {
           cropToMask: true,
           drawOutline: true,
@@ -1037,7 +1057,7 @@ body.worms-no-scroll{
         ctx.lineWidth = isCur ? 2.4 : 1.1;
         ctx.strokeRect(x, y, cellW, cellH);
 
-        wormHitBoxes.push({x, y, w: cellW, h: cellH, fi: ti, planeId: null, togglePlane: false});
+        pushHitBox({x, y, w: cellW, h: cellH, fi: ti, planeId: null, togglePlane: false});
       }
       return;
     }
@@ -1057,9 +1077,14 @@ body.worms-no-scroll{
       };
     }
 
-    // Sub-mode: BUTTER (3D Sliced Stick of Butter that parts open at fi + clickable depth pats)
+    // Sub-mode: BUTTER (All parallel depth rails × All time slices simultaneously, parting open at fi)
     if(parallelSubMode === 'butter'){
-      const maxSlices = Math.min(N, 18);
+      const visPlanes = planes.filter(p => isPlaneVisible(p.id));
+      const activeList = visPlanes.length ? visPlanes : planes;
+      const K = Math.max(1, activeList.length);
+      const RAIL_COLORS = ['#EF9F3A', '#FF453A', '#32D74B', '#409CFF', '#BF5AF2', '#FFD60A', '#64D2FF'];
+
+      const maxSlices = Math.min(N, K > 2 ? 12 : 16);
       const sliceSet = new Set([0, N - 1, fi]);
       drawnArr.forEach(k => { if(k >= 0 && k < N) sliceSet.add(k); });
       for(let s = 0; s < maxSlices; s++){
@@ -1068,120 +1093,104 @@ body.worms-no-scroll{
       }
       const sliceFrames = Array.from(sliceSet).sort((a, b) => a - b);
 
-      const cStart = spinePt(0.02), cEnd = spinePt(0.98);
-      ctx.strokeStyle = `rgba(${lineRGB}, 0.45)`;
-      ctx.lineWidth = 1.4;
-      ctx.beginPath();
-      ctx.moveTo(cStart.x, cStart.y);
-      ctx.lineTo(cEnd.x, cEnd.y);
-      ctx.stroke();
-
-      let activePt = spinePt(0.5);
-      const sliceNodes = sliceFrames.map(ti => {
-        const rawU = N > 1 ? (ti / (N - 1)) : 0.5;
-        let partShift = 0;
-        if(ti < fi) partShift = -0.055;
-        else if(ti > fi) partShift = 0.055;
-        const u = Math.max(0.03, Math.min(0.97, 0.07 + rawU * 0.84 + partShift));
-        const pt = spinePt(u);
-        if(ti === fi) activePt = pt;
-        return {ti, rawU, u, pt};
-      });
-
-      for(const sn of sliceNodes){
-        if(sn.ti === fi) continue;
-        const isKey = (sn.ti === 0 || drawnSet.has(sn.ti));
-        const cw = Math.round(68 * sn.pt.s);
-        const ch = Math.round(56 * sn.pt.s);
-        drawUpright3DCard(ctx, sn.pt.x, sn.pt.y, cw, ch, sn.ti, {
-          plane: null,
-          borderColor: isKey ? '#F5C469' : `rgba(${lineRGB}, 0.78)`,
-          borderWidth: isKey ? 1.8 : 1.2,
-          bgFill: '#FFFDF5',
-          alpha: 0.90,
-          cropToMask: true,
-          butterSlab: true,
-          slabDepth: Math.max(4, 6.5 * sn.pt.s),
-          label: `f${String(sn.ti+1).padStart(2,'0')}`,
-          labelColor: isKey ? '#FFD60A' : '#FFFFFF'
-        });
+      function butterRailPt(rIdx, u){
+        const c = spinePt(u);
+        const plane = activeList[rIdx];
+        if(plane.id === 'char' || K === 1) return {x: c.x, y: c.y, s: c.s};
+        const laneNorm = (rIdx / Math.max(1, K - 1)) - 0.5;
+        const spreadX = laneNorm * 225 * Math.max(0.65, c.s);
+        const spreadY = -laneNorm * 135 * Math.max(0.65, c.s);
+        return {
+          x: Math.max(38, Math.min(W - 38, c.x + spreadX)),
+          y: Math.max(topSafe + 24, Math.min(H - botSafe - 24, c.y + spreadY)),
+          s: c.s
+        };
       }
 
-      const visPlanes = planes.filter(p => isPlaneVisible(p.id));
-      const activeList = visPlanes.length ? visPlanes : planes;
-      const K = Math.max(1, activeList.length);
-      const RAIL_COLORS = ['#EF9F3A', '#FF453A', '#32D74B', '#409CFF', '#BF5AF2', '#FFD60A', '#64D2FF'];
+      for(let rIdx = 0; rIdx < K; rIdx++){
+        const plane = activeList[rIdx];
+        const isSubj = (plane.id === 'char');
+        const col = isSubj ? '#EF9F3A' : RAIL_COLORS[rIdx % RAIL_COLORS.length];
+        const p0 = butterRailPt(rIdx, 0.03), p1 = butterRailPt(rIdx, 0.97);
+        ctx.strokeStyle = col;
+        ctx.lineWidth = isSubj ? 2.2 : 1.4;
+        ctx.globalAlpha = isSubj ? 0.85 : 0.55;
+        ctx.beginPath();
+        ctx.moveTo(p0.x, p0.y);
+        ctx.lineTo(p1.x, p1.y);
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+      }
 
-      const popX = Math.max(66, Math.min(W - 66, activePt.x - 28));
-      const popY = Math.max(topSafe + 48, Math.min(H - botSafe - 48, activePt.y - 22));
+      const allSliceDrawList = [];
+      let activeSpinePt = spinePt(0.5);
+
+      for(const ti of sliceFrames){
+        const rawU = N > 1 ? (ti / (N - 1)) : 0.5;
+        let partShift = 0;
+        if(ti < fi) partShift = -0.05;
+        else if(ti > fi) partShift = 0.05;
+        const u = Math.max(0.03, Math.min(0.97, 0.07 + rawU * 0.84 + partShift));
+        const sp = spinePt(u);
+        if(ti === fi) activeSpinePt = sp;
+
+        ctx.strokeStyle = (ti === fi) ? '#FFFFFF' : `rgba(${lineRGB}, 0.24)`;
+        ctx.lineWidth = (ti === fi) ? 1.8 : 0.8;
+        for(let rIdx = 0; rIdx < K; rIdx++){
+          const rp = butterRailPt(rIdx, u);
+          ctx.beginPath();
+          ctx.moveTo(sp.x, sp.y);
+          ctx.lineTo(rp.x, rp.y);
+          ctx.stroke();
+
+          const plane = activeList[rIdx];
+          const isSubj = (plane.id === 'char');
+          const col = isSubj ? '#EF9F3A' : RAIL_COLORS[rIdx % RAIL_COLORS.length];
+          const kSpeed = zRef / Math.max(0.3, plane.z);
+          const fPlane = isSubj ? ti : Math.max(0, Math.min(N - 1, Math.round(ti * Math.min(1.2, Math.max(0.35, kSpeed)))));
+          allSliceDrawList.push({
+            ti, fPlane, u, rIdx, plane, isSubj, col,
+            x: rp.x, y: rp.y, s: rp.s,
+            isActive: (ti === fi)
+          });
+        }
+      }
 
       ctx.save();
       ctx.strokeStyle = '#EF9F3A';
       ctx.lineWidth = 1.6;
       ctx.setLineDash([5, 3]);
       ctx.beginPath();
-      ctx.ellipse(activePt.x, activePt.y, 118, 86, -0.14, 0, Math.PI * 2);
+      ctx.ellipse(activeSpinePt.x, activeSpinePt.y, 128, 86, -0.14, 0, Math.PI * 2);
       ctx.stroke();
       ctx.restore();
 
-      const planeCards = [];
-      for(let rIdx = 0; rIdx < K; rIdx++){
-        const plane = activeList[rIdx];
-        if(plane.id === 'char' && K > 1) continue;
-        const ang = -Math.PI * 0.42 + (rIdx / Math.max(1, K - 1)) * (Math.PI * 1.15);
-        const radX = 132, radY = 96;
-        const cx = Math.max(46, Math.min(W - 46, activePt.x + Math.cos(ang) * radX));
-        const cy = Math.max(topSafe + 34, Math.min(H - botSafe - 34, activePt.y + Math.sin(ang) * radY));
-        const col = RAIL_COLORS[rIdx % RAIL_COLORS.length];
-        planeCards.push({plane, cx, cy, col});
-      }
-
-      ctx.save();
-      ctx.strokeStyle = `rgba(${lineRGB}, 0.85)`;
-      ctx.lineWidth = 1.5;
-      ctx.beginPath();
-      ctx.moveTo(activePt.x, activePt.y);
-      ctx.lineTo(popX, popY);
-      ctx.stroke();
-      for(const pc of planeCards){
-        ctx.beginPath();
-        ctx.moveTo(activePt.x, activePt.y);
-        ctx.lineTo(pc.cx, pc.cy);
-        ctx.stroke();
-      }
-      ctx.restore();
-
-      for(const pc of planeCards){
-        const shortLbl = String(pc.plane.label || pc.plane.id).split('(')[0].trim().slice(0, 9);
-        drawUpright3DCard(ctx, pc.cx, pc.cy, 66, 54, fi, {
-          plane: pc.plane,
-          borderColor: pc.col,
-          borderWidth: 1.8,
+      allSliceDrawList.sort((a, b) => (a.isActive - b.isActive) || (a.u - b.u) || (a.y - b.y));
+      for(const item of allSliceDrawList){
+        const isKey = (item.ti === 0 || drawnSet.has(item.ti));
+        const baseW = item.isActive ? (item.isSubj ? 92 : 68) : (item.isSubj ? 60 : 44);
+        const baseH = item.isActive ? (item.isSubj ? 76 : 56) : (item.isSubj ? 50 : 36);
+        const cw = Math.round(baseW * (item.isActive ? 1.0 : Math.max(0.66, item.s * 0.92)));
+        const ch = Math.round(baseH * (item.isActive ? 1.0 : Math.max(0.66, item.s * 0.92)));
+        const shortLbl = String(item.plane.label || item.plane.id).split('(')[0].trim().slice(0, 8);
+        drawUpright3DCard(ctx, item.x, item.y, cw, ch, item.fPlane, {
+          plane: item.isSubj ? null : item.plane,
+          borderColor: item.isActive ? '#FFFFFF' : (isKey ? '#F5C469' : item.col),
+          borderWidth: item.isActive ? 2.4 : (isKey ? 1.6 : 1.1),
           bgFill: '#FFFDF5',
-          cropToMask: false,
+          alpha: item.isActive ? 1.0 : 0.86,
+          cropToMask: item.isSubj,
           butterSlab: true,
-          slabDepth: 5,
-          togglePlane: true,
-          label: `${shortLbl} z=${pc.plane.z}`,
-          labelColor: pc.col
+          slabDepth: item.isActive ? 7 : Math.max(3, 4.5 * item.s),
+          togglePlane: false,
+          label: item.isActive ? `${shortLbl} f${String(item.ti+1).padStart(2,'0')}` : (item.isSubj ? `f${String(item.ti+1).padStart(2,'0')}` : null),
+          labelColor: item.isActive ? '#EF9F3A' : (isKey ? '#FFD60A' : '#FFFFFF')
         });
       }
-
-      drawUpright3DCard(ctx, popX, popY, 96, 80, fi, {
-        plane: null,
-        borderColor: '#EF9F3A',
-        borderWidth: 2.8,
-        bgFill: '#FFFDF5',
-        cropToMask: false,
-        butterSlab: true,
-        slabDepth: 9,
-        label: `SLICE f${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`,
-        labelColor: '#EF9F3A'
-      });
       return;
     }
 
-    const uPlay = 0.24 + (N > 1 ? (fi / (N - 1)) : 0.5) * 0.54;
+    const uPlay = 0.16 + (N > 1 ? (fi / (N - 1)) : 0.5) * 0.68;
     const spPlay = spinePt(uPlay);
 
     if(parallelSubMode === 'dual'){
@@ -1272,14 +1281,37 @@ body.worms-no-scroll{
       ctx.stroke();
       ctx.restore();
 
+      const bgPlane = planes.find(p => p.id !== 'char') || planes[0];
+      const M = Math.min(N, 7);
+      for(let s = 0; s < M; s++){
+        const ti = M === 1 ? 0 : Math.round((s / (M - 1)) * (N - 1));
+        if(ti === fi) continue;
+        const u = 0.16 + (N > 1 ? (ti / (N - 1)) : 0.5) * 0.68;
+        const pc = spinePt(u), pr = redPt(u), pb = bluePt(u);
+        const f1 = Math.max(0, Math.min(N - 1, Math.round(ti * 0.5)));
+        const f2 = Math.max(0, Math.min(N - 1, Math.round(ti * 0.5 + N * 0.25)));
+        const cw = Math.round(52 * pc.s), ch = Math.round(44 * pc.s);
+        drawUpright3DCard(ctx, pb.x, pb.y, cw, ch, f2, {plane: bgPlane, borderColor: '#2E7CF6', borderWidth: 1.3, alpha: 0.82, cropToMask: false});
+        drawUpright3DCard(ctx, pc.x, pc.y, cw, ch, ti, {plane: null, borderColor: `rgba(${lineRGB}, 0.65)`, borderWidth: 1.2, alpha: 0.82, cropToMask: false});
+        drawUpright3DCard(ctx, pr.x, pr.y, cw, ch, f1, {plane: null, borderColor: '#FF3B30', borderWidth: 1.4, alpha: 0.86, cropToMask: true, label: `f${ti+1}`});
+      }
+
       const fStretched1 = Math.max(0, Math.min(N - 1, Math.round(fi * 0.5)));
       const fStretched2 = Math.max(0, Math.min(N - 1, Math.round(fi * 0.5 + N * 0.25)));
-      const bgPlane = planes.find(p => p.id !== 'char') || planes[0];
-
       const bx = Math.max(54, Math.min(W - 54, bPlay.x));
       const by = Math.max(topSafe + 38, Math.min(H - botSafe - 38, bPlay.y));
       const rx = Math.max(54, Math.min(W - 54, rPlay.x));
       const ry = Math.max(topSafe + 42, Math.min(H - botSafe - 42, rPlay.y));
+
+      ctx.save();
+      ctx.strokeStyle = '#FFFFFF';
+      ctx.lineWidth = 2.2;
+      ctx.beginPath();
+      ctx.moveTo(rx, ry);
+      ctx.lineTo(spPlay.x, spPlay.y);
+      ctx.lineTo(bx, by);
+      ctx.stroke();
+      ctx.restore();
 
       drawUpright3DCard(ctx, bx, by, 82, 68, fStretched2, {
         plane: bgPlane,
@@ -1288,16 +1320,6 @@ body.worms-no-scroll{
         cropToMask: false,
         label: `out 2 · f${fStretched2+1}`,
         labelColor: '#6CA6FF'
-      });
-
-      const fPrev = Math.max(0, fi - 2);
-      const spEcho = spinePt(Math.max(0.08, uPlay - 0.05));
-      drawUpright3DCard(ctx, spEcho.x, spEcho.y, 76, 64, fPrev, {
-        plane: null,
-        borderColor: `rgba(${lineRGB}, 0.50)`,
-        borderWidth: 1.2,
-        alpha: 0.65,
-        cropToMask: false
       });
 
       drawUpright3DCard(ctx, spPlay.x, spPlay.y, 84, 70, fi, {
@@ -1318,18 +1340,6 @@ body.worms-no-scroll{
         labelColor: '#FF6961'
       });
 
-      ctx.save();
-      ctx.strokeStyle = '#FFFFFF';
-      ctx.lineWidth = 2.2;
-      ctx.shadowColor = 'rgba(255,255,255,0.75)';
-      ctx.shadowBlur = 5;
-      ctx.beginPath();
-      ctx.moveTo(rx, ry);
-      ctx.lineTo(spPlay.x, spPlay.y);
-      ctx.lineTo(bx, by);
-      ctx.stroke();
-      ctx.restore();
-
       ctx.fillStyle = dark ? 'rgba(6, 7, 10, 0.84)' : 'rgba(251, 250, 246, 0.90)';
       ctx.fillRect(10, H - 28, W - 20, 22);
       ctx.font = '700 11px "JetBrains Mono", monospace';
@@ -1342,7 +1352,7 @@ body.worms-no-scroll{
       return;
     }
 
-    // Sub-mode 1: Radial Multi-Worm Fan
+    // Sub-mode 1: Radial Multi-Worm Fan — ALL slices along ALL K rails at once
     const visPlanes = planes.filter(p => isPlaneVisible(p.id));
     const activeList = visPlanes.length ? visPlanes : planes;
     const K = Math.max(2, activeList.length);
@@ -1426,17 +1436,28 @@ body.worms-no-scroll{
     ctx.stroke();
     ctx.restore();
 
-    for(let e = 2; e >= 1; e--){
-      const fEcho = Math.max(0, fi - e * 2);
-      const uEcho = Math.max(0.08, uPlay - e * 0.035);
-      const pe = spinePt(uEcho);
-      drawUpright3DCard(ctx, pe.x, pe.y, 60, 50, fEcho, {
-        plane: null,
-        borderColor: `rgba(${lineRGB}, 0.42)`,
-        borderWidth: 1.0,
-        alpha: 0.45 + (2 - e) * 0.15,
-        cropToMask: false
-      });
+    const M = Math.min(N, 6);
+    for(let s = 0; s < M; s++){
+      const ti = M === 1 ? 0 : Math.round((s / (M - 1)) * (N - 1));
+      if(ti === fi) continue;
+      const u = 0.16 + (N > 1 ? (ti / (N - 1)) : 0.5) * 0.68;
+      for(let rIdx = 0; rIdx < K; rIdx++){
+        const plane = activeList[rIdx];
+        const isSubj = (plane.id === 'char');
+        const rp = railPt(rIdx, u);
+        const col = isSubj ? '#EF9F3A' : RAIL_COLORS[rIdx % RAIL_COLORS.length];
+        const cw = Math.round((isSubj ? 52 : 42) * rp.s);
+        const ch = Math.round((isSubj ? 44 : 34) * rp.s);
+        const cx = Math.max(cw * 0.55 + 6, Math.min(W - cw * 0.55 - 6, rp.x));
+        const cy = Math.max(topSafe + ch * 0.55 + 4, Math.min(H - botSafe - ch * 0.55 - 4, rp.y));
+        drawUpright3DCard(ctx, cx, cy, cw, ch, ti, {
+          plane: isSubj ? null : plane,
+          borderColor: col,
+          borderWidth: 1.2,
+          alpha: 0.78,
+          cropToMask: isSubj
+        });
+      }
     }
 
     const railCards = [];
@@ -1501,22 +1522,14 @@ body.worms-no-scroll{
     ctx.textAlign = 'left';
   }
 
-  function renderStage(fi){
-    if(!curWorm) return;
-    const W = (S && S.W) || curWorm.W || 480;
-    const H = (S && S.H) || curWorm.H || 360;
-    if(cvStage.width !== W || cvStage.height !== H){ cvStage.width = W; cvStage.height = H; }
-    const ctx = ctxStage;
-    ctx.clearRect(0,0,W,H);
-    ctx.fillStyle = '#FBFAF6';
-    ctx.fillRect(0,0,W,H);
+  function renderSingleStageView(ctx, W, H, fi, vMode){
     const img = getFrameImg(curWorm, fi);
 
-    if(view === 'footage'){
+    if(vMode === 'footage'){
       if(img) ctx.drawImage(img,0,0,W,H);
       return;
     }
-    if(view === 'masks'){
+    if(vMode === 'masks'){
       if(img){ ctx.save(); ctx.globalAlpha=0.3; ctx.drawImage(img,0,0,W,H); ctx.restore(); }
       const masks = (S && S.masks && S.masks[fi]) ? S.masks[fi] :
         ((curWorm.frames && curWorm.frames[fi] && curWorm.frames[fi].ring) ? [curWorm.frames[fi].ring.map(p=>[p[0]*W,p[1]*H])] : []);
@@ -1530,12 +1543,12 @@ body.worms-no-scroll{
       });
       return;
     }
-    if(view === 'cutout'){
+    if(vMode === 'cutout'){
       if(img){ ctx.save(); ctx.globalAlpha=0.16; ctx.drawImage(img,0,0,W,H); ctx.restore(); }
       drawSamCutoutInRect(ctx, curWorm, fi, 0, 0, W, H, {cropToMask:false, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true});
       return;
     }
-    if(view === 'composite'){
+    if(vMode === 'composite'){
       if(img){
         ctx.save(); ctx.globalAlpha = 0.55; ctx.drawImage(img,0,0,W,H); ctx.restore();
         ctx.fillStyle = 'rgba(246,239,227,0.22)'; ctx.fillRect(0,0,W,H);
@@ -1559,7 +1572,7 @@ body.worms-no-scroll{
         const strokes = (S && S.cast && S.cast.frames && S.cast.frames[fi]) ? S.cast.frames[fi] :
           ((curWorm.frames && curWorm.frames[fi] && curWorm.frames[fi].doodle) ? curWorm.frames[fi].doodle.map(s=>s.map(p=>[p[0]*W,p[1]*H])) : []);
         if(celFill && strokes.length) drawStrokes(ctx, strokes, {color:'rgba(0,0,0,0)', width:0.1, boilSeed, boilAmp, fill:celFill});
-        if(fi===0 && view==='cartoon') drawStrokes(ctx, strokes, {color:'#EF9F3A', width:6, boilSeed, boilAmp});
+        if(fi===0 && vMode==='cartoon') drawStrokes(ctx, strokes, {color:'#EF9F3A', width:6, boilSeed, boilAmp});
         drawStrokes(ctx, strokes, {color:'#161412', width:2.5, boilSeed, boilAmp});
       } else if(S && Array.isArray(S.objects)){
         const objs = S.objects.filter(o => o.plane === plane.id);
@@ -1573,33 +1586,53 @@ body.worms-no-scroll{
     }
   }
 
-  function renderWorm(fi){
+  function renderStage(fi){
     if(!curWorm) return;
-    wormHitBoxes = [];
-    const W = cvWorm.width, H = cvWorm.height;
-    const ctx = ctxWorm;
+    const W = (S && S.W) || curWorm.W || 480;
+    const H = (S && S.H) || curWorm.H || 360;
+    if(cvStage.width !== W || cvStage.height !== H){ cvStage.width = W; cvStage.height = H; }
+    const ctx = ctxStage;
     ctx.clearRect(0,0,W,H);
     ctx.fillStyle = '#FBFAF6';
     ctx.fillRect(0,0,W,H);
-    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
-    const planes = getActivePlanes();
-    const meta = LENS_META[wormMode] || LENS_META.parallel;
-    const lblText = (wormMode === 'parallel' && parallelSubMode === 'butter')
-      ? 'butter loaf (click any slice or drag to part)'
-      : (wormMode === 'parallel' && parallelSubMode === 'slices')
-        ? 'all slices contact sheet (click any slice)'
-        : meta.lbl;
-    document.getElementById('idxLblWorm').textContent = lblText;
-    document.getElementById('idxLblWormR').textContent = `${planes.length} planes · f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
 
-    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
+    if(view === 'all4'){
+      const qViews = [
+        {id:'composite', lbl:'Over Footage'},
+        {id:'cutout',    lbl:'SAM Cutout'},
+        {id:'cartoon',   lbl:'Cartoon'},
+        {id:'footage',   lbl:'Footage'}
+      ];
+      const hw = W * 0.5, hh = H * 0.5;
+      qViews.forEach((qv, idx)=>{
+        const qx = (idx % 2) * hw, qy = Math.floor(idx / 2) * hh;
+        ctx.save();
+        ctx.beginPath(); ctx.rect(qx, qy, hw, hh); ctx.clip();
+        ctx.translate(qx, qy);
+        ctx.scale(0.5, 0.5);
+        renderSingleStageView(ctx, W, H, fi, qv.id);
+        ctx.restore();
+        ctx.strokeStyle = '#161412'; ctx.lineWidth = 1.2;
+        ctx.strokeRect(qx, qy, hw, hh);
+        ctx.fillStyle = 'rgba(22, 20, 18, 0.82)';
+        ctx.fillRect(qx + 4, qy + 4, 92, 15);
+        ctx.fillStyle = '#FBFAF6';
+        ctx.font = '700 9px "JetBrains Mono", monospace';
+        ctx.fillText(qv.lbl, qx + 8, qy + 14.5);
+      });
+      return;
+    }
 
-    if(wormMode === 'parallel'){
+    renderSingleStageView(ctx, W, H, fi, view);
+  }
+
+  function renderSingleWormLens(ctx, W, H, fi, N, planes, zRef, mode){
+    if(mode === 'parallel'){
       renderParallelTimelinesMode(ctx, W, H, fi, N, planes, zRef);
       return;
     }
 
-    if(wormMode === 'strobe'){
+    if(mode === 'strobe'){
       const padT = 36, padB = 30, padL = 16, padR = 16;
       const stageW = W - padL - padR, stageH = H - padT - padB;
       ctx.save();
@@ -1633,13 +1666,10 @@ body.worms-no-scroll{
       ctx.restore();
       ctx.strokeStyle = '#161412'; ctx.lineWidth = 1.4;
       ctx.beginPath(); ctx.roundRect(padL, padT, stageW, stageH, 6); ctx.stroke();
-      ctx.fillStyle = '#5E554B';
-      ctx.font = '600 10.5px "JetBrains Mono", monospace';
-      ctx.fillText('Green: Start (f=01)   ·   Orange Spine: Centroid Path   ·   Red: End', padL, H - 10);
       return;
     }
 
-    if(wormMode === 'kymo'){
+    if(mode === 'kymo'){
       const padL = 128, padR = 16, padT = 38, padB = 22;
       const trackW = W - padL - padR, availH = H - padT - padB, gap = 8;
       const bandH = (availH - gap*2) / 3;
@@ -1677,7 +1707,7 @@ body.worms-no-scroll{
       return;
     }
 
-    if(wormMode === 'anatomy'){
+    if(mode === 'anatomy'){
       const padL = 14, padR = 14, padT = 38, padB = 18;
       const topH = Math.round((H - padT - padB)*0.48);
       const botY = padT + topH + 10, botH = H - padB - botY;
@@ -1687,6 +1717,7 @@ body.worms-no-scroll{
       drawSamCutoutInRect(ctx, curWorm, 0, padL+6, padT+20, halfW-12, topH-26, {cropToMask:true, drawOutline:true, outlineColor:'#BFAF97', drawDoodle:true, doodleColor:'#EF9F3A'});
       ctx.fillStyle = '#8A4A05'; ctx.font = '700 10px "JetBrains Mono", monospace';
       ctx.fillText('THE LINE (f=01 Seed Doodle)', padL+8, padT+14);
+      pushHitBox({x: padL, y: padT, w: halfW, h: topH, fi: 0, planeId: null, togglePlane: false});
 
       const rx0 = padL + halfW + 10;
       ctx.fillStyle = '#FFFDF8'; ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 1.6;
@@ -1729,7 +1760,7 @@ body.worms-no-scroll{
       return;
     }
 
-    if(wormMode === 'box'){
+    if(mode === 'box'){
       const padX=28, padT=40, padB=24, availW=W-padX*2, availH=H-padT-padB, nP=planes.length;
       const srcW = (S && S.W) || curWorm.W || 480, srcH = (S && S.H) || curWorm.H || 360;
       planes.forEach((plane, idx)=>{
@@ -1765,7 +1796,7 @@ body.worms-no-scroll{
         ctx.fillStyle='#161412';
         ctx.fillText(lblText, lx+4, ly+10);
         ctx.restore();
-        wormHitBoxes.push({x: cx, y: cy, w: pw, h: ph, fi, planeId: plane.id, togglePlane: true});
+        pushHitBox({x: cx, y: cy, w: pw, h: ph, fi, planeId: plane.id, togglePlane: true});
       });
       return;
     }
@@ -1804,7 +1835,7 @@ body.worms-no-scroll{
       ctx.font = '500 9.5px "JetBrains Mono", monospace';
       ctx.fillText(`z=${plane.z} · k=${(zRef/Math.max(0.2,plane.z)).toFixed(2)}x`, 15, y0 + Math.min(33, laneH*0.76));
       ctx.restore();
-      wormHitBoxes.push({x: 11, y: y0 + 1, w: padL - 16, h: laneH - 2, fi, planeId: plane.id, togglePlane: true});
+      pushHitBox({x: 11, y: y0 + 1, w: padL - 16, h: laneH - 2, fi, planeId: plane.id, togglePlane: true});
 
       ctx.save();
       ctx.beginPath(); ctx.rect(padL, y0+2, trackW, laneH-4); ctx.clip();
@@ -1830,7 +1861,7 @@ body.worms-no-scroll{
         if(isChar) drawSamCutoutInRect(ctx, curWorm, ti, rx+1, ry+1, celW-2, celH-2, {cropToMask:true, drawOutline:false, drawDoodle:true});
         else drawPlaneObjectsInRect(ctx, plane, ti, rx+1, ry+1, celW-2, celH-2, true);
         ctx.restore();
-        wormHitBoxes.push({x: rx, y: ry, w: celW, h: celH, fi: ti, planeId: null, togglePlane: false});
+        pushHitBox({x: rx, y: ry, w: celW, h: celH, fi: ti, planeId: null, togglePlane: false});
       }
 
       const arx = Math.max(padL+2, Math.min(padL+trackW-actW-2, actX-actW*0.5));
@@ -1852,10 +1883,259 @@ body.worms-no-scroll{
     ctx.restore();
   }
 
+  function renderAll109WormsWall(ctx, W, H, fi, N){
+    ctx.fillStyle = '#0D0C0A';
+    ctx.fillRect(0, 0, W, H);
+    const total = WORMS.length || 1;
+    const cols = 11;
+    const rows = Math.ceil(total / cols);
+    const pad = 6, padBot = 24, gap = 3;
+    const cw = (W - pad*2 - gap*(cols - 1)) / cols;
+    const ch = (H - pad - padBot - gap*(rows - 1)) / rows;
+    const uNorm = N > 1 ? fi / (N - 1) : 0;
+
+    WORMS.forEach((w, idx)=>{
+      const c = idx % cols;
+      const r = Math.floor(idx / cols);
+      const cx = pad + c * (cw + gap);
+      const cy = pad + r * (ch + gap);
+      const isCur = (idx === curIdx);
+
+      ctx.save();
+      ctx.fillStyle = isCur ? '#2B2214' : '#161411';
+      ctx.strokeStyle = isCur ? '#EF9F3A' : '#332E27';
+      ctx.lineWidth = isCur ? 2.0 : 1.0;
+      ctx.beginPath();
+      ctx.roundRect(cx, cy, cw, ch, 3);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.rect(cx + 1, cy + 1, cw - 2, ch - 2);
+      ctx.clip();
+
+      const dws = w.depth_worms || [];
+      for(let i = dws.length - 1; i >= 0; i--){
+        const dw = dws[i];
+        const tr = dw.track || [];
+        if(!tr.length) continue;
+        ctx.beginPath();
+        for(let ti = 0; ti < tr.length; ti++){
+          const tx = cx + 4 + (tr.length > 1 ? (ti / (tr.length - 1)) * (cw - 8) : (cw - 8) * 0.5);
+          const ty = cy + 11 + Math.max(0.05, Math.min(0.95, tr[ti][1])) * (ch - 14);
+          if(ti === 0) ctx.moveTo(tx, ty); else ctx.lineTo(tx, ty);
+        }
+        ctx.strokeStyle = dw.role === 'subject' ? '#EF9F3A' : (dw.color || '#6E98D6');
+        ctx.lineWidth = dw.role === 'subject' ? 1.6 : 0.85;
+        ctx.globalAlpha = dw.role === 'subject' ? 0.95 : 0.45;
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+
+      const wfCount = (w.frames && w.frames.length) || w.n_frames || 1;
+      const wFi = Math.min(wfCount - 1, Math.max(0, Math.round(uNorm * (wfCount - 1))));
+      const playX = cx + 4 + uNorm * (cw - 8);
+      ctx.strokeStyle = isCur ? '#FFFFFF' : 'rgba(239, 159, 58, 0.72)';
+      ctx.lineWidth = 1.05;
+      ctx.beginPath();
+      ctx.moveTo(playX, cy + 10);
+      ctx.lineTo(playX, cy + ch - 2);
+      ctx.stroke();
+
+      const fr = w.frames && w.frames[wFi];
+      if(fr && fr.doodle){
+        ctx.strokeStyle = '#FFFDF8';
+        ctx.lineWidth = 0.9;
+        const dBox = Math.min(cw * 0.35, ch - 12);
+        const dx0 = Math.max(cx + 2, Math.min(cx + cw - dBox - 2, playX - dBox * 0.5));
+        const dy0 = cy + 10 + (ch - 11 - dBox) * 0.5;
+        for(const s of fr.doodle){
+          if(!s || s.length < 2) continue;
+          ctx.beginPath();
+          for(let k = 0; k < s.length; k++){
+            const px = dx0 + s[k][0] * dBox;
+            const py = dy0 + s[k][1] * dBox;
+            if(k === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+          }
+          ctx.stroke();
+        }
+      }
+
+      ctx.fillStyle = isCur ? '#EF9F3A' : '#CFC6B8';
+      ctx.font = '700 7.5px "JetBrains Mono", monospace';
+      const lbl = `${(w.lot || '').replace('SM-','')} ${(w.title || w.slug || '').slice(0, 7)}`.trim();
+      ctx.fillText(lbl, cx + 3, cy + 8.5);
+      ctx.restore();
+
+      pushHitBox({x: cx, y: cy, w: cw, h: ch, selectShotIdx: idx});
+    });
+  }
+
+  function areAllPlanesOn(planes){
+    if(soloPlaneId !== null) return false;
+    return planes.every(p => planeOn[p.id] !== false);
+  }
+
+  function togglePlaneVisibility(pid){
+    const planes = getActivePlanes();
+    soloPlaneId = null;
+    planeOn[pid] = (planeOn[pid] === false) ? true : false;
+    const anyVisible = planes.some(p => planeOn[p.id] !== false);
+    if(!anyVisible) planeOn = {};
+  }
+
+  function renderWorm(fi){
+    if(!curWorm) return;
+    wormHitBoxes = [];
+    hitTransform = {tx: 0, ty: 0, sx: 1, sy: 1};
+    const W = cvWorm.width, H = cvWorm.height;
+    const ctx = ctxWorm;
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle = '#FBFAF6';
+    ctx.fillRect(0,0,W,H);
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
+    const planes = getActivePlanes();
+    const meta = LENS_META[wormMode] || LENS_META.parallel;
+    const lblText = (wormMode === 'all')
+      ? 'all 6 lenses simultaneously · click any slice or badge'
+      : (wormMode === 'wall')
+        ? 'all 109 space-worms live wall · click any worm to select'
+        : (wormMode === 'parallel' && parallelSubMode === 'butter')
+          ? 'butter loaf (all depth rails × all slices · click any slice)'
+          : (wormMode === 'parallel' && parallelSubMode === 'slices')
+            ? 'all slices contact sheet (click any slice)'
+            : meta.lbl;
+    document.getElementById('idxLblWorm').textContent = lblText;
+    const visCount = planes.filter(p => isPlaneVisible(p.id)).length;
+    const planeTxt = (visCount === planes.length) ? `All ${planes.length} planes` : `${visCount}/${planes.length} planes`;
+    document.getElementById('idxLblWormR').textContent = `${planeTxt} · f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
+
+    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
+
+    if(wormMode === 'wall'){
+      renderAll109WormsWall(ctx, W, H, fi, N);
+      return;
+    }
+
+    if(wormMode === 'all'){
+      const lenses = [
+        {id:'parallel', lbl:'1 · 3D Butter'},
+        {id:'lanes',    lbl:'2 · Planes'},
+        {id:'strobe',   lbl:'3 · Trail'},
+        {id:'kymo',     lbl:'4 · Graphs'},
+        {id:'anatomy',  lbl:'5 · Rig'},
+        {id:'box',      lbl:'6 · Depth Box'}
+      ];
+      const cols = 3, rows = 2;
+      const pad = 6, padBot = 24, gap = 5;
+      const pw = (W - pad*2 - gap*(cols - 1)) / cols;
+      const ph = (H - pad - padBot - gap*(rows - 1)) / rows;
+      lenses.forEach((m, idx)=>{
+        const c = idx % cols, r = Math.floor(idx / cols);
+        const px = pad + c * (pw + gap);
+        const py = pad + r * (ph + gap);
+        const sx = pw / W, sy = ph / H;
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.roundRect(px, py, pw, ph, 5);
+        ctx.clip();
+        ctx.fillStyle = '#FBFAF6';
+        ctx.fillRect(px, py, pw, ph);
+        ctx.translate(px, py);
+        ctx.scale(sx, sy);
+        hitTransform = {tx: px, ty: py, sx, sy};
+        renderSingleWormLens(ctx, W, H, fi, N, planes, zRef, m.id);
+        ctx.restore();
+
+        hitTransform = {tx: 0, ty: 0, sx: 1, sy: 1};
+        ctx.strokeStyle = '#161412';
+        ctx.lineWidth = 1.3;
+        ctx.beginPath();
+        ctx.roundRect(px, py, pw, ph, 5);
+        ctx.stroke();
+
+        const bx = px + 5, by = py + 4, bw = 92, bh = 15;
+        ctx.fillStyle = 'rgba(22, 20, 18, 0.86)';
+        ctx.beginPath();
+        ctx.roundRect(bx, by, bw, bh, 3);
+        ctx.fill();
+        ctx.fillStyle = '#EF9F3A';
+        ctx.font = '700 9px "JetBrains Mono", monospace';
+        ctx.fillText(m.lbl, bx + 5, by + 11);
+        pushHitBox({x: bx, y: by, w: bw, h: bh, setMode: m.id});
+      });
+      return;
+    }
+
+    renderSingleWormLens(ctx, W, H, fi, N, planes, zRef, wormMode);
+  }
+
+  function drawRackMiniWorm(cv, w, uNorm){
+    const c = cv.getContext('2d');
+    c.fillStyle = '#FBFAF6';
+    c.fillRect(0, 0, 118, 32);
+    const dws = w.depth_worms || [];
+    for(let i = dws.length - 1; i >= 0; i--){
+      const dw = dws[i], tr = dw.track || [];
+      if(!tr.length) continue;
+      c.beginPath();
+      for(let ti = 0; ti < tr.length; ti++){
+        const x = 4 + (tr.length > 1 ? (ti / (tr.length - 1)) * 110 : 55);
+        const y = 4 + Math.max(0.08, Math.min(0.92, tr[ti][1])) * 24;
+        if(ti === 0) c.moveTo(x, y); else c.lineTo(x, y);
+      }
+      c.strokeStyle = dw.role === 'subject' ? '#EF9F3A' : (dw.color || '#8A6114');
+      c.lineWidth = dw.role === 'subject' ? 2.4 : 1.25;
+      c.globalAlpha = dw.role === 'subject' ? 0.95 : 0.45;
+      c.stroke();
+    }
+    c.globalAlpha = 1;
+    const nf = (w.frames && w.frames.length) || 1;
+    const actQ = Math.min(nf - 1, Math.max(0, Math.round((uNorm || 0) * (nf - 1))));
+    const qList = [0, actQ, nf - 1];
+    for(const q of qList){
+      const fr = w.frames && w.frames[q];
+      if(!fr || !fr.doodle) continue;
+      const xOff = (nf > 1 ? (q / (nf - 1)) : 0.5) * 90;
+      c.strokeStyle = (q === actQ) ? '#161412' : 'rgba(138, 74, 5, 0.55)';
+      c.lineWidth = (q === actQ) ? 1.15 : 0.85;
+      for(const s of fr.doodle){
+        if(!s || s.length < 2) continue;
+        c.beginPath();
+        for(let k = 0; k < s.length; k++){
+          const px = 3 + xOff + s[k][0] * 24, py = 2 + s[k][1] * 28;
+          if(k === 0) c.moveTo(px, py); else c.lineTo(px, py);
+        }
+        c.stroke();
+      }
+    }
+    const pxPlay = 4 + (uNorm || 0) * 110;
+    c.strokeStyle = '#EF9F3A';
+    c.lineWidth = 1.4;
+    c.beginPath();
+    c.moveTo(pxPlay, 1);
+    c.lineTo(pxPlay, 31);
+    c.stroke();
+  }
+
+  function syncRackMiniWorms(uNorm){
+    for(let i = rackMiniWorms.length - 1; i >= 0; i--){
+      const item = rackMiniWorms[i];
+      if(!item.cv.isConnected){
+        rackMiniWorms.splice(i, 1);
+        continue;
+      }
+      drawRackMiniWorm(item.cv, item.w, uNorm);
+    }
+  }
+
   function updateConditionalState(){
-    if(showAllPlanesBtn) showAllPlanesBtn.style.display = soloPlaneId ? '' : 'none';
+    const planes = getActivePlanes();
+    const allActive = areAllPlanesOn(planes);
+    if(showAllPlanesBtn) showAllPlanesBtn.style.display = allActive ? 'none' : '';
     if(resetBtn){
-      const isModified = (f !== 0) || (soloPlaneId !== null) || (view !== 'composite');
+      const isModified = (f !== 0) || !allActive || (view !== 'composite');
       resetBtn.style.display = isModified ? '' : 'none';
     }
   }
@@ -1871,6 +2151,7 @@ body.worms-no-scroll{
     scrub.value = String(f);
     readout.textContent = `f ${String(f+1).padStart(2,'0')} / ${String(N).padStart(2,'0')}`;
     updateConditionalState();
+    syncRackMiniWorms(N > 1 ? f / (N - 1) : 0);
   }
 
   function buildPlanesAndTicks(){
@@ -1878,16 +2159,30 @@ body.worms-no-scroll{
     ticksEl.innerHTML = '';
     if(!curWorm) return;
     const planes = getActivePlanes();
-    planes.forEach(p=>{
-      if(!(p.id in planeOn)) planeOn[p.id] = true;
+    const allActive = areAllPlanesOn(planes);
+
+    const allBtn = document.createElement('button');
+    allBtn.type = 'button';
+    allBtn.className = 'w-plane-pill';
+    allBtn.setAttribute('aria-pressed', allActive ? 'true' : 'false');
+    allBtn.textContent = `All (${planes.length})`;
+    allBtn.addEventListener('click', ()=>{
+      soloPlaneId = null;
+      planeOn = {};
+      buildPlanesAndTicks();
+      renderAll();
+    });
+    planesEl.appendChild(allBtn);
+
+    planes.slice().reverse().forEach(p=>{
+      const vis = isPlaneVisible(p.id);
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'w-plane-pill' + (p.id === 'char' ? ' subj' : '');
-      if(soloPlaneId === p.id) btn.classList.add('soloed');
-      else if(soloPlaneId && soloPlaneId !== p.id) btn.classList.add('muted');
+      btn.setAttribute('aria-pressed', vis ? 'true' : 'false');
       btn.textContent = `${p.label} · z=${p.z}`;
       btn.addEventListener('click', ()=>{
-        soloPlaneId = (soloPlaneId === p.id) ? null : p.id;
+        togglePlaneVisibility(p.id);
         buildPlanesAndTicks();
         renderAll();
       });
@@ -2059,8 +2354,23 @@ body.worms-no-scroll{
       const pt = eventToCanvasPt(cvWorm, e);
       const hit = findWormHit(pt) || findWormHit(wormDownPt);
       if(hit){
+        if(hit.selectShotIdx !== undefined){
+          selectShot(hit.selectShotIdx);
+          isScrubbing = false;
+          wormDownPt = null;
+          return;
+        }
+        if(hit.setMode){
+          wormMode = hit.setMode;
+          document.querySelectorAll('[data-idxwmode]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.idxwmode===wormMode?'true':'false'));
+          if(parTools) parTools.style.display = (wormMode === 'parallel' || wormMode === 'all') ? '' : 'none';
+          renderAll();
+          isScrubbing = false;
+          wormDownPt = null;
+          return;
+        }
         if(hit.togglePlane && hit.planeId){
-          soloPlaneId = (soloPlaneId === hit.planeId) ? null : hit.planeId;
+          togglePlaneVisibility(hit.planeId);
           buildPlanesAndTicks();
         }
         if(hit.fi !== undefined && hit.fi !== null){
@@ -2081,8 +2391,8 @@ body.worms-no-scroll{
     btn.addEventListener('click', ()=>{
       wormMode = btn.dataset.idxwmode;
       document.querySelectorAll('[data-idxwmode]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
-      if(parTools) parTools.style.display = (wormMode === 'parallel') ? '' : 'none';
-      if(curWorm && (wormMode === 'strobe' || wormMode === 'kymo' || wormMode === 'parallel')){
+      if(parTools) parTools.style.display = (wormMode === 'parallel' || wormMode === 'all') ? '' : 'none';
+      if(curWorm && (wormMode === 'strobe' || wormMode === 'kymo' || wormMode === 'parallel' || wormMode === 'all')){
         const N = curWorm.n_frames || 1;
         for(let i=0;i<N;i+=Math.max(1, Math.floor(N/8))) getFrameImg(curWorm, i);
       }
@@ -2107,6 +2417,7 @@ body.worms-no-scroll{
   if(showAllPlanesBtn){
     showAllPlanesBtn.addEventListener('click', ()=>{
       soloPlaneId = null;
+      planeOn = {};
       buildPlanesAndTicks();
       renderAll();
     });
@@ -2118,6 +2429,7 @@ body.worms-no-scroll{
       playBtn.textContent = 'Play';
       f = 0;
       soloPlaneId = null;
+      planeOn = {};
       view = 'composite';
       document.querySelectorAll('[data-idxview]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.idxview==='composite'?'true':'false'));
       buildPlanesAndTicks();
@@ -2253,7 +2565,7 @@ body.worms-no-scroll{
       const {w, idx} = match;
       const box = document.createElement('div');
       box.className = 'mini-worm-box';
-      box.title = 'Click to explore & scrub this Space-Worm at the top of the page';
+      box.title = 'Click or scrub this Space-Worm';
       const nP = (w.depth_worms && w.depth_worms.length) || (w.planes && w.planes.length) || 2;
       box.innerHTML = `
         <canvas width="118" height="32"></canvas>
@@ -2263,41 +2575,14 @@ body.worms-no-scroll{
         </div>
       `;
       const cv = box.querySelector('canvas');
-      const c = cv.getContext('2d');
-      c.fillStyle = '#FBFAF6'; c.fillRect(0,0,118,32);
-      const dws = w.depth_worms || [];
-      for(let i=dws.length-1;i>=0;i--){
-        const dw = dws[i], tr = dw.track || [];
-        if(!tr.length) continue;
-        c.beginPath();
-        for(let ti=0;ti<tr.length;ti++){
-          const x = 4 + (tr.length>1 ? (ti/(tr.length-1))*110 : 55);
-          const y = 4 + Math.max(0.08, Math.min(0.92, tr[ti][1]))*24;
-          if(ti===0) c.moveTo(x,y); else c.lineTo(x,y);
-        }
-        c.strokeStyle = dw.role==='subject' ? '#EF9F3A' : (dw.color || '#8A6114');
-        c.lineWidth = dw.role==='subject' ? 2.5 : 1.3;
-        c.globalAlpha = dw.role==='subject' ? 0.95 : 0.45;
-        c.stroke();
-      }
-      c.globalAlpha = 1;
-      const nf = (w.frames && w.frames.length) || 1;
-      for(const q of [0, Math.floor(nf/2), nf-1]){
-        const fr = w.frames && w.frames[q];
-        if(!fr || !fr.doodle) continue;
-        const xOff = (nf>1 ? (q/(nf-1)) : 0.5) * 90;
-        c.strokeStyle = q===0 ? '#8A4A05' : '#161412';
-        c.lineWidth = 0.95;
-        for(const s of fr.doodle){
-          if(!s || s.length<2) continue;
-          c.beginPath();
-          for(let k=0;k<s.length;k++){
-            const px = 3 + xOff + s[k][0]*24, py = 2 + s[k][1]*28;
-            if(k===0) c.moveTo(px,py); else c.lineTo(px,py);
-          }
-          c.stroke();
-        }
-      }
+      drawRackMiniWorm(cv, w, 0);
+      rackMiniWorms.push({cv, w});
+
+      cv.addEventListener('pointermove', (e)=>{
+        const r = cv.getBoundingClientRect();
+        const u = Math.max(0, Math.min(1, (e.clientX - r.left) / Math.max(1, r.width)));
+        drawRackMiniWorm(cv, w, u);
+      });
 
       box.addEventListener('click', (e)=>{
         e.preventDefault();
