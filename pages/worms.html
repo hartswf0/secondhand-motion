@@ -552,7 +552,9 @@
           </div>
           <!-- Bound strictly to valid state: only visible when Lens 1 (3D Stretch) is active -->
           <div class="seg" id="parallelSubSeg" role="group" aria-label="3D Timeline Mode">
-            <button type="button" data-psub="radial" aria-pressed="true">Radial Fan</button>
+            <button type="button" data-psub="butter" aria-pressed="true">Butter Loaf</button>
+            <button type="button" data-psub="slices" aria-pressed="false">All Slices</button>
+            <button type="button" data-psub="radial" aria-pressed="false">Radial Fan</button>
             <button type="button" data-psub="dual" aria-pressed="false">2-Rail</button>
           </div>
           <button type="button" class="btn" id="parThemeBtn" aria-pressed="true">Dark / Paper</button>
@@ -673,7 +675,7 @@
   let frameImgCache = new Map();
 
   let wormMode = 'parallel';
-  let parallelSubMode = 'radial';
+  let parallelSubMode = 'butter';
   let parallelDark = true;
   let mobPipMode = true;
   let view = 'composite';
@@ -682,6 +684,7 @@
   let f = 0;
   let lastTick = 0;
   let soloPlaneId = null;
+  let wormHitBoxes = [];
 
   const PLANE_TINTS = {
     far:   {fill:'rgba(92, 128, 188, 0.22)', stroke:'#3A5F9CD0'},
@@ -993,8 +996,24 @@
       label: null,
       labelColor: '#FFFFFF',
       skewY: -0.16,
-      skewX: -0.09
+      skewX: -0.09,
+      butterSlab: true,
+      slabDepth: 5.5,
+      noHit: false,
+      togglePlane: false
     }, opts || {});
+
+    if(!o.noHit){
+      wormHitBoxes.push({
+        x: cx - cw * 0.56,
+        y: cy - ch * 0.56,
+        w: cw * 1.12,
+        h: ch * 1.12,
+        fi: fi,
+        planeId: (o.plane && o.plane.id) ? o.plane.id : null,
+        togglePlane: Boolean(o.togglePlane)
+      });
+    }
 
     ctx.save();
     ctx.globalAlpha = o.alpha;
@@ -1005,7 +1024,30 @@
     const y0 = -ch * 0.5;
 
     ctx.fillStyle = 'rgba(0,0,0,0.40)';
-    ctx.fillRect(x0 + 3, y0 + 4, cw, ch);
+    ctx.fillRect(x0 + 3, y0 + 4, cw + (o.butterSlab ? o.slabDepth : 0), ch + (o.butterSlab ? o.slabDepth * 0.65 : 0));
+
+    // 3D Butter-Slab extruded right and bottom faces
+    if(o.butterSlab && o.slabDepth > 0){
+      const sd = o.slabDepth;
+      const sy = sd * 0.62;
+      ctx.fillStyle = '#E5BE62';
+      ctx.beginPath();
+      ctx.moveTo(x0 + cw, y0);
+      ctx.lineTo(x0 + cw + sd, y0 + sy);
+      ctx.lineTo(x0 + cw + sd, y0 + ch + sy);
+      ctx.lineTo(x0 + cw, y0 + ch);
+      ctx.closePath();
+      ctx.fill();
+
+      ctx.fillStyle = '#C4942D';
+      ctx.beginPath();
+      ctx.moveTo(x0, y0 + ch);
+      ctx.lineTo(x0 + cw, y0 + ch);
+      ctx.lineTo(x0 + cw + sd, y0 + ch + sy);
+      ctx.lineTo(x0 + sd, y0 + ch + sy);
+      ctx.closePath();
+      ctx.fill();
+    }
 
     ctx.fillStyle = o.bgFill;
     ctx.fillRect(x0, y0, cw, ch);
@@ -1087,30 +1129,226 @@
     }
     ctx.fillRect(0, 0, W, H);
 
-    const topSafe = 14;
-    const botSafe = 14;
-
-    const vx = W * 0.04, vy = H * 0.24;
-    const fx = W * 0.94, fy = H * 0.76;
-
-    function spinePt(u){
-      const p = Math.pow(Math.max(0, Math.min(1, u)), 0.90);
-      return {
-        x: vx + p * (fx - vx),
-        y: vy + p * (fy - vy),
-        s: 0.48 + p * 0.68
-      };
-    }
-
-    const uPlay = 0.24 + (N > 1 ? (fi / (N - 1)) : 0.5) * 0.54;
-    const spPlay = spinePt(uPlay);
-
     const keys = (S && S.keys) || curWorm.keys || {};
     const drawnArr = (keys.drawn && keys.drawn.length >= 2)
       ? keys.drawn.slice()
       : [0, Math.floor(N*0.25), Math.floor(N*0.5), Math.floor(N*0.75), Math.max(0, N-1)];
-
+    const drawnSet = new Set(drawnArr);
     const lineRGB = dark ? '255,255,255' : '22,20,18';
+
+    // Sub-mode: ALL SLICES (Flat Butter-Pat Contact Sheet of all N frames — click any slice)
+    if(parallelSubMode === 'slices'){
+      const pad = 10;
+      const availW = W - pad * 2;
+      const availH = H - pad * 2;
+      const aspect = availW / Math.max(1, availH);
+      const cols = Math.max(4, Math.min(9, Math.ceil(Math.sqrt(N * aspect * 0.85))));
+      const rows = Math.max(1, Math.ceil(N / cols));
+      const gap = 6;
+      const cellW = Math.floor((availW - gap * (cols - 1)) / cols);
+      const cellH = Math.floor((availH - gap * (rows - 1)) / rows);
+
+      for(let ti = 0; ti < N; ti++){
+        const c = ti % cols;
+        const r = Math.floor(ti / cols);
+        const x = pad + c * (cellW + gap);
+        const y = pad + r * (cellH + gap);
+        const isCur = (ti === fi);
+        const isKey = (ti === 0 || drawnSet.has(ti));
+
+        // 3D butter-pat bevel
+        ctx.fillStyle = isCur ? '#EF9F3A' : '#C4942D';
+        ctx.fillRect(x + 2.5, y + 2.5, cellW, cellH);
+
+        ctx.fillStyle = isCur ? '#FFFDF4' : '#FBFAF6';
+        ctx.fillRect(x, y, cellW, cellH);
+
+        const footH = 13;
+        const bodyH = Math.max(12, cellH - footH);
+        const img = getFrameImg(curWorm, ti);
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(x + 1, y + 1, cellW - 2, bodyH - 1);
+        ctx.clip();
+        if(img){
+          ctx.globalAlpha = isCur ? 0.42 : 0.25;
+          ctx.drawImage(img, x + 1, y + 1, cellW - 2, bodyH - 1);
+          ctx.globalAlpha = 1;
+        }
+        drawSamCutoutInRect(ctx, curWorm, ti, x + 2, y + 2, cellW - 4, bodyH - 3, {
+          cropToMask: true,
+          drawOutline: true,
+          outlineColor: isCur ? '#EF9F3A' : (isKey ? '#2E7A4A' : '#8A6114'),
+          drawDoodle: true,
+          doodleColor: '#161412'
+        });
+        ctx.restore();
+
+        ctx.fillStyle = isCur ? '#EF9F3A' : 'rgba(18,16,14,0.88)';
+        ctx.fillRect(x + 1, y + cellH - footH, cellW - 2, footH - 1);
+        ctx.fillStyle = isCur ? '#161412' : (isKey ? '#FBE6C8' : '#FFFFFF');
+        ctx.font = '700 8.5px "JetBrains Mono", monospace';
+        const tag = `f${String(ti+1).padStart(2,'0')}${ti===0?' SEED':(isKey?' KEY':'')}`;
+        ctx.fillText(tag, x + 4, y + cellH - 3.5);
+
+        ctx.strokeStyle = isCur ? '#EF9F3A' : (isKey ? '#F5C469' : 'rgba(255,255,255,0.55)');
+        ctx.lineWidth = isCur ? 2.4 : 1.1;
+        ctx.strokeRect(x, y, cellW, cellH);
+
+        wormHitBoxes.push({x, y, w: cellW, h: cellH, fi: ti, planeId: null, togglePlane: false});
+      }
+      return;
+    }
+
+    const topSafe = 14;
+    const botSafe = 14;
+
+    const vx = W * 0.06, vy = H * 0.22;
+    const fx = W * 0.90, fy = H * 0.78;
+
+    function spinePt(u){
+      const p = Math.pow(Math.max(0, Math.min(1, u)), 0.92);
+      return {
+        x: vx + p * (fx - vx),
+        y: vy + p * (fy - vy),
+        s: 0.52 + p * 0.64
+      };
+    }
+
+    // Sub-mode: BUTTER LOAF (3D Sliced Stick of Butter that parts open at fi + clickable depth pats)
+    if(parallelSubMode === 'butter'){
+      const maxSlices = Math.min(N, 18);
+      const sliceSet = new Set([0, N - 1, fi]);
+      drawnArr.forEach(k => { if(k >= 0 && k < N) sliceSet.add(k); });
+      for(let s = 0; s < maxSlices; s++){
+        const ti = maxSlices === 1 ? 0 : Math.round((s / (maxSlices - 1)) * (N - 1));
+        sliceSet.add(ti);
+      }
+      const sliceFrames = Array.from(sliceSet).sort((a, b) => a - b);
+
+      // Draw 3D butter-block guide rails
+      const cStart = spinePt(0.02), cEnd = spinePt(0.98);
+      ctx.strokeStyle = `rgba(${lineRGB}, 0.45)`;
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.moveTo(cStart.x, cStart.y);
+      ctx.lineTo(cEnd.x, cEnd.y);
+      ctx.stroke();
+
+      // Compute parted position for each slice in the stick of butter
+      let activePt = spinePt(0.5);
+      const sliceNodes = sliceFrames.map(ti => {
+        const rawU = N > 1 ? (ti / (N - 1)) : 0.5;
+        // Part the loaf open around fi so adjacent slices never obscure the active slice
+        let partShift = 0;
+        if(ti < fi) partShift = -0.055;
+        else if(ti > fi) partShift = 0.055;
+        const u = Math.max(0.03, Math.min(0.97, 0.07 + rawU * 0.84 + partShift));
+        const pt = spinePt(u);
+        if(ti === fi) activePt = pt;
+        return {ti, rawU, u, pt};
+      });
+
+      // Draw all non-active slices in back-to-front order (every slice is clickable!)
+      for(const sn of sliceNodes){
+        if(sn.ti === fi) continue;
+        const isKey = (sn.ti === 0 || drawnSet.has(sn.ti));
+        const cw = Math.round(68 * sn.pt.s);
+        const ch = Math.round(56 * sn.pt.s);
+        drawUpright3DCard(ctx, sn.pt.x, sn.pt.y, cw, ch, sn.ti, {
+          plane: null,
+          borderColor: isKey ? '#F5C469' : `rgba(${lineRGB}, 0.78)`,
+          borderWidth: isKey ? 1.8 : 1.2,
+          bgFill: '#FFFDF5',
+          alpha: 0.90,
+          cropToMask: true,
+          butterSlab: true,
+          slabDepth: Math.max(4, 6.5 * sn.pt.s),
+          label: `f${String(sn.ti+1).padStart(2,'0')}`,
+          labelColor: isKey ? '#FFD60A' : '#FFFFFF'
+        });
+      }
+
+      // Draw the active cross-section ring & fanned depth-plane butter pats around activePt
+      const visPlanes = planes.filter(p => isPlaneVisible(p.id));
+      const activeList = visPlanes.length ? visPlanes : planes;
+      const K = Math.max(1, activeList.length);
+      const RAIL_COLORS = ['#EF9F3A', '#FF453A', '#32D74B', '#409CFF', '#BF5AF2', '#FFD60A', '#64D2FF'];
+
+      const popX = Math.max(66, Math.min(W - 66, activePt.x - 28));
+      const popY = Math.max(topSafe + 48, Math.min(H - botSafe - 48, activePt.y - 22));
+
+      // Knife-cut ring around the parted butter slice
+      ctx.save();
+      ctx.strokeStyle = '#EF9F3A';
+      ctx.lineWidth = 1.6;
+      ctx.setLineDash([5, 3]);
+      ctx.beginPath();
+      ctx.ellipse(activePt.x, activePt.y, 118, 86, -0.14, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+
+      // Fan out the K depth-plane slices for frame fi around the parted slot
+      const planeCards = [];
+      for(let rIdx = 0; rIdx < K; rIdx++){
+        const plane = activeList[rIdx];
+        if(plane.id === 'char' && K > 1) continue;
+        const ang = -Math.PI * 0.42 + (rIdx / Math.max(1, K - 1)) * (Math.PI * 1.15);
+        const radX = 132, radY = 96;
+        const cx = Math.max(46, Math.min(W - 46, activePt.x + Math.cos(ang) * radX));
+        const cy = Math.max(topSafe + 34, Math.min(H - botSafe - 34, activePt.y + Math.sin(ang) * radY));
+        const col = RAIL_COLORS[rIdx % RAIL_COLORS.length];
+        planeCards.push({plane, cx, cy, col});
+      }
+
+      ctx.save();
+      ctx.strokeStyle = `rgba(${lineRGB}, 0.85)`;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(activePt.x, activePt.y);
+      ctx.lineTo(popX, popY);
+      ctx.stroke();
+      for(const pc of planeCards){
+        ctx.beginPath();
+        ctx.moveTo(activePt.x, activePt.y);
+        ctx.lineTo(pc.cx, pc.cy);
+        ctx.stroke();
+      }
+      ctx.restore();
+
+      for(const pc of planeCards){
+        const shortLbl = String(pc.plane.label || pc.plane.id).split('(')[0].trim().slice(0, 9);
+        drawUpright3DCard(ctx, pc.cx, pc.cy, 66, 54, fi, {
+          plane: pc.plane,
+          borderColor: pc.col,
+          borderWidth: 1.8,
+          bgFill: '#FFFDF5',
+          cropToMask: false,
+          butterSlab: true,
+          slabDepth: 5,
+          togglePlane: true,
+          label: `${shortLbl} z=${pc.plane.z}`,
+          labelColor: pc.col
+        });
+      }
+
+      // Popped-out active butter slice (Subject + Composite)
+      drawUpright3DCard(ctx, popX, popY, 96, 80, fi, {
+        plane: null,
+        borderColor: '#EF9F3A',
+        borderWidth: 2.8,
+        bgFill: '#FFFDF5',
+        cropToMask: false,
+        butterSlab: true,
+        slabDepth: 9,
+        label: `SLICE f${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`,
+        labelColor: '#EF9F3A'
+      });
+      return;
+    }
+
+    const uPlay = 0.24 + (N > 1 ? (fi / (N - 1)) : 0.5) * 0.54;
+    const spPlay = spinePt(uPlay);
 
     if(parallelSubMode === 'dual'){
       const redOff  = {dx: -118, dy: 72};
@@ -1519,6 +1757,7 @@
 
   function renderWorm(fi){
     if(!curWorm) return;
+    wormHitBoxes = [];
     const W = cvWorm.width, H = cvWorm.height;
     const ctx = ctxWorm;
     ctx.clearRect(0, 0, W, H);
@@ -1782,6 +2021,8 @@
         ctx.fillStyle = '#161412';
         ctx.fillText(lblText, lx + 4, ly + 10);
         ctx.restore();
+
+        wormHitBoxes.push({x: cx, y: cy, w: pw, h: ph, fi, planeId: plane.id, togglePlane: true});
       });
       return;
     }
@@ -1826,6 +2067,7 @@
       const kMult = (zRef / Math.max(0.2, plane.z)).toFixed(2);
       ctx.fillText(`z=${plane.z} · k=${kMult}x`, 16, y0 + Math.min(33, laneH*0.76));
       ctx.restore();
+      wormHitBoxes.push({x: 11, y: y0 + 1, w: padL - 16, h: laneH - 2, fi, planeId: plane.id, togglePlane: true});
 
       ctx.save();
       ctx.beginPath();
@@ -1865,6 +2107,7 @@
           drawPlaneObjectsInRect(ctx, plane, ti, rx+1, ry+1, celW-2, celH-2, true);
         }
         ctx.restore();
+        wormHitBoxes.push({x: rx, y: ry, w: celW, h: celH, fi: ti, planeId: null, togglePlane: false});
       }
 
       const arx = Math.max(padL + 2, Math.min(padL + trackW - actW - 2, actX - actW * 0.5));
@@ -2057,7 +2300,7 @@
 
     buildPlanesUI();
     buildKeyTicks();
-    for(let i=0;i<Math.min(N, 8);i++) getFrameImg(worm, i);
+    for(let i=0;i<N;i++) getFrameImg(worm, i);
     renderAll();
   }
 
@@ -2070,13 +2313,57 @@
     }
   }
 
-  // Direct horizontal drag-scrubbing on the worm canvas
+  function eventToCanvasPt(cv, e){
+    const rect = cv.getBoundingClientRect();
+    const clientX = (e.changedTouches && e.changedTouches.length) ? e.changedTouches[0].clientX : ((e.touches && e.touches.length) ? e.touches[0].clientX : e.clientX);
+    const clientY = (e.changedTouches && e.changedTouches.length) ? e.changedTouches[0].clientY : ((e.touches && e.touches.length) ? e.touches[0].clientY : e.clientY);
+    const cAspect = cv.width / cv.height;
+    const rAspect = rect.width / Math.max(1, rect.height);
+    let drawW = rect.width, drawH = rect.height, offX = 0, offY = 0;
+    if(rAspect > cAspect){
+      drawW = rect.height * cAspect;
+      offX = (rect.width - drawW) * 0.5;
+    } else {
+      drawH = rect.width / cAspect;
+      offY = (rect.height - drawH) * 0.5;
+    }
+    return {
+      x: ((clientX - rect.left - offX) / Math.max(1, drawW)) * cv.width,
+      y: ((clientY - rect.top - offY) / Math.max(1, drawH)) * cv.height,
+      clientX,
+      clientY
+    };
+  }
+
+  function findWormHit(pt){
+    for(let i = wormHitBoxes.length - 1; i >= 0; i--){
+      const b = wormHitBoxes[i];
+      if(pt.x >= b.x && pt.x <= b.x + b.w && pt.y >= b.y && pt.y <= b.y + b.h){
+        return b;
+      }
+    }
+    return null;
+  }
+
+  // Click into any slice OR drag horizontally to scrub like slicing butter
   let isScrubbingWorm = false;
+  let wormDownPt = null;
+  let wormDragged = false;
+
   function scrubFromWormEvent(e){
     if(!curWorm) return;
-    const rect = cvWorm.getBoundingClientRect();
-    const clientX = (e.touches && e.touches.length) ? e.touches[0].clientX : e.clientX;
-    const xRel = (clientX - rect.left) / Math.max(1, rect.width);
+    if(wormMode === 'parallel' && parallelSubMode === 'slices'){
+      const pt = eventToCanvasPt(cvWorm, e);
+      const hit = findWormHit(pt);
+      if(hit && hit.fi !== undefined && hit.fi !== null && hit.fi !== f){
+        f = hit.fi;
+        getFrameImg(curWorm, f);
+        renderAll();
+      }
+      return;
+    }
+    const pt = eventToCanvasPt(cvWorm, e);
+    const xRel = pt.x / Math.max(1, cvWorm.width);
     let padLFrac = 0.08, padRFrac = 0.08;
     if(wormMode === 'lanes' || wormMode === 'kymo'){ padLFrac = 124 / cvWorm.width; padRFrac = 14 / cvWorm.width; }
     else if(wormMode === 'strobe'){ padLFrac = 14 / cvWorm.width; padRFrac = 14 / cvWorm.width; }
@@ -2094,14 +2381,50 @@
   cvWorm.addEventListener('pointerdown', (e)=>{
     stopPlayback();
     isScrubbingWorm = true;
+    wormDragged = false;
+    wormDownPt = eventToCanvasPt(cvWorm, e);
     cvWorm.setPointerCapture(e.pointerId);
-    scrubFromWormEvent(e);
+    const hit = findWormHit(wormDownPt);
+    if(!hit){
+      scrubFromWormEvent(e);
+    }
   });
   cvWorm.addEventListener('pointermove', (e)=>{
-    if(isScrubbingWorm) scrubFromWormEvent(e);
+    const pt = eventToCanvasPt(cvWorm, e);
+    if(!isScrubbingWorm){
+      const hit = findWormHit(pt);
+      cvWorm.style.cursor = hit ? 'pointer' : 'ew-resize';
+      return;
+    }
+    if(wormDownPt && Math.hypot(pt.clientX - wormDownPt.clientX, pt.clientY - wormDownPt.clientY) > 6){
+      wormDragged = true;
+    }
+    if(wormDragged){
+      scrubFromWormEvent(e);
+    }
   });
-  cvWorm.addEventListener('pointerup', ()=>{ isScrubbingWorm = false; });
-  cvWorm.addEventListener('pointercancel', ()=>{ isScrubbingWorm = false; });
+  cvWorm.addEventListener('pointerup', (e)=>{
+    if(isScrubbingWorm && !wormDragged && wormDownPt){
+      const pt = eventToCanvasPt(cvWorm, e);
+      const hit = findWormHit(pt) || findWormHit(wormDownPt);
+      if(hit){
+        if(hit.togglePlane && hit.planeId){
+          soloPlaneId = (soloPlaneId === hit.planeId) ? null : hit.planeId;
+          buildPlanesUI();
+        }
+        if(hit.fi !== undefined && hit.fi !== null){
+          f = hit.fi;
+          getFrameImg(curWorm, f);
+        }
+        renderAll();
+      } else {
+        scrubFromWormEvent(e);
+      }
+    }
+    isScrubbingWorm = false;
+    wormDownPt = null;
+  });
+  cvWorm.addEventListener('pointercancel', ()=>{ isScrubbingWorm = false; wormDownPt = null; });
 
   // Lens buttons (Law 4: bind 3D sub-controls strictly to Parallel mode)
   document.querySelectorAll('[data-wmode]').forEach(btn=>{
