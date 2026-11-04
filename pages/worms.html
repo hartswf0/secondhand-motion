@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Secondhand Motion — Multiplane Space-Worms &amp; Interactive Explorer (All 109 Shots)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Secondhand Motion — Parallel Multiplane Multi-Worms (All 109 Shots)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -25,66 +25,71 @@
   }
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);overscroll-behavior-x:none}
 body{
   font-family:'Atkinson Hyperlegible',-apple-system,BlinkMacSystemFont,sans-serif;
-  font-size:15px; line-height:1.5; -webkit-font-smoothing:antialiased;
+  font-size:15px; line-height:1.45; -webkit-font-smoothing:antialiased;
 }
 a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--tag);text-underline-offset:3px}
 a:hover{color:var(--tag-ink)}
-.wrap{max-width:1380px;margin:0 auto;padding:14px 18px 64px}
+.wrap{max-width:1380px;margin:0 auto;padding:12px 16px 56px}
 
 .sm-head{
-  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
-  padding:8px 0 12px;border-bottom:1.5px solid var(--ink);margin-bottom:14px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  padding:6px 0 10px;border-bottom:1.5px solid var(--ink);margin-bottom:10px;
 }
 .sm-head .brand{
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:17px;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:16.5px;
   letter-spacing:-0.015em;text-decoration:none;color:var(--ink);
-  display:inline-flex;align-items:center;gap:8px;
+  display:inline-flex;align-items:center;gap:7px;
 }
-.sm-head .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--tag);display:inline-block}
-.sm-head nav{display:flex;gap:4px;flex-wrap:wrap}
+.sm-head .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--tag);display:inline-block}
+.sm-head nav{display:flex;gap:3px;flex-wrap:wrap;overflow-x:auto;max-width:100%}
 .sm-head nav a{
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;
-  padding:4px 10px;border-radius:999px;text-decoration:none;color:var(--muted);
-  border:1px solid transparent;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12px;
+  padding:3px 9px;border-radius:999px;text-decoration:none;color:var(--muted);
+  border:1px solid transparent;white-space:nowrap;
 }
 .sm-head nav a:hover{color:var(--ink);border-color:var(--rule-strong)}
 .sm-head nav a.here{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 
 header.shot-head{
-  display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;
-  margin-bottom:10px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  margin-bottom:8px;
 }
+.shot-title-wrap{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;min-width:0}
 h1{
   font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
-  font-size:clamp(21px,2.5vw,31px);line-height:1.08;letter-spacing:-0.02em;margin:0;
+  font-size:clamp(18px,2.2vw,28px);line-height:1.08;letter-spacing:-0.02em;margin:0;
 }
-.sub{color:var(--muted);font-size:13px;margin:2px 0 0}
-.sub .lot-pill{
-  font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;
-  padding:2px 7px;border-radius:4px;background:var(--tag-soft);color:var(--tag-ink);
-  margin-right:6px;
+.lot-pill{
+  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;
+  padding:2px 6px;border-radius:4px;background:var(--tag-soft);color:var(--tag-ink);
 }
-.head-right{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.sub{color:var(--muted);font-size:12.5px;margin:0}
+.head-right{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
 
 .stage{
   background:var(--sheet); border:1.5px solid var(--ink); border-radius:10px;
-  padding:12px 14px; box-shadow:0 6px 0 var(--rule-strong);
+  padding:10px 12px; box-shadow:0 5px 0 var(--rule-strong);
 }
 .bar{
-  display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;
-  margin-bottom:9px;
+  display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;
+  margin-bottom:8px;
 }
+.scroll-strip{
+  display:flex;align-items:center;gap:6px;overflow-x:auto;max-width:100%;
+  scrollbar-width:none;-ms-overflow-style:none;padding-bottom:2px;
+}
+.scroll-strip::-webkit-scrollbar{display:none}
 .seg{
   display:inline-flex;border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;
-  background:var(--card);flex-wrap:wrap;
+  background:var(--card);flex-shrink:0;
 }
 .seg button{
   font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11.5px;
   padding:5px 9px;border:0;background:transparent;color:var(--ink);cursor:pointer;
-  border-right:1px solid var(--rule);
+  border-right:1px solid var(--rule);white-space:nowrap;
 }
 .seg button:last-child{border-right:0}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
@@ -92,35 +97,31 @@ h1{
   font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11.5px;
   padding:5px 9px;border:1.5px solid var(--ink);border-radius:6px;
   background:var(--card);color:var(--ink);cursor:pointer;text-decoration:none;
-  display:inline-flex;align-items:center;gap:5px;
+  display:inline-flex;align-items:center;gap:4px;white-space:nowrap;flex-shrink:0;
 }
 .btn:hover{border-color:var(--tag)}
 .btn[aria-pressed="true"]{background:var(--tag);color:#161412;border-color:var(--ink)}
 .select-shot{
   font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;
-  padding:5px 9px;border:1.5px solid var(--ink);border-radius:6px;
-  background:var(--card);color:var(--ink);cursor:pointer;max-width:330px;
+  padding:4px 8px;border:1.5px solid var(--ink);border-radius:6px;
+  background:var(--card);color:var(--ink);cursor:pointer;max-width:290px;
 }
 
-/* Explanation banner for the active Worm Lens */
 .lens-banner{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
-  padding:6px 10px;margin-bottom:9px;border-radius:6px;
+  display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;
+  padding:5px 9px;margin-bottom:8px;border-radius:6px;
   background:var(--tag-soft);border:1px solid var(--tag);color:var(--ink);
-  font-size:12.5px;
+  font-size:12px;
 }
 .lens-banner b{
   font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:var(--tag-ink);
 }
-.lens-banner .lens-tip{
-  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--tag-ink);
-}
+.lens-controls{display:inline-flex;align-items:center;gap:5px;flex-wrap:wrap}
 
+/* Dual Screen Stage with Mobile PiP / Split Support */
 .screens{
-  display:grid;grid-template-columns:1.24fr 1fr;gap:12px;align-items:stretch;
-}
-@media (max-width:920px){
-  .screens{grid-template-columns:1fr}
+  position:relative;
+  display:grid;grid-template-columns:1.36fr 1fr;gap:10px;align-items:stretch;
 }
 .screen{
   position:relative;background:var(--cel);border:1.5px solid var(--ink);
@@ -130,130 +131,163 @@ h1{
   position:relative;width:100%;aspect-ratio:4/3;background:var(--cel);
   touch-action:none;user-select:none;
 }
-.screen-canvas-wrap.worm-wrap{cursor:ew-resize}
+.screen-canvas-wrap.worm-wrap{
+  cursor:ew-resize;background:#07080C;
+}
 .screen canvas{display:block;width:100%;height:100%}
 .screen .lbl{
-  position:absolute;top:7px;left:9px;
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;
-  background:rgba(246,239,227,0.92);color:#161412;
-  padding:2px 7px;border-radius:4px;border:1px solid var(--rule-strong);
-  pointer-events:none;z-index:2;
+  position:absolute;top:6px;left:8px;
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  background:rgba(22,20,18,0.82);color:#F6EFE3;
+  padding:2px 6px;border-radius:4px;border:1px solid rgba(255,255,255,0.22);
+  pointer-events:none;z-index:2;max-width:66%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.screen .lbl.light-lbl{
+  background:rgba(246,239,227,0.92);color:#161412;border-color:var(--rule-strong);
 }
 .screen .lbl-right{
-  position:absolute;top:7px;right:9px;
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  position:absolute;top:6px;right:8px;
+  font-family:'JetBrains Mono',monospace;font-size:10px;
   background:var(--tag-soft);color:var(--tag-ink);
-  padding:2px 7px;border-radius:4px;border:1px solid var(--tag);
+  padding:2px 6px;border-radius:4px;border:1px solid var(--tag);
   pointer-events:none;z-index:2;font-weight:600;
 }
 
 .controls{
   display:grid;grid-template-columns:auto auto auto 1fr auto;gap:8px;align-items:center;
-  margin-top:10px;padding-top:9px;border-top:1px solid var(--rule);
-}
-@media (max-width:680px){
-  .controls{grid-template-columns:auto auto 1fr;gap:6px}
-  .controls .f{grid-column:1/-1;text-align:left}
+  margin-top:8px;padding-top:8px;border-top:1px solid var(--rule);
 }
 .scrub{position:relative;display:flex;align-items:center;height:26px}
-.scrub input[type=range]{width:100%;accent-color:var(--tag);cursor:pointer;margin:0}
-.ticks{position:absolute;left:6px;right:6px;top:2px;height:6px;pointer-events:none}
-.ticks span{position:absolute;top:0;width:2px;height:6px;background:var(--rule-strong);transform:translateX(-1px)}
-.ticks span.drawn{background:var(--ink);height:8px;width:2.5px}
-.ticks span.line{background:var(--tag);height:10px;width:3px}
+.scrub input[type=range]{width:100%;accent-color:var(--tag);cursor:pointer;margin:0;height:22px}
+.ticks{position:absolute;left:6px;right:6px;top:2px;height:5px;pointer-events:none}
+.ticks span{position:absolute;top:0;width:2px;height:5px;background:var(--rule-strong);transform:translateX(-1px)}
+.ticks span.drawn{background:var(--ink);height:7px;width:2.5px}
+.ticks span.line{background:var(--tag);height:9px;width:3px}
 .f{
-  font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);
-  min-width:96px;text-align:right;
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);
+  min-width:84px;text-align:right;white-space:nowrap;
 }
 
 .legend{
-  display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;
-  margin-top:8px;font-size:12px;color:var(--muted);
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  margin-top:6px;font-size:11.5px;color:var(--muted);
 }
 .legend .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
-.planes{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.planes{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
 .planes label{
-  font-family:'JetBrains Mono',monospace;font-size:11px;
-  padding:3px 8px;border:1px solid var(--rule-strong);border-radius:4px;
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  padding:2px 7px;border:1px solid var(--rule-strong);border-radius:4px;
   background:var(--card);cursor:pointer;user-select:none;
-  display:inline-flex;align-items:center;gap:5px;
+  display:inline-flex;align-items:center;gap:4px;
 }
 .planes label.subj{border-color:var(--tag);background:var(--tag-soft);color:var(--tag-ink);font-weight:600}
 .planes label.soloed{outline:2px solid var(--ink)}
 .planes input{accent-color:var(--tag);margin:0;vertical-align:middle}
 
-/* Plain-English Space-Worm Decoder Grid */
 .decoder-grid{
   display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;
-  margin-top:10px;padding-top:10px;border-top:1px solid var(--rule);
-}
-@media (max-width:920px){
-  .decoder-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media (max-width:520px){
-  .decoder-grid{grid-template-columns:1fr}
+  margin-top:8px;padding-top:8px;border-top:1px solid var(--rule);
 }
 .dec-card{
   background:var(--card);border:1px solid var(--rule-strong);border-radius:6px;
-  padding:8px 10px;display:flex;flex-direction:column;gap:3px;
+  padding:7px 9px;display:flex;flex-direction:column;gap:2px;
 }
 .dec-card .dec-k{
-  font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;
   letter-spacing:0.05em;color:var(--tag-ink);font-weight:600;
 }
 .dec-card .dec-v{
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:13.5px;
-  color:var(--ink);line-height:1.2;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:13px;
+  color:var(--ink);line-height:1.18;
 }
-.dec-card .dec-p{
-  font-size:11.5px;color:var(--muted);line-height:1.35;margin:0;
-}
+.dec-card .dec-p{font-size:11px;color:var(--muted);line-height:1.32;margin:0}
 
-/* Catalog Strip below the stage */
-.rack-sec{margin-top:20px}
+/* Catalog Strip */
+.rack-sec{margin-top:16px}
 .rack-head{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
-  margin-bottom:10px;padding-bottom:6px;border-bottom:1.5px solid var(--ink);
+  display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;
+  margin-bottom:8px;padding-bottom:6px;border-bottom:1.5px solid var(--ink);
 }
-.rack-head h2{
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:17px;margin:0;
-}
+.rack-head h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:16px;margin:0}
 .rack-filters{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
 .rack-search{
-  font-family:'Atkinson Hyperlegible',sans-serif;font-size:13px;
-  padding:5px 10px;border:1.5px solid var(--ink);border-radius:6px;
-  background:var(--card);color:var(--ink);min-width:210px;
+  font-family:'Atkinson Hyperlegible',sans-serif;font-size:12.5px;
+  padding:4px 9px;border:1.5px solid var(--ink);border-radius:6px;
+  background:var(--card);color:var(--ink);min-width:190px;
 }
 .strip{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:8px;
-  max-height:420px;overflow-y:auto;padding:4px 2px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(164px,1fr));gap:7px;
+  max-height:390px;overflow-y:auto;padding:3px 2px;
 }
 .thumb{
-  display:flex;flex-direction:column;gap:4px;text-align:left;
-  padding:7px 8px;border:1.5px solid var(--rule-strong);border-radius:7px;
+  display:flex;flex-direction:column;gap:3px;text-align:left;
+  padding:6px 7px;border:1.5px solid var(--rule-strong);border-radius:7px;
   background:var(--card);color:var(--ink);cursor:pointer;
-  transition:transform .08s ease,border-color .08s ease;
 }
-.thumb:hover{transform:translateY(-1px);border-color:var(--ink)}
-.thumb.active{
-  border-color:var(--ink);background:var(--tag-soft);
-  box-shadow:0 3px 0 var(--ink);
-}
+.thumb:hover{border-color:var(--ink)}
+.thumb.active{border-color:var(--ink);background:var(--tag-soft);box-shadow:0 2px 0 var(--ink)}
 .thumb-top{
   display:flex;align-items:center;justify-content:space-between;gap:4px;
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);
+  font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);
 }
 .thumb-top .lot{font-weight:600;color:var(--tag-ink)}
 .thumb-title{
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13px;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;
   line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
-.thumb-sub{
-  font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
+.thumb-sub{font-size:10.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .thumb canvas{
-  width:100%;height:42px;border-radius:4px;background:var(--cel);
+  width:100%;height:38px;border-radius:4px;background:var(--cel);
   border:1px solid var(--rule);display:block;
+}
+
+/* ==================== MOBILE ZERO-SCROLL OPTIMIZATIONS ==================== */
+.mob-only{display:none}
+@media (max-width:860px){
+  .wrap{padding:6px 8px 40px}
+  .sm-head{padding:4px 0 6px;margin-bottom:6px;gap:6px}
+  .sm-head .brand{font-size:15px}
+  header.shot-head{margin-bottom:6px;gap:6px}
+  header.shot-head .sub{display:none}
+  .select-shot{max-width:175px;font-size:11.5px;padding:3px 6px}
+  .stage{padding:8px}
+  .bar{gap:5px;margin-bottom:6px}
+  .lens-banner{padding:4px 7px;margin-bottom:6px;font-size:11px}
+  .lens-banner #lensDesc{display:none}
+  .mob-only{display:inline-flex}
+
+  /* Default mobile layout: Side-by-Side Split OR Full Worm + PiP Corner Stage so ZERO vertical scroll is needed! */
+  .screens.mob-pip{
+    display:block;position:relative;
+  }
+  .screens.mob-pip .screen-worm{
+    width:100%;
+  }
+  .screens.mob-pip .screen-worm .screen-canvas-wrap{
+    aspect-ratio:16/11;
+  }
+  .screens.mob-pip .screen-stage{
+    position:absolute;right:8px;bottom:8px;width:36%;max-width:165px;
+    z-index:5;box-shadow:0 4px 14px rgba(0,0,0,0.45);border:2px solid var(--tag);
+  }
+  .screens.mob-pip .screen-stage .lbl,
+  .screens.mob-pip .screen-stage .lbl-right{display:none}
+
+  .screens.mob-split{
+    display:grid;grid-template-columns:1.25fr 0.95fr;gap:6px;
+  }
+  .screens.mob-split .screen-canvas-wrap{
+    aspect-ratio:4/3;
+  }
+
+  .controls{
+    grid-template-columns:auto auto 1fr auto;gap:5px;margin-top:6px;padding-top:6px;
+  }
+  .controls .speed-seg{display:none}
+  .decoder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin-top:6px;padding-top:6px}
+  .dec-card{padding:5px 7px}
+  .dec-card .dec-v{font-size:11.5px}
+  .dec-card .dec-p{font-size:10px}
 }
 </style>
 </head>
@@ -277,35 +311,33 @@ h1{
   </div>
 
   <header class="shot-head">
-    <div>
+    <div class="shot-title-wrap">
+      <span class="lot-pill" id="shotLot">SM-0004</span>
       <h1 id="shotTitle">Giraffe Walks Past</h1>
-      <p class="sub" id="shotSub">
-        <span class="lot-pill" id="shotLot">SM-0004</span>
-        <span id="shotMeta">Prelinger Archives · Wonderful World (Part II) · 33 frames @ 12 fps · 6 depth planes</span>
-      </p>
+      <p class="sub" id="shotMeta">Wonderful World (Part II) · 33f @ 12 fps · 6 depth planes</p>
     </div>
     <div class="head-right">
-      <button class="btn" id="prevShotBtn" type="button" title="Previous shot ([)">&#9664; Prev shot</button>
+      <button class="btn" id="prevShotBtn" type="button" title="Previous shot ([)">&#9664;</button>
       <select class="select-shot" id="shotSelect" aria-label="Choose shot"></select>
-      <button class="btn" id="nextShotBtn" type="button" title="Next shot (])">Next shot &#9654;</button>
-      <a class="btn" id="openPageLink" href="giraffe-walks-past.html">Shot page &#8599;</a>
+      <button class="btn" id="nextShotBtn" type="button" title="Next shot (])">&#9654;</button>
+      <a class="btn" id="openPageLink" href="giraffe-walks-past.html">Shot &#8599;</a>
     </div>
   </header>
 
-  <section class="stage" aria-label="Space-Worm Interpreter and Multiplane Player">
+  <section class="stage" aria-label="Parallel Multiplane Multi-Worm Explorer">
     <div class="bar">
-      <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--muted)">WORM LENS:</span>
+      <div class="scroll-strip">
         <div class="seg" role="group" aria-label="Space-Worm Interpretation Lens">
-          <button type="button" data-wormmode="lanes" aria-pressed="true" title="Disentangled horizontal cel tracks per depth plane">1 · Plane Worms</button>
-          <button type="button" data-wormmode="strobe" aria-pressed="false" title="Muybridge chronophotographic motion trail over the scene">2 · Stroboscopic Trail</button>
-          <button type="button" data-wormmode="kymo" aria-pressed="false" title="Horizontal X(t), Vertical Y(t) bounce, Scale R(t) & Camera Pan graphs">3 · Slit-Scan &amp; Graphs</button>
-          <button type="button" data-wormmode="anatomy" aria-pressed="false" title="The Line seed stroke vs Frame f warped rig, joint sub-worms & braid crossings">4 · Anatomy &amp; Joints</button>
-          <button type="button" data-wormmode="tunnel" aria-pressed="false" title="3D spatiotemporal cutout tunnel (t × z)">5 · 3D Cutout Worm</button>
+          <button type="button" data-wormmode="parallel" aria-pressed="true" title="3D Parallel & Stretched Output Timelines (1/K stretch fan + circular cross-section ring)">1 · Parallel Timelines (3D Stretch)</button>
+          <button type="button" data-wormmode="lanes" aria-pressed="false" title="Disentangled horizontal cel tracks per depth plane">2 · Plane Worms</button>
+          <button type="button" data-wormmode="strobe" aria-pressed="false" title="Muybridge chronophotographic motion trail over the scene">3 · Stroboscopic Trail</button>
+          <button type="button" data-wormmode="kymo" aria-pressed="false" title="Horizontal X(t), Vertical Y(t) bounce, Scale R(t) & Camera Pan graphs">4 · Slit-Scan &amp; Graphs</button>
+          <button type="button" data-wormmode="anatomy" aria-pressed="false" title="The Line seed stroke vs Frame f warped rig & joint sub-worms">5 · Anatomy &amp; Joints</button>
           <button type="button" data-wormmode="box" aria-pressed="false" title="Secondhand Motion receding multiplane camera box">6 · Planes in Depth</button>
         </div>
       </div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+
+      <div class="scroll-strip">
         <div class="seg" role="group" aria-label="Version / Pipeline Lane">
           <button type="button" id="varGwpBtn" data-variant="gwp" aria-pressed="true">Multiplane (GWP)</button>
           <button type="button" id="varSamBtn" data-variant="sam" aria-pressed="false" style="display:none">SAM Cutout</button>
@@ -319,31 +351,38 @@ h1{
           <button type="button" data-view="footage" aria-pressed="false">Footage</button>
           <button type="button" data-view="masks" aria-pressed="false">Silhouettes</button>
         </div>
-        <button type="button" class="btn" id="boilBtn" aria-pressed="true" title="3-frame hand boil">Boil</button>
-        <button type="button" class="btn" id="celBtn" aria-pressed="true" title="Opaque cream fill inside closed silhouettes">Paint cels</button>
+        <button type="button" class="btn" id="boilBtn" aria-pressed="true">Boil</button>
+        <button type="button" class="btn" id="celBtn" aria-pressed="true">Paint cels</button>
+        <button type="button" class="btn mob-only" id="mobLayoutBtn" aria-pressed="true" title="Toggle PiP vs Split View on mobile">PiP / Split</button>
       </div>
     </div>
 
     <div class="lens-banner" id="lensBanner">
       <div>
-        <b id="lensTitle">Lens 1 · Disentangled Plane Worms:</b>
-        <span id="lensDesc">One horizontal cel strip per depth plane (Near → Subject → Far). Shows how fast foreground vs. background scrolls and stamps real SAM video cutouts + ink drawings along time.</span>
+        <b id="lensTitle">Lens 1 · Parallel Output Timelines (1/K Stretched Multi-Worm):</b>
+        <span id="lensDesc">Input frames along the center spine fan out to parallel output timelines stretched 1/(layer number) times slower with the head fixed. Upright 3D cels slice across the circular playhead ring.</span>
       </div>
-      <span class="lens-tip">Drag horizontally on left screen to scrub · Click plane label to solo</span>
+      <div class="lens-controls" id="parallelControls">
+        <div class="seg" role="group" aria-label="Parallel timeline topology">
+          <button type="button" data-parmode="radial" aria-pressed="true" title="Radial multi-plane fan around the circular ring (all depth layers)">Radial Multi-Worm Fan</button>
+          <button type="button" data-parmode="dual" aria-pressed="false" title="2-Rail Red/Blue stretched output timelines">2-Rail Stretch (Red / Blue)</button>
+        </div>
+        <button type="button" class="btn" id="wormBgBtn" aria-pressed="true" title="Toggle Cinema Black vs Archival Paper backdrop">Dark / Paper</button>
+      </div>
     </div>
 
-    <div class="screens">
-      <div class="screen">
+    <div class="screens mob-pip" id="screensWrap">
+      <div class="screen screen-worm">
         <div class="screen-canvas-wrap worm-wrap" id="wormWrap">
-          <canvas id="cv-worm" width="620" height="465"></canvas>
-          <span class="lbl" id="lbl-worm">plane worms · drag horizontally anywhere to scrub f</span>
-          <span class="lbl-right" id="lbl-worm-right">6 planes · f 01/33</span>
+          <canvas id="cv-worm" width="680" height="480"></canvas>
+          <span class="lbl" id="lbl-worm">parallel output timelines · drag horizontally to scrub ring</span>
+          <span class="lbl-right" id="lbl-worm-right">6 timelines · f 01/33</span>
         </div>
       </div>
-      <div class="screen">
+      <div class="screen screen-stage" id="stageScreenCard" title="Tap on mobile to swap PiP / Split">
         <div class="screen-canvas-wrap" id="stageWrap">
           <canvas id="cv-stage" width="480" height="360"></canvas>
-          <span class="lbl" id="lbl-stage">composite over footage · camera pans with shot</span>
+          <span class="lbl light-lbl" id="lbl-stage">composite over footage · camera pans with shot</span>
           <span class="lbl-right" id="lbl-stage-right">480×360 · 12 fps</span>
         </div>
       </div>
@@ -351,14 +390,14 @@ h1{
 
     <div class="controls">
       <button type="button" class="btn" id="playBtn" aria-pressed="false">&#9654; Play</button>
-      <div style="display:inline-flex;gap:4px">
-        <button type="button" class="btn" id="stepPrevBtn" title="Step back 1 frame (Left arrow)">&#8592;</button>
-        <button type="button" class="btn" id="stepNextBtn" title="Step forward 1 frame (Right arrow)">&#8594;</button>
+      <div style="display:inline-flex;gap:3px">
+        <button type="button" class="btn" id="stepPrevBtn" title="Step back 1 frame">&#8592;</button>
+        <button type="button" class="btn" id="stepNextBtn" title="Step forward 1 frame">&#8594;</button>
       </div>
-      <div class="seg" role="group" aria-label="Playback speed">
-        <button type="button" data-speed="1" aria-pressed="true" title="Normal speed">1×</button>
-        <button type="button" data-speed="0.5" aria-pressed="false" title="Half speed for inspecting motion">0.5×</button>
-        <button type="button" data-speed="0.25" aria-pressed="false" title="Quarter speed slow-motion">0.25×</button>
+      <div class="seg speed-seg" role="group" aria-label="Playback speed">
+        <button type="button" data-speed="1" aria-pressed="true">1×</button>
+        <button type="button" data-speed="0.5" aria-pressed="false">0.5×</button>
+        <button type="button" data-speed="0.25" aria-pressed="false">0.25×</button>
       </div>
       <div class="scrub">
         <div class="ticks" id="ticks"></div>
@@ -369,15 +408,14 @@ h1{
 
     <div class="legend">
       <div>
-        <span><span class="sw" style="background:var(--tag)"></span>the line (Quick, Draw! seed)</span> &nbsp;&middot;&nbsp;
-        <span><span class="sw" style="background:var(--ink)"></span>drawn key</span> &nbsp;&middot;&nbsp;
-        <span><span class="sw" style="background:var(--rule-strong)"></span>rig / held</span> &nbsp;&middot;&nbsp;
+        <span><span class="sw" style="background:#FF3B30"></span>timeline 1 (keys / near)</span> &nbsp;&middot;&nbsp;
+        <span><span class="sw" style="background:#EF9F3A"></span>center spine (subject)</span> &nbsp;&middot;&nbsp;
+        <span><span class="sw" style="background:#2E7CF6"></span>timeline 2..K (stretched planes)</span> &nbsp;&middot;&nbsp;
         <span id="cap">Loading shot…</span>
       </div>
       <div class="planes" id="planes"></div>
     </div>
 
-    <!-- Plain-English Space-Worm Decoder Grid -->
     <div class="decoder-grid" id="wormDecoder">
       <div class="dec-card">
         <span class="dec-k">1 · What the Worm Does in Space</span>
@@ -385,7 +423,7 @@ h1{
         <p class="dec-p" id="decShapeDesc">—</p>
       </div>
       <div class="dec-card">
-        <span class="dec-k">2 · Camera Pan vs. Depth Parallax</span>
+        <span class="dec-k">2 · Parallel Timelines &amp; 1/K Stretch</span>
         <div class="dec-v" id="decCamTitle">—</div>
         <p class="dec-p" id="decCamDesc">—</p>
       </div>
@@ -408,9 +446,9 @@ h1{
       <div class="rack-filters">
         <div class="seg" role="group" aria-label="Filter shots">
           <button type="button" data-tier="all" aria-pressed="true">All (109)</button>
-          <button type="button" data-tier="flagship" aria-pressed="false">4–5 Versions / Flagship (11)</button>
-          <button type="button" data-tier="integrated" aria-pressed="false">Integrated + GWP (41)</button>
-          <button type="button" data-tier="multiplane" aria-pressed="false">4+ Depth Planes</button>
+          <button type="button" data-tier="flagship" aria-pressed="false">Flagship (11)</button>
+          <button type="button" data-tier="integrated" aria-pressed="false">Integrated (41)</button>
+          <button type="button" data-tier="multiplane" aria-pressed="false">4+ Planes</button>
         </div>
         <input type="search" class="rack-search" id="rackSearch" placeholder="Filter by title, lot (SM-0004), film…" aria-label="Filter shots">
       </div>
@@ -442,6 +480,7 @@ h1{
   const shotSelect = document.getElementById('shotSelect');
   const shotStrip = document.getElementById('shotStrip');
   const openPageLink = document.getElementById('openPageLink');
+  const screensWrap = document.getElementById('screensWrap');
 
   const varGwpBtn = document.getElementById('varGwpBtn');
   const varSamBtn = document.getElementById('varSamBtn');
@@ -451,13 +490,15 @@ h1{
   let WORMS = [];
   let curIdx = 0;
   let curWorm = null;
-  let curVariant = 'gwp'; // 'gwp' | 'sam' | 'redraw' | 'int'
-  let S = null;           // Live loaded shot.json for the active shot+variant
+  let curVariant = 'gwp';
+  let S = null;
   let shotCache = new Map();
   let frameImgCache = new Map();
 
-  let wormMode = 'lanes'; // 'lanes' | 'strobe' | 'kymo' | 'anatomy' | 'tunnel' | 'box'
-  let view = 'composite'; // 'cartoon' | 'composite' | 'cutout' | 'footage' | 'masks'
+  let wormMode = 'parallel'; // DEFAULT: 'parallel' (youtu.be/p4lRXoNL0SY 3D Parallel Output Timelines)
+  let parSubMode = 'radial'; // 'radial' (Image 2 multi-rail fan) | 'dual' (Images 1 & 3 Red/Blue 2-rail stretch)
+  let darkWormBg = true;     // Cinema Black backdrop for high-contrast white correspondence hairlines
+  let view = 'composite';
   let boilOn = true;
   let celOn = true;
   let playing = false;
@@ -470,30 +511,30 @@ h1{
   let searchQuery = '';
 
   const LENS_META = {
+    parallel: {
+      title: 'Lens 1 · Parallel Output Timelines (1/K Stretched Multi-Worm):',
+      desc: 'Input frames along the center spine fan out to parallel output timelines stretched 1/(layer number) times slower with the head fixed. Upright 3D cels slice across the circular playhead ring.',
+      lbl: 'parallel output timelines · drag horizontally to scrub circular ring'
+    },
     lanes: {
-      title: 'Lens 1 · Disentangled Plane Worms:',
+      title: 'Lens 2 · Disentangled Plane Worms:',
       desc: 'One horizontal cel strip per depth plane (Near → Subject → Far). Shows how fast foreground vs. background scrolls and stamps real SAM video cutouts + ink drawings along time.',
       lbl: 'plane worms · drag horizontally anywhere to scrub f'
     },
     strobe: {
-      title: 'Lens 2 · Space-Time Stroboscopic Trail (Muybridge View):',
-      desc: 'Lays the entire space-worm directly over the 4:3 scene: ghost SAM cutouts + ink poses from Start (green) to End (red), connected by the centroid spine, joint curves, and planted-foot anchors.',
+      title: 'Lens 3 · Space-Time Stroboscopic Trail (Muybridge View):',
+      desc: 'Lays the entire space-worm directly over the 4:3 scene: ghost SAM cutouts + ink poses from Start (green) to End (red), connected by the centroid spine and joint curves.',
       lbl: 'stroboscopic motion trail over scene · drag horizontally to scrub f'
     },
     kymo: {
-      title: 'Lens 3 · Slit-Scan & Motion Graphs (X-T, Y-T & Looming):',
+      title: 'Lens 4 · Slit-Scan & Motion Graphs (X-T, Y-T & Looming):',
       desc: 'Separates horizontal travel X(t), vertical gait bounce Y(t), and silhouette scale R(t) vs. camera pan so you can read speed, direction, and rhythm at a glance.',
       lbl: 'spatiotemporal graphs X(t), Y(t), R(t) · drag horizontally to scrub f'
     },
     anatomy: {
-      title: 'Lens 4 · Anatomy, Seed Line & Joint Braids:',
-      desc: 'Compares The Line (f=0 Quick, Draw! seed doodle) against Frame f’s warped rig + skeleton joints on top, with anatomical joint sub-worms and 2D limb-crossing (braid) markers below.',
+      title: 'Lens 5 · Anatomy, Seed Line & Joint Braids:',
+      desc: 'Compares The Line (f=0 Quick, Draw! seed doodle) against Frame f’s warped rig + skeleton joints on top, with anatomical joint sub-worms and 2D limb-crossing markers below.',
       lbl: 'seed line vs warped rig + joint sub-worms · drag horizontally to scrub f'
-    },
-    tunnel: {
-      title: 'Lens 5 · 3D Cutout Worm (X × Y × Time):',
-      desc: 'Slices the SAM video cutouts and ink drawings along a 3D spatiotemporal tube where time t flows left-to-right and depth planes recede.',
-      lbl: '3D cutout worm (t × z) · drag horizontally to scrub f'
     },
     box: {
       title: 'Lens 6 · Planes in Depth (Multiplane Camera Box):',
@@ -511,10 +552,10 @@ h1{
   };
 
   const PLANE_TINTS = {
-    far:   {fill:'rgba(92, 128, 188, 0.22)', stroke:'#3A5F9CD0', badge:'#2B6CB0'},
-    mid:   {fill:'rgba(58, 125, 68, 0.24)',  stroke:'#2E6B3AD0', badge:'#2E7A4A'},
-    near:  {fill:'rgba(196, 148, 52, 0.28)', stroke:'#8A6114D0', badge:'#B8432F'},
-    char:  {fill:'rgba(239, 159, 58, 0.34)', stroke:'#8A4A05',   badge:'#EF9F3A'}
+    far:   {fill:'rgba(92, 128, 188, 0.22)', stroke:'#3A5F9CD0', rail:'#3B82F6'},
+    mid:   {fill:'rgba(58, 125, 68, 0.24)',  stroke:'#2E6B3AD0', rail:'#34D399'},
+    near:  {fill:'rgba(196, 148, 52, 0.28)', stroke:'#8A6114D0', rail:'#FF3B30'},
+    char:  {fill:'rgba(239, 159, 58, 0.34)', stroke:'#8A4A05',   rail:'#EF9F3A'}
   };
   function tintForPlane(pid, z, zRef){
     if(pid === 'char') return PLANE_TINTS.char;
@@ -528,9 +569,7 @@ h1{
     const x = pt[0], y = pt[1];
     const h1 = Math.sin(x*12.9898 + y*78.233 + seed*43.1) * 43758.5453;
     const h2 = Math.cos(x*93.9898 + y*12.233 + seed*19.7) * 28413.1234;
-    const dx = (h1 - Math.floor(h1) - 0.5) * 2 * amp;
-    const dy = (h2 - Math.floor(h2) - 0.5) * 2 * amp;
-    return [x + dx, y + dy];
+    return [x + (h1 - Math.floor(h1) - 0.5)*2*amp, y + (h2 - Math.floor(h2) - 0.5)*2*amp];
   }
 
   function drawStrokes(ctx, strokes, opts){
@@ -713,7 +752,7 @@ h1{
 
       if(o.drawOutline){
         ctx.strokeStyle = o.outlineColor;
-        ctx.lineWidth = 1.6;
+        ctx.lineWidth = 1.5;
         for(const poly of polysPx){
           if(!poly || poly.length < 3) continue;
           ctx.beginPath();
@@ -733,7 +772,7 @@ h1{
     if(o.drawDoodle){
       if(strokesPx && strokesPx.length){
         ctx.strokeStyle = o.doodleColor || '#161412';
-        ctx.lineWidth = Math.max(1.3, 2.3 * Math.min(1, scale * 1.3));
+        ctx.lineWidth = Math.max(1.2, 2.2 * Math.min(1, scale * 1.3));
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
         for(const s of strokesPx){
@@ -846,6 +885,388 @@ h1{
       }
     }
     ctx.restore();
+  }
+
+  // Helper to draw an upright 3D perspective-skewed cel card (like youtu.be/p4lRXoNL0SY)
+  function drawUpright3DCard(ctx, cx, cy, cw, ch, opts, renderInsideFn){
+    const o = Object.assign({
+      skewY: -0.18,
+      skewX: -0.10,
+      fill: '#FBFAF6',
+      border: '#FFFFFF',
+      borderWidth: 1.6,
+      shadow: true,
+      alpha: 1.0,
+      label: '',
+      labelColor: '#FFFFFF'
+    }, opts||{});
+
+    ctx.save();
+    ctx.globalAlpha = o.alpha;
+    ctx.translate(cx, cy);
+    ctx.transform(1, o.skewY, o.skewX, 1, 0, 0);
+
+    const x0 = -cw*0.5, y0 = -ch*0.5;
+    if(o.shadow){
+      ctx.fillStyle = 'rgba(0,0,0,0.42)';
+      ctx.fillRect(x0 + 4, y0 + 5, cw, ch);
+    }
+    ctx.fillStyle = o.fill;
+    ctx.fillRect(x0, y0, cw, ch);
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(x0 + 2, y0 + 2, cw - 4, ch - 4);
+    ctx.clip();
+    renderInsideFn(ctx, x0 + 2, y0 + 2, cw - 4, ch - 4);
+    ctx.restore();
+
+    ctx.strokeStyle = o.border;
+    ctx.lineWidth = o.borderWidth;
+    ctx.strokeRect(x0, y0, cw, ch);
+
+    if(o.label){
+      ctx.font = '700 10px "JetBrains Mono", monospace';
+      ctx.fillStyle = o.labelColor;
+      ctx.fillText(o.label, x0 + 2, y0 - 5);
+    }
+    ctx.restore();
+  }
+
+  // ==================== LENS 1: 3D PARALLEL & STRETCHED OUTPUT TIMELINES (youtu.be/p4lRXoNL0SY) ====================
+  function renderParallelTimelinesMode(ctx, W, H, frameIdx, planes, N){
+    const isDark = darkWormBg;
+    ctx.fillStyle = isDark ? '#06070A' : '#FBFAF6';
+    ctx.fillRect(0, 0, W, H);
+
+    // 3D Highway Axis: recedes from Back-Left vanishing zone (vx, vy) to Front-Right foreground (fx, fy)
+    const vx = W * 0.06, vy = H * 0.20;
+    const fx = W * 0.94, fy = H * 0.80;
+    const axisDx = fx - vx, axisDy = fy - vy;
+
+    // Normalized position along the timeline highway u in [0, 1] with slight perspective foreshortening
+    function uFromFrame(ti){
+      const lin = N > 1 ? ti / (N - 1) : 0.5;
+      // Perspective mapping so back-left is compressed and foreground is wider, with playhead centered around u ~ 0.42..0.75
+      return 0.08 + 0.86 * Math.pow(lin, 0.88);
+    }
+    function spinePt(u){
+      return {
+        x: vx + axisDx * u,
+        y: vy + axisDy * u,
+        scale: 0.36 + 0.88 * u
+      };
+    }
+
+    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
+    const keys = (S && S.keys) || curWorm.keys || {};
+    const drawnKeys = (keys.drawn && keys.drawn.length) ? keys.drawn : [0, Math.floor(N/3), Math.floor(2*N/3), Math.max(0, N-1)];
+
+    const hairlineCol = isDark ? 'rgba(255,255,255,0.28)' : 'rgba(22,20,18,0.22)';
+    const fanBlockCol = isDark ? 'rgba(255,255,255,0.09)' : 'rgba(22,20,18,0.06)';
+    const spineCol    = isDark ? 'rgba(255,255,255,0.85)' : '#161412';
+
+    const uCur = uFromFrame(frameIdx);
+    const centerCur = spinePt(uCur);
+
+    if(parSubMode === 'dual'){
+      // ==================== 2-RAIL STRETCHED OUTPUT TIMELINES (Screenshots 1 & 3) ====================
+      // Rail 1 (Red, bottom-left offset): Stretched Keyframe Timeline (1 / K slower, head fixed)
+      // Center Spine (White): Full-rate Input Timeline (t = 0 .. N-1)
+      // Rail 2 (Blue, top-right offset): Multiplane / Secondary Stretched Timeline
+      const off1 = {dx: -W*0.18, dy: H*0.21}; // Red rail vector at u=1
+      const off2 = {dx:  W*0.17, dy: -H*0.13}; // Blue rail vector at u=1
+
+      function rail1Pt(u){ const s = spinePt(u); return {x: s.x + off1.dx*s.scale, y: s.y + off1.dy*s.scale, scale: s.scale}; }
+      function rail2Pt(u){ const s = spinePt(u); return {x: s.x + off2.dx*s.scale, y: s.y + off2.dy*s.scale, scale: s.scale}; }
+
+      // 1. Draw 2. Stretching correspondence fan blocks & hairlines (Screenshot 3!)
+      const nBlocks = Math.max(2, drawnKeys.length);
+      for(let b=0; b<nBlocks; b++){
+        const kStart = drawnKeys[b];
+        const kEnd   = (b + 1 < nBlocks) ? drawnKeys[b+1] : (N - 1);
+        // Stretched output interval on Rail 1 & Rail 2 (1 / layer_numbers slower with head fixed)
+        const outStartU = uFromFrame((b / nBlocks) * (N - 1));
+        const outEndU   = uFromFrame(((b + 1) / nBlocks) * (N - 1));
+
+        // Alternating shaded stretch triangles between Spine and Rail 1 / Rail 2
+        if(b % 2 === 0){
+          const sp0 = spinePt(uFromFrame(kStart)), sp1 = spinePt(uFromFrame(kEnd));
+          const r10 = rail1Pt(outStartU), r11 = rail1Pt(outEndU);
+          ctx.fillStyle = fanBlockCol;
+          ctx.beginPath();
+          ctx.moveTo(sp0.x, sp0.y); ctx.lineTo(sp1.x, sp1.y);
+          ctx.lineTo(r11.x, r11.y); ctx.lineTo(r10.x, r10.y);
+          ctx.closePath(); ctx.fill();
+
+          const r20 = rail2Pt(outStartU), r21 = rail2Pt(outEndU);
+          ctx.beginPath();
+          ctx.moveTo(sp0.x, sp0.y); ctx.lineTo(sp1.x, sp1.y);
+          ctx.lineTo(r21.x, r21.y); ctx.lineTo(r20.x, r20.y);
+          ctx.closePath(); ctx.fill();
+        }
+
+        // Fine white fan lines within each stretched block
+        const spanIn = Math.max(1, kEnd - kStart);
+        const subSteps = Math.max(4, spanIn * 2);
+        ctx.strokeStyle = hairlineCol;
+        ctx.lineWidth = 0.85;
+        for(let s=0; s<=subSteps; s++){
+          const frac = s / subSteps;
+          const uIn  = uFromFrame(kStart + frac * spanIn);
+          const uOut = outStartU + frac * (outEndU - outStartU);
+          const pIn  = spinePt(uIn);
+          const pR1  = rail1Pt(uOut);
+          const pR2  = rail2Pt(uOut);
+          ctx.beginPath();
+          ctx.moveTo(pR1.x, pR1.y);
+          ctx.lineTo(pIn.x, pIn.y);
+          ctx.lineTo(pR2.x, pR2.y);
+          ctx.stroke();
+        }
+      }
+
+      // 2. Draw the 3 main receding rails: Red (output timeline 1), White (center spine), Blue (output timeline 2)
+      const pStartS = spinePt(uFromFrame(0)), pEndS = spinePt(uFromFrame(N-1));
+      const pStart1 = rail1Pt(uFromFrame(0)), pEnd1 = rail1Pt(uFromFrame(N-1));
+      const pStart2 = rail2Pt(uFromFrame(0)), pEnd2 = rail2Pt(uFromFrame(N-1));
+
+      ctx.strokeStyle = spineCol; ctx.lineWidth = 1.6;
+      ctx.beginPath(); ctx.moveTo(pStartS.x, pStartS.y); ctx.lineTo(pEndS.x, pEndS.y); ctx.stroke();
+
+      ctx.strokeStyle = '#FF3B30'; ctx.lineWidth = 2.6;
+      ctx.beginPath(); ctx.moveTo(pStart1.x, pStart1.y); ctx.lineTo(pEnd1.x, pEnd1.y); ctx.stroke();
+
+      ctx.strokeStyle = '#2E7CF6'; ctx.lineWidth = 2.6;
+      ctx.beginPath(); ctx.moveTo(pStart2.x, pStart2.y); ctx.lineTo(pEnd2.x, pEnd2.y); ctx.stroke();
+
+      // Labels for output timeline 1 & 2
+      ctx.font = '700 13px "Bricolage Grotesque", sans-serif';
+      ctx.fillStyle = '#FF453A';
+      ctx.fillText('output timeline 1 (drawn keys · 1/K stretched)', pStart1.x + 12, pStart1.y + (pEnd1.y - pStart1.y)*0.52 + 26);
+      ctx.fillStyle = '#3B82F6';
+      ctx.fillText('output timeline 2 (multiplane parallax)', pStart2.x + (pEnd2.x - pStart2.x)*0.55, pStart2.y + (pEnd2.y - pStart2.y)*0.48 - 14);
+
+      // 3. Circular Cross-Section Playhead Ring at uCur
+      const ringRx = 128 * centerCur.scale;
+      const ringRy = 148 * centerCur.scale;
+      ctx.save();
+      ctx.strokeStyle = isDark ? 'rgba(255,255,255,0.48)' : 'rgba(22,20,18,0.45)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.ellipse(centerCur.x, centerCur.y, ringRx, ringRy, -0.18, 0, Math.PI*2);
+      ctx.stroke();
+      ctx.restore();
+
+      const curR1 = rail1Pt(uCur);
+      const curR2 = rail2Pt(uCur);
+      const cardW = Math.round(112 * centerCur.scale + 26);
+      const cardH = Math.round(cardW * 0.78);
+
+      // Find active keyframe index for stretched Rail 1
+      let activeKeyFrame = 0;
+      for(const kf of drawnKeys){ if(kf <= frameIdx) activeKeyFrame = kf; }
+
+      // Far Card (Blue Rail 2: Multiplane / Scenic + Subject at stretched parallax)
+      const backPlane = planes.find(p => p.id !== 'char') || planes[0];
+      drawUpright3DCard(ctx, curR2.x, curR2.y - cardH*0.32, cardW*0.84, cardH*0.84, {
+        border: '#3B82F6', borderWidth: 2, label: `timeline 2 · ${backPlane.label} (z=${backPlane.z})`, labelColor: '#60A5FA'
+      }, (c, x, y, w, h)=>{
+        if(backPlane && backPlane.id !== 'char'){
+          drawPlaneObjectsInRect(c, backPlane, frameIdx, x, y, w, h, false);
+        }
+        drawSamCutoutInRect(c, curWorm, Math.max(0, frameIdx - 1), x, y, w, h, {cropToMask:true, drawOutline:false, drawDoodle:true, alpha:0.85});
+      });
+
+      // Center Stacked Echo Cards (like the 2–3 closely stacked middle cards in Screenshot 1 & 3)
+      for(let echo = -1; echo <= 0; echo++){
+        const ef = Math.max(0, Math.min(N-1, frameIdx + echo));
+        const offEcho = echo * 9;
+        drawUpright3DCard(ctx, centerCur.x + offEcho, centerCur.y - cardH*0.28 - offEcho*0.6, cardW*0.95, cardH*0.95, {
+          border: echo === 0 ? '#EF9F3A' : 'rgba(255,255,255,0.6)',
+          borderWidth: echo === 0 ? 2.4 : 1.2,
+          alpha: echo === 0 ? 1.0 : 0.65,
+          label: echo === 0 ? `center spine · f ${String(frameIdx+1).padStart(2,'0')}/${String(N).padStart(2,'0')}` : '',
+          labelColor: '#FBBF24'
+        }, (c, x, y, w, h)=>{
+          drawSamCutoutInRect(c, curWorm, ef, x, y, w, h, {cropToMask:true, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true});
+        });
+      }
+
+      // Near Card (Red Rail 1: Held / Stretched Keyframe)
+      drawUpright3DCard(ctx, curR1.x, curR1.y - cardH*0.26, cardW*1.06, cardH*1.06, {
+        border: '#FF3B30', borderWidth: 2.4, label: `timeline 1 · key f${String(activeKeyFrame+1).padStart(2,'0')}`, labelColor: '#FF6961'
+      }, (c, x, y, w, h)=>{
+        drawSamCutoutInRect(c, curWorm, activeKeyFrame, x, y, w, h, {cropToMask:true, drawOutline:true, outlineColor:'#FF3B30', drawDoodle:true});
+      });
+
+      // Bright white skewer ray connecting Rail 1 -> Center Spine -> Rail 2 through the card centers
+      ctx.save();
+      ctx.strokeStyle = 'rgba(255,255,255,0.92)';
+      ctx.lineWidth = 2.4;
+      ctx.beginPath();
+      ctx.moveTo(curR1.x, curR1.y - cardH*0.26);
+      ctx.lineTo(centerCur.x, centerCur.y - cardH*0.28);
+      ctx.lineTo(curR2.x, curR2.y - cardH*0.32);
+      ctx.stroke();
+      ctx.restore();
+      return;
+    }
+
+    // ==================== RADIAL MULTI-PLANE / MULTI-WORM FAN (Screenshot 2!) ====================
+    // Arranges all visible depth planes (or sub-worms) radially around the circular cross-section ring!
+    // Each outer timeline rail stretches time by 1 / (layer rank) or parallax k = z_ref / z,
+    // with 3D fanning white correspondence lines linking the center spine to every outer rail!
+    const visPlanes = planes.filter(p => isPlaneVisible(p.id));
+    const outerPlanes = visPlanes.length >= 2 ? visPlanes : planes;
+    const K = outerPlanes.length;
+
+    // Assign radial angles around the ring (avoiding exact vertical overlap)
+    const angles = [];
+    for(let k=0; k<K; k++){
+      // Spread evenly around the 3D cross-section ellipse: top, upper-right, lower-right, bottom, lower-left
+      const ang = -Math.PI*0.52 + (k / Math.max(1, K)) * Math.PI * 1.95;
+      angles.push(ang);
+    }
+
+    const baseRx = W * 0.20;
+    const baseRy = H * 0.30;
+
+    function outerRailPt(k, u){
+      const sp = spinePt(u);
+      const ang = angles[k];
+      const rx = baseRx * sp.scale;
+      const ry = baseRy * sp.scale;
+      return {
+        x: sp.x + Math.cos(ang) * rx,
+        y: sp.y + Math.sin(ang) * ry,
+        scale: sp.scale,
+        ang: ang
+      };
+    }
+
+    // 1. Draw the receding outer timeline rails & fanning 1/K correspondence lines (Screenshot 2!)
+    const railColors = ['#FF3B30', '#3B82F6', '#34D399', '#A78BFA', '#F59E0B', '#EC4899'];
+
+    for(let k=0; k<K; k++){
+      const plane = outerPlanes[k];
+      const rCol = plane.id === 'char' ? '#EF9F3A' : railColors[k % railColors.length];
+
+      // Stretch factor for this timeline rail:
+      // Each layer k divides the shot into (K - k + 1) stretched blocks so outer timelines move slower!
+      const nStretchBlocks = Math.max(2, K + 1 - k);
+      ctx.strokeStyle = hairlineCol;
+      ctx.lineWidth = 0.8;
+
+      for(let b=0; b<nStretchBlocks; b++){
+        const inF0 = Math.round((b / nStretchBlocks) * (N - 1));
+        const inF1 = Math.round(((b + 1) / nStretchBlocks) * (N - 1));
+        const uAnchorIn = uFromFrame(inF0);
+        const pAnchorIn = spinePt(uAnchorIn);
+
+        // Fan 7 rays from the anchor on the center spine out to the stretched segment [inF0 .. inF1] on outer rail k
+        const nRays = 7;
+        for(let r=0; r<=nRays; r++){
+          const frac = r / nRays;
+          const uOut = uFromFrame(inF0 + frac * (inF1 - inF0));
+          const pOut = outerRailPt(k, uOut);
+          ctx.beginPath();
+          ctx.moveTo(pAnchorIn.x, pAnchorIn.y);
+          ctx.lineTo(pOut.x, pOut.y);
+          ctx.stroke();
+        }
+      }
+
+      // Draw outer timeline rail line from u=0 to u=1
+      const p0 = outerRailPt(k, uFromFrame(0));
+      const p1 = outerRailPt(k, uFromFrame(N - 1));
+      ctx.strokeStyle = rCol;
+      ctx.lineWidth = plane.id === 'char' ? 2.4 : 1.7;
+      ctx.beginPath();
+      ctx.moveTo(p0.x, p0.y);
+      ctx.lineTo(p1.x, p1.y);
+      ctx.stroke();
+    }
+
+    // Draw center spine rail
+    const spStart = spinePt(uFromFrame(0)), spEnd = spinePt(uFromFrame(N - 1));
+    ctx.strokeStyle = spineCol;
+    ctx.lineWidth = 2.0;
+    ctx.beginPath();
+    ctx.moveTo(spStart.x, spStart.y);
+    ctx.lineTo(spEnd.x, spEnd.y);
+    ctx.stroke();
+
+    // 2. Draw the Circular Cross-Section Playhead Ring at uCur
+    const ringRx = baseRx * centerCur.scale;
+    const ringRy = baseRy * centerCur.scale;
+    ctx.save();
+    ctx.strokeStyle = isDark ? 'rgba(255,255,255,0.52)' : 'rgba(22,20,18,0.45)';
+    ctx.lineWidth = 1.6;
+    ctx.beginPath();
+    ctx.ellipse(centerCur.x, centerCur.y, ringRx, ringRy, -0.12, 0, Math.PI*2);
+    ctx.stroke();
+    ctx.restore();
+
+    // 3. Draw Stacked Temporal Echo Cards along the Center Spine (like the 4 overlapping hand cards in Screenshot 2!)
+    const centerCardW = Math.round(96 * centerCur.scale + 24);
+    const centerCardH = Math.round(centerCardW * 0.78);
+    for(let echo = -2; echo <= 0; echo++){
+      const ef = Math.max(0, Math.min(N - 1, frameIdx + echo * 2));
+      const uEcho = uFromFrame(Math.max(0, frameIdx + echo * 1.6));
+      const pEcho = spinePt(uEcho);
+      drawUpright3DCard(ctx, pEcho.x, pEcho.y, centerCardW * (0.86 + 0.07*(echo+2)), centerCardH * (0.86 + 0.07*(echo+2)), {
+        border: echo === 0 ? '#EF9F3A' : 'rgba(255,255,255,0.65)',
+        borderWidth: echo === 0 ? 2.5 : 1.1,
+        alpha: echo === 0 ? 1.0 : (0.42 + 0.18*(echo+2)),
+        label: echo === 0 ? `spine · f${String(frameIdx+1).padStart(2,'0')}` : '',
+        labelColor: '#FBBF24'
+      }, (c, x, y, w, h)=>{
+        drawSamCutoutInRect(c, curWorm, ef, x, y, w, h, {cropToMask:true, drawOutline:echo===0, outlineColor:'#EF9F3A', drawDoodle:true});
+      });
+    }
+
+    // 4. Draw Upright 3D Cards on Every Radial Outer Timeline around the Circular Ring + White Radial Spokes!
+    const outerCardW = Math.round(82 * centerCur.scale + 20);
+    const outerCardH = Math.round(outerCardW * 0.78);
+
+    // Sort outer rails back-to-front by Y/X so foreground cards overlap cleanly
+    const order = outerPlanes.map((p, k) => ({plane: p, k, pt: outerRailPt(k, uCur)}));
+    order.sort((a, b) => a.pt.y - b.pt.y);
+
+    for(const item of order){
+      const {plane, k, pt} = item;
+      const rCol = plane.id === 'char' ? '#EF9F3A' : railColors[k % railColors.length];
+      // Stretched frame index on rail k: slower by parallax ratio or keyframe step
+      const stretchFactor = Math.max(0.25, Math.min(1.0, zRef / Math.max(0.5, plane.z)));
+      const stretchedF = Math.max(0, Math.min(N - 1, Math.round(frameIdx * stretchFactor)));
+
+      // White radial spoke from center spine to outer card on the ring
+      ctx.save();
+      ctx.strokeStyle = isDark ? 'rgba(255,255,255,0.78)' : 'rgba(22,20,18,0.65)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(centerCur.x, centerCur.y);
+      ctx.lineTo(pt.x, pt.y);
+      ctx.stroke();
+      ctx.restore();
+
+      const shortLbl = `${String(plane.label || plane.id).split('(')[0].trim().slice(0,11)} (z=${plane.z})`;
+      drawUpright3DCard(ctx, pt.x, pt.y, outerCardW, outerCardH, {
+        border: rCol,
+        borderWidth: 2.0,
+        label: shortLbl,
+        labelColor: isDark ? '#F3ECE0' : '#161412'
+      }, (c, x, y, w, h)=>{
+        if(plane.id === 'char'){
+          drawSamCutoutInRect(c, curWorm, stretchedF, x, y, w, h, {cropToMask:true, drawOutline:true, outlineColor:rCol, drawDoodle:true});
+        } else {
+          // Draw scenic plane objects + faint cutout reference
+          drawSamCutoutInRect(c, curWorm, stretchedF, x, y, w, h, {cropToMask:false, drawOutline:false, drawDoodle:false, alpha:0.28});
+          drawPlaneObjectsInRect(c, plane, frameIdx, x, y, w, h, true);
+        }
+      });
+    }
   }
 
   // ==================== RIGHT STAGE: 4:3 COMPOSITE / CARTOON / CUTOUT / FOOTAGE / SILHOUETTES ====================
@@ -976,21 +1397,28 @@ h1{
     }
   }
 
-  // ==================== LEFT SCREEN: 6 SPACE-WORM INTERPRETATION LENSES ====================
+  // ==================== LEFT SCREEN: DISPATCH ACROSS ALL 6 LENSES ====================
   function renderWorm(frameIdx){
     if(!curWorm) return;
     const W = cvWorm.width;
     const H = cvWorm.height;
     const ctx = ctxWorm;
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = '#FBFAF6';
-    ctx.fillRect(0, 0, W, H);
 
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
     const planes = getActivePlanes();
-    const meta = LENS_META[wormMode] || LENS_META.lanes;
+    const meta = LENS_META[wormMode] || LENS_META.parallel;
     lblWorm.textContent = meta.lbl;
-    lblWormRight.textContent = `${planes.length} planes · f ${String(frameIdx+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
+    lblWorm.classList.toggle('light-lbl', !(wormMode === 'parallel' && darkWormBg));
+    lblWormRight.textContent = `${planes.length} timelines · f ${String(frameIdx+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
+
+    if(wormMode === 'parallel'){
+      renderParallelTimelinesMode(ctx, W, H, frameIdx, planes, N);
+      return;
+    }
+
+    ctx.fillStyle = '#FBFAF6';
+    ctx.fillRect(0, 0, W, H);
 
     if(wormMode === 'strobe'){
       renderStrobeMode(ctx, W, H, frameIdx, planes, N);
@@ -1004,16 +1432,12 @@ h1{
       renderAnatomyMode(ctx, W, H, frameIdx, planes, N);
       return;
     }
-    if(wormMode === 'tunnel'){
-      renderTunnelMode(ctx, W, H, frameIdx, planes, N);
-      return;
-    }
     if(wormMode === 'box'){
       renderBoxMode(ctx, W, H, frameIdx, planes, N);
       return;
     }
 
-    // LENS 1: Disentangled Plane Worms ('lanes')
+    // LENS 2: Disentangled Plane Worms ('lanes')
     const planesNearFirst = planes.slice().reverse();
     const padL = 122, padR = 16, padT = 30, padB = 24;
     const availH = H - padT - padB;
@@ -1166,7 +1590,6 @@ h1{
     ctx.restore();
   }
 
-  // ==================== LENS 2: SPACE-TIME STROBOSCOPIC TRAIL (MUYBRIDGE CHRONOPHOTOGRAPH) ====================
   function renderStrobeMode(ctx, W, H, frameIdx, planes, N){
     const padT = 32, padB = 34, padL = 16, padR = 16;
     const stageW = W - padL - padR;
@@ -1175,7 +1598,6 @@ h1{
     const srcH = (S && S.H) || curWorm.H || 360;
     const sx = stageW / srcW, sy = stageH / srcH;
 
-    // 1. Faintly draw active frame background + scenic planes so user sees the real physical room/landscape
     ctx.save();
     ctx.beginPath();
     ctx.roundRect(padL, padT, stageW, stageH, 6);
@@ -1190,7 +1612,6 @@ h1{
     ctx.fillStyle = 'rgba(251, 250, 246, 0.45)';
     ctx.fillRect(padL, padT, stageW, stageH);
 
-    // Scenic background objects at current frame
     if(S && Array.isArray(S.objects)){
       for(const plane of planes){
         if(plane.id === 'char' || !isPlaneVisible(plane.id)) continue;
@@ -1204,7 +1625,6 @@ h1{
       }
     }
 
-    // 2. Stamp 6 stroboscopic ghost cutouts + ink drawings along t = 0 .. N-1 in exact scene coordinates!
     const nGhosts = Math.min(N, 7);
     for(let gIdx=0; gIdx<nGhosts; gIdx++){
       const ti = nGhosts === 1 ? 0 : Math.round((gIdx / (nGhosts - 1)) * (N - 1));
@@ -1221,7 +1641,6 @@ h1{
       });
     }
 
-    // 3. Draw Joint Sub-Worm Trajectories across the scene (head, feet, tail, etc.)
     const jointColors = ['#2B6CB0', '#2E7A4A', '#6B46C1', '#B8432F', '#D97706'];
     const joints = curWorm.joints || {};
     Object.keys(joints).slice(0, 5).forEach((jn, jIdx)=>{
@@ -1239,7 +1658,6 @@ h1{
       ctx.setLineDash([]);
     });
 
-    // 4. Draw Subject Centroid Spine (u(t), v(t)) with directional arrows and START / END badges
     const frames = curWorm.frames || [];
     if(frames.length >= 2){
       ctx.beginPath();
@@ -1252,7 +1670,6 @@ h1{
       ctx.lineWidth = 3.5;
       ctx.stroke();
 
-      // Start (f=0) & End (f=N-1) markers
       const c0 = frames[0].c || [0.5,0.5];
       const cEnd = frames[frames.length-1].c || [0.5,0.5];
       const x0 = padL + c0[0]*stageW, y0 = padT + c0[1]*stageH;
@@ -1260,29 +1677,15 @@ h1{
 
       ctx.fillStyle = '#2E7A4A';
       ctx.beginPath(); ctx.arc(x0, y0, 6, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = '#FFFFFF'; ctx.font = '700 9px "JetBrains Mono", monospace';
+      ctx.fillStyle = '#161412'; ctx.font = '700 9.5px "JetBrains Mono", monospace';
       ctx.fillText('START f01', x0 + 8, y0 + 3);
 
       ctx.fillStyle = '#B8432F';
       ctx.beginPath(); ctx.arc(xE, yE, 6, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = '#FFFFFF';
+      ctx.fillStyle = '#161412';
       ctx.fillText(`END f${String(N).padStart(2,'0')}`, xE + 8, yE + 3);
     }
 
-    // 5. Planted-Contact Ground Locks (where feet/wheels stay planted)
-    (curWorm.planted_contacts || []).forEach(pc=>{
-      const x = padL + (pc.u || 0.5)*stageW;
-      const y = padT + (pc.v || 0.7)*stageH;
-      ctx.fillStyle = '#2E7A4A';
-      ctx.strokeStyle = '#FFFBF4';
-      ctx.lineWidth = 1.5;
-      ctx.beginPath();
-      ctx.arc(x, y, 4.5, 0, Math.PI*2);
-      ctx.fill();
-      ctx.stroke();
-    });
-
-    // 6. Draw ACTIVE SCRUBBED FRAME f at 100% opacity on top!
     drawSamCutoutInRect(ctx, curWorm, frameIdx, padL, padT, stageW, stageH, {
       cropToMask: false,
       drawOutline: true,
@@ -1291,16 +1694,6 @@ h1{
       doodleColor: '#161412',
       alpha: 1.0
     });
-
-    // Highlight active centroid node
-    if(frames[frameIdx] && frames[frameIdx].c){
-      const cx = padL + frames[frameIdx].c[0]*stageW;
-      const cy = padT + frames[frameIdx].c[1]*stageH;
-      ctx.fillStyle = '#EF9F3A';
-      ctx.strokeStyle = '#161412';
-      ctx.lineWidth = 2;
-      ctx.beginPath(); ctx.arc(cx, cy, 6.5, 0, Math.PI*2); ctx.fill(); ctx.stroke();
-    }
     ctx.restore();
 
     ctx.strokeStyle = '#161412';
@@ -1308,18 +1701,8 @@ h1{
     ctx.beginPath();
     ctx.roundRect(padL, padT, stageW, stageH, 6);
     ctx.stroke();
-
-    // Bottom scrub progress bar
-    const scrubX = padL + (N > 1 ? (frameIdx / (N - 1)) * stageW : stageW*0.5);
-    ctx.fillStyle = '#DED2BF';
-    ctx.fillRect(padL, H - 18, stageW, 6);
-    ctx.fillStyle = '#EF9F3A';
-    ctx.fillRect(padL, H - 18, scrubX - padL, 6);
-    ctx.fillStyle = '#161412';
-    ctx.fillRect(scrubX - 2, H - 21, 4, 12);
   }
 
-  // ==================== LENS 3: SLIT-SCAN & MOTION GRAPHS (X(t), Y(t), SCALE R(t) & CAMERA PAN) ====================
   function renderKymoMode(ctx, W, H, frameIdx, planes, N){
     const padL = 122, padR = 18, padT = 32, padB = 26;
     const trackW = W - padL - padR;
@@ -1329,31 +1712,9 @@ h1{
     const frames = curWorm.frames || [];
 
     const bands = [
-      {
-        title: 'Horizontal Path X(t)',
-        sub: 'Left (0.0) ↔ Right (1.0)',
-        color: '#EF9F3A',
-        getVal: (fr) => fr.c ? fr.c[0] : 0.5,
-        minV: 0, maxV: 1,
-        drawStamps: true
-      },
-      {
-        title: 'Vertical Bounce Y(t)',
-        sub: 'Top (0.0) ↕ Bottom (1.0)',
-        color: '#2E7A4A',
-        getVal: (fr) => fr.c ? fr.c[1] : 0.5,
-        minV: 0, maxV: 1,
-        drawStamps: false
-      },
-      {
-        title: 'Size R(t) & Cam Pan',
-        sub: 'Orange=Size · Blue=Cam Pan',
-        color: '#2B6CB0',
-        getVal: (fr) => Math.min(1, (fr.r || 0.15) * 2.5),
-        minV: 0, maxV: 1,
-        drawStamps: false,
-        dualCam: true
-      }
+      {title: 'Horizontal Path X(t)', sub: 'Left (0.0) ↔ Right (1.0)', color: '#EF9F3A', getVal: (fr) => fr.c ? fr.c[0] : 0.5, drawStamps: true},
+      {title: 'Vertical Bounce Y(t)', sub: 'Top (0.0) ↕ Bottom (1.0)', color: '#2E7A4A', getVal: (fr) => fr.c ? fr.c[1] : 0.5, drawStamps: false},
+      {title: 'Size R(t) & Cam Pan',  sub: 'Orange=Cam · Blue=Size',   color: '#2B6CB0', getVal: (fr) => Math.min(1, (fr.r || 0.15) * 2.5), drawStamps: false, dualCam: true}
     ];
 
     bands.forEach((b, bIdx)=>{
@@ -1376,15 +1737,6 @@ h1{
       ctx.font = '500 9.5px "JetBrains Mono", monospace';
       ctx.fillText(b.sub, 14, y0 + bandH*0.72);
 
-      // Midline reference
-      ctx.strokeStyle = '#EDE0C5';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(padL, y0 + bandH*0.5);
-      ctx.lineTo(padL + trackW, y0 + bandH*0.5);
-      ctx.stroke();
-
-      // Optional slit-scan cutout stamps in Band 0
       if(b.drawStamps && frames.length){
         const nStamps = Math.min(N, 8);
         const cw = Math.min(46, trackW / nStamps - 4);
@@ -1406,7 +1758,6 @@ h1{
         }
       }
 
-      // Plot main curve
       if(frames.length >= 2){
         ctx.beginPath();
         frames.forEach((fr, ti)=>{
@@ -1419,7 +1770,6 @@ h1{
         ctx.lineWidth = 2.6;
         ctx.stroke();
 
-        // Secondary camera pan curve in Band 2
         if(b.dualCam){
           ctx.beginPath();
           frames.forEach((fr, ti)=>{
@@ -1435,21 +1785,10 @@ h1{
           ctx.stroke();
           ctx.setLineDash([]);
         }
-
-        // Active frame dot
-        const curFr = frames[frameIdx] || {};
-        const actX = padL + (N>1 ? (frameIdx/(N-1))*trackW : trackW*0.5);
-        const actV = Math.max(0, Math.min(1, b.getVal(curFr)));
-        const actY = y0 + 10 + actV * (bandH - 20);
-        ctx.fillStyle = '#EF9F3A';
-        ctx.strokeStyle = '#161412';
-        ctx.lineWidth = 2;
-        ctx.beginPath(); ctx.arc(actX, actY, 5, 0, Math.PI*2); ctx.fill(); ctx.stroke();
       }
       ctx.restore();
     });
 
-    // Vertical scrub cursor across all 3 graphs
     const scrubX = padL + (N > 1 ? (frameIdx / (N - 1)) * trackW : trackW*0.5);
     ctx.save();
     ctx.strokeStyle = '#EF9F3A';
@@ -1462,7 +1801,6 @@ h1{
     ctx.restore();
   }
 
-  // ==================== LENS 4: ANATOMY, SEED LINE & JOINT BRAID EXPLORER ====================
   function renderAnatomyMode(ctx, W, H, frameIdx, planes, N){
     const padL = 14, padR = 14, padT = 30, padB = 22;
     const topH = Math.round((H - padT - padB) * 0.52);
@@ -1470,7 +1808,6 @@ h1{
     const botH = H - padB - botY;
     const halfW = Math.round((W - padL - padR - 10) * 0.5);
 
-    // Top-Left Card: THE LINE (f=0 Quick, Draw! seed stroke)
     ctx.save();
     ctx.fillStyle = '#FFFFFF';
     ctx.strokeStyle = '#BFAF97';
@@ -1491,7 +1828,6 @@ h1{
     ctx.font = '700 11px "JetBrains Mono", monospace';
     ctx.fillText('THE LINE (f=01 Seed Doodle)', padL + 10, padT + 16);
 
-    // Top-Right Card: ACTIVE FRAME f WARPED RIG + SKELETON JOINTS
     const rx0 = padL + halfW + 10;
     ctx.fillStyle = '#FFFDF8';
     ctx.strokeStyle = '#EF9F3A';
@@ -1513,7 +1849,6 @@ h1{
     ctx.fillText(`WARPED RIG @ f=${String(frameIdx+1).padStart(2,'0')} / ${String(N).padStart(2,'0')}`, rx0 + 10, padT + 16);
     ctx.restore();
 
-    // Bottom Card: Joint Sub-Worms & Braid Crossing Timeline
     ctx.save();
     ctx.fillStyle = '#FFFFFF';
     ctx.strokeStyle = '#BFAF97';
@@ -1547,12 +1882,6 @@ h1{
       ctx.font = '600 10px "JetBrains Mono", monospace';
       ctx.fillText(String(r.label).slice(0, 14), padL + 10, ry + rH*0.65);
 
-      ctx.strokeStyle = '#EDE0C5';
-      ctx.beginPath();
-      ctx.moveTo(jPadL, ry + rH*0.5);
-      ctx.lineTo(jPadL + jTrackW, ry + rH*0.5);
-      ctx.stroke();
-
       const pts = r.pts || [];
       if(pts.length >= 2){
         ctx.beginPath();
@@ -1564,22 +1893,7 @@ h1{
         ctx.strokeStyle = r.color;
         ctx.lineWidth = 2.2;
         ctx.stroke();
-
-        const fi = Math.min(pts.length - 1, frameIdx);
-        const ax = jPadL + (N>1 ? (frameIdx/(N-1))*jTrackW : jTrackW*0.5);
-        const ay = ry + 3 + Math.max(0, Math.min(1, pts[fi][1])) * (rH - 6);
-        ctx.fillStyle = r.color;
-        ctx.beginPath(); ctx.arc(ax, ay, 4, 0, Math.PI*2); ctx.fill();
       }
-    });
-
-    // Plot Braid Crossings (×) along bottom timeline
-    (curWorm.braid_events || []).forEach(ev=>{
-      const bf = ev.f || 0;
-      const bx = jPadL + (N>1 ? (bf/(N-1))*jTrackW : jTrackW*0.5);
-      ctx.fillStyle = '#B8432F';
-      ctx.font = '700 10px "JetBrains Mono", monospace';
-      ctx.fillText('×', bx - 3, botY + 15);
     });
 
     const scrubX = jPadL + (N>1 ? (frameIdx/(N-1))*jTrackW : jTrackW*0.5);
@@ -1593,98 +1907,6 @@ h1{
     ctx.restore();
   }
 
-  // ==================== LENS 5: 3D CUTOUT WORM ====================
-  function renderTunnelMode(ctx, W, H, frameIdx, planes, N){
-    const padL = 44, padR = 32, padT = 38, padB = 34;
-    const availW = W - padL - padR;
-    const availH = H - padT - padB;
-    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
-
-    ctx.save();
-    ctx.strokeStyle = '#DED2BF';
-    ctx.lineWidth = 1;
-    for(let ti=0; ti<N; ti += Math.max(1, Math.floor(N/8))){
-      const u = N > 1 ? ti / (N - 1) : 0.5;
-      const cx = padL + u * availW;
-      ctx.beginPath();
-      ctx.moveTo(cx, padT);
-      ctx.lineTo(cx, padT + availH);
-      ctx.stroke();
-    }
-
-    for(const plane of planes){
-      if(!isPlaneVisible(plane.id)) continue;
-      if(plane.id === 'char') continue;
-      const t = tintForPlane(plane.id, plane.z, zRef);
-      const zNorm = Math.min(1, Math.log(1 + plane.z) / Math.log(12));
-      const yBand = padT + (1 - zNorm * 0.75) * availH * 0.78;
-      ctx.fillStyle = t.fill;
-      ctx.strokeStyle = t.stroke;
-      ctx.lineWidth = 1.5;
-      ctx.beginPath();
-      ctx.roundRect(padL, yBand - 18, availW, 36, 6);
-      ctx.fill();
-      ctx.stroke();
-
-      ctx.fillStyle = '#6B6259';
-      ctx.font = '600 10px "JetBrains Mono", monospace';
-      ctx.fillText(`${plane.label} (z=${plane.z})`, padL + 6, yBand - 4);
-    }
-
-    const step = Math.max(1, Math.floor(N / 9));
-    const sliceW = Math.min(118, availW * 0.24);
-    const sliceH = Math.round(sliceW * 0.78);
-    for(let ti=0; ti<N; ti += step){
-      if(ti === frameIdx) continue;
-      const u = N > 1 ? ti / (N - 1) : 0.5;
-      const fr = (curWorm.frames && curWorm.frames[ti]) ? curWorm.frames[ti] : {c:[0.5,0.5]};
-      const cx = padL + u * availW;
-      const cy = padT + (fr.c ? fr.c[1] : 0.5) * availH;
-      const rx = cx - sliceW*0.5;
-      const ry = cy - sliceH*0.5;
-
-      ctx.save();
-      ctx.globalAlpha = 0.62;
-      ctx.fillStyle = 'rgba(251,250,246,0.82)';
-      ctx.strokeStyle = '#BFAF97';
-      ctx.lineWidth = 1;
-      ctx.fillRect(rx, ry, sliceW, sliceH);
-      ctx.strokeRect(rx, ry, sliceW, sliceH);
-      drawSamCutoutInRect(ctx, curWorm, ti, rx+2, ry+2, sliceW-4, sliceH-4, {
-        cropToMask: true,
-        drawOutline: true,
-        outlineColor: '#8A4A05',
-        drawDoodle: true
-      });
-      ctx.restore();
-    }
-
-    const uAct = N > 1 ? frameIdx / (N - 1) : 0.5;
-    const frAct = (curWorm.frames && curWorm.frames[frameIdx]) ? curWorm.frames[frameIdx] : {c:[0.5,0.5]};
-    const actW = Math.min(156, availW * 0.32);
-    const actH = Math.round(actW * 0.78);
-    const actX = Math.max(padL, Math.min(padL + availW - actW, padL + uAct * availW - actW*0.5));
-    const actY = Math.max(padT, Math.min(padT + availH - actH, padT + (frAct.c ? frAct.c[1] : 0.5) * availH - actH*0.5));
-
-    ctx.fillStyle = '#FFFBF4';
-    ctx.strokeStyle = '#EF9F3A';
-    ctx.lineWidth = 2.6;
-    ctx.fillRect(actX, actY, actW, actH);
-    drawSamCutoutInRect(ctx, curWorm, frameIdx, actX+2, actY+2, actW-4, actH-4, {
-      cropToMask: true,
-      drawOutline: true,
-      outlineColor: '#EF9F3A',
-      drawDoodle: true
-    });
-    ctx.strokeRect(actX, actY, actW, actH);
-
-    ctx.fillStyle = '#EF9F3A';
-    ctx.font = '700 11px "JetBrains Mono", monospace';
-    ctx.fillText(`f ${String(frameIdx+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`, actX + 4, actY - 5);
-    ctx.restore();
-  }
-
-  // ==================== LENS 6: PLANES IN DEPTH (MULTIPLANE BOX) ====================
   function renderBoxMode(ctx, W, H, frameIdx, planes, N){
     const padX = 28, padY = 30;
     const availW = W - padX*2, availH = H - padY*2;
@@ -1766,7 +1988,6 @@ h1{
     const planes = getActivePlanes();
     const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
 
-    // 1. Space motion summary
     const c0 = (frames[0] && frames[0].c) ? frames[0].c : [0.5, 0.5];
     const c1 = (frames[frames.length-1] && frames[frames.length-1].c) ? frames[frames.length-1].c : [0.5, 0.5];
     const dxPct = Math.round((c1[0] - c0[0]) * 100);
@@ -1776,29 +1997,23 @@ h1{
       : `${dxPct > 3 ? 'Moves Right (+' + dxPct + '%)' : (dxPct < -3 ? 'Moves Left (' + dxPct + '%)' : 'Steady X')}${Math.abs(dyPct) > 3 ? ', ' + (dyPct > 0 ? 'Down +' + dyPct + '%' : 'Up ' + dyPct + '%') : ''}`;
     document.getElementById('decShapeTitle').textContent = TOPO_HUMAN[curWorm.topology] || curWorm.topology || 'Tracked Motion';
     document.getElementById('decShapeDesc').textContent =
-      `${dirStr} from (${c0[0].toFixed(2)}, ${c0[1].toFixed(2)}) to (${c1[0].toFixed(2)}, ${c1[1].toFixed(2)}) over ${curWorm.duration_s || (N/12).toFixed(1)}s. Best framing guide: ${(curWorm.best_rule || 'rule_of_thirds').replace(/_/g, ' ')} (${curWorm.best_fit || 90}% fit).`;
+      `${dirStr} from (${c0[0].toFixed(2)}, ${c0[1].toFixed(2)}) to (${c1[0].toFixed(2)}, ${c1[1].toFixed(2)}) over ${curWorm.duration_s || (N/12).toFixed(1)}s.`;
 
-    // 2. Camera vs Depth Parallax
     const minZ = Math.min(...planes.map(p=>p.z));
     const maxZ = Math.max(...planes.map(p=>p.z));
-    const panMag = Math.round((curWorm.cam_pan_mag || 0) * ((S && S.W) || curWorm.W || 480));
     document.getElementById('decCamTitle').textContent =
-      `${planes.length} Depth Planes (z=${minZ} → z=${maxZ})`;
+      `${planes.length} Parallel Timelines (z=${minZ} → z=${maxZ})`;
     document.getElementById('decCamDesc').textContent =
-      panMag > 4
-        ? `Camera pans ~${panMag}px across the shot. Near plane (z=${minZ}) moves ${(zRef/minZ).toFixed(2)}× camera speed; far horizon (z=${maxZ}) moves ${(zRef/maxZ).toFixed(2)}×.`
-        : `Locked/minimal camera pan (~${panMag}px). Motion is driven directly by the subject moving across ${planes.length} depth strata.`;
+      `Distributed input is stretched 1/K across ${planes.length} parallel depth rails: near plane (z=${minZ}) runs ${(zRef/minZ).toFixed(2)}×, far horizon (z=${maxZ}) runs ${(zRef/maxZ).toFixed(2)}×.`;
 
-    // 3. Rig & Anatomy
     const nJoints = Object.keys(curWorm.joints || {}).length;
     const keys = (S && S.keys) || curWorm.keys || {};
     const nDrawn = (keys.drawn || [0]).length;
     document.getElementById('decRigTitle').textContent =
       `${nDrawn} Drawn Keys · ${nJoints || planes.length} Sub-Worms`;
     document.getElementById('decRigDesc').textContent =
-      `Quick, Draw! seed stroke (f=01) tracked across ${N} SAM 2.1 masks with ${curWorm.braid_count || 0} limb/plane braid crossings and ${curWorm.planted_count || 0} planted ground contacts.`;
+      `Quick, Draw! seed stroke (f=01) tracked across ${N} SAM 2.1 masks with ${curWorm.braid_count || 0} braid crossings & ${curWorm.planted_count || 0} planted contacts.`;
 
-    // 4. Live Frame f + Versions
     const fr = frames[Math.min(frames.length-1, frameIdx)] || {};
     const fc = fr.c || [0.5, 0.5];
     const vers = ['Multiplane GWP'];
@@ -1809,7 +2024,7 @@ h1{
     document.getElementById('decLiveTitle').textContent =
       `f ${String(frameIdx+1).padStart(2,'0')}/${String(N).padStart(2,'0')} · Center (${fc[0].toFixed(2)}, ${fc[1].toFixed(2)})`;
     document.getElementById('decLiveDesc').textContent =
-      `Radius r=${(fr.r || 0.15).toFixed(2)} · Available versions (${vers.length}): ${vers.join(', ')}.`;
+      `Radius r=${(fr.r || 0.15).toFixed(2)} · Versions (${vers.length}): ${vers.join(', ')}.`;
   }
 
   function renderAll(){
@@ -1845,7 +2060,7 @@ h1{
       });
       const txt = document.createElement('span');
       txt.textContent = `${p.label} · z=${p.z}`;
-      txt.title = 'Double-click to solo this plane';
+      txt.title = 'Double-click to solo this timeline';
       lab.addEventListener('dblclick', (e)=>{
         e.preventDefault();
         soloPlaneId = (soloPlaneId === p.id) ? null : p.id;
@@ -1942,7 +2157,8 @@ h1{
     buildPlaneControls();
     buildTicks();
 
-    for(let i=0; i<Math.min(N, 8); i++) getFrameImg(worm, i);
+    // Preload key frames across the shot so stretched timelines have images ready immediately
+    for(let i=0; i<N; i += Math.max(1, Math.floor(N/10))) getFrameImg(worm, i);
     renderAll();
   }
 
@@ -1957,7 +2173,7 @@ h1{
     document.getElementById('shotTitle').textContent = curWorm.title || curWorm.slug;
     document.getElementById('shotLot').textContent = curWorm.lot || 'SM-SHOT';
     document.getElementById('shotMeta').textContent =
-      `Prelinger Archives · ${curWorm.source_title}${curWorm.source_year ? ' ('+curWorm.source_year+')' : ''} · ${curWorm.n_frames} frames @ ${curWorm.fps} fps · ${curWorm.depth_worms ? curWorm.depth_worms.length : curWorm.planes.length} depth layers`;
+      `${curWorm.source_title}${curWorm.source_year ? ' ('+curWorm.source_year+')' : ''} · ${curWorm.n_frames}f @ ${curWorm.fps} fps · ${curWorm.depth_worms ? curWorm.depth_worms.length : curWorm.planes.length} planes`;
     openPageLink.href = `${curWorm.shot_id}.html`;
 
     varSamBtn.style.display = curWorm.has_sam_shot ? '' : 'none';
@@ -1982,13 +2198,9 @@ h1{
     const clientX = (e.touches && e.touches.length) ? e.touches[0].clientX : e.clientX;
     const xRel = (clientX - rect.left) / Math.max(1, rect.width);
 
-    let padLFrac = 44 / cvWorm.width;
-    let padRFrac = 32 / cvWorm.width;
+    let padLFrac = 0.06, padRFrac = 0.06;
     if(wormMode === 'lanes' || wormMode === 'kymo'){
       padLFrac = 122 / cvWorm.width;
-      padRFrac = 16 / cvWorm.width;
-    } else if(wormMode === 'strobe'){
-      padLFrac = 16 / cvWorm.width;
       padRFrac = 16 / cvWorm.width;
     } else if(wormMode === 'anatomy'){
       padLFrac = 126 / cvWorm.width;
@@ -2036,21 +2248,44 @@ h1{
   cvWorm.addEventListener('pointerup', ()=>{ isScrubbingWorm = false; });
   cvWorm.addEventListener('pointercancel', ()=>{ isScrubbingWorm = false; });
 
-  // ==================== CONTROLS & PLAYBACK ====================
+  // ==================== CONTROLS & MOBILE PIP TOGGLE ====================
+  const mobLayoutBtn = document.getElementById('mobLayoutBtn');
+  function toggleMobileLayout(){
+    const isPip = screensWrap.classList.toggle('mob-pip');
+    screensWrap.classList.toggle('mob-split', !isPip);
+    mobLayoutBtn.setAttribute('aria-pressed', String(isPip));
+    mobLayoutBtn.textContent = isPip ? 'PiP View' : 'Split View';
+  }
+  mobLayoutBtn.addEventListener('click', toggleMobileLayout);
+  document.getElementById('stageScreenCard').addEventListener('click', ()=>{
+    if(window.innerWidth <= 860) toggleMobileLayout();
+  });
+
   document.querySelectorAll('[data-wormmode]').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       wormMode = btn.dataset.wormmode;
       document.querySelectorAll('[data-wormmode]').forEach(b=>b.setAttribute('aria-pressed', b===btn ? 'true' : 'false'));
-      const m = LENS_META[wormMode] || LENS_META.lanes;
+      const m = LENS_META[wormMode] || LENS_META.parallel;
       document.getElementById('lensTitle').textContent = m.title;
       document.getElementById('lensDesc').textContent = m.desc;
-      // Preload frames when switching to stroboscopic trail
-      if(curWorm && (wormMode === 'strobe' || wormMode === 'kymo')){
-        const N = curWorm.n_frames || 1;
-        for(let i=0;i<N;i+=Math.max(1, Math.floor(N/8))) getFrameImg(curWorm, i);
-      }
+      document.getElementById('parallelControls').style.display = (wormMode === 'parallel') ? 'inline-flex' : 'none';
       renderAll();
     });
+  });
+
+  document.querySelectorAll('[data-parmode]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      parSubMode = btn.dataset.parmode;
+      document.querySelectorAll('[data-parmode]').forEach(b=>b.setAttribute('aria-pressed', b===btn ? 'true' : 'false'));
+      renderAll();
+    });
+  });
+
+  const wormBgBtn = document.getElementById('wormBgBtn');
+  wormBgBtn.addEventListener('click', ()=>{
+    darkWormBg = !darkWormBg;
+    wormBgBtn.setAttribute('aria-pressed', String(darkWormBg));
+    renderAll();
   });
 
   document.querySelectorAll('[data-speed]').forEach(btn=>{
@@ -2142,7 +2377,7 @@ h1{
     else if(e.key === '['){ e.preventDefault(); document.getElementById('prevShotBtn').click(); }
     else if(e.key === ']'){ e.preventDefault(); document.getElementById('nextShotBtn').click(); }
     else if(e.key >= '1' && e.key <= '6'){
-      const modes = ['lanes','strobe','kymo','anatomy','tunnel','box'];
+      const modes = ['parallel','lanes','strobe','kymo','anatomy','box'];
       const btn = document.querySelector(`[data-wormmode="${modes[parseInt(e.key,10)-1]}"]`);
       if(btn) btn.click();
     }
@@ -2167,44 +2402,27 @@ h1{
     const ctx = cv.getContext('2d');
     const cw = cv.width, ch = cv.height;
     ctx.clearRect(0, 0, cw, ch);
-    ctx.fillStyle = '#FBFAF6';
+    ctx.fillStyle = '#08090C';
     ctx.fillRect(0, 0, cw, ch);
 
+    // Draw mini receding parallel timeline rails + circular ring
     const dws = w.depth_worms || [];
     const nf = (w.frames && w.frames.length) || 1;
-    for(let i=dws.length-1; i>=0; i--){
-      const dw = dws[i];
-      const tr = dw.track || [];
-      if(!tr.length) continue;
-      ctx.beginPath();
-      for(let ti=0; ti<tr.length; ti++){
-        const x = 6 + (tr.length > 1 ? (ti / (tr.length - 1)) * (cw - 12) : (cw - 12)*0.5);
-        const y = 6 + Math.max(0.08, Math.min(0.92, tr[ti][1])) * (ch - 12);
-        if(ti===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-      }
-      ctx.strokeStyle = dw.role === 'subject' ? '#EF9F3A' : (dw.color || '#8A6114');
-      ctx.lineWidth = dw.role === 'subject' ? 3.0 : 1.6;
-      ctx.globalAlpha = dw.role === 'subject' ? 0.95 : 0.45;
-      ctx.stroke();
+    ctx.strokeStyle = 'rgba(255,255,255,0.18)';
+    ctx.lineWidth = 0.7;
+    for(let i=0; i<8; i++){
+      const x = 10 + (i/7)*(cw - 20);
+      ctx.beginPath(); ctx.moveTo(x, 6); ctx.lineTo(x + 8, ch - 6); ctx.stroke();
     }
-    ctx.globalAlpha = 1;
-    for(const q of [0, Math.floor(nf/2), nf-1]){
-      const fr = w.frames && w.frames[q];
-      if(!fr || !fr.doodle) continue;
-      const xOff = (nf > 1 ? (q / (nf - 1)) : 0.5) * (cw - 36);
-      ctx.strokeStyle = q === 0 ? '#8A4A05' : '#161412';
-      ctx.lineWidth = 1.05;
-      for(const s of fr.doodle){
-        if(!s || s.length < 2) continue;
-        ctx.beginPath();
-        for(let k=0;k<s.length;k++){
-          const px = 4 + xOff + s[k][0]*32;
-          const py = 2 + s[k][1]*(ch - 4);
-          if(k===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
-        }
-        ctx.stroke();
-      }
-    }
+    ctx.strokeStyle = '#FF3B30'; ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.moveTo(6, 12); ctx.lineTo(cw - 8, ch - 4); ctx.stroke();
+    ctx.strokeStyle = '#3B82F6'; ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.moveTo(12, 4); ctx.lineTo(cw - 4, ch - 14); ctx.stroke();
+    ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 1.8;
+    ctx.beginPath(); ctx.moveTo(8, 8); ctx.lineTo(cw - 6, ch - 9); ctx.stroke();
+
+    ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 1.1;
+    ctx.beginPath(); ctx.ellipse(cw*0.5, ch*0.5, 14, 15, -0.15, 0, Math.PI*2); ctx.stroke();
   }
 
   function renderCatalogStrip(){
@@ -2233,7 +2451,7 @@ h1{
         </div>
         <div class="thumb-title">${w.title || w.slug}</div>
         <div class="thumb-sub">${w.source_title || ''}</div>
-        <canvas width="156" height="42"></canvas>
+        <canvas width="156" height="38"></canvas>
       `;
       drawMiniWormCard(card.querySelector('canvas'), w);
       card.addEventListener('click', ()=> selectShot(idx));
@@ -2265,7 +2483,7 @@ h1{
         opt.value = String(i);
         const nP = (w.depth_worms && w.depth_worms.length) || (w.planes && w.planes.length) || 2;
         const nV = 1 + (w.has_sam_shot?1:0) + (w.has_redraw_shot?1:0) + (w.has_integrated?1:0);
-        opt.textContent = `${w.lot ? w.lot + ' · ' : ''}${w.title || w.slug} (${nP} planes · ${nV} ver · ${w.n_frames}f)`;
+        opt.textContent = `${w.lot ? w.lot + ' · ' : ''}${w.title || w.slug} (${nP}P · ${nV}v · ${w.n_frames}f)`;
         shotSelect.appendChild(opt);
       });
 
