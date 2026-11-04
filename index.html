@@ -183,97 +183,116 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 }
 .worms-stage{
   background:var(--sheet); border:1.5px solid var(--ink); border-radius:10px;
-  padding:14px; box-shadow:0 6px 0 var(--rule-strong); margin:0 0 26px;
+  padding:8px 10px; box-shadow:0 4px 0 var(--rule-strong); margin:0 0 18px;
+  display:flex; flex-direction:column; gap:6px;
 }
 .worms-head{
-  display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;
-  margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding-bottom:6px;border-bottom:1px solid var(--rule);
+  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
 }
-.worms-head h2{
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:20px;
-  letter-spacing:-0.015em;margin:0;display:inline-flex;align-items:center;gap:8px;
-}
-.worms-head .lot-pill{
-  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;
-  padding:2px 7px;border-radius:4px;background:var(--tag-soft);color:var(--tag-ink);
-}
-.worms-bar{
-  display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;
-  margin-bottom:8px;
-}
+.worms-head::-webkit-scrollbar{display:none;width:0;height:0}
 .w-scroll-strip{
-  display:flex;align-items:center;gap:6px;overflow-x:auto;max-width:100%;
+  display:flex;align-items:center;gap:5px;overflow-x:auto;max-width:100%;
   scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;
 }
 .w-scroll-strip::-webkit-scrollbar{display:none;width:0;height:0}
+.lot-pill{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;
+  padding:3px 7px;border-radius:4px;background:var(--tag-soft);color:var(--tag-ink);
+  border:1px solid var(--tag);white-space:nowrap;flex-shrink:0;
+}
 .w-seg{
-  display:inline-flex;border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;
+  display:inline-flex;border:1.5px solid var(--ink);border-radius:5px;overflow:hidden;
   background:var(--card);flex-shrink:0;
 }
 .w-seg button{
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11.5px;
-  padding:4px 9px;border:0;background:transparent;color:var(--ink);cursor:pointer;
-  border-right:1px solid var(--rule);white-space:nowrap;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11px;
+  padding:3px 8px;border:0;background:transparent;color:var(--ink);cursor:pointer;
+  border-right:1px solid var(--rule);white-space:nowrap;line-height:1.2;
 }
 .w-seg button:last-child{border-right:0}
 .w-seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
 .w-btn{
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11.5px;
-  padding:4px 9px;border:1.5px solid var(--ink);border-radius:6px;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11px;
+  padding:3px 8px;border:1.5px solid var(--ink);border-radius:5px;
   background:var(--card);color:var(--ink);cursor:pointer;text-decoration:none;
-  display:inline-flex;align-items:center;gap:4px;white-space:nowrap;flex-shrink:0;
+  display:inline-flex;align-items:center;gap:4px;white-space:nowrap;flex-shrink:0;line-height:1.2;
 }
 .w-btn:hover{border-color:var(--tag)}
 .w-btn[aria-pressed="true"]{background:var(--tag);color:#161412;border-color:var(--ink)}
+.w-btn-stop[aria-pressed="true"]{background:#B8332A;color:#FBFAF6;border-color:var(--ink)}
+.w-btn-recover{background:var(--tag-soft);color:var(--tag-ink);border-color:var(--tag)}
 .w-select{
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;
-  padding:4px 26px 4px 9px;border:1.5px solid var(--ink);border-radius:6px;
-  background-color:var(--card);color:var(--ink);cursor:pointer;max-width:310px;
-  appearance:none;-webkit-appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23161412' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1.5L6 6.5L11 1.5'/%3E%3C/svg%3E");
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11.5px;
+  padding:3px 24px 3px 8px;border:1.5px solid var(--ink);border-radius:5px;
+  background-color:var(--card);color:var(--ink);cursor:pointer;max-width:290px;
+  appearance:none;-webkit-appearance:none;line-height:1.2;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='none' stroke='%23161412' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M1 1L5 5L9 1'/%3E%3C/svg%3E");
   background-repeat:no-repeat;
-  background-position:right 8px center;
+  background-position:right 7px center;
 }
-.w-lens-banner{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
-  padding:5px 10px;margin-bottom:9px;border-radius:6px;
-  background:var(--tag-soft);border:1px solid var(--tag);color:var(--ink);font-size:12px;
-}
-.w-lens-banner b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:var(--tag-ink)}
 .w-screens{
-  position:relative;display:grid;grid-template-columns:1.35fr 1fr;gap:12px;align-items:stretch;
+  position:relative;display:grid;grid-template-columns:1.38fr 1fr;gap:8px;align-items:stretch;
 }
 .w-screen{
   position:relative;background:var(--cel);border:1.5px solid var(--ink);
-  border-radius:6px;overflow:hidden;
+  border-radius:6px;overflow:hidden;display:flex;flex-direction:column;
 }
+.w-pane-bar{
+  height:30px;padding:0 6px;background:var(--sheet);border-bottom:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:space-between;gap:5px;flex-shrink:0;
+  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+}
+.w-pane-bar::-webkit-scrollbar{display:none;width:0;height:0}
 .w-canvas-wrap{
   position:relative;width:100%;aspect-ratio:4/3;background:var(--cel);
-  touch-action:none;user-select:none;
+  touch-action:none;user-select:none;flex:1;
 }
-.w-canvas-wrap.worm-scrub-area{cursor:ew-resize;aspect-ratio:16/11}
+.w-canvas-wrap.worm-scrub-area{cursor:ew-resize;aspect-ratio:16/10.5}
 .w-screen canvas{display:block;width:100%;height:100%}
 .w-screen .w-lbl{
-  position:absolute;top:6px;left:8px;
-  font-family:'JetBrains Mono',monospace;font-size:10px;
+  position:absolute;bottom:5px;left:6px;
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;
   background:rgba(246,239,227,0.92);color:#161412;
-  padding:2px 7px;border-radius:4px;border:1px solid var(--rule-strong);
-  pointer-events:none;z-index:2;max-width:62%;
+  padding:1px 6px;border-radius:3px;border:1px solid var(--rule-strong);
+  pointer-events:none;z-index:2;max-width:58%;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 .w-screen .w-lbl-r{
-  position:absolute;top:6px;right:8px;
-  font-family:'JetBrains Mono',monospace;font-size:10px;
+  position:absolute;bottom:5px;right:6px;
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;
   background:var(--tag-soft);color:var(--tag-ink);
-  padding:2px 7px;border-radius:4px;border:1px solid var(--tag);
+  padding:1px 6px;border-radius:3px;border:1px solid var(--tag);
   pointer-events:none;z-index:2;font-weight:600;white-space:nowrap;
 }
 .w-mob-pip-btn{display:none}
-.w-controls{
-  display:grid;grid-template-columns:auto auto auto 1fr auto;gap:8px;align-items:center;
-  margin-top:10px;padding-top:9px;border-top:1px solid var(--rule);
+.w-dock{
+  display:flex;flex-direction:column;gap:5px;padding-top:4px;border-top:1px solid var(--rule);
 }
-.w-scrub{position:relative;display:flex;align-items:center;height:28px}
+.w-planes-row{
+  display:flex;align-items:center;justify-content:space-between;gap:6px;
+  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+}
+.w-planes-row::-webkit-scrollbar{display:none;width:0;height:0}
+.w-planes{
+  display:flex;gap:4px;align-items:center;flex-wrap:nowrap;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.w-planes::-webkit-scrollbar{display:none;width:0;height:0}
+.w-plane-pill{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  padding:2px 7px;border:1px solid var(--rule-strong);border-radius:4px;
+  background:var(--card);color:var(--ink);cursor:pointer;user-select:none;
+  display:inline-flex;align-items:center;gap:4px;white-space:nowrap;flex-shrink:0;
+}
+.w-plane-pill.subj{border-color:var(--tag);background:var(--tag-soft);color:var(--tag-ink);font-weight:600}
+.w-plane-pill.soloed{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.w-plane-pill.muted{opacity:0.38}
+.w-controls{
+  display:grid;grid-template-columns:auto auto 1fr auto auto;gap:6px;align-items:center;
+}
+.w-scrub{position:relative;display:flex;align-items:center;height:22px}
 .w-scrub input[type=range]{
   width:100%;cursor:pointer;margin:0;background:transparent;
   appearance:none;-webkit-appearance:none;position:relative;z-index:2;
@@ -283,67 +302,27 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   height:6px;border-radius:999px;background:var(--rule);border:1px solid var(--ink);
 }
 .w-scrub input[type=range]::-webkit-slider-thumb{
-  -webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;
-  background:var(--tag);border:2px solid var(--ink);margin-top:-6px;
-  box-shadow:0 1px 3px rgba(0,0,0,0.25);
+  -webkit-appearance:none;appearance:none;width:15px;height:15px;border-radius:50%;
+  background:var(--tag);border:2px solid var(--ink);margin-top:-5.5px;
+  box-shadow:0 1px 2px rgba(0,0,0,0.22);
 }
 .w-scrub input[type=range]::-moz-range-track{
   height:6px;border-radius:999px;background:var(--rule);border:1px solid var(--ink);
 }
 .w-scrub input[type=range]::-moz-range-thumb{
-  width:16px;height:16px;border-radius:50%;background:var(--tag);border:2px solid var(--ink);
-  box-shadow:0 1px 3px rgba(0,0,0,0.25);
+  width:15px;height:15px;border-radius:50%;background:var(--tag);border:2px solid var(--ink);
+  box-shadow:0 1px 2px rgba(0,0,0,0.22);
 }
-.w-ticks{position:absolute;left:8px;right:8px;top:1px;height:6px;pointer-events:none;z-index:1}
-.w-ticks span{position:absolute;top:0;width:2px;height:5px;background:var(--rule-strong);transform:translateX(-1px)}
-.w-ticks span.drawn{background:var(--ink);height:7px;width:2.5px}
-.w-ticks span.line{background:var(--tag);height:8px;width:3px}
-.w-readout{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);min-width:86px;text-align:right}
-.w-foot{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
-  margin-top:8px;font-size:12px;color:var(--muted);
-}
-.w-planes{
-  display:flex;gap:5px;flex-wrap:wrap;align-items:center;
-  scrollbar-width:none;-ms-overflow-style:none;
-}
-.w-planes::-webkit-scrollbar{display:none;width:0;height:0}
-.w-planes label{
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;
-  padding:2px 7px;border:1px solid var(--rule-strong);border-radius:4px;
-  background:var(--card);cursor:pointer;user-select:none;
-  display:inline-flex;align-items:center;gap:4px;white-space:nowrap;
-}
-.w-planes label.subj{border-color:var(--tag);background:var(--tag-soft);color:var(--tag-ink);font-weight:600}
-.w-planes label.soloed{outline:2px solid var(--ink)}
-.w-planes input{accent-color:var(--tag);margin:0}
+.w-ticks{position:absolute;left:7px;right:7px;top:1px;height:5px;pointer-events:none;z-index:1}
+.w-ticks span{position:absolute;top:0;width:1.5px;height:4px;background:var(--rule-strong);transform:translateX(-1px)}
+.w-ticks span.drawn{background:var(--ink);height:6px;width:2px}
+.w-ticks span.line{background:var(--tag);height:7px;width:2.5px}
+.w-readout{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--ink);min-width:74px;text-align:right;white-space:nowrap}
 
-.w-decoder-grid{
-  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;
-  margin-top:9px;padding-top:9px;border-top:1px solid var(--rule);
-}
-.w-dec-card{
-  background:var(--card);border:1px solid var(--rule-strong);border-radius:6px;
-  padding:7px 9px;display:flex;flex-direction:column;gap:2px;
-}
-.w-dec-card .dk{
-  font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;
-  letter-spacing:0.05em;color:var(--tag-ink);font-weight:600;
-}
-.w-dec-card .dv{
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:13px;color:var(--ink);
-}
-.w-dec-card .dp{font-size:11px;color:var(--muted);line-height:1.3;margin:0}
-
-/* Mobile-First Zero-Scroll Layout */
+/* Mobile Zero-Scroll Operational Layout */
 @media (max-width:860px){
-  .worms-stage{padding:9px;margin-bottom:16px}
-  .worms-head{margin-bottom:6px;padding-bottom:6px;gap:6px}
-  .worms-head h2{font-size:16px}
-  #idxWormSub{display:none}
-  .w-select{max-width:190px;font-size:11.5px;padding:3px 22px 3px 6px}
-  .w-lens-banner{padding:4px 8px;margin-bottom:6px;font-size:11px}
-  #idxLensDesc{display:none}
+  .worms-stage{padding:6px 8px;margin-bottom:12px;gap:5px}
+  .w-select{max-width:175px;font-size:11px;padding:2px 20px 2px 6px}
   .w-mob-pip-btn{display:inline-flex}
   .w-screens.mob-pip{
     display:block;position:relative;
@@ -352,27 +331,22 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     aspect-ratio:4/3;
   }
   .w-screens.mob-pip .w-screen-stage{
-    position:absolute;right:8px;bottom:8px;width:36%;max-width:165px;
+    position:absolute;right:6px;bottom:6px;width:36%;max-width:156px;
     z-index:6;box-shadow:0 6px 18px rgba(0,0,0,0.48);
     border:2px solid var(--tag);border-radius:6px;
   }
+  .w-screens.mob-pip .w-screen-stage .w-pane-bar{display:none}
   .w-screens.mob-pip .w-screen-stage .w-lbl,
   .w-screens.mob-pip .w-screen-stage .w-lbl-r{
-    font-size:8px;padding:1px 4px;top:3px;
+    font-size:8px;padding:1px 4px;bottom:3px;
   }
   .w-screens.mob-split{
-    display:grid;grid-template-columns:1.18fr 0.82fr;gap:6px;
+    display:grid;grid-template-columns:1.18fr 0.82fr;gap:5px;
   }
   .w-controls{
-    grid-template-columns:auto auto 1fr auto;gap:5px;margin-top:6px;padding-top:6px;
+    grid-template-columns:auto auto 1fr auto;gap:4px;
   }
   .w-controls [aria-label="Playback speed"]{display:none}
-  .w-foot{margin-top:5px;gap:4px}
-  #idxCaption{display:none}
-  .w-planes{flex-wrap:nowrap;overflow-x:auto;max-width:100%}
-  .w-decoder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:6px;padding-top:6px}
-  .w-dec-card{padding:5px 7px}
-  .w-dec-card .dp{display:none}
 }
 
 /* Warm-paper mini worm badge on Rack cards */
@@ -395,76 +369,67 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 
 <section class="worms-stage" id="shmWormsHero" aria-label="Multiplane Space-Worms Explorer">
   <div class="worms-head">
-    <div>
-      <h2>
-        <span class="lot-pill" id="idxWormLot">SM-0004</span>
-        <span id="idxWormTitle">Giraffe Walks Past — Multiplane Space-Worm Explorer</span>
-      </h2>
-      <div style="font-size:12.5px;color:var(--muted);margin-top:2px" id="idxWormSub">
-        Prelinger Archives · Wonderful World (Part II) · Switch between 6 Space-Worm Lenses and drag horizontally across the left screen to scrub.
-      </div>
-    </div>
-    <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+    <div class="w-scroll-strip">
+      <span class="lot-pill" id="idxWormLot">SM-0004</span>
       <button type="button" class="w-btn" id="idxPrevShot">Prev</button>
       <select class="w-select" id="idxShotSelect" aria-label="Select shot"></select>
       <button type="button" class="w-btn" id="idxNextShot">Next</button>
-      <a class="w-btn" id="idxFullWormsLink" href="pages/worms.html">Full Worms Studio (109)</a>
-    </div>
-  </div>
-
-  <div class="worms-bar">
-    <div class="w-scroll-strip">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;color:var(--muted);flex-shrink:0">LENS:</span>
-      <div class="w-seg" role="group" aria-label="Space-Worm Interpretation Lens">
-        <button type="button" data-idxwmode="parallel" aria-pressed="true">1 · Parallel Timelines (3D Stretch)</button>
-        <button type="button" data-idxwmode="lanes" aria-pressed="false">2 · Plane Worms</button>
-        <button type="button" data-idxwmode="strobe" aria-pressed="false">3 · Stroboscopic Trail</button>
-        <button type="button" data-idxwmode="kymo" aria-pressed="false">4 · Slit-Scan &amp; Graphs</button>
-        <button type="button" data-idxwmode="anatomy" aria-pressed="false">5 · Anatomy &amp; Joints</button>
-        <button type="button" data-idxwmode="box" aria-pressed="false">6 · Planes in Depth</button>
-      </div>
+      <button type="button" class="w-btn w-btn-recover" id="idxResetBtn" style="display:none">Reset</button>
     </div>
     <div class="w-scroll-strip">
-      <div class="w-seg" id="idxParallelSubSeg" role="group" aria-label="Parallel Timeline Sub-mode">
-        <button type="button" data-idxpsub="radial" aria-pressed="true">Radial Multi-Worm Fan</button>
-        <button type="button" data-idxpsub="dual" aria-pressed="false">2-Rail Stretch (Red / Blue)</button>
-      </div>
-      <button type="button" class="w-btn" id="idxParThemeBtn" aria-pressed="true" title="Toggle high-contrast cinema black backdrop for white correspondence rays">Dark / Paper</button>
-      <div class="w-seg" role="group" aria-label="Version">
-        <button type="button" id="idxVarGwp" data-idxvar="gwp" aria-pressed="true">Multiplane (GWP)</button>
-        <button type="button" id="idxVarSam" data-idxvar="sam" aria-pressed="false" style="display:none">SAM Cutout</button>
-        <button type="button" id="idxVarRedraw" data-idxvar="redraw" aria-pressed="false" style="display:none">Puppet Redraw</button>
-        <button type="button" id="idxVarInt" data-idxvar="int" aria-pressed="false" style="display:none">Integrated 24fps</button>
-      </div>
-      <div class="w-seg" role="group" aria-label="Stage view">
-        <button type="button" data-idxview="cartoon" aria-pressed="false">Cartoon</button>
-        <button type="button" data-idxview="composite" aria-pressed="true">Over footage</button>
-        <button type="button" data-idxview="cutout" aria-pressed="false">SAM Cutout</button>
-        <button type="button" data-idxview="footage" aria-pressed="false">Footage</button>
-        <button type="button" data-idxview="masks" aria-pressed="false">Silhouettes</button>
-      </div>
-      <button type="button" class="w-btn" id="idxBoilBtn" aria-pressed="true">Boil</button>
-      <button type="button" class="w-btn" id="idxCelBtn" aria-pressed="true">Paint cels</button>
       <button type="button" class="w-btn w-mob-pip-btn" id="idxMobPipBtn" aria-pressed="true">PiP / Split</button>
-    </div>
-  </div>
-
-  <div class="w-lens-banner">
-    <div>
-      <b id="idxLensTitle">Lens 1 · Parallel &amp; Stretched Output Timelines (3D Multi-Worm):</b>
-      <span id="idxLensDesc">Parallel output timelines are prepared around the central input spine; distributed keyframes fan out via white correspondence rays (stretched 1/K slower per layer with head fixed) and intersect the circular cross-section ring as upright 3D frame cards.</span>
+      <a class="w-btn" id="idxFullWormsLink" href="pages/worms.html">Studio (109)</a>
     </div>
   </div>
 
   <div class="w-screens mob-pip" id="idxScreensWrap">
     <div class="w-screen w-screen-worm">
+      <div class="w-pane-bar">
+        <div class="w-scroll-strip">
+          <div class="w-seg" role="group" aria-label="Space-Worm Interpretation Lens">
+            <button type="button" data-idxwmode="parallel" aria-pressed="true">1 · 3D Stretch</button>
+            <button type="button" data-idxwmode="lanes" aria-pressed="false">2 · Planes</button>
+            <button type="button" data-idxwmode="strobe" aria-pressed="false">3 · Trail</button>
+            <button type="button" data-idxwmode="kymo" aria-pressed="false">4 · Graphs</button>
+            <button type="button" data-idxwmode="anatomy" aria-pressed="false">5 · Rig</button>
+            <button type="button" data-idxwmode="box" aria-pressed="false">6 · Depth Box</button>
+          </div>
+        </div>
+        <div class="w-scroll-strip" id="idxParallelTools">
+          <div class="w-seg" id="idxParallelSubSeg" role="group" aria-label="Parallel Timeline Sub-mode">
+            <button type="button" data-idxpsub="radial" aria-pressed="true">Radial</button>
+            <button type="button" data-idxpsub="dual" aria-pressed="false">2-Rail</button>
+          </div>
+          <button type="button" class="w-btn" id="idxParThemeBtn" aria-pressed="true">Dark</button>
+        </div>
+      </div>
       <div class="w-canvas-wrap worm-scrub-area">
         <canvas id="idxCvWorm" width="680" height="468"></canvas>
         <span class="w-lbl" id="idxLblWorm">parallel output timelines (3D stretch) · drag to scrub</span>
         <span class="w-lbl-r" id="idxLblWormR">6 planes · f 01/33</span>
       </div>
     </div>
+
     <div class="w-screen w-screen-stage" id="idxStageScreenCard">
+      <div class="w-pane-bar">
+        <div class="w-scroll-strip">
+          <div class="w-seg" role="group" aria-label="Stage view">
+            <button type="button" data-idxview="composite" aria-pressed="true">Over Footage</button>
+            <button type="button" data-idxview="cutout" aria-pressed="false">SAM Cutout</button>
+            <button type="button" data-idxview="cartoon" aria-pressed="false">Cartoon</button>
+            <button type="button" data-idxview="footage" aria-pressed="false">Footage</button>
+            <button type="button" data-idxview="masks" aria-pressed="false">Masks</button>
+          </div>
+        </div>
+        <div class="w-scroll-strip" id="idxVariantWrap" style="display:none">
+          <div class="w-seg" role="group" aria-label="Version">
+            <button type="button" id="idxVarGwp" data-idxvar="gwp" aria-pressed="true">GWP</button>
+            <button type="button" id="idxVarSam" data-idxvar="sam" aria-pressed="false" style="display:none">SAM</button>
+            <button type="button" id="idxVarRedraw" data-idxvar="redraw" aria-pressed="false" style="display:none">Redraw</button>
+            <button type="button" id="idxVarInt" data-idxvar="int" aria-pressed="false" style="display:none">24fps</button>
+          </div>
+        </div>
+      </div>
       <div class="w-canvas-wrap">
         <canvas id="idxCvStage" width="480" height="360"></canvas>
         <span class="w-lbl" id="idxLblStage">composite over footage · camera pans with shot</span>
@@ -473,49 +438,27 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     </div>
   </div>
 
-  <div class="w-controls">
-    <button type="button" class="w-btn" id="idxPlayBtn" aria-pressed="false">Play</button>
-    <div style="display:inline-flex;gap:4px">
-      <button type="button" class="w-btn" id="idxStepPrev">-1f</button>
-      <button type="button" class="w-btn" id="idxStepNext">+1f</button>
+  <div class="w-dock">
+    <div class="w-planes-row">
+      <div class="w-planes" id="idxPlanes"></div>
+      <button type="button" class="w-btn w-btn-recover" id="idxShowAllPlanes" style="display:none">All Planes</button>
     </div>
-    <div class="w-seg" role="group" aria-label="Playback speed">
-      <button type="button" data-idxspeed="1" aria-pressed="true">1×</button>
-      <button type="button" data-idxspeed="0.5" aria-pressed="false">0.5×</button>
-      <button type="button" data-idxspeed="0.25" aria-pressed="false">0.25×</button>
-    </div>
-    <div class="w-scrub">
-      <div class="w-ticks" id="idxTicks"></div>
-      <input type="range" id="idxScrub" min="0" max="32" value="0" step="1" aria-label="Scrub frame">
-    </div>
-    <div class="w-readout" id="idxReadout">f 01 / 33</div>
-  </div>
-
-  <div class="w-foot">
-    <span id="idxCaption">Drag horizontally across the left 3D timeline highway to scrub through the SAM cutouts &amp; multiplane drawings.</span>
-    <div class="w-planes" id="idxPlanes"></div>
-  </div>
-
-  <div class="w-decoder-grid">
-    <div class="w-dec-card">
-      <span class="dk">1 · What the Worm Does in Space</span>
-      <div class="dv" id="idxDecShapeT">—</div>
-      <p class="dp" id="idxDecShapeP">—</p>
-    </div>
-    <div class="w-dec-card">
-      <span class="dk">2 · Camera Pan vs. Depth Parallax</span>
-      <div class="dv" id="idxDecCamT">—</div>
-      <p class="dp" id="idxDecCamP">—</p>
-    </div>
-    <div class="w-dec-card">
-      <span class="dk">3 · Drawing Rig &amp; Sub-Worm Anatomy</span>
-      <div class="dv" id="idxDecRigT">—</div>
-      <p class="dp" id="idxDecRigP">—</p>
-    </div>
-    <div class="w-dec-card">
-      <span class="dk">4 · Live Frame Telemetry &amp; Versions</span>
-      <div class="dv" id="idxDecLiveT">—</div>
-      <p class="dp" id="idxDecLiveP">—</p>
+    <div class="w-controls">
+      <button type="button" class="w-btn w-btn-stop" id="idxPlayBtn" aria-pressed="false">Play</button>
+      <div style="display:inline-flex;gap:3px">
+        <button type="button" class="w-btn" id="idxStepPrev">-1f</button>
+        <button type="button" class="w-btn" id="idxStepNext">+1f</button>
+      </div>
+      <div class="w-scrub">
+        <div class="w-ticks" id="idxTicks"></div>
+        <input type="range" id="idxScrub" min="0" max="32" value="0" step="1" aria-label="Scrub frame">
+      </div>
+      <div class="w-seg" role="group" aria-label="Playback speed">
+        <button type="button" data-idxspeed="1" aria-pressed="true">1x</button>
+        <button type="button" data-idxspeed="0.5" aria-pressed="false">0.5x</button>
+        <button type="button" data-idxspeed="0.25" aria-pressed="false">0.25x</button>
+      </div>
+      <div class="w-readout" id="idxReadout">f 01 / 33</div>
     </div>
   </div>
 </section>
@@ -532,12 +475,15 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   const readout = document.getElementById('idxReadout');
   const ticksEl = document.getElementById('idxTicks');
   const planesEl = document.getElementById('idxPlanes');
+  const showAllPlanesBtn = document.getElementById('idxShowAllPlanes');
+  const resetBtn = document.getElementById('idxResetBtn');
 
+  const varWrap = document.getElementById('idxVariantWrap');
   const varGwp = document.getElementById('idxVarGwp');
   const varSam = document.getElementById('idxVarSam');
   const varRedraw = document.getElementById('idxVarRedraw');
   const varInt = document.getElementById('idxVarInt');
-  const parSubSeg = document.getElementById('idxParallelSubSeg');
+  const parTools = document.getElementById('idxParallelTools');
   const parThemeBtn = document.getElementById('idxParThemeBtn');
   const screensWrap = document.getElementById('idxScreensWrap');
   const mobPipBtn = document.getElementById('idxMobPipBtn');
@@ -1648,49 +1594,12 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     ctx.restore();
   }
 
-  function updateDecoder(fi){
-    if(!curWorm) return;
-    const frames = curWorm.frames || [];
-    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
-    const planes = getActivePlanes();
-    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
-
-    const c0 = (frames[0] && frames[0].c) ? frames[0].c : [0.5, 0.5];
-    const c1 = (frames[frames.length-1] && frames[frames.length-1].c) ? frames[frames.length-1].c : [0.5, 0.5];
-    const dxPct = Math.round((c1[0] - c0[0]) * 100);
-    const dyPct = Math.round((c1[1] - c0[1]) * 100);
-    const dirStr = Math.abs(dxPct) < 5 && Math.abs(dyPct) < 5
-      ? 'Holds position near frame center'
-      : `${dxPct > 3 ? 'Moves Right (+' + dxPct + '%)' : (dxPct < -3 ? 'Moves Left (' + dxPct + '%)' : 'Steady X')}${Math.abs(dyPct) > 3 ? ', ' + (dyPct > 0 ? 'Down +' + dyPct + '%' : 'Up ' + dyPct + '%') : ''}`;
-    document.getElementById('idxDecShapeT').textContent = TOPO_HUMAN[curWorm.topology] || curWorm.topology || 'Tracked Motion';
-    document.getElementById('idxDecShapeP').textContent =
-      `${dirStr} from (${c0[0].toFixed(2)}, ${c0[1].toFixed(2)}) to (${c1[0].toFixed(2)}, ${c1[1].toFixed(2)}) over ${curWorm.duration_s || (N/12).toFixed(1)}s.`;
-
-    const minZ = Math.min(...planes.map(p=>p.z));
-    const maxZ = Math.max(...planes.map(p=>p.z));
-    const panMag = Math.round((curWorm.cam_pan_mag || 0) * ((S && S.W) || curWorm.W || 480));
-    document.getElementById('idxDecCamT').textContent = `${planes.length} Depth Planes (z=${minZ} to z=${maxZ})`;
-    document.getElementById('idxDecCamP').textContent =
-      panMag > 4
-        ? `Camera pans ~${panMag}px. Near plane (z=${minZ}) moves ${(zRef/minZ).toFixed(2)}x camera speed; far (z=${maxZ}) moves ${(zRef/maxZ).toFixed(2)}x.`
-        : `Minimal camera pan (~${panMag}px). Subject moves across ${planes.length} depth strata.`;
-
-    const nJoints = Object.keys(curWorm.joints || {}).length;
-    const keys = (S && S.keys) || curWorm.keys || {};
-    const nDrawn = (keys.drawn || [0]).length;
-    document.getElementById('idxDecRigT').textContent = `${nDrawn} Drawn Keys · ${nJoints || planes.length} Sub-Worms`;
-    document.getElementById('idxDecRigP').textContent =
-      `Quick, Draw! seed (f=01) tracked across ${N} SAM masks with ${curWorm.braid_count || 0} braid crossings & ${curWorm.planted_count || 0} planted contacts.`;
-
-    const fr = frames[Math.min(frames.length-1, fi)] || {};
-    const fc = fr.c || [0.5, 0.5];
-    const vers = ['Multiplane GWP'];
-    if(curWorm.is_flagship) vers.push('Flagship 6-Plane');
-    if(curWorm.has_sam_shot) vers.push('SAM Cutout');
-    if(curWorm.has_redraw_shot) vers.push('Puppet Redraw');
-    if(curWorm.has_integrated) vers.push('Integrated 24fps');
-    document.getElementById('idxDecLiveT').textContent = `f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')} · (${fc[0].toFixed(2)}, ${fc[1].toFixed(2)})`;
-    document.getElementById('idxDecLiveP').textContent = `Versions (${vers.length}): ${vers.join(', ')}.`;
+  function updateConditionalState(){
+    if(showAllPlanesBtn) showAllPlanesBtn.style.display = soloPlaneId ? '' : 'none';
+    if(resetBtn){
+      const isModified = (f !== 0) || (soloPlaneId !== null) || (view !== 'composite');
+      resetBtn.style.display = isModified ? '' : 'none';
+    }
   }
 
   function renderAll(){
@@ -1703,7 +1612,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     scrub.max = Math.max(0, N - 1);
     scrub.value = String(f);
     readout.textContent = `f ${String(f+1).padStart(2,'0')} / ${String(N).padStart(2,'0')}`;
-    updateDecoder(f);
+    updateConditionalState();
   }
 
   function buildPlanesAndTicks(){
@@ -1713,20 +1622,18 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     const planes = getActivePlanes();
     planes.forEach(p=>{
       if(!(p.id in planeOn)) planeOn[p.id] = true;
-      const lab = document.createElement('label');
-      if(p.id === 'char') lab.classList.add('subj');
-      const cb = document.createElement('input');
-      cb.type = 'checkbox';
-      cb.checked = planeOn[p.id] !== false;
-      cb.addEventListener('change', ()=>{
-        planeOn[p.id] = cb.checked;
-        soloPlaneId = null;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'w-plane-pill' + (p.id === 'char' ? ' subj' : '');
+      if(soloPlaneId === p.id) btn.classList.add('soloed');
+      else if(soloPlaneId && soloPlaneId !== p.id) btn.classList.add('muted');
+      btn.textContent = `${p.label} · z=${p.z}`;
+      btn.addEventListener('click', ()=>{
+        soloPlaneId = (soloPlaneId === p.id) ? null : p.id;
+        buildPlanesAndTicks();
         renderAll();
       });
-      const sp = document.createElement('span');
-      sp.textContent = `${p.label} · z=${p.z}`;
-      lab.appendChild(cb); lab.appendChild(sp);
-      planesEl.appendChild(lab);
+      planesEl.appendChild(btn);
     });
 
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
@@ -1790,11 +1697,10 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     f = 0;
     sel.value = String(idx);
     document.getElementById('idxWormLot').textContent = curWorm.lot || 'SM-SHOT';
-    document.getElementById('idxWormTitle').textContent = `${curWorm.title || curWorm.slug} — Multiplane Space-Worm Explorer`;
-    document.getElementById('idxWormSub').textContent =
-      `Prelinger Archives · ${curWorm.source_title}${curWorm.source_year ? ' ('+curWorm.source_year+')' : ''} · ${curWorm.n_frames} frames @ ${curWorm.fps} fps · Switch between 6 Space-Worm Lenses and drag horizontally across the left screen to scrub.`;
     document.getElementById('idxFullWormsLink').href = `pages/worms.html?shot=${encodeURIComponent(curWorm.shot_id)}`;
 
+    const hasMultiVar = Boolean(curWorm.has_sam_shot || curWorm.has_redraw_shot || curWorm.has_integrated);
+    if(varWrap) varWrap.style.display = hasMultiVar ? '' : 'none';
     varSam.style.display = curWorm.has_sam_shot ? '' : 'none';
     varRedraw.style.display = curWorm.has_redraw_shot ? '' : 'none';
     varInt.style.display = curWorm.has_integrated ? '' : 'none';
@@ -1845,11 +1751,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     btn.addEventListener('click', ()=>{
       wormMode = btn.dataset.idxwmode;
       document.querySelectorAll('[data-idxwmode]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
-      const m = LENS_META[wormMode] || LENS_META.parallel;
-      document.getElementById('idxLensTitle').textContent = m.title;
-      document.getElementById('idxLensDesc').textContent = m.desc;
-      if(parSubSeg) parSubSeg.style.display = (wormMode === 'parallel') ? '' : 'none';
-      if(parThemeBtn) parThemeBtn.style.display = (wormMode === 'parallel') ? '' : 'none';
+      if(parTools) parTools.style.display = (wormMode === 'parallel') ? '' : 'none';
       if(curWorm && (wormMode === 'strobe' || wormMode === 'kymo' || wormMode === 'parallel')){
         const N = curWorm.n_frames || 1;
         for(let i=0;i<N;i+=Math.max(1, Math.floor(N/8))) getFrameImg(curWorm, i);
@@ -1868,6 +1770,27 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     parThemeBtn.addEventListener('click', ()=>{
       parallelDark = !parallelDark;
       parThemeBtn.setAttribute('aria-pressed', String(parallelDark));
+      parThemeBtn.textContent = parallelDark ? 'Dark' : 'Paper';
+      renderAll();
+    });
+  }
+  if(showAllPlanesBtn){
+    showAllPlanesBtn.addEventListener('click', ()=>{
+      soloPlaneId = null;
+      buildPlanesAndTicks();
+      renderAll();
+    });
+  }
+  if(resetBtn){
+    resetBtn.addEventListener('click', ()=>{
+      playing = false;
+      playBtn.setAttribute('aria-pressed', 'false');
+      playBtn.textContent = 'Play';
+      f = 0;
+      soloPlaneId = null;
+      view = 'composite';
+      document.querySelectorAll('[data-idxview]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.idxview==='composite'?'true':'false'));
+      buildPlanesAndTicks();
       renderAll();
     });
   }
@@ -1906,16 +1829,10 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       renderAll();
     });
   });
-  document.getElementById('idxBoilBtn').addEventListener('click', (e)=>{
-    boilOn = !boilOn; e.currentTarget.setAttribute('aria-pressed', String(boilOn)); renderAll();
-  });
-  document.getElementById('idxCelBtn').addEventListener('click', (e)=>{
-    celOn = !celOn; e.currentTarget.setAttribute('aria-pressed', String(celOn)); renderAll();
-  });
   playBtn.addEventListener('click', ()=>{
     playing = !playing;
     playBtn.setAttribute('aria-pressed', String(playing));
-    playBtn.textContent = playing ? 'Pause' : 'Play';
+    playBtn.textContent = playing ? 'Stop' : 'Play';
     if(playing){ lastTick = performance.now(); requestAnimationFrame(loop); }
   });
   document.getElementById('idxStepPrev').addEventListener('click', ()=>{
@@ -2075,7 +1992,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     <span class="eyebrow">Moving Image Archive × Quick, Draw!</span>
     <h1>Secondhand Motion</h1>
     <p class="lede">Archive film, redrawn as moving doodles. Each shot gets one real Quick, Draw! drawing as its character, the footage's own motion and camera, and a stack of tests before it counts. Everything made so far hangs on the rack below.</p>
-    <p style="display:flex;flex-wrap:wrap;gap:10px 20px;margin:0"><a href="shots/moving-drawings.html">Watch the drawings beside their archive footage →</a> <a href="pages/worms.html"><b>Explore the 108 4D Spatiotemporal Time Worms (SAM Polygon Tubes, Depth &amp; Joint Braids) →</b></a></p>
+    <p style="display:flex;flex-wrap:wrap;gap:10px 20px;margin:0"><a href="shots/moving-drawings.html">Watch the drawings beside their archive footage</a> <a href="pages/worms.html"><b>Explore the 109 Multiplane Space-Worms Studio</b></a></p>
     <div class="counts" id="counts"></div>
   </div>
   <figure class="walker" style="margin:0">

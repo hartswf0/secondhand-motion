@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Secondhand Motion — Multiplane Space-Worms Studio (109 Shots)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Secondhand Motion — Space-Worms</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --paper: #F6EFE3;
@@ -20,14 +20,9 @@
     --tag-ink: #8A4A05;
     --pass: #2E7A4A;
     --pass-soft: #DCEFDF;
-    --warn: #B85C14;
-    --warn-soft: #FCE5CC;
     --fail: #B8432F;
-    --fail-soft: #F6DDD6;
     --cel: #FBFAF6;
     --card: #FFFFFF;
-    --sky: #E7EEF2;
-    --earth: #ECE2CE;
   }
 
   * {
@@ -36,234 +31,275 @@
     scrollbar-width: thin;
     scrollbar-color: var(--rule-strong) transparent;
   }
-  *::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-  *::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  *::-webkit-scrollbar-thumb {
-    background: var(--rule-strong);
-    border-radius: 999px;
-  }
+  *::-webkit-scrollbar { width: 5px; height: 5px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: 999px; }
 
   html, body {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
     background: var(--paper);
     color: var(--ink);
     font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 13px;
+    line-height: 1.25;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 
-  .wrap {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 18px 24px 64px;
-  }
-
-  header.site {
-    display: flex; align-items: baseline; justify-content: space-between;
-    gap: 16px; flex-wrap: wrap;
-    padding-bottom: 12px;
-    border-bottom: 1.5px solid var(--ink);
-    margin-bottom: 16px;
-  }
-  .brand {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 800; font-size: 19px; letter-spacing: -0.01em;
-    color: var(--ink); text-decoration: none;
-    display: inline-flex; align-items: center; gap: 10px;
-  }
-  .brand .dot {
-    width: 11px; height: 11px; border-radius: 50%;
-    background: var(--tag); border: 1.5px solid var(--ink);
-    display: inline-block;
-  }
-  .crumbs {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12.5px; color: var(--muted);
-    display: flex; gap: 14px; flex-wrap: wrap; align-items: center;
-  }
-  .crumbs a {
-    color: var(--ink); text-decoration: underline; text-underline-offset: 3px;
-  }
-
-  .title-block {
-    display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: end;
-    margin-bottom: 16px;
-  }
-  .lot-tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11.5px; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.06em;
-    background: var(--tag-soft); color: var(--tag-ink);
-    border: 1px solid var(--tag);
-    padding: 3px 8px; border-radius: 4px;
-    display: inline-block; margin-bottom: 6px;
-  }
-  h1 {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 800; font-size: clamp(24px, 3.4vw, 38px);
-    line-height: 1.06; letter-spacing: -0.02em;
-    margin: 0 0 6px 0;
-  }
-  .dek {
-    font-size: 15.5px; color: var(--muted); max-width: 78ch; margin: 0;
-  }
-  .meta-line {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px; color: var(--muted);
-    text-align: right; line-height: 1.55;
-  }
-  .meta-line b { color: var(--ink); font-weight: 600; }
-
-  /* Studio Stage Card */
-  .stage-card {
-    background: var(--sheet);
-    border: 1.5px solid var(--ink);
-    border-radius: 10px;
-    padding: 14px;
-    box-shadow: 0 6px 0 var(--rule-strong);
-    margin-bottom: 24px;
-  }
-
-  /* Top Shot & Version Bar */
-  .bar {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 8px; flex-wrap: wrap;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--rule);
-  }
-  .bar-group {
-    display: flex; gap: 6px; flex-wrap: wrap; align-items: center;
-  }
-  .scroll-strip {
-    display: flex; gap: 6px; align-items: center;
-    overflow-x: auto; max-width: 100%;
-    scrollbar-width: none; -ms-overflow-style: none;
+  /* Strip utility: never show scrollbars on horizontal control strips */
+  .strip {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
   }
-  .scroll-strip::-webkit-scrollbar { display: none; width: 0; height: 0; }
+  .strip::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+  /* Row 1: Top Object & Safe Exit Bar (42px) */
+  .top-bar {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 6px 10px;
+    background: var(--sheet);
+    border-bottom: 1.5px solid var(--ink);
+    z-index: 10;
+  }
+  .nav-cluster {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-width: 0;
+    flex: 1;
+  }
+  .btn {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 4px 9px;
+    border: 1.5px solid var(--ink);
+    border-radius: 5px;
+    background: var(--card);
+    color: var(--ink);
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1.1;
+  }
+  .btn:hover { border-color: var(--tag); }
+  .btn[aria-pressed="true"], .btn.active {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn.tag-active {
+    background: var(--tag);
+    color: var(--ink);
+  }
+  .btn.warn-recovery {
+    background: var(--tag-soft);
+    color: var(--tag-ink);
+    border-color: var(--tag);
+  }
+  .btn.stop-active {
+    background: var(--fail);
+    color: #FFFFFF;
+    border-color: var(--ink);
+  }
+
+  .shot-select {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 12.5px;
+    padding: 4px 24px 4px 8px;
+    border: 1.5px solid var(--ink);
+    border-radius: 5px;
+    background-color: var(--card);
+    color: var(--ink);
+    cursor: pointer;
+    min-width: 130px;
+    max-width: 340px;
+    flex: 1;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='none' stroke='%23161412' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M1 1L5 5L9 1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 7px center;
+    text-overflow: ellipsis;
+  }
 
   .seg {
-    display: inline-flex; border: 1.5px solid var(--ink); border-radius: 6px; overflow: hidden;
-    background: var(--card); flex-shrink: 0;
+    display: inline-flex;
+    border: 1.5px solid var(--ink);
+    border-radius: 5px;
+    overflow: hidden;
+    background: var(--card);
+    flex-shrink: 0;
   }
   .seg button {
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 700; font-size: 12px;
-    padding: 5px 10px; border: 0; background: transparent; color: var(--ink);
-    cursor: pointer; border-right: 1px solid var(--rule);
+    font-weight: 700;
+    font-size: 11.5px;
+    padding: 4px 8px;
+    border: 0;
+    border-right: 1px solid var(--rule);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
     white-space: nowrap;
+    line-height: 1.1;
   }
   .seg button:last-child { border-right: 0; }
   .seg button[aria-pressed="true"] {
-    background: var(--ink); color: var(--paper);
-  }
-  .pill-btn {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 700; font-size: 12px;
-    padding: 5px 10px; border: 1.5px solid var(--ink); border-radius: 6px;
-    background: var(--card); color: var(--ink); cursor: pointer;
-    text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
-    white-space: nowrap; flex-shrink: 0;
-  }
-  .pill-btn[aria-pressed="true"] {
-    background: var(--tag); color: var(--ink);
-  }
-  .shot-select {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 700; font-size: 13px;
-    padding: 5px 28px 5px 10px; border: 1.5px solid var(--ink); border-radius: 6px;
-    background-color: var(--card); color: var(--ink); cursor: pointer;
-    max-width: 340px;
-    appearance: none; -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23161412' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1.5L6 6.5L11 1.5'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 9px center;
+    background: var(--ink);
+    color: var(--paper);
   }
 
-  /* Lens Explanation Banner */
-  .lens-banner {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 12px; flex-wrap: wrap;
-    padding: 6px 10px; margin-bottom: 10px;
-    border-radius: 6px;
-    background: var(--tag-soft);
-    border: 1px solid var(--tag);
-    font-size: 12.5px; color: var(--ink);
-  }
-  .lens-banner b {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 800; color: var(--tag-ink);
-  }
-
-  /* Dual Screens (Desktop side-by-side, Mobile PiP or compact Split) */
-  .screens {
+  /* Row 2: Open Center Workspace (takes all remaining vertical space, zero scroll) */
+  .workspace {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1.42fr 1fr;
+    gap: 8px;
+    padding: 8px 10px;
     position: relative;
-    display: grid; grid-template-columns: 1.38fr 1fr; gap: 12px; align-items: stretch;
+    overflow: hidden;
   }
-  .screen {
+
+  .pane {
     position: relative;
     background: var(--cel);
     border: 1.5px solid var(--ink);
-    border-radius: 6px;
+    border-radius: 7px;
     overflow: hidden;
-    display: flex; flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
   }
-  .canvas-wrap {
+
+  /* Controls placed directly on the pane they change */
+  .pane-bar {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 4px 7px;
+    background: var(--sheet);
+    border-bottom: 1px solid var(--rule);
+    z-index: 3;
+  }
+  .state-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--tag-ink);
+    background: var(--tag-soft);
+    border: 1px solid var(--tag);
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .canvas-stage {
+    flex: 1 1 auto;
+    min-height: 0;
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;
-    background: var(--cel);
+    height: 100%;
     touch-action: none;
     user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cel);
   }
-  .canvas-wrap.worm-scrub-target {
+  .canvas-stage.scrub-surface {
     cursor: ew-resize;
-    aspect-ratio: 16 / 11;
   }
-  .screen canvas {
-    display: block; width: 100%; height: 100%;
+  .canvas-stage canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
-  .screen .lbl {
-    position: absolute; top: 6px; left: 8px;
-    font-family: 'JetBrains Mono', monospace; font-size: 10px;
-    background: rgba(246, 239, 227, 0.92);
-    padding: 2px 7px; border-radius: 4px;
+
+  /* Row 3: Direct Manipulation Footer (Planes + Transport Scrubber) */
+  .bottom-dock {
+    flex: 0 0 auto;
+    background: var(--sheet);
+    border-top: 1.5px solid var(--ink);
+    padding: 5px 10px 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 10;
+  }
+
+  .planes-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .plane-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 3px 8px;
     border: 1px solid var(--rule-strong);
-    color: var(--ink); pointer-events: none;
-    z-index: 2; max-width: 62%;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    border-radius: 4px;
+    background: var(--card);
+    color: var(--ink);
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
-  .screen .lbl-right {
-    position: absolute; top: 6px; right: 8px;
-    font-family: 'JetBrains Mono', monospace; font-size: 10px;
-    background: var(--tag-soft); color: var(--tag-ink);
-    padding: 2px 7px; border-radius: 4px;
-    border: 1px solid var(--tag);
-    pointer-events: none; font-weight: 600;
-    z-index: 2; white-space: nowrap;
+  .plane-pill.subj {
+    border-color: var(--tag);
+    background: var(--tag-soft);
+    color: var(--tag-ink);
+  }
+  .plane-pill[aria-pressed="true"] {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
   }
 
-  /* Mobile layout mode toggle pill (only shown on mobile) */
-  .mob-pip-toggle {
-    display: none;
+  .transport-bar {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto auto;
+    gap: 7px;
+    align-items: center;
   }
 
-  /* Scrubber Controls with custom styled range input */
-  .controls {
-    display: grid; grid-template-columns: auto auto auto 1fr auto; gap: 8px; align-items: center;
-    margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--rule);
+  .scrub-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 24px;
+    min-width: 80px;
   }
-  .scrub {
-    position: relative; display: flex; align-items: center; height: 28px;
-  }
-  .scrub input[type=range] {
+  .scrub-wrap input[type=range] {
     width: 100%;
     margin: 0;
     background: transparent;
@@ -273,16 +309,14 @@
     position: relative;
     z-index: 2;
   }
-  .scrub input[type=range]:focus {
-    outline: none;
-  }
-  .scrub input[type=range]::-webkit-slider-runnable-track {
+  .scrub-wrap input[type=range]:focus { outline: none; }
+  .scrub-wrap input[type=range]::-webkit-slider-runnable-track {
     height: 6px;
     border-radius: 999px;
     background: var(--rule);
     border: 1px solid var(--ink);
   }
-  .scrub input[type=range]::-webkit-slider-thumb {
+  .scrub-wrap input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 16px;
@@ -291,433 +325,314 @@
     background: var(--tag);
     border: 2px solid var(--ink);
     margin-top: -6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
   }
-  .scrub input[type=range]::-moz-range-track {
+  .scrub-wrap input[type=range]::-moz-range-track {
     height: 6px;
     border-radius: 999px;
     background: var(--rule);
     border: 1px solid var(--ink);
   }
-  .scrub input[type=range]::-moz-range-thumb {
+  .scrub-wrap input[type=range]::-moz-range-thumb {
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: var(--tag);
     border: 2px solid var(--ink);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
   }
   .key-ticks {
-    position: absolute; left: 8px; right: 8px; top: 1px; height: 6px; pointer-events: none; z-index: 1;
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    top: 1px;
+    height: 5px;
+    pointer-events: none;
+    z-index: 1;
   }
   .key-ticks span {
-    position: absolute; top: 0; width: 2px; height: 5px;
-    background: var(--rule-strong); transform: translateX(-1px);
+    position: absolute;
+    top: 0;
+    width: 1.5px;
+    height: 4px;
+    background: var(--rule-strong);
+    transform: translateX(-1px);
   }
-  .key-ticks span.drawn {
-    background: var(--ink); height: 7px; width: 2.5px;
-  }
-  .key-ticks span.line {
-    background: var(--tag); height: 8px; width: 3px;
-  }
+  .key-ticks span.drawn { background: var(--ink); height: 6px; width: 2px; }
+  .key-ticks span.line { background: var(--tag); height: 7px; width: 2.5px; }
+
   .readout {
-    font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted);
-    min-width: 90px; text-align: right;
-  }
-
-  .legend {
-    display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between;
-    margin-top: 8px; font-size: 12px; color: var(--muted);
-  }
-  .planes-row {
-    display: flex; gap: 5px; flex-wrap: wrap; align-items: center;
-    scrollbar-width: none; -ms-overflow-style: none;
-  }
-  .planes-row::-webkit-scrollbar { display: none; width: 0; height: 0; }
-  .planes-row label {
-    font-family: 'JetBrains Mono', monospace; font-size: 11px;
-    padding: 2px 7px; border: 1px solid var(--rule-strong); border-radius: 4px;
-    background: var(--card); cursor: pointer; user-select: none;
-    display: inline-flex; align-items: center; gap: 5px; white-space: nowrap;
-  }
-  .planes-row label.subj {
-    border-color: var(--tag); background: var(--tag-soft); color: var(--tag-ink); font-weight: 600;
-  }
-  .planes-row label.soloed {
-    outline: 2px solid var(--ink);
-  }
-  .planes-row input { accent-color: var(--tag); margin: 0; }
-
-  /* Plain-English Worm Decoder Strip */
-  .decoder-grid {
-    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px;
-    margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule);
-  }
-  .dec-card {
-    background: var(--card);
-    border: 1px solid var(--rule-strong);
-    border-radius: 6px;
-    padding: 7px 10px;
-    display: flex; flex-direction: column; gap: 2px;
-  }
-  .dec-card .k {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em;
-    color: var(--tag-ink); font-weight: 600;
-  }
-  .dec-card .v {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 800; font-size: 13.5px; color: var(--ink);
-  }
-  .dec-card p {
-    font-size: 11.5px; color: var(--muted); margin: 0; line-height: 1.32;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    text-align: right;
   }
 
-  /* MOBILE-FIRST ZERO-SCROLL OPTIMIZATION */
-  @media (max-width: 860px) {
-    .wrap { padding: 8px 10px 36px; }
-    header.site { margin-bottom: 8px; padding-bottom: 6px; gap: 8px; }
-    .brand { font-size: 16px; }
-    .crumbs { font-size: 11px; gap: 8px; }
-    .title-block { grid-template-columns: 1fr; gap: 4px; margin-bottom: 8px; }
-    .lot-tag { font-size: 10px; padding: 2px 6px; margin-bottom: 2px; }
-    h1 { font-size: 19px; margin-bottom: 2px; }
-    .dek { display: none; }
-    .meta-line { text-align: left; font-size: 10.5px; }
-    .meta-line br { display: none; }
+  .mob-layout-btn { display: none; }
 
-    .stage-card { padding: 9px; margin-bottom: 14px; }
-    .bar { gap: 6px; margin-bottom: 6px; padding-bottom: 6px; }
-    .shot-select { max-width: 190px; font-size: 12px; padding: 4px 24px 4px 7px; }
-    .seg button, .pill-btn { font-size: 11px; padding: 4px 7px; }
-
-    .lens-banner { padding: 4px 8px; margin-bottom: 6px; font-size: 11px; }
-    .lens-banner span#lensDescText { display: none; }
-
-    .mob-pip-toggle { display: inline-flex; }
-
-    /* Mobile Mode A (Default): Picture-in-Picture (PiP) */
-    .screens.mob-pip {
-      display: block;
-      position: relative;
-    }
-    .screens.mob-pip .screen-worm .canvas-wrap {
-      aspect-ratio: 4 / 3;
-    }
-    .screens.mob-pip .screen-stage {
-      position: absolute;
-      right: 8px;
-      bottom: 8px;
-      width: 35%;
-      max-width: 160px;
-      z-index: 6;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
-      border: 2px solid var(--tag);
-      border-radius: 6px;
-    }
-    .screens.mob-pip .screen-stage .lbl,
-    .screens.mob-pip .screen-stage .lbl-right {
-      font-size: 8px;
-      padding: 1px 4px;
-      top: 3px;
-    }
-
-    /* Mobile Mode B: Side-by-Side Split */
-    .screens.mob-split {
-      display: grid;
-      grid-template-columns: 1.18fr 0.82fr;
-      gap: 6px;
-    }
-    .screens.mob-split .screen-worm .canvas-wrap {
-      aspect-ratio: 4 / 3;
-    }
-
-    .controls {
-      grid-template-columns: auto auto 1fr auto;
-      gap: 5px;
-      margin-top: 6px;
-      padding-top: 6px;
-    }
-    .controls .seg[aria-label="Playback speed"] {
-      display: none;
-    }
-    .readout { min-width: 68px; font-size: 11px; }
-
-    .legend { margin-top: 6px; gap: 6px; }
-    .legend #stageCaption { display: none; }
-    .planes-row {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      max-width: 100%;
-    }
-    .decoder-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 6px;
-      margin-top: 6px;
-      padding-top: 6px;
-    }
-    .dec-card { padding: 5px 7px; }
-    .dec-card .v { font-size: 12px; }
-    .dec-card p { display: none; }
+  /* On-Demand 109-Shot Index Drawer Overlay (hidden at rest, closes on selection) */
+  .index-drawer {
+    position: fixed;
+    inset: 0;
+    background: rgba(22, 20, 18, 0.55);
+    z-index: 50;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
   }
-
-  /* Rack Grid of All 109 Shots */
-  .rack-head {
-    display: flex; align-items: baseline; justify-content: space-between;
-    gap: 12px; flex-wrap: wrap;
-    margin-bottom: 12px; padding-bottom: 8px;
+  .index-drawer.open { display: flex; }
+  .drawer-sheet {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+    width: min(960px, 100%);
+    max-height: 86dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+  }
+  .drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--sheet);
     border-bottom: 1.5px solid var(--ink);
+    flex-wrap: wrap;
   }
-  .rack-head h2 {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 800; font-size: 22px; margin: 0;
-  }
-  .filter-bar {
-    display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
-  }
-  .search-in {
+  .drawer-search {
     font-family: 'Atkinson Hyperlegible', sans-serif;
-    font-size: 14px; padding: 6px 10px;
-    border: 1.5px solid var(--ink); border-radius: 6px;
-    background: var(--card); color: var(--ink);
-    min-width: 200px;
+    font-size: 13px;
+    padding: 5px 9px;
+    border: 1.5px solid var(--ink);
+    border-radius: 5px;
+    background: var(--card);
+    color: var(--ink);
+    flex: 1;
+    min-width: 160px;
   }
-  .rack-grid {
+  .drawer-grid {
+    padding: 10px;
+    overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(236px, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+    gap: 8px;
   }
-  @media (max-width: 640px) {
-    .rack-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-    }
-  }
-  .shot-card {
+  .shot-item {
     background: var(--sheet);
     border: 1.5px solid var(--rule-strong);
-    border-radius: 8px;
-    padding: 9px;
+    border-radius: 6px;
+    padding: 7px;
     cursor: pointer;
-    transition: transform 0.1s ease, border-color 0.1s ease;
-    display: flex; flex-direction: column; gap: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
-  .shot-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--ink);
-  }
-  .shot-card.active {
+  .shot-item:hover { border-color: var(--ink); }
+  .shot-item.active {
     border-color: var(--ink);
     background: var(--tag-soft);
-    box-shadow: 0 4px 0 var(--tag);
   }
-  .shot-card .top {
-    display: flex; justify-content: space-between; align-items: center;
-    font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted);
+  .shot-item .meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
   }
-  .shot-card .top b { color: var(--tag-ink); }
-  .shot-card canvas {
-    width: 100%; height: 50px;
+  .shot-item .meta b { color: var(--tag-ink); }
+  .shot-item canvas {
+    width: 100%;
+    height: 36px;
     background: var(--cel);
     border: 1px solid var(--rule);
-    border-radius: 4px;
+    border-radius: 3px;
     display: block;
   }
-  .shot-card .title {
+  .shot-item .name {
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 700; font-size: 15px; line-height: 1.15;
-    color: var(--ink);
+    font-weight: 700;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  .shot-card .sub {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10.5px; color: var(--muted);
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  }
-  .ver-badges {
-    display: flex; gap: 4px; flex-wrap: wrap;
-  }
-  .ver-badge {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9.5px; padding: 1px 5px; border-radius: 3px;
-    background: var(--card); border: 1px solid var(--rule-strong); color: var(--muted);
-  }
-  .ver-badge.hi {
-    background: var(--pass-soft); border-color: var(--pass); color: var(--pass); font-weight: 600;
+
+  /* MINIMAL MOBILE DEVICE LAYOUT (<= 820px): Zero Scroll, Full 100dvh */
+  @media (max-width: 820px) {
+    .top-bar { padding: 5px 7px; gap: 4px; }
+    .btn { font-size: 11px; padding: 3px 7px; }
+    .seg button { font-size: 11px; padding: 3px 6px; }
+    .shot-select { font-size: 11.5px; padding: 3px 20px 3px 6px; max-width: none; }
+    .mob-layout-btn { display: inline-flex; }
+    #openShotPageLink { display: none; }
+
+    .workspace {
+      padding: 5px 7px;
+      gap: 5px;
+    }
+    /* Mobile PiP Mode (Default): Worm fills center, 4:3 Output Stage docks bottom-right */
+    .workspace.mob-pip {
+      display: flex;
+      flex-direction: column;
+    }
+    .workspace.mob-pip #wormPane {
+      flex: 1 1 auto;
+      width: 100%;
+      height: 100%;
+    }
+    .workspace.mob-pip #stagePane {
+      position: absolute;
+      right: 13px;
+      bottom: 13px;
+      width: 38%;
+      max-width: 165px;
+      aspect-ratio: 4 / 3;
+      z-index: 8;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.48);
+      border: 2px solid var(--tag);
+    }
+    .workspace.mob-pip #stagePane .pane-bar {
+      display: none;
+    }
+
+    /* Mobile Split Mode: stacked 58% Worm / 42% Stage, still zero scroll inside 100dvh */
+    .workspace.mob-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1.25fr 0.95fr;
+    }
+
+    .bottom-dock { padding: 4px 7px 6px; gap: 4px; }
+    .transport-bar {
+      grid-template-columns: auto auto 1fr auto;
+      gap: 5px;
+    }
+    #speedSeg { display: none; }
   }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="site">
-    <a class="brand" href="../index.html"><span class="dot"></span>Secondhand Motion</a>
-    <nav class="crumbs" aria-label="Breadcrumb">
-      <a href="../index.html">The Rack</a>
-      <span>/</span>
-      <a href="giraffe-walks-past.html">Giraffe Walks Past</a>
-      <span>/</span>
-      <a href="projector.html">Projector</a>
-      <span>/</span>
-      <span>Space-Worms Studio (109)</span>
-    </nav>
+
+  <!-- ROW 1: Current Object, Shot Switcher, On-Demand Index, and Exit -->
+  <header class="top-bar">
+    <div class="nav-cluster">
+      <a class="btn" href="../index.html" title="Return to Secondhand Motion Rack">Rack</a>
+      <button type="button" class="btn" id="prevShotBtn">Prev</button>
+      <select class="shot-select" id="shotSelect" aria-label="Select shot"></select>
+      <button type="button" class="btn" id="nextShotBtn">Next</button>
+      <a class="btn" id="openShotPageLink" href="giraffe-walks-past.html">Shot Page</a>
+    </div>
+    <div class="strip" style="flex-shrink:0">
+      <button type="button" class="btn warn-recovery" id="resetStateBtn" style="display:none" title="Restore default frame f=01 and all planes">Reset</button>
+      <button type="button" class="btn mob-layout-btn tag-active" id="mobPipBtn" aria-pressed="true">PiP / Split</button>
+      <button type="button" class="btn" id="openIndexBtn">Index (109)</button>
+    </div>
   </header>
 
-  <div class="title-block">
-    <div>
-      <span class="lot-tag" id="heroLotTag">LOT SM-0004 · MULTIPLANE SPACE-WORM STUDIO</span>
-      <h1 id="heroTitle">Giraffe Walks Past</h1>
-      <p class="dek" id="heroDek">
-        Parallel output timelines fan out in 3D from the central input spine (stretched 1/K slower per depth plane with the head fixed) and intersect the circular cross-section ring as upright 3D frame cards.
-      </p>
-    </div>
-    <div class="meta-line" id="heroMeta">
-      <b>Prelinger Archives</b> · Wonderful World (Part II)<br>
-      <b>33 frames @ 12 fps</b> · 480×360 · 6 depth planes
-    </div>
-  </div>
-
-  <section class="stage-card" aria-label="Multiplane Space-Worm Stage">
-    <div class="bar">
-      <div class="bar-group" style="flex:1;min-width:220px">
-        <button type="button" class="pill-btn" id="prevShotBtn" title="Previous shot">Prev</button>
-        <select class="shot-select" id="shotSelect" aria-label="Select shot"></select>
-        <button type="button" class="pill-btn" id="nextShotBtn" title="Next shot">Next</button>
-        <a class="pill-btn" id="openShotPageLink" href="giraffe-walks-past.html">Shot Page</a>
-      </div>
-
-      <div class="scroll-strip">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);font-weight:600;flex-shrink:0">LENS:</span>
-        <div class="seg" role="group" aria-label="Space-Worm Interpretation Lens">
-          <button type="button" data-wmode="parallel" aria-pressed="true">1 · Parallel Timelines (3D Stretch)</button>
-          <button type="button" data-wmode="lanes" aria-pressed="false">2 · Plane Worms</button>
-          <button type="button" data-wmode="strobe" aria-pressed="false">3 · Stroboscopic Trail</button>
-          <button type="button" data-wmode="kymo" aria-pressed="false">4 · Slit-Scan &amp; Graphs</button>
-          <button type="button" data-wmode="anatomy" aria-pressed="false">5 · Anatomy &amp; Joints</button>
-          <button type="button" data-wmode="box" aria-pressed="false">6 · Planes in Depth</button>
+  <!-- ROW 2: Open Center Workspace (Left: Space-Worm, Right/PiP: 4:3 Scene Output) -->
+  <main class="workspace mob-pip" id="workspace">
+    <!-- Primary Object: Multiplane Space-Worm -->
+    <section class="pane" id="wormPane" aria-label="Space-Worm Canvas">
+      <div class="pane-bar">
+        <div class="strip">
+          <div class="seg" role="group" aria-label="Worm Lens">
+            <button type="button" data-wmode="parallel" aria-pressed="true">1 · 3D Stretch</button>
+            <button type="button" data-wmode="lanes" aria-pressed="false">2 · Planes</button>
+            <button type="button" data-wmode="strobe" aria-pressed="false">3 · Trail</button>
+            <button type="button" data-wmode="kymo" aria-pressed="false">4 · Graphs</button>
+            <button type="button" data-wmode="anatomy" aria-pressed="false">5 · Rig</button>
+            <button type="button" data-wmode="box" aria-pressed="false">6 · Depth Box</button>
+          </div>
+          <!-- Bound strictly to valid state: only visible when Lens 1 (3D Stretch) is active -->
+          <div class="seg" id="parallelSubSeg" role="group" aria-label="3D Timeline Mode">
+            <button type="button" data-psub="radial" aria-pressed="true">Radial Fan</button>
+            <button type="button" data-psub="dual" aria-pressed="false">2-Rail</button>
+          </div>
+          <button type="button" class="btn" id="parThemeBtn" aria-pressed="true">Dark / Paper</button>
         </div>
+        <span class="state-pill" id="wormStatePill">6 planes · f 01/33</span>
       </div>
+      <div class="canvas-stage scrub-surface" id="wormStageWrap">
+        <canvas id="cvWorm" width="680" height="468"></canvas>
+      </div>
+    </section>
+
+    <!-- Secondary Consequence Object: Live 4:3 Scene Output -->
+    <section class="pane" id="stagePane" aria-label="4:3 Scene Output">
+      <div class="pane-bar">
+        <div class="strip">
+          <div class="seg" role="group" aria-label="Scene View">
+            <button type="button" data-view="composite" aria-pressed="true">Composite</button>
+            <button type="button" data-view="cutout" aria-pressed="false">Cutout</button>
+            <button type="button" data-view="cartoon" aria-pressed="false">Cartoon</button>
+            <button type="button" data-view="footage" aria-pressed="false">Footage</button>
+            <button type="button" data-view="masks" aria-pressed="false">Masks</button>
+          </div>
+          <!-- Bound strictly to valid state: only visible when current shot has multiple versions -->
+          <div class="seg" id="versionSeg" role="group" aria-label="Version" style="display:none">
+            <button type="button" id="varBtnGwp" data-variant="gwp" aria-pressed="true">GWP</button>
+            <button type="button" id="varBtnSam" data-variant="sam" aria-pressed="false">SAM</button>
+            <button type="button" id="varBtnRedraw" data-variant="redraw" aria-pressed="false">Redraw</button>
+            <button type="button" id="varBtnInt" data-variant="int" aria-pressed="false">24fps</button>
+          </div>
+        </div>
+        <span class="state-pill" id="stageStatePill">480×360</span>
+      </div>
+      <div class="canvas-stage" id="stageCanvasWrap" title="Tap in PiP mode to expand Split view">
+        <canvas id="cvStage" width="480" height="360"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <!-- ROW 3: Direct Manipulation Footer (Depth Plane Isolation + Transport Scrubber) -->
+  <footer class="bottom-dock">
+    <div class="planes-bar">
+      <div class="strip" id="planesRow"></div>
+      <!-- Bound strictly to valid state: only visible when a single plane is soloed -->
+      <button type="button" class="btn warn-recovery" id="restorePlanesBtn" style="display:none">All Planes</button>
     </div>
-
-    <div class="bar" style="margin-bottom:8px;padding-bottom:6px">
-      <div class="scroll-strip" id="parallelSubRow">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);font-weight:600;flex-shrink:0">3D TIMELINE VIEW:</span>
-        <div class="seg" role="group" aria-label="Parallel Timeline Sub-mode">
-          <button type="button" data-psub="radial" aria-pressed="true">Radial Multi-Worm Fan</button>
-          <button type="button" data-psub="dual" aria-pressed="false">2-Rail Stretch (Red / Blue)</button>
-        </div>
-        <button type="button" class="pill-btn" id="parThemeBtn" aria-pressed="true" title="Toggle high-contrast cinema black backdrop for white correspondence rays">Dark / Paper</button>
-      </div>
-
-      <div class="scroll-strip">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);font-weight:600;flex-shrink:0">VERSION:</span>
-        <div class="seg" role="group" aria-label="Shot Version">
-          <button type="button" id="varBtnGwp" data-variant="gwp" aria-pressed="true">Multiplane (GWP)</button>
-          <button type="button" id="varBtnSam" data-variant="sam" aria-pressed="false">SAM Cutout</button>
-          <button type="button" id="varBtnRedraw" data-variant="redraw" aria-pressed="false">Puppet Redraw</button>
-          <button type="button" id="varBtnInt" data-variant="int" aria-pressed="false">Integrated 24fps</button>
-        </div>
-      </div>
-
-      <div class="scroll-strip">
-        <div class="seg" role="group" aria-label="Stage Composite Mode">
-          <button type="button" data-view="cartoon" aria-pressed="false">Cartoon only</button>
-          <button type="button" data-view="composite" aria-pressed="true">Over footage</button>
-          <button type="button" data-view="cutout" aria-pressed="false">SAM Cutout</button>
-          <button type="button" data-view="footage" aria-pressed="false">Source footage</button>
-          <button type="button" data-view="masks" aria-pressed="false">SAM silhouettes</button>
-        </div>
-        <button type="button" class="pill-btn" id="boilBtn" aria-pressed="true">Line boil: on</button>
-        <button type="button" class="pill-btn" id="celBtn" aria-pressed="true">Paint cels: on</button>
-        <button type="button" class="pill-btn mob-pip-toggle" id="mobPipBtn" aria-pressed="true">Mobile: PiP / Split</button>
-      </div>
-    </div>
-
-    <div class="lens-banner" id="lensBanner">
-      <div>
-        <b id="lensTitleText">Lens 1 · Parallel &amp; Stretched Output Timelines (3D Multi-Worm):</b>
-        <span id="lensDescText">Parallel output timelines are prepared around the central input spine; distributed keyframes fan out via white correspondence rays (stretched 1/K slower per layer with head fixed) and intersect the circular cross-section ring as upright 3D frame cards.</span>
-      </div>
-    </div>
-
-    <div class="screens mob-pip" id="screensWrap">
-      <div class="screen screen-worm">
-        <div class="canvas-wrap worm-scrub-target" id="wormWrap">
-          <canvas id="cvWorm" width="680" height="468"></canvas>
-          <span class="lbl" id="wormLeftLbl">parallel output timelines (3D stretch) · drag to scrub</span>
-          <span class="lbl-right" id="wormRightLbl">6 planes · f 01/33</span>
-        </div>
-      </div>
-      <div class="screen screen-stage" id="stageScreenCard" title="Tap on mobile to toggle Picture-in-Picture vs Split view">
-        <div class="canvas-wrap">
-          <canvas id="cvStage" width="480" height="360"></canvas>
-          <span class="lbl" id="stageLeftLbl">composite over footage · camera pans with shot</span>
-          <span class="lbl-right" id="stageRightLbl">480×360 · 12 fps</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="controls">
-      <button type="button" class="pill-btn" id="playBtn" aria-pressed="false">Play</button>
+    <div class="transport-bar">
+      <button type="button" class="btn" id="playBtn" aria-pressed="false">Play</button>
       <div style="display:inline-flex;gap:4px">
-        <button type="button" class="pill-btn" id="stepPrevBtn" title="Step back 1 frame">-1f</button>
-        <button type="button" class="pill-btn" id="stepNextBtn" title="Step forward 1 frame">+1f</button>
+        <button type="button" class="btn" id="stepPrevBtn">-1f</button>
+        <button type="button" class="btn" id="stepNextBtn">+1f</button>
       </div>
-      <div class="seg" role="group" aria-label="Playback speed">
-        <button type="button" data-speed="1" aria-pressed="true">1×</button>
-        <button type="button" data-speed="0.5" aria-pressed="false">0.5×</button>
-        <button type="button" data-speed="0.25" aria-pressed="false">0.25×</button>
-      </div>
-      <div class="scrub">
+      <div class="scrub-wrap">
         <div class="key-ticks" id="keyTicks"></div>
         <input type="range" id="scrub" min="0" max="32" value="0" step="1" aria-label="Scrub frame">
       </div>
-      <div class="readout" id="readout">f 01 / 33 · 0.00s</div>
+      <div class="seg" id="speedSeg" role="group" aria-label="Speed">
+        <button type="button" data-speed="1" aria-pressed="true">1x</button>
+        <button type="button" data-speed="0.5" aria-pressed="false">0.5x</button>
+        <button type="button" data-speed="0.25" aria-pressed="false">0.25x</button>
+      </div>
+      <div class="readout" id="readout">f 01/33 · 0.00s</div>
     </div>
+  </footer>
 
-    <div class="legend">
-      <span id="stageCaption">Drag horizontally across the 3D timeline highway to scrub time; click any plane pill on the right to toggle or double-click to solo.</span>
-      <div class="planes-row" id="planesRow"></div>
-    </div>
-
-    <div class="decoder-grid">
-      <div class="dec-card">
-        <span class="k">1 · What the Worm Does in Space</span>
-        <div class="v" id="decShapeTitle">Cross-Frame Walk</div>
-        <p id="decShapeBody">Tracks how the subject moves across the frame from f=01 to the end of the shot.</p>
+  <!-- On-Demand 109-Shot Index Drawer (Hidden at rest; closes immediately on selection) -->
+  <div class="index-drawer" id="indexDrawer" role="dialog" aria-modal="true" aria-label="Select from 109 Space-Worms">
+    <div class="drawer-sheet">
+      <div class="drawer-head">
+        <strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px">109 Space-Worms Index</strong>
+        <input type="search" class="drawer-search" id="searchIn" placeholder="Filter by subject, lot, or archive film...">
+        <select class="shot-select" id="topoSelect" style="max-width:190px" aria-label="Filter by motion shape">
+          <option value="ALL">All Shapes (109)</option>
+          <option value="DIAGONAL_SHEAR_BAND">Cross-Frame Traverse</option>
+          <option value="LOCKED_PILLAR">Anchored Subject</option>
+          <option value="SERPENTINE_CORKSCREW">Oscillating Path</option>
+          <option value="LOOMING_FUNNEL_CONE">Looming / Approaching</option>
+          <option value="RADIAL_BURST">Radial Expansion</option>
+        </select>
+        <button type="button" class="btn active" id="closeIndexBtn">Close</button>
       </div>
-      <div class="dec-card">
-        <span class="k">2 · Camera Pan vs. Depth Parallax</span>
-        <div class="v" id="decCamTitle">6 Planes (z=1.2 to z=10)</div>
-        <p id="decCamBody">Foreground scrolls faster than background by k = z_ref / z.</p>
-      </div>
-      <div class="dec-card">
-        <span class="k">3 · Drawing Rig &amp; Sub-Worm Anatomy</span>
-        <div class="v" id="decRigTitle">Seed Doodle + Joints</div>
-        <p id="decRigBody">The Line (f=01 Quick, Draw! seed) warps across SAM masks and anatomical joints.</p>
-      </div>
-      <div class="dec-card">
-        <span class="k">4 · Live Frame Telemetry &amp; Versions</span>
-        <div class="v" id="decLiveTitle">Frame 01 / 33</div>
-        <p id="decLiveBody">Shows current centroid (u, v), silhouette area %, and available Secondhand Motion versions.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="rack-head">
-    <h2>All 109 Secondhand Motion Space-Worms</h2>
-    <div class="filter-bar">
-      <input type="search" class="search-in" id="searchIn" placeholder="Search 109 shots (e.g. giraffe, cat, train, horse)...">
-      <select class="shot-select" id="topoSelect" aria-label="Filter by motion shape">
-        <option value="ALL">All Motion Shapes (109)</option>
-        <option value="DIAGONAL_SHEAR_BAND">Cross-Frame Traverse</option>
-        <option value="LOCKED_PILLAR">Anchored / Stationary Subject</option>
-        <option value="SERPENTINE_CORKSCREW">Oscillating / Winding Path</option>
-        <option value="LOOMING_FUNNEL_CONE">Looming / Approaching Camera</option>
-        <option value="RADIAL_BURST">Radial Expansion / Turn</option>
-      </select>
+      <div class="drawer-grid" id="rackGrid"></div>
     </div>
   </div>
-  <div class="rack-grid" id="rackGrid"></div>
-</div>
 
 <script>
 (function(){
@@ -732,10 +647,14 @@
   const planesRow = document.getElementById('planesRow');
   const keyTicks = document.getElementById('keyTicks');
   const rackGrid = document.getElementById('rackGrid');
-  const screensWrap = document.getElementById('screensWrap');
+  const workspace = document.getElementById('workspace');
   const mobPipBtn = document.getElementById('mobPipBtn');
-  const parallelSubRow = document.getElementById('parallelSubRow');
+  const parallelSubSeg = document.getElementById('parallelSubSeg');
   const parThemeBtn = document.getElementById('parThemeBtn');
+  const restorePlanesBtn = document.getElementById('restorePlanesBtn');
+  const resetStateBtn = document.getElementById('resetStateBtn');
+  const versionSeg = document.getElementById('versionSeg');
+  const indexDrawer = document.getElementById('indexDrawer');
 
   const varBtnGwp = document.getElementById('varBtnGwp');
   const varBtnSam = document.getElementById('varBtnSam');
@@ -751,59 +670,15 @@
   let frameImgCache = new Map();
 
   let wormMode = 'parallel';
-  let parallelSubMode = 'radial'; // 'radial' | 'dual'
+  let parallelSubMode = 'radial';
   let parallelDark = true;
   let mobPipMode = true;
   let view = 'composite';
-  let boilOn = true;
-  let celOn = true;
   let playing = false;
   let speedMult = 1.0;
   let f = 0;
   let lastTick = 0;
-  let planeOn = {};
   let soloPlaneId = null;
-
-  const LENS_META = {
-    parallel: {
-      title: 'Lens 1 · Parallel & Stretched Output Timelines (3D Multi-Worm):',
-      desc: 'Parallel output timelines are prepared around the central input spine; distributed keyframes fan out via white correspondence rays (stretched 1/K slower per layer with head fixed) and intersect the circular cross-section ring as upright 3D frame cards.',
-      lbl: 'parallel output timelines (3D stretch) · drag to scrub'
-    },
-    lanes: {
-      title: 'Lens 2 · Disentangled Plane Worms:',
-      desc: 'Every depth plane (Near -> Subject -> Far) gets its own horizontal cel strip. Shows how fast each depth layer scrolls and stamps real SAM video cutouts + ink drawings along time.',
-      lbl: 'disentangled plane worms · drag to scrub'
-    },
-    strobe: {
-      title: 'Lens 3 · Space-Time Stroboscopic Trail (Muybridge View):',
-      desc: 'Lays the entire space-worm directly over the 4:3 scene: ghost SAM cutouts + ink poses from Start (green) to End (red), connected by the centroid spine, joint curves, and planted-foot anchors.',
-      lbl: 'stroboscopic motion trail · drag to scrub'
-    },
-    kymo: {
-      title: 'Lens 4 · Slit-Scan & Motion Graphs (X-T, Y-T & Looming):',
-      desc: 'Separates horizontal travel X(t), vertical gait bounce Y(t), and silhouette scale R(t) vs. camera pan so you can read speed, direction, and rhythm at a glance.',
-      lbl: 'spatiotemporal graphs X(t), Y(t), R(t) · drag to scrub'
-    },
-    anatomy: {
-      title: 'Lens 5 · Anatomy, Seed Line & Joint Braids:',
-      desc: 'Compares The Line (f=0 Quick, Draw! seed doodle) against Frame f’s warped rig + skeleton joints on top, with anatomical joint sub-worms and 2D limb-crossing (braid) markers below.',
-      lbl: 'seed line vs warped rig + joint sub-worms · drag to scrub'
-    },
-    box: {
-      title: 'Lens 6 · Planes in Depth (Multiplane Camera Box):',
-      desc: 'Secondhand Motion’s receding multiplane cards (z=10 far horizon down to z=1.2 foreground), showing how each plane shifts by k = z_ref / z as the camera pans.',
-      lbl: 'multiplane depth box (z) · drag to scrub'
-    }
-  };
-
-  const TOPO_HUMAN = {
-    LOCKED_PILLAR: 'Anchored / Stationary Subject',
-    DIAGONAL_SHEAR_BAND: 'Cross-Frame Traverse',
-    SERPENTINE_CORKSCREW: 'Oscillating / Winding Path',
-    LOOMING_FUNNEL_CONE: 'Looming / Approaching Camera',
-    RADIAL_BURST: 'Radial Expansion / Turn'
-  };
 
   const PLANE_TINTS = {
     far:   {fill:'rgba(92, 128, 188, 0.22)', stroke:'#3A5F9CD0'},
@@ -823,9 +698,7 @@
     const x = pt[0], y = pt[1];
     const h1 = Math.sin(x*12.9898 + y*78.233 + seed*43.1) * 43758.5453;
     const h2 = Math.cos(x*93.9898 + y*12.233 + seed*19.7) * 28413.1234;
-    const jx = (h1 - Math.floor(h1) - 0.5) * 2 * amp;
-    const jy = (h2 - Math.floor(h2) - 0.5) * 2 * amp;
-    return [x + jx, y + jy];
+    return [x + (h1 - Math.floor(h1) - 0.5)*2*amp, y + (h2 - Math.floor(h2) - 0.5)*2*amp];
   }
 
   function drawStrokes(ctx, strokes, opts){
@@ -893,7 +766,7 @@
 
   function isPlaneVisible(pid){
     if(soloPlaneId) return pid === soloPlaneId;
-    return planeOn[pid] !== false;
+    return true;
   }
 
   function camOffset(planeZ, fi){
@@ -1106,10 +979,6 @@
     }
   }
 
-  /* ========================================================================
-     UPRIGHT 3D PERSPECTIVE FRAME CARD (with docked inside-card footer bar
-     so labels NEVER protrude outside the card or overlap neighboring cards)
-     ======================================================================== */
   function drawUpright3DCard(ctx, cx, cy, cw, ch, fi, opts){
     const o = Object.assign({
       plane: null,
@@ -1200,9 +1069,6 @@
     ctx.restore();
   }
 
-  /* ========================================================================
-     LENS 1: 3D PARALLEL & STRETCHED OUTPUT TIMELINES (COLLISION-FREE)
-     ======================================================================== */
   function renderParallelTimelinesMode(ctx, W, H, fi, N, planes, zRef){
     const dark = parallelDark;
     if(dark){
@@ -1218,12 +1084,11 @@
     }
     ctx.fillRect(0, 0, W, H);
 
-    const topSafe = 38;
-    const botSafe = 34;
+    const topSafe = 14;
+    const botSafe = 14;
 
-    // 3D receding spine from upper-left to lower-right
-    const vx = W * 0.04, vy = H * 0.27;
-    const fx = W * 0.94, fy = H * 0.73;
+    const vx = W * 0.04, vy = H * 0.24;
+    const fx = W * 0.94, fy = H * 0.76;
 
     function spinePt(u){
       const p = Math.pow(Math.max(0, Math.min(1, u)), 0.90);
@@ -1234,7 +1099,6 @@
       };
     }
 
-    // Playhead uPlay mapped inside [0.24, 0.78] so the cross-section ring never clips edges
     const uPlay = 0.24 + (N > 1 ? (fi / (N - 1)) : 0.5) * 0.54;
     const spPlay = spinePt(uPlay);
 
@@ -1246,7 +1110,6 @@
     const lineRGB = dark ? '255,255,255' : '22,20,18';
 
     if(parallelSubMode === 'dual'){
-      // Guaranteed non-overlapping offsets for Red (lower-left) and Blue (upper-right) rails
       const redOff  = {dx: -118, dy: 72};
       const blueOff = {dx: 122,  dy: -54};
 
@@ -1338,13 +1201,12 @@
       const fStretched2 = Math.max(0, Math.min(N - 1, Math.round(fi * 0.5 + N * 0.25)));
       const bgPlane = planes.find(p => p.id !== 'char') || planes[0];
 
-      // Clamp card centers to safe viewport bounds
       const bx = Math.max(54, Math.min(W - 54, bPlay.x));
       const by = Math.max(topSafe + 38, Math.min(H - botSafe - 38, bPlay.y));
       const rx = Math.max(54, Math.min(W - 54, rPlay.x));
       const ry = Math.max(topSafe + 42, Math.min(H - botSafe - 42, rPlay.y));
 
-      drawUpright3DCard(ctx, bx, by, 82, 68, fStretched2, {
+      drawUpright3DCard(ctx, bx, by, 84, 70, fStretched2, {
         plane: bgPlane,
         borderColor: '#2E7CF6',
         borderWidth: 2.0,
@@ -1363,7 +1225,7 @@
         cropToMask: false
       });
 
-      drawUpright3DCard(ctx, spPlay.x, spPlay.y, 84, 70, fi, {
+      drawUpright3DCard(ctx, spPlay.x, spPlay.y, 86, 72, fi, {
         plane: null,
         borderColor: '#FFFFFF',
         borderWidth: 2.2,
@@ -1372,7 +1234,7 @@
         labelColor: '#EF9F3A'
       });
 
-      drawUpright3DCard(ctx, rx, ry, 92, 76, fStretched1, {
+      drawUpright3DCard(ctx, rx, ry, 94, 78, fStretched1, {
         plane: null,
         borderColor: '#FF3B30',
         borderWidth: 2.4,
@@ -1392,39 +1254,27 @@
       ctx.lineTo(bx, by);
       ctx.stroke();
       ctx.restore();
-
-      // Fixed non-overlapping bottom-left / upper-right rail legend strip
-      ctx.fillStyle = dark ? 'rgba(6, 7, 10, 0.84)' : 'rgba(251, 250, 246, 0.90)';
-      ctx.fillRect(10, H - 28, W - 20, 22);
-      ctx.font = '700 11px "JetBrains Mono", monospace';
-      ctx.fillStyle = '#FF453A';
-      ctx.fillText('output timeline 1: SAM cutout (1/K stretched)', 16, H - 13);
-      ctx.fillStyle = '#409CFF';
-      ctx.textAlign = 'right';
-      ctx.fillText('output timeline 2: multiplane parallax', W - 16, H - 13);
-      ctx.textAlign = 'left';
       return;
     }
 
-    // Sub-mode 1: Radial Multi-Worm Fan (collision-free circular distribution)
+    // Sub-mode 1: Radial Multi-Worm Fan
     const visPlanes = planes.filter(p => isPlaneVisible(p.id));
     const activeList = visPlanes.length ? visPlanes : planes;
-    const K = Math.max(2, activeList.length);
+    const K = Math.max(1, activeList.length);
     const RAIL_COLORS = ['#EF9F3A', '#FF453A', '#32D74B', '#409CFF', '#BF5AF2', '#FFD60A', '#64D2FF'];
 
-    // Minimum radius guarantees outer cards never overlap the center spine card
-    const baseRad = Math.min(W, H) * 0.31;
+    const baseRad = Math.min(W, H) * 0.32;
 
     function railAngle(rIdx){
-      return -Math.PI * 0.72 + (rIdx / K) * (Math.PI * 2);
+      return -Math.PI * 0.72 + (rIdx / Math.max(2, K)) * (Math.PI * 2);
     }
 
     function railPt(rIdx, u){
       const c = spinePt(u);
       const ang = railAngle(rIdx);
-      const radScale = Math.max(0.68, c.s);
+      const radScale = Math.max(0.70, c.s);
       const rx = Math.cos(ang) * baseRad * 1.15 * radScale;
-      const ry = Math.sin(ang) * baseRad * 0.84 * radScale;
+      const ry = Math.sin(ang) * baseRad * 0.85 * radScale;
       return {x: c.x + rx, y: c.y + ry, s: c.s, ang, radScale};
     }
 
@@ -1481,13 +1331,13 @@
     ctx.lineWidth = 1.6;
     ctx.beginPath(); ctx.moveTo(c0.x, c0.y); ctx.lineTo(c1.x, c1.y); ctx.stroke();
 
-    const ringScale = Math.max(0.68, spPlay.s);
+    const ringScale = Math.max(0.70, spPlay.s);
     const ringR = baseRad * ringScale;
     ctx.save();
     ctx.strokeStyle = `rgba(${lineRGB}, 0.62)`;
     ctx.lineWidth = 1.5;
     ctx.beginPath();
-    ctx.ellipse(spPlay.x, spPlay.y, ringR * 1.15, ringR * 0.84, -0.08, 0, Math.PI * 2);
+    ctx.ellipse(spPlay.x, spPlay.y, ringR * 1.15, ringR * 0.85, -0.08, 0, Math.PI * 2);
     ctx.stroke();
     ctx.restore();
 
@@ -1509,10 +1359,10 @@
       const plane = activeList[rIdx];
       const rawPt = railPt(rIdx, uPlay);
       const isSubj = (plane.id === 'char');
-      const cw = isSubj ? 80 : 66;
-      const ch = isSubj ? 68 : 56;
+      const cw = isSubj ? 82 : 68;
+      const ch = isSubj ? 70 : 58;
       const cx = Math.max(cw * 0.55 + 8, Math.min(W - cw * 0.55 - 8, rawPt.x));
-      const cy = Math.max(topSafe + ch * 0.55 + 4, Math.min(H - botSafe - ch * 0.55 - 4, rawPt.y));
+      const cy = Math.max(topSafe + ch * 0.55, Math.min(H - botSafe - ch * 0.55, rawPt.y));
       const col = isSubj ? '#EF9F3A' : RAIL_COLORS[rIdx % RAIL_COLORS.length];
       const kSpeed = zRef / Math.max(0.3, plane.z);
       const fLayer = isSubj
@@ -1532,7 +1382,7 @@
     }
     ctx.restore();
 
-    drawUpright3DCard(ctx, spPlay.x, spPlay.y, 68, 58, fi, {
+    drawUpright3DCard(ctx, spPlay.x, spPlay.y, 70, 60, fi, {
       plane: null,
       borderColor: '#FFFFFF',
       borderWidth: 2.0,
@@ -1553,17 +1403,6 @@
         labelColor: rc.col
       });
     }
-
-    ctx.fillStyle = dark ? 'rgba(6, 7, 10, 0.82)' : 'rgba(251, 250, 246, 0.90)';
-    ctx.fillRect(10, H - 28, W - 20, 22);
-    ctx.fillStyle = dark ? '#FFFFFF' : '#161412';
-    ctx.font = '700 11px "Bricolage Grotesque", sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText(
-      `In this framework, ${K} parallel depth-plane timelines fan out around the spine (k = z_ref / z).`,
-      W * 0.5, H - 13
-    );
-    ctx.textAlign = 'left';
   }
 
   function renderStage(fi){
@@ -1635,10 +1474,10 @@
       ctx.fillRect(0, H*0.68, W, H*0.32);
     }
 
-    const boilSeed = boilOn ? ((fi % 3) + 1) : 0;
-    const boilAmp  = boilOn ? 0.85 : 0;
+    const boilSeed = (fi % 3) + 1;
+    const boilAmp  = 0.85;
     const planes = getActivePlanes();
-    const celFill = celOn ? '#FBFAF6' : null;
+    const celFill = '#FBFAF6';
 
     for(const plane of planes){
       if(!isPlaneVisible(plane.id)) continue;
@@ -1649,7 +1488,7 @@
           ? S.cast.frames[fi]
           : ((curWorm.frames && curWorm.frames[fi] && curWorm.frames[fi].doodle)
               ? curWorm.frames[fi].doodle.map(s => s.map(p => [p[0]*W, p[1]*H])) : []);
-        if(celFill && strokes.length){
+        if(strokes.length){
           drawStrokes(ctx, strokes, {color:'rgba(0,0,0,0)', width:0.1, boilSeed, boilAmp, fill:celFill});
         }
         if(fi === 0 && view === 'cartoon'){
@@ -1668,7 +1507,7 @@
             width: depthWidth,
             dx: off.dx, dy: off.dy,
             boilSeed: boilSeed + 1, boilAmp: boilAmp * 0.6,
-            fill: (celFill && plane.z < 10) ? celFill : null
+            fill: (plane.z < 10) ? celFill : null
           });
         }
       }
@@ -1686,9 +1525,8 @@
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
     const planes = getActivePlanes();
     const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
-    const meta = LENS_META[wormMode] || LENS_META.parallel;
-    document.getElementById('wormLeftLbl').textContent = meta.lbl;
-    document.getElementById('wormRightLbl').textContent = `${planes.length} planes · f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
+    const soloText = soloPlaneId ? `Solo: ${soloPlaneId}` : `${planes.length} planes`;
+    document.getElementById('wormStatePill').textContent = `${soloText} · f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
 
     if(wormMode === 'parallel'){
       renderParallelTimelinesMode(ctx, W, H, fi, N, planes, zRef);
@@ -1696,7 +1534,7 @@
     }
 
     if(wormMode === 'strobe'){
-      const padT = 36, padB = 30, padL = 16, padR = 16;
+      const padT = 14, padB = 14, padL = 14, padR = 14;
       const stageW = W - padL - padR, stageH = H - padT - padB;
       ctx.save();
       ctx.beginPath();
@@ -1743,28 +1581,14 @@
       drawSamCutoutInRect(ctx, curWorm, fi, padL, padT, stageW, stageH, {
         cropToMask: false, drawOutline: true, outlineColor: '#EF9F3A', drawDoodle: true, doodleColor: '#161412', alpha: 1.0
       });
-
-      const planted = curWorm.planted_anchors || [];
-      planted.forEach(pa=>{
-        const px = padL + pa.u * stageW, py = padT + pa.v * stageH;
-        ctx.fillStyle = '#2E7A4A';
-        ctx.strokeStyle = '#FFFBF4';
-        ctx.lineWidth = 1.5;
-        ctx.beginPath(); ctx.arc(px, py, 4.5, 0, Math.PI*2); ctx.fill(); ctx.stroke();
-      });
-
       ctx.restore();
       ctx.strokeStyle = '#161412'; ctx.lineWidth = 1.5;
       ctx.beginPath(); ctx.roundRect(padL, padT, stageW, stageH, 6); ctx.stroke();
-
-      ctx.fillStyle = '#5E554B';
-      ctx.font = '600 10.5px "JetBrains Mono", monospace';
-      ctx.fillText('Green: Start (f=01)   ·   Orange Spine: Centroid Path   ·   Red: End   ·   Pins: Planted Contacts', padL, H - 10);
       return;
     }
 
     if(wormMode === 'kymo'){
-      const padL = 128, padR = 16, padT = 38, padB = 22;
+      const padL = 124, padR = 14, padT = 14, padB = 14;
       const trackW = W - padL - padR;
       const availH = H - padT - padB;
       const gap = 8;
@@ -1772,9 +1596,9 @@
       const frames = curWorm.frames || [];
 
       const bands = [
-        {title:'Horizontal X(t)', sub:'Left to Right travel', color:'#EF9F3A', getVal: fr => (fr.c ? fr.c[0] : 0.5), stamps:true},
-        {title:'Vertical Bounce Y(t)', sub:'Top to Bottom gait', color:'#2E7A4A', getVal: fr => (fr.c ? fr.c[1] : 0.5), stamps:false},
-        {title:'Scale R(t) & Pan', sub:'Looming size & cam', color:'#2B6CB0', getVal: fr => Math.min(1, (fr.r || 0.15)*2.5), stamps:false}
+        {title:'Horizontal X(t)', sub:'Left to Right', color:'#EF9F3A', getVal: fr => (fr.c ? fr.c[0] : 0.5), stamps:true},
+        {title:'Vertical Y(t)', sub:'Top to Bottom', color:'#2E7A4A', getVal: fr => (fr.c ? fr.c[1] : 0.5), stamps:false},
+        {title:'Scale R(t)', sub:'Size & Cam Pan', color:'#2B6CB0', getVal: fr => Math.min(1, (fr.r || 0.15)*2.5), stamps:false}
       ];
 
       bands.forEach((b, bIdx)=>{
@@ -1837,8 +1661,8 @@
     }
 
     if(wormMode === 'anatomy'){
-      const padL = 14, padR = 14, padT = 38, padB = 18;
-      const topH = Math.round((H - padT - padB) * 0.48);
+      const padL = 14, padR = 14, padT = 14, padB = 14;
+      const topH = Math.round((H - padT - padB) * 0.50);
       const botY = padT + topH + 10;
       const botH = H - padB - botY;
       const halfW = Math.round((W - padL - padR - 10) * 0.5);
@@ -1871,10 +1695,7 @@
         ? jNames.slice(0, 5).map((jn, i)=>({label: jn.replace(/_/g,' '), pts: joints[jn], color: colors[i%colors.length]}))
         : (curWorm.depth_worms || []).slice(0, 5).map((dw, i)=>({label: dw.label, pts: (dw.track||[]).map(t=>[t[0],t[1]]), color: dw.color || colors[i%colors.length]}));
 
-      ctx.fillStyle = '#161412'; ctx.font = '700 10.5px "JetBrains Mono", monospace';
-      ctx.fillText(`ANATOMICAL SUB-WORMS (${rows.length}) · Braids: ${curWorm.braid_count || 0}`, padL+10, botY+15);
-
-      const rTop = botY + 22, rAvail = botH - 28;
+      const rTop = botY + 8, rAvail = botH - 14;
       const rH = Math.max(16, rAvail / Math.max(1, rows.length));
       rows.forEach((r, idx)=>{
         const ry = rTop + idx * rH;
@@ -1905,7 +1726,7 @@
     }
 
     if(wormMode === 'box'){
-      const padX = 28, padT = 40, padB = 24;
+      const padX = 24, padT = 18, padB = 18;
       const availW = W - padX*2, availH = H - padT - padB;
       const nP = planes.length;
       const srcW = (S && S.W) || curWorm.W || 480;
@@ -1948,7 +1769,6 @@
         }
         ctx.restore();
 
-        // Stagger label horizontally by idx so depth plane badges never collide
         const lblText = `${plane.label} · z=${plane.z}`;
         ctx.font = '600 9.5px "JetBrains Mono", monospace';
         const tw = ctx.measureText(lblText).width + 8;
@@ -1965,7 +1785,7 @@
 
     // LENS 2: DISENTANGLED PLANE WORMS ('lanes')
     const planesNearFirst = planes.slice().reverse();
-    const padL = 128, padR = 16, padT = 38, padB = 22;
+    const padL = 124, padR = 14, padT = 14, padB = 14;
     const availH = H - padT - padB;
     const nP = Math.max(1, planesNearFirst.length);
     const laneGap = 6;
@@ -1988,7 +1808,6 @@
       ctx.roundRect(10, y0, W - 20, laneH, 6);
       ctx.fill(); ctx.stroke();
 
-      // Left header column clipped so long plane labels never overflow into the worm track
       ctx.save();
       ctx.beginPath();
       ctx.rect(11, y0 + 1, padL - 16, laneH - 2);
@@ -2076,50 +1895,15 @@
     ctx.restore();
   }
 
-  function updateDecoder(fi){
-    if(!curWorm) return;
-    const frames = curWorm.frames || [];
-    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
-    const planes = getActivePlanes();
-    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
-
-    const c0 = (frames[0] && frames[0].c) ? frames[0].c : [0.5, 0.5];
-    const c1 = (frames[frames.length-1] && frames[frames.length-1].c) ? frames[frames.length-1].c : [0.5, 0.5];
-    const dxPct = Math.round((c1[0] - c0[0]) * 100);
-    const dyPct = Math.round((c1[1] - c0[1]) * 100);
-    const dirStr = Math.abs(dxPct) < 5 && Math.abs(dyPct) < 5
-      ? 'Holds position near frame center'
-      : `${dxPct > 3 ? 'Moves Right (+' + dxPct + '%)' : (dxPct < -3 ? 'Moves Left (' + dxPct + '%)' : 'Steady X')}${Math.abs(dyPct) > 3 ? ', ' + (dyPct > 0 ? 'Down +' + dyPct + '%' : 'Up ' + dyPct + '%') : ''}`;
-    document.getElementById('decShapeTitle').textContent = TOPO_HUMAN[curWorm.topology] || curWorm.topology || 'Tracked Motion';
-    document.getElementById('decShapeBody').textContent =
-      `${dirStr}: starts at (${c0[0].toFixed(2)}, ${c0[1].toFixed(2)}) and ends at (${c1[0].toFixed(2)}, ${c1[1].toFixed(2)}) over ${curWorm.duration_s || (N/12).toFixed(1)}s.`;
-
-    const minZ = Math.min(...planes.map(p=>p.z));
-    const maxZ = Math.max(...planes.map(p=>p.z));
-    const panMag = Math.round((curWorm.cam_pan_mag || 0) * ((S && S.W) || curWorm.W || 480));
-    document.getElementById('decCamTitle').textContent = `${planes.length} Depth Planes (z=${minZ} to z=${maxZ})`;
-    document.getElementById('decCamBody').textContent =
-      panMag > 4
-        ? `Camera pans ~${panMag}px. Near plane (z=${minZ}) scrolls ${(zRef/minZ).toFixed(2)}x camera speed; far plane (z=${maxZ}) scrolls ${(zRef/maxZ).toFixed(2)}x.`
-        : `Minimal camera pan (~${panMag}px). Subject moves across ${planes.length} depth layers.`;
-
-    const nJoints = Object.keys(curWorm.joints || {}).length;
-    const keys = (S && S.keys) || curWorm.keys || {};
-    const nDrawn = (keys.drawn || [0]).length;
-    document.getElementById('decRigTitle').textContent = `${nDrawn} Drawn Keys · ${nJoints || planes.length} Sub-Worms`;
-    document.getElementById('decRigBody').textContent =
-      `Quick, Draw! seed (f=01) tracked across ${N} SAM masks with ${curWorm.braid_count || 0} braid crossings and ${curWorm.planted_count || 0} planted contacts.`;
-
-    const fr = frames[Math.min(frames.length-1, fi)] || {};
-    const fc = fr.c || [0.5, 0.5];
-    const vers = ['Multiplane GWP'];
-    if(curWorm.is_flagship) vers.push('Flagship 6-Plane');
-    if(curWorm.has_sam_shot) vers.push('SAM Cutout');
-    if(curWorm.has_redraw_shot) vers.push('Puppet Redraw');
-    if(curWorm.has_integrated) vers.push('Integrated 24fps');
-    document.getElementById('decLiveTitle').textContent = `f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')} · (${fc[0].toFixed(2)}, ${fc[1].toFixed(2)})`;
-    document.getElementById('decLiveBody').textContent =
-      `Available versions (${vers.length}): ${vers.join(', ')}.`;
+  function syncConditionalRecoveryUI(){
+    // Law 4 & Law 8: Display recovery actions only while state is changed
+    if(restorePlanesBtn){
+      restorePlanesBtn.style.display = soloPlaneId ? '' : 'none';
+    }
+    const isModified = (f !== 0) || (soloPlaneId !== null) || (view !== 'composite') || (curVariant !== 'gwp');
+    if(resetStateBtn){
+      resetStateBtn.style.display = isModified ? '' : 'none';
+    }
   }
 
   function renderAll(){
@@ -2132,38 +1916,39 @@
     const fps = (S && S.fps) || curWorm.fps || 12;
     scrub.max = Math.max(0, N - 1);
     scrub.value = String(f);
-    readout.textContent = `f ${String(f+1).padStart(2,'0')} / ${String(N).padStart(2,'0')} · ${(f/fps).toFixed(2)}s`;
-    updateDecoder(f);
+    readout.textContent = `f ${String(f+1).padStart(2,'0')}/${String(N).padStart(2,'0')} · ${(f/fps).toFixed(2)}s`;
+    syncConditionalRecoveryUI();
   }
 
   function buildPlanesUI(){
     planesRow.innerHTML = '';
     const planes = getActivePlanes();
-    planes.forEach(p=>{
-      if(!(p.id in planeOn)) planeOn[p.id] = true;
-      const lab = document.createElement('label');
-      if(p.id === 'char') lab.classList.add('subj');
-      if(soloPlaneId === p.id) lab.classList.add('soloed');
-      const cb = document.createElement('input');
-      cb.type = 'checkbox';
-      cb.checked = isPlaneVisible(p.id);
-      cb.addEventListener('change', ()=>{
-        soloPlaneId = null;
-        planeOn[p.id] = cb.checked;
-        buildPlanesUI();
-        renderAll();
-      });
-      lab.addEventListener('dblclick', (e)=>{
-        e.preventDefault();
+
+    const allBtn = document.createElement('button');
+    allBtn.type = 'button';
+    allBtn.className = 'plane-pill';
+    allBtn.setAttribute('aria-pressed', soloPlaneId === null ? 'true' : 'false');
+    allBtn.textContent = `All (${planes.length})`;
+    allBtn.addEventListener('click', ()=>{
+      soloPlaneId = null;
+      buildPlanesUI();
+      renderAll();
+    });
+    planesRow.appendChild(allBtn);
+
+    planes.slice().reverse().forEach(p=>{
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'plane-pill' + (p.id === 'char' ? ' subj' : '');
+      btn.setAttribute('aria-pressed', soloPlaneId === p.id ? 'true' : 'false');
+      const shortLbl = String(p.label || p.id).split('(')[0].trim().slice(0, 14);
+      btn.textContent = `${shortLbl} z=${p.z}`;
+      btn.addEventListener('click', ()=>{
         soloPlaneId = (soloPlaneId === p.id) ? null : p.id;
         buildPlanesUI();
         renderAll();
       });
-      const txt = document.createElement('span');
-      txt.textContent = `${p.label} · z=${p.z}`;
-      lab.appendChild(cb);
-      lab.appendChild(txt);
-      planesRow.appendChild(lab);
+      planesRow.appendChild(btn);
     });
   }
 
@@ -2229,9 +2014,7 @@
           onShotDataReady(worm);
         }
       }
-    }catch(e){
-      console.warn('Variant fetch fallback:', e);
-    }
+    }catch(e){}
   }
 
   function selectShot(idx){
@@ -2241,23 +2024,21 @@
     S = null;
     f = 0;
     shotSelect.value = String(idx);
-
-    document.getElementById('heroLotTag').textContent =
-      `LOT ${curWorm.lot || 'SM-SHOT'} · ${(curWorm.category || curWorm.slug).toUpperCase()} · MULTIPLANE SPACE-WORM`;
-    document.getElementById('heroTitle').textContent = curWorm.title || curWorm.slug;
     document.getElementById('openShotPageLink').href = curWorm.shot_id + '.html';
 
+    // Law 4: Display version switcher only if alternate versions exist for this shot
+    const hasAlts = Boolean(curWorm.has_sam_shot || curWorm.has_redraw_shot || curWorm.has_integrated);
+    versionSeg.style.display = hasAlts ? '' : 'none';
     varBtnSam.style.display = curWorm.has_sam_shot ? '' : 'none';
     varBtnRedraw.style.display = curWorm.has_redraw_shot ? '' : 'none';
     varBtnInt.style.display = curWorm.has_integrated ? '' : 'none';
 
-    planeOn = {};
     soloPlaneId = null;
     buildPlanesUI();
     buildKeyTicks();
     renderAll();
 
-    document.querySelectorAll('.shot-card').forEach(el=>{
+    document.querySelectorAll('.shot-item').forEach(el=>{
       el.classList.toggle('active', Number(el.dataset.idx) === idx);
     });
 
@@ -2269,17 +2050,21 @@
     const W = (S && S.W) || worm.W || 480;
     const H = (S && S.H) || worm.H || 360;
     const fps = (S && S.fps) || worm.fps || 12;
-    const planes = getActivePlanes();
-
-    document.getElementById('heroMeta').innerHTML =
-      `<b>${worm.source_archive || 'Prelinger Archives'}</b> · ${worm.source_title || 'Archival Film'}${worm.source_year ? ' ('+worm.source_year+')' : ''}<br>` +
-      `<b>${N} frames @ ${fps} fps</b> · ${W}×${H} · ${planes.length} depth planes`;
-    document.getElementById('stageRightLbl').textContent = `${W}×${H} · ${fps} fps`;
+    document.getElementById('stageStatePill').textContent = `${W}×${H} · ${fps}fps`;
 
     buildPlanesUI();
     buildKeyTicks();
     for(let i=0;i<Math.min(N, 8);i++) getFrameImg(worm, i);
     renderAll();
+  }
+
+  function stopPlayback(){
+    if(playing){
+      playing = false;
+      playBtn.setAttribute('aria-pressed', 'false');
+      playBtn.classList.remove('stop-active');
+      playBtn.textContent = 'Play';
+    }
   }
 
   // Direct horizontal drag-scrubbing on the worm canvas
@@ -2289,10 +2074,9 @@
     const rect = cvWorm.getBoundingClientRect();
     const clientX = (e.touches && e.touches.length) ? e.touches[0].clientX : e.clientX;
     const xRel = (clientX - rect.left) / Math.max(1, rect.width);
-    let padLFrac = 46 / cvWorm.width, padRFrac = 32 / cvWorm.width;
-    if(wormMode === 'parallel'){ padLFrac = 0.08; padRFrac = 0.08; }
-    else if(wormMode === 'lanes' || wormMode === 'kymo'){ padLFrac = 128 / cvWorm.width; padRFrac = 16 / cvWorm.width; }
-    else if(wormMode === 'strobe'){ padLFrac = 16 / cvWorm.width; padRFrac = 16 / cvWorm.width; }
+    let padLFrac = 0.08, padRFrac = 0.08;
+    if(wormMode === 'lanes' || wormMode === 'kymo'){ padLFrac = 124 / cvWorm.width; padRFrac = 14 / cvWorm.width; }
+    else if(wormMode === 'strobe'){ padLFrac = 14 / cvWorm.width; padRFrac = 14 / cvWorm.width; }
     else if(wormMode === 'anatomy'){ padLFrac = 132 / cvWorm.width; padRFrac = 24 / cvWorm.width; }
     const u = Math.max(0, Math.min(1, (xRel - padLFrac) / Math.max(0.1, 1 - padLFrac - padRFrac)));
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
@@ -2305,9 +2089,7 @@
   }
 
   cvWorm.addEventListener('pointerdown', (e)=>{
-    playing = false;
-    playBtn.setAttribute('aria-pressed', 'false');
-    playBtn.textContent = 'Play';
+    stopPlayback();
     isScrubbingWorm = true;
     cvWorm.setPointerCapture(e.pointerId);
     scrubFromWormEvent(e);
@@ -2318,15 +2100,14 @@
   cvWorm.addEventListener('pointerup', ()=>{ isScrubbingWorm = false; });
   cvWorm.addEventListener('pointercancel', ()=>{ isScrubbingWorm = false; });
 
-  // Lens buttons
+  // Lens buttons (Law 4: bind 3D sub-controls strictly to Parallel mode)
   document.querySelectorAll('[data-wmode]').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       wormMode = btn.dataset.wmode;
       document.querySelectorAll('[data-wmode]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
-      const m = LENS_META[wormMode] || LENS_META.parallel;
-      document.getElementById('lensTitleText').textContent = m.title;
-      document.getElementById('lensDescText').textContent = m.desc;
-      if(parallelSubRow) parallelSubRow.style.display = (wormMode === 'parallel') ? '' : 'none';
+      const isPar = (wormMode === 'parallel');
+      if(parallelSubSeg) parallelSubSeg.style.display = isPar ? '' : 'none';
+      if(parThemeBtn) parThemeBtn.style.display = isPar ? '' : 'none';
       if(curWorm && (wormMode === 'strobe' || wormMode === 'kymo' || wormMode === 'parallel')){
         const N = curWorm.n_frames || 1;
         for(let i=0;i<N;i+=Math.max(1, Math.floor(N/8))) getFrameImg(curWorm, i);
@@ -2335,7 +2116,6 @@
     });
   });
 
-  // Parallel sub-mode buttons (Radial vs 2-Rail Stretch)
   document.querySelectorAll('[data-psub]').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       parallelSubMode = btn.dataset.psub;
@@ -2356,20 +2136,38 @@
   function setMobPipMode(pip){
     mobPipMode = pip;
     if(mobPipBtn) mobPipBtn.setAttribute('aria-pressed', String(pip));
-    if(screensWrap){
-      screensWrap.classList.toggle('mob-pip', pip);
-      screensWrap.classList.toggle('mob-split', !pip);
+    if(workspace){
+      workspace.classList.toggle('mob-pip', pip);
+      workspace.classList.toggle('mob-split', !pip);
     }
   }
   if(mobPipBtn){
     mobPipBtn.addEventListener('click', ()=> setMobPipMode(!mobPipMode));
   }
-  const stageScreenCard = document.getElementById('stageScreenCard');
-  if(stageScreenCard){
-    stageScreenCard.addEventListener('click', ()=>{
-      if(window.innerWidth <= 860 && mobPipMode){
-        setMobPipMode(false);
-      }
+  document.getElementById('stageCanvasWrap').addEventListener('click', ()=>{
+    if(window.innerWidth <= 820 && mobPipMode){
+      setMobPipMode(false);
+    }
+  });
+
+  // Recovery actions (Law 8)
+  if(restorePlanesBtn){
+    restorePlanesBtn.addEventListener('click', ()=>{
+      soloPlaneId = null;
+      buildPlanesUI();
+      renderAll();
+    });
+  }
+  if(resetStateBtn){
+    resetStateBtn.addEventListener('click', ()=>{
+      stopPlayback();
+      f = 0;
+      soloPlaneId = null;
+      view = 'composite';
+      document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.view==='composite'?'true':'false'));
+      if(curVariant !== 'gwp' && curWorm) loadVariantJson(curWorm, 'gwp');
+      buildPlanesUI();
+      renderAll();
     });
   }
 
@@ -2397,45 +2195,45 @@
     });
   });
 
-  document.getElementById('boilBtn').addEventListener('click', (e)=>{
-    boilOn = !boilOn;
-    e.currentTarget.setAttribute('aria-pressed', String(boilOn));
-    e.currentTarget.textContent = 'Line boil: ' + (boilOn ? 'on' : 'off');
-    renderAll();
-  });
-  document.getElementById('celBtn').addEventListener('click', (e)=>{
-    celOn = !celOn;
-    e.currentTarget.setAttribute('aria-pressed', String(celOn));
-    e.currentTarget.textContent = 'Paint cels: ' + (celOn ? 'on' : 'off');
-    renderAll();
-  });
-
+  // Law 7: Active work exposes Stop
   playBtn.addEventListener('click', ()=>{
     playing = !playing;
     playBtn.setAttribute('aria-pressed', String(playing));
-    playBtn.textContent = playing ? 'Pause' : 'Play';
+    playBtn.classList.toggle('stop-active', playing);
+    playBtn.textContent = playing ? 'Stop' : 'Play';
     if(playing){ lastTick = performance.now(); requestAnimationFrame(loop); }
   });
   document.getElementById('stepPrevBtn').addEventListener('click', ()=>{
-    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.textContent = 'Play';
+    stopPlayback();
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm ? curWorm.n_frames : 1);
     f = (f - 1 + N) % N;
     renderAll();
   });
   document.getElementById('stepNextBtn').addEventListener('click', ()=>{
-    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.textContent = 'Play';
+    stopPlayback();
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm ? curWorm.n_frames : 1);
     f = (f + 1) % N;
     renderAll();
   });
   scrub.addEventListener('input', ()=>{
-    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.textContent = 'Play';
+    stopPlayback();
     f = parseInt(scrub.value, 10) || 0;
     renderAll();
   });
   document.getElementById('prevShotBtn').addEventListener('click', ()=> selectShot((curIdx - 1 + WORMS.length) % WORMS.length));
   document.getElementById('nextShotBtn').addEventListener('click', ()=> selectShot((curIdx + 1) % WORMS.length));
   shotSelect.addEventListener('change', ()=> selectShot(parseInt(shotSelect.value, 10) || 0));
+
+  // On-demand 109-shot Index Drawer
+  document.getElementById('openIndexBtn').addEventListener('click', ()=>{
+    indexDrawer.classList.add('open');
+  });
+  document.getElementById('closeIndexBtn').addEventListener('click', ()=>{
+    indexDrawer.classList.remove('open');
+  });
+  indexDrawer.addEventListener('click', (e)=>{
+    if(e.target === indexDrawer) indexDrawer.classList.remove('open');
+  });
 
   function loop(now){
     if(!playing || !curWorm) return;
@@ -2464,36 +2262,15 @@
       if(!tr.length) continue;
       c.beginPath();
       for(let ti=0;ti<tr.length;ti++){
-        const x = 6 + (tr.length>1 ? (ti/(tr.length-1))*(W-12) : (W-12)*0.5);
-        const y = 6 + Math.max(0.08, Math.min(0.92, tr[ti][1]))*(H-12);
+        const x = 4 + (tr.length>1 ? (ti/(tr.length-1))*(W-8) : (W-8)*0.5);
+        const y = 4 + Math.max(0.08, Math.min(0.92, tr[ti][1]))*(H-8);
         if(ti===0) c.moveTo(x,y); else c.lineTo(x,y);
       }
       c.strokeStyle = dw.role === 'subject' ? '#EF9F3A' : (dw.color || '#8A6114');
-      c.lineWidth = dw.role === 'subject' ? 2.6 : 1.4;
+      c.lineWidth = dw.role === 'subject' ? 2.2 : 1.2;
       c.globalAlpha = dw.role === 'subject' ? 0.95 : 0.45;
       c.stroke();
     }
-    c.globalAlpha = 1.0;
-
-    const nf = (w.frames && w.frames.length) || 1;
-    const idxs = [0, Math.floor(nf*0.5), nf-1];
-    idxs.forEach(fi=>{
-      const fr = w.frames && w.frames[fi];
-      if(!fr || !fr.doodle) return;
-      const xOff = (nf>1 ? (fi/(nf-1)) : 0.5) * (W - 44);
-      c.strokeStyle = fi===0 ? '#8A4A05' : '#161412';
-      c.lineWidth = 1.1;
-      for(const s of fr.doodle){
-        if(!s || s.length<2) continue;
-        c.beginPath();
-        for(let i=0;i<s.length;i++){
-          const px = 4 + xOff + s[i][0]*36;
-          const py = 2 + s[i][1]*(H-4);
-          if(i===0) c.moveTo(px,py); else c.lineTo(px,py);
-        }
-        c.stroke();
-      }
-    });
   }
 
   function renderRack(){
@@ -2507,29 +2284,19 @@
         if(!hay.includes(q)) return;
       }
       const card = document.createElement('div');
-      card.className = 'shot-card' + (idx === curIdx ? ' active' : '');
+      card.className = 'shot-item' + (idx === curIdx ? ' active' : '');
       card.dataset.idx = String(idx);
       const nP = (w.depth_worms && w.depth_worms.length) || (w.planes && w.planes.length) || 2;
-      let verHtml = `<span class="ver-badge hi">GWP ${nP}P</span>`;
-      if(w.is_flagship) verHtml += `<span class="ver-badge hi">Flagship</span>`;
-      if(w.has_sam_shot) verHtml += `<span class="ver-badge">SAM</span>`;
-      if(w.has_redraw_shot) verHtml += `<span class="ver-badge">Redraw</span>`;
-      if(w.has_integrated) verHtml += `<span class="ver-badge">24fps</span>`;
-
       card.innerHTML = `
-        <div class="top">
-          <b>${w.lot || 'SM-SHOT'}</b>
-          <span>${w.n_frames}f · ${nP} planes</span>
-        </div>
-        <canvas width="220" height="50"></canvas>
-        <div class="title">${w.title || w.slug}</div>
-        <div class="sub">${w.source_title || 'Prelinger Archives'}</div>
-        <div class="ver-badges">${verHtml}</div>
+        <div class="meta"><b>${w.lot || 'SM'}</b><span>${nP}P · ${w.n_frames}f</span></div>
+        <canvas width="180" height="36"></canvas>
+        <div class="name">${w.title || w.slug}</div>
       `;
       drawMiniCardWorm(card.querySelector('canvas'), w);
       card.addEventListener('click', ()=>{
         selectShot(idx);
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        // Law 12: Completion creates no new demand (auto-close drawer upon selection)
+        indexDrawer.classList.remove('open');
       });
       rackGrid.appendChild(card);
     });
@@ -2547,8 +2314,7 @@
         const opt = document.createElement('option');
         opt.value = String(i);
         const nP = (w.depth_worms && w.depth_worms.length) || (w.planes && w.planes.length) || 2;
-        const nVer = 1 + (w.has_sam_shot?1:0) + (w.has_redraw_shot?1:0) + (w.has_integrated?1:0);
-        opt.textContent = `${w.lot ? w.lot + ' · ' : ''}${w.title || w.slug} (${nP} planes · ${nVer} ver · ${w.n_frames}f)`;
+        opt.textContent = `${w.lot ? w.lot + ' · ' : ''}${w.title || w.slug} (${nP}P · ${w.n_frames}f)`;
         shotSelect.appendChild(opt);
       });
       const params = new URLSearchParams(location.search);
