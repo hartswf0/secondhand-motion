@@ -186,6 +186,26 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   padding:8px 10px; box-shadow:0 4px 0 var(--rule-strong); margin:0 0 18px;
   display:flex; flex-direction:column; gap:6px;
 }
+.worms-stage.locked-fullscreen{
+  position:fixed; inset:0; width:100vw; height:100dvh; z-index:9999;
+  margin:0; border-radius:0; border:0; box-shadow:none; overflow:hidden;
+  overscroll-behavior:none;
+  padding-left:max(8px, env(safe-area-inset-left, 0px));
+  padding-right:max(8px, env(safe-area-inset-right, 0px));
+  padding-bottom:max(6px, env(safe-area-inset-bottom, 0px));
+}
+.worms-stage.locked-fullscreen .w-screens{
+  flex:1 1 auto; min-height:0;
+}
+.worms-stage.locked-fullscreen .w-screen-worm{
+  height:100%;
+}
+.worms-stage.locked-fullscreen .w-screen-worm .w-canvas-wrap{
+  aspect-ratio:auto; height:100%;
+}
+body.worms-no-scroll{
+  overflow:hidden !important; position:fixed; inset:0; width:100vw; height:100dvh; overscroll-behavior:none;
+}
 .worms-head{
   display:flex;align-items:center;justify-content:space-between;gap:8px;
   padding-bottom:6px;border-bottom:1px solid var(--rule);
@@ -378,6 +398,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     </div>
     <div class="w-scroll-strip">
       <button type="button" class="w-btn w-mob-pip-btn" id="idxMobPipBtn" aria-pressed="true">PiP / Split</button>
+      <button type="button" class="w-btn" id="idxLockScreenBtn" aria-pressed="false" title="Lock this studio to full 100dvh viewport with zero page scroll">No-Scroll</button>
       <a class="w-btn" id="idxFullWormsLink" href="pages/worms.html">Studio (109)</a>
     </div>
   </div>
@@ -1801,6 +1822,25 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       screensWrap.classList.toggle('mob-pip', mobPipMode);
       screensWrap.classList.toggle('mob-split', !mobPipMode);
     });
+  }
+  const lockScreenBtn = document.getElementById('idxLockScreenBtn');
+  const heroStage = document.getElementById('shmWormsHero');
+  let isLockedFullscreen = false;
+  function setLockedFullscreen(on){
+    isLockedFullscreen = Boolean(on);
+    if(heroStage) heroStage.classList.toggle('locked-fullscreen', isLockedFullscreen);
+    document.body.classList.toggle('worms-no-scroll', isLockedFullscreen);
+    if(lockScreenBtn){
+      lockScreenBtn.setAttribute('aria-pressed', String(isLockedFullscreen));
+      lockScreenBtn.textContent = isLockedFullscreen ? 'Exit No-Scroll' : 'No-Scroll';
+    }
+    renderAll();
+  }
+  if(lockScreenBtn){
+    lockScreenBtn.addEventListener('click', ()=> setLockedFullscreen(!isLockedFullscreen));
+  }
+  if(new URLSearchParams(window.location.search).get('noscroll') === '1'){
+    setLockedFullscreen(true);
   }
   const stageScreenCard = document.getElementById('idxStageScreenCard');
   if(stageScreenCard && screensWrap){
