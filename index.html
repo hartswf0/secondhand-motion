@@ -166,6 +166,21 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 <div class="wrap">
 <!-- BEGIN SECONDHAND MOTION WORMS STUDIO -->
 <style>
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-strong) transparent;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--rule-strong);
+  border-radius: 999px;
+}
 .worms-stage{
   background:var(--sheet); border:1.5px solid var(--ink); border-radius:10px;
   padding:14px; box-shadow:0 6px 0 var(--rule-strong); margin:0 0 26px;
@@ -188,9 +203,9 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 }
 .w-scroll-strip{
   display:flex;align-items:center;gap:6px;overflow-x:auto;max-width:100%;
-  scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;
 }
-.w-scroll-strip::-webkit-scrollbar{display:none}
+.w-scroll-strip::-webkit-scrollbar{display:none;width:0;height:0}
 .w-seg{
   display:inline-flex;border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;
   background:var(--card);flex-shrink:0;
@@ -212,8 +227,12 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 .w-btn[aria-pressed="true"]{background:var(--tag);color:#161412;border-color:var(--ink)}
 .w-select{
   font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;
-  padding:4px 9px;border:1.5px solid var(--ink);border-radius:6px;
-  background:var(--card);color:var(--ink);cursor:pointer;max-width:310px;
+  padding:4px 26px 4px 9px;border:1.5px solid var(--ink);border-radius:6px;
+  background-color:var(--card);color:var(--ink);cursor:pointer;max-width:310px;
+  appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23161412' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1.5L6 6.5L11 1.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 8px center;
 }
 .w-lens-banner{
   display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
@@ -235,36 +254,60 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 .w-canvas-wrap.worm-scrub-area{cursor:ew-resize;aspect-ratio:16/11}
 .w-screen canvas{display:block;width:100%;height:100%}
 .w-screen .w-lbl{
-  position:absolute;top:7px;left:9px;
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  position:absolute;top:6px;left:8px;
+  font-family:'JetBrains Mono',monospace;font-size:10px;
   background:rgba(246,239,227,0.92);color:#161412;
   padding:2px 7px;border-radius:4px;border:1px solid var(--rule-strong);
-  pointer-events:none;z-index:2;
+  pointer-events:none;z-index:2;max-width:62%;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 .w-screen .w-lbl-r{
-  position:absolute;top:7px;right:9px;
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  position:absolute;top:6px;right:8px;
+  font-family:'JetBrains Mono',monospace;font-size:10px;
   background:var(--tag-soft);color:var(--tag-ink);
   padding:2px 7px;border-radius:4px;border:1px solid var(--tag);
-  pointer-events:none;z-index:2;font-weight:600;
+  pointer-events:none;z-index:2;font-weight:600;white-space:nowrap;
 }
 .w-mob-pip-btn{display:none}
 .w-controls{
   display:grid;grid-template-columns:auto auto auto 1fr auto;gap:8px;align-items:center;
   margin-top:10px;padding-top:9px;border-top:1px solid var(--rule);
 }
-.w-scrub{position:relative;display:flex;align-items:center;height:24px}
-.w-scrub input[type=range]{width:100%;accent-color:var(--tag);cursor:pointer;margin:0}
-.w-ticks{position:absolute;left:6px;right:6px;top:2px;height:6px;pointer-events:none}
-.w-ticks span{position:absolute;top:0;width:2px;height:6px;background:var(--rule-strong);transform:translateX(-1px)}
-.w-ticks span.drawn{background:var(--ink);height:8px;width:2.5px}
-.w-ticks span.line{background:var(--tag);height:10px;width:3px}
+.w-scrub{position:relative;display:flex;align-items:center;height:28px}
+.w-scrub input[type=range]{
+  width:100%;cursor:pointer;margin:0;background:transparent;
+  appearance:none;-webkit-appearance:none;position:relative;z-index:2;
+}
+.w-scrub input[type=range]:focus{outline:none}
+.w-scrub input[type=range]::-webkit-slider-runnable-track{
+  height:6px;border-radius:999px;background:var(--rule);border:1px solid var(--ink);
+}
+.w-scrub input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;
+  background:var(--tag);border:2px solid var(--ink);margin-top:-6px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.25);
+}
+.w-scrub input[type=range]::-moz-range-track{
+  height:6px;border-radius:999px;background:var(--rule);border:1px solid var(--ink);
+}
+.w-scrub input[type=range]::-moz-range-thumb{
+  width:16px;height:16px;border-radius:50%;background:var(--tag);border:2px solid var(--ink);
+  box-shadow:0 1px 3px rgba(0,0,0,0.25);
+}
+.w-ticks{position:absolute;left:8px;right:8px;top:1px;height:6px;pointer-events:none;z-index:1}
+.w-ticks span{position:absolute;top:0;width:2px;height:5px;background:var(--rule-strong);transform:translateX(-1px)}
+.w-ticks span.drawn{background:var(--ink);height:7px;width:2.5px}
+.w-ticks span.line{background:var(--tag);height:8px;width:3px}
 .w-readout{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);min-width:86px;text-align:right}
 .w-foot{
   display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
   margin-top:8px;font-size:12px;color:var(--muted);
 }
-.w-planes{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.w-planes{
+  display:flex;gap:5px;flex-wrap:wrap;align-items:center;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.w-planes::-webkit-scrollbar{display:none;width:0;height:0}
 .w-planes label{
   font-family:'JetBrains Mono',monospace;font-size:10.5px;
   padding:2px 7px;border:1px solid var(--rule-strong);border-radius:4px;
@@ -298,7 +341,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   .worms-head{margin-bottom:6px;padding-bottom:6px;gap:6px}
   .worms-head h2{font-size:16px}
   #idxWormSub{display:none}
-  .w-select{max-width:190px;font-size:11.5px;padding:3px 6px}
+  .w-select{max-width:190px;font-size:11.5px;padding:3px 22px 3px 6px}
   .w-lens-banner{padding:4px 8px;margin-bottom:6px;font-size:11px}
   #idxLensDesc{display:none}
   .w-mob-pip-btn{display:inline-flex}
@@ -315,7 +358,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   }
   .w-screens.mob-pip .w-screen-stage .w-lbl,
   .w-screens.mob-pip .w-screen-stage .w-lbl-r{
-    font-size:8.5px;padding:1px 4px;top:3px;
+    font-size:8px;padding:1px 4px;top:3px;
   }
   .w-screens.mob-split{
     display:grid;grid-template-columns:1.18fr 0.82fr;gap:6px;
@@ -326,8 +369,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   .w-controls [aria-label="Playback speed"]{display:none}
   .w-foot{margin-top:5px;gap:4px}
   #idxCaption{display:none}
-  .w-planes{flex-wrap:nowrap;overflow-x:auto;max-width:100%;scrollbar-width:none}
-  .w-planes::-webkit-scrollbar{display:none}
+  .w-planes{flex-wrap:nowrap;overflow-x:auto;max-width:100%}
   .w-decoder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:6px;padding-top:6px}
   .w-dec-card{padding:5px 7px}
   .w-dec-card .dp{display:none}
@@ -363,10 +405,10 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       </div>
     </div>
     <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-      <button type="button" class="w-btn" id="idxPrevShot">&#9664;</button>
+      <button type="button" class="w-btn" id="idxPrevShot">Prev</button>
       <select class="w-select" id="idxShotSelect" aria-label="Select shot"></select>
-      <button type="button" class="w-btn" id="idxNextShot">&#9654;</button>
-      <a class="w-btn" id="idxFullWormsLink" href="pages/worms.html">Full Worms Studio (109) &#8599;</a>
+      <button type="button" class="w-btn" id="idxNextShot">Next</button>
+      <a class="w-btn" id="idxFullWormsLink" href="pages/worms.html">Full Worms Studio (109)</a>
     </div>
   </div>
 
@@ -418,7 +460,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     <div class="w-screen w-screen-worm">
       <div class="w-canvas-wrap worm-scrub-area">
         <canvas id="idxCvWorm" width="680" height="468"></canvas>
-        <span class="w-lbl" id="idxLblWorm">parallel output timelines (3D stretch) · drag horizontally to scrub f</span>
+        <span class="w-lbl" id="idxLblWorm">parallel output timelines (3D stretch) · drag to scrub</span>
         <span class="w-lbl-r" id="idxLblWormR">6 planes · f 01/33</span>
       </div>
     </div>
@@ -432,10 +474,10 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   </div>
 
   <div class="w-controls">
-    <button type="button" class="w-btn" id="idxPlayBtn" aria-pressed="false">&#9654; Play</button>
+    <button type="button" class="w-btn" id="idxPlayBtn" aria-pressed="false">Play</button>
     <div style="display:inline-flex;gap:4px">
-      <button type="button" class="w-btn" id="idxStepPrev">&#8592;</button>
-      <button type="button" class="w-btn" id="idxStepNext">&#8594;</button>
+      <button type="button" class="w-btn" id="idxStepPrev">-1f</button>
+      <button type="button" class="w-btn" id="idxStepNext">+1f</button>
     </div>
     <div class="w-seg" role="group" aria-label="Playback speed">
       <button type="button" data-idxspeed="1" aria-pressed="true">1×</button>
@@ -526,32 +568,32 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     parallel: {
       title: 'Lens 1 · Parallel & Stretched Output Timelines (3D Multi-Worm):',
       desc: 'Parallel output timelines are prepared around the central input spine; distributed keyframes fan out via white correspondence rays (stretched 1/K slower per layer with head fixed) and intersect the circular cross-section ring as upright 3D frame cards.',
-      lbl: 'parallel output timelines (3D stretch) · drag horizontally to scrub f'
+      lbl: 'parallel output timelines (3D stretch) · drag to scrub'
     },
     lanes: {
       title: 'Lens 2 · Disentangled Plane Worms:',
-      desc: 'One horizontal cel strip per depth plane (Near → Subject → Far). Shows how fast foreground vs. background scrolls and stamps real SAM video cutouts + ink drawings along time.',
-      lbl: 'disentangled plane worms · drag horizontally to scrub f'
+      desc: 'One horizontal cel strip per depth plane (Near -> Subject -> Far). Shows how fast foreground vs. background scrolls and stamps real SAM video cutouts + ink drawings along time.',
+      lbl: 'disentangled plane worms · drag to scrub'
     },
     strobe: {
       title: 'Lens 3 · Space-Time Stroboscopic Trail (Muybridge View):',
       desc: 'Lays the entire space-worm directly over the 4:3 scene: ghost SAM cutouts + ink poses from Start (green) to End (red), connected by the centroid spine, joint curves, and planted-foot anchors.',
-      lbl: 'stroboscopic motion trail over scene · drag horizontally to scrub f'
+      lbl: 'stroboscopic motion trail · drag to scrub'
     },
     kymo: {
       title: 'Lens 4 · Slit-Scan & Motion Graphs (X-T, Y-T & Looming):',
       desc: 'Separates horizontal travel X(t), vertical gait bounce Y(t), and silhouette scale R(t) vs. camera pan so you can read speed, direction, and rhythm at a glance.',
-      lbl: 'spatiotemporal graphs X(t), Y(t), R(t) · drag horizontally to scrub f'
+      lbl: 'spatiotemporal graphs X(t), Y(t), R(t) · drag to scrub'
     },
     anatomy: {
       title: 'Lens 5 · Anatomy, Seed Line & Joint Braids:',
       desc: 'Compares The Line (f=0 Quick, Draw! seed doodle) against Frame f’s warped rig + skeleton joints on top, with anatomical joint sub-worms and 2D limb-crossing (braid) markers below.',
-      lbl: 'seed line vs warped rig + joint sub-worms · drag horizontally to scrub f'
+      lbl: 'seed line vs warped rig + joint sub-worms · drag to scrub'
     },
     box: {
       title: 'Lens 6 · Planes in Depth (Multiplane Camera Box):',
       desc: 'Secondhand Motion’s receding multiplane cards (z=10 far horizon down to z=1.2 foreground), showing how each plane shifts by k = z_ref / z as the camera pans.',
-      lbl: 'multiplane depth box (z) · drag horizontally to scrub f'
+      lbl: 'multiplane depth box (z) · drag to scrub'
     }
   };
 
@@ -828,9 +870,8 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       cropToMask: true,
       label: null,
       labelColor: '#FFFFFF',
-      subLabel: null,
-      skewY: -0.18,
-      skewX: -0.10
+      skewY: -0.16,
+      skewX: -0.09
     }, opts || {});
 
     ctx.save();
@@ -841,15 +882,18 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     const x0 = -cw * 0.5;
     const y0 = -ch * 0.5;
 
-    ctx.fillStyle = 'rgba(0,0,0,0.42)';
+    ctx.fillStyle = 'rgba(0,0,0,0.40)';
     ctx.fillRect(x0 + 3, y0 + 4, cw, ch);
 
     ctx.fillStyle = o.bgFill;
     ctx.fillRect(x0, y0, cw, ch);
 
+    const footerH = o.label ? 14 : 0;
+    const contentH = ch - footerH;
+
     ctx.save();
     ctx.beginPath();
-    ctx.rect(x0 + 1.5, y0 + 1.5, cw - 3, ch - 3);
+    ctx.rect(x0 + 1.5, y0 + 1.5, cw - 3, Math.max(10, contentH - 2));
     ctx.clip();
 
     const img = getFrameImg(curWorm, fi);
@@ -857,18 +901,18 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       if(img){
         ctx.save();
         ctx.globalAlpha = 0.22;
-        ctx.drawImage(img, x0 + 1.5, y0 + 1.5, cw - 3, ch - 3);
+        ctx.drawImage(img, x0 + 1.5, y0 + 1.5, cw - 3, contentH - 2);
         ctx.restore();
       }
-      drawPlaneObjectsInRect(ctx, o.plane, fi, x0 + 2, y0 + 2, cw - 4, ch - 4, true);
+      drawPlaneObjectsInRect(ctx, o.plane, fi, x0 + 2, y0 + 2, cw - 4, contentH - 4, true);
     } else {
       if(img && !o.cropToMask){
         ctx.save();
         ctx.globalAlpha = 0.38;
-        ctx.drawImage(img, x0 + 1.5, y0 + 1.5, cw - 3, ch - 3);
+        ctx.drawImage(img, x0 + 1.5, y0 + 1.5, cw - 3, contentH - 2);
         ctx.restore();
       }
-      drawSamCutoutInRect(ctx, curWorm, fi, x0 + 2, y0 + 2, cw - 4, ch - 4, {
+      drawSamCutoutInRect(ctx, curWorm, fi, x0 + 2, y0 + 2, cw - 4, contentH - 4, {
         cropToMask: o.cropToMask,
         drawOutline: true,
         outlineColor: o.borderColor === '#FFFFFF' ? '#EF9F3A' : o.borderColor,
@@ -878,6 +922,19 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     }
     ctx.restore();
 
+    if(o.label){
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(x0 + 1, y0 + ch - footerH, cw - 2, footerH - 1);
+      ctx.clip();
+      ctx.fillStyle = 'rgba(12, 13, 18, 0.90)';
+      ctx.fillRect(x0 + 1, y0 + ch - footerH, cw - 2, footerH - 1);
+      ctx.fillStyle = o.labelColor;
+      ctx.font = '700 8.5px "JetBrains Mono", monospace';
+      ctx.fillText(o.label, x0 + 4, y0 + ch - 4);
+      ctx.restore();
+    }
+
     ctx.strokeStyle = o.borderColor;
     ctx.lineWidth = o.borderWidth;
     ctx.strokeRect(x0, y0, cw, ch);
@@ -886,33 +943,16 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     ctx.strokeStyle = '#161412';
     ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.arc(0, 0, 2.6, 0, Math.PI * 2);
+    ctx.arc(0, 0, 2.4, 0, Math.PI * 2);
     ctx.fill();
     ctx.stroke();
-
-    if(o.label){
-      ctx.font = '700 9.5px "JetBrains Mono", monospace';
-      const tw = ctx.measureText(o.label).width + 8;
-      ctx.fillStyle = 'rgba(12, 13, 18, 0.86)';
-      ctx.fillRect(x0, y0 - 15, tw, 13);
-      ctx.fillStyle = o.labelColor;
-      ctx.fillText(o.label, x0 + 4, y0 - 5);
-    }
-    if(o.subLabel){
-      ctx.font = '600 8.5px "JetBrains Mono", monospace';
-      const sw = ctx.measureText(o.subLabel).width + 6;
-      ctx.fillStyle = 'rgba(12, 13, 18, 0.78)';
-      ctx.fillRect(x0 + 2, y0 + ch - 13, sw, 11);
-      ctx.fillStyle = '#F6EFE3';
-      ctx.fillText(o.subLabel, x0 + 5, y0 + ch - 4.5);
-    }
     ctx.restore();
   }
 
   function renderParallelTimelinesMode(ctx, W, H, fi, N, planes, zRef){
     const dark = parallelDark;
     if(dark){
-      const bg = ctx.createRadialGradient(W*0.38, H*0.42, 20, W*0.5, H*0.5, W*0.75);
+      const bg = ctx.createRadialGradient(W*0.42, H*0.46, 20, W*0.5, H*0.5, W*0.75);
       bg.addColorStop(0, '#141720');
       bg.addColorStop(1, '#06070A');
       ctx.fillStyle = bg;
@@ -924,19 +964,22 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     }
     ctx.fillRect(0, 0, W, H);
 
-    const vx = -W * 0.04, vy = H * 0.17;
-    const fx = W * 0.99,  fy = H * 0.79;
+    const topSafe = 38;
+    const botSafe = 34;
+
+    const vx = W * 0.04, vy = H * 0.27;
+    const fx = W * 0.94, fy = H * 0.73;
 
     function spinePt(u){
-      const p = Math.pow(Math.max(0, Math.min(1, u)), 0.88);
+      const p = Math.pow(Math.max(0, Math.min(1, u)), 0.90);
       return {
         x: vx + p * (fx - vx),
         y: vy + p * (fy - vy),
-        s: 0.24 + p * 0.96
+        s: 0.48 + p * 0.68
       };
     }
 
-    const uPlay = 0.16 + (N > 1 ? (fi / (N - 1)) : 0.5) * 0.64;
+    const uPlay = 0.24 + (N > 1 ? (fi / (N - 1)) : 0.5) * 0.54;
     const spPlay = spinePt(uPlay);
 
     const keys = (S && S.keys) || curWorm.keys || {};
@@ -947,8 +990,8 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     const lineRGB = dark ? '255,255,255' : '22,20,18';
 
     if(parallelSubMode === 'dual'){
-      const redOff  = {dx: -84, dy: 82};
-      const blueOff = {dx: 108, dy: -46};
+      const redOff  = {dx: -118, dy: 72};
+      const blueOff = {dx: 122,  dy: -54};
 
       function redPt(u){
         const c = spinePt(u);
@@ -1009,7 +1052,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       const rStart = redPt(0),   rEnd = redPt(1);
       const bStart = bluePt(0),  bEnd = bluePt(1);
 
-      ctx.strokeStyle = `rgba(${lineRGB}, 0.72)`;
+      ctx.strokeStyle = `rgba(${lineRGB}, 0.75)`;
       ctx.lineWidth = 1.5;
       ctx.beginPath(); ctx.moveTo(cStart.x, cStart.y); ctx.lineTo(cEnd.x, cEnd.y); ctx.stroke();
 
@@ -1023,11 +1066,11 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 
       const rPlay = redPt(uPlay);
       const bPlay = bluePt(uPlay);
-      const ringRx = Math.hypot(bPlay.x - rPlay.x, bPlay.y - rPlay.y) * 0.56;
-      const ringRy = ringRx * 0.94;
+      const ringRx = Math.hypot(bPlay.x - rPlay.x, bPlay.y - rPlay.y) * 0.54;
+      const ringRy = ringRx * 0.88;
 
       ctx.save();
-      ctx.strokeStyle = `rgba(${lineRGB}, 0.52)`;
+      ctx.strokeStyle = `rgba(${lineRGB}, 0.54)`;
       ctx.lineWidth = 1.4;
       ctx.beginPath();
       ctx.ellipse(spPlay.x, spPlay.y, ringRx, ringRy, -0.15, 0, Math.PI * 2);
@@ -1035,93 +1078,94 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       ctx.restore();
 
       const fStretched1 = Math.max(0, Math.min(N - 1, Math.round(fi * 0.5)));
-      const fStretched2 = Math.max(0, Math.min(N - 1, Math.min(N - 1, Math.round(fi * 0.5 + N * 0.25))));
+      const fStretched2 = Math.max(0, Math.min(N - 1, Math.round(fi * 0.5 + N * 0.25)));
       const bgPlane = planes.find(p => p.id !== 'char') || planes[0];
 
-      drawUpright3DCard(ctx, bPlay.x, bPlay.y, 78, 66, fStretched2, {
+      const bx = Math.max(54, Math.min(W - 54, bPlay.x));
+      const by = Math.max(topSafe + 38, Math.min(H - botSafe - 38, bPlay.y));
+      const rx = Math.max(54, Math.min(W - 54, rPlay.x));
+      const ry = Math.max(topSafe + 42, Math.min(H - botSafe - 42, rPlay.y));
+
+      drawUpright3DCard(ctx, bx, by, 82, 68, fStretched2, {
         plane: bgPlane,
         borderColor: '#2E7CF6',
         borderWidth: 2.0,
         cropToMask: false,
-        label: `output timeline 2`,
-        labelColor: '#6CA6FF',
-        subLabel: `${bgPlane ? bgPlane.label : 'Parallax'} · f${fStretched2+1}`
+        label: `out 2 · f${fStretched2+1}`,
+        labelColor: '#6CA6FF'
       });
 
       const fPrev = Math.max(0, fi - 2);
-      const spEcho = spinePt(Math.max(0.06, uPlay - 0.045));
-      drawUpright3DCard(ctx, spEcho.x, spEcho.y, 82, 70, fPrev, {
+      const spEcho = spinePt(Math.max(0.08, uPlay - 0.05));
+      drawUpright3DCard(ctx, spEcho.x, spEcho.y, 76, 64, fPrev, {
         plane: null,
-        borderColor: `rgba(${lineRGB}, 0.55)`,
-        borderWidth: 1.3,
-        alpha: 0.72,
+        borderColor: `rgba(${lineRGB}, 0.50)`,
+        borderWidth: 1.2,
+        alpha: 0.65,
         cropToMask: false
       });
 
-      drawUpright3DCard(ctx, spPlay.x, spPlay.y, 88, 74, fi, {
+      drawUpright3DCard(ctx, spPlay.x, spPlay.y, 84, 70, fi, {
         plane: null,
         borderColor: '#FFFFFF',
         borderWidth: 2.2,
         cropToMask: false,
-        label: `input spine · f${fi+1}/${N}`,
-        labelColor: '#EF9F3A',
-        subLabel: `1.0× realtime`
+        label: `spine · f${fi+1}/${N}`,
+        labelColor: '#EF9F3A'
       });
 
-      drawUpright3DCard(ctx, rPlay.x, rPlay.y, 96, 82, fStretched1, {
+      drawUpright3DCard(ctx, rx, ry, 92, 76, fStretched1, {
         plane: null,
         borderColor: '#FF3B30',
         borderWidth: 2.4,
         cropToMask: true,
-        label: `output timeline 1`,
-        labelColor: '#FF6961',
-        subLabel: `1/2× stretched · f${fStretched1+1}`
+        label: `out 1 (1/2x) · f${fStretched1+1}`,
+        labelColor: '#FF6961'
       });
 
       ctx.save();
       ctx.strokeStyle = '#FFFFFF';
-      ctx.lineWidth = 2.4;
+      ctx.lineWidth = 2.2;
       ctx.shadowColor = 'rgba(255,255,255,0.75)';
-      ctx.shadowBlur = 6;
+      ctx.shadowBlur = 5;
       ctx.beginPath();
-      ctx.moveTo(rPlay.x, rPlay.y);
+      ctx.moveTo(rx, ry);
       ctx.lineTo(spPlay.x, spPlay.y);
-      ctx.lineTo(bPlay.x, bPlay.y);
+      ctx.lineTo(bx, by);
       ctx.stroke();
       ctx.restore();
 
+      ctx.fillStyle = dark ? 'rgba(6, 7, 10, 0.84)' : 'rgba(251, 250, 246, 0.90)';
+      ctx.fillRect(10, H - 28, W - 20, 22);
+      ctx.font = '700 11px "JetBrains Mono", monospace';
       ctx.fillStyle = '#FF453A';
-      ctx.font = '700 13px "Bricolage Grotesque", sans-serif';
-      ctx.fillText('output timeline 1 (SAM cutout · 1/K stretched)', Math.max(12, rPlay.x - 52), Math.min(H - 12, rPlay.y + 58));
-
+      ctx.fillText('output timeline 1: SAM cutout (1/K stretched)', 16, H - 13);
       ctx.fillStyle = '#409CFF';
-      ctx.fillText('output timeline 2 (multiplane parallax)', Math.min(W - 245, bPlay.x + 48), Math.max(38, bPlay.y + 10));
-
-      ctx.fillStyle = dark ? '#FFFFFF' : '#161412';
-      ctx.font = '800 15px "Bricolage Grotesque", sans-serif';
-      ctx.fillText('Parallel & Stretched Output Timelines', W * 0.43, 44);
-      ctx.fillStyle = dark ? 'rgba(246,239,227,0.82)' : '#5E554B';
-      ctx.font = '500 11.5px "Bricolage Grotesque", sans-serif';
-      ctx.fillText('Distributed input is stretched 1 / K slower per timeline with the head fixed.', W * 0.43, 62);
+      ctx.textAlign = 'right';
+      ctx.fillText('output timeline 2: multiplane parallax', W - 16, H - 13);
+      ctx.textAlign = 'left';
       return;
     }
 
-    // Sub-mode 1: Radial Multi-Worm Fan (all depth planes around the 3D cross-section ring)
+    // Sub-mode 1: Radial Multi-Worm Fan
     const visPlanes = planes.filter(p => isPlaneVisible(p.id));
     const activeList = visPlanes.length ? visPlanes : planes;
     const K = Math.max(2, activeList.length);
-
-    const RADIAL_ANGLES = [-2.55, 2.25, -1.35, 0.18, 1.15, -0.55, 2.85, -1.95];
     const RAIL_COLORS = ['#EF9F3A', '#FF453A', '#32D74B', '#409CFF', '#BF5AF2', '#FFD60A', '#64D2FF'];
 
-    const baseRad = Math.min(W, H) * 0.30;
+    const baseRad = Math.min(W, H) * 0.31;
+
+    function railAngle(rIdx){
+      return -Math.PI * 0.72 + (rIdx / K) * (Math.PI * 2);
+    }
 
     function railPt(rIdx, u){
       const c = spinePt(u);
-      const ang = RADIAL_ANGLES[rIdx % RADIAL_ANGLES.length];
-      const rx = Math.cos(ang) * baseRad * 1.08 * c.s;
-      const ry = Math.sin(ang) * baseRad * 0.88 * c.s;
-      return {x: c.x + rx, y: c.y + ry, s: c.s, ang};
+      const ang = railAngle(rIdx);
+      const radScale = Math.max(0.68, c.s);
+      const rx = Math.cos(ang) * baseRad * 1.15 * radScale;
+      const ry = Math.sin(ang) * baseRad * 0.84 * radScale;
+      return {x: c.x + rx, y: c.y + ry, s: c.s, ang, radScale};
     }
 
     const nSegs = Math.max(4, Math.min(7, drawnArr.length));
@@ -1147,8 +1191,8 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
           ctx.fill();
         }
 
-        const nFan = isSubj ? 9 : 6;
-        ctx.strokeStyle = `rgba(${lineRGB}, ${isSubj ? (dark ? 0.42 : 0.34) : (dark ? 0.22 : 0.18)})`;
+        const nFan = isSubj ? 8 : 5;
+        ctx.strokeStyle = `rgba(${lineRGB}, ${isSubj ? (dark ? 0.40 : 0.32) : (dark ? 0.20 : 0.16)})`;
         ctx.lineWidth = isSubj ? 0.85 : 0.65;
         for(let k = 0; k <= nFan; k++){
           const fSub = k / nFan;
@@ -1164,7 +1208,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       }
 
       const pStart = railPt(rIdx, 0), pEnd = railPt(rIdx, 1);
-      ctx.strokeStyle = isSubj ? '#EF9F3A' : `rgba(${lineRGB}, 0.55)`;
+      ctx.strokeStyle = isSubj ? '#EF9F3A' : `rgba(${lineRGB}, 0.52)`;
       ctx.lineWidth = isSubj ? 2.0 : 1.15;
       ctx.beginPath();
       ctx.moveTo(pStart.x, pStart.y);
@@ -1177,24 +1221,25 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     ctx.lineWidth = 1.6;
     ctx.beginPath(); ctx.moveTo(c0.x, c0.y); ctx.lineTo(c1.x, c1.y); ctx.stroke();
 
-    const ringR = baseRad * spPlay.s;
+    const ringScale = Math.max(0.68, spPlay.s);
+    const ringR = baseRad * ringScale;
     ctx.save();
     ctx.strokeStyle = `rgba(${lineRGB}, 0.62)`;
     ctx.lineWidth = 1.5;
     ctx.beginPath();
-    ctx.ellipse(spPlay.x, spPlay.y, ringR * 1.08, ringR * 0.88, -0.10, 0, Math.PI * 2);
+    ctx.ellipse(spPlay.x, spPlay.y, ringR * 1.15, ringR * 0.84, -0.08, 0, Math.PI * 2);
     ctx.stroke();
     ctx.restore();
 
-    for(let e = 3; e >= 1; e--){
+    for(let e = 2; e >= 1; e--){
       const fEcho = Math.max(0, fi - e * 2);
-      const uEcho = Math.max(0.05, uPlay - e * 0.032);
+      const uEcho = Math.max(0.08, uPlay - e * 0.035);
       const pe = spinePt(uEcho);
-      drawUpright3DCard(ctx, pe.x, pe.y, 70, 60, fEcho, {
+      drawUpright3DCard(ctx, pe.x, pe.y, 60, 50, fEcho, {
         plane: null,
-        borderColor: `rgba(${lineRGB}, 0.45)`,
-        borderWidth: 1.1,
-        alpha: 0.48 + (3 - e) * 0.14,
+        borderColor: `rgba(${lineRGB}, 0.42)`,
+        borderWidth: 1.0,
+        alpha: 0.45 + (2 - e) * 0.15,
         cropToMask: false
       });
     }
@@ -1202,61 +1247,61 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     const railCards = [];
     for(let rIdx = 0; rIdx < K; rIdx++){
       const plane = activeList[rIdx];
-      const pt = railPt(rIdx, uPlay);
-      const col = plane.id === 'char' ? '#EF9F3A' : RAIL_COLORS[rIdx % RAIL_COLORS.length];
+      const rawPt = railPt(rIdx, uPlay);
+      const isSubj = (plane.id === 'char');
+      const cw = isSubj ? 80 : 66;
+      const ch = isSubj ? 68 : 56;
+      const cx = Math.max(cw * 0.55 + 8, Math.min(W - cw * 0.55 - 8, rawPt.x));
+      const cy = Math.max(topSafe + ch * 0.55 + 4, Math.min(H - botSafe - ch * 0.55 - 4, rawPt.y));
+      const col = isSubj ? '#EF9F3A' : RAIL_COLORS[rIdx % RAIL_COLORS.length];
       const kSpeed = zRef / Math.max(0.3, plane.z);
-      const fLayer = plane.id === 'char'
+      const fLayer = isSubj
         ? fi
         : Math.max(0, Math.min(N - 1, Math.round(fi * Math.min(1.2, Math.max(0.35, kSpeed)))));
-      railCards.push({rIdx, plane, pt, col, kSpeed, fLayer});
+      railCards.push({rIdx, plane, cx, cy, cw, ch, col, kSpeed, fLayer, isSubj});
     }
 
     ctx.save();
     ctx.strokeStyle = `rgba(${lineRGB}, 0.85)`;
-    ctx.lineWidth = 1.6;
+    ctx.lineWidth = 1.5;
     for(const rc of railCards){
       ctx.beginPath();
       ctx.moveTo(spPlay.x, spPlay.y);
-      ctx.lineTo(rc.pt.x, rc.pt.y);
+      ctx.lineTo(rc.cx, rc.cy);
       ctx.stroke();
     }
     ctx.restore();
 
-    drawUpright3DCard(ctx, spPlay.x, spPlay.y, 82, 70, fi, {
+    drawUpright3DCard(ctx, spPlay.x, spPlay.y, 68, 58, fi, {
       plane: null,
       borderColor: '#FFFFFF',
-      borderWidth: 2.2,
+      borderWidth: 2.0,
       cropToMask: false,
-      label: `Center Spine · f${fi+1}`,
+      label: `Spine f${fi+1}`,
       labelColor: '#FFFFFF'
     });
 
-    railCards.sort((a, b) => a.pt.y - b.pt.y);
+    railCards.sort((a, b) => a.cy - b.cy);
     for(const rc of railCards){
-      const isSubj = (rc.plane.id === 'char');
-      const cw = isSubj ? 92 : 72;
-      const ch = isSubj ? 78 : 62;
-      const shortLbl = String(rc.plane.label || rc.plane.id).split('(')[0].trim().slice(0, 14);
-      drawUpright3DCard(ctx, rc.pt.x, rc.pt.y, cw, ch, rc.fLayer, {
-        plane: isSubj ? null : rc.plane,
+      const shortLbl = String(rc.plane.label || rc.plane.id).split('(')[0].trim().slice(0, 10);
+      drawUpright3DCard(ctx, rc.cx, rc.cy, rc.cw, rc.ch, rc.fLayer, {
+        plane: rc.isSubj ? null : rc.plane,
         borderColor: rc.col,
-        borderWidth: isSubj ? 2.5 : 1.8,
-        cropToMask: isSubj,
-        label: `${shortLbl} (z=${rc.plane.z})`,
-        labelColor: rc.col,
-        subLabel: `k=${rc.kSpeed.toFixed(2)}× · f${rc.fLayer+1}`
+        borderWidth: rc.isSubj ? 2.4 : 1.7,
+        cropToMask: rc.isSubj,
+        label: `${shortLbl} z=${rc.plane.z}`,
+        labelColor: rc.col
       });
     }
 
-    const capW = Math.min(W - 24, 470);
-    ctx.fillStyle = dark ? 'rgba(6, 7, 10, 0.78)' : 'rgba(251, 250, 246, 0.88)';
-    ctx.fillRect(W * 0.5 - capW * 0.5, H - 36, capW, 30);
+    ctx.fillStyle = dark ? 'rgba(6, 7, 10, 0.82)' : 'rgba(251, 250, 246, 0.90)';
+    ctx.fillRect(10, H - 28, W - 20, 22);
     ctx.fillStyle = dark ? '#FFFFFF' : '#161412';
-    ctx.font = '700 11.5px "Bricolage Grotesque", sans-serif';
+    ctx.font = '700 11px "Bricolage Grotesque", sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText(
       `In this framework, ${K} parallel depth-plane timelines fan out around the spine (k = z_ref / z).`,
-      W * 0.5, H - 17
+      W * 0.5, H - 13
     );
     ctx.textAlign = 'left';
   }
@@ -1354,7 +1399,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     }
 
     if(wormMode === 'strobe'){
-      const padT = 30, padB = 30, padL = 14, padR = 14;
+      const padT = 36, padB = 30, padL = 16, padR = 16;
       const stageW = W - padL - padR, stageH = H - padT - padB;
       ctx.save();
       ctx.beginPath(); ctx.roundRect(padL, padT, stageW, stageH, 6); ctx.clip();
@@ -1387,28 +1432,34 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       ctx.restore();
       ctx.strokeStyle = '#161412'; ctx.lineWidth = 1.4;
       ctx.beginPath(); ctx.roundRect(padL, padT, stageW, stageH, 6); ctx.stroke();
+      ctx.fillStyle = '#5E554B';
+      ctx.font = '600 10.5px "JetBrains Mono", monospace';
+      ctx.fillText('Green: Start (f=01)   ·   Orange Spine: Centroid Path   ·   Red: End', padL, H - 10);
       return;
     }
 
     if(wormMode === 'kymo'){
-      const padL = 116, padR = 16, padT = 30, padB = 22;
-      const trackW = W - padL - padR, availH = H - padT - padB, gap = 7;
+      const padL = 128, padR = 16, padT = 38, padB = 22;
+      const trackW = W - padL - padR, availH = H - padT - padB, gap = 8;
       const bandH = (availH - gap*2) / 3;
       const frames = curWorm.frames || [];
       const bands = [
-        {title:'Horizontal X(t)', sub:'Left ↔ Right', color:'#EF9F3A', getVal:fr=>fr.c?fr.c[0]:0.5, stamps:true},
-        {title:'Vertical Bounce Y(t)', sub:'Top ↕ Bottom', color:'#2E7A4A', getVal:fr=>fr.c?fr.c[1]:0.5},
-        {title:'Scale R(t) & Cam Pan', sub:'Size & Camera', color:'#2B6CB0', getVal:fr=>Math.min(1,(fr.r||0.15)*2.5)}
+        {title:'Horizontal X(t)', sub:'Left to Right travel', color:'#EF9F3A', getVal:fr=>fr.c?fr.c[0]:0.5},
+        {title:'Vertical Bounce Y(t)', sub:'Top to Bottom gait', color:'#2E7A4A', getVal:fr=>fr.c?fr.c[1]:0.5},
+        {title:'Scale R(t) & Pan', sub:'Looming size & cam', color:'#2B6CB0', getVal:fr=>Math.min(1,(fr.r||0.15)*2.5)}
       ];
       bands.forEach((b, bIdx)=>{
         const y0 = padT + bIdx*(bandH + gap);
         ctx.fillStyle = '#FFFFFF'; ctx.strokeStyle = '#BFAF97'; ctx.lineWidth = 1.1;
-        ctx.beginPath(); ctx.roundRect(8, y0, W-16, bandH, 5); ctx.fill(); ctx.stroke();
-        ctx.fillStyle = 'rgba(239,159,58,0.12)'; ctx.fillRect(9, y0+1, padL-14, bandH-2);
+        ctx.beginPath(); ctx.roundRect(10, y0, W-20, bandH, 5); ctx.fill(); ctx.stroke();
+        ctx.save();
+        ctx.beginPath(); ctx.rect(11, y0+1, padL-16, bandH-2); ctx.clip();
+        ctx.fillStyle = 'rgba(239,159,58,0.12)'; ctx.fillRect(11, y0+1, padL-16, bandH-2);
         ctx.fillStyle = '#161412'; ctx.font = '700 10.5px "Bricolage Grotesque", sans-serif';
-        ctx.fillText(b.title, 13, y0 + bandH*0.42);
+        ctx.fillText(b.title, 15, y0 + bandH*0.42);
         ctx.fillStyle = '#6B6259'; ctx.font = '500 9px "JetBrains Mono", monospace';
-        ctx.fillText(b.sub, 13, y0 + bandH*0.72);
+        ctx.fillText(b.sub, 15, y0 + bandH*0.72);
+        ctx.restore();
         if(frames.length >= 2){
           ctx.beginPath();
           frames.forEach((fr, ti)=>{
@@ -1426,17 +1477,17 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     }
 
     if(wormMode === 'anatomy'){
-      const padL = 12, padR = 12, padT = 28, padB = 20;
-      const topH = Math.round((H - padT - padB)*0.52);
-      const botY = padT + topH + 8, botH = H - padB - botY;
-      const halfW = Math.round((W - padL - padR - 8)*0.5);
+      const padL = 14, padR = 14, padT = 38, padB = 18;
+      const topH = Math.round((H - padT - padB)*0.48);
+      const botY = padT + topH + 10, botH = H - padB - botY;
+      const halfW = Math.round((W - padL - padR - 10)*0.5);
       ctx.fillStyle = '#FFFFFF'; ctx.strokeStyle = '#BFAF97'; ctx.lineWidth = 1.2;
       ctx.beginPath(); ctx.roundRect(padL, padT, halfW, topH, 5); ctx.fill(); ctx.stroke();
       drawSamCutoutInRect(ctx, curWorm, 0, padL+6, padT+20, halfW-12, topH-26, {cropToMask:true, drawOutline:true, outlineColor:'#BFAF97', drawDoodle:true, doodleColor:'#EF9F3A'});
       ctx.fillStyle = '#8A4A05'; ctx.font = '700 10px "JetBrains Mono", monospace';
       ctx.fillText('THE LINE (f=01 Seed Doodle)', padL+8, padT+14);
 
-      const rx0 = padL + halfW + 8;
+      const rx0 = padL + halfW + 10;
       ctx.fillStyle = '#FFFDF8'; ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 1.6;
       ctx.beginPath(); ctx.roundRect(rx0, padT, halfW, topH, 5); ctx.fill(); ctx.stroke();
       drawSamCutoutInRect(ctx, curWorm, fi, rx0+6, padT+20, halfW-12, topH-26, {cropToMask:true, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true, doodleColor:'#161412'});
@@ -1445,7 +1496,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 
       ctx.fillStyle = '#FFFFFF'; ctx.strokeStyle = '#BFAF97'; ctx.lineWidth = 1.1;
       ctx.beginPath(); ctx.roundRect(padL, botY, W-padL-padR, botH, 5); ctx.fill(); ctx.stroke();
-      const jPadL = padL + 104, jTrackW = W - padR - jPadL - 8;
+      const jPadL = padL + 116, jTrackW = W - padR - jPadL - 10;
       const joints = curWorm.joints || {};
       const jNames = Object.keys(joints);
       const colors = ['#EF9F3A','#2E7A4A','#2B6CB0','#B8432F','#6B46C1'];
@@ -1455,8 +1506,11 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       const rTop = botY + 18, rH = Math.max(16, (botH - 24)/Math.max(1, rows.length));
       rows.forEach((r, idx)=>{
         const ry = rTop + idx*rH;
+        ctx.save();
+        ctx.beginPath(); ctx.rect(padL + 6, ry, jPadL - padL - 10, rH); ctx.clip();
         ctx.fillStyle = '#6B6259'; ctx.font = '600 9.5px "JetBrains Mono", monospace';
-        ctx.fillText(String(r.label).slice(0,13), padL+8, ry + rH*0.65);
+        ctx.fillText(String(r.label).slice(0,14), padL+8, ry + rH*0.65);
+        ctx.restore();
         const pts = r.pts || [];
         if(pts.length >= 2){
           ctx.beginPath();
@@ -1470,12 +1524,12 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       });
       const scrubX = jPadL + (N>1 ? (fi/(N-1))*jTrackW : jTrackW*0.5);
       ctx.save(); ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 2; ctx.setLineDash([4,3]);
-      ctx.beginPath(); ctx.moveTo(scrubX, rTop-4); ctx.lineTo(scrubX, botY+botH-4); ctx.stroke(); ctx.restore();
+      ctx.beginPath(); ctx.moveTo(scrubX, rTop-2); ctx.lineTo(scrubX, botY+botH-4); ctx.stroke(); ctx.restore();
       return;
     }
 
     if(wormMode === 'box'){
-      const padX=26, padY=28, availW=W-padX*2, availH=H-padY*2, nP=planes.length;
+      const padX=28, padT=40, padB=24, availW=W-padX*2, availH=H-padT-padB, nP=planes.length;
       const srcW = (S && S.W) || curWorm.W || 480, srcH = (S && S.H) || curWorm.H || 360;
       planes.forEach((plane, idx)=>{
         const vis = isPlaneVisible(plane.id);
@@ -1483,7 +1537,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
         const scale = 0.54 + u*0.34;
         const pw = availW*scale, ph = availH*scale;
         const cx = padX + (1-u)*(availW-pw)*0.85 + u*(availW-pw)*0.12;
-        const cy = padY + (1-u)*4 + u*(availH-ph)*0.82;
+        const cy = padT + (1-u)*6 + u*(availH-ph)*0.85;
         const off = camOffset(plane.z, fi);
         const sx = pw/srcW, sy = ph/srcH;
         const t = tintForPlane(plane.id, plane.z, zRef);
@@ -1500,8 +1554,15 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
           }
         }
         ctx.restore();
-        ctx.fillStyle='#161412'; ctx.font='600 10px "JetBrains Mono", monospace';
-        ctx.fillText(`${plane.label} · z=${plane.z}`, cx+6, cy+13);
+        const lblText = `${plane.label} · z=${plane.z}`;
+        ctx.font='600 9.5px "JetBrains Mono", monospace';
+        const tw = ctx.measureText(lblText).width + 8;
+        const lx = cx + 6 + (idx % 2) * Math.min(110, pw * 0.35);
+        const ly = cy + 4;
+        ctx.fillStyle = 'rgba(251, 250, 246, 0.92)';
+        ctx.fillRect(lx, ly, tw, 13);
+        ctx.fillStyle='#161412';
+        ctx.fillText(lblText, lx+4, ly+10);
         ctx.restore();
       });
       return;
@@ -1509,11 +1570,11 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
 
     // Disentangled Plane Worms ('lanes')
     const planesNearFirst = planes.slice().reverse();
-    const padL = 114, padR = 14, padT = 28, padB = 20;
+    const padL = 128, padR = 16, padT = 38, padB = 22;
     const availH = H - padT - padB;
     const nP = Math.max(1, planesNearFirst.length);
-    const laneGap = 5;
-    const laneH = Math.max(34, (availH - laneGap*(nP-1)) / nP);
+    const laneGap = 6;
+    const laneH = Math.max(36, (availH - laneGap*(nP-1)) / nP);
     const trackW = W - padL - padR;
 
     for(let pIdx=0; pIdx<planesNearFirst.length; pIdx++){
@@ -1528,29 +1589,39 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
       ctx.fillStyle = isChar ? '#FFFDF8' : '#FFFFFF';
       ctx.strokeStyle = isChar ? '#EF9F3A' : '#BFAF97';
       ctx.lineWidth = isChar ? 1.8 : 1.1;
-      ctx.beginPath(); ctx.roundRect(8, y0, W-16, laneH, 5); ctx.fill(); ctx.stroke();
+      ctx.beginPath(); ctx.roundRect(10, y0, W-20, laneH, 5); ctx.fill(); ctx.stroke();
 
+      ctx.save();
+      ctx.beginPath(); ctx.rect(11, y0+1, padL-16, laneH-2); ctx.clip();
       ctx.fillStyle = t.fill;
-      ctx.fillRect(9, y0+1, padL-14, laneH-2);
+      ctx.fillRect(11, y0+1, padL-16, laneH-2);
       ctx.fillStyle = '#161412';
       ctx.font = '700 11px "Bricolage Grotesque", sans-serif';
-      ctx.fillText(String(plane.label||plane.id).split('(')[0].trim().slice(0,15), 13, y0 + Math.min(19, laneH*0.44));
+      ctx.fillText(String(plane.label||plane.id).split('(')[0].trim().slice(0,15), 15, y0 + Math.min(18, laneH*0.42));
       ctx.fillStyle = '#6B6259';
       ctx.font = '500 9.5px "JetBrains Mono", monospace';
-      ctx.fillText(`z=${plane.z} · k=${(zRef/Math.max(0.2,plane.z)).toFixed(2)}x`, 13, y0 + Math.min(33, laneH*0.78));
+      ctx.fillText(`z=${plane.z} · k=${(zRef/Math.max(0.2,plane.z)).toFixed(2)}x`, 15, y0 + Math.min(33, laneH*0.76));
+      ctx.restore();
 
       ctx.save();
       ctx.beginPath(); ctx.rect(padL, y0+2, trackW, laneH-4); ctx.clip();
 
+      const actX = padL + (N>1 ? (fi/(N-1))*trackW : trackW*0.5);
+      const actH = Math.max(26, laneH - 6), actW = Math.round(actH * 1.28);
+
       const nStamps = Math.min(N, isChar ? 6 : 5);
-      const celH = Math.max(24, laneH - 8), celW = Math.round(celH * 1.22);
+      const celH = Math.max(22, laneH - 10), celW = Math.round(celH * 1.20);
+      let lastStampRight = -999;
+
       for(let sIdx=0; sIdx<nStamps; sIdx++){
         const ti = nStamps===1 ? 0 : Math.round((sIdx/(nStamps-1))*(N-1));
-        if(Math.abs(ti - fi) <= Math.max(1, Math.floor(N/(nStamps*2.4)))) continue;
         const cx = padL + (N>1 ? (ti/(N-1))*trackW : trackW*0.5);
         const rx = Math.max(padL+2, Math.min(padL+trackW-celW-2, cx-celW*0.5));
+        if(Math.abs(cx - actX) < (actW*0.55 + celW*0.45)) continue;
+        if(rx < lastStampRight + 4) continue;
+        lastStampRight = rx + celW;
         const ry = y0 + (laneH-celH)*0.5;
-        ctx.save(); ctx.globalAlpha = vis ? 0.7 : 0.25;
+        ctx.save(); ctx.globalAlpha = vis ? 0.68 : 0.25;
         ctx.fillStyle = '#FBFAF6'; ctx.strokeStyle = '#DED2BF';
         ctx.fillRect(rx,ry,celW,celH); ctx.strokeRect(rx,ry,celW,celH);
         if(isChar) drawSamCutoutInRect(ctx, curWorm, ti, rx+1, ry+1, celW-2, celH-2, {cropToMask:true, drawOutline:false, drawDoodle:true});
@@ -1558,11 +1629,9 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
         ctx.restore();
       }
 
-      const actX = padL + (N>1 ? (fi/(N-1))*trackW : trackW*0.5);
-      const actH = Math.max(28, laneH - 4), actW = Math.round(actH * 1.32);
       const arx = Math.max(padL+2, Math.min(padL+trackW-actW-2, actX-actW*0.5));
       const ary = y0 + (laneH-actH)*0.5;
-      ctx.fillStyle = '#FFFBF4'; ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 2.1;
+      ctx.fillStyle = '#FFFBF4'; ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 2.0;
       ctx.fillRect(arx,ary,actW,actH);
       if(isChar) drawSamCutoutInRect(ctx, curWorm, fi, arx+1, ary+1, actW-2, actH-2, {cropToMask:true, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true});
       else drawPlaneObjectsInRect(ctx, plane, fi, arx+1, ary+1, actW-2, actH-2, true);
@@ -1600,10 +1669,10 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     const minZ = Math.min(...planes.map(p=>p.z));
     const maxZ = Math.max(...planes.map(p=>p.z));
     const panMag = Math.round((curWorm.cam_pan_mag || 0) * ((S && S.W) || curWorm.W || 480));
-    document.getElementById('idxDecCamT').textContent = `${planes.length} Depth Planes (z=${minZ} → z=${maxZ})`;
+    document.getElementById('idxDecCamT').textContent = `${planes.length} Depth Planes (z=${minZ} to z=${maxZ})`;
     document.getElementById('idxDecCamP').textContent =
       panMag > 4
-        ? `Camera pans ~${panMag}px. Near plane (z=${minZ}) moves ${(zRef/minZ).toFixed(2)}× camera speed; far (z=${maxZ}) moves ${(zRef/maxZ).toFixed(2)}×.`
+        ? `Camera pans ~${panMag}px. Near plane (z=${minZ}) moves ${(zRef/minZ).toFixed(2)}x camera speed; far (z=${maxZ}) moves ${(zRef/maxZ).toFixed(2)}x.`
         : `Minimal camera pan (~${panMag}px). Subject moves across ${planes.length} depth strata.`;
 
     const nJoints = Object.keys(curWorm.joints || {}).length;
@@ -1755,17 +1824,17 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
     const clientX = (e.touches && e.touches.length) ? e.touches[0].clientX : e.clientX;
     const xRel = (clientX - rect.left) / Math.max(1, rect.width);
     let padLFrac = 38 / cvWorm.width, padRFrac = 28 / cvWorm.width;
-    if(wormMode === 'parallel'){ padLFrac = 0.10; padRFrac = 0.10; }
-    else if(wormMode === 'lanes' || wormMode === 'kymo'){ padLFrac = 114 / cvWorm.width; padRFrac = 14 / cvWorm.width; }
-    else if(wormMode === 'strobe'){ padLFrac = 14 / cvWorm.width; padRFrac = 14 / cvWorm.width; }
-    else if(wormMode === 'anatomy'){ padLFrac = 116 / cvWorm.width; padRFrac = 20 / cvWorm.width; }
+    if(wormMode === 'parallel'){ padLFrac = 0.08; padRFrac = 0.08; }
+    else if(wormMode === 'lanes' || wormMode === 'kymo'){ padLFrac = 128 / cvWorm.width; padRFrac = 16 / cvWorm.width; }
+    else if(wormMode === 'strobe'){ padLFrac = 16 / cvWorm.width; padRFrac = 16 / cvWorm.width; }
+    else if(wormMode === 'anatomy'){ padLFrac = 130 / cvWorm.width; padRFrac = 24 / cvWorm.width; }
     const u = Math.max(0, Math.min(1, (xRel - padLFrac) / Math.max(0.1, 1 - padLFrac - padRFrac)));
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
     const nf = Math.round(u * Math.max(0, N - 1));
     if(nf !== f){ f = nf; getFrameImg(curWorm, f); renderAll(); }
   }
   cvWorm.addEventListener('pointerdown', (e)=>{
-    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.innerHTML='&#9654; Play';
+    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.textContent = 'Play';
     isScrubbing = true; cvWorm.setPointerCapture(e.pointerId); scrubFromWorm(e);
   });
   cvWorm.addEventListener('pointermove', (e)=>{ if(isScrubbing) scrubFromWorm(e); });
@@ -1846,21 +1915,21 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
   playBtn.addEventListener('click', ()=>{
     playing = !playing;
     playBtn.setAttribute('aria-pressed', String(playing));
-    playBtn.innerHTML = playing ? '&#9646;&#9646; Pause' : '&#9654; Play';
+    playBtn.textContent = playing ? 'Pause' : 'Play';
     if(playing){ lastTick = performance.now(); requestAnimationFrame(loop); }
   });
   document.getElementById('idxStepPrev').addEventListener('click', ()=>{
-    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.innerHTML='&#9654; Play';
+    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.textContent = 'Play';
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm ? curWorm.n_frames : 1);
     f = (f - 1 + N) % N; renderAll();
   });
   document.getElementById('idxStepNext').addEventListener('click', ()=>{
-    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.innerHTML='&#9654; Play';
+    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.textContent = 'Play';
     const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm ? curWorm.n_frames : 1);
     f = (f + 1) % N; renderAll();
   });
   scrub.addEventListener('input', ()=>{
-    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.innerHTML='&#9654; Play';
+    playing = false; playBtn.setAttribute('aria-pressed','false'); playBtn.textContent = 'Play';
     f = parseInt(scrub.value, 10) || 0; renderAll();
   });
   document.getElementById('idxPrevShot').addEventListener('click', ()=> selectShot((curIdx - 1 + WORMS.length) % WORMS.length));
@@ -1924,7 +1993,7 @@ select{font:600 14px var(--body);color:var(--ink);background:var(--sheet);border
         <canvas width="118" height="32"></canvas>
         <div class="mini-worm-meta">
           <b>${nP} Planes · ${w.n_frames}f</b>
-          <span>Explore worm &#8593;</span>
+          <span>Explore worm</span>
         </div>
       `;
       const cv = box.querySelector('canvas');
