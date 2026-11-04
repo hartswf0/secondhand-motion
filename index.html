@@ -677,16 +677,42 @@ body.worms-no-scroll{
 
   function camOffset(planeZ, fi){
     const zRef = (S && S.z_ref) || (curWorm && curWorm.z_ref) || 2;
-    if(S && Array.isArray(S.camera) && S.camera[fi]){
-      return {dx: S.camera[fi].dx * (zRef / planeZ), dy: S.camera[fi].dy * (zRef / planeZ)};
+    const k = zRef / Math.max(0.2, Number(planeZ) || zRef);
+    if(S && Array.isArray(S.camera) && S.camera[fi] != null){
+      const cam = S.camera[fi];
+      const cx = Array.isArray(cam) ? Number(cam[0]) : Number(cam.dx !== undefined ? cam.dx : cam.x);
+      const cy = Array.isArray(cam) ? Number(cam[1]) : Number(cam.dy !== undefined ? cam.dy : cam.y);
+      return {
+        dx: (Number.isFinite(cx) ? cx : 0) * k,
+        dy: (Number.isFinite(cy) ? cy : 0) * k
+      };
     }
     if(curWorm && curWorm.frames && curWorm.frames[fi]){
       const cam = curWorm.frames[fi].cam || [0,0];
       const W = (S && S.W) || curWorm.W || 480;
       const H = (S && S.H) || curWorm.H || 360;
-      return {dx: cam[0]*W*(zRef/planeZ), dy: cam[1]*H*(zRef/planeZ)};
+      const cx = Number(cam[0]) || 0;
+      const cy = Number(cam[1]) || 0;
+      return {dx: cx * W * k, dy: cy * H * k};
     }
     return {dx:0, dy:0};
+  }
+
+  function getObjectStrokes(o, fi){
+    if(!o) return [];
+    if(o.frames && Array.isArray(o.frames[fi]) && o.frames[fi].length > 0){
+      return o.frames[fi];
+    }
+    if(Array.isArray(o.strokes) && o.strokes.length > 0){
+      return o.strokes;
+    }
+    if(Array.isArray(o.frames)){
+      for(let d = 1; d < o.frames.length; d++){
+        if(fi - d >= 0 && Array.isArray(o.frames[fi - d]) && o.frames[fi - d].length > 0) return o.frames[fi - d];
+        if(fi + d < o.frames.length && Array.isArray(o.frames[fi + d]) && o.frames[fi + d].length > 0) return o.frames[fi + d];
+      }
+    }
+    return [];
   }
 
   function drawSamCutoutInRect(ctx, worm, fi, tx, ty, tw, th, opts){
@@ -799,44 +825,114 @@ body.worms-no-scroll{
   function drawPlaneObjectsInRect(ctx, plane, fi, tx, ty, tw, th, cropToPlane){
     const W = (S && S.W) || curWorm.W || 480;
     const H = (S && S.H) || curWorm.H || 360;
+    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
     const objs = (S && Array.isArray(S.objects)) ? S.objects.filter(o => o.plane === plane.id) : [];
     const off = camOffset(plane.z, fi);
+    const t = tintForPlane(plane.id, plane.z, zRef);
+
+    if(cropToPlane){
+      ctx.save();
+      ctx.fillStyle = t.fill;
+      ctx.globalAlpha = 0.35;
+      ctx.fillRect(tx, ty, tw, th);
+      ctx.restore();
+    }
+
     const allStrokes = [];
     for(const o of objs){
-      const ost = (o.frames && o.frames[fi]) ? o.frames[fi] : o.strokes;
+      const ost = getObjectStrokes(o, fi);
       if(ost && ost.length){
         for(const s of ost){
           if(s && s.length>=2) allStrokes.push(s.map(p => [p[0]+off.dx, p[1]+off.dy]));
         }
       }
     }
-    let minX = W, minY = H, maxX = 0, maxY = 0;
-    for(const s of allStrokes){
-      for(const p of s){
-        if(p[0]<minX) minX=p[0]; if(p[1]<minY) minY=p[1];
-        if(p[0]>maxX) maxX=p[0]; if(p[1]>maxY) maxY=p[1];
+
+    if(allStrokes.length === 0 && curWorm && Array.isArray(curWorm.depth_worms)){
+      const dwObj = curWorm.depth_worms.find(d => d.id === plane.id);
+      if(dwObj && Array.isArray(dwObj.strokes0) && dwObj.strokes0.length){
+        const u0 = Number.isFinite(dwObj.u0) ? dwObj.u0 : 0.5;
+        const v0 = Number.isFinite(dwObj.v0) ? dwObj.v0 : 0.5;
+        for(const s of dwObj.strokes0){
+          if(s && s.length >= 2){
+            allStrokes.push(s.map(p => [(u0 + p[0])*W + off.dx, (v0 + p[1])*H + off.dy]));
+          }
+        }
       }
     }
-    if(!cropToPlane || minX >= maxX || minY >= maxY){
+
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    let visMinX = Infinity, visMinY = Infinity, visMaxX = -Infinity, visMaxY = -Infinity;
+    const marginX = W * 0.08, marginY = H * 0.08;
+    for(const s of allStrokes){
+      for(const p of s){
+        const x = p[0], y = p[1];
+        if(!Number.isFinite(x) || !Number.isFinite(y)) continue;
+        if(x < minX) minX = x; if(y < minY) minY = y;
+        if(x > maxX) maxX = x; if(y > maxY) maxY = y;
+        if(x >= -marginX && x <= W + marginX && y >= -marginY && y <= H + marginY){
+          if(x < visMinX) visMinX = x; if(y < visMinY) visMinY = y;
+          if(x > visMaxX) visMaxX = x; if(y > visMaxY) visMaxY = y;
+        }
+      }
+    }
+
+    if(visMinX < visMaxX && visMinY < visMaxY){
+      minX = visMinX; minY = visMinY; maxX = visMaxX; maxY = visMaxY;
+    }
+
+    if(!cropToPlane || minX >= maxX || minY >= maxY || !Number.isFinite(minX)){
       minX = 0; minY = 0; maxX = W; maxY = H;
     } else {
-      const padX = Math.max(16, (maxX-minX)*0.18), padY = Math.max(16, (maxY-minY)*0.18);
-      minX = Math.max(0, minX-padX); minY = Math.max(0, minY-padY);
-      maxX = Math.min(W, maxX+padX); maxY = Math.min(H, maxY+padY);
+      const padX = Math.max(8, (maxX-minX)*0.10), padY = Math.max(6, (maxY-minY)*0.14);
+      minX -= padX; minY -= padY;
+      maxX += padX; maxY += padY;
     }
-    const srcW = Math.max(20, maxX-minX), srcH = Math.max(20, maxY-minY);
-    const scale = Math.min(tw/srcW, th/srcH);
-    const dw = srcW*scale, dh = srcH*scale;
+
+    const srcW = Math.max(16, maxX-minX), srcH = Math.max(12, maxY-minY);
+    const rawScaleX = Math.max(4, tw - 4) / srcW;
+    const rawScaleY = Math.max(4, th - 4) / srcH;
+    const scaleX = cropToPlane ? rawScaleX : Math.min(rawScaleX, rawScaleY);
+    const scaleY = cropToPlane
+      ? Math.min(rawScaleY, Math.max(rawScaleX, rawScaleY * 0.80))
+      : Math.min(rawScaleX, rawScaleY);
+    const dw = srcW*scaleX, dh = srcH*scaleY;
     const ox = tx + (tw-dw)*0.5, oy = ty + (th-dh)*0.5;
+
+    const img = getFrameImg(curWorm, fi);
+    if(cropToPlane && img){
+      ctx.save();
+      ctx.globalAlpha = allStrokes.length ? 0.24 : 0.65;
+      const clX = Math.max(0, Math.min(W - 16, minX));
+      const clY = Math.max(0, Math.min(H - 16, minY));
+      const clW = Math.max(16, Math.min(W - clX, srcW));
+      const clH = Math.max(16, Math.min(H - clY, srcH));
+      ctx.drawImage(img, clX, clY, clW, clH, tx, ty, tw, th);
+      ctx.restore();
+    }
+
     if(allStrokes.length){
       ctx.save();
-      ctx.strokeStyle = '#161412';
-      ctx.lineWidth = Math.max(1.2, 1.9*Math.min(1, scale*1.4));
+      ctx.beginPath();
+      ctx.rect(tx, ty, tw, th);
+      ctx.clip();
       ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      ctx.strokeStyle = 'rgba(251, 250, 246, 0.90)';
+      ctx.lineWidth = 3.2;
       for(const s of allStrokes){
         ctx.beginPath();
         for(let i=0;i<s.length;i++){
-          const px = ox + (s[i][0]-minX)*scale, py = oy + (s[i][1]-minY)*scale;
+          const px = ox + (s[i][0]-minX)*scaleX, py = oy + (s[i][1]-minY)*scaleY;
+          if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+        }
+        ctx.stroke();
+      }
+      ctx.strokeStyle = '#161412';
+      ctx.lineWidth = cropToPlane ? 1.65 : 1.45;
+      for(const s of allStrokes){
+        ctx.beginPath();
+        for(let i=0;i<s.length;i++){
+          const px = ox + (s[i][0]-minX)*scaleX, py = oy + (s[i][1]-minY)*scaleY;
           if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
         }
         ctx.stroke();
@@ -1572,15 +1668,29 @@ body.worms-no-scroll{
         const strokes = (S && S.cast && S.cast.frames && S.cast.frames[fi]) ? S.cast.frames[fi] :
           ((curWorm.frames && curWorm.frames[fi] && curWorm.frames[fi].doodle) ? curWorm.frames[fi].doodle.map(s=>s.map(p=>[p[0]*W,p[1]*H])) : []);
         if(celFill && strokes.length) drawStrokes(ctx, strokes, {color:'rgba(0,0,0,0)', width:0.1, boilSeed, boilAmp, fill:celFill});
-        if(fi===0 && vMode==='cartoon') drawStrokes(ctx, strokes, {color:'#EF9F3A', width:6, boilSeed, boilAmp});
+        if(vMode === 'composite') drawStrokes(ctx, strokes, {color:'rgba(251,250,246,0.92)', width:5.2, boilSeed, boilAmp});
+        else if(fi===0 && vMode==='cartoon') drawStrokes(ctx, strokes, {color:'#EF9F3A', width:6, boilSeed, boilAmp});
         drawStrokes(ctx, strokes, {color:'#161412', width:2.5, boilSeed, boilAmp});
       } else if(S && Array.isArray(S.objects)){
         const objs = S.objects.filter(o => o.plane === plane.id);
-        const depthAlpha = plane.z>=10 ? 0.50 : (plane.z>=6 ? 0.65 : (plane.z>=3 ? 0.85 : 0.95));
+        const depthAlpha = plane.z>=10 ? 0.65 : (plane.z>=6 ? 0.78 : (plane.z>=3 ? 0.90 : 0.98));
+        const depthWidth = plane.z>=10 ? 1.6  : (plane.z>=6 ? 1.9  : 2.2);
         for(const o of objs){
-          const ost = (o.frames && o.frames[fi]) ? o.frames[fi] : o.strokes;
-          if(!ost) continue;
-          drawStrokes(ctx, ost, {color:`rgba(22,20,18,${depthAlpha})`, width:1.9, dx:off.dx, dy:off.dy, boilSeed:boilSeed+1, boilAmp:boilAmp*0.6, fill:(celFill && plane.z<10)?celFill:null});
+          const ost = getObjectStrokes(o, fi);
+          if(!ost || !ost.length) continue;
+          if(vMode === 'composite'){
+            drawStrokes(ctx, ost, {color:'rgba(251,250,246,0.86)', width:depthWidth+2.4, dx:off.dx, dy:off.dy, boilSeed:boilSeed+1, boilAmp:boilAmp*0.6});
+          }
+          drawStrokes(ctx, ost, {color:`rgba(22,20,18,${depthAlpha})`, width:depthWidth, dx:off.dx, dy:off.dy, boilSeed:boilSeed+1, boilAmp:boilAmp*0.6, fill:(celFill && plane.z<10 && o.class!=='grass' && o.class!=='ground')?celFill:null});
+        }
+      } else if(curWorm && Array.isArray(curWorm.depth_worms)){
+        const dwObj = curWorm.depth_worms.find(d => d.id === plane.id);
+        if(dwObj && Array.isArray(dwObj.strokes0) && dwObj.strokes0.length){
+          const u0 = Number.isFinite(dwObj.u0) ? dwObj.u0 : 0.5;
+          const v0 = Number.isFinite(dwObj.v0) ? dwObj.v0 : 0.5;
+          const mapped = dwObj.strokes0.map(s => s.map(p => [(u0 + p[0])*W + off.dx, (v0 + p[1])*H + off.dy]));
+          if(vMode === 'composite') drawStrokes(ctx, mapped, {color:'rgba(251,250,246,0.84)', width:4.0});
+          drawStrokes(ctx, mapped, {color:'#161412', width:1.8});
         }
       }
     }
@@ -1640,6 +1750,12 @@ body.worms-no-scroll{
       const bgImg = getFrameImg(curWorm, fi) || getFrameImg(curWorm, 0);
       if(bgImg){ ctx.globalAlpha = 0.25; ctx.drawImage(bgImg, padL, padT, stageW, stageH); ctx.globalAlpha = 1; }
       ctx.fillStyle = 'rgba(251,250,246,0.45)'; ctx.fillRect(padL, padT, stageW, stageH);
+
+      for(const plane of planes){
+        if(plane.id !== 'char' && isPlaneVisible(plane.id)){
+          drawPlaneObjectsInRect(ctx, plane, fi, padL, padT, stageW, stageH, false);
+        }
+      }
 
       const nGhosts = Math.min(N, 7);
       for(let g=0; g<nGhosts; g++){
@@ -1779,11 +1895,8 @@ body.worms-no-scroll{
         ctx.save(); ctx.beginPath(); ctx.rect(cx,cy,pw,ph); ctx.clip();
         if(plane.id==='char'){
           drawSamCutoutInRect(ctx, curWorm, fi, cx, cy, pw, ph, {cropToMask:false, drawOutline:true, outlineColor:'#EF9F3A', drawDoodle:true});
-        } else if(S && Array.isArray(S.objects)){
-          for(const o of S.objects.filter(x=>x.plane===plane.id)){
-            const ost = (o.frames && o.frames[fi]) ? o.frames[fi] : o.strokes;
-            if(ost) drawStrokes(ctx, ost.map(s=>s.map(p=>[cx+(p[0]+off.dx)*sx, cy+(p[1]+off.dy)*sy])), {color:'#161412', width:1.4});
-          }
+        } else {
+          drawPlaneObjectsInRect(ctx, plane, fi, cx, cy, pw, ph, false);
         }
         ctx.restore();
         const lblText = `${plane.label} · z=${plane.z}`;
@@ -1840,10 +1953,32 @@ body.worms-no-scroll{
       ctx.save();
       ctx.beginPath(); ctx.rect(padL, y0+2, trackW, laneH-4); ctx.clip();
 
+      if(N >= 2){
+        ctx.save();
+        ctx.beginPath();
+        const srcW = (S && S.W) || curWorm.W || 480;
+        for(let ti = 0; ti < N; ti++){
+          const x = padL + (ti / (N - 1)) * trackW;
+          let uVal = 0.5;
+          if(isChar && curWorm.frames && curWorm.frames[ti] && curWorm.frames[ti].c){
+            uVal = curWorm.frames[ti].c[0];
+          } else {
+            const offT = camOffset(plane.z, ti);
+            uVal = 0.5 + (offT.dx / Math.max(120, srcW * 0.75));
+          }
+          const y = y0 + 6 + Math.max(0.08, Math.min(0.92, uVal)) * (laneH - 12);
+          if(ti === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.strokeStyle = isChar ? 'rgba(239, 159, 58, 0.55)' : t.stroke;
+        ctx.lineWidth = 2.0;
+        ctx.stroke();
+        ctx.restore();
+      }
+
       const actX = padL + (N>1 ? (fi/(N-1))*trackW : trackW*0.5);
       const actH = Math.max(26, laneH - 6), actW = Math.round(actH * 1.28);
 
-      const nStamps = Math.min(N, isChar ? 6 : 5);
+      const nStamps = Math.min(N, 6);
       const celH = Math.max(22, laneH - 10), celW = Math.round(celH * 1.20);
       let lastStampRight = -999;
 
@@ -1851,15 +1986,15 @@ body.worms-no-scroll{
         const ti = nStamps===1 ? 0 : Math.round((sIdx/(nStamps-1))*(N-1));
         const cx = padL + (N>1 ? (ti/(N-1))*trackW : trackW*0.5);
         const rx = Math.max(padL+2, Math.min(padL+trackW-celW-2, cx-celW*0.5));
-        if(Math.abs(cx - actX) < (actW*0.55 + celW*0.45)) continue;
         if(rx < lastStampRight + 4) continue;
         lastStampRight = rx + celW;
         const ry = y0 + (laneH-celH)*0.5;
-        ctx.save(); ctx.globalAlpha = vis ? 0.68 : 0.25;
-        ctx.fillStyle = '#FBFAF6'; ctx.strokeStyle = '#DED2BF';
-        ctx.fillRect(rx,ry,celW,celH); ctx.strokeRect(rx,ry,celW,celH);
+        ctx.save(); ctx.globalAlpha = vis ? 0.94 : 0.30;
+        ctx.fillStyle = '#FBFAF6'; ctx.strokeStyle = '#C9BBA6'; ctx.lineWidth = 1.1;
+        ctx.fillRect(rx,ry,celW,celH);
         if(isChar) drawSamCutoutInRect(ctx, curWorm, ti, rx+1, ry+1, celW-2, celH-2, {cropToMask:true, drawOutline:false, drawDoodle:true});
         else drawPlaneObjectsInRect(ctx, plane, ti, rx+1, ry+1, celW-2, celH-2, true);
+        ctx.strokeRect(rx,ry,celW,celH);
         ctx.restore();
         pushHitBox({x: rx, y: ry, w: celW, h: celH, fi: ti, planeId: null, togglePlane: false});
       }
