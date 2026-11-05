@@ -543,13 +543,14 @@
       <div class="pane-bar">
         <div class="strip">
           <div class="seg" role="group" aria-label="Worm Lens">
-            <button type="button" data-wmode="all" aria-pressed="false">All 6</button>
+            <button type="button" data-wmode="all" aria-pressed="false">All</button>
             <button type="button" data-wmode="parallel" aria-pressed="true">1 · 3D Butter</button>
             <button type="button" data-wmode="lanes" aria-pressed="false">2 · Planes</button>
-            <button type="button" data-wmode="strobe" aria-pressed="false">3 · Trail</button>
-            <button type="button" data-wmode="kymo" aria-pressed="false">4 · Graphs</button>
-            <button type="button" data-wmode="anatomy" aria-pressed="false">5 · Rig</button>
-            <button type="button" data-wmode="box" aria-pressed="false">6 · Depth Box</button>
+            <button type="button" data-wmode="parts" aria-pressed="false">3 · Parts</button>
+            <button type="button" data-wmode="strobe" aria-pressed="false">4 · Trail</button>
+            <button type="button" data-wmode="kymo" aria-pressed="false">5 · Graphs</button>
+            <button type="button" data-wmode="anatomy" aria-pressed="false">6 · Rig</button>
+            <button type="button" data-wmode="box" aria-pressed="false">7 · Depth Box</button>
             <button type="button" data-wmode="wall" aria-pressed="false">All 109</button>
           </div>
           <!-- Bound strictly to valid state: only visible when Lens 1 (3D Stretch) is active -->
@@ -575,6 +576,7 @@
           <div class="seg" role="group" aria-label="Scene View">
             <button type="button" data-view="all4" aria-pressed="false">All 4</button>
             <button type="button" data-view="composite" aria-pressed="true">Composite</button>
+            <button type="button" data-view="xray" aria-pressed="false">Parts X-Ray</button>
             <button type="button" data-view="cutout" aria-pressed="false">Cutout</button>
             <button type="button" data-view="cartoon" aria-pressed="false">Cartoon</button>
             <button type="button" data-view="footage" aria-pressed="false">Footage</button>
@@ -600,8 +602,18 @@
   <footer class="bottom-dock">
     <div class="planes-bar">
       <div class="strip" id="planesRow"></div>
-      <!-- Bound strictly to valid state: only visible when a single plane is soloed -->
-      <button type="button" class="btn warn-recovery" id="restorePlanesBtn" style="display:none">All Planes</button>
+      <div class="strip" style="flex-shrink:0;gap:6px">
+        <button type="button" class="btn tag-active" id="zoomCrumbBtn" style="display:none" title="Exit semantic zoom level">Zoom: All</button>
+        <label class="state-pill" style="display:inline-flex;align-items:center;gap:4px;cursor:pointer" title="Constrained Play: Scale camera parallax k = z_ref / z">
+          <span id="kScaleLbl">k×1.0</span>
+          <input type="range" id="kScaleRange" min="0" max="2.5" step="0.1" value="1" style="width:52px;height:14px">
+        </label>
+        <label class="state-pill" style="display:inline-flex;align-items:center;gap:4px;cursor:pointer" title="Constrained Play: Explode overlapping parts apart">
+          <span id="explodeLbl">Exp 0%</span>
+          <input type="range" id="explodeRange" min="0" max="1" step="0.05" value="0" style="width:48px;height:14px">
+        </label>
+        <button type="button" class="btn warn-recovery" id="restorePlanesBtn" style="display:none">All Planes</button>
+      </div>
     </div>
     <div class="transport-bar">
       <button type="button" class="btn" id="playBtn" aria-pressed="false">Play</button>
@@ -688,7 +700,13 @@
   let lastTick = 0;
   let soloPlaneId = null;
   let planeOn = {};
+  let zoomPlaneId = null;
+  let selectedPartId = null;
+  let hoveredPartId = null;
+  let kScale = 1.0;
+  let explodeAmt = 0.0;
   let wormHitBoxes = [];
+  let stageHitBoxes = [];
   let hitTransform = {tx: 0, ty: 0, sx: 1, sy: 1};
   function pushHitBox(b){
     wormHitBoxes.push(Object.assign({}, b, {
@@ -698,6 +716,10 @@
       h: b.h * hitTransform.sy
     }));
   }
+  const PART_PALETTE = [
+    '#EF9F3A', '#2E7A4A', '#2B6CB0', '#B8432F', '#7B4EC4',
+    '#0E8A8A', '#C86D24', '#3A6E9E', '#8A6114', '#A63A69'
+  ];
 
   const PLANE_TINTS = {
     far:   {fill:'rgba(92, 128, 188, 0.22)', stroke:'#3A5F9CD0'},
@@ -791,25 +813,371 @@
 
   function camOffset(planeZ, fi){
     const zRef = (S && S.z_ref) || (curWorm && curWorm.z_ref) || 2;
-    const k = zRef / Math.max(0.2, Number(planeZ) || zRef);
+    const k = (zRef / Math.max(0.2, Number(planeZ) || zRef)) * kScale;
+    let dx = 0, dy = 0;
     if(S && Array.isArray(S.camera) && S.camera[fi] != null){
       const cam = S.camera[fi];
       const cx = Array.isArray(cam) ? Number(cam[0]) : Number(cam.dx !== undefined ? cam.dx : cam.x);
       const cy = Array.isArray(cam) ? Number(cam[1]) : Number(cam.dy !== undefined ? cam.dy : cam.y);
-      return {
-        dx: (Number.isFinite(cx) ? cx : 0) * k,
-        dy: (Number.isFinite(cy) ? cy : 0) * k
-      };
-    }
-    if(curWorm && curWorm.frames && curWorm.frames[fi]){
+      dx = (Number.isFinite(cx) ? cx : 0) * k;
+      dy = (Number.isFinite(cy) ? cy : 0) * k;
+    } else if(curWorm && curWorm.frames && curWorm.frames[fi]){
       const cam = curWorm.frames[fi].cam || [0,0];
       const W = (S && S.W) || curWorm.W || 480;
       const H = (S && S.H) || curWorm.H || 360;
       const cx = Number(cam[0]) || 0;
       const cy = Number(cam[1]) || 0;
-      return {dx: cx * W * k, dy: cy * H * k};
+      dx = cx * W * k;
+      dy = cy * H * k;
     }
-    return {dx:0, dy:0};
+    if(explodeAmt > 0){
+      const logZ = Math.log2(Math.max(0.4, Number(planeZ) || zRef) / Math.max(0.4, zRef));
+      dy -= logZ * explodeAmt * 38;
+    }
+    return {dx, dy};
+  }
+
+  function computeStrokesBBox(strokes, W, H){
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity, nPts = 0;
+    for(const s of (strokes || [])){
+      for(const p of (s || [])){
+        if(!Number.isFinite(p[0]) || !Number.isFinite(p[1])) continue;
+        nPts++;
+        if(p[0] < minX) minX = p[0]; if(p[1] < minY) minY = p[1];
+        if(p[0] > maxX) maxX = p[0]; if(p[1] > maxY) maxY = p[1];
+      }
+    }
+    if(!Number.isFinite(minX) || minX >= maxX){
+      minX = W * 0.25; maxX = W * 0.75; minY = H * 0.25; maxY = H * 0.75;
+    }
+    return {
+      minX, minY, maxX, maxY,
+      cx: (minX + maxX) * 0.5,
+      cy: (minY + maxY) * 0.5,
+      w: Math.max(8, maxX - minX),
+      h: Math.max(8, maxY - minY),
+      nPts
+    };
+  }
+
+  function extractShotParts(fi, filterPlaneId){
+    if(!curWorm) return [];
+    const W = (S && S.W) || curWorm.W || 480;
+    const H = (S && S.H) || curWorm.H || 360;
+    const N = (S && S.cast && S.cast.frames) ? S.cast.frames.length : (curWorm.n_frames || 1);
+    const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
+    const planes = getActivePlanes();
+    const parts = [];
+    let colorIdx = 0;
+
+    function getCharStrokesAt(ti){
+      if(S && S.cast && S.cast.frames && S.cast.frames[ti]){
+        return S.cast.frames[ti];
+      }
+      if(curWorm.frames && curWorm.frames[ti] && curWorm.frames[ti].doodle){
+        return curWorm.frames[ti].doodle.map(s => s.map(p => [p[0]*W, p[1]*H]));
+      }
+      return [];
+    }
+
+    const charPlane = planes.find(p => p.id === 'char') || {id:'char', z:2, label:curWorm.title || 'Subject'};
+    const charStrokesFi = getCharStrokesAt(fi);
+    const charStrokes0  = getCharStrokesAt(0);
+
+    // 1. Character whole rig + individual anatomical strokes when zoomed into char (or top stroke groups at overview)
+    if(!filterPlaneId || filterPlaneId === 'char'){
+      const bbFi = computeStrokesBBox(charStrokesFi, W, H);
+      const bb0  = computeStrokesBBox(charStrokes0, W, H);
+      const tr = [];
+      for(let ti = 0; ti < N; ti += Math.max(1, Math.floor(N / 16))){
+        const bTi = computeStrokesBBox(getCharStrokesAt(ti), W, H);
+        tr.push({ti, cx: bTi.cx, cy: bTi.cy, camDx: 0, rigDx: bTi.cx - bb0.cx});
+      }
+      if(!filterPlaneId){
+        parts.push({
+          id: 'char:all',
+          label: `${charPlane.label} (Full Rig)`,
+          shortLabel: String(charPlane.label || 'Subject').slice(0, 14),
+          planeId: 'char',
+          planeLabel: charPlane.label,
+          z: charPlane.z,
+          k: 1.0,
+          isChar: true,
+          strokes: charStrokesFi,
+          strokes0: charStrokes0,
+          bbox: bbFi,
+          camShift: {dx: 0, dy: 0},
+          rigShift: {dx: bbFi.cx - bb0.cx, dy: bbFi.cy - bb0.cy},
+          nStrokes: charStrokesFi.length,
+          nPts: bbFi.nPts,
+          sourceTag: 'RIG',
+          sourceFull: 'SAM 2.1 silhouette + agent keyframe rig',
+          color: '#EF9F3A',
+          track: tr
+        });
+      }
+      // Individual strokes of character
+      const maxCharSub = filterPlaneId === 'char' ? charStrokesFi.length : Math.min(3, charStrokesFi.length);
+      for(let sIdx = 0; sIdx < maxCharSub; sIdx++){
+        const stFi = charStrokesFi[sIdx] ? [charStrokesFi[sIdx]] : [];
+        const st0  = charStrokes0[sIdx] ? [charStrokes0[sIdx]] : stFi;
+        if(!stFi.length) continue;
+        const bS = computeStrokesBBox(stFi, W, H);
+        const bS0 = computeStrokesBBox(st0, W, H);
+        const relY = (bS.cy - bbFi.minY) / Math.max(12, bbFi.h);
+        const anatRole = relY < 0.33 ? 'Crown/Head' : (relY < 0.68 ? 'Body/Core' : 'Limbs/Base');
+        const sTrack = [];
+        for(let ti = 0; ti < N; ti += Math.max(1, Math.floor(N / 14))){
+          const cSt = getCharStrokesAt(ti);
+          const bT = computeStrokesBBox(cSt[sIdx] ? [cSt[sIdx]] : [], W, H);
+          sTrack.push({ti, cx: bT.cx, cy: bT.cy, camDx: 0, rigDx: bT.cx - bS0.cx});
+        }
+        parts.push({
+          id: `char:s${sIdx}`,
+          label: `Stroke #${sIdx+1} (${anatRole})`,
+          shortLabel: `S${sIdx+1} ${anatRole}`,
+          planeId: 'char',
+          planeLabel: charPlane.label,
+          z: charPlane.z,
+          k: 1.0,
+          isChar: false,
+          isCharStroke: true,
+          strokes: stFi,
+          strokes0: st0,
+          bbox: bS,
+          camShift: {dx: 0, dy: 0},
+          rigShift: {dx: bS.cx - bS0.cx, dy: bS.cy - bS0.cy},
+          nStrokes: 1,
+          nPts: bS.nPts,
+          sourceTag: 'RIG',
+          sourceFull: `${charPlane.label} rig stroke #${sIdx+1} (${bS.nPts} vertices)`,
+          color: PART_PALETTE[( ++colorIdx ) % PART_PALETTE.length],
+          track: sTrack
+        });
+      }
+    }
+
+    // 2. Non-character plane objects (from S.objects or fallback curWorm.depth_worms)
+    const nonCharPlanes = planes.filter(p => p.id !== 'char' && (!filterPlaneId || p.id === filterPlaneId));
+    for(const plane of nonCharPlanes){
+      if(!isPlaneVisible(plane.id) && !filterPlaneId) continue;
+      const offFi = camOffset(plane.z, fi);
+      const off0  = camOffset(plane.z, 0);
+      const kMult = (zRef / Math.max(0.2, plane.z)) * kScale;
+      const objs = (S && Array.isArray(S.objects)) ? S.objects.filter(o => o.plane === plane.id) : [];
+
+      if(objs.length > 0){
+        // At overview level, if a plane has > 4 objects (e.g. 20 grass or 12 bushes), group into 3 spatial clusters (L/M/R)
+        // When zoomed into that plane (filterPlaneId === plane.id), show every individual object!
+        const shouldCluster = (!filterPlaneId && objs.length > 4);
+        const groups = [];
+        if(shouldCluster){
+          const third = Math.ceil(objs.length / 3);
+          groups.push({id:`${plane.id}:clusterL`, label:`${plane.label} [Left 1..${third}]`, shortLabel:`${String(plane.label).slice(0,9)} [L]`, list:objs.slice(0, third)});
+          groups.push({id:`${plane.id}:clusterM`, label:`${plane.label} [Mid ${third+1}..${Math.min(objs.length, third*2)}]`, shortLabel:`${String(plane.label).slice(0,9)} [M]`, list:objs.slice(third, third*2)});
+          if(objs.length > third*2){
+            groups.push({id:`${plane.id}:clusterR`, label:`${plane.label} [Right ${third*2+1}..${objs.length}]`, shortLabel:`${String(plane.label).slice(0,9)} [R]`, list:objs.slice(third*2)});
+          }
+        } else {
+          objs.forEach((o, oIdx)=>{
+            groups.push({
+              id: `obj:${plane.id}:${o.id || oIdx}`,
+              label: `${o.id || plane.label} (${o.class || plane.id})`,
+              shortLabel: String(o.id || o.class || plane.label).slice(0, 14),
+              list: [o],
+              rawObj: o
+            });
+          });
+        }
+
+        for(const g of groups){
+          const stFi = [], st0 = [];
+          let srcStr = '';
+          let hasAnimFrames = false;
+          for(const o of g.list){
+            if(!srcStr && o.source) srcStr = o.source;
+            if(o.frames && o.frames.length > 1) hasAnimFrames = true;
+            for(const s of getObjectStrokes(o, fi)){
+              if(s && s.length >= 2) stFi.push(s.map(p => [p[0] + offFi.dx, p[1] + offFi.dy]));
+            }
+            for(const s of getObjectStrokes(o, 0)){
+              if(s && s.length >= 2) st0.push(s.map(p => [p[0] + off0.dx, p[1] + off0.dy]));
+            }
+          }
+          if(!stFi.length) continue;
+          const bbFi = computeStrokesBBox(stFi, W, H);
+          const bb0  = computeStrokesBBox(st0, W, H);
+          const camDx = offFi.dx - off0.dx, camDy = offFi.dy - off0.dy;
+          const rigDx = (bbFi.cx - bb0.cx) - camDx;
+          const rigDy = (bbFi.cy - bb0.cy) - camDy;
+          const srcTag = srcStr.startsWith('quickdraw:') ? 'QD' : (hasAnimFrames ? 'RIG' : 'AGENT');
+          const tr = [];
+          for(let ti = 0; ti < N; ti += Math.max(1, Math.floor(N / 14))){
+            const oTi = camOffset(plane.z, ti);
+            const cDx = oTi.dx - off0.dx;
+            tr.push({ti, cx: bb0.cx + cDx + rigDx * (ti / Math.max(1, N - 1)), cy: bb0.cy + (oTi.dy - off0.dy), camDx: cDx, rigDx: hasAnimFrames ? rigDx : 0});
+          }
+          parts.push({
+            id: g.id,
+            label: g.label,
+            shortLabel: g.shortLabel,
+            planeId: plane.id,
+            planeLabel: plane.label,
+            z: plane.z,
+            k: kMult,
+            isChar: false,
+            strokes: stFi,
+            strokes0: st0,
+            bbox: bbFi,
+            camShift: {dx: camDx, dy: camDy},
+            rigShift: {dx: rigDx, dy: rigDy},
+            nStrokes: stFi.length,
+            nPts: bbFi.nPts,
+            sourceTag: srcTag,
+            sourceFull: srcStr || `${g.list.length} object(s) on plane ${plane.label}`,
+            color: PART_PALETTE[( ++colorIdx ) % PART_PALETTE.length],
+            track: tr
+          });
+        }
+      } else if(curWorm.depth_worms){
+        const dwObj = curWorm.depth_worms.find(d => d.id === plane.id);
+        if(dwObj && Array.isArray(dwObj.strokes0) && dwObj.strokes0.length){
+          const u0 = Number.isFinite(dwObj.u0) ? dwObj.u0 : 0.5;
+          const v0 = Number.isFinite(dwObj.v0) ? dwObj.v0 : 0.5;
+          const stFi = dwObj.strokes0.map(s => s.map(p => [(u0 + p[0])*W + offFi.dx, (v0 + p[1])*H + offFi.dy]));
+          const st0  = dwObj.strokes0.map(s => s.map(p => [(u0 + p[0])*W + off0.dx,  (v0 + p[1])*H + off0.dy]));
+          const bbFi = computeStrokesBBox(stFi, W, H);
+          const bb0  = computeStrokesBBox(st0, W, H);
+          parts.push({
+            id: `dw:${plane.id}`,
+            label: `${plane.label} (${dwObj.desc || plane.id})`,
+            shortLabel: String(plane.label || plane.id).slice(0, 14),
+            planeId: plane.id,
+            planeLabel: plane.label,
+            z: plane.z,
+            k: kMult,
+            isChar: false,
+            strokes: stFi,
+            strokes0: st0,
+            bbox: bbFi,
+            camShift: {dx: offFi.dx - off0.dx, dy: offFi.dy - off0.dy},
+            rigShift: {dx: 0, dy: 0},
+            nStrokes: stFi.length,
+            nPts: bbFi.nPts,
+            sourceTag: 'QD',
+            sourceFull: dwObj.desc || plane.label,
+            color: PART_PALETTE[( ++colorIdx ) % PART_PALETTE.length],
+            track: [{ti:0, cx:bb0.cx, cy:bb0.cy, camDx:0, rigDx:0}, {ti:N-1, cx:bbFi.cx, cy:bbFi.cy, camDx:offFi.dx, rigDx:0}]
+          });
+        }
+      }
+    }
+    return parts;
+  }
+
+  function drawPartInRect(ctx, part, fi, tx, ty, tw, th, opts){
+    const o = Object.assign({showSeedGhost: true, colorStrokeByIndex: false, showVertices: false}, opts || {});
+    if(!part || !part.strokes || !part.strokes.length) return;
+    if(part.isChar && !o.colorStrokeByIndex){
+      drawSamCutoutInRect(ctx, curWorm, fi, tx, ty, tw, th, {
+        cropToMask: true, drawOutline: true, outlineColor: part.color || '#EF9F3A', drawDoodle: true
+      });
+      return;
+    }
+    const W = (S && S.W) || curWorm.W || 480;
+    const H = (S && S.H) || curWorm.H || 360;
+    const allPts = [];
+    for(const s of part.strokes) for(const p of s) allPts.push(p);
+    if(o.showSeedGhost && part.strokes0){
+      for(const s of part.strokes0) for(const p of s) allPts.push(p);
+    }
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    let visMinX = Infinity, visMinY = Infinity, visMaxX = -Infinity, visMaxY = -Infinity;
+    for(const p of allPts){
+      if(!Number.isFinite(p[0]) || !Number.isFinite(p[1])) continue;
+      if(p[0] < minX) minX = p[0]; if(p[1] < minY) minY = p[1];
+      if(p[0] > maxX) maxX = p[0]; if(p[1] > maxY) maxY = p[1];
+      if(p[0] >= -W*0.1 && p[0] <= W*1.1 && p[1] >= -H*0.1 && p[1] <= H*1.1){
+        if(p[0] < visMinX) visMinX = p[0]; if(p[1] < visMinY) visMinY = p[1];
+        if(p[0] > visMaxX) visMaxX = p[0]; if(p[1] > visMaxY) visMaxY = p[1];
+      }
+    }
+    if(visMinX < visMaxX && visMinY < visMaxY){
+      minX = visMinX; minY = visMinY; maxX = visMaxX; maxY = visMaxY;
+    }
+    if(!Number.isFinite(minX) || minX >= maxX){ minX = 0; maxX = W; minY = 0; maxY = H; }
+    const padX = Math.max(6, (maxX - minX) * 0.12), padY = Math.max(6, (maxY - minY) * 0.14);
+    minX -= padX; maxX += padX; minY -= padY; maxY += padY;
+    const srcW = Math.max(14, maxX - minX), srcH = Math.max(12, maxY - minY);
+    const rawSX = Math.max(4, tw - 6) / srcW;
+    const rawSY = Math.max(4, th - 6) / srcH;
+    const scaleX = rawSX;
+    const scaleY = Math.min(rawSY, Math.max(rawSX, rawSY * 0.80));
+    const dw = srcW * scaleX, dh = srcH * scaleY;
+    const ox = tx + (tw - dw) * 0.5, oy = ty + (th - dh) * 0.5;
+
+    ctx.save();
+    ctx.beginPath(); ctx.rect(tx, ty, tw, th); ctx.clip();
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+
+    const img = getFrameImg(curWorm, fi);
+    if(img){
+      ctx.save();
+      ctx.globalAlpha = 0.22;
+      const clX = Math.max(0, Math.min(W - 16, minX));
+      const clY = Math.max(0, Math.min(H - 16, minY));
+      ctx.drawImage(img, clX, clY, Math.max(16, Math.min(W - clX, srcW)), Math.max(16, Math.min(H - clY, srcH)), tx, ty, tw, th);
+      ctx.restore();
+    }
+
+    // Seed f=01 ghost for comparison
+    if(o.showSeedGhost && part.strokes0 && fi > 0){
+      ctx.save();
+      ctx.strokeStyle = 'rgba(239, 159, 58, 0.45)';
+      ctx.lineWidth = 1.3;
+      ctx.setLineDash([3, 2]);
+      for(const s of part.strokes0){
+        ctx.beginPath();
+        for(let i=0;i<s.length;i++){
+          const px = ox + (s[i][0] - minX) * scaleX, py = oy + (s[i][1] - minY) * scaleY;
+          if(i===0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+        }
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    // Paper halo
+    ctx.strokeStyle = 'rgba(251, 250, 246, 0.92)';
+    ctx.lineWidth = 3.4;
+    for(const s of part.strokes){
+      ctx.beginPath();
+      for(let i=0;i<s.length;i++){
+        const px = ox + (s[i][0] - minX) * scaleX, py = oy + (s[i][1] - minY) * scaleY;
+        if(i===0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+    }
+
+    // Active ink strokes
+    part.strokes.forEach((s, sIdx)=>{
+      ctx.strokeStyle = o.colorStrokeByIndex ? PART_PALETTE[sIdx % PART_PALETTE.length] : '#161412';
+      ctx.lineWidth = o.colorStrokeByIndex ? 2.2 : 1.75;
+      ctx.beginPath();
+      for(let i=0;i<s.length;i++){
+        const px = ox + (s[i][0] - minX) * scaleX, py = oy + (s[i][1] - minY) * scaleY;
+        if(i===0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+      if(o.showVertices){
+        ctx.fillStyle = o.colorStrokeByIndex ? PART_PALETTE[sIdx % PART_PALETTE.length] : part.color;
+        for(let i=0;i<s.length;i+=Math.max(1, Math.floor(s.length/8))){
+          const px = ox + (s[i][0] - minX) * scaleX, py = oy + (s[i][1] - minY) * scaleY;
+          ctx.beginPath(); ctx.arc(px, py, 2.1, 0, Math.PI*2); ctx.fill();
+        }
+      }
+    });
+    ctx.restore();
   }
 
   function getObjectStrokes(o, fi){
@@ -1845,6 +2213,114 @@
       return;
     }
 
+    if(vMode === 'xray'){
+      if(img){
+        ctx.save();
+        ctx.globalAlpha = 0.25;
+        ctx.drawImage(img, 0, 0, W, H);
+        ctx.restore();
+      }
+      ctx.fillStyle = 'rgba(251, 250, 246, 0.72)';
+      ctx.fillRect(0, 0, W, H);
+
+      const parts = extractShotParts(fi, zoomPlaneId);
+      const labelQueue = [];
+
+      for(const part of parts){
+        if(!isPlaneVisible(part.planeId)) continue;
+        // Skip whole-character aggregate box in X-Ray if individual character strokes are also present
+        if(part.kind === 'char_whole' && parts.some(p => p.kind === 'char_stroke')) continue;
+
+        const isSel = (part.id === selectedPartId);
+        const isHov = (part.id === hoveredPartId);
+        const st = part.strokes || [];
+        if(!st.length) continue;
+
+        const dx = part.off.dx, dy = part.off.dy;
+        drawStrokes(ctx, st, {color: 'rgba(251,250,246,0.92)', width: (isSel || isHov) ? 6.0 : 4.2, dx, dy});
+        drawStrokes(ctx, st, {color: part.color, width: (isSel || isHov) ? 3.2 : 2.1, dx, dy});
+
+        const bx = part.bbox.x0 + dx, by = part.bbox.y0 + dy;
+        const bw = part.bbox.w, bh = part.bbox.h;
+        ctx.save();
+        ctx.strokeStyle = part.color;
+        ctx.lineWidth = (isSel || isHov) ? 2.2 : 1.1;
+        ctx.globalAlpha = (isSel || isHov) ? 0.96 : 0.52;
+        ctx.setLineDash((isSel || isHov) ? [] : [3, 2]);
+        ctx.strokeRect(bx, by, bw, bh);
+        ctx.restore();
+
+        stageHitBoxes.push({
+          x: bx - 3, y: by - 3, w: Math.max(12, bw + 6), h: Math.max(12, bh + 6),
+          partId: part.id, planeId: part.planeId
+        });
+
+        // Draw causal vectors from part center: Blue = camera parallax, Amber = intrinsic rig motion
+        const cx = part.bbox.cx + dx, cy = part.bbox.cy + dy;
+        const camLen = Math.hypot(part.camDisp.dx, part.camDisp.dy);
+        if(camLen > 0.6){
+          const vx = cx + part.camDisp.dx * 1.35, vy = cy + part.camDisp.dy * 1.35;
+          ctx.save();
+          ctx.strokeStyle = '#2B6CB0';
+          ctx.lineWidth = 1.8;
+          ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(vx, vy); ctx.stroke();
+          ctx.fillStyle = '#2B6CB0';
+          ctx.beginPath(); ctx.arc(vx, vy, 2.4, 0, Math.PI * 2); ctx.fill();
+          ctx.restore();
+        }
+        const rigLen = Math.hypot(part.rigDisp.dx, part.rigDisp.dy);
+        if(rigLen > 0.6){
+          const rx = cx + part.rigDisp.dx * 1.35, ry = cy + part.rigDisp.dy * 1.35;
+          ctx.save();
+          ctx.strokeStyle = '#D97706';
+          ctx.lineWidth = 2.0;
+          ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(rx, ry); ctx.stroke();
+          ctx.fillStyle = '#D97706';
+          ctx.beginPath(); ctx.arc(rx, ry, 2.6, 0, Math.PI * 2); ctx.fill();
+          ctx.restore();
+        }
+
+        labelQueue.push({
+          text: `${part.shortLabel} z=${part.planeZ} [${part.sourceTag}]`,
+          x: Math.max(4, Math.min(W - 115, bx)),
+          y: Math.max(22, Math.min(H - 16, by - 13)),
+          color: part.color,
+          prio: (isSel || isHov) ? 10 : (part.planeId === 'char' ? 5 : 2)
+        });
+      }
+
+      // Non-overlapping label placement
+      labelQueue.sort((a, b) => b.prio - a.prio);
+      const placed = [];
+      ctx.font = '700 8.5px "JetBrains Mono", monospace';
+      for(const lbl of labelQueue){
+        const tw = ctx.measureText(lbl.text).width + 8;
+        const th = 12;
+        let ly = lbl.y;
+        let overlap = true;
+        for(let tries = 0; tries < 5 && overlap; tries++){
+          overlap = placed.some(r => !(lbl.x + tw < r.x || lbl.x > r.x + r.w || ly + th < r.y || ly > r.y + r.h));
+          if(overlap) ly += 13;
+        }
+        if(overlap || ly + th > H - 2) continue;
+        placed.push({x: lbl.x, y: ly, w: tw, h: th});
+        ctx.fillStyle = 'rgba(251, 250, 246, 0.92)';
+        ctx.fillRect(lbl.x, ly, tw, th);
+        ctx.strokeStyle = lbl.color;
+        ctx.lineWidth = 1.1;
+        ctx.strokeRect(lbl.x, ly, tw, th);
+        ctx.fillStyle = '#161412';
+        ctx.fillText(lbl.text, lbl.x + 4, ly + 9);
+      }
+
+      ctx.fillStyle = 'rgba(22, 20, 18, 0.86)';
+      ctx.fillRect(6, 5, W - 12, 15);
+      ctx.fillStyle = '#FBFAF6';
+      ctx.font = '700 9px "JetBrains Mono", monospace';
+      ctx.fillText('PARTS X-RAY · Blue Vec=Cam Parallax · Amber Vec=Rig Motion · Click any part', 10, 15.5);
+      return;
+    }
+
     if(vMode === 'composite'){
       if(img){
         ctx.save();
@@ -1871,6 +2347,7 @@
 
     for(const plane of planes){
       if(!isPlaneVisible(plane.id)) continue;
+      if(zoomPlaneId !== null && plane.id !== zoomPlaneId) continue;
       const off = camOffset(plane.z, fi);
 
       if(plane.id === 'char'){
@@ -1923,10 +2400,46 @@
         }
       }
     }
+
+    // Populate stageHitBoxes for direct stage part picking & draw active/hovered part highlight
+    const allStageParts = extractShotParts(fi, zoomPlaneId);
+    for(const part of allStageParts){
+      if(!isPlaneVisible(part.planeId)) continue;
+      if(part.kind === 'char_whole' && allStageParts.some(p => p.kind === 'char_stroke')) continue;
+      const bx = part.bbox.x0 + part.off.dx, by = part.bbox.y0 + part.off.dy;
+      stageHitBoxes.push({
+        x: bx - 3, y: by - 3, w: Math.max(12, part.bbox.w + 6), h: Math.max(12, part.bbox.h + 6),
+        partId: part.id, planeId: part.planeId
+      });
+    }
+
+    const focusId = hoveredPartId || selectedPartId;
+    if(focusId){
+      const fp = allStageParts.find(p => p.id === focusId);
+      if(fp && fp.strokes && fp.strokes.length){
+        const dx = fp.off.dx, dy = fp.off.dy;
+        drawStrokes(ctx, fp.strokes, {color: '#EF9F3A', width: 5.5, dx, dy});
+        drawStrokes(ctx, fp.strokes, {color: fp.color, width: 2.8, dx, dy});
+        ctx.save();
+        ctx.strokeStyle = fp.color;
+        ctx.lineWidth = 2.0;
+        ctx.setLineDash([4, 2]);
+        ctx.strokeRect(fp.bbox.x0 + dx - 3, fp.bbox.y0 + dy - 3, fp.bbox.w + 6, fp.bbox.h + 6);
+        ctx.restore();
+        const tag = `${fp.label} · z=${fp.planeZ} · k=${fp.kMult.toFixed(2)}x · [${fp.sourceTag}]`;
+        ctx.font = '700 9.5px "JetBrains Mono", monospace';
+        const tw = ctx.measureText(tag).width + 10;
+        ctx.fillStyle = 'rgba(22, 20, 18, 0.90)';
+        ctx.fillRect(6, H - 22, Math.min(W - 12, tw), 16);
+        ctx.fillStyle = '#EF9F3A';
+        ctx.fillText(tag, 11, H - 11);
+      }
+    }
   }
 
   function renderStage(fi){
     if(!curWorm) return;
+    stageHitBoxes = [];
     const W = (S && S.W) || curWorm.W || 480;
     const H = (S && S.H) || curWorm.H || 360;
     if(cvStage.width !== W || cvStage.height !== H){
@@ -1940,7 +2453,7 @@
     if(view === 'all4'){
       const qViews = [
         {id:'composite', lbl:'Composite'},
-        {id:'cutout',    lbl:'SAM Cutout + Line'},
+        {id:'xray',      lbl:'Parts X-Ray'},
         {id:'cartoon',   lbl:'Multiplane Cartoon'},
         {id:'footage',   lbl:'Archive Footage'}
       ];
@@ -1968,9 +2481,326 @@
     renderSingleStageView(ctx, W, H, fi, view);
   }
 
+  function renderPartsInspectorMode(ctx, W, H, fi, N, planes, zRef){
+    const srcW = (S && S.W) || curWorm.W || 480;
+    const srcH = (S && S.H) || curWorm.H || 360;
+    const allParts = extractShotParts(fi, zoomPlaneId);
+
+    // Check if selectedPartId exists in current shot; if not, reset to overview
+    const activePart = selectedPartId ? allParts.find(p => p.id === selectedPartId) : null;
+
+    if(activePart){
+      // === LEVEL B: DEEP PART MICROSCOPE (Selected Part Analysis) ===
+      const padL = 12, padR = 12, padT = 8, padB = 8;
+      const topBarH = 22;
+
+      // Top header bar with Back button + full part provenance
+      ctx.fillStyle = '#161412';
+      ctx.beginPath(); ctx.roundRect(padL, padT, W - padL - padR, topBarH, 4); ctx.fill();
+
+      // Back button
+      const backW = 92;
+      ctx.fillStyle = '#EF9F3A';
+      ctx.beginPath(); ctx.roundRect(padL + 3, padT + 3, backW, topBarH - 6, 3); ctx.fill();
+      ctx.fillStyle = '#161412';
+      ctx.font = '700 9.5px "JetBrains Mono", monospace';
+      ctx.fillText('<- All Parts', padL + 9, padT + 14.5);
+      pushHitBox({x: padL + 3, y: padT + 3, w: backW, h: topBarH - 6, selectPartId: '__NONE__'});
+
+      ctx.fillStyle = '#FBFAF6';
+      ctx.font = '700 10px "JetBrains Mono", monospace';
+      const hdrMeta = `${activePart.label} · Plane: ${activePart.planeLabel} (z=${activePart.planeZ}, k=${activePart.kMult.toFixed(2)}x) · Src: ${activePart.sourceFull} · ${activePart.nStrokes}S/${activePart.nPts}P`;
+      ctx.fillText(hdrMeta.slice(0, 92), padL + backW + 12, padT + 14.5);
+
+      const stripH = 44;
+      const mainY = padT + topBarH + 6;
+      const mainH = H - mainY - stripH - padB - 6;
+      const leftW = Math.round((W - padL - padR - 8) * 0.46);
+      const rightX = padL + leftW + 8;
+      const rightW = W - padR - rightX;
+
+      // Left Panel: Isolated Part Geometry + Seed Ghost + Per-Stroke/Vertex Overlay
+      ctx.fillStyle = '#FFFDF8';
+      ctx.strokeStyle = activePart.color;
+      ctx.lineWidth = 1.8;
+      ctx.beginPath(); ctx.roundRect(padL, mainY, leftW, mainH, 6); ctx.fill(); ctx.stroke();
+
+      ctx.fillStyle = '#161412';
+      ctx.font = '700 10px "Bricolage Grotesque", sans-serif';
+      ctx.fillText(`ISOLATED PART GEOMETRY (f=${String(fi+1).padStart(2,'0')} vs Seed f=01)`, padL + 8, mainY + 14);
+
+      drawPartInRect(ctx, activePart, fi, padL + 8, mainY + 20, leftW - 16, mainH - 44, {
+        cropToPart: true, showGhost0: true, color: activePart.color, width: 2.6
+      });
+
+      // Vector decomposition readout bar at bottom of Left Panel
+      ctx.fillStyle = 'rgba(22, 20, 18, 0.06)';
+      ctx.fillRect(padL + 4, mainY + mainH - 22, leftW - 8, 18);
+      ctx.font = '600 9px "JetBrains Mono", monospace';
+      ctx.fillStyle = '#161412';
+      ctx.fillText(`Total Δ:(${activePart.totalDisp.dx.toFixed(1)},${activePart.totalDisp.dy.toFixed(1)})`, padL + 8, mainY + mainH - 10);
+      ctx.fillStyle = '#2B6CB0';
+      ctx.fillText(`Cam k·c:(${activePart.camDisp.dx.toFixed(1)},${activePart.camDisp.dy.toFixed(1)})`, padL + 132, mainY + mainH - 10);
+      ctx.fillStyle = '#D97706';
+      ctx.fillText(`Rig:(${activePart.rigDisp.dx.toFixed(1)},${activePart.rigDisp.dy.toFixed(1)})`, padL + 262, mainY + mainH - 10);
+
+      // Right Panel: Causal Motion Decomposition Graph over t = 1..N + X-Sheet Note
+      ctx.fillStyle = '#FFFFFF';
+      ctx.strokeStyle = '#BFAF97';
+      ctx.lineWidth = 1.2;
+      ctx.beginPath(); ctx.roundRect(rightX, mainY, rightW, mainH, 6); ctx.fill(); ctx.stroke();
+
+      ctx.fillStyle = '#161412';
+      ctx.font = '700 10px "Bricolage Grotesque", sans-serif';
+      ctx.fillText('CAUSAL MOTION DECOMPOSITION: Total(t) = k·Cam(t) + Rig(t)', rightX + 8, mainY + 14);
+
+      const gx0 = rightX + 34, gy0 = mainY + 24, gw = rightW - 44, gh = Math.max(40, mainH - 64);
+      ctx.fillStyle = '#FBFAF6';
+      ctx.strokeStyle = '#D8CCB8';
+      ctx.lineWidth = 1;
+      ctx.fillRect(gx0, gy0, gw, gh);
+      ctx.strokeRect(gx0, gy0, gw, gh);
+
+      // Zero baseline
+      const midY = gy0 + gh * 0.5;
+      ctx.strokeStyle = 'rgba(22,20,18,0.22)';
+      ctx.setLineDash([2, 2]);
+      ctx.beginPath(); ctx.moveTo(gx0, midY); ctx.lineTo(gx0 + gw, midY); ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Compute time series across t = 0..N-1 for this part
+      const seriesCam = [], seriesRig = [], seriesTot = [];
+      let maxAbs = 12;
+      for(let ti = 0; ti < N; ti++){
+        const cOff = camOffset(activePart.planeZ, ti);
+        let rDx = 0;
+        if(activePart.kind === 'char_whole' || activePart.kind === 'char_stroke' || activePart.isAnimated){
+          let stT = [];
+          if(activePart.kind === 'char_whole'){
+            stT = (S && S.cast && S.cast.frames && S.cast.frames[ti]) ? S.cast.frames[ti] : [];
+          } else if(activePart.kind === 'char_stroke'){
+            const sIdx = parseInt(activePart.id.split(':s')[1], 10) || 0;
+            const fSt = (S && S.cast && S.cast.frames && S.cast.frames[ti]) ? S.cast.frames[ti] : [];
+            stT = fSt[sIdx] ? [fSt[sIdx]] : [];
+          } else if(S && Array.isArray(S.objects)){
+            const objId = activePart.id.replace(/^obj:/, '');
+            const o = S.objects.find(ob => ob.id === objId);
+            if(o) stT = getObjectStrokes(o, ti);
+          }
+          if(stT && stT.length){
+            const bbT = computeStrokesBBox(stT, srcW, srcH);
+            rDx = bbT.cx - activePart.bbox0.cx;
+          }
+        }
+        const totDx = cOff.dx + rDx;
+        seriesCam.push(cOff.dx);
+        seriesRig.push(rDx);
+        seriesTot.push(totDx);
+        maxAbs = Math.max(maxAbs, Math.abs(cOff.dx), Math.abs(rDx), Math.abs(totDx));
+      }
+
+      const plotCurve = (arr, col, width, dash)=>{
+        if(arr.length < 2) return;
+        ctx.save();
+        ctx.strokeStyle = col;
+        ctx.lineWidth = width;
+        if(dash) ctx.setLineDash(dash);
+        ctx.beginPath();
+        for(let ti = 0; ti < arr.length; ti++){
+          const x = gx0 + (ti / (arr.length - 1)) * gw;
+          const y = midY - (arr[ti] / maxAbs) * (gh * 0.44);
+          if(ti === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        ctx.restore();
+      };
+
+      plotCurve(seriesCam, '#2B6CB0', 1.8, [4, 2]);
+      plotCurve(seriesRig, '#D97706', 2.0, null);
+      plotCurve(seriesTot, '#161412', 2.4, null);
+
+      // Playhead on decomposition graph
+      const phX = gx0 + (N > 1 ? (fi / (N - 1)) * gw : gw * 0.5);
+      ctx.strokeStyle = '#EF9F3A';
+      ctx.lineWidth = 1.8;
+      ctx.beginPath(); ctx.moveTo(phX, gy0); ctx.lineTo(phX, gy0 + gh); ctx.stroke();
+
+      // Axis labels + legend
+      ctx.fillStyle = '#5E554B';
+      ctx.font = '600 8.5px "JetBrains Mono", monospace';
+      ctx.fillText(`+${Math.round(maxAbs)}px`, rightX + 4, gy0 + 8);
+      ctx.fillText('0px', rightX + 10, midY + 3);
+      ctx.fillText(`-${Math.round(maxAbs)}px`, rightX + 4, gy0 + gh - 2);
+
+      // X-Sheet note & keyframe status for current frame fi
+      const xs = (S && Array.isArray(S.xsheet) && S.xsheet[fi]) ? S.xsheet[fi] : null;
+      const xsText = xs
+        ? `X-Sheet f${String(fi+1).padStart(2,'0')} [${xs.kind || 'I'}]: ${xs.note || 'Inbetween frame'}`
+        : `Frame f${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')} · Click graph to scrub`;
+      ctx.fillStyle = '#161412';
+      ctx.font = '600 9px "JetBrains Mono", monospace';
+      ctx.fillText(xsText.slice(0, 62), rightX + 8, gy0 + gh + 15);
+
+      ctx.fillStyle = '#161412'; ctx.fillText('— Total ΔX', rightX + 8, gy0 + gh + 29);
+      ctx.fillStyle = '#2B6CB0'; ctx.fillText('-- k·Cam(t)', rightX + 88, gy0 + gh + 29);
+      ctx.fillStyle = '#D97706'; ctx.fillText('— Rig(t)', rightX + 176, gy0 + gh + 29);
+
+      // Bottom Strip: Sibling Parts Quick-Switcher
+      const stripY = H - stripH - padB;
+      const sibParts = allParts.filter(p => !(p.kind === 'char_whole' && allParts.some(q => q.kind === 'char_stroke'))).slice(0, 12);
+      const nSib = Math.max(1, sibParts.length);
+      const sGap = 4;
+      const sW = (W - padL - padR - sGap * (nSib - 1)) / nSib;
+      sibParts.forEach((sp, idx)=>{
+        const sx = padL + idx * (sW + sGap);
+        const isCur = (sp.id === activePart.id);
+        ctx.fillStyle = isCur ? '#FFF8EB' : '#FFFFFF';
+        ctx.strokeStyle = isCur ? sp.color : '#C9BBA6';
+        ctx.lineWidth = isCur ? 2.2 : 1.1;
+        ctx.beginPath(); ctx.roundRect(sx, stripY, sW, stripH, 4); ctx.fill(); ctx.stroke();
+
+        drawPartInRect(ctx, sp, fi, sx + 2, stripY + 12, sW - 4, stripH - 14, {
+          cropToPart: true, showGhost0: false, color: sp.color, width: 1.6
+        });
+        ctx.fillStyle = '#161412';
+        ctx.font = '700 8px "JetBrains Mono", monospace';
+        ctx.fillText(sp.shortLabel.slice(0, 9), sx + 3, stripY + 9.5);
+        pushHitBox({x: sx, y: stripY, w: sW, h: stripH, selectPartId: sp.id, planeId: sp.planeId});
+      });
+      return;
+    }
+
+    // === LEVEL A: SMALL-MULTIPLES PART ATLAS (Overview of Decomposed Shot Parts) ===
+    const padL = 10, padR = 10, padT = 6, padB = 6;
+    const topBarH = 20;
+
+    // Filter parts for overview grid so every card has generous legibility:
+    // If zoomPlaneId is set, show all parts in that plane (up to 15).
+    // If viewing All Planes, show char:whole + top char strokes + distinct scene objects (up to 15).
+    let displayParts = [];
+    if(zoomPlaneId !== null){
+      displayParts = allParts.filter(p => !(p.kind === 'char_whole' && allParts.length > 1)).slice(0, 15);
+    } else {
+      const charWhole = allParts.find(p => p.kind === 'char_whole');
+      if(charWhole) displayParts.push(charWhole);
+      const sceneObjs = allParts.filter(p => p.kind === 'object' || p.kind === 'dw_fallback');
+      // Prioritize distinct classes first, then fill up to 11 scene objects + 3 char strokes
+      const seenClasses = new Set();
+      const primaryObjs = [], secondaryObjs = [];
+      for(const o of sceneObjs){
+        const clsKey = `${o.planeId}:${o.shortLabel.replace(/[0-9]+$/, '')}`;
+        if(!seenClasses.has(clsKey) || seenClasses.size < 6){
+          seenClasses.add(clsKey);
+          primaryObjs.push(o);
+        } else {
+          secondaryObjs.push(o);
+        }
+      }
+      displayParts.push(...primaryObjs.slice(0, 10));
+      const charStrokes = allParts.filter(p => p.kind === 'char_stroke').slice(0, Math.max(2, 15 - displayParts.length));
+      displayParts.push(...charStrokes);
+      if(displayParts.length < 15){
+        displayParts.push(...secondaryObjs.slice(0, 15 - displayParts.length));
+      }
+    }
+
+    // Top Header Bar
+    ctx.fillStyle = '#EFE6D5';
+    ctx.strokeStyle = '#C9BBA6';
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.roundRect(padL, padT, W - padL - padR, topBarH, 4); ctx.fill(); ctx.stroke();
+
+    let hdrX = padL + 6;
+    if(zoomPlaneId !== null){
+      const bw = 88;
+      ctx.fillStyle = '#161412';
+      ctx.beginPath(); ctx.roundRect(hdrX, padT + 2, bw, topBarH - 4, 3); ctx.fill();
+      ctx.fillStyle = '#EF9F3A';
+      ctx.font = '700 9px "JetBrains Mono", monospace';
+      ctx.fillText('<- All Planes', hdrX + 6, padT + 13);
+      pushHitBox({x: hdrX, y: padT + 2, w: bw, h: topBarH - 4, zoomPlaneOut: true});
+      hdrX += bw + 8;
+    }
+
+    const xs = (S && Array.isArray(S.xsheet) && S.xsheet[fi]) ? S.xsheet[fi] : null;
+    const xsInfo = xs && xs.note ? ` · X-Sheet [${xs.kind||'I'}]: ${xs.note}` : ' · Click any card for Deep Part Microscope';
+    ctx.fillStyle = '#161412';
+    ctx.font = '700 9.5px "JetBrains Mono", monospace';
+    const titleStr = zoomPlaneId
+      ? `PLANE [${zoomPlaneId.toUpperCase()}] PARTS (${displayParts.length}/${allParts.length})${xsInfo}`
+      : `DECOMPOSED SHOT PARTS (${displayParts.length} shown of ${allParts.length} total)${xsInfo}`;
+    ctx.fillText(titleStr.slice(0, 95), hdrX, padT + 13.5);
+
+    const gridY = padT + topBarH + 5;
+    const availW = W - padL - padR;
+    const availH = H - gridY - padB;
+    const nCards = Math.max(1, displayParts.length);
+    const cols = nCards <= 4 ? 2 : (nCards <= 6 ? 3 : (nCards <= 8 ? 4 : 5));
+    const rows = Math.ceil(nCards / cols);
+    const gap = 5;
+    const cw = (availW - gap * (cols - 1)) / cols;
+    const ch = (availH - gap * (rows - 1)) / rows;
+
+    displayParts.forEach((part, idx)=>{
+      const c = idx % cols, r = Math.floor(idx / cols);
+      const cx = padL + c * (cw + gap);
+      const cy = gridY + r * (ch + gap);
+      const isHov = (part.id === hoveredPartId);
+
+      ctx.save();
+      ctx.fillStyle = isHov ? '#FFFBF2' : '#FFFFFF';
+      ctx.strokeStyle = isHov ? part.color : '#C9BBA6';
+      ctx.lineWidth = isHov ? 2.2 : 1.2;
+      ctx.beginPath(); ctx.roundRect(cx, cy, cw, ch, 5); ctx.fill(); ctx.stroke();
+
+      // Top mini header strip
+      const topH = 14;
+      ctx.fillStyle = 'rgba(22, 20, 18, 0.06)';
+      ctx.fillRect(cx + 1, cy + 1, cw - 2, topH);
+      ctx.fillStyle = part.color;
+      ctx.fillRect(cx + 1, cy + 1, 4, topH);
+
+      ctx.fillStyle = '#161412';
+      ctx.font = '700 9px "Bricolage Grotesque", sans-serif';
+      ctx.fillText(part.shortLabel.slice(0, 12), cx + 8, cy + 11);
+
+      ctx.fillStyle = '#5E554B';
+      ctx.font = '600 8px "JetBrains Mono", monospace';
+      const rightTag = `z=${part.planeZ}·${part.sourceTag}`;
+      const rtw = ctx.measureText(rightTag).width;
+      if(cw - rtw - 4 > 54){
+        ctx.fillText(rightTag, cx + cw - rtw - 4, cy + 10.5);
+      }
+
+      // Center cropped part + seed ghost
+      const footH = 13;
+      const bodyY = cy + topH + 2;
+      const bodyH = Math.max(16, ch - topH - footH - 4);
+      drawPartInRect(ctx, part, fi, cx + 3, bodyY, cw - 6, bodyH, {
+        cropToPart: true, showGhost0: true, color: part.color, width: 2.0
+      });
+
+      // Bottom telemetry strip: stroke/pt count + causal shift
+      const footY = cy + ch - footH;
+      ctx.fillStyle = 'rgba(239, 230, 213, 0.55)';
+      ctx.fillRect(cx + 1, footY, cw - 2, footH - 1);
+      ctx.fillStyle = '#4A4238';
+      ctx.font = '600 8px "JetBrains Mono", monospace';
+      const statStr = `${part.nStrokes}S/${part.nPts}p Δ(${Math.round(part.totalDisp.dx)},${Math.round(part.totalDisp.dy)})`;
+      ctx.fillText(statStr.slice(0, 22), cx + 4, footY + 9.5);
+      ctx.restore();
+
+      pushHitBox({x: cx, y: cy, w: cw, h: ch, selectPartId: part.id, planeId: part.planeId});
+    });
+  }
+
   function renderSingleWormLens(ctx, W, H, fi, N, planes, zRef, mode){
     if(mode === 'parallel'){
       renderParallelTimelinesMode(ctx, W, H, fi, N, planes, zRef);
+      return;
+    }
+    if(mode === 'parts'){
+      renderPartsInspectorMode(ctx, W, H, fi, N, planes, zRef);
       return;
     }
 
@@ -2229,7 +3059,104 @@
       return;
     }
 
-    // LENS 2: DISENTANGLED PLANE WORMS ('lanes')
+    // LENS 2: DISENTANGLED PLANE WORMS ('lanes') — supports Semantic Zoom into Plane Parts!
+    if(zoomPlaneId !== null){
+      const planeParts = extractShotParts(fi, zoomPlaneId).filter(p => !(p.kind === 'char_whole' && zoomPlaneId === 'char')).slice(0, 7);
+      const padL = 132, padR = 14, padT = 26, padB = 10;
+      const availH = H - padT - padB;
+      const nP = Math.max(1, planeParts.length);
+      const laneGap = 5;
+      const laneH = Math.max(28, (availH - laneGap * (nP - 1)) / nP);
+      const trackW = W - padL - padR;
+
+      // Top breadcrumb bar
+      ctx.fillStyle = '#161412';
+      ctx.beginPath(); ctx.roundRect(10, 4, 96, 18, 3); ctx.fill();
+      ctx.fillStyle = '#EF9F3A';
+      ctx.font = '700 9.5px "JetBrains Mono", monospace';
+      ctx.fillText('<- All Planes', 16, 16);
+      pushHitBox({x: 10, y: 4, w: 96, h: 18, zoomPlaneOut: true});
+
+      ctx.fillStyle = '#161412';
+      ctx.font = '700 10px "JetBrains Mono", monospace';
+      ctx.fillText(`PLANE [${zoomPlaneId.toUpperCase()}] PART LANES (${planeParts.length} parts) · Click part header to inspect`, 114, 16.5);
+
+      for(let pIdx = 0; pIdx < planeParts.length; pIdx++){
+        const part = planeParts[pIdx];
+        const y0 = padT + pIdx * (laneH + laneGap);
+        const isSel = (part.id === selectedPartId || part.id === hoveredPartId);
+
+        ctx.save();
+        ctx.fillStyle = isSel ? '#FFFBF2' : '#FFFFFF';
+        ctx.strokeStyle = isSel ? part.color : '#BFAF97';
+        ctx.lineWidth = isSel ? 2.0 : 1.2;
+        ctx.beginPath(); ctx.roundRect(10, y0, W - 20, laneH, 5); ctx.fill(); ctx.stroke();
+
+        ctx.save();
+        ctx.beginPath(); ctx.rect(11, y0 + 1, padL - 16, laneH - 2); ctx.clip();
+        ctx.fillStyle = 'rgba(239, 230, 213, 0.55)';
+        ctx.fillRect(11, y0 + 1, padL - 16, laneH - 2);
+        ctx.fillStyle = part.color;
+        ctx.fillRect(11, y0 + 1, 4, laneH - 2);
+        ctx.fillStyle = '#161412';
+        ctx.font = '700 10px "Bricolage Grotesque", sans-serif';
+        ctx.fillText(part.shortLabel.slice(0, 14), 19, y0 + Math.min(15, laneH * 0.44));
+        ctx.fillStyle = '#5E554B';
+        ctx.font = '500 8.5px "JetBrains Mono", monospace';
+        ctx.fillText(`${part.sourceTag} · ${part.nStrokes}S/${part.nPts}p`, 19, y0 + Math.min(28, laneH * 0.80));
+        ctx.restore();
+        pushHitBox({x: 11, y: y0 + 1, w: padL - 16, h: laneH - 2, selectPartId: part.id, setMode: 'parts'});
+
+        ctx.save();
+        ctx.beginPath(); ctx.rect(padL, y0 + 2, trackW, laneH - 4); ctx.clip();
+
+        const nStamps = Math.min(N, 6);
+        const celH = Math.max(20, laneH - 8);
+        const celW = Math.round(celH * 1.18);
+        let lastRight = -999;
+        for(let sIdx = 0; sIdx < nStamps; sIdx++){
+          const ti = nStamps === 1 ? 0 : Math.round((sIdx / (nStamps - 1)) * (N - 1));
+          const cx = padL + (N > 1 ? (ti / (N - 1)) * trackW : trackW * 0.5);
+          const rx = Math.max(padL + 2, Math.min(padL + trackW - celW - 2, cx - celW * 0.5));
+          if(rx < lastRight + 4) continue;
+          lastRight = rx + celW;
+          const ry = y0 + (laneH - celH) * 0.5;
+          ctx.fillStyle = '#FBFAF6';
+          ctx.strokeStyle = '#C9BBA6';
+          ctx.lineWidth = 1.0;
+          ctx.fillRect(rx, ry, celW, celH);
+          drawPartInRect(ctx, part, ti, rx + 2, ry + 2, celW - 4, celH - 4, {
+            cropToPart: true, showGhost0: false, color: part.color, width: 1.7
+          });
+          ctx.strokeRect(rx, ry, celW, celH);
+          pushHitBox({x: rx, y: ry, w: celW, h: celH, fi: ti});
+        }
+
+        const actX = padL + (N > 1 ? (fi / (N - 1)) * trackW : trackW * 0.5);
+        const actH = Math.max(22, laneH - 4);
+        const actW = Math.round(actH * 1.24);
+        const arx = Math.max(padL + 2, Math.min(padL + trackW - actW - 2, actX - actW * 0.5));
+        const ary = y0 + (laneH - actH) * 0.5;
+        ctx.fillStyle = '#FFFBF4';
+        ctx.strokeStyle = part.color;
+        ctx.lineWidth = 2.0;
+        ctx.fillRect(arx, ary, actW, actH);
+        drawPartInRect(ctx, part, fi, arx + 2, ary + 2, actW - 4, actH - 4, {
+          cropToPart: true, showGhost0: true, color: part.color, width: 2.1
+        });
+        ctx.strokeRect(arx, ary, actW, actH);
+        ctx.restore();
+        ctx.restore();
+      }
+
+      const scrubX = padL + (N > 1 ? (fi / (N - 1)) * trackW : trackW * 0.5);
+      ctx.save();
+      ctx.strokeStyle = '#EF9F3A'; ctx.lineWidth = 2; ctx.setLineDash([4, 3]);
+      ctx.beginPath(); ctx.moveTo(scrubX, padT - 4); ctx.lineTo(scrubX, H - padB + 4); ctx.stroke();
+      ctx.restore();
+      return;
+    }
+
     const planesNearFirst = planes.slice().reverse();
     const padL = 124, padR = 14, padT = 14, padB = 14;
     const availH = H - padT - padB;
@@ -2263,13 +3190,24 @@
       ctx.fillStyle = '#161412';
       ctx.font = '700 11px "Bricolage Grotesque", sans-serif';
       const shortName = String(plane.label || plane.id).split('(')[0].trim().slice(0, 15);
-      ctx.fillText(shortName, 16, y0 + Math.min(18, laneH*0.42));
+      ctx.fillText(shortName, 16, y0 + Math.min(16, laneH*0.36));
       ctx.fillStyle = '#5E554B';
-      ctx.font = '500 9.5px "JetBrains Mono", monospace';
-      const kMult = (zRef / Math.max(0.2, plane.z)).toFixed(2);
-      ctx.fillText(`z=${plane.z} · k=${kMult}x`, 16, y0 + Math.min(33, laneH*0.76));
+      ctx.font = '500 9px "JetBrains Mono", monospace';
+      const kMult = ((zRef / Math.max(0.2, plane.z)) * kScale).toFixed(2);
+      ctx.fillText(`z=${plane.z} · k=${kMult}x`, 16, y0 + Math.min(29, laneH*0.64));
+
+      // Semantic Zoom affordance: [+ Parts] drill-down badge inside plane header
+      if(laneH >= 38){
+        const bx = 15, by = y0 + laneH - 15, bw = 54, bh = 12;
+        ctx.fillStyle = 'rgba(22, 20, 18, 0.82)';
+        ctx.beginPath(); ctx.roundRect(bx, by, bw, bh, 2.5); ctx.fill();
+        ctx.fillStyle = '#EF9F3A';
+        ctx.font = '700 8px "JetBrains Mono", monospace';
+        ctx.fillText('+ Parts', bx + 6, by + 9);
+        pushHitBox({x: bx, y: by, w: bw, h: bh, zoomPlaneIn: plane.id});
+      }
       ctx.restore();
-      pushHitBox({x: 11, y: y0 + 1, w: padL - 16, h: laneH - 2, fi, planeId: plane.id, togglePlane: true});
+      pushHitBox({x: 11, y: y0 + 1, w: padL - 16, h: Math.max(18, laneH - 17), fi, planeId: plane.id, togglePlane: true});
 
       ctx.save();
       ctx.beginPath();
@@ -2472,7 +3410,9 @@
     const planes = getActivePlanes();
     const zRef = (S && S.z_ref) || curWorm.z_ref || 2;
     const visCount = planes.filter(p => isPlaneVisible(p.id)).length;
-    const planeText = (visCount === planes.length) ? `All ${planes.length} planes` : `${visCount}/${planes.length} planes`;
+    const planeText = zoomPlaneId
+      ? `Plane: ${zoomPlaneId}`
+      : ((visCount === planes.length) ? `All ${planes.length} planes` : `${visCount}/${planes.length} planes`);
     document.getElementById('wormStatePill').textContent = `${planeText} · f ${String(fi+1).padStart(2,'0')}/${String(N).padStart(2,'0')}`;
 
     if(wormMode === 'wall'){
@@ -2484,10 +3424,10 @@
       const lenses = [
         {id:'parallel', lbl:'1 · 3D Butter'},
         {id:'lanes',    lbl:'2 · Planes'},
-        {id:'strobe',   lbl:'3 · Trail'},
-        {id:'kymo',     lbl:'4 · Graphs'},
-        {id:'anatomy',  lbl:'5 · Rig'},
-        {id:'box',      lbl:'6 · Depth Box'}
+        {id:'parts',    lbl:'3 · Parts'},
+        {id:'strobe',   lbl:'4 · Trail'},
+        {id:'kymo',     lbl:'5 · Graphs'},
+        {id:'anatomy',  lbl:'6 · Rig'}
       ];
       const cols = 3, rows = 2;
       const pad = 6, gap = 6;
@@ -2541,7 +3481,17 @@
     if(restorePlanesBtn){
       restorePlanesBtn.style.display = allPlanesActive ? 'none' : '';
     }
-    const isModified = (f !== 0) || !allPlanesActive || (view !== 'composite') || (curVariant !== 'gwp');
+    if(zoomCrumbBtn){
+      const hasZoom = (zoomPlaneId !== null || selectedPartId !== null);
+      zoomCrumbBtn.style.display = hasZoom ? '' : 'none';
+      if(selectedPartId !== null){
+        zoomCrumbBtn.textContent = zoomPlaneId ? `<- Plane [${zoomPlaneId}]` : '<- All Parts';
+      } else if(zoomPlaneId !== null){
+        zoomCrumbBtn.textContent = '<- All Planes';
+      }
+    }
+    const isModified = (f !== 0) || !allPlanesActive || (view !== 'composite') || (curVariant !== 'gwp')
+      || (Math.abs(kScale - 1.0) > 0.01) || (explodeAmt > 0.01) || (zoomPlaneId !== null) || (selectedPartId !== null);
     if(resetStateBtn){
       resetStateBtn.style.display = isModified ? '' : 'none';
     }
@@ -2574,7 +3524,7 @@
   function buildPlanesUI(){
     planesRow.innerHTML = '';
     const planes = getActivePlanes();
-    const allActive = areAllPlanesOn(planes);
+    const allActive = areAllPlanesOn(planes) && zoomPlaneId === null;
 
     const allBtn = document.createElement('button');
     allBtn.type = 'button';
@@ -2583,6 +3533,8 @@
     allBtn.textContent = `All (${planes.length})`;
     allBtn.addEventListener('click', ()=>{
       soloPlaneId = null;
+      zoomPlaneId = null;
+      selectedPartId = null;
       planeOn = {};
       buildPlanesUI();
       renderAll();
@@ -2591,14 +3543,31 @@
 
     planes.slice().reverse().forEach(p=>{
       const vis = isPlaneVisible(p.id);
+      const isZoomed = (zoomPlaneId === p.id);
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'plane-pill' + (p.id === 'char' ? ' subj' : '');
       btn.setAttribute('aria-pressed', vis ? 'true' : 'false');
+      btn.title = 'Click to toggle plane visibility · Double-click (or Shift-click) to zoom into this plane’s constituent parts';
       const shortLbl = String(p.label || p.id).split('(')[0].trim().slice(0, 14);
-      btn.textContent = `${shortLbl} z=${p.z}`;
-      btn.addEventListener('click', ()=>{
+      btn.textContent = `${isZoomed ? '[*] ' : ''}${shortLbl} z=${p.z}`;
+      btn.addEventListener('click', (e)=>{
+        if(e.shiftKey || wormMode === 'parts'){
+          zoomPlaneId = (zoomPlaneId === p.id) ? null : p.id;
+          selectedPartId = null;
+          planeOn[p.id] = true;
+          buildPlanesUI();
+          renderAll();
+          return;
+        }
         togglePlaneVisibility(p.id);
+        buildPlanesUI();
+        renderAll();
+      });
+      btn.addEventListener('dblclick', ()=>{
+        zoomPlaneId = (zoomPlaneId === p.id) ? null : p.id;
+        selectedPartId = null;
+        planeOn[p.id] = true;
         buildPlanesUI();
         renderAll();
       });
@@ -2688,6 +3657,9 @@
     varBtnInt.style.display = curWorm.has_integrated ? '' : 'none';
 
     soloPlaneId = null;
+    zoomPlaneId = null;
+    selectedPartId = null;
+    hoveredPartId = null;
     planeOn = {};
     buildPlanesUI();
     buildKeyTicks();
@@ -2754,6 +3726,23 @@
     return null;
   }
 
+  function findStageHit(pt){
+    // Prefer smaller (more specific) bounding boxes when overlapping
+    let best = null;
+    let bestArea = Infinity;
+    for(let i = stageHitBoxes.length - 1; i >= 0; i--){
+      const b = stageHitBoxes[i];
+      if(pt.x >= b.x && pt.x <= b.x + b.w && pt.y >= b.y && pt.y <= b.y + b.h){
+        const area = b.w * b.h;
+        if(area < bestArea){
+          bestArea = area;
+          best = b;
+        }
+      }
+    }
+    return best;
+  }
+
   // Click into any slice OR drag horizontally to scrub like slicing butter
   let isScrubbingWorm = false;
   let wormDownPt = null;
@@ -2775,6 +3764,7 @@
     const xRel = pt.x / Math.max(1, cvWorm.width);
     let padLFrac = 0.08, padRFrac = 0.08;
     if(wormMode === 'lanes' || wormMode === 'kymo'){ padLFrac = 124 / cvWorm.width; padRFrac = 14 / cvWorm.width; }
+    else if(wormMode === 'parts'){ padLFrac = 0.48; padRFrac = 0.03; }
     else if(wormMode === 'strobe'){ padLFrac = 14 / cvWorm.width; padRFrac = 14 / cvWorm.width; }
     else if(wormMode === 'anatomy'){ padLFrac = 132 / cvWorm.width; padRFrac = 24 / cvWorm.width; }
     const u = Math.max(0, Math.min(1, (xRel - padLFrac) / Math.max(0.1, 1 - padLFrac - padRFrac)));
@@ -2803,6 +3793,11 @@
     if(!isScrubbingWorm){
       const hit = findWormHit(pt);
       cvWorm.style.cursor = hit ? 'pointer' : 'ew-resize';
+      const newHov = (hit && hit.selectPartId && hit.selectPartId !== '__NONE__') ? hit.selectPartId : null;
+      if(newHov !== hoveredPartId){
+        hoveredPartId = newHov;
+        renderAll();
+      }
       return;
     }
     if(wormDownPt && Math.hypot(pt.clientX - wormDownPt.clientX, pt.clientY - wormDownPt.clientY) > 6){
@@ -2812,6 +3807,12 @@
       scrubFromWormEvent(e);
     }
   });
+  cvWorm.addEventListener('pointerleave', ()=>{
+    if(hoveredPartId !== null){
+      hoveredPartId = null;
+      renderAll();
+    }
+  });
   cvWorm.addEventListener('pointerup', (e)=>{
     if(isScrubbingWorm && !wormDragged && wormDownPt){
       const pt = eventToCanvasPt(cvWorm, e);
@@ -2819,6 +3820,36 @@
       if(hit){
         if(hit.selectShotIdx !== undefined){
           selectShot(hit.selectShotIdx);
+          isScrubbingWorm = false;
+          wormDownPt = null;
+          return;
+        }
+        if(hit.zoomPlaneOut){
+          zoomPlaneId = null;
+          selectedPartId = null;
+          buildPlanesUI();
+          renderAll();
+          isScrubbingWorm = false;
+          wormDownPt = null;
+          return;
+        }
+        if(hit.zoomPlaneIn){
+          zoomPlaneId = hit.zoomPlaneIn;
+          selectedPartId = null;
+          planeOn[hit.zoomPlaneIn] = true;
+          buildPlanesUI();
+          renderAll();
+          isScrubbingWorm = false;
+          wormDownPt = null;
+          return;
+        }
+        if(hit.selectPartId){
+          selectedPartId = (hit.selectPartId === '__NONE__') ? null : hit.selectPartId;
+          if(hit.setMode){
+            wormMode = hit.setMode;
+            document.querySelectorAll('[data-wmode]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.wmode===wormMode?'true':'false'));
+          }
+          renderAll();
           isScrubbingWorm = false;
           wormDownPt = null;
           return;
@@ -2851,6 +3882,66 @@
     wormDownPt = null;
   });
   cvWorm.addEventListener('pointercancel', ()=>{ isScrubbingWorm = false; wormDownPt = null; });
+
+  // Direct Part Picking & Hover X-Ray on Stage Canvas
+  cvStage.addEventListener('pointermove', (e)=>{
+    const pt = eventToCanvasPt(cvStage, e);
+    const hit = findStageHit(pt);
+    cvStage.style.cursor = hit ? 'pointer' : 'default';
+    const newHov = hit ? hit.partId : null;
+    if(newHov !== hoveredPartId){
+      hoveredPartId = newHov;
+      renderAll();
+    }
+  });
+  cvStage.addEventListener('pointerleave', ()=>{
+    if(hoveredPartId !== null){
+      hoveredPartId = null;
+      renderAll();
+    }
+  });
+  cvStage.addEventListener('click', (e)=>{
+    if(window.innerWidth <= 820 && mobPipMode) return;
+    const pt = eventToCanvasPt(cvStage, e);
+    const hit = findStageHit(pt);
+    if(hit && hit.partId){
+      selectedPartId = (selectedPartId === hit.partId) ? null : hit.partId;
+      if(selectedPartId && wormMode !== 'parts'){
+        wormMode = 'parts';
+        document.querySelectorAll('[data-wmode]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.wmode==='parts'?'true':'false'));
+        if(parallelSubSeg) parallelSubSeg.style.display = 'none';
+        if(parThemeBtn) parThemeBtn.style.display = 'none';
+      }
+      renderAll();
+    }
+  });
+
+  // Semantic Zoom Breadcrumb & Constrained Play Sliders
+  if(zoomCrumbBtn){
+    zoomCrumbBtn.addEventListener('click', ()=>{
+      if(selectedPartId !== null){
+        selectedPartId = null;
+      } else if(zoomPlaneId !== null){
+        zoomPlaneId = null;
+      }
+      buildPlanesUI();
+      renderAll();
+    });
+  }
+  if(kScaleRange){
+    kScaleRange.addEventListener('input', ()=>{
+      kScale = (parseInt(kScaleRange.value, 10) || 0) / 100;
+      if(kScaleVal) kScaleVal.textContent = kScale.toFixed(1) + 'x';
+      renderAll();
+    });
+  }
+  if(explodeRange){
+    explodeRange.addEventListener('input', ()=>{
+      explodeAmt = (parseInt(explodeRange.value, 10) || 0) / 100;
+      if(explodeVal) explodeVal.textContent = Math.round(explodeAmt * 100) + '%';
+      renderAll();
+    });
+  }
 
   // Lens buttons (Law 4: bind 3D sub-controls to Parallel & All-6 modes)
   document.querySelectorAll('[data-wmode]').forEach(btn=>{
@@ -2906,6 +3997,8 @@
   if(restorePlanesBtn){
     restorePlanesBtn.addEventListener('click', ()=>{
       soloPlaneId = null;
+      zoomPlaneId = null;
+      selectedPartId = null;
       planeOn = {};
       buildPlanesUI();
       renderAll();
@@ -2916,7 +4009,16 @@
       stopPlayback();
       f = 0;
       soloPlaneId = null;
+      zoomPlaneId = null;
+      selectedPartId = null;
+      hoveredPartId = null;
       planeOn = {};
+      kScale = 1.0;
+      explodeAmt = 0.0;
+      if(kScaleRange) kScaleRange.value = '100';
+      if(kScaleVal) kScaleVal.textContent = '1.0x';
+      if(explodeRange) explodeRange.value = '0';
+      if(explodeVal) explodeVal.textContent = '0%';
       view = 'composite';
       document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.view==='composite'?'true':'false'));
       if(curVariant !== 'gwp' && curWorm) loadVariantJson(curWorm, 'gwp');
