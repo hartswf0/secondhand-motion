@@ -149,11 +149,11 @@
 
   .seg {
     display: inline-flex;
+    flex-wrap: wrap;
     border: 1.5px solid var(--ink);
     border-radius: 5px;
     overflow: hidden;
     background: var(--card);
-    flex-shrink: 0;
   }
   .seg button {
     font-family: 'Bricolage Grotesque', sans-serif;
@@ -162,6 +162,7 @@
     padding: 4px 8px;
     border: 0;
     border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
     background: transparent;
     color: var(--ink);
     cursor: pointer;
@@ -198,17 +199,35 @@
     min-width: 0;
   }
 
-  /* Controls placed directly on the pane they change */
+  /* Controls placed directly on the pane they change (Collapsible & Wrapped) */
   .pane-bar {
     flex: 0 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
+    flex-direction: column;
+    gap: 4px;
     padding: 4px 7px;
     background: var(--sheet);
     border-bottom: 1px solid var(--rule);
     z-index: 3;
+  }
+  .pane-bar-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    width: 100%;
+  }
+  .pane-tray {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    padding-top: 3px;
+    border-top: 1px solid var(--rule);
+  }
+  .pane-tray.tray-collapsed {
+    display: none !important;
   }
   .state-pill {
     font-family: 'JetBrains Mono', monospace;
@@ -533,6 +552,7 @@
       <button type="button" class="btn warn-recovery" id="resetStateBtn" style="display:none" title="Restore default frame f=01 and all planes">Reset</button>
       <button type="button" class="btn mob-layout-btn tag-active" id="mobPipBtn" aria-pressed="true">PiP / Split</button>
       <button type="button" class="btn" id="openIndexBtn">Index (109)</button>
+      <a class="btn tag-active" id="openAbcFlixStudioLink" href="https://hartswf0.github.io/abc-flix/?shot=giraffe-walks-past" title="Open in ABC FLIX Studio (3D Butter, Layer Tube, c-bus & BEFLIX)">★ ABC FLIX</a>
     </div>
   </header>
 
@@ -541,7 +561,14 @@
     <!-- Primary Object: Multiplane Space-Worm -->
     <section class="pane" id="wormPane" aria-label="Space-Worm Canvas">
       <div class="pane-bar">
-        <div class="strip">
+        <div class="pane-bar-head">
+          <div class="strip">
+            <button type="button" class="btn tag-active" id="wormTrayToggleBtn" onclick="const t=document.getElementById('wormMenuTray');const c=t.classList.toggle('tray-collapsed');document.getElementById('wormTrayCaret').textContent=c?'▸':'▾';" title="Collapse or expand Worm Lens & Sub-Mode buttons"><span id="wormTrayCaret">▾</span> Lens: <span id="activeWormLensLbl">1 · 3D Butter · Butter Loaf</span></button>
+            <button type="button" class="btn" id="parThemeBtn" aria-pressed="true">Dark / Paper</button>
+          </div>
+          <span class="state-pill" id="wormStatePill">6 planes · f 01/33</span>
+        </div>
+        <div class="pane-tray" id="wormMenuTray">
           <div class="seg" role="group" aria-label="Worm Lens">
             <button type="button" data-wmode="all" aria-pressed="false">All</button>
             <button type="button" data-wmode="parallel" aria-pressed="true">1 · 3D Butter</button>
@@ -560,9 +587,7 @@
             <button type="button" data-psub="radial" aria-pressed="false">Radial Fan</button>
             <button type="button" data-psub="dual" aria-pressed="false">2-Rail</button>
           </div>
-          <button type="button" class="btn" id="parThemeBtn" aria-pressed="true">Dark / Paper</button>
         </div>
-        <span class="state-pill" id="wormStatePill">6 planes · f 01/33</span>
       </div>
       <div class="canvas-stage scrub-surface" id="wormStageWrap">
         <canvas id="cvWorm" width="680" height="468"></canvas>
@@ -572,7 +597,11 @@
     <!-- Secondary Consequence Object: Live 4:3 Scene Output -->
     <section class="pane" id="stagePane" aria-label="4:3 Scene Output">
       <div class="pane-bar">
-        <div class="strip">
+        <div class="pane-bar-head">
+          <button type="button" class="btn tag-active" id="stageTrayToggleBtn" onclick="const t=document.getElementById('stageMenuTray');const c=t.classList.toggle('tray-collapsed');document.getElementById('stageTrayCaret').textContent=c?'▸':'▾';" title="Collapse or expand Stage View buttons"><span id="stageTrayCaret">▾</span> Stage: <span id="activeStageViewLbl">Composite</span></button>
+          <span class="state-pill" id="stageStatePill">480×360</span>
+        </div>
+        <div class="pane-tray" id="stageMenuTray">
           <div class="seg" role="group" aria-label="Scene View">
             <button type="button" data-view="all4" aria-pressed="false">All 4</button>
             <button type="button" data-view="composite" aria-pressed="true">Composite</button>
@@ -590,7 +619,6 @@
             <button type="button" id="varBtnInt" data-variant="int" aria-pressed="false">24fps</button>
           </div>
         </div>
-        <span class="state-pill" id="stageStatePill">480×360</span>
       </div>
       <div class="canvas-stage" id="stageCanvasWrap" title="Tap in PiP mode to expand Split view">
         <canvas id="cvStage" width="480" height="360"></canvas>
@@ -3668,6 +3696,7 @@
     document.querySelectorAll('.shot-item').forEach(el=>{
       el.classList.toggle('active', Number(el.dataset.idx) === idx);
     });
+    if(typeof syncWormsCollapsibleLabels === 'function') syncWormsCollapsibleLabels();
 
     loadVariantJson(curWorm, 'gwp');
   }
@@ -3943,6 +3972,29 @@
     });
   }
 
+  function syncWormsCollapsibleLabels(){
+    const wLbl = document.getElementById('activeWormLensLbl');
+    if(wLbl){
+      const mb = document.querySelector(`[data-wmode="${wormMode}"]`);
+      const mTxt = mb ? mb.textContent.trim() : wormMode;
+      let sTxt = '';
+      if(wormMode === 'parallel' || wormMode === 'all'){
+        const sb = document.querySelector(`[data-psub="${parallelSubMode}"]`);
+        if(sb) sTxt = ' · ' + sb.textContent.trim();
+      }
+      wLbl.textContent = mTxt + sTxt;
+    }
+    const sLbl = document.getElementById('activeStageViewLbl');
+    if(sLbl){
+      const vb = document.querySelector(`[data-view="${view}"]`);
+      if(vb) sLbl.textContent = vb.textContent.trim();
+    }
+    if(curWorm){
+      const abcLink = document.getElementById('openAbcFlixStudioLink');
+      if(abcLink) abcLink.href = `https://hartswf0.github.io/abc-flix/?shot=${encodeURIComponent(curWorm.shot_id)}`;
+    }
+  }
+
   // Lens buttons (Law 4: bind 3D sub-controls to Parallel & All-6 modes)
   document.querySelectorAll('[data-wmode]').forEach(btn=>{
     btn.addEventListener('click', ()=>{
@@ -3951,6 +4003,7 @@
       const isPar = (wormMode === 'parallel' || wormMode === 'all');
       if(parallelSubSeg) parallelSubSeg.style.display = isPar ? '' : 'none';
       if(parThemeBtn) parThemeBtn.style.display = isPar ? '' : 'none';
+      syncWormsCollapsibleLabels();
       if(curWorm && (wormMode === 'strobe' || wormMode === 'kymo' || wormMode === 'parallel' || wormMode === 'all')){
         const N = curWorm.n_frames || 1;
         for(let i=0;i<N;i+=Math.max(1, Math.floor(N/8))) getFrameImg(curWorm, i);
@@ -3963,6 +4016,7 @@
     btn.addEventListener('click', ()=>{
       parallelSubMode = btn.dataset.psub;
       document.querySelectorAll('[data-psub]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
+      syncWormsCollapsibleLabels();
       renderAll();
     });
   });
@@ -4047,6 +4101,7 @@
     btn.addEventListener('click', ()=>{
       view = btn.dataset.view;
       document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
+      syncWormsCollapsibleLabels();
       renderAll();
     });
   });
