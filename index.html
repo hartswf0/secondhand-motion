@@ -260,14 +260,17 @@ body.worms-no-scroll{
   border-radius:6px;overflow:hidden;display:flex;flex-direction:column;
 }
 .w-pane-bar{
-  padding:4px 6px;background:var(--sheet);border-bottom:1px solid var(--rule);
-  display:flex;flex-direction:column;gap:4px;flex-shrink:0;
+  position:relative;z-index:30;
+  padding:3px 6px;background:var(--sheet);border-bottom:1px solid var(--rule);
+  display:flex;flex-direction:column;flex-shrink:0;
 }
 .w-pane-head{
-  display:flex;align-items:center;justify-content:space-between;gap:5px;width:100%;flex-wrap:wrap;
+  display:flex;align-items:center;justify-content:space-between;gap:5px;width:100%;flex-wrap:nowrap;
 }
 .w-pane-tray{
-  display:flex;flex-wrap:wrap;align-items:center;gap:4px;width:100%;padding-top:3px;border-top:1px solid var(--rule);
+  position:absolute;top:100%;left:0;right:0;z-index:40;
+  display:flex;flex-wrap:wrap;align-items:center;gap:4px;width:100%;padding:6px;
+  background:var(--sheet);border-bottom:1.5px solid var(--ink);box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
 .w-pane-tray.tray-collapsed{
   display:none !important;
@@ -432,10 +435,10 @@ body.worms-no-scroll{
     <div class="w-screen w-screen-worm">
       <div class="w-pane-bar">
         <div class="w-pane-head">
-          <button type="button" class="w-btn w-btn-recover" id="idxWormMenuToggle" onclick="const t=document.getElementById('idxWormMenuTray');const c=t.classList.toggle('tray-collapsed');document.getElementById('idxWormMenuCaret').textContent=c?'▸':'▾';" title="Collapse or expand Worm Lens menu"><span id="idxWormMenuCaret">▾</span> Lens: <span id="idxActiveWormLbl">1 · 3D Butter · Butter</span></button>
-          <button type="button" class="w-btn" id="idxParThemeBtn" aria-pressed="true">Dark</button>
+          <button type="button" class="w-btn w-btn-recover" id="idxWormMenuToggle" onclick="const t=document.getElementById('idxWormMenuTray');const c=t.classList.toggle('tray-collapsed');document.getElementById('idxWormMenuCaret').textContent=c?'▸':'▾';" title="Collapse or expand Worm Lens menu"><span id="idxWormMenuCaret">▸</span> <span id="idxActiveWormLbl">1 · 3D Butter · Butter</span></button>
+          <button type="button" class="w-btn" id="idxParThemeBtn" aria-pressed="true" title="Toggle Dark / Paper Ground">◐</button>
         </div>
-        <div class="w-pane-tray" id="idxWormMenuTray">
+        <div class="w-pane-tray tray-collapsed" id="idxWormMenuTray">
           <div class="w-seg" role="group" aria-label="Space-Worm Interpretation Lens">
             <button type="button" data-idxwmode="all" aria-pressed="false">All 6</button>
             <button type="button" data-idxwmode="parallel" aria-pressed="true">1 · 3D Butter</button>
@@ -467,9 +470,9 @@ body.worms-no-scroll{
     <div class="w-screen w-screen-stage" id="idxStageScreenCard">
       <div class="w-pane-bar">
         <div class="w-pane-head">
-          <button type="button" class="w-btn w-btn-recover" id="idxStageMenuToggle" onclick="const t=document.getElementById('idxStageMenuTray');const c=t.classList.toggle('tray-collapsed');document.getElementById('idxStageMenuCaret').textContent=c?'▸':'▾';" title="Collapse or expand Stage View menu"><span id="idxStageMenuCaret">▾</span> Stage: <span id="idxActiveStageLbl">Over Footage</span></button>
+          <button type="button" class="w-btn w-btn-recover" id="idxStageMenuToggle" onclick="const t=document.getElementById('idxStageMenuTray');const c=t.classList.toggle('tray-collapsed');document.getElementById('idxStageMenuCaret').textContent=c?'▸':'▾';" title="Collapse or expand Stage View menu"><span id="idxStageMenuCaret">▸</span> <span id="idxActiveStageLbl">Over Footage</span></button>
         </div>
-        <div class="w-pane-tray" id="idxStageMenuTray">
+        <div class="w-pane-tray tray-collapsed" id="idxStageMenuTray">
           <div class="w-seg" role="group" aria-label="Stage view">
             <button type="button" data-idxview="all4" aria-pressed="false">All 4</button>
             <button type="button" data-idxview="composite" aria-pressed="true">Over Footage</button>
@@ -3587,17 +3590,33 @@ body.worms-no-scroll{
     }
   }
 
+  function closeIdxTrays(){
+    const wt = document.getElementById('idxWormMenuTray');
+    const wc = document.getElementById('idxWormMenuCaret');
+    if(wt) wt.classList.add('tray-collapsed');
+    if(wc) wc.textContent = '▸';
+    const st = document.getElementById('idxStageMenuTray');
+    const sc = document.getElementById('idxStageMenuCaret');
+    if(st) st.classList.add('tray-collapsed');
+    if(sc) sc.textContent = '▸';
+  }
+  document.addEventListener('pointerdown', (e)=>{
+    if(!e.target.closest('.w-pane-bar')) closeIdxTrays();
+  });
+
   document.querySelectorAll('[data-idxwmode]').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       wormMode = btn.dataset.idxwmode;
       document.querySelectorAll('[data-idxwmode]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
-      if(parTools) parTools.style.display = (wormMode === 'parallel' || wormMode === 'all') ? 'inline-flex' : 'none';
+      const isPar = (wormMode === 'parallel' || wormMode === 'all');
+      if(parTools) parTools.style.display = isPar ? 'inline-flex' : 'none';
       syncIdxCollapsibleLabels();
       if(curWorm && (wormMode === 'strobe' || wormMode === 'kymo' || wormMode === 'parallel' || wormMode === 'all')){
         const N = curWorm.n_frames || 1;
         for(let i=0;i<N;i+=Math.max(1, Math.floor(N/8))) getFrameImg(curWorm, i);
       }
       renderAll();
+      if(!isPar) closeIdxTrays();
     });
   });
   document.querySelectorAll('[data-idxpsub]').forEach(btn=>{
@@ -3606,13 +3625,13 @@ body.worms-no-scroll{
       document.querySelectorAll('[data-idxpsub]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
       syncIdxCollapsibleLabels();
       renderAll();
+      closeIdxTrays();
     });
   });
   if(parThemeBtn){
     parThemeBtn.addEventListener('click', ()=>{
       parallelDark = !parallelDark;
       parThemeBtn.setAttribute('aria-pressed', String(parallelDark));
-      parThemeBtn.textContent = parallelDark ? 'Dark' : 'Paper';
       renderAll();
     });
   }
@@ -3702,6 +3721,7 @@ body.worms-no-scroll{
       document.querySelectorAll('[data-idxview]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
       syncIdxCollapsibleLabels();
       renderAll();
+      closeIdxTrays();
     });
   });
   playBtn.addEventListener('click', ()=>{

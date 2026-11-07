@@ -199,32 +199,40 @@
     min-width: 0;
   }
 
-  /* Controls placed directly on the pane they change (Collapsible & Wrapped) */
+  /* Controls placed directly on the pane they change (Single-line compact bar + Floating Popover Tray) */
   .pane-bar {
     flex: 0 0 auto;
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    padding: 4px 7px;
+    padding: 3px 6px;
     background: var(--sheet);
     border-bottom: 1px solid var(--rule);
-    z-index: 3;
+    z-index: 30;
   }
   .pane-bar-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 6px;
+    gap: 5px;
     width: 100%;
+    flex-wrap: nowrap;
   }
   .pane-tray {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 40;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 5px;
     width: 100%;
-    padding-top: 3px;
-    border-top: 1px solid var(--rule);
+    padding: 6px;
+    background: var(--sheet);
+    border-bottom: 1.5px solid var(--ink);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   }
   .pane-tray.tray-collapsed {
     display: none !important;
@@ -563,12 +571,12 @@
       <div class="pane-bar">
         <div class="pane-bar-head">
           <div class="strip">
-            <button type="button" class="btn tag-active" id="wormTrayToggleBtn" onclick="const t=document.getElementById('wormMenuTray');const c=t.classList.toggle('tray-collapsed');document.getElementById('wormTrayCaret').textContent=c?'▸':'▾';" title="Collapse or expand Worm Lens & Sub-Mode buttons"><span id="wormTrayCaret">▾</span> Lens: <span id="activeWormLensLbl">1 · 3D Butter · Butter Loaf</span></button>
-            <button type="button" class="btn" id="parThemeBtn" aria-pressed="true">Dark / Paper</button>
+            <button type="button" class="btn tag-active" id="wormTrayToggleBtn" onclick="const t=document.getElementById('wormMenuTray');const c=t.classList.toggle('tray-collapsed');document.getElementById('wormTrayCaret').textContent=c?'▸':'▾';" title="Collapse or expand Worm Lens & Sub-Mode buttons"><span id="wormTrayCaret">▸</span> <span id="activeWormLensLbl">1 · 3D Butter · Butter Loaf</span></button>
+            <button type="button" class="btn" id="parThemeBtn" aria-pressed="true" title="Toggle Dark / Paper Ground">◐</button>
           </div>
           <span class="state-pill" id="wormStatePill">6 planes · f 01/33</span>
         </div>
-        <div class="pane-tray" id="wormMenuTray">
+        <div class="pane-tray tray-collapsed" id="wormMenuTray">
           <div class="seg" role="group" aria-label="Worm Lens">
             <button type="button" data-wmode="all" aria-pressed="false">All</button>
             <button type="button" data-wmode="parallel" aria-pressed="true">1 · 3D Butter</button>
@@ -598,10 +606,10 @@
     <section class="pane" id="stagePane" aria-label="4:3 Scene Output">
       <div class="pane-bar">
         <div class="pane-bar-head">
-          <button type="button" class="btn tag-active" id="stageTrayToggleBtn" onclick="const t=document.getElementById('stageMenuTray');const c=t.classList.toggle('tray-collapsed');document.getElementById('stageTrayCaret').textContent=c?'▸':'▾';" title="Collapse or expand Stage View buttons"><span id="stageTrayCaret">▾</span> Stage: <span id="activeStageViewLbl">Composite</span></button>
+          <button type="button" class="btn tag-active" id="stageTrayToggleBtn" onclick="const t=document.getElementById('stageMenuTray');const c=t.classList.toggle('tray-collapsed');document.getElementById('stageTrayCaret').textContent=c?'▸':'▾';" title="Collapse or expand Stage View buttons"><span id="stageTrayCaret">▸</span> <span id="activeStageViewLbl">Composite</span></button>
           <span class="state-pill" id="stageStatePill">480×360</span>
         </div>
-        <div class="pane-tray" id="stageMenuTray">
+        <div class="pane-tray tray-collapsed" id="stageMenuTray">
           <div class="seg" role="group" aria-label="Scene View">
             <button type="button" data-view="all4" aria-pressed="false">All 4</button>
             <button type="button" data-view="composite" aria-pressed="true">Composite</button>
@@ -3995,6 +4003,20 @@
     }
   }
 
+  function closeWormsTrays(){
+    const wt = document.getElementById('wormMenuTray');
+    const wc = document.getElementById('wormTrayCaret');
+    if(wt) wt.classList.add('tray-collapsed');
+    if(wc) wc.textContent = '▸';
+    const st = document.getElementById('stageMenuTray');
+    const sc = document.getElementById('stageTrayCaret');
+    if(st) st.classList.add('tray-collapsed');
+    if(sc) sc.textContent = '▸';
+  }
+  document.addEventListener('pointerdown', (e)=>{
+    if(!e.target.closest('.pane-bar')) closeWormsTrays();
+  });
+
   // Lens buttons (Law 4: bind 3D sub-controls to Parallel & All-6 modes)
   document.querySelectorAll('[data-wmode]').forEach(btn=>{
     btn.addEventListener('click', ()=>{
@@ -4009,6 +4031,7 @@
         for(let i=0;i<N;i+=Math.max(1, Math.floor(N/8))) getFrameImg(curWorm, i);
       }
       renderAll();
+      if(!isPar) closeWormsTrays();
     });
   });
 
@@ -4018,6 +4041,7 @@
       document.querySelectorAll('[data-psub]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
       syncWormsCollapsibleLabels();
       renderAll();
+      closeWormsTrays();
     });
   });
 
@@ -4103,6 +4127,7 @@
       document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed', b===btn?'true':'false'));
       syncWormsCollapsibleLabels();
       renderAll();
+      closeWormsTrays();
     });
   });
 
